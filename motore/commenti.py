@@ -366,6 +366,13 @@ def main():
         sys.exit("Manca IG_TOKEN: va messo nei Secrets del repository.")
     ig = Instagram(token)
     me = ig.io()
+    if "--diagnosi" in sys.argv:  # cosa vede il motore, senza toccare la mappa
+        print("account:", me.get("username"))
+        for m in ig.pagine("me/media", fields="id,timestamp,media_type,media_product_type,comments_count", limit=10):
+            print("media:", m)
+            for c in ig.pagine(f"{m['id']}/comments", fields="id,text,timestamp,username,from", limit=50):
+                print("   commento:", c)
+        return
     def tutti():
         for m in ig.reel_recenti():
             for c in ig.commenti(m["id"]):
