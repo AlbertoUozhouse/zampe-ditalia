@@ -14,6 +14,13 @@ on:
       didascalia:
         description: "percorso del testo dentro docs/ (vuoto per le storie)"
         required: false
+      trial:
+        description: "Prova come Trial Reel (se rifiutato, reel normale)"
+        type: boolean
+        default: false
+      alle:
+        description: "Aspetta fino a quest'ora italiana prima di pubblicare (HH:MM, vuoto = subito)"
+        required: false
 
 permissions:
   contents: write
@@ -25,15 +32,21 @@ concurrency:
 jobs:
   pubblica:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 340
     env:
       IG_TOKEN: ${{ secrets.IG_TOKEN }}
     steps:
       - uses: actions/checkout@v4
+      - name: Aspetta l'orario
+        if: inputs.alle != ''
+        run: |
+          target=$(TZ=Europe/Rome date -d "today ${{ inputs.alle }}" +%s); now=$(date +%s)
+          if [ "$target" -gt "$now" ]; then echo "aspetto $(( (target-now)/60 )) minuti"; sleep $(( target-now )); fi
       - name: Pubblica su Instagram
         run: |
           ARGS=(--tipo "${{ inputs.tipo }}" --media "${{ inputs.media }}")
           if [ -n "${{ inputs.didascalia }}" ]; then ARGS+=(--didascalia "${{ inputs.didascalia }}"); fi
+          if [ "${{ inputs.trial }}" = "true" ]; then ARGS+=(--trial); fi
           python3 -I motore/pubblica.py "${ARGS[@]}"
       - name: Salva il registro
         run: |

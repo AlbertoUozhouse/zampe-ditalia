@@ -37,6 +37,7 @@ def main():
     a.add_argument("--media", required=True)
     a.add_argument("--didascalia")
     a.add_argument("--prova", action="store_true", help="prepara il contenitore senza pubblicare")
+    a.add_argument("--trial", action="store_true", help="Trial Reel: mostrato prima solo a chi non segue; se Instagram lo rifiuta si pubblica normale")
     o = a.parse_args()
     token = os.environ.get("IG_TOKEN") or sys.exit("Manca IG_TOKEN.")
     url = SITO + o.media.lstrip("/")
@@ -49,7 +50,16 @@ def main():
         params["media_type"] = o.tipo
     if o.tipo == "REELS":
         params["share_to_feed"] = "true"
-    cont = chiama("POST", "me/media", token, **params)["id"]
+    cont = None
+    if o.trial and o.tipo == "REELS":
+        # Meta promuove da solo il reel ai follower se va bene con chi non ci segue
+        try:
+            cont = chiama("POST", "me/media", token, trial_params=json.dumps({"graduation_strategy": "SS_PERFORMANCE"}), **params)["id"]
+            print("Trial Reel accettato da Instagram")
+        except SystemExit as e:
+            print(f"Trial Reel rifiutato ({e}); pubblico come reel normale")
+    if not cont:
+        cont = chiama("POST", "me/media", token, **params)["id"]
     print(f"contenitore pronto: {cont}")
 
     # i video vengono elaborati da Instagram: si aspetta che il contenitore sia pronto (massimo 10 minuti)
