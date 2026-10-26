@@ -15,6 +15,9 @@ STORICO = ROOT / "motore/reel_fatti.json"
 LANCIO = date(2026, 10, 26)
 ORA = datetime.now(ZoneInfo("Europe/Rome"))
 
+# account di Alberto: restano sulla mappa ma non vengono mai nominati nei reel (la pagina cresce da sola)
+ESCLUSI = {"thor_golden_life", "albertomarchesin"}
+
 CITTA = ["Milano", "Roma", "Napoli", "Torino", "Palermo", "Genova", "Bologna", "Firenze", "Bari", "Catania", "Venezia", "Verona",
          "Padova", "Trieste", "Brescia", "Parma", "Modena", "Reggio nell'Emilia", "Perugia", "Cagliari", "Pescara", "Lecce", "Bergamo",
          "Trento", "Bolzano", "Ancona", "Salerno", "Rimini", "Treviso", "Vicenza", "Como", "Monza", "Pisa", "Siena", "Sassari", "Udine"]
@@ -37,7 +40,7 @@ def dati():
     for a in an + tifo:
         per_citta.setdefault(a["c"], {"cani": 0, "gatti": 0})["gatti" if a.get("t") == "gatto" else "cani"] += 1
     oggi = ORA.date().isoformat()
-    nuovi_fondatori = [a for a in an if a.get("ruolo", "").startswith("Fondatore") and str(a.get("ts", ""))[:10] == oggi]
+    nuovi_fondatori = [a for a in an if a.get("ruolo", "").startswith("Fondatore") and str(a.get("ts", ""))[:10] == oggi and a["u"].lower() not in ESCLUSI]
     return {"animali": an, "tifo": tifo, "tutti": A, "razze": R, "per_citta": per_citta, "nuovi_fondatori": nuovi_fondatori,
             "cani": sum(1 for a in an + tifo if a.get("t") != "gatto"), "gatti": sum(1 for a in an + tifo if a.get("t") == "gatto")}
 
