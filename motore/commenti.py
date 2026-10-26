@@ -55,7 +55,7 @@ class Comuni:
         """Frasi libere: un comune dopo "a", "di", "da", "in" ("vive a Bari"). Restituisce (comune, frase senza il comune)."""
         w = norm(testo).split()
         for i, x in enumerate(w):
-            if x in ("a", "di", "da", "in") and i + 1 < len(w):
+            if x in ("a", "di", "da", "in", "citta", "comune", "paese") and i + 1 < len(w):
                 for n in range(min(5, len(w) - i - 1), 0, -1):
                     c, _ = self.trova(" ".join(w[i + 1:i + 1 + n]))
                     if c:
@@ -115,7 +115,7 @@ def razza(testo, tipo):
     return r["key"] if r else None
 
 # parole che non sono mai il nome dell'animale
-RIEMPITIVE = {"allora", "ciao", "ecco", "io", "sono", "ho", "il", "lo", "la", "mio", "mia", "miei", "mie", "si", "chiama", "vive", "abita", "a", "in", "di", "da",
+RIEMPITIVE = {"due", "tre", "quattro", "cinque", "i", "le", "gli", "con", "citta", "città", "vivo", "viviamo", "abito", "abitiamo", "nostri", "tuoi", "loro", "allora", "ciao", "ecco", "io", "sono", "ho", "il", "lo", "la", "mio", "mia", "miei", "mie", "si", "chiama", "vive", "abita", "a", "in", "di", "da",
               "ed", "e", "è", "un", "una", "uno", "che", "anche", "noi", "abbiamo", "nostro", "nostra", "zampeditalia", "qui", "sta", "ce", "c"}
 
 def descrittiva(t):
@@ -130,10 +130,47 @@ def inizia_descrizione(ws, i):
     coda = " " + norm(" ".join(ws[i:i + 4])) + " "
     return any(coda.startswith(" " + r["sin"] + " ") for r in TABELLA if len(r["sin"]) > 2)
 
+REGIONI = ["friuli venezia giulia", "friuli", "trentino alto adige", "trentino", "alto adige", "valle d'aosta", "emilia romagna", "emilia-romagna",
+           "piemonte", "lombardia", "veneto", "liguria", "toscana", "umbria", "marche", "lazio", "abruzzo", "molise", "campania", "puglia",
+           "basilicata", "calabria", "sicilia", "sardegna", "regione", "provincia"]
+
+def senza_regioni(t):
+    for r in REGIONI:
+        t = re.sub(r"(?i)(?<![\w'])" + re.escape(r).replace("\\-", "[- ]").replace("\\ ", "[ -]") + r"(?![\w])", " ", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+TIPI_RE = r"(cane|cana|cani|cagnolin[oa]|cucciol[oa]|gatt[oaie]|gattin[oaie]|micio|micia)"
+
+def piu_animali(raw, comuni):
+    """"Il mio cane Mia, i miei gatti Tigro e Tempesta, vivo a Reggio Emilia" → più animali nello stesso comune."""
+    c, _ = comuni.in_mezzo(raw)
+    if not c:
+        for p in re.split(r"[,;.\n]", raw):
+            c, _ = comuni.trova(p.strip()) if p.strip() else (None, None)
+            if c: break
+    if not c:
+        return None
+    trovati = []
+    for seg in re.split(r"[,;.\n]", raw):
+        m = re.search(r"(?i)\b" + TIPI_RE + r"\b(.*)", seg)
+        if not m: continue
+        t = "gatto" if norm(m.group(1)).startswith(("gatt", "mic")) else "cane"
+        dopo = re.sub(r"(?i)\bsi chiam\w*\b", " ", m.group(2))
+        parole = re.findall(r"[A-Za-zÀ-ÿ']+", dopo)
+        # un nome è una parola con la maiuscola dopo "cane"/"gatto" che non sia il comune né la razza
+        nomi = [w for w in parole if w[0].isupper() and w not in ("E", "Si", "Il", "La", "I", "Lo", "Le", "Gli", "Un", "Una")
+                and norm(w) not in norm(c["c"]).split() and not descrittiva(w) and not inizia_descrizione([w], 0)]
+        descr = " ".join(w for w in parole if descrittiva(w) or inizia_descrizione([w], 0))
+        for n in nomi[:4]:
+            trovati.append({"n": nome_proprio(n), "t": t, "razza": razza(descr, t) or ("europeo" if t == "gatto" else "meticcio"), "razza_testo": (descr or t)[:40]})
+    return {"k": "multi", "luogo": c, "animali": trovati} if len(trovati) >= 2 else None
+
 # ---------- riconoscimento dei commenti ----------
 def analizza(testo, comuni):
     """Trasforma un commento in un'azione del gioco. Restituisce un dict con 'k' (tipo) oppure con 'manca'."""
     raw = re.sub(r"@\w[\w.]*", " ", testo).strip()           # i tag agli amici non fanno parte del formato
+    raw = re.sub(r"[\U0001F300-\U0001FAFF\u2600-\u27BF\uFE0F]+", " ", raw).strip() if not re.fullmatch(r"[\W_]+", raw) else raw
+    raw = senza_regioni(raw)
     t = norm(raw)
     if re.fullmatch(r"rimuovi( tutto)?", t):
         return {"k": "rimuovi"}
@@ -152,7 +189,11 @@ def analizza(testo, comuni):
     m = re.match(r"^(sogno|stella)\s*[:,\-]\s*(.+)$", raw, flags=re.I)
     if m:
         kind, raw = m.group(1).lower(), m.group(2)
-    parti = [p.strip() for p in re.split(r"[,;\n]| - | – ", raw) if p.strip()]
+    multi = piu_animali(raw, comuni)
+    if multi:
+        return multi
+    parti = [p.strip() for p in re.split(r"[,;\n]| - | – |\. ", raw) if p.strip(" .")]
+    parti = [p.strip(" .") for p in parti]
     if not parti:
         return None
     # 1) il comune: una parte intera, oppure all'inizio o alla fine di una parte ("Tarquinia gatto tigrato", "Leo Treviso"),
@@ -200,6 +241,8 @@ def analizza(testo, comuni):
             nome = nome_proprio(cand[0])
     sembra_gioco = kind != "animale" or bool(luogo) or bool(GATTO_PAROLE.search(norm(raw)) or cerca_razza(raw)
                                               or re.search(r"\b(cane|cagnolin|cucciol)", norm(raw)))
+    if nome and luogo and norm(nome) == norm(luogo["c"]):
+        nome = ""  # "Tarquinia gatto tigrato": Tarquinia è il comune, non il nome
     if not luogo:
         return {"k": kind, "manca": err or "comune", "n": nome or None} if sembra_gioco and (nome or descr) else None
     if not nome:
@@ -235,6 +278,7 @@ FRASI = {
     "manca_nome": ["Come si chiama? Riscrivi «{c}, nome, razza» e si accende la sua luce ✨"],
     "manca_razza": ["Che razza è {n}? Scrivi «{c}, {n}, golden» oppure «{c}, {n}, gatto rosso» 🐶🐱"],
     "manca_formato": ["Scrivi per esempio «Sogno: Padova, Bruno, bassotto» oppure «Stella: Treviso, Max» ✨"],
+    "multi": ["Si accendono {quanti} luci a {c}: {nomi}! ✨ Benvenuti sulla mappa 🐾", "{c} si illumina: {nomi} sono sulla mappa! 🔥"],
     "voto": ["Voto per i {squadra} registrato! 🔥 {squadra} {n}, {rivale} {altri}. Accendi anche la tua luce: città, nome e razza ✨",
              "+1 ai {squadra}! Ora sono {n} contro {altri}. Scrivi città, nome e razza e metti il tuo animale sulla mappa 🐾"],
     "altri": ["Arrivano presto anche furetti, conigli, uccelli e tutti gli altri! 🐾 Intanto puoi fare il tifo: scrivi «Tifo cani: la tua città» o «Tifo gatti: la tua città»"],
@@ -257,7 +301,7 @@ class Instagram:
         params["access_token"] = self.token
         url = path if path.startswith("http") else f"{API}/{path}"
         data = None
-        if method == "GET":
+        if method in ("GET", "DELETE"):
             url += ("&" if "?" in url else "?") + urllib.parse.urlencode(params)
         else:
             data = urllib.parse.urlencode(params).encode()
@@ -287,6 +331,12 @@ class Instagram:
 
     def commenti(self, media_id):
         yield from self.pagine(f"{media_id}/comments", fields="id,text,timestamp,username,from", limit=50)
+
+    def cancella_mie_risposte(self, comment_id, mio):
+        """Toglie le risposte della pagina sotto un commento (per rifare una risposta sbagliata)."""
+        for r in self.pagine(f"{comment_id}/replies", fields="id,username,from"):
+            if (r.get("username") or r.get("from", {}).get("username", "")).lower() == mio.lower():
+                self._req("DELETE", r["id"])
 
     def rispondi(self, comment_id, testo):
         return self._req("POST", f"{comment_id}/replies", message=testo)
@@ -339,6 +389,11 @@ class Gioco:
             self.cambiato = True
             sq = "gatti" if az["t"] == "gatto" else "cani"
             return "voto", {"squadra": sq, "n": v[sq], "altri": v["cani" if sq == "gatti" else "gatti"], "rivale": "cani" if sq == "gatti" else "gatti"}, False
+        if k == "multi":
+            nomi = []
+            for x in az["animali"]:
+                self.applica({"k": "animale", "luogo": az["luogo"], **x}, utente, ts); nomi.append(x["n"])
+            return "multi", {"c": az["luogo"]["c"], "nomi": ", ".join(nomi[:-1]) + " e " + nomi[-1], "quanti": len(nomi)}, True
         if k == "rimuovi":
             prima = len(self.animali)
             self.dati["animali"] = [a for a in self.animali if a["u"].lower() != utente.lower()]
@@ -428,9 +483,41 @@ class Gioco:
             self.cambiato = True
 
 # ---------- giro principale ----------
-def gira(commenti, rispondi, mio_username=None):
-    """commenti: iterabile di (media_id, commento); rispondi: funzione(comment_id, testo)."""
+CORREZIONI = ROOT / "motore/correzioni.json"
+
+def applica_correzioni(gioco):
+    """Correzioni a mano lette da motore/correzioni.json, applicate una volta sola: toglie voci sbagliate e fa rielaborare commenti."""
+    try:
+        cor = json.loads(CORREZIONI.read_text())
+    except (FileNotFoundError, json.JSONDecodeError):
+        return set()
+    if not cor.get("id") or cor["id"] in gioco.stato.setdefault("correzioni_fatte", []):
+        return set()
+    via = {(x["u"].lower(), x["n"].lower()) for x in cor.get("togli", [])}
+    gioco.dati["animali"] = [a for a in gioco.animali if (a["u"].lower(), a["n"].lower()) not in via]
+    rifai = set(cor.get("rifai", []))
+    gioco.visti -= rifai
+    comuni = Comuni()
+    for x in cor.get("aggiungi", []):
+        c, _ = comuni.trova(x["comune"])
+        if c:
+            gioco.applica({"k": "animale", "t": x["t"], "luogo": c, "n": x["n"], "razza": x["razza"], "razza_testo": x.get("razza_testo", "")}, x["u"], x.get("ts") or datetime.now(timezone.utc).isoformat())
+            if x.get("risposta_a"):
+                gioco.stato.setdefault("risposte_da_fare", []).append({"id": x["risposta_a"], "testo": x["risposta"]})
+    gioco.stato["correzioni_fatte"].append(cor["id"]); gioco.cambiato = True
+    print(f"correzione {cor['id']}: tolte {len(via)} voci, da rifare {len(rifai)} commenti")
+    return rifai
+
+def gira(commenti, rispondi, mio_username=None, cancella=None):
+    """commenti: iterabile di (media_id, commento); rispondi: funzione(comment_id, testo); cancella: funzione(comment_id) per le risposte da rifare."""
     comuni, gioco = Comuni(), Gioco()
+    rifai = applica_correzioni(gioco)
+    for r in gioco.stato.pop("risposte_da_fare", []):  # risposte decise a mano nella correzione
+        try:
+            if cancella: cancella(r["id"])
+            rispondi(r["id"], r["testo"])
+        except Exception as e:
+            print(f"risposta di correzione non inviata ({r['id']}): {e}", file=sys.stderr)
     nuovi = risposte = 0
     for media_id, c in commenti:
         if c["id"] in gioco.visti:
@@ -440,6 +527,9 @@ def gira(commenti, rispondi, mio_username=None):
         if not utente or (mio_username and utente.lower() == mio_username.lower()):
             continue
         nuovi += 1
+        if c["id"] in rifai and cancella:
+            try: cancella(c["id"])
+            except Exception as e: print(f"risposta vecchia non cancellata ({c['id']}): {e}", file=sys.stderr)
         testo_c = c.get("text", "")
         az = analizza(testo_c, comuni)
         # commenti a pezzi: "Leo gatto" e poi "Tarquinia" → si uniscono con quello di prima della stessa persona (entro 24 ore)
@@ -538,7 +628,7 @@ def main():
         # Instagram li restituisce dal più recente: in ordine di arrivo il Fondatore è davvero il primo
         lista = [(m["id"], c) for m in ig.reel_recenti() for c in ig.commenti(m["id"])]
         return sorted(lista, key=lambda x: x[1].get("timestamp", ""))
-    gira(tutti(), ig.rispondi, me.get("username"))
+    gira(tutti(), ig.rispondi, me.get("username"), lambda cid: ig.cancella_mie_risposte(cid, me.get("username", "zampeditalia")))
 
 if __name__ == "__main__":
     main()

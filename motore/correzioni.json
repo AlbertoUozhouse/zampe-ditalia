@@ -1,0 +1,15 @@
+{
+  "nota": "Correzione del 26/10 sera: commenti scritti in modo libero letti male dal motore. La guardia la applica una volta sola.",
+  "id": "2026-10-26-sera",
+  "togli": [
+    {"u": "gada_raffy", "n": "Puglia Loki"},
+    {"u": "sofiamastrochicco", "n": "I"},
+    {"u": "vincenzo_bascer", "n": "Santo"}
+  ],
+  "rifai": ["18222375271352300", "17914664442557062", "18117640454321133"],
+  "aggiungi": [
+    {"u": "vincenzo_bascer", "n": "Leo", "t": "gatto", "razza": "europeo", "razza_testo": "gatto grigio nero e bianco tigrato", "comune": "Tarquinia",
+     "ts": "2026-10-26T14:29:00+0000", "risposta_a": "18114790604030893",
+     "risposta": "Eccolo! Leo, gatto tigrato, si è acceso a Tarquinia 👑 È il Fondatore della città. Scusa per la confusione di prima 🐾"}
+  ]
+}
