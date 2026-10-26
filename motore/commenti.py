@@ -25,7 +25,7 @@ GIORNI_REEL = 7            # si leggono i commenti dei reel pubblicati negli ult
 QUOTA_RISPOSTE = 0.30      # agli altri si risponde a campione
 MAX_RISPOSTE_ORA = 200
 MAX_ANIMALI_PER_UTENTE = 5
-PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5}
+PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3}
 
 # ---------- testo ----------
 def norm(s):
@@ -177,6 +177,10 @@ FRASI = {
     "manca_razza": ["Che razza è {n}? Scrivi «{c}, {n}, golden» oppure «{c}, {n}, gatto rosso» 🐶🐱"],
     "manca_formato": ["Scrivi per esempio «Sogno: Padova, Bruno, bassotto» oppure «Stella: Treviso, Max» ✨"],
     "rimosso": ["Fatto, abbiamo tolto le tue luci dalla mappa. Ti aspettiamo quando vuoi 🐾"],
+    "tag": ["Hai taggato {amici}: per ognuno che commenta, +3 punti per te! 👥", "Inviti partiti per {amici}: per ognuno che commenta prendi +3 punti 🔥"],
+    "tag_senza_luce": ["Bello l'invito a {amici}! Accendi prima la tua luce con città, nome e razza: poi ogni amico che commenta ti vale +3 punti 👥"],
+    "premio": ["Benvenuto! Grazie a te {chi} ha appena preso +3 punti 🎉", "Sei arrivato con un invito: +3 punti a {chi} 👥"],
+    "base": ["Ciao! Scrivi città, nome e razza del tuo animale, per esempio «Treviso, Luna, golden», e accendi la sua luce ✨"],
 }
 
 def frase(chiave, **kw):
@@ -311,6 +315,32 @@ class Gioco:
             return "vicini", {**par, "v1": vicini[0]["n"], "v2": vicini[1]["n"]}, False
         return "animale", par, False
 
+    def tag(self, utente, testo):
+        """Segna gli amici taggati in un commento. Restituisce i nuovi invitati."""
+        nuovi = []
+        for amico in {m.rstrip(".").lower() for m in re.findall(r"@([\w.]+)", testo)}:
+            if not amico or amico == utente.lower():
+                continue
+            if f"{utente.lower()}>{amico}" in self.stato.get("premiati", []):
+                continue  # questo amico ha già fatto prendere i punti a chi lo invita
+            chi = self.stato.setdefault("inviti", {}).setdefault(amico, [])
+            if utente.lower() not in chi:
+                chi.append(utente.lower()); nuovi.append(amico); self.cambiato = True
+        return nuovi
+
+    def premia_inviti(self, utente):
+        """L'amico taggato ha commentato: +3 a chi l'ha invitato, una volta sola per coppia. Restituisce chi è stato premiato."""
+        premiati = []
+        for chi in self.stato.get("inviti", {}).pop(utente.lower(), []):
+            coppia = f"{chi}>{utente.lower()}"
+            if coppia in self.stato.setdefault("premiati", []):
+                continue
+            suoi = [a for a in self.animali if a["u"].lower() == chi and a["k"] in ("animale", "sogno", "tifo")]
+            if suoi:
+                max(suoi, key=lambda a: a["pt"])["pt"] += PUNTI["tag"]
+                self.stato["premiati"].append(coppia); premiati.append(chi); self.cambiato = True
+        return premiati
+
     def bonus_giornaliero(self, utente, media_id):
         """+5 una volta al giorno a chi commenta un reel nuovo e ha già una luce."""
         oggi = datetime.now(timezone.utc).date().isoformat()
@@ -346,11 +376,23 @@ def gira(commenti, rispondi, mio_username=None):
             gioco.bonus_giornaliero(utente, media_id)
         else:
             gioco.stato["bonus"][utente.lower()] = datetime.now(timezone.utc).date().isoformat()
+        # inviti: chi tagga amici prende +3 per ognuno che poi commenta; a chi tagga si risponde sempre
+        taggati = gioco.tag(utente, c.get("text", ""))
+        premiati = gioco.premia_inviti(utente)
+        extra = []
+        if taggati:
+            ha_luce = any(a["u"].lower() == utente.lower() and a["k"] in ("animale", "sogno", "tifo") for a in gioco.animali)
+            extra.append(frase("tag" if ha_luce else "tag_senza_luce", amici=", ".join("@" + a for a in taggati[:5])))
+        if premiati:
+            extra.append(frase("premio", chi=", ".join("@" + a for a in premiati[:3])))
+        if not chiave and extra:
+            chiave, par, obbligatoria = "base", {}, True
         if not chiave or gioco.risposte_ultima_ora() >= MAX_RISPOSTE_ORA:
             continue
-        if obbligatoria or random.random() < QUOTA_RISPOSTE:
+        if obbligatoria or extra or random.random() < QUOTA_RISPOSTE:
             try:
-                rispondi(c["id"], frase(chiave, **par))
+                testo = frase(chiave, **par) if chiave != "base" or not extra else ""
+                rispondi(c["id"], " ".join(t for t in [testo] + extra if t))
                 gioco.stato["risposte"].append(time.time())
                 risposte += 1
             except Exception as e:  # una risposta fallita non deve fermare la mappa

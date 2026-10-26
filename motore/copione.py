@@ -177,11 +177,17 @@ def main():
     rng = random.Random(ORA.strftime("%Y%m%d%H") + formato)
     D = dati()
     titolo, frasi, did = FORMATI[formato](D, rng, st)
+    # in ogni reel, prima della chiusura: tagga un amico, +3 punti per ognuno che commenta
+    frasi.insert(len(frasi) - 1, (rng.choice(["Tagga un amico: per ognuno che commenta, prendi tre punti in più.",
+                                               "E se tagghi un amico, quando commenta guadagni tre punti.",
+                                               "Tagga i tuoi amici: ogni amico che commenta ti regala tre punti."]),
+                                  {"tipo": "numero", "grande": "+3", "sotto": "punti per ogni amico taggato che commenta"}))
+    did = did.strip() + "\n\n👥 Tagga un amico: per ognuno che commenta, +3 punti per te."
     frasi, did = varia(frasi, did, D)
     did = did.strip() + "\n\nVoce generata con IA.\n\n#cani #gatti #italia #canicontrogatti"
     copione = {"id": ORA.strftime("%Y-%m-%d-%H%M") + "-" + formato, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
-               "banner": "📍 Scrivi città, nome e razza 👇", "didascalia": did}
+               "banner": "📍 Scrivi città, nome, razza e tagga un amico 👇", "didascalia": did}
     Path(uscita).write_text(json.dumps(copione, ensure_ascii=False, indent=1))
     STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
     print(f"copione {copione['id']}: " + " / ".join(t for t, _ in frasi))
