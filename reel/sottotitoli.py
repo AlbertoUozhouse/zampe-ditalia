@@ -6,8 +6,9 @@ Le frasi sono i gruppi da mostrare (2–4 parole), nell'ordine della voce: devon
 import json, sys
 from pathlib import Path
 
-ORO = {"cani", "cane", "fondatore.", "spenta.", "accende", "nome.", "tifo!", "città!", "commenti", "vince?", "luce"}
-VERDE = {"gatti.", "gatto?", "gatti?", "tetti.", "gatti", "gatto"}
+# parole chiave, confrontate senza punteggiatura
+ORO = {"cani", "cane", "fondatore", "spenta", "accende", "nome", "tifo", "città", "commenti", "vince", "luce", "notte"}
+VERDE = {"gatti", "gatto", "tetti"}
 
 def main():
     parole_json, progetto, durata, *frasi = sys.argv[1:]
@@ -30,7 +31,7 @@ def main():
         e = (P[b + 1]["s"] - 0.03) if b + 1 < len(P) else durata - 0.05
         spans = []
         for wi, w in enumerate(ws):
-            k = w["p"].lower()
+            k = w["p"].lower().strip(".,:;!?…")
             cls = " or" if k in ORO else " ve" if k in VERDE else ""
             spans.append(f'<span class="w{cls}" id="st-{gi}-{wi}">{w["p"].upper()}</span>')
             js.append(f'tl.fromTo("#st-{gi}-{wi}", {{ scale: 0.6, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.14, ease: "back.out(3)" }}, {max(s, w["s"] - 0.04):.3f});')
