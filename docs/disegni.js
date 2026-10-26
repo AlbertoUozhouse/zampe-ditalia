@@ -149,12 +149,16 @@ ${st ? `<path d="M${40 + tail * 0.5} 36 l1.6 -2.4 M${42 + tail * 0.8} 33 l1.8 -1
 </g>
 <ellipse cx="32" cy="32" rx="${b.fluffy ? 9.4 : 8.2}" ry="8.6" fill="${fur}"/>
 ${wh ? `<ellipse cx="32" cy="34" rx="4.4" ry="6" fill="${wh}"/>` : ""}
-${st ? `<path d="M25 29 q2 1 3 3 M39 29 q-2 1 -3 3 M26 34 q2 .6 3 2 M38 34 q-2 .6 -3 2" stroke="${st}" stroke-width="1.3" fill="none" stroke-linecap="round"/>` : ""}
+${st && !b.spots ? `<path d="M25 29 q2 1 3 3 M39 29 q-2 1 -3 3 M26 34 q2 .6 3 2 M38 34 q-2 .6 -3 2" stroke="${st}" stroke-width="1.3" fill="none" stroke-linecap="round"/>` : ""}
+${b.spots ? `<g fill="${st || "#3A2A1A"}"><circle cx="27" cy="29" r="1.3"/><circle cx="36.6" cy="28.4" r="1.2"/><circle cx="25.6" cy="34" r="1.1"/><circle cx="38.4" cy="33.6" r="1.3"/><circle cx="31" cy="27" r="1"/><circle cx="34" cy="36" r="1"/></g>` : ""}
+${b.patches ? `<g fill-opacity=".95"><path d="M24 27 Q28 23 31 28 Q29 33 24.4 32Z" fill="${b.patches[0]}"/><path d="M33.4 30 Q38 27 40 31.6 Q38.6 36.4 34 35Z" fill="${b.patches[1]}"/></g>` : ""}
 <ellipse cx="27.6" cy="39.4" rx="2.6" ry="1.5" fill="${pt || wh || fur}"/><ellipse cx="36.4" cy="39.4" rx="2.6" ry="1.5" fill="${pt || wh || fur}"/>
-<path d="M${26.2 - (ear - 4.4)} 17.6 L${25.4 - (ear - 4.4) * 0.6} ${16 - ear} L30 15.4Z M${37.8 + (ear - 4.4)} 17.6 L${38.6 + (ear - 4.4) * 0.6} ${16 - ear} L34 15.4Z" fill="${earC}" stroke="${earC}" stroke-width="1" stroke-linejoin="round"/>
+${b.fold ? `<path d="M24.6 16.6 Q25.6 13.4 29.6 14.6 Q27 15.4 26.4 17.6Z M39.4 16.6 Q38.4 13.4 34.4 14.6 Q37 15.4 37.6 17.6Z" fill="${earC}"/>` :
+`<path d="M${26.2 - (ear - 4.4)} 17.6 L${25.4 - (ear - 4.4) * 0.6} ${16 - ear} L30 15.4Z M${37.8 + (ear - 4.4)} 17.6 L${38.6 + (ear - 4.4) * 0.6} ${16 - ear} L34 15.4Z" fill="${earC}" stroke="${earC}" stroke-width="1" stroke-linejoin="round"/>`}
 ${b.tufts ? `<path d="M25.4 ${12 - ear + 4} l-.8 -2.4 M38.6 ${12 - ear + 4} l.8 -2.4" stroke="${fur}" stroke-width="1"/>` : ""}
 <ellipse cx="32" cy="20.6" rx="${head + (b.fluffy ? 0.6 : 0)}" ry="${head - 0.6}" fill="${fur}"/>
 ${pt ? `<ellipse cx="32" cy="23" rx="4.4" ry="3.4" fill="${pt}" opacity=".9"/>` : ""}
+${b.patches ? `<path d="M25.4 18 Q27 14.4 30.6 15.6 Q30 19.6 26 21Z" fill="${b.patches[0]}"/><path d="M34 15.4 Q37.6 15 38.4 18.6 Q36.6 20.6 34.6 19Z" fill="${b.patches[1]}"/>` : ""}
 ${wh ? `<path d="M32 15.6 L29.6 25.4 Q32 27 34.4 25.4Z" fill="${wh}"/>` : ""}
 ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" stroke-width="1.1" stroke-linecap="round"/>` : ""}
 <circle cx="28.8" cy="20.4" r="4.2" fill="url(#${id})"/><circle cx="35.2" cy="20.4" r="4.2" fill="url(#${id})"/>
@@ -179,5 +183,43 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
 <path d="M20 6 L23.4 15.6 L33.4 15.8 L25.4 21.8 L28.4 31.6 L20 25.8 L11.6 31.6 L14.6 21.8 L6.6 15.8 L16.6 15.6Z" fill="#FFF4DE"/>
 </svg>`;
 
-  window.Disegni = { CANI, GATTI, razza, cane, gatto, sogno, stella, hash };
+  // ---------- elenco completo da data/razze.json ----------
+  // Le righe dell'elenco diventano parametri dei disegni; i sinonimi sostituiscono le regole scritte qui sopra.
+  const normT = s => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, " ").trim();
+  let TABELLA = null; // [{sin, key, tipo, colore}] ordinata dal sinonimo più lungo
+  function carica(json) {
+    const C = json.colori, col = v => C[v] || v;
+    const extra = s => Object.fromEntries((s || "").split(/\s+/).filter(Boolean).map(t => { const [k, v] = t.split(":"); return [k, v ? col(v) : true]; }));
+    TABELLA = [];
+    for (const [key, n, sin, pelo, ear, ex] of json.cani) {
+      const x = extra(ex), fur = col(pelo);
+      CANI[key] = { n, fur, ear, earC: x.orecchie || shade(fur, -0.25), muz: x.muso || shade(fur, 0.42), mask: x.maschera, blaze: x.fiamma,
+        patch: x.macchia, cap: x.cappa, face: x.viso, eye: x.occhi, curly: !!x.ricci, flat: !!x.piatto, mix: !!x.mix };
+      sin.forEach(s => TABELLA.push({ sin: normT(s), key, tipo: "cane" }));
+    }
+    for (const [key, n, sin, pelo, pat, ex] of json.gatti) {
+      const x = extra(ex), fur = col(pelo);
+      GATTI[key] = { n, fur, pat, eye: x.occhi, stripe: pat === "tabby" || pat === "spotted" ? x.strisce || shade(fur, -0.4) : null,
+        spots: pat === "spotted", point: pat === "points" ? shade(fur, -0.62) : null, white: pat === "bicolor" ? C.neve : null,
+        patches: pat === "calico" ? [C.arancio, C.nero] : pat === "tortie" ? [C.arancio, C.cannella] : null,
+        fluffy: !!x.pelolungo, tufts: !!x.ciuffi, bigEars: !!x.orecchiegrandi, round: !!x.tondo, fold: !!x.piegate };
+      sin.forEach(s => TABELLA.push({ sin: normT(s), key, tipo: "gatto", colore: !!x.colore }));
+    }
+    TABELLA.sort((a, b) => b.sin.length - a.sin.length);
+  }
+  // Il sinonimo più lungo che compare come parola intera nel testo.
+  function cerca(testo, tipo) {
+    const t = " " + normT(testo) + " ";
+    return TABELLA.find(r => (!tipo || r.tipo === tipo) && t.includes(" " + r.sin + " "));
+  }
+  const razzaVecchia = razza;
+  function razzaNuova(testo, tipo) {
+    if (!TABELLA) return razzaVecchia(testo, tipo);
+    if (CANI[testo] && tipo !== "gatto") return testo;   // già una chiave
+    if (GATTI[testo] && tipo === "gatto") return testo;
+    const r = cerca(testo, tipo);
+    return r ? r.key : tipo === "gatto" ? "europeo" : "meticcio";
+  }
+
+  window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, hash, carica, cerca };
 })();

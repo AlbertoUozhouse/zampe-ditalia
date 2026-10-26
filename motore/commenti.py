@@ -78,29 +78,30 @@ class Comuni:
         return lista[0], None
 
 # ---------- razze ----------
-GATTO_PAROLE = re.compile(r"\b(gatt[oaie]|micio|micia|siames|persian|maine|coon|british|certosin|ragdoll|sphynx|sfinge|soriano|tigrat|tuxedo)")
-RAZZE = [  # stesse chiavi di docs/disegni.js
-    (r"golden|retriever", "golden"), (r"labrador.*(nero|black)", "labrador_nero"), (r"labrador.*(cioccolat|marrone|choco)", "labrador_cioccolato"),
-    (r"labrador|\blab\b", "labrador_miele"), (r"pastore tedesco|tedesco|german|\blupo\b", "pastore_tedesco"), (r"border|collie", "border_collie"),
-    (r"husky|siberian", "husky"), (r"beagle", "beagle"), (r"jack|russel", "jack_russell"), (r"bassott|dachs|salsicc", "bassotto"),
-    (r"chihuahua|chiuaua|chihuaua", "chihuahua"), (r"barbon|poodle|\btoy\b", "barboncino"), (r"bulldog|frenchie|bouledogue", "bulldog_francese"),
-    (r"cavalier|king charles", "cavalier"), (r"maltes", "maltese"), (r"shih|tzu|yorkshire|yorkie", "shih_tzu"), (r"amstaff|pit ?bull|staffordshire|staffy", "amstaff"),
-    (r"samoied|samoyed", "samoiedo"), (r"volpin|pomer|spitz", "volpino"), (r"boxer", "boxer"), (r"carlin|\bpug\b", "carlino"),
-    (r"rottweil|rotweil", "rottweiler"), (r"cocker|spaniel", "cocker"), (r"australian|aussie|pastore australiano", "australian"),
-    (r"corgi", "corgi"), (r"shiba|akita", "shiba"),
-    (r"meticc|incrocio|bastardin|\bmix\b", "meticcio"),
-    (r"siames", "siamese"), (r"persian", "persiano"), (r"maine|coon", "maine_coon"), (r"british|certosin", "british"), (r"ragdoll", "ragdoll"),
-    (r"sphynx|sfinge|nudo", "sphynx"), (r"bicolor|bianco e nero|bianconer|tuxedo", "bicolore"), (r"\bner[oa]\b", "nero"),
-    (r"ross[oa]|arancion|fulv", "rosso"), (r"bianc[oa]", "bianco"), (r"tigrat|soriano|europeo|grigi[oa]", "europeo"),
-]
-GATTI = {"siamese", "persiano", "maine_coon", "british", "ragdoll", "sphynx", "bicolore", "nero", "rosso", "bianco", "europeo"}
+# Elenco unico in docs/data/razze.json, lo stesso che usa la mappa: vince il sinonimo più lungo trovato come parola intera.
+GATTO_PAROLE = re.compile(r"\b(gatt[oaie]|micio|micia|micetto|micetta|gattino|gattina)\b")
+_RAZZE = json.loads((ROOT / "docs/data/razze.json").read_text())
+TABELLA = sorted(
+    [{"sin": norm(x), "key": r[0], "tipo": "cane", "colore": False} for r in _RAZZE["cani"] for x in r[2]] +
+    [{"sin": norm(x), "key": r[0], "tipo": "gatto", "colore": "colore" in r[5].split()} for r in _RAZZE["gatti"] for x in r[2]],
+    key=lambda r: -len(r["sin"]))
+
+def cerca_razza(testo, tipo=None):
+    t = " " + norm(testo).replace("'", " ") + " "
+    return next((r for r in TABELLA if (not tipo or r["tipo"] == tipo) and f" {r['sin']} " in t), None)
+
+def tipo_animale(descr):
+    """Cane o gatto? Le parole "gatto/micio" decidono; poi la razza più lunga; i soli colori non bastano per dire gatto."""
+    if GATTO_PAROLE.search(norm(descr)):
+        return "gatto"
+    g, c = cerca_razza(descr, "gatto"), cerca_razza(descr, "cane")
+    if g and not g["colore"] and (not c or len(g["sin"]) > len(c["sin"])):
+        return "gatto"
+    return "cane"
 
 def razza(testo, tipo):
-    t = norm(testo)
-    for pat, k in RAZZE:
-        if re.search(pat, t) and ((k in GATTI) == (tipo == "gatto")):
-            return k
-    return None
+    r = cerca_razza(testo, tipo)
+    return r["key"] if r else None
 
 # ---------- riconoscimento dei commenti ----------
 def analizza(testo, comuni):
@@ -138,14 +139,14 @@ def analizza(testo, comuni):
         resto.append(p)
     if not luogo:
         # sembra un tentativo di gioco solo se c'è anche una razza o una parola chiave
-        if kind != "animale" or any(razza(p, "cane") or razza(p, "gatto") or GATTO_PAROLE.search(norm(p)) for p in parti):
+        if kind != "animale" or any(cerca_razza(p) or GATTO_PAROLE.search(norm(p)) for p in parti):
             return {"k": kind, "manca": err or "comune"}
         return None
     if not resto:
         return {"k": kind, "manca": "nome", "luogo": luogo}
     nome = nome_proprio(resto[0])
     descr = " ".join(resto[1:])
-    tipo = "gatto" if GATTO_PAROLE.search(norm(descr)) or razza(descr, "gatto") and not razza(descr, "cane") else "cane"
+    tipo = tipo_animale(descr)
     rz = razza(descr, tipo)
     if kind == "stella":
         return {"k": "stella", "t": tipo, "luogo": luogo, "n": nome, "razza": rz}
@@ -284,14 +285,14 @@ class Gioco:
         miei = [a for a in self.animali if a["u"].lower() == utente.lower() and a["k"] != "tifo"]
         gia = next((a for a in miei if norm(a["n"]) == norm(az["n"]) and a["k"] == k), None)
         if gia:  # stesso animale riscritto: si aggiornano città e razza, i punti restano
-            gia.update(base, t=az["t"], razza=az.get("razza"), ts=gia["ts"])
+            gia.update(base, t=az["t"], razza=az.get("razza"), razza_testo=az.get("razza_testo"), ts=gia["ts"])
             self.cambiato = True
             return None, {}, False
         if len(miei) >= MAX_ANIMALI_PER_UTENTE:
             return None, {}, False
         fondatore = k == "animale" and not any(a["k"] == "animale" and a["c"] == L["c"] and a["p"] == L["p"] for a in self.animali)
         pt = PUNTI["fondatore"] if fondatore else PUNTI[k]
-        nuovo = {**base, "id": f"{utente}|{k}|{norm(az['n'])}", "k": k, "t": az["t"], "n": az["n"], "razza": az.get("razza"), "pt": pt}
+        nuovo = {**base, "id": f"{utente}|{k}|{norm(az['n'])}", "k": k, "t": az["t"], "n": az["n"], "razza": az.get("razza"), "razza_testo": az.get("razza_testo"), "pt": pt}
         if fondatore:
             nuovo["ruolo"] = f"Fondatore di {L['c']}"
         self.animali.append(nuovo)

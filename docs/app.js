@@ -211,7 +211,8 @@ function refresh(list) {
 map.on("move zoom resize", redraw);
 map.on("moveend zoomend", () => { syncPets(); syncCities(STATS.city || []); });
 $("#igLink").href = CONFIG.ig;
-loadData().then(refresh);
+// prima l'elenco completo delle razze, poi gli animali
+fetch("data/razze.json").then(r => r.json()).then(D.carica).catch(() => {}).finally(() => loadData().then(refresh));
 // Il motore dei commenti aggiorna i dati ogni 10-15 minuti: la pagina li ricarica da sola.
 if (!ANTEPRIMA) setInterval(() => loadData().then(refresh), 5 * 60e3);
 
