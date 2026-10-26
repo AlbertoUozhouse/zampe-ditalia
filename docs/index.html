@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Zampe d'Italia | Mappa degli animali</title>
+<meta name="description" content="Ogni animale accende una luce sull'Italia. Cani contro Gatti: quale città d'Italia vince?">
+<meta name="theme-color" content="#060B1A">
+<meta property="og:title" content="Zampe d'Italia: Cani contro Gatti">
+<meta property="og:description" content="Ogni animale accende una luce sull'Italia. Commenta il reel e accendi la tua.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Nunito:wght@600;800;900&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="map" aria-label="Mappa notturna d'Italia: ogni luce è un animale"></div>
+
+<header class="top">
+  <div class="brand">
+    <h1>Zampe d'Italia</h1>
+    <p>Ogni animale accende una luce sull'Italia</p>
+  </div>
+  <div class="versus" id="versus" aria-live="polite"></div>
+  <form class="search" id="searchForm" role="search">
+    <input id="q" type="search" placeholder="Cerca @account, nome o città" autocomplete="off" aria-label="Cerca un account, un animale o una città">
+    <button class="btn" type="submit">Trova</button>
+  </form>
+  <div class="badge" id="badge" hidden></div>
+</header>
+
+<div class="zoom">
+  <button type="button" id="zin" aria-label="Avvicina">+</button>
+  <button type="button" id="zout" aria-label="Allontana">−</button>
+  <button type="button" id="zall" aria-label="Tutta Italia">⤢</button>
+</div>
+
+<section class="sheet" id="sheet" hidden></section>
+
+<nav class="bottom">
+  <div class="counter" id="counter"></div>
+  <div class="cta">
+    <div>Commenta l'ultimo reel: <b>«Treviso, Luna, golden»</b>
+      <small>Entro 15 minuti la tua luce si accende col tuo @</small></div>
+    <a class="btn" id="igLink" href="https://www.instagram.com/zampeditalia/" target="_blank" rel="noopener">Commenta</a>
+  </div>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-v="mappa">Mappa</button>
+    <button class="tab" role="tab" aria-selected="false" data-v="sfida">Sfida città</button>
+    <button class="tab" role="tab" aria-selected="false" data-v="classifica">Classifica</button>
+    <button class="tab" role="tab" aria-selected="false" data-v="regole">Come si gioca</button>
+  </div>
+</nav>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="disegni.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+# Il repository è pubblico: documenti interni, piani e materiale del concorrente restano solo sul Mac.
+BRIEF.md
+DECISIONI.md
+PIANO-SVILUPPO.md
+LEGGIMI-PRIMA.md
+esempi/
+.claude/
+.DS_Store
+node_modules/
+reel-remotion/out/
+*.env
+.env*
+# Prototipi scartati e marchio vecchio: restano in locale come riferimento.
+reel-remotion/
+mappa/
+logo/
