@@ -1,6 +1,6 @@
 {
   "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana.",
-  "reel_automatici": false,
+  "reel_automatici": true,
   "orari": {
     "09:00": "duello",
     "13:00": "vetrina",

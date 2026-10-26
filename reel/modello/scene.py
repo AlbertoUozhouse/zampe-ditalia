@@ -4,7 +4,7 @@ Ogni funzione riceve l'id della scena, la sua durata e i parametri del copione, 
 compositions/<id>.html. Lo stile è quello dei reel di lancio: Italia di notte, luce calda per i cani,
 verde-oro per i gatti. I disegni degli animali arrivano dalla fabbrica (docs/disegni.js) come SVG in assets/svg.
 """
-import html, json
+import html, json, re
 from pathlib import Path
 
 ESC = html.escape
@@ -15,6 +15,12 @@ CIELO = """<linearGradient id="{p}-cielo" x1="0" y1="0" x2="0" y2="1"><stop offs
 STELLE = "".join(f'<circle cx="{x}" cy="{y}" r="{r}"/>' for x, y, r in
                  [(90, 380, 2.4), (210, 300, 1.6), (330, 420, 2), (470, 330, 1.4), (610, 390, 2.2), (160, 520, 1.6), (980, 560, 2),
                   (720, 300, 1.5), (40, 640, 1.8), (1030, 380, 1.4), (560, 250, 1.8), (260, 600, 1.3)])
+
+def _primo_fotogramma(js):
+    """Prima scena del reel: niente ingressi da vuoto, il primo fotogramma è già pieno e luminoso.
+    Gli ingressi fromTo diventano piccoli assestamenti (scala 1.04 → 1), così resta il movimento ma non il buio."""
+    return re.sub(r'tl\.fromTo\(("[^"]+"), \{[^}]*\}, \{[^}]*?duration: ([\d.]+)[^}]*\}, [\d.]+\);',
+                  r'tl.fromTo(\1, { scale: 1.04 }, { scale: 1, duration: \2, ease: "power2.out" }, 0);', js)
 
 def _pagina(cid, nota, css, corpo, js):
     return f"""<template>

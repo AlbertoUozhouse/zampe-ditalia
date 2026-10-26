@@ -116,7 +116,9 @@ def puntata(D, rng, st):
     tot = len([a for a in D["tutti"] if a.get("k") != "stella"])
     top = sorted(D["per_citta"].items(), key=lambda kv: -sum(kv[1].values()))[:5]
     cane, gatto = esempio(rng, D)
-    frasi = [(f"Giorno {n} della mappa: {tot} {'luce accesa' if tot == 1 else 'luci accese'} in Italia.", {"tipo": "numero", "grande": str(tot), "sotto": "luci accese in Italia"}),
+    # si apre sulla mappa con le luci vere già accese e la città in testa evidenziata
+    pin = [{"nome": top[0][0], "testo": f"{top[0][0]} · {luci_n(sum(top[0][1].values()))}", "colore": "d"}] if top else []
+    frasi = [(f"Giorno {n} della mappa: {tot} {'luce accesa' if tot == 1 else 'luci accese'} in Italia.", {"tipo": "mappa", "luci": luci(D), "citta": pin}),
              (f"Cani {D['cani']}, gatti {D['gatti']}.", {"tipo": "duello", "sinistra": {"titolo": "Cani", "valore": str(D["cani"])}, "destra": {"titolo": "Gatti", "valore": str(D["gatti"])}})]
     nf = [a["n"] for a in D["nuovi_fondatori"]][:3]
     if nf:

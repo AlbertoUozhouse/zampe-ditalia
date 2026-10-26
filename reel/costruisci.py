@@ -169,7 +169,11 @@ def main():
             sc["citta"] = [{**c, **dict(zip(("x", "y"), proietta(*comune(c["nome"]))))} for c in sc.get("citta", [])]
             sc["luci"] = [{"x": x, "y": y, "t": l["t"]} for l in sc.get("luci", []) for x, y in [proietta(l["lng"], l["lat"])]]
             if sc.get("zoom"): x, y = proietta(*comune(sc["zoom"]["comune"])); sc["zoom"] = {"s": sc["zoom"].get("s", 1.8), "x": x, "y": y}
-        (prog / "compositions" / f"{cid}.html").write_text(S.TIPI[tipo](cid, d, **sc))
+        pagina = S.TIPI[tipo](cid, d, **sc)
+        if n == 0 and tipo != "mappa":  # mai aprire sul buio (la mappa ha già la sua versione "subito")
+            testa, js = pagina.split("<script>", 1)
+            pagina = testa + "<script>" + S._primo_fotogramma(js)
+        (prog / "compositions" / f"{cid}.html").write_text(pagina)
         host.append(f'      <div id="{cid}" data-composition-id="{cid}" data-composition-src="compositions/{cid}.html" data-start="{a}" data-duration="{d}" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:1"></div>')
         if n: effetti["whoosh"].append(a)
         effetti["pop"].append(round(a + 0.45, 2))
