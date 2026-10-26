@@ -415,13 +415,25 @@ def main():
     if "--diagnosi" in sys.argv:  # cosa vede il motore, senza toccare la mappa
         print("account:", me.get("username"))
         print("profilo:", ig._req("GET", "me", fields="username,followers_count,media_count"))
-        for m in ig.pagine("me/media", fields="id,timestamp,media_type,media_product_type,comments_count,like_count", limit=10):
-            print("media:", m)
+        for met, extra in (("reach", {"period": "day"}), ("profile_views", {"period": "day", "metric_type": "total_value"}),
+                           ("follower_count", {"period": "day"}), ("accounts_engaged", {"period": "day", "metric_type": "total_value"})):
             try:
-                st = ig._req("GET", f"{m['id']}/insights", metric="views,reach,likes,comments,shares,saved")
-                print("   statistiche:", {x["name"]: x["values"][0]["value"] for x in st.get("data", [])})
+                print("profilo", met, json.dumps(ig._req("GET", "me/insights", metric=met, **extra).get("data", []))[:400])
             except urllib.error.HTTPError as e:
-                print("   statistiche non disponibili:", e.code, e.read()[:200])
+                print("profilo", met, "n/d", e.code, e.read()[:150])
+        for m in ig.pagine("me/media", fields="id,timestamp,media_type,media_product_type,comments_count,like_count,permalink", limit=10):
+            print("media:", m)
+            metriche = ["views", "reach", "likes", "comments", "shares", "saved", "total_interactions"]
+            if m.get("media_product_type") == "REELS":
+                metriche += ["ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]
+            st = {}
+            for met in metriche:  # una per volta: se una non esiste per quel tipo, le altre si leggono lo stesso
+                try:
+                    d = ig._req("GET", f"{m['id']}/insights", metric=met).get("data", [])
+                    if d: st[met] = d[0].get("values", [{}])[0].get("value", d[0].get("total_value", {}).get("value"))
+                except urllib.error.HTTPError as e:
+                    st[met] = f"n/d {e.code}"
+            print("   statistiche:", json.dumps(st))
             for c in ig.pagine(f"{m['id']}/comments", fields="id,text,timestamp,username,from", limit=50):
                 print("   commento:", c)
             for prova in ({}, {"fields": "comments{id,text,username}"}):
