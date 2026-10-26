@@ -1,0 +1,42 @@
+# Guardia dei commenti: il cron di GitHub qui non parte in modo affidabile, quindi questo workflow
+# fa girare il motore ogni 10 minuti per circa 5 ore e 40 minuti, poi si riavvia da solo.
+# commenti.yml resta come riserva e per i giri a mano.
+name: veglia
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: veglia
+  cancel-in-progress: false
+
+jobs:
+  veglia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    env:
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Motore ogni 10 minuti
+        run: |
+          git config user.name "zampe-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for giro in $(seq 1 34); do
+            git pull -q --rebase || true
+            python3 -I motore/commenti.py || echo "giro $giro: errore del motore, riprovo al prossimo"
+            git add docs/data/animali.json motore/stato.json
+            if ! git diff --cached --quiet; then
+              git commit -q -m "Mappa aggiornata dai commenti"
+              git pull -q --rebase && git push -q || echo "giro $giro: push non riuscito, riprovo al prossimo"
+            fi
+            [ "$giro" -lt 34 ] && sleep 600
+          done
+      - name: Riparti
+        if: always()
+        run: gh workflow run veglia.yml --ref main
