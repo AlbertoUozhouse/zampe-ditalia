@@ -33,7 +33,7 @@ def chiama(method, path, token, **params):
 
 def main():
     a = argparse.ArgumentParser()
-    a.add_argument("--tipo", choices=["IMAGE", "REELS", "STORIES"], required=True)
+    a.add_argument("--tipo", choices=["IMAGE", "REELS", "STORIES", "CAROSELLO"], required=True)
     a.add_argument("--media", required=True)
     a.add_argument("--didascalia")
     a.add_argument("--prova", action="store_true", help="prepara il contenitore senza pubblicare")
@@ -43,6 +43,18 @@ def main():
     url = SITO + o.media.lstrip("/")
     caption = (ROOT / "docs" / o.didascalia).read_text().strip() if o.didascalia else ""
 
+    if o.tipo == "CAROSELLO":
+        # ogni slide è un contenitore a sé, poi il carosello le raccoglie (massimo 10)
+        figli = [chiama("POST", "me/media", token, image_url=SITO + m.strip().lstrip("/"), is_carousel_item="true")["id"] for m in o.media.split(",")[:10]]
+        print(f"slide pronte: {len(figli)}")
+        cont = chiama("POST", "me/media", token, media_type="CAROUSEL", children=",".join(figli), caption=caption)["id"]
+        pub = chiama("POST", "me/media_publish", token, creation_id=cont)["id"]
+        info = chiama("GET", pub, token, fields="permalink,timestamp")
+        print(f"pubblicato: {info.get('permalink')}")
+        reg = json.loads(REGISTRO.read_text()) if REGISTRO.exists() else []
+        reg.append({"id": pub, "tipo": "CAROSELLO", "media": o.media, "permalink": info.get("permalink"), "ts": datetime.now(timezone.utc).isoformat(timespec="seconds")})
+        REGISTRO.write_text(json.dumps(reg, ensure_ascii=False, indent=1) + "\n")
+        return
     params = {"caption": caption} if caption and o.tipo != "STORIES" else {}
     video = o.media.lower().endswith((".mp4", ".mov"))
     params["video_url" if video else "image_url"] = url
