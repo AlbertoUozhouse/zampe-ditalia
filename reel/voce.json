@@ -1,0 +1,8 @@
+{
+  "nota": "La voce di Zampe d'Italia: sempre questa, per tutti i reel e le storie. Scelta da Alberto il 26/10/2026.",
+  "servizio": "elevenlabs",
+  "voce": "Chris Basetta - Smiley and Engaging",
+  "voice_id": "t3hJ92dgZhDVtsff084B",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": { "stability": 0.4, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": true }
+}

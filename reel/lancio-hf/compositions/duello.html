@@ -1,0 +1,28 @@
+<template>
+  <style>
+    /* Apertura: luminosa dal primo fotogramma. Sopra la cuccia accesa, sotto il gatto sul tetto, al centro il VS. */
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #root .metà { position: absolute; left: 0; right: 0; height: 420px; display: flex; align-items: center; justify-content: center; }
+    #root .su { top: 330px; background: radial-gradient(ellipse 60% 70% at 50% 60%, rgba(255, 179, 71, .38), rgba(255, 179, 71, 0) 70%); }
+    #root .giu { top: 740px; background: radial-gradient(ellipse 60% 70% at 50% 45%, rgba(207, 227, 107, .22), rgba(207, 227, 107, 0) 70%); }
+    #root .su img { width: 470px; filter: drop-shadow(0 0 60px rgba(255, 179, 71, .7)); }
+    #root .giu img { width: 420px; filter: drop-shadow(0 0 40px rgba(207, 227, 107, .5)); }
+    #root .vs { position: absolute; left: 0; right: 0; top: 665px; display: flex; justify-content: center; }
+    #root .vs span { width: 130px; height: 130px; border-radius: 50%; display: grid; place-items: center; background: var(--night);
+      border: 6px solid var(--cream); font: 800 58px/1 var(--font-display); color: var(--cream); box-shadow: 0 0 50px rgba(255, 244, 222, .45); }
+  </style>
+  <div id="root" data-composition-id="duello" data-width="1080" data-height="1920">
+    <div class="metà su"><img id="duello-cane" src="assets/svg/golden.svg" alt=""></div>
+    <div class="metà giu"><img id="duello-gatto" src="assets/svg/gatto-rosso.svg" alt=""></div>
+    <div class="vs"><span id="duello-vs">VS</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // primo fotogramma già acceso: si parte a scala quasi piena e si "respira"
+    tl.fromTo("#duello-cane", { scale: 0.94, x: -40 }, { scale: 1.04, x: 0, duration: 1.38, ease: "power2.out" }, 0);
+    tl.fromTo("#duello-gatto", { scale: 0.94, x: 40 }, { scale: 1.04, x: 0, duration: 1.38, ease: "power2.out" }, 0);
+    tl.fromTo("#duello-vs", { scale: 1.25, rotation: -12 }, { scale: 1, rotation: 0, duration: 0.4, ease: "back.out(3)" }, 0.05);
+    tl.to("#duello-vs", { scale: 1.18, duration: 0.12, yoyo: true, repeat: 1, ease: "sine.inOut" }, 0.82);
+    window.__timelines["duello"] = tl;
+  </script>
+</template>

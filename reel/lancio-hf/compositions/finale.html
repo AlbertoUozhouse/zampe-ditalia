@@ -1,0 +1,35 @@
+<template>
+  <style>
+    /* Chiusura: si torna al duello dell'apertura (il reel riparte senza stacco) con la chiamata all'azione. */
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #root .metà { position: absolute; left: 0; right: 0; height: 420px; display: flex; align-items: center; justify-content: center; }
+    #root .su { top: 330px; background: radial-gradient(ellipse 60% 70% at 50% 60%, rgba(255, 179, 71, .38), rgba(255, 179, 71, 0) 70%); }
+    #root .giu { top: 740px; background: radial-gradient(ellipse 60% 70% at 50% 45%, rgba(207, 227, 107, .22), rgba(207, 227, 107, 0) 70%); }
+    #root .su img { width: 470px; filter: drop-shadow(0 0 60px rgba(255, 179, 71, .7)); }
+    #root .giu img { width: 420px; filter: drop-shadow(0 0 40px rgba(207, 227, 107, .5)); }
+    #root .vs { position: absolute; left: 0; right: 0; top: 665px; display: flex; justify-content: center; }
+    #root .vs span { width: 130px; height: 130px; border-radius: 50%; display: grid; place-items: center; background: var(--night);
+      border: 6px solid var(--cream); font: 800 58px/1 var(--font-display); color: var(--cream); box-shadow: 0 0 50px rgba(255, 244, 222, .45); }
+    #root .cta { position: absolute; left: 0; right: 0; top: 1300px; display: flex; justify-content: center; }
+    #root .cta span { font: 900 42px var(--font-body); color: #2A1606; background: var(--gold); border-radius: 22px; padding: 16px 34px; box-shadow: 0 0 50px rgba(255, 197, 92, .7); }
+  </style>
+  <div id="root" data-composition-id="finale" data-width="1080" data-height="1920">
+    <div class="metà su"><img id="finale-cane" src="assets/svg/golden.svg" alt=""></div>
+    <div class="metà giu"><img id="finale-gatto" src="assets/svg/gatto-rosso.svg" alt=""></div>
+    <div class="vs"><span id="finale-vs">VS</span></div>
+    <div class="cta"><span id="finale-cta">👇 Scrivi la tua città qui sotto</span></div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#finale-cane", { scale: 1.2, x: -200, opacity: 0 }, { scale: 0.94, x: -40, opacity: 1, duration: 0.4, ease: "power3.out" }, 0);
+    tl.fromTo("#finale-gatto", { scale: 1.2, x: 200, opacity: 0 }, { scale: 0.94, x: 40, opacity: 1, duration: 0.4, ease: "power3.out" }, 0.05);
+    tl.fromTo("#finale-vs", { scale: 0, rotation: 30 }, { scale: 1, rotation: 0, duration: 0.35, ease: "back.out(3)" }, 0.3);
+    // sulle parole "cani" e "gatti" si accende la squadra nominata
+    tl.to("#finale-cane", { scale: 1.06, duration: 0.15, yoyo: true, repeat: 1 }, 0.47);
+    tl.to("#finale-gatto", { scale: 1.06, duration: 0.15, yoyo: true, repeat: 1 }, 0.9);
+    tl.fromTo("#finale-cta", { y: -30, scale: 0.6, opacity: 0 }, { y: 0, scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.4)" }, 1.4);
+    [2.0, 2.6].forEach(t => tl.to("#finale-cta", { scale: 1.08, duration: 0.15, yoyo: true, repeat: 1 }, t));
+    // ultimo fotogramma come il primo: cane e gatto a scala 0.94, in posizione di partenza del loop
+    window.__timelines["finale"] = tl;
+  </script>
+</template>

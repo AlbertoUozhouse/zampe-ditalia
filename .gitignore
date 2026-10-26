@@ -15,3 +15,10 @@ reel-remotion/
 mappa/
 logo/
 icona-app-meta.png
+interno/
+# Reel: si versionano progetti e script, non provini, rendering e cache
+reel/audio/
+reel/lancio/*.mp4
+reel/anteprima-voce-lancio.mp3
+reel/**/.hyperframes/
+reel/**/node_modules/

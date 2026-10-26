@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="it" data-resolution="portrait"
+  data-composition-variables='[{"id":"cani","type":"number","label":"Cani sulla mappa","default":2},{"id":"gatti","type":"number","label":"Gatti sulla mappa","default":0},{"id":"esempio","type":"string","label":"Commento di esempio","default":"Treviso, Luna, golden"}]'>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* Reel di lancio "Cani contro Gatti": l'Italia di notte, ogni animale è una luce. */
+      @font-face { font-family: "Bricolage Grotesque"; font-weight: 800; src: url("assets/fonts/bric800.woff2") format("woff2"); }
+      @font-face { font-family: "Bricolage Grotesque"; font-weight: 700; src: url("assets/fonts/bric700.woff2") format("woff2"); }
+      :root {
+        --night: #060B1A; --night2: #0E1A3A; --land: #1E3266; --coast: #5577C9;
+        --gold: #FFC55C; --warm: #FFB347; --cream: #FFF4DE; --cat: #CFE36B;
+        --font-display: "Bricolage Grotesque", "Nunito", sans-serif; --font-body: "Nunito", sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--night); }
+      #root { position: relative; width: 100%; height: 100%; font-family: var(--font-body); color: var(--cream); }
+      .bg { position: absolute; inset: 0; background: radial-gradient(ellipse 80% 55% at 50% 42%, #18295A 0, var(--night2) 45%, var(--night) 100%); }
+
+      /* Testata fissa: sotto la barra di stato di Instagram (168 px) */
+      #testata { position: absolute; left: 0; right: 0; top: 186px; z-index: 5; display: flex; justify-content: center; }
+      #testata .pill { display: flex; align-items: center; gap: 22px; padding: 14px 34px; border-radius: 999px;
+        background: rgba(6, 11, 26, .82); border: 3px solid rgba(255, 197, 92, .75); box-shadow: 0 0 40px rgba(255, 197, 92, .25); }
+      #testata .t { font: 800 46px/1 var(--font-display); letter-spacing: -.5px; }
+      #testata .d { color: var(--gold); } #testata .c { color: var(--cat); } #testata .vs { font-size: 30px; opacity: .8; margin: 0 6px; }
+      #testata .n { font: 900 40px/1 var(--font-body); font-variant-numeric: tabular-nums; padding-left: 22px; border-left: 3px solid rgba(255, 244, 222, .25); }
+
+      #banner { position: absolute; left: 0; right: 0; top: 298px; z-index: 5; display: flex; justify-content: center; }
+      #banner span { font: 900 34px/1 var(--font-body); padding: 14px 28px; border-radius: 18px; background: var(--gold); color: #2A1606;
+        box-shadow: 0 0 34px rgba(255, 197, 92, .55); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="21.2" data-width="1080" data-height="1920">
+      <div class="bg"></div>
+
+      <div id="duello" data-composition-id="duello" data-composition-src="compositions/duello.html" data-start="0" data-duration="1.38" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:1"></div>
+      <div id="mappa" data-composition-id="mappa" data-composition-src="compositions/mappa.html" data-start="1.38" data-duration="3.6" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:1"></div>
+      <div id="commento" data-composition-id="commento" data-composition-src="compositions/commento.html" data-start="4.98" data-duration="2.92" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:1"></div>
+      <div id="cuccia" data-composition-id="cuccia" data-composition-src="compositions/cuccia.html" data-start="7.9" data-duration="2.56" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:1"></div>
+      <div id="gatto" data-composition-id="gatto" data-composition-src="compositions/gatto.html" data-start="10.46" data-duration="2.72" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:1"></div>
+      <div id="fondatore" data-composition-id="fondatore" data-composition-src="compositions/fondatore.html" data-start="13.18" data-duration="2.6" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:1"></div>
+      <div id="tifo" data-composition-id="tifo" data-composition-src="compositions/tifo.html" data-start="15.78" data-duration="1.94" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:1"></div>
+      <div id="finale" data-composition-id="finale" data-composition-src="compositions/finale.html" data-start="17.72" data-duration="3.48" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920" style="z-index:1"></div>
+
+      <div id="testata" class="clip" data-start="0" data-duration="21.2" data-track-index="2" data-track-kind="graphics">
+        <div class="pill" id="testata-pill">
+          <span class="t"><span class="d">CANI</span><span class="vs">vs</span><span class="c">GATTI</span></span>
+          <span class="n">🐶 <span id="n-cani">2</span> – <span id="n-gatti">0</span> 🐱</span>
+        </div>
+      </div>
+      <div id="banner" class="clip" data-start="4.98" data-duration="12.74" data-track-index="3" data-track-kind="graphics">
+        <span id="banner-t">📍 Scrivi città, nome e razza 👇</span>
+      </div>
+
+      <div id="sottotitoli" data-composition-id="sottotitoli" data-composition-src="compositions/sottotitoli.html" data-start="0" data-duration="21.2" data-track-index="4" data-track-kind="captions" data-width="1080" data-height="1920" style="z-index:6"></div>
+
+      <audio id="voce" class="clip" src="assets/audio/voce.mp3" data-start="0" data-duration="20.71" data-track-index="5" data-volume="1"></audio>
+      <audio id="musica" class="clip" src="assets/audio/musica.wav" data-start="0" data-duration="21.2" data-track-index="6" data-volume="0.22" data-fade-out="0.8"></audio>
+    </div>
+    <script>
+      const v = (window.__hyperframes && window.__hyperframes.getVariables && window.__hyperframes.getVariables()) || {};
+      document.getElementById("n-cani").textContent = v.cani ?? 2;
+      document.getElementById("n-gatti").textContent = v.gatti ?? 0;
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#testata-pill", { y: -30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 0.05);
+      tl.fromTo("#banner-t", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.4)" }, 4.98);
+      // il banner respira, per ricordare dove commentare
+      [6.6, 9.2, 11.8, 14.4].forEach(t => tl.to("#banner-t", { scale: 1.07, duration: 0.18, yoyo: true, repeat: 1, ease: "sine.inOut" }, t));
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
