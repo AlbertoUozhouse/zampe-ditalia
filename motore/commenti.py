@@ -25,7 +25,7 @@ GIORNI_REEL = 7            # si leggono i commenti dei reel pubblicati negli ult
 QUOTA_RISPOSTE = 0.30      # agli altri si risponde a campione
 MAX_RISPOSTE_ORA = 200
 MAX_ANIMALI_PER_UTENTE = 5
-PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3}
+PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 5}
 
 # ---------- testo ----------
 def norm(s):
@@ -174,6 +174,15 @@ def analizza(testo, comuni):
     t = norm(raw)
     if re.fullmatch(r"rimuovi( tutto)?", t):
         return {"k": "rimuovi"}
+    if re.search(r"(?i)\b(ti seguo|seguo|seguito|seguita|follow|followato|followata)\b", raw):
+        resto_s = re.sub(r"(?i)\b(ti seguo|seguo|seguito|seguita|ho messo segui|follow|followato|followata|già|gia|anche)\b", " ", raw).strip(" ,.!")
+        if not re.search(r"\w", resto_s):
+            return {"k": "segue"}
+        dentro = analizza(resto_s, comuni)
+        if dentro:
+            dentro["segue"] = True
+            return dentro
+        return {"k": "segue"}
     solo = re.sub(r"[\s!.]+", "", testo.lower())
     if solo and re.fullmatch(r"(🐶|🐕|🐩|🦮|cani|cane|teamcani|forzacani)+", solo):
         return {"k": "voto", "t": "cane"}
@@ -222,6 +231,8 @@ def analizza(testo, comuni):
     nome, descr = "", []
     for p in resto:
         ws = [w for w in p.split() if norm(w)]
+        if not nome and len(ws) == 1 and len(resto) > 1 and ws[0][:1].isupper() and norm(ws[0]) not in RIEMPITIVE:
+            nome = nome_proprio(ws[0]); continue  # "Como, Rex, husky": la parola sola col maiuscolo è il nome, anche se somiglia a una razza
         while ws and norm(ws[0]) in RIEMPITIVE:
             ws = ws[1:]
         if not nome and ws and not inizia_descrizione(ws, 0):
@@ -279,6 +290,8 @@ FRASI = {
     "manca_razza": ["Che razza è {n}? Scrivi «{c}, {n}, golden» oppure «{c}, {n}, gatto rosso» 🐶🐱"],
     "manca_formato": ["Scrivi per esempio «Sogno: Padova, Bruno, bassotto» oppure «Stella: Treviso, Max» ✨"],
     "multi": ["Si accendono {quanti} luci a {c}: {nomi}! ✨ Benvenuti sulla mappa 🐾", "{c} si illumina: {nomi} sono sulla mappa! 🔥"],
+    "segue": ["Grazie per il follow! +5 punti per te 🎉", "Benvenuto tra noi! +5 punti per il follow 🐾"],
+    "segue_senza_luce": ["Grazie per il follow! I tuoi +5 punti arrivano appena accendi la tua luce: scrivi città, nome e razza ✨"],
     "voto": ["Voto per i {squadra} registrato! 🔥 {squadra} {n}, {rivale} {altri}. Accendi anche la tua luce: città, nome e razza ✨",
              "+1 ai {squadra}! Ora sono {n} contro {altri}. Scrivi città, nome e razza e metti il tuo animale sulla mappa 🐾"],
     "altri": ["Arrivano presto anche furetti, conigli, uccelli e tutti gli altri! 🐾 Intanto puoi fare il tifo: scrivi «Tifo cani: la tua città» o «Tifo gatti: la tua città»"],
@@ -470,6 +483,20 @@ class Gioco:
                 self.stato["premiati"].append(coppia); premiati.append(chi); self.cambiato = True
         return premiati
 
+    def segue(self, utente):
+        """+5 una volta sola a chi scrive SEGUO (l'API non dice chi ci segue: vale sulla fiducia). Restituisce la frase da usare."""
+        st = self.stato.setdefault("seguono", {})
+        if st.get(utente.lower()) == "premiato":
+            return None
+        suoi = [a for a in self.animali if a["u"].lower() == utente.lower() and a["k"] in ("animale", "sogno", "tifo")]
+        if suoi:
+            max(suoi, key=lambda a: a["pt"])["pt"] += PUNTI["segue"]; st[utente.lower()] = "premiato"; self.cambiato = True
+            return "segue"
+        if st.get(utente.lower()) == "in_attesa":
+            return None  # gliel'abbiamo già detto
+        st[utente.lower()] = "in_attesa"; self.cambiato = True
+        return "segue_senza_luce"
+
     def bonus_giornaliero(self, utente, media_id):
         """+5 una volta al giorno a chi commenta un reel nuovo e ha già una luce."""
         oggi = datetime.now(timezone.utc).date().isoformat()
@@ -546,6 +573,9 @@ def gira(commenti, rispondi, mio_username=None, cancella=None):
         if az is None and "?" in testo_c and re.search(r"furett|conigli|criceti|criceto|pappagall|uccell|cavall|tartarug|pesc|porcellin|asin|capr|galli", norm(testo_c)):
             az = {"k": "altri"}
         prima = len(gioco.animali)
+        frase_segue = None
+        if az and az["k"] == "segue":
+            frase_segue = gioco.segue(utente); az = None
         if az and az["k"] == "altri":
             chiave, par, obbligatoria = "altri", {}, True
         elif az:
@@ -556,6 +586,10 @@ def gira(commenti, rispondi, mio_username=None, cancella=None):
             gioco.bonus_giornaliero(utente, media_id)
         else:
             gioco.stato["bonus"][utente.lower()] = datetime.now(timezone.utc).date().isoformat()
+        if az and az.get("segue"):
+            frase_segue = gioco.segue(utente)
+        elif gioco.stato.get("seguono", {}).get(utente.lower()) == "in_attesa" and len(gioco.animali) > prima:
+            frase_segue = gioco.segue(utente)  # i +5 promessi arrivano ora che la luce è accesa
         # inviti: chi tagga amici prende +3 per ognuno che poi commenta; a chi tagga si risponde sempre
         taggati = gioco.tag(utente, c.get("text", ""))
         premiati = gioco.premia_inviti(utente)
@@ -565,6 +599,8 @@ def gira(commenti, rispondi, mio_username=None, cancella=None):
             extra.append(frase("tag" if ha_luce else "tag_senza_luce", amici=", ".join("@" + a for a in taggati[:5])))
         if premiati:
             extra.append(frase("premio", chi=", ".join("@" + a for a in premiati[:3])))
+        if frase_segue:
+            extra.append(frase(frase_segue))
         if not chiave and extra:
             chiave, par, obbligatoria = "base", {}, True
         if not chiave or gioco.risposte_ultima_ora() >= MAX_RISPOSTE_ORA:
