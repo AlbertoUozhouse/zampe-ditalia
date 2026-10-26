@@ -1,10 +1,13 @@
 {
-  "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana.",
+  "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana (massimo 50 pubblicazioni al giorno per l'API).",
   "reel_automatici": true,
   "orari": {
     "09:00": "duello",
+    "11:30": "voto",
     "13:00": "vetrina",
+    "16:00": "voto",
     "18:00": "fondatore",
-    "21:00": "puntata"
+    "21:00": "puntata",
+    "22:30": "voto"
   }
 }
