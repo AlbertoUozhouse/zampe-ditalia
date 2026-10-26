@@ -1,0 +1,84 @@
+# Un reel automatico: copione dai dati veri, voce di Chris, video HyperFrames, controlli, pubblicazione.
+# Lo avvia la guardia (veglia.yml) agli orari di motore/config.json; si può lanciare anche a mano.
+name: reel
+
+on:
+  workflow_dispatch:
+    inputs:
+      formato:
+        description: "duello, vetrina, fondatore, puntata oppure auto"
+        required: true
+        default: auto
+      pubblica:
+        description: "Pubblica su Instagram (false = solo prova)"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: reel
+  cancel-in-progress: false
+
+jobs:
+  reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Strumenti
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          pip install -q numpy
+      - name: Copione
+        run: python3 motore/copione.py "${{ inputs.formato }}" /tmp/copione.json
+      - name: Video
+        run: python3 reel/costruisci.py /tmp/copione.json /tmp/reel
+      - name: Carica sul sito
+        id: carica
+        run: |
+          ID=$(python3 -c "import json;print(json.load(open('/tmp/copione.json'))['id'])")
+          mkdir -p docs/media/auto docs/contenuti/auto
+          cp /tmp/reel/reel.mp4 "docs/media/auto/$ID.mp4"
+          cp /tmp/reel/didascalia.txt "docs/contenuti/auto/$ID.txt"
+          # sul sito restano solo i reel degli ultimi 3 giorni
+          find docs/media/auto -name '*.mp4' -mtime +3 -delete
+          git config user.name "zampe-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/media/auto docs/contenuti/auto motore/reel_fatti.json
+          git commit -q -m "Reel automatico $ID"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
+          echo "id=$ID" >> "$GITHUB_OUTPUT"
+          for i in $(seq 1 40); do
+            [ "$(curl -s -o /dev/null -w '%{http_code}' "https://zampeditalia.it/media/auto/$ID.mp4")" = "200" ] && exit 0
+            sleep 15
+          done
+          echo "il video non è comparso sul sito"; exit 1
+      - name: Pubblica su Instagram
+        if: inputs.pubblica
+        run: python3 -I motore/pubblica.py --tipo REELS --media "media/auto/${{ steps.carica.outputs.id }}.mp4" --didascalia "contenuti/auto/${{ steps.carica.outputs.id }}.txt"
+      - name: Salva il registro
+        if: inputs.pubblica
+        run: |
+          git add motore/pubblicati.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Registro pubblicazioni"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
+      - name: Avvisa Alberto se qualcosa va storto
+        if: failure()
+        run: |
+          gh issue create --title "🔴 Reel automatico non pubblicato (${{ inputs.formato }})" \
+            --body "Cosa è successo: il reel automatico si è fermato prima della pubblicazione.
+          Cosa fare: niente, per ora. L'agente lo sistema alla prossima sessione; se si ripete, aprimi questa pagina.
+          Tempo: 0 minuti.
+          Dettagli: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
