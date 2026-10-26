@@ -9,7 +9,7 @@ Uso:
 
 Solo libreria standard, così gira su GitHub Actions senza installare niente.
 """
-import json, os, random, re, sys, time, unicodedata, urllib.parse, urllib.request
+import json, os, random, re, sys, time, unicodedata, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timedelta, timezone
 from math import cos, radians, sqrt
 from pathlib import Path
@@ -372,6 +372,12 @@ def main():
             print("media:", m)
             for c in ig.pagine(f"{m['id']}/comments", fields="id,text,timestamp,username,from", limit=50):
                 print("   commento:", c)
+            for prova in ({}, {"fields": "comments{id,text,username}"}):
+                path = f"{m['id']}/comments" if not prova else m["id"]
+                try:
+                    print("   grezzo", path, prova, "→", ig._req("GET", path, **prova))
+                except urllib.error.HTTPError as e:
+                    print("   grezzo", path, prova, "→ errore", e.code, e.read()[:300])
         return
     def tutti():
         for m in ig.reel_recenti():
