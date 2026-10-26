@@ -31,6 +31,17 @@ def chiama(method, path, token, **params):
         # il messaggio d'errore di Instagram non contiene il token: si può stampare
         sys.exit(f"Instagram ha risposto {e.code}: {json.loads(e.read()).get('error', {}).get('message')}")
 
+def pronto(cont, token, minuti=10):
+    """Aspetta che Instagram finisca di elaborare un contenitore; esce con errore se lo rifiuta."""
+    for _ in range(minuti * 6):
+        stato = chiama("GET", cont, token, fields="status_code").get("status_code")
+        if stato in (None, "FINISHED"):
+            return
+        if stato in ("ERROR", "EXPIRED"):
+            sys.exit(f"Instagram non ha accettato il media: {stato}")
+        time.sleep(10)
+    sys.exit("Instagram non ha finito di elaborare il media in tempo")
+
 def main():
     a = argparse.ArgumentParser()
     a.add_argument("--tipo", choices=["IMAGE", "REELS", "STORIES", "CAROSELLO"], required=True)
@@ -46,8 +57,11 @@ def main():
     if o.tipo == "CAROSELLO":
         # ogni slide è un contenitore a sé, poi il carosello le raccoglie (massimo 10)
         figli = [chiama("POST", "me/media", token, image_url=SITO + m.strip().lstrip("/"), is_carousel_item="true")["id"] for m in o.media.split(",")[:10]]
+        for f in figli: pronto(f, token)
         print(f"slide pronte: {len(figli)}")
         cont = chiama("POST", "me/media", token, media_type="CAROUSEL", children=",".join(figli), caption=caption)["id"]
+        pronto(cont, token)
+        time.sleep(5)
         pub = chiama("POST", "me/media_publish", token, creation_id=cont)["id"]
         info = chiama("GET", pub, token, fields="permalink,timestamp")
         print(f"pubblicato: {info.get('permalink')}")
