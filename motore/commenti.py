@@ -380,9 +380,9 @@ def main():
                     print("   grezzo", path, prova, "→ errore", e.code, e.read()[:300])
         return
     def tutti():
-        for m in ig.reel_recenti():
-            for c in ig.commenti(m["id"]):
-                yield m["id"], c
+        # Instagram li restituisce dal più recente: in ordine di arrivo il Fondatore è davvero il primo
+        lista = [(m["id"], c) for m in ig.reel_recenti() for c in ig.commenti(m["id"])]
+        return sorted(lista, key=lambda x: x[1].get("timestamp", ""))
     gira(tutti(), ig.rispondi, me.get("username"))
 
 if __name__ == "__main__":
