@@ -1,0 +1,35 @@
+# Ogni 10 minuti legge i commenti dei reel, aggiorna la mappa e risponde.
+name: commenti
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: commenti
+  cancel-in-progress: false
+
+jobs:
+  commenti:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Leggi i commenti e aggiorna la mappa
+        if: env.IG_TOKEN != ''
+        run: python3 -I motore/commenti.py
+      - name: Salva la mappa
+        if: env.IG_TOKEN != ''
+        run: |
+          git config user.name "zampe-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/animali.json motore/stato.json
+          if git diff --cached --quiet; then echo "nessuna novità"; exit 0; fi
+          git commit -q -m "Mappa aggiornata dai commenti"
+          git pull -q --rebase && git push -q
