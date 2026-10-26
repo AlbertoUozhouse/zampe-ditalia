@@ -1,0 +1,45 @@
+# Pubblicazione manuale (o chiamata da altri workflow) di un post, reel o storia già presente nel sito.
+name: pubblica
+
+on:
+  workflow_dispatch:
+    inputs:
+      tipo:
+        description: "IMAGE, REELS o STORIES"
+        required: true
+        default: IMAGE
+      media:
+        description: "percorso dentro docs/, per esempio media/come-si-gioca.jpg"
+        required: true
+      didascalia:
+        description: "percorso del testo dentro docs/ (vuoto per le storie)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pubblica
+  cancel-in-progress: false
+
+jobs:
+  pubblica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pubblica su Instagram
+        run: |
+          ARGS=(--tipo "${{ inputs.tipo }}" --media "${{ inputs.media }}")
+          if [ -n "${{ inputs.didascalia }}" ]; then ARGS+=(--didascalia "${{ inputs.didascalia }}"); fi
+          python3 -I motore/pubblica.py "${ARGS[@]}"
+      - name: Salva il registro
+        run: |
+          git config user.name "zampe-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add motore/pubblicati.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Registro pubblicazioni"
+          git pull -q --rebase && git push -q
