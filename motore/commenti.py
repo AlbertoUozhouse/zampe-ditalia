@@ -372,8 +372,14 @@ def main():
     me = ig.io()
     if "--diagnosi" in sys.argv:  # cosa vede il motore, senza toccare la mappa
         print("account:", me.get("username"))
-        for m in ig.pagine("me/media", fields="id,timestamp,media_type,media_product_type,comments_count", limit=10):
+        print("profilo:", ig._req("GET", "me", fields="username,followers_count,media_count"))
+        for m in ig.pagine("me/media", fields="id,timestamp,media_type,media_product_type,comments_count,like_count", limit=10):
             print("media:", m)
+            try:
+                st = ig._req("GET", f"{m['id']}/insights", metric="views,reach,likes,comments,shares,saved")
+                print("   statistiche:", {x["name"]: x["values"][0]["value"] for x in st.get("data", [])})
+            except urllib.error.HTTPError as e:
+                print("   statistiche non disponibili:", e.code, e.read()[:200])
             for c in ig.pagine(f"{m['id']}/comments", fields="id,text,timestamp,username,from", limit=50):
                 print("   commento:", c)
             for prova in ({}, {"fields": "comments{id,text,username}"}):
