@@ -28,14 +28,14 @@ jobs:
           git config user.name "zampe-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for giro in $(seq 1 34); do
-            git pull -q --rebase || true
+            git pull -q --rebase -X theirs || { git rebase --abort 2>/dev/null; git reset -q --hard origin/main; }
             python3 -I motore/commenti.py || echo "giro $giro: errore del motore, riprovo al prossimo"
             formato=$(python3 -I motore/orari.py || true)
             if [ -n "$formato" ]; then echo "giro $giro: è l'ora del reel $formato"; gh workflow run reel.yml -f formato="$formato" || echo "reel non avviato"; fi
             git add docs/data/animali.json motore/stato.json motore/reel_fatti.json
             if ! git diff --cached --quiet; then
               git commit -q -m "Mappa aggiornata dai commenti"
-              git pull -q --rebase && git push -q || echo "giro $giro: push non riuscito, riprovo al prossimo"
+              git pull -q --rebase -X theirs && git push -q || { git rebase --abort 2>/dev/null; echo "giro $giro: push non riuscito, riprovo al prossimo"; }
             fi
             if [ "$giro" -lt 34 ]; then sleep 600; fi
           done

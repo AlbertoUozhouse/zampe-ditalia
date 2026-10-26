@@ -51,10 +51,21 @@ class Comuni:
             self.per_nome.setdefault(norm(c), []).append({"c": c, "p": p, "r": r, "lat": lat, "lng": lng})
         self.province = {x["p"] for v in self.per_nome.values() for x in v}
 
+    def in_mezzo(self, testo):
+        """Frasi libere: un comune dopo "a", "di", "da", "in" ("vive a Bari"). Restituisce (comune, frase senza il comune)."""
+        w = norm(testo).split()
+        for i, x in enumerate(w):
+            if x in ("a", "di", "da", "in") and i + 1 < len(w):
+                for n in range(min(5, len(w) - i - 1), 0, -1):
+                    c, _ = self.trova(" ".join(w[i + 1:i + 1 + n]))
+                    if c:
+                        return c, " ".join(w[:i] + w[i + 1 + n:])
+        return None, testo
+
     def in_testa(self, testo):
         """Per i commenti senza virgole: cerca il comune più lungo all'inizio o alla fine ("Treviso Luna golden")."""
         w = norm(testo).split()
-        for n in range(min(5, len(w) - 1), 0, -1):
+        for n in range(min(6, len(w) - 1), 0, -1):
             for parte, resto in ((w[:n], w[n:]), (w[-n:], w[:-n])):
                 c, _ = self.trova(" ".join(parte))
                 if c:
@@ -103,6 +114,22 @@ def razza(testo, tipo):
     r = cerca_razza(testo, tipo)
     return r["key"] if r else None
 
+# parole che non sono mai il nome dell'animale
+RIEMPITIVE = {"allora", "ciao", "ecco", "io", "sono", "ho", "il", "lo", "la", "mio", "mia", "miei", "mie", "si", "chiama", "vive", "abita", "a", "in", "di", "da",
+              "ed", "e", "è", "un", "una", "uno", "che", "anche", "noi", "abbiamo", "nostro", "nostra", "zampeditalia", "qui", "sta", "ce", "c"}
+
+def descrittiva(t):
+    n = norm(t)
+    return bool(re.search(r"\b(gatt[oaie]|gattin[oa]|cane|cana|cani|cagnolin[oa]|cucciol[oa]|razza)\b", n) or cerca_razza(n))
+
+def inizia_descrizione(ws, i):
+    """La parola i è l'inizio della razza o del tipo d'animale? ("pastore tedesco", "gatto rosso", "golden")"""
+    w = norm(ws[i])
+    if re.fullmatch(r"gatt[oaie]|gattin[oa]|cane|cana|cani|cagnolin[oa]|cucciol[oa]|razza", w):
+        return True
+    coda = " " + norm(" ".join(ws[i:i + 4])) + " "
+    return any(coda.startswith(" " + r["sin"] + " ") for r in TABELLA if len(r["sin"]) > 2)
+
 # ---------- riconoscimento dei commenti ----------
 def analizza(testo, comuni):
     """Trasforma un commento in un'azione del gioco. Restituisce un dict con 'k' (tipo) oppure con 'manca'."""
@@ -110,6 +137,11 @@ def analizza(testo, comuni):
     t = norm(raw)
     if re.fullmatch(r"rimuovi( tutto)?", t):
         return {"k": "rimuovi"}
+    solo = re.sub(r"[\s!.]+", "", testo.lower())
+    if solo and re.fullmatch(r"(🐶|🐕|🐩|🦮|cani|cane|teamcani|forzacani)+", solo):
+        return {"k": "voto", "t": "cane"}
+    if solo and re.fullmatch(r"(🐱|🐈|🐈‍⬛|😺|😸|gatti|gatto|teamgatti|forzagatti)+", solo):
+        return {"k": "voto", "t": "gatto"}
     m = re.match(r"^tifo\s*(cani|cane|gatti|gatto)\s*[:,\-]?\s*(.+)$", t)
     if m:
         c, err = comuni.trova(m.group(2))
@@ -121,31 +153,57 @@ def analizza(testo, comuni):
     if m:
         kind, raw = m.group(1).lower(), m.group(2)
     parti = [p.strip() for p in re.split(r"[,;\n]| - | – ", raw) if p.strip()]
-    if len(parti) == 1 and len(parti[0].split()) <= 6:
-        c, resto = comuni.in_testa(parti[0])
-        if c and resto:
-            w = resto.split()
-            parti = [c["c"] + " " + c["p"], w[0]] + ([" ".join(w[1:])] if len(w) > 1 else [])
-    if len(parti) < 2:
-        return None if kind == "animale" else {"k": kind, "manca": "formato"}
+    if not parti:
+        return None
+    # 1) il comune: una parte intera, oppure all'inizio o alla fine di una parte ("Tarquinia gatto tigrato", "Leo Treviso"),
+    #    oppure dopo "a/di/da/in" in una frase libera ("il mio cane Bobby vive a Bari")
     luogo, err, resto = None, None, []
     for p in parti:
         if not luogo:
             c, e = comuni.trova(p)
             if c:
-                luogo = c
-                continue
+                luogo = c; continue
             err = err or e
+            if len(p.split()) <= 12:
+                c, rimanente = comuni.in_testa(p)
+                if c:
+                    luogo = c
+                    # "Genova quinto, Maila": una parola in più accanto al comune è un quartiere, se il nome è altrove
+                    if rimanente and not (len(parti) > 1 and len(rimanente.split()) <= 2 and not descrittiva(rimanente)):
+                        resto.append(rimanente)
+                    continue
         resto.append(p)
     if not luogo:
-        # sembra un tentativo di gioco solo se c'è anche una razza o una parola chiave
-        if kind != "animale" or any(cerca_razza(p) or GATTO_PAROLE.search(norm(p)) for p in parti):
-            return {"k": kind, "manca": err or "comune"}
-        return None
-    if not resto:
+        c, frase_senza = comuni.in_mezzo(raw)
+        if c:
+            luogo, resto = c, [frase_senza]
+    # 2) il nome: le prime parole che non sono razza, tipo d'animale o parole di riempimento; il resto è la descrizione
+    nome, descr = "", []
+    for p in resto:
+        ws = [w for w in p.split() if norm(w)]
+        while ws and norm(ws[0]) in RIEMPITIVE:
+            ws = ws[1:]
+        if not nome and ws and not inizia_descrizione(ws, 0):
+            presi = []
+            for i, w in enumerate(ws):
+                if inizia_descrizione(ws, i) or norm(w) in RIEMPITIVE: break
+                presi.append(w)
+            if len(presi) <= 3:  # un nome non è una frase intera
+                nome = nome_proprio(" ".join(presi)); descr.append(" ".join(ws[len(presi):])); continue
+        descr.append(" ".join(ws))
+    descr = " ".join(d for d in descr if d).strip()
+    if not nome:  # frasi libere: "si chiama Salem", oppure la prima parola con la maiuscola che non sia il comune
+        m2 = re.search(r"\bchiama\s+([A-Za-zÀ-ÿ']+)", raw, re.I)
+        cand = [m2.group(1)] if m2 else [w for w in re.findall(r"\b[A-ZÀ-Ý][a-zà-ÿ']+", raw)
+                                          if norm(w) not in RIEMPITIVE and not descrittiva(w) and not (luogo and norm(w) in norm(luogo["c"]))]
+        if cand:
+            nome = nome_proprio(cand[0])
+    sembra_gioco = kind != "animale" or bool(luogo) or bool(GATTO_PAROLE.search(norm(raw)) or cerca_razza(raw)
+                                              or re.search(r"\b(cane|cagnolin|cucciol)", norm(raw)))
+    if not luogo:
+        return {"k": kind, "manca": err or "comune", "n": nome or None} if sembra_gioco and (nome or descr) else None
+    if not nome:
         return {"k": kind, "manca": "nome", "luogo": luogo}
-    nome = nome_proprio(resto[0])
-    descr = " ".join(resto[1:])
     tipo = tipo_animale(descr)
     rz = razza(descr, tipo)
     if kind == "stella":
@@ -171,11 +229,15 @@ FRASI = {
     "tifo": ["Tifo registrato: +1 per i {squadra} di {c}! 📣", "{c} ringrazia: un tifoso in più per i {squadra}! 🔥"],
     "sogno": ["Il sogno di {n} è in cielo sopra {c} ☁️", "Una nuvoletta in più su {c}: {n} ti aspetta nei sogni ☁️"],
     "stella": ["Una stella per {n} brilla sopra {c}. ✦", "{n} ora è una stella nel cielo di {c}. Sempre con te. ✦"],
+    "manca_comune_nome": ["In quale comune vive {n}? Scrivilo qui sotto e si accende la sua luce 🗺️", "Che bello {n}! Dove vive? Scrivi il comune e accendo la sua luce ✨"],
     "manca_comune": ["Quasi! In quale comune vive? Scrivi per esempio «Treviso, {n}, golden» 🐾", "Non ho trovato il comune 🙈 Riscrivilo con città, nome e razza!"],
     "manca_provincia": ["Ci sono più comuni con quel nome: aggiungi la provincia, per esempio «Calliano TN» 🗺️"],
     "manca_nome": ["Come si chiama? Riscrivi «{c}, nome, razza» e si accende la sua luce ✨"],
     "manca_razza": ["Che razza è {n}? Scrivi «{c}, {n}, golden» oppure «{c}, {n}, gatto rosso» 🐶🐱"],
     "manca_formato": ["Scrivi per esempio «Sogno: Padova, Bruno, bassotto» oppure «Stella: Treviso, Max» ✨"],
+    "voto": ["Voto per i {squadra} registrato! 🔥 {squadra} {n}, {rivale} {altri}. Accendi anche la tua luce: città, nome e razza ✨",
+             "+1 ai {squadra}! Ora sono {n} contro {altri}. Scrivi città, nome e razza e metti il tuo animale sulla mappa 🐾"],
+    "altri": ["Arrivano presto anche furetti, conigli, uccelli e tutti gli altri! 🐾 Intanto puoi fare il tifo: scrivi «Tifo cani: la tua città» o «Tifo gatti: la tua città»"],
     "rimosso": ["Fatto, abbiamo tolto le tue luci dalla mappa. Ti aspettiamo quando vuoi 🐾"],
     "tag": ["Hai taggato {amici}: per ognuno che commenta, +3 punti per te! 👥", "Inviti partiti per {amici}: per ognuno che commenta prendi +3 punti 🔥"],
     "tag_senza_luce": ["Bello l'invito a {amici}! Accendi prima la tua luce con città, nome e razza: poi ogni amico che commenta ti vale +3 punti 👥"],
@@ -266,6 +328,17 @@ class Gioco:
     def applica(self, az, utente, ts):
         """Aggiorna la mappa. Restituisce (chiave_frase, parametri, risposta_obbligatoria)."""
         k = az["k"]
+        if k == "voto":  # un voto al giorno per persona nella sfida nazionale Cani contro Gatti
+            oggi = datetime.now(timezone.utc).date().isoformat()
+            fatti = self.stato.setdefault("voti_oggi", {})
+            if fatti.get(utente.lower()) == oggi:
+                return None, {}, False
+            fatti[utente.lower()] = oggi
+            v = self.dati.setdefault("voti", {"cani": 0, "gatti": 0})
+            v["gatti" if az["t"] == "gatto" else "cani"] += 1
+            self.cambiato = True
+            sq = "gatti" if az["t"] == "gatto" else "cani"
+            return "voto", {"squadra": sq, "n": v[sq], "altri": v["cani" if sq == "gatti" else "gatti"], "rivale": "cani" if sq == "gatti" else "gatti"}, False
         if k == "rimuovi":
             prima = len(self.animali)
             self.dati["animali"] = [a for a in self.animali if a["u"].lower() != utente.lower()]
@@ -275,7 +348,8 @@ class Gioco:
             luogo = az.get("luogo") or {}
             if az.get("n") and any(a["u"].lower() == utente.lower() and norm(a["n"]) == norm(az["n"]) for a in self.animali):
                 return None, {}, False  # animale già sulla mappa, riscritto senza razza: niente da chiedere
-            return "manca_" + az["manca"], {"n": az.get("n", "il tuo animale"), "c": luogo.get("c", "Treviso")}, True
+            chiave = "manca_comune_nome" if az["manca"] == "comune" and az.get("n") else "manca_" + az["manca"]
+            return chiave, {"n": az.get("n") or "il tuo animale", "c": luogo.get("c", "Treviso")}, True
         L = az["luogo"]
         base = {"u": utente, "c": L["c"], "p": L["p"], "r": L["r"], "lat": L["lat"], "lng": L["lng"], "ts": ts}
         if k == "tifo":
@@ -319,7 +393,7 @@ class Gioco:
         """Segna gli amici taggati in un commento. Restituisce i nuovi invitati."""
         nuovi = []
         for amico in {m.rstrip(".").lower() for m in re.findall(r"@([\w.]+)", testo)}:
-            if not amico or amico == utente.lower():
+            if not amico or amico == utente.lower() or amico == "zampeditalia":
                 continue
             if f"{utente.lower()}>{amico}" in self.stato.get("premiati", []):
                 continue  # questo amico ha già fatto prendere i punti a chi lo invita
@@ -366,9 +440,25 @@ def gira(commenti, rispondi, mio_username=None):
         if not utente or (mio_username and utente.lower() == mio_username.lower()):
             continue
         nuovi += 1
-        az = analizza(c.get("text", ""), comuni)
+        testo_c = c.get("text", "")
+        az = analizza(testo_c, comuni)
+        # commenti a pezzi: "Leo gatto" e poi "Tarquinia" → si uniscono con quello di prima della stessa persona (entro 24 ore)
+        pezzi = gioco.stato.setdefault("pezzi", {})
+        prec = pezzi.get(utente.lower())
+        if (az is None or "manca" in az) and prec and time.time() - prec["t"] < 86400:
+            unito = analizza(prec["testo"] + ", " + testo_c, comuni)
+            if unito and "manca" not in unito:
+                az = unito; pezzi.pop(utente.lower(), None)
+        if az and "manca" in az and az.get("k") == "animale":
+            pezzi[utente.lower()] = {"testo": testo_c, "t": time.time()}
+        elif az and "manca" not in az:
+            pezzi.pop(utente.lower(), None)
+        if az is None and "?" in testo_c and re.search(r"furett|conigli|criceti|criceto|pappagall|uccell|cavall|tartarug|pesc|porcellin|asin|capr|galli", norm(testo_c)):
+            az = {"k": "altri"}
         prima = len(gioco.animali)
-        if az:
+        if az and az["k"] == "altri":
+            chiave, par, obbligatoria = "altri", {}, True
+        elif az:
             chiave, par, obbligatoria = gioco.applica(az, utente, c.get("timestamp") or datetime.now(timezone.utc).isoformat())
         else:
             chiave, obbligatoria = None, False
@@ -389,7 +479,8 @@ def gira(commenti, rispondi, mio_username=None):
             chiave, par, obbligatoria = "base", {}, True
         if not chiave or gioco.risposte_ultima_ora() >= MAX_RISPOSTE_ORA:
             continue
-        if obbligatoria or extra or random.random() < QUOTA_RISPOSTE:
+        quota = 1.0 if len(gioco.animali) < 500 else QUOTA_RISPOSTE  # finché siamo piccoli si risponde a tutti
+        if obbligatoria or extra or random.random() < quota:
             try:
                 testo = frase(chiave, **par) if chiave != "base" or not extra else ""
                 rispondi(c["id"], " ".join(t for t in [testo] + extra if t))
