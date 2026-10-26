@@ -95,7 +95,8 @@ def main():
         png = out / f"slide-{n}.png"
         subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=1", "--window-size=1080,1350",
                         "--virtual-time-budget=6000", f"--user-data-dir={out / '.chrome'}", f"--screenshot={png}", h.as_uri()],
-                       capture_output=True, check=True)
+                       capture_output=True)  # Chrome a volte esce con errore in chiusura dopo aver già salvato l'immagine
+        if not png.exists(): raise SystemExit(f"slide {n} non generata")
         jpg = out / f"slide-{n}.jpg"
         subprocess.run(["sips", "-s", "format", "jpeg", "-s", "formatOptions", "90", str(png), "--out", str(jpg)], capture_output=True, check=True)
         png.unlink(); fatti.append(jpg.name)
