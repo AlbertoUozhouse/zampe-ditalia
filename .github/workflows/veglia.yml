@@ -35,7 +35,7 @@ jobs:
               git commit -q -m "Mappa aggiornata dai commenti"
               git pull -q --rebase && git push -q || echo "giro $giro: push non riuscito, riprovo al prossimo"
             fi
-            [ "$giro" -lt 34 ] && sleep 600
+            if [ "$giro" -lt 34 ]; then sleep 600; fi
           done
       - name: Riparti
         if: always()
