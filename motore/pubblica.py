@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITO = "https://albertouozhouse.github.io/zampe-ditalia/"
+SITO = "https://zampeditalia.it/"
 API = "https://graph.instagram.com/v23.0"
 REGISTRO = ROOT / "motore/pubblicati.json"
 
