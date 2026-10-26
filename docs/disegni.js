@@ -32,6 +32,16 @@
     cavalier:            { n: "Cavalier King",     fur: "#F4EFE6", ear: "long", earC: "#B5582A", muz: "#F4EFE6", patch: "#B5582A", blaze: "#F4EFE6" },
     shih_tzu:            { n: "Shih tzu",          fur: "#E9DCC4", ear: "long", earC: "#8A6A4A", muz: "#F4ECDD", patch: "#8A6A4A", curly: true, flat: true },
     amstaff:             { n: "Amstaff",           fur: "#6E7480", ear: "semi", earC: "#5A606B", muz: "#7E8490", blaze: "#EDEBE6" },
+    samoiedo:            { n: "Samoiedo",          fur: "#F6F3EC", ear: "up",   earC: "#E9E3D6", muz: "#FFFFFF", curly: true },
+    volpino:             { n: "Volpino",           fur: "#E8913A", ear: "up",   earC: "#C9742A", muz: "#F6D2A6", curly: true },
+    boxer:               { n: "Boxer",             fur: "#C27A3E", ear: "semi", earC: "#9A5B2A", muz: "#D69A62", mask: "#2A1D14", flat: true, blaze: "#F4EFE6" },
+    carlino:             { n: "Carlino",           fur: "#D9BE94", ear: "semi", earC: "#2A2220", muz: "#E3CDA8", mask: "#2A2220", flat: true },
+    rottweiler:          { n: "Rottweiler",        fur: "#1E1A18", ear: "flop", earC: "#141110", muz: "#9A5B2A" },
+    cocker:              { n: "Cocker",            fur: "#D9A24E", ear: "long", earC: "#B98232", muz: "#E8BE7A", curly: true },
+    australian:          { n: "Australian shepherd", fur: "#8E949C", ear: "semi", earC: "#3A3634", muz: "#F4EFE6", blaze: "#F4EFE6", patch: "#3A3634", eye: "#7FD3FF" },
+    corgi:               { n: "Corgi",             fur: "#E39A4C", ear: "big",  earC: "#C97E36", muz: "#F4EFE6", blaze: "#F4EFE6" },
+    shiba:               { n: "Shiba / Akita",     fur: "#E0904A", ear: "up",   earC: "#C47534", muz: "#F6E6CF", face: "#F6E6CF" },
+    maltese:             { n: "Maltese",           fur: "#FBF8F2", ear: "long", earC: "#EFE9DD", muz: "#FFFFFF", curly: true },
   };
   // motivo: tabby (striato), points (estremità scure), bicolor, solid
   const GATTI = {
@@ -56,7 +66,10 @@
     [/husky|siberian/, "husky"], [/beagle/, "beagle"], [/jack|russel/, "jack_russell"],
     [/bassott|dachs|salsicc/, "bassotto"], [/chihuahua|chiuaua|chihuaua/, "chihuahua"],
     [/barbon|poodle|toy/, "barboncino"], [/bulldog|frenchie|bouledogue/, "bulldog_francese"],
-    [/cavalier|king charles/, "cavalier"], [/shih|tzu|maltes|yorkshire|yorkie/, "shih_tzu"],
+    [/cavalier|king charles/, "cavalier"], [/maltes/, "maltese"], [/shih|tzu|yorkshire|yorkie/, "shih_tzu"],
+    [/samoied|samoyed/, "samoiedo"], [/volpin|pomer|spitz/, "volpino"], [/boxer/, "boxer"], [/carlin|pug/, "carlino"],
+    [/rottweil|rotweil/, "rottweiler"], [/cocker|spaniel/, "cocker"], [/australian|aussie|pastore australiano/, "australian"],
+    [/corgi/, "corgi"], [/shiba|akita/, "shiba"],
     [/amstaff|pitbull|pit bull|staffordshire|staffy/, "amstaff"], [/meticc|incrocio|bastardin|mix/, "meticcio"],
     [/siames/, "siamese"], [/persian/, "persiano"], [/maine|coon/, "maine_coon"], [/british|certosin/, "british"],
     [/ragdoll/, "ragdoll"], [/sphynx|sfinge|nudo/, "sphynx"], [/bicolor|bianco e nero|bianconer|tuxedo/, "bicolore"],
