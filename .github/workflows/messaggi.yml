@@ -1,0 +1,26 @@
+# Giro a mano dei messaggi privati (di solito li fa la guardia). Con diagnosi dice solo se l'API risponde.
+name: messaggi
+
+on:
+  workflow_dispatch:
+    inputs:
+      diagnosi:
+        description: "solo diagnosi"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  messaggi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          git config user.name "zampe-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python3 -I motore/messaggi.py ${{ inputs.diagnosi && '--diagnosi' || '' }}
