@@ -86,6 +86,18 @@ def main():
         except SystemExit as e:
             print(f"Trial Reel rifiutato ({e}); pubblico come reel normale")
     tag = [t.strip().lstrip("@") for t in o.tag.split(",") if t.strip()][:20]
+    if tag:
+        # i profili privati o inesistenti fanno rifiutare tutti i tag: si prova ognuno su un'immagine che non verrà mai pubblicata
+        validi = []
+        for t in tag:
+            try:
+                chiama("POST", "me/media", token, image_url=SITO + "media/come-si-gioca.jpg", caption="prova tag",
+                       user_tags=json.dumps([{"username": t, "x": 0.5, "y": 0.5}]))
+                validi.append(t)
+            except SystemExit:
+                pass
+        print(f"tag validi: {len(validi)} su {len(tag)}")
+        tag = validi
     if not cont and tag and o.tipo == "REELS":
         try:
             cont = chiama("POST", "me/media", token, user_tags=json.dumps([{"username": t} for t in tag]), **params)["id"]
