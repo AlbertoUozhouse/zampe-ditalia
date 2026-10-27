@@ -56,12 +56,14 @@ def main():
         try:
             conv = list(conversazioni(ig))
             print(f"API dei messaggi: ok · conversazioni: {len(conv)} · messaggi letti: {sum(len(c.get('messages', {}).get('data', [])) for c in conv)}")
-            for cartella in ("inbox", "general", "other", "pending", "requests", "message_requests", "spam"):
-                try:
-                    n = sum(1 for _ in ig.pagine("me/conversations", platform="instagram", folder=cartella, fields="id", limit=50))
-                    print(f"  cartella {cartella}: {n} conversazioni")
-                except urllib.error.HTTPError as e:
-                    print(f"  cartella {cartella}: errore {e.code} {str(json.loads(e.read() or b'{}').get('error', {}).get('message'))[:100]}")
+            tipi = {}
+            for c in conv:
+                for m in c.get("messages", {}).get("data", []):
+                    chiavi = sorted(k for k in ("story", "attachments") if m.get(k))
+                    sotto = sorted((m.get("story") or {}).keys()) + sorted({a.get("type", "?") for a in (m.get("attachments") or {}).get("data", [])})
+                    k = "+".join(chiavi + sotto) or "solo testo"
+                    tipi[k] = tipi.get(k, 0) + 1
+            print("  tipi di messaggio:", tipi)
         except urllib.error.HTTPError as e:
             err = json.loads(e.read() or b"{}").get("error", {})
             print(f"API dei messaggi: errore {e.code} · {err.get('type')} · codice {err.get('code')} · {str(err.get('message'))[:160]}")
