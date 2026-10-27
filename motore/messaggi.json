@@ -52,6 +52,7 @@
 "b4efffa6c69e19eb",
 "b66e9084bbe6314e",
 "c6c85e1b3d700a47",
+"c886e337b190b889",
 "c9b91f846299f25c",
 "cb96993c0b95eaae",
 "cc68613bef65c438",
@@ -70,5 +71,6 @@
 "grazie_v1": true,
 "storie_nostre": {
 "2026-10-27": 5
-}
+},
+"prenota_attesa": {}
 }
