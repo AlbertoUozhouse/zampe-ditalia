@@ -49,23 +49,7 @@
 "e2975083ab83fd75",
 "e795271742757519"
 ],
-"in_attesa": [
-{
-"igsid": "1399441978841061",
-"url": [
-"https://zampeditalia.it/cartoline/5c870591fd49384d.png",
-"https://zampeditalia.it/cartoline/0116fa41175f708a.png"
-],
-"t": 1793110827.592642
-},
-{
-"storia": "cartoline/8cea369518eb5ec2.png",
-"url": [
-"https://zampeditalia.it/cartoline/8cea369518eb5ec2.png"
-],
-"t": 1793110813.401161
-}
-],
+"in_attesa": [],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
