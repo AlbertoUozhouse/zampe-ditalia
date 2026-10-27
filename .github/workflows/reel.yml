@@ -66,7 +66,9 @@ jobs:
           echo "il video non è comparso sul sito"; exit 1
       - name: Pubblica su Instagram
         if: inputs.pubblica
-        run: python3 -I motore/pubblica.py --tipo REELS --media "media/auto/${{ steps.carica.outputs.id }}.mp4" --didascalia "contenuti/auto/${{ steps.carica.outputs.id }}.txt"
+        run: |
+          TAG=$(python3 -c "import json;print(','.join(json.load(open('/tmp/copione.json')).get('tag', [])))")
+          python3 -I motore/pubblica.py --tipo REELS --media "media/auto/${{ steps.carica.outputs.id }}.mp4" --didascalia "contenuti/auto/${{ steps.carica.outputs.id }}.txt" --tag "$TAG"
       - name: Salva il registro
         if: inputs.pubblica
         run: |

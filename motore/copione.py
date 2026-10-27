@@ -5,8 +5,8 @@ Formati: duello (9:00), vetrina (13:00), fondatore (18:00), puntata (21:00). "au
 Regola: nessun numero inventato. I numeri e i nomi vengono dai dati; Claude (se c'è ANTHROPIC_API_KEY) può solo
 riformulare le frasi, e la riformulazione si scarta se cambia numeri o nomi o allunga troppo il testo.
 """
-import json, os, random, re, sys, urllib.request
-from datetime import datetime, date
+import unicodedata, json, os, random, re, sys, urllib.request
+from datetime import datetime, date, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -172,8 +172,33 @@ def voto(D, rng, st):
     did = f"Cani {cani}, gatti {gatti} 🐶🐱 Commenta con un'emoji e vediamo chi vince!\n\nVuoi accendere la luce del tuo animale sulla mappa d'Italia? Scrivi città, nome e razza (per esempio «Treviso, Luna, golden»)."
     return "CANI vs GATTI", frasi, did
 
-FORMATI = {"voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
-ORARI = [(9, "duello"), (11, "voto"), (13, "vetrina"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
+def benvenuti(D, rng, st):
+    """Le nuove luci di oggi con i loro @: chi è nel reel viene taggato, riceve la notifica e di solito lo ricondivide."""
+    oggi = ORA.date().isoformat()
+    nuovi, visti = [], set()
+    for a in sorted((a for a in D["animali"] if str(a.get("ts", ""))[:10] >= (ORA.date() - timedelta(days=1)).isoformat() and a["u"].lower() not in ESCLUSI),
+                    key=lambda a: (a["u"].lower() not in D.get("seguono", ()), -(a.get("pt") or 0))):
+        if a["u"] not in visti:
+            visti.add(a["u"]); nuovi.append(a)
+    if len(nuovi) < 3:
+        return voto(D, rng, st)
+    nuovi = nuovi[:5]
+    cane, gatto = esempio(rng, D)
+    frasi = [("Nuove luci accese sulla mappa!", {"tipo": "classifica", "titolo": "Benvenuti sulla mappa 🐾",
+                                                "righe": [{"nome": a["n"], "valore": a["c"]} for a in nuovi]})]
+    star = next((a for a in nuovi if a.get("t") in ("cane", "gatto")), None)
+    if star:
+        sc = scena_vera({**D, "animali": [star]}, rng, star["t"])
+        if sc: frasi.append((f"Benvenuto {star['n']}, da {star['c']}!", sc[1]))
+    frasi += [("Domani nel reel ci sei tu: scrivi città, nome e animale.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
+              ("Scrivi qui sotto e accendi la tua luce!", {"tipo": "chiusura", "testo": "👇 Domani nel reel ci sei tu"})]
+    did = ("Nuove luci accese sulla mappa di Zampe d'Italia 🐾 Benvenuti " + ", ".join(f"{a['n']} di {a['c']} (@{a['u']})" for a in nuovi) +
+           "!\n\nVuoi esserci nel prossimo reel? Scrivi qui sotto città, nome e animale: la luce si accende entro 15 minuti col tuo @.")
+    st["tag_extra"] = [a["u"] for a in nuovi]
+    return "NUOVE LUCI", frasi, did
+
+FORMATI = {"benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
 
@@ -233,13 +258,23 @@ def main():
     did = did.strip() + ("\n\n➕ Seguici e scrivi SEGUO: +10 punti, e nei reel mettiamo prima gli animali di chi ci segue"
                          "\n👥 Sfida degli inviti: +3 per ogni amico taggato che commenta. Chi ne porta di più oggi è il Re degli inviti 👑 e va nella puntata delle 21")
     frasi, did = varia(frasi, did, D)
-    mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")})
+    mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")} | set(st.pop("tag_extra", [])))
     if mostrati:
         did = did.strip() + "\n\n🐾 In questo reel: " + " ".join("@" + u for u in mostrati)
-    did = did.strip() + "\n\nVoce generata con IA.\n\n#cani #gatti #italia #canicontrogatti"
+    # gli hashtag delle città nel reel: chi cerca la propria città lo trova
+    citta = []
+    for _, sc in frasi:
+        for c in [sc.get("comune")] + [r.get("valore") for r in sc.get("righe", [])] + [x.get("nome") for x in sc.get("citta", [])] + \
+                 [sc.get(k, {}).get("titolo") for k in ("sinistra", "destra") if isinstance(sc.get(k), dict)]:
+            if c and isinstance(c, str) and not c.startswith("Fondatore") and c not in ("Cani", "Gatti") and not re.search(r"\d", c):
+                h = re.sub(r"[^a-z]", "", unicodedata.normalize("NFD", c.lower()).encode("ascii", "ignore").decode())
+                if 2 < len(h) < 25 and h not in citta: citta.append(h)
+    tag_citta = " ".join("#" + h for h in citta[:5])
+    did = did.strip() + "\n\nVoce generata con IA.\n\n#cani #gatti #italia #canicontrogatti #animalidomestici " + tag_citta
     copione = {"id": ORA.strftime("%Y-%m-%d-%H%M") + "-" + formato, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
-               "banner": "📍 Scrivi città, nome, razza · ➕ Seguici +10 👇", "didascalia": did}
+               "banner": "📍 Scrivi città, nome, razza · ➕ Seguici +10 👇", "didascalia": did,
+               "tag": [u for u in mostrati if u.lower() not in ESCLUSI]}
     Path(uscita).write_text(json.dumps(copione, ensure_ascii=False, indent=1))
     STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
     print(f"copione {copione['id']}: " + " / ".join(t for t, _ in frasi))

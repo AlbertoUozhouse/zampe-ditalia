@@ -199,7 +199,8 @@ def classifica(cid, dur, titolo, righe):
       border-radius: 24px; padding: 18px 26px; font: 900 46px var(--font-body); color: var(--cream); }
     #root li:first-child { border-color: var(--gold); box-shadow: 0 0 40px rgba(255,197,92,.3); }
     #root .p { font: 800 52px "Bricolage Grotesque", sans-serif; color: var(--gold); text-align: center; }
-    #root .v { color: var(--gold); }"""
+    #root .v { color: var(--gold); max-width: 480px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 40px; }
+    #root .w { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }"""
     corpo = f'<div class="box"><h2 id="{cid}-t">{ESC(titolo)}</h2><ol>{li}</ol></div>'
     js = f'    tl.fromTo("#{cid}-t", {{ y: -30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0);\n'
     js += "\n".join(f'    tl.fromTo("#{cid}-r{i}", {{ x: 120, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.3, ease: "power3.out" }}, {0.25 + i * 0.18:.2f});' for i in range(len(righe[:5])))

@@ -285,6 +285,11 @@ FRASI = {
         "La luce di {n} è accesa: {c} sale nella sfida Cani contro Gatti! 🔥",
         "Ecco {n}, {pos}° {animale} di {c}. Tagga un amico e fai salire la città!",
     ],
+    "sfida_fondatore": ["{n} è il primo di {c}: Fondatore! 👑 Ora {c} sfida {rc}, che ha già {rt} luci. Tagga gli amici di {c} e superatela 🔥",
+                        "{c} si accende con {n}, il Fondatore 👑 La vicina {rc} è a {rt}: chi vince? Tagga i tuoi amici di {c}!"],
+    "sfida_vicini": ["{n} è acceso! {c} {mt} luci, {rc} {rt}. Tagga gli amici di {c} e sorpassate! 🔥",
+                     "Luce accesa per {n} ✨ Sfida tra vicini: {c} {mt} contro {rc} {rt}. Chi porti dalla tua città? 👥"],
+    "sfida_testa": ["{n} è acceso! {c} è in testa con {mt} luci, {rc} insegue a {rt}. Tagga gli amici e allungate! 🔥"],
     "vicini": ["{n} è acceso a {c}! I tuoi vicini sono {v1} e {v2} 🐾"],
     "tifo": ["Tifo registrato: +1 per i {squadra} di {c}! 📣", "{c} ringrazia: un tifoso in più per i {squadra}! 🔥"],
     "sogno": ["Il sogno di {n} è in cielo sopra {c} ☁️", "Una nuvoletta in più su {c}: {n} ti aspetta nei sogni ☁️"],
@@ -620,6 +625,20 @@ SPECIE_RE = r"furett|conigli|criceti|criceto|pappagall|uccell|cavall|tartarug|pe
 def solo_tag(testo):
     return bool(re.fullmatch(r"\s*(@[\w.]+[\s,]*)+", testo or ""))
 
+def rivale(gioco, a):
+    """Il comune acceso più vicino (entro ~60 km): la sfida col paese accanto fa taggare gli amici della propria città."""
+    conta = {}
+    for x in gioco.animali:
+        if x["k"] == "animale":
+            k = (x["c"], x["p"]); conta.setdefault(k, [0, x]); conta[k][0] += 1
+    mio = conta.get((a["c"], a["p"]), [0])[0]
+    vicini = [(distanza(x, a), c, n) for (c, p), (n, x) in conta.items() if (c, p) != (a["c"], a["p"]) and distanza(x, a) < 0.6]
+    if not vicini:
+        return None
+    davanti = [v for v in vicini if v[2] >= mio]  # meglio un vicino da superare
+    _, c, n = min(davanti or vicini)
+    return {"rc": c, "rt": n, "mt": mio, "testa": not davanti}
+
 def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
     """La frase giusta per l'ultimo commento di questa persona."""
     ids = {c["id"] for c in nuovi_c}
@@ -632,6 +651,9 @@ def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
         if a["k"] in ("stella", "sogno"):
             return a["k"], {"n": a["n"], "c": a["c"]}
         animale = a["t"] if a["t"] in ("cane", "gatto") else a.get("specie") or "animale"
+        r = rivale(gioco, a)
+        if r and random.random() < 0.6:
+            return ("sfida_fondatore" if a.get("ruolo") else "sfida_testa" if r["testa"] else "sfida_vicini"), {"n": a["n"], "c": a["c"], "animale": animale, **r}
         if a.get("ruolo"):
             return "fondatore", {"n": a["n"], "c": a["c"], "animale": animale}
         stessa = [x for x in gioco.animali if x["k"] == "animale" and x["c"] == a["c"] and x["p"] == a["p"] and x["t"] == a["t"]]
@@ -714,7 +736,7 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
             if v["id"] in ids:
                 k2, p2, _ = gioco.applica({"k": "voto", "t": "gatto" if v["squadra"] == "gatti" else "cane"}, u, None)
                 if k2 and not chiave: chiave, par = k2, p2
-        if chiave in ("fondatore", "animale", "vicini", "multi"):
+        if chiave in ("fondatore", "animale", "vicini", "multi", "sfida_fondatore", "sfida_vicini", "sfida_testa"):
             gioco.stato["bonus"][u.lower()] = oggi  # il commento che accende una luce ha già i suoi punti
         else:
             gioco.bonus_giornaliero(u)
@@ -732,9 +754,9 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
             extra.append(frase("premio", chi=", ".join("@" + a for a in premiati[:3])))
         if frase_segue:
             extra.append(frase(frase_segue))
-        elif chiave in ("fondatore", "animale", "vicini", "multi", "aggiornato", "voto") and not seguono.get(u.lower()):
+        elif chiave in ("fondatore", "animale", "vicini", "multi", "aggiornato", "voto", "sfida_fondatore", "sfida_vicini", "sfida_testa") and not seguono.get(u.lower()):
             extra.append(frase("invito_segui"))  # commentano ma non ci seguono: lo chiediamo a ogni luce accesa
-        if chiave in ("fondatore", "animale", "vicini", "multi"):
+        if chiave in ("fondatore", "animale", "vicini", "multi", "sfida_fondatore", "sfida_vicini", "sfida_testa"):
             extra.append(frase("cartolina", n=par.get("n") or par.get("nomi", "").split(",")[0].split(" e ")[0]))  # la cartolina in storia porta gente nuova
         if not chiave and not extra:
             continue

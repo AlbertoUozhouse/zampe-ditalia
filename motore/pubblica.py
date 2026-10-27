@@ -48,6 +48,7 @@ def main():
     a.add_argument("--media", required=True)
     a.add_argument("--didascalia")
     a.add_argument("--prova", action="store_true", help="prepara il contenitore senza pubblicare")
+    a.add_argument("--tag", default="", help="account da taggare nel reel, separati da virgola: ricevono la notifica e il reel va nel loro profilo")
     a.add_argument("--trial", action="store_true", help="Trial Reel: mostrato prima solo a chi non segue; se Instagram lo rifiuta si pubblica normale")
     o = a.parse_args()
     token = os.environ.get("IG_TOKEN") or sys.exit("Manca IG_TOKEN.")
@@ -84,6 +85,13 @@ def main():
             print("Trial Reel accettato da Instagram")
         except SystemExit as e:
             print(f"Trial Reel rifiutato ({e}); pubblico come reel normale")
+    tag = [t.strip().lstrip("@") for t in o.tag.split(",") if t.strip()][:20]
+    if not cont and tag and o.tipo == "REELS":
+        try:
+            cont = chiama("POST", "me/media", token, user_tags=json.dumps([{"username": t} for t in tag]), **params)["id"]
+            print(f"reel con {len(tag)} persone taggate")
+        except SystemExit as e:
+            print(f"tag rifiutati da Instagram ({e}); pubblico senza tag")
     if not cont:
         cont = chiama("POST", "me/media", token, **params)["id"]
     print(f"contenitore pronto: {cont}")
