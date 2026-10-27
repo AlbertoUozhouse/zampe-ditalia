@@ -1,5 +1,6 @@
 {
 "fatti": [
+"08df1daa522ef9ed",
 "3cbaa21c281fa5cd",
 "58875c571d4c55f4",
 "864824862dc25242",
@@ -8,5 +9,14 @@
 "cc68613bef65c438",
 "e2975083ab83fd75"
 ],
-"in_attesa": []
+"in_attesa": [
+{
+"igsid": "1524870129481968",
+"url": [
+"https://zampeditalia.it/cartoline/8d2a6747e9a19a29.png",
+"https://zampeditalia.it/cartoline/a19064e7f1f95c1e.png"
+],
+"t": 1793097427.5780778
+}
+]
 }
