@@ -55,6 +55,12 @@ def main():
         try:
             conv = list(conversazioni(ig))
             print(f"API dei messaggi: ok · conversazioni: {len(conv)} · messaggi letti: {sum(len(c.get('messages', {}).get('data', [])) for c in conv)}")
+            for cartella in ("inbox", "general", "other", "pending", "requests", "message_requests", "spam"):
+                try:
+                    n = sum(1 for _ in ig.pagine("me/conversations", platform="instagram", folder=cartella, fields="id", limit=50))
+                    print(f"  cartella {cartella}: {n} conversazioni")
+                except urllib.error.HTTPError as e:
+                    print(f"  cartella {cartella}: errore {e.code} {str(json.loads(e.read() or b'{}').get('error', {}).get('message'))[:100]}")
         except urllib.error.HTTPError as e:
             err = json.loads(e.read() or b"{}").get("error", {})
             print(f"API dei messaggi: errore {e.code} · {err.get('type')} · codice {err.get('code')} · {str(err.get('message'))[:160]}")
