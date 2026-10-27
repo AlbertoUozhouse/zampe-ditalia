@@ -300,6 +300,8 @@ FRASI = {
     "segue_senza_luce": ["Grazie per il follow! I tuoi +10 punti arrivano appena accendi la tua luce: scrivi città, nome e razza ✨"],
     "invito_segui": ["👉 Seguici e scrivi SEGUO: +10 punti!", "Segui @zampeditalia e scrivi SEGUO: +10 punti e scali la classifica 🚀",
                      "Ultimo passo: seguici e scrivi SEGUO, +10 punti per te 🎁"],
+    "cartolina": ["💌 Scrivici CARTOLINA in privato e ti mandiamo la cartolina di {n} da mettere in storia!",
+                  "💌 Vuoi la cartolina di {n}? Scrivici CARTOLINA in DM 📲"],
     "aggiornato": ["Fatto! {n} ora brilla a {c} ✨", "Aggiornato: {n} è a {c} 🗺️"],
     "estero": ["Per ora la mappa è solo l'Italia 🇮🇹 Se hai un comune italiano del cuore, scrivilo e accendiamo la luce lì ✨"],
     "voto": ["Voto per i {squadra} registrato! 🔥 {squadra} {n}, {rivale} {altri}. Accendi anche la tua luce: città, nome e razza ✨",
@@ -732,6 +734,8 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
             extra.append(frase(frase_segue))
         elif chiave in ("fondatore", "animale", "vicini", "multi", "aggiornato", "voto") and not seguono.get(u.lower()):
             extra.append(frase("invito_segui"))  # commentano ma non ci seguono: lo chiediamo a ogni luce accesa
+        if chiave in ("fondatore", "animale", "vicini", "multi"):
+            extra.append(frase("cartolina", n=par.get("n") or par.get("nomi", "").split(",")[0].split(" e ")[0]))  # la cartolina in storia porta gente nuova
         if not chiave and not extra:
             continue
         if gioco.risposte_ultima_ora() >= MAX_RISPOSTE_ORA:
