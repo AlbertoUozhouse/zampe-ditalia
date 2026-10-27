@@ -15,22 +15,7 @@
 "d50cf829a4e9ea00",
 "e2975083ab83fd75"
 ],
-"in_attesa": [
-{
-"storia": "cartoline/ea02130023b3e69e.png",
-"url": [
-"https://zampeditalia.it/cartoline/ea02130023b3e69e.png"
-],
-"t": 1793100051.4537413
-},
-{
-"storia": "cartoline/0cb4c2056214bbd8.png",
-"url": [
-"https://zampeditalia.it/cartoline/0cb4c2056214bbd8.png"
-],
-"t": 1793100053.3169196
-}
-],
+"in_attesa": [],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
