@@ -38,7 +38,7 @@ jobs:
           node-version: 22
       - name: Strumenti
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji >/dev/null
           pip install -q numpy
       - name: Copione
         run: python3 motore/copione.py "${{ inputs.formato }}" /tmp/copione.json
@@ -51,8 +51,9 @@ jobs:
           mkdir -p docs/media/auto docs/contenuti/auto
           cp /tmp/reel/reel.mp4 "docs/media/auto/$ID.mp4"
           cp /tmp/reel/didascalia.txt "docs/contenuti/auto/$ID.txt"
+          python3 reel/copertina.py /tmp/copione.json "docs/media/auto/$ID.jpg" || echo "copertina non creata: si usa il primo fotogramma"
           # sul sito restano solo i reel degli ultimi 3 giorni
-          find docs/media/auto -name '*.mp4' -mtime +3 -delete
+          find docs/media/auto \( -name '*.mp4' -o -name '*.jpg' \) -mtime +3 -delete
           git config user.name "zampe-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/media/auto docs/contenuti/auto motore/reel_fatti.json
@@ -68,7 +69,8 @@ jobs:
         if: inputs.pubblica
         run: |
           TAG=$(python3 -c "import json;print(','.join(json.load(open('/tmp/copione.json')).get('tag', [])))")
-          python3 -I motore/pubblica.py --tipo REELS --media "media/auto/${{ steps.carica.outputs.id }}.mp4" --didascalia "contenuti/auto/${{ steps.carica.outputs.id }}.txt" --tag "$TAG"
+          python3 -I motore/pubblica.py --tipo REELS --media "media/auto/${{ steps.carica.outputs.id }}.mp4" --didascalia "contenuti/auto/${{ steps.carica.outputs.id }}.txt" --tag "$TAG" \
+            $( [ -f "docs/media/auto/${{ steps.carica.outputs.id }}.jpg" ] && echo --copertina "media/auto/${{ steps.carica.outputs.id }}.jpg" )
       - name: Salva il registro
         if: inputs.pubblica
         run: |

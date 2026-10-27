@@ -48,6 +48,7 @@ def main():
     a.add_argument("--media", required=True)
     a.add_argument("--didascalia")
     a.add_argument("--prova", action="store_true", help="prepara il contenitore senza pubblicare")
+    a.add_argument("--copertina", default="", help="immagine di copertina del reel (percorso sul sito): sul profilo i reel non sembrano tutti uguali")
     a.add_argument("--tag", default="", help="account da taggare nel reel, separati da virgola: ricevono la notifica e il reel va nel loro profilo")
     a.add_argument("--trial", action="store_true", help="Trial Reel: mostrato prima solo a chi non segue; se Instagram lo rifiuta si pubblica normale")
     o = a.parse_args()
@@ -77,6 +78,8 @@ def main():
         params["media_type"] = o.tipo
     if o.tipo == "REELS":
         params["share_to_feed"] = "true"
+        if o.copertina:
+            params["cover_url"] = SITO + o.copertina.lstrip("/")
     cont = None
     if o.trial and o.tipo == "REELS":
         # Meta promuove da solo il reel ai follower se va bene con chi non ci segue
