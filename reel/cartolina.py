@@ -59,6 +59,7 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:#060B1A}}
   radial-gradient(3px 3px at 6% 48%,#fff7 50%,transparent 51%),radial-gradient(2px 2px at 50% 96%,#fff5 50%,transparent 51%),radial-gradient(2px 2px at 18% 80%,#fff6 50%,transparent 51%)}}
 .marca{{position:absolute;top:250px;left:0;right:0;text-align:center;font:800 58px 'Bricolage Grotesque';color:#FFC55C;text-shadow:0 0 24px rgba(255,197,92,.6)}}
 .sotto{{position:absolute;top:326px;left:0;right:0;text-align:center;font:800 32px Nunito;opacity:.8}}
+.grazie{{display:inline-block;margin-top:6px;font:900 44px Nunito;color:#3A1E08;background:linear-gradient(#FFE7A0,#FFC55C);border-radius:999px;padding:12px 34px;opacity:1;box-shadow:0 0 40px rgba(255,197,92,.6)}}
 svg.mappa{{position:absolute;left:0;top:0}}
 .eroe{{position:absolute;left:{ex}px;top:{ey}px;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center}}
 .eroe svg{{width:{dim}px;height:auto;filter:drop-shadow(0 0 50px {glow})}}
@@ -71,7 +72,7 @@ svg.mappa{{position:absolute;left:0;top:0}}
 .piede{{position:absolute;left:0;right:0;bottom:270px;text-align:center;font:900 40px Nunito;color:#FFC55C}}
 .piede small{{display:block;font:800 30px Nunito;color:#FFF4DE;opacity:.75;margin-top:8px}}
 </style></head><body><div class="s"><div class="stelle"></div>
-<div class="marca">Zampe d'Italia</div><div class="sotto">la mappa degli animali d'Italia</div>
+<div class="marca">Zampe d'Italia</div><div class="sotto">{sotto}</div>
 <svg class="mappa" width="1080" height="1920" viewBox="0 0 1080 1920">
   <defs><radialGradient id="l"><stop offset="0" stop-color="#FFE7B0" stop-opacity=".95"/><stop offset="1" stop-color="#FFC55C" stop-opacity="0"/></radialGradient>
   <radialGradient id="io"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".25" stop-color="{luce}"/><stop offset="1" stop-color="{luce}" stop-opacity="0"/></radialGradient></defs>
@@ -91,11 +92,13 @@ COLORI = {"cane": ("#FFC55C", "rgba(255,179,71,.65)", "#F3DDB0", "#5E3519", "#5A
           "stella": ("#FFF4DE", "rgba(255,244,222,.5)", "#FFF4DE", "#8A7A5A", "#3A2E18")}
 
 def main():
-    utente = sys.argv[1]
-    cartella = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "docs/cartoline"
+    arg = [a for a in sys.argv[1:] if not a.startswith("--")]
+    grazie = "--grazie" in sys.argv  # versione per la storia di @zampeditalia: ringrazia chi ci ha messo in storia
+    utente = arg[0]
+    cartella = Path(arg[1]) if len(arg) > 1 else ROOT / "docs/cartoline"
     cartella.mkdir(parents=True, exist_ok=True)
     tutti = json.loads((ROOT / "docs/data/animali.json").read_text())["animali"]
-    suoi = [a for a in tutti if a["u"].lower() == utente.lower() and a["k"] in ("animale", "sogno", "stella")][:3]
+    suoi = [a for a in tutti if a["u"].lower() == utente.lower() and a["k"] in ("animale", "sogno", "stella")][:1 if grazie else 3]
     if not suoi or not CHROME:
         sys.exit("niente da disegnare" if not suoi else "Chrome non trovato")
     if sys.platform.startswith("linux") and "emoji" not in subprocess.run(["fc-list"], capture_output=True, text=True).stdout.lower():
@@ -122,7 +125,8 @@ def main():
         pagina = PAGINA.format(sagoma=sag, luci=luci, px=f"{px:.0f}", py=f"{py:.0f}", ex=ex, ey=ey, luce=luce, glow=glow, fondo=fondo, bordo=bordo, testo=testo,
                                dim=dim, fs=fs, svg=dis[a["id"]]["svg"], nome=E(a["n"]),
                                tipo=E(str(dis[a["id"]]["tipo"])[:1].upper() + str(dis[a["id"]]["tipo"])[1:]), comune=E(f'{a["c"]} ({a["p"]})'),
-                               utente=E(a["u"]), corona=corona)
+                               utente=E(a["u"]), corona=corona,
+                               sotto=(f'<span class="grazie">💛 Grazie @{E(a["u"])} per la storia!</span>' if grazie else "la mappa degli animali d'Italia"))
         h = tmp / "c.html"
         h.write_text(pagina)
         nome = secrets.token_hex(8) + ".png"

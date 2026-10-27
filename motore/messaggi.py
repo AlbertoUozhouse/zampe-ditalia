@@ -73,7 +73,7 @@ def main():
     dati = carica(ANIMALI, {"animali": []})
     limite = (datetime.now(timezone.utc) - timedelta(hours=23)).isoformat()
     # i messaggi nuovi di ogni persona, con quelli precedenti della stessa conversazione come contesto
-    persone, storie = {}, []
+    persone, storie, nuove_storie = {}, [], []
     for conv in conversazioni(ig):
         for m in sorted(conv.get("messages", {}).get("data", []), key=lambda m: m.get("created_time", "")):
             da = m.get("from", {})
@@ -95,15 +95,31 @@ def main():
     gioco = Gioco(); gioco.migra_punti()
     comuni = Comuni()
     richieste, conteggi = [], {"luci": 0, "seguo": 0, "risposte": 0, "al_team": 0, "storie": 0}
-    premiati = gioco.stato.setdefault("storie", [])  # chi ha già preso il premio della storia (una volta per persona)
+    impr = lambda u: hashlib.sha256(("zampe-storia" + u.lower()).encode()).hexdigest()[:16]
+    premiati = gioco.stato.setdefault("storie", [])  # impronte di chi ha già preso il premio della storia (una volta per persona)
+    if not st.get("grazie_v1"):  # una volta sola: storia di ringraziamento anche per chi era già stato premiato, poi i nomi diventano impronte
+        for vecchio in [x for x in premiati if len(x) != 16 or not re.fullmatch(r"[0-9a-f]{16}", x)]:
+            storie.append((None, vecchio))
+            premiati.remove(vecchio)
+        st["grazie_v1"] = True
     for igsid, u in storie:
         try:
-            if u.lower() in premiati:
-                manda(ig, igsid, {"text": "Grazie ancora per la storia! 💛 Ogni storia porta nuove luci sulla mappa ✨"})
+            if impr(u) in premiati:
+                if igsid: manda(ig, igsid, {"text": "Grazie ancora per la storia! 💛 Ogni storia porta nuove luci sulla mappa ✨"})
             elif gioco.ha_luce(u):
-                gioco.punti_extra(u, PUNTI_STORIA); premiati.append(u.lower())
-                manda(ig, igsid, {"text": f"Grazie per la storia! 🎉 +{PUNTI_STORIA} punti per te. Tagga anche gli amici sotto i reel: +3 per ognuno che commenta 👥"})
-            else:
+                if igsid: gioco.punti_extra(u, PUNTI_STORIA)  # chi viene dal recupero i punti li ha già presi
+                premiati.append(impr(u))
+                oggi = datetime.now(timezone.utc).date().isoformat()
+                fatte = st.setdefault("storie_nostre", {}).get(oggi, 0)
+                if fatte < 10:  # ringraziamento pubblico nella storia di @zampeditalia, al massimo 10 al giorno
+                    gioco.salva()
+                    uscita = subprocess.run([sys.executable, str(ROOT / "reel/cartolina.py"), u, "--grazie"], capture_output=True, text=True)
+                    nomi = [l.strip() for l in uscita.stdout.splitlines() if l.strip().endswith(".png")]
+                    if nomi:
+                        nuove_storie.append({"storia": "cartoline/" + nomi[0], "url": [SITO + "cartoline/" + nomi[0]], "t": time.time()})
+                        st["storie_nostre"] = {oggi: fatte + 1}
+                if igsid: manda(ig, igsid, {"text": f"Grazie per la storia! 🎉 +{PUNTI_STORIA} punti per te. Tagga anche gli amici sotto i reel: +3 per ognuno che commenta 👥"})
+            elif igsid:
                 manda(ig, igsid, {"text": "Grazie per la storia! 🎉 Accendi la luce del tuo animale (scrivi qui città, nome e animale) e ti diamo +10 punti 🐾"})
             conteggi["storie"] += 1
         except urllib.error.HTTPError as e:
@@ -169,9 +185,9 @@ def main():
     st["storie_v1"] = True
     st["fatti"] = sorted(fatti)[-20000:]
     # in attesa: solo l'ID anonimo che Instagram dà alla nostra app e l'indirizzo dell'immagine, niente nomi né testi
-    st["in_attesa"] = st.get("in_attesa", []) + [{"igsid": i, "url": urls, "t": time.time()} for i, urls in pronte]
+    st["in_attesa"] = st.get("in_attesa", []) + [{"igsid": i, "url": urls, "t": time.time()} for i, urls in pronte] + nuove_storie
     STATO.write_text(json.dumps(st, indent=0) + "\n")
-    if pronte:  # si pubblicano le immagini nuove; GitHub Pages di solito ci mette 1-2 minuti
+    if pronte or nuove_storie:  # si pubblicano le immagini nuove; GitHub Pages di solito ci mette 1-2 minuti
         subprocess.run("git add docs/cartoline motore/messaggi.json && git commit -q -m 'Cartoline' && "
                        "(git pull -q --rebase -X theirs; git push -q)", shell=True, cwd=ROOT)
         fine = time.time() + 300
@@ -182,6 +198,10 @@ def main():
         if not all(online(u) for u in r["url"]):
             if time.time() - r["t"] < 6 * 3600:
                 resta.append(r)  # il sito non l'ha ancora pubblicata: si riprova al prossimo giro
+            continue
+        if r.get("storia"):  # la nostra storia di ringraziamento
+            esito = subprocess.run([sys.executable, str(ROOT / "motore/pubblica.py"), "--tipo", "STORIES", "--media", r["storia"]], capture_output=True, text=True, cwd=ROOT)
+            print("storia di ringraziamento: " + ("pubblicata" if "pubblicato:" in esito.stdout else f"non pubblicata ({(esito.stderr or esito.stdout)[-150:]})"))
             continue
         try:
             for u in r["url"]:
