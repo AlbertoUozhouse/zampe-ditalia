@@ -4,6 +4,7 @@
 "08df1daa522ef9ed",
 "3cbaa21c281fa5cd",
 "58875c571d4c55f4",
+"601ed71500ca1d5f",
 "61eb8cd47d8b4796",
 "7b4ef8af4955e1dc",
 "864824862dc25242",
@@ -14,6 +15,25 @@
 "d50cf829a4e9ea00",
 "e2975083ab83fd75"
 ],
-"in_attesa": [],
-"storie_v1": true
+"in_attesa": [
+{
+"storia": "cartoline/ea02130023b3e69e.png",
+"url": [
+"https://zampeditalia.it/cartoline/ea02130023b3e69e.png"
+],
+"t": 1793100051.4537413
+},
+{
+"storia": "cartoline/0cb4c2056214bbd8.png",
+"url": [
+"https://zampeditalia.it/cartoline/0cb4c2056214bbd8.png"
+],
+"t": 1793100053.3169196
+}
+],
+"storie_v1": true,
+"grazie_v1": true,
+"storie_nostre": {
+"2026-10-27": 2
+}
 }
