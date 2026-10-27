@@ -107,28 +107,33 @@ def main():
         except urllib.error.HTTPError as e:
             print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
     st["fatti"] = sorted(fatti)[-20000:]
+    # in attesa: solo l'ID anonimo che Instagram dà alla nostra app e l'indirizzo dell'immagine, niente nomi né testi
+    st["in_attesa"] = st.get("in_attesa", []) + [{"igsid": i, "url": urls, "t": time.time()} for i, urls in pronte]
     STATO.write_text(json.dumps(st, indent=0) + "\n")
-    if not pronte:
-        print(f"messaggi: nessuna cartolina da fare")
-        return
-    # si pubblicano le immagini e si aspetta GitHub Pages (di solito 1-2 minuti), poi si mandano
-    subprocess.run("git add docs/cartoline motore/messaggi.json && git commit -q -m 'Cartoline' && "
-                   "(git pull -q --rebase -X theirs; git push -q)", shell=True, cwd=ROOT)
-    fine = time.time() + 480
-    while time.time() < fine and not all(online(u) for _, urls in pronte for u in urls):
-        time.sleep(20)
-    mandate = 0
-    for igsid, urls in pronte:
+    if pronte:  # si pubblicano le immagini nuove; GitHub Pages di solito ci mette 1-2 minuti
+        subprocess.run("git add docs/cartoline motore/messaggi.json && git commit -q -m 'Cartoline' && "
+                       "(git pull -q --rebase -X theirs; git push -q)", shell=True, cwd=ROOT)
+        fine = time.time() + 300
+        while time.time() < fine and not all(online(u) for r in st["in_attesa"] for u in r["url"]):
+            time.sleep(20)
+    resta, mandate = [], 0
+    for r in st["in_attesa"]:
+        if not all(online(u) for u in r["url"]):
+            if time.time() - r["t"] < 6 * 3600:
+                resta.append(r)  # il sito non l'ha ancora pubblicata: si riprova al prossimo giro
+            continue
         try:
-            for u in urls:
-                if online(u):
-                    manda(ig, igsid, {"attachment": {"type": "image", "payload": {"url": u}}})
-            manda(ig, igsid, {"text": "Eccola! 💌 Mettila nella tua storia e tagga @zampeditalia ✨ "
-                                      "Vuoi far salire la tua città? Tagga gli amici sotto i reel: +3 punti per ognuno che commenta, e chi ne porta di più oggi è il Re degli inviti 👑"})
+            for u in r["url"]:
+                manda(ig, r["igsid"], {"attachment": {"type": "image", "payload": {"url": u}}})
+            manda(ig, r["igsid"], {"text": "Eccola! 💌 Mettila nella tua storia e tagga @zampeditalia ✨ "
+                                           "Vuoi far salire la tua città? Tagga gli amici sotto i reel: +3 punti per ognuno che commenta, e chi ne porta di più oggi è il Re degli inviti 👑"})
             mandate += 1
         except urllib.error.HTTPError as e:
             print(f"cartolina non mandata: errore {e.code}", file=sys.stderr)
-    print(f"messaggi: cartoline mandate {mandate} su {len(pronte)}")
+    if st["in_attesa"] or resta:
+        st["in_attesa"] = resta
+        STATO.write_text(json.dumps(st, indent=0) + "\n")
+    print(f"messaggi: cartoline nuove {len(pronte)} · mandate {mandate} · in attesa {len(resta)}")
 
 
 if __name__ == "__main__":
