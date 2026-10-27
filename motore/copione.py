@@ -47,7 +47,7 @@ def dati():
     stato = carica(ROOT / "motore/stato.json", {})
     seguono = {u for u, v in stato.get("seguono", {}).items() if v == "premiato"}
     inviti = J.get("inviti", {})
-    return {"voti": voti, "seguono": seguono, "inviti": inviti, "animali": an, "tifo": tifo, "tutti": A, "razze": R, "per_citta": per_citta, "nuovi_fondatori": nuovi_fondatori,
+    return {"voti": voti, "seguono": seguono, "inviti": inviti, "capibranco": J.get("capibranco", {}), "animali": an, "tifo": tifo, "tutti": A, "razze": R, "per_citta": per_citta, "nuovi_fondatori": nuovi_fondatori,
             "cani": sum(1 for a in an + tifo if a.get("t", "cane") == "cane"), "gatti": sum(1 for a in an + tifo if a.get("t") == "gatto"),
             "altri": sum(1 for a in an if a.get("t") == "altro" and a.get("k") == "animale")}
 
@@ -153,6 +153,13 @@ def puntata(D, rng, st):
         frasi.append((f"Nuovi Fondatori di oggi: {', '.join(nf)}.", {"tipo": "classifica", "titolo": "Nuovi Fondatori 👑", "righe": [{"nome": a["n"], "valore": a["c"]} for a in D["nuovi_fondatori"][:5]]}))
     elif top:
         frasi.append(("Ecco le città più accese.", {"tipo": "classifica", "titolo": "Le città più accese", "righe": [{"nome": c, "valore": luci_n(sum(v.values()))} for c, v in top]}))
+    cb = D.get("capibranco", {})
+    if cb.get("giorno") == ORA.date().isoformat():  # domenica: l'elezione appena fatta apre la puntata dopo la mappa
+        capi = [x for x in cb.get("lista", []) if x[0].lower() not in ESCLUSI][:5]
+        if capi:
+            frasi.insert(1, (f"Stasera si eleggono i Capibranco: {cb['quanti']} città hanno il loro capo!",
+                             {"tipo": "classifica", "titolo": "I nuovi Capibranco 🐺", "righe": [{"nome": f"{x[1]} · @{x[0]}", "valore": x[2]} for x in capi], "utente": capi[0][0]}))
+            st["tag_extra"] = [x[0] for x in capi]
     re_inv = [x for x in D.get("inviti", {}).get("oggi", []) if x[0].lower() not in ESCLUSI]
     if re_inv:
         u, n_inv = re_inv[0]

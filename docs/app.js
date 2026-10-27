@@ -97,6 +97,9 @@ function petIcon(d) {
   const cls = d.k === "animale" ? d.t : d.k;
   return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}" data-id="${esc(d.id)}">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${esc(d.n)}</span></div>` });
 }
+const EDIFICI = [[5, "Fontanella", "⛲"], [10, "Parco cani", "🌳"], [25, "Gattile", "🏠"], [50, "Clinica veterinaria", "🏥"], [100, "Piazza dei Fondatori", "🏛️"], [250, "Grande parco", "🎡"]]; // come in motore/commenti.py
+const edifici = n => EDIFICI.filter(e => n >= e[0]).map(e => e[2]).join("");
+const prossimo = n => { const e = EDIFICI.find(e => n < e[0]); return e ? `mancano ${e[0] - n} ${e[0] - n === 1 ? "luce" : "luci"} per ${e[2]} ${e[1].toLowerCase()}` : ""; };
 const icona = d => d.t === "altro" ? D.emoji(d.specie) : d.t === "gatto" ? "🐱" : "🐶";
 function popup(d) {
   const ruolo = d.ruolo || (d.fondatore ? "Fondatore di " + d.c : "");
@@ -104,6 +107,7 @@ function popup(d) {
   return `<div class="pop"><h3>${d.k === "stella" ? "✦" : icona(d)} ${esc(d.n)}</h3><div class="k">${tipo}</div>
     <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>
     ${d.k === "stella" ? "" : `<div>${d.pt} ${d.pt === 1 ? "punto" : "punti"}${d.rank ? ` · ${d.rank}° in Italia` : ""}</div>`}
+    ${d.capo ? `<span class="role">🐺 ${esc(d.capo)}</span>` : d.testa ? `<span class="role">🐺 In testa a ${esc(d.c)}: domenica alle 21 il Capobranco</span>` : ""}
     ${ruolo ? `<span class="role">👑 ${esc(ruolo)}</span>` : ""}
     ${d.u ? `<div style="margin-top:6px"><a href="https://www.instagram.com/${encodeURIComponent(d.u)}/" target="_blank" rel="noopener">@${esc(d.u)} ↗</a></div>` : ""}</div>`;
 }
@@ -141,6 +145,9 @@ function stats() {
   const city = [...cities.values()].sort((a, b) => b.tot - a.tot || a.c.localeCompare(b.c));
   const rank = DATA.filter(d => d.k === "animale" || d.k === "sogno").sort((a, b) => b.pt - a.pt || (a.ts || "").localeCompare(b.ts || ""));
   rank.forEach((d, i) => d.rank = i + 1);
+  const capi = new Map(), inGara = new Map(); // corsa a Capobranco: il primo per punti di ogni comune con almeno 3 luci
+  for (const d of rank) { const key = d.c + "|" + d.p; inGara.set(key, (inGara.get(key) || 0) + 1); if (!capi.has(key)) capi.set(key, d); d.testa = false; }
+  capi.forEach((d, key) => { d.testa = inGara.get(key) >= 3; });
   return STATS = { city, rank, cani, gatti, altri, luci };
 }
 function renderHeader() {
@@ -160,7 +167,7 @@ function show(v) {
   const empty = `<p class="empty">Ancora nessuna luce. Commenta il reel e accendi la prima!</p>`;
   if (v === "sfida") {
     s.innerHTML = `<h2>Cani contro Gatti</h2><p class="sub">Quale città d'Italia vince? Conta ogni animale e ogni tifo.</p>` + (STATS.city.length ? `<ol class="list">` +
-      STATS.city.slice(0, 40).map((c, i) => `<li class="row" data-i="${i}"><span class="pos">${i + 1}</span><span class="who">${esc(c.c)}<small>${esc(c.r)}</small>
+      STATS.city.slice(0, 40).map((c, i) => `<li class="row" data-i="${i}"><span class="pos">${i + 1}</span><span class="who">${esc(c.c)} <span class="edifici">${edifici(c.tot)}</span><small>${esc(c.r)}${prossimo(c.tot) ? " · " + prossimo(c.tot) : ""}</small>
         <span class="split"><i style="width:${(c.cani / c.tot) * 100}%"></i></span></span><span class="vs"><span class="d">${fmt(c.cani)}</span> – <span class="c">${fmt(c.gatti)}</span></span></li>`).join("") + `</ol>` : empty);
     s.querySelectorAll(".row").forEach(r => r.onclick = () => { const c = STATS.city[r.dataset.i]; show("mappa"); map.flyTo([c.lat, c.lng], 13, { duration: 0.9 }); });
   }
@@ -177,6 +184,8 @@ function show(v) {
     s.innerHTML = `<h2>Come si gioca</h2><p class="sub">Si gioca nei commenti dei reel di @zampeditalia. Entro 15 minuti la luce si accende.</p><ul class="rules">
       <li><b>🐶🐱 Il tuo animale · +10</b>Scrivi città, nome e razza: <code>Treviso, Luna, golden</code> oppure <code>Milano, Micio, gatto rosso</code>. Il primo del comune diventa Fondatore (+20).</li>
       <li><b>🐰🦎🐢 Tutti gli animali</b>Conigli, furetti, gechi, tartarughe, pappagalli…: <code>Padova, Ugo, furetto</code>. Accendono la città con una luce azzurra. Quando arrivano a 15 luci entrano nella sfida: Cani contro Gatti contro Altri animali!</li>
+      <li><b>🐺 Capobranco</b>Ogni domenica alle 21 chi ha più punti nel suo comune (con almeno 3 luci) diventa Capobranco per una settimana. Commenta ogni giorno (+5) e tagga gli amici (+3) per salire.</li>
+      <li><b>⛲ La tua città cresce</b>A 5 luci la fontanella, a 10 il parco cani, a 25 il gattile, a 50 la clinica veterinaria, a 100 la piazza dei Fondatori.</li>
       <li><b>➕ Seguici · +10</b>Segui @zampeditalia e scrivi <code>SEGUO</code> in un commento. Nei reel mettiamo prima gli animali di chi ci segue. 🎃 Fino al 2 novembre il tuo animale ha anche il costume di Halloween sulla mappa.</li>
       <li><b>📣 Fai il tifo · +5</b>Non hai animali? Scegli la squadra: <code>Tifo cani: Treviso</code> oppure <code>Tifo gatti: Milano</code>.</li>
       <li><b>☁️ Il tuo sogno · +10</b>L'animale che vorresti: <code>Sogno: Padova, Bruno, bassotto</code>.</li>

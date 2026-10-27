@@ -31,6 +31,9 @@ GIORNI_REEL = 7            # si leggono i commenti dei reel pubblicati negli ult
 QUOTA_RISPOSTE = 0.30      # a chi ci segue già si risponde a campione; a chi non ci segue sempre, con l'invito
 MAX_RISPOSTE_ORA = 200
 MAX_ANIMALI_PER_UTENTE = 5
+EDIFICI = [(5, "la fontanella", "⛲"), (10, "il parco cani", "🌳"), (25, "il gattile", "🏠"), (50, "la clinica veterinaria", "🏥"),
+           (100, "la piazza dei Fondatori", "🏛️"), (250, "il grande parco", "🎡")]  # come in docs/app.js
+PRIMA_ELEZIONE = "2026-11-01"  # ogni domenica alle 20:45 si elegge il Capobranco di ogni comune con almeno 3 luci (prima della puntata delle 21)
 HALLOWEEN_FINO = "2026-11-02"  # fino a questo giorno gli animali di chi ci segue hanno il costume
 SOGLIA_ALTRI = 15  # con 15 luci gli altri animali entrano nella sfida: Cani contro Gatti contro Altri (anche in copione.py)
 PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 10}
@@ -418,6 +421,7 @@ class Gioco:
             tot[coppia.split(">")[0]] = tot.get(coppia.split(">")[0], 0) + 1
         self.dati["inviti"] = {"giorno": oggi, "oggi": sorted(ig.get(oggi, {}).items(), key=lambda x: -x[1])[:10],
                                "totale": sorted(tot.items(), key=lambda x: -x[1])[:10]}
+        self.elezione()
         vestiti = oggi <= HALLOWEEN_FINO  # il costume di Halloween è il regalo per chi ci segue
         seguono = {u for u, v in self.stato.get("seguono", {}).items() if v == "premiato"}
         for x in self.animali:
@@ -427,6 +431,31 @@ class Gioco:
         self.stato["risposte"] = [t for t in self.stato["risposte"] if ora - t < 3600]
         ANIMALI.write_text(json.dumps(self.dati, ensure_ascii=False, separators=(",", ":")) + "\n")
         STATO.write_text(json.dumps(self.stato, ensure_ascii=False, indent=0) + "\n")
+
+    def elezione(self):
+        """Ogni domenica alle 20:45 (ora italiana) il primo per punti di ogni comune con almeno 3 luci diventa Capobranco fino alla domenica dopo."""
+        from zoneinfo import ZoneInfo
+        ora = datetime.now(ZoneInfo("Europe/Rome"))
+        dom = (ora - timedelta(days=(ora.weekday() + 1) % 7)).replace(hour=20, minute=45, second=0, microsecond=0)
+        if dom > ora: dom -= timedelta(days=7)
+        giorno = dom.date().isoformat()
+        if giorno < PRIMA_ELEZIONE or self.stato.get("elezione") == giorno:
+            return
+        citta = {}
+        for a in self.animali:
+            a.pop("capo", None)
+            if a["k"] in ("animale", "sogno"): citta.setdefault((a["c"], a["p"]), []).append(a)
+        eletti = []
+        for (c, p), gara in citta.items():
+            if len(gara) >= 3:
+                v = min(gara, key=lambda x: (-x.get("pt", 0), x.get("ts") or ""))
+                v["capo"] = f"Capobranco di {c}"
+                eletti.append((len(gara), v))
+        eletti.sort(key=lambda x: -x[0])
+        self.stato["elezione"] = giorno
+        self.dati["capibranco"] = {"giorno": giorno, "lista": [[v["u"], v["n"], v["c"]] for _, v in eletti[:30]], "quanti": len(eletti)}
+        self.cambiato = True
+        print(f"elezione del Capobranco: {len(eletti)} città")
 
     def risposte_ultima_ora(self):
         ora = time.time()
@@ -661,6 +690,33 @@ def rivale(gioco, a):
     luci = lambda k: f"{k} {'luce' if k == 1 else 'luci'}"
     return {"rc": c, "rt": luci(n), "mt": luci(mio), "testa": not davanti}
 
+def luci_citta(gioco, c, p):
+    return sum(1 for x in gioco.animali if x["k"] in ("animale", "sogno") and x["c"] == c and x["p"] == p)
+
+def riga_edificio(gioco, a):
+    """«Cecina: mancano 2 luci al parco cani 🌳» oppure, appena arriva, «Cecina sblocca il parco cani»."""
+    n = luci_citta(gioco, a["c"], a["p"])
+    for soglia, nome, em in EDIFICI:
+        if n == soglia:
+            return f"🎉 Con {a['n']}, {a['c']} arriva a {n} luci e sblocca {nome} {em}!"
+        if n < soglia:
+            m = soglia - n
+            return f"{a['c']}: {'manca 1 luce' if m == 1 else f'mancano {m} luci'} per {nome} {em}. Tagga gli amici!" if m <= 4 else None
+    return None
+
+def riga_capobranco(gioco, a):
+    """In una città con almeno 3 luci: a che posto è nella corsa a Capobranco di domenica."""
+    gara = sorted((x for x in gioco.animali if x["k"] in ("animale", "sogno") and x["c"] == a["c"] and x["p"] == a["p"]),
+                  key=lambda x: (-x.get("pt", 0), x.get("ts") or ""))
+    if len(gara) < 3:
+        return None
+    pos = next((i for i, x in enumerate(gara, 1) if x["u"].lower() == a["u"].lower()), None)
+    if not pos:
+        return None
+    if pos == 1:
+        return f"🐺 {a['n']} è in testa a {a['c']}: domenica alle 21 diventa Capobranco, se nessuno lo supera!"
+    return f"🐺 Domenica alle 21 si elegge il Capobranco di {a['c']}: {a['n']} è {pos}°. Commenta ogni giorno (+5) e tagga gli amici (+3) per salire!"
+
 def invito_segui(gioco, u):
     """L'invito a seguirci, col posto concreto che si guadagna in classifica: «sale dal 140° all'11° posto».
     I posti si contano come sul sito: punti, e a pari punti chi è arrivato prima."""
@@ -797,6 +853,7 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
                 except Exception as e: print(f"risposta vecchia non cancellata ({c['id']}): {e}", file=sys.stderr)
         nuovi += len(nuovi_c)
         ts_di = lambda cid: next((c.get("timestamp") for c in suoi if c["id"] == cid), None) or nuovi_c[-1].get("timestamp") or datetime.now(timezone.utc).isoformat()
+        nuovi_a = []
         if letto["rimuovi"]:
             chiave, par, _ = gioco.applica({"k": "rimuovi"}, u, None)
         else:
@@ -825,6 +882,11 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
             extra.append(frase("premio", chi=", ".join("@" + a for a in premiati[:3])))
         if frase_segue:
             extra.append(frase(frase_segue) + (COSTUME.replace("E fino", "Da ora fino") if halloween() and frase_segue == "segue" else ""))
+        if nuovi_a and chiave not in ("stella", "sogno"):  # obiettivo di città oppure corsa a Capobranco: un motivo concreto per taggare
+            riga = riga_edificio(gioco, nuovi_a[0]) or (riga_capobranco(gioco, nuovi_a[0]) if random.random() < 0.4 else None)
+            if riga: extra.insert(0, riga)
+        if frase_segue:
+            pass  # ha appena scritto SEGUO: il grazie basta
         elif chiave in ("fondatore", "animale", "vicini", "multi", "aggiornato", "voto", "voto_altri", "sfida_fondatore", "sfida_vicini", "sfida_testa", "animale_altro") and not seguono.get(u.lower()):
             extra.append(invito_segui(gioco, u))  # commentano ma non ci seguono: lo chiediamo a ogni luce, col posto che guadagnano
         elif chiave in ("fondatore", "animale", "vicini", "multi", "sfida_fondatore", "sfida_vicini", "sfida_testa", "animale_altro"):

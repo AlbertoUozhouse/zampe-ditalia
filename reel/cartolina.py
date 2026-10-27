@@ -122,7 +122,7 @@ def main():
         ex = 300 if px > 560 else 780
         ex = int(min(1040 - largo / 2, max(40 + largo / 2, ex)))  # né il disegno né il nome escono dalla cartolina
         ey = int(max(400 + dim + 70, min(1250, py - 40)))         # e non coprono il titolo
-        corona = f'<div class="corona">👑 {E(a["ruolo"])}</div>' if a.get("ruolo") else ""
+        corona = f'<div class="corona">🐺 {E(a["capo"])}</div>' if a.get("capo") else f'<div class="corona">👑 {E(a["ruolo"])}</div>' if a.get("ruolo") else ""
         pagina = PAGINA.format(sagoma=sag, luci=luci, px=f"{px:.0f}", py=f"{py:.0f}", ex=ex, ey=ey, luce=luce, glow=glow, fondo=fondo, bordo=bordo, testo=testo,
                                dim=dim, fs=fs, svg=dis[a["id"]]["svg"], nome=E(a["n"]),
                                tipo=E(str(dis[a["id"]]["tipo"])[:1].upper() + str(dis[a["id"]]["tipo"])[1:]), comune=E(f'{a["c"]} ({a["p"]})'),
