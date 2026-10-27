@@ -12,7 +12,7 @@ from cartolina import CHROME, sagoma, xy  # noqa: E402
 
 TEMI = {  # accento, sfondo
     "voto": ("#FFC55C", "#7A3FB8"), "duello": ("#9CC6FF", "#1E5BC6"), "benvenuti": ("#9FF0FA", "#0F7C80"),
-    "fondatore": ("#FFE08A", "#A8650E"), "puntata": ("#D9CCFF", "#3B1F8C"), "vetrina": ("#E3F58A", "#3C7A22"),
+    "fondatore": ("#FFE08A", "#A8650E"), "puntata": ("#D9CCFF", "#3B1F8C"), "vetrina": ("#E3F58A", "#3C7A22"), "attivita": ("#FFB3C1", "#8C1F45"),
 }
 
 PAGINA = """<!doctype html><html lang="it"><head><meta charset="utf-8">

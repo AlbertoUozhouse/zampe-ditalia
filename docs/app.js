@@ -63,10 +63,11 @@ fetch("data/regioni.json").then(r => r.json()).then(REG => {
 });
 
 // ---------- dati ----------
+let PRENOTATE = {}; // posti prenotati dalle attività, per comune: {"Treviso|TV": {"veterinario": 1}}
 let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; return j.animali || []; } } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -100,6 +101,8 @@ function petIcon(d) {
 const EDIFICI = [[5, "Fontanella", "⛲"], [10, "Parco cani", "🌳"], [25, "Gattile", "🏠"], [50, "Clinica veterinaria", "🏥"], [100, "Piazza dei Fondatori", "🏛️"], [250, "Grande parco", "🎡"]]; // come in motore/commenti.py
 const edifici = n => EDIFICI.filter(e => n >= e[0]).map(e => e[2]).join("");
 const prossimo = n => { const e = EDIFICI.find(e => n < e[0]); return e ? `mancano ${e[0] - n} ${e[0] - n === 1 ? "luce" : "luci"} per ${e[2]} ${e[1].toLowerCase()}` : ""; };
+const POSTI = { veterinario: "🏥 clinica", toelettatura: "✂️ toelettatura", negozio: "🛍️ negozio", pensione: "🏡 pensione", educatore: "🎾 addestramento", altro: "🏪 bottega" };
+const prenotati = c => Object.keys(PRENOTATE[c.c + "|" + c.p] || {}).map(t => POSTI[t] || POSTI.altro).join(", ");
 const icona = d => d.t === "altro" ? D.emoji(d.specie) : d.t === "gatto" ? "🐱" : "🐶";
 function popup(d) {
   const ruolo = d.ruolo || (d.fondatore ? "Fondatore di " + d.c : "");
@@ -167,7 +170,7 @@ function show(v) {
   const empty = `<p class="empty">Ancora nessuna luce. Commenta il reel e accendi la prima!</p>`;
   if (v === "sfida") {
     s.innerHTML = `<h2>Cani contro Gatti</h2><p class="sub">Quale città d'Italia vince? Conta ogni animale e ogni tifo.</p>` + (STATS.city.length ? `<ol class="list">` +
-      STATS.city.slice(0, 40).map((c, i) => `<li class="row" data-i="${i}"><span class="pos">${i + 1}</span><span class="who">${esc(c.c)} <span class="edifici">${edifici(c.tot)}</span><small>${esc(c.r)}${prossimo(c.tot) ? " · " + prossimo(c.tot) : ""}</small>
+      STATS.city.slice(0, 40).map((c, i) => `<li class="row" data-i="${i}"><span class="pos">${i + 1}</span><span class="who">${esc(c.c)} <span class="edifici">${edifici(c.tot)}</span><small>${esc(c.r)}${prossimo(c.tot) ? " · " + prossimo(c.tot) : ""}${prenotati(c) ? " · prenotati: " + prenotati(c) : ""}</small>
         <span class="split"><i style="width:${(c.cani / c.tot) * 100}%"></i></span></span><span class="vs"><span class="d">${fmt(c.cani)}</span> – <span class="c">${fmt(c.gatti)}</span></span></li>`).join("") + `</ol>` : empty);
     s.querySelectorAll(".row").forEach(r => r.onclick = () => { const c = STATS.city[r.dataset.i]; show("mappa"); map.flyTo([c.lat, c.lng], 13, { duration: 0.9 }); });
   }

@@ -24,6 +24,9 @@ CARTOLINE = ROOT / "docs/cartoline"
 SITO = "https://zampeditalia.it/"
 PUNTI_STORIA = 10
 PAROLA = re.compile(r"(?i)cartolin")
+PRENOTA = re.compile(r"(?i)prenot")
+EDIFICIO = {"veterinario": "la clinica veterinaria 🏥", "toelettatura": "il salone di toelettatura ✂️", "negozio": "il negozio per animali 🛍️",
+            "pensione": "la pensione per animali 🏡", "educatore": "il campo di addestramento 🎾", "altro": "la bottega degli animali 🏪"}
 SEGUE = re.compile(r"(?i)\b(ti seguo|seguo|seguito|seguita|follow)\b")
 
 
@@ -130,6 +133,40 @@ def main():
         u, nuovi = p["u"], [m for _, m in p["nuovi"]]
         testi = [m["text"] for m in nuovi]
         risposte = []
+        attesa = st.setdefault("prenota_attesa", {})
+        chiede, gestito = any(PRENOTA.search(t) for t in testi), False
+        if chiede or time.time() - attesa.get(igsid, 0) < 86400:
+            # un'attività prenota il suo posto: nel repository restano solo tipo e comune, la conversazione la vede il team su Instagram
+            pr = lettore.prenotazione([m["text"] for m in p["tutti"]]) or {}
+            L = comuni.trova(pr["comune"])[0] if pr.get("comune") else None
+            try:
+                if pr.get("tipo") and L:
+                    attesa.pop(igsid, None); gestito = True
+                    chi = hashlib.sha256(("zampe-prenota" + igsid).encode()).hexdigest()[:16]
+                    lista = [x for x in st.setdefault("prenotazioni", []) if x["id"] != chi]
+                    lista.append({"id": chi, "tipo": pr["tipo"], "c": L["c"], "p": L["p"], "t": datetime.now(timezone.utc).isoformat(timespec="seconds")})
+                    st["prenotazioni"] = lista
+                    conteggio = {}
+                    for x in lista:
+                        conteggio.setdefault(f"{x['c']}|{x['p']}", {}).setdefault(x["tipo"], 0)
+                        conteggio[f"{x['c']}|{x['p']}"][x["tipo"]] += 1
+                    gioco.dati["prenotate"] = conteggio
+                    gioco.cambiato = True
+                    manda(ig, igsid, {"text": f"Prenotato! 🎉 Ti teniamo {EDIFICIO[pr['tipo']]} di {L['c']} sulla mappa di Zampe d'Italia. "
+                                              "Quando apriamo, entro dicembre, hai la precedenza e il -20% per i primi 6 mesi. Ti scriviamo noi qui 🐾"})
+                    conteggi["prenotazioni"] = conteggi.get("prenotazioni", 0) + 1
+                elif not chiede:
+                    attesa.pop(igsid, None)  # gli avevamo chiesto attività e comune ma ha scritto altro: si risponde come sempre
+                else:
+                    attesa[igsid] = time.time(); gestito = True
+                    manda(ig, igsid, {"text": "Ciao! 🐾 Ti teniamo il posto con il -20%. Che attività hai e in quale comune? "
+                                              "Per esempio «Toelettatura, Treviso» oppure «Veterinario, Cecina»"})
+            except urllib.error.HTTPError as e:
+                print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
+            if gestito or chiede:
+                for imp, _ in p["nuovi"]:
+                    fatti.add(imp)
+                continue
         vuole_cartolina = any(PAROLA.search(t) for t in testi)
         solo_parole = all(re.fullmatch(r"(?i)[\W_]*(cartolina|seguo|ti seguo|follow|fatto)[\W_]*", t) for t in testi)
         letto = None if solo_parole else lettore.leggi(u, p["tutti"], comuni, norm, nome_proprio, razza, riservato=True)

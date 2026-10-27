@@ -234,7 +234,26 @@ def benvenuti(D, rng, st):
     st["copertina"] = {"sopra": "NUOVE LUCI", "grande": "<br>".join(a["n"] for a in nuovi[:3]), "sotto": "Benvenuti sulla mappa 🐾", "tema": "benvenuti"}
     return "NUOVE LUCI", frasi, did
 
-FORMATI = {"benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+def attivita(D, rng, st):
+    """Per le attività legate agli animali: prenotano gratis il posto sulla mappa, con il -20%. Ci dice se c'è mercato prima di vendere."""
+    tot = len([a for a in D["tutti"] if a.get("k") in ("animale", "sogno")])
+    top = sorted(D["per_citta"].items(), key=lambda kv: -sum(kv[1].values()))[:5]
+    c0 = top[0][0] if top else "Roma"
+    frasi = [("Hai un'attività per animali? Veterinario, toelettatura, negozio, pensione.", {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": c0, "testo": c0, "colore": "d"}]}),
+             (f"Sulla mappa ci sono già {tot} animali, ognuno con la sua città.", {"tipo": "numero", "grande": str(tot), "sotto": "proprietari di animali, città per città"}),
+             ("Ecco dove si accendono di più.", {"tipo": "classifica", "titolo": "Le città più accese", "righe": [{"nome": c, "valore": luci_n(sum(v.values()))} for c, v in top]}),
+             (f"Presto ogni città avrà la sua clinica, la sua toelettatura e il suo negozio. Uno solo per tipo.", {"tipo": "commento", "testo": f"🏥 Clinica veterinaria di {c0}: posto libero"}),
+             ("Chi prenota adesso ha la precedenza e il venti per cento di sconto.", {"tipo": "numero", "grande": "-20%", "sotto": "per chi prenota adesso il suo posto"}),
+             ("Scrivici PRENOTA in privato!", {"tipo": "chiusura", "testo": "📩 Scrivi PRENOTA in DM"})]
+    did = (f"Hai un'attività per animali? 🐾 Sulla mappa di Zampe d'Italia ci sono già {tot} animali, ognuno con il suo @ e la sua città.\n\n"
+           "Presto ogni comune avrà la sua clinica veterinaria, la sua toelettatura, il suo negozio per animali e la sua pensione, uno solo per tipo: "
+           "chi gioca li vede vicino a casa e ti scrive con un tocco.\n\n"
+           "📩 Scrivici PRENOTA in privato con il tipo di attività e il comune: ti teniamo il posto, con la precedenza e il -20% per i primi 6 mesi. Prenotare è gratis e senza impegno.")
+    st["copertina"] = {"sopra": "PER LE ATTIVITÀ", "grande": "La clinica<br>del paese", "sotto": "Prenota gratis: -20% 🐾", "tema": "attivita"}
+    st["senza_bonus"] = True
+    return "PER LE ATTIVITÀ", frasi, did
+
+FORMATI = {"attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -284,7 +303,10 @@ def main():
     titolo, frasi, did = FORMATI[formato](D, rng, st)
     # in ogni reel, prima della chiusura, un bonus a rotazione: tagga un amico (+3) oppure seguici (+5)
     x = rng.random()
-    if ORA.date().isoformat() <= "2026-11-02":  # Halloween: il follow regala il costume, lo diciamo in ogni reel
+    per_attivita = st.pop("senza_bonus", False)
+    if per_attivita:
+        pass  # il reel per le attività ha già la sua azione: niente bonus per i giocatori
+    elif ORA.date().isoformat() <= "2026-11-02":  # Halloween: il follow regala il costume, lo diciamo in ogni reel
         frasi.insert(len(frasi) - 1, (rng.choice(["Seguici e scrivi seguo: dieci punti e il costume di Halloween per il tuo animale sulla mappa!",
                                                    "Chi ci segue ha il costume di Halloween sulla mappa: seguici e scrivi seguo!"]),
                                       {"tipo": "numero", "grande": "🎃", "sotto": "seguici e scrivi SEGUO: +10 punti e il costume di Halloween"}))
@@ -296,9 +318,13 @@ def main():
         frasi.insert(len(frasi) - 1, (rng.choice(["Seguici e scrivi seguo: dieci punti, e il tuo animale può finire nel prossimo reel.",
                                                    "Ci segui? Scrivi seguo: dieci punti in più."]),
                                       {"tipo": "numero", "grande": "+10", "sotto": "punti se ci segui e scrivi SEGUO"}))
-    did = did.strip() + ("\n\n🎃 Fino al 2 novembre chi ci segue ha il costume di Halloween sulla mappa" if ORA.date().isoformat() <= "2026-11-02" else "") + ("\n\n➕ Seguici e scrivi SEGUO: +10 punti, e nei reel mettiamo prima gli animali di chi ci segue"
-                         "\n👥 Sfida degli inviti: +3 per ogni amico taggato che commenta. Chi ne porta di più oggi è il Re degli inviti 👑 e va nella puntata delle 21")
-    frasi, did = varia(frasi, did, D)
+    if per_attivita:
+        did = did.strip() + "\n\n"
+    else:
+        did = did.strip() + ("\n\n🎃 Fino al 2 novembre chi ci segue ha il costume di Halloween sulla mappa" if ORA.date().isoformat() <= "2026-11-02" else "") + ("\n\n➕ Seguici e scrivi SEGUO: +10 punti, e nei reel mettiamo prima gli animali di chi ci segue"
+                             "\n👥 Sfida degli inviti: +3 per ogni amico taggato che commenta. Chi ne porta di più oggi è il Re degli inviti 👑 e va nella puntata delle 21")
+    if not per_attivita:  # nel reel per le attività la parola PRENOTA non si tocca
+        frasi, did = varia(frasi, did, D)
     mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")} | set(st.pop("tag_extra", [])))
     if mostrati:
         did = did.strip() + "\n\n🐾 In questo reel: " + " ".join("@" + u for u in mostrati)
@@ -311,7 +337,7 @@ def main():
                 h = re.sub(r"[^a-z]", "", unicodedata.normalize("NFD", c.lower()).encode("ascii", "ignore").decode())
                 if 2 < len(h) < 25 and h not in citta: citta.append(h)
     tag_citta = " ".join("#" + h for h in citta[:5])
-    did = did.strip() + "\n\nVoce generata con IA.\n\n#cani #gatti #italia #canicontrogatti #animalidomestici " + tag_citta
+    did = did.strip() + "\n\nVoce generata con IA.\n\n" + ("#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici " if per_attivita else "#cani #gatti #italia #canicontrogatti #animalidomestici ") + tag_citta
     copione = {"id": ORA.strftime("%Y-%m-%d-%H%M") + "-" + formato, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
                "banner": "📍 Scrivi città, nome, razza · ➕ Seguici +10 👇", "didascalia": did,

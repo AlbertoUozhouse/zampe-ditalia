@@ -74,6 +74,7 @@ Regole che puoi spiegare:
 - il profilo privato va benissimo: si gioca uguale (commenti, luce sulla mappa, punti, cartolina); l'unica differenza è che nei reel non possiamo taggarlo, ma il nome e la città dell'animale compaiono lo stesso.
 Tono: caldo, semplice, al massimo due frasi brevi, qualche emoji. Non inventare premi, date o funzioni che non sono qui. Non chiedere dati personali.
 Se è una domanda sul gioco che queste regole non coprono, rispondi col buon senso restando dentro le regole (senza inventare premi, date o funzioni).
+Se chi scrive ha un'attività per animali (veterinario, toelettatura, negozio, pensione, educatore) e vuole farsi vedere sulla mappa, digli di scriverci PRENOTA con il tipo di attività e il comune: prenotare è gratis e dà la precedenza e il -20%.
 Solo se il messaggio è una proposta di collaborazione, una questione commerciale o una lamentela seria, rispondi che a breve gli scrive una persona del team.
 Se il messaggio non richiede risposta (un cuore, «ok», «grazie»), puoi rispondere con un breve grazie oppure niente.
 Rispondi SOLO con JSON: {"risposta": "testo oppure stringa vuota", "per_persona": true|false}"""
@@ -94,6 +95,29 @@ def rispondi_dm(utente, testi, suoi):
         return json.JSONDecoder().raw_decode(testo[testo.index("{"):])[0]
     except Exception as e:
         print(f"lettore: risposta in privato non riuscita ({type(e).__name__})", file=sys.stderr)
+        return None
+
+
+PRENOTA = """Un'attività legata agli animali ci scrive in privato per prenotare il suo posto sulla mappa di Zampe d'Italia.
+Dai messaggi capisci che tipo di attività è e in quale comune italiano si trova.
+- "tipo": uno tra "veterinario", "toelettatura", "negozio" (negozio o shop per animali), "pensione" (pensione, asilo, dog sitter), "educatore" (educatore, addestratore, centro cinofilo), "altro"; null se non si capisce.
+- "comune": il comune italiano con il nome ufficiale, null se non c'è. Una provincia da sola non è un comune.
+Rispondi SOLO con JSON: {"tipo": ..., "comune": ...}"""
+
+
+def prenotazione(testi):
+    """Tipo di attività e comune da chi scrive PRENOTA. None se Claude non risponde."""
+    k = _chiave()
+    if not k:
+        return None
+    body = {"model": MODELLO, "max_tokens": 2000, "system": PRENOTA, "messages": [{"role": "user", "content": "\n".join(testi[-6:])}]}
+    try:
+        r = urllib.request.Request("https://api.anthropic.com/v1/messages", data=json.dumps(body).encode(),
+                                   headers={"x-api-key": k, "anthropic-version": "2023-06-01", "content-type": "application/json"})
+        testo = next(b["text"] for b in json.loads(urllib.request.urlopen(r, timeout=60).read())["content"] if b.get("type") == "text")
+        return json.JSONDecoder().raw_decode(testo[testo.index("{"):])[0]
+    except Exception as e:
+        print(f"lettore: prenotazione non letta ({type(e).__name__})", file=sys.stderr)
         return None
 
 

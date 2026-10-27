@@ -891,6 +891,8 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
             extra.append(invito_segui(gioco, u))  # commentano ma non ci seguono: lo chiediamo a ogni luce, col posto che guadagnano
         elif chiave in ("fondatore", "animale", "vicini", "multi", "sfida_fondatore", "sfida_vicini", "sfida_testa", "animale_altro"):
             extra.append(frase("cartolina", n=par.get("n") or par.get("nomi", "").split(",")[0].split(" e ")[0]))  # la cartolina in storia porta gente nuova
+        if any(re.search(r"(?i)prenot", c.get("text", "")) for c in nuovi_c):  # un'attività vuole il suo posto: la prenotazione si fa in privato
+            extra.append("📩 Scrivici PRENOTA in privato con il tipo di attività e il comune: ti teniamo il posto con la precedenza e il -20%!")
         if not chiave and not extra:
             continue
         if gioco.risposte_ultima_ora() >= MAX_RISPOSTE_ORA:
