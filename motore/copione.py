@@ -277,7 +277,11 @@ def main():
     titolo, frasi, did = FORMATI[formato](D, rng, st)
     # in ogni reel, prima della chiusura, un bonus a rotazione: tagga un amico (+3) oppure seguici (+5)
     x = rng.random()
-    if x < 0.35:
+    if ORA.date().isoformat() <= "2026-11-02":  # Halloween: il follow regala il costume, lo diciamo in ogni reel
+        frasi.insert(len(frasi) - 1, (rng.choice(["Seguici e scrivi seguo: dieci punti e il costume di Halloween per il tuo animale sulla mappa!",
+                                                   "Chi ci segue ha il costume di Halloween sulla mappa: seguici e scrivi seguo!"]),
+                                      {"tipo": "numero", "grande": "🎃", "sotto": "seguici e scrivi SEGUO: +10 punti e il costume di Halloween"}))
+    elif x < 0.35:
         frasi.insert(len(frasi) - 1, (rng.choice(["Sfida degli inviti: chi porta più amici oggi finisce nel reel delle 21.",
                                                    "Tagga i tuoi amici: chi ne porta di più oggi è il Re degli inviti."]),
                                       {"tipo": "numero", "grande": "+3", "sotto": "per ogni amico taggato che commenta · il primo è Re degli inviti 👑"}))
@@ -285,7 +289,7 @@ def main():
         frasi.insert(len(frasi) - 1, (rng.choice(["Seguici e scrivi seguo: dieci punti, e il tuo animale può finire nel prossimo reel.",
                                                    "Ci segui? Scrivi seguo: dieci punti in più."]),
                                       {"tipo": "numero", "grande": "+10", "sotto": "punti se ci segui e scrivi SEGUO"}))
-    did = did.strip() + ("\n\n➕ Seguici e scrivi SEGUO: +10 punti, e nei reel mettiamo prima gli animali di chi ci segue"
+    did = did.strip() + ("\n\n🎃 Fino al 2 novembre chi ci segue ha il costume di Halloween sulla mappa" if ORA.date().isoformat() <= "2026-11-02" else "") + ("\n\n➕ Seguici e scrivi SEGUO: +10 punti, e nei reel mettiamo prima gli animali di chi ci segue"
                          "\n👥 Sfida degli inviti: +3 per ogni amico taggato che commenta. Chi ne porta di più oggi è il Re degli inviti 👑 e va nella puntata delle 21")
     frasi, did = varia(frasi, did, D)
     mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")} | set(st.pop("tag_extra", [])))

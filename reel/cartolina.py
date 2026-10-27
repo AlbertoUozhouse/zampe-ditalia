@@ -44,6 +44,7 @@ const out={{}}; for (const a of {json.dumps(animali)}) {{ const s=D.hash(a.id);
   if (a.t==="altro") {{ out[a.id]={{svg:D.altro(a.specie,s), tipo:(a.razza_testo||a.specie||"")}}; continue; }}
   const k=D.razza(a.razza_testo||a.razza,a.t);
   out[a.id]={{svg:(a.t==="gatto"?D.gatto(k,s):D.cane(k,s)), tipo:(k==="meticcio"&&a.razza_testo&&!/meticc|incrocio|mix/i.test(a.razza_testo))?a.razza_testo:(a.t==="gatto"?D.GATTI[k]:D.CANI[k]).n}}; }}
+for (const a of {json.dumps(animali)}) if (a.vestito==="halloween" && out[a.id] && a.k!=="stella") out[a.id].svg=D.costume(out[a.id].svg, a.t, D.hash(a.id));
 console.log(JSON.stringify(out));"""
     return json.loads(subprocess.run(["node", "-e", js], capture_output=True, text=True, check=True).stdout)
 

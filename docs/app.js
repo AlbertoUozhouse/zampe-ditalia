@@ -92,7 +92,8 @@ function prepare(list) {
 const petLayer = L.layerGroup().addTo(map), cityLabels = L.layerGroup().addTo(map);
 let petMarkers = new Map();
 function petIcon(d) {
-  const svg = d.k === "stella" ? D.stella() : d.k === "sogno" ? D.sogno(d.rk, d.seed) : d.t === "altro" ? D.altro(d.specie, d.seed) : d.t === "gatto" ? D.gatto(d.rk, d.seed) : D.cane(d.rk, d.seed);
+  let svg = d.k === "stella" ? D.stella() : d.k === "sogno" ? D.sogno(d.rk, d.seed) : d.t === "altro" ? D.altro(d.specie, d.seed) : d.t === "gatto" ? D.gatto(d.rk, d.seed) : D.cane(d.rk, d.seed);
+  if (d.vestito === "halloween") svg = D.costume(svg, d.k === "sogno" ? "sogno" : d.t, d.seed);
   const cls = d.k === "animale" ? d.t : d.k;
   return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}" data-id="${esc(d.id)}">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${esc(d.n)}</span></div>` });
 }
@@ -146,7 +147,7 @@ function renderHeader() {
   const { cani, gatti, luci } = STATS, tot = cani + gatti, pc = tot ? (cani / tot) * 100 : 50;
   $("#versus").innerHTML = `<span class="side dog">🐶 <b>${fmt(cani)}</b> Cani</span><span class="bar" role="img" aria-label="Cani ${fmt(cani)}, Gatti ${fmt(gatti)}"><i style="width:${pc}%"></i></span><span class="side cat">Gatti <b>${fmt(gatti)}</b> 🐱</span>`;
   const goal = luci < CONFIG.obiettivo ? CONFIG.obiettivo : Math.ceil((luci + 1) / 25000) * 25000;
-  $("#counter").innerHTML = `<span><b>${fmt(luci)}</b> / ${fmt(goal)} luci</span><span class="track"><i style="width:${Math.min(100, (luci / goal) * 100)}%"></i></span>${recentCount ? `<span>✨ ${fmt(recentCount)} brillano ora</span>` : ""}`;
+  $("#counter").innerHTML = `<span><b>${fmt(luci)}</b> / ${fmt(goal)} luci</span><span class="track"><i style="width:${Math.min(100, (luci / goal) * 100)}%"></i></span>${recentCount ? `<span>✨ ${fmt(recentCount)} brillano ora</span>` : ""}${new Date() < new Date("2026-11-03") ? `<span>🎃 Chi ci segue ha il costume</span>` : ""}`;
   if (ANTEPRIMA) { $("#badge").hidden = false; $("#badge").textContent = "Anteprima con dati inventati"; }
 }
 
@@ -176,7 +177,7 @@ function show(v) {
     s.innerHTML = `<h2>Come si gioca</h2><p class="sub">Si gioca nei commenti dei reel di @zampeditalia. Entro 15 minuti la luce si accende.</p><ul class="rules">
       <li><b>🐶🐱 Il tuo animale · +10</b>Scrivi città, nome e razza: <code>Treviso, Luna, golden</code> oppure <code>Milano, Micio, gatto rosso</code>. Il primo del comune diventa Fondatore (+20).</li>
       <li><b>🐰🦎🐢 Tutti gli animali</b>Conigli, furetti, gechi, tartarughe, pappagalli…: <code>Padova, Ugo, furetto</code>. Accendono la città con una luce azzurra. Quando arrivano a 15 luci entrano nella sfida: Cani contro Gatti contro Altri animali!</li>
-      <li><b>➕ Seguici · +10</b>Segui @zampeditalia e scrivi <code>SEGUO</code> in un commento. Nei reel mettiamo prima gli animali di chi ci segue.</li>
+      <li><b>➕ Seguici · +10</b>Segui @zampeditalia e scrivi <code>SEGUO</code> in un commento. Nei reel mettiamo prima gli animali di chi ci segue. 🎃 Fino al 2 novembre il tuo animale ha anche il costume di Halloween sulla mappa.</li>
       <li><b>📣 Fai il tifo · +5</b>Non hai animali? Scegli la squadra: <code>Tifo cani: Treviso</code> oppure <code>Tifo gatti: Milano</code>.</li>
       <li><b>☁️ Il tuo sogno · +10</b>L'animale che vorresti: <code>Sogno: Padova, Bruno, bassotto</code>.</li>
       <li><b>✦ Una stella</b>Per chi non c'è più: <code>Stella: Treviso, Max</code>. Una stella nel cielo col suo nome, mai in classifica.</li>

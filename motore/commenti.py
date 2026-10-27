@@ -31,6 +31,7 @@ GIORNI_REEL = 7            # si leggono i commenti dei reel pubblicati negli ult
 QUOTA_RISPOSTE = 0.30      # a chi ci segue già si risponde a campione; a chi non ci segue sempre, con l'invito
 MAX_RISPOSTE_ORA = 200
 MAX_ANIMALI_PER_UTENTE = 5
+HALLOWEEN_FINO = "2026-11-02"  # fino a questo giorno gli animali di chi ci segue hanno il costume
 SOGLIA_ALTRI = 15  # con 15 luci gli altri animali entrano nella sfida: Cani contro Gatti contro Altri (anche in copione.py)
 PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 10}
 
@@ -326,6 +327,11 @@ FRASI = {
     "base": ["Ciao! Scrivi città, nome e razza del tuo animale, per esempio «Treviso, Luna, golden», e accendi la sua luce ✨"],
 }
 
+def halloween():
+    return datetime.now(timezone.utc).date().isoformat() <= HALLOWEEN_FINO
+
+COSTUME = " 🎃 E fino al 2 novembre il tuo animale ha il costume di Halloween sulla mappa!"
+
 def frase(chiave, **kw):
     return random.choice(FRASI[chiave]).format(**kw)
 
@@ -412,6 +418,11 @@ class Gioco:
             tot[coppia.split(">")[0]] = tot.get(coppia.split(">")[0], 0) + 1
         self.dati["inviti"] = {"giorno": oggi, "oggi": sorted(ig.get(oggi, {}).items(), key=lambda x: -x[1])[:10],
                                "totale": sorted(tot.items(), key=lambda x: -x[1])[:10]}
+        vestiti = oggi <= HALLOWEEN_FINO  # il costume di Halloween è il regalo per chi ci segue
+        seguono = {u for u, v in self.stato.get("seguono", {}).items() if v == "premiato"}
+        for x in self.animali:
+            if vestiti and x["k"] in ("animale", "sogno") and x["u"].lower() in seguono: x["vestito"] = "halloween"
+            else: x.pop("vestito", None)
         ora = time.time()
         self.stato["risposte"] = [t for t in self.stato["risposte"] if ora - t < 3600]
         ANIMALI.write_text(json.dumps(self.dati, ensure_ascii=False, separators=(",", ":")) + "\n")
@@ -663,8 +674,8 @@ def invito_segui(gioco, u):
         r2 = 1 + sum(1 for p, t in altri if p > pt + PUNTI["segue"] or p == pt + PUNTI["segue"] and t < ts)
         if r2 < r1:
             al = lambda r, prep: f"{prep}ll'{r}°" if str(r)[0] == "8" or r == 11 else f"{prep}l {r}°"  # dall'11°, all'8°
-            return frase("invito_salto", n=io["n"], dal=al(r1, "da"), al=al(r2, "a"))
-    return frase("invito_segui")
+            return frase("invito_salto", n=io["n"], dal=al(r1, "da"), al=al(r2, "a")) + (COSTUME if halloween() else "")
+    return frase("invito_segui") + (COSTUME if halloween() else "")
 
 def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
     """La frase giusta per l'ultimo commento di questa persona."""
@@ -813,7 +824,7 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
         if premiati:
             extra.append(frase("premio", chi=", ".join("@" + a for a in premiati[:3])))
         if frase_segue:
-            extra.append(frase(frase_segue))
+            extra.append(frase(frase_segue) + (COSTUME.replace("E fino", "Da ora fino") if halloween() and frase_segue == "segue" else ""))
         elif chiave in ("fondatore", "animale", "vicini", "multi", "aggiornato", "voto", "voto_altri", "sfida_fondatore", "sfida_vicini", "sfida_testa", "animale_altro") and not seguono.get(u.lower()):
             extra.append(invito_segui(gioco, u))  # commentano ma non ci seguono: lo chiediamo a ogni luce, col posto che guadagnano
         elif chiave in ("fondatore", "animale", "vicini", "multi", "sfida_fondatore", "sfida_vicini", "sfida_testa", "animale_altro"):

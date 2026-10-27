@@ -232,5 +232,25 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
     <circle cx="23" cy="23" r="15" fill="#1C5361" opacity=".7"/>
     <text x="23" y="24" text-anchor="middle" dominant-baseline="central" font-size="${22 + (seed % 3)}">${emoji(specie)}</text></svg>`;
 
-  window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, altro, emoji, hash, carica, cerca };
+  // ---------- il costume di Halloween, sopra il disegno ----------
+  // testa: cane nella cuccia (32,38), gatto sul tetto (32,14.5); il medaglione degli altri animali ha il costume in basso a destra
+  const STREGA = (x, y, k) => `<g transform="translate(${x} ${y}) scale(${k})"><ellipse cx="0" cy="0" rx="9.5" ry="2.2" fill="#2B1840"/>
+<path d="M-5.6 -.6 Q-3 -6 -.6 -11.5 Q1.6 -15.5 5.6 -14.6 Q2.6 -12.6 2.6 -9 L5.6 -.6Z" fill="#3A1F57"/>
+<path d="M-5.2 -2.6 L5.2 -2.6 L5.6 -.6 L-5.6 -.6Z" fill="#FF8A1F"/><circle cx="0" cy="-1.6" r=".9" fill="#FFE38A"/></g>`;
+  const ZUCCA = (x, y, k) => `<g transform="translate(${x} ${y}) scale(${k})"><path d="M0 -7.4 q.4 -2.4 2.4 -3" stroke="#3E6B1F" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+<ellipse cx="-3.4" cy="-3.6" rx="3.8" ry="3.9" fill="#E86A10"/><ellipse cx="3.4" cy="-3.6" rx="3.8" ry="3.9" fill="#E86A10"/><ellipse cx="0" cy="-3.6" rx="3.6" ry="4.1" fill="#FF8A1F"/>
+<path d="M-2.4 -4.6 l1 -1.4 l1 1.4Z M.4 -4.6 l1 -1.4 l1 1.4Z M-2.6 -2.2 q2.6 1.6 5.2 0 l-1 .9 l-.8 -.6 l-.8 .7 l-.8 -.7 l-.8 .6Z" fill="#4A1E04"/></g>`;
+  const FANTASMA = (x, y, k) => `<g transform="translate(${x} ${y}) scale(${k})"><path d="M-5 6 V-1 A5 5 0 0 1 5 -1 V6 l-1.7 -1.6 l-1.6 1.6 l-1.7 -1.6 l-1.7 1.6 l-1.6 -1.6Z" fill="#F4F1FF" opacity=".95"/>
+<ellipse cx="-1.8" cy="-.6" rx=".8" ry="1.1" fill="#24173A"/><ellipse cx="1.8" cy="-.6" rx=".8" ry="1.1" fill="#24173A"/><ellipse cx="0" cy="2" rx="1" ry=".8" fill="#24173A"/></g>`;
+  const PIPISTRELLO = (x, y) => `<path transform="translate(${x} ${y})" d="M0 0 q-2 -2.4 -5.4 -1.6 q1.4 .8 1.2 2.2 q-1.4 -.6 -2.4 .6 q1.8 .2 2.6 1.2 q1.6 -1.4 4 -.6 q2.4 -.8 4 .6 q.8 -1 2.6 -1.2 q-1 -1.2 -2.4 -.6 q-.2 -1.4 1.2 -2.2 q-3.4 -.8 -5.4 1.6Z" fill="#1A0F2A" stroke="#FF8A1F" stroke-width=".35"/>`;
+  function costume(svg, tipo, seed) {
+    const n = seed % 3, cane = tipo === "cane" || tipo === "sogno";
+    const pezzi = tipo === "altro"
+      ? [ZUCCA(36, 44, 0.95), STREGA(33, 41, 0.75), FANTASMA(37, 36, 0.85)][n] + PIPISTRELLO(9, 8)
+      : cane ? [STREGA(33, 38.6, 0.95), ZUCCA(32, 38.6, 0.9), FANTASMA(52, 18, 0.95)][n] + PIPISTRELLO(10, 12)
+      : [STREGA(33, 15, 0.82), ZUCCA(32, 15.2, 0.9), FANTASMA(12, 38, 0.95)][n] + PIPISTRELLO(51, 8);
+    return svg.replace(/<\/svg>\s*$/, `<g class="costume">${pezzi}</g></svg>`);
+  }
+
+  window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, altro, emoji, hash, carica, cerca, costume };
 })();
