@@ -1,9 +1,8 @@
-# Ogni 10 minuti legge i commenti dei reel, aggiorna la mappa e risponde.
+# Giro a mano del motore dei commenti (diagnosi, ricostruzione). Il giro ogni 10 minuti lo fa veglia.yml:
+# un orario qui farebbe girare due motori insieme, con risposte doppie e mappa in conflitto.
 name: commenti
 
 on:
-  schedule:
-    - cron: "*/10 * * * *"
   workflow_dispatch:
     inputs:
       diagnosi:
