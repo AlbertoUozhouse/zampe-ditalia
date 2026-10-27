@@ -394,6 +394,7 @@ class Gioco:
         self.dati = carica(ANIMALI, {"aggiornato": None, "animali": []})
         self.stato = carica(STATO, {"visti": [], "risposte": [], "bonus": {}, "media_letti": {}})
         self.visti = set(self.stato["visti"])
+        self.visti_ora = set()  # i commenti letti in questo giro
         self.cambiato = False
 
     @property
@@ -724,6 +725,35 @@ def per_persona(commenti, mio_username, visti=None):
         v.sort(key=lambda c: c.get("timestamp", ""))
     return per
 
+ESCLUSI = {"thor_golden_life", "albertomarchesin"}  # come in copione.py: i nostri account
+SOLLECITI_GIRO = 8  # ogni 10 minuti: circa 48 all'ora, piano per non sembrare spam
+SOLLECITO = ["Ciao! {n} brilla già sulla mappa 🌙", "{n} è sulla mappa d'Italia ✨", "Ciao! La luce di {n} è accesa 🐾"]
+
+def sollecita(gioco, per, rispondi, appena):
+    """Un giro di inviti a seguirci, una volta sola per persona: a chi ha la luce accesa ma non ha mai scritto SEGUO,
+    in risposta al suo ultimo commento, col posto che guadagnerebbe in classifica."""
+    fatti = gioco.stato.setdefault("solleciti", {})
+    seguono = gioco.stato.get("seguono", {})
+    n = 0
+    for u, suoi in sorted(per.items(), key=lambda kv: kv[1][-1].get("timestamp", ""), reverse=True):  # prima chi ha commentato da poco
+        if n >= SOLLECITI_GIRO or gioco.risposte_ultima_ora() >= MAX_RISPOSTE_ORA:
+            break
+        k = u.lower()
+        if k in fatti or seguono.get(k) or k in ESCLUSI or u in appena or not gioco.ha_luce(u):
+            continue
+        miei = [a for a in gioco.animali if a["u"].lower() == k and a["k"] in ("animale", "sogno")]
+        if not miei:
+            continue
+        nome = max(miei, key=lambda a: a.get("pt", 0))["n"]
+        try:
+            rispondi(suoi[-1]["id"], random.choice(SOLLECITO).format(n=nome) + " " + invito_segui(gioco, u))
+            gioco.stato["risposte"].append(time.time())
+        except Exception as e:
+            print(f"sollecito non inviato a {suoi[-1]['id']}: {e}", file=sys.stderr)
+        fatti[k] = datetime.now(timezone.utc).date().isoformat()  # anche se fallisce: mai due volte alla stessa persona
+        n += 1
+    return n
+
 def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
     """commenti: iterabile di (media_id, commento); rispondi: funzione(comment_id, testo); cancella: funzione(comment_id) per le risposte da rifare.
     Claude legge tutti i commenti di chi ha scritto qualcosa di nuovo; se non risponde, quei commenti si riprovano al giro dopo."""
@@ -750,7 +780,7 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
             print(f"@{u}: il lettore non ha risposto, riprovo al prossimo giro", file=sys.stderr)
             continue
         for c in nuovi_c:
-            gioco.visti.add(c["id"])
+            gioco.visti.add(c["id"]); gioco.visti_ora.add(c["id"])
             if c["id"] in rifai and cancella:
                 try: cancella(c["id"])
                 except Exception as e: print(f"risposta vecchia non cancellata ({c['id']}): {e}", file=sys.stderr)
@@ -801,9 +831,10 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
             risposte += 1
         except Exception as e:  # una risposta fallita non deve fermare la mappa
             print(f"risposta non inviata a {nuovi_c[-1]['id']}: {e}", file=sys.stderr)
+    solleciti = sollecita(gioco, per, rispondi, {u for u, suoi in per.items() if any(c["id"] in gioco.visti_ora for c in suoi)})
     gioco.salva()
     luci = sum(1 for a in gioco.animali if a["k"] != "stella")
-    print(f"commenti nuovi: {nuovi} · risposte: {risposte} · luci sulla mappa: {luci}")
+    print(f"commenti nuovi: {nuovi} · risposte: {risposte} · solleciti al follow: {solleciti} · luci sulla mappa: {luci}")
     return gioco
 
 def ricostruisci(commenti, rispondi, mio_username, cancella, prova):
