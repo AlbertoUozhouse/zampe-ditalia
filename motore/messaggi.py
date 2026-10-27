@@ -16,13 +16,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "motore"))
-from commenti import API, Instagram, carica, norm  # noqa: E402
+from commenti import API, Gioco, Instagram, carica, norm  # noqa: E402
 
 STATO = ROOT / "motore/messaggi.json"
 ANIMALI = ROOT / "docs/data/animali.json"
 CARTOLINE = ROOT / "docs/cartoline"
 SITO = "https://zampeditalia.it/"
 PAROLA = re.compile(r"(?i)cartolin")
+SEGUE = re.compile(r"(?i)\b(ti seguo|seguo|seguito|seguita|follow)\b")
 
 
 def manda(ig, igsid, messaggio):
@@ -62,7 +63,7 @@ def main():
     fatti = set(st["fatti"])  # solo impronte (hash) dei messaggi già visti: nel repository pubblico non finisce chi ci scrive
     dati = carica(ANIMALI, {"animali": []})
     limite = (datetime.now(timezone.utc) - timedelta(hours=23)).isoformat()
-    richieste = []
+    richieste, seguono = [], []
     for conv in conversazioni(ig):
         for m in conv.get("messages", {}).get("data", []):
             da = m.get("from", {})
@@ -70,9 +71,25 @@ def main():
             if impronta in fatti or str(da.get("id")) == mio_id or (da.get("username") or "").lower() == mio:
                 continue
             fatti.add(impronta)
-            if m.get("created_time", "").replace("+0000", "+00:00") >= limite and PAROLA.search(m.get("message") or ""):
-                if not any(r[1] == da.get("id") for r in richieste):
-                    richieste.append((da.get("username", ""), da.get("id")))
+            if m.get("created_time", "").replace("+0000", "+00:00") < limite:
+                continue
+            if PAROLA.search(m.get("message") or "") and not any(r[1] == da.get("id") for r in richieste):
+                richieste.append((da.get("username", ""), da.get("id")))
+            elif SEGUE.search(m.get("message") or "") and not any(r[1] == da.get("id") for r in seguono):
+                seguono.append((da.get("username", ""), da.get("id")))
+    if seguono:  # SEGUO scritto in privato vale come nei commenti: +10 una volta sola
+        gioco = Gioco(); gioco.migra_punti()
+        for u, igsid in seguono:
+            esito = gioco.segue(u)
+            testo = {"segue": "Grazie per il follow! 🎉 +10 punti per te, li vedi già in classifica su zampeditalia.it",
+                     "segue_senza_luce": "Grazie per il follow! 🎉 I tuoi +10 punti arrivano appena accendi la luce del tuo animale: "
+                                         "scrivi sotto un nostro reel città, nome e animale (per esempio «Treviso, Luna, golden») ✨"}.get(esito)
+            try:
+                if testo: manda(ig, igsid, {"text": testo})
+            except urllib.error.HTTPError as e:
+                print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
+        gioco.salva()
+        print(f"messaggi: SEGUO in privato {len(seguono)}")
     pronte = []
     for u, igsid in richieste:
         suoi = [a for a in dati["animali"] if a["u"].lower() == u.lower() and a["k"] in ("animale", "sogno", "stella")]
