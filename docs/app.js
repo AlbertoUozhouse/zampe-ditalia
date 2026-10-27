@@ -175,7 +175,7 @@ function show(v) {
   if (v === "regole") {
     s.innerHTML = `<h2>Come si gioca</h2><p class="sub">Si gioca nei commenti dei reel di @zampeditalia. Entro 15 minuti la luce si accende.</p><ul class="rules">
       <li><b>🐶🐱 Il tuo animale · +10</b>Scrivi città, nome e razza: <code>Treviso, Luna, golden</code> oppure <code>Milano, Micio, gatto rosso</code>. Il primo del comune diventa Fondatore (+20).</li>
-      <li><b>🐰🦎🐢 Tutti gli animali</b>Conigli, furetti, gechi, tartarughe, pappagalli…: <code>Padova, Ugo, furetto</code>. Accendono la città con una luce azzurra.</li>
+      <li><b>🐰🦎🐢 Tutti gli animali</b>Conigli, furetti, gechi, tartarughe, pappagalli…: <code>Padova, Ugo, furetto</code>. Accendono la città con una luce azzurra. Quando arrivano a 15 luci entrano nella sfida: Cani contro Gatti contro Altri animali!</li>
       <li><b>➕ Seguici · +10</b>Segui @zampeditalia e scrivi <code>SEGUO</code> in un commento. Nei reel mettiamo prima gli animali di chi ci segue.</li>
       <li><b>📣 Fai il tifo · +5</b>Non hai animali? Scegli la squadra: <code>Tifo cani: Treviso</code> oppure <code>Tifo gatti: Milano</code>.</li>
       <li><b>☁️ Il tuo sogno · +10</b>L'animale che vorresti: <code>Sogno: Padova, Bruno, bassotto</code>.</li>

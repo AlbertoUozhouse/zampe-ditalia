@@ -48,7 +48,10 @@ def dati():
     seguono = {u for u, v in stato.get("seguono", {}).items() if v == "premiato"}
     inviti = J.get("inviti", {})
     return {"voti": voti, "seguono": seguono, "inviti": inviti, "animali": an, "tifo": tifo, "tutti": A, "razze": R, "per_citta": per_citta, "nuovi_fondatori": nuovi_fondatori,
-            "cani": sum(1 for a in an + tifo if a.get("t", "cane") == "cane"), "gatti": sum(1 for a in an + tifo if a.get("t") == "gatto")}
+            "cani": sum(1 for a in an + tifo if a.get("t", "cane") == "cane"), "gatti": sum(1 for a in an + tifo if a.get("t") == "gatto"),
+            "altri": sum(1 for a in an if a.get("t") == "altro" and a.get("k") == "animale")}
+
+SOGLIA_ALTRI = 15  # con 15 luci gli altri animali entrano nella sfida (come in commenti.py)
 
 def luci(D):
     return [{"lng": a["lng"], "lat": a["lat"], "t": a.get("t", "cane")} for a in D["tutti"] if a.get("k") != "stella"]
@@ -165,6 +168,8 @@ def voto(D, rng, st):
     """Il commento più facile: un'emoji. Porta commenti, e i commenti portano distribuzione."""
     v = D.get("voti", {"cani": 0, "gatti": 0})
     cani, gatti = D["cani"] + v.get("cani", 0), D["gatti"] + v.get("gatti", 0)
+    if D["altri"] >= SOGLIA_ALTRI:
+        return voto_tre(D, rng, st, cani, gatti, D["altri"] + v.get("altri", 0))
     perde = "gatti" if gatti < cani else "cani"
     frasi = [(f"Cani {cani}, gatti {gatti}. I {perde} stanno perdendo!" if cani != gatti else "Cani o gatti? È pareggio!",
               {"tipo": "duello", "sinistra": {"titolo": "Cani", "valore": str(cani)}, "destra": {"titolo": "Gatti", "valore": str(gatti)}}),
@@ -172,10 +177,29 @@ def voto(D, rng, st):
     x = scena_vera(D, rng, rng.choice(["cane", "gatto"]))
     if x:
         frasi.append((f"Vuoi la tua luce come {x[0]['n']}? Città, nome e razza.", x[1]))
+    manca = SOGLIA_ALTRI - D["altri"]
+    frasi.append((f"E arrivano gli altri: ancora {manca} {'luce' if manca == 1 else 'luci'} e conigli, furetti e tartarughe entrano nella sfida!",
+                  {"tipo": "numero", "grande": str(D["altri"]), "sotto": f"altri animali accesi: a {SOGLIA_ALTRI} entrano nella sfida 🐰🐢🦎"}))
     frasi.append(("Cani o gatti? Vota qui sotto!", {"tipo": "chiusura", "testo": "👇 Scrivi 🐶 o 🐱"}))
-    did = f"Cani {cani}, gatti {gatti} 🐶🐱 Commenta con un'emoji e vediamo chi vince!\n\nVuoi accendere la luce del tuo animale sulla mappa d'Italia? Scrivi città, nome e razza (per esempio «Treviso, Luna, golden»)."
+    did = f"Cani {cani}, gatti {gatti} 🐶🐱 Commenta con un'emoji e vediamo chi vince!\n\n🐰 Hai un coniglio, un furetto, una tartaruga? Ancora {manca} {'luce' if manca == 1 else 'luci'} e gli altri animali entrano nella sfida: scrivi città, nome e specie.\n\nVuoi accendere la luce del tuo animale sulla mappa d'Italia? Scrivi città, nome e razza (per esempio «Treviso, Luna, golden»)."
     st["copertina"] = {"sopra": "CANI vs GATTI", "grande": f"{cani} – {gatti}", "sotto": f"I {perde} perdono! Vota 🐶🐱" if cani != gatti else "Pareggio! Vota 🐶🐱", "tema": "voto"}
     return "CANI vs GATTI", frasi, did
+
+def voto_tre(D, rng, st, cani, gatti, altri):
+    """Da 15 altri animali la sfida è a tre: cani, gatti e tutti gli altri."""
+    squadre = sorted([("Cani", cani, "🐶"), ("Gatti", gatti, "🐱"), ("Altri animali", altri, "🐰")], key=lambda x: -x[1])
+    ultimo = squadre[-1]
+    frasi = [(f"Cani {cani}, gatti {gatti}, altri animali {altri}. La sfida ora è a tre!",
+              {"tipo": "classifica", "titolo": "La sfida a tre 🏆", "righe": [{"nome": f"{e} {n}", "valore": luci_n(x)} for n, x, e in squadre]}),
+             (f"Ultimi: {ultimo[0].lower()}! Commenta con un'emoji e falli risalire.", {"tipo": "commento", "testo": ultimo[2]})]
+    x = scena_vera(D, rng, rng.choice(["cane", "gatto"]))
+    if x:
+        frasi.append((f"Vuoi la tua luce come {x[0]['n']}? Città, nome e animale.", x[1]))
+    frasi.append(("Cani, gatti o altri? Vota qui sotto!", {"tipo": "chiusura", "testo": "👇 Scrivi 🐶 🐱 o 🐰"}))
+    did = (f"Cani {cani}, gatti {gatti}, altri animali {altri} 🐶🐱🐰 La sfida è a tre: commenta con un'emoji e vediamo chi vince!\n\n"
+           "Conigli, furetti, tartarughe, gechi: si accendono tutti. Scrivi città, nome e animale (per esempio «Treviso, Luna, coniglio»).")
+    st["copertina"] = {"sopra": "CANI · GATTI · ALTRI", "grande": "Sfida<br>a tre", "sotto": f"Ultimi: {ultimo[0].lower()}! Vota 🐶🐱🐰", "tema": "voto"}
+    return "SFIDA A TRE", frasi, did
 
 def benvenuti(D, rng, st):
     """Le nuove luci di oggi con i loro @: chi è nel reel viene taggato, riceve la notifica e di solito lo ricondivide."""

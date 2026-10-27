@@ -31,6 +31,7 @@ GIORNI_REEL = 7            # si leggono i commenti dei reel pubblicati negli ult
 QUOTA_RISPOSTE = 0.30      # agli altri si risponde a campione
 MAX_RISPOSTE_ORA = 200
 MAX_ANIMALI_PER_UTENTE = 5
+SOGLIA_ALTRI = 15  # con 15 luci gli altri animali entrano nella sfida: Cani contro Gatti contro Altri (anche in copione.py)
 PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 10}
 
 # ---------- testo ----------
@@ -285,6 +286,8 @@ FRASI = {
         "La luce di {n} è accesa: {c} sale nella sfida Cani contro Gatti! 🔥",
         "Ecco {n}, {pos}° {animale} di {c}. Tagga un amico e fai salire la città!",
     ],
+    "animale_altro": ["{n} si è acceso a {c}! 🐾 La squadra degli altri animali ora ha {na} luci: a {soglia} entra nella sfida contro cani e gatti!",
+                      "Benvenuto {n}! È il {na}° tra conigli, furetti, gechi e tartarughe: a {soglia} luci si sfida cani e gatti 🔥"],
     "sfida_fondatore": ["{n} è il primo di {c}: Fondatore! 👑 Ora {c} sfida {rc}, che ha già {rt}. Tagga gli amici di {c} e superatela 🔥",
                         "{c} si accende con {n}, il Fondatore 👑 La vicina {rc} ha {rt}: chi vince? Tagga i tuoi amici di {c}!"],
     "sfida_vicini": ["{n} è acceso! {c} {mt}, {rc} {rt}. Tagga gli amici di {c} e sorpassate! 🔥",
@@ -303,6 +306,9 @@ FRASI = {
     "multi": ["Si accendono {quanti} luci a {c}: {nomi}! ✨ Benvenuti sulla mappa 🐾", "{c} si illumina: {nomi} sono sulla mappa! 🔥"],
     "segue": ["Grazie per il follow! +10 punti per te 🎉", "Benvenuto tra noi! +10 punti per il follow 🐾"],
     "segue_senza_luce": ["Grazie per il follow! I tuoi +10 punti arrivano appena accendi la tua luce: scrivi città, nome e razza ✨"],
+    "invito_salto": ["🚀 Seguici e scrivi SEGUO: +10 punti e {n} sale {dal} {al} posto in Italia!",
+                     "Vuoi salire? Segui @zampeditalia e scrivi SEGUO: +10 punti, {n} passa {dal} {al} posto 🏆",
+                     "👉 Manca solo il follow: seguici, scrivi SEGUO e {n} vola {dal} {al} posto (+10 punti) 🚀"],
     "invito_segui": ["👉 Seguici e scrivi SEGUO: +10 punti!", "Segui @zampeditalia e scrivi SEGUO: +10 punti e scali la classifica 🚀",
                      "Ultimo passo: seguici e scrivi SEGUO, +10 punti per te 🎁"],
     "cartolina": ["💌 Scrivici CARTOLINA in privato e ti mandiamo la cartolina di {n} da mettere in storia!",
@@ -311,6 +317,7 @@ FRASI = {
     "estero": ["Per ora la mappa è solo l'Italia 🇮🇹 Se hai un comune italiano del cuore, scrivilo e accendiamo la luce lì ✨"],
     "voto": ["Voto per i {squadra} registrato! 🔥 {squadra} {n}, {rivale} {altri}. Accendi anche la tua luce: città, nome e razza ✨",
              "+1 ai {squadra}! Ora sono {n} contro {altri}. Scrivi città, nome e razza e metti il tuo animale sulla mappa 🐾"],
+    "voto_altri": ["+1 agli altri animali! 🐰🐢🦎 Conigli, furetti e tartarughe si fanno sentire. Accendi anche la tua luce: città, nome e specie ✨"],
     "altri": ["Sì! Da oggi si accendono tutti gli animali: furetti, conigli, gechi, tartarughe… 🐾 Scrivi città, nome e specie e arriva la sua luce ✨"],
     "rimosso": ["Fatto, abbiamo tolto le tue luci dalla mappa. Ti aspettiamo quando vuoi 🐾"],
     "tag": ["Hai taggato {amici}: per ognuno che commenta, +3 punti per te! 👥", "Inviti partiti per {amici}: per ognuno che commenta prendi +3 punti 🔥"],
@@ -423,9 +430,11 @@ class Gioco:
                 return None, {}, False
             fatti[utente.lower()] = oggi
             v = self.dati.setdefault("voti", {"cani": 0, "gatti": 0})
-            v["gatti" if az["t"] == "gatto" else "cani"] += 1
+            sq = {"gatto": "gatti", "altro": "altri"}.get(az["t"], "cani")
+            v[sq] = v.get(sq, 0) + 1
             self.cambiato = True
-            sq = "gatti" if az["t"] == "gatto" else "cani"
+            if sq == "altri":
+                return "voto_altri", {"n": v[sq]}, False
             return "voto", {"squadra": sq, "n": v[sq], "altri": v["cani" if sq == "gatti" else "gatti"], "rivale": "cani" if sq == "gatti" else "gatti"}, False
         if k == "multi":
             nomi = []
@@ -640,6 +649,22 @@ def rivale(gioco, a):
     luci = lambda k: f"{k} {'luce' if k == 1 else 'luci'}"
     return {"rc": c, "rt": luci(n), "mt": luci(mio), "testa": not davanti}
 
+def invito_segui(gioco, u):
+    """L'invito a seguirci, col posto concreto che si guadagna in classifica: «sale dal 140° all'11° posto».
+    I posti si contano come sul sito: punti, e a pari punti chi è arrivato prima."""
+    gara = [a for a in gioco.animali if a["k"] in ("animale", "sogno")]
+    miei = [a for a in gara if a["u"].lower() == u.lower()]
+    if miei:
+        io = max(miei, key=lambda a: a.get("pt", 0))
+        pt, ts = io.get("pt", 0), str(io.get("ts", ""))
+        altri = [(a.get("pt", 0), str(a.get("ts", ""))) for a in gara if a["u"].lower() != u.lower()]
+        r1 = 1 + sum(1 for p, t in altri if p > pt or p == pt and t < ts)
+        r2 = 1 + sum(1 for p, t in altri if p > pt + PUNTI["segue"] or p == pt + PUNTI["segue"] and t < ts)
+        if r2 < r1:
+            al = lambda r, prep: f"{prep}ll'{r}°" if str(r)[0] == "8" or r == 11 else f"{prep}l {r}°"  # dall'11°, all'8°
+            return frase("invito_salto", n=io["n"], dal=al(r1, "da"), al=al(r2, "a"))
+    return frase("invito_segui")
+
 def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
     """La frase giusta per l'ultimo commento di questa persona."""
     ids = {c["id"] for c in nuovi_c}
@@ -657,6 +682,10 @@ def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
             return ("sfida_fondatore" if a.get("ruolo") else "sfida_testa" if r["testa"] else "sfida_vicini"), {"n": a["n"], "c": a["c"], "animale": animale, **r}
         if a.get("ruolo"):
             return "fondatore", {"n": a["n"], "c": a["c"], "animale": animale}
+        if a["t"] == "altro" and random.random() < 0.7:
+            na = sum(1 for x in gioco.animali if x["k"] == "animale" and x.get("t") == "altro")
+            if na < SOGLIA_ALTRI:
+                return "animale_altro", {"n": a["n"], "c": a["c"], "na": na, "soglia": SOGLIA_ALTRI}
         stessa = [x for x in gioco.animali if x["k"] == "animale" and x["c"] == a["c"] and x["p"] == a["p"] and x["t"] == a["t"]]
         squadra = "canine" if a["t"] == "cane" else "gatte" if a["t"] == "gatto" else "speciali"
         par = {"n": a["n"], "c": a["c"], "pos": len(stessa), "animale": animale, "tot": len(stessa), "squadra": squadra}
@@ -735,9 +764,9 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
         ids = {c["id"] for c in nuovi_c}
         for v in letto["voti"]:
             if v["id"] in ids:
-                k2, p2, _ = gioco.applica({"k": "voto", "t": "gatto" if v["squadra"] == "gatti" else "cane"}, u, None)
+                k2, p2, _ = gioco.applica({"k": "voto", "t": {"gatti": "gatto", "altri": "altro"}.get(v["squadra"], "cane")}, u, None)
                 if k2 and not chiave: chiave, par = k2, p2
-        if chiave in ("fondatore", "animale", "vicini", "multi", "sfida_fondatore", "sfida_vicini", "sfida_testa"):
+        if chiave in ("fondatore", "animale", "vicini", "multi", "sfida_fondatore", "sfida_vicini", "sfida_testa", "animale_altro"):
             gioco.stato["bonus"][u.lower()] = oggi  # il commento che accende una luce ha già i suoi punti
         else:
             gioco.bonus_giornaliero(u)
@@ -755,9 +784,9 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
             extra.append(frase("premio", chi=", ".join("@" + a for a in premiati[:3])))
         if frase_segue:
             extra.append(frase(frase_segue))
-        elif chiave in ("fondatore", "animale", "vicini", "multi", "aggiornato", "voto", "sfida_fondatore", "sfida_vicini", "sfida_testa") and not seguono.get(u.lower()):
-            extra.append(frase("invito_segui"))  # commentano ma non ci seguono: lo chiediamo a ogni luce accesa
-        if chiave in ("fondatore", "animale", "vicini", "multi", "sfida_fondatore", "sfida_vicini", "sfida_testa"):
+        elif chiave in ("fondatore", "animale", "vicini", "multi", "aggiornato", "voto", "voto_altri", "sfida_fondatore", "sfida_vicini", "sfida_testa", "animale_altro") and not seguono.get(u.lower()):
+            extra.append(invito_segui(gioco, u))  # commentano ma non ci seguono: lo chiediamo a ogni luce, col posto che guadagnano
+        elif chiave in ("fondatore", "animale", "vicini", "multi", "sfida_fondatore", "sfida_vicini", "sfida_testa", "animale_altro"):
             extra.append(frase("cartolina", n=par.get("n") or par.get("nomi", "").split(",")[0].split(" e ")[0]))  # la cartolina in storia porta gente nuova
         if not chiave and not extra:
             continue
@@ -819,7 +848,7 @@ def ricostruisci(commenti, rispondi, mio_username, cancella, prova):
                 testo = (f"Avevo capito male, scusa 🙈 Ora è giusto: {elenco} ✨" if prima.get(u.lower())
                          else f"Eccoci! Si accende la luce: {elenco} ✨")
                 if not gioco.stato.get("seguono", {}).get(u.lower()):
-                    testo += " " + frase("invito_segui")
+                    testo += " " + invito_segui(gioco, u)
             elif l["senza_comune"]:
                 testo = frase("manca_comune_nome", n=l["senza_comune"][0]["n"])
             elif l["senza_nome"] and l["senza_nome"][0].get("luogo"):

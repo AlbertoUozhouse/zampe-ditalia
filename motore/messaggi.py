@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "motore"))
-from commenti import API, Comuni, Gioco, Instagram, carica, frase, lettore, nome_proprio, norm, razza, scegli_frase  # noqa: E402
+from commenti import API, Comuni, Gioco, Instagram, carica, frase, lettore, nome_proprio, norm, razza, scegli_frase, invito_segui  # noqa: E402
 
 STATO = ROOT / "motore/messaggi.json"
 ANIMALI = ROOT / "docs/data/animali.json"
@@ -148,6 +148,8 @@ def main():
         if (letto and letto["segue"]) or any(SEGUE.search(t) for t in testi):
             esito = gioco.segue(u)
             if esito: risposte.append(frase(esito)); conteggi["seguo"] += 1
+        elif risposte and gioco.ha_luce(u) and not gioco.stato.get("seguono", {}).get(u.lower()):
+            risposte.append(invito_segui(gioco, u))  # anche in privato: il posto in classifica che guadagna col follow
         if vuole_cartolina:
             richieste.append((u, igsid))
         elif not risposte:

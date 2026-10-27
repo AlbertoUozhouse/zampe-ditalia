@@ -19,7 +19,7 @@ Regole:
 - "tipo": "stella" se l'animale non c'è più (il commento inizia con "Stella:", oppure dice "in cielo", "non c'è più"; "Bergamo, stella, cane" invece è un cane di nome Stella), "sogno" se è un animale che la persona sogna di avere ("Sogno:"), altrimenti "animale".
 - Più animali nello stesso commento sono voci separate. Massimo 5 animali per persona.
 - "dal_commento": l'id del commento in cui compare quell'animale (l'ultimo che lo descrive).
-- "voti": i commenti che sono solo un voto nella sfida, cioè solo emoji o parole di cane o gatto, senza un nome: {"id": ..., "squadra": "cani"|"gatti"}.
+- "voti": i commenti che sono solo un voto nella sfida, cioè solo emoji o parole di cane, di gatto o di un altro animale (🐰🐢🦎🐹🦜…), senza un nome: {"id": ..., "squadra": "cani"|"gatti"|"altri"}.
 - "segue": true se la persona dice di seguire la pagina ("seguo", "ti seguo", "follow fatto").
 - "rimuovi": true se chiede di togliere i suoi animali.
 - "domanda": se la persona fa una domanda alla pagina, riassumila in poche parole, altrimenti null.
@@ -146,7 +146,7 @@ def leggi(utente, commenti, comuni, norm, nome_proprio, razza, riservato=False):
     for x in g.get("senza_nome", []) or []:
         senza_nome.append({"specie": norm(x.get("specie") or ""), "luogo": luogo(x), "id": x.get("dal_commento")})
     ids = {c["id"] for c in commenti}
-    voti = [v for v in g.get("voti", []) or [] if v.get("id") in ids and v.get("squadra") in ("cani", "gatti")]
+    voti = [v for v in g.get("voti", []) or [] if v.get("id") in ids and v.get("squadra") in ("cani", "gatti", "altri")]
     if scartati and not riservato:  # per i messaggi privati non si stampa niente: i log sono pubblici
         print(f"lettore: @{utente} scartati {scartati}", file=sys.stderr)
     return {"animali": animali[:5], "senza_comune": senza_comune, "senza_nome": senza_nome, "estero": bool(g.get("estero")),
