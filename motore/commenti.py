@@ -28,7 +28,7 @@ COMUNI = ROOT / "dati/comuni_min.json"
 API = "https://graph.instagram.com/v23.0"
 
 GIORNI_REEL = 7            # si leggono i commenti dei reel pubblicati negli ultimi 7 giorni
-QUOTA_RISPOSTE = 0.30      # agli altri si risponde a campione
+QUOTA_RISPOSTE = 0.30      # a chi ci segue già si risponde a campione; a chi non ci segue sempre, con l'invito
 MAX_RISPOSTE_ORA = 200
 MAX_ANIMALI_PER_UTENTE = 5
 SOGLIA_ALTRI = 15  # con 15 luci gli altri animali entrano nella sfida: Cani contro Gatti contro Altri (anche in copione.py)
@@ -792,7 +792,7 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
             continue
         if gioco.risposte_ultima_ora() >= MAX_RISPOSTE_ORA:
             continue
-        if len(gioco.animali) >= 500 and chiave in ("animale", "vicini") and not taggati and random.random() > QUOTA_RISPOSTE:
+        if len(gioco.animali) >= 500 and chiave in ("animale", "vicini") and not taggati and seguono.get(u.lower()) and random.random() > QUOTA_RISPOSTE:
             continue
         testo = " ".join(t for t in [frase(chiave, **par) if chiave else ""] + extra if t)
         try:
