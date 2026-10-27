@@ -50,7 +50,7 @@ def chiedi(utente, commenti):
     if not k:
         return None
     righe = "\n".join(f'[{c["id"]}] {c.get("timestamp", "")[:16]}  {c.get("text", "")}' for c in commenti[-25:])
-    body = {"model": MODELLO, "max_tokens": 1500, "system": ISTRUZIONI,
+    body = {"model": MODELLO, "max_tokens": 4000, "system": ISTRUZIONI,
             "messages": [{"role": "user", "content": f"Persona: @{utente}\nCommenti:\n{righe}"}]}
     for tentativo in range(3):
         try:
@@ -60,11 +60,42 @@ def chiedi(utente, commenti):
             testo = next(b["text"] for b in blocchi if b.get("type") == "text")
             return json.JSONDecoder().raw_decode(testo[testo.index("{"):])[0]
         except Exception as e:
-            print(f"lettore: @{utente} tentativo {tentativo + 1} non riuscito: {e}", file=sys.stderr)
+            print(f"lettore: tentativo {tentativo + 1} non riuscito: {type(e).__name__}", file=sys.stderr)
     return None
 
 
-def leggi(utente, commenti, comuni, norm, nome_proprio, razza):
+DM = """Sei @zampeditalia e rispondi in privato su Instagram. Zampe d'Italia è un gioco: chi commenta sotto i nostri reel accende la luce del suo animale su una mappa notturna d'Italia (zampeditalia.it).
+Regole che puoi spiegare:
+- per entrare: commenta sotto un reel, oppure scrivi qui, «città, nome e animale», per esempio «Treviso, Luna, golden». Vale ogni animale: cani, gatti, conigli, furetti, gechi, tartarughe…;
+- il primo animale di ogni comune diventa il Fondatore 👑 (+20 punti), gli altri +10;
+- seguire la pagina e scrivere SEGUO vale +10; ogni amico taggato che poi commenta vale +3; chi ne porta di più in un giorno è il Re degli inviti e va nella puntata delle 21;
+- scrivendo CARTOLINA qui si riceve la cartolina del proprio animale da mettere in storia;
+- per un animale che non c'è più si scrive «Stella: città, nome»; per sparire dalla mappa si commenta RIMUOVI.
+Tono: caldo, semplice, al massimo due frasi brevi, qualche emoji. Non inventare premi, date o funzioni che non sono qui. Non chiedere dati personali.
+Se il messaggio è una proposta di collaborazione, una questione commerciale, una lamentela seria o qualcosa che non sai, rispondi solo che a breve gli scrive una persona del team.
+Se il messaggio non richiede risposta (un cuore, «ok», «grazie»), puoi rispondere con un breve grazie oppure niente.
+Rispondi SOLO con JSON: {"risposta": "testo oppure stringa vuota", "per_persona": true|false}"""
+
+
+def rispondi_dm(utente, testi, suoi):
+    """Risposta breve a un messaggio privato che non è un animale né una parola chiave. None se Claude non risponde."""
+    k = _chiave()
+    if not k:
+        return None
+    mappa = "; ".join(f"{a['n']} a {a['c']}" for a in suoi) or "nessuno ancora"
+    body = {"model": MODELLO, "max_tokens": 2500, "system": DM,
+            "messages": [{"role": "user", "content": f"I suoi animali sulla mappa: {mappa}\nMessaggi nuovi di @{utente}:\n" + "\n".join(testi[-6:])}]}
+    try:
+        r = urllib.request.Request("https://api.anthropic.com/v1/messages", data=json.dumps(body).encode(),
+                                   headers={"x-api-key": k, "anthropic-version": "2023-06-01", "content-type": "application/json"})
+        testo = next(b["text"] for b in json.loads(urllib.request.urlopen(r, timeout=60).read())["content"] if b.get("type") == "text")
+        return json.JSONDecoder().raw_decode(testo[testo.index("{"):])[0]
+    except Exception as e:
+        print(f"lettore: risposta in privato non riuscita ({type(e).__name__})", file=sys.stderr)
+        return None
+
+
+def leggi(utente, commenti, comuni, norm, nome_proprio, razza, riservato=False):
     """Chiede a Claude e controlla tutto. Restituisce un dict pronto per il gioco, oppure None se Claude non ha risposto."""
     g = chiedi(utente, commenti)
     if g is None:
@@ -116,7 +147,7 @@ def leggi(utente, commenti, comuni, norm, nome_proprio, razza):
         senza_nome.append({"specie": norm(x.get("specie") or ""), "luogo": luogo(x), "id": x.get("dal_commento")})
     ids = {c["id"] for c in commenti}
     voti = [v for v in g.get("voti", []) or [] if v.get("id") in ids and v.get("squadra") in ("cani", "gatti")]
-    if scartati:
+    if scartati and not riservato:  # per i messaggi privati non si stampa niente: i log sono pubblici
         print(f"lettore: @{utente} scartati {scartati}", file=sys.stderr)
     return {"animali": animali[:5], "senza_comune": senza_comune, "senza_nome": senza_nome, "estero": bool(g.get("estero")),
             "voti": voti, "segue": bool(g.get("segue")), "rimuovi": bool(g.get("rimuovi")), "domanda": g.get("domanda")}

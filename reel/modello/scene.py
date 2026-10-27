@@ -168,7 +168,8 @@ def commento(cid, dur, testo):
     #root .chi { display: flex; align-items: center; gap: 20px; font: 800 34px var(--font-body); color: #444; }
     #root .avatar { width: 76px; height: 76px; border-radius: 50%; background: linear-gradient(135deg, #FFC55C, #FF8A65); }
     #root .riga { margin-top: 26px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-    #root .testo { font: 900 52px/1.1 var(--font-body); color: #111; white-space: nowrap; display: flex; align-items: center; overflow: hidden; }
+    #root .testo { font: 900 52px/1.1 var(--font-body); color: #111; white-space: nowrap; display: flex; align-items: center; overflow: hidden; min-height: 80px; padding: 6px 0; }
+    #root .testo span { line-height: 68px; }  /* le emoji sono più alte delle lettere: devono stare dentro la casella */
     #root .invia { font: 900 32px var(--font-body); color: #fff; background: #2B7BFF; border-radius: 999px; padding: 14px 26px; }"""
     corpo = f"""<div class="carta" id="{cid}-carta"><div class="chi"><span class="avatar"></span>@il.tuo.nome</div>
       <div class="riga"><div class="testo">{spans}</div><span class="invia" id="{cid}-invia">Pubblica</span></div></div>"""

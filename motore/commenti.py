@@ -285,11 +285,11 @@ FRASI = {
         "La luce di {n} è accesa: {c} sale nella sfida Cani contro Gatti! 🔥",
         "Ecco {n}, {pos}° {animale} di {c}. Tagga un amico e fai salire la città!",
     ],
-    "sfida_fondatore": ["{n} è il primo di {c}: Fondatore! 👑 Ora {c} sfida {rc}, che ha già {rt} luci. Tagga gli amici di {c} e superatela 🔥",
-                        "{c} si accende con {n}, il Fondatore 👑 La vicina {rc} è a {rt}: chi vince? Tagga i tuoi amici di {c}!"],
-    "sfida_vicini": ["{n} è acceso! {c} {mt} luci, {rc} {rt}. Tagga gli amici di {c} e sorpassate! 🔥",
+    "sfida_fondatore": ["{n} è il primo di {c}: Fondatore! 👑 Ora {c} sfida {rc}, che ha già {rt}. Tagga gli amici di {c} e superatela 🔥",
+                        "{c} si accende con {n}, il Fondatore 👑 La vicina {rc} ha {rt}: chi vince? Tagga i tuoi amici di {c}!"],
+    "sfida_vicini": ["{n} è acceso! {c} {mt}, {rc} {rt}. Tagga gli amici di {c} e sorpassate! 🔥",
                      "Luce accesa per {n} ✨ Sfida tra vicini: {c} {mt} contro {rc} {rt}. Chi porti dalla tua città? 👥"],
-    "sfida_testa": ["{n} è acceso! {c} è in testa con {mt} luci, {rc} insegue a {rt}. Tagga gli amici e allungate! 🔥"],
+    "sfida_testa": ["{n} è acceso! {c} è in testa con {mt}, {rc} insegue con {rt}. Tagga gli amici e allungate! 🔥"],
     "vicini": ["{n} è acceso a {c}! I tuoi vicini sono {v1} e {v2} 🐾"],
     "tifo": ["Tifo registrato: +1 per i {squadra} di {c}! 📣", "{c} ringrazia: un tifoso in più per i {squadra}! 🔥"],
     "sogno": ["Il sogno di {n} è in cielo sopra {c} ☁️", "Una nuvoletta in più su {c}: {n} ti aspetta nei sogni ☁️"],
@@ -637,7 +637,8 @@ def rivale(gioco, a):
         return None
     davanti = [v for v in vicini if v[2] >= mio]  # meglio un vicino da superare
     _, c, n = min(davanti or vicini)
-    return {"rc": c, "rt": n, "mt": mio, "testa": not davanti}
+    luci = lambda k: f"{k} {'luce' if k == 1 else 'luci'}"
+    return {"rc": c, "rt": luci(n), "mt": luci(mio), "testa": not davanti}
 
 def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
     """La frase giusta per l'ultimo commento di questa persona."""
