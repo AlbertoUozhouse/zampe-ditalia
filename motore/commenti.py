@@ -6,6 +6,9 @@ aggiorna docs/data/animali.json e risponde secondo le regole del piano.
 Uso:
   python motore/commenti.py                 # gira davvero (serve IG_TOKEN nell'ambiente)
   python motore/commenti.py --prova FILE    # legge commenti finti da un JSON e stampa le risposte, senza Instagram
+  python motore/commenti.py --ricostruisci [--a-secco]   # rilegge tutti i commenti con Claude e rifà la mappa
+
+I commenti li legge Claude (motore/lettore.py), tutti quelli di una persona insieme; il codice controlla ogni dato.
 
 Solo libreria standard, così gira su GitHub Actions senza installare niente.
 """
@@ -13,6 +16,9 @@ import json, os, random, re, sys, time, unicodedata, urllib.error, urllib.parse,
 from datetime import datetime, timedelta, timezone
 from math import cos, radians, sqrt
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import lettore
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = Path(os.environ.get("ZAMPE_OUT", ROOT))  # le prove scrivono altrove, mai sulla mappa vera
@@ -25,7 +31,7 @@ GIORNI_REEL = 7            # si leggono i commenti dei reel pubblicati negli ult
 QUOTA_RISPOSTE = 0.30      # agli altri si risponde a campione
 MAX_RISPOSTE_ORA = 200
 MAX_ANIMALI_PER_UTENTE = 5
-PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 5}
+PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 10}
 
 # ---------- testo ----------
 def norm(s):
@@ -290,11 +296,15 @@ FRASI = {
     "manca_razza": ["Che razza è {n}? Scrivi «{c}, {n}, golden» oppure «{c}, {n}, gatto rosso» 🐶🐱"],
     "manca_formato": ["Scrivi per esempio «Sogno: Padova, Bruno, bassotto» oppure «Stella: Treviso, Max» ✨"],
     "multi": ["Si accendono {quanti} luci a {c}: {nomi}! ✨ Benvenuti sulla mappa 🐾", "{c} si illumina: {nomi} sono sulla mappa! 🔥"],
-    "segue": ["Grazie per il follow! +5 punti per te 🎉", "Benvenuto tra noi! +5 punti per il follow 🐾"],
-    "segue_senza_luce": ["Grazie per il follow! I tuoi +5 punti arrivano appena accendi la tua luce: scrivi città, nome e razza ✨"],
+    "segue": ["Grazie per il follow! +10 punti per te 🎉", "Benvenuto tra noi! +10 punti per il follow 🐾"],
+    "segue_senza_luce": ["Grazie per il follow! I tuoi +10 punti arrivano appena accendi la tua luce: scrivi città, nome e razza ✨"],
+    "invito_segui": ["👉 Seguici e scrivi SEGUO: +10 punti!", "Segui @zampeditalia e scrivi SEGUO: +10 punti e scali la classifica 🚀",
+                     "Ultimo passo: seguici e scrivi SEGUO, +10 punti per te 🎁"],
+    "aggiornato": ["Fatto! {n} ora brilla a {c} ✨", "Aggiornato: {n} è a {c} 🗺️"],
+    "estero": ["Per ora la mappa è solo l'Italia 🇮🇹 Se hai un comune italiano del cuore, scrivilo e accendiamo la luce lì ✨"],
     "voto": ["Voto per i {squadra} registrato! 🔥 {squadra} {n}, {rivale} {altri}. Accendi anche la tua luce: città, nome e razza ✨",
              "+1 ai {squadra}! Ora sono {n} contro {altri}. Scrivi città, nome e razza e metti il tuo animale sulla mappa 🐾"],
-    "altri": ["Arrivano presto anche furetti, conigli, uccelli e tutti gli altri! 🐾 Intanto puoi fare il tifo: scrivi «Tifo cani: la tua città» o «Tifo gatti: la tua città»"],
+    "altri": ["Sì! Da oggi si accendono tutti gli animali: furetti, conigli, gechi, tartarughe… 🐾 Scrivi città, nome e specie e arriva la sua luce ✨"],
     "rimosso": ["Fatto, abbiamo tolto le tue luci dalla mappa. Ti aspettiamo quando vuoi 🐾"],
     "tag": ["Hai taggato {amici}: per ognuno che commenta, +3 punti per te! 👥", "Inviti partiti per {amici}: per ognuno che commenta prendi +3 punti 🔥"],
     "tag_senza_luce": ["Bello l'invito a {amici}! Accendi prima la tua luce con città, nome e razza: poi ogni amico che commenta ti vale +3 punti 👥"],
@@ -379,6 +389,14 @@ class Gioco:
     def salva(self):
         self.dati["aggiornato"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
         self.stato["visti"] = sorted(self.visti)[-50000:]
+        oggi = datetime.now(timezone.utc).date().isoformat()
+        ig = self.stato.get("inviti_giorno", {})
+        self.stato["inviti_giorno"] = {g: v for g, v in ig.items() if g >= (datetime.now(timezone.utc) - timedelta(days=7)).date().isoformat()}
+        tot = {}
+        for coppia in self.stato.get("premiati", []):
+            tot[coppia.split(">")[0]] = tot.get(coppia.split(">")[0], 0) + 1
+        self.dati["inviti"] = {"giorno": oggi, "oggi": sorted(ig.get(oggi, {}).items(), key=lambda x: -x[1])[:10],
+                               "totale": sorted(tot.items(), key=lambda x: -x[1])[:10]}
         ora = time.time()
         self.stato["risposte"] = [t for t in self.stato["risposte"] if ora - t < 3600]
         ANIMALI.write_text(json.dumps(self.dati, ensure_ascii=False, separators=(",", ":")) + "\n")
@@ -477,37 +495,97 @@ class Gioco:
             coppia = f"{chi}>{utente.lower()}"
             if coppia in self.stato.setdefault("premiati", []):
                 continue
-            suoi = [a for a in self.animali if a["u"].lower() == chi and a["k"] in ("animale", "sogno", "tifo")]
-            if suoi:
-                max(suoi, key=lambda a: a["pt"])["pt"] += PUNTI["tag"]
-                self.stato["premiati"].append(coppia); premiati.append(chi); self.cambiato = True
+            if self.ha_luce(chi):
+                self.punti_extra(chi, PUNTI["tag"])
+                self.stato["premiati"].append(coppia); premiati.append(chi)
+                giorno = self.stato.setdefault("inviti_giorno", {}).setdefault(datetime.now(timezone.utc).date().isoformat(), {})
+                giorno[chi] = giorno.get(chi, 0) + 1  # Sfida degli inviti: chi porta più amici oggi
         return premiati
 
     def segue(self, utente):
-        """+5 una volta sola a chi scrive SEGUO (l'API non dice chi ci segue: vale sulla fiducia). Restituisce la frase da usare."""
+        """+10 una volta sola a chi scrive SEGUO (l'API non dice chi ci segue: vale sulla fiducia). Restituisce la frase da usare."""
         st = self.stato.setdefault("seguono", {})
         if st.get(utente.lower()) == "premiato":
             return None
-        suoi = [a for a in self.animali if a["u"].lower() == utente.lower() and a["k"] in ("animale", "sogno", "tifo")]
-        if suoi:
-            max(suoi, key=lambda a: a["pt"])["pt"] += PUNTI["segue"]; st[utente.lower()] = "premiato"; self.cambiato = True
+        if self.ha_luce(utente):
+            self.punti_extra(utente, PUNTI["segue"]); st[utente.lower()] = "premiato"
             return "segue"
         if st.get(utente.lower()) == "in_attesa":
             return None  # gliel'abbiamo già detto
         st[utente.lower()] = "in_attesa"; self.cambiato = True
         return "segue_senza_luce"
 
-    def bonus_giornaliero(self, utente, media_id):
+    def bonus_giornaliero(self, utente):
         """+5 una volta al giorno a chi commenta un reel nuovo e ha già una luce."""
         oggi = datetime.now(timezone.utc).date().isoformat()
-        chiave = utente.lower()
-        if self.stato["bonus"].get(chiave) == oggi:
+        if self.stato["bonus"].get(utente.lower()) == oggi:
             return
-        miei = [a for a in self.animali if a["u"].lower() == chiave and a["k"] in ("animale", "sogno")]
-        if miei:
-            max(miei, key=lambda a: a["pt"])["pt"] += PUNTI["giornaliero"]
-            self.stato["bonus"][chiave] = oggi
-            self.cambiato = True
+        if self.ha_luce(utente):
+            self.punti_extra(utente, PUNTI["giornaliero"])
+            self.stato["bonus"][utente.lower()] = oggi
+
+    # ---------- punti: base dell'animale + punti extra della persona (inviti, follow, bonus) ----------
+    def ha_luce(self, utente):
+        return any(a["u"].lower() == utente.lower() and a["k"] in ("animale", "sogno", "tifo") for a in self.animali)
+
+    def punti_extra(self, utente, n):
+        ex = self.stato.setdefault("extra", {})
+        ex[utente.lower()] = ex.get(utente.lower(), 0) + n
+        self.ricalcola()
+
+    def migra_punti(self):
+        """Una volta sola: i bonus prima stavano dentro i punti dell'animale, ora si tengono a parte per persona."""
+        if "extra" in self.stato:
+            return
+        ex = {}
+        for a in self.animali:
+            base = 0 if a["k"] == "stella" else PUNTI["tifo"] if a["k"] == "tifo" else PUNTI["fondatore"] if a.get("ruolo") else PUNTI[a["k"]]
+            ex[a["u"].lower()] = ex.get(a["u"].lower(), 0) + max(0, a.get("pt", 0) - base)
+        self.stato["extra"] = {u: v for u, v in ex.items() if v}
+
+    def ricalcola(self):
+        """Fondatore = il primo animale acceso in ogni comune. Punti = base + extra della persona sull'animale migliore."""
+        primo = {}
+        for a in sorted((a for a in self.animali if a["k"] == "animale"), key=lambda a: a.get("ts") or ""):
+            primo.setdefault((a["c"], a["p"]), a["id"])
+        for a in self.animali:
+            fond = a["k"] == "animale" and primo.get((a["c"], a["p"])) == a["id"]
+            if fond: a["ruolo"] = f"Fondatore di {a['c']}"
+            else: a.pop("ruolo", None)
+            a["pt"] = 0 if a["k"] == "stella" else PUNTI["tifo"] if a["k"] == "tifo" else PUNTI["fondatore"] if fond else PUNTI[a["k"]]
+        ex = self.stato.get("extra", {})
+        per = {}
+        for a in self.animali:
+            if a["k"] in ("animale", "sogno", "tifo"):
+                u = a["u"].lower()
+                if u not in per or a["pt"] > per[u]["pt"]: per[u] = a
+        for u, a in per.items():
+            a["pt"] += ex.get(u, 0)
+        self.cambiato = True
+
+    def riconcilia(self, utente, letto, ts_di):
+        """Mette sulla mappa gli animali letti da Claude per questa persona. Restituisce (nuovi, aggiornati)."""
+        miei = {norm(a["n"]): a for a in self.animali if a["u"].lower() == utente.lower() and a["k"] in ("animale", "sogno", "stella")}
+        nuovi, aggiornati = [], []
+        for x in letto["animali"]:
+            L = x["luogo"]
+            campi = {"c": L["c"], "p": L["p"], "r": L["r"], "lat": L["lat"], "lng": L["lng"], "k": x["k"], "t": x["t"],
+                     "n": x["n"], "razza": x["razza"], "razza_testo": x["razza_testo"]}
+            if x["t"] == "altro": campi["specie"] = x["specie"]
+            a = miei.get(norm(x["n"]))
+            if a:
+                if any(a.get(k) != v for k, v in campi.items() if k in ("c", "p", "k", "t", "n", "specie")):
+                    aggiornati.append(a)
+                a.update(campi)
+                if x["t"] != "altro": a.pop("specie", None)
+            else:
+                if len(miei) + len(nuovi) >= MAX_ANIMALI_PER_UTENTE:
+                    continue
+                a = {"u": utente, **campi, "ts": ts_di(x.get("id_commento")), "id": f"{utente}|{x['k']}|{norm(x['n'])}", "pt": 0}
+                self.animali.append(a); nuovi.append(a)
+        if nuovi or aggiornati:
+            self.ricalcola()
+        return nuovi, aggiornati
 
 # ---------- giro principale ----------
 CORREZIONI = ROOT / "motore/correzioni.json"
@@ -535,89 +613,217 @@ def applica_correzioni(gioco):
     print(f"correzione {cor['id']}: tolte {len(via)} voci, da rifare {len(rifai)} commenti")
     return rifai
 
-def gira(commenti, rispondi, mio_username=None, cancella=None):
-    """commenti: iterabile di (media_id, commento); rispondi: funzione(comment_id, testo); cancella: funzione(comment_id) per le risposte da rifare."""
+SPECIE_RE = r"furett|conigli|criceti|criceto|pappagall|uccell|cavall|tartarug|pesc|porcellin|asin|capr|galli|gec|lepr|rettil|serpent|iguan|cincill|maial"
+
+def solo_tag(testo):
+    return bool(re.fullmatch(r"\s*(@[\w.]+[\s,]*)+", testo or ""))
+
+def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
+    """La frase giusta per l'ultimo commento di questa persona."""
+    ids = {c["id"] for c in nuovi_c}
+    if nuovi_a:
+        if len(nuovi_a) >= 2:
+            nomi = [a["n"] for a in nuovi_a]
+            citta = sorted({a["c"] for a in nuovi_a})
+            return "multi", {"c": " e ".join(citta), "nomi": ", ".join(nomi[:-1]) + " e " + nomi[-1], "quanti": len(nomi)}
+        a = nuovi_a[0]
+        if a["k"] in ("stella", "sogno"):
+            return a["k"], {"n": a["n"], "c": a["c"]}
+        animale = a["t"] if a["t"] in ("cane", "gatto") else a.get("specie") or "animale"
+        if a.get("ruolo"):
+            return "fondatore", {"n": a["n"], "c": a["c"], "animale": animale}
+        stessa = [x for x in gioco.animali if x["k"] == "animale" and x["c"] == a["c"] and x["p"] == a["p"] and x["t"] == a["t"]]
+        squadra = "canine" if a["t"] == "cane" else "gatte" if a["t"] == "gatto" else "speciali"
+        par = {"n": a["n"], "c": a["c"], "pos": len(stessa), "animale": animale, "tot": len(stessa), "squadra": squadra}
+        vicini = sorted((x for x in gioco.animali if x["k"] == "animale" and x is not a and x["u"].lower() != u.lower()),
+                        key=lambda x: distanza(x, a))[:2]
+        if len(vicini) == 2 and random.random() < 0.4:
+            return "vicini", {**par, "v1": vicini[0]["n"], "v2": vicini[1]["n"]}
+        return "animale", par
+    if aggiornati:
+        a = aggiornati[0]
+        return "aggiornato", {"n": a["n"], "c": a["c"]}
+    for x in letto["senza_comune"]:
+        if x.get("id") in ids:
+            return "manca_comune_nome", {"n": x["n"]}
+    for x in letto["senza_nome"]:
+        if x.get("id") in ids:
+            return ("manca_nome", {"c": x["luogo"]["c"]}) if x.get("luogo") else ("base", {})
+    if letto["estero"] and not gioco.ha_luce(u):
+        return "estero", {}
+    if letto["domanda"] and any("?" in c.get("text", "") for c in nuovi_c):
+        return "altri", {}
+    return None, {}
+
+def vuoto():
+    return {"animali": [], "senza_comune": [], "senza_nome": [], "estero": False, "voti": [], "segue": False, "rimuovi": False, "domanda": None}
+
+def per_persona(commenti, mio_username, visti=None):
+    per = {}
+    for media_id, c in commenti:
+        u = c.get("username") or c.get("from", {}).get("username", "")
+        if not u or (mio_username and u.lower() == mio_username.lower()):
+            if visti is not None: visti.add(c["id"])
+            continue
+        per.setdefault(u, []).append(c)
+    for v in per.values():
+        v.sort(key=lambda c: c.get("timestamp", ""))
+    return per
+
+def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
+    """commenti: iterabile di (media_id, commento); rispondi: funzione(comment_id, testo); cancella: funzione(comment_id) per le risposte da rifare.
+    Claude legge tutti i commenti di chi ha scritto qualcosa di nuovo; se non risponde, quei commenti si riprovano al giro dopo."""
     comuni, gioco = Comuni(), Gioco()
+    gioco.migra_punti()
     rifai = applica_correzioni(gioco)
     for r in gioco.stato.pop("risposte_da_fare", []):  # risposte decise a mano nella correzione
         try:
-            if cancella: cancella(r["id"])
-            rispondi(r["id"], r["testo"])
+            if cancella:
+                for cid in r.get("cancella", [r["id"]]): cancella(cid)
+            if r.get("testo"): rispondi(r["id"], r["testo"])
         except Exception as e:
             print(f"risposta di correzione non inviata ({r['id']}): {e}", file=sys.stderr)
+    leggi_fn = leggi_fn or (lambda u, cs: lettore.leggi(u, cs, comuni, norm, nome_proprio, razza))
+    per = per_persona(commenti, mio_username, gioco.visti)
+    oggi = datetime.now(timezone.utc).date().isoformat()
     nuovi = risposte = 0
-    for media_id, c in commenti:
-        if c["id"] in gioco.visti:
+    for u, suoi in per.items():
+        nuovi_c = [c for c in suoi if c["id"] not in gioco.visti or c["id"] in rifai]
+        if not nuovi_c:
             continue
-        gioco.visti.add(c["id"])
-        utente = c.get("username") or c.get("from", {}).get("username", "")
-        if not utente or (mio_username and utente.lower() == mio_username.lower()):
+        letto = vuoto() if all(solo_tag(c.get("text", "")) for c in nuovi_c) else leggi_fn(u, suoi)
+        if letto is None:
+            print(f"@{u}: il lettore non ha risposto, riprovo al prossimo giro", file=sys.stderr)
             continue
-        nuovi += 1
-        if c["id"] in rifai and cancella:
-            try: cancella(c["id"])
-            except Exception as e: print(f"risposta vecchia non cancellata ({c['id']}): {e}", file=sys.stderr)
-        testo_c = c.get("text", "")
-        az = analizza(testo_c, comuni)
-        # commenti a pezzi: "Leo gatto" e poi "Tarquinia" → si uniscono con quello di prima della stessa persona (entro 24 ore)
-        pezzi = gioco.stato.setdefault("pezzi", {})
-        prec = pezzi.get(utente.lower())
-        if (az is None or "manca" in az) and prec and time.time() - prec["t"] < 86400:
-            unito = analizza(prec["testo"] + ", " + testo_c, comuni)
-            if unito and "manca" not in unito:
-                az = unito; pezzi.pop(utente.lower(), None)
-        if az and "manca" in az and az.get("k") == "animale":
-            pezzi[utente.lower()] = {"testo": testo_c, "t": time.time()}
-        elif az and "manca" not in az:
-            pezzi.pop(utente.lower(), None)
-        if az is None and "?" in testo_c and re.search(r"furett|conigli|criceti|criceto|pappagall|uccell|cavall|tartarug|pesc|porcellin|asin|capr|galli", norm(testo_c)):
-            az = {"k": "altri"}
-        prima = len(gioco.animali)
+        for c in nuovi_c:
+            gioco.visti.add(c["id"])
+            if c["id"] in rifai and cancella:
+                try: cancella(c["id"])
+                except Exception as e: print(f"risposta vecchia non cancellata ({c['id']}): {e}", file=sys.stderr)
+        nuovi += len(nuovi_c)
+        ts_di = lambda cid: next((c.get("timestamp") for c in suoi if c["id"] == cid), None) or nuovi_c[-1].get("timestamp") or datetime.now(timezone.utc).isoformat()
+        if letto["rimuovi"]:
+            chiave, par, _ = gioco.applica({"k": "rimuovi"}, u, None)
+        else:
+            nuovi_a, aggiornati = gioco.riconcilia(u, letto, ts_di)
+            chiave, par = scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c)
+        ids = {c["id"] for c in nuovi_c}
+        for v in letto["voti"]:
+            if v["id"] in ids:
+                k2, p2, _ = gioco.applica({"k": "voto", "t": "gatto" if v["squadra"] == "gatti" else "cane"}, u, None)
+                if k2 and not chiave: chiave, par = k2, p2
+        if chiave in ("fondatore", "animale", "vicini", "multi"):
+            gioco.stato["bonus"][u.lower()] = oggi  # il commento che accende una luce ha già i suoi punti
+        else:
+            gioco.bonus_giornaliero(u)
+        seguono = gioco.stato.setdefault("seguono", {})
         frase_segue = None
-        if az and az["k"] == "segue":
-            frase_segue = gioco.segue(utente); az = None
-        if az and az["k"] == "altri":
-            chiave, par, obbligatoria = "altri", {}, True
-        elif az:
-            chiave, par, obbligatoria = gioco.applica(az, utente, c.get("timestamp") or datetime.now(timezone.utc).isoformat())
-        else:
-            chiave, obbligatoria = None, False
-        if len(gioco.animali) <= prima:  # il commento che accende una luce ha già i suoi punti
-            gioco.bonus_giornaliero(utente, media_id)
-        else:
-            gioco.stato["bonus"][utente.lower()] = datetime.now(timezone.utc).date().isoformat()
-        if az and az.get("segue"):
-            frase_segue = gioco.segue(utente)
-        elif gioco.stato.get("seguono", {}).get(utente.lower()) == "in_attesa" and len(gioco.animali) > prima:
-            frase_segue = gioco.segue(utente)  # i +5 promessi arrivano ora che la luce è accesa
+        if letto["segue"] or seguono.get(u.lower()) == "in_attesa" and gioco.ha_luce(u):
+            frase_segue = gioco.segue(u)
         # inviti: chi tagga amici prende +3 per ognuno che poi commenta; a chi tagga si risponde sempre
-        taggati = gioco.tag(utente, c.get("text", ""))
-        premiati = gioco.premia_inviti(utente)
+        taggati = [a for c in nuovi_c for a in gioco.tag(u, c.get("text", ""))]
+        premiati = gioco.premia_inviti(u)
         extra = []
         if taggati:
-            ha_luce = any(a["u"].lower() == utente.lower() and a["k"] in ("animale", "sogno", "tifo") for a in gioco.animali)
-            extra.append(frase("tag" if ha_luce else "tag_senza_luce", amici=", ".join("@" + a for a in taggati[:5])))
+            extra.append(frase("tag" if gioco.ha_luce(u) else "tag_senza_luce", amici=", ".join("@" + a for a in taggati[:5])))
         if premiati:
             extra.append(frase("premio", chi=", ".join("@" + a for a in premiati[:3])))
         if frase_segue:
             extra.append(frase(frase_segue))
-        if not chiave and extra:
-            chiave, par, obbligatoria = "base", {}, True
-        if not chiave or gioco.risposte_ultima_ora() >= MAX_RISPOSTE_ORA:
+        elif chiave in ("fondatore", "animale", "vicini", "multi", "aggiornato", "voto") and not seguono.get(u.lower()):
+            extra.append(frase("invito_segui"))  # commentano ma non ci seguono: lo chiediamo a ogni luce accesa
+        if not chiave and not extra:
             continue
-        quota = 1.0 if len(gioco.animali) < 500 else QUOTA_RISPOSTE  # finché siamo piccoli si risponde a tutti
-        if obbligatoria or extra or random.random() < quota:
-            try:
-                testo = frase(chiave, **par) if chiave != "base" or not extra else ""
-                rispondi(c["id"], " ".join(t for t in [testo] + extra if t))
-                gioco.stato["risposte"].append(time.time())
-                risposte += 1
-            except Exception as e:  # una risposta fallita non deve fermare la mappa
-                print(f"risposta non inviata a {c['id']}: {e}", file=sys.stderr)
+        if gioco.risposte_ultima_ora() >= MAX_RISPOSTE_ORA:
+            continue
+        if len(gioco.animali) >= 500 and chiave in ("animale", "vicini") and not taggati and random.random() > QUOTA_RISPOSTE:
+            continue
+        testo = " ".join(t for t in [frase(chiave, **par) if chiave else ""] + extra if t)
+        try:
+            rispondi(nuovi_c[-1]["id"], testo)
+            gioco.stato["risposte"].append(time.time())
+            risposte += 1
+        except Exception as e:  # una risposta fallita non deve fermare la mappa
+            print(f"risposta non inviata a {nuovi_c[-1]['id']}: {e}", file=sys.stderr)
     gioco.salva()
     luci = sum(1 for a in gioco.animali if a["k"] != "stella")
     print(f"commenti nuovi: {nuovi} · risposte: {risposte} · luci sulla mappa: {luci}")
     return gioco
+
+def ricostruisci(commenti, rispondi, mio_username, cancella, prova):
+    """Rilegge con Claude TUTTI i commenti e rifà la mappa da capo; a chi era stato capito male risponde con la versione giusta."""
+    from concurrent.futures import ThreadPoolExecutor
+    comuni, gioco = Comuni(), Gioco()
+    gioco.migra_punti()
+    prima = {}
+    for a in gioco.animali:
+        if a["k"] != "tifo":
+            prima.setdefault(a["u"].lower(), set()).add((norm(a["n"]), a["c"], a["k"]))
+    per = per_persona(commenti, mio_username)
+    with ThreadPoolExecutor(8) as ex:
+        letti = dict(ex.map(lambda u: (u, lettore.leggi(u, per[u], comuni, norm, nome_proprio, razza)), list(per)))
+    rinomina = carica(CORREZIONI, {}).get("rinomina", {})  # i pochi casi ambigui decisi a mano: {"utente": {"Letto": "Giusto"}}
+    for u, l in letti.items():
+        for x in (l or {}).get("animali", []):
+            x["n"] = rinomina.get(u, {}).get(x["n"], x["n"])
+    mancano = [u for u, l in letti.items() if l is None]
+    if mancano:
+        sys.exit(f"il lettore non ha risposto per {mancano}: ricostruzione annullata, la mappa resta com'era")
+    ora_vecchia = {(a["u"].lower(), norm(a["n"])): a["ts"] for a in gioco.animali}
+    gioco.dati["animali"] = [a for a in gioco.animali if a["k"] == "tifo"]
+    for u in sorted(per, key=lambda u: per[u][0].get("timestamp", "")):
+        suoi = per[u]
+        if letti[u]["rimuovi"]:
+            continue
+        gioco.riconcilia(u, letti[u], lambda cid, suoi=suoi: next((c.get("timestamp") for c in suoi if c["id"] == cid), suoi[0].get("timestamp")))
+    # le luci accese all'inizio mantengono l'ora originale, così i Fondatori restano gli stessi quando il comune è giusto
+    for a in gioco.animali:
+        a["ts"] = min(a["ts"], ora_vecchia.get((a["u"].lower(), norm(a["n"])), a["ts"]))
+    gioco.ricalcola()
+    da_fare = []
+    for u, suoi in per.items():
+        l = letti[u]
+        dopo = {(norm(a["n"]), a["c"], a["k"]) for a in gioco.animali if a["u"].lower() == u.lower() and a["k"] != "tifo"}
+        miei = [a for a in gioco.animali if a["u"].lower() == u.lower() and a["k"] != "tifo"]
+        testo = None
+        if dopo != prima.get(u.lower(), set()):
+            if miei:
+                elenco = ", ".join(f"{a['n']} {'ad' if a['c'][:1] in 'AaEe' else 'a'} {a['c']}" + (" ✦" if a["k"] == "stella" else " 👑" if a.get("ruolo") else "") for a in miei)
+                testo = (f"Avevo capito male, scusa 🙈 Ora è giusto: {elenco} ✨" if prima.get(u.lower())
+                         else f"Eccoci! Si accende la luce: {elenco} ✨")
+                if not gioco.stato.get("seguono", {}).get(u.lower()):
+                    testo += " " + frase("invito_segui")
+            elif l["senza_comune"]:
+                testo = frase("manca_comune_nome", n=l["senza_comune"][0]["n"])
+            elif l["senza_nome"] and l["senza_nome"][0].get("luogo"):
+                testo = frase("manca_nome", c=l["senza_nome"][0]["luogo"]["c"])
+            elif l["estero"]:
+                testo = frase("estero")
+        domande = [c for c in suoi if "?" in c.get("text", "") and re.search(SPECIE_RE, norm(c.get("text", "")))]
+        if testo:
+            bersaglio = next((c for c in reversed(suoi) if not solo_tag(c.get("text", ""))), suoi[-1])
+            da_fare.append((u, bersaglio, [c["id"] for c in suoi], testo))
+        elif domande:
+            da_fare.append((u, domande[-1], [domande[-1]["id"]], frase("altri")))
+    for u in sorted(set(prima) - {x.lower() for x in per}):
+        print(f"  (nessun commento letto per @{u}: le sue luci sono state tolte)")
+    for u, c, canc, testo in da_fare:
+        print(f"@{u}: «{c.get('text', '')[:90]}»\n   ↳ {testo}")
+    print(f"luci prima: {sum(len(v) for v in prima.values())} · dopo: {sum(1 for a in gioco.animali if a['k'] != 'tifo')} · risposte da fare: {len(da_fare)}")
+    if prova:
+        for a in sorted(gioco.animali, key=lambda a: a["u"]):
+            print(f"   {a['u'][:20]:20} {a['k'][:6]:6} {a['t']:5} {a.get('specie', ''):9} {a['n']:16} {a['c']} ({a['p']}) {a.get('razza')}|{a.get('razza_testo')} {a['pt']}pt {a.get('ruolo', '')}")
+        return
+    gioco.salva()
+    fatte = 0
+    for u, c, canc, testo in da_fare:
+        try:
+            for cid in canc: cancella(cid)
+            rispondi(c["id"], testo); fatte += 1
+        except Exception as e:
+            print(f"risposta non inviata a @{u}: {e}", file=sys.stderr)
+        time.sleep(2)  # piano: tante risposte di fila sembrano spam
+    print(f"mappa ricostruita · risposte inviate: {fatte}")
 
 def main():
     if len(sys.argv) == 3 and sys.argv[1] == "--prova":
@@ -659,6 +865,11 @@ def main():
                     print("   grezzo", path, prova, "→", ig._req("GET", path, **prova))
                 except urllib.error.HTTPError as e:
                     print("   grezzo", path, prova, "→ errore", e.code, e.read()[:300])
+        return
+    if "--ricostruisci" in sys.argv:
+        lista = [(m["id"], c) for m in ig.reel_recenti() for c in ig.commenti(m["id"])]
+        ricostruisci(lista, ig.rispondi, me.get("username"), lambda cid: ig.cancella_mie_risposte(cid, me.get("username", "zampeditalia")),
+                     "--a-secco" in sys.argv)
         return
     def tutti():
         # Instagram li restituisce dal più recente: in ordine di arrivo il Fondatore è davvero il primo

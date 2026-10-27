@@ -6,7 +6,7 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmt = n => n.toLocaleString("it-IT");
 const ANTEPRIMA = new URLSearchParams(location.search).has("anteprima");
-const COL = { cane: [255, 197, 92], gatto: [207, 227, 107], sogno: [190, 205, 255], stella: [255, 244, 222] };
+const COL = { cane: [255, 197, 92], gatto: [207, 227, 107], altro: [130, 220, 235], sogno: [190, 205, 255], stella: [255, 244, 222] };
 
 // ---------- mappa ----------
 const map = L.map("map", { zoomControl: false, attributionControl: false, minZoom: 5, maxZoom: 16, zoomSnap: 0.25,
@@ -28,7 +28,7 @@ const sprite = rgb => {
   g.addColorStop(0, "rgba(255,255,255,1)"); g.addColorStop(0.18, `rgba(${rgb},1)`); g.addColorStop(0.45, `rgba(${rgb},.35)`); g.addColorStop(1, `rgba(${rgb},0)`);
   x.fillStyle = g; x.fillRect(0, 0, 64, 64); return c;
 };
-const SPR = { cane: sprite(COL.cane), gatto: sprite(COL.gatto), sogno: sprite(COL.sogno), stella: sprite(COL.stella) };
+const SPR = { cane: sprite(COL.cane), gatto: sprite(COL.gatto), altro: sprite(COL.altro), sogno: sprite(COL.sogno), stella: sprite(COL.stella) };
 
 let DATA = [], VISIBLE = [], recentCount = 0;
 const DOM_ZOOM = 11.5; // da qui in su compaiono i disegni
@@ -63,9 +63,10 @@ fetch("data/regioni.json").then(r => r.json()).then(REG => {
 });
 
 // ---------- dati ----------
+let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) return (await r.json()).animali || []; } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -74,7 +75,7 @@ function prepare(list) {
   list.forEach(d => { const key = d.c + "|" + d.p; perCity.set(key, (perCity.get(key) || 0) + 1); });
   list.forEach((d, i) => {
     d.k = d.k || "animale"; d.t = d.t || "cane"; d.pt = d.pt || 0; d.id = d.id || d.u + "|" + d.n + "|" + i;
-    d.seed = D.hash(d.id); d.rk = D.razza(d.razza_testo || d.razza, d.t); // il testo scritto vince: le razze nuove si disegnano anche per chi è già sulla mappa
+    d.seed = D.hash(d.id); d.rk = d.t === "altro" ? null : D.razza(d.razza_testo || d.razza, d.t); // il testo scritto vince: le razze nuove si disegnano anche per chi è già sulla mappa
     d.recent = d.ts && now - Date.parse(d.ts) < 3600e3;
     // sparso su un disco attorno al centro del comune, più largo dove ci sono più animali; sempre uguale per lo stesso animale
     const spread = Math.min(0.09, 0.006 + 0.0028 * Math.sqrt(perCity.get(d.c + "|" + d.p)));
@@ -91,14 +92,15 @@ function prepare(list) {
 const petLayer = L.layerGroup().addTo(map), cityLabels = L.layerGroup().addTo(map);
 let petMarkers = new Map();
 function petIcon(d) {
-  const svg = d.k === "stella" ? D.stella() : d.k === "sogno" ? D.sogno(d.rk, d.seed) : d.t === "gatto" ? D.gatto(d.rk, d.seed) : D.cane(d.rk, d.seed);
+  const svg = d.k === "stella" ? D.stella() : d.k === "sogno" ? D.sogno(d.rk, d.seed) : d.t === "altro" ? D.altro(d.specie, d.seed) : d.t === "gatto" ? D.gatto(d.rk, d.seed) : D.cane(d.rk, d.seed);
   const cls = d.k === "animale" ? d.t : d.k;
   return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}" data-id="${esc(d.id)}">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${esc(d.n)}</span></div>` });
 }
+const icona = d => d.t === "altro" ? D.emoji(d.specie) : d.t === "gatto" ? "🐱" : "🐶";
 function popup(d) {
   const ruolo = d.ruolo || (d.fondatore ? "Fondatore di " + d.c : "");
-  const tipo = d.k === "stella" ? "Una stella nel cielo" : d.k === "sogno" ? "Il sogno di @" + esc(d.u) : d.t === "gatto" ? (D.GATTI[d.rk]?.n || "Gatto") : (d.rk === "meticcio" && d.razza_testo && !/meticc|incrocio|mix/i.test(d.razza_testo) ? esc(d.razza_testo.replace(/^./, c => c.toUpperCase())) : D.CANI[d.rk]?.n || "Cane");
-  return `<div class="pop"><h3>${d.k === "stella" ? "✦" : d.t === "gatto" ? "🐱" : "🐶"} ${esc(d.n)}</h3><div class="k">${tipo}</div>
+  const tipo = d.k === "stella" ? "Una stella nel cielo" : d.k === "sogno" ? "Il sogno di @" + esc(d.u) : d.t === "altro" ? esc((d.razza_testo || d.specie || "Amico speciale").replace(/^./, c => c.toUpperCase())) : d.t === "gatto" ? (D.GATTI[d.rk]?.n || "Gatto") : (d.rk === "meticcio" && d.razza_testo && !/meticc|incrocio|mix/i.test(d.razza_testo) ? esc(d.razza_testo.replace(/^./, c => c.toUpperCase())) : D.CANI[d.rk]?.n || "Cane");
+  return `<div class="pop"><h3>${d.k === "stella" ? "✦" : icona(d)} ${esc(d.n)}</h3><div class="k">${tipo}</div>
     <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>
     ${d.k === "stella" ? "" : `<div>${d.pt} ${d.pt === 1 ? "punto" : "punti"}${d.rank ? ` · ${d.rank}° in Italia` : ""}</div>`}
     ${ruolo ? `<span class="role">👑 ${esc(ruolo)}</span>` : ""}
@@ -125,18 +127,20 @@ function syncCities(cities) {
 // ---------- statistiche ----------
 let STATS = {};
 function stats() {
-  const cities = new Map(); let cani = 0, gatti = 0, luci = 0;
+  const cities = new Map(); let cani = 0, gatti = 0, altri = 0, luci = 0;
   for (const d of DATA) {
     if (d.k === "stella") continue;
     luci++;
     const key = d.c + "|" + d.p; let c = cities.get(key);
     if (!c) cities.set(key, c = { c: d.c, p: d.p, r: d.r, lat: d.lat, lng: d.lng, cani: 0, gatti: 0, tot: 0 });
-    const team = d.t === "gatto" ? "gatti" : "cani"; c[team]++; c.tot++; team === "cani" ? cani++ : gatti++;
+    c.tot++;
+    if (d.t === "altro") { altri++; continue; } // gli altri animali accendono la città ma non entrano nella sfida Cani contro Gatti
+    const team = d.t === "gatto" ? "gatti" : "cani"; c[team]++; team === "cani" ? cani++ : gatti++;
   }
   const city = [...cities.values()].sort((a, b) => b.tot - a.tot || a.c.localeCompare(b.c));
   const rank = DATA.filter(d => d.k === "animale" || d.k === "sogno").sort((a, b) => b.pt - a.pt || (a.ts || "").localeCompare(b.ts || ""));
   rank.forEach((d, i) => d.rank = i + 1);
-  return STATS = { city, rank, cani, gatti, luci };
+  return STATS = { city, rank, cani, gatti, altri, luci };
 }
 function renderHeader() {
   const { cani, gatti, luci } = STATS, tot = cani + gatti, pc = tot ? (cani / tot) * 100 : 50;
@@ -160,18 +164,24 @@ function show(v) {
     s.querySelectorAll(".row").forEach(r => r.onclick = () => { const c = STATS.city[r.dataset.i]; show("mappa"); map.flyTo([c.lat, c.lng], 13, { duration: 0.9 }); });
   }
   if (v === "classifica") {
-    s.innerHTML = `<h2>Classifica</h2><p class="sub">Più punti fai, più la tua luce cresce: cuccia, lucine, giardino, villa, castello.</p>` + (STATS.rank.length ? `<ol class="list">` +
-      STATS.rank.slice(0, 50).map(d => `<li class="row" data-id="${esc(d.id)}"><span class="pos">${d.rank}</span><span class="who">${d.t === "gatto" ? "🐱" : "🐶"} ${esc(d.n)} · @${esc(d.u)}<small>${esc(d.c)} · ${esc(d.r)}</small></span><span class="pts">${fmt(d.pt)}<small>pt</small></span></li>`).join("") + `</ol>` : empty);
+    const oggi = (INVITI && INVITI.oggi) || [];
+    const sfida = `<div class="sfida-inviti"><h3>👥 Sfida degli inviti di oggi</h3><p class="sub">Tagga gli amici nei commenti: ogni amico che commenta vale +3. Chi ne porta di più è il <b>Re degli inviti</b> 👑 e finisce nella puntata delle 21.</p>` +
+      (oggi.length ? `<ol class="list">` + oggi.slice(0, 5).map(([u, n], i) => `<li class="row"><span class="pos">${i === 0 ? "👑" : i + 1}</span><span class="who">@${esc(u)}</span><span class="pts">${n}<small>${n === 1 ? "amico" : "amici"}</small></span></li>`).join("") + `</ol>`
+        : `<p class="empty">Nessun invito ancora oggi: il primo amico che porti ti mette in testa!</p>`) + `</div>`;
+    s.innerHTML = `<h2>Classifica</h2><p class="sub">Più punti fai, più la tua luce cresce: cuccia, lucine, giardino, villa, castello.</p>` + sfida + (STATS.rank.length ? `<ol class="list">` +
+      STATS.rank.slice(0, 50).map(d => `<li class="row" data-id="${esc(d.id)}"><span class="pos">${d.rank}</span><span class="who">${icona(d)} ${esc(d.n)} · @${esc(d.u)}<small>${esc(d.c)} · ${esc(d.r)}</small></span><span class="pts">${fmt(d.pt)}<small>pt</small></span></li>`).join("") + `</ol>` : empty);
     s.querySelectorAll(".row").forEach(r => r.onclick = () => { show("mappa"); focus(DATA.find(d => d.id === r.dataset.id)); });
   }
   if (v === "regole") {
     s.innerHTML = `<h2>Come si gioca</h2><p class="sub">Si gioca nei commenti dei reel di @zampeditalia. Entro 15 minuti la luce si accende.</p><ul class="rules">
       <li><b>🐶🐱 Il tuo animale · +10</b>Scrivi città, nome e razza: <code>Treviso, Luna, golden</code> oppure <code>Milano, Micio, gatto rosso</code>. Il primo del comune diventa Fondatore (+20).</li>
+      <li><b>🐰🦎🐢 Tutti gli animali</b>Conigli, furetti, gechi, tartarughe, pappagalli…: <code>Padova, Ugo, furetto</code>. Accendono la città con una luce azzurra.</li>
+      <li><b>➕ Seguici · +10</b>Segui @zampeditalia e scrivi <code>SEGUO</code> in un commento. Nei reel mettiamo prima gli animali di chi ci segue.</li>
       <li><b>📣 Fai il tifo · +5</b>Non hai animali? Scegli la squadra: <code>Tifo cani: Treviso</code> oppure <code>Tifo gatti: Milano</code>.</li>
       <li><b>☁️ Il tuo sogno · +10</b>L'animale che vorresti: <code>Sogno: Padova, Bruno, bassotto</code>.</li>
       <li><b>✦ Una stella</b>Per chi non c'è più: <code>Stella: Treviso, Max</code>. Una stella nel cielo col suo nome, mai in classifica.</li>
       <li><b>👑 I ruoli</b>Fondatore (primo del comune), Sindaco a 4 zampe (primo della città), Capobranco (primo della regione), Cane d'Italia e Gatto d'Italia, proclamati la domenica alle 21.</li>
-      <li><b>🙋 Punti ogni giorno</b>+5 per un commento su un reel nuovo, +3 per ogni amico taggato che poi commenta.</li>
+      <li><b>🙋 Punti ogni giorno</b>+5 per un commento su un reel nuovo, +3 per ogni amico taggato che poi commenta. Chi porta più amici in un giorno è il Re degli inviti 👑</li>
       <li><b>Privacy</b>Sulla mappa ci sono solo il tuo @ pubblico, la città e quello che hai scritto. Per sparire, commenta <code>RIMUOVI</code>.</li></ul>`;
   }
 }

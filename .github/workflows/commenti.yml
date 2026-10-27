@@ -10,6 +10,14 @@ on:
         description: "solo diagnosi, senza toccare la mappa"
         type: boolean
         default: false
+      ricostruisci:
+        description: "rilegge tutti i commenti con Claude e rifà la mappa"
+        type: boolean
+        default: false
+      a_secco:
+        description: "con ricostruisci: stampa soltanto, senza salvare né rispondere"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -21,20 +29,21 @@ concurrency:
 jobs:
   commenti:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 25
     env:
       IG_TOKEN: ${{ secrets.IG_TOKEN }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - name: Leggi i commenti e aggiorna la mappa
         if: env.IG_TOKEN != ''
-        run: python3 -I motore/commenti.py ${{ inputs.diagnosi && '--diagnosi' || '' }}
+        run: python3 -I motore/commenti.py ${{ inputs.diagnosi && '--diagnosi' || '' }} ${{ inputs.ricostruisci && '--ricostruisci' || '' }} ${{ inputs.a_secco && '--a-secco' || '' }}
       - name: Salva la mappa
         if: env.IG_TOKEN != ''
         run: |
           git config user.name "zampe-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/animali.json motore/stato.json
+          git add docs/data/animali.json motore/stato.json docs/data/razze.json
           if git diff --cached --quiet; then echo "nessuna novità"; exit 0; fi
           git commit -q -m "Mappa aggiornata dai commenti"
           git pull -q --rebase && git push -q

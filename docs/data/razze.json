@@ -184,7 +184,7 @@
   ["certosino", "Certosino (Chartreux)", ["certosino", "certosina", "chartreux"], "blu", "solid", "tondo occhi:rame"],
   ["blu_russia", "Blu di Russia", ["blu di russia", "russian blue", "russo blu", "nebelung"], "blu", "solid", "occhi:verde"],
   ["ragdoll", "Ragdoll", ["ragdoll", "rag doll", "ragamuffin"], "crema", "points", "pelolungo occhi:azzurro"],
-  ["birmano", "Sacro di Birmania", ["sacro di birmania", "birmano", "birmana", "birman"], "crema", "points", "pelolungo occhi:azzurro"],
+  ["birmano", "Sacro di Birmania", ["sacro di birmania", "sacri di birmania", "birmano", "birmana", "birman"], "crema", "points", "pelolungo occhi:azzurro"],
   ["burmese", "Burmese", ["burmese", "burmilla", "tonchinese", "tonkinese"], "marrone", "solid", "occhi:ambra"],
   ["sphynx", "Sphynx", ["sphynx", "sphinx", "sfinge", "nudo", "gatto nudo", "peterbald", "donskoy", "senza pelo"], "rosa", "solid", "orecchiegrandi"],
   ["devon_rex", "Devon / Cornish rex", ["devon rex", "cornish rex", "rex", "selkirk", "selkirk rex", "laperm"], "crema", "solid", "orecchiegrandi ricci"],

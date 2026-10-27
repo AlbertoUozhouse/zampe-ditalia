@@ -97,6 +97,8 @@ body{background:var(--night);color:var(--cream);font-family:var(--f-body);overfl
 .pet .name{margin-top:-2px;background:#F3DDB0;color:#5A3417;border:2px solid #5E3519;border-radius:7px;padding:0 7px;
   font:800 11px/1.5 var(--f-display);letter-spacing:.6px;text-transform:uppercase;white-space:nowrap;box-shadow:0 0 12px rgba(255,197,92,.5)}
 .pet.gatto .name{background:#E9F2C4;color:#2F3A10;border-color:#3D4A18;box-shadow:0 0 12px rgba(207,227,107,.4)}
+.pet.altro svg{filter:drop-shadow(0 0 9px rgba(130,220,235,.5))}
+.pet.altro .name{background:#D6F3F8;color:#0E3A44;border-color:#1C5361;box-shadow:0 0 12px rgba(130,220,235,.45)}
 .pet.sogno .name{background:#E6ECFF;color:#24366B;border-color:#3A4E8C}
 .pet.stella .name{background:transparent;border:0;color:var(--cream);box-shadow:none;text-shadow:0 0 6px #000}
 .pet.hit{z-index:1000!important;animation:hit 1.2s ease-out 2}
@@ -113,3 +115,5 @@ body{background:var(--night);color:var(--cream);font-family:var(--f-body);overfl
 
 @media (max-width:520px){.tab{padding:8px 10px;font-size:13px}.cta{font-size:13px}.zoom{display:none}.brand p{display:none}.sheet{bottom:calc(160px + env(safe-area-inset-bottom,0px))}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.sfida-inviti{border:1px solid rgba(130,220,235,.35);border-radius:12px;padding:10px 12px;margin:0 0 14px;background:rgba(130,220,235,.06)}
+.sfida-inviti h3{margin:0 0 4px;font:800 15px var(--f-display);color:var(--cream)}

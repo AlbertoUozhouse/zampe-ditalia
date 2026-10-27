@@ -221,5 +221,16 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
     return r ? r.key : tipo === "gatto" ? "europeo" : "meticcio";
   }
 
-  window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, hash, carica, cerca };
+  // ---------- tutti gli altri animali: un medaglione con la loro emoji ----------
+  const EMOJI = [["furett", "🦦"], ["conigli", "🐰"], ["lepr", "🐇"], ["gec", "🦎"], ["iguan", "🦎"], ["lucertol", "🦎"], ["tartarug", "🐢"],
+    ["criceto", "🐹"], ["criceti", "🐹"], ["porcellin", "🐹"], ["cincill", "🐭"], ["topo", "🐭"], ["ratt", "🐀"], ["pappagall", "🦜"], ["cocorit", "🦜"],
+    ["canarin", "🐤"], ["uccell", "🐦"], ["gallin", "🐔"], ["gallo", "🐓"], ["anatr", "🦆"], ["oca", "🪿"], ["cavall", "🐴"], ["pony", "🐴"], ["asin", "🫏"],
+    ["capr", "🐐"], ["pecor", "🐑"], ["maial", "🐷"], ["mucc", "🐄"], ["serpent", "🐍"], ["pitone", "🐍"], ["pesc", "🐠"], ["riccio", "🦔"], ["ragn", "🕷️"]];
+  const emoji = specie => { const s = String(specie || "").toLowerCase(); return (EMOJI.find(([k]) => s.includes(k)) || [0, "🐾"])[1]; };
+  const altro = (specie, seed = 0) => `<svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+    <circle cx="23" cy="23" r="20" fill="#123A44" stroke="#82DCEB" stroke-width="2.5"/>
+    <circle cx="23" cy="23" r="15" fill="#1C5361" opacity=".7"/>
+    <text x="23" y="24" text-anchor="middle" dominant-baseline="central" font-size="${22 + (seed % 3)}">${emoji(specie)}</text></svg>`;
+
+  window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, altro, emoji, hash, carica, cerca };
 })();
