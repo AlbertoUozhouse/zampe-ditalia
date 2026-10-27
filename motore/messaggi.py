@@ -22,6 +22,7 @@ STATO = ROOT / "motore/messaggi.json"
 ANIMALI = ROOT / "docs/data/animali.json"
 CARTOLINE = ROOT / "docs/cartoline"
 SITO = "https://zampeditalia.it/"
+PUNTI_STORIA = 10
 PAROLA = re.compile(r"(?i)cartolin")
 SEGUE = re.compile(r"(?i)\b(ti seguo|seguo|seguito|seguita|follow)\b")
 
@@ -35,7 +36,7 @@ def manda(ig, igsid, messaggio):
 
 
 def conversazioni(ig):
-    campi = "id,updated_time,participants,messages.limit(10){id,from,to,message,created_time}"
+    campi = "id,updated_time,participants,messages.limit(10){id,from,to,message,created_time,story,attachments}"
     yield from ig.pagine("me/conversations", platform="instagram", fields=campi, limit=25)
 
 
@@ -70,7 +71,7 @@ def main():
     dati = carica(ANIMALI, {"animali": []})
     limite = (datetime.now(timezone.utc) - timedelta(hours=23)).isoformat()
     # i messaggi nuovi di ogni persona, con quelli precedenti della stessa conversazione come contesto
-    persone = {}
+    persone, storie = {}, []
     for conv in conversazioni(ig):
         for m in sorted(conv.get("messages", {}).get("data", []), key=lambda m: m.get("created_time", "")):
             da = m.get("from", {})
@@ -79,13 +80,32 @@ def main():
             p = persone.setdefault(da.get("id"), {"u": da.get("username", ""), "tutti": [], "nuovi": []})
             p["tutti"].append({"id": m["id"], "timestamp": m.get("created_time", ""), "text": m.get("message") or ""})
             impronta = hashlib.sha256(("zampe" + m["id"]).encode()).hexdigest()[:16]
+            menzione = bool((m.get("story") or {}).get("mention")) or "story_mention" in json.dumps(m.get("attachments") or {})
+            if menzione and (impronta not in fatti or not st.get("storie_v1")):  # al primo giro si recuperano anche le storie già arrivate
+                fatti.add(impronta)  # ci ha messo in una storia: premio e grazie
+                if m.get("created_time", "").replace("+0000", "+00:00") >= limite and not any(x[0] == da.get("id") for x in storie):
+                    storie.append((da.get("id"), da.get("username", "")))
+                continue
             if impronta not in fatti and m.get("created_time", "").replace("+0000", "+00:00") >= limite and (m.get("message") or "").strip():
                 p["nuovi"].append((impronta, p["tutti"][-1]))
             elif impronta not in fatti:
                 fatti.add(impronta)  # vecchi o senza testo (foto, reazioni): non si rispondono
     gioco = Gioco(); gioco.migra_punti()
     comuni = Comuni()
-    richieste, conteggi = [], {"luci": 0, "seguo": 0, "risposte": 0, "al_team": 0}
+    richieste, conteggi = [], {"luci": 0, "seguo": 0, "risposte": 0, "al_team": 0, "storie": 0}
+    premiati = gioco.stato.setdefault("storie", [])  # chi ha già preso il premio della storia (una volta per persona)
+    for igsid, u in storie:
+        try:
+            if u.lower() in premiati:
+                manda(ig, igsid, {"text": "Grazie ancora per la storia! 💛 Ogni storia porta nuove luci sulla mappa ✨"})
+            elif gioco.ha_luce(u):
+                gioco.punti_extra(u, PUNTI_STORIA); premiati.append(u.lower())
+                manda(ig, igsid, {"text": f"Grazie per la storia! 🎉 +{PUNTI_STORIA} punti per te. Tagga anche gli amici sotto i reel: +3 per ognuno che commenta 👥"})
+            else:
+                manda(ig, igsid, {"text": "Grazie per la storia! 🎉 Accendi la luce del tuo animale (scrivi qui città, nome e animale) e ti diamo +10 punti 🐾"})
+            conteggi["storie"] += 1
+        except urllib.error.HTTPError as e:
+            print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
     for igsid, p in persone.items():
         if not p["nuovi"]:
             continue
@@ -144,6 +164,7 @@ def main():
             pronte.append((igsid, [SITO + "cartoline/" + n for n in nomi]))
         except urllib.error.HTTPError as e:
             print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
+    st["storie_v1"] = True
     st["fatti"] = sorted(fatti)[-20000:]
     # in attesa: solo l'ID anonimo che Instagram dà alla nostra app e l'indirizzo dell'immagine, niente nomi né testi
     st["in_attesa"] = st.get("in_attesa", []) + [{"igsid": i, "url": urls, "t": time.time()} for i, urls in pronte]
@@ -163,7 +184,7 @@ def main():
         try:
             for u in r["url"]:
                 manda(ig, r["igsid"], {"attachment": {"type": "image", "payload": {"url": u}}})
-            manda(ig, r["igsid"], {"text": "Eccola! 💌 Mettila nella tua storia e tagga @zampeditalia ✨ "
+            manda(ig, r["igsid"], {"text": "Eccola! 💌 Mettila nella tua storia e tagga @zampeditalia: +10 punti per te ✨ "
                                            "Vuoi far salire la tua città? Tagga gli amici sotto i reel: +3 punti per ognuno che commenta, e chi ne porta di più oggi è il Re degli inviti 👑"})
             mandate += 1
         except urllib.error.HTTPError as e:
