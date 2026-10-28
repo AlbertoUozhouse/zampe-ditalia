@@ -13,10 +13,15 @@ on:
         description: "Pubblica su Instagram (false = solo prova)"
         type: boolean
         default: true
+      riserva:
+        description: "È già il reel di riserva di uno fallito (non ne lancia un altro)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
   issues: write
+  actions: write
 
 concurrency:
   group: reel
@@ -78,11 +83,15 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -q -m "Registro pubblicazioni"
           for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
+      - name: Reel di riserva
+        if: failure() && inputs.pubblica && !inputs.riserva
+        # un reel fallito non lascia il buco: parte un voto, il formato più semplice
+        run: for t in 1 2 3; do gh workflow run reel.yml -f formato=voto -f riserva=true && break; sleep 20; done
       - name: Avvisa Alberto se qualcosa va storto
         if: failure()
         run: |
           gh issue create --title "🔴 Reel automatico non pubblicato (${{ inputs.formato }})" \
             --body "Cosa è successo: il reel automatico si è fermato prima della pubblicazione.
-          Cosa fare: niente, per ora. L'agente lo sistema alla prossima sessione; se si ripete, aprimi questa pagina.
+          Cosa fare: niente. Al posto suo è partito un reel di riserva (voto); l'agente sistema la causa alla prossima sessione.
           Tempo: 0 minuti.
           Dettagli: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

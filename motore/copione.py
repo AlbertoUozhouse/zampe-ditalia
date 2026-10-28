@@ -260,6 +260,17 @@ ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fon
 
 def numeri(s): return re.findall(r"\d+", s)
 
+MAX_PAROLE = 70  # circa 30 secondi di voce: oltre, il reel perde chi guarda (e costruisci.py scarta sopra i 40)
+
+def taglia(frasi):
+    """Troppe parole (la domenica, con Capobranco, Re degli inviti e bonus insieme): via le scene di mezzo, dalla più vicina alla fine.
+    Restano sempre l'apertura, il bonus e la chiusura."""
+    frasi = list(frasi)
+    while sum(len(t.split()) for t, _ in frasi) > MAX_PAROLE and len(frasi) > 4:
+        via = next((i for i in range(len(frasi) - 3, 0, -1) if frasi[i][1]["tipo"] == "commento"), len(frasi) - 3)
+        print("scena tolta per stare nei tempi:", frasi.pop(via)[0])
+    return frasi
+
 def varia(frasi, didascalia, D):
     k = os.environ.get("ANTHROPIC_API_KEY")
     if not k: return frasi, didascalia
@@ -325,6 +336,7 @@ def main():
                              "\n👥 Sfida degli inviti: +3 per ogni amico taggato che commenta. Chi ne porta di più oggi è il Re degli inviti 👑 e va nella puntata delle 21")
     if not per_attivita:  # nel reel per le attività la parola PRENOTA non si tocca
         frasi, did = varia(frasi, did, D)
+    frasi = taglia(frasi)
     mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")} | set(st.pop("tag_extra", [])))
     if mostrati:
         did = did.strip() + "\n\n🐾 In questo reel: " + " ".join("@" + u for u in mostrati)

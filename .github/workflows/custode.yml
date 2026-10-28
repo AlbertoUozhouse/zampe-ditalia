@@ -1,0 +1,27 @@
+# Custode della guardia: se veglia.yml non sta girando (un riavvio non riuscito), la riaccende.
+# Il cron di GitHub qui è in ritardo spesso, ma per una rete di sicurezza basta che passi ogni tanto.
+name: custode
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  custode:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: La guardia è viva?
+        run: |
+          vive=$(gh run list --workflow veglia.yml --limit 5 --json status -q '[.[] | select(.status != "completed")] | length')
+          if [ "$vive" -gt 0 ]; then echo "guardia viva"; exit 0; fi
+          echo "guardia ferma: la riaccendo"
+          for t in 1 2 3 4 5; do gh workflow run veglia.yml --ref main && exit 0; sleep 30; done
+          exit 1

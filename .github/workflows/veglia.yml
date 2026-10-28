@@ -43,4 +43,7 @@ jobs:
           done
       - name: Riparti
         if: always()
-        run: gh workflow run veglia.yml --ref main
+        run: |
+          # un errore di GitHub qui fermerebbe tutto: si riprova, e il custode (custode.yml) fa da rete
+          for t in 1 2 3 4 5; do gh workflow run veglia.yml --ref main && exit 0; sleep 30; done
+          exit 1
