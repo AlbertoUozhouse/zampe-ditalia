@@ -202,7 +202,7 @@ function renderHeader() {
   const { cani, gatti, luci } = STATS, tot = cani + gatti, pc = tot ? (cani / tot) * 100 : 50;
   $("#versus").innerHTML = `<span class="side dog">🐶 <b>${fmt(cani)}</b> Cani</span><span class="bar" role="img" aria-label="Cani ${fmt(cani)}, Gatti ${fmt(gatti)}"><i style="width:${pc}%"></i></span><span class="side cat">Gatti <b>${fmt(gatti)}</b> 🐱</span>`;
   const goal = luci < CONFIG.obiettivo ? CONFIG.obiettivo : Math.ceil((luci + 1) / 25000) * 25000;
-  $("#counter").innerHTML = `<span><b>${fmt(luci)}</b> / ${fmt(goal)} luci</span><span class="track"><i style="width:${Math.min(100, (luci / goal) * 100)}%"></i></span>${recentCount ? `<span>✨ ${fmt(recentCount)} brillano ora</span>` : ""}${new Date() < new Date("2026-11-03") ? `<span>🎃 Chi ci segue ha il costume</span>` : `<span>✨ Chi ci segue ha le lucine e la prima fila</span>`}`;
+  $("#counter").innerHTML = `<span><b>${fmt(luci)}</b> / ${fmt(goal)} luci</span><span class="track"><i style="width:${Math.min(100, (luci / goal) * 100)}%"></i></span>${recentCount ? `<span>✨ ${fmt(recentCount)} brillano ora</span>` : ""}${new Date() < new Date("2026-11-02") ? `<span>🔥 SEGUO vale +30 fino a domenica</span>` : ""}${new Date() < new Date("2026-11-03") ? `<span>🎃 Chi ci segue ha il costume</span>` : `<span>✨ Chi ci segue ha le lucine e la prima fila</span>`}`;
   if (ANTEPRIMA) { $("#badge").hidden = false; $("#badge").textContent = "Anteprima con dati inventati"; }
 }
 
@@ -234,7 +234,7 @@ function show(v) {
       <li><b>🐰🦎🐢 Tutti gli animali</b>Conigli, furetti, gechi, tartarughe, pappagalli…: <code>Padova, Ugo, furetto</code>. Accendono la città con una luce azzurra. Quando arrivano a 15 luci entrano nella sfida: Cani contro Gatti contro Altri animali!</li>
       <li><b>🐺 Capobranco</b>Ogni domenica alle 21 chi ha più punti nel suo comune (con almeno 3 luci) diventa Capobranco per una settimana. Commenta ogni giorno (+5) e tagga gli amici (+3) per salire.</li>
       <li><b>⛲ La tua città cresce</b>A 5 luci la fontanella, a 10 il parco cani, a 25 il gattile, a 50 la clinica veterinaria, a 100 la piazza dei Fondatori.</li>
-      <li><b>➕ Seguici · +10</b>Segui @zampeditalia e scrivi <code>SEGUO</code> in un commento. Nei reel mettiamo prima gli animali di chi ci segue. 🎃 Fino al 2 novembre il tuo animale ha anche il costume di Halloween sulla mappa; poi le lucine sulla cuccia e la prima fila nel suo paese, vicino alla piazza.</li>
+      <li><b>➕ Seguici · ${new Date() < new Date("2026-11-02") ? "+30 fino a domenica 🔥" : "+10"}</b>Segui @zampeditalia e scrivi <code>SEGUO</code> in un commento. Nei reel mettiamo prima gli animali di chi ci segue. 🎃 Fino al 2 novembre il tuo animale ha anche il costume di Halloween sulla mappa; poi le lucine sulla cuccia e la prima fila nel suo paese, vicino alla piazza.</li>
       <li><b>📣 Fai il tifo · +5</b>Non hai animali? Scegli la squadra: <code>Tifo cani: Treviso</code> oppure <code>Tifo gatti: Milano</code>.</li>
       <li><b>☁️ Il tuo sogno · +10</b>L'animale che vorresti: <code>Sogno: Padova, Bruno, bassotto</code>.</li>
       <li><b>✦ Una stella</b>Per chi non c'è più: <code>Stella: Treviso, Max</code>. Una stella nel cielo col suo nome, mai in classifica.</li>

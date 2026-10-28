@@ -37,6 +37,9 @@ PRIMA_ELEZIONE = "2026-11-01"  # ogni domenica alle 20:45 si elegge il Capobranc
 HALLOWEEN_FINO = "2026-11-02"  # fino a questo giorno gli animali di chi ci segue hanno il costume
 SOGLIA_ALTRI = 15  # con 15 luci gli altri animali entrano nella sfida: Cani contro Gatti contro Altri (anche in copione.py)
 PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 10}
+BOOST_FINO = "2026-11-01"  # Settimana del follow: fino a domenica (elezione dei Capibranco) SEGUO vale +30
+BOOST = datetime.now(timezone.utc).date().isoformat() <= BOOST_FINO
+if BOOST: PUNTI["segue"] = 30
 
 # ---------- testo ----------
 def norm(s):
@@ -329,6 +332,10 @@ FRASI = {
     "premio": ["Benvenuto! Grazie a te {chi} ha appena preso +3 punti 🎉", "Sei arrivato con un invito: +3 punti a {chi} 👥"],
     "base": ["Ciao! Scrivi città, nome e razza del tuo animale, per esempio «Treviso, Luna, golden», e accendi la sua luce ✨"],
 }
+
+for _k in ("segue", "segue_senza_luce", "invito_salto", "invito_segui"):
+    FRASI[_k] = [t.replace("+10", f"+{PUNTI['segue']}") for t in FRASI[_k]]
+    if BOOST and _k.startswith("invito"): FRASI[_k] = ["🔥 Settimana del follow, fino a domenica! " + t for t in FRASI[_k]]
 
 def halloween():
     return datetime.now(timezone.utc).date().isoformat() <= HALLOWEEN_FINO
@@ -829,6 +836,10 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
     Claude legge tutti i commenti di chi ha scritto qualcosa di nuovo; se non risponde, quei commenti si riprovano al giro dopo."""
     comuni, gioco = Comuni(), Gioco()
     gioco.migra_punti()
+    if BOOST and not gioco.stato.get("boost_follow"):
+        for u, v in list(gioco.stato.get("seguono", {}).items()):
+            if v == "premiato": gioco.punti_extra(u, PUNTI["segue"] - 10)
+        gioco.stato["boost_follow"] = True; gioco.cambiato = True
     rifai = applica_correzioni(gioco)
     for r in gioco.stato.pop("risposte_da_fare", []):  # risposte decise a mano nella correzione
         try:

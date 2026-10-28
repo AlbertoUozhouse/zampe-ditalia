@@ -14,6 +14,8 @@ ROOT = Path(__file__).resolve().parent.parent
 STORICO = ROOT / "motore/reel_fatti.json"
 LANCIO = date(2026, 10, 26)
 ORA = datetime.now(ZoneInfo("Europe/Rome"))
+BOOST = ORA.date().isoformat() <= "2026-11-01"  # Settimana del follow: SEGUO vale +30 (come in commenti.py)
+PS, PS_P = ("+30", "trenta punti") if BOOST else ("+10", "dieci punti")
 
 # account di Alberto: restano sulla mappa ma non vengono mai nominati nei reel (la pagina cresce da sola)
 ESCLUSI = {"thor_golden_life", "albertomarchesin"}
@@ -380,9 +382,9 @@ def main():
     if per_attivita:
         pass  # il reel per le attività ha già la sua azione: niente bonus per i giocatori
     elif ORA.date().isoformat() <= "2026-11-02":  # Halloween: il follow regala il costume, lo diciamo in ogni reel
-        frasi.insert(len(frasi) - 1, (rng.choice(["Seguici e scrivi seguo: dieci punti e il costume di Halloween per il tuo animale sulla mappa!",
+        frasi.insert(len(frasi) - 1, (rng.choice([f"Seguici e scrivi seguo: {PS_P} e il costume di Halloween per il tuo animale sulla mappa!",
                                                    "Chi ci segue ha il costume di Halloween sulla mappa: seguici e scrivi seguo!"]),
-                                      {"tipo": "numero", "grande": "🎃", "sotto": "seguici e scrivi SEGUO: +10 punti e il costume di Halloween"}))
+                                      {"tipo": "numero", "grande": "🎃" if not BOOST else PS, "sotto": f"seguici e scrivi SEGUO: {PS} punti e il costume di Halloween"}))
     elif x < 0.35:
         frasi.insert(len(frasi) - 1, (rng.choice(["Sfida degli inviti: chi porta più amici oggi finisce nel reel delle 21.",
                                                    "Tagga i tuoi amici: chi ne porta di più oggi è il Re degli inviti."]),
@@ -394,7 +396,7 @@ def main():
     if per_attivita:
         did = did.strip() + "\n\n"
     else:
-        did = did.strip() + ("\n\n🎃 Fino al 2 novembre chi ci segue ha il costume di Halloween sulla mappa" if ORA.date().isoformat() <= "2026-11-02" else "\n\n✨ Chi ci segue ha le lucine sulla cuccia e sta in prima fila nel suo paese sulla mappa") + ("\n\n➕ Seguici e scrivi SEGUO: +10 punti, e nei reel mettiamo prima gli animali di chi ci segue. Il paese della tua città è su zampeditalia.it"
+        did = did.strip() + ("\n\n🎃 Fino al 2 novembre chi ci segue ha il costume di Halloween sulla mappa" if ORA.date().isoformat() <= "2026-11-02" else "\n\n✨ Chi ci segue ha le lucine sulla cuccia e sta in prima fila nel suo paese sulla mappa") + (("\n\n🔥 Settimana del follow: fino a domenica chi ci segue e scrive SEGUO prende +30 punti" if BOOST else "") + "\n\n➕ Seguici e scrivi SEGUO: " + PS + " punti, e nei reel mettiamo prima gli animali di chi ci segue. Il paese della tua città è su zampeditalia.it"
                              "\n👥 Sfida degli inviti: +3 per ogni amico taggato che commenta. Chi ne porta di più oggi è il Re degli inviti 👑 e va nella puntata delle 21")
     if not per_attivita:  # nel reel per le attività la parola PRENOTA non si tocca
         frasi, did = varia(frasi, did, D)
@@ -414,7 +416,7 @@ def main():
     did = did.strip() + "\n\nVoce generata con IA.\n\n" + ("#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici " if per_attivita else st.pop("hashtag", "#cani #gatti #italia #canicontrogatti #animalidomestici ")) + tag_citta
     copione = {"id": ORA.strftime("%Y-%m-%d-%H%M") + "-" + formato, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
-               "banner": "📍 Scrivi città, nome, razza · ➕ Seguici +10 👇", "didascalia": did,
+               "banner": f"📍 Scrivi città, nome, razza · ➕ Seguici {PS} 👇", "didascalia": did,
                "tag": [u for u in mostrati if u.lower() not in ESCLUSI], "copertina": st.pop("copertina", None)}
     Path(uscita).write_text(json.dumps(copione, ensure_ascii=False, indent=1))
     STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
