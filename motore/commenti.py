@@ -1022,14 +1022,8 @@ def main():
                 except urllib.error.HTTPError as e:
                     st[met] = f"n/d {e.code}"
             print("   statistiche:", json.dumps(st))
-            for c in ig.pagine(f"{m['id']}/comments", fields="id,text,timestamp,username,from", limit=50):
-                print("   commento:", c)
-            for prova in ({}, {"fields": "comments{id,text,username}"}):
-                path = f"{m['id']}/comments" if not prova else m["id"]
-                try:
-                    print("   grezzo", path, prova, "→", ig._req("GET", path, **prova))
-                except urllib.error.HTTPError as e:
-                    print("   grezzo", path, prova, "→ errore", e.code, e.read()[:300])
+            # i commenti non si stampano: i log di un repository pubblico li legge chiunque
+            print("   commenti letti:", sum(1 for _ in ig.pagine(f"{m['id']}/comments", fields="id", limit=50)))
         return
     if "--ricostruisci" in sys.argv:
         lista = [(m["id"], c) for m in ig.reel_recenti() for c in ig.commenti(m["id"])]
