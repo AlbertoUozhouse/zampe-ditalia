@@ -135,7 +135,9 @@ def mappa(cid, dur, italia, luci=(), citta=(), zoom=None, subito=False):
         else:
             js.append(f'    tl.fromTo("#{cid}-pin{i}", {{ scale: 0, svgOrigin: "0 0" }}, {{ scale: 1, duration: 0.3, ease: "back.out(3)" }}, {t:.2f});')
         js.append(f'    for (let k = 0; k < 2; k++) tl.fromTo("#{cid}-onda{i}", {{ attr: {{ r: 20 }}, opacity: 1 }}, {{ attr: {{ r: 80 }}, opacity: 0, duration: 0.5, ease: "power1.out" }}, {t + 0.15:.2f} + k * 0.5);')
-    pallini = "".join(f'<circle cx="{l["x"]}" cy="{l["y"]}" r="{l.get("r", 30)}" fill="url(#{cid}-{"g" if l["t"] == "gatto" else "glow"})"/>' for l in luci)
+    # con tante luci i pallini si rimpiccioliscono: l'Italia deve restare visibile sotto (a 1.000 luci, raggio 10 invece di 30)
+    r0 = round(max(8, min(30, 30 * (100 / max(len(luci), 1)) ** 0.5)), 1)
+    pallini = "".join(f'<circle cx="{l["x"]}" cy="{l["y"]}" r="{l.get("r", r0)}" fill="url(#{cid}-{"g" if l["t"] == "gatto" else "glow"})"/>' for l in luci)
     css = """#root .terra { fill: #1E3266; stroke: #34508F; stroke-width: 1.4; }
     #root .costa { fill: none; stroke: #5577C9; stroke-width: 10; opacity: .8; }
     #root text { font: 800 42px "Bricolage Grotesque", sans-serif; fill: var(--cream); }
