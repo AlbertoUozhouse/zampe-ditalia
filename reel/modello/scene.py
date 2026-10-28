@@ -135,8 +135,8 @@ def mappa(cid, dur, italia, luci=(), citta=(), zoom=None, subito=False):
         else:
             js.append(f'    tl.fromTo("#{cid}-pin{i}", {{ scale: 0, svgOrigin: "0 0" }}, {{ scale: 1, duration: 0.3, ease: "back.out(3)" }}, {t:.2f});')
         js.append(f'    for (let k = 0; k < 2; k++) tl.fromTo("#{cid}-onda{i}", {{ attr: {{ r: 20 }}, opacity: 1 }}, {{ attr: {{ r: 80 }}, opacity: 0, duration: 0.5, ease: "power1.out" }}, {t + 0.15:.2f} + k * 0.5);')
-    # con tante luci i pallini si rimpiccioliscono: l'Italia deve restare visibile sotto (a 1.000 luci, raggio 10 invece di 30)
-    r0 = round(max(8, min(30, 30 * (100 / max(len(luci), 1)) ** 0.5)), 1)
+    # con tante luci i pallini si rimpiccioliscono: l'Italia deve sembrare ancora quasi al buio, da accendere (a 1.000 luci, raggio 5 invece di 30)
+    r0 = round(max(4.5, min(30, 30 * (100 / max(len(luci), 1)) ** 0.8)), 1)
     pallini = "".join(f'<circle cx="{l["x"]}" cy="{l["y"]}" r="{l.get("r", r0)}" fill="url(#{cid}-{"g" if l["t"] == "gatto" else "glow"})"/>' for l in luci)
     css = """#root .terra { fill: #1E3266; stroke: #34508F; stroke-width: 1.4; }
     #root .costa { fill: none; stroke: #5577C9; stroke-width: 10; opacity: .8; }
@@ -153,7 +153,7 @@ def mappa(cid, dur, italia, luci=(), citta=(), zoom=None, subito=False):
     if zoom:
         zj = f'    tl.to("#{cid}-italia", {{ scale: {zoom["s"]}, svgOrigin: "{zoom["x"]} {zoom["y"]}", x: {540 - zoom["x"]}, y: {720 - zoom["y"]}, duration: {max(0.6, dur - 1.0):.2f}, ease: "power2.inOut" }}, 0.85);'
     base = f"""    tl.fromTo("#{cid}-italia", {{ scale: 1.06, svgOrigin: "540 760" }}, {{ scale: 1, duration: 0.8, ease: "power2.out" }}, 0);
-    tl.fromTo("#{cid}-luci", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.4 }}, 0.1);"""
+    tl.fromTo("#{cid}-luci", {{ opacity: 0 }}, {{ opacity: {1 if len(luci) < 200 else .8}, duration: 0.4 }}, 0.1);"""
     if subito:
         base = f'    tl.fromTo("#{cid}-italia", {{ scale: 1.03, svgOrigin: "540 760" }}, {{ scale: 1, duration: 0.8, ease: "power2.out" }}, 0);'
         luminoso = "".join(f'<circle cx="{c["x"]}" cy="{c["y"]}" r="120" fill="url(#{cid}-glow)" opacity=".55"/>' for c in citta)
