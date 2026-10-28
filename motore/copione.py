@@ -19,6 +19,7 @@ PS, PS_P = ("+30", "trenta punti") if BOOST else ("+10", "dieci punti")
 
 # account di Alberto: restano sulla mappa ma non vengono mai nominati nei reel (la pagina cresce da sola)
 ESCLUSI = {"thor_golden_life", "albertomarchesin"}
+MASCOTTE = "thor_golden_life"  # Thor, il golden della pagina: fa l'arbitro del derby, ma non gareggia mai
 
 CITTA = ["Milano", "Roma", "Napoli", "Torino", "Palermo", "Genova", "Bologna", "Firenze", "Bari", "Catania", "Venezia", "Verona",
          "Padova", "Trieste", "Brescia", "Parma", "Modena", "Reggio nell'Emilia", "Perugia", "Cagliari", "Pescara", "Lecce", "Bergamo",
@@ -342,8 +343,12 @@ def derby(D, rng, st):
             avanti, dietro = (a, b) if na > nb else (b, a)
             stato = f"Derby {a} contro {b}: {max(na, nb)} a {min(na, nb)}. {dietro}, ci sei?"
         frasi.append((stato, {"tipo": "duello", "sinistra": {"titolo": a, "valore": luci_n(na)}, "destra": {"titolo": b, "valore": luci_n(nb)}}))
-        frasi.append(("Vale tutta la provincia: ogni animale acceso è una luce per la sua città.",
+        frasi.append(("Vale tutta la provincia: ogni animale è una luce.",
                       {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": a, "testo": f"{a} · {na}", "colore": "d", "t": 0.3}, {"nome": b, "testo": f"{b} · {nb}", "colore": "c", "t": 0.8}]}))
+    thor = next((x for x in D["tutti"] if x["u"] == MASCOTTE and x.get("k") == "animale"), None)
+    if thor:
+        frasi.append(("L'arbitro è Thor, il nostro golden.", {"tipo": "cuccia", "nome": thor["n"], "razza": thor.get("razza") or "golden", "seme": sum(map(ord, thor["id"])) % 997 + 1,
+                                                             "utente": MASCOTTE, "comune": "Arbitro del derby ⚖️"}))
     frasi += [
         (f"Scrivi città, nome e razza: {a}, {cane['nome']}, {cane['parola']}.", {"tipo": "commento", "testo": f"{a}, {cane['nome']}, {cane['parola']}"}),
         (f"E tagga un amico della tua città: si chiude {quando}.", {"tipo": "numero", "grande": f"+{DB.PREMIO}", "sotto": f"punti a chi accende la provincia che vince il derby 🏆"}),
@@ -355,7 +360,7 @@ def derby(D, rng, st):
     did = (f"⚔️ Il Derby della settimana: {a} contro {b}! " + (f"Ora siamo {na} a {nb}." if na + nb else "Si parte da 0 a 0.") + "\n\n"
            f"Vale tutta la provincia: scrivi qui sotto città, nome e razza del tuo animale (per esempio «{a}, {cane['nome']}, {cane['parola']}» o «{b}, {gatto['nome']}, {gatto['parola']}») "
            f"e la sua luce si accende per la tua città. Si chiude {quando}: chi ha acceso la provincia che vince prende +{DB.PREMIO} punti 🏆\n\n"
-           f"👥 Tagga un amico di {a} o di {b}: ogni amico che commenta è una luce in più.")
+           f"👥 Tagga un amico di {a} o di {b}: ogni amico che commenta è una luce in più.\n\n⚖️ Arbitro del derby: Thor, il golden di Zampe d'Italia (@{MASCOTTE})")
     st["hashtag"] = "#derby #cani #gatti #animalidomestici #italia "
     st["copertina"] = {"sopra": "⚔️ IL DERBY", "grande": f"{a}<br><i>vs</i><br>{b}", "sotto": f"{na} – {nb} · chi si accende di più? ⚔️", "tema": "duello"}
     return "IL DERBY", frasi, did
@@ -455,7 +460,7 @@ def main():
     for _, sc in frasi:
         for c in [sc.get("comune")] + [r.get("valore") for r in sc.get("righe", [])] + [x.get("nome") for x in sc.get("citta", [])] + \
                  [sc.get(k, {}).get("titolo") for k in ("sinistra", "destra") if isinstance(sc.get(k), dict)]:
-            if c and isinstance(c, str) and not c.startswith("Fondatore") and c not in ("Cani", "Gatti") and not re.search(r"\d", c):
+            if c and isinstance(c, str) and not c.startswith(("Fondatore", "Arbitro")) and c not in ("Cani", "Gatti") and not re.search(r"\d", c):
                 h = re.sub(r"[^a-z]", "", unicodedata.normalize("NFD", c.lower()).encode("ascii", "ignore").decode())
                 if 2 < len(h) < 25 and h not in citta: citta.append(h)
     tag_citta = " ".join("#" + h for h in citta[:5])
@@ -463,7 +468,7 @@ def main():
     copione = {"id": ORA.strftime("%Y-%m-%d-%H%M") + "-" + formato, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
                "banner": f"📍 Scrivi città, nome, razza · ➕ Seguici {PS} 👇", "didascalia": did,
-               "tag": [u for u in mostrati if u.lower() not in ESCLUSI], "copertina": st.pop("copertina", None)}
+               "tag": [u for u in mostrati if u.lower() not in ESCLUSI or u == MASCOTTE], "copertina": st.pop("copertina", None)}
     Path(uscita).write_text(json.dumps(copione, ensure_ascii=False, indent=1))
     STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
     print(f"copione {copione['id']}: " + " / ".join(t for t, _ in frasi))
