@@ -2,8 +2,7 @@
   "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana (massimo 50 pubblicazioni al giorno per l'API). Con «:prova» il reel esce come Trial Reel, mostrato prima a chi non ci segue. Meno reel ma più forti: i voto rendevano meno di tutti (motore/rendimento.json).",
   "reel_automatici": true,
   "orari": {
-    "11:30": "buio",
-    "13:30": "benvenuti",
+    "12:30": "buio",
     "15:30": "attivita",
     "18:00": "fondatore",
     "19:30": "buio:prova",
