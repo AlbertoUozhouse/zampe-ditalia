@@ -317,7 +317,50 @@ def altri(D, rng, st):
     st["copertina"] = {"sopra": "NON SOLO CANI E GATTI", "grande": "Hai un<br>coniglio?", "sotto": "Anche lui accende una luce 🐰", "tema": "benvenuti"}
     return "CANI vs GATTI vs ALTRI", frasi, did
 
-FORMATI = {"altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+def derby(D, rng, st):
+    """Il Derby della settimana (motore/derby.py): due province rivali, vince chi accende più luci nuove entro domenica alle 21.
+    Il campanilismo fa taggare gli amici della propria città: è il reel delle condivisioni."""
+    import derby as DB
+    R = DB.riassunto(D["tutti"], ORA)
+    d = R["ora"]; a, b, na, nb = d["a"], d["b"], d["na"], d["nb"]
+    fine = datetime.fromisoformat(d["fine"]); giorni = (fine.date() - ORA.date()).days
+    quando = "stasera alle 21" if giorni == 0 else "domani sera" if giorni == 1 else "domenica alle 21"
+    cane, gatto = esempio(rng, D)
+    frasi = []
+    ult = R["albo"][-1] if R["albo"] else None
+    if ult and (ORA - datetime.fromisoformat(ult["fine"])).days < 2:  # il derby appena finito apre il reel nuovo
+        if ult["vince"]:
+            perde, pv, pp = (ult["b"], ult["na"], ult["nb"]) if ult["vince"] == ult["a"] else (ult["a"], ult["nb"], ult["na"])
+            frasi.append((f"{ult['vince']} ha vinto il derby contro {perde}, {pv} a {pp}!", {"tipo": "duello", "sinistra": {"titolo": ult["a"], "valore": str(ult["na"])}, "destra": {"titolo": ult["b"], "valore": str(ult["nb"])}}))
+        else:
+            frasi.append((f"{ult['a']} e {ult['b']}: pareggio, {ult['na']} a {ult['nb']}!", {"tipo": "duello", "sinistra": {"titolo": ult["a"], "valore": str(ult["na"])}, "destra": {"titolo": ult["b"], "valore": str(ult["nb"])}}))
+        frasi.append((f"Nuovo derby: {a} contro {b}!", {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": a, "testo": a, "colore": "d", "t": 0.3}, {"nome": b, "testo": b, "colore": "c", "t": 0.8}]}))
+    else:
+        if na == nb:
+            stato = f"Derby {a} contro {b}: {na} a {nb}, tutto aperto!" if na else f"Parte il derby: {a} contro {b}!"
+        else:
+            avanti, dietro = (a, b) if na > nb else (b, a)
+            stato = f"Derby {a} contro {b}: {max(na, nb)} a {min(na, nb)}. {dietro}, ci sei?"
+        frasi.append((stato, {"tipo": "duello", "sinistra": {"titolo": a, "valore": luci_n(na)}, "destra": {"titolo": b, "valore": luci_n(nb)}}))
+        frasi.append(("Vale tutta la provincia: ogni animale acceso è una luce per la sua città.",
+                      {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": a, "testo": f"{a} · {na}", "colore": "d", "t": 0.3}, {"nome": b, "testo": f"{b} · {nb}", "colore": "c", "t": 0.8}]}))
+    frasi += [
+        (f"Scrivi città, nome e razza: {a}, {cane['nome']}, {cane['parola']}.", {"tipo": "commento", "testo": f"{a}, {cane['nome']}, {cane['parola']}"}),
+        (f"E tagga un amico della tua città: si chiude {quando}.", {"tipo": "numero", "grande": f"+{DB.PREMIO}", "sotto": f"punti a chi accende la provincia che vince il derby 🏆"}),
+        (f"{a} o {b}? Scrivi la tua città!", {"tipo": "chiusura", "testo": f"⚔️ {a} o {b}? Scrivilo qui sotto"}),
+    ]
+    # nel reel i primi che hanno acceso ciascuna città: ricevono la notifica e chiamano gli amici
+    per = DB.conta(D["tutti"], {"inizio": datetime.fromisoformat(d["inizio"]), "fine": fine, "a": (a, d["pa"]), "b": (b, d["pb"])})
+    st["tag_extra"] = [x["u"] for p in (d["pa"], d["pb"]) for x in per[p][:3]]
+    did = (f"⚔️ Il Derby della settimana: {a} contro {b}! " + (f"Ora siamo {na} a {nb}." if na + nb else "Si parte da 0 a 0.") + "\n\n"
+           f"Vale tutta la provincia: scrivi qui sotto città, nome e razza del tuo animale (per esempio «{a}, {cane['nome']}, {cane['parola']}» o «{b}, {gatto['nome']}, {gatto['parola']}») "
+           f"e la sua luce si accende per la tua città. Si chiude {quando}: chi ha acceso la provincia che vince prende +{DB.PREMIO} punti 🏆\n\n"
+           f"👥 Tagga un amico di {a} o di {b}: ogni amico che commenta è una luce in più.")
+    st["hashtag"] = "#derby #cani #gatti #animalidomestici #italia "
+    st["copertina"] = {"sopra": "IL DERBY DELLA SETTIMANA", "grande": f"{a}<br><i>vs</i><br>{b}", "sotto": f"{na} – {nb} · chi si accende di più? ⚔️", "tema": "duello"}
+    return "IL DERBY", frasi, did
+
+FORMATI = {"derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide

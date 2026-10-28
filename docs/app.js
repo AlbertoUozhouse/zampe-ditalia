@@ -65,10 +65,11 @@ fetch("data/regioni.json").then(r => r.json()).then(REG => {
 // ---------- dati ----------
 let PRENOTATE = {}; // posti prenotati dalle attività, per comune: {"Treviso|TV": {"veterinario": 1}}
 let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
+let DERBY = null; // il Derby della settimana: {ora: {a, b, na, nb, fine, partito}, albo: [...]} (motore/derby.py)
 let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: 1000}; raggiunto, nevica sulla mappa
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; return j.animali || []; } } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; DERBY = j.derby || null; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -205,7 +206,10 @@ function renderHeader() {
   const goal = luci < CONFIG.obiettivo ? CONFIG.obiettivo : Math.ceil((luci + 1) / 25000) * 25000;
   // accanto alle luci un messaggio alla volta, a rotazione: su telefono non c'è posto per tutti
   const segui = `href="${CONFIG.ig}" target="_blank" rel="noopener" class="traguardo"`, oggi = new Date();
+  const DO = DERBY && DERBY.ora, U = DERBY && DERBY.albo && DERBY.albo[DERBY.albo.length - 1];
   const msg = [
+    U && U.vince && oggi - new Date(U.fine) < 864e5 && `🏆 ${U.vince} ha vinto il derby`,
+    DO && (DO.partito ? `⚔️ Derby ${DO.a} <b>${fmt(DO.na)}</b> – <b>${fmt(DO.nb)}</b> ${DO.b}` : `⚔️ Stasera il derby ${DO.a}–${DO.b}`),
     FOLLOW && (FOLLOW.n >= FOLLOW.traguardo ? `❄️ ${fmt(FOLLOW.n)} follower: nevica sulla mappa!` : `<a ${segui} title="A ${fmt(FOLLOW.traguardo)} follower nevica su tutta la mappa">❄️ Mancano ${fmt(FOLLOW.traguardo - FOLLOW.n)} follower alla neve</a>`),
     oggi < new Date("2026-11-02") && `<a ${segui}>🔥 SEGUO vale +30 fino a dom.</a>`,
     oggi < new Date("2026-11-03") ? "🎃 Chi ci segue ha il costume" : "✨ Chi ci segue ha le lucine e la prima fila",

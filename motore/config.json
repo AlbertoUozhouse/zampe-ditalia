@@ -1,11 +1,11 @@
 {
-  "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana (massimo 50 pubblicazioni al giorno per l'API). Con «:prova» il reel esce come Trial Reel, mostrato prima a chi non ci segue. Meno reel ma più forti: i voto rendevano meno di tutti (motore/rendimento.json).",
+  "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana (massimo 50 pubblicazioni al giorno per l'API). Con «:prova» il reel esce come Trial Reel, mostrato prima a chi non ci segue. Meno reel ma più forti: i voto rendevano meno di tutti (motore/rendimento.json). Il derby (motore/derby.py) esce ogni sera alle 19:30.",
   "reel_automatici": true,
   "orari": {
-    "12:30": "buio",
+    "12:30": "buio:prova",
     "15:30": "attivita",
     "18:00": "fondatore",
-    "19:30": "buio:prova",
+    "19:30": "derby",
     "21:00": "puntata"
   }
 }

@@ -443,6 +443,7 @@ class Gioco:
         self.dati["inviti"] = {"giorno": oggi, "oggi": sorted(ig.get(oggi, {}).items(), key=lambda x: -x[1])[:10],
                                "totale": sorted(tot.items(), key=lambda x: -x[1])[:10]}
         self.elezione()
+        self.derby()
         vestito = "halloween" if oggi <= HALLOWEEN_FINO else "lucine"  # il regalo per chi ci segue
         seguono = {u for u, v in self.stato.get("seguono", {}).items() if v == "premiato"}
         for x in self.animali:
@@ -452,6 +453,19 @@ class Gioco:
         self.stato["risposte"] = [t for t in self.stato["risposte"] if ora - t < 3600]
         ANIMALI.write_text(json.dumps(self.dati, ensure_ascii=False, separators=(",", ":")) + "\n")
         STATO.write_text(json.dumps(self.stato, ensure_ascii=False, indent=0) + "\n")
+
+    def derby(self):
+        """Il Derby della settimana (motore/derby.py): punteggio per il sito e i reel, e il premio a chi ha acceso la provincia vincente."""
+        from zoneinfo import ZoneInfo
+        import derby
+        ora = datetime.now(ZoneInfo("Europe/Rome"))
+        fatti = self.stato.setdefault("derby_premiati", [])
+        for d in derby.derby_di(ora):
+            chiave = d["inizio"].date().isoformat() + d["a"][1] + d["b"][1]
+            if d["fine"] <= ora and chiave not in fatti:
+                for u in derby.premiati(self.animali, d): self.punti_extra(u, derby.PREMIO)
+                fatti.append(chiave)
+        self.dati["derby"] = derby.riassunto(self.animali, ora)
 
     def elezione(self):
         """Ogni domenica alle 20:45 (ora italiana) il primo per punti di ogni comune con almeno 3 luci diventa Capobranco fino alla domenica dopo."""
