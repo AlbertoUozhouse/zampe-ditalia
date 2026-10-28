@@ -127,7 +127,7 @@ def mappa(cid, dur, italia, luci=(), citta=(), zoom=None, subito=False):
     for i, c in enumerate(citta):
         pins.append(f'''<g transform="translate({c["x"]} {c["y"]})"><g class="pin {c.get("colore", "d")}" id="{cid}-pin{i}">
         <circle class="onda" id="{cid}-onda{i}" r="40" fill="none" stroke-width="5"/><circle r="18" class="punto"/>
-        <g transform="translate(0 -70)"><rect x="-{max(120, 14 * len(c["testo"]))}" y="-38" width="{2 * max(120, 14 * len(c["testo"]))}" height="70" rx="35" fill="rgba(6,11,26,.88)" class="bordo" stroke-width="4"/>
+        <g transform="translate(0 {70 if c["y"] < 560 else -70})"><rect x="-{max(120, 14 * len(c["testo"]))}" y="-38" width="{2 * max(120, 14 * len(c["testo"]))}" height="70" rx="35" fill="rgba(6,11,26,.88)" class="bordo" stroke-width="4"/>
         <text y="13" text-anchor="middle">{ESC(c["testo"])}</text></g></g></g>''')
         t = c.get("t", 0.3 + i * 0.35)
         if subito:  # prima scena del reel: la città è già accesa nel primo fotogramma
