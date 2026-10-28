@@ -90,13 +90,15 @@ jobs:
           for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
       - name: Reel di riserva
         if: failure() && inputs.pubblica && !inputs.riserva
-        # un reel fallito non lascia il buco: parte un voto, il formato più semplice
-        run: for t in 1 2 3; do gh workflow run reel.yml -f formato=voto -f riserva=true && break; sleep 20; done
+        # un reel fallito non lascia il buco: parte un Fondatore (diverso da tutti gli altri), ma solo se nelle ultime 2 ore non è uscito niente
+        run: |
+          python3 -I motore/orari.py --poco-fa 120 && { echo "è uscito un reel da poco: niente riserva"; exit 0; }
+          for t in 1 2 3; do gh workflow run reel.yml -f formato=fondatore -f riserva=true && break; sleep 20; done
       - name: Avvisa Alberto se qualcosa va storto
         if: failure()
         run: |
           gh issue create --title "🔴 Reel automatico non pubblicato (${{ inputs.formato }})" \
             --body "Cosa è successo: il reel automatico si è fermato prima della pubblicazione.
-          Cosa fare: niente. Al posto suo è partito un reel di riserva (voto); l'agente sistema la causa alla prossima sessione.
+          Cosa fare: niente. Al posto suo è partito un reel di riserva (Fondatore), se non ne era uscito uno da poco; l'agente sistema la causa alla prossima sessione.
           Tempo: 0 minuti.
           Dettagli: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
