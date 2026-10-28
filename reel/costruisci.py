@@ -39,6 +39,17 @@ def voce(testo, uscita):
     if cur: parole.append({"p": cur, "s": round(s, 3), "e": round(e, 3)})
     return parole
 
+def muto(testo, uscita):
+    """Parole con tempi stimati (ritmo della voce vera) e una traccia di silenzio al posto della voce."""
+    parole, t = [], 0.3
+    for w in testo.split():
+        d = 0.18 + 0.045 * len(w)
+        parole.append({"p": w, "s": round(t, 3), "e": round(t + d, 3)})
+        t += d + (0.35 if w[-1] in ".!?" else 0.08)
+    subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", str(round(t + 1, 2)),
+                    "-c:a", "libmp3lame", "-b:a", "128k", str(uscita)], check=True)
+    return parole
+
 # ---------- mappa: proiezione dell'Italia nel fotogramma (come nei reel di lancio) ----------
 BOX, LON, LAT = (90, 330, 990, 1190), (6.6, 18.6), (36.6, 47.1)
 _mx = lambda l: math.radians(l)
@@ -141,7 +152,11 @@ def main():
     (prog / "meta.json").write_text(json.dumps({"id": copione["id"], "name": copione["id"]}))
 
     frasi = [f["testo"].strip() for f in copione["frasi"]]
-    parole = voce(" ".join(frasi), prog / "assets/audio/voce.mp3")
+    try:
+        parole = voce(" ".join(frasi), prog / "assets/audio/voce.mp3")
+    except Exception as e:  # crediti finiti o servizio giù: il reel esce lo stesso, con musica e sottotitoli
+        print(f"voce non disponibile ({e}): reel senza voce")
+        parole = muto(" ".join(frasi), prog / "assets/audio/voce.mp3")
     (out / "parole.json").write_text(json.dumps({"parole": parole}, ensure_ascii=False))
 
     # inizio di ogni frase = prima parola della frase nella voce
