@@ -305,7 +305,7 @@ def varia(frasi, didascalia, D):
         print(f"variazione di Claude non disponibile ({e}): uso il modello fisso"); return frasi, didascalia
 
 def main():
-    formato, uscita = sys.argv[1], sys.argv[2]
+    formato, uscita = sys.argv[1].split(":")[0], sys.argv[2]  # «fondatore:prova» è un Trial Reel: il copione è lo stesso
     if formato == "auto":
         formato = min(ORARI, key=lambda o: abs(o[0] - ORA.hour))[1]
     st = carica(STORICO, {})

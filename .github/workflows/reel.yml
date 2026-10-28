@@ -13,6 +13,10 @@ on:
         description: "Pubblica su Instagram (false = solo prova)"
         type: boolean
         default: true
+      prova:
+        description: "Trial Reel: mostrato prima solo a chi non ci segue"
+        type: boolean
+        default: false
       riserva:
         description: "È già il reel di riserva di uno fallito (non ne lancia un altro)"
         type: boolean
@@ -75,7 +79,8 @@ jobs:
         run: |
           TAG=$(python3 -c "import json;print(','.join(json.load(open('/tmp/copione.json')).get('tag', [])))")
           python3 -I motore/pubblica.py --tipo REELS --media "media/auto/${{ steps.carica.outputs.id }}.mp4" --didascalia "contenuti/auto/${{ steps.carica.outputs.id }}.txt" --tag "$TAG" \
-            $( [ -f "docs/media/auto/${{ steps.carica.outputs.id }}.jpg" ] && echo --copertina "media/auto/${{ steps.carica.outputs.id }}.jpg" )
+            $( [ -f "docs/media/auto/${{ steps.carica.outputs.id }}.jpg" ] && echo --copertina "media/auto/${{ steps.carica.outputs.id }}.jpg" ) \
+            ${{ inputs.prova && '--trial' || '' }}
       - name: Salva il registro
         if: inputs.pubblica
         run: |
