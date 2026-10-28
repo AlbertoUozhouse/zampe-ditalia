@@ -361,6 +361,7 @@ def derby(D, rng, st):
            f"Vale tutta la provincia: scrivi qui sotto città, nome e razza del tuo animale (per esempio «{a}, {cane['nome']}, {cane['parola']}» o «{b}, {gatto['nome']}, {gatto['parola']}») "
            f"e la sua luce si accende per la tua città. Si chiude {quando}: chi ha acceso la provincia che vince prende +{DB.PREMIO} punti 🏆\n\n"
            f"👥 Tagga un amico di {a} o di {b}: ogni amico che commenta è una luce in più.\n\n⚖️ L'arbitro del derby è Thor, il primo cane che si è acceso sulla mappa: seguilo su @{MASCOTTE} 🐾")
+    if thor and (ROOT / "reel/thor/derby-intro.mp4").exists(): st["intro"] = "reel/thor/derby-intro.mp4"  # si apre col muso vero di Thor
     st["hashtag"] = "#derby #cani #gatti #animalidomestici #italia "
     st["copertina"] = {"sopra": "⚔️ IL DERBY", "grande": f"{a}<br><i>vs</i><br>{b}", "sotto": f"{na} – {nb} · chi si accende di più? ⚔️", "tema": "duello"}
     return "IL DERBY", frasi, did
@@ -465,10 +466,11 @@ def main():
                 if 2 < len(h) < 25 and h not in citta: citta.append(h)
     tag_citta = " ".join("#" + h for h in citta[:5])
     did = did.strip() + "\n\nVoce generata con IA.\n\n" + ("#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici " if per_attivita else st.pop("hashtag", "#cani #gatti #italia #canicontrogatti #animalidomestici ")) + tag_citta
+    intro = st.pop("intro", None)
     copione = {"id": ORA.strftime("%Y-%m-%d-%H%M") + "-" + formato, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
                "banner": f"📍 Scrivi città, nome, razza · ➕ Seguici {PS} 👇", "didascalia": did,
-               "tag": [u for u in mostrati if u.lower() not in ESCLUSI or u == MASCOTTE], "copertina": st.pop("copertina", None)}
+               "tag": [u for u in mostrati if u.lower() not in ESCLUSI or u == MASCOTTE], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {})}
     Path(uscita).write_text(json.dumps(copione, ensure_ascii=False, indent=1))
     STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
     print(f"copione {copione['id']}: " + " / ".join(t for t, _ in frasi))

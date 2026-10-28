@@ -217,6 +217,17 @@ def main():
                     "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", str(out / "reel.mp4")], check=True)
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(out / "reel.mp4")], capture_output=True, text=True).stdout)
     if abs(dur - durata) > 0.5: raise SystemExit(f"Il video dura {dur}s invece di {durata}s")
+    if copione.get("intro"):  # qualche secondo di video vero prima del reel (Thor, l'arbitro del derby), con la stessa musica
+        intro = ROOT / copione["intro"]
+        di = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(intro)], capture_output=True, text=True).stdout)
+        (out / "effetti_intro.json").write_text(json.dumps({"durata": di, "pop": [0.25, 2.45]}))
+        subprocess.run([sys.executable, str(ROOT / "reel/musica.py"), str(out / "effetti_intro.json"), str(out / "intro.wav")], check=True)
+        subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(intro), "-i", str(out / "intro.wav"), "-i", str(out / "reel.mp4"), "-filter_complex",
+                        f"[0:v]scale=1080:1920,fps=30,setsar=1,format=yuv420p[v0];[2:v]fps=30,setsar=1,format=yuv420p[v1];"
+                        f"[1:a]atrim=0:{di},apad=whole_dur={di},volume=0.6,aresample=48000,aformat=channel_layouts=stereo[a0];[2:a]aresample=48000,aformat=channel_layouts=stereo[a1];"
+                        "[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]", "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "20", "-preset", "medium",
+                        "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out / "con_intro.mp4")], check=True)
+        shutil.move(out / "con_intro.mp4", out / "reel.mp4"); dur += di
     (out / "didascalia.txt").write_text(copione["didascalia"].strip() + "\n")
     print(f"reel pronto: {out / 'reel.mp4'} · {dur:.1f} s")
 
