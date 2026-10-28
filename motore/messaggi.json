@@ -223,47 +223,7 @@
 "fc719c080832dc63",
 "ffa379cadcaacf70"
 ],
-"in_attesa": [
-{
-"igsid": "2067883127200992",
-"url": [
-"https://zampeditalia.it/cartoline/40f241058263806f.png"
-],
-"t": 1793194355.7439883
-},
-{
-"igsid": "1805547873823121",
-"url": [
-"https://zampeditalia.it/cartoline/cc0ccb2669907307.png",
-"https://zampeditalia.it/cartoline/08b43b34ef6e75af.png",
-"https://zampeditalia.it/cartoline/7a1b47199789567d.png"
-],
-"t": 1793194355.7439902
-},
-{
-"igsid": "2869972836718871",
-"url": [
-"https://zampeditalia.it/cartoline/63b2ced19f339760.png",
-"https://zampeditalia.it/cartoline/ddb7c2cb1c75332c.png",
-"https://zampeditalia.it/cartoline/58853e8832ac14da.png"
-],
-"t": 1793194355.743991
-},
-{
-"igsid": "1108634381709576",
-"url": [
-"https://zampeditalia.it/cartoline/df4d7f170de36cb5.png"
-],
-"t": 1793194355.7439911
-},
-{
-"storia": "cartoline/392872ad7bbd363b.png",
-"url": [
-"https://zampeditalia.it/cartoline/392872ad7bbd363b.png"
-],
-"t": 1793194299.1251278
-}
-],
+"in_attesa": [],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
