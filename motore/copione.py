@@ -49,7 +49,7 @@ def dati():
     stato = carica(ROOT / "motore/stato.json", {})
     seguono = {u for u, v in stato.get("seguono", {}).items() if v == "premiato"}
     inviti = J.get("inviti", {})
-    return {"voti": voti, "seguono": seguono, "inviti": inviti, "capibranco": J.get("capibranco", {}), "animali": an, "tifo": tifo, "tutti": A, "razze": R, "per_citta": per_citta, "nuovi_fondatori": nuovi_fondatori,
+    return {"voti": voti, "seguono": seguono, "inviti": inviti, "capibranco": J.get("capibranco", {}), "follower": J.get("follower"), "animali": an, "tifo": tifo, "tutti": A, "razze": R, "per_citta": per_citta, "nuovi_fondatori": nuovi_fondatori,
             "cani": sum(1 for a in an + tifo if a.get("t", "cane") == "cane"), "gatti": sum(1 for a in an + tifo if a.get("t") == "gatto"),
             "altri": sum(1 for a in an if a.get("t") == "altro" and a.get("k") == "animale")}
 
@@ -401,6 +401,9 @@ def main():
     if not per_attivita:  # nel reel per le attività la parola PRENOTA non si tocca
         frasi, did = varia(frasi, did, D)
     frasi = taglia(frasi)
+    fw = D.get("follower")
+    if fw and fw["n"] < fw["traguardo"] and not per_attivita:  # il traguardo di tutti, come sul sito
+        did = did.strip() + f"\n\n❄️ Siamo a {fw['n']} follower: a {fw['traguardo']} nevica su tutta la mappa d'Italia. Mancano {fw['traguardo'] - fw['n']}: seguici e dillo agli amici!"
     mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")} | set(st.pop("tag_extra", [])))
     if mostrati:
         did = did.strip() + "\n\n🐾 In questo reel: " + " ".join("@" + u for u in mostrati)

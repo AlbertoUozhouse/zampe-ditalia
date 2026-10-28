@@ -52,9 +52,12 @@ body{background:var(--night);color:var(--cream);font-family:var(--f-body);overfl
   background:linear-gradient(rgba(6,11,26,0),rgba(6,11,26,.85) 45%,var(--night))}
 .bottom>*{pointer-events:auto}
 .counter{font:800 13px var(--f-display);color:var(--cream);display:flex;align-items:center;gap:10px;width:min(560px,100%);font-variant-numeric:tabular-nums}
-.counter .track{flex:1;height:6px;border-radius:999px;background:rgba(85,119,201,.3);overflow:hidden}
+.counter .track{flex:1;min-width:36px;height:6px;border-radius:999px;background:rgba(85,119,201,.3);overflow:hidden}
 .counter .track i{display:block;height:100%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
 .counter b{color:var(--gold)}
+.counter .msg{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:62%}
+.counter .msg.entra{animation:entra .4s ease-out}
+@keyframes entra{from{opacity:0;transform:translateY(6px)}}
 .cta{display:flex;align-items:center;gap:10px;background:var(--panel);border:1.5px solid rgba(255,197,92,.55);border-radius:16px;
   padding:8px 8px 8px 14px;font-weight:700;font-size:14px;max-width:560px;width:100%;box-shadow:0 0 24px rgba(255,197,92,.12)}
 .cta>div{flex:1;min-width:0;line-height:1.3}
@@ -144,3 +147,11 @@ body{background:var(--night);color:var(--cream);font-family:var(--f-body);overfl
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 .sfida-inviti{border:1px solid rgba(130,220,235,.35);border-radius:12px;padding:10px 12px;margin:0 0 14px;background:rgba(130,220,235,.06)}
 .sfida-inviti h3{margin:0 0 4px;font:800 15px var(--f-display);color:var(--cream)}
+
+/* Traguardo dei follower: il link nel contatore, e la neve quando lo raggiungiamo */
+.traguardo{color:var(--cream);font-weight:900;text-decoration:none;border-bottom:1px dashed rgba(255,244,222,.5)}
+body.neve::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:500;opacity:.8;
+  background-image:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(2px 2px at 80px 120px,#fff,transparent),radial-gradient(3px 3px at 150px 60px,#fff,transparent),
+  radial-gradient(2px 2px at 200px 170px,#fff,transparent),radial-gradient(3px 3px at 260px 20px,#fff,transparent);background-size:300px 200px;animation:neve 9s linear infinite}
+@keyframes neve{to{background-position:60px 200px,-40px 200px,30px 200px,-20px 200px,50px 200px}}
+@media (max-width:520px){.counter .track{display:none}.counter .msg{max-width:none;font-size:12.5px}}

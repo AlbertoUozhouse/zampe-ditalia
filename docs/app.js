@@ -65,9 +65,10 @@ fetch("data/regioni.json").then(r => r.json()).then(REG => {
 // ---------- dati ----------
 let PRENOTATE = {}; // posti prenotati dalle attività, per comune: {"Treviso|TV": {"veterinario": 1}}
 let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
+let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: 1000}; raggiunto, nevica sulla mappa
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; return j.animali || []; } } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -202,7 +203,18 @@ function renderHeader() {
   const { cani, gatti, luci } = STATS, tot = cani + gatti, pc = tot ? (cani / tot) * 100 : 50;
   $("#versus").innerHTML = `<span class="side dog">🐶 <b>${fmt(cani)}</b> Cani</span><span class="bar" role="img" aria-label="Cani ${fmt(cani)}, Gatti ${fmt(gatti)}"><i style="width:${pc}%"></i></span><span class="side cat">Gatti <b>${fmt(gatti)}</b> 🐱</span>`;
   const goal = luci < CONFIG.obiettivo ? CONFIG.obiettivo : Math.ceil((luci + 1) / 25000) * 25000;
-  $("#counter").innerHTML = `<span><b>${fmt(luci)}</b> / ${fmt(goal)} luci</span><span class="track"><i style="width:${Math.min(100, (luci / goal) * 100)}%"></i></span>${recentCount ? `<span>✨ ${fmt(recentCount)} brillano ora</span>` : ""}${new Date() < new Date("2026-11-02") ? `<span>🔥 SEGUO vale +30 fino a domenica</span>` : ""}${new Date() < new Date("2026-11-03") ? `<span>🎃 Chi ci segue ha il costume</span>` : `<span>✨ Chi ci segue ha le lucine e la prima fila</span>`}`;
+  // accanto alle luci un messaggio alla volta, a rotazione: su telefono non c'è posto per tutti
+  const segui = `href="${CONFIG.ig}" target="_blank" rel="noopener" class="traguardo"`, oggi = new Date();
+  const msg = [
+    FOLLOW && (FOLLOW.n >= FOLLOW.traguardo ? `❄️ ${fmt(FOLLOW.n)} follower: nevica sulla mappa!` : `<a ${segui} title="A ${fmt(FOLLOW.traguardo)} follower nevica su tutta la mappa">❄️ Mancano ${fmt(FOLLOW.traguardo - FOLLOW.n)} follower alla neve</a>`),
+    oggi < new Date("2026-11-02") && `<a ${segui}>🔥 SEGUO vale +30 fino a dom.</a>`,
+    oggi < new Date("2026-11-03") ? "🎃 Chi ci segue ha il costume" : "✨ Chi ci segue ha le lucine e la prima fila",
+    recentCount && `✨ ${fmt(recentCount)} brillano ora`,
+  ].filter(Boolean);
+  $("#counter").innerHTML = `<span><b>${fmt(luci)}</b> / ${fmt(goal)} luci</span><span class="track"><i style="width:${Math.min(100, (luci / goal) * 100)}%"></i></span><span class="msg">${msg[0] || ""}</span>`;
+  clearInterval(renderHeader.giro); let k = 0;
+  if (msg.length > 1) renderHeader.giro = setInterval(() => { const el = $("#counter .msg"); if (el) { k = (k + 1) % msg.length; el.innerHTML = msg[k]; el.classList.remove("entra"); void el.offsetWidth; el.classList.add("entra"); } }, 4500);
+  document.body.classList.toggle("neve", !!FOLLOW && FOLLOW.n >= FOLLOW.traguardo);
   if (ANTEPRIMA) { $("#badge").hidden = false; $("#badge").textContent = "Anteprima con dati inventati"; }
 }
 

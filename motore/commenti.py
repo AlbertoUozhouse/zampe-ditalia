@@ -37,6 +37,8 @@ PRIMA_ELEZIONE = "2026-11-01"  # ogni domenica alle 20:45 si elegge il Capobranc
 HALLOWEEN_FINO = "2026-11-02"  # fino a questo giorno gli animali di chi ci segue hanno il costume
 SOGLIA_ALTRI = 15  # con 15 luci gli altri animali entrano nella sfida: Cani contro Gatti contro Altri (anche in copione.py)
 PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 10}
+FOLLOWER = None  # follower veri dell'account, letti a ogni giro (main)
+TRAGUARDO = 1000
 BOOST_FINO = "2026-11-01"  # Settimana del follow: fino a domenica (elezione dei Capibranco) SEGUO vale +30
 BOOST = datetime.now(timezone.utc).date().isoformat() <= BOOST_FINO
 if BOOST: PUNTI["segue"] = 30
@@ -422,6 +424,7 @@ class Gioco:
 
     def salva(self):
         self.dati["aggiornato"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        if FOLLOWER: self.dati["follower"] = {"n": FOLLOWER, "traguardo": TRAGUARDO}  # il traguardo di tutti: a 1.000 nevica sulla mappa
         self.stato["visti"] = sorted(self.visti)[-50000:]
         oggi = datetime.now(timezone.utc).date().isoformat()
         ig = self.stato.get("inviti_giorno", {})
@@ -1011,6 +1014,9 @@ def main():
         sys.exit("Manca IG_TOKEN: va messo nei Secrets del repository.")
     ig = Instagram(token)
     me = ig.io()
+    global FOLLOWER
+    try: FOLLOWER = ig._req("GET", "me", fields="followers_count").get("followers_count")
+    except urllib.error.HTTPError: pass
     if "--diagnosi" in sys.argv:  # cosa vede il motore, senza toccare la mappa
         print("account:", me.get("username"))
         print("profilo:", ig._req("GET", "me", fields="username,followers_count,media_count"))
