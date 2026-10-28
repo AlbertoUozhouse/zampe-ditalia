@@ -306,7 +306,7 @@ def altri(D, rng, st):
         (f"Sulla mappa ci sono già {na} altri animali: conigli, tartarughe, pappagalli.", {"tipo": "numero", "grande": str(na), "sotto": "altri animali già accesi 🐰🐢🦜"}),
         ("Hai un coniglio, un criceto o una tartaruga? Scrivi città, nome e animale.", {"tipo": "commento", "testo": f"{citta}, {nome}, coniglio"}),
         (("Ora la sfida è a tre: cani, gatti e altri animali!" if na >= SOGLIA_ALTRI else f"Ancora {SOGLIA_ALTRI - na} e anche loro entrano nella sfida!"),
-         {"tipo": "numero", "grande": "🐶🐱🐰", "sotto": "cani contro gatti contro altri animali"}),
+         {"tipo": "numero", "grande": "3", "sotto": "squadre: cani, gatti e altri animali 🐰"}),
         ("Scrivilo qui sotto e accendi la sua luce!", {"tipo": "chiusura", "testo": "🐰 Accendi il tuo animale qui sotto"}),
     ]
     st["tag_extra"] = [x["u"] for x in an if x.get("u")]
