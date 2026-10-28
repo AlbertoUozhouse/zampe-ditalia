@@ -253,7 +253,39 @@ def attivita(D, rng, st):
     st["senza_bonus"] = True
     return "PER LE ATTIVITÀ", frasi, did
 
-FORMATI = {"attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+# capoluogo e articolo di ogni regione, per il formato «buio»
+REGIONI = {"Abruzzo": ("L'Aquila", "l'"), "Basilicata": ("Potenza", "la "), "Calabria": ("Catanzaro", "la "), "Campania": ("Napoli", "la "),
+           "Emilia-Romagna": ("Bologna", "l'"), "Friuli-Venezia Giulia": ("Trieste", "il "), "Lazio": ("Roma", "il "), "Liguria": ("Genova", "la "),
+           "Lombardia": ("Milano", "la "), "Marche": ("Ancona", "le "), "Molise": ("Campobasso", "il "), "Piemonte": ("Torino", "il "),
+           "Puglia": ("Bari", "la "), "Sardegna": ("Cagliari", "la "), "Sicilia": ("Palermo", "la "), "Toscana": ("Firenze", "la "),
+           "Trentino-Alto Adige": ("Trento", "il "), "Umbria": ("Perugia", "l'"), "Valle d'Aosta": ("Aosta", "la "), "Veneto": ("Venezia", "il ")}
+
+def buio(D, rng, st):
+    """Come il reel che ha reso di più («Questa è l'Italia di notte… e non c'è ancora nemmeno un cane»):
+    la mappa al buio fa venire voglia di accendere. Ogni volta la regione con meno luci, senza ripetere le ultime 4."""
+    conta = {r: 0 for r in REGIONI}
+    for a in D["tutti"]:
+        if a.get("k") != "stella" and a.get("r") in conta: conta[a["r"]] += 1
+    giro = [r for r in sorted(conta, key=lambda r: (conta[r], r)) if r not in st.get("buio", [])[-4:]]
+    r = giro[0]; st.setdefault("buio", []).append(r)
+    cap, art = REGIONI[r]; n = conta[r]; Art = art[0].upper() + art[1:]
+    cane, gatto = esempio(rng, D)
+    stato = "è ancora al buio: nemmeno un cane." if n == 0 else f"è quasi al buio: {luci_n(n)} in tutta la regione."
+    sono = "sono" if art == "le " else "è"
+    stato = stato.replace("è ", sono + " ", 1)
+    frasi = [
+        ("Questa è l'Italia di notte.", {"tipo": "mappa", "luci": luci(D)}),
+        (f"{Art}{r} {stato}", {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": cap, "testo": f"{r}: {n}", "colore": "d", "t": 0.3}], "zoom": {"comune": cap, "s": 2.0}}),
+        ("Ogni commento accende una luce: città, nome e razza.", {"tipo": "commento", "testo": f"{cap}, {cane['nome']}, {cane['parola']}"}),
+        (f"Accendiamo {art}{r}? Scrivilo qui sotto!", {"tipo": "chiusura", "testo": f"🌙 Accendi {art}{r}"}),
+    ]
+    did = (f"Questa è l'Italia di notte 🌙 e {art}{r} {stato}\n\nOgni commento accende una luce: scrivi qui sotto città, nome e razza "
+           f"(per esempio «{cap}, {cane['nome']}, {cane['parola']}» o «{cap}, {gatto['nome']}, {gatto['parola']}») e la cuccia del tuo cane o gli occhi del tuo gatto si accendono sulla mappa col tuo @.\n\n"
+           "👑 Il primo di ogni comune diventa il Fondatore.\nMappa nel link in bio.")
+    st["copertina"] = {"sopra": "L'ITALIA DI NOTTE", "grande": f"{r}<br>al buio", "sotto": "Accendi la prima luce 🌙", "tema": "buio"}
+    return "L'ITALIA DI NOTTE", frasi, did
+
+FORMATI = {"buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
