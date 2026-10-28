@@ -43,6 +43,7 @@
 "2a6ad18134ab1ba5",
 "2ccddcfc694c5161",
 "302a367515eb02b7",
+"368b4aa3c8776754",
 "36f24def3da10a03",
 "3763259778236306",
 "376a20de4608aed1",
@@ -60,6 +61,7 @@
 "3d2aba6364627795",
 "3d7b4115fc5bf82e",
 "3d844d201fea1436",
+"3e3fc49971b671bc",
 "3f45909a7ef34dc0",
 "3fd307a9876391a7",
 "3fec4a29fa7ff6a0",
@@ -72,6 +74,7 @@
 "44fec364800b0351",
 "4628bcf8840c4283",
 "46c5ee39a0e0a15d",
+"46ec269fd66dd7bd",
 "4790fae301f096e1",
 "4a14f7d8924cc8c3",
 "4a4f8a4b004c8a93",
@@ -82,6 +85,7 @@
 "53de2bcd8eb377ea",
 "55d76475113d2c91",
 "5682334708bbcc32",
+"5875acc8dfbdb60e",
 "58875c571d4c55f4",
 "597ee1f3e2704750",
 "5a93b122696cfc48",
@@ -168,6 +172,7 @@
 "b4efffa6c69e19eb",
 "b4f57553745fb090",
 "b66e9084bbe6314e",
+"b768d4a609e61215",
 "b78c32f7d1f6d6c0",
 "b7a5580b502f1651",
 "b8fc2ee2979afcd5",
@@ -191,13 +196,16 @@
 "c5c348bc473fc1af",
 "c6c85e1b3d700a47",
 "c886e337b190b889",
+"c95da245897d7ddd",
 "c9b91f846299f25c",
 "ca7c8997d3c52483",
+"cb63fce339e835b2",
 "cb96993c0b95eaae",
 "cc4bc2e6d62b86fe",
 "cc68613bef65c438",
 "cce44735f07c3175",
 "ce54d134345a2ef1",
+"cf74aeea20f5bbf2",
 "cfa10856bbb20ada",
 "d06de1cf080c40b0",
 "d17588b828adf3e4",
@@ -212,6 +220,7 @@
 "d94c06f0111b1590",
 "dac8b9b2d3f01478",
 "dbae0d2413028804",
+"dbfd63121f736694",
 "dd2b4ad4d0c3f6f7",
 "dd36117935253bc5",
 "de22bd0ab2ef554e",
@@ -231,6 +240,7 @@
 "ef096c2151aba998",
 "f03feeacf61325c7",
 "f046b372bf56e0c8",
+"f192ba5159c74bc2",
 "f211af5428d578f1",
 "f6a71dad2c049a1b",
 "f71cdd8f9ced4f8f",
@@ -243,11 +253,33 @@
 "fc719c080832dc63",
 "ffa379cadcaacf70"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1911841629825026",
+"url": [
+"https://zampeditalia.it/cartoline/ffb142b261d40545.png"
+],
+"t": 1793199685.712667
+},
+{
+"igsid": "1751149269326232",
+"url": [
+"https://zampeditalia.it/cartoline/2825ce91ecee6619.png"
+],
+"t": 1793199685.7126684
+},
+{
+"storia": "cartoline/6cede4be29a7576a.png",
+"url": [
+"https://zampeditalia.it/cartoline/6cede4be29a7576a.png"
+],
+"t": 1793199654.1363523
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
-"2026-10-28": 4
+"2026-10-28": 5
 },
 "prenota_attesa": {}
 }
