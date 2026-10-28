@@ -94,7 +94,7 @@ def duello(D, rng, st):
     ]
     v = scena_vera(D, rng, rng.choice(["cane", "gatto"]))
     if v:
-        frasi.append((f"Come {v[0]['n']}, che si è acceso a {v[0]['c']}.", v[1]))
+        frasi.append((f"Come {v[0]['n']}, che ha acceso la sua luce a {v[0]['c']}.", v[1]))
     else:
         frasi.append(("Si accende la sua cuccia, col suo nome.", {"tipo": "cuccia", "nome": cane["nome"], "razza": cane["razza"], "seme": cane["seme"]}))
     frasi.append((f"Allora: {a} o {b}? Scrivi la tua città!", {"tipo": "chiusura", "testo": "👇 Scrivi la tua città qui sotto"}))
@@ -326,13 +326,13 @@ def main():
                                                    "Tagga i tuoi amici: chi ne porta di più oggi è il Re degli inviti."]),
                                       {"tipo": "numero", "grande": "+3", "sotto": "per ogni amico taggato che commenta · il primo è Re degli inviti 👑"}))
     else:
-        frasi.insert(len(frasi) - 1, (rng.choice(["Seguici e scrivi seguo: dieci punti, e il tuo animale può finire nel prossimo reel.",
-                                                   "Ci segui? Scrivi seguo: dieci punti in più."]),
-                                      {"tipo": "numero", "grande": "+10", "sotto": "punti se ci segui e scrivi SEGUO"}))
+        frasi.insert(len(frasi) - 1, (rng.choice(["Seguici e scrivi seguo: dieci punti e le lucine sulla cuccia del tuo animale!",
+                                                   "Chi ci segue sta in prima fila nel suo paese, con le lucine: scrivi seguo!"]),
+                                      {"tipo": "numero", "grande": "+10", "sotto": "seguici e scrivi SEGUO: lucine sulla cuccia e prima fila nel tuo paese ✨"}))
     if per_attivita:
         did = did.strip() + "\n\n"
     else:
-        did = did.strip() + ("\n\n🎃 Fino al 2 novembre chi ci segue ha il costume di Halloween sulla mappa" if ORA.date().isoformat() <= "2026-11-02" else "") + ("\n\n➕ Seguici e scrivi SEGUO: +10 punti, e nei reel mettiamo prima gli animali di chi ci segue"
+        did = did.strip() + ("\n\n🎃 Fino al 2 novembre chi ci segue ha il costume di Halloween sulla mappa" if ORA.date().isoformat() <= "2026-11-02" else "\n\n✨ Chi ci segue ha le lucine sulla cuccia e sta in prima fila nel suo paese sulla mappa") + ("\n\n➕ Seguici e scrivi SEGUO: +10 punti, e nei reel mettiamo prima gli animali di chi ci segue. Il paese della tua città è su zampeditalia.it"
                              "\n👥 Sfida degli inviti: +3 per ogni amico taggato che commenta. Chi ne porta di più oggi è il Re degli inviti 👑 e va nella puntata delle 21")
     if not per_attivita:  # nel reel per le attività la parola PRENOTA non si tocca
         frasi, did = varia(frasi, did, D)

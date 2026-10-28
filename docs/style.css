@@ -107,6 +107,8 @@ body{background:var(--night);color:var(--cream);font-family:var(--f-body);overfl
 .pet .muso{animation:esce .9s cubic-bezier(.34,1.56,.64,1) both,sbircia 9s ease-in-out calc(var(--r,0s) + 1.5s) infinite}
 .pet .micio{animation:sale 1s cubic-bezier(.34,1.56,.64,1) both,salta 11s ease-in-out calc(var(--r,0s) + 1.5s) infinite}
 .pet .coda{transform-origin:37px 37px;animation:coda 2.4s ease-in-out var(--r,0s) infinite}
+.pet .lucina{animation:lucina 1.6s ease-in-out infinite}
+@keyframes lucina{0%,100%{opacity:1}50%{opacity:.35}}
 .pet .vola{animation:vola 3.2s ease-in-out var(--r,0s) infinite}
 .pet:hover .muso,.pet:hover .micio{animation:saluta .6s ease-in-out}
 @keyframes esce{from{transform:translateY(18px)}to{transform:none}}

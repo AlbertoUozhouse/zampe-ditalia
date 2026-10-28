@@ -261,5 +261,22 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
     return svg.replace(/<\/svg>\s*$/, `<g class="costume vola">${pezzi}</g></svg>`);
   }
 
-  window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, altro, emoji, hash, carica, cerca, costume };
+  // ---------- le lucine di chi ci segue: una ghirlanda colorata sul tetto ----------
+  const COLORI_LUCI = ["#FF5A6E", "#FFD23F", "#5BE37D", "#4FB4FF", "#FF9A3C"];
+  function lucine(svg, tipo, seed) {
+    const tratti = tipo === "altro" ? [[5, 40, 23, 44, 41, 40]] : tipo === "gatto" ? [[1, 50.6, 16, 47, 32, 41.4], [32, 41.4, 48, 47, 63, 50.6]]
+      : [[5.4, 30.6, 17, 21.4, 32, 9.6], [32, 9.6, 47, 21.4, 58.6, 30.6]]; // quadratiche: da, controllo, a
+    let filo = "", luci = "", i = seed % 5;
+    for (const [x0, y0, cx, cy, x1, y1] of tratti) {
+      filo += `<path d="M${x0} ${y0} Q${cx} ${cy + 2.2} ${x1} ${y1}" fill="none" stroke="#2A2A2A" stroke-width=".6"/>`;
+      for (let k = 1; k < 8; k++) {
+        const t = k / 8, x = (1 - t) ** 2 * x0 + 2 * t * (1 - t) * cx + t * t * x1, y = (1 - t) ** 2 * y0 + 2 * t * (1 - t) * (cy + 2.2) + t * t * y1;
+        luci += `<circle class="lucina" style="animation-delay:${((i * 0.37) % 1.6).toFixed(2)}s" cx="${x.toFixed(1)}" cy="${(y + 1.1).toFixed(1)}" r="1.7" fill="${COLORI_LUCI[i++ % 5]}"/>`;
+      }
+    }
+    return svg.replace(/<\/svg>\s*$/, `<g class="ghirlanda">${filo}${luci}</g></svg>`);
+  }
+  const vesti = (svg, d, tipo, seed) => d === "halloween" ? costume(svg, tipo, seed) : d === "lucine" ? lucine(svg, tipo === "sogno" ? "cane" : tipo, seed) : svg;
+
+  window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, altro, emoji, hash, carica, cerca, costume, lucine, vesti };
 })();

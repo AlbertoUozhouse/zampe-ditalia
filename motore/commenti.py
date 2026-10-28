@@ -333,7 +333,10 @@ FRASI = {
 def halloween():
     return datetime.now(timezone.utc).date().isoformat() <= HALLOWEEN_FINO
 
-COSTUME = " 🎃 E fino al 2 novembre il tuo animale ha il costume di Halloween sulla mappa!"
+# il regalo per chi ci segue: il costume fino al 2 novembre, poi le lucine sulla cuccia e la prima fila nel paese
+COSTUME = (" 🎃 E fino al 2 novembre il tuo animale ha il costume di Halloween sulla mappa!" if halloween() else
+           " ✨ E il tuo animale ha le lucine sulla cuccia e sta in prima fila nel suo paese sulla mappa!")
+COSTUME_ORA = COSTUME.replace("E fino", "Da ora fino").replace("E il tuo", "Da ora il tuo")
 
 def frase(chiave, **kw):
     return random.choice(FRASI[chiave]).format(**kw)
@@ -422,10 +425,10 @@ class Gioco:
         self.dati["inviti"] = {"giorno": oggi, "oggi": sorted(ig.get(oggi, {}).items(), key=lambda x: -x[1])[:10],
                                "totale": sorted(tot.items(), key=lambda x: -x[1])[:10]}
         self.elezione()
-        vestiti = oggi <= HALLOWEEN_FINO  # il costume di Halloween è il regalo per chi ci segue
+        vestito = "halloween" if oggi <= HALLOWEEN_FINO else "lucine"  # il regalo per chi ci segue
         seguono = {u for u, v in self.stato.get("seguono", {}).items() if v == "premiato"}
         for x in self.animali:
-            if vestiti and x["k"] in ("animale", "sogno") and x["u"].lower() in seguono: x["vestito"] = "halloween"
+            if x["k"] in ("animale", "sogno") and x["u"].lower() in seguono: x["vestito"] = vestito
             else: x.pop("vestito", None)
         ora = time.time()
         self.stato["risposte"] = [t for t in self.stato["risposte"] if ora - t < 3600]
@@ -730,8 +733,8 @@ def invito_segui(gioco, u):
         r2 = 1 + sum(1 for p, t in altri if p > pt + PUNTI["segue"] or p == pt + PUNTI["segue"] and t < ts)
         if r2 < r1:
             al = lambda r, prep: f"{prep}ll'{r}°" if str(r)[0] == "8" or r == 11 else f"{prep}l {r}°"  # dall'11°, all'8°
-            return frase("invito_salto", n=io["n"], dal=al(r1, "da"), al=al(r2, "a")) + (COSTUME if halloween() else "")
-    return frase("invito_segui") + (COSTUME if halloween() else "")
+            return frase("invito_salto", n=io["n"], dal=al(r1, "da"), al=al(r2, "a")) + COSTUME
+    return frase("invito_segui") + COSTUME
 
 def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
     """La frase giusta per l'ultimo commento di questa persona."""
@@ -881,7 +884,7 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
         if premiati:
             extra.append(frase("premio", chi=", ".join("@" + a for a in premiati[:3])))
         if frase_segue:
-            extra.append(frase(frase_segue) + (COSTUME.replace("E fino", "Da ora fino") if halloween() and frase_segue == "segue" else ""))
+            extra.append(frase(frase_segue) + (COSTUME_ORA if frase_segue == "segue" else ""))
         if nuovi_a and chiave not in ("stella", "sogno"):  # obiettivo di città oppure corsa a Capobranco: un motivo concreto per taggare
             riga = riga_edificio(gioco, nuovi_a[0]) or (riga_capobranco(gioco, nuovi_a[0]) if random.random() < 0.4 else None)
             if riga: extra.insert(0, riga)
