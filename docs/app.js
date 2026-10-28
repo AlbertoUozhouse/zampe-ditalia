@@ -92,11 +92,42 @@ function prepare(list) {
 // ---------- disegni da vicino ----------
 const petLayer = L.layerGroup().addTo(map), cityLabels = L.layerGroup().addTo(map);
 let petMarkers = new Map();
+// da vicino ogni comune è un paese disegnato (paese.js): il terreno sta sotto le cucce, le cucce in cerchio attorno alla piazza
+map.createPane("paesi").style.zIndex = 450;
+const paeseLayer = L.layerGroup().addTo(map), paeseMarkers = new Map();
+let VILLE = new Map();
+const scala = z => Math.max(0.5, Math.min(1.7, Math.pow(2, (z - 14) * 0.55)));
+function ville() {
+  VILLE = new Map();
+  for (const d of DATA) {
+    if (d.k === "tifo") continue;
+    const key = d.c + "|" + d.p; let v = VILLE.get(key);
+    if (!v) VILLE.set(key, v = { key, nome: d.c, ll: L.latLng(d.lat, d.lng), lista: [], stelle: [] });
+    (d.k === "stella" ? v.stelle : v.lista).push(d);
+  }
+  const ord = d => (d.capo ? 0 : d.fondatore ? 1 : 2);
+  for (const v of VILLE.values()) {
+    v.lista.sort((a, b) => ord(a) - ord(b) || b.pt - a.pt || (a.ts || "").localeCompare(b.ts || ""));
+    const P = Paese.posti(v.lista.length), fondo = P.raggio * Paese.SQ;
+    v.lista.forEach((d, i) => { d.off = P.posti[i]; d.prof = 0.86 + 0.14 * (d.off[1] / fondo + 1) / 2; d.villa = v; });
+    v.stelle.forEach(d => { d.off = [(d.seed % 240) - 120, -Math.round(fondo + 70 + (d.seed >>> 9) % 40)]; d.prof = 0.8; d.villa = v; });
+    v.luci = STATS.city.find(c => c.c === v.nome && c.p === v.key.split("|")[1])?.tot || v.lista.length;
+    v.html = null;
+  }
+}
+function paeseIcon(v) {
+  if (!v.html) {
+    const g = Paese.suolo(v.nome, v.luci, v.lista.length, D.hash(v.key)), ox = g.w / 2, oy = g.h / 2 + g.dy;
+    v.html = `<div class="paese" style="width:${g.w}px;height:${g.h}px;transform-origin:${ox}px ${oy}px;transform:translate(${-ox}px,${-oy}px) scale(var(--s,1))">${g.svg}</div>`;
+  }
+  return L.divIcon({ className: "", iconSize: [0, 0], html: v.html });
+}
+const posto = (d, z, s) => d.villa ? map.unproject(map.project(d.villa.ll, z).add([d.off[0] * s, d.off[1] * s]), z) : d.ll;
 function petIcon(d) {
   let svg = d.k === "stella" ? D.stella() : d.k === "sogno" ? D.sogno(d.rk, d.seed) : d.t === "altro" ? D.altro(d.specie, d.seed) : d.t === "gatto" ? D.gatto(d.rk, d.seed) : D.cane(d.rk, d.seed);
   if (d.vestito === "halloween") svg = D.costume(svg, d.k === "sogno" ? "sogno" : d.t, d.seed);
   const cls = d.k === "animale" ? d.t : d.k;
-  return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}" data-id="${esc(d.id)}">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${esc(d.n)}</span></div>` });
+  return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}" data-id="${esc(d.id)}" style="--k:${(d.prof || 1).toFixed(3)};--r:${((d.seed % 90) / 10).toFixed(1)}s">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${esc(d.n)}</span></div>` });
 }
 const EDIFICI = [[5, "Fontanella", "⛲"], [10, "Parco cani", "🌳"], [25, "Gattile", "🏠"], [50, "Clinica veterinaria", "🏥"], [100, "Piazza dei Fondatori", "🏛️"], [250, "Grande parco", "🎡"]]; // come in motore/commenti.py
 const edifici = n => EDIFICI.filter(e => n >= e[0]).map(e => e[2]).join("");
@@ -116,13 +147,20 @@ function popup(d) {
 }
 function syncPets() {
   const z = map.getZoom();
-  if (z < DOM_ZOOM) { petLayer.clearLayers(); petMarkers.clear(); return; }
-  const b = map.getBounds().pad(0.15), want = new Set();
-  for (const d of DATA) { if (d.k === "tifo" || !b.contains(d.ll)) continue; want.add(d.id); if (want.size > 500) break; }
-  for (const [id, m] of petMarkers) if (!want.has(id)) { petLayer.removeLayer(m); petMarkers.delete(id); }
+  if (z < DOM_ZOOM) { petLayer.clearLayers(); petMarkers.clear(); paeseLayer.clearLayers(); paeseMarkers.clear(); return; }
+  const s = scala(z); map.getContainer().style.setProperty("--s", s);
+  const b = map.getBounds().pad(0.15), vb = map.getBounds().pad(0.8), want = new Set(), ville = new Set();
+  for (const v of VILLE.values()) if (vb.contains(v.ll)) ville.add(v.key);
+  for (const [k, m] of paeseMarkers) if (!ville.has(k) || m._luci !== VILLE.get(k).luci) { paeseLayer.removeLayer(m); paeseMarkers.delete(k); }
+  for (const k of ville) if (!paeseMarkers.has(k)) {
+    const v = VILLE.get(k), m = L.marker(v.ll, { icon: paeseIcon(v), pane: "paesi", interactive: false, keyboard: false });
+    m._luci = v.luci; paeseMarkers.set(k, m); paeseLayer.addLayer(m);
+  }
+  for (const d of DATA) { if (d.k === "tifo") continue; d.qui = posto(d, z, s); if (!b.contains(d.qui)) continue; want.add(d.id); if (want.size > 500) break; }
+  for (const [id, m] of petMarkers) if (!want.has(id)) { petLayer.removeLayer(m); petMarkers.delete(id); } else m.setLatLng(m._d.qui);
   for (const d of DATA) if (want.has(d.id) && !petMarkers.has(d.id)) {
-    const m = L.marker(d.ll, { icon: petIcon(d), riseOnHover: true }).bindPopup(() => popup(d), { offset: [0, -70], autoPanPaddingTopLeft: L.point(20, 200), autoPanPaddingBottomRight: L.point(20, 190) });
-    petMarkers.set(d.id, m); petLayer.addLayer(m); d.marker = m;
+    const m = L.marker(d.qui, { icon: petIcon(d), riseOnHover: true }).bindPopup(() => popup(d), { offset: [0, -70], autoPanPaddingTopLeft: L.point(20, 200), autoPanPaddingBottomRight: L.point(20, 190) });
+    m._d = d; petMarkers.set(d.id, m); petLayer.addLayer(m); d.marker = m;
   }
 }
 function syncCities(cities) {
@@ -204,7 +242,7 @@ document.querySelectorAll(".tab").forEach(t => t.onclick = () => show(t.dataset.
 let COMUNI = null;
 function focus(d) {
   if (!d) return;
-  map.flyTo(d.ll, 14.5, { duration: 1 });
+  map.flyTo(posto(d, 14.5, scala(14.5)), 14.5, { duration: 1 });
   map.once("moveend", () => { syncPets(); const m = petMarkers.get(d.id); if (m) { m.openPopup(); const el = m.getElement()?.querySelector(".pet"); el?.classList.add("hit"); } });
 }
 $("#searchForm").addEventListener("submit", async e => {
@@ -227,7 +265,7 @@ $("#zall").onclick = () => map.flyToBounds(ITALY, { ...PAD(), duration: 0.8 });
 
 // ---------- avvio ----------
 function refresh(list) {
-  DATA = prepare(list); stats(); renderHeader(); syncCities(STATS.city); syncPets();
+  DATA = prepare(list); stats(); ville(); renderHeader(); syncCities(STATS.city); syncPets();
   if (!raf && recentCount) raf = requestAnimationFrame(loop); else redraw();
   if (!$("#sheet").hidden) show(document.querySelector('.tab[aria-selected="true"]').dataset.v);
 }

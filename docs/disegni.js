@@ -110,6 +110,7 @@
 <path d="M4 29 L32 6.5 L60 29 L56.5 31.5 L32 11.6 L7.5 31.5Z" fill="#4A2A14"/>
 <path d="M4 29 L32 6.5 L60 29" fill="none" stroke="#FFC55C" stroke-width="1.4" stroke-linejoin="round" opacity=".7"/>
 <path d="${door}" fill="url(#${id})"/>
+<clipPath id="p${id}"><path d="M-20 -20 H84 V57.2 H-20Z"/></clipPath><g clip-path="url(#p${id})"><g class="muso">
 ${EARS[earKind](earC)}
 <ellipse cx="32" cy="45" rx="8" ry="${headRy}" fill="${fur}"/>
 ${b.cap ? `<path d="M24.6 42 Q32 34.8 39.4 42 Q32 39.6 24.6 42Z" fill="${b.cap}" opacity=".85"/>` : ""}
@@ -124,6 +125,7 @@ ${tongue ? `<path d="M30.8 51 Q32 54.6 33.2 51Z" fill="#E8707E"/>` : `<path d="M
 <circle cx="28.8" cy="43.2" r="1.25" fill="${eye}"/><circle cx="35.2" cy="43.2" r="1.25" fill="${eye}"/>
 <circle cx="29.2" cy="42.8" r=".42" fill="#fff"/><circle cx="35.6" cy="42.8" r=".42" fill="#fff"/>
 <path d="M25.4 52.6 Q32 55.4 38.6 52.6" stroke="${collar}" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+<!--testa--></g></g>
 <path d="${door}" fill="none" stroke="#5E3519" stroke-width="2.2"/>
 </svg>`;
   }
@@ -139,14 +141,16 @@ ${tongue ? `<path d="M30.8 51 Q32 54.6 33.2 51Z" fill="#E8707E"/>` : `<path d="M
     const id = "g" + seed.toString(36);
     return `<svg width="80" height="75" viewBox="0 0 64 60" aria-hidden="true">
 <defs><radialGradient id="${id}"><stop offset="0" stop-color="${eye}" stop-opacity=".9"/><stop offset="1" stop-color="${eye}" stop-opacity="0"/></radialGradient></defs>
-<path d="M0 60 V48 L32 38 L64 48 V60Z" fill="#162650"/>
-<path d="M0 48 L32 38 L64 48" fill="none" stroke="#5577C9" stroke-width="1.2" opacity=".7"/>
-<path d="M8 52 L24 47 M8 56 L30 49.5 M40 49.5 L60 56 M42 47 L58 52" stroke="#0E1A3A" stroke-width="1.1" opacity=".8"/>
-<rect x="47" y="34" width="7" height="12" fill="#1E3266"/><rect x="46" y="32.6" width="9" height="2.4" fill="#2A4180"/>
-<g transform="translate(32 0) scale(${flip} 1) translate(-32 0)">
+<path d="M0 60 V48 L32 38 L64 48 V60Z" fill="#8C3F2B"/>
+<path d="M0 48 L32 38 L64 48" fill="none" stroke="#FFC55C" stroke-width="1.3" opacity=".75"/>
+<path d="M8 52 L24 47 M8 56 L30 49.5 M40 49.5 L60 56 M42 47 L58 52" stroke="#5A2416" stroke-width="1.2" opacity=".85"/>
+<path d="M26 60 V53 Q32 48.6 38 53 V60Z" fill="#FFD27A"/><path d="M32 49.6 V60 M26 55.6 H38" stroke="#8C3F2B" stroke-width="1.1"/>
+<rect x="47" y="34" width="7" height="12" fill="#A9533A"/><rect x="46" y="32.6" width="9" height="2.4" fill="#C46A4C"/>
+<clipPath id="p${id}"><path d="M-20 -20 H84 V49.4 L32 39.6 L-20 51.6Z"/></clipPath><g clip-path="url(#p${id})"><g class="micio">
+<g transform="translate(32 0) scale(${flip} 1) translate(-32 0)"><g class="coda">
 <path d="M37 37 Q${44 + tail} 36 ${42 + tail} ${26 - tail / 3}" stroke="${pt || fur}" stroke-width="${b.fluffy ? 4 : 2.8}" fill="none" stroke-linecap="round"/>
 ${st ? `<path d="M${40 + tail * 0.5} 36 l1.6 -2.4 M${42 + tail * 0.8} 33 l1.8 -1.6" stroke="${st}" stroke-width="1.4"/>` : ""}
-</g>
+</g></g>
 <ellipse cx="32" cy="32" rx="${b.fluffy ? 9.4 : 8.2}" ry="8.6" fill="${fur}"/>
 ${wh ? `<ellipse cx="32" cy="34" rx="4.4" ry="6" fill="${wh}"/>` : ""}
 ${st && !b.spots ? `<path d="M25 29 q2 1 3 3 M39 29 q-2 1 -3 3 M26 34 q2 .6 3 2 M38 34 q-2 .6 -3 2" stroke="${st}" stroke-width="1.3" fill="none" stroke-linecap="round"/>` : ""}
@@ -166,6 +170,7 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
 <ellipse cx="28.8" cy="20.4" rx=".55" ry="1.5" fill="#0A0F06"/><ellipse cx="35.2" cy="20.4" rx=".55" ry="1.5" fill="#0A0F06"/>
 <path d="M31.2 23.4 h1.6 l-.8 1Z" fill="#E88A9A"/>
 <path d="M25 23.6 l-4 -.8 M25 24.6 l-4 .6 M39 23.6 l4 -.8 M39 24.6 l4 .6" stroke="#FFF4DE" stroke-width=".45" opacity=".7"/>
+<!--testa--></g></g>
 </svg>`;
   }
 
@@ -249,7 +254,11 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
       ? [ZUCCA(36, 44, 0.95), STREGA(33, 41, 0.75), FANTASMA(37, 36, 0.85)][n] + PIPISTRELLO(9, 8)
       : cane ? [STREGA(33, 38.6, 0.95), ZUCCA(32, 38.6, 0.9), FANTASMA(52, 18, 0.95)][n] + PIPISTRELLO(10, 12)
       : [STREGA(33, 15, 0.82), ZUCCA(32, 15.2, 0.9), FANTASMA(12, 38, 0.95)][n] + PIPISTRELLO(51, 8);
-    return svg.replace(/<\/svg>\s*$/, `<g class="costume">${pezzi}</g></svg>`);
+    if (tipo !== "altro" && n < 2 && svg.includes("<!--testa-->")) { // cappello e zucca stanno sulla testa e si muovono con lei
+      const [testa, resto] = pezzi.split(/(?=<path transform)/);
+      return svg.replace("<!--testa-->", `<g class="costume">${testa}</g>`).replace(/<\/svg>\s*$/, `<g class="costume vola">${resto}</g></svg>`);
+    }
+    return svg.replace(/<\/svg>\s*$/, `<g class="costume vola">${pezzi}</g></svg>`);
   }
 
   window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, altro, emoji, hash, carica, cerca, costume };

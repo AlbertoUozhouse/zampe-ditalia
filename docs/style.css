@@ -91,7 +91,31 @@ body{background:var(--night);color:var(--cream);font-family:var(--f-body);overfl
 .empty{color:var(--muted);font-weight:700;text-align:center;padding:16px 0}
 
 /* Primi piani: cucce e tetti */
-.pet{position:relative;display:flex;flex-direction:column;align-items:center;cursor:pointer;transform:translate(-50%,-100%);width:max-content}
+.pet{position:relative;display:flex;flex-direction:column;align-items:center;cursor:pointer;transform-origin:50% 100%;transform:translate(-50%,-100%) scale(calc(var(--s,1) * var(--k,1)));width:max-content}
+/* Il paese: terreno sotto le cucce, animali che escono, lampioni e fontana che vivono */
+.paese{pointer-events:none;filter:drop-shadow(0 0 40px rgba(43,82,70,.45))}
+.paese svg{display:block}
+.paese .albero{transform-box:fill-box;transform-origin:50% 100%;animation:vento 5s ease-in-out infinite}
+.paese .albero.b{animation-duration:6.2s}
+.paese .alone{animation:lampione 3.4s ease-in-out infinite}
+.paese .zampillo{animation:zampillo 1.4s ease-in-out infinite}
+.paese .ruota{transform-box:fill-box;transform-origin:50% 50%;animation:gira 14s linear infinite}
+@keyframes vento{0%,100%{transform:rotate(0)}50%{transform:rotate(1.6deg)}}
+@keyframes lampione{0%,100%{opacity:.9}50%{opacity:.6}}
+@keyframes zampillo{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes gira{to{transform:rotate(360deg)}}
+.pet .muso{animation:esce .9s cubic-bezier(.34,1.56,.64,1) both,sbircia 9s ease-in-out calc(var(--r,0s) + 1.5s) infinite}
+.pet .micio{animation:sale 1s cubic-bezier(.34,1.56,.64,1) both,salta 11s ease-in-out calc(var(--r,0s) + 1.5s) infinite}
+.pet .coda{transform-origin:37px 37px;animation:coda 2.4s ease-in-out var(--r,0s) infinite}
+.pet .vola{animation:vola 3.2s ease-in-out var(--r,0s) infinite}
+.pet:hover .muso,.pet:hover .micio{animation:saluta .6s ease-in-out}
+@keyframes esce{from{transform:translateY(18px)}to{transform:none}}
+@keyframes sbircia{0%,82%,100%{transform:none}87%{transform:translateY(8px)}93%{transform:translateY(-1.5px)}}
+@keyframes sale{from{transform:translateY(26px)}to{transform:none}}
+@keyframes salta{0%,88%,100%{transform:none}93%{transform:translateY(-6px)}97%{transform:translateY(.5px)}}
+@keyframes coda{0%,100%{transform:rotate(0)}50%{transform:rotate(-10deg)}}
+@keyframes vola{0%,100%{transform:translateY(0)}50%{transform:translateY(-2.5px)}}
+@keyframes saluta{0%,100%{transform:none}40%{transform:translateY(-4px) rotate(-3deg)}70%{transform:translateY(-1px) rotate(3deg)}}
 .pet svg{display:block;filter:drop-shadow(0 0 10px rgba(255,197,92,.45))}
 .pet.gatto svg{filter:drop-shadow(0 0 8px rgba(207,227,107,.45))}
 .pet .name{margin-top:-2px;background:#F3DDB0;color:#5A3417;border:2px solid #5E3519;border-radius:7px;padding:0 7px;
@@ -101,8 +125,9 @@ body{background:var(--night);color:var(--cream);font-family:var(--f-body);overfl
 .pet.altro .name{background:#D6F3F8;color:#0E3A44;border-color:#1C5361;box-shadow:0 0 12px rgba(130,220,235,.45)}
 .pet.sogno .name{background:#E6ECFF;color:#24366B;border-color:#3A4E8C}
 .pet.stella .name{background:transparent;border:0;color:var(--cream);box-shadow:none;text-shadow:0 0 6px #000}
-.pet.hit{z-index:1000!important;animation:hit 1.2s ease-out 2}
-@keyframes hit{0%{transform:translate(-50%,-100%) scale(1)}30%{transform:translate(-50%,-100%) scale(1.35)}100%{transform:translate(-50%,-100%) scale(1)}}
+.pet.hit{z-index:1000!important}
+.pet.hit svg{transform-origin:50% 100%;animation:hit 1.2s ease-out 2}
+@keyframes hit{0%,100%{transform:scale(1)}30%{transform:scale(1.35)}}
 .city{font:800 12px var(--f-display);color:var(--cream);text-shadow:0 0 6px #000,0 0 12px #000;white-space:nowrap;transform:translate(-50%,8px);width:max-content;pointer-events:none}
 .leaflet-popup-content-wrapper{background:var(--panel);color:var(--cream);border:1.5px solid rgba(255,197,92,.6);border-radius:16px;box-shadow:0 0 30px rgba(255,197,92,.2)}
 .leaflet-popup-tip{background:var(--panel)}
