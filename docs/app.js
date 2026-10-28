@@ -31,7 +31,7 @@ const sprite = rgb => {
 const SPR = { cane: sprite(COL.cane), gatto: sprite(COL.gatto), altro: sprite(COL.altro), sogno: sprite(COL.sogno), stella: sprite(COL.stella) };
 
 let DATA = [], VISIBLE = [], recentCount = 0;
-const DOM_ZOOM = 11.5; // da qui in su compaiono i disegni
+const DOM_ZOOM = 12.5; // da qui in su compaiono i paesi disegnati
 
 function drawGlow(t = performance.now()) {
   const s = map.getSize(), dpr = Math.min(devicePixelRatio || 1, 2);
@@ -44,7 +44,7 @@ function drawGlow(t = performance.now()) {
     if (p.x < -40 || p.y < -40 || p.x > s.x + 40 || p.y > s.y + 40) continue;
     let r = base * (d.k === "tifo" ? 0.6 : d.k === "stella" ? 0.6 : 1) * (1 + Math.min(0.7, d.pt / 250));
     if (d.recent) r *= 1 + 0.35 * Math.sin(t / 380 + d.seed);
-    if (near && d.k !== "tifo") continue; // da vicino il disegno ha già il suo bagliore
+    if (near && d.k !== "tifo" && d.villa?.mostra) continue; // da vicino il paese disegnato ha già il suo bagliore
     gx.globalAlpha = far;
     gx.drawImage(SPR[d.k === "tifo" ? d.t : d.k === "animale" ? d.t : d.k], p.x - r, p.y - r, r * 2, r * 2);
   }
@@ -96,7 +96,7 @@ let petMarkers = new Map();
 map.createPane("paesi").style.zIndex = 450;
 const paeseLayer = L.layerGroup().addTo(map), paeseMarkers = new Map();
 let VILLE = new Map();
-const scala = z => Math.max(0.5, Math.min(1.7, Math.pow(2, (z - 14) * 0.55)));
+const scala = z => Math.max(0.45, Math.min(1.25, Math.pow(2, (z - 14) * 0.6)));
 function ville() {
   VILLE = new Map();
   for (const d of DATA) {
@@ -108,7 +108,7 @@ function ville() {
   const ord = d => (d.capo ? 0 : d.fondatore ? 1 : 2);
   for (const v of VILLE.values()) {
     v.lista.sort((a, b) => ord(a) - ord(b) || b.pt - a.pt || (a.ts || "").localeCompare(b.ts || ""));
-    const P = Paese.posti(v.lista.length), fondo = P.raggio * Paese.SQ;
+    const P = Paese.posti(v.lista.length), fondo = P.raggio * Paese.SQ; v.R = P.raggio + 110;
     v.lista.forEach((d, i) => { d.off = P.posti[i]; d.prof = 0.86 + 0.14 * (d.off[1] / fondo + 1) / 2; d.villa = v; });
     v.stelle.forEach(d => { d.off = [(d.seed % 240) - 120, -Math.round(fondo + 70 + (d.seed >>> 9) % 40)]; d.prof = 0.8; d.villa = v; });
     v.luci = STATS.city.find(c => c.c === v.nome && c.p === v.key.split("|")[1])?.tot || v.lista.length;
@@ -150,13 +150,20 @@ function syncPets() {
   if (z < DOM_ZOOM) { petLayer.clearLayers(); petMarkers.clear(); paeseLayer.clearLayers(); paeseMarkers.clear(); return; }
   const s = scala(z); map.getContainer().style.setProperty("--s", s);
   const b = map.getBounds().pad(0.15), vb = map.getBounds().pad(0.8), want = new Set(), ville = new Set();
-  for (const v of VILLE.values()) if (vb.contains(v.ll)) ville.add(v.key);
+  // due paesi che si toccano: si disegna il più grande, l'altro resta una luce finché non si ingrandisce
+  const messi = [];
+  for (const v of [...VILLE.values()].sort((a, b) => b.lista.length - a.lista.length)) {
+    v.mostra = false; if (!vb.contains(v.ll)) continue;
+    const p = map.project(v.ll, z);
+    if (messi.some(([q, R]) => Math.hypot((p.x - q.x) / (R + v.R), (p.y - q.y) / ((R + v.R) * Paese.SQ)) < s * 0.95)) continue;
+    messi.push([p, v.R]); v.mostra = true; ville.add(v.key);
+  }
   for (const [k, m] of paeseMarkers) if (!ville.has(k) || m._luci !== VILLE.get(k).luci) { paeseLayer.removeLayer(m); paeseMarkers.delete(k); }
   for (const k of ville) if (!paeseMarkers.has(k)) {
     const v = VILLE.get(k), m = L.marker(v.ll, { icon: paeseIcon(v), pane: "paesi", interactive: false, keyboard: false });
     m._luci = v.luci; paeseMarkers.set(k, m); paeseLayer.addLayer(m);
   }
-  for (const d of DATA) { if (d.k === "tifo") continue; d.qui = posto(d, z, s); if (!b.contains(d.qui)) continue; want.add(d.id); if (want.size > 500) break; }
+  for (const d of DATA) { if (d.k === "tifo" || !d.villa?.mostra) continue; d.qui = posto(d, z, s); if (!b.contains(d.qui)) continue; want.add(d.id); if (want.size > 500) break; }
   for (const [id, m] of petMarkers) if (!want.has(id)) { petLayer.removeLayer(m); petMarkers.delete(id); } else m.setLatLng(m._d.qui);
   for (const d of DATA) if (want.has(d.id) && !petMarkers.has(d.id)) {
     const m = L.marker(d.qui, { icon: petIcon(d), riseOnHover: true }).bindPopup(() => popup(d), { offset: [0, -70], autoPanPaddingTopLeft: L.point(20, 200), autoPanPaddingBottomRight: L.point(20, 190) });
@@ -165,8 +172,8 @@ function syncPets() {
 }
 function syncCities(cities) {
   cityLabels.clearLayers();
-  const z = map.getZoom(), n = z < 6.5 ? 6 : z < 8 ? 14 : z < DOM_ZOOM ? 40 : 0;
-  cities.slice(0, n).forEach(c => cityLabels.addLayer(L.marker([c.lat, c.lng], { interactive: false,
+  const z = map.getZoom(), n = z < 6.5 ? 6 : z < 8 ? 14 : 40;
+  (z < DOM_ZOOM ? cities : cities.filter(c => !VILLE.get(c.c + "|" + c.p)?.mostra)).slice(0, n).forEach(c => cityLabels.addLayer(L.marker([c.lat, c.lng], { interactive: false,
     icon: L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="city">${esc(c.c)} · ${fmt(c.tot)}</div>` }) })));
 }
 
@@ -265,12 +272,12 @@ $("#zall").onclick = () => map.flyToBounds(ITALY, { ...PAD(), duration: 0.8 });
 
 // ---------- avvio ----------
 function refresh(list) {
-  DATA = prepare(list); stats(); ville(); renderHeader(); syncCities(STATS.city); syncPets();
+  DATA = prepare(list); stats(); ville(); renderHeader(); syncPets(); syncCities(STATS.city);
   if (!raf && recentCount) raf = requestAnimationFrame(loop); else redraw();
   if (!$("#sheet").hidden) show(document.querySelector('.tab[aria-selected="true"]').dataset.v);
 }
 map.on("move zoom resize", redraw);
-map.on("moveend zoomend", () => { syncPets(); syncCities(STATS.city || []); });
+map.on("moveend zoomend", () => { syncPets(); syncCities(STATS.city || []); redraw(); });
 $("#igLink").href = CONFIG.ig;
 // prima l'elenco completo delle razze, poi gli animali
 fetch("data/razze.json").then(r => r.json()).then(D.carica).catch(() => {}).finally(() => loadData().then(refresh));
