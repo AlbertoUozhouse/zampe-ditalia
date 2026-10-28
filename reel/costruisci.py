@@ -75,7 +75,7 @@ def disegni(chiavi, cartella):
     """chiavi: [("cane"|"gatto", razza, seme)] → assets/svg/<razza>-<seme>.svg"""
     js = f"""const fs=require("fs"); global.window={{}}; eval(fs.readFileSync({json.dumps(str(ROOT / "docs/disegni.js"))},"utf8"));
 const D=window.Disegni; D.carica(JSON.parse(fs.readFileSync({json.dumps(str(ROOT / "docs/data/razze.json"))},"utf8")));
-for (const [t,k,s] of {json.dumps(chiavi)}) {{ const svg=(t==="gatto"?D.gatto(k,s):D.cane(k,s)).replace("<svg ","<svg xmlns=\\"http://www.w3.org/2000/svg\\" ");
+for (const [t,k,s] of {json.dumps(chiavi)}) {{ const svg=(t==="gatto"?D.gatto(k,s):t==="altro"?D.altro(k,s):D.cane(k,s)).replace("<svg ","<svg xmlns=\\"http://www.w3.org/2000/svg\\" ");
   fs.writeFileSync({json.dumps(str(cartella))}+"/"+k+"-"+s+".svg", svg); }}"""
     subprocess.run(["node", "-e", js], check=True)
 

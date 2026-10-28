@@ -285,7 +285,37 @@ def buio(D, rng, st):
     st["copertina"] = {"sopra": "L'ITALIA DI NOTTE", "grande": f"{r}<br>al buio", "sotto": "Accendi la prima luce 🌙", "tema": "buio"}
     return "L'ITALIA DI NOTTE", frasi, did
 
-FORMATI = {"buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+def altri(D, rng, st):
+    """Un reel diretto a chi ha un coniglio, una tartaruga, un pappagallo…: anche loro accendono una luce."""
+    brutti = re.compile(r"(?i)cogl|cazz|merd|stronz|fig[ao]|puttan|troi|culo|minchi")  # nomi che in un reel non vanno
+    veri_altri = [a for a in D["animali"] if a.get("t") == "altro" and a.get("k") == "animale" and a["u"].lower() not in ESCLUSI and not brutti.search(a["n"])]
+    veri_altri.sort(key=lambda a: a["u"].lower() not in D.get("seguono", ()))  # prima chi ci segue
+    an, specie = [], set()
+    for a in veri_altri:
+        sp = (a.get("specie") or "").split()[0]
+        if sp and sp not in specie and len(an) < 6: specie.add(sp); an.append({"t": "altro", "razza": sp, "nome": f"{a['n']}"[:14], "seme": rng.randint(1, 999), "u": a["u"]})
+    for sp, nome in [("coniglio", "Coniglio"), ("tartaruga", "Tartaruga"), ("pappagallo", "Pappagallo"), ("criceto", "Criceto"), ("furetto", "Furetto"), ("geco", "Geco")]:
+        if len(an) >= 4: break
+        if sp not in specie: specie.add(sp); an.append({"t": "altro", "razza": sp, "nome": nome, "seme": rng.randint(1, 999)})
+    na, citta = D["altri"], rng.choice(CITTA)
+    nome = rng.choice(["Ugo", "Briciola", "Nocciola", "Pepe", "Kiwi", "Tito"])
+    frasi = [
+        ("Non solo cani e gatti.", {"tipo": "vetrina", "animali": [{k: v for k, v in x.items() if k != "u"} for x in an]}),
+        (f"Sulla mappa ci sono già {na} altri animali: conigli, tartarughe, pappagalli.", {"tipo": "numero", "grande": str(na), "sotto": "altri animali già accesi 🐰🐢🦜"}),
+        ("Hai un coniglio, un criceto o una tartaruga? Scrivi città, nome e animale.", {"tipo": "commento", "testo": f"{citta}, {nome}, coniglio"}),
+        (("Ora la sfida è a tre: cani, gatti e altri animali!" if na >= SOGLIA_ALTRI else f"Ancora {SOGLIA_ALTRI - na} e anche loro entrano nella sfida!"),
+         {"tipo": "numero", "grande": "🐶🐱🐰", "sotto": "cani contro gatti contro altri animali"}),
+        ("Scrivilo qui sotto e accendi la sua luce!", {"tipo": "chiusura", "testo": "🐰 Accendi il tuo animale qui sotto"}),
+    ]
+    st["tag_extra"] = [x["u"] for x in an if x.get("u")]
+    did = (f"Non solo cani e gatti 🐰🐢🦜 Sulla mappa di Zampe d'Italia ci sono già {na} altri animali: conigli, tartarughe, pappagalli, criceti, furetti.\n\n"
+           f"Hai un animale speciale? Scrivi qui sotto città, nome e animale (per esempio «{citta}, {nome}, coniglio»): entro 15 minuti si accende la sua luce sulla mappa col tuo @. "
+           "E la sfida ora è a tre: cani contro gatti contro altri animali!")
+    st["hashtag"] = "#conigli #tartarughe #pappagalli #criceti #furetti #animalidomestici "
+    st["copertina"] = {"sopra": "NON SOLO CANI E GATTI", "grande": "Hai un<br>coniglio?", "sotto": "Anche lui accende una luce 🐰", "tema": "benvenuti"}
+    return "CANI vs GATTI vs ALTRI", frasi, did
+
+FORMATI = {"altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -381,7 +411,7 @@ def main():
                 h = re.sub(r"[^a-z]", "", unicodedata.normalize("NFD", c.lower()).encode("ascii", "ignore").decode())
                 if 2 < len(h) < 25 and h not in citta: citta.append(h)
     tag_citta = " ".join("#" + h for h in citta[:5])
-    did = did.strip() + "\n\nVoce generata con IA.\n\n" + ("#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici " if per_attivita else "#cani #gatti #italia #canicontrogatti #animalidomestici ") + tag_citta
+    did = did.strip() + "\n\nVoce generata con IA.\n\n" + ("#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici " if per_attivita else st.pop("hashtag", "#cani #gatti #italia #canicontrogatti #animalidomestici ")) + tag_citta
     copione = {"id": ORA.strftime("%Y-%m-%d-%H%M") + "-" + formato, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
                "banner": "📍 Scrivi città, nome, razza · ➕ Seguici +10 👇", "didascalia": did,
