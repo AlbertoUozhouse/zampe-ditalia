@@ -16,13 +16,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "motore"))
-from commenti import API, Comuni, Gioco, Instagram, carica, frase, lettore, nome_proprio, norm, razza, scegli_frase, invito_segui, COSTUME_ORA  # noqa: E402
+from commenti import API, Comuni, Gioco, Instagram, carica, frase, lettore, nome_proprio, norm, razza, scegli_frase, invito_segui, COSTUME_ORA, BOOST  # noqa: E402
 
 STATO = ROOT / "motore/messaggi.json"
 ANIMALI = ROOT / "docs/data/animali.json"
 CARTOLINE = ROOT / "docs/cartoline"
 SITO = "https://zampeditalia.it/"
-PUNTI_STORIA = 10
+PUNTI_STORIA = 20 if BOOST else 10  # la storia porta gente nuova: nella Settimana del follow vale doppio
 PAROLA = re.compile(r"(?i)cartolin")
 PRENOTA = re.compile(r"(?i)prenot")
 EDIFICIO = {"veterinario": "la clinica veterinaria 🏥", "toelettatura": "il salone di toelettatura ✂️", "negozio": "il negozio per animali 🛍️",
@@ -245,7 +245,7 @@ def main():
         try:
             for u in r["url"]:
                 manda(ig, r["igsid"], {"attachment": {"type": "image", "payload": {"url": u}}})
-            manda(ig, r["igsid"], {"text": "Eccola! 💌 Mettila nella tua storia e tagga @zampeditalia: +10 punti per te ✨ "
+            manda(ig, r["igsid"], {"text": f"Eccola! 💌 Mettila nella tua storia e tagga @zampeditalia: +{PUNTI_STORIA} punti per te ✨ "
                                            "Vuoi far salire la tua città? Tagga gli amici sotto i reel: +3 punti per ognuno che commenta, e chi ne porta di più oggi è il Re degli inviti 👑"})
             mandate += 1
         except urllib.error.HTTPError as e:

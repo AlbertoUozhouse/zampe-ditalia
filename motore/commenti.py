@@ -399,6 +399,14 @@ class Instagram:
     def rispondi(self, comment_id, testo):
         return self._req("POST", f"{comment_id}/replies", message=testo)
 
+    def privato(self, comment_id, testo):
+        """Risposta privata a un commento (una sola per commento, entro 7 giorni): apre la conversazione in DM."""
+        body = json.dumps({"recipient": {"comment_id": comment_id}, "message": {"text": testo}}).encode()
+        req = urllib.request.Request(f"{API}/me/messages?access_token={urllib.parse.quote(self.token)}", data=body,
+                                     headers={"content-type": "application/json"}, method="POST")
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.loads(r.read())
+
 # ---------- stato del gioco ----------
 def carica(path, vuoto):
     try:
@@ -834,7 +842,28 @@ def sollecita(gioco, per, rispondi, appena):
         n += 1
     return n
 
-def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
+# ---------- la cartolina in privato a chi accende una luce nuova ----------
+LUCI_NUOVE = ("fondatore", "animale", "vicini", "multi", "sfida_fondatore", "sfida_vicini", "sfida_testa", "animale_altro")
+MAX_PRIVATI_ORA = 40
+PRIVATO = ["Ciao! 🌙 La luce di {n} è accesa a {c} sulla mappa d'Italia. Vuoi la sua cartolina da mettere nella storia? Rispondi CARTOLINA qui e te la mandiamo 💌",
+           "{n} è sulla mappa di Zampe d'Italia, a {c} ✨ Ti mandiamo la sua cartolina per la storia? Scrivi CARTOLINA qui 💌"]
+
+def manda_cartolina(gioco, privato, comment_id, u, par):
+    """Una volta sola per persona (si tiene solo un'impronta, non il nome): chi risponde CARTOLINA la riceve da messaggi.py."""
+    import hashlib
+    impr = hashlib.sha256(("zampe-privato" + u.lower()).encode()).hexdigest()[:16]
+    fatti, ora = gioco.stato.setdefault("privati", []), time.time()
+    recenti = [t for t in gioco.stato.get("privati_ora", []) if ora - t < 3600]
+    if impr in fatti or len(recenti) >= MAX_PRIVATI_ORA or u.lower() in ESCLUSI: return
+    n = par.get("n") or (par.get("nomi") or "il tuo animale").split(",")[0].split(" e ")[0]
+    try:
+        privato(comment_id, random.choice(PRIVATO).format(n=n, c=par.get("c", "")))
+        fatti.append(impr); gioco.stato["privati_ora"] = recenti + [ora]
+    except urllib.error.HTTPError as e:  # nei log solo il codice: niente nomi
+        print(f"risposta privata non inviata ({e.code})", file=sys.stderr)
+        if e.code in (400, 403): fatti.append(impr)  # commento non più raggiungibile: non si riprova
+
+def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, privato=None):
     """commenti: iterabile di (media_id, commento); rispondi: funzione(comment_id, testo); cancella: funzione(comment_id) per le risposte da rifare.
     Claude legge tutti i commenti di chi ha scritto qualcosa di nuovo; se non risponde, quei commenti si riprovano al giro dopo."""
     comuni, gioco = Comuni(), Gioco()
@@ -921,6 +950,7 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None):
             rispondi(nuovi_c[-1]["id"], testo)
             gioco.stato["risposte"].append(time.time())
             risposte += 1
+            if privato and chiave in LUCI_NUOVE: manda_cartolina(gioco, privato, nuovi_c[-1]["id"], u, par)
         except Exception as e:  # una risposta fallita non deve fermare la mappa
             print(f"risposta non inviata a {nuovi_c[-1]['id']}: {e}", file=sys.stderr)
     solleciti = sollecita(gioco, per, rispondi, {u for u, suoi in per.items() if any(c["id"] in gioco.visti_ora for c in suoi)})
@@ -1051,7 +1081,7 @@ def main():
         # Instagram li restituisce dal più recente: in ordine di arrivo il Fondatore è davvero il primo
         lista = [(m["id"], c) for m in ig.reel_recenti() for c in ig.commenti(m["id"])]
         return sorted(lista, key=lambda x: x[1].get("timestamp", ""))
-    gira(tutti(), ig.rispondi, me.get("username"), lambda cid: ig.cancella_mie_risposte(cid, me.get("username", "zampeditalia")))
+    gira(tutti(), ig.rispondi, me.get("username"), lambda cid: ig.cancella_mie_risposte(cid, me.get("username", "zampeditalia")), privato=ig.privato)
 
 if __name__ == "__main__":
     main()
