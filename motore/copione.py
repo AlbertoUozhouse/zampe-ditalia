@@ -347,7 +347,7 @@ def derby(D, rng, st):
                       {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": a, "testo": f"{a} · {na}", "colore": "d", "t": 0.3}, {"nome": b, "testo": f"{b} · {nb}", "colore": "c", "t": 0.8}]}))
     thor = next((x for x in D["tutti"] if x["u"] == MASCOTTE and x.get("k") == "animale"), None)
     if thor:
-        frasi.append(("L'arbitro è Thor, il nostro golden.", {"tipo": "cuccia", "nome": thor["n"], "razza": thor.get("razza") or "golden", "seme": sum(map(ord, thor["id"])) % 997 + 1,
+        frasi.append(("L'arbitro è Thor: il primo cane acceso sulla mappa.", {"tipo": "cuccia", "nome": thor["n"], "razza": thor.get("razza") or "golden", "seme": sum(map(ord, thor["id"])) % 997 + 1,
                                                              "utente": MASCOTTE, "comune": "Arbitro del derby ⚖️"}))
     frasi += [
         (f"Scrivi città, nome e razza: {a}, {cane['nome']}, {cane['parola']}.", {"tipo": "commento", "testo": f"{a}, {cane['nome']}, {cane['parola']}"}),
@@ -360,7 +360,7 @@ def derby(D, rng, st):
     did = (f"⚔️ Il Derby della settimana: {a} contro {b}! " + (f"Ora siamo {na} a {nb}." if na + nb else "Si parte da 0 a 0.") + "\n\n"
            f"Vale tutta la provincia: scrivi qui sotto città, nome e razza del tuo animale (per esempio «{a}, {cane['nome']}, {cane['parola']}» o «{b}, {gatto['nome']}, {gatto['parola']}») "
            f"e la sua luce si accende per la tua città. Si chiude {quando}: chi ha acceso la provincia che vince prende +{DB.PREMIO} punti 🏆\n\n"
-           f"👥 Tagga un amico di {a} o di {b}: ogni amico che commenta è una luce in più.\n\n⚖️ Arbitro del derby: Thor, il golden di Zampe d'Italia (@{MASCOTTE})")
+           f"👥 Tagga un amico di {a} o di {b}: ogni amico che commenta è una luce in più.\n\n⚖️ L'arbitro del derby è Thor, il primo cane che si è acceso sulla mappa: seguilo su @{MASCOTTE} 🐾")
     st["hashtag"] = "#derby #cani #gatti #animalidomestici #italia "
     st["copertina"] = {"sopra": "⚔️ IL DERBY", "grande": f"{a}<br><i>vs</i><br>{b}", "sotto": f"{na} – {nb} · chi si accende di più? ⚔️", "tema": "duello"}
     return "IL DERBY", frasi, did
