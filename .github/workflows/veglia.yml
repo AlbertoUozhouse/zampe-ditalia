@@ -33,7 +33,7 @@ jobs:
             python3 -I motore/commenti.py || echo "giro $giro: errore del motore, riprovo al prossimo"
             python3 -I motore/messaggi.py || echo "giro $giro: errore nei messaggi, riprovo al prossimo"
             formato=$(python3 -I motore/orari.py || true)
-            if [ -n "$formato" ]; then echo "giro $giro: è l'ora del reel $formato"; gh workflow run reel.yml -f formato="$formato" || echo "reel non avviato"; fi
+            if [ -n "$formato" ]; then echo "giro $giro: è l'ora del reel $formato"; for t in 1 2 3; do gh workflow run reel.yml -f formato="$formato" && break; sleep 20; [ $t = 3 ] && { echo "reel non avviato, riprovo al prossimo giro"; python3 -I motore/orari.py --annulla; }; done; fi
             git add docs/data/animali.json motore/stato.json motore/reel_fatti.json motore/messaggi.json motore/pubblicati.json docs/cartoline
             if ! git diff --cached --quiet; then
               git commit -q -m "Mappa aggiornata dai commenti"

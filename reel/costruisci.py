@@ -7,7 +7,7 @@ Il copione (scritto da motore/copione.py) è:
    "banner": "📍 Scrivi città, nome e razza 👇", "didascalia": "..."}
 Serve ELEVENLABS_API_KEY nell'ambiente (o nel Portachiavi del Mac). Esce con errore, senza video, se un controllo fallisce.
 """
-import base64, json, math, os, re, shutil, subprocess, sys, urllib.request
+import base64, inspect, json, math, os, re, shutil, subprocess, sys, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -169,6 +169,9 @@ def main():
             sc["citta"] = [{**c, **dict(zip(("x", "y"), proietta(*comune(c["nome"]))))} for c in sc.get("citta", [])]
             sc["luci"] = [{"x": x, "y": y, "t": l["t"]} for l in sc.get("luci", []) for x, y in [proietta(l["lng"], l["lat"])]]
             if sc.get("zoom"): x, y = proietta(*comune(sc["zoom"]["comune"])); sc["zoom"] = {"s": sc["zoom"].get("s", 1.8), "x": x, "y": y}
+        firma = inspect.signature(S.TIPI[tipo]).parameters  # i campi solo per la didascalia (utente, comune…) non arrivano alla scena
+        if not any(x.kind == x.VAR_KEYWORD for x in firma.values()):
+            sc = {k: v for k, v in sc.items() if k in firma}
         pagina = S.TIPI[tipo](cid, d, **sc)
         if n == 0 and tipo != "mappa":  # mai aprire sul buio (la mappa ha già la sua versione "subito")
             testa, js = pagina.split("<script>", 1)

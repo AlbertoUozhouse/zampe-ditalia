@@ -11,6 +11,14 @@ from zoneinfo import ZoneInfo
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG, STORICO = ROOT / "motore/config.json", ROOT / "motore/reel_fatti.json"
 
+def annulla():
+    """Il lancio non è partito (GitHub ha risposto con un errore): l'ultimo orario segnato oggi torna libero per il prossimo giro."""
+    st = json.loads(STORICO.read_text())
+    fatti = st.get("lanciati", {}).get(datetime.now(ZoneInfo("Europe/Rome")).date().isoformat(), [])
+    if fatti:
+        fatti.pop()
+        STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
+
 def main():
     cfg = json.loads(CONFIG.read_text())
     if not cfg.get("reel_automatici"):
@@ -33,4 +41,5 @@ def main():
             return
 
 if __name__ == "__main__":
-    main()
+    import sys
+    annulla() if sys.argv[1:] == ["--annulla"] else main()
