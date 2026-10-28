@@ -1,0 +1,26 @@
+# Quanto rende ogni reel: numeri da Instagram in motore/rendimento.json (solo numeri, nessun nome).
+name: rendimento
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rendimento:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      IG_TOKEN: ${{ secrets.IG_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -I motore/rendimento.py
+      - name: Salva
+        run: |
+          git config user.name "zampe-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add motore/rendimento.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Rendimento dei reel"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
