@@ -357,7 +357,7 @@ def derby(D, rng, st):
            f"e la sua luce si accende per la tua città. Si chiude {quando}: chi ha acceso la provincia che vince prende +{DB.PREMIO} punti 🏆\n\n"
            f"👥 Tagga un amico di {a} o di {b}: ogni amico che commenta è una luce in più.")
     st["hashtag"] = "#derby #cani #gatti #animalidomestici #italia "
-    st["copertina"] = {"sopra": "IL DERBY DELLA SETTIMANA", "grande": f"{a}<br><i>vs</i><br>{b}", "sotto": f"{na} – {nb} · chi si accende di più? ⚔️", "tema": "duello"}
+    st["copertina"] = {"sopra": "⚔️ IL DERBY", "grande": f"{a}<br><i>vs</i><br>{b}", "sotto": f"{na} – {nb} · chi si accende di più? ⚔️", "tema": "duello"}
     return "IL DERBY", frasi, did
 
 FORMATI = {"derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
