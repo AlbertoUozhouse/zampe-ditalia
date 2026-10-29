@@ -276,6 +276,7 @@
 "a468bf43e896b7f7",
 "a473465ab3d1df8f",
 "a5711454104d8df9",
+"a5b37fc3295058e2",
 "a5ceea97ef23fea3",
 "a5f2a21ef7e81db5",
 "a676e1b95cd6a65b",
@@ -455,11 +456,19 @@
 "ffcb46312197b698",
 "ffd691c69733657e"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"storia": "cartoline/6174e07dcdbb37d9.png",
+"url": [
+"https://zampeditalia.it/cartoline/6174e07dcdbb37d9.png"
+],
+"t": 1793273044.9666302
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
-"2026-10-28": 10
+"2026-10-29": 1
 },
 "prenota_attesa": {}
 }
