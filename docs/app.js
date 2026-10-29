@@ -66,12 +66,12 @@ fetch("data/regioni.json").then(r => r.json()).then(REG => {
 let PRENOTATE = {}; // posti prenotati dalle attività, per comune: {"Treviso|TV": {"veterinario": 1}}
 let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 let DERBY = null; // il Derby della settimana: {ora: {a, b, na, nb, fine, partito}, albo: [...]} (motore/derby.py)
-let NEGOZIO = {}, SFILATA = [], BELLO = null; // la Sfilata degli accessori e «Il più bello d'Italia» della settimana (motore/commenti.py)
+let NEGOZIO = {}, SFILATA = [], BELLO = null, BOOST = null; // la Sfilata degli accessori e «Il più bello d'Italia» della settimana (motore/commenti.py)
 let _x = 0; // i link di pagamento degli accessori (motore/config.json → animali.json): {collare: "https://buy.stripe.com/…"}
 let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: 1000}; raggiunto, nevica sulla mappa
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; DERBY = j.derby || null; return j.animali || []; } } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -168,8 +168,11 @@ function hud(d) {
     <small>${fmt(d.pt)} punti${d.rank ? ` · ${d.rank}° in Italia` : ""}${d.fondatore ? " · 👑 Fondatore" : ""}</small>${barra(d.pt)}
     <button type="button" class="link" id="cambia">non è il tuo?</button></span></div>
     <button type="button" class="btn entra-qui" data-id="${esc(d.id)}" style="width:100%">🎮 Vai da ${esc(d.n)} nel paese in 3D</button>
-    <h3>🎯 Missioni di oggi</h3><ul class="missioni">
-    <li>💬 Commenta il reel di oggi<b>+5</b></li><li>👥 Tagga un amico che poi commenta<b>+3 ognuno</b></li>
+    ${BOOST ? `<div class="boost-giorno">⚡ <b>Boost di oggi</b> · ${esc(BOOST.frase)}</div>` : ""}
+    ${d.bo * 1000 > Date.now() ? `<div class="boost-mio">⚡ Boost x2 attivo ancora per ${Math.ceil((d.bo * 1000 - Date.now()) / 3600e3)} ore</div>` : ""}
+    <h3>🎯 Missioni di oggi <small>${(d.mo ? 1 : 0) + (d.ma ? 1 : 0)}/2 · fatte tutte: +10</small></h3><ul class="missioni">
+    <li class="${d.mo ? "fatta" : ""}">${d.mo ? "✅" : "💬"} Commenta il reel di oggi<b>+5${BOOST?.tipi?.includes("giornaliero") ? " ×" + BOOST.x : ""}</b></li>
+    <li class="${d.ma ? "fatta" : ""}">${d.ma ? "✅" : "👥"} Tagga un amico che poi commenta${d.ma ? ` (${d.ma})` : ""}<b>+3 ognuno${BOOST?.tipi?.includes("tag") ? " ×" + BOOST.x : ""}</b></li>
     <li>➕ Seguici e scrivi SEGUO<b>${oggi ? "+30" : "+10"}</b></li><li>🏆 Regala un accessorio: sali nella Sfilata del più bello<b>da 1 €</b></li>${DERBY?.ora?.partito && !DERBY.ora.finito ? `<li>⚔️ Derby ${esc(DERBY.ora.a)}–${esc(DERBY.ora.b)}: accendi la tua provincia<b>+20</b></li>` : ""}</ul>`;
 }
 const edifici = n => EDIFICI.filter(e => n >= e[0]).map(e => e[2]).join("");
@@ -256,6 +259,7 @@ function renderHeader() {
     DO && (DO.partito ? `⚔️ Derby ${DO.a} <b>${fmt(DO.na)}</b> – <b>${fmt(DO.nb)}</b> ${DO.b}` : `⚔️ Stasera il derby ${DO.a}–${DO.b}`),
     FOLLOW && (FOLLOW.n >= FOLLOW.traguardo ? `❄️ ${fmt(FOLLOW.n)} follower: nevica sulla mappa!` : `<a ${segui} title="A ${fmt(FOLLOW.traguardo)} follower nevica su tutta la mappa">❄️ Mancano ${fmt(FOLLOW.traguardo - FOLLOW.n)} follower alla neve</a>`),
     oggi < new Date("2026-11-02") && `<a ${segui}>🔥 SEGUO vale +30 fino a dom.</a>`,
+    BOOST && `⚡ Oggi: ${esc(BOOST.frase)}`,
     oggi < new Date("2026-11-03") ? "🎃 Chi ci segue ha il costume" : "✨ Chi ci segue ha le lucine e la prima fila",
     recentCount && `✨ ${fmt(recentCount)} brillano ora`,
   ].filter(Boolean);
@@ -298,6 +302,8 @@ function show(v) {
       <ul class="shop">${ARTICOLI.map(([k, nome, prezzo, testo]) => `<li class="art"><span class="anteprima">${prova ? prova(k, scelto.t) : `<span class="emo">${ICONE[k]}</span>`}</span>
         <span class="who"><b>${nome}</b><small>${testo}</small></span>
         ${scelto?.acc?.includes(k) ? `<span class="preso">✓ Ce l'ha</span>` : `<button type="button" class="btn compra" data-k="${k}" ${scelto && NEGOZIO[k] ? "" : "disabled"}>${prezzo}</button>`}</li>`).join("")}</ul>
+      <div class="art boost-art"><span class="anteprima"><span class="emo">⚡</span></span><span class="who"><b>Boost x2 per 24 ore</b><small>Tutti i punti di commenti e amici valgono doppio. Si somma al Boost di oggi!</small></span>
+        <button type="button" class="btn compra" data-k="boost" ${scelto && NEGOZIO.boost ? "" : "disabled"}>1 €</button></div>
       ${sfilata(scelto)}
       <p class="sub piccolo">${Object.keys(NEGOZIO).length ? "Pagamento sicuro con Stripe. L'accessorio compare sulla mappa entro 15 minuti, e il tuo regalo finisce nella storia di @zampeditalia 🎉" : "Il negozio apre a breve: gli accessori arrivano nei prossimi giorni."} Nessun abbonamento, si paga una volta sola.</p>`;
     const cerca = $("#mio"), lista = $("#miei");

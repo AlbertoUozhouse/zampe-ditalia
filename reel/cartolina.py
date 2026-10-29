@@ -97,7 +97,7 @@ def main():
     arg = [a for a in sys.argv[1:] if not a.startswith("--")]
     grazie = "--grazie" in sys.argv  # versione per la storia di @zampeditalia: ringrazia chi ci ha messo in storia
     opz = dict(a[2:].split("=", 1) for a in sys.argv[1:] if a.startswith("--") and "=" in a)
-    REGALI = {"osso": "🦴 l'Osso d'oro", "fiocco": "🎀 il Fiocco", "collare": "📿 il Collare d'oro", "corona": "👑 la Corona", "fuochi": "🎆 i Fuochi d'artificio"}  # come motore/negozio.py
+    REGALI = {"osso": "🦴 l'Osso d'oro", "fiocco": "🎀 il Fiocco", "collare": "📿 il Collare d'oro", "corona": "👑 la Corona", "fuochi": "🎆 i Fuochi d'artificio", "boost": "⚡ il Boost x2"}  # come motore/negozio.py
     regalo = REGALI.get(opz.get("regalo"))  # storia di @zampeditalia quando qualcuno compra un accessorio nel negozio
     utente = arg[0]
     cartella = Path(arg[1]) if len(arg) > 1 else ROOT / "docs/cartoline"

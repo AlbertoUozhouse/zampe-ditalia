@@ -10,7 +10,7 @@ import json, os, time, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ARTICOLI = {"osso": ("Osso d'oro", 100), "fiocco": ("Fiocco", 149), "collare": ("Collare d'oro", 199), "corona": ("Corona", 299), "fuochi": ("Fuochi d'artificio", 399)}  # come in docs/app.js
+ARTICOLI = {"osso": ("Osso d'oro", 100), "fiocco": ("Fiocco", 149), "collare": ("Collare d'oro", 199), "corona": ("Corona", 299), "fuochi": ("Fuochi d'artificio", 399), "boost": ("Boost x2 per 24 ore", 100)}  # come in docs/app.js
 
 def _hash(s):
     """FNV-1a a 32 bit, come Disegni.hash in docs/disegni.js."""
@@ -52,7 +52,10 @@ def leggi(stato, animali):
             for s in _stripe(chiave, "checkout/sessions", limit=100, status="complete", **{"created[gte]": int(time.time()) - 3 * 86400})["data"]:
                 k, ida = plink.get(s.get("payment_link")), codici.get(s.get("client_reference_id") or "")
                 if s["id"] in fatti or s.get("payment_status") != "paid" or not k or not ida: continue
-                if k not in acquisti.setdefault(ida, []): acquisti[ida].append(k)
+                if k == "boost":  # non è un accessorio: per 24 ore i punti della persona valgono doppio (commenti.py)
+                    u = next((a["u"].lower() for a in animali if a.get("id") == ida), None)
+                    if u: b = stato.setdefault("boost", {}); b[u] = max(b.get(u, 0), time.time()) + 86400
+                elif k not in acquisti.setdefault(ida, []): acquisti[ida].append(k)
                 stato.setdefault("negozio_storie", []).append({"id": ida, "k": k})  # messaggi.py ne fa una storia su @zampeditalia
                 fatti.append(s["id"]); nuovi += 1
             stato["negozio_fatti"] = fatti[-2000:]

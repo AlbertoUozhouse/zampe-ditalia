@@ -36,6 +36,16 @@ EDIFICI = [(5, "la fontanella", "⛲"), (10, "il parco cani", "🌳"), (25, "il 
 PRIMA_ELEZIONE = "2026-11-01"  # ogni domenica alle 20:45 si elegge il Capobranco di ogni comune con almeno 3 luci (prima della puntata delle 21)
 HALLOWEEN_FINO = "2026-11-02"  # fino a questo giorno gli animali di chi ci segue hanno il costume
 SOGLIA_ALTRI = 15  # con 15 luci gli altri animali entrano nella sfida: Cani contro Gatti contro Altri (anche in copione.py)
+# il Boost del giorno, uguale per tutti: (tipi di punti moltiplicati, per quanto, frase per sito e reel). Come in docs/app.js
+BOOST_GIORNI = [(("giornaliero",), 2, "Lunedì dei commenti: commentare vale doppio"), (("tag",), 2, "Martedì degli amici: ogni amico vale doppio"),
+                (("giornaliero",), 3, "Mercoledì triplo: commentare vale il triplo"), (("tag",), 2, "Giovedì degli amici: ogni amico vale doppio"),
+                (("giornaliero", "tag"), 2, "Venerdì doppio: commenti e amici valgono doppio"), (("tag",), 3, "Sabato degli amici: ogni amico vale il triplo"),
+                (("giornaliero", "tag"), 2, "Domenica doppia: commenti e amici valgono doppio")]
+def boost_del_giorno():
+    from zoneinfo import ZoneInfo
+    return BOOST_GIORNI[datetime.now(ZoneInfo("Europe/Rome")).weekday()]
+MISSIONI_PREMIO = 10  # chi completa le missioni del giorno (commento + almeno un amico portato)
+
 PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 10}
 FOLLOWER = None  # follower veri dell'account, letti a ogni giro (main)
 TRAGUARDO = 1000
@@ -452,10 +462,29 @@ class Gioco:
         import negozio
         self.dati["negozio"] = negozio.leggi(self.stato, self.animali)  # gli accessori pagati e i link del negozio per il sito
         self.sfilata()
+        self.missioni()
         ora = time.time()
         self.stato["risposte"] = [t for t in self.stato["risposte"] if ora - t < 3600]
         ANIMALI.write_text(json.dumps(self.dati, ensure_ascii=False, separators=(",", ":")) + "\n")
         STATO.write_text(json.dumps(self.stato, ensure_ascii=False, indent=0) + "\n")
+
+    def missioni(self):
+        """Missioni di oggi: commentare un reel nuovo e portare almeno un amico. Fatte tutte e due: +10, una volta al giorno.
+        Sul sito ogni animale ha mo (commentato oggi), ma (amici oggi), bo (fine del suo Boost x2)."""
+        oggi = datetime.now(timezone.utc).date().isoformat()
+        amici = self.stato.get("inviti_giorno", {}).get(oggi, {})
+        fatte = self.stato.setdefault("missioni_fatte", {})
+        self.stato["missioni_fatte"] = fatte = {u: g for u, g in fatte.items() if g == oggi}
+        boost = {u: t for u, t in self.stato.get("boost", {}).items() if t > time.time()}; self.stato["boost"] = boost
+        for u, g in self.stato.get("bonus", {}).items():
+            if g == oggi and amici.get(u, 0) >= 1 and u not in fatte and self.ha_luce(u):
+                fatte[u] = oggi; self.punti_extra(u, MISSIONI_PREMIO)
+        for a in self.animali:
+            u = a["u"].lower()
+            for k, v in (("mo", 1 if self.stato.get("bonus", {}).get(u) == oggi else 0), ("ma", amici.get(u, 0)), ("bo", int(boost.get(u, 0)))):
+                if v: a[k] = v
+                else: a.pop(k, None)
+        b = boost_del_giorno(); self.dati["boost"] = {"frase": b[2], "x": b[1], "tipi": list(b[0])}
 
     def sfilata(self):
         """La Sfilata: vince l'animale con più accessori (a parità, più punti). Ogni domenica alle 21 diventa «Il più bello d'Italia»
@@ -606,7 +635,7 @@ class Gioco:
             if coppia in self.stato.setdefault("premiati", []):
                 continue
             if self.ha_luce(chi):
-                self.punti_extra(chi, PUNTI["tag"])
+                self.punti_extra(chi, PUNTI["tag"], "tag")
                 self.stato["premiati"].append(coppia); premiati.append(chi)
                 giorno = self.stato.setdefault("inviti_giorno", {}).setdefault(datetime.now(timezone.utc).date().isoformat(), {})
                 giorno[chi] = giorno.get(chi, 0) + 1  # Sfida degli inviti: chi porta più amici oggi
@@ -631,14 +660,18 @@ class Gioco:
         if self.stato["bonus"].get(utente.lower()) == oggi:
             return
         if self.ha_luce(utente):
-            self.punti_extra(utente, PUNTI["giornaliero"])
+            self.punti_extra(utente, PUNTI["giornaliero"], "giornaliero")
             self.stato["bonus"][utente.lower()] = oggi
 
     # ---------- punti: base dell'animale + punti extra della persona (inviti, follow, bonus) ----------
     def ha_luce(self, utente):
         return any(a["u"].lower() == utente.lower() and a["k"] in ("animale", "sogno", "tifo") for a in self.animali)
 
-    def punti_extra(self, utente, n):
+    def punti_extra(self, utente, n, tipo=None):
+        """Punti extra della persona. Il Boost del giorno (per tutti) e il Boost x2 comprato nel negozio li moltiplicano."""
+        k = boost_del_giorno()[1] if tipo in boost_del_giorno()[0] else 1
+        if tipo and self.stato.get("boost", {}).get(utente.lower(), 0) > time.time(): k *= 2
+        n = n * k
         ex = self.stato.setdefault("extra", {})
         ex[utente.lower()] = ex.get(utente.lower(), 0) + n
         self.ricalcola()

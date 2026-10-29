@@ -223,3 +223,7 @@ body.neve::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:5
 .m3-tutto{margin-top:8px;font-weight:800;color:#FFD23F}
 .sfilata{margin:14px 0;padding:12px;border-radius:16px;background:linear-gradient(135deg,rgba(255,210,63,.14),rgba(255,90,158,.1));border:2px solid rgba(255,210,63,.35)}
 .sfilata h3{margin:0 0 4px}
+.boost-giorno,.boost-mio{margin:8px 0;padding:9px 12px;border-radius:12px;background:linear-gradient(90deg,rgba(79,180,255,.25),rgba(255,210,63,.2));font-size:14px}
+.boost-mio{background:linear-gradient(90deg,rgba(255,210,63,.35),rgba(255,138,31,.3));font-weight:800}
+.missioni li.fatta{background:rgba(91,227,125,.16);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.4)}
+.boost-art{display:flex;align-items:center;gap:12px;padding:10px;border-radius:14px;background:linear-gradient(90deg,rgba(79,180,255,.18),rgba(255,210,63,.14));border:2px solid rgba(79,180,255,.4)}

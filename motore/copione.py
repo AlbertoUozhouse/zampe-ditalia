@@ -533,6 +533,9 @@ def main():
     fw = D.get("follower")
     if fw and fw["n"] < fw["traguardo"] and not per_attivita:  # il traguardo di tutti, come sul sito
         did = did.strip() + f"\n\n❄️ Siamo a {fw['n']} follower: a {fw['traguardo']} nevica su tutta la mappa d'Italia. Mancano {fw['traguardo'] - fw['n']}: seguici e dillo agli amici!"
+    bg = carica(ROOT / "docs/data/animali.json", {}).get("boost")
+    if bg and not per_attivita:  # il Boost del giorno: oggi conviene commentare e taggare
+        did = did.strip() + f"\n\n⚡ Boost di oggi: {bg['frase']}. Missioni del giorno su zampeditalia.it: commenta + porta un amico = +10 extra"
     mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")} | set(st.pop("tag_extra", [])))
     if mostrati:
         did = did.strip() + "\n\n🐾 In questo reel: " + " ".join("@" + u for u in mostrati)

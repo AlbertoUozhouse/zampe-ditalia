@@ -9,8 +9,11 @@
   "21:00": "puntata"
  },
  "negozio": {
+  "osso": "",
+  "fiocco": "",
   "collare": "",
   "corona": "",
-  "fuochi": ""
+  "fuochi": "",
+  "boost": ""
  }
 }
