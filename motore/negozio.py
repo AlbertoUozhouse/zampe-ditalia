@@ -65,4 +65,4 @@ def leggi(stato, animali):
     for a in animali:
         if acquisti.get(a.get("id")): a["acc"] = acquisti[a["id"]]
         else: a.pop("acc", None)
-    return ln
+    return ln if chiave else {}  # senza la chiave non vedremmo i pagamenti: il negozio resta chiuso, nessuno paga a vuoto

@@ -3,7 +3,7 @@
 Un orario vale per 50 minuti dopo l'ora prevista (la guardia gira ogni 10 minuti) e si lancia una volta sola al giorno.
 Legge motore/config.json (interruttore e orari) e segna i lanci in motore/reel_fatti.json.
 """
-import json
+import json, os
 from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -47,7 +47,7 @@ def main():
             STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
             if formato.startswith("attivita"):  # col negozio aperto, quello slot fa il reel degli accessori
                 try:
-                    if any(str(u).startswith("https://") for u in cfg.get("negozio", {}).values()): formato = "negozio" + formato[len("attivita"):]
+                    if os.environ.get("STRIPE_KEY") and any(str(u).startswith("https://") for u in cfg.get("negozio", {}).values()): formato = "negozio" + formato[len("attivita"):]
                 except AttributeError: pass
             print(formato)
             return
