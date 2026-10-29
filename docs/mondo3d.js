@@ -258,6 +258,19 @@ async function apri(v, opz = {}) {
     const anello = new THREE.Mesh(new THREE.TorusGeometry(1.3 * k, 0.07, 10, 48), liv ? new THREE.MeshStandardMaterial({ color: bordoC, metalness: 0.85, roughness: 0.3, emissive: bordoC, emissiveIntensity: liv === "castello" ? 0.35 : 0.12 }) : mat(bordoC));
     anello.rotation.x = Math.PI / 2; anello.position.y = 0.18; g.add(anello);
     if (liv) for (let i = 0; i < 8; i++) { const a = (i / 8) * Math.PI * 2 + 0.3, f = new THREE.Mesh(new THREE.SphereGeometry(0.09, 8, 6), fiore[i % 5]); f.position.set(Math.cos(a) * 1.08 * k, 0.22, Math.sin(a) * 1.08 * k); g.add(f); }
+    if (cane) { // la sua cuccia, dietro di lui: legno, tetto a capanna con tegole scure, porta ad arco
+      const W = 2.6 * k, H = 1.9 * k, D = 2.4 * k, c = new THREE.Group();
+      const corpo = new THREE.Mesh(new THREE.BoxGeometry(W, H, D), muro); corpo.position.y = H / 2;
+      const Hr = W * 0.5, tri = new THREE.Shape(); tri.moveTo(-W / 2, 0); tri.lineTo(W / 2, 0); tri.lineTo(0, Hr); tri.lineTo(-W / 2, 0);
+      const timpano = new THREE.Mesh(new THREE.ExtrudeGeometry(tri, { depth: D, bevelEnabled: false }), muro); timpano.position.set(0, H, -D / 2);
+      const ang = Math.atan2(Hr, W / 2), lato = Math.hypot(Hr, W / 2) + 0.35;
+      for (const q of [-1, 1]) { const falda = new THREE.Mesh(new THREE.BoxGeometry(lato, 0.14, D + 0.5), tettoC); falda.position.set(q * W / 4, H + Hr / 2 + 0.07, 0); falda.rotation.z = -q * ang; c.add(falda); }
+      const porta = new THREE.Mesh(arco, portaLuce); porta.scale.setScalar(k * 0.9); porta.position.set(0, 0.02, D / 2 + 0.01);
+      c.add(corpo, timpano, porta); c.position.z = -(1.3 * k + D / 2 + 0.15); g.add(ombre(c));
+    } else if (d.t === "gatto") { // il suo cuscino morbido
+      const cus = new THREE.Mesh(new THREE.TorusGeometry(0.8 * k, 0.28 * k, 14, 36), pelo(THREE, ["#C8102E", "#2F7FE0", "#8A3FE0", "#2FB36B"][d.seed % 4])); cus.rotation.x = Math.PI / 2; cus.position.y = 0.4; cus.castShadow = true; g.add(cus);
+      const fondo = new THREE.Mesh(new THREE.CylinderGeometry(0.8 * k, 0.8 * k, 0.12, 30), pelo(THREE, "#EDE4D0")); fondo.position.y = 0.26; g.add(fondo);
+    }
     // l'animale in 3D, coi colori della sua razza: il cane seduto davanti alla porta, il gatto sul tetto; gli altri restano medaglioni
     let s, base;
     if (d.t === "altro") {
@@ -265,12 +278,12 @@ async function apri(v, opz = {}) {
       svgTex(THREE, opz.svg(d)).then(r => { if (!r || !M) return; s.material.map = r.tex; s.material.needsUpdate = true; s.scale.set(2.6 * r.a, 2.6, 1); });
     } else {
       s = d.t === "gatto" ? micio3d(THREE, d) : cane3d(THREE, d); s.scale.setScalar((d.t === "gatto" ? 2.3 : 2.0) * k);
-      base = new THREE.Vector3(0, 0.18, 0);
+      base = new THREE.Vector3(0, d.t === "gatto" ? 0.32 : 0.18, 0);
       accessori3d(THREE, s, d);
     }
     s.position.copy(base); g.add(s); s.userData.d = d; toccabili.push(s);
     const nome = ETICHETTA(THREE, (d.acc?.includes("corona") ? "👑 " : "") + d.n, d.t === "gatto" ? { fg: "#2F3A10", bg: "#E9F2C4", bordo: "#3D4A18" } : {});
-    nome.position.set(0, 3.1 * k + 0.3, 0); g.add(nome);
+    nome.scale.multiplyScalar(0.7); nome.position.set(0, 3.1 * k + 0.2, 0); g.add(nome);
     pet.push({ d, g, s, base, cane, fase: (d.seed % 628) / 100 });
     if (opz.bello === d.id) { // Il più bello d'Italia: piedistallo d'oro, faro dall'alto e coppa che gira
       const ped = new THREE.Mesh(new THREE.CylinderGeometry(0.9 * k, 1 * k, 0.25, 32), oro(THREE)); ped.position.set(0, 0.3, 0); g.add(ped); s.position.y += 0.25; base.y += 0.25;
