@@ -449,6 +449,8 @@ class Gioco:
         for x in self.animali:
             if x["k"] in ("animale", "sogno") and x["u"].lower() in seguono: x["vestito"] = vestito
             else: x.pop("vestito", None)
+        import negozio
+        self.dati["negozio"] = negozio.leggi(self.stato, self.animali)  # gli accessori pagati e i link del negozio per il sito
         ora = time.time()
         self.stato["risposte"] = [t for t in self.stato["risposte"] if ora - t < 3600]
         ANIMALI.write_text(json.dumps(self.dati, ensure_ascii=False, separators=(",", ":")) + "\n")

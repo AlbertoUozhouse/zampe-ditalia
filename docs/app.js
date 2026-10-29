@@ -66,10 +66,11 @@ fetch("data/regioni.json").then(r => r.json()).then(REG => {
 let PRENOTATE = {}; // posti prenotati dalle attività, per comune: {"Treviso|TV": {"veterinario": 1}}
 let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 let DERBY = null; // il Derby della settimana: {ora: {a, b, na, nb, fine, partito}, albo: [...]} (motore/derby.py)
+let NEGOZIO = {}; // i link di pagamento degli accessori (motore/config.json → animali.json): {collare: "https://buy.stripe.com/…"}
 let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: 1000}; raggiunto, nevica sulla mappa
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; DERBY = j.derby || null; return j.animali || []; } } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; DERBY = j.derby || null; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -125,16 +126,39 @@ function paeseIcon(v) {
   return L.divIcon({ className: "", iconSize: [0, 0], html: v.html });
 }
 const posto = (d, z, s) => d.villa ? map.unproject(map.project(d.villa.ll, z).add([d.off[0] * s, d.off[1] * s]), z) : d.ll;
-function petIcon(d) {
+function petSvg(d) {
   let svg = d.k === "stella" ? D.stella() : d.k === "sogno" ? D.sogno(d.rk, d.seed) : d.t === "altro" ? D.altro(d.specie, d.seed) : d.t === "gatto" ? D.gatto(d.rk, d.seed) : D.cane(d.rk, d.seed);
+  if (d.acc && d.k !== "stella") svg = D.accessori(svg, d.acc, d.k === "sogno" ? "sogno" : d.t, d.seed); // prima del costume: il costume si prende il segnaposto della testa
   if (d.vestito && d.k !== "stella") svg = D.vesti(svg, d.vestito, d.k === "sogno" ? "sogno" : d.t, d.seed);
-  const cls = d.k === "animale" ? d.t : d.k;
-  return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}" data-id="${esc(d.id)}" style="--k:${(d.prof || 1).toFixed(3)};--r:${((d.seed % 90) / 10).toFixed(1)}s">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${d.k !== "stella" && livello(d.pt) ? livello(d.pt)[1] + " " : ""}${esc(d.n)}</span></div>` });
+  return svg;
+}
+function petIcon(d) {
+  const svg = petSvg(d), cls = d.k === "animale" ? d.t : d.k;
+  return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}${d.recent ? " nuovo" : ""}" data-id="${esc(d.id)}" style="--k:${(d.prof || 1).toFixed(3)};--r:${((d.seed % 90) / 10).toFixed(1)}s">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${d.k !== "stella" && livello(d.pt) ? livello(d.pt)[1] + " " : ""}${esc(d.n)}</span></div>` });
 }
 const EDIFICI = [[5, "Fontanella", "⛲"], [10, "Parco cani", "🌳"], [25, "Gattile", "🏠"], [50, "Clinica veterinaria", "🏥"], [100, "Piazza dei Fondatori", "🏛️"], [250, "Grande parco", "🎡"]]; // come in motore/commenti.py
 const LIVELLI = [[30, "🌸", "Giardino"], [50, "🏡", "Villa"], [70, "🏰", "Castello"]]; // come in motore/copione.py: più punti, più la cuccia cresce
 const livello = pt => [...LIVELLI].reverse().find(l => pt >= l[0]);
+// come in un videogioco: il livello della cuccia e la barra verso il prossimo
+const barra = pt => { const i = LIVELLI.findIndex(l => pt < l[0]), da = i > 0 ? LIVELLI[i - 1][0] : i < 0 ? LIVELLI.at(-1)[0] : 0, a = i < 0 ? null : LIVELLI[i];
+  const ora = livello(pt) || [0, "🏠", "Cuccia"];
+  return `<div class="liv">Livello ${LIVELLI.indexOf(livello(pt)) + 2} · ${ora[1]} ${ora[2]}${a ? ` → ${a[1]} a ${a[0]} punti` : " · livello massimo!"}</div>` +
+    `<div class="xp"><i style="width:${a ? Math.round(((pt - da) / (a[0] - da)) * 100) : 100}%"></i></div>`; };
 const prossimoLiv = pt => { const l = LIVELLI.find(l => pt < l[0]); return l ? ` · mancano ${l[0] - pt} punti per ${l[1]} ${l[2].toLowerCase()}` : ""; };
+const ARTICOLI = [["collare", "Collare d'oro", "1,99 €", "Con la medaglietta che brilla"], ["corona", "Corona", "2,99 €", "Il re o la regina del paese"],
+  ["fuochi", "Fuochi d'artificio", "3,99 €", "Esplodono sopra la sua cuccia, giorno e notte"]]; // come in motore/negozio.py
+const codice = id => "z" + D.hash(id).toString(36); // come in motore/negozio.py: lega il pagamento all'animale senza dati personali
+let SCELTO = null; // il tuo animale, ricordato su questo telefono
+function hud(d) {
+  const oggi = new Date() < new Date("2026-11-02");
+  return `<div class="hud"><span class="ritratto">${petSvg(d)}</span><span class="dati"><b>${esc(d.n)}</b> · ${esc(d.c)}<br>
+    <small>${fmt(d.pt)} punti${d.rank ? ` · ${d.rank}° in Italia` : ""}${d.fondatore ? " · 👑 Fondatore" : ""}</small>${barra(d.pt)}
+    <button type="button" class="link" id="cambia">non è il tuo?</button></span></div>
+    <button type="button" class="btn entra-qui" data-id="${esc(d.id)}" style="width:100%">🎮 Vai da ${esc(d.n)} nel paese in 3D</button>
+    <h3>🎯 Missioni di oggi</h3><ul class="missioni">
+    <li>💬 Commenta il reel di oggi<b>+5</b></li><li>👥 Tagga un amico che poi commenta<b>+3 ognuno</b></li>
+    <li>➕ Seguici e scrivi SEGUO<b>${oggi ? "+30" : "+10"}</b></li>${DERBY?.ora?.partito && !DERBY.ora.finito ? `<li>⚔️ Derby ${esc(DERBY.ora.a)}–${esc(DERBY.ora.b)}: accendi la tua provincia<b>+20</b></li>` : ""}</ul>`;
+}
 const edifici = n => EDIFICI.filter(e => n >= e[0]).map(e => e[2]).join("");
 const prossimo = n => { const e = EDIFICI.find(e => n < e[0]); return e ? `mancano ${e[0] - n} ${e[0] - n === 1 ? "luce" : "luci"} per ${e[2]} ${e[1].toLowerCase()}` : ""; };
 const POSTI = { veterinario: "🏥 clinica", toelettatura: "✂️ toelettatura", negozio: "🛍️ negozio", pensione: "🏡 pensione", educatore: "🎾 addestramento", altro: "🏪 bottega" };
@@ -145,13 +169,16 @@ function popup(d) {
   const tipo = d.k === "stella" ? "Una stella nel cielo" : d.k === "sogno" ? "Il sogno di @" + esc(d.u) : d.t === "altro" ? esc((d.razza_testo || d.specie || "Amico speciale").replace(/^./, c => c.toUpperCase())) : d.t === "gatto" ? (D.GATTI[d.rk]?.n || "Gatto") : (d.rk === "meticcio" && d.razza_testo && !/meticc|incrocio|mix/i.test(d.razza_testo) ? esc(d.razza_testo.replace(/^./, c => c.toUpperCase())) : D.CANI[d.rk]?.n || "Cane");
   return `<div class="pop"><h3>${d.k === "stella" ? "✦" : icona(d)} ${esc(d.n)}</h3><div class="k">${tipo}</div>
     <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>
-    ${d.k === "stella" ? "" : `<div>${d.pt} ${d.pt === 1 ? "punto" : "punti"}${d.rank ? ` · ${d.rank}° in Italia` : ""}</div>${livello(d.pt) ? `<span class="role">${livello(d.pt)[1]} ${livello(d.pt)[2]}${prossimoLiv(d.pt)}</span>` : `<div class="k">${prossimoLiv(d.pt).slice(3).replace(/^./, c => c.toUpperCase())}</div>`}`}
+    ${d.k === "stella" ? "" : `<div>${d.pt} ${d.pt === 1 ? "punto" : "punti"}${d.rank ? ` · ${d.rank}° in Italia` : ""}</div>${barra(d.pt)}`}
     ${d.capo ? `<span class="role">🐺 ${esc(d.capo)}</span>` : d.testa ? `<span class="role">🐺 In testa a ${esc(d.c)}: domenica alle 21 il Capobranco</span>` : ""}
     ${ruolo ? `<span class="role">👑 ${esc(ruolo)}</span>` : ""}
+    ${d.k === "stella" ? "" : `<button type="button" class="regala" data-id="${esc(d.id)}">🛍️ ${d.acc?.length ? "Altri accessori" : "Regalagli un accessorio"}</button>`}
+    ${d.villa && !document.querySelector(".mondo3d") ? `<button type="button" class="entra-qui" data-id="${esc(d.id)}">🎮 Entra nel suo paese in 3D</button>` : ""}
     ${d.u ? `<div style="margin-top:6px"><a href="https://www.instagram.com/${encodeURIComponent(d.u)}/" target="_blank" rel="noopener">@${esc(d.u)} ↗</a></div>` : ""}</div>`;
 }
 function syncPets() {
   const z = map.getZoom();
+  $("#entra3d").hidden = z < DOM_ZOOM;
   if (z < DOM_ZOOM) { petLayer.clearLayers(); petMarkers.clear(); paeseLayer.clearLayers(); paeseMarkers.clear(); return; }
   const s = scala(z); map.getContainer().style.setProperty("--s", s);
   const b = map.getBounds().pad(0.15), vb = map.getBounds().pad(0.8), want = new Set(), ville = new Set();
@@ -247,6 +274,31 @@ function show(v) {
       STATS.rank.slice(0, 50).map(d => `<li class="row" data-id="${esc(d.id)}"><span class="pos">${d.rank}</span><span class="who">${icona(d)} ${esc(d.n)} · @${esc(d.u)}<small>${esc(d.c)} · ${esc(d.r)}</small></span><span class="pts">${fmt(d.pt)}<small>pt</small></span></li>`).join("") + `</ol>` : empty);
     s.querySelectorAll(".row").forEach(r => r.onclick = () => { show("mappa"); focus(DATA.find(d => d.id === r.dataset.id)); });
   }
+  if (v === "negozio") {
+    const scelto = SCELTO && DATA.includes(SCELTO) ? SCELTO : null;
+    const prova = scelto ? (k, t) => D.accessori(t === "gatto" ? D.gatto(scelto.rk, scelto.seed) : t === "altro" ? D.altro(scelto.specie, scelto.seed) : D.cane(scelto.rk, scelto.seed), [k], t, scelto.seed) : null;
+    s.innerHTML = `<h2>🎮 Il tuo animale</h2><p class="sub">Fai punti, sali di livello, fai crescere la cuccia. E regalagli un accessorio: per sempre sulla mappa, lo vede tutta Italia.</p>
+      <form class="cerca-mio" id="cercaMio"><input id="mio" type="search" placeholder="Il tuo @ o il nome del tuo animale" autocomplete="off" value="${scelto ? esc("@" + scelto.u) : ""}"></form>
+      <div id="miei">${scelto ? hud(scelto) : `<p class="empty">Cerca il tuo animale: vedi il suo livello, le missioni di oggi e i regali.</p>`}</div>
+      ${scelto ? `<h3>🛍️ Regali per ${esc(scelto.n)}</h3>` : ""}
+      <ul class="shop">${ARTICOLI.map(([k, nome, prezzo, testo]) => `<li class="art"><span class="anteprima">${prova ? prova(k, scelto.t) : `<span class="emo">${{ collare: "📿", corona: "👑", fuochi: "🎆" }[k]}</span>`}</span>
+        <span class="who"><b>${nome}</b><small>${testo}</small></span>
+        ${scelto?.acc?.includes(k) ? `<span class="preso">✓ Ce l'ha</span>` : `<button type="button" class="btn compra" data-k="${k}" ${scelto && NEGOZIO[k] ? "" : "disabled"}>${prezzo}</button>`}</li>`).join("")}</ul>
+      <p class="sub piccolo">${Object.keys(NEGOZIO).length ? "Pagamento sicuro con Stripe. L'accessorio compare sulla mappa entro 15 minuti." : "Il negozio apre a breve: gli accessori arrivano nei prossimi giorni."} Nessun abbonamento, si paga una volta sola.</p>`;
+    const cerca = $("#mio"), lista = $("#miei");
+    $("#cercaMio").onsubmit = e => e.preventDefault();
+    cerca.oninput = () => { const q = cerca.value.trim().toLowerCase().replace(/^@/, ""); if (q.length < 2) return;
+      const trovati = DATA.filter(d => d.k !== "stella" && d.k !== "tifo" && (d.u.toLowerCase().includes(q) || d.n.toLowerCase().includes(q))).slice(0, 6);
+      lista.innerHTML = trovati.length ? `<ol class="list">` + trovati.map(d => `<li class="row" data-id="${esc(d.id)}"><span class="who">${icona(d)} ${esc(d.n)} · @${esc(d.u)}<small>${esc(d.c)}</small></span></li>`).join("") + `</ol>` : `<p class="empty">Non lo trovo: prima accendilo commentando un reel.</p>`;
+      lista.querySelectorAll(".row").forEach(r => r.onclick = () => { SCELTO = DATA.find(d => d.id === r.dataset.id); try { localStorage.setItem("mio", SCELTO.id); } catch (e) {} show("negozio"); }); };
+    if (scelto) { // sei salito di livello dall'ultima visita? festa
+      let prima = null; try { prima = localStorage.getItem("liv:" + scelto.id); localStorage.setItem("liv:" + scelto.id, String(LIVELLI.indexOf(livello(scelto.pt)))); } catch (e) {}
+      if (prima !== null && +prima < LIVELLI.indexOf(livello(scelto.pt))) { const f = document.createElement("div"); f.className = "levelup"; f.textContent = "LIVELLO SU! " + livello(scelto.pt)[1]; document.body.appendChild(f); setTimeout(() => f.remove(), 2500); }
+    }
+    if ($("#cambia")) $("#cambia").onclick = () => { SCELTO = null; try { localStorage.removeItem("mio"); } catch (e) {} show("negozio"); $("#mio").focus(); };
+    s.querySelectorAll(".compra").forEach(b => b.onclick = () => { if (!scelto || !NEGOZIO[b.dataset.k]) return;
+      location.href = NEGOZIO[b.dataset.k] + (NEGOZIO[b.dataset.k].includes("?") ? "&" : "?") + "client_reference_id=" + codice(scelto.id); });
+  }
   if (v === "regole") {
     s.innerHTML = `<h2>Come si gioca</h2><p class="sub">Si gioca nei commenti dei reel di @zampeditalia. Entro 15 minuti la luce si accende.</p><ul class="rules">
       <li><b>🐶🐱 Il tuo animale · +10</b>Scrivi città, nome e razza: <code>Treviso, Luna, golden</code> oppure <code>Milano, Micio, gatto rosso</code>. Il primo del comune diventa Fondatore (+20).</li>
@@ -262,7 +314,31 @@ function show(v) {
       <li><b>Privacy</b>Sulla mappa ci sono solo il tuo @ pubblico, la città e quello che hai scritto. Per sparire, commenta <code>RIMUOVI</code>.</li></ul>`;
   }
 }
-document.querySelectorAll(".tab").forEach(t => t.onclick = () => show(t.dataset.v));
+document.querySelectorAll(".tab").forEach(t => t.onclick = () => { if (t.dataset.v === "negozio" && !SCELTO) { try { const id = localStorage.getItem("mio"); SCELTO = id && DATA.find(d => d.id === id) || null; } catch (e) {} } show(t.dataset.v); });
+// ---------- il paese in 3D (mondo3d.js) ----------
+const vicino = () => { const c = map.getCenter(); let best = null, bd = Infinity; for (const v of VILLE.values()) { const k = c.distanceTo(v.ll); if (k < bd) { bd = k; best = v; } } return best; };
+const QUANTI = (v, k) => v.lista.filter(d => d.acc?.includes(k)).length;
+function entra3d(v) {
+  if (!v || !window.Mondo3D) return;
+  map.closePopup(); $("#sheet").hidden = true;
+  let mio = SCELTO; if (!mio) try { const id = localStorage.getItem("mio"); mio = id && DATA.find(d => d.id === id); } catch (e) {}
+  window.Mondo3D.apri(v, { svg: petSvg, mio: mio && mio.villa === v ? mio : null, scheda: d => {
+    const manca = ARTICOLI.filter(a => !d.acc?.includes(a[0]));
+    return popup(d).replace('<div class="pop">', '<div class="pop">') + (manca.length ? `<div class="m3-vetrina">${manca.map(([k, nome, prezzo]) =>
+      `<button type="button" class="m3-art regala" data-id="${esc(d.id)}" data-k="${k}"><span>${{ collare: "📿", corona: "👑", fuochi: "🎆" }[k]}</span><b>${nome}</b><small>${prezzo}${QUANTI(v, k) ? ` · ${QUANTI(v, k)} in ${esc(v.nome)}` : ""}</small></button>`).join("")}</div>` : `<div class="m3-tutto">✨ Ha già tutti gli accessori!</div>`);
+  } });
+}
+$("#entra3d").onclick = () => entra3d(vicino());
+document.addEventListener("click", e => { const t = e.target.closest(".entra-qui"); if (t) entra3d(DATA.find(d => d.id === t.dataset.id)?.villa); });
+document.addEventListener("click", e => { const b = e.target.closest(".regala"); if (!b) return; SCELTO = DATA.find(d => d.id === b.dataset.id); map.closePopup(); window.Mondo3D?.chiudi(); show("negozio"); });
+// ---------- il mondo è vivo: ogni tanto un animale manda un cuore, una lucciola passa, una stella cadente attraversa l'Italia ----------
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  setInterval(() => { const pets = [...document.querySelectorAll(".leaflet-marker-icon .pet:not(.stella)")]; if (!pets.length) return;
+    const p = pets[Math.floor(Math.random() * pets.length)], c = document.createElement("span");
+    c.className = "cuore"; c.textContent = ["❤️", "💛", "🐾", "✨", "💤", "🦴"][Math.floor(Math.random() * 6)]; p.appendChild(c); setTimeout(() => c.remove(), 2600); }, 1400);
+  setInterval(() => { if (document.hidden || map.getZoom() > 9) return; const c = document.createElement("div"); c.className = "cometa";
+    c.style.top = 8 + Math.random() * 40 + "%"; c.style.left = 20 + Math.random() * 60 + "%"; map.getContainer().appendChild(c); setTimeout(() => c.remove(), 1800); }, 9000);
+}
 
 // ---------- ricerca ----------
 let COMUNI = null;

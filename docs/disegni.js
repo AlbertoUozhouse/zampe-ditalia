@@ -276,7 +276,27 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
     }
     return svg.replace(/<\/svg>\s*$/, `<g class="ghirlanda">${filo}${luci}</g></svg>`);
   }
+  // ---------- gli accessori del negozio (motore/negozio.py): collare d'oro, corona, fuochi d'artificio ----------
+  // testa come per il costume: cane nella cuccia (32,38), gatto sul tetto (32,14.5), gli altri nel medaglione (23,23)
+  const TESTA = { cane: [32, 38, 1], sogno: [32, 38, 1], gatto: [32, 14.5, 0.9], altro: [23, 23, 1.1] };
+  const COLLARE = (x, y, k) => `<g transform="translate(${x} ${y + 6.4 * k}) scale(${k})"><path d="M-6.4 -1 Q0 2.6 6.4 -1" stroke="#C8102E" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<circle cx="0" cy="2.4" r="2.5" fill="#FFD23F" stroke="#A8650E" stroke-width=".6"/><circle class="brilla" cx="-.8" cy="1.6" r=".7" fill="#fff"/></g>`;
+  const CORONA = (x, y, k) => `<g transform="translate(${x} ${y - 8.6 * k}) scale(${k})"><g class="corona"><path d="M-6 1.6 L-6.6 -4.4 L-3 -1.4 L0 -6 L3 -1.4 L6.6 -4.4 L6 1.6Z" fill="#FFD23F" stroke="#A8650E" stroke-width=".7" stroke-linejoin="round"/>
+<circle cx="0" cy="-.6" r="1.1" fill="#E2394B"/><circle cx="-3.6" cy=".2" r=".7" fill="#4FB4FF"/><circle cx="3.6" cy=".2" r=".7" fill="#5BE37D"/><circle class="brilla" cx="0" cy="-6.4" r=".9" fill="#fff"/></g></g>`;
+  const FUOCHI = (w, seed) => { let f = ""; const col = ["#FF5A6E", "#FFD23F", "#4FB4FF", "#5BE37D", "#FF9A3C"];
+    for (let i = 0; i < 3; i++) { const x = [w * 0.16, w * 0.5, w * 0.84][i], y = [-2, -9, -1][i], c = col[(seed + i) % 5]; let r = "";
+      for (let j = 0; j < 8; j++) { const a = j * Math.PI / 4; r += `<line x1="${(x + 2 * Math.cos(a)).toFixed(1)}" y1="${(y + 2 * Math.sin(a)).toFixed(1)}" x2="${(x + 8 * Math.cos(a)).toFixed(1)}" y2="${(y + 8 * Math.sin(a)).toFixed(1)}"/>`; }
+      f += `<g class="scoppio" style="animation-delay:${(i * 0.7 + (seed % 7) / 10).toFixed(1)}s;transform-origin:${x.toFixed(1)}px ${y}px" stroke="${c}" stroke-width="1.8" stroke-linecap="round">${r}<circle cx="${x.toFixed(1)}" cy="${y}" r="1.6" fill="#fff" stroke="none"/></g>`; }
+    return `<g class="fuochi">${f}</g>`; };
+  function accessori(svg, lista, tipo, seed) {
+    if (!lista || !lista.length) return svg;
+    const [x, y, k] = TESTA[tipo] || TESTA.cane, w = tipo === "altro" ? 46 : 64;
+    const testa = (lista.includes("collare") ? COLLARE(x, y, k) : "") + (lista.includes("corona") ? CORONA(x, y, k) : "");
+    if (testa) svg = svg.includes("<!--testa-->") && tipo !== "altro" ? svg.replace("<!--testa-->", `<g class="accessori">${testa}</g><!--testa-->`) : svg.replace(/<\/svg>\s*$/, `<g class="accessori">${testa}</g></svg>`);
+    if (lista.includes("fuochi")) svg = svg.replace(/<\/svg>\s*$/, FUOCHI(w, seed) + "</svg>");
+    return svg;
+  }
   const vesti = (svg, d, tipo, seed) => d === "halloween" ? costume(svg, tipo, seed) : d === "lucine" ? lucine(svg, tipo === "sogno" ? "cane" : tipo, seed) : svg;
 
-  window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, altro, emoji, hash, carica, cerca, costume, lucine, vesti };
+  window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, altro, emoji, hash, carica, cerca, costume, lucine, vesti, accessori };
 })();

@@ -155,3 +155,69 @@ body.neve::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:5
   radial-gradient(2px 2px at 200px 170px,#fff,transparent),radial-gradient(3px 3px at 260px 20px,#fff,transparent);background-size:300px 200px;animation:neve 9s linear infinite}
 @keyframes neve{to{background-position:60px 200px,-40px 200px,30px 200px,-20px 200px,50px 200px}}
 @media (max-width:520px){.counter .track{display:none}.counter .msg{max-width:none;font-size:12.5px}}
+
+/* il mondo è vivo: lucciole, cuori, stelle cadenti, chi è appena arrivato, gli accessori del negozio */
+.paese .lucciola{filter:drop-shadow(0 0 4px #FFE45C);animation:lucciola 8s ease-in-out infinite}
+@keyframes lucciola{0%,100%{transform:translate(0,0);opacity:.2}25%{transform:translate(14px,-10px);opacity:1}50%{transform:translate(-6px,-22px);opacity:.4}75%{transform:translate(-16px,-6px);opacity:1}}
+.pet{position:relative}
+.pet .cuore{position:absolute;left:50%;top:6px;font-size:16px;pointer-events:none;animation:cuore 2.6s ease-out forwards}
+@keyframes cuore{from{transform:translate(-50%,0) scale(.4);opacity:0}15%{opacity:1;transform:translate(-50%,-10px) scale(1)}to{transform:translate(-30%,-52px) scale(.9);opacity:0}}
+.cometa{position:absolute;z-index:420;width:120px;height:2px;pointer-events:none;background:linear-gradient(90deg,rgba(255,244,222,0),#FFF4DE);border-radius:2px;
+  transform:rotate(-24deg);animation:cometa 1.8s ease-out forwards;filter:drop-shadow(0 0 6px #FFE9B8)}
+@keyframes cometa{from{opacity:0;translate:0 0}20%{opacity:1}to{opacity:0;translate:-260px 120px}}
+.pet.nuovo svg{filter:drop-shadow(0 0 10px #FFE45C)}
+.pet.nuovo::before{content:"✨ NUOVO";position:absolute;top:-14px;left:50%;transform:translateX(-50%);font:800 10px var(--f-display);background:#FFD23F;color:#4A2C04;border-radius:999px;padding:1px 7px;white-space:nowrap;animation:lucina 1.6s ease-in-out infinite}
+.pet .brilla{animation:lucina 1.3s ease-in-out infinite}
+.pet .corona{animation:vola 3s ease-in-out infinite}
+.pet .scoppio{animation:scoppio 2.1s ease-out infinite;opacity:0}
+@keyframes scoppio{0%{transform:scale(.2);opacity:0}15%{opacity:1}60%{transform:scale(1.1);opacity:.9}100%{transform:scale(1.3);opacity:0}}
+.pop .regala{margin-top:8px;width:100%;border:0;border-radius:10px;padding:7px 10px;font:inherit;font-weight:800;background:#FFD23F;color:#4A2C04;cursor:pointer}
+.shop{list-style:none;padding:0;margin:10px 0;display:grid;gap:10px}
+.shop .art{display:flex;align-items:center;gap:12px;padding:10px;border-radius:14px;background:rgba(255,255,255,.06)}
+.shop .anteprima{width:64px;height:60px;flex:none;display:grid;place-items:center}
+.shop .anteprima svg{width:64px;height:auto}
+.shop .emo{font-size:34px}
+.shop .who{flex:1;display:flex;flex-direction:column}
+.shop .compra{min-width:78px}
+.shop .compra[disabled]{opacity:.45;cursor:default}
+.shop .preso{font-weight:800;color:#5BE37D}
+.cerca-mio input{width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.25);color:inherit;font:inherit}
+.per .link{background:none;border:0;color:#FFD23F;text-decoration:underline;font:inherit;cursor:pointer}
+.sub.piccolo{font-size:12px;opacity:.75}
+.pop .xp{margin-top:6px;height:8px;border-radius:99px;background:rgba(0,0,0,.25);overflow:hidden}
+.pop .xp i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#FFD23F,#FF8A1F)}
+.pop .liv{font-weight:800;font-size:12px;margin-top:6px}
+.pet svg{overflow:visible}
+.pet .fuochi{filter:drop-shadow(0 0 3px #fff)}
+/* la scheda del giocatore */
+.hud{display:flex;gap:12px;align-items:center;padding:12px;border-radius:16px;background:linear-gradient(135deg,rgba(255,210,63,.18),rgba(79,180,255,.12));border:2px solid rgba(255,210,63,.45);margin:10px 0}
+.hud .ritratto{width:80px;flex:none}
+.hud .ritratto svg{width:80px;height:auto}
+.hud .dati{flex:1;min-width:0}
+.hud .dati b{font:800 18px var(--f-display)}
+.hud .xp{margin-top:6px;height:10px;border-radius:99px;background:rgba(0,0,0,.3);overflow:hidden}
+.hud .xp i{display:block;height:100%;background:linear-gradient(90deg,#FFD23F,#FF8A1F);border-radius:99px;transition:width 1.2s cubic-bezier(.34,1.56,.64,1)}
+.missioni{list-style:none;padding:0;margin:8px 0 14px;display:grid;gap:6px}
+.missioni li{display:flex;justify-content:space-between;gap:10px;padding:8px 10px;border-radius:12px;background:rgba(255,255,255,.06);font-size:14px}
+.missioni li b{color:#FFD23F;white-space:nowrap}
+.levelup{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;pointer-events:none;font:900 54px var(--f-display);color:#FFD23F;text-shadow:0 0 24px #FF8A1F,0 4px 0 #8C4A00;animation:levelup 2.4s ease-out forwards}
+@keyframes levelup{0%{transform:scale(.3);opacity:0}20%{transform:scale(1.15);opacity:1}35%{transform:scale(1)}80%{opacity:1}100%{opacity:0;transform:scale(1.05) translateY(-30px)}}
+/* il paese in 3D */
+.entra3d{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(150px + env(safe-area-inset-bottom));z-index:1000;border:0;border-radius:999px;padding:11px 20px;
+  font:800 16px var(--f-display);background:linear-gradient(180deg,#FFE070,#FFB020);color:#4A2C04;box-shadow:0 6px 0 #A8650E,0 0 30px rgba(255,200,60,.55);cursor:pointer;animation:pulsa 1.8s ease-in-out infinite}
+@keyframes pulsa{0%,100%{scale:1}50%{scale:1.06}}
+.pop .entra-qui{margin-top:6px;width:100%;border:0;border-radius:10px;padding:7px 10px;font:inherit;font-weight:800;background:#4FB4FF;color:#06223D;cursor:pointer}
+.mondo3d{position:fixed;inset:0;z-index:5000;background:#0B1638}
+.mondo3d canvas{display:block;touch-action:none}
+.m3-top{position:absolute;top:calc(12px + env(safe-area-inset-top));left:12px;right:60px;color:#FFF4DE;text-shadow:0 2px 6px #000;pointer-events:none}
+.m3-top b{display:block;font:800 22px var(--f-display);color:#FFD23F}
+.m3-top span{font-size:13px;opacity:.85}
+.m3-esci{position:absolute;top:calc(12px + env(safe-area-inset-top));right:12px;width:42px;height:42px;border-radius:50%;border:2px solid #FFD23F;background:rgba(11,22,56,.8);color:#FFD23F;font:800 20px system-ui;cursor:pointer}
+.m3-scheda{position:absolute;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));max-width:420px;margin:auto;background:rgba(14,26,64,.94);border:2px solid rgba(255,210,63,.6);border-radius:18px;padding:14px;color:#FFF4DE;box-shadow:0 10px 40px rgba(0,0,0,.5);animation:entra .3s ease-out}
+.m3-scheda .pop h3{margin:0 0 2px}
+.m3-vetrina{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.m3-art{display:flex;flex-direction:column;align-items:center;gap:2px;border:0;border-radius:14px;padding:8px 4px;background:linear-gradient(180deg,#2A3F86,#1B2A5E);color:#FFF4DE;font:inherit;cursor:pointer;box-shadow:inset 0 0 0 2px rgba(255,210,63,.35)}
+.m3-art span{font-size:28px;animation:vola 2.4s ease-in-out infinite}
+.m3-art b{font-size:12px}
+.m3-art small{font-size:11px;color:#FFD23F;font-weight:800}
+.m3-tutto{margin-top:8px;font-weight:800;color:#FFD23F}

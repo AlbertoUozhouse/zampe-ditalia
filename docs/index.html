@@ -30,6 +30,7 @@
   <div class="badge" id="badge" hidden></div>
 </header>
 
+<button type="button" class="entra3d" id="entra3d" hidden>🎮 Entra nel paese in 3D</button>
 <div class="zoom">
   <button type="button" id="zin" aria-label="Avvicina">+</button>
   <button type="button" id="zout" aria-label="Allontana">−</button>
@@ -49,13 +50,16 @@
     <button class="tab" role="tab" aria-selected="true" data-v="mappa">Mappa</button>
     <button class="tab" role="tab" aria-selected="false" data-v="sfida">Sfida città</button>
     <button class="tab" role="tab" aria-selected="false" data-v="classifica">Classifica</button>
+    <button class="tab" role="tab" aria-selected="false" data-v="negozio">🎮 Il mio</button>
     <button class="tab" role="tab" aria-selected="false" data-v="regole">Come si gioca</button>
   </div>
 </nav>
 
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
 <script src="disegni.js"></script>
 <script src="paese.js"></script>
 <script src="app.js"></script>
+<script type="module" src="mondo3d.js"></script>
 </body>
 </html>

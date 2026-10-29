@@ -7,5 +7,10 @@
   "18:00": "gara",
   "19:30": "derby",
   "21:00": "puntata"
+ },
+ "negozio": {
+  "collare": "",
+  "corona": "",
+  "fuochi": ""
  }
 }

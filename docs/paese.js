@@ -84,6 +84,9 @@
       const rr = R - 26 + r() * 30; bosco.push([Math.round(rr * Math.cos(a)), Math.round(rr * Math.sin(a) * SQ), 0.75 + r() * 0.5, r() < 0.5 ? "#2F7A4A" : "#246340"]);
     }
     bosco.sort((p, q) => p[1] - q[1]).forEach(p => { if (!(p[1] > 0 && Math.abs(p[0]) < 70)) s += albero(...p); }); // davanti resta il varco con il cartello
+    // lucciole che girano per il paese
+    for (let i = 0; i < Math.min(18, 6 + n); i++) { const a = r() * 2 * Math.PI, rr = 60 + r() * (R - 60);
+      s += `<circle class="lucciola" style="animation-delay:-${(r() * 8).toFixed(1)}s;animation-duration:${(6 + r() * 5).toFixed(1)}s" cx="${Math.round(rr * Math.cos(a))}" cy="${Math.round(rr * Math.sin(a) * SQ - 20)}" r="2.2" fill="#FFF3A0"/>`; }
     // il cartello d'ingresso
     const y = Math.round((R - 4) * SQ), testo = String(nome).toUpperCase(), w = Math.max(90, testo.length * 10 + 34);
     s += `<g transform="translate(0 ${y})"><rect x="-2" y="-8" width="4" height="26" fill="#4A2C17"/>
