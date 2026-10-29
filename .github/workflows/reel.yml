@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       formato:
-        description: "derby, buio, fondatore, puntata, attivita, altri… oppure auto"
+        description: "gara, derby, buio, fondatore, puntata, attivita, altri… oppure auto"
         required: true
         default: auto
       pubblica:

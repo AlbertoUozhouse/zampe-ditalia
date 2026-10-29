@@ -365,7 +365,62 @@ def derby(D, rng, st):
     st["copertina"] = {"sopra": "⚔️ IL DERBY", "grande": f"{a}<br><i>vs</i><br>{b}", "sotto": f"{na} – {nb} · chi si accende di più? ⚔️", "tema": "duello"}
     return "IL DERBY", frasi, did
 
-FORMATI = {"derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+def _ts(a):
+    try: return datetime.strptime(str(a.get("ts", "")), "%Y-%m-%dT%H:%M:%S%z")
+    except ValueError: return None
+
+def scena_di(a, comune=None):
+    return {"tipo": "gatto" if a.get("t") == "gatto" else "cuccia", "nome": a["n"], "razza": a.get("razza_testo") or a.get("razza") or ("europeo" if a.get("t") == "gatto" else "meticcio"),
+            "seme": abs(hash(a.get("id", a["u"] + a["n"]))) % 997 + 1, "utente": a["u"], "comune": comune or a["c"]}
+
+LIVELLI = [(30, "giardino"), (50, "villa"), (70, "castello")]  # come in docs/app.js: più punti, più la cuccia cresce
+
+def gara(D, rng, st):
+    """Come i reel che rendono di più nelle pagine simili: persone vere e gare vere, con un numero grande in apertura.
+    «A Livorno Chicco ha battuto Kira di 6 secondi» + chi è in testa ai punti. I nomi e i secondi vengono dai dati."""
+    an = [a for a in D["animali"] if a.get("k") == "animale" and _ts(a) and a["u"].lower() not in ESCLUSI]
+    tot = len([a for a in D["tutti"] if a.get("k") != "stella"])
+    nc = len({a["c"] for a in D["tutti"] if a.get("k") != "stella"})
+    g = (ORA.date() - LANCIO).days + 1
+    cane, gatto = esempio(rng, D)
+    frasi = [(f"In {g} giorni si sono accesi {tot} animali, in {nc} città.", {"tipo": "numero", "grande": str(tot), "sotto": f"animali accesi in {g} giorni · {nc} città 🐾"})]
+    # la gara per diventare Fondatore più tirata, senza ripetere le ultime 10
+    per = {}
+    for a in sorted(an, key=_ts): per.setdefault(a["c"], []).append(a)
+    gare = []
+    for c, l in per.items():
+        sec = next((l[i] for i in range(1, len(l)) if l[i]["u"] != l[0]["u"]), None)
+        if sec and c not in st.get("gare", [])[-10:]:
+            gare.append(((_ts(sec) - _ts(l[0])).total_seconds(), c, l[0], sec))
+    gare = [x for x in sorted(gare, key=lambda x: x[0]) if x[0] <= 900]
+    tag = []
+    if gare:
+        s, c, p, q = gare[0]; st.setdefault("gare", []).append(c)
+        quanto = f"{int(s)} {'secondo' if int(s) == 1 else 'secondi'}" if s < 120 else f"{round(s / 60)} minuti"
+        frasi.append((f"A {c} {p['n']} ha battuto {q['n']} di {quanto}: è il Fondatore!", {**scena_di(p, f"Fondatore di {c} 👑")}))
+        tag += [p["u"], q["u"]]
+        st["copertina"] = {"sopra": f"⏱️ {quanto.upper()}", "grande": c, "sotto": "Fondatore per un soffio 👑", "tema": "fondatore", "citta": c}
+    top = sorted(an, key=lambda a: -a.get("pt", 0))[:3]
+    if top and top[0].get("pt"):
+        cast = sum(1 for a in an if a.get("pt", 0) >= LIVELLI[-1][0])
+        frasi.append(((f"Solo {cast} animali hanno il castello. " if 1 < cast < 30 else "") + f"In testa c'è {top[0]['n']}, di {top[0]['c']}, con {top[0]['pt']} punti.",
+                      {"tipo": "classifica", "titolo": "In testa 🏆", "righe": [{"nome": f"{a['n']} · @{a['u']}", "valore": f"{a.get('pt', 0)} pt"} for a in top], "utente": top[0]["u"]}))
+        tag += [a["u"] for a in top]
+    frasi += [("E la tua città? Scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
+              ("Arriva primo nel tuo comune: scrivilo qui sotto!", {"tipo": "chiusura", "testo": "👑 Arriva primo nella tua città"})]
+    st["tag_extra"] = list(dict.fromkeys(tag))
+    did = f"In {g} giorni sulla mappa di Zampe d'Italia si sono accesi {tot} animali, in {nc} città 🐾\n\n"
+    if gare:
+        did += f"⏱️ A {c} @{p['u']} ({p['n']}) ha commentato {quanto} prima di @{q['u']} ({q['n']}): Fondatore per sempre 👑\n"
+    if top and top[0].get("pt"):
+        did += "🏰 Più punti fai, più la cuccia cresce: 🌸 giardino a 30 punti, 🏡 villa a 50, 🏰 castello a 70\n"
+        did += "🏆 In testa: " + ", ".join(f"@{a['u']} ({a['c']}) {a.get('pt', 0)} punti" for a in top) + "\n"
+    did += (f"\nScrivi qui sotto città, nome e razza del tuo animale (per esempio «{rng.choice(CITTA)}, {gatto['nome']}, {gatto['parola']}»): entro 15 minuti si accende sulla mappa col tuo @. "
+            "Chi arriva primo nel suo comune diventa il Fondatore, prima che qualcuno arrivi prima di te 👀")
+    st.setdefault("copertina", {"sopra": f"{tot} ANIMALI", "grande": f"{g} giorni", "sotto": "Chi arriva primo nella tua città? 👑", "tema": "fondatore"})
+    return "LA GARA", frasi, did
+
+FORMATI = {"gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide

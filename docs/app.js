@@ -129,9 +129,12 @@ function petIcon(d) {
   let svg = d.k === "stella" ? D.stella() : d.k === "sogno" ? D.sogno(d.rk, d.seed) : d.t === "altro" ? D.altro(d.specie, d.seed) : d.t === "gatto" ? D.gatto(d.rk, d.seed) : D.cane(d.rk, d.seed);
   if (d.vestito && d.k !== "stella") svg = D.vesti(svg, d.vestito, d.k === "sogno" ? "sogno" : d.t, d.seed);
   const cls = d.k === "animale" ? d.t : d.k;
-  return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}" data-id="${esc(d.id)}" style="--k:${(d.prof || 1).toFixed(3)};--r:${((d.seed % 90) / 10).toFixed(1)}s">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${esc(d.n)}</span></div>` });
+  return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}" data-id="${esc(d.id)}" style="--k:${(d.prof || 1).toFixed(3)};--r:${((d.seed % 90) / 10).toFixed(1)}s">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${d.k !== "stella" && livello(d.pt) ? livello(d.pt)[1] + " " : ""}${esc(d.n)}</span></div>` });
 }
 const EDIFICI = [[5, "Fontanella", "⛲"], [10, "Parco cani", "🌳"], [25, "Gattile", "🏠"], [50, "Clinica veterinaria", "🏥"], [100, "Piazza dei Fondatori", "🏛️"], [250, "Grande parco", "🎡"]]; // come in motore/commenti.py
+const LIVELLI = [[30, "🌸", "Giardino"], [50, "🏡", "Villa"], [70, "🏰", "Castello"]]; // come in motore/copione.py: più punti, più la cuccia cresce
+const livello = pt => [...LIVELLI].reverse().find(l => pt >= l[0]);
+const prossimoLiv = pt => { const l = LIVELLI.find(l => pt < l[0]); return l ? ` · mancano ${l[0] - pt} punti per ${l[1]} ${l[2].toLowerCase()}` : ""; };
 const edifici = n => EDIFICI.filter(e => n >= e[0]).map(e => e[2]).join("");
 const prossimo = n => { const e = EDIFICI.find(e => n < e[0]); return e ? `mancano ${e[0] - n} ${e[0] - n === 1 ? "luce" : "luci"} per ${e[2]} ${e[1].toLowerCase()}` : ""; };
 const POSTI = { veterinario: "🏥 clinica", toelettatura: "✂️ toelettatura", negozio: "🛍️ negozio", pensione: "🏡 pensione", educatore: "🎾 addestramento", altro: "🏪 bottega" };
@@ -142,7 +145,7 @@ function popup(d) {
   const tipo = d.k === "stella" ? "Una stella nel cielo" : d.k === "sogno" ? "Il sogno di @" + esc(d.u) : d.t === "altro" ? esc((d.razza_testo || d.specie || "Amico speciale").replace(/^./, c => c.toUpperCase())) : d.t === "gatto" ? (D.GATTI[d.rk]?.n || "Gatto") : (d.rk === "meticcio" && d.razza_testo && !/meticc|incrocio|mix/i.test(d.razza_testo) ? esc(d.razza_testo.replace(/^./, c => c.toUpperCase())) : D.CANI[d.rk]?.n || "Cane");
   return `<div class="pop"><h3>${d.k === "stella" ? "✦" : icona(d)} ${esc(d.n)}</h3><div class="k">${tipo}</div>
     <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>
-    ${d.k === "stella" ? "" : `<div>${d.pt} ${d.pt === 1 ? "punto" : "punti"}${d.rank ? ` · ${d.rank}° in Italia` : ""}</div>`}
+    ${d.k === "stella" ? "" : `<div>${d.pt} ${d.pt === 1 ? "punto" : "punti"}${d.rank ? ` · ${d.rank}° in Italia` : ""}</div>${livello(d.pt) ? `<span class="role">${livello(d.pt)[1]} ${livello(d.pt)[2]}${prossimoLiv(d.pt)}</span>` : `<div class="k">${prossimoLiv(d.pt).slice(3).replace(/^./, c => c.toUpperCase())}</div>`}`}
     ${d.capo ? `<span class="role">🐺 ${esc(d.capo)}</span>` : d.testa ? `<span class="role">🐺 In testa a ${esc(d.c)}: domenica alle 21 il Capobranco</span>` : ""}
     ${ruolo ? `<span class="role">👑 ${esc(ruolo)}</span>` : ""}
     ${d.u ? `<div style="margin-top:6px"><a href="https://www.instagram.com/${encodeURIComponent(d.u)}/" target="_blank" rel="noopener">@${esc(d.u)} ↗</a></div>` : ""}</div>`;
