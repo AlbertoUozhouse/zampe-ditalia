@@ -1,5 +1,6 @@
 {
 "fatti": [
+"000d2221d05acb38",
 "00457197337fa3c3",
 "00bf0a136c86975a",
 "00ebe724334f7889",
@@ -42,13 +43,17 @@
 "0e7cedd09fe17acd",
 "0ec5620209cdabf3",
 "0f2040e4cb47fcf7",
+"0f59acee95ff1993",
 "0fe1b4cf43870ef5",
 "10829f93be2fae14",
+"109ae2600698d1c4",
 "109eee814f80128f",
+"111a0460f7503279",
 "1120cb339f90bb21",
 "113d0028e4562159",
 "118f2559216d2bfd",
 "11f2e63c61922361",
+"122da41ff527d111",
 "127d19a16cd64c45",
 "12eb32be7d5e7cdb",
 "131cae81468ab1b2",
@@ -143,6 +148,7 @@
 "3932ab297288b1fb",
 "39825dfcaac5c225",
 "399dd83ace2f1077",
+"39e0e7bfc8c619b3",
 "3a0d6eca35940206",
 "3a28ccab7c74159b",
 "3a9ad2887105e090",
@@ -171,8 +177,10 @@
 "3fcd564da4728d01",
 "3fd307a9876391a7",
 "3fec4a29fa7ff6a0",
+"4026a324e0fc8bca",
 "40e526a94610f4eb",
 "411cf201605ce595",
+"41a578923d550f04",
 "41e28b56070013c2",
 "426f4f5c8ec40da2",
 "42ad87623203ba8b",
@@ -209,10 +217,12 @@
 "4f13cc3962306926",
 "4f4b27dc303d8001",
 "4ffdc34560a982a2",
+"51b05ec708012d23",
 "538a92ab908e3dac",
 "53aa8f1a5db33657",
 "53de2bcd8eb377ea",
 "540d1c672e0fa78a",
+"54f2f1c31420b369",
 "5525a7926db00f15",
 "55d76475113d2c91",
 "562f72537f49326f",
@@ -281,6 +291,7 @@
 "767dce285e4c6cb7",
 "7698f9d2767f3b8b",
 "76b0cc37c0af5528",
+"776686b1117eca98",
 "77a357093fe67ada",
 "77a446f5b3aa4c5d",
 "785d04fcaaa96045",
@@ -377,6 +388,7 @@
 "a34cc43b2b30049d",
 "a35fa22d47fe1c06",
 "a382a32c78af53ff",
+"a3c7348751a6dfbd",
 "a468bf43e896b7f7",
 "a473465ab3d1df8f",
 "a54adedd7e0df3a1",
@@ -447,6 +459,7 @@
 "b8fc2ee2979afcd5",
 "b930b736c71e32ee",
 "b96e41e7b2c7e858",
+"b971b4cc9a0414a5",
 "b971e7944827597b",
 "b9a302c6b1a8cb91",
 "ba923cd7fc014613",
@@ -474,12 +487,14 @@
 "c4a2079ebabfa31d",
 "c4ba941e9df01583",
 "c540d341221926d0",
+"c5632da1bd1b5c1d",
 "c589f16d5dc84fb7",
 "c5c348bc473fc1af",
 "c66972b64a15da07",
 "c690a8cd0b1201e3",
 "c6c85e1b3d700a47",
 "c75f4b448d7b66af",
+"c7797428b163ec50",
 "c886e337b190b889",
 "c95da245897d7ddd",
 "c9b91f846299f25c",
@@ -607,6 +622,7 @@
 "f7256b601a0191ba",
 "f7c1952bd090e4d0",
 "f7fbe005248c91ac",
+"f81cd711b4f72d9f",
 "f864de8c5d74f2bc",
 "f8683e0485d0a866",
 "f8b2329115e8af12",
@@ -627,11 +643,48 @@
 "ffcb46312197b698",
 "ffd691c69733657e"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1095714559978461",
+"url": [
+"https://zampeditalia.it/cartoline/c6ebfef101f5e08c.png",
+"https://zampeditalia.it/cartoline/d311b440ae01540c.png"
+],
+"t": 1793306238.027661
+},
+{
+"igsid": "1185941677625259",
+"url": [
+"https://zampeditalia.it/cartoline/84ee7181dd39122e.png"
+],
+"t": 1793306238.0276628
+},
+{
+"storia": "cartoline/bd5bb569f4e7d596.png",
+"url": [
+"https://zampeditalia.it/cartoline/bd5bb569f4e7d596.png"
+],
+"t": 1793306176.6840098
+},
+{
+"storia": "cartoline/9a0530b84bc2d3f7.png",
+"url": [
+"https://zampeditalia.it/cartoline/9a0530b84bc2d3f7.png"
+],
+"t": 1793306179.002534
+},
+{
+"storia": "cartoline/8363d0dec8b04e7d.png",
+"url": [
+"https://zampeditalia.it/cartoline/8363d0dec8b04e7d.png"
+],
+"t": 1793306181.588102
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
-"2026-10-29": 6
+"2026-10-29": 9
 },
 "prenota_attesa": {}
 }
