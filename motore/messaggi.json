@@ -40,6 +40,7 @@
 "0962f06cb7455ce7",
 "0a6a2533ff4e7781",
 "0a73a817c49bdd32",
+"0a8dcefe1bb6eaa1",
 "0aa9b0cfc0246cf6",
 "0b258847622b34ee",
 "0b941e6a028cc3c9",
@@ -68,6 +69,7 @@
 "135ec9d71def1ec8",
 "1375dda27a35f5e5",
 "13b0a26396dfac88",
+"13f40a7b1984f4d9",
 "145d2ce578c7ddcf",
 "148a7542c81337bb",
 "14a1aa59ef3bd899",
@@ -198,6 +200,7 @@
 "411cf201605ce595",
 "41a578923d550f04",
 "41e28b56070013c2",
+"424c3d1b82c8e88a",
 "426f4f5c8ec40da2",
 "42ad87623203ba8b",
 "430784acf1d033f6",
@@ -217,6 +220,7 @@
 "46dcc79102c4d838",
 "46ebf96973bcc02d",
 "46ec269fd66dd7bd",
+"4762d410977339b2",
 "4762ed14bbe7d917",
 "4790fae301f096e1",
 "490418a946e2d7dc",
@@ -294,6 +298,7 @@
 "6a93d9c08ddefa94",
 "6ac5c3fede0a1cf3",
 "6afa6373c4a8d3ea",
+"6b1e20bc7b0503d1",
 "6b74230255c37b25",
 "6bb44c3cd12a4a98",
 "6bbe592e444c87bb",
@@ -328,6 +333,7 @@
 "7890ae644b7f226e",
 "7927fde03a955c89",
 "79b67bc1af0f6f8b",
+"79c48cbca15bb530",
 "79dc232b4f7342aa",
 "7a61ba783fce6637",
 "7ab903a214b7c48c",
@@ -341,6 +347,7 @@
 "7d9d0a23d6c755d9",
 "7e8fd891de6c7339",
 "7ed522c95f4caaa8",
+"7f0410df4faa3a43",
 "7f1e9ebab26c7885",
 "7f852f496fcf0e92",
 "7fd9e4ed1338dc02",
@@ -350,6 +357,7 @@
 "80e4d435c2603d0d",
 "80fdd98a2f0edb73",
 "82069c479629e963",
+"82bb182d63226c53",
 "82e055266e5492cf",
 "832ec06b0e9383b7",
 "8480d52fd45efb17",
@@ -417,6 +425,7 @@
 "9e5ab7e1e5b35b8b",
 "9e93f56bfac54bbc",
 "9f2e4e919c7fb840",
+"9f61fb47be753199",
 "9f7155ccb005cb0f",
 "9faa7d55555f5b69",
 "9fceddae7e3ac374",
@@ -593,6 +602,7 @@
 "d955808250964940",
 "dac8b9b2d3f01478",
 "dac9c027f19e91ef",
+"dadc7a0395ad04a7",
 "dbae0d2413028804",
 "dbfd63121f736694",
 "dc18a13e4f2f50cc",
@@ -665,6 +675,7 @@
 "f046b372bf56e0c8",
 "f192ba5159c74bc2",
 "f211af5428d578f1",
+"f23ebea14d0354f1",
 "f2ba4c40ec65992c",
 "f38d6fad8b5b1c91",
 "f3ae16def318e87a",
@@ -694,6 +705,7 @@
 "fb8f8d74b7bf738f",
 "fb945a085fc1297d",
 "fb9c6d320f719d07",
+"fbb2efb544cac1e6",
 "fbee8730e7020f6b",
 "fbf7fa9cd6ce7e25",
 "fc15a973f35c4b26",
@@ -705,7 +717,22 @@
 "ffcb46312197b698",
 "ffd691c69733657e"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1599842384674075",
+"url": [
+"https://zampeditalia.it/cartoline/47b9c728a784b210.png"
+],
+"t": 1793312380.9753566
+},
+{
+"igsid": "1927132455338577",
+"url": [
+"https://zampeditalia.it/cartoline/7da37b20ea75d6ca.png"
+],
+"t": 1793312380.9753582
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
