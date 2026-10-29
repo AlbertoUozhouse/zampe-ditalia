@@ -221,6 +221,15 @@ def main():
             pronte.append((igsid, [SITO + "cartoline/" + n for n in nomi]))
         except urllib.error.HTTPError as e:
             print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
+    # chi compra un accessorio nel negozio: la storia col regalo esce su @zampeditalia (la coda la riempie motore/negozio.py)
+    coda, regali = gioco.stato.get("negozio_storie", []), 0
+    for r in coda[:6]:
+        uscita = subprocess.run([sys.executable, str(ROOT / "reel/cartolina.py"), "-", "--regalo=" + r["k"], "--id=" + r["id"]], capture_output=True, text=True)
+        nomi = [l.strip() for l in uscita.stdout.splitlines() if l.strip().endswith(".png")]
+        if nomi: nuove_storie.append({"storia": "cartoline/" + nomi[0], "url": [SITO + "cartoline/" + nomi[0]], "t": time.time()}); regali += 1
+    if coda:
+        gioco.stato["negozio_storie"] = coda[6:]; gioco.salva()
+        print(f"storie dei regali del negozio: {regali}")
     st["storie_v1"] = True
     st["fatti"] = sorted(fatti)[-20000:]
     # in attesa: solo l'ID anonimo che Instagram dà alla nostra app e l'indirizzo dell'immagine, niente nomi né testi

@@ -215,7 +215,7 @@ body.neve::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:5
 .m3-esci{position:absolute;top:calc(12px + env(safe-area-inset-top));right:12px;width:42px;height:42px;border-radius:50%;border:2px solid #FFD23F;background:rgba(11,22,56,.8);color:#FFD23F;font:800 20px system-ui;cursor:pointer}
 .m3-scheda{position:absolute;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom));max-width:420px;margin:auto;background:rgba(14,26,64,.94);border:2px solid rgba(255,210,63,.6);border-radius:18px;padding:14px;color:#FFF4DE;box-shadow:0 10px 40px rgba(0,0,0,.5);animation:entra .3s ease-out}
 .m3-scheda .pop h3{margin:0 0 2px}
-.m3-vetrina{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.m3-vetrina{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px;margin-top:10px}
 .m3-art{display:flex;flex-direction:column;align-items:center;gap:2px;border:0;border-radius:14px;padding:8px 4px;background:linear-gradient(180deg,#2A3F86,#1B2A5E);color:#FFF4DE;font:inherit;cursor:pointer;box-shadow:inset 0 0 0 2px rgba(255,210,63,.35)}
 .m3-art span{font-size:28px;animation:vola 2.4s ease-in-out infinite}
 .m3-art b{font-size:12px}

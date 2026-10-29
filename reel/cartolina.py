@@ -44,6 +44,7 @@ const out={{}}; for (const a of {json.dumps(animali)}) {{ const s=D.hash(a.id);
   if (a.t==="altro") {{ out[a.id]={{svg:D.altro(a.specie,s), tipo:(a.razza_testo||a.specie||"")}}; continue; }}
   const k=D.razza(a.razza_testo||a.razza,a.t);
   out[a.id]={{svg:(a.t==="gatto"?D.gatto(k,s):D.cane(k,s)), tipo:(k==="meticcio"&&a.razza_testo&&!/meticc|incrocio|mix/i.test(a.razza_testo))?a.razza_testo:(a.t==="gatto"?D.GATTI[k]:D.CANI[k]).n}}; }}
+for (const a of {json.dumps(animali)}) if (a.acc && out[a.id] && a.k!=="stella") out[a.id].svg=D.accessori(out[a.id].svg, a.acc, a.k==="sogno" ? "sogno" : a.t, D.hash(a.id));
 for (const a of {json.dumps(animali)}) if (a.vestito && out[a.id] && a.k!=="stella") out[a.id].svg=D.vesti(out[a.id].svg, a.vestito, a.k==="sogno" ? "sogno" : a.t, D.hash(a.id));
 console.log(JSON.stringify(out));"""
     return json.loads(subprocess.run(["node", "-e", js], capture_output=True, text=True, check=True).stdout)
@@ -95,11 +96,15 @@ COLORI = {"cane": ("#FFC55C", "rgba(255,179,71,.65)", "#F3DDB0", "#5E3519", "#5A
 def main():
     arg = [a for a in sys.argv[1:] if not a.startswith("--")]
     grazie = "--grazie" in sys.argv  # versione per la storia di @zampeditalia: ringrazia chi ci ha messo in storia
+    opz = dict(a[2:].split("=", 1) for a in sys.argv[1:] if a.startswith("--") and "=" in a)
+    REGALI = {"osso": "🦴 l'Osso d'oro", "fiocco": "🎀 il Fiocco", "collare": "📿 il Collare d'oro", "corona": "👑 la Corona", "fuochi": "🎆 i Fuochi d'artificio"}  # come motore/negozio.py
+    regalo = REGALI.get(opz.get("regalo"))  # storia di @zampeditalia quando qualcuno compra un accessorio nel negozio
     utente = arg[0]
     cartella = Path(arg[1]) if len(arg) > 1 else ROOT / "docs/cartoline"
     cartella.mkdir(parents=True, exist_ok=True)
     tutti = json.loads((ROOT / "docs/data/animali.json").read_text())["animali"]
     suoi = [a for a in tutti if a["u"].lower() == utente.lower() and a["k"] in ("animale", "sogno", "stella")][:1 if grazie else 3]
+    if regalo: suoi = [a for a in tutti if a.get("id") == opz.get("id")][:1]
     if not suoi or not CHROME:
         sys.exit("niente da disegnare" if not suoi else "Chrome non trovato")
     if sys.platform.startswith("linux") and "emoji" not in subprocess.run(["fc-list"], capture_output=True, text=True).stdout.lower():
@@ -127,7 +132,7 @@ def main():
                                dim=dim, fs=fs, svg=dis[a["id"]]["svg"], nome=E(a["n"]),
                                tipo=E(str(dis[a["id"]]["tipo"])[:1].upper() + str(dis[a["id"]]["tipo"])[1:]), comune=E(f'{a["c"]} ({a["p"]})'),
                                utente=E(a["u"]), corona=corona,
-                               sotto=(f'<span class="grazie">💛 Grazie @{E(a["u"])} per la storia!</span>' if grazie else "la mappa degli animali d'Italia"))
+                               sotto=(f'<span class="grazie">🎁 {E(a["n"])} ha {E(regalo)}!</span>' if regalo else f'<span class="grazie">💛 Grazie @{E(a["u"])} per la storia!</span>' if grazie else "la mappa degli animali d'Italia"))
         h = tmp / "c.html"
         h.write_text(pagina)
         nome = secrets.token_hex(8) + ".png"

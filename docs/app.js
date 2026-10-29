@@ -145,9 +145,10 @@ const barra = pt => { const i = LIVELLI.findIndex(l => pt < l[0]), da = i > 0 ? 
   return `<div class="liv">Livello ${LIVELLI.indexOf(livello(pt)) + 2} · ${ora[1]} ${ora[2]}${a ? ` → ${a[1]} a ${a[0]} punti` : " · livello massimo!"}</div>` +
     `<div class="xp"><i style="width:${a ? Math.round(((pt - da) / (a[0] - da)) * 100) : 100}%"></i></div>`; };
 const prossimoLiv = pt => { const l = LIVELLI.find(l => pt < l[0]); return l ? ` · mancano ${l[0] - pt} punti per ${l[1]} ${l[2].toLowerCase()}` : ""; };
-const ARTICOLI = [["collare", "Collare d'oro", "1,99 €", "Con la medaglietta che brilla"], ["corona", "Corona", "2,99 €", "Il re o la regina del paese"],
+const ARTICOLI = [["osso", "Osso d'oro", "1 €", "Brilla accanto alla sua cuccia"], ["fiocco", "Fiocco", "1,49 €", "Rosa, sulla testa: il più tenero del paese"], ["collare", "Collare d'oro", "1,99 €", "Con la medaglietta che brilla"], ["corona", "Corona", "2,99 €", "Il re o la regina del paese"],
   ["fuochi", "Fuochi d'artificio", "3,99 €", "Esplodono sopra la sua cuccia, giorno e notte"]]; // come in motore/negozio.py
 const codice = id => "z" + D.hash(id).toString(36); // come in motore/negozio.py: lega il pagamento all'animale senza dati personali
+const ICONE = { osso: "🦴", fiocco: "🎀", collare: "📿", corona: "👑", fuochi: "🎆" };
 let SCELTO = null; // il tuo animale, ricordato su questo telefono
 function hud(d) {
   const oggi = new Date() < new Date("2026-11-02");
@@ -281,10 +282,10 @@ function show(v) {
       <form class="cerca-mio" id="cercaMio"><input id="mio" type="search" placeholder="Il tuo @ o il nome del tuo animale" autocomplete="off" value="${scelto ? esc("@" + scelto.u) : ""}"></form>
       <div id="miei">${scelto ? hud(scelto) : `<p class="empty">Cerca il tuo animale: vedi il suo livello, le missioni di oggi e i regali.</p>`}</div>
       ${scelto ? `<h3>🛍️ Regali per ${esc(scelto.n)}</h3>` : ""}
-      <ul class="shop">${ARTICOLI.map(([k, nome, prezzo, testo]) => `<li class="art"><span class="anteprima">${prova ? prova(k, scelto.t) : `<span class="emo">${{ collare: "📿", corona: "👑", fuochi: "🎆" }[k]}</span>`}</span>
+      <ul class="shop">${ARTICOLI.map(([k, nome, prezzo, testo]) => `<li class="art"><span class="anteprima">${prova ? prova(k, scelto.t) : `<span class="emo">${ICONE[k]}</span>`}</span>
         <span class="who"><b>${nome}</b><small>${testo}</small></span>
         ${scelto?.acc?.includes(k) ? `<span class="preso">✓ Ce l'ha</span>` : `<button type="button" class="btn compra" data-k="${k}" ${scelto && NEGOZIO[k] ? "" : "disabled"}>${prezzo}</button>`}</li>`).join("")}</ul>
-      <p class="sub piccolo">${Object.keys(NEGOZIO).length ? "Pagamento sicuro con Stripe. L'accessorio compare sulla mappa entro 15 minuti." : "Il negozio apre a breve: gli accessori arrivano nei prossimi giorni."} Nessun abbonamento, si paga una volta sola.</p>`;
+      <p class="sub piccolo">${Object.keys(NEGOZIO).length ? "Pagamento sicuro con Stripe. L'accessorio compare sulla mappa entro 15 minuti, e il tuo regalo finisce nella storia di @zampeditalia 🎉" : "Il negozio apre a breve: gli accessori arrivano nei prossimi giorni."} Nessun abbonamento, si paga una volta sola.</p>`;
     const cerca = $("#mio"), lista = $("#miei");
     $("#cercaMio").onsubmit = e => e.preventDefault();
     cerca.oninput = () => { const q = cerca.value.trim().toLowerCase().replace(/^@/, ""); if (q.length < 2) return;
@@ -325,7 +326,7 @@ function entra3d(v) {
   window.Mondo3D.apri(v, { svg: petSvg, mio: mio && mio.villa === v ? mio : null, scheda: d => {
     const manca = ARTICOLI.filter(a => !d.acc?.includes(a[0]));
     return popup(d).replace('<div class="pop">', '<div class="pop">') + (manca.length ? `<div class="m3-vetrina">${manca.map(([k, nome, prezzo]) =>
-      `<button type="button" class="m3-art regala" data-id="${esc(d.id)}" data-k="${k}"><span>${{ collare: "📿", corona: "👑", fuochi: "🎆" }[k]}</span><b>${nome}</b><small>${prezzo}${QUANTI(v, k) ? ` · ${QUANTI(v, k)} in ${esc(v.nome)}` : ""}</small></button>`).join("")}</div>` : `<div class="m3-tutto">✨ Ha già tutti gli accessori!</div>`);
+      `<button type="button" class="m3-art regala" data-id="${esc(d.id)}" data-k="${k}"><span>${ICONE[k]}</span><b>${nome}</b><small>${prezzo}${QUANTI(v, k) ? ` · ${QUANTI(v, k)} in ${esc(v.nome)}` : ""}</small></button>`).join("")}</div>` : `<div class="m3-tutto">✨ Ha già tutti gli accessori!</div>`);
   } });
 }
 $("#entra3d").onclick = () => entra3d(vicino());

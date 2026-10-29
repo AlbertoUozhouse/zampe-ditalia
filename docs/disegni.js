@@ -283,6 +283,11 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
 <circle cx="0" cy="2.4" r="2.5" fill="#FFD23F" stroke="#A8650E" stroke-width=".6"/><circle class="brilla" cx="-.8" cy="1.6" r=".7" fill="#fff"/></g>`;
   const CORONA = (x, y, k) => `<g transform="translate(${x} ${y - 8.6 * k}) scale(${k})"><g class="corona"><path d="M-6 1.6 L-6.6 -4.4 L-3 -1.4 L0 -6 L3 -1.4 L6.6 -4.4 L6 1.6Z" fill="#FFD23F" stroke="#A8650E" stroke-width=".7" stroke-linejoin="round"/>
 <circle cx="0" cy="-.6" r="1.1" fill="#E2394B"/><circle cx="-3.6" cy=".2" r=".7" fill="#4FB4FF"/><circle cx="3.6" cy=".2" r=".7" fill="#5BE37D"/><circle class="brilla" cx="0" cy="-6.4" r=".9" fill="#fff"/></g></g>`;
+  const FIOCCO = (x, y, k) => `<g transform="translate(${x + 4.6 * k} ${y - 6.2 * k}) scale(${k}) rotate(-14)"><path d="M0 0 L-4.4 -2.6 Q-5.4 0 -4.4 2.6Z M0 0 L4.4 -2.6 Q5.4 0 4.4 2.6Z" fill="#FF5A9E" stroke="#B3205E" stroke-width=".5"/>
+<circle r="1.3" fill="#FF8AC0" stroke="#B3205E" stroke-width=".5"/></g>`;
+  const OSSO = (x, y, k) => `<g transform="translate(${x + 9 * k} ${y + 11 * k}) scale(${k}) rotate(-18)"><path d="M-4.6 -.9 H4.6 M-4.6 .9 H4.6" stroke="#FFD23F" stroke-width="0"/>
+<rect x="-4.4" y="-1" width="8.8" height="2" fill="#FFD23F"/><circle cx="-4.6" cy="-1.1" r="1.4" fill="#FFD23F"/><circle cx="-4.6" cy="1.1" r="1.4" fill="#FFD23F"/>
+<circle cx="4.6" cy="-1.1" r="1.4" fill="#FFD23F"/><circle cx="4.6" cy="1.1" r="1.4" fill="#FFD23F"/><circle class="brilla" cx="-2" cy="-.4" r=".5" fill="#fff"/></g>`;
   const FUOCHI = (w, seed) => { let f = ""; const col = ["#FF5A6E", "#FFD23F", "#4FB4FF", "#5BE37D", "#FF9A3C"];
     for (let i = 0; i < 3; i++) { const x = [w * 0.16, w * 0.5, w * 0.84][i], y = [-2, -9, -1][i], c = col[(seed + i) % 5]; let r = "";
       for (let j = 0; j < 8; j++) { const a = j * Math.PI / 4; r += `<line x1="${(x + 2 * Math.cos(a)).toFixed(1)}" y1="${(y + 2 * Math.sin(a)).toFixed(1)}" x2="${(x + 8 * Math.cos(a)).toFixed(1)}" y2="${(y + 8 * Math.sin(a)).toFixed(1)}"/>`; }
@@ -291,8 +296,9 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
   function accessori(svg, lista, tipo, seed) {
     if (!lista || !lista.length) return svg;
     const [x, y, k] = TESTA[tipo] || TESTA.cane, w = tipo === "altro" ? 46 : 64;
-    const testa = (lista.includes("collare") ? COLLARE(x, y, k) : "") + (lista.includes("corona") ? CORONA(x, y, k) : "");
+    const testa = (lista.includes("collare") ? COLLARE(x, y, k) : "") + (lista.includes("corona") ? CORONA(x, y, k) : "") + (lista.includes("fiocco") ? FIOCCO(x, y, k) : "");
     if (testa) svg = svg.includes("<!--testa-->") && tipo !== "altro" ? svg.replace("<!--testa-->", `<g class="accessori">${testa}</g><!--testa-->`) : svg.replace(/<\/svg>\s*$/, `<g class="accessori">${testa}</g></svg>`);
+    if (lista.includes("osso")) svg = svg.replace(/<\/svg>\s*$/, `<g class="accessori">${OSSO(x, tipo === "gatto" ? 38 : tipo === "altro" ? 30 : y + 4, k)}</g></svg>`);
     if (lista.includes("fuochi")) svg = svg.replace(/<\/svg>\s*$/, FUOCHI(w, seed) + "</svg>");
     return svg;
   }

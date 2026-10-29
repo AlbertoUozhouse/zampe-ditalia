@@ -1,4 +1,5 @@
-"""Il negozio: accessori a pochi euro per il proprio animale, per sempre sulla mappa (collare d'oro, corona, fuochi d'artificio).
+"""Il negozio: accessori da 1 euro in su per il proprio animale, per sempre sulla mappa (osso, fiocco, collare d'oro, corona, fuochi d'artificio).
+Ogni acquisto diventa una storia su @zampeditalia col regalo (messaggi.py + reel/cartolina.py --regalo).
 
 Si paga con i Payment Link di Stripe (motore/config.json → "negozio"). Il sito aggiunge al link ?client_reference_id=<codice>,
 un codice che lega il pagamento all'animale senza dati personali (lo stesso calcolo di docs/app.js).
@@ -9,7 +10,7 @@ import json, os, time, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ARTICOLI = {"collare": ("Collare d'oro", 199), "corona": ("Corona", 299), "fuochi": ("Fuochi d'artificio", 399)}  # come in docs/app.js
+ARTICOLI = {"osso": ("Osso d'oro", 100), "fiocco": ("Fiocco", 149), "collare": ("Collare d'oro", 199), "corona": ("Corona", 299), "fuochi": ("Fuochi d'artificio", 399)}  # come in docs/app.js
 
 def _hash(s):
     """FNV-1a a 32 bit, come Disegni.hash in docs/disegni.js."""
@@ -52,6 +53,7 @@ def leggi(stato, animali):
                 k, ida = plink.get(s.get("payment_link")), codici.get(s.get("client_reference_id") or "")
                 if s["id"] in fatti or s.get("payment_status") != "paid" or not k or not ida: continue
                 if k not in acquisti.setdefault(ida, []): acquisti[ida].append(k)
+                stato.setdefault("negozio_storie", []).append({"id": ida, "k": k})  # messaggi.py ne fa una storia su @zampeditalia
                 fatti.append(s["id"]); nuovi += 1
             stato["negozio_fatti"] = fatti[-2000:]
             if nuovi: print(f"negozio: {nuovi} accessori nuovi")
