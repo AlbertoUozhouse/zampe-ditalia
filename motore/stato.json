@@ -3296,6 +3296,7 @@
 "18145162342560591",
 "18145186291591851",
 "18145296163600734",
+"18145346611678158",
 "18145495483586415",
 "18145613071598599",
 "18145668685566371",
@@ -4183,7 +4184,9 @@
 "18655159417063350",
 "18665959441058699"
 ],
-"risposte": [],
+"risposte": [
+1793237113.1368248
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -5045,7 +5048,7 @@
 "alessandriniisa": "2026-10-28",
 "urbanovaleriad": "2026-10-28",
 "sara30091994": "2026-10-28",
-"gabriele_carbone.97": "2026-10-28",
+"gabriele_carbone.97": "2026-10-29",
 "letizianonesiste": "2026-10-28",
 "_.ale_sakura._": "2026-10-28",
 "sergio_pipitone": "2026-10-28",
@@ -5525,6 +5528,9 @@
 ],
 "marty11.01": [
 "kacper07.06"
+],
+"saraceno_13": [
+"gabriele_carbone.97"
 ]
 },
 "premiati": [
@@ -5975,7 +5981,7 @@
 "ndginlove": 30,
 "stora5821": 30,
 "aa09_.__._": 30,
-"gabriele_carbone.97": 30,
+"gabriele_carbone.97": 35,
 "letizianonesiste": 30,
 "sara30091994": 30,
 "desy_santoro09": 20
