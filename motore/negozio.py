@@ -41,11 +41,12 @@ def _stripe(chiave, percorso, **q):
 def leggi(stato, animali):
     """Dà gli accessori pagati. stato["acquisti"] = {id animale: [articoli]}, stato["negozio_fatti"] = sessioni già lette."""
     acquisti = stato.setdefault("acquisti", {})
-    chiave, ln = os.environ.get("STRIPE_KEY"), link()
+    chiave, ln, ok = os.environ.get("STRIPE_KEY"), link(), False
     if chiave and ln:
         try:
             per_url = {u.split("?")[0]: k for k, u in ln.items()}
             plink = {p["id"]: per_url[p["url"]] for p in _stripe(chiave, "payment_links", limit=100)["data"] if p.get("url") in per_url}
+            ok = bool(plink)  # la chiave funziona e vede i nostri link
             fatti = stato.setdefault("negozio_fatti", [])
             codici = {codice(a.get("id", "")): a.get("id") for a in animali if a.get("id")}
             nuovi = 0
@@ -65,4 +66,5 @@ def leggi(stato, animali):
     for a in animali:
         if acquisti.get(a.get("id")): a["acc"] = acquisti[a["id"]]
         else: a.pop("acc", None)
-    return ln if chiave else {}  # senza la chiave non vedremmo i pagamenti: il negozio resta chiuso, nessuno paga a vuoto
+    if chiave and ln and not ok: print(f"negozio: chiuso, Stripe non conferma i link ({len(plink) if 'plink' in dir() else 0} trovati)")
+    return ln if ok else {}  # se non vediamo i pagamenti il negozio resta chiuso: nessuno paga a vuoto
