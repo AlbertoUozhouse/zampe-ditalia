@@ -451,10 +451,26 @@ class Gioco:
             else: x.pop("vestito", None)
         import negozio
         self.dati["negozio"] = negozio.leggi(self.stato, self.animali)  # gli accessori pagati e i link del negozio per il sito
+        self.sfilata()
         ora = time.time()
         self.stato["risposte"] = [t for t in self.stato["risposte"] if ora - t < 3600]
         ANIMALI.write_text(json.dumps(self.dati, ensure_ascii=False, separators=(",", ":")) + "\n")
         STATO.write_text(json.dumps(self.stato, ensure_ascii=False, indent=0) + "\n")
+
+    def sfilata(self):
+        """La Sfilata: vince l'animale con più accessori (a parità, più punti). Ogni domenica alle 21 diventa «Il più bello d'Italia»
+        per una settimana. Il premio è solo gloria (titolo, piedistallo d'oro nel paese 3D, la puntata delle 21): niente soldi né oggetti."""
+        from zoneinfo import ZoneInfo
+        ora = datetime.now(ZoneInfo("Europe/Rome"))
+        cand = [a for a in self.animali if a.get("acc") and a["k"] in ("animale", "sogno") and a["u"].lower() not in ("thor_golden_life", "albertomarchesin")]
+        cand.sort(key=lambda a: (-len(a["acc"]), -a.get("pt", 0), a.get("ts", "")))
+        self.dati["sfilata"] = [[a["id"], len(a["acc"])] for a in cand[:10]]
+        sett = ora.strftime("%G-%V")
+        if ora.weekday() == 6 and ora.hour >= 21 and self.stato.get("bello_sett") != sett and cand:
+            self.stato["bello_sett"] = sett
+            self.stato["piu_bello"] = {"id": cand[0]["id"], "giorno": ora.date().isoformat()}
+        pb = self.stato.get("piu_bello")
+        self.dati["piu_bello"] = pb if pb and (ora.date() - datetime.fromisoformat(pb["giorno"]).date()).days < 7 else None
 
     def derby(self):
         """Il Derby della settimana (motore/derby.py): punteggio per il sito e i reel, e il premio a chi ha acceso la provincia vincente."""

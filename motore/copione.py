@@ -50,7 +50,7 @@ def dati():
     stato = carica(ROOT / "motore/stato.json", {})
     seguono = {u for u, v in stato.get("seguono", {}).items() if v == "premiato"}
     inviti = J.get("inviti", {})
-    return {"voti": voti, "seguono": seguono, "inviti": inviti, "capibranco": J.get("capibranco", {}), "follower": J.get("follower"), "animali": an, "tifo": tifo, "tutti": A, "razze": R, "per_citta": per_citta, "nuovi_fondatori": nuovi_fondatori,
+    return {"voti": voti, "seguono": seguono, "inviti": inviti, "capibranco": J.get("capibranco", {}), "piu_bello": J.get("piu_bello"), "follower": J.get("follower"), "animali": an, "tifo": tifo, "tutti": A, "razze": R, "per_citta": per_citta, "nuovi_fondatori": nuovi_fondatori,
             "cani": sum(1 for a in an + tifo if a.get("t", "cane") == "cane"), "gatti": sum(1 for a in an + tifo if a.get("t") == "gatto"),
             "altri": sum(1 for a in an if a.get("t") == "altro" and a.get("k") == "animale")}
 
@@ -163,6 +163,11 @@ def puntata(D, rng, st):
             frasi.insert(1, (f"Stasera si eleggono i Capibranco: {cb['quanti']} città hanno il loro capo!",
                              {"tipo": "classifica", "titolo": "I nuovi Capibranco 🐺", "righe": [{"nome": f"{x[1]} · @{x[0]}", "valore": x[2]} for x in capi], "utente": capi[0][0]}))
             st["tag_extra"] = [x[0] for x in capi]
+    pb = D.get("piu_bello")
+    vinto = pb and pb.get("giorno") == ORA.date().isoformat() and next((a for a in D["animali"] if a.get("id") == pb["id"]), None)
+    if vinto:  # domenica: la Sfilata degli accessori ha il suo vincitore
+        frasi.insert(1, (f"Il più bello d'Italia è {vinto['n']}, di {vinto['c']}, con {len(vinto.get('acc', []))} accessori!", {**scena_di(vinto, "🏆 Il più bello d'Italia")}))
+        st.setdefault("tag_extra", []).append(vinto["u"])
     re_inv = [x for x in D.get("inviti", {}).get("oggi", []) if x[0].lower() not in ESCLUSI]
     if re_inv:
         u, n_inv = re_inv[0]
@@ -420,7 +425,28 @@ def gara(D, rng, st):
     st.setdefault("copertina", {"sopra": f"{tot} ANIMALI", "grande": f"{g} giorni", "sotto": "Chi arriva primo nella tua città? 👑", "tema": "fondatore"})
     return "LA GARA", frasi, did
 
-FORMATI = {"gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+def negozio(D, rng, st):
+    """Il reel del negozio: accessori da 1 euro, per sempre sulla mappa, e la Sfilata del più bello d'Italia ogni domenica."""
+    J = carica(ROOT / "docs/data/animali.json", {})
+    top = [next((a for a in D["animali"] if a.get("id") == i), None) for i, _ in J.get("sfilata", [])][:3]
+    top = [a for a in top if a and a["u"].lower() not in ESCLUSI]
+    cane, gatto = esempio(rng, D)
+    frasi = [("Da oggi puoi regalare un accessorio al tuo animale sulla mappa.", {"tipo": "numero", "grande": "👑", "sotto": "corona · fiocco · collare d'oro · fuochi d'artificio"}),
+             ("Si parte da 1 euro, ed è per sempre.", {"tipo": "numero", "grande": "1 €", "sotto": "🦴 1 € · 🎀 1,49 · 📿 1,99 · 👑 2,99 · 🎆 3,99"})]
+    if top:
+        frasi.append((f"In testa alla Sfilata c'è {top[0]['n']}, di {top[0]['c']}.", {"tipo": "classifica", "titolo": "La Sfilata 🏆", "righe": [{"nome": f"{a['n']} · @{a['u']}", "valore": f"{len(a.get('acc', []))} accessori"} for a in top], "utente": top[0]["u"]}))
+        st["tag_extra"] = [a["u"] for a in top]
+    frasi += [("Ogni domenica il più accessoriato diventa il più bello d'Italia.", {"tipo": "numero", "grande": "🏆", "sotto": "il più bello d'Italia: piedistallo d'oro e la puntata delle 21"}),
+              ("Non sei ancora sulla mappa? Scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
+              ("Il negozio è nel link in bio!", {"tipo": "chiusura", "testo": "🛍️ Negozio nel link in bio"})]
+    did = ("👑 Da oggi sulla mappa di Zampe d'Italia puoi regalare un accessorio al tuo animale, per sempre: 🦴 osso d'oro 1 €, 🎀 fiocco 1,49 €, 📿 collare d'oro 1,99 €, 👑 corona 2,99 €, 🎆 fuochi d'artificio 3,99 €.\n\n"
+           "Ogni regalo finisce nella nostra storia 🎉 e ogni domenica alle 21 il più accessoriato diventa 🏆 Il più bello d'Italia.\n\n"
+           "🛍️ Negozio su zampeditalia.it (link in bio) → «Il mio» → cerca il tuo @.\n\n"
+           f"Non sei ancora sulla mappa? Scrivi qui sotto città, nome e razza (per esempio «{rng.choice(CITTA)}, {gatto['nome']}, {gatto['parola']}»).")
+    st["copertina"] = {"sopra": "🛍️ IL NEGOZIO", "grande": "Da 1 €", "sotto": "Il più bello d'Italia? 🏆", "tema": "attivita"}
+    return "IL NEGOZIO", frasi, did
+
+FORMATI = {"negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide

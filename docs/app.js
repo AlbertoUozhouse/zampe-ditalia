@@ -66,11 +66,12 @@ fetch("data/regioni.json").then(r => r.json()).then(REG => {
 let PRENOTATE = {}; // posti prenotati dalle attività, per comune: {"Treviso|TV": {"veterinario": 1}}
 let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 let DERBY = null; // il Derby della settimana: {ora: {a, b, na, nb, fine, partito}, albo: [...]} (motore/derby.py)
-let NEGOZIO = {}; // i link di pagamento degli accessori (motore/config.json → animali.json): {collare: "https://buy.stripe.com/…"}
+let NEGOZIO = {}, SFILATA = [], BELLO = null; // la Sfilata degli accessori e «Il più bello d'Italia» della settimana (motore/commenti.py)
+let _x = 0; // i link di pagamento degli accessori (motore/config.json → animali.json): {collare: "https://buy.stripe.com/…"}
 let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: 1000}; raggiunto, nevica sulla mappa
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; DERBY = j.derby || null; return j.animali || []; } } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; DERBY = j.derby || null; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -150,6 +151,17 @@ const ARTICOLI = [["osso", "Osso d'oro", "1 €", "Brilla accanto alla sua cucci
 const codice = id => "z" + D.hash(id).toString(36); // come in motore/negozio.py: lega il pagamento all'animale senza dati personali
 const ICONE = { osso: "🦴", fiocco: "🎀", collare: "📿", corona: "👑", fuochi: "🎆" };
 let SCELTO = null; // il tuo animale, ricordato su questo telefono
+function sfilata(scelto) {
+  const righe = SFILATA.map(([id, n]) => DATA.find(d => d.id === id)).filter(Boolean).slice(0, 5);
+  const pos = scelto ? SFILATA.findIndex(([id]) => id === scelto.id) : -1;
+  const vinto = BELLO && DATA.find(d => d.id === BELLO.id);
+  return `<div class="sfilata"><h3>🏆 La Sfilata: il più bello d'Italia</h3>
+    <p class="sub">Vince chi ha più accessori. Ogni domenica alle 21 il primo diventa <b>Il più bello d'Italia</b>: piedistallo d'oro nel suo paese 3D e protagonista della puntata delle 21.</p>
+    ${vinto ? `<p class="per">🏆 Questa settimana: <b>${icona(vinto)} ${esc(vinto.n)}</b> · ${esc(vinto.c)}</p>` : ""}
+    ${righe.length ? `<ol class="list">` + righe.map((d, i) => `<li class="row"><span class="pos">${i === 0 ? "🏆" : i + 1}</span><span class="who">${icona(d)} ${esc(d.n)} · @${esc(d.u)}<small>${esc(d.c)}</small></span><span class="pts">${(d.acc || []).map(k => ICONE[k]).join("")}</span></li>`).join("") + `</ol>`
+      : `<p class="empty">Nessuno ha ancora un accessorio: il primo che lo regala al suo animale è in testa alla Sfilata!</p>`}
+    ${scelto ? `<p class="per">${pos >= 0 ? `${esc(scelto.n)} è ${pos + 1}° nella Sfilata${pos ? `: ${pos === 1 ? "un accessorio" : "qualche accessorio"} e passa avanti!` : " 🏆"}` : `${esc(scelto.n)} non è ancora nella Sfilata: basta 1 € per entrare.`}</p>` : ""}</div>`;
+}
 function hud(d) {
   const oggi = new Date() < new Date("2026-11-02");
   return `<div class="hud"><span class="ritratto">${petSvg(d)}</span><span class="dati"><b>${esc(d.n)}</b> · ${esc(d.c)}<br>
@@ -158,7 +170,7 @@ function hud(d) {
     <button type="button" class="btn entra-qui" data-id="${esc(d.id)}" style="width:100%">🎮 Vai da ${esc(d.n)} nel paese in 3D</button>
     <h3>🎯 Missioni di oggi</h3><ul class="missioni">
     <li>💬 Commenta il reel di oggi<b>+5</b></li><li>👥 Tagga un amico che poi commenta<b>+3 ognuno</b></li>
-    <li>➕ Seguici e scrivi SEGUO<b>${oggi ? "+30" : "+10"}</b></li>${DERBY?.ora?.partito && !DERBY.ora.finito ? `<li>⚔️ Derby ${esc(DERBY.ora.a)}–${esc(DERBY.ora.b)}: accendi la tua provincia<b>+20</b></li>` : ""}</ul>`;
+    <li>➕ Seguici e scrivi SEGUO<b>${oggi ? "+30" : "+10"}</b></li><li>🏆 Regala un accessorio: sali nella Sfilata del più bello<b>da 1 €</b></li>${DERBY?.ora?.partito && !DERBY.ora.finito ? `<li>⚔️ Derby ${esc(DERBY.ora.a)}–${esc(DERBY.ora.b)}: accendi la tua provincia<b>+20</b></li>` : ""}</ul>`;
 }
 const edifici = n => EDIFICI.filter(e => n >= e[0]).map(e => e[2]).join("");
 const prossimo = n => { const e = EDIFICI.find(e => n < e[0]); return e ? `mancano ${e[0] - n} ${e[0] - n === 1 ? "luce" : "luci"} per ${e[2]} ${e[1].toLowerCase()}` : ""; };
@@ -172,6 +184,7 @@ function popup(d) {
     <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>
     ${d.k === "stella" ? "" : `<div>${d.pt} ${d.pt === 1 ? "punto" : "punti"}${d.rank ? ` · ${d.rank}° in Italia` : ""}</div>${barra(d.pt)}`}
     ${d.capo ? `<span class="role">🐺 ${esc(d.capo)}</span>` : d.testa ? `<span class="role">🐺 In testa a ${esc(d.c)}: domenica alle 21 il Capobranco</span>` : ""}
+    ${BELLO?.id === d.id ? `<span class="role">🏆 Il più bello d'Italia</span>` : ""}
     ${ruolo ? `<span class="role">👑 ${esc(ruolo)}</span>` : ""}
     ${d.k === "stella" ? "" : `<button type="button" class="regala" data-id="${esc(d.id)}">🛍️ ${d.acc?.length ? "Altri accessori" : "Regalagli un accessorio"}</button>`}
     ${d.villa && !document.querySelector(".mondo3d") ? `<button type="button" class="entra-qui" data-id="${esc(d.id)}">🎮 Entra nel suo paese in 3D</button>` : ""}
@@ -285,6 +298,7 @@ function show(v) {
       <ul class="shop">${ARTICOLI.map(([k, nome, prezzo, testo]) => `<li class="art"><span class="anteprima">${prova ? prova(k, scelto.t) : `<span class="emo">${ICONE[k]}</span>`}</span>
         <span class="who"><b>${nome}</b><small>${testo}</small></span>
         ${scelto?.acc?.includes(k) ? `<span class="preso">✓ Ce l'ha</span>` : `<button type="button" class="btn compra" data-k="${k}" ${scelto && NEGOZIO[k] ? "" : "disabled"}>${prezzo}</button>`}</li>`).join("")}</ul>
+      ${sfilata(scelto)}
       <p class="sub piccolo">${Object.keys(NEGOZIO).length ? "Pagamento sicuro con Stripe. L'accessorio compare sulla mappa entro 15 minuti, e il tuo regalo finisce nella storia di @zampeditalia 🎉" : "Il negozio apre a breve: gli accessori arrivano nei prossimi giorni."} Nessun abbonamento, si paga una volta sola.</p>`;
     const cerca = $("#mio"), lista = $("#miei");
     $("#cercaMio").onsubmit = e => e.preventDefault();
@@ -323,7 +337,7 @@ function entra3d(v) {
   if (!v || !window.Mondo3D) return;
   map.closePopup(); $("#sheet").hidden = true;
   let mio = SCELTO; if (!mio) try { const id = localStorage.getItem("mio"); mio = id && DATA.find(d => d.id === id); } catch (e) {}
-  window.Mondo3D.apri(v, { svg: petSvg, mio: mio && mio.villa === v ? mio : null, scheda: d => {
+  window.Mondo3D.apri(v, { svg: petSvg, bello: BELLO?.id, mio: mio && mio.villa === v ? mio : null, scheda: d => {
     const manca = ARTICOLI.filter(a => !d.acc?.includes(a[0]));
     return popup(d).replace('<div class="pop">', '<div class="pop">') + (manca.length ? `<div class="m3-vetrina">${manca.map(([k, nome, prezzo]) =>
       `<button type="button" class="m3-art regala" data-id="${esc(d.id)}" data-k="${k}"><span>${ICONE[k]}</span><b>${nome}</b><small>${prezzo}${QUANTI(v, k) ? ` · ${QUANTI(v, k)} in ${esc(v.nome)}` : ""}</small></button>`).join("")}</div>` : `<div class="m3-tutto">✨ Ha già tutti gli accessori!</div>`);

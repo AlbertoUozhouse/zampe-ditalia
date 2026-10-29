@@ -289,6 +289,10 @@ async function apri(v, opz = {}) {
     const nome = ETICHETTA(THREE, (d.acc?.includes("corona") ? "👑 " : "") + d.n, d.t === "gatto" ? { fg: "#2F3A10", bg: "#E9F2C4", bordo: "#3D4A18" } : {});
     nome.position.set(0, (cane ? 3.6 : 4.8) * k + 0.4, 0); g.add(nome);
     pet.push({ d, g, s, base, cane, fase: (d.seed % 628) / 100 });
+    if (opz.bello === d.id) { // Il più bello d'Italia: piedistallo d'oro, faro dall'alto e coppa che gira
+      const ped = new THREE.Mesh(new THREE.CylinderGeometry(0.9 * k, 1 * k, 0.25, 32), oro(THREE)); ped.position.copy(base).setY(0.12); g.add(ped); s.position.y += 0.25; base.y += 0.25;
+      const faro = new THREE.SpotLight("#FFE9B8", 60, 18, 0.35, 0.5, 1.4); faro.position.set(0, 12, base.z); faro.target = s; g.add(faro);
+      const coppa = ETICHETTA(THREE, "🏆 Il più bello d'Italia", { size: 46, fg: "#4A2C04", bg: "#FFD23F", bordo: "#8C4A00" }); coppa.position.set(0, (cane ? 4.5 : 5.7) * k + 0.4, 0); g.add(coppa); }
   }
   // il tuo animale: una freccia che rimbalza
   const mio = opz.mio && pet.find(p => p.d === opz.mio); let freccia = null;

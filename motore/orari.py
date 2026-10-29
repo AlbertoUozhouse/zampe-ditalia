@@ -45,6 +45,10 @@ def main():
             fatti.append(hhmm)
             st["lanciati"] = {k: v for k, v in st["lanciati"].items() if k >= (ora.date() - timedelta(days=7)).isoformat()}
             STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
+            if formato.startswith("attivita"):  # col negozio aperto, quello slot fa il reel degli accessori
+                try:
+                    if any(str(u).startswith("https://") for u in cfg.get("negozio", {}).values()): formato = "negozio" + formato[len("attivita"):]
+                except AttributeError: pass
             print(formato)
             return
 
