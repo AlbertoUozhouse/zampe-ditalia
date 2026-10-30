@@ -68,6 +68,7 @@
 "10829f93be2fae14",
 "109ae2600698d1c4",
 "109eee814f80128f",
+"10c0ad0d48bf5430",
 "111a0460f7503279",
 "1120cb339f90bb21",
 "113d0028e4562159",
@@ -351,6 +352,7 @@
 "67ca84f9aee6d877",
 "68af4f22c126bce4",
 "693ffadfb68602ac",
+"69eb8ea8d3774d83",
 "6a05df4c7d293d50",
 "6a93d9c08ddefa94",
 "6ac5c3fede0a1cf3",
@@ -383,6 +385,7 @@
 "7398c0d85f0ba128",
 "7403c78812549d89",
 "74628ff038e34ec0",
+"7530dc9d1389b1ab",
 "7536c9d2ed026f89",
 "754b873b3527d440",
 "767dce285e4c6cb7",
@@ -424,6 +427,7 @@
 "80e3b92efd9fcdb3",
 "80e4d435c2603d0d",
 "80fdd98a2f0edb73",
+"8101349359fbed30",
 "82069c479629e963",
 "82bb182d63226c53",
 "82e055266e5492cf",
@@ -435,6 +439,7 @@
 "8484db0af0ca5a5e",
 "8495f3c7d501eff4",
 "84c28c597f9b11ed",
+"851890d498352f41",
 "855315ddd6b5c670",
 "856a5839eba9f590",
 "862b2d1cf8ee4f3a",
@@ -539,6 +544,7 @@
 "a35fa22d47fe1c06",
 "a382a32c78af53ff",
 "a3c7348751a6dfbd",
+"a43ab78f3a8b633e",
 "a468bf43e896b7f7",
 "a473465ab3d1df8f",
 "a480c506862026bb",
@@ -780,6 +786,7 @@
 "e4c4119569351269",
 "e4d44c3fe3e7fb36",
 "e4d539b6d7388d49",
+"e5248a99a17b5aae",
 "e572652f5f9640bf",
 "e5745f00fd27c1d9",
 "e584b743f23e4882",
@@ -805,6 +812,7 @@
 "ea9f8b774b424f3d",
 "eaed6ee8ab1638bc",
 "eb022ad6afc098dd",
+"eb51313bde8b06be",
 "ebda24aff192e37b",
 "ebfbbf806de1674f",
 "ec0b5bd8bc6c6c04",
@@ -874,15 +882,38 @@
 "fe5ce1bec697ef43",
 "fe5e4d1baf57130c",
 "fe6aa3a1a7c157ee",
+"fe78501c09249b1a",
 "ffa379cadcaacf70",
 "ffcb46312197b698",
 "ffd691c69733657e"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1652447290003472",
+"url": [
+"https://zampeditalia.it/cartoline/5ee734ba44e071f6.png"
+],
+"t": 1793367372.7512157
+},
+{
+"igsid": "1693351255739165",
+"url": [
+"https://zampeditalia.it/cartoline/e50c3a4700a7659d.png"
+],
+"t": 1793367372.7512171
+},
+{
+"storia": "cartoline/065c85837bb91c18.png",
+"url": [
+"https://zampeditalia.it/cartoline/065c85837bb91c18.png"
+],
+"t": 1793367344.0226104
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
-"2026-10-30": 9
+"2026-10-30": 10
 },
 "prenota_attesa": {}
 }
