@@ -9,7 +9,21 @@ from pathlib import Path
 
 ESC = html.escape
 
-CIELO = """<linearGradient id="{p}-cielo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050A1C"/><stop offset=".6" stop-color="#14254F"/><stop offset="1" stop-color="#24396B"/></linearGradient>
+# Aspetti a rotazione, così due reel di fila non si somigliano: cambiano cielo, colline, prato, strada e mappa; animali e testi restano uguali.
+TEMI = {
+    "notte":    {"cielo": ("#050A1C", "#14254F", "#24396B"), "colline": "#101E44", "prato": "#0F2A2A", "strada": "#162650", "ombra": "#0B1634", "terra": "#1E3266", "bordo": "#34508F", "costa": "#5577C9", "bg": ("#18295A", "#0E1A3A", "#060B1A")},
+    "tramonto": {"cielo": ("#2B1240", "#8C2F5A", "#F2784B"), "colline": "#3A1636", "prato": "#2E1E26", "strada": "#3A1A3E", "ombra": "#8C2F5A", "terra": "#5A2350", "bordo": "#8C3F72", "costa": "#F2A65A", "bg": ("#8C2F5A", "#4A1645", "#1E0A24")},
+    "aurora":   {"cielo": ("#031A1F", "#0B4D4A", "#2FA37A"), "colline": "#062B2C", "prato": "#0A2E22", "strada": "#0C3A3A", "ombra": "#0B4D4A", "terra": "#0E4A48", "bordo": "#1F7A70", "costa": "#5FE0B0", "bg": ("#0E5A55", "#06302F", "#021316")},
+    "giorno":   {"cielo": ("#2E7BD6", "#62A8F0", "#BFE3FF"), "colline": "#3E8E41", "prato": "#4FA34F", "strada": "#5A6B7A", "ombra": "#62A8F0", "terra": "#4FA34F", "bordo": "#2F7A33", "costa": "#FFFFFF", "bg": ("#4A95E6", "#2468BE", "#123E80")},
+    "neon":     {"cielo": ("#12002B", "#3B0A6B", "#7A1FA2"), "colline": "#22074A", "prato": "#1A0638", "strada": "#2A0A55", "ombra": "#3B0A6B", "terra": "#3B0F70", "bordo": "#8A3FD1", "costa": "#FF5FD2", "bg": ("#5A1890", "#2A0A55", "#12002B")},
+}
+T = dict(TEMI["notte"])
+
+def usa_tema(nome):
+    """Sceglie l'aspetto del reel prima di disegnare le scene (costruisci.py)."""
+    T.clear(); T.update(TEMI.get(nome, TEMI["notte"]))
+
+CIELO = """<linearGradient id="{p}-cielo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{c0}"/><stop offset=".6" stop-color="{c1}"/><stop offset="1" stop-color="{c2}"/></linearGradient>
 <radialGradient id="{p}-alone"><stop offset="0" stop-color="#FFC55C" stop-opacity=".55"/><stop offset="1" stop-color="#FFC55C" stop-opacity="0"/></radialGradient>"""
 
 STELLE = "".join(f'<circle cx="{x}" cy="{y}" r="{r}"/>' for x, y, r in
@@ -42,12 +56,12 @@ def _pagina(cid, nota, css, corpo, js):
 """
 
 def _sfondo_notte(p, prato=True):
-    terra = (f'<path d="M0 960 C200 920 380 950 540 935 C720 920 880 960 1080 930 V1920 H0Z" fill="#0F2A2A"/>' if prato
-             else f'<path d="M0 1240 L540 1060 L1080 1240 V1920 H0Z" fill="#162650"/><path d="M0 1240 L540 1060 L1080 1240" fill="none" stroke="#5577C9" stroke-width="6" opacity=".7"/>')
-    return f"""<svg class="sf" viewBox="0 0 1080 1920" id="{p}-sf"><defs>{CIELO.format(p=p)}</defs>
+    terra = (f'<path d="M0 960 C200 920 380 950 540 935 C720 920 880 960 1080 930 V1920 H0Z" fill="{T["prato"]}"/>' if prato
+             else f'<path d="M0 1240 L540 1060 L1080 1240 V1920 H0Z" fill="{T["strada"]}"/><path d="M0 1240 L540 1060 L1080 1240" fill="none" stroke="{T["costa"]}" stroke-width="6" opacity=".7"/>')
+    return f"""<svg class="sf" viewBox="0 0 1080 1920" id="{p}-sf"><defs>{CIELO.format(p=p, c0=T["cielo"][0], c1=T["cielo"][1], c2=T["cielo"][2])}</defs>
       <rect width="1080" height="1920" fill="url(#{p}-cielo)"/><g fill="#fff" opacity=".7">{STELLE}</g>
-      <circle cx="860" cy="430" r="150" fill="url(#{p}-alone)" opacity=".5"/><circle cx="860" cy="430" r="62" fill="#FFF4DE"/><circle cx="890" cy="411" r="56" fill="#0B1634"/>
-      <path d="M0 860 C180 790 330 830 470 800 C640 760 800 820 1080 770 V1100 H0Z" fill="#101E44"/>
+      <circle cx="860" cy="430" r="150" fill="url(#{p}-alone)" opacity=".5"/><circle cx="860" cy="430" r="62" fill="#FFF4DE"/><circle cx="890" cy="411" r="56" fill="{T["ombra"]}"/>
+      <path d="M0 860 C180 790 330 830 470 800 C640 760 800 820 1080 770 V1100 H0Z" fill="{T["colline"]}"/>
       <g fill="#FFC55C"><rect x="110" y="830" width="20" height="15" rx="2"/><rect x="760" y="800" width="20" height="15" rx="2"/><rect x="990" y="780" width="20" height="15" rx="2"/></g>
       {terra}</svg>"""
 
@@ -138,8 +152,8 @@ def mappa(cid, dur, italia, luci=(), citta=(), zoom=None, subito=False):
     # con tante luci i pallini si rimpiccioliscono: l'Italia deve sembrare ancora quasi al buio, da accendere (a 1.000 luci, raggio 5 invece di 30)
     r0 = round(max(4.5, min(30, 30 * (100 / max(len(luci), 1)) ** 0.8)), 1)
     pallini = "".join(f'<circle cx="{l["x"]}" cy="{l["y"]}" r="{l.get("r", r0)}" fill="url(#{cid}-{"g" if l["t"] == "gatto" else "glow"})"/>' for l in luci)
-    css = """#root .terra { fill: #1E3266; stroke: #34508F; stroke-width: 1.4; }
-    #root .costa { fill: none; stroke: #5577C9; stroke-width: 10; opacity: .8; }
+    css = f"""#root .terra {{ fill: {T["terra"]}; stroke: {T["bordo"]}; stroke-width: 1.4; }}
+    #root .costa {{ fill: none; stroke: {T["costa"]}; stroke-width: 10; opacity: .8; }}""" + """
     #root text { font: 800 42px "Bricolage Grotesque", sans-serif; fill: var(--cream); }
     #root .d .punto { fill: var(--gold); } #root .d .onda, #root .d .bordo { stroke: var(--gold); }
     #root .c .punto { fill: var(--cat); } #root .c .onda, #root .c .bordo { stroke: var(--cat); }"""

@@ -108,7 +108,7 @@ INDEX = """<!doctype html>
       * {{ margin: 0; padding: 0; box-sizing: border-box; }}
       html, body {{ width: 1080px; height: 1920px; overflow: hidden; background: var(--night); }}
       #root {{ position: relative; width: 100%; height: 100%; font-family: var(--font-body); color: var(--cream); }}
-      .bg {{ position: absolute; inset: 0; background: radial-gradient(ellipse 80% 55% at 50% 42%, #18295A 0, var(--night2) 45%, var(--night) 100%); }}
+      .bg {{ position: absolute; inset: 0; background: radial-gradient(ellipse 80% 55% at 50% 42%, {bg0} 0, {bg1} 45%, {bg2} 100%); }}
       #testata {{ position: absolute; left: 0; right: 0; top: 186px; z-index: 5; display: flex; justify-content: center; }}
       #testata .pill {{ display: flex; align-items: center; gap: 22px; padding: 14px 34px; border-radius: 999px; background: rgba(6,11,26,.82);
         border: 3px solid rgba(255,197,92,.75); box-shadow: 0 0 40px rgba(255,197,92,.25); }}
@@ -143,6 +143,7 @@ INDEX = """<!doctype html>
 
 def main():
     copione = json.loads(Path(sys.argv[1]).read_text())
+    S.usa_tema(copione.get("tema", "notte"))  # l'aspetto del reel: notte, tramonto, aurora, giorno, neon
     out = Path(sys.argv[2]); prog = out / "hf"
     if prog.exists(): shutil.rmtree(prog)
     for d in ("compositions", "assets/audio", "assets/svg", "assets/fonts"): (prog / d).mkdir(parents=True, exist_ok=True)
@@ -200,7 +201,7 @@ def main():
 
     c = copione.get("conteggio", {"cani": 0, "gatti": 0})
     b0 = round(inizi[1] if len(inizi) > 1 else 0.5, 2)
-    (prog / "index.html").write_text(INDEX.format(nota=copione.get("formato", ""), durata=durata, host="\n".join(host), titolo=S.ESC(copione["testata"]["titolo"]),
+    (prog / "index.html").write_text(INDEX.format(nota=copione.get("formato", ""), durata=durata, bg0=S.T["bg"][0], bg1=S.T["bg"][1], bg2=S.T["bg"][2], host="\n".join(host), titolo=S.ESC(copione["testata"]["titolo"]),
         cani=c["cani"], gatti=c["gatti"], b0=b0, bd=round(inizi[-1] - b0, 2), banner=S.ESC(copione.get("banner", "📍 Scrivi città, nome e razza 👇")),
         dvoce=round(fine_voce + 0.1, 2)))
     subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *gruppi_sottotitoli(frasi)], check=True)
