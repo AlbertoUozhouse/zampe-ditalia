@@ -402,9 +402,12 @@ def gara(D, rng, st):
     if gare:
         s, c, p, q = gare[0]; st.setdefault("gare", []).append(c)
         quanto = f"{int(s)} {'secondo' if int(s) == 1 else 'secondi'}" if s < 120 else f"{round(s / 60)} minuti"
-        frasi.append((f"A {c} {p['n']} ha battuto {q['n']} di {quanto}: è il Fondatore!", {**scena_di(p, f"Fondatore di {c} 👑")}))
+        # la gara vera apre il reel, come «Ha fondato Firenze per 31 secondi» (198.000 views in una pagina simile): niente statistica in testa
+        frasi[0] = (f"{p['n']} ha fondato {c} per {quanto}!", {**scena_di(p, f"Fondatore di {c} 👑")})
+        frasi.insert(1, (f"Secondo posto per {q['n']}, per un soffio.", {**scena_di(q, f"secondo a {c}")}))
         tag += [p["u"], q["u"]]
-        st["copertina"] = {"sopra": f"⏱️ {quanto.upper()}", "grande": c, "sotto": "Fondatore per un soffio 👑", "tema": "fondatore", "citta": c}
+        n, unita = quanto.split(" ", 1)
+        st["copertina"] = {"sopra": f"HA FONDATO {c.upper()}", "grande": f"per {n}<br>{unita}", "sotto": f"{p['n']} è il Fondatore 👑", "domanda": "Nella tua città chi arriva primo? 👇", "tema": "fondatore", "citta": c}
     top = sorted(an, key=lambda a: -a.get("pt", 0))[:3]
     if top and top[0].get("pt"):
         cast = sum(1 for a in an if a.get("pt", 0) >= LIVELLI[-1][0])
