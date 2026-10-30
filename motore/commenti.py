@@ -442,7 +442,10 @@ class Gioco:
 
     def salva(self):
         self.dati["aggiornato"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-        if FOLLOWER: self.dati["follower"] = {"n": FOLLOWER, "traguardo": next((t for t in TRAGUARDI if FOLLOWER < t), TRAGUARDI[-1]), "fatti": [t for t in TRAGUARDI if FOLLOWER >= t]}  # il traguardo di tutti
+        if FOLLOWER:  # il traguardo di tutti, e i follower di ogni giorno (ora italiana) per misurare la crescita
+            storia = self.stato.setdefault("follower_giorno", {}); storia[datetime.now(timezone(timedelta(hours=1))).date().isoformat()] = FOLLOWER
+            self.stato["follower_giorno"] = storia = dict(sorted(storia.items())[-90:])
+            self.dati["follower"] = {"n": FOLLOWER, "traguardo": next((t for t in TRAGUARDI if FOLLOWER < t), TRAGUARDI[-1]), "fatti": [t for t in TRAGUARDI if FOLLOWER >= t], "storia": storia}
         self.stato["visti"] = sorted(self.visti)[-50000:]
         oggi = datetime.now(timezone.utc).date().isoformat()
         ig = self.stato.get("inviti_giorno", {})
