@@ -455,11 +455,16 @@ class Gioco:
             tot[coppia.split(">")[0]] = tot.get(coppia.split(">")[0], 0) + 1
         self.dati["inviti"] = {"giorno": oggi, "oggi": sorted(ig.get(oggi, {}).items(), key=lambda x: -x[1])[:10],
                                "totale": sorted(tot.items(), key=lambda x: -x[1])[:10]}
-        tutte = self.stato.get("corsa", {})
-        ora_s = settimana(); prima = sorted(k for k in tutte if k < ora_s)[-1:]
-        self.stato["corsa"] = {k: v for k, v in tutte.items() if k == ora_s or k in prima}
-        top = lambda k, n: sorted(self.stato["corsa"].get(k, {}).items(), key=lambda x: -x[1])[:n]
-        self.dati["corsa"] = {"settimana": ora_s, "classifica": top(ora_s, 20), "scorsa": top(prima[0], 3) if prima else []}
+        ora_s = settimana()
+        for g in GIOCHI:  # Zampe di corsa sta in "corsa" (nato per primo), gli altri in "giochi"
+            chiave = "corsa" if g == "corsa" else "gioco_" + g
+            tutte = self.stato.get(chiave, {}); prima = sorted(k for k in tutte if k < ora_s)[-1:]
+            if not tutte: continue
+            self.stato[chiave] = {k: v for k, v in tutte.items() if k == ora_s or k in prima}
+            top = lambda k, n: sorted(self.stato[chiave].get(k, {}).items(), key=lambda x: -x[1])[:n]
+            cl = {"settimana": ora_s, "classifica": top(ora_s, 20), "scorsa": top(prima[0], 3) if prima else []}
+            if g == "corsa": self.dati["corsa"] = cl
+            self.dati.setdefault("giochi", {})[g] = cl
         self.elezione()
         self.derby()
         vestito = "halloween" if oggi <= HALLOWEEN_FINO else "lucine"  # il regalo per chi ci segue
@@ -671,9 +676,9 @@ class Gioco:
                 giorno[chi] = giorno.get(chi, 0) + 1  # Sfida degli inviti: chi porta più amici oggi
         return premiati
 
-    def corsa(self, utente, punti, quando=None):
-        """Il record della settimana a Zampe di corsa (solo gloria). Restituisce (posto, migliorato)."""
-        sett = self.stato.setdefault("corsa", {}).setdefault(settimana(quando), {})
+    def corsa(self, utente, punti, quando=None, g="corsa"):
+        """Il record della settimana in un minigioco (solo gloria). Restituisce (posto, migliorato)."""
+        sett = self.stato.setdefault("corsa" if g == "corsa" else "gioco_" + g, {}).setdefault(settimana(quando), {})
         u = utente.lower(); migliorato = punti > sett.get(u, 0)
         if migliorato: sett[u] = punti; self.cambiato = True
         posto = 1 + sum(1 for v in sett.values() if v > sett[u])
@@ -797,22 +802,25 @@ def applica_correzioni(gioco):
 SPECIE_RE = r"furett|conigli|criceti|criceto|pappagall|uccell|cavall|tartarug|pesc|porcellin|asin|capr|galli|gec|lepr|rettil|serpent|iguan|cincill|maial"
 
 # ---------- Zampe di corsa: il record del minigioco arriva come commento «CORSA 1234 K7» ----------
-RE_CORSA = re.compile(r"(?i)\bcorsa\s*:?\s*(\d{1,6})\s+([a-z0-9]{2})\b")
+# I minigiochi (docs/giochi.html): parola del codice -> nome. Un gioco nuovo si aggiunge qui e in Zampe.GIOCHI (docs/comune.js).
+GIOCHI = {"corsa": "Zampe di corsa", "pappa": "Pappa al volo"}
+RE_CORSA = re.compile(r"(?i)\b(" + "|".join(GIOCHI) + r")\s*:?\s*(\d{1,6})\s+([a-z0-9]{2})\b")
 
-def codice_corsa(punti):
-    """Due caratteri legati al punteggio, come codiceCorsa() in docs/gioco.js: scoraggia chi si inventa i punti."""
+def codice_corsa(punti, gioco="corsa"):
+    """Due caratteri legati al punteggio, come in docs/gioco.js e docs/comune.js: scoraggia chi si inventa i punti."""
     h = 2166136261
-    for ch in f"zampe-corsa|{punti}":
+    for ch in f"zampe-{gioco}|{punti}":
         h = ((h ^ ord(ch)) * 16777619) & 0xFFFFFFFF
     cifre, out = "0123456789abcdefghijklmnopqrstuvwxyz", ""
     while h: h, r = divmod(h, 36); out = cifre[r] + out
     return out[-2:].upper()
 
 def corsa_valida(testo):
-    """(punti, giusto) per un commento CORSA, oppure None."""
+    """(gioco, punti, giusto) per un commento «CORSA 123 XY» / «PAPPA 123 XY», oppure None."""
     m = RE_CORSA.search(testo or "")
     if not m: return None
-    return int(m.group(1)), m.group(2).upper() == codice_corsa(int(m.group(1)))
+    g, p = m.group(1).lower(), int(m.group(2))
+    return g, p, m.group(3).upper() == codice_corsa(p, g)
 
 def settimana(ts=None):
     d = datetime.now(timezone.utc) if not ts else datetime.fromisoformat(ts.replace("+0000", "+00:00"))
@@ -1039,12 +1047,13 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
         for c in nuovi_c:
             cv = corsa_valida(c.get("text", ""))
             if not cv: continue
-            if not cv[1]:
-                righe_corsa.append("🕹️ Il codice del record non torna: copialo così com'è dalla fine della partita a Zampe di corsa."); continue
-            posto, meglio = gioco.corsa(u, cv[0], c.get("timestamp"))
-            righe_corsa.append(f"🏁 Record registrato: {cv[0]} punti a Zampe di corsa! Sei {posto}° in Italia questa settimana. "
-                               + ("Sei sul podio: la classifica è su zampeditalia.it/gioco 🏆" if posto <= 3 else "Rigioca e manda la sfida a un amico per salire ⚔️")
-                               if meglio else f"🏁 {cv[0]} punti! Il tuo record della settimana resta più alto: sei {posto}°. Riprova 💪")
+            g, pt, giusto = cv; nome = GIOCHI[g]
+            if not giusto:
+                righe_corsa.append(f"🕹️ Il codice del record non torna: copialo così com'è dalla fine della partita a {nome}."); continue
+            posto, meglio = gioco.corsa(u, pt, c.get("timestamp"), g)
+            righe_corsa.append(f"🏁 Record registrato: {pt} punti a {nome}! Sei {posto}° in Italia questa settimana. "
+                               + ("Sei sul podio: la classifica è su zampeditalia.it/giochi 🏆" if posto <= 3 else "Rigioca e manda la sfida a un amico per salire ⚔️")
+                               if meglio else f"🏁 {pt} punti a {nome}! Il tuo record della settimana resta più alto: sei {posto}°. Riprova 💪")
         nuovi_a = []
         if letto["rimuovi"]:
             chiave, par, _ = gioco.applica({"k": "rimuovi"}, u, None)

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Giochi | Zampe d'Italia</title>
+<meta name="description" content="I minigiochi di Zampe d'Italia: gioca col tuo cane o gatto, entra in classifica col tuo @ e sfida gli amici. Un gioco nuovo ogni due giorni.">
+<meta name="theme-color" content="#060B1A">
+<meta property="og:title" content="I giochi di Zampe d'Italia">
+<meta property="og:description" content="Gioca col tuo cane o gatto e sfida gli amici. Un gioco nuovo ogni due giorni.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Nunito:wght@600;800;900&display=swap">
+<meta name="google-adsense-account" content="ca-pub-9487085633840449">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9487085633840449" crossorigin="anonymous"></script>
+<style>
+/* La sala giochi: stessa notte della mappa, una scheda per gioco col tuo animale dentro. */
+:root{--night:#060B1A;--night2:#0E1A3A;--gold:#FFC55C;--cream:#FFF4DE;--muted:#9FB0D9;--panel:#14244D;--line:rgba(85,119,201,.55);
+  --f-display:"Bricolage Grotesque",ui-rounded,"Segoe UI",system-ui,sans-serif;--f-body:"Nunito",ui-rounded,"Segoe UI",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;min-height:100%;background:radial-gradient(ellipse at 50% 0,var(--night2),var(--night) 70%) fixed;color:var(--cream);font-family:var(--f-body);-webkit-font-smoothing:antialiased}
+main{max-width:560px;margin:0 auto;padding:calc(18px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:16px}
+.indietro{color:var(--muted);font-weight:800;font-size:14px;text-decoration:none}
+h1{margin:0;font:800 clamp(32px,9vw,46px)/1 var(--f-display);color:var(--gold);text-shadow:0 0 18px rgba(255,197,92,.5)}
+.sotto{margin:0;font-weight:700;font-size:15px;line-height:1.45}
+.mio{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.06);border-radius:16px;padding:8px 14px 8px 8px}
+.mio canvas{width:84px;height:64px;flex:none}.mio b{font:800 18px var(--f-display)}.mio small{display:block;color:var(--muted);font-weight:700}
+.lista{display:flex;flex-direction:column;gap:12px;margin:0;padding:0;list-style:none}
+.gioco{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;background:var(--panel);border:1.5px solid var(--line);border-radius:18px;padding:16px;text-decoration:none;color:inherit}
+.gioco:focus-visible{outline:3px solid var(--cream);outline-offset:2px}
+.gioco h2{margin:0;font:800 22px var(--f-display);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.nuovo{font:900 12px var(--f-body);letter-spacing:.5px;background:var(--gold);color:#2A1606;border-radius:999px;padding:2px 9px}
+.gioco p{grid-column:1;margin:0;font-weight:700;font-size:14px;color:var(--muted);line-height:1.4}
+.gioco .rec{grid-column:1;font-weight:800;font-size:13px}
+.gioco .vai{grid-column:2;grid-row:1/4;font:800 16px var(--f-display);background:var(--gold);color:#2A1606;border-radius:999px;padding:10px 18px;box-shadow:0 0 18px rgba(255,197,92,.4)}
+.presto{background:transparent;border-style:dashed;opacity:.8}
+.nota{margin:0;font-size:13px;color:var(--muted);font-weight:700;line-height:1.5}
+.nota a{color:var(--gold)}
+</style>
+</head>
+<body>
+<main>
+  <a class="indietro" href="./">← Mappa</a>
+  <h1>Giochi</h1>
+  <p class="sotto">Gioca col tuo animale, entra in classifica col tuo @ e sfida gli amici. Un gioco nuovo ogni due giorni.</p>
+  <div class="mio" id="mio"></div>
+  <ul class="lista" id="lista"></ul>
+  <p class="nota">Per entrare in classifica: a fine partita copia il codice e scrivilo in un commento sotto un reel di <a href="https://www.instagram.com/zampeditalia/" target="_blank" rel="noopener">@zampeditalia</a>. Il tuo animale non è sulla mappa? Commenta città, nome e razza e si accende in 15 minuti.</p>
+</main>
+<script src="disegni.js"></script>
+<script src="comune.js"></script>
+<script>
+// La sala giochi: elenco da Zampe.GIOCHI (comune.js), record di ciascuno dal browser, «Nuovo» sul gioco più recente se uscito da meno di 3 giorni.
+const Z = window.Zampe;
+Z.caricaPet(P => {
+  const razza = (P.t === "gatto" ? Z.D.GATTI : Z.D.CANI)[P.rk]?.n || "";
+  Z.$("#mio").innerHTML = `<canvas width="168" height="128" aria-hidden="true"></canvas><span><b>${Z.esc(P.n)}</b><small>${Z.esc(razza)} · gioca con te</small></span>`;
+  Z.ritratto(Z.$("#mio canvas"));
+});
+const oggi = Date.now();
+Z.$("#lista").innerHTML = Z.GIOCHI.map((g, i) => {
+  const rec = +Z.leggi(g.id === "corsa" ? "gioco:record" : "gioco:record:" + g.id) || 0, nuovo = i === 0 && oggi - Date.parse(g.uscito) < 3 * 864e5;
+  return `<li><a class="gioco" href="${g.pagina}"><h2>${Z.esc(g.nome)}${nuovo ? '<span class="nuovo">NUOVO</span>' : ""}</h2><p>${Z.esc(g.testo)}</p>
+    <span class="rec">${rec ? `Il tuo record: ${Z.fmt(rec)}` : "Non ci hai ancora giocato"}</span><span class="vai">Gioca</span></a></li>`;
+}).join("") + `<li><div class="gioco presto"><h2>Il prossimo gioco</h2><p>Arriva tra due giorni. Seguici per non perderlo.</p></div></li>`;
+</script>
+</body>
+</html>
