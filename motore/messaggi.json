@@ -1,6 +1,7 @@
 {
 "fatti": [
 "000d2221d05acb38",
+"0037e155e5bb070f",
 "00457197337fa3c3",
 "00bf0a136c86975a",
 "00ebe724334f7889",
@@ -1061,7 +1062,15 @@
 "ffcb46312197b698",
 "ffd691c69733657e"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1595483002622544",
+"url": [
+"https://zampeditalia.it/cartoline/25c6283dfd780d60.png"
+],
+"t": 1793404291.309479
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
