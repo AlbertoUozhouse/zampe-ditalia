@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Zampe di corsa | Zampe d'Italia</title>
+<meta name="description" content="Il minigioco di Zampe d'Italia: corri di notte per le vie del paese col tuo animale, salta gli ostacoli, raccogli gli ossi e sfida gli amici.">
+<meta name="theme-color" content="#060B1A">
+<meta property="og:title" content="Zampe di corsa: riesci a battermi?">
+<meta property="og:description" content="Corri col tuo cane o gatto per le vie del paese e sfida gli amici. Gratis, nel browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Nunito:wght@600;800;900&display=swap">
+<link rel="stylesheet" href="gioco.css">
+</head>
+<body>
+<canvas id="scena" aria-label="Zampe di corsa: tocca lo schermo o premi spazio per saltare"></canvas>
+
+<div class="hud" id="hud" hidden>
+  <div class="punti"><b id="punti">0</b><small>punti</small></div>
+  <div class="ossi">🦴 <b id="ossi">0</b><span class="doppio" id="doppio" hidden>×2</span></div>
+  <div class="bersaglio" id="bersaglio" hidden></div>
+</div>
+
+<section class="schermo" id="inizio">
+  <a class="indietro" href="./">← Mappa</a>
+  <h1>Zampe di corsa</h1>
+  <p class="sotto">Corri di notte per le vie del paese. Salta idranti e vasi, raccogli gli ossi.</p>
+  <div class="sfida-banner" id="sfidaBanner" hidden></div>
+  <div class="mio" id="mio"></div>
+  <form class="scegli" id="scegli" hidden>
+    <label for="nome">Nome</label><input id="nome" maxlength="20" autocomplete="off" placeholder="Luna">
+    <label for="tipo">Animale</label><select id="tipo"><option value="cane">Cane</option><option value="gatto">Gatto</option></select>
+    <label for="razza">Razza</label><input id="razza" maxlength="40" autocomplete="off" placeholder="golden, bassotto, gatto rosso…">
+    <button class="btn piccolo" type="submit">Fatto</button>
+  </form>
+  <button class="btn grande" id="gioca" type="button">Gioca</button>
+  <button class="btn chiaro oggi" id="oggi" type="button">📅 Sfida del giorno<small>stesso percorso per tutti, oggi</small></button>
+  <p class="come">Tocca o premi <kbd>spazio</kbd> per saltare. Tieni premuto per saltare più in alto, tocca di nuovo in aria per il doppio salto.</p>
+  <p class="record" id="recordInizio"></p>
+</section>
+
+<section class="schermo" id="fine" hidden>
+  <h2 id="fineTitolo">Che corsa!</h2>
+  <div class="risultato"><b id="finePunti">0</b><small>punti</small></div>
+  <p class="esito" id="esito"></p>
+  <button class="btn grande video" id="continua" type="button" hidden>🎬 Continua da qui<small>guarda un breve video</small></button>
+  <div class="riga">
+    <button class="btn" id="rigioca" type="button">Rigioca</button>
+    <button class="btn chiaro" id="sfida" type="button">⚔️ Sfida un amico</button>
+  </div>
+  <p class="copiato" id="copiato" role="status"></p>
+  <a class="link" href="./">Torna alla mappa</a>
+  <p class="piccolo">Il tuo animale non è ancora sulla mappa? Commenta un reel di <a href="https://www.instagram.com/zampeditalia/" target="_blank" rel="noopener">@zampeditalia</a> e accendi la sua luce.</p>
+</section>
+
+<div class="pubblicita" id="velo" hidden>Pubblicità in arrivo…</div>
+
+<script src="disegni.js"></script>
+<script src="gioco.js"></script>
+</body>
+</html>
