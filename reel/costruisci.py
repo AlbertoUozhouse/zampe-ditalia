@@ -165,7 +165,7 @@ def main():
         inizi.append(0.0 if not inizi else max(0.0, parole[i]["s"] - 0.08)); i += len(f.split())
     if i != len(parole): raise SystemExit(f"La voce ha {len(parole)} parole, il copione {i}: controllo fallito")
     fine_voce = parole[-1]["e"]; durata = round(fine_voce + 0.95, 2)
-    if not 12 <= durata <= 40: raise SystemExit(f"Durata {durata}s fuori dai limiti (12–40 s)")
+    if not 8 <= durata <= 40: raise SystemExit(f"Durata {durata}s fuori dai limiti (8–40 s)")
 
     serve, host, effetti = set(), [], {"durata": durata, "whoosh": [], "pop": [], "chime": []}
     ita = italia() if any(f["scena"]["tipo"] == "mappa" for f in copione["frasi"]) else ""

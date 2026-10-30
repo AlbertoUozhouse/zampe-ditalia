@@ -149,7 +149,7 @@ def puntata(D, rng, st):
     cane, gatto = esempio(rng, D)
     # si apre sulla mappa con le luci vere già accese e la città in testa evidenziata
     pin = [{"nome": top[0][0], "testo": f"{top[0][0]} · {luci_n(sum(top[0][1].values()))}", "colore": "d"}] if top else []
-    frasi = [(f"Giorno {n} della mappa: {tot} {'luce accesa' if tot == 1 else 'luci accese'} in Italia.", {"tipo": "mappa", "luci": luci(D), "citta": pin}),
+    frasi = [(f"Il tuo animale è già su questa mappa? {tot} {'luce accesa' if tot == 1 else 'luci accese'} in Italia.", {"tipo": "mappa", "luci": luci(D), "citta": pin}),
              (f"Cani {D['cani']}, gatti {D['gatti']}.", {"tipo": "duello", "sinistra": {"titolo": "Cani", "valore": str(D["cani"])}, "destra": {"titolo": "Gatti", "valore": str(D["gatti"])}})]
     nf = [a["n"] for a in D["nuovi_fondatori"]][:3]
     if nf:
@@ -388,7 +388,7 @@ def gara(D, rng, st):
     nc = len({a["c"] for a in D["tutti"] if a.get("k") != "stella"})
     g = (ORA.date() - LANCIO).days + 1
     cane, gatto = esempio(rng, D)
-    frasi = [(f"In {g} giorni si sono accesi {tot} animali, in {nc} città.", {"tipo": "numero", "grande": str(tot), "sotto": f"animali accesi in {g} giorni · {nc} città 🐾"})]
+    frasi = [(f"La tua città è in gara? {tot} animali accesi in {nc} città.", {"tipo": "numero", "grande": str(tot), "sotto": f"animali accesi in {g} giorni · {nc} città 🐾"})]
     # la gara per diventare Fondatore più tirata, senza ripetere le ultime 10
     per = {}
     for a in sorted(an, key=_ts): per.setdefault(a["c"], []).append(a)
@@ -481,7 +481,7 @@ ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fon
 
 def numeri(s): return re.findall(r"\d+", s)
 
-MAX_PAROLE = 70  # circa 30 secondi di voce: oltre, il reel perde chi guarda (e costruisci.py scarta sopra i 40)
+MAX_PAROLE = 40  # circa 15 secondi: in ottobre la visione media era 8-11 s su reel di 25 s, la gente se ne andava a metà
 
 def taglia(frasi):
     """Troppe parole (la domenica, con Capobranco, Re degli inviti e bonus insieme): via le scene di mezzo, dalla più vicina alla fine.
@@ -501,6 +501,8 @@ def varia(frasi, didascalia, D):
     richiesta = {"frasi": [t for t, _ in frasi], "didascalia": didascalia}
     prompt = ("Sei l'autore dei reel di Zampe d'Italia, gioco Instagram in cui ogni animale commentato accende una luce sulla mappa d'Italia. "
               "Riscrivi in italiano naturale, caldo ed entusiasta le frasi della voce e la didascalia qui sotto, per non ripetere sempre le stesse parole. "
+              "La PRIMA frase è il gancio del primo secondo: parla a chi guarda (tu, il tuo cane, il tuo gatto, la tua città) con una domanda o una sfida "
+              "che si capisce anche senza conoscere il gioco, mai una statistica secca (no «Giorno 4», no «1823 animali accesi» da soli). "
               "Regole obbligatorie: stesso numero di frasi e stesso ordine; ogni frase dice la stessa cosa e resta lunga al massimo come l'originale più 15 caratteri; "
               "non aggiungere né cambiare numeri, città, nomi o razze; niente link, niente emoji nelle frasi della voce; la didascalia può avere 1-3 emoji e niente hashtag. "
               "Rispondi solo con JSON: {\"frasi\": [...], \"didascalia\": \"...\"}.\n\n" + json.dumps(richiesta, ensure_ascii=False))
@@ -533,16 +535,16 @@ def main():
     rng = random.Random(ORA.strftime("%Y%m%d%H") + formato)
     D = dati()
     titolo, frasi, did = FORMATI[formato](D, rng, st)
-    # in ogni reel, prima della chiusura, un bonus a rotazione: tagga un amico (+3) oppure seguici (+5)
+    # in un reel su tre, prima della chiusura, un bonus a rotazione: tagga un amico (+3) oppure seguici
     x = rng.random()
     per_attivita = st.pop("senza_bonus", False)
-    if per_attivita:
-        pass  # il reel per le attività ha già la sua azione: niente bonus per i giocatori
+    if per_attivita or x > 0.33:
+        pass  # una richiesta sola per reel: il bonus (segui, tagga) esce in un reel su tre, gli altri chiudono con «scrivi città, nome e razza»
     elif ORA.date().isoformat() <= "2026-11-02":  # Halloween: il follow regala il costume, lo diciamo in ogni reel
         frasi.insert(len(frasi) - 1, (rng.choice([f"Seguici e scrivi seguo: {PS_P} e il costume di Halloween per il tuo animale sulla mappa!",
                                                    "Chi ci segue ha il costume di Halloween sulla mappa: seguici e scrivi seguo!"]),
                                       {"tipo": "numero", "grande": "🎃" if not BOOST else PS, "sotto": f"seguici e scrivi SEGUO: {PS} punti e il costume di Halloween"}))
-    elif x < 0.35:
+    elif x < 0.16:
         frasi.insert(len(frasi) - 1, (rng.choice(["Sfida degli inviti: chi porta più amici oggi finisce nel reel delle 21.",
                                                    "Tagga i tuoi amici: chi ne porta di più oggi è il Re degli inviti."]),
                                       {"tipo": "numero", "grande": "+3", "sotto": "per ogni amico taggato che commenta · il primo è Re degli inviti 👑"}))
@@ -552,18 +554,12 @@ def main():
                                       {"tipo": "numero", "grande": "+10", "sotto": "seguici e scrivi SEGUO: lucine sulla cuccia e prima fila nel tuo paese ✨"}))
     if per_attivita:
         did = did.strip() + "\n\n"
-    else:
-        did = did.strip() + ("\n\n🎃 Fino al 2 novembre chi ci segue ha il costume di Halloween sulla mappa" if ORA.date().isoformat() <= "2026-11-02" else "\n\n✨ Chi ci segue ha le lucine sulla cuccia e sta in prima fila nel suo paese sulla mappa") + (("\n\n🔥 Settimana del follow: fino a domenica chi ci segue e scrive SEGUO prende +30 punti" if BOOST else "") + "\n\n➕ Seguici e scrivi SEGUO: " + PS + " punti, e nei reel mettiamo prima gli animali di chi ci segue. Il paese della tua città è su zampeditalia.it"
-                             "\n👥 Sfida degli inviti: +3 per ogni amico taggato che commenta. Chi ne porta di più oggi è il Re degli inviti 👑 e va nella puntata delle 21")
+    else:  # una richiesta sola: con 8 richieste diverse in didascalia (ottobre) non se ne faceva nessuna
+        if "nome e razza" not in did: did = did.strip() + "\n\n👇 Scrivi qui sotto città, nome e razza del tuo animale: la sua luce si accende sulla mappa col tuo @."
+        did = did.strip() + "\n🕹️ E sfida tutti a Zampe di corsa: link in bio."
     if not per_attivita:  # nel reel per le attività la parola PRENOTA non si tocca
         frasi, did = varia(frasi, did, D)
     frasi = taglia(frasi)
-    fw = D.get("follower")
-    if fw and fw["n"] < fw["traguardo"] and not per_attivita:  # il traguardo di tutti, come sul sito
-        did = did.strip() + f"\n\n❄️ Siamo a {fw['n']} follower: a {fw['traguardo']} nevica su tutta la mappa d'Italia. Mancano {fw['traguardo'] - fw['n']}: seguici e dillo agli amici!"
-    bg = carica(ROOT / "docs/data/animali.json", {}).get("boost")
-    if bg and not per_attivita:  # il Boost del giorno: oggi conviene commentare e taggare
-        did = did.strip() + f"\n\n⚡ Boost di oggi: {bg['frase']}. Missioni del giorno su zampeditalia.it: commenta + porta un amico = +10 extra"
     mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")} | set(st.pop("tag_extra", [])))
     if mostrati:
         did = did.strip() + "\n\n🐾 In questo reel: " + " ".join("@" + u for u in mostrati)
