@@ -222,13 +222,16 @@ def main():
         except urllib.error.HTTPError as e:
             print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
     # chi compra un accessorio nel negozio: la storia col regalo esce su @zampeditalia (la coda la riempie motore/negozio.py)
-    coda, regali = gioco.stato.get("negozio_storie", []), 0
+    coda, regali, riprova = gioco.stato.get("negozio_storie", []), 0, []
     for r in coda[:6]:
         uscita = subprocess.run([sys.executable, str(ROOT / "reel/cartolina.py"), "-", "--regalo=" + r["k"], "--id=" + r["id"]], capture_output=True, text=True)
         nomi = [l.strip() for l in uscita.stdout.splitlines() if l.strip().endswith(".png")]
         if nomi: nuove_storie.append({"storia": "cartoline/" + nomi[0], "url": [SITO + "cartoline/" + nomi[0]], "t": time.time()}); regali += 1
+        else:  # non disegnata: si riprova per 3 giri (nel log solo l'errore, niente nomi)
+            print(f"storia del negozio non disegnata: {uscita.stderr.strip().splitlines()[-1][:150] if uscita.stderr.strip() else uscita.returncode}", file=sys.stderr)
+            if r.get("tent", 0) < 2: riprova.append({**r, "tent": r.get("tent", 0) + 1})
     if coda:
-        gioco.stato["negozio_storie"] = coda[6:]; gioco.salva()
+        gioco.stato["negozio_storie"] = riprova + coda[6:]; gioco.salva()
         print(f"storie dei regali del negozio: {regali}")
     st["storie_v1"] = True
     st["fatti"] = sorted(fatti)[-20000:]

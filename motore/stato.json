@@ -11166,7 +11166,12 @@
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ"
 ],
-"negozio_storie": [],
+"negozio_storie": [
+{
+"id": "nicolassctt|animale|artur",
+"k": "presidente"
+}
+],
 "presidenti": {
 "Veneto": "nicolassctt|animale|artur"
 }
