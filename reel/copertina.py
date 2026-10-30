@@ -1,4 +1,5 @@
 """Copertina del reel 1080x1920: un testo grande diverso per ogni reel, così sul profilo non sembrano tutti uguali.
+Dal 30/10 testo giallo enorme con bordo scuro e una domanda a chi guarda, come le copertine che rendono di più sul feed.
 
 Uso: python3 reel/copertina.py <copione.json> <uscita.jpg>
 Il profilo mostra il reel ritagliato in 3:4 al centro (1080x1440): tutto il testo sta lì dentro.
@@ -21,18 +22,19 @@ PAGINA = """<!doctype html><html lang="it"><head><meta charset="utf-8">
 *{{box-sizing:border-box;margin:0}}
 html,body{{width:1080px;height:1920px;overflow:hidden;background:#060B1A}}
 .s{{position:relative;width:1080px;height:1920px;overflow:hidden;color:#FFF4DE;
-  background:radial-gradient(ellipse 85% 50% at 50% 48%,{fondo} 0,{fondo}CC 30%,#0B1430 75%,#060B1A 100%)}}
-svg{{position:absolute;left:0;top:0;opacity:.55}}
-.box{{position:absolute;left:70px;right:70px;top:300px;height:1320px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:40px;text-align:center}}
+  background:radial-gradient(ellipse 95% 60% at 50% 46%,{fondo} 0,{fondo} 35%,#1A3478 80%,#122659 100%)}}
+svg{{position:absolute;left:0;top:0;opacity:.45}}
+.box{{position:absolute;left:50px;right:50px;top:280px;height:1360px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;text-align:center}}
 .sopra{{font:900 58px Nunito;letter-spacing:6px;color:{accento};background:rgba(6,11,26,.7);border:4px solid {accento};border-radius:999px;padding:14px 44px}}
-.grande{{font:800 {fs}px/0.98 'Bricolage Grotesque';letter-spacing:-3px;color:#FFF4DE;text-shadow:0 0 60px {accento}AA,0 6px 0 rgba(0,0,0,.35)}}
-.grande i{{font-style:normal;font-size:.5em;color:{accento};letter-spacing:4px}}
-.sotto{{font:900 56px/1.15 Nunito;color:#FFF4DE;background:rgba(6,11,26,.72);border-radius:28px;padding:18px 34px}}
+.grande{{font:800 {fs}px/0.98 'Bricolage Grotesque';letter-spacing:-3px;color:#FFD23F;-webkit-text-stroke:10px #2A1606;paint-order:stroke fill;text-shadow:0 12px 0 #2A1606,0 0 70px rgba(255,210,63,.55)}}
+.grande i{{font-style:normal;font-size:.5em;color:#FFF4DE;letter-spacing:4px}}
+.sotto{{font:900 60px/1.12 Nunito;color:#FFF4DE;-webkit-text-stroke:6px #2A1606;paint-order:stroke fill;text-shadow:0 6px 0 #2A1606}}
+.domanda{{font:900 64px/1.1 Nunito;color:#2A1606;background:#FFD23F;border:6px solid #2A1606;border-radius:30px;padding:16px 36px;box-shadow:0 10px 0 #2A1606}}
 .marca{{position:absolute;bottom:330px;left:0;right:0;text-align:center;font:800 44px 'Bricolage Grotesque';color:#FFC55C;text-shadow:0 0 20px rgba(255,197,92,.6)}}
 </style></head><body><div class="s">
 <svg width="1080" height="1920" viewBox="0 0 1080 1920"><defs><radialGradient id="l"><stop offset="0" stop-color="#FFE7B0"/><stop offset="1" stop-color="#FFC55C" stop-opacity="0"/></radialGradient></defs>
 <path d="{sagoma}" fill="#13224A" stroke="#5577C9" stroke-opacity=".6" stroke-width="2"/>{luci}</svg>
-<div class="box"><div class="sopra">{sopra}</div><div class="grande">{grande}</div><div class="sotto">{sotto}</div></div>
+<div class="box"><div class="sopra">{sopra}</div><div class="grande">{grande}</div><div class="sotto">{sotto}</div><div class="domanda">{domanda}</div></div>
 <div class="marca">Zampe d'Italia</div>
 </div></body></html>"""
 
@@ -48,7 +50,7 @@ def main():
     if len(righe) >= 3: fs = min(fs, 150)
     tutti = json.loads((ROOT / "docs/data/animali.json").read_text())["animali"]
     luci = "".join(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="10" fill="url(#l)"/>' for x, y in (xy(a["lng"], a["lat"]) for a in tutti if a.get("k") != "stella" and "lng" in a))
-    pagina = PAGINA.format(sagoma=sagoma(), luci=luci, accento=accento, fondo=fondo, fs=fs, sopra=html.escape(c["sopra"]), grande=grande, sotto=html.escape(c["sotto"]))
+    pagina = PAGINA.format(sagoma=sagoma(), luci=luci, accento=accento, fondo=fondo, fs=fs, sopra=html.escape(c["sopra"]), grande=grande, sotto=html.escape(c["sotto"]), domanda=html.escape(c.get("domanda") or "Il tuo animale c'è? 👇"))
     tmp = Path(tempfile.mkdtemp())
     (tmp / "c.html").write_text(pagina)
     png = tmp / "c.png"
