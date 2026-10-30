@@ -7,6 +7,7 @@
 "00fbdd0c31abb1f6",
 "010ac0d792765445",
 "017854b025bfbd2e",
+"01799c7eb07f9b5f",
 "01a2973ed1ff9d2e",
 "01ab7b687513ce08",
 "01e3e60ca81d2fb6",
@@ -101,6 +102,7 @@
 "1795fdcbed11d928",
 "17abd943f8f5810b",
 "17d398d53768a21a",
+"18044b0d16f6af24",
 "184d0886e6ced8be",
 "18ea6fc3140daf28",
 "18fa5ccb8c4d58cc",
@@ -157,6 +159,7 @@
 "2bb171eed48d1c6f",
 "2bbacc9eeac08fa9",
 "2bd702b3261f35c5",
+"2c44e4266edaa6e7",
 "2c984b9dcdda4c25",
 "2cc11806f85f88e5",
 "2ccddcfc694c5161",
@@ -185,6 +188,7 @@
 "3685b195aedd2943",
 "368b4aa3c8776754",
 "36bb33f8a244bf3d",
+"36dbd2764881ca3b",
 "36f24def3da10a03",
 "372980ed16a9e23f",
 "3754122b1ed4d2d9",
@@ -287,6 +291,7 @@
 "5525a7926db00f15",
 "55d76475113d2c91",
 "562f72537f49326f",
+"566d535f568aaec4",
 "5682334708bbcc32",
 "56b86f707fbb52f0",
 "573d89106b5d0d94",
@@ -690,6 +695,7 @@
 "d1cdac94a0d08fcf",
 "d215b8a2c942dd40",
 "d343a78557fbaff2",
+"d3aed4e571c262d5",
 "d3f1912cd4383c7b",
 "d3fa00fbc9cba803",
 "d4affb85f7d176e2",
@@ -720,6 +726,7 @@
 "dbae0d2413028804",
 "dbfd63121f736694",
 "dc18a13e4f2f50cc",
+"dcaa7abc73bc8cb5",
 "dcf40d3cbb57a65e",
 "dd2b4ad4d0c3f6f7",
 "dd36117935253bc5",
@@ -780,6 +787,7 @@
 "ea1479a0bf8cbd15",
 "ea254226e3ba1c54",
 "ea75268804d2f2de",
+"ea9f8b774b424f3d",
 "eaed6ee8ab1638bc",
 "eb022ad6afc098dd",
 "ebda24aff192e37b",
@@ -852,7 +860,37 @@
 "ffcb46312197b698",
 "ffd691c69733657e"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "3131041970419693",
+"url": [
+"https://zampeditalia.it/cartoline/c7457ee7a0b8fd93.png"
+],
+"t": 1793364079.3572266
+},
+{
+"igsid": "1440531714945973",
+"url": [
+"https://zampeditalia.it/cartoline/d8c42d6f43cd2cde.png"
+],
+"t": 1793364079.3572283
+},
+{
+"igsid": "1121138053831984",
+"url": [
+"https://zampeditalia.it/cartoline/f4cf0a240f9d579b.png",
+"https://zampeditalia.it/cartoline/2ab2e27e29002cf2.png"
+],
+"t": 1793364079.3572285
+},
+{
+"igsid": "1432872424954965",
+"url": [
+"https://zampeditalia.it/cartoline/62ae76a51fc712cc.png"
+],
+"t": 1793364079.3572288
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
