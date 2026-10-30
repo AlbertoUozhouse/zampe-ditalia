@@ -48,7 +48,7 @@ MISSIONI_PREMIO = 10  # chi completa le missioni del giorno (commento + almeno u
 
 PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 10}
 FOLLOWER = None  # follower veri dell'account, letti a ogni giro (main)
-TRAGUARDO = 1000
+TRAGUARDI = [1000, 2000]  # 1.000: nevica sulla mappa (raggiunto il 30/10) · 2.000: fuochi d'artificio su tutta la mappa
 BOOST_FINO = "2026-11-01"  # Settimana del follow: fino a domenica (elezione dei Capibranco) SEGUO vale +30
 BOOST = datetime.now(timezone.utc).date().isoformat() <= BOOST_FINO
 if BOOST: PUNTI["segue"] = 30
@@ -442,7 +442,7 @@ class Gioco:
 
     def salva(self):
         self.dati["aggiornato"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-        if FOLLOWER: self.dati["follower"] = {"n": FOLLOWER, "traguardo": TRAGUARDO}  # il traguardo di tutti: a 1.000 nevica sulla mappa
+        if FOLLOWER: self.dati["follower"] = {"n": FOLLOWER, "traguardo": next((t for t in TRAGUARDI if FOLLOWER < t), TRAGUARDI[-1]), "fatti": [t for t in TRAGUARDI if FOLLOWER >= t]}  # il traguardo di tutti
         self.stato["visti"] = sorted(self.visti)[-50000:]
         oggi = datetime.now(timezone.utc).date().isoformat()
         ig = self.stato.get("inviti_giorno", {})
@@ -874,8 +874,13 @@ def invito_segui(gioco, u):
         r2 = 1 + sum(1 for p, t in altri if p > pt + PUNTI["segue"] or p == pt + PUNTI["segue"] and t < ts)
         if r2 < r1:
             al = lambda r, prep: f"{prep}ll'{r}°" if str(r)[0] == "8" or r == 11 else f"{prep}l {r}°"  # dall'11°, all'8°
-            return frase("invito_salto", n=io["n"], dal=al(r1, "da"), al=al(r2, "a")) + COSTUME
-    return frase("invito_segui") + COSTUME
+            return frase("invito_salto", n=io["n"], dal=al(r1, "da"), al=al(r2, "a")) + COSTUME + mancano_fuochi()
+    return frase("invito_segui") + COSTUME + mancano_fuochi()
+
+def mancano_fuochi():
+    """Il traguardo di tutti nelle risposte: ogni follower nuovo avvicina i fuochi d'artificio sulla mappa."""
+    if not FOLLOWER or FOLLOWER >= TRAGUARDI[-1]: return ""
+    return f" 🎆 A {TRAGUARDI[-1]:,} follower fuochi d'artificio su tutta la mappa: ne mancano {TRAGUARDI[-1] - FOLLOWER}!".replace(",", ".")
 
 def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
     """La frase giusta per l'ultimo commento di questa persona."""

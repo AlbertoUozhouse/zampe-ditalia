@@ -155,6 +155,12 @@ body.neve::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:5
   background-image:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(2px 2px at 80px 120px,#fff,transparent),radial-gradient(3px 3px at 150px 60px,#fff,transparent),
   radial-gradient(2px 2px at 200px 170px,#fff,transparent),radial-gradient(3px 3px at 260px 20px,#fff,transparent);background-size:300px 200px;animation:neve 9s linear infinite}
 @keyframes neve{to{background-position:60px 200px,-40px 200px,30px 200px,-20px 200px,50px 200px}}
+body.fuochi::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:499;mix-blend-mode:screen;
+  background:radial-gradient(circle at 22% 28%,rgba(255,197,92,.9) 0 2px,rgba(255,179,71,.35) 3px 34px,transparent 60px),radial-gradient(circle at 74% 20%,rgba(207,227,107,.9) 0 2px,rgba(207,227,107,.3) 3px 30px,transparent 54px),
+  radial-gradient(circle at 58% 42%,rgba(255,107,92,.9) 0 2px,rgba(255,107,92,.3) 3px 28px,transparent 50px),radial-gradient(circle at 36% 60%,rgba(130,220,235,.9) 0 2px,rgba(130,220,235,.3) 3px 30px,transparent 52px);
+  animation:fuochi 2.6s ease-out infinite}
+@keyframes fuochi{0%{opacity:0;transform:scale(.4)}20%{opacity:1}100%{opacity:0;transform:scale(1.35)}}
+@media (prefers-reduced-motion:reduce){body.fuochi::before,body.neve::after{animation:none}}
 @media (max-width:520px){.counter .track{display:none}.counter .msg{max-width:none;font-size:12.5px}}
 
 /* il mondo è vivo: lucciole, cuori, stelle cadenti, chi è appena arrivato, gli accessori del negozio */

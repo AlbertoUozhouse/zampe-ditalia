@@ -581,6 +581,9 @@ def main():
     else:  # una richiesta sola: con 8 richieste diverse in didascalia (ottobre) non se ne faceva nessuna
         if "nome e razza" not in did: did = did.strip() + "\n\n👇 Scrivi qui sotto città, nome e razza del tuo animale: la sua luce si accende sulla mappa col tuo @."
         did = did.strip() + "\n🕹️ E sfida tutti a Zampe di corsa: link in bio."
+        fw = D.get("follower") or {}
+        if fw.get("n") and fw["n"] < 2000:  # il traguardo di tutti: per ora la priorità sono i follower
+            did = did.strip() + f"\n\n🎆 A 2.000 follower facciamo i fuochi d'artificio su tutta la mappa d'Italia: ne mancano {2000 - fw['n']}. Seguici e dillo a un amico!"
     if not per_attivita:  # nel reel per le attività la parola PRENOTA non si tocca
         frasi, did = varia(frasi, did, D)
     frasi = taglia(frasi)

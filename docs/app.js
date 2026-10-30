@@ -68,7 +68,7 @@ let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 let DERBY = null; // il Derby della settimana: {ora: {a, b, na, nb, fine, partito}, albo: [...]} (motore/derby.py)
 let NEGOZIO = {}, SFILATA = [], BELLO = null, BOOST = null; // la Sfilata degli accessori e «Il più bello d'Italia» della settimana (motore/commenti.py)
 let _x = 0; // i link di pagamento degli accessori (motore/config.json → animali.json): {collare: "https://buy.stripe.com/…"}
-let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: 1000}; raggiunto, nevica sulla mappa
+let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: il prossimo, fatti: [...]}; 1.000 = neve, 2.000 = fuochi d'artificio
 async function loadData() {
   if (ANTEPRIMA) return demo();
   try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; return j.animali || []; } } catch (e) {}
@@ -258,7 +258,7 @@ function renderHeader() {
   const msg = [
     U && U.vince && oggi - new Date(U.fine) < 864e5 && `🏆 ${U.vince} ha vinto il derby`,
     DO && (DO.partito ? `⚔️ Derby ${DO.a} <b>${fmt(DO.na)}</b> – <b>${fmt(DO.nb)}</b> ${DO.b}` : `⚔️ Stasera il derby ${DO.a}–${DO.b}`),
-    FOLLOW && (FOLLOW.n >= FOLLOW.traguardo ? `❄️ ${fmt(FOLLOW.n)} follower: nevica sulla mappa!` : `<a ${segui} title="A ${fmt(FOLLOW.traguardo)} follower nevica su tutta la mappa">❄️ Mancano ${fmt(FOLLOW.traguardo - FOLLOW.n)} follower alla neve</a>`),
+    FOLLOW && (FOLLOW.n >= 2000 ? `🎆 ${fmt(FOLLOW.n)} follower: fuochi d'artificio su tutta la mappa!` : FOLLOW.n >= 1000 ? `<a ${segui} title="A 2.000 follower fuochi d'artificio su tutta la mappa">🎆 Mancano ${fmt(2000 - FOLLOW.n)} follower ai fuochi d'artificio</a>` : `<a ${segui} title="A 1.000 follower nevica su tutta la mappa">❄️ Mancano ${fmt(1000 - FOLLOW.n)} follower alla neve</a>`),
     oggi < new Date("2026-11-02") && `<a ${segui}>🔥 SEGUO vale +30 fino a dom.</a>`,
     BOOST && `⚡ Oggi: ${esc(BOOST.frase)}`,
     oggi < new Date("2026-11-03") ? "🎃 Chi ci segue ha il costume" : "✨ Chi ci segue ha le lucine e la prima fila",
@@ -267,7 +267,8 @@ function renderHeader() {
   $("#counter").innerHTML = `<span><b>${fmt(luci)}</b> / ${fmt(goal)} luci</span><span class="track"><i style="width:${Math.min(100, (luci / goal) * 100)}%"></i></span><span class="msg">${msg[0] || ""}</span>`;
   clearInterval(renderHeader.giro); let k = 0;
   if (msg.length > 1) renderHeader.giro = setInterval(() => { const el = $("#counter .msg"); if (el) { k = (k + 1) % msg.length; el.innerHTML = msg[k]; el.classList.remove("entra"); void el.offsetWidth; el.classList.add("entra"); } }, 4500);
-  document.body.classList.toggle("neve", !!FOLLOW && FOLLOW.n >= FOLLOW.traguardo);
+  document.body.classList.toggle("neve", !!FOLLOW && FOLLOW.n >= 1000);
+  document.body.classList.toggle("fuochi", !!FOLLOW && FOLLOW.n >= 2000);
   if (ANTEPRIMA) { $("#badge").hidden = false; $("#badge").textContent = "Anteprima con dati inventati"; }
 }
 
