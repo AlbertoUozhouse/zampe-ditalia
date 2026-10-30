@@ -10,15 +10,16 @@ const leggi = k => { try { return localStorage.getItem(k); } catch (e) { return 
 // ---------- pubblicità (Google AdSense, annunci per giochi H5) ----------
 // Finché CLIENT è vuoto il gioco va senza pubblicità e "Continua" è gratis una volta a partita.
 // Quando Alberto ha l'account AdSense approvato: metti qui "ca-pub-…" e lo stesso numero in docs/ads.txt.
-const PUB = { client: "", prova: false }; // prova: true mostra annunci finti di Google per collaudare
+const PUB = { client: "ca-pub-9487085633840449", prova: false }; // prova: true mostra annunci finti di Google per collaudare
 let adBreak = null;
 if (PUB.client) {
+  if (!document.querySelector('script[src*="adsbygoogle.js"]')) { // di solito c'è già nella <head>, per la verifica AdSense
   const s = document.createElement("script");
   s.async = true; s.crossOrigin = "anonymous";
   s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + PUB.client;
   s.dataset.adFrequencyHint = "90s";
   if (PUB.prova) s.dataset.adbreakTest = "on";
-  document.head.appendChild(s);
+  document.head.appendChild(s); }
   window.adsbygoogle = window.adsbygoogle || [];
   adBreak = o => window.adsbygoogle.push(o);
   adBreak({ preloadAdBreaks: "on", sound: "on" }); // è adConfig: stessa coda
@@ -365,9 +366,10 @@ function offriContinua() {
     beforeReward: show => { mostraVideo = show; b.hidden = false; b.querySelector("small").textContent = "guarda un breve video"; },
     adDismissed: () => { b.hidden = true; },
     adViewed: () => { continuato = true; nuovaPartita(false); },
-    adBreakDone: () => { $("#velo").hidden = true; } });
+    adBreakDone: () => { $("#velo").hidden = true; // nessun video disponibile (es. account non ancora approvato): continua gratis
+      if (!mostraVideo && !continuato) { b.hidden = false; b.querySelector("small").textContent = "una volta a partita"; } } });
 }
-$("#continua").onclick = () => { if (mostraVideo) mostraVideo(); else if (!adBreak) { continuato = true; nuovaPartita(false); } };
+$("#continua").onclick = () => { if (mostraVideo) mostraVideo(); else { continuato = true; nuovaPartita(false); } };
 $("#rigioca").onclick = () => {
   if (adBreak) adBreak({ type: "next", name: "rigioca", beforeAd: () => { $("#velo").hidden = false; }, afterAd: () => { $("#velo").hidden = true; }, adBreakDone: () => { $("#velo").hidden = true; nuovaPartita(); } });
   else nuovaPartita();
