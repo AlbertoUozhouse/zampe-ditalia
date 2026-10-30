@@ -490,7 +490,7 @@ def sfida(D, rng, st):
         ("Quale città li salva?", {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": a, "testo": a + "?", "colore": "d", "t": 0.3}, {"nome": b, "testo": b + "?", "colore": "c", "t": 0.7}]}),
         ("Scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{a}, {ex['nome']}, {ex['parola']}"}),
         ("E si accende col suo nome.", {"tipo": "gatto" if dietro == "gatti" else "cuccia", "nome": ex["nome"], "razza": ex["razza"], "seme": ex["seme"]}),
-        (f"In {liberi} comuni non c'è ancora nessuno: il primo è Fondatore.", {"tipo": "numero", "grande": str(liberi), "sotto": "comuni ancora spenti: il primo diventa Fondatore 👑"}),
+        ("Il primo del tuo comune diventa Fondatore.", {"tipo": "numero", "grande": str(liberi), "sotto": "comuni ancora spenti: il primo diventa Fondatore 👑"}),
         ("Allora: cani o gatti? Scrivi la tua città!", {"tipo": "chiusura", "testo": "👇 Scrivi città, nome e razza"}),
     ]
     did = (f"Cani contro Gatti: {cani} a {gatti}. I {dietro} stanno perdendo: quale città li salva? 🐶🐱\n\n"
