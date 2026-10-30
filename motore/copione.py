@@ -7,6 +7,7 @@ riformulare le frasi, e la riformulazione si scarta se cambia numeri o nomi o al
 """
 import unicodedata, json, os, random, re, sys, urllib.request
 from datetime import datetime, date, timedelta
+from collections import Counter
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -477,6 +478,54 @@ def presidente(D, rng, st):
     st["copertina"] = {"sopra": "🇮🇹 IL PRIMO PRESIDENTE" if len(pres) == 1 else "🇮🇹 I PRESIDENTI", "grande": p["n"], "sotto": f"{p['pres']} · {libere} regioni libere", "tema": "attivita"}
     return "IL PRESIDENTE", frasi, did
 
+def nomi(D, rng, st):
+    """I nomi più diffusi sulla mappa: una storia che hanno solo i nostri dati (gli animali veri hanno un nome).
+    Chi guarda controlla se c'è il nome del suo e lo scrive nei commenti."""
+    conta = lambda t: Counter(a["n"].strip().title() for a in D["animali"] if a.get("k") == "animale" and a.get("t", "cane") == t).most_common(5)
+    cani, gatti = conta("cane"), conta("gatto")
+    if len(cani) < 3 or len(gatti) < 1: return sfida(D, rng, st)
+    (n1, c1), (n2, _), (n3, _) = cani[:3]
+    cane, gatto = esempio(rng, D)
+    frasi = [
+        (f"Il tuo cane si chiama {n1}? Non è l'unico.", {"tipo": "numero", "grande": n1, "sotto": f"il nome più diffuso: {c1} cani in Italia 🐶"}),
+        (f"Dopo {n1} vengono {n2} e {n3}.", {"tipo": "classifica", "titolo": "I nomi dei cani 🐶", "righe": [{"nome": n, "valore": f"{c} cani"} for n, c in cani]}),
+        (f"Tra i gatti vince {gatti[0][0]}.", {"tipo": "classifica", "titolo": "I nomi dei gatti 🐱", "righe": [{"nome": n, "valore": f"{c} gatti"} for n, c in gatti]}),
+        ("Il tuo come si chiama? Scrivilo qui sotto.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
+        ("Il nome del tuo entra in classifica!", {"tipo": "chiusura", "testo": "👇 Scrivi città, nome e razza"}),
+    ]
+    did = (f"Il nome più diffuso per un cane sulla mappa d'Italia è {n1} ({c1}), poi {n2} e {n3}. Tra i gatti vince {gatti[0][0]} 🐶🐱\n\n"
+           "Il tuo come si chiama? Scrivi qui sotto città, nome e razza: entro 15 minuti si accende sulla mappa col tuo @ e il suo nome entra in classifica.")
+    st["copertina"] = {"sopra": "IL NOME PIÙ DIFFUSO", "grande": n1, "sotto": f"{c1} cani in Italia si chiamano così", "domanda": "Il tuo come si chiama? 👇", "tema": "voto"}
+    return "I NOMI D'ITALIA", frasi, did
+
+CAPOLUOGHI = [("Veneto", "Venezia"), ("Piemonte", "Torino"), ("Lazio", "Roma"), ("Campania", "Napoli"), ("Puglia", "Bari"), ("Sicilia", "Palermo"), ("Sardegna", "Cagliari"), ("Lombardia", "Milano"), ("Toscana", "Firenze")]
+
+def razze(D, rng, st):
+    """La razza preferita di ogni regione (meticci a parte) e il meticcio re d'Italia: dati che hanno solo gli animali veri.
+    Divide quanto basta («da noi vince un'altra razza!») per far commentare."""
+    nome = {r[0]: r[1].lower() for r in D["razze"]["cani"]}
+    cani = [a for a in D["animali"] if a.get("k") == "animale" and a.get("t", "cane") == "cane"]
+    if len(cani) < 50: return sfida(D, rng, st)
+    per = {}
+    for a in cani:
+        if a.get("razza") and a["razza"] != "meticcio": per.setdefault(a.get("r"), Counter())[a["razza"]] += 1
+    cand = [(r, c, per[r].most_common(1)[0][0]) for r, c in CAPOLUOGHI if per.get(r) and per[r].most_common(1)[0][1] >= 3]
+    if len(cand) < 3: return sfida(D, rng, st)
+    scelte = [cand[0], cand[len(cand) // 2], cand[-1]]  # nord, centro, sud o isole
+    pct = round(100 * sum(1 for a in cani if a.get("razza") == "meticcio") / len(cani))
+    cane, _ = esempio(rng, D)
+    frasi = [
+        ("Ogni regione ha la sua razza. La tua?", {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": c, "testo": nome.get(k, k).capitalize(), "colore": "d", "t": 0.3 + 0.35 * i} for i, (_, c, k) in enumerate(scelte)]}),
+        (f"In {scelte[0][0]} vince il {nome.get(scelte[0][2], scelte[0][2])}, in {scelte[-1][0]} il {nome.get(scelte[-1][2], scelte[-1][2])}.", {"tipo": "numero", "grande": nome.get(scelte[0][2], scelte[0][2]).capitalize(), "sotto": f"la razza preferita in {scelte[0][0]} 🐶"}),
+        (f"Ma il re è il meticcio: {pct} su cento.", {"tipo": "numero", "grande": f"{pct}%", "sotto": "dei cani sulla mappa è meticcio ❤️"}),
+        ("E da te? Scrivi la razza del tuo.", {"tipo": "commento", "testo": f"{scelte[1][1]}, {cane['nome']}, {cane['parola']}"}),
+        ("Scrivilo qui sotto!", {"tipo": "chiusura", "testo": "👇 Scrivi città, nome e razza"}),
+    ]
+    did = (f"La razza preferita di ogni regione sulla mappa di Zampe d'Italia: " + ", ".join(f"{r} {nome.get(k, k)}" for r, _, k in scelte) +
+           f". E il re d'Italia è il meticcio: {pct} cani su cento ❤️\n\nNella tua regione vince un'altra razza? Scrivi qui sotto città, nome e razza del tuo: entro 15 minuti si accende sulla mappa col tuo @.")
+    st["copertina"] = {"sopra": "LA RAZZA DI OGNI REGIONE", "grande": f"{pct}%", "sotto": "dei cani d'Italia è meticcio", "domanda": "E nella tua regione? 👇", "tema": "vetrina"}
+    return "LE RAZZE D'ITALIA", frasi, did
+
 def sfida(D, rng, st):
     """Rifà la struttura del lancio (26.910 views, 4.408 commenti): una rivalità che capiscono tutti, cosa scrivere
     mostrato come un commento, il premio subito (la tua cuccia col tuo nome), il posto da Fondatore ancora libero,
@@ -501,7 +550,7 @@ def sfida(D, rng, st):
     st["copertina"] = {"sopra": "CANI vs GATTI", "grande": f"{cani}<br><i>vs</i><br>{gatti}", "sotto": f"I {dietro} stanno perdendo", "domanda": "La tua città li salva? 👇", "tema": "duello"}
     return "CANI vs GATTI", frasi, did
 
-FORMATI = {"sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -565,7 +614,7 @@ def main():
     # in un reel su tre, prima della chiusura, un bonus a rotazione: tagga un amico (+3) oppure seguici
     x = rng.random()
     per_attivita = st.pop("senza_bonus", False)
-    if per_attivita or x > 0.33 or formato == "sfida":  # la sfida ha già la sua richiesta: niente bonus
+    if per_attivita or x > 0.33 or formato in ("sfida", "nomi", "razze"):  # la sfida ha già la sua richiesta: niente bonus
         pass  # una richiesta sola per reel: il bonus (segui, tagga) esce in un reel su tre, gli altri chiudono con «scrivi città, nome e razza»
     elif ORA.date().isoformat() <= "2026-11-02":  # Halloween: il follow regala il costume, lo diciamo in ogni reel
         frasi.insert(len(frasi) - 1, (rng.choice([f"Seguici e scrivi seguo: {PS_P} e il costume di Halloween per il tuo animale sulla mappa!",

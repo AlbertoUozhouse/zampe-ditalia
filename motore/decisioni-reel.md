@@ -28,3 +28,11 @@ Cambiato: nuovo formato `sfida` con la stessa struttura e i numeri di oggi (la s
 Esce sabato 31/10 alle 21:00 al posto della puntata (`una_tantum` in config.json).
 Stasera alle 22:30 esce anche il primo reel con una partita vera di Zampe di corsa (`pronto-corsa_luna`).
 Da guardare: views e commenti ogni 1.000 views della sfida contro la puntata delle 21 del 29/10 (3.077 views, 73 commenti ogni 1.000).
+
+## 30/10/2026 notte — idee nostre, non copiate: i dati degli animali veri
+
+Le case di un gioco simile non hanno nome né razza; i nostri animali sì. Due formati nuovi che raccontano solo dati nostri:
+- `nomi`: i nomi più diffusi (cani: Leo 30, Luna 27, Kira 22; gatti: Luna, Stella, Simba). Chi guarda controlla il nome del suo e lo scrive.
+- `razze`: la razza preferita di ogni regione (meticci a parte) e il meticcio re d'Italia (58 cani su 100). Divide quanto basta per far commentare.
+Escono sabato 31/10 alle 13 (`nomi`) e domenica 1/11 alle 13 (`razze`), al posto del fondatore. Rotazione dei 3 reel di sabato: nomi, gara (si apre con la gara vera), sfida: tre aspetti diversi.
+Da guardare: commenti ogni 1.000 views (questi formati chiedono una risposta personale) e condivisioni.
