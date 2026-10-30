@@ -72,6 +72,9 @@ async function caricaPet() {
 
 // ---------- la sfida tra amici: ?sfida=Luna&p=1234&t=cane&a=golden ----------
 const Q = new URLSearchParams(location.search);
+const OGGI = new Date().toLocaleDateString("sv-SE"); // AAAA-MM-GG
+const GIORNO = /^\d{4}-\d{2}-\d{2}$/.test(Q.get("giorno") || "") ? Q.get("giorno") : null; // percorso del giorno arrivato con una sfida
+const generatore = seme => { let x = (seme % 2147483646) + 1; return () => (x = (x * 16807) % 2147483647) / 2147483647; };
 const SFIDA = Q.has("sfida") && +Q.get("p") > 0 ? { n: Q.get("sfida").slice(0, 20), p: Math.floor(+Q.get("p")), t: Q.get("t") === "gatto" ? "gatto" : "cane" } : null;
 if (SFIDA) { $("#sfidaBanner").hidden = false; $("#sfidaBanner").innerHTML = `⚔️ <b>${esc(SFIDA.n)}</b> ti sfida: batti <b>${SFIDA.p.toLocaleString("it-IT")}</b> punti!`; }
 const RECORD = () => +leggi("gioco:record") || 0;
@@ -162,7 +165,7 @@ function misura() {
   DPR = Math.min(devicePixelRatio || 1, 2);
   cv.width = innerWidth * DPR; cv.height = innerHeight * DPR;
   K = innerHeight / H; W = innerWidth / K;
-  if (W < 480) { K = innerWidth / 480; W = 480; } // telefono in verticale: si vede almeno mezzo schermo di strada
+  if (W < 420) { K = innerWidth / 420; W = 420; } // telefono in verticale: cane grande, ma abbastanza strada davanti per reagire
   costruisciCitta();
 }
 addEventListener("resize", misura);
@@ -251,9 +254,9 @@ function disegnaOsso(c, x, y, oro, t) {
 
 // ---------- partita ----------
 const ANIMALE_X = 120;
-let S = null, ultimo = 0, giro = null, premuto = false, continuato = false;
-function nuovaPartita(daCapo = true) {
-  if (daCapo) { S = { cam: 0, vel: 330, y: 0, vy: 0, salti: 0, tenuto: 0, ostacoli: [], ossi: [], ossiPresi: 0, puntiOssi: 0, doppio: 0, prossimo: 500, fase: 0, t: 0, finita: false, battuto: false, scintille: [] }; continuato = false; }
+let S = null, ultimo = 0, giro = null, premuto = false, continuato = false, giorno = null;
+function nuovaPartita(daCapo = true, delGiorno = giorno) {
+  if (daCapo) { giorno = delGiorno; S = { rnd: giorno ? generatore(D.hash("zampe" + giorno)) : Math.random, cam: 0, vel: 330, y: 0, vy: 0, salti: 0, tenuto: 0, ostacoli: [], ossi: [], ossiPresi: 0, puntiOssi: 0, doppio: 0, prossimo: 500, fase: 0, t: 0, finita: false, battuto: false, scintille: [] }; continuato = false; }
   else { S.finita = false; S.y = 0; S.vy = 0; S.salti = 0; S.ostacoli = S.ostacoli.filter(o => o.x - S.cam > W * .9); }
   $("#inizio").hidden = true; $("#fine").hidden = true; $("#hud").hidden = false;
   if (SFIDA) { $("#bersaglio").hidden = false; }
@@ -262,17 +265,18 @@ function nuovaPartita(daCapo = true) {
 const punti = () => Math.floor(S.cam / 40) + S.puntiOssi;
 
 function genera() {
+  const rand = S.rnd;
   const x = S.cam + W + 40, vel = S.vel;
   const tipi = vel > 420 ? ["idrante", "cono", "vaso", "panchina", "piccione", "idrante"] : ["idrante", "cono", "vaso", "cono"];
-  const k = tipi[Math.floor(Math.random() * tipi.length)], o = OSTACOLI[k];
-  S.ostacoli.push({ k, x, y: o.volo ? TERRA - 92 - Math.random() * 18 : 0 });
-  if (Math.random() < .25 && vel > 480 && !o.volo) S.ostacoli.push({ k: "cono", x: x + o.w + 4, y: 0 }); // coppia: serve il doppio salto o un salto lungo
+  const k = tipi[Math.floor(rand() * tipi.length)], o = OSTACOLI[k];
+  S.ostacoli.push({ k, x, y: o.volo ? TERRA - 92 - rand() * 18 : 0 });
+  if (rand() < .25 && vel > 480 && !o.volo) S.ostacoli.push({ k: "cono", x: x + o.w + 4, y: 0 }); // coppia: serve il doppio salto o un salto lungo
   // ossi: in fila a terra o ad arco sopra l'ostacolo
-  const oro = Math.random() < .07;
-  if (Math.random() < .55) { const n = 3 + Math.floor(Math.random() * 3), arco = Math.random() < .5;
+  const oro = rand() < .07;
+  if (rand() < .55) { const n = 3 + Math.floor(rand() * 3), arco = rand() < .5;
     for (let i = 0; i < n; i++) S.ossi.push({ x: x + (arco ? -40 + i * 26 : 120 + i * 26), y: arco ? TERRA - 70 - Math.sin((i / (n - 1)) * Math.PI) * 50 : TERRA - 22, oro: oro && i === n - 1 }); }
   const minimo = vel * .62 + 110; // spazio sufficiente per atterrare e risaltare
-  S.prossimo = S.cam + W + 40 + minimo + Math.random() * (220 + vel * .4);
+  S.prossimo = S.cam + W + 40 + minimo + rand() * (220 + vel * .4);
 }
 
 function salta() {
@@ -285,7 +289,7 @@ function scintille(x, y, col) { for (let i = 0; i < 10; i++) S.scintille.push({ 
 function passo(ora) {
   const dt = Math.min((ora - ultimo) / 1000, 1 / 20); ultimo = ora;
   if (!S.finita) {
-    S.t += dt; S.vel = Math.min(330 + S.t * 9, 760); S.cam += S.vel * dt; S.fase += dt * S.vel / 26;
+    S.t += dt; S.vel = Math.min(330 + S.t * 9, W < 600 ? 640 : 760); S.cam += S.vel * dt; S.fase += dt * S.vel / 26;
     // salto: tenendo premuto la gravità è più leggera per un attimo
     const g = premuto && S.tenuto > 0 && S.vy < 0 ? 900 : 2300; S.tenuto -= dt;
     S.vy += g * dt; S.y += S.vy * dt; if (S.y >= 0) { S.y = 0; S.vy = 0; S.salti = 0; }
@@ -334,13 +338,15 @@ function aggiornaHud() {
 function fine() {
   S.finita = true; scintille(ANIMALE_X + 20, TERRA + S.y - 30, "#FF6B5C");
   if (navigator.vibrate) try { navigator.vibrate([40, 30, 60]); } catch (e) {}
-  const p = punti(), nuovo = p > RECORD();
+  const p = punti(), nuovo = p > RECORD(), kg = "gioco:giorno:" + giorno, primaOggi = +leggi(kg) || 0;
   if (nuovo) salva("gioco:record", String(p));
+  if (giorno && p > primaOggi) salva(kg, String(p));
   setTimeout(() => {
     $("#hud").hidden = true; $("#fine").hidden = false; $("#copiato").textContent = "";
     $("#finePunti").textContent = p.toLocaleString("it-IT");
     $("#fineTitolo").textContent = nuovo ? "Nuovo record!" : ["Che corsa!", "Ahia!", "Quasi!", "Bella corsa!"][Math.floor(Math.random() * 4)];
     $("#esito").textContent = SFIDA ? (p > SFIDA.p ? `Hai battuto ${SFIDA.n}! Ora sfida qualcun altro.` : `Ti mancano ${(SFIDA.p - p + 1).toLocaleString("it-IT")} punti per battere ${SFIDA.n}.`)
+      : giorno ? (p > primaOggi ? `Il tuo migliore nella sfida del giorno! Mandalo agli amici: stesso percorso per tutti.` : `Nella sfida del giorno il tuo migliore è ${primaOggi.toLocaleString("it-IT")}.`)
       : nuovo ? `${PET.n} ha ${S.ossiPresi} ossi in bocca.` : `Il tuo record è ${RECORD().toLocaleString("it-IT")}.`;
     offriContinua();
     $("#rigioca").focus();
@@ -366,13 +372,17 @@ $("#rigioca").onclick = () => {
   if (adBreak) adBreak({ type: "next", name: "rigioca", beforeAd: () => { $("#velo").hidden = false; }, afterAd: () => { $("#velo").hidden = true; }, adBreakDone: () => { $("#velo").hidden = true; nuovaPartita(); } });
   else nuovaPartita();
 };
-$("#gioca").onclick = () => nuovaPartita();
+$("#gioca").onclick = () => nuovaPartita(true, GIORNO && SFIDA ? GIORNO : null);
+$("#oggi").onclick = () => nuovaPartita(true, OGGI);
+const oggiMio = +leggi("gioco:giorno:" + OGGI) || 0;
+if (oggiMio) $("#oggi").querySelector("small").textContent = `stesso percorso per tutti · il tuo migliore: ${oggiMio.toLocaleString("it-IT")}`;
+if (GIORNO && SFIDA) $("#sfidaBanner").innerHTML += `<br><small>Sul percorso del giorno ${GIORNO.split("-").reverse().join("/")}</small>`;
 
 // ---------- sfida un amico ----------
 $("#sfida").onclick = async () => {
   const p = punti(), u = new URL("gioco.html", location.href);
-  u.search = new URLSearchParams({ sfida: PET.n, p, t: PET.t }).toString();
-  const testo = `🐾 ${PET.n} ha fatto ${p.toLocaleString("it-IT")} punti a Zampe di corsa! Riesci a battermi?`;
+  u.search = new URLSearchParams({ sfida: PET.n, p, t: PET.t, ...(giorno ? { giorno } : {}) }).toString();
+  const testo = `🐾 ${PET.n} ha fatto ${p.toLocaleString("it-IT")} punti ${giorno ? "nella sfida del giorno " : ""}a Zampe di corsa! Riesci a battermi?`;
   if (navigator.share) { try { await navigator.share({ title: "Zampe di corsa", text: testo, url: u.href }); return; } catch (e) { if (e.name === "AbortError") return; } }
   try { await navigator.clipboard.writeText(testo + " " + u.href); $("#copiato").textContent = "Link copiato: incollalo su WhatsApp o in un DM."; }
   catch (e) { $("#copiato").textContent = u.href; }

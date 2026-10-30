@@ -43,6 +43,8 @@ kbd{font:800 11px var(--f-body);border:1px solid var(--muted);border-radius:5px;
 .btn.chiaro{background:transparent;color:var(--cream);border:1.5px solid var(--gold);box-shadow:none}
 .btn.video{display:flex;flex-direction:column;align-items:center;gap:2px;background:linear-gradient(135deg,var(--gold),var(--warm))}
 .btn.video small{font:800 12px var(--f-body);opacity:.75}
+.btn.oggi{display:flex;flex-direction:column;align-items:center;gap:2px}
+.btn.oggi small{font:800 12px var(--f-body);color:var(--muted)}
 .riga{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
 .link{color:var(--muted);font-weight:800;font-size:14px}
 .risultato{display:flex;flex-direction:column;line-height:1}
