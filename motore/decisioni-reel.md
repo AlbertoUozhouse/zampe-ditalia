@@ -10,7 +10,7 @@ Tutti gli altri tra 235 e 3.573 views, commenti scesi a 15-90 ogni 1.000, condiv
 Fasce migliori: 21:00 (puntata 3.573 e 3.077) e 18:00 (fondatore 3.143). Trial Reel 12:30/15:30: 236 e 235 views.
 
 Cambiato:
-- da 5 reel al giorno (2 Trial Reel) a 2: 18:00 gara, 21:00 puntata;
+- da 5 reel al giorno (2 Trial Reel) a 3: 13:00 fondatore, 18:00 gara, 21:00 puntata;
 - voce al massimo 40 parole (circa 15 s) invece di 70;
 - prima frase = gancio rivolto a chi guarda (domanda o sfida), non una statistica;
 - didascalia con una richiesta sola (+ il link al gioco) al posto di 8;
