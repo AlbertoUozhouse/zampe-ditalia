@@ -36,7 +36,9 @@ def main():
         st = {}
     oggi = ora.date().isoformat()
     fatti = st.setdefault("lanciati", {}).setdefault(oggi, [])
-    for hhmm, formato in sorted(cfg["orari"].items()):
+    orari = dict(cfg["orari"])
+    orari.update({k[11:]: v for k, v in cfg.get("una_tantum", {}).items() if k[:10] == oggi})  # reel di un giorno solo, «AAAA-MM-GG HH:MM»
+    for hhmm, formato in sorted(orari.items()):
         h, m = map(int, hhmm.split(":"))
         inizio = ora.replace(hour=h, minute=m, second=0, microsecond=0)
         if hhmm not in fatti and inizio <= ora < inizio + timedelta(minutes=50):

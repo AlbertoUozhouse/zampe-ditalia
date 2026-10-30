@@ -50,9 +50,14 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji >/dev/null
           pip install -q numpy
       - name: Copione
+        if: ${{ !startsWith(inputs.formato, 'pronto-') }}
         run: python3 motore/copione.py "${{ inputs.formato }}" /tmp/copione.json
       - name: Video
+        if: ${{ !startsWith(inputs.formato, 'pronto-') }}
         run: python3 reel/costruisci.py /tmp/copione.json /tmp/reel
+      - name: Reel già montato
+        if: ${{ startsWith(inputs.formato, 'pronto-') }}
+        run: F="${{ inputs.formato }}"; python3 reel/pronto.py "${F#pronto-}" /tmp/copione.json /tmp/reel
       - name: Carica sul sito
         id: carica
         run: |
