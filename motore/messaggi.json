@@ -887,29 +887,7 @@
 "ffcb46312197b698",
 "ffd691c69733657e"
 ],
-"in_attesa": [
-{
-"igsid": "1652447290003472",
-"url": [
-"https://zampeditalia.it/cartoline/5ee734ba44e071f6.png"
-],
-"t": 1793367372.7512157
-},
-{
-"igsid": "1693351255739165",
-"url": [
-"https://zampeditalia.it/cartoline/e50c3a4700a7659d.png"
-],
-"t": 1793367372.7512171
-},
-{
-"storia": "cartoline/065c85837bb91c18.png",
-"url": [
-"https://zampeditalia.it/cartoline/065c85837bb91c18.png"
-],
-"t": 1793367344.0226104
-}
-],
+"in_attesa": [],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
