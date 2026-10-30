@@ -67,6 +67,7 @@ body{background:var(--night);color:var(--cream);font-family:var(--f-body);overfl
 .tabs{display:flex;gap:4px;background:var(--panel);border:1.5px solid rgba(85,119,201,.55);border-radius:999px;padding:4px;max-width:100%;overflow-x:auto;scrollbar-width:none}
 .tab{border:0;background:transparent;color:var(--cream);font:800 14px var(--f-body);padding:8px 14px;border-radius:999px;cursor:pointer;white-space:nowrap}
 .tab[aria-selected="true"]{background:var(--gold);color:#2A1606}
+a.tab{text-decoration:none}.tab.gioca{color:var(--gold)}
 
 /* Pannelli */
 .sheet{position:fixed;z-index:25;left:50%;transform:translateX(-50%);bottom:calc(170px + env(safe-area-inset-bottom,0px));
