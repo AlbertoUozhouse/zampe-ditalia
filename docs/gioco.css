@@ -64,5 +64,16 @@ kbd{font:800 11px var(--f-body);border:1px solid var(--muted);border-radius:5px;
 .sfida-banner{background:linear-gradient(135deg,rgba(255,197,92,.22),rgba(255,107,92,.18));border:1.5px solid var(--gold);border-radius:14px;padding:10px 14px;font-weight:800;font-size:15px;width:100%}
 .sfida-banner b{color:var(--gold)}
 
+.registra{display:flex;flex-direction:column;gap:6px;align-items:center;width:100%;background:rgba(255,197,92,.1);border:1.5px dashed rgba(255,197,92,.6);border-radius:14px;padding:10px 12px;font-size:13.5px;font-weight:700}
+.registra b{font:800 16px var(--f-display);color:var(--gold)}
+.codice{font:800 22px ui-monospace,Menlo,monospace;letter-spacing:1px;color:var(--cream);background:rgba(0,0,0,.35);border:1px solid rgba(255,244,222,.25);border-radius:10px;padding:6px 14px;cursor:pointer}
+.registra .btn.piccolo{grid-column:auto}
+.podio{width:100%;text-align:left}
+.podio h3{margin:0 0 6px;font:800 16px var(--f-display);color:var(--gold);text-align:center}
+.podio ol{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px;font-weight:800;font-size:14px}
+.podio li{display:flex;gap:8px;align-items:baseline;background:rgba(255,255,255,.05);border-radius:9px;padding:5px 10px}
+.podio li span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.podio li b{color:var(--gold);font-variant-numeric:tabular-nums}
+.podio small{display:block;text-align:center;color:var(--muted);font-weight:700;margin-top:6px}
 .pubblicita{position:fixed;inset:0;z-index:30;display:grid;place-items:center;background:rgba(6,11,26,.85);font:800 18px var(--f-display)}
 @media (prefers-reduced-motion:reduce){.doppio{animation:none}}

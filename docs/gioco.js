@@ -78,6 +78,20 @@ const GIORNO = /^\d{4}-\d{2}-\d{2}$/.test(Q.get("giorno") || "") ? Q.get("giorno
 const generatore = seme => { let x = (seme % 2147483646) + 1; return () => (x = (x * 16807) % 2147483647) / 2147483647; };
 const SFIDA = Q.has("sfida") && +Q.get("p") > 0 ? { n: Q.get("sfida").slice(0, 20), p: Math.floor(+Q.get("p")), t: Q.get("t") === "gatto" ? "gatto" : "cane" } : null;
 if (SFIDA) { $("#sfidaBanner").hidden = false; $("#sfidaBanner").innerHTML = `⚔️ <b>${esc(SFIDA.n)}</b> ti sfida: batti <b>${SFIDA.p.toLocaleString("it-IT")}</b> punti!`; }
+// il record entra nella classifica settimanale commentando un reel: il motore dei commenti sa chi scrive (motore/commenti.py)
+const codiceCorsa = p => D.hash("zampe-corsa|" + p).toString(36).slice(-2).toUpperCase();
+const testoCorsa = p => `CORSA ${p} ${codiceCorsa(p)}`;
+async function caricaPodio() {
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); const j = await r.json(); const c = j.corsa;
+    if (!c || !(c.classifica.length || c.scorsa.length)) return;
+    const riga = ([u, p], i) => `<li>${["🥇", "🥈", "🥉"][i] || i + 1 + "."}<span>@${esc(u)}</span><b>${(+p).toLocaleString("it-IT")}</b></li>`;
+    $("#podio").innerHTML = (c.classifica.length ? `<h3>🏆 Classifica della settimana</h3><ol>${c.classifica.slice(0, 10).map(riga).join("")}</ol>` : "")
+      + (c.scorsa.length ? `<small>Settimana scorsa: ${c.scorsa.map(([u]) => "@" + esc(u)).join(" · ")}</small>` : "")
+      + `<small>Per entrare: a fine partita copia il codice e commentalo sotto un reel.</small>`;
+    $("#podio").hidden = false;
+  } catch (e) {}
+}
+caricaPodio();
 const RECORD = () => +leggi("gioco:record") || 0;
 const scriviRecord = () => { $("#recordInizio").textContent = RECORD() ? `Il tuo record: ${RECORD().toLocaleString("it-IT")} punti` : ""; };
 scriviRecord();
@@ -348,7 +362,8 @@ function fine() {
     $("#fineTitolo").textContent = nuovo ? "Nuovo record!" : ["Che corsa!", "Ahia!", "Quasi!", "Bella corsa!"][Math.floor(Math.random() * 4)];
     $("#esito").textContent = SFIDA ? (p > SFIDA.p ? `Hai battuto ${SFIDA.n}! Ora sfida qualcun altro.` : `Ti mancano ${(SFIDA.p - p + 1).toLocaleString("it-IT")} punti per battere ${SFIDA.n}.`)
       : giorno ? (p > primaOggi ? `Il tuo migliore nella sfida del giorno! Mandalo agli amici: stesso percorso per tutti.` : `Nella sfida del giorno il tuo migliore è ${primaOggi.toLocaleString("it-IT")}.`)
-      : nuovo ? `${PET.n} ha ${S.ossiPresi} ossi in bocca.` : `Il tuo record è ${RECORD().toLocaleString("it-IT")}.`;
+      : nuovo ? (S.ossiPresi ? `${PET.n} ha ${S.ossiPresi} ossi in bocca.` : `Prendi gli ossi: ognuno vale 10 punti.`) : `Il tuo record è ${RECORD().toLocaleString("it-IT")}.`;
+    $("#codice").textContent = testoCorsa(p);
     offriContinua();
     $("#rigioca").focus();
   }, 650);
@@ -360,6 +375,7 @@ function offriContinua() {
   const b = $("#continua"); b.hidden = true; mostraVideo = null;
   if (continuato) return;
   if (!adBreak) { b.hidden = false; b.querySelector("small").textContent = "una volta a partita"; return; }
+  setTimeout(() => { if (!mostraVideo && !continuato && !$("#fine").hidden) { b.hidden = false; b.querySelector("small").textContent = "una volta a partita"; } }, 2500); // Google non risponde: continua gratis
   adBreak({ type: "reward", name: "continua",
     beforeAd: () => { $("#velo").hidden = false; },
     afterAd: () => { $("#velo").hidden = true; },
@@ -389,6 +405,11 @@ $("#sfida").onclick = async () => {
   try { await navigator.clipboard.writeText(testo + " " + u.href); $("#copiato").textContent = "Link copiato: incollalo su WhatsApp o in un DM."; }
   catch (e) { $("#copiato").textContent = u.href; }
 };
+
+const copiaCodice = async () => { try { await navigator.clipboard.writeText($("#codice").textContent); $("#copiato").textContent = "Codice copiato: incollalo in un commento sotto l'ultimo reel."; }
+  catch (e) { const r = document.createRange(); r.selectNodeContents($("#codice")); getSelection().removeAllRanges(); getSelection().addRange(r); $("#copiato").textContent = "Copia il codice e incollalo in un commento."; } };
+$("#codice").onclick = copiaCodice;
+$("#vaiIg").onclick = () => { copiaCodice(); }; // il link si apre comunque: il codice è già negli appunti
 
 // ---------- comandi ----------
 const giu = e => { if (e.target.closest && e.target.closest("button,a,input,select,.schermo")) return; premuto = true; salta(); e.preventDefault?.(); };

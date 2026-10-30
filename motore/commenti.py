@@ -452,6 +452,11 @@ class Gioco:
             tot[coppia.split(">")[0]] = tot.get(coppia.split(">")[0], 0) + 1
         self.dati["inviti"] = {"giorno": oggi, "oggi": sorted(ig.get(oggi, {}).items(), key=lambda x: -x[1])[:10],
                                "totale": sorted(tot.items(), key=lambda x: -x[1])[:10]}
+        tutte = self.stato.get("corsa", {})
+        ora_s = settimana(); prima = sorted(k for k in tutte if k < ora_s)[-1:]
+        self.stato["corsa"] = {k: v for k, v in tutte.items() if k == ora_s or k in prima}
+        top = lambda k, n: sorted(self.stato["corsa"].get(k, {}).items(), key=lambda x: -x[1])[:n]
+        self.dati["corsa"] = {"settimana": ora_s, "classifica": top(ora_s, 20), "scorsa": top(prima[0], 3) if prima else []}
         self.elezione()
         self.derby()
         vestito = "halloween" if oggi <= HALLOWEEN_FINO else "lucine"  # il regalo per chi ci segue
@@ -663,6 +668,14 @@ class Gioco:
                 giorno[chi] = giorno.get(chi, 0) + 1  # Sfida degli inviti: chi porta più amici oggi
         return premiati
 
+    def corsa(self, utente, punti, quando=None):
+        """Il record della settimana a Zampe di corsa (solo gloria). Restituisce (posto, migliorato)."""
+        sett = self.stato.setdefault("corsa", {}).setdefault(settimana(quando), {})
+        u = utente.lower(); migliorato = punti > sett.get(u, 0)
+        if migliorato: sett[u] = punti; self.cambiato = True
+        posto = 1 + sum(1 for v in sett.values() if v > sett[u])
+        return posto, migliorato
+
     def segue(self, utente):
         """+10 una volta sola a chi scrive SEGUO (l'API non dice chi ci segue: vale sulla fiducia). Restituisce la frase da usare."""
         st = self.stato.setdefault("seguono", {})
@@ -779,6 +792,29 @@ def applica_correzioni(gioco):
     return rifai
 
 SPECIE_RE = r"furett|conigli|criceti|criceto|pappagall|uccell|cavall|tartarug|pesc|porcellin|asin|capr|galli|gec|lepr|rettil|serpent|iguan|cincill|maial"
+
+# ---------- Zampe di corsa: il record del minigioco arriva come commento «CORSA 1234 K7» ----------
+RE_CORSA = re.compile(r"(?i)\bcorsa\s*:?\s*(\d{1,6})\s+([a-z0-9]{2})\b")
+
+def codice_corsa(punti):
+    """Due caratteri legati al punteggio, come codiceCorsa() in docs/gioco.js: scoraggia chi si inventa i punti."""
+    h = 2166136261
+    for ch in f"zampe-corsa|{punti}":
+        h = ((h ^ ord(ch)) * 16777619) & 0xFFFFFFFF
+    cifre, out = "0123456789abcdefghijklmnopqrstuvwxyz", ""
+    while h: h, r = divmod(h, 36); out = cifre[r] + out
+    return out[-2:].upper()
+
+def corsa_valida(testo):
+    """(punti, giusto) per un commento CORSA, oppure None."""
+    m = RE_CORSA.search(testo or "")
+    if not m: return None
+    return int(m.group(1)), m.group(2).upper() == codice_corsa(int(m.group(1)))
+
+def settimana(ts=None):
+    d = datetime.now(timezone.utc) if not ts else datetime.fromisoformat(ts.replace("+0000", "+00:00"))
+    a, w, _ = d.isocalendar()
+    return f"{a}-W{w:02d}"
 
 def solo_tag(testo):
     return bool(re.fullmatch(r"\s*(@[\w.]+[\s,]*)+", testo or ""))
@@ -979,7 +1015,8 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
         nuovi_c = [c for c in suoi if c["id"] not in gioco.visti or c["id"] in rifai]
         if not nuovi_c:
             continue
-        letto = vuoto() if all(solo_tag(c.get("text", "")) for c in nuovi_c) else leggi_fn(u, suoi)
+        letto = vuoto() if all(solo_tag(c.get("text", "")) or RE_CORSA.fullmatch(c.get("text", "").strip()) for c in nuovi_c) \
+            else leggi_fn(u, [{**c, "text": RE_CORSA.sub("", c.get("text", ""))} for c in suoi])
         if letto is None:
             print(f"@{u}: il lettore non ha risposto, riprovo al prossimo giro", file=sys.stderr)
             continue
@@ -990,6 +1027,16 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
                 except Exception as e: print(f"risposta vecchia non cancellata ({c['id']}): {e}", file=sys.stderr)
         nuovi += len(nuovi_c)
         ts_di = lambda cid: next((c.get("timestamp") for c in suoi if c["id"] == cid), None) or nuovi_c[-1].get("timestamp") or datetime.now(timezone.utc).isoformat()
+        righe_corsa = []
+        for c in nuovi_c:
+            cv = corsa_valida(c.get("text", ""))
+            if not cv: continue
+            if not cv[1]:
+                righe_corsa.append("🕹️ Il codice del record non torna: copialo così com'è dalla fine della partita a Zampe di corsa."); continue
+            posto, meglio = gioco.corsa(u, cv[0], c.get("timestamp"))
+            righe_corsa.append(f"🏁 Record registrato: {cv[0]} punti a Zampe di corsa! Sei {posto}° in Italia questa settimana. "
+                               + ("Sei sul podio: la classifica è su zampeditalia.it/gioco 🏆" if posto <= 3 else "Rigioca e manda la sfida a un amico per salire ⚔️")
+                               if meglio else f"🏁 {cv[0]} punti! Il tuo record della settimana resta più alto: sei {posto}°. Riprova 💪")
         nuovi_a = []
         if letto["rimuovi"]:
             chiave, par, _ = gioco.applica({"k": "rimuovi"}, u, None)
@@ -1012,7 +1059,7 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
         # inviti: chi tagga amici prende +3 per ognuno che poi commenta; a chi tagga si risponde sempre
         taggati = [a for c in nuovi_c for a in gioco.tag(u, c.get("text", ""))]
         premiati = gioco.premia_inviti(u)
-        extra = []
+        extra = righe_corsa[-1:]
         if taggati:
             extra.append(frase("tag" if gioco.ha_luce(u) else "tag_senza_luce", amici=", ".join("@" + a for a in taggati[:5])))
         if premiati:
