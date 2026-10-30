@@ -17,3 +17,14 @@ Cambiato:
 - bonus (SEGUO, inviti) in un reel su tre invece che in tutti.
 
 Da guardare nei prossimi 3 giorni: views medie sopra 3.000, visione media sopra il 50% della durata, commenti ogni 1.000 views in salita.
+
+## 30/10/2026 sera — formato «sfida», rifatto sul reel da 26.910 views
+
+Il lancio del 26/10 funzionava per cinque motivi: una rivalità che capiscono tutti nel primo secondo («Cani contro Gatti, quale città vince?»),
+cosa scrivere mostrato come un commento, il premio subito (la cuccia col tuo nome), il posto da Fondatore ancora libero, e la stessa domanda in chiusura.
+In più ogni commento riceveva una risposta, che raddoppiava i commenti visibili.
+
+Cambiato: nuovo formato `sfida` con la stessa struttura e i numeri di oggi (la squadra che perde, i comuni ancora spenti), senza bonus in mezzo.
+Esce sabato 31/10 alle 21:00 al posto della puntata (`una_tantum` in config.json).
+Stasera alle 22:30 esce anche il primo reel con una partita vera di Zampe di corsa (`pronto-corsa_luna`).
+Da guardare: views e commenti ogni 1.000 views della sfida contro la puntata delle 21 del 29/10 (3.077 views, 73 commenti ogni 1.000).

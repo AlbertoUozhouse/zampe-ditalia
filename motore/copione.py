@@ -474,7 +474,31 @@ def presidente(D, rng, st):
     st["copertina"] = {"sopra": "🇮🇹 IL PRIMO PRESIDENTE" if len(pres) == 1 else "🇮🇹 I PRESIDENTI", "grande": p["n"], "sotto": f"{p['pres']} · {libere} regioni libere", "tema": "attivita"}
     return "IL PRESIDENTE", frasi, did
 
-FORMATI = {"presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+def sfida(D, rng, st):
+    """Rifà la struttura del lancio (26.910 views, 4.408 commenti): una rivalità che capiscono tutti, cosa scrivere
+    mostrato come un commento, il premio subito (la tua cuccia col tuo nome), il posto da Fondatore ancora libero,
+    e la stessa domanda alla fine così il reel si riguarda. Cambia la squadra che insegue, per non ripetersi."""
+    cani, gatti = D["cani"], D["gatti"]
+    dietro = "gatti" if gatti < cani else "cani"
+    cane, gatto = esempio(rng, D)
+    ex = gatto if dietro == "gatti" else cane
+    top = sorted(D["per_citta"].items(), key=lambda x: -sum(x[1].values()))[:6]
+    a, b = [c for c, _ in rng.sample(top, 2)] if len(top) >= 2 else ("Milano", "Napoli")
+    liberi = max(0, 7896 - len(D["per_citta"]))  # comuni italiani senza ancora un animale
+    frasi = [
+        (f"Cani contro Gatti: i {dietro} stanno perdendo.", {"tipo": "duello", "sinistra": {"titolo": "Cani", "valore": str(cani)}, "destra": {"titolo": "Gatti", "valore": str(gatti)}}),
+        ("Quale città li salva?", {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": a, "testo": a + "?", "colore": "d", "t": 0.3}, {"nome": b, "testo": b + "?", "colore": "c", "t": 0.7}]}),
+        ("Scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{a}, {ex['nome']}, {ex['parola']}"}),
+        ("E si accende col suo nome.", {"tipo": "gatto" if dietro == "gatti" else "cuccia", "nome": ex["nome"], "razza": ex["razza"], "seme": ex["seme"]}),
+        (f"In {liberi} comuni non c'è ancora nessuno: il primo è Fondatore.", {"tipo": "numero", "grande": str(liberi), "sotto": "comuni ancora spenti: il primo diventa Fondatore 👑"}),
+        ("Allora: cani o gatti? Scrivi la tua città!", {"tipo": "chiusura", "testo": "👇 Scrivi città, nome e razza"}),
+    ]
+    did = (f"Cani contro Gatti: {cani} a {gatti}. I {dietro} stanno perdendo: quale città li salva? 🐶🐱\n\n"
+           f"Scrivi qui sotto città, nome e razza del tuo animale (per esempio «{a}, {ex['nome']}, {ex['parola']}»): entro 15 minuti si accende sulla mappa col tuo @.")
+    st["copertina"] = {"sopra": "CANI vs GATTI", "grande": f"{cani}<br><i>vs</i><br>{gatti}", "sotto": f"I {dietro} perdono: salvali tu", "tema": "duello"}
+    return "CANI vs GATTI", frasi, did
+
+FORMATI = {"sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -538,7 +562,7 @@ def main():
     # in un reel su tre, prima della chiusura, un bonus a rotazione: tagga un amico (+3) oppure seguici
     x = rng.random()
     per_attivita = st.pop("senza_bonus", False)
-    if per_attivita or x > 0.33:
+    if per_attivita or x > 0.33 or formato == "sfida":  # la sfida ha già la sua richiesta: niente bonus
         pass  # una richiesta sola per reel: il bonus (segui, tagga) esce in un reel su tre, gli altri chiudono con «scrivi città, nome e razza»
     elif ORA.date().isoformat() <= "2026-11-02":  # Halloween: il follow regala il costume, lo diciamo in ogni reel
         frasi.insert(len(frasi) - 1, (rng.choice([f"Seguici e scrivi seguo: {PS_P} e il costume di Halloween per il tuo animale sulla mappa!",
