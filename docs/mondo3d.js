@@ -285,6 +285,13 @@ async function apri(v, opz = {}) {
     const nome = ETICHETTA(THREE, (d.acc?.includes("corona") ? "👑 " : "") + d.n, d.t === "gatto" ? { fg: "#2F3A10", bg: "#E9F2C4", bordo: "#3D4A18" } : {});
     nome.scale.multiplyScalar(0.7); nome.position.set(0, 3.1 * k + 0.2, 0); g.add(nome);
     pet.push({ d, g, s, base, cane, fase: (d.seed % 628) / 100 });
+    if (d.pres) { // il Presidente di regione: fascia tricolore e cartello
+      const fascia = new THREE.Group(), tri = ["#009246", "#F4F5F0", "#CE2B37"];
+      const r0 = d.t === "gatto" ? 0.27 : 0.33; // tre anelli vicini fanno una fascia piatta, di traverso sul petto
+      tri.forEach((c, i) => fascia.add(new THREE.Mesh(new THREE.TorusGeometry(r0 + i * 0.03, 0.017, 6, 40), new THREE.MeshStandardMaterial({ color: c, roughness: 0.6 }))));
+      fascia.rotation.set(Math.PI / 2, 0, 0.55); fascia.position.set(0, d.t === "gatto" ? 0.42 : 0.58, -0.04); s.add(fascia);
+      if (opz.bello !== d.id) { const cart = ETICHETTA(THREE, "🇮🇹 " + d.pres, { size: 40, fg: "#FFFFFF", bg: "#0B6B3A", bordo: "#CE2B37" }); cart.position.set(0, 3.9 * k + 0.3, 0); g.add(cart); }
+    }
     if (opz.bello === d.id) { // Il più bello d'Italia: piedistallo d'oro, faro dall'alto e coppa che gira
       const ped = new THREE.Mesh(new THREE.CylinderGeometry(0.9 * k, 1 * k, 0.25, 32), oro(THREE)); ped.position.set(0, 0.3, 0); g.add(ped); s.position.y += 0.25; base.y += 0.25;
       const faro = new THREE.SpotLight("#FFE9B8", 60, 18, 0.35, 0.5, 1.4); faro.position.set(0, 12, base.z); faro.target = s; g.add(faro);

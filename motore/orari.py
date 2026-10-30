@@ -47,7 +47,7 @@ def main():
             STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
             if formato.startswith("attivita"):  # col negozio aperto, quello slot fa il reel degli accessori
                 try:
-                    if os.environ.get("STRIPE_KEY") and any(str(u).startswith("https://") for u in cfg.get("negozio", {}).values()): formato = "negozio" + formato[len("attivita"):]
+                    if os.environ.get("STRIPE_KEY") and any(str(u).startswith("https://") for u in cfg.get("negozio", {}).values()): formato = ("presidente" if ora.toordinal() % 2 else "negozio") + formato[len("attivita"):]  # un giorno i Presidenti, uno il negozio
                 except AttributeError: pass
             print(formato)
             return

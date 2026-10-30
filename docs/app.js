@@ -109,7 +109,7 @@ function ville() {
     if (!v) VILLE.set(key, v = { key, nome: d.c, ll: L.latLng(d.lat, d.lng), lista: [], stelle: [] });
     (d.k === "stella" ? v.stelle : v.lista).push(d);
   }
-  const ord = d => (d.capo ? 0 : d.fondatore ? 1 : d.vestito ? 2 : 3); // chi ci segue sta in prima fila, vicino alla piazza
+  const ord = d => (d.pres || d.capo ? 0 : d.fondatore ? 1 : d.vestito ? 2 : 3); // chi ci segue sta in prima fila, vicino alla piazza
   for (const v of VILLE.values()) {
     v.lista.sort((a, b) => ord(a) - ord(b) || b.pt - a.pt || (a.ts || "").localeCompare(b.ts || ""));
     const P = Paese.posti(v.lista.length), fondo = P.raggio * Paese.SQ; v.R = P.raggio + 110;
@@ -186,6 +186,7 @@ function popup(d) {
   return `<div class="pop"><h3>${d.k === "stella" ? "✦" : icona(d)} ${esc(d.n)}</h3><div class="k">${tipo}</div>
     <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>
     ${d.k === "stella" ? "" : `<div>${d.pt} ${d.pt === 1 ? "punto" : "punti"}${d.rank ? ` · ${d.rank}° in Italia` : ""}</div>${barra(d.pt)}`}
+    ${d.pres ? `<span class="role">🇮🇹 ${esc(d.pres)}</span>` : ""}
     ${d.capo ? `<span class="role">🐺 ${esc(d.capo)}</span>` : d.testa ? `<span class="role">🐺 In testa a ${esc(d.c)}: domenica alle 21 il Capobranco</span>` : ""}
     ${BELLO?.id === d.id ? `<span class="role">🏆 Il più bello d'Italia</span>` : ""}
     ${ruolo ? `<span class="role">👑 ${esc(ruolo)}</span>` : ""}

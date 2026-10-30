@@ -446,7 +446,35 @@ def negozio(D, rng, st):
     st["copertina"] = {"sopra": "🛍️ IL NEGOZIO", "grande": "Da 1 €", "sotto": "Il più bello d'Italia? 🏆", "tema": "attivita"}
     return "IL NEGOZIO", frasi, did
 
-FORMATI = {"negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+def presidente(D, rng, st):
+    """Il Presidente di regione (commenti.py): chi ha più accessori nella sua regione. Il reel mostra chi c'è e quante regioni sono libere."""
+    pres = sorted([a for a in D["animali"] if a.get("pres") and a["u"].lower() not in ESCLUSI], key=lambda a: (-len(a.get("acc", [])), -a.get("pt", 0)))
+    if not pres: return negozio(D, rng, st)
+    NOMI = {"osso": "l'osso d'oro", "fiocco": "il fiocco", "collare": "il collare d'oro", "corona": "la corona", "fuochi": "i fuochi d'artificio"}  # come motore/negozio.py
+    p, libere = pres[0], 20 - len(pres)
+    cosa = " e ".join(NOMI[k] for k in p.get("acc", []) if k in NOMI) or "un accessorio"
+    razza = p.get("razza_testo") or ("gatto" if p.get("t") == "gatto" else "cane")
+    cane, gatto = esempio(rng, D)
+    frasi = [("Abbiamo il primo Presidente di regione!" if len(pres) == 1 else f"In Italia ci sono {len(pres)} Presidenti di regione.", {"tipo": "numero", "grande": "🇮🇹", "sotto": "il Presidente di regione"}),
+             (f"È {p['n']}, {razza} di {p['c']}: con {cosa} è {p['pres']}.", scena_di(p, f"{p['pres']} 🇮🇹"))]
+    if len(pres) > 1:
+        frasi.append(("Ecco gli altri Presidenti.", {"tipo": "classifica", "titolo": "I Presidenti 🇮🇹", "righe": [{"nome": f"{a['n']} · @{a['u']}", "valore": a["r"]} for a in pres[:5]], "utente": p["u"]}))
+    frasi += [(f"{'Altre' if len(pres) == 1 else 'Ancora'} {libere} regioni non hanno un Presidente.", {"tipo": "numero", "grande": str(libere), "sotto": "regioni senza Presidente 👀"}),
+              ("Chi ha più accessori nella sua regione diventa Presidente. Si parte da 1 euro.", {"tipo": "numero", "grande": "1 €", "sotto": "🦴 1 € · 🎀 1,49 · 📿 1,99 · 👑 2,99 · 🎆 3,99"}),
+              ("E se qualcuno ti supera, la fascia passa subito a lui!", {"tipo": "numero", "grande": "⚡", "sotto": "chi ti supera ti toglie la fascia"}),
+              ("Non sei ancora sulla mappa? Scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
+              ("Il negozio è nel link in bio!", {"tipo": "chiusura", "testo": "🇮🇹 Diventa Presidente: link in bio"})]
+    st["tag_extra"] = [a["u"] for a in pres[:5]]
+    did = (f"🇮🇹 {'Abbiamo il primo Presidente di regione' if len(pres) == 1 else 'I Presidenti di regione di Zampe d’Italia'}: {p['n']} di @{p['u']}, {razza} di {p['c']}, con {cosa} è {p['pres']}!\n\n"
+           + ("".join(f"🇮🇹 {a['n']} di @{a['u']}: {a['pres']}\n" for a in pres[1:5]) + "\n" if len(pres) > 1 else "")
+           + f"{'Altre' if len(pres) == 1 else 'Ancora'} {libere} regioni non hanno un Presidente 👀 Chi ha più accessori nella sua regione prende la fascia tricolore sulla mappa e nel paese 3D, "
+           "e se qualcuno lo supera la fascia passa subito a lui ⚡\n\n"
+           "🛍️ Accessori da 1 €: zampeditalia.it (link in bio) → «Il mio» → cerca il tuo @.\n\n"
+           f"Non sei ancora sulla mappa? Scrivi qui sotto città, nome e razza (per esempio «{rng.choice(CITTA)}, {gatto['nome']}, {gatto['parola']}»).")
+    st["copertina"] = {"sopra": "🇮🇹 IL PRIMO PRESIDENTE" if len(pres) == 1 else "🇮🇹 I PRESIDENTI", "grande": p["n"], "sotto": f"{p['pres']} · {libere} regioni libere", "tema": "attivita"}
+    return "IL PRESIDENTE", frasi, did
+
+FORMATI = {"presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide

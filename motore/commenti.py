@@ -462,6 +462,7 @@ class Gioco:
         import negozio
         self.dati["negozio"] = negozio.leggi(self.stato, self.animali)  # gli accessori pagati e i link del negozio per il sito
         self.sfilata()
+        self.presidenti()
         self.missioni()
         ora = time.time()
         self.stato["risposte"] = [t for t in self.stato["risposte"] if ora - t < 3600]
@@ -485,6 +486,27 @@ class Gioco:
                 if v: a[k] = v
                 else: a.pop(k, None)
         b = boost_del_giorno(); self.dati["boost"] = {"frase": b[2], "x": b[1], "tipi": list(b[0])}
+
+    def presidenti(self):
+        """Il Presidente di regione: l'animale con più accessori della sua regione (a parità, più punti). Il titolo passa subito
+        a chi lo supera, a parità resta a chi c'era. Ogni nuovo Presidente diventa una storia su @zampeditalia. Solo gloria, come la Sfilata."""
+        pres = self.stato.setdefault("presidenti", {})
+        per = {}
+        for a in self.animali:
+            a.pop("pres", None)
+            if a.get("acc") and a.get("r") in DI_REGIONE and a["k"] in ("animale", "sogno") and a["u"].lower() not in ("thor_golden_life", "albertomarchesin"):
+                per.setdefault(a["r"], []).append(a)
+        for r in list(pres):
+            if r not in per: del pres[r]
+        for r, gara in per.items():
+            gara.sort(key=lambda a: (-len(a["acc"]), -a.get("pt", 0), a.get("ts", "")))
+            v = next((a for a in gara if a["id"] == pres.get(r)), None)
+            if not v or len(v["acc"]) < len(gara[0]["acc"]):
+                v = gara[0]; pres[r] = v["id"]
+                self.stato.setdefault("negozio_storie", []).append({"id": v["id"], "k": "presidente"})
+                print("nuovo Presidente di regione")
+            v["pres"] = "Presidente " + DI_REGIONE[r]
+        self.dati["presidenti"] = dict(pres)
 
     def sfilata(self):
         """La Sfilata: vince l'animale con più accessori (a parità, più punti). Ogni domenica alle 21 diventa «Il più bello d'Italia»
@@ -878,6 +900,10 @@ def per_persona(commenti, mio_username, visti=None):
         v.sort(key=lambda c: c.get("timestamp", ""))
     return per
 
+DI_REGIONE = {"Abruzzo": "dell'Abruzzo", "Basilicata": "della Basilicata", "Calabria": "della Calabria", "Campania": "della Campania", "Emilia-Romagna": "dell'Emilia-Romagna",
+              "Friuli-Venezia Giulia": "del Friuli-Venezia Giulia", "Lazio": "del Lazio", "Liguria": "della Liguria", "Lombardia": "della Lombardia", "Marche": "delle Marche",
+              "Molise": "del Molise", "Piemonte": "del Piemonte", "Puglia": "della Puglia", "Sardegna": "della Sardegna", "Sicilia": "della Sicilia", "Toscana": "della Toscana",
+              "Trentino-Alto Adige": "del Trentino-Alto Adige", "Umbria": "dell'Umbria", "Valle d'Aosta": "della Valle d'Aosta", "Veneto": "del Veneto"}  # i Presidenti di regione
 ESCLUSI = {"thor_golden_life", "albertomarchesin"}  # come in copione.py: i nostri account
 SOLLECITI_GIRO = 8  # ogni 10 minuti: circa 48 all'ora, piano per non sembrare spam
 SOLLECITO = ["Ciao! {n} brilla già sulla mappa 🌙", "{n} è sulla mappa d'Italia ✨", "Ciao! La luce di {n} è accesa 🐾"]

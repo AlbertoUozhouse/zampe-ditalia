@@ -97,7 +97,7 @@ def main():
     arg = [a for a in sys.argv[1:] if not a.startswith("--")]
     grazie = "--grazie" in sys.argv  # versione per la storia di @zampeditalia: ringrazia chi ci ha messo in storia
     opz = dict(a[2:].split("=", 1) for a in sys.argv[1:] if a.startswith("--") and "=" in a)
-    REGALI = {"osso": "🦴 l'Osso d'oro", "fiocco": "🎀 il Fiocco", "collare": "📿 il Collare d'oro", "corona": "👑 la Corona", "fuochi": "🎆 i Fuochi d'artificio", "boost": "⚡ il Boost x2"}  # come motore/negozio.py
+    REGALI = {"osso": "🦴 l'Osso d'oro", "fiocco": "🎀 il Fiocco", "collare": "📿 il Collare d'oro", "corona": "👑 la Corona", "fuochi": "🎆 i Fuochi d'artificio", "boost": "⚡ il Boost x2", "presidente": "presidente"}  # come motore/negozio.py
     regalo = REGALI.get(opz.get("regalo"))  # storia di @zampeditalia quando qualcuno compra un accessorio nel negozio
     utente = arg[0]
     cartella = Path(arg[1]) if len(arg) > 1 else ROOT / "docs/cartoline"
@@ -127,12 +127,12 @@ def main():
         ex = 300 if px > 560 else 780
         ex = int(min(1040 - largo / 2, max(40 + largo / 2, ex)))  # né il disegno né il nome escono dalla cartolina
         ey = int(max(400 + dim + 70, min(1250, py - 40)))         # e non coprono il titolo
-        corona = f'<div class="corona">🐺 {E(a["capo"])}</div>' if a.get("capo") else f'<div class="corona">👑 {E(a["ruolo"])}</div>' if a.get("ruolo") else ""
+        corona = f'<div class="corona">🇮🇹 {E(a["pres"])}</div>' if a.get("pres") else f'<div class="corona">🐺 {E(a["capo"])}</div>' if a.get("capo") else f'<div class="corona">👑 {E(a["ruolo"])}</div>' if a.get("ruolo") else ""
         pagina = PAGINA.format(sagoma=sag, luci=luci, px=f"{px:.0f}", py=f"{py:.0f}", ex=ex, ey=ey, luce=luce, glow=glow, fondo=fondo, bordo=bordo, testo=testo,
                                dim=dim, fs=fs, svg=dis[a["id"]]["svg"], nome=E(a["n"]),
                                tipo=E(str(dis[a["id"]]["tipo"])[:1].upper() + str(dis[a["id"]]["tipo"])[1:]), comune=E(f'{a["c"]} ({a["p"]})'),
                                utente=E(a["u"]), corona=corona,
-                               sotto=(f'<span class="grazie">🎁 {E(a["n"])} ha {E(regalo)}!</span>' if regalo else f'<span class="grazie">💛 Grazie @{E(a["u"])} per la storia!</span>' if grazie else "la mappa degli animali d'Italia"))
+                               sotto=(f'<span class="grazie">🇮🇹 {E(a["n"])} è il nuovo {E(a.get("pres", "Presidente"))}!</span>' if regalo == "presidente" else f'<span class="grazie">🎁 {E(a["n"])} ha {E(regalo)}!</span>' if regalo else f'<span class="grazie">💛 Grazie @{E(a["u"])} per la storia!</span>' if grazie else "la mappa degli animali d'Italia"))
         h = tmp / "c.html"
         h.write_text(pagina)
         nome = secrets.token_hex(8) + ".png"
