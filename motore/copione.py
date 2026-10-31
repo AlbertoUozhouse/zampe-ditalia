@@ -283,7 +283,7 @@ def buio(D, rng, st):
     sono = "sono" if art == "le " else "è"
     stato = stato.replace("è ", sono + " ", 1)
     frasi = [
-        ("Questa è l'Italia di notte.", {"tipo": "mappa", "luci": luci(D)}),
+        ("Trova la tua città: è accesa o ancora al buio?", {"tipo": "mappa", "luci": luci(D)}),
         (f"{Art}{r} {stato}", {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": cap, "testo": f"{r}: {n}", "colore": "d", "t": 0.3}], "zoom": {"comune": cap, "s": 2.0}}),
         ("Ogni commento accende una luce: città, nome e razza.", {"tipo": "commento", "testo": f"{cap}, {cane['nome']}, {cane['parola']}"}),
         (f"Accendiamo {art}{r}? Scrivilo qui sotto!", {"tipo": "chiusura", "testo": f"🌙 Accendi {art}{r}"}),

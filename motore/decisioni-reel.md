@@ -44,3 +44,12 @@ Il calo è arrivato subito dopo la modifica delle 18:30 del 30/10 che toglieva d
 Cambiato: la riga SEGUO torna in ogni didascalia; la scena SEGUO torna in ogni reel (non in sfida, nomi e razze, che hanno la scena del commento); voce fino a 48 parole.
 Regola per il bot: la richiesta di seguire non si toglie più. La «richiesta sola» vale per cosa scrivere nel commento, non per il follow.
 Da guardare: follower nuovi del 31/10 rispetto ai +258 del 30/10.
+
+## 31/10/2026 notte — 6 reel al giorno, e cosa dicono i dati sui follower
+
+Curva dei follower ricostruita dalla cronologia di docs/data/animali.json (30/10, ore UTC):
+10-12 +32 follower / +43 animali nuovi · 12-15 +52 / +93 · 15-17:40 +26 / +37 · 17:40-20 +25 / +53 · 20-22 +12 / +48 · 22-01 +10 / +13.
+1) I follower arrivano insieme ai giocatori nuovi: circa un follower ogni 1,5-2 animali nuovi. Il motore della crescita è far commentare persone nuove.
+2) Le ore migliori sono 11-16 italiane. Di sera si accendono ancora animali, ma la parte che poi ci segue scende: tra le 21 e le 23 un follower ogni 4 animali, quando le didascalie non avevano più il SEGUO. Indizio, non prova.
+Cambiato: 6 reel al giorno (12:00 fondatore, 13:30 duello, 15:00 buio, 16:30 derby, 18:00 gara, 21:00 puntata), più reel nelle ore in cui la gente segue; il buio si apre con «Trova la tua città: è accesa o ancora al buio?».
+Da guardare: follower nuovi al giorno e follower per animale nuovo.

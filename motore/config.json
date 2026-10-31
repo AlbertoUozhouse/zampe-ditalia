@@ -1,8 +1,11 @@
 {
- "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana. Con «:prova» il reel esce come Trial Reel (ottobre: 235 views, sprecati). Dal 30/10: 3 reel al giorno (13, 18 e 21: le fasce migliori di ottobre), corti e con un gancio nel primo secondo. Il controllo delle 10:30 li cambia ogni giorno in base a motore/rendimento.json (motore/decisioni-reel.md).",
+ "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana, almeno 90 minuti tra un reel e l'altro (orari.py salta un reel se ne è uscito uno da meno di 75 minuti). Niente «:prova» (i Trial Reel di ottobre: 235 views). Dal 31/10: 6 reel al giorno, voluti da Alberto, e il controllo delle 11:13 li cambia in base a follower e numeri (motore/decisioni-reel.md). «una_tantum» vale per un giorno solo e sostituisce l'orario uguale.",
  "reel_automatici": true,
  "orari": {
-  "13:00": "fondatore",
+  "12:00": "fondatore",
+  "13:30": "duello",
+  "15:00": "buio",
+  "16:30": "derby",
   "18:00": "gara",
   "21:00": "puntata"
  },
@@ -17,7 +20,7 @@
  "una_tantum": {
   "2026-10-30 22:30": "pronto-corsa_luna",
   "2026-10-31 21:00": "sfida",
-  "2026-10-31 13:00": "nomi",
-  "2026-11-01 13:00": "razze"
+  "2026-10-31 13:30": "nomi",
+  "2026-11-01 13:30": "razze"
  }
 }
