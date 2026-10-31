@@ -53,6 +53,22 @@ def main():
                 except AttributeError: pass
             print(formato)
             return
+    f = festa(ora, st, fatti)
+    if f: print(f)
+
+def festa(ora, st, fatti):
+    """Un nuovo Presidente di regione (stato «feste_presidente», scritto da commenti.py) ha il suo reel di festa appena c'è spazio:
+    tra le 10 e le 22, mai a meno di 75 minuti da un altro reel. Ogni acquisto che fa un Presidente diventa una vetrina."""
+    if not 10 <= ora.hour < 22 or poco_fa(ora): return None
+    try: feste = json.loads((ROOT / "motore/stato.json").read_text()).get("feste_presidente", [])
+    except (FileNotFoundError, json.JSONDecodeError): return None
+    nuove = [f for f in feste if f not in st.setdefault("feste_fatte", [])]
+    if not nuove: return None
+    st["feste_fatte"] = (st["feste_fatte"] + [nuove[0]])[-30:]
+    st["presidente_festa"] = nuove[0].split("|")[0]  # copione.py → neopresidente
+    fatti.append(ora.strftime("%H:%M"))
+    STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
+    return "neopresidente"
 
 if __name__ == "__main__":
     import sys

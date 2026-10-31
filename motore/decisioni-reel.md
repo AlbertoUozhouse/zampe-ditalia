@@ -59,3 +59,8 @@ Da guardare: follower nuovi al giorno e follower per animale nuovo.
 Secondo acquisto arrivato. Il Presidente di regione è chi ha più accessori nella sua regione: oggi 2 Presidenti, 18 regioni libere.
 Cambiato: le risposte a chi accende una luce dicono (una volta su due) quanto manca per essere Presidente della sua regione; la scheda «Il mio» del sito lo dice sopra il negozio; il reel presidente si apre con «18 regioni senza Presidente. La tua è libera?» ed esce ogni giorno alle 15:00 al posto del buio.
 Da guardare: acquisti al giorno.
+
+## 31/10/2026 — più accessori, più Presidenti; festa automatica per ogni nuovo Presidente
+
+Le risposte e il sito dicono chiaro che chi ha più accessori nella regione è Presidente. Ogni nuovo Presidente (commenti.py → stato «feste_presidente», solo regione e un'impronta dell'id) fa partire da solo il reel «neopresidente» appena c'è spazio tra le 10 e le 22 (orari.py, festa).
+Da guardare: acquisti nei giorni dopo ogni reel di festa.

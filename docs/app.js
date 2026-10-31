@@ -276,9 +276,9 @@ function renderHeader() {
 function presidenza(d) {
   if (!d.r || d.t === "altro") return "";
   const n = d.acc?.length || 0, pr = DATA.find(x => x.pres && x.r === d.r && x !== d);
-  const testo = d.pres ? `👑 <b>${esc(d.n)}</b> è ${esc(d.pres)}! Chi lo supera in accessori gli prende il titolo.`
+  const testo = d.pres ? `👑 <b>${esc(d.n)}</b> è ${esc(d.pres)}! Più accessori ha, più è difficile togliergli il titolo.`
     : pr ? `👑 <b>${esc(pr.n)}</b> è ${esc(pr.pres)} con ${pr.acc.length} ${pr.acc.length === 1 ? "accessorio" : "accessori"}: con ${pr.acc.length + 1 - n} ${pr.acc.length + 1 - n === 1 ? "accessorio" : "accessori"} in più il titolo passa a <b>${esc(d.n)}</b>.`
-    : `👑 ${esc(d.r)} non ha ancora un Presidente: con un accessorio da 1 € il titolo è di <b>${esc(d.n)}</b>.`;
+    : `👑 ${esc(d.r)} non ha ancora un Presidente: con un accessorio da 1 € il titolo è di <b>${esc(d.n)}</b>. Chi ha più accessori nella regione è Presidente.`;
   return `<p class="presidenza">${testo}</p>`;
 }
 

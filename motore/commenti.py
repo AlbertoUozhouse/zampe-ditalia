@@ -517,6 +517,7 @@ class Gioco:
             if not v or len(v["acc"]) < len(gara[0]["acc"]):
                 v = gara[0]; pres[r] = v["id"]
                 self.stato.setdefault("negozio_storie", []).append({"id": v["id"], "k": "presidente"})
+                self.stato["feste_presidente"] = (self.stato.get("feste_presidente", []) + [f"{r}|{_hash_breve(v['id'])}"])[-30:]  # il reel di festa (orari.py → neopresidente)
                 print("nuovo Presidente di regione")
             v["pres"] = "Presidente " + DI_REGIONE[r]
         self.dati["presidenti"] = dict(pres)
@@ -859,6 +860,11 @@ def riga_edificio(gioco, a):
             return f"{a['c']}: {'manca 1 luce' if m == 1 else f'mancano {m} luci'} per {nome} {em}. Tagga gli amici!" if m <= 4 else None
     return None
 
+def _hash_breve(s):
+    """Un'impronta corta dell'id, per i registri pubblici del repository senza nomi utente."""
+    import zlib
+    return format(zlib.crc32(str(s).encode()), "x")
+
 def riga_presidente(gioco, a):
     """Il titolo di Presidente di regione va a chi ha più accessori (presidenti()): a chi accende una luce diciamo quanto gli manca.
     Con 18 regioni ancora libere basta un accessorio da 1 euro. Solo gloria, come la Sfilata."""
@@ -867,10 +873,10 @@ def riga_presidente(gioco, a):
     pres = gioco.stato.get("presidenti", {})
     v = next((x for x in gioco.animali if x.get("id") == pres.get(r)), None)
     if not v:
-        return f"👑 Il Presidente {DI_REGIONE[r]} non c'è ancora: con un accessorio da 1 € il titolo è di {a['n']}! (zampeditalia.it → «Il mio»)"
+        return f"👑 Il Presidente {DI_REGIONE[r]} non c'è ancora: con un accessorio da 1 € il titolo è di {a['n']}! Più accessori hai, più resti Presidente (zampeditalia.it → «Il mio»)"
     if v["u"].lower() == a["u"].lower(): return None
     n = len(v.get("acc", []))
-    return f"👑 {v['n']} è Presidente {DI_REGIONE[r]} con {n} {'accessorio' if n == 1 else 'accessori'}: con {n + 1} il titolo passa a {a['n']}! (zampeditalia.it → «Il mio»)"
+    return f"👑 {v['n']} è Presidente {DI_REGIONE[r]} con {n} {'accessorio' if n == 1 else 'accessori'}: chi ne ha di più diventa Presidente, con {n + 1} il titolo passa a {a['n']}! (zampeditalia.it → «Il mio»)"
 
 def riga_capobranco(gioco, a):
     """In una città con almeno 3 luci: a che posto è nella corsa a Capobranco di domenica."""
