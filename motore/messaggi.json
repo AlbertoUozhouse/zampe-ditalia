@@ -1232,22 +1232,7 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [
-{
-"storia": "cartoline/ba1996a778c0f0ae.png",
-"url": [
-"https://zampeditalia.it/cartoline/ba1996a778c0f0ae.png"
-],
-"t": 1793467364.2172427
-},
-{
-"storia": "cartoline/35a3697612c71b35.png",
-"url": [
-"https://zampeditalia.it/cartoline/35a3697612c71b35.png"
-],
-"t": 1793467366.5045187
-}
-],
+"in_attesa": [],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
