@@ -1111,43 +1111,7 @@
 "ffcb46312197b698",
 "ffd691c69733657e"
 ],
-"in_attesa": [
-{
-"igsid": "1428421835512421",
-"url": [
-"https://zampeditalia.it/cartoline/01fb43d3b8168f3c.png"
-],
-"t": 1793439947.5586784
-},
-{
-"igsid": "2091823531441779",
-"url": [
-"https://zampeditalia.it/cartoline/b2921f96b2bde6a3.png"
-],
-"t": 1793439947.5586805
-},
-{
-"igsid": "1026284670488784",
-"url": [
-"https://zampeditalia.it/cartoline/5537ca9ee07d444a.png"
-],
-"t": 1793439947.558681
-},
-{
-"storia": "cartoline/02fe6b9cc00eccbd.png",
-"url": [
-"https://zampeditalia.it/cartoline/02fe6b9cc00eccbd.png"
-],
-"t": 1793439929.1438196
-},
-{
-"storia": "cartoline/6ec09b1c4956fa15.png",
-"url": [
-"https://zampeditalia.it/cartoline/6ec09b1c4956fa15.png"
-],
-"t": 1793439931.7754924
-}
-],
+"in_attesa": [],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
