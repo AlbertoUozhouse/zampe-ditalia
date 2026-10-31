@@ -53,3 +53,9 @@ Curva dei follower ricostruita dalla cronologia di docs/data/animali.json (30/10
 2) Le ore migliori sono 11-16 italiane. Di sera si accendono ancora animali, ma la parte che poi ci segue scende: tra le 21 e le 23 un follower ogni 4 animali, quando le didascalie non avevano più il SEGUO. Indizio, non prova.
 Cambiato: 6 reel al giorno (12:00 fondatore, 13:30 duello, 15:00 buio, 16:30 derby, 18:00 gara, 21:00 puntata), più reel nelle ore in cui la gente segue; il buio si apre con «Trova la tua città: è accesa o ancora al buio?».
 Da guardare: follower nuovi al giorno e follower per animale nuovo.
+
+## 31/10/2026 — spingere gli acquisti: il Presidente di regione
+
+Secondo acquisto arrivato. Il Presidente di regione è chi ha più accessori nella sua regione: oggi 2 Presidenti, 18 regioni libere.
+Cambiato: le risposte a chi accende una luce dicono (una volta su due) quanto manca per essere Presidente della sua regione; la scheda «Il mio» del sito lo dice sopra il negozio; il reel presidente si apre con «18 regioni senza Presidente. La tua è libera?» ed esce ogni giorno alle 15:00 al posto del buio.
+Da guardare: acquisti al giorno.

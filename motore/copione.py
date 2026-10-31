@@ -459,7 +459,8 @@ def presidente(D, rng, st):
     cosa = " e ".join(NOMI[k] for k in p.get("acc", []) if k in NOMI) or "un accessorio"
     razza = p.get("razza_testo") or ("gatto" if p.get("t") == "gatto" else "cane")
     cane, gatto = esempio(rng, D)
-    frasi = [("Abbiamo il primo Presidente di regione!" if len(pres) == 1 else f"In Italia ci sono {len(pres)} Presidenti di regione.", {"tipo": "numero", "grande": "🇮🇹", "sotto": "il Presidente di regione"}),
+    # scarsità in apertura: le regioni ancora libere, con 1 euro il titolo è tuo (gli acquisti fanno i Presidenti)
+    frasi = [(f"{libere} regioni senza Presidente. La tua è libera?", {"tipo": "numero", "grande": str(libere), "sotto": "regioni senza Presidente: con 1 € il titolo è tuo 👑"}),
              (f"È {p['n']}, {razza} di {p['c']}: con {cosa} è {p['pres']}.", scena_di(p, f"{p['pres']} 🇮🇹"))]
     if len(pres) > 1:
         frasi.append(("Ecco gli altri Presidenti.", {"tipo": "classifica", "titolo": "I Presidenti 🇮🇹", "righe": [{"nome": f"{a['n']} · @{a['u']}", "valore": a["r"]} for a in pres[:5]], "utente": p["u"]}))
@@ -475,7 +476,7 @@ def presidente(D, rng, st):
            "e se qualcuno lo supera la fascia passa subito a lui ⚡\n\n"
            "🛍️ Accessori da 1 €: zampeditalia.it (link in bio) → «Il mio» → cerca il tuo @.\n\n"
            f"Non sei ancora sulla mappa? Scrivi qui sotto città, nome e razza (per esempio «{rng.choice(CITTA)}, {gatto['nome']}, {gatto['parola']}»).")
-    st["copertina"] = {"sopra": "🇮🇹 IL PRIMO PRESIDENTE" if len(pres) == 1 else "🇮🇹 I PRESIDENTI", "grande": p["n"], "sotto": f"{p['pres']} · {libere} regioni libere", "tema": "attivita"}
+    st["copertina"] = {"sopra": "🇮🇹 PRESIDENTE DI REGIONE", "grande": f"{libere}<br>libere", "sotto": "Con 1 € il titolo è del tuo animale", "domanda": "La tua regione è libera? 👇", "tema": "attivita"}
     return "IL PRESIDENTE", frasi, did
 
 def nomi(D, rng, st):

@@ -859,6 +859,19 @@ def riga_edificio(gioco, a):
             return f"{a['c']}: {'manca 1 luce' if m == 1 else f'mancano {m} luci'} per {nome} {em}. Tagga gli amici!" if m <= 4 else None
     return None
 
+def riga_presidente(gioco, a):
+    """Il titolo di Presidente di regione va a chi ha più accessori (presidenti()): a chi accende una luce diciamo quanto gli manca.
+    Con 18 regioni ancora libere basta un accessorio da 1 euro. Solo gloria, come la Sfilata."""
+    r = a.get("r")
+    if r not in DI_REGIONE or a.get("t") == "altro" or a["u"].lower() in ("thor_golden_life", "albertomarchesin"): return None
+    pres = gioco.stato.get("presidenti", {})
+    v = next((x for x in gioco.animali if x.get("id") == pres.get(r)), None)
+    if not v:
+        return f"👑 Il Presidente {DI_REGIONE[r]} non c'è ancora: con un accessorio da 1 € il titolo è di {a['n']}! (zampeditalia.it → «Il mio»)"
+    if v["u"].lower() == a["u"].lower(): return None
+    n = len(v.get("acc", []))
+    return f"👑 {v['n']} è Presidente {DI_REGIONE[r]} con {n} {'accessorio' if n == 1 else 'accessori'}: con {n + 1} il titolo passa a {a['n']}! (zampeditalia.it → «Il mio»)"
+
 def riga_capobranco(gioco, a):
     """In una città con almeno 3 luci: a che posto è nella corsa a Capobranco di domenica."""
     gara = sorted((x for x in gioco.animali if x["k"] in ("animale", "sogno") and x["c"] == a["c"] and x["p"] == a["p"]),
@@ -1084,7 +1097,7 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
         if frase_segue:
             extra.append(frase(frase_segue) + (COSTUME_ORA if frase_segue == "segue" else ""))
         if nuovi_a and chiave not in ("stella", "sogno"):  # obiettivo di città oppure corsa a Capobranco: un motivo concreto per taggare
-            riga = riga_edificio(gioco, nuovi_a[0]) or (riga_capobranco(gioco, nuovi_a[0]) if random.random() < 0.4 else None)
+            riga = (riga_presidente(gioco, nuovi_a[0]) if random.random() < 0.5 else None) or riga_edificio(gioco, nuovi_a[0]) or (riga_capobranco(gioco, nuovi_a[0]) if random.random() < 0.4 else None)
             if riga: extra.insert(0, riga)
         if frase_segue:
             pass  # ha appena scritto SEGUO: il grazie basta

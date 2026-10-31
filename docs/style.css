@@ -234,3 +234,6 @@ body.fuochi::before{content:"";position:fixed;inset:0;pointer-events:none;z-inde
 .boost-mio{background:linear-gradient(90deg,rgba(255,210,63,.35),rgba(255,138,31,.3));font-weight:800}
 .missioni li.fatta{background:rgba(91,227,125,.16);text-decoration:line-through;text-decoration-color:rgba(255,255,255,.4)}
 .boost-art{display:flex;align-items:center;gap:12px;padding:10px;border-radius:14px;background:linear-gradient(90deg,rgba(79,180,255,.18),rgba(255,210,63,.14));border:2px solid rgba(79,180,255,.4)}
+/* Quanto manca per diventare Presidente di regione, sopra il negozio */
+.presidenza{margin:10px 0 0;padding:10px 14px;border-radius:14px;background:rgba(255,197,92,.12);border:1.5px solid rgba(255,197,92,.55);font-weight:800;font-size:14px;line-height:1.4}
+.presidenza b{color:var(--gold)}

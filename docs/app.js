@@ -272,6 +272,16 @@ function renderHeader() {
   if (ANTEPRIMA) { $("#badge").hidden = false; $("#badge").textContent = "Anteprima con dati inventati"; }
 }
 
+// Il Presidente di regione è chi ha più accessori nella sua regione (motore/commenti.py, presidenti): quanto ti manca per esserlo.
+function presidenza(d) {
+  if (!d.r || d.t === "altro") return "";
+  const n = d.acc?.length || 0, pr = DATA.find(x => x.pres && x.r === d.r && x !== d);
+  const testo = d.pres ? `👑 <b>${esc(d.n)}</b> è ${esc(d.pres)}! Chi lo supera in accessori gli prende il titolo.`
+    : pr ? `👑 <b>${esc(pr.n)}</b> è ${esc(pr.pres)} con ${pr.acc.length} ${pr.acc.length === 1 ? "accessorio" : "accessori"}: con ${pr.acc.length + 1 - n} ${pr.acc.length + 1 - n === 1 ? "accessorio" : "accessori"} in più il titolo passa a <b>${esc(d.n)}</b>.`
+    : `👑 ${esc(d.r)} non ha ancora un Presidente: con un accessorio da 1 € il titolo è di <b>${esc(d.n)}</b>.`;
+  return `<p class="presidenza">${testo}</p>`;
+}
+
 // ---------- pannelli ----------
 function show(v) {
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.v === v));
@@ -300,7 +310,7 @@ function show(v) {
     s.innerHTML = `<h2>🎮 Il tuo animale</h2><p class="sub">Fai punti, sali di livello, fai crescere la cuccia. E regalagli un accessorio: per sempre sulla mappa, lo vede tutta Italia.</p>
       <form class="cerca-mio" id="cercaMio"><input id="mio" type="search" placeholder="Il tuo @ o il nome del tuo animale" autocomplete="off" value="${scelto ? esc("@" + scelto.u) : ""}"></form>
       <div id="miei">${scelto ? hud(scelto) : `<p class="empty">Cerca il tuo animale: vedi il suo livello, le missioni di oggi e i regali.</p>`}</div>
-      ${scelto ? `<h3>🛍️ Regali per ${esc(scelto.n)}</h3>` : ""}
+      ${scelto ? presidenza(scelto) + `<h3>🛍️ Regali per ${esc(scelto.n)}</h3>` : ""}
       <ul class="shop">${ARTICOLI.map(([k, nome, prezzo, testo]) => `<li class="art"><span class="anteprima">${prova ? prova(k, scelto.t) : `<span class="emo">${ICONE[k]}</span>`}</span>
         <span class="who"><b>${nome}</b><small>${testo}</small></span>
         ${scelto?.acc?.includes(k) ? `<span class="preso">✓ Ce l'ha</span>` : `<button type="button" class="btn compra" data-k="${k}" ${scelto && NEGOZIO[k] ? "" : "disabled"}>${prezzo}</button>`}</li>`).join("")}</ul>
