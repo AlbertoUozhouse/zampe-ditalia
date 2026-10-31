@@ -105,6 +105,7 @@
 "1472dec8dd246f76",
 "148a7542c81337bb",
 "14a1aa59ef3bd899",
+"14a9f437ea1a4d94",
 "14bdc3988f4fc405",
 "14ffeb2f98fcdac2",
 "1507fb8733f95e5d",
@@ -234,6 +235,7 @@
 "3685b195aedd2943",
 "368b4aa3c8776754",
 "36bb33f8a244bf3d",
+"36c2c182b38f370c",
 "36dbd2764881ca3b",
 "36f24def3da10a03",
 "372980ed16a9e23f",
@@ -295,6 +297,7 @@
 "40aef5fff28dec75",
 "40e526a94610f4eb",
 "40ee77ccd8bd6204",
+"410c0cebea170ff5",
 "411cf201605ce595",
 "41669dd5fcfcc7ab",
 "41a578923d550f04",
@@ -441,6 +444,7 @@
 "6351ace69d7fce63",
 "63d23021888c8c86",
 "63efbc96c3258272",
+"642a6ab2a99d7ae6",
 "648306eeb3f498ab",
 "6498a6aeb16f0f64",
 "64aa8456459f47cb",
@@ -450,6 +454,7 @@
 "6688cd49aba6d420",
 "67ca84f9aee6d877",
 "6867a1a63f306101",
+"68855e8617cc7c6a",
 "68af4f22c126bce4",
 "693ffadfb68602ac",
 "69eb8ea8d3774d83",
@@ -573,6 +578,7 @@
 "862b2d1cf8ee4f3a",
 "864824862dc25242",
 "8684d10100eee217",
+"869a4bcd991d3712",
 "86c22be6b539fb7d",
 "871248374f11d6fc",
 "87b2d50dee1ac178",
@@ -582,6 +588,7 @@
 "883d20a7f2015b88",
 "886f8c74901cec30",
 "88dd2c76dad71ecc",
+"891e4767bd3d0f1f",
 "893f67d6ff44c322",
 "89e4bae55e9ab590",
 "8a2e717daead1a04",
@@ -677,6 +684,7 @@
 "9f2e4e919c7fb840",
 "9f61fb47be753199",
 "9f7155ccb005cb0f",
+"9f80fc5b0a34c913",
 "9fa46340341a65ca",
 "9faa7d55555f5b69",
 "9fba155baa5ba91e",
@@ -1013,6 +1021,7 @@
 "e5d7d573635498ef",
 "e61d4c26dbfe262a",
 "e61ff210cd9b62a8",
+"e63f690186eca564",
 "e67e7b023ca718e9",
 "e6a22b7c5598a507",
 "e6cfc60c27359d7a",
@@ -1124,7 +1133,24 @@
 "ffcb46312197b698",
 "ffd691c69733657e"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1148814151038455",
+"url": [
+"https://zampeditalia.it/cartoline/038a1cb14acf8081.png",
+"https://zampeditalia.it/cartoline/3e9f5360c17dd04f.png",
+"https://zampeditalia.it/cartoline/9629d5fc82dadc94.png"
+],
+"t": 1793443417.5934083
+},
+{
+"igsid": "1668357901564143",
+"url": [
+"https://zampeditalia.it/cartoline/4761f599ad96dabc.png"
+],
+"t": 1793443417.5934098
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
