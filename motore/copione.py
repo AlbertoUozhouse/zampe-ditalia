@@ -527,6 +527,35 @@ def razze(D, rng, st):
     st["copertina"] = {"sopra": "LA RAZZA DI OGNI REGIONE", "grande": f"{pct}%", "sotto": "dei cani d'Italia è meticcio", "domanda": "E nella tua regione? 👇", "tema": "vetrina"}
     return "LE RAZZE D'ITALIA", frasi, did
 
+def neopresidente(D, rng, st):
+    """Festa per il Presidente di regione appena eletto (l'ultimo in st["presidente_festa"] o, se manca, il più recente):
+    il suo animale in primo piano col nome del padrone, l'accessorio che gli ha dato il titolo e le regioni ancora libere.
+    Chi è festeggiato lo condivide; chi guarda vede che con 1 euro il titolo può essere suo."""
+    J = carica(ROOT / "docs/data/animali.json", {})
+    pres = J.get("presidenti", {})
+    if not pres: return presidente(D, rng, st)
+    r = st.pop("presidente_festa", None) or list(pres)[-1]
+    a = next((x for x in D["tutti"] if x.get("id") == pres.get(r)), None)
+    if not a: return presidente(D, rng, st)
+    nomi_acc = {"osso": "l'osso d'oro", "fiocco": "il fiocco", "collare": "il collare d'oro", "corona": "la corona", "fuochi": "i fuochi d'artificio"}
+    acc = nomi_acc.get((a.get("acc") or ["osso"])[-1], "un accessorio")
+    libere = 20 - len(pres)
+    tipo = "gatto" if a.get("t") == "gatto" else "cuccia"
+    frasi = [
+        (f"{a['n']} è {a['pres']}!", {"tipo": tipo, "nome": a["n"], "razza": a.get("razza_testo") or a.get("razza") or "meticcio",
+                                     "seme": abs(hash(a["id"])) % 997 + 1, "utente": a["u"], "comune": a["pres"] + " 🇮🇹"}),
+        (f"Le è bastato {acc}, da {a['c']}.", {"tipo": "numero", "grande": "👑", "sotto": f"{acc} e la fascia tricolore sulla mappa"}),
+        (f"Ancora {libere} regioni senza Presidente. La tua?", {"tipo": "numero", "grande": str(libere), "sotto": "regioni senza Presidente: con 1 € il titolo è tuo"}),
+        ("Il negozio è nel link in bio!", {"tipo": "chiusura", "testo": "👑 Diventa Presidente della tua regione"}),
+    ]
+    did = (f"🇮🇹 {a['n']} di @{a['u']} è la nuova {a['pres']}! Le è bastato {acc} 👑\n\n"
+           f"Ancora {libere} regioni non hanno un Presidente: chi ha più accessori nella sua regione prende la fascia tricolore sulla mappa, e se qualcuno lo supera il titolo passa a lui ⚡\n\n"
+           "🛍️ Accessori da 1 €: zampeditalia.it (link in bio) → «Il mio» → cerca il tuo @.\n"
+           "👇 Non sei ancora sulla mappa? Scrivi qui sotto città, nome e razza del tuo animale.")
+    st["copertina"] = {"sopra": "🇮🇹 NUOVA PRESIDENTE", "grande": a["n"], "sotto": a["pres"] + " 👑", "domanda": "E nella tua regione? 👇", "tema": "attivita"}
+    st["tag_extra"] = [a["u"]]
+    return "PRESIDENTE", frasi, did
+
 def sfida(D, rng, st):
     """Rifà la struttura del lancio (26.910 views, 4.408 commenti): una rivalità che capiscono tutti, cosa scrivere
     mostrato come un commento, il premio subito (la tua cuccia col tuo nome), il posto da Fondatore ancora libero,
@@ -551,7 +580,7 @@ def sfida(D, rng, st):
     st["copertina"] = {"sopra": "CANI vs GATTI", "grande": f"{cani}<br><i>vs</i><br>{gatti}", "sotto": f"I {dietro} stanno perdendo", "domanda": "La tua città li salva? 👇", "tema": "duello"}
     return "CANI vs GATTI", frasi, did
 
-FORMATI = {"nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
