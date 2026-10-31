@@ -174,6 +174,7 @@
 "22cec862b215ab77",
 "22eb7ff2aad44125",
 "234d26be97d58c8b",
+"23709729d06d5275",
 "23882891259ffeb0",
 "239aac3141ce1085",
 "239b222abb0dbc1c",
@@ -263,6 +264,7 @@
 "3a2858b83a1f7bbd",
 "3a28ccab7c74159b",
 "3a32ba4ab616886a",
+"3a57e6fda3c4ebe1",
 "3a85d06320b75f80",
 "3a9ad2887105e090",
 "3adabc2052a703b3",
@@ -327,6 +329,7 @@
 "44ffa1764171a287",
 "4530db3d7d50b8e2",
 "457566f511018798",
+"459af91f7202031c",
 "45f6a2fab80839b5",
 "4628bcf8840c4283",
 "4675d4697c0bce51",
@@ -349,6 +352,7 @@
 "4ad02fdd7aa3dabf",
 "4af89e922a6d8c40",
 "4b09619d7b3a7be6",
+"4b45b9ad3411fff5",
 "4b53b351bdd893c3",
 "4b8abe940d7675d0",
 "4b9472de6b7b6063",
@@ -393,6 +397,7 @@
 "574914032d583de6",
 "57aec8efdd20f74b",
 "57e1ae638294dfa5",
+"5800aa341bf236c8",
 "580bf7862dff08bd",
 "5815e3b124c94e9c",
 "5875acc8dfbdb60e",
@@ -459,6 +464,7 @@
 "6867a1a63f306101",
 "68855e8617cc7c6a",
 "68af4f22c126bce4",
+"68dac0b970a67f28",
 "693ffadfb68602ac",
 "69eb8ea8d3774d83",
 "6a05df4c7d293d50",
@@ -493,6 +499,7 @@
 "6f2bd4871768f1e9",
 "6f32faa7ed61859f",
 "6f90fd0d4a378123",
+"6fa1cc404a0c0565",
 "7026e311065bc1aa",
 "7078cee3e966c57f",
 "7094bd442dae5f20",
@@ -571,6 +578,7 @@
 "82e055266e5492cf",
 "82f30d76b0b4f7d3",
 "832ec06b0e9383b7",
+"83762859549e5ff6",
 "8394f5fb168ddd2d",
 "83c60891a13d5beb",
 "8480d52fd45efb17",
@@ -677,6 +685,7 @@
 "99579cb7194efb4e",
 "995bd297b0e7ef46",
 "9a34c5fec946529b",
+"9b666511221a39c3",
 "9c1c48c2aa15d40e",
 "9c4f8212e30c41b3",
 "9d19ad27ebf44480",
@@ -763,6 +772,7 @@
 "ab9783b723e0aadf",
 "aba88926ed043bbd",
 "abbdc500798e18de",
+"abf057cbeed57701",
 "ac0924db16da439a",
 "ac129130ed3eca39",
 "ac8fc8eccb32b0d2",
@@ -899,6 +909,7 @@
 "cb96993c0b95eaae",
 "cbbaabc9d9a319bc",
 "cc0f5abe0bdc0fe6",
+"cc18c68411429e8d",
 "cc30a48711746726",
 "cc4bc2e6d62b86fe",
 "cc68613bef65c438",
@@ -1142,9 +1153,40 @@
 "ffa379cadcaacf70",
 "ffa6fddabae2477a",
 "ffcb46312197b698",
-"ffd691c69733657e"
+"ffd691c69733657e",
+"ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1695077462050451",
+"url": [
+"https://zampeditalia.it/cartoline/3e13c21234ba76fe.png",
+"https://zampeditalia.it/cartoline/25acb823cf2b5a4d.png"
+],
+"t": 1793447813.509364
+},
+{
+"igsid": "28874144442250225",
+"url": [
+"https://zampeditalia.it/cartoline/9840f5678c2b2f12.png"
+],
+"t": 1793447813.5093663
+},
+{
+"igsid": "1856079228912014",
+"url": [
+"https://zampeditalia.it/cartoline/a475e655ed85e21c.png"
+],
+"t": 1793447813.5093665
+},
+{
+"igsid": "1868982261196881",
+"url": [
+"https://zampeditalia.it/cartoline/34af9aecff37e050.png"
+],
+"t": 1793447813.5093665
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
