@@ -557,7 +557,7 @@ ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fon
 
 def numeri(s): return re.findall(r"\d+", s)
 
-MAX_PAROLE = 40  # circa 15 secondi: in ottobre la visione media era 8-11 s su reel di 25 s, la gente se ne andava a metà
+MAX_PAROLE = 48  # circa 17 secondi, con la scena SEGUO: in ottobre la visione media era 8-11 s su reel di 25 s, la gente se ne andava a metà
 
 def taglia(frasi):
     """Troppe parole (la domenica, con Capobranco, Re degli inviti e bonus insieme): via le scene di mezzo, dalla più vicina alla fine.
@@ -614,13 +614,13 @@ def main():
     # in un reel su tre, prima della chiusura, un bonus a rotazione: tagga un amico (+3) oppure seguici
     x = rng.random()
     per_attivita = st.pop("senza_bonus", False)
-    if per_attivita or x > 0.33 or formato in ("sfida", "nomi", "razze"):  # la sfida ha già la sua richiesta: niente bonus
+    if per_attivita or formato in ("sfida", "nomi", "razze"):  # questi hanno già la scena «scrivi città, nome e razza» al limite delle parole: il SEGUO sta in didascalia
         pass  # una richiesta sola per reel: il bonus (segui, tagga) esce in un reel su tre, gli altri chiudono con «scrivi città, nome e razza»
     elif ORA.date().isoformat() <= "2026-11-02":  # Halloween: il follow regala il costume, lo diciamo in ogni reel
         frasi.insert(len(frasi) - 1, (rng.choice([f"Seguici e scrivi seguo: {PS_P} e il costume di Halloween per il tuo animale sulla mappa!",
                                                    "Chi ci segue ha il costume di Halloween sulla mappa: seguici e scrivi seguo!"]),
                                       {"tipo": "numero", "grande": "🎃" if not BOOST else PS, "sotto": f"seguici e scrivi SEGUO: {PS} punti e il costume di Halloween"}))
-    elif x < 0.16:
+    elif False:  # finché la priorità sono i follower, il bonus è sempre SEGUO (gli inviti restano nelle risposte)
         frasi.insert(len(frasi) - 1, (rng.choice(["Sfida degli inviti: chi porta più amici oggi finisce nel reel delle 21.",
                                                    "Tagga i tuoi amici: chi ne porta di più oggi è il Re degli inviti."]),
                                       {"tipo": "numero", "grande": "+3", "sotto": "per ogni amico taggato che commenta · il primo è Re degli inviti 👑"}))
@@ -632,7 +632,8 @@ def main():
         did = did.strip() + "\n\n"
     else:  # una richiesta sola: con 8 richieste diverse in didascalia (ottobre) non se ne faceva nessuna
         if "nome e razza" not in did: did = did.strip() + "\n\n👇 Scrivi qui sotto città, nome e razza del tuo animale: la sua luce si accende sulla mappa col tuo @."
-        did = did.strip() + "\n🕹️ E sfida tutti a Zampe di corsa: link in bio."
+        # dal 30/10 sera, togliendo questa riga, i follower sono passati da circa 250 a 20-30 al giorno: resta sempre
+        did = did.strip() + f"\n\n➕ Seguici e scrivi SEGUO: {PS} punti" + (" e il costume di Halloween per il tuo animale" if ORA.date().isoformat() <= "2026-11-02" else " e le lucine sulla cuccia") + ". Nei reel mettiamo prima gli animali di chi ci segue."
         fw = D.get("follower") or {}
         if fw.get("n") and fw["n"] < 2000:  # il traguardo di tutti: per ora la priorità sono i follower
             did = did.strip() + f"\n\n🎆 A 2.000 follower facciamo i fuochi d'artificio su tutta la mappa d'Italia: ne mancano {2000 - fw['n']}. Seguici e dillo a un amico!"

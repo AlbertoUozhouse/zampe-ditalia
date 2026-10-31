@@ -36,3 +36,11 @@ Le case di un gioco simile non hanno nome né razza; i nostri animali sì. Due f
 - `razze`: la razza preferita di ogni regione (meticci a parte) e il meticcio re d'Italia (58 cani su 100). Divide quanto basta per far commentare.
 Escono sabato 31/10 alle 13 (`nomi`) e domenica 1/11 alle 13 (`razze`), al posto del fondatore. Rotazione dei 3 reel di sabato: nomi, gara (si apre con la gara vera), sfida: tre aspetti diversi.
 Da guardare: commenti ogni 1.000 views (questi formati chiedono una risposta personale) e condivisioni.
+
+## 31/10/2026 notte — rimesso il SEGUO in ogni reel e in ogni didascalia
+
+Follower: 814 (29/10 sera) → 1.072 (30/10, 18:30): +258 in un giorno. Poi 1.072 → 1.093 in 7 ore (30/10 sera - 31/10 notte).
+Il calo è arrivato subito dopo la modifica delle 18:30 del 30/10 che toglieva dalle didascalie «Seguici e scrivi SEGUO: +30 punti» e lasciava la scena SEGUO in un reel su tre.
+Cambiato: la riga SEGUO torna in ogni didascalia; la scena SEGUO torna in ogni reel (non in sfida, nomi e razze, che hanno la scena del commento); voce fino a 48 parole.
+Regola per il bot: la richiesta di seguire non si toglie più. La «richiesta sola» vale per cosa scrivere nel commento, non per il follow.
+Da guardare: follower nuovi del 31/10 rispetto ai +258 del 30/10.
