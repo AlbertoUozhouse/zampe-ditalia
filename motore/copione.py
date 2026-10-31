@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 STORICO = ROOT / "motore/reel_fatti.json"
 LANCIO = date(2026, 10, 26)
 ORA = datetime.now(ZoneInfo("Europe/Rome"))
-BOOST = ORA.date().isoformat() <= "2026-11-01"  # Settimana del follow: SEGUO vale +30 (come in commenti.py)
+BOOST = ORA.date().isoformat() <= "2026-11-08"  # Settimana del follow: SEGUO vale +30 (come in commenti.py)
 PS, PS_P = ("+30", "trenta punti") if BOOST else ("+10", "dieci punti")
 
 # account di Alberto: restano sulla mappa ma non vengono mai nominati nei reel (la pagina cresce da sola)

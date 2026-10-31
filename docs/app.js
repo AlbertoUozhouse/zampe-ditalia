@@ -163,7 +163,7 @@ function sfilata(scelto) {
     ${scelto ? `<p class="per">${pos >= 0 ? `${esc(scelto.n)} è ${pos + 1}° nella Sfilata${pos ? `: ${pos === 1 ? "un accessorio" : "qualche accessorio"} e passa avanti!` : " 🏆"}` : `${esc(scelto.n)} non è ancora nella Sfilata: basta 1 € per entrare.`}</p>` : ""}</div>`;
 }
 function hud(d) {
-  const oggi = new Date() < new Date("2026-11-02");
+  const oggi = new Date() < new Date("2026-11-09"); // Settimana del follow: SEGUO +30 fino all'8 novembre
   return `<div class="hud"><span class="ritratto">${petSvg(d)}</span><span class="dati"><b>${esc(d.n)}</b> · ${esc(d.c)}<br>
     <small>${fmt(d.pt)} punti${d.rank ? ` · ${d.rank}° in Italia` : ""}${d.fondatore ? " · 👑 Fondatore" : ""}</small>${barra(d.pt)}
     <button type="button" class="link" id="cambia">non è il tuo?</button></span></div>
@@ -259,7 +259,7 @@ function renderHeader() {
     U && U.vince && oggi - new Date(U.fine) < 864e5 && `🏆 ${U.vince} ha vinto il derby`,
     DO && (DO.partito ? `⚔️ Derby ${DO.a} <b>${fmt(DO.na)}</b> – <b>${fmt(DO.nb)}</b> ${DO.b}` : `⚔️ Stasera il derby ${DO.a}–${DO.b}`),
     FOLLOW && (FOLLOW.n >= 2000 ? `🎆 ${fmt(FOLLOW.n)} follower: fuochi d'artificio su tutta la mappa!` : FOLLOW.n >= 1000 ? `<a ${segui} title="A 2.000 follower fuochi d'artificio su tutta la mappa">🎆 Mancano ${fmt(2000 - FOLLOW.n)} follower ai fuochi d'artificio</a>` : `<a ${segui} title="A 1.000 follower nevica su tutta la mappa">❄️ Mancano ${fmt(1000 - FOLLOW.n)} follower alla neve</a>`),
-    oggi < new Date("2026-11-02") && `<a ${segui}>🔥 SEGUO vale +30 fino a dom.</a>`,
+    oggi < new Date("2026-11-09") && `<a ${segui}>🔥 SEGUO vale +30 fino all'8 nov.</a>`,
     BOOST && `⚡ Oggi: ${esc(BOOST.frase)}`,
     oggi < new Date("2026-11-03") ? "🎃 Chi ci segue ha il costume" : "✨ Chi ci segue ha le lucine e la prima fila",
     recentCount && `✨ ${fmt(recentCount)} brillano ora`,
@@ -338,7 +338,7 @@ function show(v) {
       <li><b>🐰🦎🐢 Tutti gli animali</b>Conigli, furetti, gechi, tartarughe, pappagalli…: <code>Padova, Ugo, furetto</code>. Accendono la città con una luce azzurra. Quando arrivano a 15 luci entrano nella sfida: Cani contro Gatti contro Altri animali!</li>
       <li><b>🐺 Capobranco</b>Ogni domenica alle 21 chi ha più punti nel suo comune (con almeno 3 luci) diventa Capobranco per una settimana. Commenta ogni giorno (+5) e tagga gli amici (+3) per salire.</li>
       <li><b>⛲ La tua città cresce</b>A 5 luci la fontanella, a 10 il parco cani, a 25 il gattile, a 50 la clinica veterinaria, a 100 la piazza dei Fondatori.</li>
-      <li><b>➕ Seguici · ${new Date() < new Date("2026-11-02") ? "+30 fino a domenica 🔥" : "+10"}</b>Segui @zampeditalia e scrivi <code>SEGUO</code> in un commento. Nei reel mettiamo prima gli animali di chi ci segue. 🎃 Fino al 2 novembre il tuo animale ha anche il costume di Halloween sulla mappa; poi le lucine sulla cuccia e la prima fila nel suo paese, vicino alla piazza.</li>
+      <li><b>➕ Seguici · ${new Date() < new Date("2026-11-09") ? "+30 fino all'8 novembre 🔥" : "+10"}</b>Segui @zampeditalia e scrivi <code>SEGUO</code> in un commento. Nei reel mettiamo prima gli animali di chi ci segue. 🎃 Fino al 2 novembre il tuo animale ha anche il costume di Halloween sulla mappa; poi le lucine sulla cuccia e la prima fila nel suo paese, vicino alla piazza.</li>
       <li><b>📣 Fai il tifo · +5</b>Non hai animali? Scegli la squadra: <code>Tifo cani: Treviso</code> oppure <code>Tifo gatti: Milano</code>.</li>
       <li><b>☁️ Il tuo sogno · +10</b>L'animale che vorresti: <code>Sogno: Padova, Bruno, bassotto</code>.</li>
       <li><b>✦ Una stella</b>Per chi non c'è più: <code>Stella: Treviso, Max</code>. Una stella nel cielo col suo nome, mai in classifica.</li>

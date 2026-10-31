@@ -49,7 +49,7 @@ MISSIONI_PREMIO = 10  # chi completa le missioni del giorno (commento + almeno u
 PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 10}
 FOLLOWER = None  # follower veri dell'account, letti a ogni giro (main)
 TRAGUARDI = [1000, 2000]  # 1.000: nevica sulla mappa (raggiunto il 30/10) · 2.000: fuochi d'artificio su tutta la mappa
-BOOST_FINO = "2026-11-01"  # Settimana del follow: fino a domenica (elezione dei Capibranco) SEGUO vale +30
+BOOST_FINO = "2026-11-08"  # Settimana del follow, allungata da Alberto il 31/10: fino a domenica 8 novembre SEGUO vale +30
 BOOST = datetime.now(timezone.utc).date().isoformat() <= BOOST_FINO
 if BOOST: PUNTI["segue"] = 30
 
@@ -347,7 +347,7 @@ FRASI = {
 
 for _k in ("segue", "segue_senza_luce", "invito_salto", "invito_segui"):
     FRASI[_k] = [t.replace("+10", f"+{PUNTI['segue']}") for t in FRASI[_k]]
-    if BOOST and _k.startswith("invito"): FRASI[_k] = ["🔥 Settimana del follow, fino a domenica! " + t for t in FRASI[_k]]
+    if BOOST and _k.startswith("invito"): FRASI[_k] = ["🔥 Settimana del follow, allungata fino all'8 novembre! " + t for t in FRASI[_k]]
 
 def halloween():
     return datetime.now(timezone.utc).date().isoformat() <= HALLOWEEN_FINO
