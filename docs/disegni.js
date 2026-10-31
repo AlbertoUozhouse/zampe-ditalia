@@ -288,6 +288,16 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
   const OSSO = (x, y, k) => `<g transform="translate(${x + 9 * k} ${y + 11 * k}) scale(${k}) rotate(-18)"><path d="M-4.6 -.9 H4.6 M-4.6 .9 H4.6" stroke="#FFD23F" stroke-width="0"/>
 <rect x="-4.4" y="-1" width="8.8" height="2" fill="#FFD23F"/><circle cx="-4.6" cy="-1.1" r="1.4" fill="#FFD23F"/><circle cx="-4.6" cy="1.1" r="1.4" fill="#FFD23F"/>
 <circle cx="4.6" cy="-1.1" r="1.4" fill="#FFD23F"/><circle cx="4.6" cy="1.1" r="1.4" fill="#FFD23F"/><circle class="brilla" cx="-2" cy="-.4" r=".5" fill="#fff"/></g>`;
+  // Natale (fino al 6 gennaio): cappello di Babbo Natale, sciarpa a righe, alberello con le lucine accanto alla cuccia
+  const CAPPELLO = (x, y, k) => `<g transform="translate(${x - 1 * k} ${y - 8.2 * k}) scale(${k})"><path d="M-6.2 1 Q-2 -8.6 5.2 -6.6 L6.4 1Z" fill="#D7263D" stroke="#8E1424" stroke-width=".6" stroke-linejoin="round"/>
+<rect x="-7" y="-.2" width="14" height="2.8" rx="1.4" fill="#FFF8EE"/><circle cx="5.4" cy="-6.8" r="1.7" fill="#FFF8EE"/></g>`;
+  const SCIARPA = (x, y, k) => `<g transform="translate(${x} ${y + 13.4 * k}) scale(${k * .95})"><path d="M-6.6 -1.2 Q0 2.9 6.6 -1.2" stroke="#2E8B57" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+<path d="M-6.6 -1.2 Q0 2.9 6.6 -1.2" stroke="#FFF8EE" stroke-width="2.2" fill="none" stroke-dasharray="1.2 1.8"/><rect x="2.2" y=".6" width="2.4" height="5.6" rx=".8" fill="#2E8B57" transform="rotate(-8 3.4 .6)"/>
+<path d="M2.4 2.4 h2 M2.5 4.2 h2" stroke="#FFF8EE" stroke-width=".7"/></g>`;
+  const ALBERO = (x, y, k) => `<g transform="translate(${x - 15 * k} ${y + 8 * k}) scale(${k})"><rect x="-.9" y="4.6" width="1.8" height="2.4" fill="#6B4027"/>
+<path d="M0 -9 L4.6 -2.6 H2.6 L5.8 2 H3.4 L6.6 5 H-6.6 L-3.4 2 H-5.8 L-2.6 -2.6 H-4.6Z" fill="#2E8B57" stroke="#1B5E3A" stroke-width=".5" stroke-linejoin="round"/>
+<path d="M0 -10.6 l.9 1.8 2 .3 -1.45 1.4 .35 2 -1.8 -.95 -1.8 .95 .35 -2 -1.45 -1.4 2 -.3Z" fill="#FFD23F"/>
+<circle class="brilla" cx="-2" cy="-1" r=".8" fill="#FF5A6E"/><circle class="brilla" cx="2.4" cy="1.4" r=".8" fill="#4FB4FF"/><circle class="brilla" cx="-3.4" cy="3.6" r=".8" fill="#FFD23F"/><circle class="brilla" cx="3" cy="3.8" r=".8" fill="#5BE37D"/></g>`;
   const FUOCHI = (w, seed) => { let f = ""; const col = ["#FF5A6E", "#FFD23F", "#4FB4FF", "#5BE37D", "#FF9A3C"];
     for (let i = 0; i < 3; i++) { const x = [w * 0.16, w * 0.5, w * 0.84][i], y = [-2, -9, -1][i], c = col[(seed + i) % 5]; let r = "";
       for (let j = 0; j < 8; j++) { const a = j * Math.PI / 4; r += `<line x1="${(x + 2 * Math.cos(a)).toFixed(1)}" y1="${(y + 2 * Math.sin(a)).toFixed(1)}" x2="${(x + 8 * Math.cos(a)).toFixed(1)}" y2="${(y + 8 * Math.sin(a)).toFixed(1)}"/>`; }
@@ -296,9 +306,10 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
   function accessori(svg, lista, tipo, seed) {
     if (!lista || !lista.length) return svg;
     const [x, y, k] = TESTA[tipo] || TESTA.cane, w = tipo === "altro" ? 46 : 64;
-    const testa = (lista.includes("collare") ? COLLARE(x, y, k) : "") + (lista.includes("corona") ? CORONA(x, y, k) : "") + (lista.includes("fiocco") ? FIOCCO(x, y, k) : "");
+    const testa = (lista.includes("sciarpa") ? SCIARPA(x, y, k) : lista.includes("collare") ? COLLARE(x, y, k) : "") + (lista.includes("corona") ? CORONA(x, y, k) : lista.includes("cappello") ? CAPPELLO(x, y, k) : "") + (lista.includes("fiocco") ? FIOCCO(x, y, k) : "");
     if (testa) svg = svg.includes("<!--testa-->") && tipo !== "altro" ? svg.replace("<!--testa-->", `<g class="accessori">${testa}</g><!--testa-->`) : svg.replace(/<\/svg>\s*$/, `<g class="accessori">${testa}</g></svg>`);
     if (lista.includes("osso")) svg = svg.replace(/<\/svg>\s*$/, `<g class="accessori">${OSSO(x, tipo === "gatto" ? 38 : tipo === "altro" ? 30 : y + 4, k)}</g></svg>`);
+    if (lista.includes("albero")) svg = svg.replace(/<\/svg>\s*$/, `<g class="accessori">${ALBERO(x, tipo === "gatto" ? 30 : tipo === "altro" ? 22 : y + 4, k)}</g></svg>`);
     if (lista.includes("fuochi")) svg = svg.replace(/<\/svg>\s*$/, FUOCHI(w, seed) + "</svg>");
     return svg;
   }

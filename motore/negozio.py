@@ -10,7 +10,8 @@ import json, os, time, urllib.parse, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ARTICOLI = {"osso": ("Osso d'oro", 100), "fiocco": ("Fiocco", 149), "collare": ("Collare d'oro", 199), "corona": ("Corona", 299), "fuochi": ("Fuochi d'artificio", 399), "boost": ("Boost x2 per 24 ore", 100)}  # come in docs/app.js
+ARTICOLI = {"osso": ("Osso d'oro", 100), "fiocco": ("Fiocco", 149), "collare": ("Collare d'oro", 199), "corona": ("Corona", 299), "fuochi": ("Fuochi d'artificio", 399), "boost": ("Boost x2 per 24 ore", 100),
+            "cappello": ("Cappello di Babbo Natale", 149), "sciarpa": ("Sciarpa di Natale", 199), "albero": ("Alberello di Natale", 249)}  # come in docs/app.js; i tre di Natale in vendita fino al 6 gennaio
 
 def _hash(s):
     """FNV-1a a 32 bit, come Disegni.hash in docs/disegni.js."""

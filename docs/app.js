@@ -147,9 +147,12 @@ const barra = pt => { const i = LIVELLI.findIndex(l => pt < l[0]), da = i > 0 ? 
     `<div class="xp"><i style="width:${a ? Math.round(((pt - da) / (a[0] - da)) * 100) : 100}%"></i></div>`; };
 const prossimoLiv = pt => { const l = LIVELLI.find(l => pt < l[0]); return l ? ` · mancano ${l[0] - pt} punti per ${l[1]} ${l[2].toLowerCase()}` : ""; };
 const ARTICOLI = [["osso", "Osso d'oro", "1 €", "Brilla accanto alla sua cuccia"], ["fiocco", "Fiocco", "1,49 €", "Rosa, sulla testa: il più tenero del paese"], ["collare", "Collare d'oro", "1,99 €", "Con la medaglietta che brilla"], ["corona", "Corona", "2,99 €", "Il re o la regina del paese"],
-  ["fuochi", "Fuochi d'artificio", "3,99 €", "Esplodono sopra la sua cuccia, giorno e notte"]]; // come in motore/negozio.py
+  ["fuochi", "Fuochi d'artificio", "3,99 €", "Esplodono sopra la sua cuccia, giorno e notte"],
+  // Natale: in vendita fino al 6 gennaio, poi restano per sempre a chi li ha. Contano come gli altri per diventare Presidente.
+  ["cappello", "Cappello di Babbo Natale", "1,49 €", "🎄 Solo fino al 6 gennaio. Conta per diventare Presidente!"], ["sciarpa", "Sciarpa di Natale", "1,99 €", "🎄 Solo fino al 6 gennaio. Calda e a righe"],
+  ["albero", "Alberello di Natale", "2,49 €", "🎄 Solo fino al 6 gennaio. Con le lucine, accanto alla cuccia"]].filter(a => !["cappello", "sciarpa", "albero"].includes(a[0]) || new Date() < new Date("2027-01-07")); // come in motore/negozio.py
 const codice = id => "z" + D.hash(id).toString(36); // come in motore/negozio.py: lega il pagamento all'animale senza dati personali
-const ICONE = { osso: "🦴", fiocco: "🎀", collare: "📿", corona: "👑", fuochi: "🎆" };
+const ICONE = { osso: "🦴", fiocco: "🎀", collare: "📿", corona: "👑", fuochi: "🎆", cappello: "🎅", sciarpa: "🧣", albero: "🎄" };
 let SCELTO = null; // il tuo animale, ricordato su questo telefono
 function sfilata(scelto) {
   const righe = SFILATA.map(([id, n]) => DATA.find(d => d.id === id)).filter(Boolean).slice(0, 5);

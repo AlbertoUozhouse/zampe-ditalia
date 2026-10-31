@@ -454,7 +454,7 @@ def presidente(D, rng, st):
     """Il Presidente di regione (commenti.py): chi ha più accessori nella sua regione. Il reel mostra chi c'è e quante regioni sono libere."""
     pres = sorted([a for a in D["animali"] if a.get("pres") and a["u"].lower() not in ESCLUSI], key=lambda a: (-len(a.get("acc", [])), -a.get("pt", 0)))
     if not pres: return negozio(D, rng, st)
-    NOMI = {"osso": "l'osso d'oro", "fiocco": "il fiocco", "collare": "il collare d'oro", "corona": "la corona", "fuochi": "i fuochi d'artificio"}  # come motore/negozio.py
+    NOMI = {"osso": "l'osso d'oro", "fiocco": "il fiocco", "collare": "il collare d'oro", "corona": "la corona", "fuochi": "i fuochi d'artificio", "cappello": "il cappello di Babbo Natale", "sciarpa": "la sciarpa di Natale", "albero": "l'alberello di Natale"}  # come motore/negozio.py
     p, libere = pres[0], 20 - len(pres)
     cosa = " e ".join(NOMI[k] for k in p.get("acc", []) if k in NOMI) or "un accessorio"
     razza = p.get("razza_testo") or ("gatto" if p.get("t") == "gatto" else "cane")
@@ -537,7 +537,7 @@ def neopresidente(D, rng, st):
     r = st.pop("presidente_festa", None) or list(pres)[-1]
     a = next((x for x in D["tutti"] if x.get("id") == pres.get(r)), None)
     if not a: return presidente(D, rng, st)
-    nomi_acc = {"osso": "l'osso d'oro", "fiocco": "il fiocco", "collare": "il collare d'oro", "corona": "la corona", "fuochi": "i fuochi d'artificio"}
+    nomi_acc = {"osso": "l'osso d'oro", "fiocco": "il fiocco", "collare": "il collare d'oro", "corona": "la corona", "fuochi": "i fuochi d'artificio", "cappello": "il cappello di Babbo Natale", "sciarpa": "la sciarpa di Natale", "albero": "l'alberello di Natale"}
     acc = nomi_acc.get((a.get("acc") or ["osso"])[-1], "un accessorio")
     libere = 20 - len(pres)
     tipo = "gatto" if a.get("t") == "gatto" else "cuccia"
