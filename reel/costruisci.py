@@ -178,6 +178,8 @@ def main():
         a = round(inizi[n], 2); b = round(inizi[n + 1], 2) if n + 1 < len(inizi) else durata; d = round(b - a, 2)
         if tipo in ("cuccia", "gatto"):
             sc["svg"] = svg_di("gatto" if tipo == "gatto" else "cane", sc.pop("razza"), sc.pop("seme", n + 3), serve)
+        if tipo == "foto":  # la foto vera della star (docs/media/ugc)
+            (prog / "assets/img").mkdir(parents=True, exist_ok=True); shutil.copy(ROOT / "docs/media/ugc" / sc["file"], prog / "assets/img" / sc["file"])
         if tipo == "vetrina":
             sc["animali"] = [{"svg": svg_di(x["t"], x["razza"], x.get("seme", k + 1), serve), "nome": x["nome"], "t": x["t"]} for k, x in enumerate(sc["animali"])]
         if tipo in ("duello", "chiusura"):

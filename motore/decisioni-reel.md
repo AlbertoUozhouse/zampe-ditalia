@@ -91,3 +91,8 @@ Da guardare domani: views del buio delle 13:30 (sopra 2.000?) e follower nuovi t
 Alberto: i reel sembrano fatti da una macchina. Primo passo: niente voce sintetica (config.json "voce_ia": false), solo musica (volume 0.6) e scritte grandi a ritmo di lettura; sparisce «Voce generata con IA» dalla didascalia.
 Prossimi passi proposti: animali veri (foto e video mandati in DM dai giocatori, con il loro consenso), video veri girati da Alberto, meno cartoni.
 Da guardare: visione media e views dei reel senza voce rispetto a quelli con voce.
+
+## 1/11/2026 — animali veri: «La star di oggi»
+
+Scelta di Alberto per avere reel meno «IA». Chi manda in privato la foto del suo animale riceve «Possiamo metterlo nel reel col tuo @? Rispondi SÌ»; col SÌ la foto si salva in docs/media/ugc (ridotta, senza dati nascosti) e ogni giorno alle 18 esce il reel «star» con la foto vera e il suo @. Senza foto in coda esce la gara. Ogni didascalia invita a mandare la foto.
+Da guardare: quante foto arrivano al giorno, views e condivisioni dei reel star (chi è nel reel lo condivide).

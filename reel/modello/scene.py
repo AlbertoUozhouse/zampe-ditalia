@@ -248,5 +248,24 @@ def chiusura(cid, dur, testo, svg_su="golden.svg", svg_giu="gatto-rosso.svg"):
                         f'    tl.to("#{cid}-cta", {{ scale: 1.08, duration: 0.15, yoyo: true, repeat: 1 }}, {max(1.2, dur - 1.2):.2f});\n    window.__timelines["{cid}"] = tl;')
     return base
 
-TIPI = {"cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+def foto(cid, dur, file, nome, utente=None, comune=None):
+    """La foto vera di un animale (mandata da chi lo ha, col suo permesso): grande, con lo sfondo sfocato della stessa foto e la targa col nome."""
+    sotto = ""
+    if utente or comune:
+        sotto = f'<span class="tag" id="{cid}-tag">{ESC("@" + utente) if utente else ""}{" · " if utente and comune else ""}{ESC(comune or "")}</span>'
+    corpo = f"""<div class="sfoca" style="background-image:url('assets/img/{file}')"></div>
+    <div class="eroe" id="{cid}-eroe"><div class="cornice" id="{cid}-img"><img src="assets/img/{file}" alt=""></div><span class="targa d" id="{cid}-targa">⭐ {ESC(nome.upper())}</span>{sotto}</div>"""
+    css = f"""#root .sfoca {{ position: absolute; inset: -60px; background-size: cover; background-position: center; filter: blur(40px) brightness(.45); }}
+    #root .eroe {{ position: absolute; left: 0; right: 0; top: 330px; display: flex; flex-direction: column; align-items: center; }}
+    #root .cornice {{ width: 860px; height: 1000px; border-radius: 48px; overflow: hidden; border: 10px solid #FFF4DE; box-shadow: 0 30px 90px rgba(0,0,0,.6); }}
+    #root .cornice img {{ width: 100%; height: 100%; object-fit: cover; }}
+    #root .eroe .targa {{ margin-top: -46px; }}
+    {TARGA_CSS}"""
+    js = f"""    tl.fromTo("#{cid}-img", {{ scale: 1.08 }}, {{ scale: 1, duration: {dur:.2f}, ease: "power1.out" }}, 0);
+    tl.fromTo("#{cid}-targa", {{ y: 30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, 0.3);"""
+    if sotto:
+        js += f'\n    tl.fromTo("#{cid}-tag", {{ y: 20, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0.55);'
+    return _pagina(cid, f"Foto vera: {nome}.", css, corpo, js)
+
+TIPI = {"foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}

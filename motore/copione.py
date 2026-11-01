@@ -524,6 +524,30 @@ def razze(D, rng, st):
     st["copertina"] = {"sopra": "LA RAZZA DI OGNI REGIONE", "grande": f"{pct}%", "sotto": "dei cani d'Italia è meticcio", "domanda": "E nella tua regione? 👇", "tema": "vetrina"}
     return "LE RAZZE D'ITALIA", frasi, did
 
+def star(D, rng, st):
+    """La star di oggi: la foto vera di un animale, mandata in privato da chi lo ha e col suo SÌ (messaggi.py → stato «ugc»).
+    Niente disegni: è il reel meno «IA» che abbiamo. Senza foto nuove, esce la gara."""
+    fatte = set(st.get("star_fatte", []))
+    ugc = [x for x in carica(ROOT / "motore/stato.json", {}).get("ugc", []) if x["f"] not in fatte and (ROOT / "docs/media/ugc" / x["f"]).exists()
+           and x["u"].lower() not in ESCLUSI]
+    if not ugc: return gara(D, rng, st)
+    x = ugc[0]; st["star_fatte"] = (st.get("star_fatte", []) + [x["f"]])[-500:]
+    a = next((y for y in D["animali"] if y["u"].lower() == x["u"].lower() and y.get("k") == "animale"), None)
+    nome, citta = (a["n"], a["c"]) if a else ("la star", None)
+    resto = len(ugc) - 1
+    frasi = [
+        (f"La star di oggi è {nome}{', da ' + citta if citta else ''}!", {"tipo": "foto", "file": x["f"], "nome": nome, "utente": x["u"], "comune": citta}),
+        ("Una foto vera, mandata da chi lo ama.", {"tipo": "foto", "file": x["f"], "nome": nome, "utente": x["u"], "comune": citta}),
+        ("Vuoi che domani tocchi al tuo?", {"tipo": "numero", "grande": "📸", "sotto": "mandaci in privato la foto del tuo animale"}),
+        ("Mandaci la sua foto in privato!", {"tipo": "chiusura", "testo": "📸 Mandaci la foto del tuo in DM"}),
+    ]
+    did = (f"⭐ La star di oggi è {nome}" + (f" di {citta}" if citta else "") + f", di @{x['u']}! 😍\n\n"
+           "📸 Vuoi che domani tocchi al tuo? Mandaci in privato una foto del tuo animale: ogni giorno uno diventa la star del reel, col tuo @."
+           + (f" (Ne abbiamo già {resto} in coda!)" if resto > 2 else "") + "\n\n👇 E scrivi qui sotto città, nome e razza: si accende anche sulla mappa d'Italia.")
+    st["tag_extra"] = [x["u"]]
+    st["copertina"] = {"sopra": "⭐ LA STAR DI OGGI", "grande": nome, "sotto": citta or "foto vera, mandata in DM", "domanda": "Domani tocca al tuo? 📸", "tema": "fondatore"}
+    return "LA STAR", frasi, did
+
 def neopresidente(D, rng, st):
     """Festa per il Presidente di regione appena eletto (l'ultimo in st["presidente_festa"] o, se manca, il più recente):
     il suo animale in primo piano col nome del padrone, l'accessorio che gli ha dato il titolo e le regioni ancora libere.
@@ -577,7 +601,7 @@ def sfida(D, rng, st):
     st["copertina"] = {"sopra": "CANI vs GATTI", "grande": f"{cani}<br><i>vs</i><br>{gatti}", "sotto": f"I {dietro} stanno perdendo", "domanda": "La tua città li salva? 👇", "tema": "duello"}
     return "CANI vs GATTI", frasi, did
 
-FORMATI = {"neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -645,6 +669,7 @@ def main():
         did = did.strip() + "\n\n"
     else:  # una richiesta sola: con 8 richieste diverse in didascalia (ottobre) non se ne faceva nessuna
         if "nome e razza" not in did: did = did.strip() + "\n\n👇 Scrivi qui sotto città, nome e razza del tuo animale: la sua luce si accende sulla mappa col tuo @."
+        if formato != "star": did = did.strip() + "\n📸 Mandaci in privato la foto del tuo animale: ogni giorno uno diventa la star del reel!"
         # dal 30/10 sera, togliendo questa riga, i follower sono passati da circa 250 a 20-30 al giorno: resta sempre
         did = did.strip() + f"\n\n➕ Seguici e scrivi SEGUO: {PS} punti" + (" e il costume di Halloween per il tuo animale" if ORA.date().isoformat() <= "2026-11-02" else " e le lucine sulla cuccia") + ". Nei reel mettiamo prima gli animali di chi ci segue."
         fw = D.get("follower") or {}

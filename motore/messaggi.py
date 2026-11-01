@@ -28,6 +28,26 @@ PRENOTA = re.compile(r"(?i)prenot")
 EDIFICIO = {"veterinario": "la clinica veterinaria 🏥", "toelettatura": "il salone di toelettatura ✂️", "negozio": "il negozio per animali 🛍️",
             "pensione": "la pensione per animali 🏡", "educatore": "il campo di addestramento 🎾", "altro": "la bottega degli animali 🏪"}
 SEGUE = re.compile(r"(?i)\b(ti seguo|seguo|seguito|seguita|follow)\b")
+# La star di oggi: chi ci manda la foto del suo animale in privato, e dice SÌ, finisce in un reel col suo @ (copione.py → star)
+UGC = ROOT / "docs/media/ugc"
+SI, NO = re.compile(r"(?i)^\W*(s[iì]+|certo|ok|va bene|volentieri)\b"), re.compile(r"(?i)^\W*no\b")
+
+def foto_di(m):
+    """L'indirizzo della foto allegata a un messaggio privato (i video per ora no), oppure None."""
+    for a in (m.get("attachments") or {}).get("data", []):
+        u = (a.get("image_data") or {}).get("url") or ((a.get("payload") or {}).get("url") if a.get("type") == "image" else None)
+        if u: return u
+    return None
+
+def salva_foto(url):
+    """Scarica la foto e la salva ridotta e senza dati nascosti (ffmpeg non copia EXIF né posizione). Restituisce il nome del file."""
+    UGC.mkdir(parents=True, exist_ok=True)
+    nome = hashlib.sha256(("zampe-ugc" + url).encode()).hexdigest()[:12] + ".jpg"
+    grezza = UGC / ("_" + nome)
+    grezza.write_bytes(urllib.request.urlopen(url, timeout=60).read())
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(grezza), "-vf", "scale='min(1080,iw)':-2", "-map_metadata", "-1", "-q:v", "3", str(UGC / nome)], check=True)
+    grezza.unlink()
+    return nome
 
 
 def manda(ig, igsid, messaggio):
@@ -76,7 +96,7 @@ def main():
     dati = carica(ANIMALI, {"animali": []})
     limite = (datetime.now(timezone.utc) - timedelta(hours=23)).isoformat()
     # i messaggi nuovi di ogni persona, con quelli precedenti della stessa conversazione come contesto
-    persone, storie, nuove_storie = {}, [], []
+    persone, storie, nuove_storie, foto_nuove = {}, [], [], []
     for conv in conversazioni(ig):
         for m in sorted(conv.get("messages", {}).get("data", []), key=lambda m: m.get("created_time", "")):
             da = m.get("from", {})
@@ -90,6 +110,9 @@ def main():
                 fatti.add(impronta)  # ci ha messo in una storia: premio e grazie
                 if m.get("created_time", "").replace("+0000", "+00:00") >= limite and not any(x[0] == da.get("id") for x in storie):
                     storie.append((da.get("id"), da.get("username", "")))
+                continue
+            if impronta not in fatti and m.get("created_time", "").replace("+0000", "+00:00") >= limite and foto_di(m) and not (m.get("message") or "").strip():
+                fatti.add(impronta); foto_nuove.append((da.get("id"), foto_di(m)))  # una foto del suo animale: chiediamo se possiamo usarla
                 continue
             if impronta not in fatti and m.get("created_time", "").replace("+0000", "+00:00") >= limite and (m.get("message") or "").strip():
                 p["nuovi"].append((impronta, p["tutti"][-1]))
@@ -127,10 +150,30 @@ def main():
             conteggi["storie"] += 1
         except urllib.error.HTTPError as e:
             print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
+    attesa_foto, ugc_nuove = st.setdefault("foto_attesa", {}), 0
+    chiave_foto = lambda i: hashlib.sha256(("zampe-foto" + str(i)).encode()).hexdigest()[:16]  # nel repository solo impronte, niente ID
+    for igsid, url in foto_nuove:
+        attesa_foto[chiave_foto(igsid)] = {"url": url, "t": time.time()}
+        try: manda(ig, igsid, {"text": "Che bello! 😍 Possiamo metterlo nel reel «La star di oggi» di @zampeditalia, col tuo @? Rispondi SÌ oppure NO"})
+        except urllib.error.HTTPError as e: print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
     for igsid, p in persone.items():
         if not p["nuovi"]:
             continue
         u, nuovi = p["u"], [m for _, m in p["nuovi"]]
+        cf = chiave_foto(igsid)
+        if cf in attesa_foto and any(SI.search(m["text"]) or NO.search(m["text"]) for m in nuovi):
+            si = any(SI.search(m["text"]) for m in nuovi)
+            f = attesa_foto.pop(cf)
+            try:
+                if si:
+                    nome = salva_foto(f["url"])
+                    gioco.stato.setdefault("ugc", []).append({"f": nome, "u": u, "t": time.time()}); ugc_nuove += 1
+                    manda(ig, igsid, {"text": "Fatto! ⭐ Sarà la star di uno dei prossimi reel, col tuo @. Intanto scrivi città, nome e razza sotto un reel: si accende anche sulla mappa 🐾"})
+                else:
+                    manda(ig, igsid, {"text": "Va bene, niente reel 👍 Grazie lo stesso!"})
+            except Exception as e:
+                print(f"foto della star non salvata: {type(e).__name__}", file=sys.stderr)
+            continue
         testi = [m["text"] for m in nuovi]
         risposte = []
         attesa = st.setdefault("prenota_attesa", {})
@@ -233,6 +276,11 @@ def main():
     if coda:
         gioco.stato["negozio_storie"] = riprova + coda[6:]; gioco.salva()
         print(f"storie dei regali del negozio: {regali}")
+    st["foto_attesa"] = {k: v for k, v in attesa_foto.items() if time.time() - v["t"] < 3 * 86400}  # dopo 3 giorni senza risposta si lascia perdere
+    if ugc_nuove:
+        gioco.salva()
+        subprocess.run("git add docs/media/ugc motore/stato.json && git commit -q -m 'Foto della star' && (git pull -q --rebase -X theirs; git push -q)", shell=True, cwd=ROOT)
+        print(f"foto della star nuove: {ugc_nuove}")
     st["storie_v1"] = True
     st["fatti"] = sorted(fatti)[-20000:]
     # in attesa: solo l'ID anonimo che Instagram dà alla nostra app e l'indirizzo dell'immagine, niente nomi né testi
