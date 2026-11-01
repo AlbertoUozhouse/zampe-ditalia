@@ -112,7 +112,7 @@ def main():
                     storie.append((da.get("id"), da.get("username", "")))
                 continue
             if impronta not in fatti and m.get("created_time", "").replace("+0000", "+00:00") >= limite and foto_di(m) and not (m.get("message") or "").strip():
-                fatti.add(impronta); foto_nuove.append((da.get("id"), foto_di(m)))  # una foto del suo animale: chiediamo se possiamo usarla
+                fatti.add(impronta); foto_nuove.append((da.get("id"), foto_di(m), da.get("username", "")))  # una foto del suo animale: la guardiamo e chiediamo se possiamo usarla
                 continue
             if impronta not in fatti and m.get("created_time", "").replace("+0000", "+00:00") >= limite and (m.get("message") or "").strip():
                 p["nuovi"].append((impronta, p["tutti"][-1]))
@@ -152,16 +152,35 @@ def main():
             print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
     attesa_foto, ugc_nuove = st.setdefault("foto_attesa", {}), 0
     chiave_foto = lambda i: hashlib.sha256(("zampe-foto" + str(i)).encode()).hexdigest()[:16]  # nel repository solo impronte, niente ID
-    for igsid, url in foto_nuove:
-        attesa_foto[chiave_foto(igsid)] = {"url": url, "t": time.time()}
-        try: manda(ig, igsid, {"text": "Che bello! 😍 Possiamo metterlo nel reel «La star di oggi» di @zampeditalia, col tuo @? Rispondi SÌ oppure NO"})
-        except urllib.error.HTTPError as e: print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
+    seguono = {k for k, v in gioco.stato.get("seguono", {}).items() if v == "premiato"}
+    for igsid, url, u in foto_nuove:
+        if u.lower() not in seguono:  # la star è un premio per chi ci segue (Alberto, 1/11)
+            try: manda(ig, igsid, {"text": "Che bello! 😍 La star del giorno è riservata a chi ci segue: seguici, scrivi SEGUO sotto un nostro reel e poi rimandaci la foto ⭐"})
+            except urllib.error.HTTPError as e: print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
+            continue
+        # l'ID anonimo che Instagram dà alla nostra app serve per rispondere dopo il giudizio (come in «in_attesa»): niente nomi né testi
+        attesa_foto[chiave_foto(igsid)] = {"url": url, "t": time.time(), "igsid": igsid, "giudicata": False}
+    for cf, f in list(attesa_foto.items()):
+        if f.get("giudicata", True):
+            continue
+        try:  # solo foto belle: niente sfocate, buie, con persone in primo piano o screenshot
+            giudizio = lettore.giudica_foto(urllib.request.urlopen(f["url"], timeout=60).read())
+            if giudizio is None:
+                continue  # Claude non risponde: si riprova al prossimo giro
+            if not giudizio.get("ok"):
+                attesa_foto.pop(cf)
+                manda(ig, f["igsid"], {"text": f"Grazie! 🐾 Questa è {giudizio.get('motivo', 'difficile da vedere bene')}: mandacene un'altra con il tuo animale ben visibile, a fuoco e con tanta luce 📸"})
+                continue
+            f["giudicata"] = True
+            manda(ig, f["igsid"], {"text": "Che bella! 😍 Possiamo metterla nel reel «La star di oggi» di @zampeditalia, col tuo @? Rispondi SÌ oppure NO"})
+        except Exception as e:
+            print(f"foto della star non gestita: {type(e).__name__}", file=sys.stderr)
     for igsid, p in persone.items():
         if not p["nuovi"]:
             continue
         u, nuovi = p["u"], [m for _, m in p["nuovi"]]
         cf = chiave_foto(igsid)
-        if cf in attesa_foto and any(SI.search(m["text"]) or NO.search(m["text"]) for m in nuovi):
+        if cf in attesa_foto and attesa_foto[cf].get("giudicata", True) and any(SI.search(m["text"]) or NO.search(m["text"]) for m in nuovi):
             si = any(SI.search(m["text"]) for m in nuovi)
             f = attesa_foto.pop(cf)
             try:

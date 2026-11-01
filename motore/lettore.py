@@ -177,3 +177,28 @@ def leggi(utente, commenti, comuni, norm, nome_proprio, razza, riservato=False):
         print(f"lettore: @{utente} scartati {scartati}", file=sys.stderr)
     return {"animali": animali[:5], "senza_comune": senza_comune, "senza_nome": senza_nome, "estero": bool(g.get("estero")),
             "voti": voti, "segue": bool(g.get("segue")), "rimuovi": bool(g.get("rimuovi")), "domanda": g.get("domanda")}
+
+
+def giudica_foto(dati_jpg):
+    """La foto mandata per «La star di oggi» è da reel? {"ok": bool, "motivo": "..."}; None se Claude non risponde.
+    Serve un animale ben visibile, a fuoco e con buona luce; niente persone in primo piano, screenshot, scritte o contenuti non adatti."""
+    import base64
+    k = _chiave()
+    if not k:
+        return None
+    istr = ("Sei il photo editor di una pagina Instagram italiana di animali domestici. Guarda la foto e decidi se è abbastanza bella "
+            "per un reel «La star di oggi». Serve: un animale domestico ben visibile e al centro, a fuoco, con buona luce, inquadratura gradevole. "
+            "Scarta se: sfocata, buia, animale piccolo o tagliato, persone (soprattutto bambini) in primo piano, screenshot, scritte o meme, "
+            "contenuti violenti o non adatti. Rispondi solo con JSON: {\"ok\": true/false, \"motivo\": \"in 3-6 parole italiane, per esempio 'un po\' sfocata'\"}")
+    body = {"model": MODELLO, "max_tokens": 200, "messages": [{"role": "user", "content": [
+        {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(dati_jpg).decode()}},
+        {"type": "text", "text": istr}]}]}
+    try:
+        r = urllib.request.Request("https://api.anthropic.com/v1/messages", data=json.dumps(body).encode(),
+                                   headers={"x-api-key": k, "anthropic-version": "2023-06-01", "content-type": "application/json"})
+        testo = next(b["text"] for b in json.loads(urllib.request.urlopen(r, timeout=60).read())["content"] if b.get("type") == "text")
+        return json.JSONDecoder().raw_decode(testo[testo.index("{"):])[0]
+    except Exception as e:
+        print(f"lettore: foto non giudicata ({type(e).__name__})", file=sys.stderr)
+        return None
+

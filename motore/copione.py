@@ -703,7 +703,7 @@ def main():
         did = did.strip() + "\n\n"
     else:  # una richiesta sola: con 8 richieste diverse in didascalia (ottobre) non se ne faceva nessuna
         if "nome e razza" not in did: did = did.strip() + "\n\n👇 Scrivi qui sotto città, nome e razza del tuo animale: la sua luce si accende sulla mappa col tuo @."
-        if formato != "star": did = did.strip() + "\n📸 Mandaci in privato la foto del tuo animale: ogni giorno uno diventa la star del reel!"
+        if formato != "star": did = did.strip() + "\n📸 Ci segui? Mandaci in privato la foto più bella del tuo animale: ogni giorno una diventa la star del reel!"
         # dal 30/10 sera, togliendo questa riga, i follower sono passati da circa 250 a 20-30 al giorno: resta sempre
         did = did.strip() + f"\n\n➕ Seguici e scrivi SEGUO: {PS} punti" + (" e il costume di Halloween per il tuo animale" if ORA.date().isoformat() <= "2026-11-02" else " e le lucine sulla cuccia") + ". Nei reel mettiamo prima gli animali di chi ci segue."
         fw = D.get("follower") or {}

@@ -102,3 +102,8 @@ Da guardare: quante foto arrivano al giorno, views e condivisioni dei reel star 
 Alberto: non togliere la voce a tutti, fare 10 prove diverse di impatto, e far sentire la gente una comunità.
 Cambiato: ogni reel prende a rotazione una di 10 varianti (VARIANTI in main() di motore/copione.py): voce sì/no × apertura (solita / «Siamo già N animali d'Italia. Manca il tuo?» / «Stiamo costruendo il paese virtuale con più animali d'Italia») × durata 48 o 32 parole. La variante di ogni reel è in motore/reel_fatti.json, chiave "varianti" (id del reel → variante): confrontare views, condivisioni e follower per variante dopo 2-3 giri completi, poi tenere le migliori e togliere le peggiori.
 Nuovo formato «missione»: il paese virtuale con più animali d'Italia, traguardo 10.000, poi Italia contro Mondo; tono da famiglia. Esce l'1/11 alle 21.
+
+## 1/11/2026 — la star solo per chi ci segue, e solo foto belle
+
+Alberto: non tutti mandano belle foto, e chi non ci segue non deve diventare la star.
+Cambiato (motore/messaggi.py, lettore.giudica_foto): chi non ha scritto SEGUO riceve «la star è riservata a chi ci segue»; le foto di chi ci segue le guarda Claude (animale ben visibile, a fuoco, luce buona, niente persone in primo piano, screenshot o scritte) prima di chiedere il SÌ. Se Claude non risponde la foto si riprova al giro dopo.
