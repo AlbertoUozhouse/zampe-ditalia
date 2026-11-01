@@ -84,7 +84,8 @@
  "gare": [
   "Livorno",
   "Modena",
-  "Salerno"
+  "Salerno",
+  "Napoli"
  ],
  "temi": [
   "notte",
@@ -93,11 +94,13 @@
   "notte",
   "neon",
   "aurora",
-  "tramonto"
+  "tramonto",
+  "neon"
  ],
- "variante_n": 2,
+ "variante_n": 3,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
-  "2026-11-01-1637-derby": "muto-solita-48"
+  "2026-11-01-1637-derby": "muto-solita-48",
+  "2026-11-01-1809-star": "voce-solita-48"
  }
 }
