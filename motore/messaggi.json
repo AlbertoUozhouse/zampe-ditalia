@@ -76,11 +76,13 @@
 "0b4759c4dd918768",
 "0b941e6a028cc3c9",
 "0c6cc97ae8d6632d",
+"0ca747c8ad471305",
 "0cbf51f2b994db4a",
 "0d1173300bbfe1b9",
 "0d5cdfe0958cef3c",
 "0d841e26d21546f3",
 "0d9d7b624cadefb9",
+"0de62bb04817a8b6",
 "0e7cedd09fe17acd",
 "0e99ff44793e5d74",
 "0ea5bc0cbc0fb258",
@@ -222,6 +224,7 @@
 "2708f68ca796820e",
 "2743cf0ee35cdaa2",
 "27bd752f14915c93",
+"27fa97144b1c12dd",
 "29f074fc17b311cc",
 "2a045a39f38213d2",
 "2a60d6f950c6ca2d",
@@ -254,6 +257,7 @@
 "306aaf40e5ac0c73",
 "30f797d3c1f1b526",
 "3158d3c8911dd8b7",
+"3168c73d42ad635c",
 "317e2034d2b738b6",
 "31d9c67838ca256e",
 "322cd0224de1238f",
@@ -444,6 +448,7 @@
 "54f2f1c31420b369",
 "550e1924ba63c167",
 "5525a7926db00f15",
+"5542a153fe64a56b",
 "55469068df21330e",
 "55d76475113d2c91",
 "55e512565c4640c5",
@@ -668,6 +673,7 @@
 "8394f5fb168ddd2d",
 "83b0bfcd8c628bab",
 "83c60891a13d5beb",
+"8413c6f40a3218e8",
 "8455c918e291e5c5",
 "8480d52fd45efb17",
 "8484db0af0ca5a5e",
@@ -1014,6 +1020,7 @@
 "c303aed18b070112",
 "c32a450b69af3da3",
 "c33f4086f5b99f9e",
+"c3fc192c680643ab",
 "c4a2079ebabfa31d",
 "c4ba941e9df01583",
 "c540d341221926d0",
@@ -1102,6 +1109,7 @@
 "d50cf829a4e9ea00",
 "d51e59f5f0deebbe",
 "d54d2c052c446cf6",
+"d5547840eca6ccd1",
 "d5f581e60ad4b697",
 "d62e713e15d4af0a",
 "d68c320b545d122e",
@@ -1118,6 +1126,7 @@
 "d7d4cd6e15b4c898",
 "d85dba8f4b730d47",
 "d8a2a2d5772b79e7",
+"d8ac1450442f2c20",
 "d8e4a27e1274169a",
 "d9400c45ab922d17",
 "d94c06f0111b1590",
@@ -1234,11 +1243,13 @@
 "eb51313bde8b06be",
 "eb8dec0f383275c5",
 "ebda24aff192e37b",
+"ebeccc179a3fb5d3",
 "ebfbbf806de1674f",
 "ec0b5bd8bc6c6c04",
 "ec71fd8c3b327f8b",
 "ec85c16c6fae5621",
 "ecd8d251ee31c8a9",
+"ed139d9883cad453",
 "edc74475aff97ae4",
 "edde923449b94175",
 "edee0cb85c600162",
@@ -1334,11 +1345,40 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "2283966029179186",
+"url": [
+"https://zampeditalia.it/cartoline/4852ab8abe857e8b.png"
+],
+"t": 1793539101.4245253
+},
+{
+"igsid": "2429315564141504",
+"url": [
+"https://zampeditalia.it/cartoline/73b4610a726375b0.png"
+],
+"t": 1793539101.4245276
+},
+{
+"igsid": "1595936595880444",
+"url": [
+"https://zampeditalia.it/cartoline/c5fdd50deb32ee5b.png"
+],
+"t": 1793539101.424528
+},
+{
+"storia": "cartoline/68a5f3fba1feded2.png",
+"url": [
+"https://zampeditalia.it/cartoline/68a5f3fba1feded2.png"
+],
+"t": 1793539075.2625992
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
-"2026-11-01": 1
+"2026-11-01": 2
 },
 "prenota_attesa": {},
 "foto_attesa": {}
