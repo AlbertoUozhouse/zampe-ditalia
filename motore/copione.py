@@ -524,6 +524,27 @@ def razze(D, rng, st):
     st["copertina"] = {"sopra": "LA RAZZA DI OGNI REGIONE", "grande": f"{pct}%", "sotto": "dei cani d'Italia è meticcio", "domanda": "E nella tua regione? 👇", "tema": "vetrina"}
     return "LE RAZZE D'ITALIA", frasi, did
 
+def missione(D, rng, st):
+    """La missione di tutti: il paese virtuale con più animali d'Italia, poi Italia contro Mondo.
+    Tono da comunità («una famiglia», «insieme»): chi commenta non gioca con una pagina, costruisce qualcosa con gli altri."""
+    tot = len(luci(D)); nc = len({a["c"] for a in D["tutti"] if a.get("k") != "stella"})
+    cane, _ = esempio(rng, D)
+    c = rng.choice(CITTA)
+    frasi = [
+        ("Stiamo costruendo il paese virtuale con più animali d'Italia.", {"tipo": "mappa", "luci": luci(D)}),
+        (f"Siamo già {tot}, in {nc} città.", {"tipo": "numero", "grande": str(tot), "sotto": f"animali veri in {nc} città: una sola famiglia 🐾"}),
+        ("Il traguardo: diecimila.", {"tipo": "numero", "grande": "10.000", "sotto": "animali d'Italia, il paese più grande, fatto da voi"}),
+        ("Poi sfidiamo il mondo: Italia contro Mondo!", {"tipo": "duello", "sinistra": {"titolo": "Italia", "valore": f"{tot} animali"}, "destra": {"titolo": "Mondo", "valore": "presto 🌍"}}),
+        ("Manca il tuo: scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{c}, {cane['nome']}, {cane['parola']}"}),
+        ("Entra nella famiglia!", {"tipo": "chiusura", "testo": "🐾 Entra nella famiglia: scrivi la tua città"}),
+    ]
+    did = (f"🇮🇹 Stiamo costruendo insieme il paese virtuale con più animali d'Italia: siamo già {tot}, in {nc} città.\n\n"
+           "Non è il gioco di una pagina: è la casa di tutti i nostri animali, e ogni commento è un mattone. "
+           "Il traguardo è 10.000. Quando ci arriviamo, apriamo la sfida più grande: 🇮🇹 Italia contro Mondo 🌍\n\n"
+           f"👇 Manca il tuo: scrivi qui sotto città, nome e razza (per esempio «{c}, {cane['nome']}, {cane['parola']}») e tagga chi deve esserci con te.")
+    st["copertina"] = {"sopra": "🇮🇹 LA NOSTRA MISSIONE", "grande": f"{tot}<br><i>/</i><br>10.000", "sotto": "animali d'Italia, una sola famiglia", "domanda": "Manca il tuo? 👇", "tema": "duello"}
+    return "LA MISSIONE", frasi, did
+
 def star(D, rng, st):
     """La star di oggi: la foto vera di un animale, mandata in privato da chi lo ha e col suo SÌ (messaggi.py → stato «ugc»).
     Niente disegni: è il reel meno «IA» che abbiamo. Senza foto nuove, esce la gara."""
@@ -601,7 +622,7 @@ def sfida(D, rng, st):
     st["copertina"] = {"sopra": "CANI vs GATTI", "grande": f"{cani}<br><i>vs</i><br>{gatti}", "sotto": f"I {dietro} stanno perdendo", "domanda": "La tua città li salva? 👇", "tema": "duello"}
     return "CANI vs GATTI", frasi, did
 
-FORMATI = {"star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -610,11 +631,11 @@ def numeri(s): return re.findall(r"\d+", s)
 
 MAX_PAROLE = 48  # circa 17 secondi, con la scena SEGUO: in ottobre la visione media era 8-11 s su reel di 25 s, la gente se ne andava a metà
 
-def taglia(frasi):
+def taglia(frasi, max_parole=None):
     """Troppe parole (la domenica, con Capobranco, Re degli inviti e bonus insieme): via le scene di mezzo, dalla più vicina alla fine.
     Restano sempre l'apertura, il bonus e la chiusura."""
     frasi = list(frasi)
-    while sum(len(t.split()) for t, _ in frasi) > MAX_PAROLE and len(frasi) > 4:
+    while sum(len(t.split()) for t, _ in frasi) > (max_parole or MAX_PAROLE) and len(frasi) > 4:
         via = next((i for i in range(len(frasi) - 3, 0, -1) if frasi[i][1]["tipo"] == "commento"), len(frasi) - 3)
         print("scena tolta per stare nei tempi:", frasi.pop(via)[0])
     return frasi
@@ -662,6 +683,19 @@ def main():
     rng = random.Random(ORA.strftime("%Y%m%d%H") + formato)
     D = dati()
     titolo, frasi, did = FORMATI[formato](D, rng, st)
+    # 10 prove diverse a rotazione (Alberto, 1/11: «non togliere la voce a prescindere, fai 10 prove di impatto»): voce sì/no,
+    # apertura (solita, «siamo già N animali, manca il tuo?», la missione del paese virtuale più grande d'Italia), durata 48 o 32 parole.
+    # Ogni reel segna la sua variante in st["varianti"]: il bot del mattino confronta views e follower per variante.
+    VARIANTI = [("voce", "solita", 48), ("muto", "solita", 48), ("voce", "comunita", 48), ("muto", "comunita", 48), ("voce", "missione", 48),
+                ("muto", "missione", 48), ("voce", "solita", 32), ("muto", "comunita", 32), ("voce", "missione", 32), ("muto", "solita", 32)]
+    nv = st.get("variante_n", 0); st["variante_n"] = nv + 1
+    voce_v, apertura, max_parole = VARIANTI[nv % len(VARIANTI)]
+    if formato in ("star", "missione", "neopresidente"): apertura = "solita"  # hanno già la loro apertura
+    tot_luci = len(luci(D))
+    if apertura == "comunita":
+        frasi.insert(0, (f"Siamo già {tot_luci} animali d'Italia. Manca il tuo?", {"tipo": "numero", "grande": str(tot_luci), "sotto": "animali veri, una sola grande famiglia 🐾"}))
+    elif apertura == "missione":
+        frasi.insert(0, ("Stiamo costruendo il paese virtuale con più animali d'Italia.", {"tipo": "mappa", "luci": luci(D)}))
     # Niente scena SEGUO dentro il video: l'1/11 occupava 5 secondi su 15 e chi guardava scorreva via (views da 3.000 a meno di 1.000).
     # La richiesta di seguire resta dove non ruba il contenuto: la scritta fissa in alto («➕ Seguici +30»), la didascalia e le risposte ai commenti.
     per_attivita = st.pop("senza_bonus", False)
@@ -677,7 +711,7 @@ def main():
             did = did.strip() + f"\n\n🎆 A 2.000 follower facciamo i fuochi d'artificio su tutta la mappa d'Italia: ne mancano {2000 - fw['n']}. Seguici e dillo a un amico!"
     if not per_attivita:  # nel reel per le attività la parola PRENOTA non si tocca
         frasi, did = varia(frasi, did, D)
-    frasi = taglia(frasi)
+    frasi = taglia(frasi, max_parole)
     mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")} | set(st.pop("tag_extra", [])))
     if mostrati:
         did = did.strip() + "\n\n🐾 In questo reel: " + " ".join("@" + u for u in mostrati)
@@ -690,7 +724,7 @@ def main():
                 h = re.sub(r"[^a-z]", "", unicodedata.normalize("NFD", c.lower()).encode("ascii", "ignore").decode())
                 if 2 < len(h) < 25 and h not in citta: citta.append(h)
     tag_citta = " ".join("#" + h for h in citta[:5])
-    voce_ia = carica(ROOT / "motore/config.json", {}).get("voce_ia", False)  # senza voce artificiale niente avviso in didascalia
+    voce_ia = voce_v == "voce"  # senza voce artificiale niente avviso in didascalia
     did = did.strip() + ("\n\nVoce generata con IA.\n\n" if voce_ia else "\n\n") + ("#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici " if per_attivita else st.pop("hashtag", "#cani #gatti #italia #canicontrogatti #animalidomestici ")) + tag_citta
     intro = st.pop("intro", None)
     # l'aspetto grafico a rotazione: mai uguale ai due reel prima (reel/modello/scene.py, TEMI)
@@ -698,7 +732,9 @@ def main():
     gia = st.get("temi", [])[-2:]
     tema = rng.choice([t for t in temi if t not in gia])
     st["temi"] = (st.get("temi", []) + [tema])[-10:]
-    copione = {"tema": tema, "id": ORA.strftime("%Y-%m-%d-%H%M") + "-" + formato, "formato": formato, "testata": {"titolo": titolo},
+    id_reel = ORA.strftime("%Y-%m-%d-%H%M") + "-" + formato
+    st["varianti"] = dict(list({**st.get("varianti", {}), id_reel: f"{voce_v}-{apertura}-{max_parole}"}.items())[-200:])
+    copione = {"voce": voce_ia, "variante": f"{voce_v}-{apertura}-{max_parole}", "tema": tema, "id": id_reel, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
                "banner": f"📍 Scrivi città, nome, razza · ➕ Seguici {PS} 👇", "didascalia": did,
                "tag": [u for u in mostrati if u.lower() not in ESCLUSI], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {})}

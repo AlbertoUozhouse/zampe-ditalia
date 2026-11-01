@@ -96,3 +96,9 @@ Da guardare: visione media e views dei reel senza voce rispetto a quelli con voc
 
 Scelta di Alberto per avere reel meno «IA». Chi manda in privato la foto del suo animale riceve «Possiamo metterlo nel reel col tuo @? Rispondi SÌ»; col SÌ la foto si salva in docs/media/ugc (ridotta, senza dati nascosti) e ogni giorno alle 18 esce il reel «star» con la foto vera e il suo @. Senza foto in coda esce la gara. Ogni didascalia invita a mandare la foto.
 Da guardare: quante foto arrivano al giorno, views e condivisioni dei reel star (chi è nel reel lo condivide).
+
+## 1/11/2026 sera — 10 prove diverse e la missione
+
+Alberto: non togliere la voce a tutti, fare 10 prove diverse di impatto, e far sentire la gente una comunità.
+Cambiato: ogni reel prende a rotazione una di 10 varianti (VARIANTI in main() di motore/copione.py): voce sì/no × apertura (solita / «Siamo già N animali d'Italia. Manca il tuo?» / «Stiamo costruendo il paese virtuale con più animali d'Italia») × durata 48 o 32 parole. La variante di ogni reel è in motore/reel_fatti.json, chiave "varianti" (id del reel → variante): confrontare views, condivisioni e follower per variante dopo 2-3 giri completi, poi tenere le migliori e togliere le peggiori.
+Nuovo formato «missione»: il paese virtuale con più animali d'Italia, traguardo 10.000, poi Italia contro Mondo; tono da famiglia. Esce l'1/11 alle 21.

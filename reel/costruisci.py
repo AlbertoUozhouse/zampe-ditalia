@@ -153,8 +153,8 @@ def main():
     (prog / "meta.json").write_text(json.dumps({"id": copione["id"], "name": copione["id"]}))
 
     frasi = [f["testo"].strip() for f in copione["frasi"]]
-    # dall'1/11 niente voce artificiale (Alberto: «meno IA»): solo musica e scritte, come i reel fatti a mano. Si riaccende con "voce_ia": true in motore/config.json
-    con_voce = json.loads((ROOT / "motore/config.json").read_text()).get("voce_ia", False)
+    # voce sì o no lo decide la variante del copione (10 prove a rotazione, motore/copione.py); senza variante vale "voce_ia" in config.json
+    con_voce = copione.get("voce", json.loads((ROOT / "motore/config.json").read_text()).get("voce_ia", False))  # la variante del copione decide
     try:
         if not con_voce: raise RuntimeError("voce artificiale spenta in config.json")
         parole = voce(" ".join(frasi), prog / "assets/audio/voce.mp3")
