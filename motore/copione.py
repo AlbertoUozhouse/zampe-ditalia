@@ -665,7 +665,8 @@ def main():
                 h = re.sub(r"[^a-z]", "", unicodedata.normalize("NFD", c.lower()).encode("ascii", "ignore").decode())
                 if 2 < len(h) < 25 and h not in citta: citta.append(h)
     tag_citta = " ".join("#" + h for h in citta[:5])
-    did = did.strip() + "\n\nVoce generata con IA.\n\n" + ("#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici " if per_attivita else st.pop("hashtag", "#cani #gatti #italia #canicontrogatti #animalidomestici ")) + tag_citta
+    voce_ia = carica(ROOT / "motore/config.json", {}).get("voce_ia", False)  # senza voce artificiale niente avviso in didascalia
+    did = did.strip() + ("\n\nVoce generata con IA.\n\n" if voce_ia else "\n\n") + ("#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici " if per_attivita else st.pop("hashtag", "#cani #gatti #italia #canicontrogatti #animalidomestici ")) + tag_citta
     intro = st.pop("intro", None)
     # l'aspetto grafico a rotazione: mai uguale ai due reel prima (reel/modello/scene.py, TEMI)
     temi = ["notte", "tramonto", "aurora", "giorno", "neon"]  # colori resi abbastanza scuri da passare il controllo di contrasto (reel/modello/scene.py)

@@ -43,9 +43,9 @@ def muto(testo, uscita):
     """Parole con tempi stimati (ritmo della voce vera) e una traccia di silenzio al posto della voce."""
     parole, t = [], 0.3
     for w in testo.split():
-        d = 0.18 + 0.045 * len(w)
+        d = 0.13 + 0.03 * len(w)  # ritmo di lettura delle scritte grandi: circa 3 parole al secondo
         parole.append({"p": w, "s": round(t, 3), "e": round(t + d, 3)})
-        t += d + (0.35 if w[-1] in ".!?" else 0.08)
+        t += d + (0.3 if w[-1] in ".!?" else 0.05)
     subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", str(round(t + 1, 2)),
                     "-c:a", "libmp3lame", "-b:a", "128k", str(uscita)], check=True)
     return parole
@@ -128,7 +128,7 @@ INDEX = """<!doctype html>
       <div id="banner" class="clip" data-start="{b0}" data-duration="{bd}" data-track-index="3" data-track-kind="graphics"><span id="banner-t">{banner}</span></div>
       <div id="sottotitoli" data-composition-id="sottotitoli" data-composition-src="compositions/sottotitoli.html" data-start="0" data-duration="{durata}" data-track-index="4" data-track-kind="captions" data-width="1080" data-height="1920" style="z-index:6"></div>
       <audio id="voce" class="clip" src="assets/audio/voce.mp3" data-start="0" data-duration="{dvoce}" data-track-index="5" data-volume="1"></audio>
-      <audio id="musica" class="clip" src="assets/audio/musica.wav" data-start="0" data-duration="{durata}" data-track-index="6" data-volume="0.22" data-fade-out="0.8"></audio>
+      <audio id="musica" class="clip" src="assets/audio/musica.wav" data-start="0" data-duration="{durata}" data-track-index="6" data-volume="{vol_musica}" data-fade-out="0.8"></audio>
     </div>
     <script>
       const tl = gsap.timeline({{ paused: true }});
@@ -153,7 +153,10 @@ def main():
     (prog / "meta.json").write_text(json.dumps({"id": copione["id"], "name": copione["id"]}))
 
     frasi = [f["testo"].strip() for f in copione["frasi"]]
+    # dall'1/11 niente voce artificiale (Alberto: «meno IA»): solo musica e scritte, come i reel fatti a mano. Si riaccende con "voce_ia": true in motore/config.json
+    con_voce = json.loads((ROOT / "motore/config.json").read_text()).get("voce_ia", False)
     try:
+        if not con_voce: raise RuntimeError("voce artificiale spenta in config.json")
         parole = voce(" ".join(frasi), prog / "assets/audio/voce.mp3")
     except Exception as e:  # crediti finiti o servizio giù: il reel esce lo stesso, con musica e sottotitoli
         print(f"voce non disponibile ({e}): reel senza voce")
@@ -201,7 +204,7 @@ def main():
 
     c = copione.get("conteggio", {"cani": 0, "gatti": 0})
     b0 = round(inizi[1] if len(inizi) > 1 else 0.5, 2)
-    (prog / "index.html").write_text(INDEX.format(nota=copione.get("formato", ""), durata=durata, bg0=S.T["bg"][0], bg1=S.T["bg"][1], bg2=S.T["bg"][2], host="\n".join(host), titolo=S.ESC(copione["testata"]["titolo"]),
+    (prog / "index.html").write_text(INDEX.format(nota=copione.get("formato", ""), durata=durata, vol_musica=0.22 if con_voce else 0.6, bg0=S.T["bg"][0], bg1=S.T["bg"][1], bg2=S.T["bg"][2], host="\n".join(host), titolo=S.ESC(copione["testata"]["titolo"]),
         cani=c["cani"], gatti=c["gatti"], b0=b0, bd=round(inizi[-1] - b0, 2), banner=S.ESC(copione.get("banner", "📍 Scrivi città, nome e razza 👇")),
         dvoce=round(fine_voce + 0.1, 2)))
     subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *gruppi_sottotitoli(frasi)], check=True)

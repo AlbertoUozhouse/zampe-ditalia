@@ -85,3 +85,9 @@ Cambiato (una cosa sola): alle 13:30 esce ogni giorno il «buio» invece del «d
 e si apre con una domanda a chi guarda («Trova la tua città: è accesa o ancora al buio?») che porta a commentare chi non ha ancora un animale sulla mappa: proprio i giocatori nuovi che portano i follower.
 Il duello alle 13:30 non era mai uscito (il 31/10 e il 1/11 c'erano nomi e razze). Il cambiamento di ieri (6 reel, presidente alle 15) non si annulla: il calo di ieri si spiega coi reel serali falliti.
 Da guardare domani: views del buio delle 13:30 (sopra 2.000?) e follower nuovi tra le 13 e le 16; rendimento di razze (13:30 di oggi) contro nomi (488); i reel di stasera escono davvero dopo la correzione del contrasto.
+
+## 1/11/2026 — meno IA: via la voce artificiale
+
+Alberto: i reel sembrano fatti da una macchina. Primo passo: niente voce sintetica (config.json "voce_ia": false), solo musica (volume 0.6) e scritte grandi a ritmo di lettura; sparisce «Voce generata con IA» dalla didascalia.
+Prossimi passi proposti: animali veri (foto e video mandati in DM dai giocatori, con il loro consenso), video veri girati da Alberto, meno cartoni.
+Da guardare: visione media e views dei reel senza voce rispetto a quelli con voce.
