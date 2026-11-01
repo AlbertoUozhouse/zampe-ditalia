@@ -53,6 +53,7 @@
 "0734ad5096f3d286",
 "073a09555cdce00c",
 "075095cdabbf839a",
+"076d3a45ea9d19d9",
 "0772aa8091da384c",
 "0775455153551a83",
 "077d68079fd17c36",
@@ -420,6 +421,7 @@
 "48e4a7f7c4d0592d",
 "490418a946e2d7dc",
 "4963d88e8d228582",
+"49c319f062ee8446",
 "49ee4ec1b73ffbe1",
 "4a14f7d8924cc8c3",
 "4a31032231a14452",
@@ -774,6 +776,7 @@
 "8fb4f669db9f455f",
 "8fba6fc1bdc40c16",
 "8fc86abe2e02a69e",
+"9004d65ac5ab902f",
 "9050181ed11a0841",
 "90777cef3647773d",
 "907e54718404bdd7",
@@ -1089,6 +1092,7 @@
 "c8e9fea810981feb",
 "c9393a59229aeef2",
 "c95da245897d7ddd",
+"c9a45052ec346e0d",
 "c9b91f846299f25c",
 "c9d34e604d2527d4",
 "ca03927b053d07eb",
@@ -1403,12 +1407,5 @@
 "2026-11-01": 5
 },
 "prenota_attesa": {},
-"foto_attesa": {
-"59922cdcafaa8949": {
-"url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=1545535447598982&signature=Ab0xN5b3fLYwhT5RleqT80wCp0ZroKvtblBw5dFH3Fgi_5Sqi99dEM0sdvrxdzZea_XeBBEq91JUETOK_2J0DB61I7GaK-GkWcDlrHNe8qnh5-PuAjHF3z1KEt9-nTow7j-z2OGt1uykhCAg3xfWYWCcSxgskBzYC1ZzVSQ2bj1sKT1VGiumSQD_SJ3h8KB39tmW_NYYy6b4bXxV2Pv0lRI2HW0F0SA",
-"t": 1793547218.218883,
-"igsid": "868537086319552",
-"giudicata": false
-}
-}
+"foto_attesa": {}
 }
