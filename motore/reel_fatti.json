@@ -89,6 +89,11 @@
   "aurora",
   "tramonto",
   "notte",
-  "neon"
- ]
+  "neon",
+  "aurora"
+ ],
+ "variante_n": 1,
+ "varianti": {
+  "2026-11-01-1509-presidente": "voce-solita-48"
+ }
 }
