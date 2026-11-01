@@ -551,7 +551,7 @@ def star(D, rng, st):
     fatte = set(st.get("star_fatte", []))
     ugc = [x for x in carica(ROOT / "motore/stato.json", {}).get("ugc", []) if x["f"] not in fatte and (ROOT / "docs/media/ugc" / x["f"]).exists()
            and x["u"].lower() not in ESCLUSI]
-    if not ugc: return gara(D, rng, st)
+    if not ugc: return fondatore(D, rng, st)  # 2/11: il fondatore rende più della gara (2.700 views medie contro 2.000)
     x = ugc[0]; st["star_fatte"] = (st.get("star_fatte", []) + [x["f"]])[-500:]
     a = next((y for y in D["animali"] if y["u"].lower() == x["u"].lower() and y.get("k") == "animale"), None)
     nome, citta = (a["n"], a["c"]) if a else ("la star", None)
@@ -686,8 +686,9 @@ def main():
     # 10 prove diverse a rotazione (Alberto, 1/11: «non togliere la voce a prescindere, fai 10 prove di impatto»): voce sì/no,
     # apertura (solita, «siamo già N animali, manca il tuo?», la missione del paese virtuale più grande d'Italia), durata 48 o 32 parole.
     # Ogni reel segna la sua variante in st["varianti"]: il bot del mattino confronta views e follower per variante.
-    VARIANTI = [("voce", "solita", 48), ("muto", "solita", 48), ("voce", "comunita", 48), ("muto", "comunita", 48), ("voce", "missione", 48),
-                ("muto", "missione", 48), ("voce", "solita", 32), ("muto", "comunita", 32), ("voce", "missione", 32), ("muto", "solita", 32)]
+    # 2/11: da 10 varianti a 2. Con 10 varianti e formati diversi ogni variante aveva un reel ogni 2-3 giorni: nessun confronto possibile.
+    # Resta una prova sola, voce sì / voce no, sempre corta (32 parole): la visione media era scesa a 7 secondi su reel da 15-20.
+    VARIANTI = [("voce", "solita", 32), ("muto", "solita", 32)]
     nv = st.get("variante_n", 0); st["variante_n"] = nv + 1
     voce_v, apertura, max_parole = VARIANTI[nv % len(VARIANTI)]
     if formato in ("star", "missione", "neopresidente"): apertura = "solita"  # hanno già la loro apertura

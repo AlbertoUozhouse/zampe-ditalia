@@ -3,6 +3,22 @@
 Registro delle scelte sui reel automatici: cosa si cambia, perché (numeri da motore/rendimento.json), e cosa si guarda dopo.
 Lo aggiorna ogni mattina il controllo delle 10:30. Solo numeri e formati, nessun nome utente (il repository è pubblico).
 
+## REGOLE IN VIGORE (check generale del 1/11/2026 sera) — valgono più di tutto quello che c'è sotto
+
+Numeri di 35 reel (rendimento.json, 1/11 ore 20): un solo reel sopra i 5.000, il lancio del 26/10 (35.321 views, 163 commenti ogni 1.000, 17 s di visione media).
+Gli altri tra 191 e 3.787. Media per reel: 2.400 il 30/10 (3-5 reel), 1.300 il 31/10, sotto 1.000 l'1/11 (7 reel). Visione media scesa da 12-13 s a 7 s, commenti da 80-90 a 15-30 ogni 1.000.
+Più reel e più cambi ogni giorno non hanno portato più views: le hanno divise.
+
+1. **Solo 4 reel al giorno, solo formati sopra 3.000:** 11:30 presidente (3.474 alle 11), 13:30 buio (3.693), 18:00 star (foto vera; senza foto il fondatore, 3.415), 21:00 puntata (3.787 e 3.684).
+2. **Fuori dalla rotazione** (sotto 2.000 più volte): derby, nomi, razze, voto, duello, attivita, altri, benvenuti, neopresidente; niente reel di festa in più (config "feste_reel": false).
+3. **Una prova sola alla volta:** voce sì / voce no, sempre 32 parole. Si decide dopo almeno 6 reel per lato.
+4. **Un cambiamento al giorno al massimo, e solo con i numeri.** Un formato non si tocca prima di 3 uscite. Chi cambia scrive qui cosa e perché.
+5. **I primi 2 secondi:** una domanda o una sfida rivolta a chi guarda, mai una statistica, mai una richiesta di seguire.
+6. **La richiesta di seguire sta in didascalia e nelle risposte, non nel video.**
+7. **Il formato «sfida»** rifà il lancio da 35.000 (Cani contro Gatti, quale città vince?). Non era mai uscito: il 31/10 sera è fallito col contrasto. Prova il 2/11 alle 21 al posto della puntata; se supera la puntata, prende le 21 a giorni alterni.
+8. **Reel dei giochi** (191 views, il peggiore): restano un extra, con la voce. Se anche col parlato restano sotto 1.000, il gioco nuovo si annuncia nelle storie e nella didascalia, non in un reel.
+9. **Obiettivo:** media sopra 3.000 per reel entro il 5/11, e un reel sopra 5.000 entro una settimana.
+
 ## 30/10/2026 — riparto dopo l'analisi dei primi 22 reel
 
 Numeri: il lancio del 26/10 ore 21 ha fatto 26.910 views e 4.408 commenti (164 ogni 1.000 views, 116 condivisioni).

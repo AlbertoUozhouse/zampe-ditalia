@@ -60,6 +60,9 @@ def festa(ora, st, fatti):
     """Un nuovo Presidente di regione (stato «feste_presidente», scritto da commenti.py) ha il suo reel di festa appena c'è spazio:
     tra le 10 e le 22, mai a meno di 75 minuti da un altro reel. Ogni acquisto che fa un Presidente diventa una vetrina."""
     if not 10 <= ora.hour < 22 or poco_fa(ora): return None
+    try:  # 2/11: niente reel in più fuori orario (neopresidente 1.342 views); i Presidenti li festeggia il reel delle 11:30
+        if not json.loads((ROOT / "motore/config.json").read_text()).get("feste_reel", True): return None
+    except (FileNotFoundError, json.JSONDecodeError): pass
     try: feste = json.loads((ROOT / "motore/stato.json").read_text()).get("feste_presidente", [])
     except (FileNotFoundError, json.JSONDecodeError): return None
     nuove = [f for f in feste if f not in st.setdefault("feste_fatte", [])]

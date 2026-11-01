@@ -2,10 +2,8 @@
  "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana, almeno 90 minuti tra un reel e l'altro (orari.py salta un reel se ne è uscito uno da meno di 75 minuti). Niente «:prova» (i Trial Reel di ottobre: 235 views). Dal 31/10: 6 reel al giorno, voluti da Alberto, e il controllo delle 11:13 li cambia in base a follower e numeri (motore/decisioni-reel.md). «una_tantum» vale per un giorno solo e sostituisce l'orario uguale.",
  "reel_automatici": true,
  "orari": {
-  "12:00": "fondatore",
+  "11:30": "presidente",
   "13:30": "buio",
-  "15:00": "presidente",
-  "16:30": "derby",
   "18:00": "star",
   "21:00": "puntata"
  },
@@ -25,7 +23,9 @@
   "2026-10-31 11:15": "neopresidente",
   "2026-11-01 19:30": "pronto-gioco_bastone",
   "2026-11-01 21:00": "missione",
-  "2026-11-03 19:30": "pronto-gioco_bastone"
+  "2026-11-03 19:30": "pronto-gioco_bastone",
+  "2026-11-02 21:00": "sfida"
  },
- "voce_ia": false
+ "voce_ia": false,
+ "feste_reel": false
 }
