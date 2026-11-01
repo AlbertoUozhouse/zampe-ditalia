@@ -70,3 +70,18 @@ Da guardare: acquisti nei giorni dopo ogni reel di festa.
 Views in calo: dai 2.300-3.700 del 28-30/10 ai 488-895 del 31/10. Nel reel delle 12 dell'1/11, 5 secondi su 15 erano la scena «+30 seguici e scrivi SEGUO» (due volte): pubblicità invece di contenuto, chi guarda scorre via.
 Cambiato: la scena SEGUO non entra più nei video. La richiesta di seguire resta nella scritta fissa in alto («➕ Seguici +30»), nella didascalia e nelle risposte ai commenti. Il derby non mostra più Thor come arbitro.
 Da guardare: visione media in percentuale della durata e views dei reel dal pomeriggio dell'1/11; follower per animale nuovo (non deve scendere).
+
+## 01/11/2026 — Crescita: alle 13:30 il «buio» al posto del «duello»
+
+Follower: 1.305 (01/11, 13:30). Nuovi ieri (31/10): +158 con +244 animali nuovi (1 follower ogni 1,5 animali). Giorni prima: +236 (29/10), +230 (30/10). Media 3 giorni: +208 al giorno → circa 3-4 giorni ai 2.000 (ne mancano 695).
+Ieri pesano i 3 reel falliti da sabato 18:00 (aspetto «giorno» bloccato dal controllo di contrasto, corretto oggi alle 13): la sera del 31/10 ha portato solo +22 follower tra le 18 e l'1. Stamattina 08-13: +47 contro +89 di ieri alla stessa ora (niente reel serali a spingere).
+Reel maturi (29-31/10, rendimento.json aggiornato fino al 31/10 13:34; manca IG_TOKEN per i più recenti):
+puntata 29/10 21:05 3.597 views, 13 condivisioni, 76 commenti ogni 1.000, 12,1 s · presidente 30/10 11:18 3.321, 43/1.000, 11,0 s · puntata 30/10 21:04 2.697, 58/1.000 ·
+gara 30/10 18:11 2.331, 11 condivisioni, 32/1.000 · gara 29/10 18:18 1.737, 45/1.000 · corsa_luna 30/10 22:43 1.382, 55/1.000 · presidente 30/10 15:34 1.285, 17/1.000 ·
+neopresidente 31/10 11:27 895, 38/1.000, 7,6 s · nomi 31/10 13:34 488, 0 condivisioni, 25/1.000, 6,4 s · buio e attivita 29/10 (Trial Reel) 236 e 235.
+Il «nomi» è il peggiore dei reel non di prova: si guarda poco (6,4 s) e non si condivide.
+
+Cambiato (una cosa sola): alle 13:30 esce ogni giorno il «buio» invece del «duello». Il buio, uscito normale (non Trial) il 28/10 alle 12:43, ha fatto 3.606 views e 43 commenti ogni 1.000,
+e si apre con una domanda a chi guarda («Trova la tua città: è accesa o ancora al buio?») che porta a commentare chi non ha ancora un animale sulla mappa: proprio i giocatori nuovi che portano i follower.
+Il duello alle 13:30 non era mai uscito (il 31/10 e il 1/11 c'erano nomi e razze). Il cambiamento di ieri (6 reel, presidente alle 15) non si annulla: il calo di ieri si spiega coi reel serali falliti.
+Da guardare domani: views del buio delle 13:30 (sopra 2.000?) e follower nuovi tra le 13 e le 16; rendimento di razze (13:30 di oggi) contro nomi (488); i reel di stasera escono davvero dopo la correzione del contrasto.
