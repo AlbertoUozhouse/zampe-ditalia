@@ -261,6 +261,7 @@
 "30699e9f68a05b3d",
 "306aaf40e5ac0c73",
 "30f797d3c1f1b526",
+"31394ce16c0e57d3",
 "3158d3c8911dd8b7",
 "3168c73d42ad635c",
 "317e2034d2b738b6",
@@ -496,6 +497,7 @@
 "5bb5c1e923ebbd4b",
 "5c47d7808908f4e2",
 "5c86bd5f958ce394",
+"5c93d6818c3783c8",
 "5d279734f84cad30",
 "5d476eba8076e4fd",
 "5d8341a314cc44b2",
@@ -607,6 +609,7 @@
 "74628ff038e34ec0",
 "7480b83ca68040c2",
 "750cf2d14d2a9e5a",
+"7519692420e585b3",
 "7530dc9d1389b1ab",
 "7536c9d2ed026f89",
 "754b873b3527d440",
@@ -698,6 +701,7 @@
 "86c22be6b539fb7d",
 "8701374acc4f74e7",
 "871248374f11d6fc",
+"87575c3a40be41c3",
 "87a42159aa10a08a",
 "87ad00d0048f474e",
 "87b2d50dee1ac178",
@@ -1030,6 +1034,7 @@
 "c303aed18b070112",
 "c32a450b69af3da3",
 "c33f4086f5b99f9e",
+"c3c4cc79cbfc9c53",
 "c3fc192c680643ab",
 "c4a2079ebabfa31d",
 "c4ba941e9df01583",
@@ -1054,6 +1059,7 @@
 "c860d941cac90e8f",
 "c886e337b190b889",
 "c888fbfcc133e968",
+"c8e9fea810981feb",
 "c9393a59229aeef2",
 "c95da245897d7ddd",
 "c9b91f846299f25c",
@@ -1201,6 +1207,7 @@
 "e2b42834181f963b",
 "e2c4597093d816fb",
 "e2d7ac601d1d55e3",
+"e3114472be549f6d",
 "e32d446a402f0f6e",
 "e340b33a5ff55d6b",
 "e384404b04eb04d7",
@@ -1274,6 +1281,7 @@
 "f046b372bf56e0c8",
 "f05a0bbe7e5f2845",
 "f0a271dd148f58e6",
+"f0b0ea41ee481938",
 "f0e0ca14a2650551",
 "f10fb2c5f2bb663c",
 "f1529831cdf8b041",
@@ -1355,7 +1363,24 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "2687203455064142",
+"url": [
+"https://zampeditalia.it/cartoline/1aae4a7df49cf9b9.png",
+"https://zampeditalia.it/cartoline/e1d59e11bb3d57ce.png",
+"https://zampeditalia.it/cartoline/0c6f07d2a238ba78.png"
+],
+"t": 1793543025.9322782
+},
+{
+"igsid": "1154431213928346",
+"url": [
+"https://zampeditalia.it/cartoline/927570f865ab7774.png"
+],
+"t": 1793543025.9322805
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
