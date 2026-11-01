@@ -685,7 +685,7 @@ def main():
     did = did.strip() + "\n\nVoce generata con IA.\n\n" + ("#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici " if per_attivita else st.pop("hashtag", "#cani #gatti #italia #canicontrogatti #animalidomestici ")) + tag_citta
     intro = st.pop("intro", None)
     # l'aspetto grafico a rotazione: mai uguale ai due reel prima (reel/modello/scene.py, TEMI)
-    temi = ["notte", "tramonto", "aurora", "giorno", "neon"]
+    temi = ["notte", "neon"]
     gia = st.get("temi", [])[-2:]
     tema = rng.choice([t for t in temi if t not in gia])
     st["temi"] = (st.get("temi", []) + [tema])[-10:]
