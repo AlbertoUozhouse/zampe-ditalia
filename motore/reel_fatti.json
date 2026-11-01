@@ -97,12 +97,14 @@
   "neon",
   "aurora",
   "tramonto",
-  "neon"
+  "neon",
+  "giorno"
  ],
- "variante_n": 3,
+ "variante_n": 4,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
-  "2026-11-01-1809-star": "voce-solita-48"
+  "2026-11-01-1809-star": "voce-solita-48",
+  "2026-11-01-2113-missione": "muto-solita-32"
  }
 }
