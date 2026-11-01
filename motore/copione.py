@@ -351,10 +351,7 @@ def derby(D, rng, st):
         frasi.append((stato, {"tipo": "duello", "sinistra": {"titolo": a, "valore": luci_n(na)}, "destra": {"titolo": b, "valore": luci_n(nb)}}))
         frasi.append(("Vale tutta la provincia: ogni animale è una luce.",
                       {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": a, "testo": f"{a} · {na}", "colore": "d", "t": 0.3}, {"nome": b, "testo": f"{b} · {nb}", "colore": "c", "t": 0.8}]}))
-    thor = next((x for x in D["tutti"] if x["u"] == MASCOTTE and x.get("k") == "animale"), None)
-    if thor:
-        frasi.append(("L'arbitro è Thor: il primo cane acceso sulla mappa.", {"tipo": "cuccia", "nome": thor["n"], "razza": thor.get("razza") or "golden", "seme": sum(map(ord, thor["id"])) % 997 + 1,
-                                                             "utente": MASCOTTE, "comune": "Arbitro del derby ⚖️"}))
+    # niente Thor nei reel (Alberto, 30/10): la pagina va avanti senza di lui
     frasi += [
         (f"Scrivi città, nome e razza: {a}, {cane['nome']}, {cane['parola']}.", {"tipo": "commento", "testo": f"{a}, {cane['nome']}, {cane['parola']}"}),
         (f"E tagga un amico della tua città: si chiude {quando}.", {"tipo": "numero", "grande": f"+{DB.PREMIO}", "sotto": f"punti a chi accende la provincia che vince il derby 🏆"}),
@@ -366,7 +363,7 @@ def derby(D, rng, st):
     did = (f"⚔️ Il Derby della settimana: {a} contro {b}! " + (f"Ora siamo {na} a {nb}." if na + nb else "Si parte da 0 a 0.") + "\n\n"
            f"Vale tutta la provincia: scrivi qui sotto città, nome e razza del tuo animale (per esempio «{a}, {cane['nome']}, {cane['parola']}» o «{b}, {gatto['nome']}, {gatto['parola']}») "
            f"e la sua luce si accende per la tua città. Si chiude {quando}: chi ha acceso la provincia che vince prende +{DB.PREMIO} punti 🏆\n\n"
-           f"👥 Tagga un amico di {a} o di {b}: ogni amico che commenta è una luce in più.\n\n⚖️ L'arbitro del derby è Thor, il primo cane che si è acceso sulla mappa: seguilo su @{MASCOTTE} 🐾")
+           f"👥 Tagga un amico di {a} o di {b}: ogni amico che commenta è una luce in più.")
     st["hashtag"] = "#derby #cani #gatti #animalidomestici #italia "
     st["copertina"] = {"sopra": "⚔️ IL DERBY", "grande": f"{a}<br><i>vs</i><br>{b}", "sotto": f"{na} – {nb} · chi si accende di più? ⚔️", "tema": "duello"}
     return "IL DERBY", frasi, did
@@ -641,23 +638,9 @@ def main():
     rng = random.Random(ORA.strftime("%Y%m%d%H") + formato)
     D = dati()
     titolo, frasi, did = FORMATI[formato](D, rng, st)
-    # in un reel su tre, prima della chiusura, un bonus a rotazione: tagga un amico (+3) oppure seguici
-    x = rng.random()
+    # Niente scena SEGUO dentro il video: l'1/11 occupava 5 secondi su 15 e chi guardava scorreva via (views da 3.000 a meno di 1.000).
+    # La richiesta di seguire resta dove non ruba il contenuto: la scritta fissa in alto («➕ Seguici +30»), la didascalia e le risposte ai commenti.
     per_attivita = st.pop("senza_bonus", False)
-    if per_attivita or formato in ("sfida", "nomi", "razze"):  # questi hanno già la scena «scrivi città, nome e razza» al limite delle parole: il SEGUO sta in didascalia
-        pass  # una richiesta sola per reel: il bonus (segui, tagga) esce in un reel su tre, gli altri chiudono con «scrivi città, nome e razza»
-    elif ORA.date().isoformat() <= "2026-11-02":  # Halloween: il follow regala il costume, lo diciamo in ogni reel
-        frasi.insert(len(frasi) - 1, (rng.choice([f"Seguici e scrivi seguo: {PS_P} e il costume di Halloween per il tuo animale sulla mappa!",
-                                                   "Chi ci segue ha il costume di Halloween sulla mappa: seguici e scrivi seguo!"]),
-                                      {"tipo": "numero", "grande": "🎃" if not BOOST else PS, "sotto": f"seguici e scrivi SEGUO: {PS} punti e il costume di Halloween"}))
-    elif False:  # finché la priorità sono i follower, il bonus è sempre SEGUO (gli inviti restano nelle risposte)
-        frasi.insert(len(frasi) - 1, (rng.choice(["Sfida degli inviti: chi porta più amici oggi finisce nel reel delle 21.",
-                                                   "Tagga i tuoi amici: chi ne porta di più oggi è il Re degli inviti."]),
-                                      {"tipo": "numero", "grande": "+3", "sotto": "per ogni amico taggato che commenta · il primo è Re degli inviti 👑"}))
-    else:
-        frasi.insert(len(frasi) - 1, (rng.choice(["Seguici e scrivi seguo: dieci punti e le lucine sulla cuccia del tuo animale!",
-                                                   "Chi ci segue sta in prima fila nel suo paese, con le lucine: scrivi seguo!"]),
-                                      {"tipo": "numero", "grande": "+10", "sotto": "seguici e scrivi SEGUO: lucine sulla cuccia e prima fila nel tuo paese ✨"}))
     if per_attivita:
         did = did.strip() + "\n\n"
     else:  # una richiesta sola: con 8 richieste diverse in didascalia (ottobre) non se ne faceva nessuna
@@ -692,7 +675,7 @@ def main():
     copione = {"tema": tema, "id": ORA.strftime("%Y-%m-%d-%H%M") + "-" + formato, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
                "banner": f"📍 Scrivi città, nome, razza · ➕ Seguici {PS} 👇", "didascalia": did,
-               "tag": [u for u in mostrati if u.lower() not in ESCLUSI or u == MASCOTTE], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {})}
+               "tag": [u for u in mostrati if u.lower() not in ESCLUSI], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {})}
     Path(uscita).write_text(json.dumps(copione, ensure_ascii=False, indent=1))
     STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
     print(f"copione {copione['id']}: " + " / ".join(t for t, _ in frasi))

@@ -64,3 +64,9 @@ Da guardare: acquisti al giorno.
 
 Le risposte e il sito dicono chiaro che chi ha più accessori nella regione è Presidente. Ogni nuovo Presidente (commenti.py → stato «feste_presidente», solo regione e un'impronta dell'id) fa partire da solo il reel «neopresidente» appena c'è spazio tra le 10 e le 22 (orari.py, festa).
 Da guardare: acquisti nei giorni dopo ogni reel di festa.
+
+## 1/11/2026 — qualità: via la scena SEGUO dal video, via Thor dal derby
+
+Views in calo: dai 2.300-3.700 del 28-30/10 ai 488-895 del 31/10. Nel reel delle 12 dell'1/11, 5 secondi su 15 erano la scena «+30 seguici e scrivi SEGUO» (due volte): pubblicità invece di contenuto, chi guarda scorre via.
+Cambiato: la scena SEGUO non entra più nei video. La richiesta di seguire resta nella scritta fissa in alto («➕ Seguici +30»), nella didascalia e nelle risposte ai commenti. Il derby non mostra più Thor come arbitro.
+Da guardare: visione media in percentuale della durata e views dei reel dal pomeriggio dell'1/11; follower per animale nuovo (non deve scendere).
