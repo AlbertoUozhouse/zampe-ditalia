@@ -91,10 +91,12 @@
   "tramonto",
   "notte",
   "neon",
-  "aurora"
+  "aurora",
+  "tramonto"
  ],
- "variante_n": 1,
+ "variante_n": 2,
  "varianti": {
-  "2026-11-01-1509-presidente": "voce-solita-48"
+  "2026-11-01-1509-presidente": "voce-solita-48",
+  "2026-11-01-1637-derby": "muto-solita-48"
  }
 }
