@@ -12,9 +12,10 @@ ESC = html.escape
 # Aspetti a rotazione, così due reel di fila non si somigliano: cambiano cielo, colline, prato, strada e mappa; animali e testi restano uguali.
 TEMI = {
     "notte":    {"cielo": ("#050A1C", "#14254F", "#24396B"), "colline": "#101E44", "prato": "#0F2A2A", "strada": "#162650", "ombra": "#0B1634", "terra": "#1E3266", "bordo": "#34508F", "costa": "#5577C9", "bg": ("#18295A", "#0E1A3A", "#060B1A")},
-    "tramonto": {"cielo": ("#2B1240", "#8C2F5A", "#F2784B"), "colline": "#3A1636", "prato": "#2E1E26", "strada": "#3A1A3E", "ombra": "#8C2F5A", "terra": "#5A2350", "bordo": "#8C3F72", "costa": "#F2A65A", "bg": ("#8C2F5A", "#4A1645", "#1E0A24")},
-    "aurora":   {"cielo": ("#031A1F", "#0B4D4A", "#2FA37A"), "colline": "#062B2C", "prato": "#0A2E22", "strada": "#0C3A3A", "ombra": "#0B4D4A", "terra": "#0E4A48", "bordo": "#1F7A70", "costa": "#5FE0B0", "bg": ("#0E5A55", "#06302F", "#021316")},
-    "giorno":   {"cielo": ("#2E7BD6", "#62A8F0", "#BFE3FF"), "colline": "#3E8E41", "prato": "#4FA34F", "strada": "#5A6B7A", "ombra": "#62A8F0", "terra": "#4FA34F", "bordo": "#2F7A33", "costa": "#FFFFFF", "bg": ("#4A95E6", "#2468BE", "#123E80")},
+    "tramonto": {"cielo": ("#2B1240", "#7A2A55", "#A8473F"), "colline": "#3A1636", "prato": "#2E1E26", "strada": "#3A1A3E", "ombra": "#8C2F5A", "terra": "#5A2350", "bordo": "#8C3F72", "costa": "#F2A65A", "bg": ("#8C2F5A", "#4A1645", "#1E0A24")},
+    "aurora":   {"cielo": ("#031A1F", "#0B4D4A", "#17694F"), "colline": "#062B2C", "prato": "#0A2E22", "strada": "#0C3A3A", "ombra": "#0B4D4A", "terra": "#0E4A48", "bordo": "#1F7A70", "costa": "#5FE0B0", "bg": ("#0E5A55", "#06302F", "#021316")},
+    # giorno: azzurro abbastanza scuro da tenere il contrasto 3:1 dei testi oro e verdi (il controllo HyperFrames lo pretende)
+    "giorno":   {"cielo": ("#123F86", "#1F5FAE", "#2C68B0"), "colline": "#2E6E33", "prato": "#3A7F3E", "strada": "#3E4C5A", "ombra": "#1F5FAE", "terra": "#2E6E33", "bordo": "#4C9A50", "costa": "#E6F2FF", "bg": ("#24508F", "#173A6E", "#0C2448")},
     "neon":     {"cielo": ("#12002B", "#3B0A6B", "#7A1FA2"), "colline": "#22074A", "prato": "#1A0638", "strada": "#2A0A55", "ombra": "#3B0A6B", "terra": "#3B0F70", "bordo": "#8A3FD1", "costa": "#FF5FD2", "bg": ("#5A1890", "#2A0A55", "#12002B")},
 }
 T = dict(TEMI["notte"])
