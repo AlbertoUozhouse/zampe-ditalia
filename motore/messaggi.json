@@ -1358,6 +1358,7 @@
 "ea1479a0bf8cbd15",
 "ea254226e3ba1c54",
 "ea5959830266bacb",
+"ea6a011036b1be64",
 "ea75268804d2f2de",
 "ea9f8b774b424f3d",
 "eaed6ee8ab1638bc",
@@ -1475,7 +1476,15 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1133931505687470",
+"url": [
+"https://zampeditalia.it/cartoline/6e43786919648bfc.png"
+],
+"t": 1793608618.1330042
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
