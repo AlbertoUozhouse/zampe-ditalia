@@ -688,7 +688,8 @@ def main():
     # Ogni reel segna la sua variante in st["varianti"]: il bot del mattino confronta views e follower per variante.
     # 2/11: da 10 varianti a 2. Con 10 varianti e formati diversi ogni variante aveva un reel ogni 2-3 giorni: nessun confronto possibile.
     # Resta una prova sola, voce sì / voce no, sempre corta (32 parole): la visione media era scesa a 7 secondi su reel da 15-20.
-    VARIANTI = [("voce", "solita", 32), ("muto", "solita", 32)]
+    # 2/11 pomeriggio, Alberto: i reel senza voce, solo scritte, non vanno. Sempre con la voce.
+    VARIANTI = [("voce", "solita", 32)]
     nv = st.get("variante_n", 0); st["variante_n"] = nv + 1
     voce_v, apertura, max_parole = VARIANTI[nv % len(VARIANTI)]
     if formato in ("star", "missione", "neopresidente"): apertura = "solita"  # hanno già la loro apertura

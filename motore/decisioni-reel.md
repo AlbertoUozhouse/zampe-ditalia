@@ -11,7 +11,7 @@ Più reel e più cambi ogni giorno non hanno portato più views: le hanno divise
 
 1. **Solo 4 reel al giorno, solo formati sopra 3.000:** 11:30 presidente (3.474 alle 11), 13:30 buio (3.693), 18:00 star (foto vera; senza foto il fondatore, 3.415), 21:00 puntata (3.787 e 3.684).
 2. **Fuori dalla rotazione** (sotto 2.000 più volte): derby, nomi, razze, voto, duello, attivita, altri, benvenuti, neopresidente; niente reel di festa in più (config "feste_reel": false).
-3. **Una prova sola alla volta:** voce sì / voce no, sempre 32 parole. Si decide dopo almeno 6 reel per lato.
+3. **Sempre con la voce** (Alberto, 2/11: i reel muti con le sole scritte non vanno), sempre 32 parole.
 4. **Un cambiamento al giorno al massimo, e solo con i numeri.** Un formato non si tocca prima di 3 uscite. Chi cambia scrive qui cosa e perché.
 5. **I primi 2 secondi:** una domanda o una sfida rivolta a chi guarda, mai una statistica, mai una richiesta di seguire.
 6. **La richiesta di seguire sta in didascalia e nelle risposte, non nel video.**
