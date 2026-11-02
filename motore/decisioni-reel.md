@@ -3,21 +3,21 @@
 Registro delle scelte sui reel automatici: cosa si cambia, perché (numeri da motore/rendimento.json), e cosa si guarda dopo.
 Lo aggiorna ogni mattina il controllo delle 10:30. Solo numeri e formati, nessun nome utente (il repository è pubblico).
 
-## REGOLE IN VIGORE (check generale del 1/11/2026 sera) — valgono più di tutto quello che c'è sotto
+## REGOLE IN VIGORE (2/11/2026, dopo l'analisi del concorrente) — valgono più di tutto quello che c'è sotto
 
-Numeri di 35 reel (rendimento.json, 1/11 ore 20): un solo reel sopra i 5.000, il lancio del 26/10 (35.321 views, 163 commenti ogni 1.000, 17 s di visione media).
-Gli altri tra 191 e 3.787. Media per reel: 2.400 il 30/10 (3-5 reel), 1.300 il 31/10, sotto 1.000 l'1/11 (7 reel). Visione media scesa da 12-13 s a 7 s, commenti da 80-90 a 15-30 ogni 1.000.
-Più reel e più cambi ogni giorno non hanno portato più views: le hanno divise.
+Il concorrente (case sulla mappa, stesso meccanismo) ha 12.200 follower con 19 post. Anche lui cala: da 357.000 views del primo reel a 11.800 dell'ultimo.
+La differenza vera è il lancio (357.000 contro i nostri 35.000) e i commenti: circa 230 ogni 1.000 views contro i nostri 15-60. Ha l'etichetta «Profilo generato dall'IA»: l'aspetto da IA non è il problema.
+Cosa fa: chiede una parola sola (la città), ha una fascia fissa in basso «Commenta la tua città → ricevi una casa» per tutto il video, 1-2 reel al giorno,
+storie a puntate con scadenza («stasera alle 21», «3 giorni al voto»), l'@ vero del giocatore grande al centro, scarsità («solo 3 case così»), testo enorme bianco e giallo.
 
-1. **Solo 4 reel al giorno, solo formati sopra 3.000:** 11:30 presidente (3.474 alle 11), 13:30 buio (3.693), 18:00 star (foto vera; senza foto il fondatore, 3.415), 21:00 puntata (3.787 e 3.684).
-2. **Fuori dalla rotazione** (sotto 2.000 più volte): derby, nomi, razze, voto, duello, attivita, altri, benvenuti, neopresidente; niente reel di festa in più (config "feste_reel": false).
-3. **Sempre con la voce** (Alberto, 2/11: i reel muti con le sole scritte non vanno), sempre 32 parole.
-4. **Un cambiamento al giorno al massimo, e solo con i numeri.** Un formato non si tocca prima di 3 uscite. Chi cambia scrive qui cosa e perché.
-5. **I primi 2 secondi:** una domanda o una sfida rivolta a chi guarda, mai una statistica, mai una richiesta di seguire.
-6. **La richiesta di seguire sta in didascalia e nelle risposte, non nel video.**
-7. **Il formato «sfida»** rifà il lancio da 35.000 (Cani contro Gatti, quale città vince?). Non era mai uscito: il 31/10 sera è fallito col contrasto. Prova il 2/11 alle 21 al posto della puntata; se supera la puntata, prende le 21 a giorni alterni.
-8. **Reel dei giochi** (191 views, il peggiore): restano un extra, con la voce. Se anche col parlato restano sotto 1.000, il gioco nuovo si annuncia nelle storie e nella didascalia, non in un reel.
-9. **Obiettivo:** media sopra 3.000 per reel entro il 5/11, e un reel sopra 5.000 entro una settimana.
+1. **Massimo 3 reel al giorno:** 13:00 buio, 18:00 star (solo se c'è una foto vera nuova, altrimenti niente reel), 21:00 puntata; la «sfida» (Cani contro Gatti col punteggio) alle 21 a giorni alterni (2, 4, 6, 8/11).
+2. **Ogni reel ha la fascia fissa in basso** «💬 Commenta città e nome del tuo animale 👇» per tutto il video. Niente «Seguici» nel video: si chiede il commento, il follow sta in didascalia e nelle risposte.
+3. **Si chiede meno:** «città e nome» (+ cane o gatto). La razza è facoltativa. Se manca cane/gatto la risposta lo chiede: è un commento in più.
+4. **Sempre con la voce**, 32 parole.
+5. **Niente reel di giochi, negozio o festa** finché non arriviamo a 5.000 follower (nei reel; sul sito restano).
+6. **Un cambiamento al giorno al massimo, solo con i numeri.** Un formato non si tocca prima di 3 uscite. Chi cambia scrive qui cosa e perché.
+7. **Cosa si guarda:** commenti ogni 1.000 views (obiettivo sopra 100) e follower al giorno. Le views seguono i commenti.
+8. **Prossimo passo, da preparare e far vedere ad Alberto prima di pubblicarlo:** il nostro «Giorno 1», un rilancio come evento.
 
 ## 30/10/2026 — riparto dopo l'analisi dei primi 22 reel
 

@@ -45,6 +45,8 @@ def main():
             if poco_fa(ora):  # due reel troppo vicini sembrano uguali e si rubano le visualizzazioni: questo orario salta
                 fatti.append(hhmm); STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1)); return
             fatti.append(hhmm)
+            if formato == "star" and not foto_nuove(st):  # 2/11: la star esce solo con una foto vera; senza foto niente reel in più
+                STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1)); return
             st["lanciati"] = {k: v for k, v in st["lanciati"].items() if k >= (ora.date() - timedelta(days=7)).isoformat()}
             STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
             if formato.startswith("attivita"):  # col negozio aperto, quello slot fa il reel degli accessori
@@ -55,6 +57,13 @@ def main():
             return
     f = festa(ora, st, fatti)
     if f: print(f)
+
+def foto_nuove(st):
+    """Ci sono foto della star (stato «ugc», col SÌ di chi le ha mandate) non ancora usate in un reel?"""
+    try: ugc = json.loads((ROOT / "motore/stato.json").read_text()).get("ugc", [])
+    except (FileNotFoundError, json.JSONDecodeError): return False
+    fatte = set(st.get("star_fatte", []))
+    return any(x["f"] not in fatte and (ROOT / "docs/media/ugc" / x["f"]).exists() for x in ugc)
 
 def festa(ora, st, fatti):
     """Un nuovo Presidente di regione (stato «feste_presidente», scritto da commenti.py) ha il suo reel di festa appena c'è spazio:

@@ -114,8 +114,8 @@ INDEX = """<!doctype html>
         border: 3px solid rgba(255,197,92,.75); box-shadow: 0 0 40px rgba(255,197,92,.25); }}
       #testata .t {{ font: 800 46px/1 var(--font-display); color: var(--gold); letter-spacing: -.5px; }}
       #testata .n {{ font: 900 40px/1 var(--font-body); padding-left: 22px; border-left: 3px solid rgba(255,244,222,.25); }}
-      #banner {{ position: absolute; left: 0; right: 0; top: 298px; z-index: 5; display: flex; justify-content: center; }}
-      #banner span {{ font: 900 34px/1 var(--font-body); padding: 14px 28px; border-radius: 18px; background: var(--gold); color: #2A1606; box-shadow: 0 0 34px rgba(255,197,92,.55); }}
+      #banner {{ position: absolute; left: 0; right: 0; top: 1470px; z-index: 5; display: flex; justify-content: center; }}
+      #banner span {{ font: 900 36px/1.15 var(--font-body); padding: 16px 30px; border-radius: 22px; background: #FFF4DE; border: 4px solid #2A1606; max-width: 1000px; text-align: center; color: #2A1606; box-shadow: 0 0 34px rgba(255,197,92,.55); }}
     </style>
   </head>
   <body>
@@ -205,9 +205,9 @@ def main():
     disegni(sorted(serve), prog / "assets/svg")
 
     c = copione.get("conteggio", {"cani": 0, "gatti": 0})
-    b0 = round(inizi[1] if len(inizi) > 1 else 0.5, 2)
+    b0 = 0.3  # 2/11: la richiesta di commentare sta in basso per tutto il video, come una fascia fissa
     (prog / "index.html").write_text(INDEX.format(nota=copione.get("formato", ""), durata=durata, vol_musica=0.22 if con_voce else 0.6, bg0=S.T["bg"][0], bg1=S.T["bg"][1], bg2=S.T["bg"][2], host="\n".join(host), titolo=S.ESC(copione["testata"]["titolo"]),
-        cani=c["cani"], gatti=c["gatti"], b0=b0, bd=round(inizi[-1] - b0, 2), banner=S.ESC(copione.get("banner", "📍 Scrivi città, nome e razza 👇")),
+        cani=c["cani"], gatti=c["gatti"], b0=b0, bd=round(durata - b0, 2), banner=S.ESC(copione.get("banner", "📍 Scrivi città, nome e razza 👇")),
         dvoce=round(fine_voce + 0.1, 2)))
     subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *gruppi_sottotitoli(frasi)], check=True)
     (out / "effetti.json").write_text(json.dumps(effetti))

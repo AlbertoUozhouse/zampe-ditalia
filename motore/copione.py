@@ -94,7 +94,7 @@ def duello(D, rng, st):
     frasi = [
         (f"{a} o {b}?", {"tipo": "duello", "sinistra": {"titolo": a, "valore": luci_n(ca)}, "destra": {"titolo": b, "valore": luci_n(cb)}}),
         ("Quale città si accende per prima?", {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": a, "testo": a + "?", "colore": "d", "t": 0.5}, {"nome": b, "testo": b + "?", "colore": "c", "t": 1.0}]}),
-        ("Scrivi città, nome e razza del tuo animale.", {"tipo": "commento", "testo": f"{a}, {cane['nome']}, {cane['parola']}"}),
+        ("Scrivi città e nome del tuo animale.", {"tipo": "commento", "testo": f"{a}, {cane['nome']}, {cane['parola']}"}),
     ]
     v = scena_vera(D, rng, rng.choice(["cane", "gatto"]))
     if v:
@@ -102,7 +102,7 @@ def duello(D, rng, st):
     else:
         frasi.append(("Si accende la sua cuccia, col suo nome.", {"tipo": "cuccia", "nome": cane["nome"], "razza": cane["razza"], "seme": cane["seme"]}))
     frasi.append((f"Allora: {a} o {b}? Scrivi la tua città!", {"tipo": "chiusura", "testo": "👇 Scrivi la tua città qui sotto"}))
-    did = f"{a} o {b}: quale città si accende per prima? 🐶🐱\n\nScrivi qui sotto città, nome e razza (per esempio «{a}, {cane['nome']}, {cane['parola']}»): entro 15 minuti la luce del tuo animale si accende sulla mappa col tuo @. Il primo di ogni comune diventa il Fondatore 👑"
+    did = f"{a} o {b}: quale città si accende per prima? 🐶🐱\n\nScrivi qui sotto città e nome (per esempio «{a}, {cane['nome']}, {cane['parola']}»): entro 15 minuti la luce del tuo animale si accende sulla mappa col tuo @. Il primo di ogni comune diventa il Fondatore 👑"
     st["copertina"] = {"sopra": "SFIDA TRA CITTÀ", "grande": f"{a}<br><i>vs</i><br>{b}", "sotto": "Quale si accende prima?", "tema": "duello"}
     return "CANI vs GATTI", frasi, did
 
@@ -118,13 +118,13 @@ def vetrina(D, rng, st):
     frasi = [
         ("Ogni razza ha la sua cuccia.", {"tipo": "vetrina", "animali": an}),
         (f"Ne abbiamo già disegnate {nc + ng}.", {"tipo": "numero", "grande": str(nc + ng), "sotto": "razze di cani e gatti disegnate"}),
-        ("C'è anche la tua? Scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{citta}, {cane['nome']}, {cane['parola']}"}),
+        ("C'è anche la tua? Scrivi città e nome.", {"tipo": "commento", "testo": f"{citta}, {cane['nome']}, {cane['parola']}"}),
     ]
     v = scena_vera(D, rng, "gatto" if rng.random() < 0.4 else "cane")
     frasi.append((f"Come {v[0]['n']}, a {v[0]['c']}." if v else "E il tuo animale si accende così, col suo nome.",
                   v[1] if v else {"tipo": "cuccia", "nome": cane["nome"], "razza": cane["razza"], "seme": cane["seme"]}))
     frasi.append(("Qual è la tua razza? Scrivila qui sotto!", {"tipo": "chiusura", "testo": "👇 Scrivi la tua razza qui sotto"}))
-    did = f"Ogni razza ha la sua cuccia 🐾 Sulla mappa di Zampe d'Italia ci sono già {nc} razze di cani e {ng} di gatti disegnate, ognuna diversa.\n\nScrivi qui sotto città, nome e razza: il tuo animale si accende sulla mappa col tuo @."
+    did = f"Ogni razza ha la sua cuccia 🐾 Sulla mappa di Zampe d'Italia ci sono già {nc} razze di cani e {ng} di gatti disegnate, ognuna diversa.\n\nScrivi qui sotto città e nome: il tuo animale si accende sulla mappa col tuo @."
     st["copertina"] = {"sopra": f"{nc + ng} RAZZE", "grande": "C'è anche<br>la tua?", "sotto": "Ogni razza ha la sua cuccia", "tema": "vetrina"}
     return "CANI vs GATTI", frasi, did
 
@@ -135,11 +135,11 @@ def fondatore(D, rng, st):
     cane, gatto = esempio(rng, D)
     frasi = [
         (f"{c} non ha ancora un Fondatore.", {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": c, "testo": c + "?", "colore": "d", "t": 0.3}], "zoom": {"comune": c, "s": 2.2}}),
-        (f"Il primo che scrive {c}, nome e razza", {"tipo": "commento", "testo": f"{c}, {cane['nome']}, {cane['parola']}"}),
+        (f"Il primo che scrive {c} e il nome", {"tipo": "commento", "testo": f"{c}, {cane['nome']}, {cane['parola']}"}),
         ("accende la prima cuccia della città e diventa Fondatore. Per sempre.", {"tipo": "cuccia", "nome": cane["nome"], "razza": cane["razza"], "seme": cane["seme"], "comune": "Fondatore di " + c}),
         (f"Chi sarà il Fondatore di {c}? Scrivilo qui sotto!", {"tipo": "chiusura", "testo": f"👑 Diventa il Fondatore di {c}"}),
     ]
-    did = f"{c} non ha ancora un Fondatore 👑\n\nIl primo animale di {c} che arriva sulla mappa lo diventa per sempre. Scrivi qui sotto «{c}, nome e razza» (per esempio «{c}, {cane['nome']}, {cane['parola']}»): entro 15 minuti la sua luce si accende."
+    did = f"{c} non ha ancora un Fondatore 👑\n\nIl primo animale di {c} che arriva sulla mappa lo diventa per sempre. Scrivi qui sotto «{c}, nome, cane o gatto» (per esempio «{c}, {cane['nome']}, {cane['parola']}»): entro 15 minuti la sua luce si accende."
     st["copertina"] = {"sopra": "CERCASI FONDATORE", "grande": c, "sotto": "Il primo diventa Fondatore 👑", "tema": "fondatore", "citta": c}
     return "CANI vs GATTI", frasi, did
 
@@ -174,9 +174,9 @@ def puntata(D, rng, st):
         u, n_inv = re_inv[0]
         frasi.append((f"Re degli inviti di oggi: {u}, con {n_inv} {'amico' if n_inv == 1 else 'amici'}!",
                       {"tipo": "classifica", "titolo": "Re degli inviti 👑", "righe": [{"nome": "@" + x[0], "valore": f"{x[1]} {'amico' if x[1] == 1 else 'amici'}"} for x in re_inv[:3]], "utente": u}))
-    frasi += [("Ogni commento è una luce: scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
+    frasi += [("Ogni commento è una luce: scrivi città e nome.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
               ("Scrivi qui sotto e accendi la tua luce!", {"tipo": "chiusura", "testo": "👇 Accendi la tua luce qui sotto"})]
-    did = f"Giorno {n} della mappa di Zampe d'Italia 🌙 {tot} {'luce accesa' if tot == 1 else 'luci accese'}: cani {D['cani']}, gatti {D['gatti']}.\n\nScrivi qui sotto città, nome e razza del tuo animale e accendi la tua luce col tuo @. Il primo di ogni comune diventa il Fondatore 👑"
+    did = f"Giorno {n} della mappa di Zampe d'Italia 🌙 {tot} {'luce accesa' if tot == 1 else 'luci accese'}: cani {D['cani']}, gatti {D['gatti']}.\n\nScrivi qui sotto città e nome del tuo animale e accendi la tua luce col tuo @. Il primo di ogni comune diventa il Fondatore 👑"
     st["copertina"] = {"sopra": f"GIORNO {n}", "grande": f"{tot}<br>luci", "sotto": "La mappa di stasera 🌙", "tema": "puntata"}
     return f"GIORNO {n}", frasi, did
 
@@ -192,12 +192,12 @@ def voto(D, rng, st):
              ("Commenta con un'emoji: cane o gatto.", {"tipo": "commento", "testo": "🐱" if perde == "gatti" else "🐶"})]
     x = scena_vera(D, rng, rng.choice(["cane", "gatto"]))
     if x:
-        frasi.append((f"Vuoi la tua luce come {x[0]['n']}? Città, nome e razza.", x[1]))
+        frasi.append((f"Vuoi la tua luce come {x[0]['n']}? Città e nome.", x[1]))
     manca = SOGLIA_ALTRI - D["altri"]
     frasi.append((f"E arrivano gli altri: ancora {manca} {'luce' if manca == 1 else 'luci'} e conigli, furetti e tartarughe entrano nella sfida!",
                   {"tipo": "numero", "grande": str(D["altri"]), "sotto": f"altri animali accesi: a {SOGLIA_ALTRI} entrano nella sfida 🐰🐢🦎"}))
     frasi.append(("Cani o gatti? Vota qui sotto!", {"tipo": "chiusura", "testo": "👇 Scrivi 🐶 o 🐱"}))
-    did = f"Cani {cani}, gatti {gatti} 🐶🐱 Commenta con un'emoji e vediamo chi vince!\n\n🐰 Hai un coniglio, un furetto, una tartaruga? Ancora {manca} {'luce' if manca == 1 else 'luci'} e gli altri animali entrano nella sfida: scrivi città, nome e specie.\n\nVuoi accendere la luce del tuo animale sulla mappa d'Italia? Scrivi città, nome e razza (per esempio «Treviso, Luna, golden»)."
+    did = f"Cani {cani}, gatti {gatti} 🐶🐱 Commenta con un'emoji e vediamo chi vince!\n\n🐰 Hai un coniglio, un furetto, una tartaruga? Ancora {manca} {'luce' if manca == 1 else 'luci'} e gli altri animali entrano nella sfida: scrivi città, nome e specie.\n\nVuoi accendere la luce del tuo animale sulla mappa d'Italia? Scrivi città e nome (per esempio «Treviso, Luna, golden»)."
     st["copertina"] = {"sopra": "CANI vs GATTI", "grande": f"{cani} – {gatti}", "sotto": f"I {perde} perdono! Vota 🐶🐱" if cani != gatti else "Pareggio! Vota 🐶🐱", "tema": "voto"}
     return "CANI vs GATTI", frasi, did
 
@@ -285,10 +285,10 @@ def buio(D, rng, st):
     frasi = [
         ("Trova la tua città: è accesa o ancora al buio?", {"tipo": "mappa", "luci": luci(D)}),
         (f"{Art}{r} {stato}", {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": cap, "testo": f"{r}: {n}", "colore": "d", "t": 0.3}], "zoom": {"comune": cap, "s": 2.0}}),
-        ("Ogni commento accende una luce: città, nome e razza.", {"tipo": "commento", "testo": f"{cap}, {cane['nome']}, {cane['parola']}"}),
+        ("Ogni commento accende una luce: città e nome.", {"tipo": "commento", "testo": f"{cap}, {cane['nome']}, {cane['parola']}"}),
         (f"Accendiamo {art}{r}? Scrivilo qui sotto!", {"tipo": "chiusura", "testo": f"🌙 Accendi {art}{r}"}),
     ]
-    did = (f"Questa è l'Italia di notte 🌙 e {art}{r} {stato}\n\nOgni commento accende una luce: scrivi qui sotto città, nome e razza "
+    did = (f"Questa è l'Italia di notte 🌙 e {art}{r} {stato}\n\nOgni commento accende una luce: scrivi qui sotto città e nome "
            f"(per esempio «{cap}, {cane['nome']}, {cane['parola']}» o «{cap}, {gatto['nome']}, {gatto['parola']}») e la cuccia del tuo cane o gli occhi del tuo gatto si accendono sulla mappa col tuo @.\n\n"
            "👑 Il primo di ogni comune diventa il Fondatore.\nMappa nel link in bio.")
     st["copertina"] = {"sopra": "L'ITALIA DI NOTTE", "grande": f"{r}<br>al buio", "sotto": "Accendi la prima luce 🌙", "tema": "buio"}
@@ -353,7 +353,7 @@ def derby(D, rng, st):
                       {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": a, "testo": f"{a} · {na}", "colore": "d", "t": 0.3}, {"nome": b, "testo": f"{b} · {nb}", "colore": "c", "t": 0.8}]}))
     # niente Thor nei reel (Alberto, 30/10): la pagina va avanti senza di lui
     frasi += [
-        (f"Scrivi città, nome e razza: {a}, {cane['nome']}, {cane['parola']}.", {"tipo": "commento", "testo": f"{a}, {cane['nome']}, {cane['parola']}"}),
+        (f"Scrivi città e nome: {a}, {cane['nome']}, {cane['parola']}.", {"tipo": "commento", "testo": f"{a}, {cane['nome']}, {cane['parola']}"}),
         (f"E tagga un amico della tua città: si chiude {quando}.", {"tipo": "numero", "grande": f"+{DB.PREMIO}", "sotto": f"punti a chi accende la provincia che vince il derby 🏆"}),
         (f"{a} o {b}? Scrivi la tua città!", {"tipo": "chiusura", "testo": f"⚔️ {a} o {b}? Scrivilo qui sotto"}),
     ]
@@ -361,7 +361,7 @@ def derby(D, rng, st):
     per = DB.conta(D["tutti"], {"inizio": datetime.fromisoformat(d["inizio"]), "fine": fine, "a": (a, d["pa"]), "b": (b, d["pb"])})
     st["tag_extra"] = [x["u"] for p in (d["pa"], d["pb"]) for x in per[p][:3]]
     did = (f"⚔️ Il Derby della settimana: {a} contro {b}! " + (f"Ora siamo {na} a {nb}." if na + nb else "Si parte da 0 a 0.") + "\n\n"
-           f"Vale tutta la provincia: scrivi qui sotto città, nome e razza del tuo animale (per esempio «{a}, {cane['nome']}, {cane['parola']}» o «{b}, {gatto['nome']}, {gatto['parola']}») "
+           f"Vale tutta la provincia: scrivi qui sotto città e nome del tuo animale (per esempio «{a}, {cane['nome']}, {cane['parola']}» o «{b}, {gatto['nome']}, {gatto['parola']}») "
            f"e la sua luce si accende per la tua città. Si chiude {quando}: chi ha acceso la provincia che vince prende +{DB.PREMIO} punti 🏆\n\n"
            f"👥 Tagga un amico di {a} o di {b}: ogni amico che commenta è una luce in più.")
     st["hashtag"] = "#derby #cani #gatti #animalidomestici #italia "
@@ -412,7 +412,7 @@ def gara(D, rng, st):
         frasi.append(((f"Solo {cast} animali hanno il castello. " if 1 < cast < 30 else "") + f"In testa c'è {top[0]['n']}, di {top[0]['c']}, con {top[0]['pt']} punti.",
                       {"tipo": "classifica", "titolo": "In testa 🏆", "righe": [{"nome": f"{a['n']} · @{a['u']}", "valore": f"{a.get('pt', 0)} pt"} for a in top], "utente": top[0]["u"]}))
         tag += [a["u"] for a in top]
-    frasi += [("E la tua città? Scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
+    frasi += [("E la tua città? Scrivi città e nome.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
               ("Arriva primo nel tuo comune: scrivilo qui sotto!", {"tipo": "chiusura", "testo": "👑 Arriva primo nella tua città"})]
     st["tag_extra"] = list(dict.fromkeys(tag))
     did = f"In {g} giorni sulla mappa di Zampe d'Italia si sono accesi {tot} animali, in {nc} città 🐾\n\n"
@@ -421,7 +421,7 @@ def gara(D, rng, st):
     if top and top[0].get("pt"):
         did += "🏰 Più punti fai, più la cuccia cresce: 🌸 giardino a 30 punti, 🏡 villa a 50, 🏰 castello a 70\n"
         did += "🏆 In testa: " + ", ".join(f"@{a['u']} ({a['c']}) {a.get('pt', 0)} punti" for a in top) + "\n"
-    did += (f"\nScrivi qui sotto città, nome e razza del tuo animale (per esempio «{rng.choice(CITTA)}, {gatto['nome']}, {gatto['parola']}»): entro 15 minuti si accende sulla mappa col tuo @. "
+    did += (f"\nScrivi qui sotto città e nome del tuo animale (per esempio «{rng.choice(CITTA)}, {gatto['nome']}, {gatto['parola']}»): entro 15 minuti si accende sulla mappa col tuo @. "
             "Chi arriva primo nel suo comune diventa il Fondatore, prima che qualcuno arrivi prima di te 👀")
     st.setdefault("copertina", {"sopra": f"{tot} ANIMALI", "grande": f"{g} giorni", "sotto": "Chi arriva primo nella tua città? 👑", "tema": "fondatore"})
     return "LA GARA", frasi, did
@@ -438,12 +438,12 @@ def negozio(D, rng, st):
         frasi.append((f"In testa alla Sfilata c'è {top[0]['n']}, di {top[0]['c']}.", {"tipo": "classifica", "titolo": "La Sfilata 🏆", "righe": [{"nome": f"{a['n']} · @{a['u']}", "valore": f"{len(a.get('acc', []))} accessori"} for a in top], "utente": top[0]["u"]}))
         st["tag_extra"] = [a["u"] for a in top]
     frasi += [("Ogni domenica il più accessoriato diventa il più bello d'Italia.", {"tipo": "numero", "grande": "🏆", "sotto": "il più bello d'Italia: piedistallo d'oro e la puntata delle 21"}),
-              ("Non sei ancora sulla mappa? Scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
+              ("Non sei ancora sulla mappa? Scrivi città e nome.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
               ("Il negozio è nel link in bio!", {"tipo": "chiusura", "testo": "🛍️ Negozio nel link in bio"})]
     did = ("👑 Da oggi sulla mappa di Zampe d'Italia puoi regalare un accessorio al tuo animale, per sempre: 🦴 osso d'oro 1 €, 🎀 fiocco 1,49 €, 📿 collare d'oro 1,99 €, 👑 corona 2,99 €, 🎆 fuochi d'artificio 3,99 €.\n\n"
            "Ogni regalo finisce nella nostra storia 🎉 e ogni domenica alle 21 il più accessoriato diventa 🏆 Il più bello d'Italia.\n\n"
            "🛍️ Negozio su zampeditalia.it (link in bio) → «Il mio» → cerca il tuo @.\n\n"
-           f"Non sei ancora sulla mappa? Scrivi qui sotto città, nome e razza (per esempio «{rng.choice(CITTA)}, {gatto['nome']}, {gatto['parola']}»).")
+           f"Non sei ancora sulla mappa? Scrivi qui sotto città e nome (per esempio «{rng.choice(CITTA)}, {gatto['nome']}, {gatto['parola']}»).")
     st["copertina"] = {"sopra": "🛍️ IL NEGOZIO", "grande": "Da 1 €", "sotto": "Il più bello d'Italia? 🏆", "tema": "attivita"}
     return "IL NEGOZIO", frasi, did
 
@@ -464,7 +464,7 @@ def presidente(D, rng, st):
     frasi += [(f"{'Altre' if len(pres) == 1 else 'Ancora'} {libere} regioni non hanno un Presidente.", {"tipo": "numero", "grande": str(libere), "sotto": "regioni senza Presidente 👀"}),
               ("Chi ha più accessori nella sua regione diventa Presidente. Si parte da 1 euro.", {"tipo": "numero", "grande": "1 €", "sotto": "🦴 1 € · 🎀 1,49 · 📿 1,99 · 👑 2,99 · 🎆 3,99"}),
               ("E se qualcuno ti supera, la fascia passa subito a lui!", {"tipo": "numero", "grande": "⚡", "sotto": "chi ti supera ti toglie la fascia"}),
-              ("Non sei ancora sulla mappa? Scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
+              ("Non sei ancora sulla mappa? Scrivi città e nome.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
               ("Il negozio è nel link in bio!", {"tipo": "chiusura", "testo": "🇮🇹 Diventa Presidente: link in bio"})]
     st["tag_extra"] = [a["u"] for a in pres[:5]]
     did = (f"🇮🇹 {'Abbiamo il primo Presidente di regione' if len(pres) == 1 else 'I Presidenti di regione di Zampe d’Italia'}: {p['n']} di @{p['u']}, {razza} di {p['c']}, con {cosa} è {p['pres']}!\n\n"
@@ -472,7 +472,7 @@ def presidente(D, rng, st):
            + f"{'Altre' if len(pres) == 1 else 'Ancora'} {libere} regioni non hanno un Presidente 👀 Chi ha più accessori nella sua regione prende la fascia tricolore sulla mappa e nel paese 3D, "
            "e se qualcuno lo supera la fascia passa subito a lui ⚡\n\n"
            "🛍️ Accessori da 1 €: zampeditalia.it (link in bio) → «Il mio» → cerca il tuo @.\n\n"
-           f"Non sei ancora sulla mappa? Scrivi qui sotto città, nome e razza (per esempio «{rng.choice(CITTA)}, {gatto['nome']}, {gatto['parola']}»).")
+           f"Non sei ancora sulla mappa? Scrivi qui sotto città e nome (per esempio «{rng.choice(CITTA)}, {gatto['nome']}, {gatto['parola']}»).")
     st["copertina"] = {"sopra": "🇮🇹 PRESIDENTE DI REGIONE", "grande": f"{libere}<br>libere", "sotto": "Con 1 € il titolo è del tuo animale", "domanda": "La tua regione è libera? 👇", "tema": "attivita"}
     return "IL PRESIDENTE", frasi, did
 
@@ -489,10 +489,10 @@ def nomi(D, rng, st):
         (f"Dopo {n1} vengono {n2} e {n3}.", {"tipo": "classifica", "titolo": "I nomi dei cani 🐶", "righe": [{"nome": n, "valore": f"{c} cani"} for n, c in cani]}),
         (f"Tra i gatti vince {gatti[0][0]}.", {"tipo": "classifica", "titolo": "I nomi dei gatti 🐱", "righe": [{"nome": n, "valore": f"{c} gatti"} for n, c in gatti]}),
         ("Il tuo come si chiama? Scrivilo qui sotto.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, {cane['nome']}, {cane['parola']}"}),
-        ("Il nome del tuo entra in classifica!", {"tipo": "chiusura", "testo": "👇 Scrivi città, nome e razza"}),
+        ("Il nome del tuo entra in classifica!", {"tipo": "chiusura", "testo": "👇 Scrivi città e nome"}),
     ]
     did = (f"Il nome più diffuso per un cane sulla mappa d'Italia è {n1} ({c1}), poi {n2} e {n3}. Tra i gatti vince {gatti[0][0]} 🐶🐱\n\n"
-           "Il tuo come si chiama? Scrivi qui sotto città, nome e razza: entro 15 minuti si accende sulla mappa col tuo @ e il suo nome entra in classifica.")
+           "Il tuo come si chiama? Scrivi qui sotto città e nome: entro 15 minuti si accende sulla mappa col tuo @ e il suo nome entra in classifica.")
     st["copertina"] = {"sopra": "IL NOME PIÙ DIFFUSO", "grande": n1, "sotto": f"{c1} cani in Italia si chiamano così", "domanda": "Il tuo come si chiama? 👇", "tema": "voto"}
     return "I NOMI D'ITALIA", frasi, did
 
@@ -517,10 +517,10 @@ def razze(D, rng, st):
         (f"In {scelte[0][0]} vince il {nome.get(scelte[0][2], scelte[0][2])}, in {scelte[-1][0]} il {nome.get(scelte[-1][2], scelte[-1][2])}.", {"tipo": "numero", "grande": nome.get(scelte[0][2], scelte[0][2]).capitalize(), "sotto": f"la razza preferita in {scelte[0][0]} 🐶"}),
         (f"Ma il re è il meticcio: {pct} su cento.", {"tipo": "numero", "grande": f"{pct}%", "sotto": "dei cani sulla mappa è meticcio ❤️"}),
         ("E da te? Scrivi la razza del tuo.", {"tipo": "commento", "testo": f"{scelte[1][1]}, {cane['nome']}, {cane['parola']}"}),
-        ("Scrivilo qui sotto!", {"tipo": "chiusura", "testo": "👇 Scrivi città, nome e razza"}),
+        ("Scrivilo qui sotto!", {"tipo": "chiusura", "testo": "👇 Scrivi città e nome"}),
     ]
     did = (f"La razza preferita di ogni regione sulla mappa di Zampe d'Italia: " + ", ".join(f"{r} {nome.get(k, k)}" for r, _, k in scelte) +
-           f". E il re d'Italia è il meticcio: {pct} cani su cento ❤️\n\nNella tua regione vince un'altra razza? Scrivi qui sotto città, nome e razza del tuo: entro 15 minuti si accende sulla mappa col tuo @.")
+           f". E il re d'Italia è il meticcio: {pct} cani su cento ❤️\n\nNella tua regione vince un'altra razza? Scrivi qui sotto città e nome del tuo: entro 15 minuti si accende sulla mappa col tuo @.")
     st["copertina"] = {"sopra": "LA RAZZA DI OGNI REGIONE", "grande": f"{pct}%", "sotto": "dei cani d'Italia è meticcio", "domanda": "E nella tua regione? 👇", "tema": "vetrina"}
     return "LE RAZZE D'ITALIA", frasi, did
 
@@ -535,13 +535,13 @@ def missione(D, rng, st):
         (f"Siamo già {tot}, in {nc} città.", {"tipo": "numero", "grande": str(tot), "sotto": f"animali veri in {nc} città: una sola famiglia 🐾"}),
         ("Il traguardo: diecimila.", {"tipo": "numero", "grande": "10.000", "sotto": "animali d'Italia, il paese più grande, fatto da voi"}),
         ("Poi sfidiamo il mondo: Italia contro Mondo!", {"tipo": "duello", "sinistra": {"titolo": "Italia", "valore": f"{tot} animali"}, "destra": {"titolo": "Mondo", "valore": "presto 🌍"}}),
-        ("Manca il tuo: scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{c}, {cane['nome']}, {cane['parola']}"}),
+        ("Manca il tuo: scrivi città e nome.", {"tipo": "commento", "testo": f"{c}, {cane['nome']}, {cane['parola']}"}),
         ("Entra nella famiglia!", {"tipo": "chiusura", "testo": "🐾 Entra nella famiglia: scrivi la tua città"}),
     ]
     did = (f"🇮🇹 Stiamo costruendo insieme il paese virtuale con più animali d'Italia: siamo già {tot}, in {nc} città.\n\n"
            "Non è il gioco di una pagina: è la casa di tutti i nostri animali, e ogni commento è un mattone. "
            "Il traguardo è 10.000. Quando ci arriviamo, apriamo la sfida più grande: 🇮🇹 Italia contro Mondo 🌍\n\n"
-           f"👇 Manca il tuo: scrivi qui sotto città, nome e razza (per esempio «{c}, {cane['nome']}, {cane['parola']}») e tagga chi deve esserci con te.")
+           f"👇 Manca il tuo: scrivi qui sotto città e nome (per esempio «{c}, {cane['nome']}, {cane['parola']}») e tagga chi deve esserci con te.")
     st["copertina"] = {"sopra": "🇮🇹 LA NOSTRA MISSIONE", "grande": f"{tot}<br><i>/</i><br>10.000", "sotto": "animali d'Italia, una sola famiglia", "domanda": "Manca il tuo? 👇", "tema": "duello"}
     return "LA MISSIONE", frasi, did
 
@@ -564,7 +564,7 @@ def star(D, rng, st):
     ]
     did = (f"⭐ La star di oggi è {nome}" + (f" di {citta}" if citta else "") + f", di @{x['u']}! 😍\n\n"
            "📸 Vuoi che domani tocchi al tuo? Mandaci in privato una foto del tuo animale: ogni giorno uno diventa la star del reel, col tuo @."
-           + (f" (Ne abbiamo già {resto} in coda!)" if resto > 2 else "") + "\n\n👇 E scrivi qui sotto città, nome e razza: si accende anche sulla mappa d'Italia.")
+           + (f" (Ne abbiamo già {resto} in coda!)" if resto > 2 else "") + "\n\n👇 E scrivi qui sotto città e nome: si accende anche sulla mappa d'Italia.")
     st["tag_extra"] = [x["u"]]
     st["copertina"] = {"sopra": "⭐ LA STAR DI OGGI", "grande": nome, "sotto": citta or "foto vera, mandata in DM", "domanda": "Domani tocca al tuo? 📸", "tema": "fondatore"}
     return "LA STAR", frasi, did
@@ -593,7 +593,7 @@ def neopresidente(D, rng, st):
     did = (f"🇮🇹 {a['n']} di @{a['u']} è la nuova {a['pres']}! Le è bastato {acc} 👑\n\n"
            f"Ancora {libere} regioni non hanno un Presidente: chi ha più accessori nella sua regione prende la fascia tricolore sulla mappa, e se qualcuno lo supera il titolo passa a lui ⚡\n\n"
            "🛍️ Accessori da 1 €: zampeditalia.it (link in bio) → «Il mio» → cerca il tuo @.\n"
-           "👇 Non sei ancora sulla mappa? Scrivi qui sotto città, nome e razza del tuo animale.")
+           "👇 Non sei ancora sulla mappa? Scrivi qui sotto città e nome del tuo animale.")
     st["copertina"] = {"sopra": "🇮🇹 NUOVA PRESIDENTE", "grande": a["n"], "sotto": a["pres"] + " 👑", "domanda": "E nella tua regione? 👇", "tema": "attivita"}
     st["tag_extra"] = [a["u"]]
     return "PRESIDENTE", frasi, did
@@ -612,13 +612,13 @@ def sfida(D, rng, st):
     frasi = [
         (f"Cani contro Gatti: i {dietro} stanno perdendo.", {"tipo": "duello", "sinistra": {"titolo": "Cani", "valore": str(cani)}, "destra": {"titolo": "Gatti", "valore": str(gatti)}}),
         ("Quale città li salva?", {"tipo": "mappa", "luci": luci(D), "citta": [{"nome": a, "testo": a + "?", "colore": "d", "t": 0.3}, {"nome": b, "testo": b + "?", "colore": "c", "t": 0.7}]}),
-        ("Scrivi città, nome e razza.", {"tipo": "commento", "testo": f"{a}, {ex['nome']}, {ex['parola']}"}),
+        ("Scrivi città e nome.", {"tipo": "commento", "testo": f"{a}, {ex['nome']}, {ex['parola']}"}),
         ("E si accende col suo nome.", {"tipo": "gatto" if dietro == "gatti" else "cuccia", "nome": ex["nome"], "razza": ex["razza"], "seme": ex["seme"]}),
         ("Il primo del tuo comune diventa Fondatore.", {"tipo": "numero", "grande": str(liberi), "sotto": "comuni ancora spenti: il primo diventa Fondatore 👑"}),
-        ("Allora: cani o gatti? Scrivi la tua città!", {"tipo": "chiusura", "testo": "👇 Scrivi città, nome e razza"}),
+        ("Allora: cani o gatti? Scrivi la tua città!", {"tipo": "chiusura", "testo": "👇 Scrivi città e nome"}),
     ]
     did = (f"Cani contro Gatti: {cani} a {gatti}. I {dietro} stanno perdendo: quale città li salva? 🐶🐱\n\n"
-           f"Scrivi qui sotto città, nome e razza del tuo animale (per esempio «{a}, {ex['nome']}, {ex['parola']}»): entro 15 minuti si accende sulla mappa col tuo @.")
+           f"Scrivi qui sotto città e nome del tuo animale (per esempio «{a}, {ex['nome']}, {ex['parola']}»): entro 15 minuti si accende sulla mappa col tuo @.")
     st["copertina"] = {"sopra": "CANI vs GATTI", "grande": f"{cani}<br><i>vs</i><br>{gatti}", "sotto": f"I {dietro} stanno perdendo", "domanda": "La tua città li salva? 👇", "tema": "duello"}
     return "CANI vs GATTI", frasi, did
 
@@ -704,7 +704,7 @@ def main():
     if per_attivita:
         did = did.strip() + "\n\n"
     else:  # una richiesta sola: con 8 richieste diverse in didascalia (ottobre) non se ne faceva nessuna
-        if "nome e razza" not in did: did = did.strip() + "\n\n👇 Scrivi qui sotto città, nome e razza del tuo animale: la sua luce si accende sulla mappa col tuo @."
+        if "città e nome" not in did: did = did.strip() + "\n\n👇 Commenta la tua città e il nome del tuo cane o gatto (es. «Treviso, Luna, cane»): si accende sulla mappa col tuo @."
         if formato != "star": did = did.strip() + "\n📸 Ci segui? Mandaci in privato la foto più bella del tuo animale: ogni giorno una diventa la star del reel!"
         # dal 30/10 sera, togliendo questa riga, i follower sono passati da circa 250 a 20-30 al giorno: resta sempre
         did = did.strip() + f"\n\n➕ Seguici e scrivi SEGUO: {PS} punti" + (" e il costume di Halloween per il tuo animale" if ORA.date().isoformat() <= "2026-11-02" else " e le lucine sulla cuccia") + ". Nei reel mettiamo prima gli animali di chi ci segue."
@@ -738,7 +738,7 @@ def main():
     st["varianti"] = dict(list({**st.get("varianti", {}), id_reel: f"{voce_v}-{apertura}-{max_parole}"}.items())[-200:])
     copione = {"voce": voce_ia, "variante": f"{voce_v}-{apertura}-{max_parole}", "tema": tema, "id": id_reel, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
-               "banner": f"📍 Scrivi città, nome, razza · ➕ Seguici {PS} 👇", "didascalia": did,
+               "banner": "💬 Commenta città e nome del tuo animale 👇", "didascalia": did,
                "tag": [u for u in mostrati if u.lower() not in ESCLUSI], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {})}
     Path(uscita).write_text(json.dumps(copione, ensure_ascii=False, indent=1))
     STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
