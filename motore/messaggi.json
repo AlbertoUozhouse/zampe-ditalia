@@ -224,8 +224,10 @@
 "1f7cf19d47006b69",
 "2020467a3a52b501",
 "2081ded24a4ba78b",
+"20b72d6b7efebfa2",
 "20d4ca74a6f95f9d",
 "20d68707c66b135e",
+"211674f24b8d3a88",
 "213f2748c4c480ea",
 "214b75d7aaf63072",
 "216da96268d4ac26",
@@ -278,6 +280,7 @@
 "2a045a39f38213d2",
 "2a60d6f950c6ca2d",
 "2a6ad18134ab1ba5",
+"2a700e2af62d2862",
 "2aafb5b29ff6b097",
 "2ae37ee7c31e31a1",
 "2aedb182251901ef",
@@ -526,6 +529,7 @@
 "51b05ec708012d23",
 "51ea901d2279e820",
 "5204ae47fd7bc3a8",
+"53153aa317d608b5",
 "5327b26f8414d134",
 "538a92ab908e3dac",
 "538eee0e94dc68ab",
@@ -1472,6 +1476,7 @@
 "e7234dd8a1569833",
 "e72731d3c60fe0fd",
 "e735193e6da7f13e",
+"e74aac3d2e36d68c",
 "e783dd7b2b2cbb9e",
 "e794eb0a258d9998",
 "e795271742757519",
@@ -1620,7 +1625,16 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1809476540307428",
+"url": [
+"https://zampeditalia.it/cartoline/9dfbc9bae6056a6f.png",
+"https://zampeditalia.it/cartoline/0946288bcbae084b.png"
+],
+"t": 1793643509.1980872
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
