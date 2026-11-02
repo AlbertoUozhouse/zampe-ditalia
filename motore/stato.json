@@ -8870,6 +8870,7 @@
 "18646629211011747",
 "18646699615025409",
 "18646703887025183",
+"18646766749007582",
 "18646959934048640",
 "18646964884005693",
 "18647046160024627",
@@ -8919,7 +8920,9 @@
 "18666851569016117",
 "18668921470032586"
 ],
-"risposte": [],
+"risposte": [
+1793598600.6303258
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -10734,7 +10737,7 @@
 "elprivato.delbelloms": "2026-11-01",
 "easy758": "2026-11-01",
 "notalxya": "2026-11-01",
-"francesco__stocco": "2026-11-01",
+"francesco__stocco": "2026-11-02",
 "privatissimo.sciari": "2026-11-01",
 "almaf4lco_1108": "2026-11-01",
 "samuburrascano_": "2026-11-01",
@@ -12596,7 +12599,8 @@
 "stella_zenna": 46,
 "carlino_junior": 30,
 "easy758": 20,
-"fabri_chad": 20
+"fabri_chad": 20,
+"francesco__stocco": 40
 },
 "inviti_giorno": {
 "2026-10-27": {
@@ -13390,7 +13394,8 @@
 "ma_de_.marco_": "premiato",
 "stella_zenna": "premiato",
 "carlino_junior": "premiato",
-"giannapezzogno": "in_attesa"
+"giannapezzogno": "in_attesa",
+"francesco__stocco": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -16262,7 +16267,7 @@
 "2026-10-30": 1087,
 "2026-10-31": 1243,
 "2026-11-01": 1391,
-"2026-11-02": 1393
+"2026-11-02": 1394
 },
 "gioco_pappa": {
 "2026-W44": {
