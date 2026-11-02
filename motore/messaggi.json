@@ -32,6 +32,7 @@
 "033008d79e570215",
 "037662f0d4c19780",
 "042d9a9fcf7e5fc9",
+"0431f3f652189ef6",
 "045409428ddd1e36",
 "04624f88bbfa0bf2",
 "04631ac80e2bc928",
@@ -407,6 +408,7 @@
 "3eb40f7da8046e15",
 "3f45909a7ef34dc0",
 "3f4d18174bfb532d",
+"3f5ee3ca068bff9d",
 "3f644852e3f84d93",
 "3f6482eb795d9fb2",
 "3fc2e62f6aa382df",
@@ -488,6 +490,7 @@
 "4b1d3613711ed656",
 "4b45b9ad3411fff5",
 "4b53b351bdd893c3",
+"4b5b5132fb11cadd",
 "4b8abe940d7675d0",
 "4b9472de6b7b6063",
 "4ba3f5b56442ced3",
@@ -540,6 +543,7 @@
 "5542a153fe64a56b",
 "55469068df21330e",
 "55d76475113d2c91",
+"55ddda004ab01ca5",
 "55e512565c4640c5",
 "55ebb2696a057468",
 "55f85262bb5ea971",
@@ -718,6 +722,7 @@
 "72845d3974410276",
 "72f0edc069008a46",
 "73444ac830239470",
+"734882776bd1e624",
 "7398c0d85f0ba128",
 "73b165e54e327d55",
 "73b4f923021af862",
@@ -988,6 +993,7 @@
 "a0d7a1d2dca184fe",
 "a11b6d14ce6a4988",
 "a124ffeb41e12f95",
+"a1406feecbd539cb",
 "a19c2705b99c6a55",
 "a1f53ce37467b661",
 "a2036eacbf837cc2",
@@ -1046,6 +1052,7 @@
 "a962337133b11122",
 "a98fb41dff8b72ea",
 "a9bde4c8b680e96e",
+"a9c3f90589842002",
 "a9f6fa8512f77620",
 "aa092960fda79f8a",
 "aa11bd8a4027d149",
@@ -1376,6 +1383,7 @@
 "de64bef24c6d9515",
 "de6a7c536b34f777",
 "de7768802902feca",
+"def9ac5b45dbfa7f",
 "df3861336e91c1db",
 "df3d8956940e5685",
 "df5daa24f408f439",
@@ -1599,11 +1607,34 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1897640334943229",
+"url": [
+"https://zampeditalia.it/cartoline/708bbe772b5248c4.png"
+],
+"t": 1793638116.2465134
+},
+{
+"igsid": "1135398549346161",
+"url": [
+"https://zampeditalia.it/cartoline/b2321a3fc5f75154.png",
+"https://zampeditalia.it/cartoline/68cd94c1d9537d6c.png"
+],
+"t": 1793638116.246515
+},
+{
+"storia": "cartoline/fe5ba5049fd0c68c.png",
+"url": [
+"https://zampeditalia.it/cartoline/fe5ba5049fd0c68c.png"
+],
+"t": 1793638096.8736293
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
-"2026-11-02": 8
+"2026-11-02": 9
 },
 "prenota_attesa": {},
 "foto_attesa": {}
