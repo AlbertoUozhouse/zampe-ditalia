@@ -123,3 +123,9 @@ Nuovo formato «missione»: il paese virtuale con più animali d'Italia, traguar
 
 Alberto: non tutti mandano belle foto, e chi non ci segue non deve diventare la star.
 Cambiato (motore/messaggi.py, lettore.giudica_foto): chi non ha scritto SEGUO riceve «la star è riservata a chi ci segue»; le foto di chi ci segue le guarda Claude (animale ben visibile, a fuoco, luce buona, niente persone in primo piano, screenshot o scritte) prima di chiedere il SÌ. Se Claude non risponde la foto si riprova al giro dopo.
+
+## 3/11/2026 — controllo del mattino: nessun cambiamento
+
+Follower 1.536 (+136 il 2/11). Prima sfida con la fascia fissa in basso e la richiesta «città e nome» (2/11 21:10): 654 views, 78 commenti ogni 1.000 (il presidente delle 11:44 senza fascia: 2.255 views, 36 ogni 1.000), 2 condivisioni, 8,9 s di visione media.
+I commenti per views raddoppiano, le views non ancora. Un reel solo non basta: le regole nuove restano uguali per 3 uscite. Il buio del 2/11 è stato tolto da Instagram (era senza voce).
+Da guardare domani: commenti ogni 1.000 views di buio e puntata di oggi (obiettivo sopra 100) e follower del 3/11.
