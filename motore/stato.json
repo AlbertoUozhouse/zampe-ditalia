@@ -1146,6 +1146,7 @@
 "17924861286448920",
 "17924927958440222",
 "17924935593214046",
+"17924952507223141",
 "17925239241437745",
 "17925352485443758",
 "17925454998440512",
@@ -9707,7 +9708,7 @@
 "18668921470032586"
 ],
 "risposte": [
-1793732392.825659
+1793736299.822691
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12606,9 +12607,6 @@
 "kolia_holovko405_": [
 "cosmico1278"
 ],
-"skbidiaura": [
-"cosmico1278"
-],
 "_nickkk_34_": [
 "cosmico1278"
 ],
@@ -12776,7 +12774,8 @@
 "just_rora_148>biffi.bianca",
 "victoriacrimi8>syria_23.10",
 "diego_coglia>andreazattera2",
-"valerio_elav>cosmico1278"
+"valerio_elav>cosmico1278",
+"cosmico1278>skbidiaura"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -13684,7 +13683,7 @@
 "antisocial_lula": 30,
 "valerio_elav": 23,
 "christian.soriano.______": 30,
-"cosmico1278": 30,
+"cosmico1278": 36,
 "asia.cav": 30,
 "mia.zanniniii": 40,
 "angel_mussolino": 35,
@@ -13801,6 +13800,9 @@
 "victoriacrimi8": 1,
 "diego_coglia": 1,
 "valerio_elav": 1
+},
+"2026-11-03": {
+"cosmico1278": 1
 }
 },
 "seguono": {
@@ -17776,7 +17778,7 @@
 "2026-10-31": 1243,
 "2026-11-01": 1391,
 "2026-11-02": 1527,
-"2026-11-03": 1563
+"2026-11-03": 1564
 },
 "gioco_pappa": {
 "2026-W44": {
