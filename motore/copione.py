@@ -622,7 +622,29 @@ def sfida(D, rng, st):
     st["copertina"] = {"sopra": "CANI vs GATTI", "grande": f"{cani}<br><i>vs</i><br>{gatti}", "sotto": f"I {dietro} stanno perdendo", "domanda": "La tua città li salva? 👇", "tema": "duello"}
     return "CANI vs GATTI", frasi, did
 
-FORMATI = {"missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+def fuochi(D, rng, st):
+    """Reel che chiede di seguire (Alberto, 3/11: «un reel che spinga i follow»): un traguardo di tutti, vicino e visibile
+    (a 2.000 follower i fuochi d'artificio su tutta la mappa), il premio subito per chi segue (SEGUO = punti al suo animale)
+    e un amico da taggare. Qui la richiesta di seguire è il contenuto, quindi sta anche nella fascia in basso."""
+    fw = D.get("follower") or {}
+    n = fw.get("n") or 0
+    manca = max(1, 2000 - n)
+    tot = len(luci(D))
+    frasi = [
+        (f"Mancano {manca} follower ai fuochi d'artificio su tutta l'Italia!", {"tipo": "numero", "grande": str(manca), "sotto": "follower ai fuochi d'artificio 🎆"}),
+        (f"A 2.000 si accende la festa sopra tutti i {tot} animali della mappa.", {"tipo": "mappa", "luci": luci(D)}),
+        (f"Seguici e scrivi SEGUO: {PS_P} al tuo animale.", {"tipo": "commento", "testo": "SEGUO"}),
+        ("Tagga un amico: ci arriviamo insieme!", {"tipo": "chiusura", "testo": "➕ Segui e tagga un amico 👇"}),
+    ]
+    did = (f"🎆 Mancano {manca} follower ai fuochi d'artificio su tutta la mappa d'Italia!\n\n"
+           f"Quando arriviamo a 2.000 si accende la festa sopra tutti i {tot} cani e gatti della mappa.\n"
+           f"➕ Seguici e scrivi SEGUO qui sotto: {PS} punti al tuo animale.\n👥 Tagga un amico che ha un cane o un gatto: ci arriviamo insieme!")
+    st["copertina"] = {"sopra": "MANCANO", "grande": str(manca), "sotto": "follower ai fuochi d'artificio 🎆", "domanda": "Ci aiuti? ➕👇", "tema": "duello"}
+    st["banner_reel"] = f"➕ Seguici e scrivi SEGUO: {PS} punti 👇"
+    st["senza_bonus"] = True  # la didascalia ha già la sua richiesta: niente altre righe in coda
+    return "🎆 VERSO I 2.000", frasi, did
+
+FORMATI = {"fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -738,7 +760,7 @@ def main():
     st["varianti"] = dict(list({**st.get("varianti", {}), id_reel: f"{voce_v}-{apertura}-{max_parole}"}.items())[-200:])
     copione = {"voce": voce_ia, "variante": f"{voce_v}-{apertura}-{max_parole}", "tema": tema, "id": id_reel, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
-               "banner": "💬 Commenta città e nome del tuo animale 👇", "didascalia": did,
+               "banner": st.pop("banner_reel", "💬 Commenta città e nome del tuo animale 👇"), "didascalia": did,
                "tag": [u for u in mostrati if u.lower() not in ESCLUSI], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {})}
     Path(uscita).write_text(json.dumps(copione, ensure_ascii=False, indent=1))
     STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))

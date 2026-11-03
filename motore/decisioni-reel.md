@@ -129,3 +129,10 @@ Cambiato (motore/messaggi.py, lettore.giudica_foto): chi non ha scritto SEGUO ri
 Follower 1.536 (+136 il 2/11). Prima sfida con la fascia fissa in basso e la richiesta «città e nome» (2/11 21:10): 654 views, 78 commenti ogni 1.000 (il presidente delle 11:44 senza fascia: 2.255 views, 36 ogni 1.000), 2 condivisioni, 8,9 s di visione media.
 I commenti per views raddoppiano, le views non ancora. Un reel solo non basta: le regole nuove restano uguali per 3 uscite. Il buio del 2/11 è stato tolto da Instagram (era senza voce).
 Da guardare domani: commenti ogni 1.000 views di buio e puntata di oggi (obiettivo sopra 100) e follower del 3/11.
+
+## 3/11/2026 sera — un reel che chiede di seguire: «fuochi»
+
+Alberto: serve un reel che spinga i follow. Oggi follower +40 (1.567) e solo 91 commenti nuovi (ieri 711): con 2 reel al giorno e poche views arrivano pochi giocatori nuovi.
+Nuovo formato `fuochi` (eccezione alla regola 2, perché qui seguire è il contenuto): il numero che manca ai 2.000 follower, la festa sopra tutti gli animali della mappa, SEGUO = punti al tuo animale, tagga un amico. Fascia in basso «➕ Seguici e scrivi SEGUO».
+Esce il 4/11 alle 13:00 al posto del buio (fascia oraria in cui la gente segue di più: 11-16).
+Da guardare: follower nuovi tra le 13 e le 17 del 4/11 contro le stesse ore del 3/11, e i SEGUO nei commenti.
