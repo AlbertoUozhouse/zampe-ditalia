@@ -84,7 +84,8 @@
   "Basilicata",
   "Trentino-Alto Adige",
   "Umbria",
-  "Valle d'Aosta"
+  "Valle d'Aosta",
+  "Molise"
  ],
  "gare": [
   "Livorno",
@@ -93,7 +94,6 @@
   "Napoli"
  ],
  "temi": [
-  "tramonto",
   "notte",
   "neon",
   "aurora",
@@ -102,9 +102,10 @@
   "giorno",
   "notte",
   "tramonto",
-  "neon"
+  "neon",
+  "aurora"
  ],
- "variante_n": 7,
+ "variante_n": 8,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -112,6 +113,7 @@
   "2026-11-01-2113-missione": "muto-solita-32",
   "2026-11-02-1144-presidente": "voce-solita-32",
   "2026-11-02-1345-buio": "muto-solita-32",
-  "2026-11-02-2110-sfida": "voce-solita-32"
+  "2026-11-02-2110-sfida": "voce-solita-32",
+  "2026-11-03-1310-buio": "voce-solita-32"
  }
 }
