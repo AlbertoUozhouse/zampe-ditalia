@@ -1696,23 +1696,7 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [
-{
-"igsid": "1130354002805286",
-"url": [
-"https://zampeditalia.it/cartoline/56808bde8befd017.png"
-],
-"t": 1793689061.0267835
-},
-{
-"igsid": "28788702594090232",
-"url": [
-"https://zampeditalia.it/cartoline/33e6a34c489be602.png",
-"https://zampeditalia.it/cartoline/8d90b2603a028da9.png"
-],
-"t": 1793689061.0267856
-}
-],
+"in_attesa": [],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
