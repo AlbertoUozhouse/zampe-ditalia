@@ -45,8 +45,7 @@ def main():
             if poco_fa(ora):  # due reel troppo vicini sembrano uguali e si rubano le visualizzazioni: questo orario salta
                 fatti.append(hhmm); STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1)); return
             fatti.append(hhmm)
-            if formato == "star" and not foto_nuove(st):  # 2/11: la star esce solo con una foto vera; senza foto niente reel in più
-                STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1)); return
+            # 4/11: senza foto nuove la star non salta più: copione.py fa il fondatore (con 2 reel al giorno i commenti nuovi sono crollati, da 711 a 91)
             st["lanciati"] = {k: v for k, v in st["lanciati"].items() if k >= (ora.date() - timedelta(days=7)).isoformat()}
             STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
             if formato.startswith("attivita"):  # col negozio aperto, quello slot fa il reel degli accessori

@@ -10,7 +10,7 @@ La differenza vera è il lancio (357.000 contro i nostri 35.000) e i commenti: c
 Cosa fa: chiede una parola sola (la città), ha una fascia fissa in basso «Commenta la tua città → ricevi una casa» per tutto il video, 1-2 reel al giorno,
 storie a puntate con scadenza («stasera alle 21», «3 giorni al voto»), l'@ vero del giocatore grande al centro, scarsità («solo 3 case così»), testo enorme bianco e giallo.
 
-1. **Massimo 3 reel al giorno:** 13:00 buio, 18:00 star (solo se c'è una foto vera nuova, altrimenti niente reel), 21:00 puntata; la «sfida» (Cani contro Gatti col punteggio) alle 21 a giorni alterni (2, 4, 6, 8/11).
+1. **3 reel al giorno:** 13:00 buio, 18:00 star (senza foto nuova esce il fondatore), 21:00 puntata; la «sfida» (Cani contro Gatti col punteggio) alle 21 a giorni alterni (2, 4, 6, 8/11).
 2. **Ogni reel ha la fascia fissa in basso** «💬 Commenta città e nome del tuo animale 👇» per tutto il video. Niente «Seguici» nel video: si chiede il commento, il follow sta in didascalia e nelle risposte.
 3. **Si chiede meno:** «città e nome» (+ cane o gatto). La razza è facoltativa. Se manca cane/gatto la risposta lo chiede: è un commento in più.
 4. **Sempre con la voce**, 32 parole.
@@ -136,3 +136,10 @@ Alberto: serve un reel che spinga i follow. Oggi follower +40 (1.567) e solo 91 
 Nuovo formato `fuochi` (eccezione alla regola 2, perché qui seguire è il contenuto): il numero che manca ai 2.000 follower, la festa sopra tutti gli animali della mappa, SEGUO = punti al tuo animale, tagga un amico. Fascia in basso «➕ Seguici e scrivi SEGUO».
 Esce il 4/11 alle 13:00 al posto del buio (fascia oraria in cui la gente segue di più: 11-16).
 Da guardare: follower nuovi tra le 13 e le 17 del 4/11 contro le stesse ore del 3/11, e i SEGUO nei commenti.
+
+## 4/11/2026 — controllo del mattino: torna il terzo reel
+
+Il conteggio di Instagram era fermo dal 3/11 mattina: la copia intera del repository (quasi 1 GB) superava i 10 minuti. Ora rendimento.yml copia solo motore/.
+Follower 1.576 (+43 il 3/11, +136 il 2/11). Commenti nuovi: 711 il 2/11, 98 il 3/11. Reel del 3/11: buio 614 views (62 commenti ogni 1.000), puntata 345 (38). Sfida del 2/11: 801 (76).
+Con 2 reel al giorno (la star saltava senza foto) i giocatori nuovi sono crollati. Cambiato (uno solo): senza foto nuove alle 18 esce il fondatore, così i reel tornano 3.
+Oggi: 13:00 fuochi (follow), 18:00 fondatore, 21:00 sfida. Da guardare: follower tra le 13 e le 17 e commenti nuovi del 4/11.
