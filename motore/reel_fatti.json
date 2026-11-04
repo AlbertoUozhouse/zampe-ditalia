@@ -97,7 +97,6 @@
   "Napoli"
  ],
  "temi": [
-  "neon",
   "giorno",
   "notte",
   "tramonto",
@@ -106,9 +105,10 @@
   "giorno",
   "notte",
   "tramonto",
-  "aurora"
+  "aurora",
+  "notte"
  ],
- "variante_n": 12,
+ "variante_n": 13,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -121,7 +121,8 @@
   "2026-11-03-2116-puntata": "voce-solita-32",
   "2026-11-04-1309-fuochi": "voce-solita-32",
   "2026-11-04-1806-star": "voce-solita-32",
-  "2026-11-04-1933-ospiti": "voce-solita-32"
+  "2026-11-04-1933-ospiti": "voce-solita-32",
+  "2026-11-04-2107-ospiti_sera": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -524,6 +525,8 @@
   "gretaaltamura",
   "gridellivalentina",
   "gsxr666_",
+  "guenni_soltan",
+  "hassouna346",
   "hawk.74442906",
   "heiii.asi",
   "helloxelysa",
