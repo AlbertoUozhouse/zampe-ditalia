@@ -12,11 +12,13 @@ permissions:
 jobs:
   rendimento:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     env:
       IG_TOKEN: ${{ secrets.IG_TOKEN }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: motore  # il sito pesa quasi 1 GB: qui servono solo i numeri (3/11 la copia intera superava i 10 minuti)
       - run: python3 -I motore/rendimento.py
       - name: Salva
         run: |
