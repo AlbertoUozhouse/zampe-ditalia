@@ -143,3 +143,12 @@ Il conteggio di Instagram era fermo dal 3/11 mattina: la copia intera del reposi
 Follower 1.576 (+43 il 3/11, +136 il 2/11). Commenti nuovi: 711 il 2/11, 98 il 3/11. Reel del 3/11: buio 614 views (62 commenti ogni 1.000), puntata 345 (38). Sfida del 2/11: 801 (76).
 Con 2 reel al giorno (la star saltava senza foto) i giocatori nuovi sono crollati. Cambiato (uno solo): senza foto nuove alle 18 esce il fondatore, così i reel tornano 3.
 Oggi: 13:00 fuochi (follow), 18:00 fondatore, 21:00 sfida. Da guardare: follower tra le 13 e le 17 e commenti nuovi del 4/11.
+
+## 4/11/2026 pomeriggio — evento «Il Re degli animali d'Italia» (Alberto: «hai carta bianca, voglio follower»)
+
+4/11 alle 15:30: +2 follower e 2 animali nuovi in tutto il giorno. Instagram fa vedere i reel a 200-450 persone: la stessa mappa con numeri diversi non è più una novità.
+Le pagine simili crescono con eventi a scadenza («Stasera alle 21 il primo Presidente d'Italia», 24.000-93.000 views) e con persone vere al centro.
+Nuovo evento: venerdì 6/11 alle 21 si incorona il primo Re degli animali d'Italia (più punti) e il Re di ogni regione. Si vince coi punti del gioco:
+SEGUO = +30 (fino all'8/11), ogni amico taggato che commenta = +3. Seguire ha un motivo dentro il gioco, e chi è in classifica tagga e condivide.
+Calendario: `re` (conto alla rovescia con la classifica vera) 4/11 18:00, 5/11 13:00 e 21:00, 6/11 13:00; `incoronazione` 6/11 21:00 (al posto della sfida).
+Da guardare: SEGUO e tag nei commenti, follower al giorno dal 4 al 7/11.

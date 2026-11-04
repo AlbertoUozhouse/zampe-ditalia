@@ -644,7 +644,70 @@ def fuochi(D, rng, st):
     st["senza_bonus"] = True  # la didascalia ha già la sua richiesta: niente altre righe in coda
     return "🎆 VERSO I 2.000", frasi, did
 
-FORMATI = {"fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+CORONA = datetime(2026, 11, 6, 21, 0, tzinfo=ZoneInfo("Europe/Rome"))  # l'incoronazione del primo Re degli animali d'Italia
+
+def _regnanti(D):
+    """Il Re d'Italia e il Re di ogni regione: l'animale con più punti (punti veri del gioco, ESCLUSI fuori)."""
+    an = [a for a in D["animali"] if a.get("k") == "animale" and a.get("u", "").lower() not in ESCLUSI and a.get("pt")]
+    top = sorted(an, key=lambda a: -a.get("pt", 0))
+    regioni = {}
+    for a in top:
+        if a.get("r") and a["r"] not in regioni: regioni[a["r"]] = a
+    return top, regioni
+
+def regno(D, rng, st):
+    """Conto alla rovescia per l'incoronazione (Alberto, 4/11: «voglio follower»): un evento con una scadenza, come i reel
+    «Stasera alle 21 il primo Presidente» delle pagine simili. Si vince coi punti, e il modo più veloce per farli è seguirci (SEGUO)
+    e far commentare gli amici: la richiesta di seguire ha un motivo dentro il gioco."""
+    top, regioni = _regnanti(D)
+    ore = max(1, int((CORONA - ORA).total_seconds() // 3600))
+    quando = "stasera alle 21" if CORONA.date() == ORA.date() else ("domani sera alle 21" if (CORONA.date() - ORA.date()).days == 1 else "venerdì alle 21")
+    t3 = top[:3]
+    frasi = [
+        (f"{quando[0].upper() + quando[1:]} incoroniamo il primo Re degli animali d'Italia. Sarà il tuo?", {"tipo": "numero", "grande": "👑", "sotto": f"{quando}: il Re degli animali d'Italia"}),
+        (f"Oggi in testa c'è {t3[0]['n']}, di {t3[0]['c']}." if t3 else "Il trono è ancora libero.",
+         {"tipo": "classifica", "titolo": "Corsa al trono 👑", "righe": [{"nome": f"{a['n']} · @{a['u']}", "valore": f"{a.get('pt', 0)} pt"} for a in t3], "utente": t3[0]["u"]} if t3 else {"tipo": "mappa", "luci": luci(D)}),
+        (f"E ogni regione avrà il suo Re.", {"tipo": "mappa", "luci": luci(D)}),
+        (f"Seguici e scrivi SEGUO: {PS_P} subito.", {"tipo": "commento", "testo": "SEGUO"}),
+        ("Tagga gli amici: ogni amico che commenta vale tre punti!", {"tipo": "chiusura", "testo": "👑 Segui, scrivi SEGUO, tagga un amico"}),
+    ]
+    st["tag_extra"] = [a["u"] for a in t3]
+    did = (f"👑 {quando[0].upper() + quando[1:]} incoroniamo il primo Re degli animali d'Italia, e il Re di ogni regione!\n\n"
+           + ("Oggi in testa: " + ", ".join(f"{a['n']} di {a['c']} ({a['pt']} punti)" for a in t3) + ".\n\n" if t3 else "")
+           + "Come si fanno punti:\n"
+           f"➕ Seguici e scrivi SEGUO qui sotto: {PS} punti\n"
+           "👥 Tagga gli amici: ogni amico che commenta col suo animale ti vale +3\n"
+           "🐾 Non sei ancora sulla mappa? Commenta la tua città e il nome del tuo cane o gatto.\n\n"
+           f"Mancano {ore} ore. Il tuo animale ha la stoffa del Re? 👇")
+    st["copertina"] = {"sopra": quando.upper(), "grande": "👑 IL RE", "sotto": "degli animali d'Italia", "domanda": "Sarà il tuo? 👇", "tema": "fondatore"}
+    st["banner_reel"] = f"👑 Seguici e scrivi SEGUO: {PS} punti per diventare Re"
+    st["senza_bonus"] = True
+    return "👑 IL RE D'ITALIA", frasi, did
+
+def incoronazione(D, rng, st):
+    """La serata: il primo Re degli animali d'Italia (più punti) e i Re delle regioni. Persone vere al centro: chi vince condivide."""
+    top, regioni = _regnanti(D)
+    if not top: return regno(D, rng, st)
+    r0 = top[0]
+    altri = sorted(regioni.values(), key=lambda a: -a.get("pt", 0))
+    altri = [a for a in altri if a is not r0][:4]
+    frasi = [
+        ("È ufficiale!", {"tipo": "numero", "grande": "👑", "sotto": "il primo Re degli animali d'Italia"}),
+        (f"Il primo Re degli animali d'Italia è {r0['n']}, di {r0['c']}!", {**scena_di(r0, f"Re d'Italia 👑 {r0['c']}")}),
+        ("Ed ecco i Re delle regioni.", {"tipo": "classifica", "titolo": "I Re delle regioni 👑", "righe": [{"nome": f"{a['n']} · {a['r']}", "valore": f"@{a['u']}"} for a in altri], "utente": r0["u"]}),
+        ("La prossima corona è tra un mese. Seguici per non perderla!", {"tipo": "chiusura", "testo": "➕ Seguici: la prossima corona può essere tua"}),
+    ]
+    st["tag_extra"] = [r0["u"]] + [a["u"] for a in altri]
+    righe = "\n".join(f"👑 {a['r']}: {a['n']} di {a['c']} (@{a['u']})" for a in sorted(regioni.values(), key=lambda a: a["r"]))
+    did = (f"👑 È ufficiale: il primo Re degli animali d'Italia è {r0['n']}, di {r0['c']}, con {r0['pt']} punti! Complimenti @{r0['u']} 🎉\n\n"
+           f"I Re delle regioni:\n{righe}\n\n"
+           "➕ Seguici e scrivi SEGUO: la prossima corona può essere del tuo animale.\n🐾 Non sei sulla mappa? Commenta la tua città e il nome del tuo cane o gatto.")
+    st["copertina"] = {"sopra": "È UFFICIALE", "grande": r0["n"].upper(), "sotto": f"Re degli animali d'Italia 👑", "domanda": "Il prossimo sarà il tuo? 👇", "tema": "fondatore", "citta": r0["c"]}
+    st["banner_reel"] = "➕ Seguici: la prossima corona può essere tua 👇"
+    st["senza_bonus"] = True
+    return "👑 È UFFICIALE", frasi, did
+
+FORMATI = {"re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
