@@ -865,6 +865,11 @@ def _hash_breve(s):
     import zlib
     return format(zlib.crc32(str(s).encode()), "x")
 
+def riga_re(a):
+    """Fino all'incoronazione del 6/11 alle 21 (copione.py, formati re e incoronazione) ogni nuova luce sa come fare punti per diventare Re."""
+    if datetime.now(timezone.utc) >= datetime(2026, 11, 6, 20, 0, tzinfo=timezone.utc) or a["u"].lower() in ("thor_golden_life", "albertomarchesin"): return None
+    return f"👑 Venerdì alle 21 incoroniamo il Re degli animali d'Italia e di ogni regione: seguici e scrivi SEGUO (+30), e ogni amico che tagghi e commenta vale +3 per {a['n']}!"
+
 def riga_presidente(gioco, a):
     """Il titolo di Presidente di regione va a chi ha più accessori (presidenti()): a chi accende una luce diciamo quanto gli manca.
     Con 18 regioni ancora libere basta un accessorio da 1 euro. Solo gloria, come la Sfilata."""
@@ -1103,7 +1108,7 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
         if frase_segue:
             extra.append(frase(frase_segue) + (COSTUME_ORA if frase_segue == "segue" else ""))
         if nuovi_a and chiave not in ("stella", "sogno"):  # obiettivo di città oppure corsa a Capobranco: un motivo concreto per taggare
-            riga = (riga_presidente(gioco, nuovi_a[0]) if random.random() < 0.5 else None) or riga_edificio(gioco, nuovi_a[0]) or (riga_capobranco(gioco, nuovi_a[0]) if random.random() < 0.4 else None)
+            riga = riga_re(nuovi_a[0]) or (riga_presidente(gioco, nuovi_a[0]) if random.random() < 0.5 else None) or riga_edificio(gioco, nuovi_a[0]) or (riga_capobranco(gioco, nuovi_a[0]) if random.random() < 0.4 else None)
             if riga: extra.insert(0, riga)
         if frase_segue:
             pass  # ha appena scritto SEGUO: il grazie basta
