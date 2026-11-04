@@ -707,7 +707,55 @@ def incoronazione(D, rng, st):
     st["senza_bonus"] = True
     return "👑 È UFFICIALE", frasi, did
 
-FORMATI = {"re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+def ospiti(D, rng, st):
+    """Reel per i follow (Alberto, 4/11: «fai follower senza sponsorizzare»): il premio arriva la sera stessa.
+    Chi ci segue e scrive SEGUO entro le 21 vede il suo animale, col suo @, nel reel delle 21 (formato ospiti_sera).
+    Qui si fotografa chi ci seguiva già (st «seguono_prima»): la sera si mostrano solo i nuovi."""
+    st["seguono_prima"] = sorted(D.get("seguono", ()))
+    cane, gatto = esempio(rng, D)
+    c = rng.choice(CITTA)
+    frasi = [
+        ("Stasera alle 21 il tuo animale può finire in questo reel!", {"tipo": "numero", "grande": "21:00", "sotto": "il tuo animale nel reel, col tuo @ 🎬"}),
+        ("Mettiamo tutti gli animali di chi ci segue da oggi.", {"tipo": "mappa", "luci": luci(D)}),
+        ("Seguici e scrivi SEGUO con città e nome.", {"tipo": "commento", "testo": f"SEGUO {c}, {cane['nome']}, {cane['parola']}"}),
+        (f"In più, {PS_P} subito. Ci vediamo alle 21!", {"tipo": "chiusura", "testo": "➕ Segui e scrivi SEGUO 👇"}),
+    ]
+    did = ("🎬 Stasera alle 21 il tuo animale può finire nel reel, col tuo @!\n\n"
+           "Nel reel delle 21 mettiamo gli animali di tutti quelli che ci seguono da oggi.\n"
+           f"➕ Seguici e scrivi qui sotto SEGUO con città e nome (per esempio «SEGUO {c}, {cane['nome']}, {cane['parola']}»): {PS} punti subito e il tuo animale si accende sulla mappa.\n"
+           "👥 Tagga un amico che ha un cane o un gatto: stasera ci siete tutti e due!")
+    st["copertina"] = {"sopra": "STASERA ALLE 21", "grande": "IL TUO<br>ANIMALE", "sotto": "nel nostro reel, col tuo @ 🎬", "domanda": "Ci sarà? ➕👇", "tema": "duello"}
+    st["banner_reel"] = "➕ Seguici e scrivi SEGUO: stasera il tuo animale è nel reel 👇"
+    st["senza_bonus"] = True
+    return "🎬 STASERA ALLE 21", frasi, did
+
+def ospiti_sera(D, rng, st):
+    """La promessa del pomeriggio mantenuta: gli animali di chi ci segue da oggi, coi loro @. Chi c'è lo condivide."""
+    prima = set(st.get("seguono_prima", []))
+    st["seguono_prima"] = sorted(D.get("seguono", ()))  # la prossima volta si mostrano quelli arrivati da adesso
+    nuovi_u = [u for u in D.get("seguono", ()) if u not in prima and u.lower() not in ESCLUSI]
+    an = {a["u"].lower(): a for a in D["animali"] if a.get("k") == "animale"}
+    nuovi = [an[u] for u in nuovi_u if u in an]
+    if not prima or not nuovi: return regno(D, rng, st)  # niente foto del pomeriggio o nessun nuovo: si parla del Re
+    rng.shuffle(nuovi)
+    frasi = [
+        (f"Promessa mantenuta: benvenuti ai {len(nuovi)} nuovi amici di oggi!" if len(nuovi) > 1 else "Promessa mantenuta: benvenuto al nuovo amico di oggi!",
+         {"tipo": "numero", "grande": f"+{len(nuovi)}", "sotto": "animali nuovi nella famiglia di Zampe 🐾"}),
+        (f"Ciao {nuovi[0]['n']}, da {nuovi[0]['c']}!", {**scena_di(nuovi[0])}),
+        ("Eccoli tutti.", {"tipo": "classifica", "titolo": "I nuovi amici 🎬", "righe": [{"nome": f"{a['n']} · {a['c']}", "valore": f"@{a['u']}"} for a in nuovi[:5]], "utente": nuovi[0]["u"]}),
+        ("Il prossimo è il tuo? Seguici e scrivi SEGUO!", {"tipo": "chiusura", "testo": "➕ Segui e scrivi SEGUO 👇"}),
+    ]
+    st["tag_extra"] = [a["u"] for a in nuovi[:20]]
+    elenco = "\n".join(f"🐾 {a['n']} da {a['c']}" for a in nuovi[:30])
+    did = (f"🎬 Promessa mantenuta! Ecco gli animali di chi ci segue da oggi:\n{elenco}\n\n"
+           f"➕ Il prossimo è il tuo? Seguici e scrivi SEGUO con città e nome: {PS} punti, e nel prossimo reel dei nuovi amici c'è anche il tuo animale.\n"
+           "👑 E venerdì alle 21 incoroniamo il primo Re degli animali d'Italia!")
+    st["copertina"] = {"sopra": "PROMESSA MANTENUTA", "grande": f"+{len(nuovi)}", "sotto": "nuovi amici di oggi 🐾", "domanda": "Il prossimo è il tuo? ➕👇", "tema": "fondatore"}
+    st["banner_reel"] = "➕ Seguici e scrivi SEGUO: il prossimo è il tuo animale 👇"
+    st["senza_bonus"] = True
+    return "🎬 I NUOVI AMICI", frasi, did
+
+FORMATI = {"ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
