@@ -155,7 +155,7 @@ Da guardare: SEGUO e tag nei commenti, follower al giorno dal 4 al 7/11.
 
 ## 4/11/2026 pomeriggio — «Stasera alle 21 il tuo animale nel reel» (Alberto: follower senza sponsorizzare)
 
-Un reel per i follow col premio la sera stessa: `ospiti` (oggi 18:00) dice che alle 21 mettiamo nel reel gli animali di chi ci segue da oggi (SEGUO con città e nome);
+Un reel per i follow col premio la sera stessa: `ospiti` (oggi 19:30: alle 18 era già uscito il fondatore) dice che alle 21 mettiamo nel reel gli animali di chi ci segue da oggi (SEGUO con città e nome);
 `ospiti_sera` (21:00) mantiene la promessa: gli animali di chi ha scritto SEGUO dopo il reel delle 18, coi loro @ (si fotografa l'elenco SEGUO alle 18 in reel_fatti «seguono_prima»).
 Ripetuto il 5/11 e il 7/11 alle 21 (ognuno mostra chi è arrivato dal reel precedente). Il Re resta: 5/11 13:00, 6/11 13:00, incoronazione 6/11 21:00.
 Da guardare: SEGUO tra le 18 e le 21 del 4/11 e follower del 4-5/11.
