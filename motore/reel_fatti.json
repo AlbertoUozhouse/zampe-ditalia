@@ -70,6 +70,10 @@
   [
    "Vicenza",
    "Parma"
+  ],
+  [
+   "Venezia",
+   "Sassari"
   ]
  ],
  "fondatori": [
@@ -92,7 +96,6 @@
   "Napoli"
  ],
  "temi": [
-  "notte",
   "tramonto",
   "neon",
   "aurora",
@@ -101,9 +104,10 @@
   "tramonto",
   "aurora",
   "notte",
-  "neon"
+  "neon",
+  "aurora"
  ],
- "variante_n": 14,
+ "variante_n": 15,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -118,7 +122,8 @@
   "2026-11-04-1806-star": "voce-solita-32",
   "2026-11-04-1933-ospiti": "voce-solita-32",
   "2026-11-04-2107-ospiti_sera": "voce-solita-32",
-  "2026-11-05-1312-re": "voce-solita-32"
+  "2026-11-05-1312-re": "voce-solita-32",
+  "2026-11-05-1806-star": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
