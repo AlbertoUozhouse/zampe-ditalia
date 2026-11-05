@@ -1813,24 +1813,7 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [
-{
-"igsid": "1693351255739165",
-"url": [
-"https://zampeditalia.it/cartoline/7ef5c7e5714ede71.png",
-"https://zampeditalia.it/cartoline/c3653310f12ac993.png",
-"https://zampeditalia.it/cartoline/9fa76526fd19ab46.png"
-],
-"t": 1793897170.6867888
-},
-{
-"igsid": "2334962563574818",
-"url": [
-"https://zampeditalia.it/cartoline/43e135467aedd66b.png"
-],
-"t": 1793897170.6867912
-}
-],
+"in_attesa": [],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
