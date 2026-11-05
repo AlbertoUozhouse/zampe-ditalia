@@ -6639,6 +6639,7 @@
 "18126833113809814",
 "18126842308912599",
 "18126863105478711",
+"18126867092317054",
 "18126867436915329",
 "18126882542480037",
 "18126898925303005",
@@ -9859,7 +9860,7 @@
 "18668921470032586"
 ],
 "risposte": [
-1793833393.730957
+1793837196.8133392
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -11905,7 +11906,8 @@
 "ansa_.550": "2026-11-04",
 "stegada96_runner": "2026-11-04",
 "vittoria_mattia_123456679": "2026-11-04",
-"federica_topscret": "2026-11-04"
+"federica_topscret": "2026-11-04",
+"itsnotsilva": "2026-11-05"
 },
 "media_letti": {},
 "pezzi": {
@@ -13889,23 +13891,6 @@
 "4l3_il_pro": 35
 },
 "inviti_giorno": {
-"2026-10-28": {
-"abigail_.2517": 1,
-"whisperssdies": 1,
-"_wendyyrusticali_": 1,
-"giogio_polla": 2,
-"__giuliagarcia_": 1,
-"svrvxn": 1,
-"d1n3_succcc": 1,
-"_bularosa_": 1,
-"andreabombardi08": 1,
-"gioelemastroleo": 2,
-"spina_rys": 3,
-"40.spin": 1,
-"veronicadefacii": 1,
-"la_espox": 1,
-"jasonnason20": 1
-},
 "2026-10-29": {
 "gioele7230": 1,
 "xx_my_vida_is_kidyugi_xx": 2,
@@ -17948,13 +17933,11 @@
 "79ec5c488703ac73",
 "0e18e47fc39529c1",
 "a06c25f834527406",
-"d6171c3649ef2061"
+"d6171c3649ef2061",
+"8aef7f93747fd013"
 ],
 "privati_ora": [
-1793827665.7611184,
-1793829592.9545002,
-1793829599.7430687,
-1793830496.825778
+1793837196.8133748
 ],
 "derby_premiati": [
 "2026-10-28NARM"
@@ -17967,10 +17950,7 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {
-"emma.borsani26": "2026-11-04",
-"ludovicojonascarollo": "2026-11-04"
-},
+"missioni_fatte": {},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
