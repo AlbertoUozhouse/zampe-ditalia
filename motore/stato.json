@@ -5024,6 +5024,7 @@
 "18108187451272884",
 "18108192533635846",
 "18108202772365483",
+"18108204410341752",
 "18108239102345728",
 "18108251951198072",
 "18108288506181446",
@@ -9874,7 +9875,9 @@
 "18666851569016117",
 "18668921470032586"
 ],
-"risposte": [],
+"risposte": [
+1793869738.0777662
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -11921,7 +11924,8 @@
 "vittoria_mattia_123456679": "2026-11-04",
 "federica_topscret": "2026-11-04",
 "itsnotsilva": "2026-11-05",
-"raffaelescimmia": "2026-11-05"
+"raffaelescimmia": "2026-11-05",
+"virgyrosso": "2026-11-05"
 },
 "media_letti": {},
 "pezzi": {
@@ -13904,7 +13908,8 @@
 "stegada96_runner": 50,
 "4l3_il_pro": 35,
 "itsnotsilva": 30,
-"ciccio1973it": 30
+"ciccio1973it": 30,
+"virgyrosso": 30
 },
 "inviti_giorno": {
 "2026-10-29": {
@@ -14759,7 +14764,8 @@
 "4l3_il_pro": "premiato",
 "itsnotsilva": "premiato",
 "aleandroraffone": "in_attesa",
-"ciccio1973it": "premiato"
+"ciccio1973it": "premiato",
+"virgyrosso": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -17956,10 +17962,11 @@
 "a06c25f834527406",
 "d6171c3649ef2061",
 "8aef7f93747fd013",
-"3e0af14ad9523ba2"
+"3e0af14ad9523ba2",
+"e3753945027aef37"
 ],
 "privati_ora": [
-1793862345.8780096
+1793869738.0778027
 ],
 "derby_premiati": [
 "2026-10-28NARM"
@@ -18007,7 +18014,7 @@
 "2026-11-02": 1527,
 "2026-11-03": 1570,
 "2026-11-04": 1637,
-"2026-11-05": 1653
+"2026-11-05": 1654
 },
 "gioco_pappa": {
 "2026-W44": {
