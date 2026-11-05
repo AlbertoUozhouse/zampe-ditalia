@@ -2529,6 +2529,7 @@
 "17996947302103711",
 "17997011865020296",
 "17997090489024833",
+"17997112379862873",
 "17997121431019120",
 "17997133686047022",
 "17997155619046212",
@@ -3324,6 +3325,7 @@
 "18042638453655382",
 "18042687518839039",
 "18042808010838576",
+"18042937868842330",
 "18042938819840036",
 "18043008338839226",
 "18043047260831708",
@@ -9940,7 +9942,8 @@
 "risposte": [
 1793892503.9956903,
 1793893346.5215456,
-1793894404.400356
+1793894404.400356,
+1793895438.3460188
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12893,14 +12896,12 @@
 "ludovicojonascarollo": [
 "carla_g.livigni"
 ],
-"sasa_gabriele19": [
-"giovannipaoloooooo"
-],
 "soooniaa1": [
 "_.mari.stu._"
 ],
 "giovannipaoloooooo": [
-"_mari_close.friends_"
+"_mari_close.friends_",
+"sasa_gabriele19"
 ],
 "_.mari.stu._": [
 "scalzo_martinaa"
@@ -13053,7 +13054,8 @@
 "emma.borsani26>leo_aqui_170",
 "ludovicojonascarollo>carla_g.livigni",
 "alessandropacera>cutugnogabriele",
-"_.mari.stu._>scalzo_martinaa"
+"_.mari.stu._>scalzo_martinaa",
+"giovannipaoloooooo>sasa_gabriele19"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -13615,7 +13617,7 @@
 "samueledoino": 30,
 "_ale15.mucci": 30,
 "therealvenzone": 30,
-"giovannipaoloooooo": 88,
+"giovannipaoloooooo": 104,
 "violafranco22": 30,
 "_.mari.stu._": 111,
 "adamstrambaci": 30,
@@ -14074,7 +14076,8 @@
 "alessandropacera": 1
 },
 "2026-11-05": {
-"_.mari.stu._": 1
+"_.mari.stu._": 1,
+"giovannipaoloooooo": 1
 }
 },
 "seguono": {
@@ -18094,7 +18097,8 @@
 ]
 },
 "missioni_fatte": {
-"_.mari.stu._": "2026-11-05"
+"_.mari.stu._": "2026-11-05",
+"giovannipaoloooooo": "2026-11-05"
 },
 "boost": {},
 "negozio_fatti": [
@@ -18130,7 +18134,7 @@
 "2026-11-02": 1527,
 "2026-11-03": 1570,
 "2026-11-04": 1637,
-"2026-11-05": 1667
+"2026-11-05": 1669
 },
 "gioco_pappa": {
 "2026-W44": {
