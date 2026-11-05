@@ -159,3 +159,9 @@ Un reel per i follow col premio la sera stessa: `ospiti` (oggi 19:30: alle 18 er
 `ospiti_sera` (21:00) mantiene la promessa: gli animali di chi ha scritto SEGUO dopo il reel delle 18, coi loro @ (si fotografa l'elenco SEGUO alle 18 in reel_fatti «seguono_prima»).
 Ripetuto il 5/11 e il 7/11 alle 21 (ognuno mostra chi è arrivato dal reel precedente). Il Re resta: 5/11 13:00, 6/11 13:00, incoronazione 6/11 21:00.
 Da guardare: SEGUO tra le 18 e le 21 del 4/11 e follower del 4-5/11.
+
+## 5/11/2026 — controllo del mattino: nessun cambiamento
+
+Follower 1.655: +67 il 4/11 (+2 fino alle 15:30, poi +65 la sera, coi reel fondatore 18:06, ospiti 19:37 e ospiti_sera 21:07), +18 stamattina.
+Fuochi (4/11 13:09): 383 views, 8 commenti ogni 1.000, 5,6 s: debole, non si ripete. SEGUO nuovi: 746 → 759 il 4/11.
+La sera rende più della mattina. Oggi resta il calendario: 13:00 re, 18:00 star/fondatore, 21:00 ospiti_sera. Da guardare: follower del 5/11, SEGUO tra le 13 e le 21.
