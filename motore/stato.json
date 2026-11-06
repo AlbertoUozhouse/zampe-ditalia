@@ -4613,6 +4613,7 @@
 "18100501484654255",
 "18100559999646832",
 "18100571183096020",
+"18100582505426854",
 "18100592633388657",
 "18100648808425561",
 "18100651205547707",
@@ -6289,6 +6290,7 @@
 "18120255674051636",
 "18120256666983602",
 "18120256925284182",
+"18120260828004894",
 "18120265589515323",
 "18120266716957515",
 "18120271459947713",
@@ -9991,7 +9993,8 @@
 "18668921470032586"
 ],
 "risposte": [
-1793921233.6812289
+1793921233.6812289,
+1793923320.0706236
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12055,7 +12058,7 @@
 "adelmo.bacchilega": "2026-11-05",
 "__moscoz__": "2026-11-05",
 "privat_elee": "2026-11-05",
-"icantbreathebutimliving": "2026-11-05"
+"icantbreathebutimliving": "2026-11-06"
 },
 "media_letti": {},
 "pezzi": {
@@ -12961,6 +12964,12 @@
 ],
 "noemipecorini": [
 "vittoria_mattia_123456679"
+],
+"caterinaaverde": [
+"icantbreathebutimliving"
+],
+"marti21_": [
+"icantbreathebutimliving"
 ]
 },
 "premiati": [
@@ -14064,26 +14073,9 @@
 "vittoria_mattia_123456679": 35,
 "privat_elee": 30,
 "_tommaso.marino.20_": 35,
-"icantbreathebutimliving": 30
+"icantbreathebutimliving": 40
 },
 "inviti_giorno": {
-"2026-10-29": {
-"gioele7230": 1,
-"xx_my_vida_is_kidyugi_xx": 2,
-"emma_finessi": 1,
-"gandolfo.noemi": 1,
-"troisi.edoardo": 2,
-"brunozulian00": 1,
-"spina_rys": 2,
-"antonionicolace99": 1,
-"sebafloris_official": 4,
-"giovy_floris": 6,
-"rya.25_": 5,
-"_giuseppefloris_": 1,
-"tore_rana": 4,
-"toremanca86": 3,
-"_antonellafloris_": 3
-},
 "2026-10-30": {
 "gianluca.pais": 1,
 "toremanca86": 1,
@@ -18172,11 +18164,7 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {
-"_.mari.stu._": "2026-11-05",
-"giovannipaoloooooo": "2026-11-05",
-"emma_finessi": "2026-11-05"
-},
+"missioni_fatte": {},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
