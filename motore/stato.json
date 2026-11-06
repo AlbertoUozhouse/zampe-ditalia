@@ -8569,6 +8569,7 @@
 "18190028521410162",
 "18190058773409669",
 "18190132117417048",
+"18190183585364618",
 "18190604179412955",
 "18190622842409642",
 "18190650847411802",
@@ -10073,7 +10074,8 @@
 "risposte": [
 1793998691.9058828,
 1793998698.4849153,
-1793999467.6428258
+1793999467.6428258,
+1794001141.062856
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -14189,7 +14191,8 @@
 "matteoo.boi": 30,
 "fede_sporty_": 50,
 "alan407103": 30,
-"brunac80": 40
+"brunac80": 40,
+"organize_time_italy": 30
 },
 "inviti_giorno": {
 "2026-10-30": {
@@ -15049,7 +15052,8 @@
 "fiornocalibero.it": "in_attesa",
 "matteoo.boi": "premiato",
 "fede_sporty_": "premiato",
-"brunac80": "premiato"
+"brunac80": "premiato",
+"organize_time_italy": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
