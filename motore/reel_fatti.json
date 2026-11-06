@@ -77,6 +77,10 @@
   [
    "Roma",
    "Salerno"
+  ],
+  [
+   "Genova",
+   "Modena"
   ]
  ],
  "fondatori": [
@@ -99,7 +103,6 @@
   "Napoli"
  ],
  "temi": [
-  "notte",
   "tramonto",
   "aurora",
   "notte",
@@ -108,9 +111,10 @@
   "giorno",
   "neon",
   "tramonto",
-  "aurora"
+  "aurora",
+  "giorno"
  ],
- "variante_n": 19,
+ "variante_n": 20,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -130,7 +134,8 @@
   "2026-11-05-2111-ospiti_sera": "voce-solita-32",
   "2026-11-06-1306-re": "voce-solita-32",
   "2026-11-06-1810-fondatore": "voce-solita-32",
-  "2026-11-06-2110-incoronazione": "voce-solita-32"
+  "2026-11-06-2110-incoronazione": "voce-solita-32",
+  "2026-11-06-2123-fondatore": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
