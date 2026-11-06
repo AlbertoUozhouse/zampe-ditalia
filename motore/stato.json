@@ -1124,6 +1124,7 @@
 "17922160296452351",
 "17922200874445422",
 "17922235794444715",
+"17922242115453137",
 "17922288558451451",
 "17922374481448827",
 "17922393654445673",
@@ -5485,6 +5486,7 @@
 "18112996304183465",
 "18112996820270829",
 "18112999730191511",
+"18113007262896442",
 "18113017507879450",
 "18113017529171842",
 "18113036249232055",
@@ -9017,6 +9019,7 @@
 "18344109730261550",
 "18344214985250847",
 "18344224303257183",
+"18344274700273777",
 "18344557297260755",
 "18344573881281111",
 "18344645644256465",
@@ -10013,7 +10016,9 @@
 "risposte": [
 1793971343.4761167,
 1793972742.7611496,
-1793973568.4721396
+1793973568.4721396,
+1793974715.352605,
+1793974720.8983235
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12079,7 +12084,8 @@
 "privat_elee": "2026-11-05",
 "icantbreathebutimliving": "2026-11-06",
 "osteo_psycho": "2026-11-06",
-"giorgia.ciufici": "2026-11-06"
+"giorgia.ciufici": "2026-11-06",
+"franco.mancuso90": "2026-11-06"
 },
 "media_letti": {},
 "pezzi": {
@@ -12997,9 +13003,6 @@
 ],
 "venusianlily": [
 "osteo_psycho"
-],
-"sconosciuto1234225": [
-"_.mari.stu._"
 ]
 },
 "premiati": [
@@ -13153,7 +13156,8 @@
 "giovannipaoloooooo>sasa_gabriele19",
 "emma_finessi>giada_antonellini",
 "emma_finessi>barbara.turra",
-"emma_finessi>adelmo.bacchilega"
+"emma_finessi>adelmo.bacchilega",
+"_.mari.stu._>sconosciuto1234225"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -13717,7 +13721,7 @@
 "therealvenzone": 30,
 "giovannipaoloooooo": 104,
 "violafranco22": 30,
-"_.mari.stu._": 121,
+"_.mari.stu._": 137,
 "adamstrambaci": 30,
 "angelica643349": 30,
 "aa.santarelli": 50,
@@ -14166,6 +14170,9 @@
 "_.mari.stu._": 1,
 "giovannipaoloooooo": 1,
 "emma_finessi": 3
+},
+"2026-11-06": {
+"_.mari.stu._": 1
 }
 },
 "seguono": {
@@ -18184,10 +18191,12 @@
 "f54ee1d43d644ce9",
 "0c1f1b34427ca9bd",
 "7828c4aa832aa1b6",
-"433174db9733df19"
+"433174db9733df19",
+"3d86e99059c0a550"
 ],
 "privati_ora": [
-1793972742.7611713
+1793972742.7611713,
+1793974715.3526385
 ],
 "derby_premiati": [
 "2026-10-28NARM"
@@ -18200,7 +18209,9 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {},
+"missioni_fatte": {
+"_.mari.stu._": "2026-11-06"
+},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
@@ -18239,7 +18250,7 @@
 "2026-11-03": 1570,
 "2026-11-04": 1637,
 "2026-11-05": 1677,
-"2026-11-06": 1689
+"2026-11-06": 1688
 },
 "gioco_pappa": {
 "2026-W44": {
