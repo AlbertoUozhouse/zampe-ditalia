@@ -755,7 +755,31 @@ def ospiti_sera(D, rng, st):
     st["senza_bonus"] = True
     return "🎬 I NUOVI AMICI", frasi, did
 
-FORMATI = {"ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+def amici(D, rng, st):
+    """«Porta due amici e scali la classifica» (Alberto, 6/11). Regola vera in commenti.py: tagghi un amico, lui commenta (+3 a te),
+    e quando ci segue e scrive SEGUO prendi altri +15 (premia_amico_segue). Due amici che seguono = +36, più di un SEGUO."""
+    top, _ = _regnanti(D)
+    t3 = top[:3]
+    frasi = [
+        ("Vuoi scalare la classifica? Porta due amici!", {"tipo": "numero", "grande": "+36", "sotto": "punti con 2 amici che ci seguono 👥"}),
+        ("Taggali qui sotto.", {"tipo": "commento", "testo": "@amico1 @amico2 venite!"}),
+        ("Quando ci seguono e scrivono SEGUO, quindici punti a testa per te.",
+         {"tipo": "classifica", "titolo": "In testa 👑", "righe": [{"nome": f"{a['n']} · @{a['u']}", "valore": f"{a.get('pt', 0)} pt"} for a in t3], "utente": t3[0]["u"]} if t3 else {"tipo": "mappa", "luci": luci(D)}),
+        ("Chi porta più amici, sale. Tagga ora!", {"tipo": "chiusura", "testo": "👥 Tagga 2 amici qui sotto"}),
+    ]
+    st["tag_extra"] = [a["u"] for a in t3]
+    did = ("👥 Porta due amici e scala la classifica!\n\n"
+           "1️⃣ Tagga qui sotto due amici che hanno un cane o un gatto\n"
+           "2️⃣ Quando commentano col loro animale: +3 punti per te\n"
+           "3️⃣ Quando ci seguono e scrivono SEGUO: +15 punti per te, per ognuno\n\n"
+           "Due amici = +36 punti. Più amici porti, più il tuo animale sale verso la prossima corona 👑\n"
+           "🐾 Non sei ancora sulla mappa? Commenta la tua città e il nome del tuo cane o gatto.")
+    st["copertina"] = {"sopra": "PORTA 2 AMICI", "grande": "+36", "sotto": "punti e scali la classifica 👑", "domanda": "Chi tagghi? 👥👇", "tema": "duello"}
+    st["banner_reel"] = "👥 Tagga 2 amici: se ci seguono, +15 punti a testa per te"
+    st["senza_bonus"] = True
+    return "👥 PORTA 2 AMICI", frasi, did
+
+FORMATI = {"amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide

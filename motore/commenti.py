@@ -46,7 +46,7 @@ def boost_del_giorno():
     return BOOST_GIORNI[datetime.now(ZoneInfo("Europe/Rome")).weekday()]
 MISSIONI_PREMIO = 10  # chi completa le missioni del giorno (commento + almeno un amico portato)
 
-PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 10}
+PUNTI = {"animale": 10, "fondatore": 20, "tifo": 5, "sogno": 10, "stella": 0, "giornaliero": 5, "tag": 3, "segue": 10, "amico_segue": 15}
 FOLLOWER = None  # follower veri dell'account, letti a ogni giro (main)
 TRAGUARDI = [1000, 2000]  # 1.000: nevica sulla mappa (raggiunto il 30/10) · 2.000: fuochi d'artificio su tutta la mappa
 BOOST_FINO = "2026-11-08"  # Settimana del follow, allungata da Alberto il 31/10: fino a domenica 8 novembre SEGUO vale +30
@@ -341,6 +341,7 @@ FRASI = {
     "rimosso": ["Fatto, abbiamo tolto le tue luci dalla mappa. Ti aspettiamo quando vuoi 🐾"],
     "tag": ["Hai taggato {amici}: per ognuno che commenta, +3 punti per te! 👥", "Inviti partiti per {amici}: per ognuno che commenta prendi +3 punti 🔥"],
     "tag_senza_luce": ["Bello l'invito a {amici}! Accendi prima la tua luce con città, nome e cane o gatto: poi ogni amico che commenta ti vale +3 punti 👥"],
+    "amico_segue": ["Ci segui grazie a un invito: +15 punti a {chi}! 👥🎉", "Benvenuto! Sei arrivato con {chi}: +15 punti per l'invito 👥"],
     "premio": ["Benvenuto! Grazie a te {chi} ha appena preso +3 punti 🎉", "Sei arrivato con un invito: +3 punti a {chi} 👥"],
     "base": ["Ciao! Scrivi la tua città e il nome del tuo cane o gatto, per esempio «Treviso, Luna, cane», e si accende sulla mappa ✨"],
 }
@@ -435,6 +436,7 @@ class Gioco:
         self.visti = set(self.stato["visti"])
         self.visti_ora = set()  # i commenti letti in questo giro
         self.cambiato = False
+        self.amici_che_seguono = []  # chi ha invitato un amico che ora ci segue: riga nella risposta
 
     @property
     def animali(self):
@@ -663,6 +665,17 @@ class Gioco:
                 chi.append(utente.lower()); nuovi.append(amico); self.cambiato = True
         return nuovi
 
+    def premia_amico_segue(self, utente):
+        """«Porta due amici» (Alberto, 6/11): l'amico taggato ci segue (SEGUO) → +15 a chi l'ha invitato, una volta sola per coppia.
+        Vale sulla fiducia come il SEGUO. Chi ha invitato si trova negli inviti ancora aperti o nelle coppie già premiate col +3."""
+        u = utente.lower()
+        chi_inv = list(self.stato.get("inviti", {}).get(u, [])) + [c.split(">")[0] for c in self.stato.get("premiati", []) if c.endswith(">" + u) and ">>" not in c]
+        fatti = self.stato.setdefault("premiati", [])
+        for chi in dict.fromkeys(chi_inv):
+            if f"{chi}>>{u}" in fatti or not self.ha_luce(chi): continue
+            self.punti_extra(chi, PUNTI["amico_segue"], "tag"); fatti.append(f"{chi}>>{u}")
+            self.amici_che_seguono.append(chi); self.cambiato = True
+
     def premia_inviti(self, utente):
         """L'amico taggato ha commentato: +3 a chi l'ha invitato, una volta sola per coppia. Restituisce chi è stato premiato."""
         premiati = []
@@ -692,6 +705,7 @@ class Gioco:
             return None
         if self.ha_luce(utente):
             self.punti_extra(utente, PUNTI["segue"]); st[utente.lower()] = "premiato"
+            self.premia_amico_segue(utente)
             return "segue"
         if st.get(utente.lower()) == "in_attesa":
             return None  # gliel'abbiamo già detto
@@ -1107,6 +1121,9 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
             extra.append(frase("premio", chi=", ".join("@" + a for a in premiati[:3])))
         if frase_segue:
             extra.append(frase(frase_segue) + (COSTUME_ORA if frase_segue == "segue" else ""))
+        if gioco.amici_che_seguono:
+            extra.append(frase("amico_segue", chi=", ".join("@" + a for a in dict.fromkeys(gioco.amici_che_seguono))))
+            gioco.amici_che_seguono.clear()
         if nuovi_a and chiave not in ("stella", "sogno"):  # obiettivo di città oppure corsa a Capobranco: un motivo concreto per taggare
             riga = riga_re(nuovi_a[0]) or (riga_presidente(gioco, nuovi_a[0]) if random.random() < 0.5 else None) or riga_edificio(gioco, nuovi_a[0]) or (riga_capobranco(gioco, nuovi_a[0]) if random.random() < 0.4 else None)
             if riga: extra.insert(0, riga)

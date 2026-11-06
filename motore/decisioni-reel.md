@@ -171,3 +171,8 @@ La sera rende più della mattina. Oggi resta il calendario: 13:00 re, 18:00 star
 Follower 1.684: +40 il 5/11, +7 stamattina. Numeri maturati: fuochi (4/11) salito a 1.486 views, il migliore dal 2/11; re (5/11 13:12) 461 views ma 106 commenti ogni 1.000, il valore più alto dal lancio (obiettivo regola 7 raggiunto).
 ospiti_sera (4/11) 80 commenti ogni 1.000. I reel con una ragione per commentare o seguire (Re, nuovi amici) fanno commentare di più; le views restano basse (260-400 persone raggiunte).
 Oggi resta il calendario: 13:00 re («stasera alle 21»), 18:00 star/fondatore, 21:00 incoronazione. Da guardare: views e condivisioni dell'incoronazione (chi vince condivide) e follower del 6-7/11.
+
+## 6/11/2026 — «Porta 2 amici» (idea di Alberto)
+
+Regola nuova del gioco (commenti.py, premia_amico_segue): l'amico che hai taggato ci segue e scrive SEGUO → +15 a chi l'ha invitato, una volta per coppia (sulla fiducia, come il SEGUO). Con il +3 del commento: 2 amici = +36.
+Reel `amici` oggi alle 18:00 (al posto di star/fondatore) e domani 7/11 alle 13:00. Da guardare: tag nei commenti e SEGUO di amici invitati (coppie «>>» in stato «premiati»).
