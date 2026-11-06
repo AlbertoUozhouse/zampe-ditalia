@@ -6504,6 +6504,7 @@
 "18122076463941420",
 "18122089168746162",
 "18122090048052448",
+"18122114212948723",
 "18122137840935794",
 "18122156437947374",
 "18122159933289649",
@@ -9178,6 +9179,7 @@
 "18375747457242012",
 "18375879544210424",
 "18375997873242616",
+"18376030513215854",
 "18376272421215892",
 "18376329634243439",
 "18376372993213886",
@@ -9993,7 +9995,10 @@
 "18666851569016117",
 "18668921470032586"
 ],
-"risposte": [],
+"risposte": [
+1793951689.0659297,
+1793951693.0698595
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -12056,7 +12061,8 @@
 "adelmo.bacchilega": "2026-11-05",
 "__moscoz__": "2026-11-05",
 "privat_elee": "2026-11-05",
-"icantbreathebutimliving": "2026-11-06"
+"icantbreathebutimliving": "2026-11-06",
+"osteo_psycho": "2026-11-06"
 },
 "media_letti": {},
 "pezzi": {
@@ -14071,7 +14077,8 @@
 "vittoria_mattia_123456679": 35,
 "privat_elee": 30,
 "_tommaso.marino.20_": 35,
-"icantbreathebutimliving": 40
+"icantbreathebutimliving": 40,
+"osteo_psycho": 30
 },
 "inviti_giorno": {
 "2026-10-30": {
@@ -14923,7 +14930,8 @@
 "vittoria_mattia_123456679": "premiato",
 "privat_elee": "premiato",
 "_tommaso.marino.20_": "premiato",
-"icantbreathebutimliving": "premiato"
+"icantbreathebutimliving": "premiato",
+"osteo_psycho": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -18146,10 +18154,11 @@
 "6680e0b3f154e390",
 "eee6138994b97a95",
 "f54ee1d43d644ce9",
-"0c1f1b34427ca9bd"
+"0c1f1b34427ca9bd",
+"7828c4aa832aa1b6"
 ],
 "privati_ora": [
-1793921233.681267
+1793951693.0698917
 ],
 "derby_premiati": [
 "2026-10-28NARM"
@@ -18201,7 +18210,7 @@
 "2026-11-03": 1570,
 "2026-11-04": 1637,
 "2026-11-05": 1677,
-"2026-11-06": 1680
+"2026-11-06": 1681
 },
 "gioco_pappa": {
 "2026-W44": {
