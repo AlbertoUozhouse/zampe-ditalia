@@ -165,3 +165,9 @@ Da guardare: SEGUO tra le 18 e le 21 del 4/11 e follower del 4-5/11.
 Follower 1.655: +67 il 4/11 (+2 fino alle 15:30, poi +65 la sera, coi reel fondatore 18:06, ospiti 19:37 e ospiti_sera 21:07), +18 stamattina.
 Fuochi (4/11 13:09): 383 views, 8 commenti ogni 1.000, 5,6 s: debole, non si ripete. SEGUO nuovi: 746 → 759 il 4/11.
 La sera rende più della mattina. Oggi resta il calendario: 13:00 re, 18:00 star/fondatore, 21:00 ospiti_sera. Da guardare: follower del 5/11, SEGUO tra le 13 e le 21.
+
+## 6/11/2026 — controllo del mattino: nessun cambiamento, stasera l'incoronazione
+
+Follower 1.684: +40 il 5/11, +7 stamattina. Numeri maturati: fuochi (4/11) salito a 1.486 views, il migliore dal 2/11; re (5/11 13:12) 461 views ma 106 commenti ogni 1.000, il valore più alto dal lancio (obiettivo regola 7 raggiunto).
+ospiti_sera (4/11) 80 commenti ogni 1.000. I reel con una ragione per commentare o seguire (Re, nuovi amici) fanno commentare di più; le views restano basse (260-400 persone raggiunte).
+Oggi resta il calendario: 13:00 re («stasera alle 21»), 18:00 star/fondatore, 21:00 incoronazione. Da guardare: views e condivisioni dell'incoronazione (chi vince condivide) e follower del 6-7/11.
