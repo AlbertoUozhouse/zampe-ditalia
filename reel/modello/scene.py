@@ -208,7 +208,10 @@ def numero(cid, dur, grande, sotto, colore="d"):
 
 def classifica(cid, dur, titolo, righe):
     """Una classifica corta (massimo 5 righe) con dati veri: [{"nome": "Treviso", "valore": "3 luci"}]."""
-    li = "".join(f'<li id="{cid}-r{i}"><span class="p">{i + 1}</span><span class="w">{ESC(r["nome"])}</span><span class="v">{ESC(str(r["valore"]))}</span></li>'
+    def fs(testo, base, entra):  # 6/11: «Nome · @utente» lungo veniva tagliato e il controllo bloccava il reel: il testo si rimpicciolisce per entrare
+        n = len(str(testo)); return base if n <= entra else max(22, int(base * entra / n))
+    li = "".join(f'<li id="{cid}-r{i}"><span class="p">{i + 1}</span><span class="w" style="font-size:{fs(r["nome"], 46, 20)}px">{ESC(r["nome"])}</span>'
+                 f'<span class="v" style="font-size:{fs(r["valore"], 40, 16)}px">{ESC(str(r["valore"]))}</span></li>'
                  for i, r in enumerate(righe[:5]))
     css = """#root .box { position: absolute; left: 80px; right: 80px; top: 400px; }
     #root h2 { font: 800 64px/1.05 "Bricolage Grotesque", sans-serif; color: var(--gold); text-align: center; margin-bottom: 30px; }
