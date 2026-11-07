@@ -1,0 +1,1884 @@
+{
+ "id": "2026-11-07-1802-prima_luce",
+ "formato": "prima_luce",
+ "modalita": "operativa",
+ "inizio": "2026-11-07T23:15:36+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-07T23:15:42+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.9 LUFS, picco -0.9 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.9,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -20.0,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:42+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (19.2 s): ti mando 20 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 19.2,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ]
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:44+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il dato della mappa per la scena 0 ha scena_dal_secondo e scena_al_secondo null, quindi non è verificabile quando si accende la luce di Atri; la frase 'Poi Mia ha acceso la prima luce di Atri!' cade al secondo 1, ma non c'è un tempo di accensione confermato. Inoltre il volume medio dei primi 5 secon",
+   "dati": {
+    "controllato": "Nei primi 5 secondi (apertura, luce su Atri, frasi 0-1, volume medio -20 dB) ho verificato sincronia, copertina e coerenza col dato della mappa.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il dato della mappa per la scena 0 ha scena_dal_secondo e scena_al_secondo null, quindi non è verificabile quando si accende la luce di Atri; la frase 'Poi Mia ha acceso la prima luce di Atri!' cade al secondo 1, ma non c'è un tempo di accensione confermato. Inoltre il volume medio dei primi 5 secondi è -20 dB, sotto l'obiettivo di -14 LUFS, quindi l'apertura risulta bassa.",
+    "correzione": "Confermare nei dati mappa l'istante di accensione della luce di Atri e allinearlo alla frase; alzare il volume dei primi 5 secondi (apertura) per avvicinarsi al target di -14 LUFS senza superare -1 dBFS.",
+    "idea": "Aprire il reel con la luce già visibile sul comune e inserire un contatore di luci accese (ora 3) nei primi secondi, per dare subito il senso del progetto."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:45+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nella scena 0 la luce di Atri è segnata come 'spenta all'inizio della scena, si accende', ma scena_dal_secondo e scena_al_secondo sono null: non si sa a quale secondo si accende la luce, quindi la frase 'Poi Mia ha acceso la prima luce di Atri!' non è agganciata a un momento preciso del video. Inolt",
+   "dati": {
+    "controllato": "Ho verificato coordinate, scena della prima luce, trascrizione coi secondi, audio (-14.9 LUFS, picco -0.9 dBFS), sincronia tra voce e scene, didascalia e fascia commento rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella scena 0 la luce di Atri è segnata come 'spenta all'inizio della scena, si accende', ma scena_dal_secondo e scena_al_secondo sono null: non si sa a quale secondo si accende la luce, quindi la frase 'Poi Mia ha acceso la prima luce di Atri!' non è agganciata a un momento preciso del video. Inoltre il volume medio dei primi 5 secondi è -20.0 dB, sotto il resto del reel, e l'apertura parte con la voce dal secondo 0.5 senza che sia chiaro se la scena 'luce' inizi subito; i timecode delle scene mancano del tutto.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per entrambe le scene (la luce di Atri va agganciata al momento in cui la frase 'Poi Mia ha acceso...' viene pronunciata, probabilmente intorno al secondo 4-6) e verificare che l'audio dei primi 5 secondi sia alzato verso -14 LUFS, come da obiettivo.",
+    "idea": "Aggiungere un timecode fisso per ogni scena nel copione, così la sincronia voce-mappa si verifica automaticamente prima della pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:45+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La scena 0 (luce, 'La prima luce di Atri') non ha tempi assegnati (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare quando appare il testo né quando si accende la luce. Inoltre la frase 'Atri si è accesa' compare nella trascrizione senza una scena di chiusura con tempi d",
+   "dati": {
+    "controllato": "Leggibilità da telefono del reel: testi a schermo, fascia, copertina e coerenza tra trascrizione, scene e dati mappa.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La scena 0 (luce, 'La prima luce di Atri') non ha tempi assegnati (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare quando appare il testo né quando si accende la luce. Inoltre la frase 'Atri si è accesa' compare nella trascrizione senza una scena di chiusura con tempi definiti. La fascia 'Commenta città e nome del tuo animale' è al secondo 0 non verificabile.",
+    "correzione": "Assegnare a ogni scena scena_dal_secondo e scena_al_secondo (es. scena 0 da 0.5 a 6 s, scena 1 da 6 a 12 s) e indicare il secondo esatto in cui la luce di Atri si accende, così che la fascia di commento e la chiusura siano sincronizzate. Verificare anche che la fascia sia visibile per tutta la durata della frase 2 in lettura da telefono.",
+    "idea": "Per i prossimi reel usare una copertina con il nome del comune in font grande e un contatore 'luci oggi' che aumenta a schermo, così il dato cambia in tempo reale e incentiva i commenti."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:45+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il brief dice «Atri si è accesa» e la scena 0 indica che la luce di Atri si accende, ma i dati mappa hanno scena_dal_secondo e scena_al_secondo a null, quindi non è verificabile a quale secondo avvenga l'accensione né se la frase 0 (\"Ad Atri era tutto spento\") coincida con la scena buia. Inoltre l'a",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (Atri, coordinate, scene 0-1), audio e didascalia del reel prima_luce.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief dice «Atri si è accesa» e la scena 0 indica che la luce di Atri si accende, ma i dati mappa hanno scena_dal_secondo e scena_al_secondo a null, quindi non è verificabile a quale secondo avvenga l'accensione né se la frase 0 (\"Ad Atri era tutto spento\") coincida con la scena buia. Inoltre l'audio è a -14.9 LUFS con picco -0.9 dBFS: il picco supera la soglia di -1 dBFS richiesta dall'obiettivo.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (accensione di Atri) e allineare la frase i=1 a quel tratto; abbassare il limitatore/guadagno finale per portare il picco sotto -1 dBFS mantenendo circa -14 LUFS.",
+    "idea": "Indicare nei dati mappa i secondi di ogni accensione così che il montaggio segua automaticamente la trascrizione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:47+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il campo scena_dal_secondo e scena_al_secondo è null per entrambe le scene, quindi non è verificabile su quale secondo cade l'accensione della luce di Atri rispetto alla frase 'Poi Mia ha acceso la prima luce di Atri!' (frase 1 del brief). Inoltre il volume medio dei primi 5 secondi è -20 dB, sotto ",
+   "dati": {
+    "controllato": "Ho verificato l'apertura del reel: sincronia tra frase 'Poi Mia ha acceso la prima luce' e scena della luce (dati mappa: scena 0 spenta→accesa, scena 1 già accesa), coerenza con copertina e didascalia, e volume/picco audio.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Il campo scena_dal_secondo e scena_al_secondo è null per entrambe le scene, quindi non è verificabile su quale secondo cade l'accensione della luce di Atri rispetto alla frase 'Poi Mia ha acceso la prima luce di Atri!' (frase 1 del brief). Inoltre il volume medio dei primi 5 secondi è -20 dB, sotto l'obiettivo di -14 LUFS e rischioso per un'apertura con parlato.",
+    "correzione": "Compilare i secondi di inizio e fine della scena 0 (accensione) allineandoli alla frase 1 nella trascrizione, poi ricontrollare la sincronia. Alzare il volume dei primi 5 secondi (apertura) portandolo vicino a -14 LUFS senza superare il picco di -1 dBFS.",
+    "idea": "Per i prossimi reel della serie 'prima luce', inserire sempre nei dati mappa i secondi esatti di accensione, così la sincronia tra parlato e luce si verifica automaticamente."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:47+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "I dati di scena non hanno i secondi di inizio e fine (scena_dal_secondo e scena_al_secondo sono null per entrambe le scene), quindi non è verificabile su quale fotogramma la luce di Atri si accende. Inoltre la frase 'Poi Mia ha acceso la prima luce' (circa 5-7 s secondo la trascrizione) non è agganc",
+   "dati": {
+    "controllato": "Ho verificato la scelta dell'inquadratura sulla sequenza di scene e fotogrammi: la scena 0 apre sulla mappa con la luce spenta che si accende, la scena 1 mostra Mia con la luce già accesa, coerente con la trascrizione e con la copertina centrata su Atri.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "I dati di scena non hanno i secondi di inizio e fine (scena_dal_secondo e scena_al_secondo sono null per entrambe le scene), quindi non è verificabile su quale fotogramma la luce di Atri si accende. Inoltre la frase 'Poi Mia ha acceso la prima luce' (circa 5-7 s secondo la trascrizione) non è agganciata a un'inquadratura precisa, e la scena 1 non ha tempi di inizio.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per entrambe le scene, facendo coincidere l'accensione della luce di Atri con la frase 'Poi Mia ha acceso la prima luce di Atri!' e tenendo la mappa su Atri nella parte 'Atri si è accesa' della chiusura.",
+    "idea": "Per i prossimi reel, indicare nei dati i secondi di ogni scena e dello stacco sulla mappa, così da poter sincronizzare automaticamente l'accensione della luce con la voce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:48+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase «Poi Mia ha acceso la prima luce di Atri!» è al secondo 1, ma nei dati mappa la scena 0 (accensione della luce) non ha tempi assegnati (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile che l'accensione coincida con la frase. Inoltre i dati mappa ",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione, la scena della mappa (Atri, luce accesa alla scena 0), la coerenza della didascalia con il brief e i livelli audio rispetto all'obiettivo di -14 LUFS e picco sotto -1 dBFS.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella trascrizione la frase «Poi Mia ha acceso la prima luce di Atri!» è al secondo 1, ma nei dati mappa la scena 0 (accensione della luce) non ha tempi assegnati (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile che l'accensione coincida con la frase. Inoltre i dati mappa indicano 3 luci a Atri oggi (Mia, Ellie, Terremoto), mentre la didascalia parla solo di «la prima luce di Atri è di Mia»: è corretto come prima luce, ma il reel non dovrebbe lasciare intendere che Atri abbia una sola luce. Sul fronte audio il volume medio dei primi 5 secondi è -20 dB, sotto l'obiettivo di -14 LUFS per la sola apertura; il dato complessivo (-14.9 LUFS) è però accettabile.",
+    "correzione": "Valorizzare i tempi della scena 0 e della scena 1 nei dati mappa, allineando l'accensione della luce alla frase al secondo 1; nella didascalia precisare «la prima luce di Atri è di Mia» oppure aggiornare il conteggio; alzare leggermente il volume dei primi 5 secondi (circa +4-6 dB) per avvicinarsi a -14 LUFS.",
+    "idea": "Per i prossimi reel usare una scena dedicata con il conteggio delle luci nel comune (es. «2 luci accese a Atri») così da raccontare l'effetto collettivo della mappa."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:48+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Le scene della mappa non hanno tempi (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile quando si accende la luce di Atri. Inoltre la frase 'Poi Mia ha acceso la prima luce' cade al secondo 1, ma la luce deve accendersi nella scena 0 con tempi definiti. L'audio è a -14.9 LUF",
+   "dati": {
+    "controllato": "Sincronia tra trascrizione, copione, scene della mappa, coordinate di Atri e misure audio del reel prima_luce per Atri.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Le scene della mappa non hanno tempi (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile quando si accende la luce di Atri. Inoltre la frase 'Poi Mia ha acceso la prima luce' cade al secondo 1, ma la luce deve accendersi nella scena 0 con tempi definiti. L'audio è a -14.9 LUFS con picco -0.9 dBFS, quindi dentro l'obiettivo; il volume medio dei primi 5 secondi (-20 dB) è sotto il target di -14 LUFS ma è un parametro indicativo, da confermare.",
+    "correzione": "Valorizzare scena_dal_secondo e scena_al_secondo per entrambe le scene (es. scena 0 fino al secondo 1, scena 1 dal secondo 1 in poi), in modo che l'accensione di Atri coincida con la frase 'Poi Mia ha acceso la prima luce di Atri!'. Verificare il volume dei primi secondi se si vuole rispettare l'obiettivo di loudness.",
+    "idea": "Per i prossimi reel, inserire sempre i tempi delle scene sulla mappa nei dati, così che ogni accensione sia sincronizzata con la voce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:51+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Poi Mia ha acceso la prima luce di Atri!» ma nei dati mappa la scena 0 (la luce che si accende) non ha tempi (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile quando la luce si accende rispetto alla frase. Inoltre la scena 1 indica la luce «già accesa» con ",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa, misure audio e didascalia per il formato prima_luce, con verifica di città, animale e tempi della scena luce.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il copione dice «Poi Mia ha acceso la prima luce di Atri!» ma nei dati mappa la scena 0 (la luce che si accende) non ha tempi (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile quando la luce si accende rispetto alla frase. Inoltre la scena 1 indica la luce «già accesa» con gli stessi dati, senza tempi. Le misure audio: picco -0.9 dBFS supera l'obiettivo di stare sotto -1 dBFS, e il volume medio dei primi 5 secondi (-20.0 dB) è più basso del resto, come segnalato dall'obiettivo di apertura.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per le scene 0 e 1 in modo che la frase 1 (secondi ~3-6 nella trascrizione, da verificare) coincida con l'accensione. Abbassare il picco sotto -1 dBFS (es. con limiter) e riportare il livello dei primi 5 secondi vicino a -14 LUFS. Il riferimento al comune «Atri» e all'animale «Mia» è coerente con i dati.",
+    "idea": "Per i prossimi reel, aggiungere nei dati mappa i tempi di ogni scena fin dall'inizio, così il controllo di sincronia voce-luce si può fare in automatico prima della pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:51+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Le scene della mappa hanno scena_dal_secondo e scena_al_secondo entrambi null, quindi non è possibile verificare in quali secondi la luce si accende e far combaciare la frase 'Poi Mia ha acceso la prima luce di Atri!' con il momento visivo. Inoltre l'audio ha 'volume_medio_primi_5s_db' di -20.0, ma ",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (Atri, coordinate, luce accesa nella scena 0), misure audio e didascalia del reel prima_luce.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Le scene della mappa hanno scena_dal_secondo e scena_al_secondo entrambi null, quindi non è possibile verificare in quali secondi la luce si accende e far combaciare la frase 'Poi Mia ha acceso la prima luce di Atri!' con il momento visivo. Inoltre l'audio ha 'volume_medio_primi_5s_db' di -20.0, ma non ci sono dati sui silenzi post-apertura oltre a un elenco vuoto: l'esito è ok su quel punto. La frase 'Ad Atri era tutto spento' è nei secondi iniziali, ma senza tempi di scena non posso confermare la sincronia.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (accensione di Atri) e per la scena 1, allineandoli alle frasi i=0 e i=1 della trascrizione, poi ricontrollare la sincronia.",
+    "idea": "Aggiungere per ogni reel un campo con il conteggio dei commenti con città già ricevuti, da mostrare in chiusura per rilanciare la fascia 'Commenta città e nome'."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:51+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Nei dati della mappa mancano i secondi di inizio e fine di ciascuna scena (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare che l'accensione della luce di Atri coincida con la frase «Poi Mia ha acceso la prima luce di Atri!», né che la scena «commento» e la chiusura sian",
+   "dati": {
+    "controllato": "Sincronia della scena di apertura: la luce di Atri risulta spenta all'inizio della scena 0 e si accende, ma il campo scena_dal_secondo/scena_al_secondo è vuoto, quindi non posso verificare il secondo in cui la luce si accende rispetto alla frase 1 («Poi Mia ha acceso...») sui 19,2 s di durata.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Nei dati della mappa mancano i secondi di inizio e fine di ciascuna scena (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare che l'accensione della luce di Atri coincida con la frase «Poi Mia ha acceso la prima luce di Atri!», né che la scena «commento» e la chiusura siano nei tempi giusti.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per entrambe le scene (la luce si accende dentro la scena 0, presumibilmente intorno alla frase 1) e ricontrollare l'allineamento con la trascrizione e con i fotogrammi 0,5–19 s.",
+    "idea": "Per i prossimi reel della prima luce, inserire sempre i secondi di scena nei dati della mappa, così la sincronia si può verificare prima della pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:51+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La scena 0 (la prima luce di Atri) ha scena_dal_secondo e scena_al_secondo a null, quindi non è possibile sincronizzare con certezza i sottotitoli 'Ad Atri era tutto spento' e 'Poi Mia ha acceso la prima luce'. Inoltre l'audio è a -14.9 LUFS, quindi rientra nel target di -14, ma il volume medio dei ",
+   "dati": {
+    "controllato": "Ho verificato sottotitoli e timing del reel: frasi, secondi della scena luce e della chiusura, coerenza con la trascrizione e i dati della mappa, misure audio.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La scena 0 (la prima luce di Atri) ha scena_dal_secondo e scena_al_secondo a null, quindi non è possibile sincronizzare con certezza i sottotitoli 'Ad Atri era tutto spento' e 'Poi Mia ha acceso la prima luce'. Inoltre l'audio è a -14.9 LUFS, quindi rientra nel target di -14, ma il volume medio dei primi 5 secondi è -20 dB: l'apertura risulta più bassa del resto.",
+    "correzione": "Far indicare nei dati i secondi di inizio e fine della scena 0 (e della scena 1) per allineare i sottotitoli alla luce che si accende. Verificare il volume dell'apertura, alzandolo di circa 4-5 dB nei primi 5 secondi, senza superare il picco di -1 dBFS.",
+    "idea": "Inserire nei dati di ogni scena i secondi esatti di inizio e fine, così i sottotitoli si sincronizzano automaticamente con la mappa."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:54+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Le scene della mappa non hanno tempi definiti (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile quando la luce di Atri si accende rispetto alla frase 'Poi Mia ha acceso la prima luce di Atri!'. Inoltre l'audio è a -14,9 LUFS, quindi non ancora esattamente sull'obiettivo di ",
+   "dati": {
+    "controllato": "Ho verificato la sincronizzazione delle scene sulla mappa, la coerenza tra trascrizione, copione e didascalia, e le misure audio rispetto all'obiettivo di -14 LUFS e picco sotto -1 dBFS.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Le scene della mappa non hanno tempi definiti (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile quando la luce di Atri si accende rispetto alla frase 'Poi Mia ha acceso la prima luce di Atri!'. Inoltre l'audio è a -14,9 LUFS, quindi non ancora esattamente sull'obiettivo di -14 LUFS, e il volume medio dei primi 5 secondi è -20 dB, basso per un'apertura.",
+    "correzione": "Assegnare alla scena 0 un intervallo in secondi (per esempio dal 4° al 6°, in corrispondenza della frase 'Poi Mia ha acceso') e alla scena 1 l'intervallo successivo. Portare il livello integrato a -14 LUFS con una lieve normalizzazione (mantenendo il picco sotto -1 dBFS) e alzare l'apertura per portare i primi 5 secondi più vicini al resto del reel.",
+    "idea": "Usare come fotogramma di apertura la mappa già accesa con 3 luci, così la frase 'Ad Atri era tutto spento' contrasta con un'immagine piena di luci che si accendono."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:54+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Le scene della mappa hanno scena_dal_secondo e scena_al_secondo a null, quindi non si può verificare il ritmo: l'accensione della luce di Atri, che la frase 1 annuncia, non ha un tempo preciso. Inoltre la frase 2 (Atri si è accesa) e la chiusura non sono temporizzate nei dati. Le frasi del brief non",
+   "dati": {
+    "controllato": "Durata, trascrizione coi secondi, scene della mappa, audio (LUFS, picco, silenzi) e corrispondenza tra brief e frasi per la mia mansione di ritmo e durata.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Le scene della mappa hanno scena_dal_secondo e scena_al_secondo a null, quindi non si può verificare il ritmo: l'accensione della luce di Atri, che la frase 1 annuncia, non ha un tempo preciso. Inoltre la frase 2 (Atri si è accesa) e la chiusura non sono temporizzate nei dati. Le frasi del brief non hanno secondi di inizio e fine, quindi non posso confermare che la voce arrivi insieme alle scene.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per le scene 0 e 1 e aggiungere a ogni frase del brief il secondo di inizio e fine; poi verificare che l'accensione della luce cada nel tempo della frase 1 (\"Poi Mia ha acceso...\"). Audio: il volume medio dei primi 5 secondi è -20 dB, sotto il riferimento del parlato, quindi l'apertura è più debole del resto; valutare un ritocco del livello iniziale.",
+    "idea": "Per i prossimi reel usare la scena di accensione come punto fisso con secondo esatto segnato nei dati, così il ritmo si può controllare prima della pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:54+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'scena_dal_secondo' e 'scena_al_secondo' è null per entrambe le scene, quindi non è possibile collegare la trascrizione alle scene con certezza. Inoltre la voce è dichiarata generata con IA e la didascalia cita 'Atri' e 'Mia' come da dati: quello è coerente, ma la scena 0 dice 'luce spenta a",
+   "dati": {
+    "controllato": "Ho verificato per il montaggio: durata, trascrizione coi secondi, scene e comune sulla mappa (Atri, coordinate coerenti), audio (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e rispetto del brief (4 frasi, fascia commento, didascalia, hashtag).",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il dato 'scena_dal_secondo' e 'scena_al_secondo' è null per entrambe le scene, quindi non è possibile collegare la trascrizione alle scene con certezza. Inoltre la voce è dichiarata generata con IA e la didascalia cita 'Atri' e 'Mia' come da dati: quello è coerente, ma la scena 0 dice 'luce spenta all'inizio, si accende' senza un secondo preciso di accensione, quindi il momento del 'Poi Mia ha acceso' (frase 1) non è verificabile sui materiali.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (luce spenta/accesa) e per la scena 1, indicando il secondo esatto in cui la luce di Atri si accende, e allineare la frase 1 del copione a quel secondo (circa tra il secondo 6 e 9, da verificare sul video).",
+    "idea": "Aggiungere nei dati di ogni reel il secondo esatto dell'accensione della luce, così da sincronizzare automaticamente voce, testo a schermo e animazione della mappa."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:55+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Nei dati della mappa la scena 0 ha scena_dal_secondo e scena_al_secondo a null, quindi non c'è modo di sapere in quale secondo la luce di Atri si accende, che è il momento centrale del reel. Inoltre l'audio supera di poco l'obiettivo dei primi 5 secondi: il volume medio è -20 dB, più basso del resto",
+   "dati": {
+    "controllato": "Ho verificato l'esportazione del reel prima_luce: durata, trascrizione coi secondi, coerenza tra scena della mappa (Atri, coordinate e luce accesa) e frasi del copione, audio (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e didascalia/fascia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nei dati della mappa la scena 0 ha scena_dal_secondo e scena_al_secondo a null, quindi non c'è modo di sapere in quale secondo la luce di Atri si accende, che è il momento centrale del reel. Inoltre l'audio supera di poco l'obiettivo dei primi 5 secondi: il volume medio è -20 dB, più basso del resto del reel, e la frase di apertura parla di una luce che si accende senza che il montaggio possa sincronizzarla. Il resto (LUFS, picco, durata 19.2 s, frasi coerenti con la trascrizione, Atri con 3 luci oggi) risulta a posto.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (ad esempio il secondo in cui la luce di Atri si accende, verosimilmente intorno alla frase 'Poi Mia ha acceso la prima luce') e allineare il cambio di scena alla frase 1 del copione. Verificare il volume dei primi 5 secondi prima della pubblicazione.",
+    "idea": "Aggiungere al dato della mappa i secondi di accensione di ogni luce, così il montaggio può sincronizzare automaticamente la comparsa della luce con la voce in tutti i prossimi reel prima_luce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:56+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La frase «Poi Mia ha acceso la prima luce di Atri!» è nella scena 'luce' ma i dati della mappa non indicano quando la luce si accende (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile che l'accensione coincida con la frase. Inoltre la scena 1 'Mia' non ha tempi assegnati. I",
+   "dati": {
+    "controllato": "Coerenza di trascrizione, secondi di scena, dati mappa (Atri, coordinate, luci), audio (LUFS, picco, silenzi) e fascia rispetto al brief del reel prima_luce.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La frase «Poi Mia ha acceso la prima luce di Atri!» è nella scena 'luce' ma i dati della mappa non indicano quando la luce si accende (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile che l'accensione coincida con la frase. Inoltre la scena 1 'Mia' non ha tempi assegnati. Il volume medio dei primi 5 secondi è -20 dB, sotto il target di apertura non indicato come problema bloccante, ma da tenere d'occhio.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (accensione di Atri) e la scena 1 (Mia), allineandoli alla frase 1 della trascrizione prima di approvare il montaggio.",
+    "idea": "Aggiungere ai dati della mappa i tempi di ogni scena fin dalla fase di montaggio, così la sincronia voce-luce si verifica automaticamente."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:56+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato di mappa della scena 0 è incoerente: 'scena_dal_secondo' e 'scena_al_secondo' sono null, quindi non si sa quando la luce di Atri si accende. Inoltre la scena 1 (Mia) non ha tempi. Il copione dice 'Poi Mia ha acceso la prima luce' al secondo 1, ma il dato non lo conferma. In più l'audio è a -",
+   "dati": {
+    "controllato": "Ho verificato i secondi di scena, la coerenza tra trascrizione, copione e mappa, la didascalia e le misure audio del reel Prima Luce di Atri.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il dato di mappa della scena 0 è incoerente: 'scena_dal_secondo' e 'scena_al_secondo' sono null, quindi non si sa quando la luce di Atri si accende. Inoltre la scena 1 (Mia) non ha tempi. Il copione dice 'Poi Mia ha acceso la prima luce' al secondo 1, ma il dato non lo conferma. In più l'audio è a -20 dB nei primi 5 secondi, mentre l'obiettivo di apertura non è verificabile senza tempi di scena. Non posso confermare la sincronia tra voce e accensione della luce.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (accensione di Atri, indicativamente attorno al secondo 1-2) e per la scena 1 (Mia), allineandoli alla trascrizione. Verificare il volume dei primi 5 secondi e, se necessario, alzarlo leggermente per rispettare l'obiettivo di apertura.",
+    "idea": "Aggiungere nel dato di mappa un campo di tempi obbligatorio per ogni scena, così la sincronia voce-luce viene controllata automaticamente prima della pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:57+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "I materiali non riportano alcun gancio visivo o testuale nei primi 2 secondi che sia verificabile: la prima frase («Questa è l'Italia di notte. Ad Atri era tutto spento.») parte senza un elemento forte, e i tempi per scena sono null (scena_dal_secondo e scena_al_secondo non sono valorizzati), quindi",
+   "dati": {
+    "controllato": "Ganci dei primi 2 secondi: apertura, trascrizione con tempi, scena della luce su Atri e coerenza tra copione, didascalia e dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "I materiali non riportano alcun gancio visivo o testuale nei primi 2 secondi che sia verificabile: la prima frase («Questa è l'Italia di notte. Ad Atri era tutto spento.») parte senza un elemento forte, e i tempi per scena sono null (scena_dal_secondo e scena_al_secondo non sono valorizzati), quindi non posso confermare cosa compare a 0,5–2 secondi. Inoltre la scena 0 e la scena 1 hanno la stessa posizione e lo stesso comune, quindi la sequenza 'spenta, poi accesa' va verificata sui fotogrammi.",
+    "correzione": "Far comparire nei primi 2 secondi la mappa con Atri ancora spenta e il nome del comune in grande (es. 'ATRI, AL BUIO'), e completare i campi scena_dal_secondo/scena_al_secondo con i tempi reali prima della pubblicazione.",
+    "idea": "Aprire ogni reel con un confronto 'al buio' vs 'acceso' sullo stesso comune, così il gancio dei primi secondi mostra subito la trasformazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:58+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione manca la pausa tra la frase 0 e la frase 1 e la frase 2 contiene 'commenta città e nome' ma la fascia dice 'Commenta città e nome del tuo animale'; il dato più rilevante è che la frase 1 ('Poi Mia ha acceso la prima luce di Atri!') descrive un'azione che nei dati risulta già avven",
+   "dati": {
+    "controllato": "Copione, trascrizione con secondi, didascalia e coerenza della frase sulla luce di Atri con i dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 9.5,
+    "problema": "Nella trascrizione manca la pausa tra la frase 0 e la frase 1 e la frase 2 contiene 'commenta città e nome' ma la fascia dice 'Commenta città e nome del tuo animale'; il dato più rilevante è che la frase 1 ('Poi Mia ha acceso la prima luce di Atri!') descrive un'azione che nei dati risulta già avvenuta (luce 'già accesa' nella scena 1), quindi non è verificabile dai materiali che la luce si accenda in video. Inoltre la frase 3 ('Atri si è accesa') è al presente mentre la scena dati dice 'si accende', mancano secondi di scena per le frasi (scena_dal_secondo e scena_al_secondo sono null).",
+    "correzione": "Assegnare alle frasi intervalli di secondi verificati (es. frase 1 sull'accensione della luce) e allineare la frase 3 al momento in cui la luce compare sulla mappa; uniformare la fascia al testo del copione.",
+    "idea": "Per i prossimi reel, registrare i secondi di ogni scena sulla mappa così da sincronizzare la voce con l'accensione reale delle luci."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:59+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La frase 0 dice 'Ad Atri era tutto spento', ma nei dati della mappa la luce di Atri è segnata come 'spenta all'inizio della scena, si accende' e i tre animali di Atri risultano già registrati oggi (luci_li_oggi: 3): la frase è coerente con la scena solo se la luce si accende davvero nel primo second",
+   "dati": {
+    "controllato": "Copione, trascrizione e secondi della scena 'luce' (frasi 0-1) rispetto ai dati della mappa su Atri e alla didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La frase 0 dice 'Ad Atri era tutto spento', ma nei dati della mappa la luce di Atri è segnata come 'spenta all'inizio della scena, si accende' e i tre animali di Atri risultano già registrati oggi (luci_li_oggi: 3): la frase è coerente con la scena solo se la luce si accende davvero nel primo secondo, cosa che i dati non precisano (scena_dal_secondo e scena_al_secondo sono null). Inoltre la frase 1 'Poi Mia ha acceso la prima luce' e la didascalia 'La prima luce di Atri è di Mia' sono incoerenti con i dati: nell'elenco di arrivo ci sono già Ellie e Terremoto dello stesso giorno, quindi la prima luce per data risulta Mia solo se l'ordine è effettivamente quello indicato (Mia è prima, quindi regge), ma i secondi di accensione non sono verificati.",
+    "correzione": "Riportare nel brief i secondi reali di accensione della luce di Atri (scena_dal_secondo e scena_al_secondo) e verificare che la frase 1 cada dopo lo spegnimento iniziale; confermare che 'prima luce' si riferisce a Mia e non alla serie di tre luci di oggi.",
+    "idea": "Per i prossimi reel, indicare sempre nei dati della mappa i secondi di accensione di ogni luce, così la voce e la scena si possono sincronizzare senza stime."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:59+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Poi Mia ha acceso la prima luce di Atri!» e «Atri si è accesa», ma nei dati mappa la scena 0 non ha secondi di inizio e fine (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare che l'accensione avvenga al momento giusto della frase 1. Inoltre la fasci",
+   "dati": {
+    "controllato": "Copione, trascrizione con secondi, dati mappa, didascalia e fascia: coerenza tra testo, scene e luce su Atri.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La trascrizione dice «Poi Mia ha acceso la prima luce di Atri!» e «Atri si è accesa», ma nei dati mappa la scena 0 non ha secondi di inizio e fine (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare che l'accensione avvenga al momento giusto della frase 1. Inoltre la fascia dice «Commenta città e nome del tuo animale», mentre la frase 2 dice «commenta città e nome»: coerenti, ma la didascalia nomina la mappa 'link in bio' senza che il materiale lo confermi.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (luce che si accende) e allineare la frase 1 a quel momento. Verificare che il link in bio esista prima di pubblicare.",
+    "idea": "Per il prossimo reel usare la scena di accensione come aggancio al commento con il nome della città, così il pubblico vede la luce accendersi mentre legge l'invito."
+   }
+  },
+  {
+   "t": "2026-11-07T23:15:59+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nel copione l'invito a commentare («Commenta città e nome») compare alla frase 2, ma la trascrizione e il brief indicano la scena 'commento' senza un secondo preciso; la fascia di invito nella didascalia non è sincronizzata con la frase del parlato. Inoltre la trascrizione dice 'Mia ha acceso la pri",
+   "dati": {
+    "controllato": "Trascrizione, frasi del copione, fascia di invito a commentare città e nome, didascalia e dati della mappa (Atri, scene 0-1) per il formato prima_luce.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Nel copione l'invito a commentare («Commenta città e nome») compare alla frase 2, ma la trascrizione e il brief indicano la scena 'commento' senza un secondo preciso; la fascia di invito nella didascalia non è sincronizzata con la frase del parlato. Inoltre la trascrizione dice 'Mia ha acceso la prima luce' mentre i dati_mappa mostrano Mia come prima di tre animali già arrivati a Atri il 2026-11-07: la frase 'la prima luce' va bene, ma l'animale non è l'unico acceso lì, quindi 'Atri si è accesa' è corretto solo come primo arrivo.",
+    "correzione": "Ancorare la scena 'commento' (frase 2) a un secondo preciso dentro i 19,2 s, mostrando la fascia 'Commenta città e nome del tuo animale' per tutta la durata della frase; nel testo della chiusura dire 'Atri si è accesa con la luce di Mia' per essere precisi sui dati.",
+    "idea": "Per i prossimi reel della serie prima_luce, usare un contatore dinamico (es. 'Atri: 3 luci') nella scena di chiusura, così il dato verificato accompagna la frase finale."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:01+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella frase 0 il testo dice «Ad Atri era tutto spento» e nella frase 1 «Poi Mia ha acceso la prima luce di Atri!», ma nella trascrizione e nella didascalia non ci sono errori grammaticali; il problema è che la frase 2 «commenta città e nome» è un'imperativo colloquiale non coerente con la didascalia",
+   "dati": {
+    "controllato": "Copione e preposizioni del reel 'prima_luce' (testo, frasi, didascalia, fascia) confrontati con trascrizione e dati mappa.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nella frase 0 il testo dice «Ad Atri era tutto spento» e nella frase 1 «Poi Mia ha acceso la prima luce di Atri!», ma nella trascrizione e nella didascalia non ci sono errori grammaticali; il problema è che la frase 2 «commenta città e nome» è un'imperativo colloquiale non coerente con la didascalia («Commenta la tua città e il nome»), e la frase 3 «Atri si è accesa» usa il femminile corretto ma la frase generata dalla voce ripete la luce come 'luce' al femminile senza articolo nella copertina «LA PRIMA LUCE di Atri» (accordo corretto). Il difetto concreto è la preposizione nella fascia: «Commenta città e nome del tuo animale» è accettabile, ma nella trascrizione manca la preposizione «di» tra «nome» e il riferimento all'animale, rendendo la frase 2 ellittica.",
+    "correzione": "Frase 2: «Ogni animale può accendere la sua città: commenta la città e il nome del tuo animale.» Allinearla alla didascalia e alla fascia.",
+    "idea": "Per i prossimi reel usare sempre la stessa formula di invito alla fascia e alla frase di commento, così la voce e il testo restano coerenti."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:02+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Poi Mia ha acceso la prima luce di Atri!» mentre la scena 0 (la luce di Atri che si accende) non ha un intervallo di secondi definito (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile in quale secondo avvenga l'accensione. Inoltre la frase 'Ad Atri era tutt",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione, i secondi delle scene e la corrispondenza tra copione, dati mappa (Atri, coordinate, Mia) e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il copione dice «Poi Mia ha acceso la prima luce di Atri!» mentre la scena 0 (la luce di Atri che si accende) non ha un intervallo di secondi definito (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile in quale secondo avvenga l'accensione. Inoltre la frase 'Ad Atri era tutto spento' non ha una scena esplicita con tempi. Nei dati c'è anche un'incoerenza: la scena 0 dice 'luci_li_oggi: 3' e l'elenco mostra tre animali di @julieta_negri._, ma la didascalia attribuisce la luce a Mia senza indicare che sono tre luci, e la mappa non ha i tempi di scena per la sequenza di accensione.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (accensione di Atri) e per la scena 1, allineandole alle frasi 0 e 1 del brief, poi verificare che l'accensione cada entro i secondi della frase 1. Confermare anche il conteggio delle luci di oggi prima della pubblicazione.",
+    "idea": "Per i prossimi reel, aggiungere sempre i secondi di inizio e fine di ogni scena nei dati mappa, così il controllo di sincronia tra voce, luce e didascalia si può fare in automatico."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:02+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nei dati_mappa la scena 0 ha scena_dal_secondo e scena_al_secondo a null, quindi non è verificabile in quale secondo la luce di Atri si accende; la frase 'Poi Mia ha acceso la prima luce' (frase 1) non è agganciata a un momento preciso del reel. Inoltre la trascrizione dice 'Mia ha acceso', ma nella",
+   "dati": {
+    "controllato": "Copione, trascrizione, timing della luce di Atri sulla mappa e frasi del brief: la sequenza luce → commento → chiusura è coerente e il dato di Atri è verificato.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nei dati_mappa la scena 0 ha scena_dal_secondo e scena_al_secondo a null, quindi non è verificabile in quale secondo la luce di Atri si accende; la frase 'Poi Mia ha acceso la prima luce' (frase 1) non è agganciata a un momento preciso del reel. Inoltre la trascrizione dice 'Mia ha acceso', ma nella didascalia e nei dati Mia risulta la prima luce di Atri: coerente, ma la frase 'Atri si è accesa' va verificata sul fotogramma in cui la luce cambia.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 con i secondi reali dell'accensione (es. dal secondo 4 al 6) e allineare la frase 1 a quell'intervallo; verificare che la luce sia visibile sui fotogrammi corrispondenti.",
+    "idea": "Per i prossimi reel, aggiungere nei dati mappa i secondi di accensione di ogni luce così da poter sincronizzare automaticamente testo e animazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:03+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La frase 0 (\"Questa è l'Italia di notte. Ad Atri era tutto spento.\") è assegnata alla scena «luce», ma nei dati della mappa la scena 0 ha la luce che si accende, mentre i campi scena_dal_secondo e scena_al_secondo sono null: non è indicato dove inizia e finisce ciascuna scena, quindi non è verificab",
+   "dati": {
+    "controllato": "Ho verificato i testi del copione, la corrispondenza tra frasi e scene nella trascrizione, la coerenza tra didascalia e dati della mappa (Atri, Mia, data) e la lunghezza del reel rispetto ai 19,2 secondi.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La frase 0 (\"Questa è l'Italia di notte. Ad Atri era tutto spento.\") è assegnata alla scena «luce», ma nei dati della mappa la scena 0 ha la luce che si accende, mentre i campi scena_dal_secondo e scena_al_secondo sono null: non è indicato dove inizia e finisce ciascuna scena, quindi non è verificabile l'allineamento con la voce. Inoltre la trascrizione dice «Atri si è accesa» mentre la mappa per la scena 0 riporta 3 luci di oggi con Mia, Ellie e Terremoto, ma la trascrizione e la didascalia citano solo Mia come prima luce: coerente, ma Ellie e Terremoto non compaiono nel testo, e la voce non specifica che sono luci successive.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per le scene 0 e 1 (ad esempio la scena 0 dai 0 ai circa 9 secondi, in corrispondenza della frase 0) e verificare che la frase 1 «Poi Mia ha acceso la prima luce» coincida con l'accensione visibile. Chiarire nel testo o nella didascalia che Ellie e Terremoto hanno acceso luci successive ad Atri, oppure precisare che Mia è la prima.",
+    "idea": "Per i prossimi reel, inserire sempre i secondi di inizio e fine di ogni scena nei dati della mappa, così la sincronia tra voce e luce è controllabile prima della pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:04+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 1 la trascrizione dice «Poi Mia ha acceso la prima luce di Atri!», ma nei dati della mappa la scena 0 («La prima luce di Atri») ha scena_dal_secondo e scena_al_secondo null, quindi non c'è un intervallo verificato in cui la luce si accende. Inoltre l'audio è a -14,9 LUFS con un volume med",
+   "dati": {
+    "controllato": "Mappa e dati del reel prima_luce: coordinate, comune, animali, sincronia scene/trascrizione e controllo audio (LUFS, picco, silenzi).",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Al secondo 1 la trascrizione dice «Poi Mia ha acceso la prima luce di Atri!», ma nei dati della mappa la scena 0 («La prima luce di Atri») ha scena_dal_secondo e scena_al_secondo null, quindi non c'è un intervallo verificato in cui la luce si accende. Inoltre l'audio è a -14,9 LUFS con un volume medio dei primi 5 s a -20 dB, e l'obiettivo di chiusura dell'apertura non è verificabile senza i tempi di scena. Il dato 'luci_li_oggi: 3' e la didascalia dicono che la luce di Atri è di Mia, ma la mappa elenca tre animali per Atri (Mia, Ellie, Terremoto) senza indicare quale abbia acceso per prima.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (es. secondi in cui la luce di Atri si accende) e verificare che coincidano con la frase 1 della trascrizione. Confermare nella didascalia che Mia è davvero la prima per orario, oppure riformulare. Verificare le misure audio sul file finale, non solo sui dati di riferimento.",
+    "idea": "Aggiungere al JSON della mappa i secondi di accensione per ogni scena, così da poter sincronizzare automaticamente testo e luce nei prossimi reel."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:05+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La luce di Atri è spenta all'inizio della scena 0 e si accende, ma i campi scena_dal_secondo e scena_al_secondo sono null, quindi non si può verificare a quale secondo del reel avvenga l'accensione né se la frase 'Poi Mia ha acceso la prima luce' sia sincronizzata. Inoltre il volume medio dei primi ",
+   "dati": {
+    "controllato": "Coerenza tra scena 0 della mappa (luce di Atri che si accende), trascrizione, coordinate e comune, e misure audio contro l'obiettivo -14 LUFS e picco sotto -1 dBFS.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La luce di Atri è spenta all'inizio della scena 0 e si accende, ma i campi scena_dal_secondo e scena_al_secondo sono null, quindi non si può verificare a quale secondo del reel avvenga l'accensione né se la frase 'Poi Mia ha acceso la prima luce' sia sincronizzata. Inoltre il volume medio dei primi 5 secondi è -20 dB, ben sotto i -14 LUFS dell'obiettivo, e l'apertura resta silenziosa per un tratto.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 e allineare l'accensione della luce alla frase 'Poi Mia ha acceso la prima luce di Atri!'. Rivedere il livello dei primi 5 secondi (alzare il volume dell'apertura o della voce) per avvicinarlo all'obiettivo. Il resto dei dati (LUFS globale -14.9, picco -0.9 dBFS, nessun silenzio lungo, comune Atri, coordinate coerenti, 3 luci di oggi) risulta a posto.",
+    "idea": "Inserire sempre nei dati di scena i secondi di inizio e fine, così la sincronizzazione luce-voce si verifica automaticamente per ogni reel."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:05+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La scena 0 ha 'scena_dal_secondo' e 'scena_al_secondo' vuoti (null), quindi non è indicato il momento del reel in cui la luce si accende; anche la scena 1 non ha tempi. Inoltre la voce dice «Poi Mia ha acceso la prima luce» ma i dati indicano che Mia era già nell'elenco 'in ordine di arrivo' con gli",
+   "dati": {
+    "controllato": "Coordinamento tra scene della mappa (Atri, coordinate, luce accesa a inizio scena 0), trascrizione e copione: la mappa mostra Atri come prima luce del giorno, con Mia come primo animale, coerente con il testo della voce.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La scena 0 ha 'scena_dal_secondo' e 'scena_al_secondo' vuoti (null), quindi non è indicato il momento del reel in cui la luce si accende; anche la scena 1 non ha tempi. Inoltre la voce dice «Poi Mia ha acceso la prima luce» ma i dati indicano che Mia era già nell'elenco 'in ordine di arrivo' con gli stessi ID: va verificato che l'accensione sulla mappa coincida con la frase al secondo corrispondente (frasi 0 e 1 nel brief, non assegnate a tempi precisi).",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per entrambe le scene, allineando l'accensione di Atri alla frase 1 (\"Poi Mia ha acceso la prima luce di Atri!\") e verificare che la scena 0 copra il tempo di \"Questa è l'Italia di notte. Ad Atri era tutto spento.\"",
+    "idea": "Indicare nei dati di mappa i secondi di ogni frase del copione, così la verifica luce può confermare automaticamente la sincronia voce-luce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:06+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Poi Mia ha acceso la prima luce di Atri!» mentre i dati di mappa indicano che la luce di Atri si accende nella scena 0 (scena_dal_secondo e scena_al_secondo null, quindi non c'è un tempo preciso). Inoltre la frase 'Atri si è accesa' arriva in chiusura, ma nei dati la scena 1 mostra ",
+   "dati": {
+    "controllato": "Coordinate della mappa, scene e comune di Atri, trascrizione e voce, audio, didascalia e fascia, coerenza tra copione, luce e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il copione dice «Poi Mia ha acceso la prima luce di Atri!» mentre i dati di mappa indicano che la luce di Atri si accende nella scena 0 (scena_dal_secondo e scena_al_secondo null, quindi non c'è un tempo preciso). Inoltre la frase 'Atri si è accesa' arriva in chiusura, ma nei dati la scena 1 mostra la luce già accesa: la sequenza visiva non è verificabile dai materiali forniti. Non sono indicati i secondi di inizio e fine delle scene, quindi non posso confermare la sincronia tra voce e luce. Il pronome 'Mia' compare anche nel brief come animale, ma la didascalia la presenta come 'La prima luce di Atri è di Mia', coerente con i dati.",
+    "correzione": "Inserire nei dati di mappa i secondi di scena (scena_dal_secondo e scena_al_secondo) per la scena 0 e la scena 1, così da allineare l'accensione della luce alla frase 'Poi Mia ha acceso la prima luce di Atri!' (intorno al secondo 4-5 secondo il brief) e verificare che 'Atri si è accesa' cada sulla luce accesa. Audio: LUFS -14.9 e picco -0.9 dBFS rispettano l'obiettivo, nessun silenzio lungo; il volume medio dei primi 5 secondi (-20 dB) è accettabile.",
+    "idea": "Per i prossimi reel, indicare sempre i secondi di inizio e fine di ogni scena sulla mappa, così il controllo di sincronia tra voce e accensione della luce è verificabile."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:07+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nei dati_mappa la scena 0 ha scena_dal_secondo e scena_al_secondo a null: non è indicato in quale secondo la luce di Atri si accende, quindi non posso verificare che l'accensione coincida con la frase 'Poi Mia ha acceso la prima luce di Atri!' (che nella trascrizione non ha tempi). Inoltre la scena ",
+   "dati": {
+    "controllato": "Coordinate di Atri, scena 0 e 1 della mappa, e coerenza di etichette e comune con il copione e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nei dati_mappa la scena 0 ha scena_dal_secondo e scena_al_secondo a null: non è indicato in quale secondo la luce di Atri si accende, quindi non posso verificare che l'accensione coincida con la frase 'Poi Mia ha acceso la prima luce di Atri!' (che nella trascrizione non ha tempi). Inoltre la scena 1 ha 'luce: già accesa' mentre la scena 0 dice 'si accende': la scena 1 è coerente, ma i secondi mancano in entrambe.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (accensione di Atri) e per la scena 1, e aggiungere i tempi di ogni frase della trascrizione, poi allineare l'accensione alla frase 'Poi Mia ha acceso...'.",
+    "idea": "Aggiungere nei dati della mappa i secondi di ogni scena e dell'accensione, così il reparto Mappa può verificare automaticamente la sincronia luce-voce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:07+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il campo scena_dal_secondo e scena_al_secondo è null per la scena 0 che introduce la luce (la scena di accensione 'La prima luce di Atri'), quindi non è verificabile in quale secondo esatto avviene l'accensione sulla mappa; inoltre la scena 1 non ha tempi. Anche il volume medio dei primi 5 secondi (",
+   "dati": {
+    "controllato": "Coordinate, comune sulla mappa, sequenza della luce, copione e didascalia della scena prima luce, e misure audio rispetto all'obiettivo di -14 LUFS e picco sotto -1 dBFS.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il campo scena_dal_secondo e scena_al_secondo è null per la scena 0 che introduce la luce (la scena di accensione 'La prima luce di Atri'), quindi non è verificabile in quale secondo esatto avviene l'accensione sulla mappa; inoltre la scena 1 non ha tempi. Anche il volume medio dei primi 5 secondi (-20 dB) è basso rispetto al resto dell'audio, a differenza dell'obiettivo di apertura.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per entrambe le scene, indicando il secondo in cui la luce di Atri si accende (presumibilmente attorno alla frase 1, 'Poi Mia ha acceso la prima luce'), e verificare il livello di apertura o accettarlo come scelta consapevole.",
+    "idea": "Aggiungere nei dati della mappa i secondi di ogni accensione così da sincronizzare automaticamente il testo con la luce sullo schermo."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:08+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nei dati_mappa la scena 0 dice che la luce di Atri è spenta all'inizio e si accende, ma il copione alla frase 0 dice 'Ad Atri era tutto spento' e alla frase 1 'Poi Mia ha acceso la prima luce'. Il reel mostra l'accensione in scena 'luce' senza indicare il secondo esatto (scena_dal_secondo e scena_al",
+   "dati": {
+    "controllato": "Coordinate, comune sulla mappa, sequenza delle luci, misure audio e corrispondenza tra trascrizione, copione e didascalia per il reel Prima luce di Atri.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nei dati_mappa la scena 0 dice che la luce di Atri è spenta all'inizio e si accende, ma il copione alla frase 0 dice 'Ad Atri era tutto spento' e alla frase 1 'Poi Mia ha acceso la prima luce'. Il reel mostra l'accensione in scena 'luce' senza indicare il secondo esatto (scena_dal_secondo e scena_al_secondo sono null). Inoltre il conteggio 'luci_li_oggi: 3' non corrisponde a un'unica prima luce nel titolo: Mia, Ellie e Terremoto sono tre animali, quindi la 'prima luce' di Atri è di Mia ma il dato 'luci_li_oggi' va verificato. Anche la fascia 'Commenta città e nome' e la frase 2 del copione combaciano, quindi il problema principale è la mancanza dei secondi di scena.",
+    "correzione": "Valorizzare scena_dal_secondo e scena_al_secondo per la scena 0 (luce) e per la scena 1 (Mia), allineandoli alla frase 1 del copione. Verificare che 'luci_li_oggi: 3' sia corretto o riferito a Atri nel giorno, e confermare che la luce di Mia sia l'unica prima luce del comune.",
+    "idea": "Aggiungere nei dati della mappa i secondi di accensione di ogni luce, così il reel può sincronizzare automaticamente l'animazione con la voce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:09+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nei dati mappa le scene 0 e 1 hanno scena_dal_secondo e scena_al_secondo entrambi null, quindi non è indicato in quale secondo la luce di Atri si accende, né in quale intervallo compare la scena di Mia. Il brief associa la frase 1 («Poi Mia ha acceso la prima luce di Atri!») alla scena 'luce' senza ",
+   "dati": {
+    "controllato": "Ho verificato per il reparto Mappa e dati la coerenza tra copione, trascrizione coi secondi, coordinate e comune della luce di Atri, scene della mappa, misure audio e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nei dati mappa le scene 0 e 1 hanno scena_dal_secondo e scena_al_secondo entrambi null, quindi non è indicato in quale secondo la luce di Atri si accende, né in quale intervallo compare la scena di Mia. Il brief associa la frase 1 («Poi Mia ha acceso la prima luce di Atri!») alla scena 'luce' senza tempi verificati. Inoltre l'audio supera di poco l'obiettivo di picco (-0.9 dBFS contro il limite di -1 dBFS) e il volume medio dei primi 5 secondi (-20 dB) va verificato rispetto all'apertura.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per le scene 0 e 1 allineandoli alla trascrizione (la frase 'Poi Mia ha acceso...' deve coincidere con l'accensione della luce di Atri), e abbassare il picco sotto -1 dBFS prima della pubblicazione.",
+    "idea": "Aggiungere al brief un campo con il secondo esatto dell'accensione della luce, così il reparto Mappa può verificare automaticamente la sincronia tra voce e mappa in ogni reel prima_luce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:10+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nei dati mappa la scena 0 ha scena_dal_secondo e scena_al_secondo a null, quindi non è indicato in quale secondo si accende la luce di Atri. Inoltre la frase 'Ad Atri era tutto spento' è in scena 'luce' ma non c'è un riferimento temporale verificabile per l'accensione. Il volume medio dei primi 5 se",
+   "dati": {
+    "controllato": "Ho verificato i dati mappa (coordinate di Atri, scena 0 con luce che si accende, scena 1 già accesa, etichette e animali), la trascrizione e la coerenza delle frasi del brief con le scene, poi l'audio (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nei dati mappa la scena 0 ha scena_dal_secondo e scena_al_secondo a null, quindi non è indicato in quale secondo si accende la luce di Atri. Inoltre la frase 'Ad Atri era tutto spento' è in scena 'luce' ma non c'è un riferimento temporale verificabile per l'accensione. Il volume medio dei primi 5 secondi (-20 dB) è basso rispetto all'obiettivo, ma non è un dato che blocchi il reel.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 con i secondi reali in cui la luce si accende, e allineare la frase 'Poi Mia ha acceso la prima luce di Atri!' a quel momento. Verificare anche se alzare il volume dei primi 5 secondi.",
+    "idea": "Per i prossimi reel, indicare sempre nei dati mappa i secondi di accensione di ogni luce, così la sincronia tra voce e mappa si può controllare automaticamente."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:10+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il picco è -0.9 dBFS, quindi sopra la soglia di -1 dBFS indicata dall'obiettivo; il volume medio dei primi 5 secondi (-20 dB) è anche più basso del resto, con l'apertura che rischia di risultare debole. Inoltre la frase 'Poi Mia ha acceso la prima luce' è legata alla scena 'luce' ma il dato mappa in",
+   "dati": {
+    "controllato": "Livello audio (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio lungo, volume iniziale -20 dB) e allineamento della voce con la scena della luce su Atri.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il picco è -0.9 dBFS, quindi sopra la soglia di -1 dBFS indicata dall'obiettivo; il volume medio dei primi 5 secondi (-20 dB) è anche più basso del resto, con l'apertura che rischia di risultare debole. Inoltre la frase 'Poi Mia ha acceso la prima luce' è legata alla scena 'luce' ma il dato mappa indica che la luce di Atri è spenta all'inizio della scena 0 e accesa nella scena 1, quindi il riferimento temporale va verificato.",
+    "correzione": "Abbassare il guadagno di circa 0.5-1 dB per portare il picco sotto -1 dBFS (es. -1.5 dBFS) mantenendo -14 LUFS; alzare leggermente la voce nei primi 5 secondi; verificare che la frase 'Poi Mia...' cada sul secondo in cui la luce si accende nella mappa.",
+    "idea": "Per i prossimi reel, aggiungere un limiter finale automatico a -1.5 dBFS così il picco non supera mai la soglia audio."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:10+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Volume audio del reel: LUFS, picco, silenzi e livello dei primi 5 secondi rispetto all'obiettivo di -14 LUFS, picco sotto -1 dBFS.",
+   "dati": {
+    "controllato": "Volume audio del reel: LUFS, picco, silenzi e livello dei primi 5 secondi rispetto all'obiettivo di -14 LUFS, picco sotto -1 dBFS.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, aggiungere un breve effetto sonoro o un tono appena udibile sul momento in cui la luce si accende, per rendere più evidente l'apertura senza superare il picco di -1 dBFS."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:12+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -20 dB, sotto l'obiettivo implicito del brief, che indica di tenere i primi secondi percepibili; l'apertura risulta quindi debole rispetto al resto del reel (-14 LUFS complessivi). Inoltre la trascrizione dice 'Mia ha acceso la prima luce' ma la frase 'Atri si è",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume primi 5s) e coerenza tra trascrizione, copione e didascalia per il reel Prima luce di Atri.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il volume medio dei primi 5 secondi è -20 dB, sotto l'obiettivo implicito del brief, che indica di tenere i primi secondi percepibili; l'apertura risulta quindi debole rispetto al resto del reel (-14 LUFS complessivi). Inoltre la trascrizione dice 'Mia ha acceso la prima luce' ma la frase 'Atri si è accesa' è ripetuta senza variazione, e i campi scena_dal_secondo/scena_al_secondo sono null, quindi non posso verificare a quale secondo cambia la scena luce.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 5-6 dB (portandolo verso -14/-15 dB) mantenendo il picco sotto -1 dBFS; compilare i tempi di inizio e fine delle scene nei dati della mappa prima della pubblicazione.",
+    "idea": "Per i prossimi reel inserire sempre i secondi di inizio e fine di ogni scena nei dati, così il controllo di sincronia voce-luce è verificabile."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:12+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio del reel (LUFS, picco, volume iniziale, silenzi) confrontati con l'obiettivo di -14 LUFS, picco sotto -1 dBFS e assenza di silenzi lunghi dopo l'apertura.",
+   "dati": {
+    "controllato": "Audio del reel (LUFS, picco, volume iniziale, silenzi) confrontati con l'obiettivo di -14 LUFS, picco sotto -1 dBFS e assenza di silenzi lunghi dopo l'apertura.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel prima_luce, mostrare nella scena del commento la fascia con il nome del comune e dell'animale già visibile, così chi guarda capisce subito cosa scrivere."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:12+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio è a -0.9 dBFS, quindi supera la soglia richiesta di -1 dBFS (il picco deve stare sotto -1 dBFS); c'è rischio di clipping. Inoltre il volume dei primi 5 secondi (-20 dB) è basso rispetto al resto, e i dati di scena non indicano il secondo esatto in cui la luce si accende (scena_dal_sec",
+   "dati": {
+    "controllato": "Audio: LUFS -14.9 (obiettivo -14), picco -0.9 dBFS (sotto -1 dBFS? No, -0.9 è sopra la soglia), nessun silenzio lungo, volume primi 5s -20 dB; verificato anche l'apertura e il secondo in cui si accende la luce.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Il picco audio è a -0.9 dBFS, quindi supera la soglia richiesta di -1 dBFS (il picco deve stare sotto -1 dBFS); c'è rischio di clipping. Inoltre il volume dei primi 5 secondi (-20 dB) è basso rispetto al resto, e i dati di scena non indicano il secondo esatto in cui la luce si accende (scena_dal_secondo e scena_al_secondo sono null).",
+    "correzione": "Abbassare il guadagno o applicare un limiter in modo che il picco scenda sotto -1 dBFS, mantenendo LUFS vicino a -14; verificare il secondo di accensione della luce sulla trascrizione/fotogrammi per allineare la voce all'evento.",
+    "idea": "Inserire nel brief i secondi precisi di accensione di ogni luce, così da sincronizzare voce e animazione in modo automatico."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:13+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -20.0 dB, mentre l'obiettivo di apertura è più vicino a -14 LUFS: l'attacco risulta poco incisivo. Inoltre la voce è dichiarata sintetica nel brief (voce: true, 'Voce generata con IA') e la trascrizione non indica scene temporizzate: 'scena_dal_secondo' e 'scena",
+   "dati": {
+    "controllato": "Copione, trascrizione e tempi delle quattro frasi, misure audio (LUFS, picco, silenzi, volume primi 5s) e coerenza tra voce e didascalia rispetto ai dati forniti.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il volume medio dei primi 5 secondi è -20.0 dB, mentre l'obiettivo di apertura è più vicino a -14 LUFS: l'attacco risulta poco incisivo. Inoltre la voce è dichiarata sintetica nel brief (voce: true, 'Voce generata con IA') e la trascrizione non indica scene temporizzate: 'scena_dal_secondo' e 'scena_al_secondo' sono null, quindi non è verificabile in quale secondo cambia la scena luce/commento/chiusura.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 5-6 dB per avvicinarsi a -14 LUFS senza superare -1 dBFS di picco, e compilare i secondi di inizio e fine di ciascuna scena nei dati della mappa prima della pubblicazione.",
+    "idea": "Per i prossimi reel, far comparire la fascia di commento già dal primo secondo, così il pubblico sa subito cosa fare con la voce sintetica dichiarata."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:13+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il picco è a -0.9 dBFS, più alto del limite di -1 dBFS previsto dagli obiettivi audio. Il volume medio (-14.9 LUFS) è invece corretto.",
+   "dati": {
+    "controllato": "Audio del reel: LUFS -14.9 (obiettivo -14), picco -0.9 dBFS (sotto -1 dBFS, obiettivo non rispettato), nessun silenzio lungo, primi 5s a -20 dB.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Il picco è a -0.9 dBFS, più alto del limite di -1 dBFS previsto dagli obiettivi audio. Il volume medio (-14.9 LUFS) è invece corretto.",
+    "correzione": "Abbassare il livello del master di circa 0.5 dB (o applicare un limiter con soglia a -1 dBFS) mantenendo il loudness intorno a -14 LUFS, poi riesportare e ricontrollare il picco.",
+    "idea": "Aggiungere una breve pausa musicale di 0.5 s prima della frase di chiusura per dare respiro alla scena finale e sottolineare l'accensione della luce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:15+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -20.0 dB, molto più basso dei -14 LUFS dell'obiettivo: l'apertura rischia di risultare debole e far scorrere il pollice. Il picco di -0.9 dBFS supera di poco il limite richiesto di -1 dBFS (il valore è sopra -1), quindi è marginalmente fuori specifica.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume primi 5s) confrontato con l'obiettivo -14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo; verificata anche la coerenza di durata e scene della trascrizione con i dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il volume medio dei primi 5 secondi è -20.0 dB, molto più basso dei -14 LUFS dell'obiettivo: l'apertura rischia di risultare debole e far scorrere il pollice. Il picco di -0.9 dBFS supera di poco il limite richiesto di -1 dBFS (il valore è sopra -1), quindi è marginalmente fuori specifica.",
+    "correzione": "Alzare il volume dell'apertura (primi 5 s) di circa 5-6 dB, rispettando il picco e portando l'integrato a -14 LUFS; abbassare il picco a -1.0 dBFS o meno con un limiter.",
+    "idea": "Per i prossimi reel, aggiungere un effetto sonoro breve e incisivo (per esempio un 'clic' di accensione) sincronizzato con il secondo in cui la luce di Atri si accende, così l'apertura ha subito una presa audio forte."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:15+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il loudness integrato è -14.9 LUFS, quindi circa 0.9 dB sotto il target di -14 LUFS. Il picco di -0.9 dBFS è sopra il limite di -1 dBFS (di poco). Il volume medio dei primi 5 secondi è -20.0 dB, più basso del resto, senza silenzi registrati.",
+   "dati": {
+    "controllato": "Loudness, picco, silenzi e apertura del reel rispetto all'obiettivo -14 LUFS, picco sotto -1 dBFS e assenza di silenzi lunghi dopo l'apertura.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Il loudness integrato è -14.9 LUFS, quindi circa 0.9 dB sotto il target di -14 LUFS. Il picco di -0.9 dBFS è sopra il limite di -1 dBFS (di poco). Il volume medio dei primi 5 secondi è -20.0 dB, più basso del resto, senza silenzi registrati.",
+    "correzione": "Applicare normalizzazione a -14 LUFS integrati con limiter a true peak di -1 dBTP (o -1 dBFS) e ricontrollare la misura. Non sono presenti silenzi lunghi da correggere.",
+    "idea": "Per i prossimi reel conviene impostare il limiter come ultimo passaggio della catena audio, così loudness e picco vengono rispettati insieme senza doverli riaggiustare a mano."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:15+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Copertina (luce di Atri, coordinate, testo 'LA PRIMA LUCE / di Atri / Mia 👑') confrontata con i dati mappa e il brief.",
+   "dati": {
+    "controllato": "Copertina (luce di Atri, coordinate, testo 'LA PRIMA LUCE / di Atri / Mia 👑') confrontata con i dati mappa e il brief.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, una copertina che mostri la mappa con la luce appena accesa e il nome del comune in grande, così chi scorre capisce subito di quale città si parla."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:16+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La copertina dichiara la luce di Atri accesa con 'Mia 👑', ma nei dati mappa la scena 0 indica la luce spenta all'inizio e acceso solo alla scena 0 senza secondo di inizio/fine (scena_dal_secondo e scena_al_secondo sono null), quindi non posso verificare in quale secondo la luce si accende nel fotogr",
+   "dati": {
+    "controllato": "Copertina, dati mappa (coordinate, comune Atri, luce accesa), misure audio e corrispondenza tra copione e trascrizione nella mia mansione grafica.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La copertina dichiara la luce di Atri accesa con 'Mia 👑', ma nei dati mappa la scena 0 indica la luce spenta all'inizio e acceso solo alla scena 0 senza secondo di inizio/fine (scena_dal_secondo e scena_al_secondo sono null), quindi non posso verificare in quale secondo la luce si accende nel fotogramma; inoltre la copertina è al secondo 0 e la luce accesa non è ancora visibile in quel momento. Anche 'Atri era tutto spento' va allineato alla scena in cui la luce appare spenta.",
+    "correzione": "Valorizzare scena_dal_secondo e scena_al_secondo per la scena 0 (es. luce spenta fino al secondo X, accesa dal secondo X) e far coincidere la frase 'Poi Mia ha acceso la prima luce di Atri!' con quel secondo; scegliere per la copertina un fotogramma in cui la luce è già accesa.",
+    "idea": "Aggiungere in ogni dato mappa i secondi precisi di accensione, così la sincronia voce-luce si verifica automaticamente."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:16+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La copertina dichiara luce su Atri con coordinate 13.9754, 42.5797 che coincidono con quelle del comune, ma la fascia 'Commenta città e nome del tuo animale' è sovrapposta alla scena 0 che resta a luce spenta, mentre il testo recita 'Poi Mia ha acceso' solo dopo. Inoltre 'scena_dal_secondo' e 'scena",
+   "dati": {
+    "controllato": "Copertina, fascia, sovrapposizione testo e luce sulla mappa rispetto a coordinate, scene e dati di Atri, e secondi del reel.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La copertina dichiara luce su Atri con coordinate 13.9754, 42.5797 che coincidono con quelle del comune, ma la fascia 'Commenta città e nome del tuo animale' è sovrapposta alla scena 0 che resta a luce spenta, mentre il testo recita 'Poi Mia ha acceso' solo dopo. Inoltre 'scena_dal_secondo' e 'scena_al_secondo' sono null per entrambe le scene, quindi non è verificabile in quale secondo la luce si accende.",
+    "correzione": "Impostare i secondi di inizio e fine di ogni scena nei dati mappa (la scena 0 dovrebbe chiudersi quando compare l'accensione, circa dal secondo 5-6 in base alla trascrizione) e spostare la fascia commento alla scena 2 o alla chiusura, così non copre l'accensione.",
+    "idea": "Per i prossimi reel usare sempre scene con secondi espliciti nei dati, così la sincronia tra voce, luce sulla mappa e fascia si può controllare prima della pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:17+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La copertina usa il testo «LA PRIMA LUCE / di Atri / Mia 👑» con coordinate della luce, ma la fascia «💬 Commenta città e nome del tuo animale 👇» compare solo nella trascrizione e nei dati, non c'è un tempo di apparizione definito per la fascia né per le scritte grandi: non posso verificare che sia le",
+   "dati": {
+    "controllato": "Font e testi grandi del reel: copertina (testo sopra/grande/sotto, coordinate), frasi del copione e fascia commento, leggibilità sul frame 0.5–19s.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La copertina usa il testo «LA PRIMA LUCE / di Atri / Mia 👑» con coordinate della luce, ma la fascia «💬 Commenta città e nome del tuo animale 👇» compare solo nella trascrizione e nei dati, non c'è un tempo di apparizione definito per la fascia né per le scritte grandi: non posso verificare che sia leggibile sui fotogrammi 0.5–19s. Inoltre la scena 0 ha scena_dal_secondo e scena_al_secondo null, quindi non so a che secondo parta la luce di Atri, e la fascia di commento non ha un intervallo definito.",
+    "correzione": "Definire per ogni scritta grande (copertina, fascia commento, nome animale) il secondo di inizio e fine, e mantenere la fascia commento per almeno gli ultimi 6–8 secondi dove c'è il comando «Commenta». Verificare la leggibilità mobile con font di almeno circa 60–70 px su 1080 di larghezza.",
+    "idea": "Usare come copertina il frame in cui la luce di Atri si accende, con il nome dell'animale scritto accanto alla luce, per collegare visivamente testo e mappa."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:18+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La mappa mostra la luce di Atri già spenta all'inizio della scena 0 e accesa dopo, ma la scena 0 non ha secondi di inizio e fine (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile in quale fotogramma avvenga l'accensione rispetto alla frase 'Poi Mia ha acceso la prima luce'.",
+   "dati": {
+    "controllato": "Copertina, fascia, didascalia e dati della mappa per la scena della prima luce di Atri, incluso l'allineamento tra copione e secondi.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La mappa mostra la luce di Atri già spenta all'inizio della scena 0 e accesa dopo, ma la scena 0 non ha secondi di inizio e fine (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile in quale fotogramma avvenga l'accensione rispetto alla frase 'Poi Mia ha acceso la prima luce'. Inoltre la copertina dichiara 'LA PRIMA LUCE di Atri' ma la luce di Atri è accesa dagli animali di @julieta_negri._ (tre animali), quindi il titolo 'Mia 👑' come unica protagonista è coerente solo col primo arrivo, non con i tre già registrati.",
+    "correzione": "Valorizzare nei dati della mappa i secondi di inizio e fine della scena 0 (ad esempio intorno a 5-8 s, dove il copione passa da 'era tutto spento' a 'Poi Mia ha acceso') in modo che il cambio di luce coincida con la frase; verificare che la copertina e la didascalia dicano che Mia è la prima e che Ellie e Terremoto seguono.",
+    "idea": "Per i prossimi reel di prima luce, registrare nei dati i secondi esatti di accensione di ogni luce, così la copertina e la scena di accensione si possono sincronizzare automaticamente."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:18+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel brief la scena 0 (luce, 'la prima luce di Atri') ha scena_dal_secondo e scena_al_secondo a null, quindi non è stabilito quando la luce si accende; inoltre la scena 1 ('già accesa') non ha intervalli di tempo. Anche le misure audio sono fuori target: -14,9 LUFS è accettabile, ma il volume medio d",
+   "dati": {
+    "controllato": "Copertina, copione, fascia commento, didascalia e dati mappa (coordinate e comune di Atri) con la sincronizzazione scena/secondo e le misure audio.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nel brief la scena 0 (luce, 'la prima luce di Atri') ha scena_dal_secondo e scena_al_secondo a null, quindi non è stabilito quando la luce si accende; inoltre la scena 1 ('già accesa') non ha intervalli di tempo. Anche le misure audio sono fuori target: -14,9 LUFS è accettabile, ma il volume medio dei primi 5 s è -20 dB, troppo basso per un'apertura che deve catturare subito.",
+    "correzione": "Valorizzare scena_dal_secondo e scena_al_secondo per entrambe le scene (es. scena 0 da 0,5 a circa 4 s, scena 1 da circa 4 s in poi) e allineare il momento dell'accensione della luce di Atri alla frase 1 ('Poi Mia ha acceso la prima luce'). Alzare il volume dei primi 5 secondi di circa 5 dB, mantenendo il picco sotto -1 dBFS.",
+    "idea": "Per i prossimi reel usare un marcatore di tempo fisso per l'accensione della luce, così copione, mappa e audio restano sincronizzati senza controlli manuali."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:19+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'luci_li_oggi: 3' della mappa e le luci di Atri non sono coerenti con la scena: la prima luce dovrebbe essere la prima di Atri, ma i dati indicano tre animali arrivati lo stesso giorno. Inoltre la didascalia dice 'Su Zampe d'Italia ogni animale accende una luce', coerente, ma il volume medio",
+   "dati": {
+    "controllato": "Copertina, fascia, didascalia, dati mappa (coordinate e luci di Atri) e misure audio rispetto al copione e ai dati verificati.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il dato 'luci_li_oggi: 3' della mappa e le luci di Atri non sono coerenti con la scena: la prima luce dovrebbe essere la prima di Atri, ma i dati indicano tre animali arrivati lo stesso giorno. Inoltre la didascalia dice 'Su Zampe d'Italia ogni animale accende una luce', coerente, ma il volume medio dei primi 5 secondi (-20 dB) è molto basso rispetto all'obiettivo di -14 LUFS sull'apertura, e la voce è dichiarata generata con IA mentre la copertina non riporta questa avvertenza.",
+    "correzione": "Verificare che Mia sia davvero la prima luce di Atri e allineare il conteggio luci (3 vs 'prima'). Alzare il volume dei primi 5 secondi in modo che l'apertura sia vicina a -14 LUFS. Mantenere la dicitura 'Voce generata con IA' in didascalia e, se possibile, nel reel stesso.",
+    "idea": "Aggiungere in copertina un contatore 'luce n. X di Y' per rendere visibile la progressione della mappa."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:20+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "L'etichetta 'La prima luce di Atri' (scena 0) non ha secondi di inizio e fine (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare quando compare sulla mappa. Inoltre la scena 1 'Mia · @julieta_negri._' ha lo stesso punto di Atri (42.5797, 13.9754) e secondi null: l'etichet",
+   "dati": {
+    "controllato": "Etichette sulla mappa: coordinate, nomi dei comuni, scena e secondi dell'etichetta, incrocio con copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "L'etichetta 'La prima luce di Atri' (scena 0) non ha secondi di inizio e fine (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare quando compare sulla mappa. Inoltre la scena 1 'Mia · @julieta_negri._' ha lo stesso punto di Atri (42.5797, 13.9754) e secondi null: l'etichetta del nome non è agganciata a nessun momento del reel. Il copione dice 'Poi Mia ha acceso la prima luce di Atri' al secondo 1 circa, ma senza tempi certi non si sa se l'etichetta coincide con la frase.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per entrambe le etichette: per 'La prima luce di Atri' indicativamente dal secondo 1 (frase 'Poi Mia ha acceso...') fino alla fine della scena luce; per 'Mia · @julieta_negri._' dal momento in cui la luce si accende fino alla chiusura, da confermare sul fotogramma reale.",
+    "idea": "Aggiungere per ogni reel un campo con la frase del copione a cui l'etichetta è legata, così il controllo dei secondi si fa in automatico."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:21+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La scena 0 (luce spenta che si accende) ha scena_dal_secondo e scena_al_secondo null, quindi non è possibile verificare su quali fotogrammi cada l'accensione della luce di Atri, né sincronizzare la frase 'Poi Mia ha acceso la prima luce' con la scena giusta. Inoltre la trascrizione dice 'Ad Atri era",
+   "dati": {
+    "controllato": "Formato 9:16, copertina, sincronizzazione scene/secondi, fascia, didascalia e tag del reel 'prima_luce' contro copione, trascrizione e dati mappa.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "La scena 0 (luce spenta che si accende) ha scena_dal_secondo e scena_al_secondo null, quindi non è possibile verificare su quali fotogrammi cada l'accensione della luce di Atri, né sincronizzare la frase 'Poi Mia ha acceso la prima luce' con la scena giusta. Inoltre la trascrizione dice 'Ad Atri era tutto spento' mentre i dati mappa indicano già 3 luci oggi per Atri: l'affermazione 'era tutto spento' va verificata rispetto al momento in cui è ambientata la scena.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (es. luce spenta nei primi secondi, accensione nei successivi) e allineare la frase 'Poi Mia ha acceso...' a quel intervallo. Verificare che 'Atri era tutto spento' sia coerente con le 3 luci registrate lo stesso giorno, o riformulare in modo fedele ai dati.",
+    "idea": "Per i prossimi reel usare scene con tempi espliciti per ogni etichetta, così la sincronizzazione voce-luce si può controllare automaticamente prima della pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:21+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione ha il secondo di inizio/fine delle frasi mancante (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare che l'accensione della luce di Atri coincida con la frase 'Poi Mia ha acceso la prima luce di Atri!'. Inoltre nei dati mappa la scena 0 dice che la luce 's",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (Atri, coordinate, luce accesa), misure audio (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio) e didascalia con hashtag e dicitura voce IA.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La trascrizione ha il secondo di inizio/fine delle frasi mancante (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare che l'accensione della luce di Atri coincida con la frase 'Poi Mia ha acceso la prima luce di Atri!'. Inoltre nei dati mappa la scena 0 dice che la luce 'si accende' ma non c'è un secondo indicato. Anche il volume medio dei primi 5 secondi (-20 dB) è sotto il livello target di -14 LUFS, e il copione del brief chiama la scena 'luce' le frasi 0 e 1 senza tempi.",
+    "correzione": "Inserire nei dati mappa i secondi precisi di inizio e fine delle scene 'luce' e 'commento' e allineare l'accensione della luce di Atri alla frase 1; verificare che l'apertura non risulti troppo bassa rispetto al target audio.",
+    "idea": "Aggiungere nel brief un campo fisso con i secondi di ogni frase, così il controllo di sincronia mappa-voce si può fare senza lacune in tutti i prossimi reel."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:22+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Poi Mia ha acceso la prima luce di Atri!' è detta mentre il dato della mappa per la scena 0 indica che la luce di Atri si accende, ma la scena di apertura ha 'scena_dal_secondo' e 'scena_al_secondo' null: non è dichiarato a quale secondo la luce si accende, quindi non posso confermare la s",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, coordinate e comune di Atri sulla mappa, misure audio, didascalia e fascia di commento rispetto ai dati del reel.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La frase 'Poi Mia ha acceso la prima luce di Atri!' è detta mentre il dato della mappa per la scena 0 indica che la luce di Atri si accende, ma la scena di apertura ha 'scena_dal_secondo' e 'scena_al_secondo' null: non è dichiarato a quale secondo la luce si accende, quindi non posso confermare la sincronia tra voce e accensione. Inoltre l'audio è a -14.9 LUFS, quindi entro -14 (lieve scarto), e il picco di -0.9 dBFS è sopra la soglia richiesta di -1 dBFS.",
+    "correzione": "Indicare nei dati di mappa i secondi di inizio e fine della scena 0 (accensione di Atri) e allineare la frase 'Poi Mia ha acceso...' a quel momento. Abbassare il picco sotto -1 dBFS (es. limitatore o riduzione di 0.5 dB) e portare il livello integrato verso -14 LUFS.",
+    "idea": "Per i prossimi reel, inserire nei dati di mappa sempre i secondi di inizio/fine di ogni scena, così la sincronia voce-luce è verificabile prima della pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:24+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nel brief la scena 'luce' va dall'inizio a circa 2 secondi (frasi 0 e 1), ma i dati mappa indicano scena_dal_secondo e scena_al_secondo a null, quindi il momento esatto in cui la luce si accende non è segnato. Inoltre la frase 1 ('Poi Mia ha acceso la prima luce di Atri!') dice che Mia ha acceso la ",
+   "dati": {
+    "controllato": "Ho verificato trascrizione, didascalia, dati mappa (Atri, coordinate, luce accesa nella scena 0 e già accesa nella scena 1), misure audio e numeri del progetto, nel rispetto del brief.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nel brief la scena 'luce' va dall'inizio a circa 2 secondi (frasi 0 e 1), ma i dati mappa indicano scena_dal_secondo e scena_al_secondo a null, quindi il momento esatto in cui la luce si accende non è segnato. Inoltre la frase 1 ('Poi Mia ha acceso la prima luce di Atri!') dice che Mia ha acceso la luce, mentre la scena 1 la mostra già accesa: va bene come sequenza, ma serve confermare che l'accensione avvenga effettivamente al secondo 1 o 2. L'audio è da correggere: il volume medio dei primi 5 secondi è -20 dB, sotto l'obiettivo di -14 LUFS dopo l'apertura, e l'apertura del video non è sincronizzata con i dati di scena.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (es. 0-1.5 s) e per la scena 1, verificare che l'accensione sia nel secondo indicato dalla frase 1, e alzare il volume dei primi 5 secondi (dopo l'apertura) portandolo verso -14 LUFS senza superare -1 dBFS di picco.",
+    "idea": "Aggiungere un contatore sulla mappa 'luci di oggi' già nella copertina, così ogni reel mostra il numero reale di accensioni del giorno."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:24+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella scena 0 il campo 'luce' dice 'spenta all'inizio della scena, si accende', quindi la copertina al secondo 0 mostra la mappa con Atri spenta; la copertina però indica 'LA PRIMA LUCE di Atri' con Mia, mentre al secondo 0 la luce non è ancora accesa. Inoltre il dato 'luci_li_oggi: 3' risulta incoe",
+   "dati": {
+    "controllato": "Copertina del reel: luce di Atri alle coordinate giuste, testo sopra/grande/sotto e secondi dei fotogrammi coerenti con il copione.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nella scena 0 il campo 'luce' dice 'spenta all'inizio della scena, si accende', quindi la copertina al secondo 0 mostra la mappa con Atri spenta; la copertina però indica 'LA PRIMA LUCE di Atri' con Mia, mentre al secondo 0 la luce non è ancora accesa. Inoltre il dato 'luci_li_oggi: 3' risulta incoerente con il titolo 'prima luce' se Atri è la prima luce del giorno. Il campo 'scena_dal_secondo' è null, quindi non è verificabile in quale secondo avviene l'accensione.",
+    "correzione": "Verificare il secondo esatto dell'accensione di Atri e usare come copertina un fotogramma successivo a quel secondo (luce accesa); chiarire il conteggio 'luci_li_oggi' o rivedere il titolo se non è davvero la prima del giorno.",
+    "idea": "Per i prossimi reel, indicare nel dato di ogni scena il secondo di inizio e fine, così la copertina può sempre mostrare la luce già accesa."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:25+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Le misure audio non rispettano l'obiettivo dichiarato: il volume medio dei primi 5 secondi è -20.0 dB, mentre l'obiettivo è -14 LUFS con apertura forte; la scena dell'apertura risulta quindi troppo bassa. Inoltre la didascalia dice che Mia ha 'acceso la prima luce', ma nella mappa Atri ha già 3 luci",
+   "dati": {
+    "controllato": "Ho verificato la mappa (coordinate di Atri, luce accesa alla scena 0, comune corretto), la trascrizione e i secondi, la fascia commento, la didascalia (tag @julieta_negri._ e numeri coerenti con i dati) e le misure audio.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Le misure audio non rispettano l'obiettivo dichiarato: il volume medio dei primi 5 secondi è -20.0 dB, mentre l'obiettivo è -14 LUFS con apertura forte; la scena dell'apertura risulta quindi troppo bassa. Inoltre la didascalia dice che Mia ha 'acceso la prima luce', ma nella mappa Atri ha già 3 luci (Mia, Ellie, Terremoto), quindi non è la prima luce della città senza precisazione di data/ordine.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 6 dB (a circa -14 dB) mantenendo il picco sotto -1 dBFS, e nella didascalia e nel copione sostituire 'la prima luce di Atri' con 'la prima luce di Atri di oggi' oppure citare il conteggio corretto (3 luci ad Atri). Verificare anche che Ellie e Terremoto siano citate correttamente o omesse consapevolmente.",
+    "idea": "Per i prossimi reel usare il conteggio reale delle luci per città nella frase di apertura (es. 'Atri ha già 3 luci accese') così il racconto resta sempre aderente ai dati della mappa."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:25+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato della scena 'luce' dice che la prima luce di Atri si accende nella scena 0 (lat/lng di Atri), ma i campi scena_dal_secondo e scena_al_secondo sono null, quindi non è verificabile su quale secondo cade l'accensione. Inoltre la frase 'Poi Mia ha acceso la prima luce' (secondo 2) non è aggancia",
+   "dati": {
+    "controllato": "Ho verificato la sincronizzazione tra trascrizione, scene della mappa, coordinate di Atri, misure audio (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio) e fascia di commento nel reel.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Il dato della scena 'luce' dice che la prima luce di Atri si accende nella scena 0 (lat/lng di Atri), ma i campi scena_dal_secondo e scena_al_secondo sono null, quindi non è verificabile su quale secondo cade l'accensione. Inoltre la frase 'Poi Mia ha acceso la prima luce' (secondo 2) non è agganciata a nessun intervallo temporale nei dati. La scena 'commento' (frase 2) ha il testo che invita a commentare ma non ha tempi dichiarati, e la fascia 'Commenta città e nome del tuo animale' non è temporizzata.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (luce), la scena 1 (Mia) e la scena di commento, allineandoli alle frasi 0-3, e verificare che l'accensione della luce di Atri coincida con 'Poi Mia ha acceso...' prima della fascia di commento. Il progetto è coerente nei numeri e l'audio è conforme all'obiettivo.",
+    "idea": "Per i prossimi reel, aggiungere nei dati i tempi di inizio e fine di ogni scena e della fascia di commento, così il controllo di sincronizzazione è completo già in fase di montaggio."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:26+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "I campi scena_dal_secondo e scena_al_secondo sono null per la scena 0, quindi non è possibile stabilire a quale secondo della trascrizione/fotogrammi si accende la luce di Atri. Inoltre la voce è dichiarata generata con IA nella didascalia ma non è un problema di audio; l'audio è nei parametri. Il v",
+   "dati": {
+    "controllato": "Ho verificato la scena della mappa e il secondo della scena 0 (Atri, luce che si accende), i dati audio (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio), la trascrizione e la didascalia rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "I campi scena_dal_secondo e scena_al_secondo sono null per la scena 0, quindi non è possibile stabilire a quale secondo della trascrizione/fotogrammi si accende la luce di Atri. Inoltre la voce è dichiarata generata con IA nella didascalia ma non è un problema di audio; l'audio è nei parametri. Il volume medio dei primi 5 secondi è -20.0 dB, non rilevabile rispetto all'obiettivo perché il target indicato non specifica una soglia per quel dato.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 con i secondi reali in cui la luce di Atri si accende, e verificare che coincidano con la frase 1 della trascrizione (\"Poi Mia ha acceso la prima luce di Atri!\").",
+    "idea": "Aggiungere nel dato di ogni reel il secondo esatto dell'accensione della luce, così da poter sincronizzare automaticamente la fascia di commento con il momento dell'effetto visivo."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:26+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Poi Mia ha acceso la prima luce di Atri!' ricade sulla scena 'luce', ma nei dati mappa la scena 1 (Mia, luce già accesa) non ha scena_dal_secondo né scena_al_secondo, quindi non è verificabile su quale secondo la luce si accende. Inoltre l'audio è a -14.9 LUFS e picco -0",
+   "dati": {
+    "controllato": "Pubblicazione del reel prima_luce: coerenza tra copione, trascrizione coi secondi, dati mappa (Atri, coordinate, luce accesa), misure audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella trascrizione la frase 'Poi Mia ha acceso la prima luce di Atri!' ricade sulla scena 'luce', ma nei dati mappa la scena 1 (Mia, luce già accesa) non ha scena_dal_secondo né scena_al_secondo, quindi non è verificabile su quale secondo la luce si accende. Inoltre l'audio è a -14.9 LUFS e picco -0.9 dBFS: il picco supera la soglia di -1 dBFS richiesta. Le misure sono entrambe fuori o al limite dell'obiettivo.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 1 e la scena 0, allineandole alle frasi 0 e 1. Abbassare il livello di circa 0.2 dB per portare il picco sotto -1 dBFS e ricontrollare la misura LUFS. Verificare anche che la didascalia non dichiari dati non presenti nei materiali (ad esempio il numero di follower rispetto alle luci).",
+    "idea": "Aggiungere un contatore visibile delle luci accese nella chiusura, così il pubblico vede la crescita della mappa a ogni nuovo reel."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:28+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Poi Mia ha acceso la prima luce di Atri!' è nella scena 'luce', ma nei dati mappa la scena 0 dice che la luce di Atri si accende senza un secondo indicato (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile dove cade l'accensione rispetto al voice",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, coordinate e comune sulla mappa, misure audio, didascalia e coerenza dei numeri del reel Prima luce di Atri.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella trascrizione la frase 'Poi Mia ha acceso la prima luce di Atri!' è nella scena 'luce', ma nei dati mappa la scena 0 dice che la luce di Atri si accende senza un secondo indicato (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile dove cade l'accensione rispetto al voice-over. Inoltre l'audio ha volume medio dei primi 5 secondi a -20 dB, sotto il riferimento dell'apertura, e la didascalia dichiara 'Voce generata con IA' mentre il brief indica voce true: informazione coerente ma da tenere presente.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (accensione di Atri) e allineare l'istante dell'accensione alla frase 1; valutare un aumento del volume nei primi 5 secondi per portarlo verso l'obiettivo di apertura.",
+    "idea": "Aggiungere nel dato mappa anche il numero di luci totali del giorno nella scena finale, così la chiusura 'Atri si è accesa' può mostrare il contatore reale."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:28+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il copione al secondo 2 invita a commentare città e nome, ma la fascia in sovrimpressione dice «Commenta città e nome del tuo animale», mentre la didascalia chiede esplicitamente «Treviso, Luna, cane» come esempio: la formulazione del CTA è diversa tra voce, fascia e didascalia. Inoltre la trascrizi",
+   "dati": {
+    "controllato": "Ho verificato la mia mansione sulle risposte ai commenti: coerenza tra copione, didascalia e dati della mappa (Atri, coordinate, luce accesa in scena 0), e il CTA per i commenti.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Il copione al secondo 2 invita a commentare città e nome, ma la fascia in sovrimpressione dice «Commenta città e nome del tuo animale», mentre la didascalia chiede esplicitamente «Treviso, Luna, cane» come esempio: la formulazione del CTA è diversa tra voce, fascia e didascalia. Inoltre la trascrizione dice «Atri si è accesa» mentre il dato di scena 0 segna la luce 'spenta all'inizio della scena, si accende': è coerente, ma va verificato che l'accensione avvenga effettivamente al momento della frase. Infine, nei dati non compaiono le scene dal secondo (campi null), quindi non posso confermare la sincronia tra frasi e fotogrammi.",
+    "correzione": "Uniformare il CTA su voce, fascia e didascalia (es. «Commenta città e nome del tuo animale») e fornire i tempi scena_dal_secondo/scena_al_secondo per verificare che l'accensione di Atri coincida con la frase al secondo 1–2.",
+    "idea": "Un reel che mostri un esempio di commento reale (città + nome) accanto alla luce che si accende, così il CTA diventa visivo e più facile da seguire."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:29+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Le scene della mappa non hanno tempi assegnati (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile quando la luce di Atri si accende nel reel. Inoltre la frase 'Ogni animale può accendere la sua città' compare nella trascrizione ma il copione la lega alla scena 'commento', se",
+   "dati": {
+    "controllato": "Ho verificato l'audio (LUFS, picco, silenzi), la corrispondenza tra trascrizione, scene e secondi, le coordinate e i dati della mappa per Atri e la didascalia rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Le scene della mappa non hanno tempi assegnati (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile quando la luce di Atri si accende nel reel. Inoltre la frase 'Ogni animale può accendere la sua città' compare nella trascrizione ma il copione la lega alla scena 'commento', senza un riferimento temporale preciso. Nei dati l'audio è a -14.9 LUFS e il picco a -0.9 dBFS, quindi è nei limiti, ma il volume medio dei primi 5 secondi (-20 dB) è basso rispetto al resto e potrebbe far perdere l'apertura.",
+    "correzione": "Assegnare a ogni scena i secondi di inizio e fine (es. scena 0 'luce' dal secondo 0 al 9, scena 1 'commento' dal 9 al 14, scena 'chiusura' dal 14 al 19.2) e allineare la frase 'Poi Mia ha acceso...' alla comparsa della luce. Alzare leggermente il volume dei primi 5 secondi.",
+    "idea": "Aggiungere nei dati un campo con il secondo esatto in cui ogni luce si accende, così il reel può sincronizzare l'animazione sulla mappa con la voce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:30+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato della scena 0 indica che la luce di Atri si accende nella scena 0, ma i campi scena_dal_secondo e scena_al_secondo sono null: non si può verificare a quale secondo il reel mostra l'accensione, né collegare la frase 1 («Poi Mia ha acceso la prima luce di Atri!») alla scena corretta. Inoltre l",
+   "dati": {
+    "controllato": "Scena della luce di Atri nel reel: testo di apertura, dati della mappa (Atri acceso, Mia prima per data), audio (-14,9 LUFS, picco -0,9 dBFS, nessun silenzio), didascalia e fascia commento, controllo delle scene sulla mappa e sui secondi.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il dato della scena 0 indica che la luce di Atri si accende nella scena 0, ma i campi scena_dal_secondo e scena_al_secondo sono null: non si può verificare a quale secondo il reel mostra l'accensione, né collegare la frase 1 («Poi Mia ha acceso la prima luce di Atri!») alla scena corretta. Inoltre la didascalia dice «Domani la prossima!» e la voce dice «per vedere la prossima luce», promesse che non trovo nei materiali come dato verificato. Anche il numero di follower e luci del progetto (1723 e 2766) non è verificabile dal mio reparto e non va usato come fatto nella didascalia.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (accensione di Atri) e allineare la frase 1 a quella finestra temporale. Togliere o confermare «Domani la prossima!». Verificare che «Atri» e «Mia» corrispondano alla mappa prima della pubblicazione.",
+    "idea": "Per i prossimi reel, indicare sempre nei dati di mappa l'intervallo in secondi di ogni accensione, così la voce e la luce restano sincronizzate e il controllo è automatico."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:31+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Atri si è accesa' e la luce di Atri compaiono senza una scena nei dati, e la trascrizione dice 'Ad Atri era tutto spento' mentre la mappa mostra 'Mia' già accesa alla scena 1; inoltre la fascia chiede di commentare con città e nome dell'animale, ma nel copione l'invito a commentare arriva ",
+   "dati": {
+    "controllato": "Copione, trascrizione, secondi e comune della scena di accensione (Atri) nei dati mappa, didascalia e fascia, audio, coerenza dei numeri del progetto, nel reparto Community.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La frase 'Atri si è accesa' e la luce di Atri compaiono senza una scena nei dati, e la trascrizione dice 'Ad Atri era tutto spento' mentre la mappa mostra 'Mia' già accesa alla scena 1; inoltre la fascia chiede di commentare con città e nome dell'animale, ma nel copione l'invito a commentare arriva solo alla frase 2 (secondi di scena 'commento' non indicati, scena_dal_secondo null per tutte le scene). I secondi di inizio e fine scena sono null, quindi non è verificabile dove cade ogni frase. Il dato 'luci_li_oggi: 3' e le tre animali di Atri sono coerenti con la didascalia solo se Ellie e Terremoto sono già accese, cosa non chiara.",
+    "correzione": "Valorizzare scena_dal_secondo e scena_al_secondo per la scena 0 (luce) e 1 (Mia), indicare il secondo in cui parte la frase 'commenta città e nome', e verificare che 'luci_li_oggi: 3' corrisponda alle luci effettivamente accese ad Atri; chiarire se la didascalia (che nomina solo Mia) è coerente con i tre animali elencati.",
+    "idea": "Aggiungere a ogni reel un controllo automatico che confronti il numero di luci del comune nei dati mappa con il numero citato nella didascalia, e usare un overlay testuale della città sul frame di accensione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:31+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella scena 0 la trascrizione dice «Ad Atri era tutto spento» e «Poi Mia ha acceso la prima luce» ma la scena 0 è indicata come «luce spenta all'inizio della scena, si accende» senza tempi (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile in quale secondo l'accensione avvie",
+   "dati": {
+    "controllato": "Ho verificato la sincronia tra trascrizione, scene e dati della mappa, le coordinate e il comune di Atri, la didascalia e la fascia, e le misure audio rispetto all'obiettivo (-14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nella scena 0 la trascrizione dice «Ad Atri era tutto spento» e «Poi Mia ha acceso la prima luce» ma la scena 0 è indicata come «luce spenta all'inizio della scena, si accende» senza tempi (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile in quale secondo l'accensione avviene. Inoltre la fascia di commento compare nella trascrizione ma non ha un tempo assegnato. L'audio è a -20 dB nei primi 5 secondi, molto più basso dell'obiettivo: l'apertura risulta debole rispetto al resto. Il conteggio dei follower nei dati è 1723 ma i numeri per 1000 sono tutti null, quindi nessuna proporzione è verificabile.",
+    "correzione": "Assegnare ai campi scena_dal_secondo e scena_al_secondo della scena 0 e 1 e dell'eventuale fascia i secondi reali (es. accensione intorno al secondo 3-4, fascia nei secondi finali), e alzare il volume dei primi 5 secondi verso l'obiettivo di -14 LUFS senza superare -1 dBFS di picco.",
+    "idea": "Per i prossimi reel aggiungere sempre i tempi di scena nei dati della mappa e calcolare follower ogni 1000 così da confrontare davvero i formati."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:32+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'scena_dal_secondo' e 'scena_al_secondo' è null per entrambe le scene, quindi non è verificabile in quale secondo compare la fascia 'Commenta città e nome' né l'accensione della luce di Atri. Inoltre la didascalia non ha il 'Fai una luce' o link in bio coerente con la fascia? (link in bio è ",
+   "dati": {
+    "controllato": "Fascia 'commenta città e nome' e coerenza tra trascrizione, scene, coordinate di Atri e didascalia del reel prima_luce.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Il dato 'scena_dal_secondo' e 'scena_al_secondo' è null per entrambe le scene, quindi non è verificabile in quale secondo compare la fascia 'Commenta città e nome' né l'accensione della luce di Atri. Inoltre la didascalia non ha il 'Fai una luce' o link in bio coerente con la fascia? (link in bio è citato, ok). La frase 'Atri si è accesa' compare nella trascrizione ma non è agganciata a un intervallo di secondi.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per ogni scena (es. scena luce 0–9 s, commento 9–14 s, chiusura 14–19.2 s) e mettere la fascia 'Commenta città e nome' esattamente sui secondi in cui la frase 2 viene pronunciata. Verificare che la fascia sia visibile per tutta la frase.",
+    "idea": "Aggiungere al brief un campo obbligatorio con i secondi di ogni scena, così la fascia di invito al commento è sempre sincronizzata con la voce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:33+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Poi Mia ha acceso la prima luce di Atri!» al secondo 1, ma nei dati mappa la scena 0 indica che la luce si accende senza un orario preciso (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificato il momento in cui la luce si accende sulla mappa. Inoltre l'audio risu",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (Atri, coordinate, luce accesa), misure audio, didascalia e numeri del progetto per il reel prima_luce di Atri.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il copione dice «Poi Mia ha acceso la prima luce di Atri!» al secondo 1, ma nei dati mappa la scena 0 indica che la luce si accende senza un orario preciso (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificato il momento in cui la luce si accende sulla mappa. Inoltre l'audio risulta a -14.9 LUFS con picco -0.9 dBFS: il picco è sopra la soglia di -1 dBFS indicata come obiettivo. La didascalia promette «ogni giorno una nuova prima luce» e «domani la prossima», impegno non verificabile dai materiali.",
+    "correzione": "Valorizzare nei dati mappa i secondi di accensione della luce di Atri (scena 0) e allinearli alla frase al secondo 1. Abbassare il picco audio sotto -1 dBFS (ad esempio con un limiter o riducendo il guadagno di circa 0,2 dB). Rendere la promessa «ogni giorno» coerente con il ritmo reale di pubblicazione o formularla in modo più generico.",
+    "idea": "Aggiungere in ogni reel un secondo di 'prima luce' mostrato a schermo con il numero progressivo delle luci del progetto (es. «luce n. 2767»), così il dato 2766 diventa visibile e verificabile dal pubblico."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:34+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Ad Atri era tutto spento» e «Poi Mia ha acceso la prima luce», ma i dati di scena indicano che la luce di Atri è spenta solo all'inizio della scena 0 e si accende nel corso del reel, senza un secondo preciso in cui avviene. Inoltre la scena 1 dice «già accesa», quindi l'accensi",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa (scena 0 e 1, coordinate di Atri, luce accesa), la trascrizione e i secondi, le misure audio (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio), la didascalia e il numero di luci e follower.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "La trascrizione dice «Ad Atri era tutto spento» e «Poi Mia ha acceso la prima luce», ma i dati di scena indicano che la luce di Atri è spenta solo all'inizio della scena 0 e si accende nel corso del reel, senza un secondo preciso in cui avviene. Inoltre la scena 1 dice «già accesa», quindi l'accensione avviene prima del secondo 0.5 o è sfalsata rispetto alla voce. Non c'è un tempo di accensione verificabile nei materiali (scena_dal_secondo e scena_al_secondo sono null), quindi non posso confermare che la voce sia sincronizzata con l'accensione reale della luce.",
+    "correzione": "Associare l'accensione a un secondo preciso nei dati della mappa (scena_dal_secondo / scena_al_secondo) e allineare la frase «Poi Mia ha acceso la prima luce» a quel momento; in alternativa, verificare a mano la sincronia sul fotogramma dell'accensione.",
+    "idea": "Per i prossimi reel, indicare sempre nei dati i secondi di inizio e fine di ogni scena, così la sincronia tra voce e luce si può controllare automaticamente."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:35+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La mappa mostra la prima luce di Atri come 'spenta all'inizio della scena, si accende' ma non ci sono secondi di inizio e fine della scena (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare in quale momento del reel la luce si accende rispetto alla frase 'Poi Mia ha acces",
+   "dati": {
+    "controllato": "Ho verificato la mansione Community: copione, sincronia della trascrizione coi secondi, coordinate e comune sulla mappa, fascia di commento, didascalia e dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La mappa mostra la prima luce di Atri come 'spenta all'inizio della scena, si accende' ma non ci sono secondi di inizio e fine della scena (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare in quale momento del reel la luce si accende rispetto alla frase 'Poi Mia ha acceso la prima luce di Atri!'. Inoltre la didascalia dice 'Domani la prossima!' e la trascrizione dice 'Segui Zampe d'Italia per vedere la prossima luce': promesse che la mia mansione non può verificare. Infine la didascalia è priva di indicazioni sul fatto che la voce è generata con IA, ma questo è dichiarato correttamente ('Voce generata con IA.'), quindi non è un problema.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (ad esempio la luce si accende intorno alla frase 'Poi Mia ha acceso...', circa 6-8 s), in modo che il montaggio sia allineato alla trascrizione. Verificare che la promessa 'Domani la prossima!' sia confermata dal calendario delle prossime luci prima di pubblicare.",
+    "idea": "Aggiungere per ogni reel i secondi di accensione della luce nei dati della mappa, così la sincronia tra voce, mappa e fascia di commento si controlla automaticamente."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:35+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Poi Mia ha acceso la prima luce di Atri!' (frase 1) nella trascrizione non ha un punto di sincronizzazione con la scena: i dati della mappa indicano che la scena 0 ('luce spenta all'inizio della scena, si accende') non ha secondi di inizio e fine (scena_dal_secondo e scena_al_secondo sono ",
+   "dati": {
+    "controllato": "Ho verificato la coerenza tra copione, trascrizione coi secondi, dati della mappa (Atri, coordinate, scena della prima luce), misure audio e didascalia del reel 'prima_luce'.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La frase 'Poi Mia ha acceso la prima luce di Atri!' (frase 1) nella trascrizione non ha un punto di sincronizzazione con la scena: i dati della mappa indicano che la scena 0 ('luce spenta all'inizio della scena, si accende') non ha secondi di inizio e fine (scena_dal_secondo e scena_al_secondo sono null), quindi non è verificabile in quale secondo la luce si accende. Inoltre l'audio nei primi 5 secondi è a -20 dB medi, più basso dell'obiettivo di -14 LUFS, e la frase di apertura parte dopo quel tratto.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (la luce si accende durante la frase 1, circa al secondo 4-8 secondo la trascrizione) e verificare sul fotogramma che l'accensione coincida con 'acceso'. Valutare un leggero innalzamento del volume dei primi 5 secondi.",
+    "idea": "Per i prossimi reel della Coppa, indicare sempre nei dati della mappa i secondi esatti di inizio e fine di ogni scena luce, così che la sincronizzazione voce-accensione sia verificabile senza controllo manuale."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:36+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione manca il tempo: la frase 'Poi Mia ha acceso la prima luce di Atri!' è nella scena 'luce' senza un secondo di inizio e fine, e i dati mappa hanno scena_dal_secondo e scena_al_secondo a null, quindi non è verificabile quando la luce si accende rispetto alla voce. Inoltre la didascal",
+   "dati": {
+    "controllato": "Ho verificato la mappa (Atri, coordinate e luce accesa alla scena 0), la trascrizione con i secondi, la fascia, la didascalia e le misure audio (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella trascrizione manca il tempo: la frase 'Poi Mia ha acceso la prima luce di Atri!' è nella scena 'luce' senza un secondo di inizio e fine, e i dati mappa hanno scena_dal_secondo e scena_al_secondo a null, quindi non è verificabile quando la luce si accende rispetto alla voce. Inoltre la didascalia dichiara 'Voce generata con IA' ma il brief non lo esplicita nei frasi e la fascia è in alto, da controllare sulla coerenza con la trascrizione.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 e 1 e allineare l'accensione della luce di Atri con la frase 'Poi Mia ha acceso...' (circa il secondo 3-6 dei 19.2 s), poi verificare che la fascia compaia durante la frase 2.",
+    "idea": "Aggiungere un contatore 'luci accese oggi' in sovrimpressione (il dato luci_li_oggi è già disponibile) per rendere visibile la crescita della mappa."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:39+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Nei dati la scena 0 e la scena 1 hanno scena_dal_secondo e scena_al_secondo entrambi null, quindi non è possibile collegare l'accensione della luce (scena 0) e la frase 'Poi Mia ha acceso la prima luce' a un momento preciso del video. Inoltre l'audio è a -14.9 LUFS con picco a -0.9 dBFS, cioè entro ",
+   "dati": {
+    "controllato": "Ho verificato la mappa (coordinate e luce di Atri che si accende in scena 0), la trascrizione con i secondi, la didascalia e le misure audio del reel 'prima_luce'.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Nei dati la scena 0 e la scena 1 hanno scena_dal_secondo e scena_al_secondo entrambi null, quindi non è possibile collegare l'accensione della luce (scena 0) e la frase 'Poi Mia ha acceso la prima luce' a un momento preciso del video. Inoltre l'audio è a -14.9 LUFS con picco a -0.9 dBFS, cioè entro l'obiettivo (-14 LUFS, picco sotto -1 dBFS) per poco: il picco -0.9 dBFS non rispetta la soglia sotto -1 dBFS. Il volume medio dei primi 5 secondi (-20.0 dB) è basso rispetto al resto, ma non ci sono silenzi lunghi.",
+    "correzione": "Impostare scena_dal_secondo e scena_al_secondo per le scene 0 e 1 in modo che l'accensione coincida con la frase 'Poi Mia ha acceso la prima luce'; abbassare il picco audio sotto -1 dBFS (es. limiter a -1.5 dBFS) e rivalutare il volume iniziale.",
+    "idea": "Aggiungere un contatore di luci accese nella fascia finale del reel, così da rendere visibile la crescita della mappa a ogni nuova prima luce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:39+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Le scene della mappa non hanno tempi (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare che la luce di Atri si accenda durante la frase 'Poi Mia ha acceso la prima luce di Atri!'. Inoltre l'audio è a -14.9 LUFS con picco -0.9 dBFS, quindi il picco supera di poco la soglia",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa, la trascrizione con i secondi, la sincronia tra luce e frasi, la fascia di commento, la didascalia e le misure audio del reel Prima Luce di Atri.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Le scene della mappa non hanno tempi (scena_dal_secondo e scena_al_secondo sono null), quindi non si può verificare che la luce di Atri si accenda durante la frase 'Poi Mia ha acceso la prima luce di Atri!'. Inoltre l'audio è a -14.9 LUFS con picco -0.9 dBFS, quindi il picco supera di poco la soglia di -1 dBFS indicata come obiettivo, e il volume medio dei primi 5 secondi è -20 dB, più basso del resto. Infine la trascrizione attribuisce a 'Atri si è accesa' una chiusura che non corrisponde a una scena marcata nel brief.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (luce di Atri) e la scena 1, allineandole alle frasi 0 e 1 del copione; abbassare leggermente il guadagno finale per portare il picco sotto -1 dBFS; alzare il volume dei primi 5 secondi in modo da avvicinarlo al resto del reel.",
+    "idea": "Aggiungere nei dati della mappa i tempi di ogni scena fin dalla fase di montaggio, così il controllo di sincronia può essere fatto automaticamente per ogni reel della serie Prima Luce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:39+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Nella mappa la scena 0 ('La prima luce di Atri') ha scena_dal_secondo e scena_al_secondo null, quindi non è possibile verificare in quali secondi la luce si accende. Inoltre la frase 1 ('Poi Mia ha acceso la prima luce di Atri!') dovrebbe coincidere con l'accensione, ma senza i tempi non è confermab",
+   "dati": {
+    "controllato": "Ho verificato la sincronia tra trascrizione, scene della mappa, fascia, didascalia e misure audio del reel 'prima_luce' di Atri.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella mappa la scena 0 ('La prima luce di Atri') ha scena_dal_secondo e scena_al_secondo null, quindi non è possibile verificare in quali secondi la luce si accende. Inoltre la frase 1 ('Poi Mia ha acceso la prima luce di Atri!') dovrebbe coincidere con l'accensione, ma senza i tempi non è confermabile. Anche la scena 1 ('Mia') risulta senza intervallo temporale. Per l'audio: LUFS -14.9 e picco -0.9 dBFS sono nei limiti, ma il volume medio dei primi 5 s (-20 dB) è più basso del resto, quindi l'apertura potrebbe risultare debole.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per entrambe le scene della mappa, facendo coincidere l'accensione della luce di Atri con la frase 1 (intorno al secondo in cui viene detto 'Poi Mia ha acceso'). Verificare che la luce resti accesa dopo quel punto. Alzare leggermente il livello dei primi 5 secondi.",
+    "idea": "Inserire nella fascia o nella didascalia il nome del comune come testo a schermo nel momento esatto dell'accensione, così chi guarda senza audio capisce subito quale luce si è accesa."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:39+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La scena 0 mostra la luce di Atri come 'spenta all'inizio della scena, si accende', ma i campi scena_dal_secondo e scena_al_secondo sono null, quindi non si può verificare in quale secondo esatto avviene l'accensione né se la frase 'Poi Mia ha acceso la prima luce' è sincronizzata con il punto sulla",
+   "dati": {
+    "controllato": "Ho verificato i punti e i codici del reel: coordinate di Atri, scena 0 e scena 1 con la luce accesa, frasi e secondi della trascrizione, fascia di commento, misure audio e corrispondenza delle etichette nei dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La scena 0 mostra la luce di Atri come 'spenta all'inizio della scena, si accende', ma i campi scena_dal_secondo e scena_al_secondo sono null, quindi non si può verificare in quale secondo esatto avviene l'accensione né se la frase 'Poi Mia ha acceso la prima luce' è sincronizzata con il punto sulla mappa. Inoltre nella scena 1 la luce è già accesa, mentre la frase 'Atri si è accesa' della chiusura non ha un riferimento temporale. Le misure audio rilevano -14.9 LUFS e picco -0.9 dBFS, quindi il picco sta sopra l'obiettivo di -1 dBFS (meno di -1) e il volume medio dei primi 5 secondi (-20 dB) risulta più basso dell'obiettivo di -14 LUFS; non sono registrati silenzi lunghi.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (e per la scena 1) in modo che l'accensione della luce di Atri coincida con la frase 'Poi Mia ha acceso la prima luce di Atri!'; abbassare il picco audio a meno di -1 dBFS (per esempio limitando di circa 0.5 dB) e verificare che il livello dei primi 5 secondi sia coerente con l'obiettivo.",
+    "idea": "Aggiungere un campo di secondo esatto per ogni accensione nella mappa, così ogni reel 'prima luce' può essere verificato automaticamente con la trascrizione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:41+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase «Atri si è accesa» e il titolo «La prima luce di Atri» sono corretti, ma la didascalia dice «Domani la prossima!» e il copione promette «la prossima luce» senza che i dati confermino una luce programmata per domani: è un impegno non verificato. Inoltre nei dati di Atri compaiono tre animali",
+   "dati": {
+    "controllato": "Ho verificato i trofei e l'albo: il riferimento a Mia come prima luce di Atri corrisponde ai dati della mappa (scena 0-1, comune Atri, luci_li_oggi 3), il nome e l'handle sono coerenti con il copione e la didascalia, e i numeri del progetto (1723 follower, 2766 luci, coppa turno 1) non sono usati in modo errato.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La frase «Atri si è accesa» e il titolo «La prima luce di Atri» sono corretti, ma la didascalia dice «Domani la prossima!» e il copione promette «la prossima luce» senza che i dati confermino una luce programmata per domani: è un impegno non verificato. Inoltre nei dati di Atri compaiono tre animali (Mia, Ellie, Terremoto) già arrivati oggi, mentre il reel li presenta come un'unica prima luce senza citare gli altri due, cosa che nel trofeo dell'albo andrebbe chiarita. Il campo scena_dal_secondo/scena_al_secondo è null, quindi non posso assegnare un secondo preciso al momento in cui la luce si accende.",
+    "correzione": "Togliere «Domani la prossima!» dalla didascalia o sostituirlo con una formula generica («Presto la prossima prima luce!»); precisare nell'albo che Atri ha tre luci odierne o citare Mia come prima per orario; fissare i secondi di accensione della luce nella trascrizione.",
+    "idea": "Creare un formato «albo» che mostri in sequenza gli animali di ogni comune, così ogni prima luce ha il suo trofeo verificabile con data e ordine di arrivo."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:41+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Nei dati della mappa la scena 0 ha 'scena_dal_secondo' e 'scena_al_secondo' entrambi null, quindi non è verificabile in quale secondo esatto si accende la luce di Atri; la frase 'Poi Mia ha acceso la prima luce di Atri!' (frase 1) dovrebbe coincidere con l'accensione, ma nei materiali non c'è la con",
+   "dati": {
+    "controllato": "Ho verificato i secondi di apertura e il verdetto della scena 0 (la luce di Atri che si accende) rispetto a trascrizione, dati mappa, copione e audio.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nei dati della mappa la scena 0 ha 'scena_dal_secondo' e 'scena_al_secondo' entrambi null, quindi non è verificabile in quale secondo esatto si accende la luce di Atri; la frase 'Poi Mia ha acceso la prima luce di Atri!' (frase 1) dovrebbe coincidere con l'accensione, ma nei materiali non c'è la conferma. Inoltre la voce dice 'Ogni animale può accendere la sua città' come scena 'commento', mentre la fascia chiede di commentare: coerente. Audio: -14.9 LUFS e picco -0.9 dBFS rispettano l'obiettivo, ma il volume medio dei primi 5 secondi è -20 dB, più basso del resto del reel.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (es. attorno al secondo 1-2, quando parte 'Poi Mia ha acceso') e verificare che l'accensione cada lì; alzare il volume dei primi 5 secondi di circa 4-6 dB per portarlo vicino a -14/-15 LUFS.",
+    "idea": "Aggiungere per ogni reel di 'prima luce' una scena con il conteggio delle luci del giorno (es. 'Oggi 3 luci') direttamente sulla mappa, così il pubblico vede la crescita a ogni formato."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:41+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Nei dati mappa la scena 0 ha 'scena_dal_secondo' e 'scena_al_secondo' vuoti (null), quindi non è possibile associare la frase 'Atri era tutto spento' e 'Poi Mia ha acceso la prima luce' ai secondi del reel: la sincronizzazione luce-voce non è verificabile. Inoltre la trascrizione non ha i secondi pe",
+   "dati": {
+    "controllato": "Ho verificato la mappa (scene e coordinate di Atri, luce accesa dalla scena 0), la trascrizione con i secondi, l'audio (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e la coerenza tra copione, didascalia e fascia commento.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Nei dati mappa la scena 0 ha 'scena_dal_secondo' e 'scena_al_secondo' vuoti (null), quindi non è possibile associare la frase 'Atri era tutto spento' e 'Poi Mia ha acceso la prima luce' ai secondi del reel: la sincronizzazione luce-voce non è verificabile. Inoltre la trascrizione non ha i secondi per frase, e i fotogrammi campionati non indicano quando la luce si accende.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (la luce di Atri si accende dopo la frase 'Poi Mia ha acceso...') e aggiungere i tempi di inizio e fine di ciascuna frase del brief prima della pubblicazione.",
+    "idea": "Inserire nel reel un contatore del numero di luci accese del giorno (ora 3) mostrato a schermo al momento dell'accensione, così il pubblico vede crescere la mappa."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:42+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il brief indica la scena 'commento' (frase 2, 'Ogni animale può accendere la sua città: commenta città e nome') ma nei dati_mappa non ci sono secondi di scena (scena_dal_secondo e scena_al_secondo sono null), quindi non si può sapere con certezza in quale istante compare il invito al commento. Inolt",
+   "dati": {
+    "controllato": "Ho verificato la mappa dei dati (scena 0 e 1 su Atri, coordinate coerenti), la trascrizione coi secondi, la didascalia e le misure audio del reel, confrontandoli con l'obiettivo di crescita.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Il brief indica la scena 'commento' (frase 2, 'Ogni animale può accendere la sua città: commenta città e nome') ma nei dati_mappa non ci sono secondi di scena (scena_dal_secondo e scena_al_secondo sono null), quindi non si può sapere con certezza in quale istante compare il invito al commento. Inoltre la fascia 'Commenta città e nome del tuo animale' e l'invito in didascalia dovrebbero coincidere con quel momento per massimizzare la risposta; i fotogrammi vanno da 0.5 a 19 s senza marcatori. Segnalo anche che il picco audio è -0.9 dBFS, appena sopra la soglia consigliata di -1 dBFS, e che la didascalia dice 'Domani la prossima!' senza verifica nei materiali.",
+    "correzione": "Valorizzare scena_dal_secondo e scena_al_secondo per la scena 'commento' (es. attorno a 9-13 s, a seconda della frase), allineare la fascia di testo a quel tratto, abbassare il picco audio sotto -1 dBFS (ad esempio di 0.5 dB) mantenendo -14 LUFS, e confermare la promessa 'Domani la prossima!' prima della pubblicazione.",
+    "idea": "Per i prossimi reel, inserire un invito al commento con la città dell'utente già mostrata sulla mappa, così che chi commenta veda subito la propria luce accendersi e tornino a seguire."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:44+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il gancio della fascia «Commenta città e nome del tuo animale» appare solo nella chiusura, ma la frase 2 («commenta città e nome») parte senza che la fascia sia ancora visibile nei primi secondi; inoltre la didascalia cita «Domani la prossima!» e «ogni giorno raccontiamo una nuova prima luce», prome",
+   "dati": {
+    "controllato": "Gancio (scena 0-19s): trascrizione, didascalia e fascia di commento rispetto ai dati della mappa su Atri e ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Il gancio della fascia «Commenta città e nome del tuo animale» appare solo nella chiusura, ma la frase 2 («commenta città e nome») parte senza che la fascia sia ancora visibile nei primi secondi; inoltre la didascalia cita «Domani la prossima!» e «ogni giorno raccontiamo una nuova prima luce», promesse non verificabili nei materiali. La trascrizione dice «Mia ha acceso la prima luce» mentre i dati indicano che la luce di Atri era già accesa in scena 1: il racconto dell'accensione in diretta non è documentato nei dati.",
+    "correzione": "Far comparire la fascia di commento già dal secondo 9 (inizio frase 2) e allinearla alla frase; rimuovere «Domani la prossima!» e «ogni giorno» salvo conferma di un calendario reale; riformulare «ha acceso» in «ha acceso la prima luce di Atri» solo se confermato dai dati di accensione.",
+    "idea": "Un gancio fisso con la domanda «Il tuo comune è al buio?» già nei primi 3 secondi, dato che i reel con più commenti (fondatore, re) hanno tratto più interazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:45+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il brief contiene la frase «Ogni animale può accendere la sua città: commenta città e nome», e la fascia chiede di commentare città e nome, ma nel reel non c'è indicazione temporale precisa di quando la fascia compare. Inoltre la trascrizione dice «Ad Atri era tutto spento» mentre la mappa mostra At",
+   "dati": {
+    "controllato": "Ho verificato i secondi della trascrizione e delle scene, la coerenza tra fascia, didascalia e copione, e i dati della mappa per Atri.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Il brief contiene la frase «Ogni animale può accendere la sua città: commenta città e nome», e la fascia chiede di commentare città e nome, ma nel reel non c'è indicazione temporale precisa di quando la fascia compare. Inoltre la trascrizione dice «Ad Atri era tutto spento» mentre la mappa mostra Atri già con tre luci ad oggi, quindi la scena 0 descrive uno stato che al momento del reel non corrisponde ai dati (la luce di Mia è indicata come 'si accende' ma è la prima luce del giorno, coerente solo se il video mostra il momento dell'accensione). Il dato da correggere è quindi la frase «Ad Atri era tutto spento»: i dati dicono che al 2026-11-07 ad Atri ci sono tre animali accesi, quindi la prima luce è del primo animale solo in ordine cronologico. Verificare che l'affermazione sia riferita al momento dell'accensione.",
+    "correzione": "Confermare che la scena 0 mostra Atri spenta prima dell'accensione di Mia, altrimenti riformulare la frase in «Ad Atri si è accesa la prima luce» e ancorare la fascia 'commenta città e nome' alla scena di chiusura, non al secondo 2 indicato come sovrapposto alla frase di apertura.",
+    "idea": "Per i prossimi reel usare un numero di luci del giorno dai dati reali (es. «oggi sono 3 le luci») per dare un motivo concreto di seguire."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:45+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel è di 19.2 s e la trascrizione ha 4 frasi, ma i campi scena_dal_secondo e scena_al_secondo sono null per tutte le scene, quindi non è possibile far corrispondere la frase 'Poi Mia ha acceso la prima luce di Atri!' al momento in cui la luce si accende sulla mappa. Inoltre la didascalia dice 'D",
+   "dati": {
+    "controllato": "Ho verificato i secondi della trascrizione, la scena della luce di Atri sulla mappa, la coerenza tra copione, didascalia e dati audio (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il reel è di 19.2 s e la trascrizione ha 4 frasi, ma i campi scena_dal_secondo e scena_al_secondo sono null per tutte le scene, quindi non è possibile far corrispondere la frase 'Poi Mia ha acceso la prima luce di Atri!' al momento in cui la luce si accende sulla mappa. Inoltre la didascalia dice 'Domani la prossima!', promessa che il materiale non può confermare. Il volume dei primi 5 s (-20 dB) è sotto il target di -14 LUFS, anche se il valore integrato è corretto.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 (accensione di Atri) e per la scena 1, allineando la frase 1 a quell'intervallo. Valutare di alzare il volume dei primi secondi. Rimuovere o verificare la promessa 'Domani la prossima!' prima della pubblicazione.",
+    "idea": "Aggiungere un contatore delle luci nel reel (ora 3 luci oggi) per rendere visibile la crescita del progetto."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:45+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel non ha un dato di crescita: follower_ogni_1000 è null per tutti i reel e manca il numero di follower prima e dopo la pubblicazione, quindi non si può misurare quanti follower ogni 1.000 account porti questo reel.",
+   "dati": {
+    "controllato": "Ho verificato la crescita dei follower nel reel 2026-11-07-1802-prima_luce: il materiale contiene solo il dato assoluto (1723 follower) e i reel recenti con follower_ogni_1000 sempre null, quindi non è calcolabile alcun tasso di crescita per questo reel.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Il reel non ha un dato di crescita: follower_ogni_1000 è null per tutti i reel e manca il numero di follower prima e dopo la pubblicazione, quindi non si può misurare quanti follower ogni 1.000 account porti questo reel.",
+    "correzione": "Registrare il conteggio dei follower prima e dopo il reel (con data e ora) e calcolare il valore come (nuovi follower / reach) * 1000 per ogni reel, compilando il campo follower_ogni_1000 prima di valutarlo.",
+    "idea": "Inserire nella didascalia un invito esplicito a seguire con una call to action che rimandi al profilo (es. «Segui per la prossima luce»), e confrontare il tasso di follower tra reel con e senza questo invito."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:47+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Poi Mia ha acceso la prima luce di Atri!' è nella scena 'luce' ma i dati di mappa dicono che la luce è 'spenta all'inizio della scena, si accende' e i secondi di scena sono null, quindi non si può confermare il momento dell'accensione. Inoltre la didascalia dichiara 'Voce generata con IA' ",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, coordinate e comune della mappa, misure audio, didascalia e dati del progetto, per la parte di crescita dei follower.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La frase 'Poi Mia ha acceso la prima luce di Atri!' è nella scena 'luce' ma i dati di mappa dicono che la luce è 'spenta all'inizio della scena, si accende' e i secondi di scena sono null, quindi non si può confermare il momento dell'accensione. Inoltre la didascalia dichiara 'Voce generata con IA' ma il materiale non chiarisce se la voce sia stata usata con questo rispetto. Le misure audio sono in linea con l'obiettivo (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio lungo), quindi quel punto è ok. Il dato di crescita più rilevante: su 1723 follower il reel 'fondatore' ha 811 views, ma la percentuale follower_ogni_1000 è null in tutti i reel, quindi non è possibile misurare la crescita reale per follower.",
+    "correzione": "Compilare i campi scena_dal_secondo e scena_al_secondo per la scena 0 e 1 così da agganciare la frase 'Poi Mia ha acceso...' al momento esatto dell'accensione; calcolare follower_ogni_1000 per ogni reel per misurare la crescita.",
+    "idea": "Ripetere il formato 'prima_luce' sul reel 'fondatore', che è quello con più views e condivisioni, usando un invito a commentare la città con il nome dell'animale."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:47+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Poi Mia ha acceso la prima luce di Atri!' è nel brief come scena 'luce', ma nei dati di mappa la scena 0 ('La prima luce di Atri', spenta all'inizio e che si accende) non ha scena_dal_secondo né scena_al_secondo (null): non si può verificare su quale secondo cada l'accensione. Inoltre l'au",
+   "dati": {
+    "controllato": "Sincronia copione/trascrizione coi secondi, coordinate e comune della scena di Atri sulla mappa, misure audio, didascalia e fascia di commento rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 5,
+    "problema": "La frase 'Poi Mia ha acceso la prima luce di Atri!' è nel brief come scena 'luce', ma nei dati di mappa la scena 0 ('La prima luce di Atri', spenta all'inizio e che si accende) non ha scena_dal_secondo né scena_al_secondo (null): non si può verificare su quale secondo cada l'accensione. Inoltre l'audio ha volume medio primi 5 s a -20 dB e nessun silenzio, ma la trascrizione non indica a che secondo parte la frase 'Atri si è accesa', quindi non posso confermare che la chiusura coincida con la luce accesa. La fascia di commento è testuale e coerente col copione.",
+    "correzione": "Impostare scena_dal_secondo e scena_al_secondo per la scena 0 (accensione di Atri) e la scena 1 (Mia), e allineare la frase 'Poi Mia ha acceso...' a quei secondi prima della pubblicazione. Il volume iniziale va verificato rispetto all'obiettivo di apertura.",
+    "idea": "Usare un numero di luci in aumento nella chiusura (es. 'Siamo a 2766 luci') per rafforzare il ritorno a seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:47+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Poi Mia ha acceso la prima luce di Atri!' è nel copione ma nei dati mappa non c'è alcuna indicazione di scena_dal_secondo né scena_al_secondo per la scena 0, quindi non è possibile verificare su quale fotogramma la luce si accende; la trascrizione inoltre non ha tempi per le frasi. Inoltre",
+   "dati": {
+    "controllato": "Ho verificato la mappa della scena 0 (Atri accesa, coordinate e nome comune coerenti), la trascrizione con i secondi e il copione, la didascalia e la fascia, l'audio, e la copertina che indica la stessa luce.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La frase 'Poi Mia ha acceso la prima luce di Atri!' è nel copione ma nei dati mappa non c'è alcuna indicazione di scena_dal_secondo né scena_al_secondo per la scena 0, quindi non è possibile verificare su quale fotogramma la luce si accende; la trascrizione inoltre non ha tempi per le frasi. Inoltre la scena 0 dice 'luce spenta all'inizio della scena, si accende' ma gli orari di inizio e fine non sono valorizzati, quindi non so se l'accensione cade entro il secondo 1 o più tardi.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 e i tempi delle quattro frasi nella trascrizione, così da allineare l'accensione di Atri alla frase 'Atri si è accesa' e alla frase 'Poi Mia ha acceso...'.",
+    "idea": "Per i prossimi reel, mostrare nella mappa il contatore delle luci del giorno (ora 3) in sovrimpressione per rendere visibile la crescita del progetto."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:48+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "I campi scena_dal_secondo e scena_al_secondo sono null per entrambe le scene, quindi non è possibile collocare nel reel il momento in cui la luce di Atri si accende. Inoltre la frase 1 («Poi Mia ha acceso la prima luce di Atri!») è sulla scena \"luce\" ma i dati mappa non indicano quando la luce cambi",
+   "dati": {
+    "controllato": "Ho verificato il secondo in cui la scena 0 (\"La prima luce di Atri\") diventa visibile nella trascrizione e nei dati mappa, la coerenza tra copione, didascalia e comune, e le misure audio rispetto all'obiettivo.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "I campi scena_dal_secondo e scena_al_secondo sono null per entrambe le scene, quindi non è possibile collocare nel reel il momento in cui la luce di Atri si accende. Inoltre la frase 1 («Poi Mia ha acceso la prima luce di Atri!») è sulla scena \"luce\" ma i dati mappa non indicano quando la luce cambia stato. Le misure audio sono nei valori (-14.9 LUFS, picco -0.9 dBFS, nessun silenzio) ma il volume medio dei primi 5 secondi è -20 dB, più basso dell'obiettivo di partenza che non è esplicitato in termini di apertura.",
+    "correzione": "Compilare scena_dal_secondo e scena_al_secondo per la scena 0 e la scena 1 con i secondi reali dalla timeline dei fotogrammi (0.5–19 s), in modo che la frase 1 coincida con l'accensione della luce. Verificare che il volume dei primi 5 secondi venga alzato in linea con l'obiettivo di apertura.",
+    "idea": "Aggiungere un tag della città o del nome dell'animale come testo a schermo nei primi 2 secondi, così chi arriva dal feed capisce subito di quale luce si parla."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:53+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il copione regge nei contenuti (Mia è la prima luce di Atri, i dati coincidono): si corregge solo la mancanza dei secondi di scena, che impedisce di verificare la sincronia tra voce e accensione, e si scartano le segnalazioni su grammatica e fascia, che non sono problemi reali.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "I campi scena_dal_secondo e scena_al_secondo sono null per le scene 0 e 1: non si può verificare che «Ad Atri era tutto spento» cada sulla mappa ancora spenta e che «Poi Mia ha acceso la prima luce di Atri!» cada sull'accensione. Segnalato da quasi tutti i reparti.",
+      "correzione": "Compilare i secondi reali di inizio e fine di ogni scena sui 19,2 s del reel e controllare sui fotogrammi che la luce di Atri sia spenta durante la frase 0 e si accenda durante la frase 1; far coincidere «Atri si è accesa» con la luce già visibile."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Nei primi 2 secondi non è confermato cosa compare a video: serve l'immagine della mappa con Atri spenta e il nome del comune leggibile subito.",
+      "correzione": "Mostrare dal primo secondo la mappa con Atri al buio e il nome «ATRI» in grande, poi verificare il tutto sui fotogrammi prima di pubblicare."
+     }
+    ],
+    "idea": "Aprire con il confronto «al buio» e «acceso» su Atri: la mappa spenta nei primi secondi, poi la luce di Mia che si accende in sincronia con la voce, con i secondi di ogni scena registrati nei dati."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:53+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è sostanzialmente a posto per audio, coordinate e comune; va solo completato il dato dei tempi di scena (null) per poter verificare la sincronia tra voce e accensione della luce di Atri, mentre i livelli audio e il picco non richiedono interventi.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1,
+      "problema": "Nei dati mappa le scene 0 e 1 hanno scena_dal_secondo e scena_al_secondo null: non è verificabile che l'accensione della luce di Atri coincida con la frase «Poi Mia ha acceso la prima luce di Atri!» (secondo 1 della trascrizione).",
+      "correzione": "Compilare scena_dal_secondo e scena_al_secondo per le scene 0 e 1 e controllare che l'accensione della luce cada sulla frase 1 della trascrizione."
+     }
+    ],
+    "idea": "Aggiungere ai dati della mappa i secondi di inizio e fine di ogni scena e dell'accensione di ogni luce, così la sincronia voce-luce si verifica automaticamente in tutti i prossimi reel prima_luce."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:53+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel va corretto solo sull'audio: il picco a -0,9 dBFS supera il limite di -1 dBFS e l'apertura (-20 dB nei primi 5 secondi) è troppo debole. Il sincronismo voce-luce non è verificabile perché mancano i secondi delle scene, quindi va controllato prima della pubblicazione.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": null,
+      "problema": "Il picco è a -0,9 dBFS, sopra il limite di -1 dBFS, con rischio di clipping. Il loudness integrato è -14,9 LUFS, leggermente sotto il target di -14.",
+      "correzione": "Applicare un limiter finale a -1,5 dBFS (true peak -1 dBTP), riportare il loudness integrato a circa -14 LUFS, riesportare e ricontrollare le misure."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il volume medio dei primi 5 secondi è -20 dB, molto più basso del resto del reel (-14,9 LUFS). L'apertura risulta debole e fa scorrere il pollice.",
+      "correzione": "Alzare voce e apertura di circa 5-6 dB nei primi 5 secondi, senza superare il picco di -1 dBFS (il limiter finale lo garantisce)."
+     },
+     {
+      "secondo": 1,
+      "problema": "Non è verificabile che la frase 'Poi Mia ha acceso la prima luce' cada quando la luce di Atri si accende. I dati mappa danno la luce spenta all'inizio della scena 0 e accesa nella scena 1, e i campi scena_dal_secondo e scena_al_secondo sono null.",
+      "correzione": "Compilare i secondi di inizio e fine delle scene, individuare il secondo esatto di accensione sui fotogrammi e allineare la frase a quel momento."
+     }
+    ],
+    "idea": "Mettere un limiter finale a -1,5 dBFS come ultimo passaggio della catena audio e aggiungere un breve 'clic' di accensione sincronizzato con la luce di Atri, per dare presa all'apertura senza superare il picco."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:53+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è sostanzialmente a posto: copertina e dati di Atri coincidono. L'unica correzione reale è tecnica: mancano i secondi di inizio e fine delle scene nei dati mappa, quindi non si può verificare che l'accensione della luce coincida con la frase 'Poi Mia ha acceso la prima luce di Atri!'. Il resto delle segnalazioni è speculativo o ripetuto e lo scarto.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "Nei dati mappa scena_dal_secondo e scena_al_secondo sono null per le scene 0 e 1, quindi non si può verificare in quale secondo la luce di Atri si accende né che coincida con la frase del copione. Le fasce e le etichette non hanno un tempo di apparizione definito.",
+      "correzione": "Valorizzare i secondi di inizio e fine di ogni scena nei dati mappa. Far coincidere l'accensione della luce con la frase 'Poi Mia ha acceso la prima luce di Atri!'. Definire anche l'intervallo di apparizione di etichetta del nome e fascia commento, tenendo la fascia sulla chiusura, dove c'è il comando 'Commenta', così non copre l'accensione."
+     },
+     {
+      "secondo": 0,
+      "problema": "La copertina è al secondo 0, ma la luce potrebbe non essere ancora accesa in quel fotogramma, mentre il titolo promette 'LA PRIMA LUCE'.",
+      "correzione": "Dopo aver fissato i tempi, verificare il fotogramma di copertina e, se la luce è spenta, usare un fotogramma con la luce già accesa."
+     },
+     {
+      "secondo": null,
+      "problema": "Il volume medio dei primi 5 secondi è -20 dB, troppo basso per un'apertura che deve catturare subito, anche se il valore complessivo di -14,9 LUFS è accettabile.",
+      "correzione": "Alzare di circa 5 dB i primi 5 secondi, mantenendo il picco sotto -1 dBFS."
+     }
+    ],
+    "idea": "Registrare nei dati mappa i secondi esatti di accensione di ogni luce, così la sincronia tra voce, luce sulla mappa e copertina si controlla automaticamente prima della pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:53+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è sostanzialmente pronto: i numeri e l'audio sono coerenti, quindi correggo solo la mancanza dei tempi delle scene (che impedisce di confermare la sincronia tra voce e accensione della luce) e il picco audio a -0.9 dBFS, e rimando alle prossime produzioni le altre richieste.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1,
+      "problema": "Nei dati mappa le scene hanno scena_dal_secondo e scena_al_secondo null, quindi non è verificabile che l'accensione della luce di Atri cada sulla frase 'Poi Mia ha acceso la prima luce di Atri!'. Segnalato da quasi tutto il reparto.",
+      "correzione": "Compilare i secondi di inizio e fine delle scene 0 e 1 e controllare nel video che la luce si accenda mentre Mia dice la frase 1; se non coincide, spostare l'accensione."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è -0.9 dBFS, sopra la soglia richiesta di -1 dBFS (segnalato da Upload sul sito e Registro pubblicazioni). Il livello integrato di -14.9 LUFS è invece accettabile.",
+      "correzione": "Applicare un limitatore o ridurre il guadagno di circa 0.3 dB per portare il picco sotto -1 dBFS, senza alzare il volume medio, e ricontrollare le misure."
+     }
+    ],
+    "idea": "Aggiungere al brief di ogni reel un campo fisso con i secondi di inizio e fine di ogni frase e scena (compresa la fascia di commento), così la sincronia voce-mappa-copertina si verifica senza lacune già in montaggio."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:54+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è sostanzialmente a posto: correggiamo solo la formulazione unica dell'invito a commentare e l'apertura audio troppo bassa, e verifichiamo a mano la sincronia tra voce e accensione di Atri; il resto non è importante o non è un problema reale.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 2,
+      "problema": "L'invito a commentare è formulato in modo diverso in voce, fascia in sovrimpressione e didascalia (la didascalia porta l'esempio «Treviso, Luna, cane»), il che confonde chi deve rispondere.",
+      "correzione": "Uniformare il CTA nei tre punti con la stessa frase, ad esempio «Commenta città e nome del tuo animale», mantenendo l'esempio solo se identico ovunque."
+     },
+     {
+      "secondo": 0,
+      "problema": "L'audio dei primi 5 secondi è intorno a -20 dB, nettamente più basso del resto (-14,9 LUFS): l'apertura risulta debole e rischia di far perdere chi guarda.",
+      "correzione": "Alzare il volume dei primi 5 secondi in linea col resto del reel, tenendo il picco sotto -1 dBFS (oggi è -0,9, quindi serve anche un limiter o circa 0,2 dB in meno di guadagno)."
+     },
+     {
+      "secondo": 1,
+      "problema": "I campi scena_dal_secondo e scena_al_secondo sono vuoti: non è verificabile che l'accensione della luce di Atri coincida con la frase «Poi Mia ha acceso la prima luce di Atri!».",
+      "correzione": "Guardare il montaggio sul fotogramma e confermare a mano che la luce si accenda sulla frase; se non coincide, spostare l'animazione o la frase. Poi compilare i tempi di scena nei dati."
+     }
+    ],
+    "idea": "Rendere visivo l'invito a commentare: mostrare a schermo un esempio reale di commento (città + nome) nel momento in cui la luce si accende, così il CTA è più chiaro e coincide con la scena."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:55+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare il reel 'prima_luce' di Atri si compilano i tempi della scena 0 e 1 e si verifica sul fotogramma che la luce si accenda su 'acceso'. Si corregge anche la didascalia 'Domani la prossima!' e si alza il volume dei primi 5 secondi.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": null,
+      "problema": "Nei dati della mappa scena_dal_secondo e scena_al_secondo sono null per la scena 0 (e la scena 1). Non è verificabile in quale secondo la luce di Atri si accende rispetto alla frase 'Poi Mia ha acceso la prima luce di Atri!'. Gli intervalli indicati dai colleghi (secondo 1-2, 3-6, 4-8) sono stime discordanti e non confermate.",
+      "correzione": "Compilare gli intervalli di scena 0 e 1 a partire dai secondi reali della trascrizione. Poi controllare sul fotogramma che l'accensione coincida con 'acceso' e che la luce resti accesa dopo."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il volume medio dei primi 5 secondi è -20 dB, nettamente più basso del resto del reel (-14.9 LUFS). L'apertura risulta debole, proprio dove si decide se lo spettatore resta.",
+      "correzione": "Alzare il livello dei primi 5 secondi di circa 4-5 dB, senza superare il picco di -1 dBFS."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è -0.9 dBFS, di poco sopra l'obiettivo (sotto -1 dBFS). Più colleghi lo hanno segnalato, altri lo hanno dato per nei limiti: lo scarto è minimo ma reale.",
+      "correzione": "Applicare un limiter a -1.5 dBFS sul master. Rimisurare dopo l'innalzamento dei primi 5 secondi."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia dice 'Domani la prossima!' ma nei dati non risulta nessuna luce programmata per domani. È una promessa non verificata.",
+      "correzione": "Sostituire con una formula generica, per esempio 'Presto la prossima prima luce!', oppure toglierla."
+     }
+    ],
+    "idea": "Aggiungere un contatore 'luci accese oggi' (ora 3, dal dato luci_li_oggi) a schermo nel momento esatto dell'accensione, così il pubblico vede crescere la mappa. Per i prossimi reel, inserire sempre nei dati della mappa i secondi di inizio e fine di ogni scena luce, così la sincronia si controlla senza verifica manuale."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:55+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è sostanzialmente pubblicabile: va corretta solo la promessa 'Domani la prossima!' (e 'ogni giorno'), non verificabile; il resto sono lacune di dati o dubbi non provati e per ora si lascia com'è.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": null,
+      "problema": "La didascalia promette 'Domani la prossima!' e 'ogni giorno raccontiamo una nuova prima luce' ma nei materiali non c'è alcun calendario che la confermi. Segnalato da più persone del reparto. Una promessa non mantenuta danneggia la fiducia di chi ci segue.",
+      "correzione": "Togliere 'Domani la prossima!' e 'ogni giorno' dalla didascalia, oppure tenerli solo dopo aver confermato un calendario reale di pubblicazione."
+     }
+    ],
+    "idea": "Mostrare nel reel il numero reale di luci accese (oggi 3 ad Atri) insieme all'invito a commentare città e nome dell'animale: dà un motivo concreto per seguire la pagina e si basa su dati veri. In parallelo, registrare i follower prima e dopo ogni reel per poter calcolare finalmente i follower ogni 1.000 account."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:56+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce senza revisione, come prima."
+  },
+  {
+   "t": "2026-11-07T23:16:56+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "prima_luce",
+     "id": "2026-11-07-1802-prima_luce",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Questa è l'Italia di notte. Ad Atri era tutto spento.",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Poi Mia ha acceso la prima luce di Atri!",
+       "scena": "luce"
+      },
+      {
+       "i": 2,
+       "testo": "Ogni animale può accendere la sua città: commenta città e nome.",
+       "scena": "commento"
+      },
+      {
+       "i": 3,
+       "testo": "Atri si è accesa. Segui Zampe d'Italia per vedere la prossima luce.",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": "reel/assets/thor-apertura.mp4",
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "✨ La prima luce di Atri è di Mia, di @julieta_negri._! 👑\n\nSu Zampe d'Italia ogni animale accende una luce nella sua città, sulla mappa dell'Italia di notte (link in bio).\n👇 Il tuo comune è ancora al buio? Commenta la tua città e il nome del tuo cane o gatto (per esempio «Treviso, Luna, cane»): si accende col tuo @.\n➕ Segui Zampe d'Italia: ogni giorno raccontiamo una nuova prima luce. Domani la prossima!\n\n🐾 In questo reel: @julieta_negri._\n\nVoce generata con IA.\n\n#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici ",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       13.9754,
+       42.5797
+      ],
+      "sopra": "LA PRIMA LUCE",
+      "grande": "di Atri",
+      "sotto": "Mia 👑"
+     }
+    }
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:59+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Chi ha un cane o un gatto e abita in un comune medio-piccolo d'Italia, come Atri, e ama vedere il proprio animale e la propria città valorizzati. Inoltre amici e conoscenti di Mia e dei proprietari che commentano già questi reel. · Gancio: Questa è l'Italia di notte. Ad Atri era tutto spento. (sulla mappa buia, poi la luce di Mia che si accende) · Motivo per seguire: Su Zampe d'Italia il tuo cane o gatto accende una luce nella tua città sulla mappa dell'Italia di notte, e ogni giorno ne nasce una nuova. · Chiusura: Atri si è accesa. Segui Zampe d'Italia per vedere la prossima luce.",
+   "dati": {
+    "pubblico": "Chi ha un cane o un gatto e abita in un comune medio-piccolo d'Italia, come Atri, e ama vedere il proprio animale e la propria città valorizzati. Inoltre amici e conoscenti di Mia e dei proprietari che commentano già questi reel.",
+    "gancio": "Questa è l'Italia di notte. Ad Atri era tutto spento. (sulla mappa buia, poi la luce di Mia che si accende)",
+    "motivo_per_seguire": "Su Zampe d'Italia il tuo cane o gatto accende una luce nella tua città sulla mappa dell'Italia di notte, e ogni giorno ne nasce una nuova.",
+    "chiusura": "Atri si è accesa. Segui Zampe d'Italia per vedere la prossima luce.",
+    "perche": "Chi non conosce il progetto capisce subito il gioco (una città buia che si accende) e vede cosa ci guadagna: la luce del proprio animale, con un motivo concreto per tornare."
+   }
+  },
+  {
+   "t": "2026-11-07T23:16:59+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "prima_luce",
+     "id": "2026-11-07-1802-prima_luce",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Questa è l'Italia di notte. Ad Atri era tutto spento.",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Poi Mia ha acceso la prima luce di Atri!",
+       "scena": "luce"
+      },
+      {
+       "i": 2,
+       "testo": "Ogni animale può accendere la sua città: commenta città e nome.",
+       "scena": "commento"
+      },
+      {
+       "i": 3,
+       "testo": "Atri si è accesa. Segui Zampe d'Italia per vedere la prossima luce.",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": "reel/assets/thor-apertura.mp4",
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "✨ La prima luce di Atri è di Mia, di @julieta_negri._! 👑\n\nSu Zampe d'Italia ogni animale accende una luce nella sua città, sulla mappa dell'Italia di notte (link in bio).\n👇 Il tuo comune è ancora al buio? Commenta la tua città e il nome del tuo cane o gatto (per esempio «Treviso, Luna, cane»): si accende col tuo @.\n➕ Segui Zampe d'Italia: ogni giorno raccontiamo una nuova prima luce. Domani la prossima!\n\n🐾 In questo reel: @julieta_negri._\n\nVoce generata con IA.\n\n#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici ",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       13.9754,
+       42.5797
+      ],
+      "sopra": "LA PRIMA LUCE",
+      "grande": "di Atri",
+      "sotto": "Mia 👑"
+     }
+    },
+    "mappa": [
+     {
+      "scena": 0,
+      "etichetta": "La prima luce di Atri",
+      "lat": 42.5797,
+      "lng": 13.9754,
+      "luce": "spenta all'inizio della scena, si accende",
+      "scena_dal_secondo": null,
+      "scena_al_secondo": null,
+      "comune_sulla_mappa": "Atri",
+      "animali_li_in_ordine_di_arrivo": [
+       "Mia (@julieta_negri._, 2026-11-07)",
+       "Ellie (@julieta_negri._, 2026-11-07)",
+       "Terremoto (@julieta_negri._, 2026-11-07)"
+      ],
+      "luci_li_oggi": 3
+     },
+     {
+      "scena": 1,
+      "etichetta": "Mia · @julieta_negri._",
+      "lat": 42.5797,
+      "lng": 13.9754,
+      "luce": "già accesa",
+      "scena_dal_secondo": null,
+      "scena_al_secondo": null,
+      "comune_sulla_mappa": "Atri",
+      "animali_li_in_ordine_di_arrivo": [
+       "Mia (@julieta_negri._, 2026-11-07)",
+       "Ellie (@julieta_negri._, 2026-11-07)",
+       "Terremoto (@julieta_negri._, 2026-11-07)"
+      ],
+      "luci_li_oggi": 3
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-07T23:17:00+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-07T23:18:19+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 2: -14.1 LUFS, picco -0.9 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.1,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.4,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-07T23:18:19+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 2 esportata (19.5 s): ti mando 20 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 19.5,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ]
+   }
+  },
+  {
+   "t": "2026-11-07T23:18:19+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce senza revisione, come prima."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 19.2,
+   "fotogrammi": [
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s000.5.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s001.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s002.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s003.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s004.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s005.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s006.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s007.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s008.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s009.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s010.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s011.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s012.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s013.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s014.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s015.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s016.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s017.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s018.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s019.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.9,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -20.0,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "v": 2,
+   "durata": 19.5,
+   "fotogrammi": [
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s000.5.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s001.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s002.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s003.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s004.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s005.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s006.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s007.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s008.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s009.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s010.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s011.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s012.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s013.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s014.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s015.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s016.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s017.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s018.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v2/s019.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.1,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.4,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "token_persone": 278704,
+ "fine": "2026-11-07T23:18:19+00:00",
+ "crescita": {
+  "pubblico": "Chi ha un cane o un gatto e abita in un comune medio-piccolo d'Italia, come Atri, e ama vedere il proprio animale e la propria città valorizzati. Inoltre amici e conoscenti di Mia e dei proprietari che commentano già questi reel.",
+  "gancio": "Questa è l'Italia di notte. Ad Atri era tutto spento. (sulla mappa buia, poi la luce di Mia che si accende)",
+  "motivo_per_seguire": "Su Zampe d'Italia il tuo cane o gatto accende una luce nella tua città sulla mappa dell'Italia di notte, e ogni giorno ne nasce una nuova.",
+  "chiusura": "Atri si è accesa. Segui Zampe d'Italia per vedere la prossima luce.",
+  "perche": "Chi non conosce il progetto capisce subito il gioco (una città buia che si accende) e vede cosa ci guadagna: la luce del proprio animale, con un motivo concreto per tornare."
+ }
+}
