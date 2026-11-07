@@ -41,12 +41,13 @@ jobs:
             mkdir -p docs/media/bozze && cp /tmp/reel/reel.mp4 "docs/media/bozze/$ID-v2.mp4"
           fi
           echo "esito finale: $esito (0 approvato, 20 bozza)"
+          python3 -c "import json,sys;d=json.load(open('docs/data/agenzia/sessioni/$ID.json'));print('stato:',d['stato'],'· direttore:',d.get('direttore_modello'));[print('-',x['tipo'],x['da'],'->',x['a'],':',x['testo'][:200]) for x in d['scambi']]"
       - name: Salva nella stanza
         if: always()
         run: |
           git config user.name "zampe-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/agenzia docs/agenzia docs/media/bozze 2>/dev/null || true
+          for d in docs/data/agenzia docs/agenzia docs/media/bozze; do [ -e "$d" ] && git add "$d"; done
           git diff --cached --quiet && exit 0
           git commit -q -m "Centro Agenzia: revisione del reel $ID"
           for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done

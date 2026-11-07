@@ -236,6 +236,7 @@ def revisione(cop_path, cartella, giro):
              {k: mat[k] for k in ("durata_s", "fotogrammi_secondi")})
     r, chi = openai(DIR_DOPO, json.dumps(mat, ensure_ascii=False), [f.read_bytes() for _, f in foto])
     if r is None:
+        print(f"agenzia: Direttore video non raggiungibile ({chi})", file=sys.stderr)
         S.scrivi("direzione-1", "pubblicazione-1", "nota", f"Direttore video non collegato ({chi}): il reel esce senza revisione, come prima.")
         S.d["stato"] = "senza direttore"; S.d["fine"] = _ora(); S.salva(); return 0
     S.d["direttore_modello"] = chi
