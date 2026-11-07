@@ -1,1 +1,11 @@
-[]
+[
+ {
+  "id": "2026-11-07-1802-prima_luce",
+  "formato": "prima_luce",
+  "modalita": "operativa",
+  "inizio": "2026-11-07T18:35:32+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-07T18:35:42+00:00",
+  "scambi": 3
+ }
+]

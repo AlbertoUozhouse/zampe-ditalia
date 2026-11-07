@@ -1,0 +1,98 @@
+{
+ "id": "2026-11-07-1802-prima_luce",
+ "formato": "prima_luce",
+ "modalita": "operativa",
+ "inizio": "2026-11-07T18:35:32+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-07T18:35:41+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.9 LUFS, picco -0.9 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.9,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -20.0,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-07T18:35:41+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (19.2 s): ti mando 20 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 19.2,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ]
+   }
+  },
+  {
+   "t": "2026-11-07T18:35:42+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce senza revisione, come prima."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 19.2,
+   "fotogrammi": [
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s000.5.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s001.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s002.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s003.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s004.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s005.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s006.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s007.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s008.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s009.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s010.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s011.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s012.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s013.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s014.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s015.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s016.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s017.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s018.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s019.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.9,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -20.0,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "fine": "2026-11-07T18:35:42+00:00"
+}
