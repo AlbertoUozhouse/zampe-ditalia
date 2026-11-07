@@ -100,7 +100,6 @@
   "Napoli"
  ],
  "temi": [
-  "aurora",
   "notte",
   "neon",
   "aurora",
@@ -109,9 +108,10 @@
   "tramonto",
   "aurora",
   "giorno",
-  "neon"
+  "neon",
+  "aurora"
  ],
- "variante_n": 21,
+ "variante_n": 22,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -133,7 +133,8 @@
   "2026-11-06-1810-fondatore": "voce-solita-32",
   "2026-11-06-2110-incoronazione": "voce-solita-32",
   "2026-11-06-2123-fondatore": "voce-solita-32",
-  "2026-11-07-1303-amici": "voce-solita-32"
+  "2026-11-07-1303-amici": "voce-solita-32",
+  "2026-11-07-1802-prima_luce": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -901,5 +902,11 @@
   "yxelizn",
   "z03_011_18",
   "zerbino__9"
+ ],
+ "prime_luci": [
+  "Atri"
+ ],
+ "luci_raccontate": [
+  "julieta_negri._|animale|mia"
  ]
 }
