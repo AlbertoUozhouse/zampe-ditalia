@@ -176,3 +176,9 @@ Oggi resta il calendario: 13:00 re («stasera alle 21»), 18:00 star/fondatore, 
 
 Regola nuova del gioco (commenti.py, premia_amico_segue): l'amico che hai taggato ci segue e scrive SEGUO → +15 a chi l'ha invitato, una volta per coppia (sulla fiducia, come il SEGUO). Con il +3 del commento: 2 amici = +36.
 Reel `amici` oggi alle 18:00 (al posto di star/fondatore) e domani 7/11 alle 13:00. Da guardare: tag nei commenti e SEGUO di amici invitati (coppie «>>» in stato «premiati»).
+
+## 7/11/2026 — controllo del mattino: due reel falliti il 6/11, l'incoronazione pubblicata oggi
+
+Follower 1.714: +25 il 6/11, +12 stamattina. Il 6/11 alle 18 il reel «amici» si è fermato al controllo HyperFrames (riga «Nome · @utente» tagliata nella classifica: corretto in reel/modello/scene.py, i nomi lunghi si rimpiccioliscono; provato qui, controllo ok).
+Alle 21 l'incoronazione era montata ma GitHub Pages non l'ha messa online in 10 minuti: è uscita una riserva (fondatore). Il controllo del mattino ha già portato l'attesa a 20 minuti. L'incoronazione è stata pubblicata a mano oggi alle 11:17.
+Il Re del 5/11: 652 views e 121 commenti ogni 1.000 (record). Oggi: 13:00 amici, 18:00 star/fondatore, 21:00 ospiti_sera. Nessun altro cambiamento.
