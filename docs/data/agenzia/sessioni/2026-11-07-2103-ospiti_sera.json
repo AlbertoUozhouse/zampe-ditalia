@@ -1,0 +1,136 @@
+{
+ "id": "2026-11-07-2103-ospiti_sera",
+ "formato": "ospiti_sera",
+ "modalita": "operativa",
+ "inizio": "2026-11-07T20:03:38+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-07T20:03:38+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce.",
+   "dati": {
+    "brief": {
+     "formato": "ospiti_sera",
+     "id": "2026-11-07-2103-ospiti_sera",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!",
+       "scena": "numero"
+      },
+      {
+       "i": 1,
+       "testo": "Ciao Deah, da Ficarazzi!",
+       "scena": "cuccia"
+      },
+      {
+       "i": 2,
+       "testo": "Eccoli tutti.",
+       "scena": "classifica"
+      },
+      {
+       "i": 3,
+       "testo": "Il prossimo è il tuo? Seguici e scrivi SEGUO!",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": null,
+     "fascia": "➕ Seguici e scrivi SEGUO: il prossimo è il tuo animale 👇",
+     "didascalia": "🎬 Promessa mantenuta! Ecco gli animali di chi ci segue da oggi:\n🐾 Deah da Ficarazzi\n🐾 Kora da San Martino Siccomario\n🐾 Alma da Concesio\n🐾 Thor da Fogliano Redipuglia\n🐾 Mimi da Bassano del Grappa\n🐾 Sole da Roma\n🐾 Luna da Carosino\n🐾 Terremoto da Atri\n🐾 Barù da Messina\n🐾 Cloe da Napoli\n🐾 Totò da Scarperia e San Piero\n🐾 Kira da Villaricca\n🐾 Charlie da Serramazzoni\n🐾 Zampa da Aversa\n🐾 Goemon da Pomezia\n\n➕ Il prossimo è il tuo? Seguici e scrivi SEGUO con città e nome: +30 punti, e nel prossimo reel dei nuovi amici c'è anche il tuo animale.\n👑 E venerdì alle 21 incoroniamo il primo Re degli animali d'",
+     "voce": true,
+     "copertina": {
+      "sopra": "PROMESSA MANTENUTA",
+      "grande": "+15",
+      "sotto": "nuovi amici di oggi 🐾",
+      "domanda": "Il prossimo è il tuo? ➕👇",
+      "tema": "fondatore"
+     }
+    },
+    "mappa": []
+   }
+  },
+  {
+   "t": "2026-11-07T20:03:40+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-07T20:04:40+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.7 LUFS, picco -0.9 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.7,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -17.1,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-07T20:04:40+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (11.6 s): ti mando 12 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 11.6,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   }
+  },
+  {
+   "t": "2026-11-07T20:04:40+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce senza revisione, come prima."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 11.6,
+   "fotogrammi": [
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s000.5.jpg",
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s001.0.jpg",
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s002.0.jpg",
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s003.0.jpg",
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s004.0.jpg",
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s005.0.jpg",
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s006.0.jpg",
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s007.0.jpg",
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s008.0.jpg",
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s009.0.jpg",
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s010.0.jpg",
+    "fotogrammi/2026-11-07-2103-ospiti_sera/v1/s011.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.7,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -17.1,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "fine": "2026-11-07T20:04:40+00:00"
+}

@@ -1,0 +1,98 @@
+{
+ "voce": true,
+ "variante": "voce-solita-32",
+ "tema": "notte",
+ "id": "2026-11-07-2103-ospiti_sera",
+ "formato": "ospiti_sera",
+ "testata": {
+  "titolo": "🎬 I NUOVI AMICI"
+ },
+ "conteggio": {
+  "cani": 1905,
+  "gatti": 756
+ },
+ "frasi": [
+  {
+   "testo": "Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!",
+   "scena": {
+    "tipo": "numero",
+    "grande": "+15",
+    "sotto": "animali nuovi nella famiglia di Zampe 🐾"
+   }
+  },
+  {
+   "testo": "Ciao Deah, da Ficarazzi!",
+   "scena": {
+    "tipo": "cuccia",
+    "nome": "Deah",
+    "razza": "staffy",
+    "seme": 369,
+    "utente": "privat_elee",
+    "comune": "Ficarazzi"
+   }
+  },
+  {
+   "testo": "Eccoli tutti.",
+   "scena": {
+    "tipo": "classifica",
+    "titolo": "I nuovi amici 🎬",
+    "righe": [
+     {
+      "nome": "Deah · Ficarazzi",
+      "valore": "@privat_elee"
+     },
+     {
+      "nome": "Kora · San Martino Siccomario",
+      "valore": "@matteoo.boi"
+     },
+     {
+      "nome": "Alma · Concesio",
+      "valore": "@organize_time_italy"
+     },
+     {
+      "nome": "Thor · Fogliano Redipuglia",
+      "valore": "@ivanbianchi_"
+     },
+     {
+      "nome": "Mimi · Bassano del Grappa",
+      "valore": "@brunac80"
+     }
+    ],
+    "utente": "privat_elee"
+   }
+  },
+  {
+   "testo": "Il prossimo è il tuo? Seguici e scrivi SEGUO!",
+   "scena": {
+    "tipo": "chiusura",
+    "testo": "➕ Segui e scrivi SEGUO 👇"
+   }
+  }
+ ],
+ "banner": "➕ Seguici e scrivi SEGUO: il prossimo è il tuo animale 👇",
+ "didascalia": "🎬 Promessa mantenuta! Ecco gli animali di chi ci segue da oggi:\n🐾 Deah da Ficarazzi\n🐾 Kora da San Martino Siccomario\n🐾 Alma da Concesio\n🐾 Thor da Fogliano Redipuglia\n🐾 Mimi da Bassano del Grappa\n🐾 Sole da Roma\n🐾 Luna da Carosino\n🐾 Terremoto da Atri\n🐾 Barù da Messina\n🐾 Cloe da Napoli\n🐾 Totò da Scarperia e San Piero\n🐾 Kira da Villaricca\n🐾 Charlie da Serramazzoni\n🐾 Zampa da Aversa\n🐾 Goemon da Pomezia\n\n➕ Il prossimo è il tuo? Seguici e scrivi SEGUO con città e nome: +30 punti, e nel prossimo reel dei nuovi amici c'è anche il tuo animale.\n👑 E venerdì alle 21 incoroniamo il primo Re degli animali d'Italia!\n\n🐾 In questo reel: @_tommaso.marino.20_ @alan407103 @antonio_benci @brunac80 @fede_sporty_ @icantbreathebutimliving @ivanbianchi_ @julieta_negri._ @maryg78a @matteoo.boi @organize_time_italy @osteo_psycho @pi_dou @privat_elee @vittoria_mattia_123456679\n\nVoce generata con IA.\n\n#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici #ficarazzi #privatelee #matteooboi #organizetimeitaly #ivanbianchi",
+ "tag": [
+  "_tommaso.marino.20_",
+  "alan407103",
+  "antonio_benci",
+  "brunac80",
+  "fede_sporty_",
+  "icantbreathebutimliving",
+  "ivanbianchi_",
+  "julieta_negri._",
+  "maryg78a",
+  "matteoo.boi",
+  "organize_time_italy",
+  "osteo_psycho",
+  "pi_dou",
+  "privat_elee",
+  "vittoria_mattia_123456679"
+ ],
+ "copertina": {
+  "sopra": "PROMESSA MANTENUTA",
+  "grande": "+15",
+  "sotto": "nuovi amici di oggi 🐾",
+  "domanda": "Il prossimo è il tuo? ➕👇",
+  "tema": "fondatore"
+ }
+}

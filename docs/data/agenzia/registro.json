@@ -7,5 +7,14 @@
   "stato": "senza direttore",
   "fine": "2026-11-07T18:35:42+00:00",
   "scambi": 3
+ },
+ {
+  "id": "2026-11-07-2103-ospiti_sera",
+  "formato": "ospiti_sera",
+  "modalita": "operativa",
+  "inizio": "2026-11-07T20:03:38+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-07T20:04:40+00:00",
+  "scambi": 5
  }
 ]
