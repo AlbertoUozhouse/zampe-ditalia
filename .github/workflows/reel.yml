@@ -74,7 +74,8 @@ jobs:
           git commit -q -m "Reel automatico $ID"
           for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
           echo "id=$ID" >> "$GITHUB_OUTPUT"
-          for i in $(seq 1 40); do
+          # Pages a volte ci mette più di 10 minuti (ieri 2 reel su 3 persi per questo): si aspetta fino a 20
+          for i in $(seq 1 80); do
             [ "$(curl -s -o /dev/null -w '%{http_code}' "https://zampeditalia.it/media/auto/$ID.mp4")" = "200" ] && exit 0
             sleep 15
           done
