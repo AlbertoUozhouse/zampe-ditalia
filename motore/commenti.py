@@ -19,6 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lettore
+import coppa  # la Coppa delle Zampe (campionato settimanale tra comuni)
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = Path(os.environ.get("ZAMPE_OUT", ROOT))  # le prove scrivono altrove, mai sulla mappa vera
@@ -469,6 +470,8 @@ class Gioco:
             cl = {"settimana": ora_s, "classifica": top(ora_s, 20), "scorsa": top(prima[0], 3) if prima else []}
             if g == "corsa": self.dati["corsa"] = cl
             self.dati.setdefault("giochi", {})[g] = cl
+        coppa.aggiorna(self.stato, self.animali)
+        coppa.pubblica(self.stato, OUT / "docs/data/coppa.json")
         self.elezione()
         self.derby()
         vestito = "halloween" if oggi <= HALLOWEEN_FINO else "lucine"  # il regalo per chi ci segue
@@ -822,6 +825,7 @@ SPECIE_RE = r"furett|conigli|criceti|criceto|pappagall|uccell|cavall|tartarug|pe
 # I minigiochi (docs/giochi.html): parola del codice -> nome. Un gioco nuovo si aggiunge qui e in Zampe.GIOCHI (docs/comune.js).
 GIOCHI = {"corsa": "Zampe di corsa", "pappa": "Pappa al volo", "bastone": "Riporta il bastone"}
 RE_CORSA = re.compile(r"(?i)\b(" + "|".join(GIOCHI) + r")\s*:?\s*(\d{1,6})\s+([a-z0-9]{2})\b")
+RE_COPPA = re.compile(r"(?i)\bcoppa\s*:?\s*([a-z0-9]{2})\b")  # la prova del giorno della Coppa delle Zampe (motore/coppa.py)
 
 def codice_corsa(punti, gioco="corsa"):
     """Due caratteri legati al punteggio, come in docs/gioco.js e docs/comune.js: scoraggia chi si inventa i punti."""
@@ -1071,8 +1075,9 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
         nuovi_c = [c for c in suoi if c["id"] not in gioco.visti or c["id"] in rifai]
         if not nuovi_c:
             continue
-        letto = vuoto() if all(solo_tag(c.get("text", "")) or RE_CORSA.fullmatch(c.get("text", "").strip()) for c in nuovi_c) \
-            else leggi_fn(u, [{**c, "text": RE_CORSA.sub("", c.get("text", ""))} for c in suoi])
+        senza_codici = lambda t: RE_COPPA.sub("", RE_CORSA.sub("", t or "")).strip()
+        letto = vuoto() if all(solo_tag(c.get("text", "")) or not senza_codici(c.get("text", "")) for c in nuovi_c) \
+            else leggi_fn(u, [{**c, "text": senza_codici(c.get("text", ""))} for c in suoi])
         if letto is None:
             print(f"@{u}: il lettore non ha risposto, riprovo al prossimo giro", file=sys.stderr)
             continue
@@ -1094,6 +1099,7 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
             righe_corsa.append(f"🏁 Record registrato: {pt} punti a {nome}! Sei {posto}° in Italia questa settimana. "
                                + ("Sei sul podio: la classifica è su zampeditalia.it/giochi 🏆" if posto <= 3 else "Rigioca e manda la sfida a un amico per salire ⚔️")
                                if meglio else f"🏁 {pt} punti a {nome}! Il tuo record della settimana resta più alto: sei {posto}°. Riprova 💪")
+        codici_coppa = [m.group(1) for c in nuovi_c for m in [RE_COPPA.search(c.get("text", ""))] if m]
         nuovi_a = []
         if letto["rimuovi"]:
             chiave, par, _ = gioco.applica({"k": "rimuovi"}, u, None)
@@ -1117,6 +1123,22 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
         taggati = [a for c in nuovi_c for a in gioco.tag(u, c.get("text", ""))]
         premiati = gioco.premia_inviti(u)
         extra = righe_corsa[-1:]
+        if codici_coppa:  # la prova del giorno della Coppa delle Zampe: un punto al giorno per persona alla sua città
+            esito, d = coppa.punto(gioco.stato, gioco.animali, u, codici_coppa[-1]); gioco.cambiato = True
+            nome_c = lambda k: (k or "").split("|")[0]
+            if esito == "ok":
+                extra.append(f"🏆 Punto per {nome_c(d['comune'])}! Coppa delle Zampe: {nome_c(d['comune'])} {d['noi']} – {d['loro']} {nome_c(d['rivale']) or 'in attesa di sfidante'}. "
+                             + (f"🔥 Staffetta completata: anello dorato su {nome_c(d['comune'])}! " if d.get("staffetta_nuova") else
+                                f"Staffetta: {d['giocatori']}/{coppa.STAFFETTA} giocatori. " if d["giocatori"] < coppa.STAFFETTA else "")
+                             + "Condividi la cartolina e seguici: domenica alle 21 il verdetto 🏆")
+            elif esito == "gia":
+                extra.append(f"✅ Oggi il punto per {nome_c(d['comune'])} l'hai già portato. Torna domani: ogni giorno una prova nuova!")
+            elif esito == "codice":
+                extra.append("🕹️ Il codice della Coppa non torna: copialo così com'è dalla fine della prova di oggi su zampeditalia.it")
+            elif esito == "chiuso":
+                extra.append("🏁 La Coppa di questa settimana è chiusa: lunedì a mezzanotte riparte, ti aspettiamo!")
+            else:
+                extra.append("🐾 Per giocare per la tua città serve il tuo animale sulla mappa: scrivi qui città e nome (es. «Treviso, Luna, cane») e poi ricommenta il codice.")
         if taggati:
             extra.append(frase("tag" if gioco.ha_luce(u) else "tag_senza_luce", amici=", ".join("@" + a for a in taggati[:5])))
         if premiati:

@@ -898,7 +898,102 @@ def questa_luce(D, rng, st):
     st["senza_bonus"] = True
     return "💡 QUESTA LUCE È DI…", frasi, did
 
-FORMATI = {"prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+# ---------------------------------------------------------------- la Coppa delle Zampe (motore/coppa.py): reel di apertura, sorpasso e verdetto coi dati veri
+
+def _coppa(D):
+    st = carica(ROOT / "motore/stato.json", {})
+    dove = {}
+    for a in D["animali"]:
+        if a.get("k") == "animale" and "lat" in a: dove.setdefault(f"{a['c']}|{a.get('p', '')}", a)
+    return st.get("coppa"), st.get("coppa_albo", []), dove
+
+_n = lambda k: (k or "").split("|")[0]
+
+def _match(dove, a, b, pa, pb):
+    x, y = dove[a], dove[b]
+    mezzo = {"lat": (x["lat"] + y["lat"]) / 2, "lng": (x["lng"] + y["lng"]) / 2}
+    lontani = _dist(x, y) > 120  # due città lontane: la mappa resta più larga
+    return {"tipo": "luce", "centro": [mezzo["lng"], mezzo["lat"]], "s1": 0.7 if _dist(x, y) > 400 else 1.0 if lontani else 1.5, "intorno": _intorno(D_CORRENTE[0], mezzo),
+            "punti": [{"lng": x["lng"], "lat": x["lat"], "testo": f"{_n(a)} · {pa}"}, {"lng": y["lng"], "lat": y["lat"], "testo": f"{_n(b)} · {pb}"}]}
+
+D_CORRENTE = [None]
+INVITO_COPPA = ("🏆 Gioca anche tu per la tua città: su zampeditalia.it (link in bio) tocca «Gioca per la tua città», fai la prova del giorno "
+                "e commenta qui sotto il codice COPPA che ti dà il sito. Un punto al giorno, gratis.\n➕ Seguici per vedere il verdetto domenica alle 21!")
+
+def coppa_apertura(D, rng, st):
+    """Lunedì: parte il turno. Una sfida grande e una tra paesi piccoli, per far capire che vince anche chi è piccolo."""
+    C, _, dove = _coppa(D); D_CORRENTE[0] = D
+    if not C or not C.get("coppie"): return prima_luce(D, rng, st)
+    coppie = [c for c in C["coppie"] if c[0] in dove and c[1] in dove]
+    grande = coppie[0]
+    piccole = coppie[len(coppie) // 2:] or coppie[-1:]  # la metà con meno giocatori: anche lì c'è una sfida vera
+    p = piccole[rng.randrange(len(piccole))]
+    _clip(D, st)
+    frasi = [
+        (f"Parte la Coppa delle Zampe: {len(coppie) * 2} comuni d'Italia, sfida a due.", _match(dove, grande[0], grande[1], 0, 0)),
+        (f"{_n(grande[0])} contro {_n(grande[1])}. Ma anche {_n(p[0])} contro {_n(p[1])}: i paesi piccoli sfidano paesi piccoli.",
+         {"tipo": "duello", "sinistra": {"titolo": _n(p[0]), "valore": "0"}, "destra": {"titolo": _n(p[1]), "valore": "0"}}),
+        ("Una prova al giorno sul sito: un punto per la tua città.", {"tipo": "commento", "testo": "COPPA ··"}),
+        ("Domenica alle 21 il trofeo. Gioca per la tua città!", {"tipo": "chiusura", "testo": "🏆 Gioca per la tua città"}),
+    ]
+    did = (f"🏆 Parte la Coppa delle Zampe, turno {C['turno']}: {len(coppie) * 2} comuni, sfide a due tra città con un numero simile di giocatori.\n"
+           f"{_n(grande[0])} – {_n(grande[1])}, {_n(p[0])} – {_n(p[1])} e tante altre: anche il tuo paese ha la sua sfida.\n\n" + INVITO_COPPA)
+    st["copertina"] = {"luce": [dove[grande[0]]["lng"], dove[grande[0]]["lat"]], "sopra": "PARTE LA COPPA", "grande": "delle Zampe", "sotto": "Gioca per la tua città 🏆"}
+    st["banner_reel"] = "🏆 Gioca per la tua città: link in bio 👇"
+    st["senza_bonus"] = True
+    return "🏆 COPPA DELLE ZAMPE", frasi, did
+
+def coppa_sorpasso(D, rng, st):
+    """A metà settimana: l'ultimo sorpasso vero, o la sfida più tirata."""
+    C, _, dove = _coppa(D); D_CORRENTE[0] = D
+    if not C: return prima_luce(D, rng, st)
+    P = C.get("punti", {})
+    s = next((x for x in reversed(C.get("storia", [])) if x["sorpasso"] in dove and x["su"] in dove), None)
+    if s:
+        a, b = s["sorpasso"], s["su"]; testa = f"Sorpasso! {_n(a)} passa davanti {_a(_n(b))}."
+    else:
+        tirate = sorted((c for c in C["coppie"] if c[0] in dove and c[1] in dove and P.get(c[0], 0) + P.get(c[1], 0) > 0),
+                        key=lambda c: (abs(P.get(c[0], 0) - P.get(c[1], 0)), -(P.get(c[0], 0) + P.get(c[1], 0))))
+        if not tirate: return coppa_apertura(D, rng, st)
+        a, b = tirate[0]
+        if P.get(b, 0) > P.get(a, 0): a, b = b, a
+        testa = f"{_n(a)} contro {_n(b)}: la sfida più tirata della Coppa."
+    pa, pb = P.get(a, 0), P.get(b, 0)
+    fine = datetime.fromisoformat(C["fine"]); giorni = max(0, (fine.date() - ORA.date()).days)
+    frasi = [
+        (testa, _match(dove, a, b, pa, pb)),
+        (f"{pa} a {pb}, e mancano {giorni} giorni. Ogni giocatore porta un punto al giorno.", {"tipo": "duello", "sinistra": {"titolo": _n(a), "valore": str(pa)}, "destra": {"titolo": _n(b), "valore": str(pb)}}),
+        (f"Sei di {_n(b)}? Gioca per la tua città!", {"tipo": "chiusura", "testo": f"🏆 Forza {_n(b)}!"}),
+    ]
+    did = f"⚔️ {_n(a)} {pa} – {pb} {_n(b)}: {testa.lower() if not s else 'sorpasso nella Coppa delle Zampe!'}\nMancano {giorni} giorni al verdetto.\n\n" + INVITO_COPPA
+    st["copertina"] = {"luce": [dove[a]["lng"], dove[a]["lat"]], "sopra": "SORPASSO" if s else "TESTA A TESTA", "grande": f"{pa} – {pb}", "sotto": f"{_n(a)} vs {_n(b)}"}
+    st["banner_reel"] = "🏆 Gioca per la tua città: link in bio 👇"
+    st["senza_bonus"] = True
+    return "⚔️ COPPA DELLE ZAMPE", frasi, did
+
+def coppa_verdetto(D, rng, st):
+    """Domenica alle 21: chi ha vinto la sua sfida prende il trofeo sulla mappa. Persone vere e città vere: chi vince condivide."""
+    C, albo, dove = _coppa(D); D_CORRENTE[0] = D
+    if not albo or not albo[-1]["vincitori"]: return coppa_sorpasso(D, rng, st)
+    v = [x for x in albo[-1]["vincitori"] if x["c"] in dove]
+    if not v: return prima_luce(D, rng, st)
+    t = v[0]
+    piccolo = next((x for x in reversed(v) if x is not t), None)
+    frasi = [
+        (f"Verdetto della Coppa delle Zampe: vince {_n(t['c'])}, {t['p']} a {t['pc']} contro {_n(t['contro'])}!", {"tipo": "luce", "centro": [dove[t["c"]]["lng"], dove[t["c"]]["lat"]], "intorno": _intorno(D, dove[t["c"]]),
+          "punti": [{"lng": dove[t["c"]]["lng"], "lat": dove[t["c"]]["lat"], "acceso": False, "testo": f"🏆 {_n(t['c'])}"}]}),
+        (f"Trofeo anche per {len(v) - 1} altre città" + (f", come {_n(piccolo['c'])}." if piccolo else "."),
+         {"tipo": "classifica", "titolo": "🏆 I vincitori", "righe": [{"nome": _n(x["c"]), "valore": f"{x['p']}–{x['pc']}"} for x in v[:5]]}),
+        ("Domani si riparte. Gioca per la tua città!", {"tipo": "chiusura", "testo": "🏆 Lunedì si riparte"}),
+    ]
+    elenco = "\n".join(f"🏆 {_n(x['c'])} {x['p']}–{x['pc']} {_n(x['contro'])}" for x in v[:15])
+    did = f"🏆 Il verdetto della Coppa delle Zampe, turno {albo[-1]['turno']}!\n\n{elenco}\n\nI trofei sono sulla mappa di zampeditalia.it. Domani a mezzanotte parte il turno nuovo.\n\n" + INVITO_COPPA.replace("domenica alle 21", "domenica prossima")
+    st["copertina"] = {"luce": [dove[t["c"]]["lng"], dove[t["c"]]["lat"]], "sopra": "HA VINTO", "grande": _n(t["c"]), "sotto": "Coppa delle Zampe 🏆"}
+    st["banner_reel"] = "🏆 Lunedì si riparte: gioca per la tua città 👇"
+    st["senza_bonus"] = True
+    return "🏆 IL VERDETTO", frasi, did
+
+FORMATI = {"coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide

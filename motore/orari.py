@@ -37,6 +37,8 @@ def main():
     oggi = ora.date().isoformat()
     fatti = st.setdefault("lanciati", {}).setdefault(oggi, [])
     orari = dict(cfg["orari"])
+    giorno_sett = ["lun", "mar", "mer", "gio", "ven", "sab", "dom"][ora.weekday()]  # i reel di ogni settimana (la Coppa delle Zampe): «lun 13:00»
+    orari.update({k[4:]: v for k, v in cfg.get("settimanali", {}).items() if k[:3] == giorno_sett})
     orari.update({k[11:]: v for k, v in cfg.get("una_tantum", {}).items() if k[:10] == oggi})  # reel di un giorno solo, «AAAA-MM-GG HH:MM»
     for hhmm, formato in sorted(orari.items()):
         h, m = map(int, hhmm.split(":"))

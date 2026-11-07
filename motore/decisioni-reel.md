@@ -3,6 +3,14 @@
 Registro delle scelte sui reel automatici: cosa si cambia, perché (numeri da motore/rendimento.json), e cosa si guarda dopo.
 Lo aggiorna ogni mattina il controllo delle 10:30. Solo numeri e formati, nessun nome utente (il repository è pubblico).
 
+## COPPA DELLE ZAMPE (Alberto, 7/11/2026)
+
+Campionato settimanale tra comuni (motore/coppa.py, docs/coppa.js). Si gioca sul sito («🏆 Gioca per la tua città» sulla mappa); la prova del giorno dà il codice «COPPA XY» da commentare sotto un reel: un punto al giorno per persona alla città del suo animale (resta quella per tutto il turno). Coppie di comuni con un numero simile di giocatori attivi. Chiude la domenica alle 20, trofeo a chi vince la sua sfida (mappa e albo), riparte il lunedì a mezzanotte. Staffetta: 3 giocatori dello stesso comune = anello dorato e cartolina «Io gioco per…».
+Prove: La Luce Misteriosa (indizi dai dati della mappa) e Indovina la Zampa (sagoma o dettaglio dei disegni della mappa; suoni veri non ne abbiamo), un giorno l'una e un giorno l'altra.
+Reel: coppa_apertura (lun 13:00), coppa_sorpasso (gio 21:00), coppa_verdetto (dom 21:00), in config.json «settimanali». Primo turno: dal 7/11 al 15/11 (apertura domenica 8/11 alle 21).
+Misure di ogni turno in motore/stato.json «coppa_misure»: giocatori, tornano (avevano giocato il turno prima), piu_giorni, nuovi_da_instagram (arrivati sulla mappa con un commento durante il turno). Le visite al sito non si possono contare senza uno strumento di statistiche (servirebbe un account di Alberto).
+Dopo ogni turno: leggere coppa_misure e le risposte ai reel, e inventare la prova nuova da aggiungere (sempre da dati veri della mappa o materiali che abbiamo).
+
 ## SERIE DELLA MAPPA (Alberto, 7/11/2026) — vale più delle regole sotto
 
 Obiettivo: chi vede la pagina per la prima volta capisce subito il gioco (ogni animale accende una luce nella sua città).

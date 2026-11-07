@@ -299,7 +299,7 @@ function presidenza(d) {
 // ---------- pannelli ----------
 function show(v) {
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.v === v));
-  const s = $("#sheet");
+  const s = $("#sheet"); s.dataset.v = v;
   if (v === "mappa") { s.hidden = true; return; }
   s.hidden = false;
   const empty = `<p class="empty">Ancora nessuna luce. Commenta il reel e accendi la prima!</p>`;
@@ -420,13 +420,15 @@ function apriComune(key) {
   const fond = qui.find(d => d.fondatore);
   const quando = ts => { if (!ts) return ""; const m = (Date.now() - Date.parse(ts)) / 60000; return m < 60 ? `${Math.max(1, Math.round(m))} min fa` : m < 1440 ? `${Math.round(m / 60)} ore fa` : `${Math.round(m / 1440)} giorni fa`; };
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", "false"));
-  const s = $("#sheet"); s.hidden = false;
+  const s = $("#sheet"); s.hidden = false; s.dataset.v = "comune";
   s.innerHTML = `<h2>${esc(nome)} <small>${esc(prov)}</small></h2><p class="sub">${fmt(qui.length)} ${qui.length === 1 ? "luce accesa" : "luci accese"} · 🐶 ${fmt(cani)} · 🐱 ${fmt(qui.length - cani)}${fond ? ` · la prima luce: <b>${esc(fond.n)}</b> 👑` : ""}</p>
     <h3>Gli ultimi arrivati</h3><ol class="list">` + ultimi.map(d => `<li class="row" data-id="${esc(d.id)}"><span class="pos">${icona(d)}</span><span class="who">${esc(d.n)} · @${esc(d.u)}<small>${esc(d.razza_testo || d.razza || d.t)} · ${quando(d.ts)}</small></span></li>`).join("") + `</ol>
-    <p class="sub">🐾 Accendi anche il tuo: commenta l'ultimo reel con <b>«${esc(nome)}, nome, cane»</b> (o gatto).</p><p><a class="btn" href="${CONFIG.ig}" target="_blank" rel="noopener">Commenta su Instagram</a></p>`;
+    <p class="sub">🐾 Accendi anche il tuo: commenta l'ultimo reel con <b>«${esc(nome)}, nome, cane»</b> (o gatto).</p><p><a class="btn" href="${CONFIG.ig}" target="_blank" rel="noopener">Commenta su Instagram</a> <button type="button" class="btn chiaro" id="giocaQui">🏆 Gioca per ${esc(nome)}</button></p>`;
+  $("#giocaQui").onclick = () => window.apriCoppa && window.apriCoppa(key);
   s.querySelectorAll(".row").forEach(r => r.onclick = () => { s.hidden = true; focus(DATA.find(d => d.id === r.dataset.id)); });
 }
 map.on("click", e => { // il comune più vicino al dito, entro 36 pixel
+  if (window.coppaTocco && window.coppaTocco(e)) return; // durante la Luce Misteriosa il tocco è una risposta (coppa.js)
   if (map.getZoom() >= DOM_ZOOM) return;
   const p = map.latLngToContainerPoint(e.latlng); let best = null, bd = 36;
   for (const c of STATS.city || []) { const q = map.latLngToContainerPoint([c.lat, c.lng]), dd = Math.hypot(q.x - p.x, q.y - p.y) - 3 * Math.log1p(c.tot); if (dd < bd) { bd = dd; best = c; } } // a parità di distanza vince il comune con più luci

@@ -36,7 +36,7 @@ jobs:
             formato=$(python3 -I motore/orari.py || true)
             if [ -n "$formato" ]; then echo "giro $giro: è l'ora del reel $formato"; prova=false; [ "${formato#*:}" = prova ] && prova=true; formato=${formato%%:*}
               for t in 1 2 3; do gh workflow run reel.yml -f formato="$formato" -f prova=$prova && break; sleep 20; [ $t = 3 ] && { echo "reel non avviato, riprovo al prossimo giro"; python3 -I motore/orari.py --annulla; }; done; fi
-            git add docs/data/animali.json motore/stato.json motore/reel_fatti.json motore/messaggi.json motore/pubblicati.json docs/cartoline
+            git add docs/data/animali.json motore/stato.json motore/reel_fatti.json motore/messaggi.json motore/pubblicati.json docs/cartoline docs/data/coppa.json
             if ! git diff --cached --quiet; then
               git commit -q -m "Mappa aggiornata dai commenti"
               git pull -q --rebase -X theirs && git push -q || { git rebase --abort 2>/dev/null; echo "giro $giro: push non riuscito, riprovo al prossimo"; }

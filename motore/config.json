@@ -25,7 +25,7 @@
   "2026-11-02 21:00": "sfida",
   "2026-11-04 21:00": "ospiti_sera",
   "2026-11-06 21:00": "incoronazione",
-  "2026-11-08 21:00": "sfida",
+  "2026-11-08 21:00": "coppa_apertura",
   "2026-11-04 13:00": "fuochi",
   "2026-11-05 13:00": "re",
   "2026-11-05 21:00": "ospiti_sera",
@@ -38,11 +38,17 @@
   "2026-11-08 13:00": "testa_a_testa",
   "2026-11-10 13:00": "testa_a_testa",
   "2026-11-12 13:00": "testa_a_testa",
-  "2026-11-14 13:00": "testa_a_testa"
+  "2026-11-14 13:00": "testa_a_testa",
+  "2026-11-09 13:00": "prima_luce"
  },
  "voce_ia": false,
  "feste_reel": false,
  "sponsorizzati": [
   "18121405274055603"
- ]
+ ],
+ "settimanali": {
+  "lun 13:00": "coppa_apertura",
+  "gio 21:00": "coppa_sorpasso",
+  "dom 21:00": "coppa_verdetto"
+ }
 }
