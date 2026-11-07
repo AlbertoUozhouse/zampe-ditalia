@@ -14195,31 +14195,6 @@
 "organize_time_italy": 30
 },
 "inviti_giorno": {
-"2026-10-30": {
-"gianluca.pais": 1,
-"toremanca86": 1,
-"mariaacicchitti_": 1,
-"giammo_.012._": 1,
-"rya.25_": 2,
-"emma_finessi": 1,
-"braghingaia": 1,
-"raquelle_nut": 1,
-"matteo.rebellato": 1,
-"giovannipaoloooooo": 3,
-"_.mari.stu._": 5,
-"riccardo_cadona": 1,
-"__matilde__meloni__": 1,
-"flavio_guercio13": 2,
-"_priv_amy_aut_": 1,
-"geidaniele": 1,
-"mikyspiga79": 3,
-"vitto_pellerito": 1,
-"_luka.bulatovicc": 1,
-"luca.z.v": 1,
-"sofiap5_privato": 1,
-"ely_forclose4": 1,
-"didd_i_25": 1
-},
 "2026-10-31": {
 "ely_forclose4": 1,
 "eli.priva_tissimo": 2,
@@ -18312,9 +18287,7 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {
-"_.mari.stu._": "2026-11-06"
-},
+"missioni_fatte": {},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
@@ -18354,7 +18327,7 @@
 "2026-11-04": 1637,
 "2026-11-05": 1677,
 "2026-11-06": 1702,
-"2026-11-07": 1703
+"2026-11-07": 1704
 },
 "gioco_pappa": {
 "2026-W44": {
