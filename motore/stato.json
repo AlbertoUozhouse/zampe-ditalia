@@ -10088,10 +10088,7 @@
 "18666851569016117",
 "18668921470032586"
 ],
-"risposte": [
-1794034787.0826151,
-1794034787.9219036
-],
+"risposte": [],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -14212,7 +14209,8 @@
 "alan407103": 30,
 "brunac80": 40,
 "organize_time_italy": 30,
-"ivanbianchi_": 30
+"ivanbianchi_": 30,
+"pi_dou": 30
 },
 "inviti_giorno": {
 "2026-10-31": {
@@ -15050,7 +15048,8 @@
 "brunac80": "premiato",
 "organize_time_italy": "premiato",
 "julieta_negri._": "in_attesa",
-"ivanbianchi_": "premiato"
+"ivanbianchi_": "premiato",
+"pi_dou": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
