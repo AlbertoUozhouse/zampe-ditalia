@@ -800,7 +800,9 @@ def _clip(D, st, utente=None):
     fatte = set(st.get("clip_fatte", []))
     clip = [x for x in carica(ROOT / "motore/stato.json", {}).get("ugc", []) if x["f"].endswith(".mp4") and x["f"] not in fatte
             and (ROOT / "docs/media/ugc" / x["f"]).exists() and x["u"].lower() not in ESCLUSI]
-    if not clip: return None
+    if not clip:  # nessun video dei follower: Thor, il golden di Alberto (Alberto, 7/11: «usa Thor»), ritagliato senza scritte, luce naturale
+        st["intro"] = "reel/assets/thor-apertura.mp4"
+        return None
     x = next((c for c in clip if utente and c["u"].lower() == utente.lower()), clip[0])
     st["clip_fatte"] = (st.get("clip_fatte", []) + [x["f"]])[-500:]
     st["intro"] = f"docs/media/ugc/{x['f']}"
