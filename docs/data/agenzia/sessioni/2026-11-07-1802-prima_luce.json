@@ -1,0 +1,825 @@
+{
+ "id": "2026-11-07-1802-prima_luce",
+ "formato": "prima_luce",
+ "modalita": "operativa",
+ "inizio": "2026-11-07T20:09:32+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-07T20:09:39+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.9 LUFS, picco -0.9 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.9,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -20.0,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-07T20:09:39+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (19.2 s): ti mando 20 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 19.2,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19
+    ]
+   }
+  },
+  {
+   "t": "2026-11-07T20:09:50+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:09:50+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:09:50+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:09:50+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:09:50+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:09:50+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:09:51+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:09:51+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:09:51+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:09:51+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:00+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:00+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:01+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:01+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:01+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:01+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:01+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:01+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:01+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:02+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:11+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:12+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:12+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:12+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:12+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:12+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:12+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:12+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:12+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:12+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:21+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:22+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:22+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:22+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:22+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:23+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:23+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:23+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:23+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:23+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:32+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:32+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:33+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:33+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:33+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:33+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:33+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:33+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:33+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:33+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:40+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Copertina: le coordinate della luce [13.9754, 42.5797] coincidono con lat/lng di Atri nei dati mappa, e i testi («LA PRIMA LUCE», «di Atri», «Mia 👑») corrispondono al copione e alla didascalia.",
+   "dati": {
+    "controllato": "Copertina: le coordinate della luce [13.9754, 42.5797] coincidono con lat/lng di Atri nei dati mappa, e i testi («LA PRIMA LUCE», «di Atri», «Mia 👑») corrispondono al copione e alla didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Sulla copertina dei prossimi reel aggiungere il numero di luci accese nel progetto (ora 2760), così il dato del progetto compare già nella prima scena."
+   }
+  },
+  {
+   "t": "2026-11-07T20:10:42+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:43+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:43+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:44+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:44+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:44+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:44+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:44+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:44+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:50+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:53+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:53+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:54+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:54+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:55+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:55+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:55+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:55+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:10:55+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:01+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:04+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:04+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:04+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:05+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:05+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:06+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:06+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:06+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:06+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:12+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:15+00:00",
+   "da": "analisi-2",
+   "a": "analisi-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:15+00:00",
+   "da": "analisi-3",
+   "a": "analisi-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:15+00:00",
+   "da": "analisi-4",
+   "a": "analisi-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:16+00:00",
+   "da": "analisi-5",
+   "a": "analisi-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:16+00:00",
+   "da": "analisi-6",
+   "a": "analisi-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:16+00:00",
+   "da": "analisi-7",
+   "a": "analisi-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:16+00:00",
+   "da": "analisi-8",
+   "a": "analisi-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:16+00:00",
+   "da": "analisi-9",
+   "a": "analisi-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:17+00:00",
+   "da": "analisi-10",
+   "a": "analisi-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-07T20:11:20+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non ho ricevuto nessuna relazione dalle 9 persone del reparto (l'input è vuoto), quindi non correggo nulla e non scelgo nessuna idea finché non arrivano i contenuti.",
+   "dati": {
+    "difetti": [],
+    "idea": "Nessuna idea scelta: servono le relazioni, il copione o il reel da valutare. Rimandate le 9 relazioni con i secondi indicati e decido subito."
+   }
+  },
+  {
+   "t": "2026-11-07T20:11:20+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non ho ricevuto nessuna relazione dalle 9 persone del reparto (input vuoto), quindi non posso confermare errori né scegliere un'idea su basi reali: sospendo le decisioni finché non arrivano i report.",
+   "dati": {
+    "difetti": [],
+    "idea": "Nessuna idea scelta per ora: chiedo a tutte e 9 le persone di rinviare la relazione con secondo, problema e proposta, poi decido."
+   }
+  },
+  {
+   "t": "2026-11-07T20:11:20+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non è arrivata nessuna relazione dei 9 membri del reparto (input vuoto), quindi non ho elementi veri su cui decidere e non invento correzioni: restiamo in attesa dei report.",
+   "dati": {
+    "difetti": [],
+    "idea": "Nessuna idea scelta per ora: serve che le 9 persone inviino le loro relazioni su voce e musica del reel, con secondi e problemi riscontrati, per poter decidere."
+   }
+  },
+  {
+   "t": "2026-11-07T20:11:22+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Nessuna correzione necessaria: la copertina è verificata (coordinate di Atri, testi e didascalia coerenti). Dei 9 report previsti ne è arrivato solo uno, quindi il resto del reel non è ancora controllato.",
+   "dati": {
+    "difetti": [],
+    "idea": "Aggiungere sulla copertina dei prossimi reel il numero di luci accese nel progetto (ora 2760), così il dato compare già nella prima scena. Il numero va riletto dai dati del progetto prima di ogni pubblicazione, per non mostrare cifre vecchie."
+   }
+  },
+  {
+   "t": "2026-11-07T20:11:22+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non ho ricevuto nessuna relazione (input vuoto): non correggo nulla e non scelgo un'idea finché le 9 persone del reparto non inviano le loro segnalazioni sul reel.",
+   "dati": {
+    "difetti": [],
+    "idea": "Nessuna al momento: serve almeno un set di relazioni con secondi, problemi e proposte per poter decidere."
+   }
+  },
+  {
+   "t": "2026-11-07T20:11:22+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non ho ricevuto nessuna relazione dei 9 membri del reparto (il contenuto è vuoto), quindi non correggo nulla e non scelgo nessuna idea finché non arrivano i report con secondi e osservazioni sul reel.",
+   "dati": {
+    "difetti": [],
+    "idea": "Nessuna al momento: serve che le relazioni vengano rinviate per poter confrontare le proposte e scegliere quella da portare avanti."
+   }
+  },
+  {
+   "t": "2026-11-07T20:11:22+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non ho ricevuto nessuna relazione dei 9 collaboratori (l'input è vuoto), quindi non correggo nulla e non scelgo nessuna idea finché non arrivano il reel e le relazioni.",
+   "dati": {
+    "difetti": [],
+    "idea": "Nessuna per ora: servono le relazioni con i secondi, i problemi osservati e le idee proposte per decidere quale portare avanti."
+   }
+  },
+  {
+   "t": "2026-11-07T20:11:22+00:00",
+   "da": "analisi-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non ho ricevuto nessuna relazione dalle 9 persone del reparto (input vuoto), quindi non posso confermare problemi né scegliere un'idea: nessuna correzione adesso, in attesa dei dati.",
+   "dati": {
+    "difetti": [],
+    "idea": "Nessuna idea scelta: servono prima le relazioni del team sul reel (con secondi, problemi osservati e proposte) per decidere quale portare avanti."
+   }
+  },
+  {
+   "t": "2026-11-07T20:11:23+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce senza revisione, come prima."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 19.2,
+   "fotogrammi": [
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s000.5.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s001.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s002.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s003.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s004.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s005.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s006.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s007.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s008.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s009.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s010.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s011.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s012.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s013.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s014.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s015.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s016.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s017.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s018.0.jpg",
+    "fotogrammi/2026-11-07-1802-prima_luce/v1/s019.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.9,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -20.0,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "token_persone": 6414,
+ "fine": "2026-11-07T20:11:23+00:00"
+}
