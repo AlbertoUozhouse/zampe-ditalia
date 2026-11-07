@@ -20,6 +20,7 @@ FOTO = ROOT / "docs/agenzia/fotogrammi"
 CONFIG = json.loads((ROOT / "motore/config.json").read_text())
 MODELLI_OPENAI = CONFIG.get("openai_modelli", ["gpt-5", "gpt-4.1", "gpt-4o"])  # il primo che risponde
 CLAUDE = "claude-sonnet-5-5"
+PERSONE = CONFIG.get("agenzia_modello_persone", "claude-haiku-5-5")  # le 100 persone dell'ufficio: un modello veloce ed economico
 MAX_REVISIONI = 2
 
 # ---------------------------------------------------------------- l'ufficio: 10 reparti, 100 postazioni con mansioni distinte
@@ -114,6 +115,87 @@ def claude(istruzioni, contenuto):
         print(f"agenzia: Claude non ha risposto ({type(e).__name__})", file=sys.stderr)
         return None
 
+# ---------------------------------------------------------------- le 100 persone: ognuna fa la sua mansione sul reel, ogni capo reparto decide
+
+PERSONA = """Lavori nel Centro Agenzia di Zampe d'Italia, una pagina Instagram italiana: ogni animale accende una luce nella sua città sulla mappa dell'Italia di notte.
+Sei «{ruolo}» nel reparto «{reparto}». Fai SOLO la tua mansione sul reel qui sotto (materiali veri: copione, trascrizione coi secondi, dati verificati della mappa, misure audio, didascalia, numeri del progetto).
+Sii concreto e breve, in italiano. Se nella tua mansione è tutto a posto dillo. Non inventare dati che non sono nei materiali.
+Rispondi solo JSON: {{"controllato": "cosa hai controllato, una frase", "esito": "ok" oppure "segnalo", "secondo": numero o null, "problema": "...", "correzione": "...", "idea": "una proposta utile per i prossimi reel, oppure vuoto"}}"""
+
+CAPO = """Sei «{ruolo}», capo del reparto «{reparto}» del Centro Agenzia di Zampe d'Italia. Ricevi le relazioni delle tue 9 persone su questo reel.
+Decidi per il reparto: cosa va corretto adesso (solo cose vere e importanti, con secondo, problema e correzione) e quale idea portare avanti.
+Rispondi solo JSON: {{"decisione": "una frase", "da_correggere": [{{"secondo": numero o null, "problema": "...", "correzione": "..."}}], "idea_scelta": "..."}}"""
+
+def lavora(sistema, contenuto, modello=None):
+    """Una persona dell'ufficio al lavoro (Claude). Restituisce (json, token) oppure (None, 0)."""
+    k = os.environ.get("ANTHROPIC_API_KEY")
+    if not k: return None, 0
+    body = {"model": modello or PERSONE, "max_tokens": 600, "system": sistema, "messages": [{"role": "user", "content": contenuto}]}
+    for tentativo in range(2):
+        try:
+            r = urllib.request.Request("https://api.anthropic.com/v1/messages", data=json.dumps(body).encode(),
+                                       headers={"x-api-key": k, "anthropic-version": "2023-06-01", "content-type": "application/json"})
+            out = json.loads(urllib.request.urlopen(r, timeout=90).read())
+            t = next(b["text"] for b in out["content"] if b.get("type") == "text")
+            u = out.get("usage", {})
+            return _json(t), u.get("input_tokens", 0) + u.get("output_tokens", 0)
+        except Exception:
+            time.sleep(2)
+    return None, 0
+
+def ufficio_al_lavoro(S, mat):
+    """Le 100 persone lavorano sul reel: 90 relazioni + 8 decisioni dei capi reparto (il capo della Direzione è il Direttore OpenAI,
+    quello del Montaggio è Claude). Tutto va nella stanza. Restituisce le decisioni dei reparti, che vanno al Direttore."""
+    from concurrent.futures import ThreadPoolExecutor
+    if not os.environ.get("ANTHROPIC_API_KEY") or CONFIG.get("agenzia_persone") is False: return []
+    progetto = progetto_in_breve()
+    testo = json.dumps({**mat, "progetto": progetto}, ensure_ascii=False)[:24000]
+    lavori = [(rid, nome, p) for rid, nome, ruoli in REPARTI for p in ufficio_reparto(rid)[1:]]
+    token = 0
+    def uno(x):
+        rid, nome, p = x
+        return x, lavora(PERSONA.format(ruolo=p["ruolo"], reparto=nome), testo)
+    rel = {}
+    with ThreadPoolExecutor(10) as ex:
+        for (rid, nome, p), (r, t) in ex.map(uno, lavori):
+            token += t
+            capo = f"{rid}-1"
+            if not r: S.d["scambi"].append({"t": _ora(), "da": p["id"], "a": capo, "tipo": "nota", "testo": "Non ha risposto in tempo."}); continue
+            rel.setdefault(rid, []).append({"ruolo": p["ruolo"], **r})
+            S.d["scambi"].append({"t": _ora(), "da": p["id"], "a": capo, "tipo": "proposta" if r.get("esito") == "segnalo" else "nota",
+                                  "testo": (r.get("problema") or r.get("controllato") or "")[:300], "dati": {k: r.get(k) for k in ("controllato", "esito", "secondo", "problema", "correzione", "idea")}})
+    decisioni = []
+    def capo(x):
+        rid, nome = x
+        ruolo = ufficio_reparto(rid)[0]["ruolo"]
+        return x, lavora(CAPO.format(ruolo=ruolo, reparto=nome), json.dumps(rel.get(rid, []), ensure_ascii=False), CLAUDE)
+    with ThreadPoolExecutor(8) as ex:
+        for (rid, nome), (r, t) in ex.map(capo, [(rid, nome) for rid, nome, _ in REPARTI if rid not in ("direzione", "montaggio")]):
+            token += t
+            if not r: continue
+            decisioni.append({"reparto": nome, **r})
+            S.d["scambi"].append({"t": _ora(), "da": f"{rid}-1", "a": "direzione-1", "tipo": "decisione", "testo": r.get("decisione", ""), "dati": {"difetti": r.get("da_correggere", []), "idea": r.get("idea_scelta")}})
+    for rid in ("direzione", "montaggio"):  # le loro persone riferiscono direttamente al Direttore e al Montatore
+        if rel.get(rid): decisioni.append({"reparto": dict((a, b) for a, b, _ in REPARTI)[rid], "relazioni": rel[rid]})
+    S.d["token_persone"] = S.d.get("token_persone", 0) + token
+    S.salva()
+    return decisioni
+
+def ufficio_reparto(rid):
+    return next(r["postazioni"] for r in ufficio() if r["id"] == rid)
+
+def progetto_in_breve():
+    """I numeri del progetto per chi lavora sul reel: follower, ultimi reel, Coppa (niente nomi utente)."""
+    try:
+        A = json.loads((ROOT / "docs/data/animali.json").read_text())
+        R = json.loads((ROOT / "motore/rendimento.json").read_text())[-6:]
+        C = json.loads((ROOT / "docs/data/coppa.json").read_text()) if (ROOT / "docs/data/coppa.json").exists() else {}
+        return {"follower": (A.get("follower") or {}).get("n"), "luci": len(A.get("animali", [])),
+                "ultimi_reel": [{k: x.get(k) for k in ("formato", "views", "reach", "comments", "shares", "follower_ogni_1000")} for x in R],
+                "coppa": {"turno": C.get("turno"), "sfide": len(C.get("sfide", [])), "staffette": len(C.get("anelli", []))}}
+    except Exception:
+        return {}
+
 # ---------------------------------------------------------------- materiali per il Direttore
 
 def dati_mappa(cop):
@@ -171,7 +253,8 @@ Chi guarda deve capire il gioco nei primi 5 secondi. Rispondi solo JSON:
 DIR_DOPO = """Sei il Direttore video di Zampe d'Italia e rispondi della qualità. Ricevi i fotogrammi del reel esportato (ogni immagine ha il suo secondo), la trascrizione con i tempi,
 i dati verificati della mappa e le misure audio. Controlla: realismo (niente che sembri finto o sbagliato), chiarezza nei primi 5 secondi (si capisce che ogni animale accende una luce nella sua città?),
 leggibilità da telefono (testi grandi, contrasto, niente testo tagliato), corrispondenza tra animale, comune e luce (l'etichetta e il punto acceso devono essere il comune e l'animale veri),
-e audio (voce chiara, musica sotto la voce, -14 LUFS circa, niente silenzi lunghi). Approva solo se non ci sono difetti che un utente noterebbe.
+e audio (voce chiara, musica sotto la voce, -14 LUFS circa, niente silenzi lunghi). Hai anche le relazioni dei reparti dell'ufficio («relazioni_reparti»): tienine conto, ma decidi tu.
+Approva solo se non ci sono difetti che un utente noterebbe.
 Rispondi solo JSON: {"approvato": true/false, "difetti": [{"secondo": 3.0, "area": "realismo|primi5s|leggibilita|corrispondenza|audio", "problema": "...", "correzione": "..."}], "decisione": "una frase"}"""
 
 CLA_CORR = """Sei Claude, il montatore di Zampe d'Italia. Il Direttore video ha trovato dei difetti. Traducili in azioni che il montaggio automatico sa fare; se un difetto non si può correggere con queste azioni, dillo.
@@ -234,6 +317,8 @@ def revisione(cop_path, cartella, giro):
            "fotogrammi_secondi": [s for s, _ in foto]}
     S.scrivi("montaggio-1", "direzione-1", "proposta", f"Versione {giro} esportata ({dur:.1f} s): ti mando {len(foto)} fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
              {k: mat[k] for k in ("durata_s", "fotogrammi_secondi")})
+    if giro == 1:  # l'ufficio al completo lavora sulla prima versione; le decisioni dei reparti vanno al Direttore
+        mat["relazioni_reparti"] = ufficio_al_lavoro(S, mat)
     r, chi = openai(DIR_DOPO, json.dumps(mat, ensure_ascii=False), [f.read_bytes() for _, f in foto])
     if r is None:
         print(f"agenzia: Direttore video non raggiungibile ({chi})", file=sys.stderr)
@@ -248,7 +333,7 @@ def revisione(cop_path, cartella, giro):
     if giro >= MAX_REVISIONI:
         S.scrivi("direzione-1", "pubblicazione-1", "decisione", f"Dopo {giro} revisioni restano difetti: il reel resta in bozza e parte quello di riserva.", {"difetti": difetti})
         S.d["stato"] = "bozza"; S.d["fine"] = _ora(); S.salva(); return 20
-    c = claude(CLA_CORR, json.dumps({"brief": _brief(cop), "difetti": difetti, "dati_mappa": dati_mappa(cop)}, ensure_ascii=False)) or {"azioni": [], "messaggio_al_direttore": "Claude non ha risposto."}
+    c = claude(CLA_CORR, json.dumps({"brief": _brief(cop), "difetti": difetti, "dati_mappa": dati_mappa(cop), "relazioni_reparti": mat.get("relazioni_reparti", [])[:6]}, ensure_ascii=False)) or {"azioni": [], "messaggio_al_direttore": "Claude non ha risposto."}
     fatte = applica(cop, c.get("azioni"))
     Path(cop_path).write_text(json.dumps(cop, ensure_ascii=False))
     S.scrivi("montaggio-1", "direzione-1", "correzione", c.get("messaggio_al_direttore") or f"Applicate {len(fatte)} correzioni.", {"azioni": fatte, "non_correggibili": c.get("non_correggibili", [])})
