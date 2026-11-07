@@ -1,0 +1,335 @@
+{
+ "id": "demo",
+ "formato": "prima_luce",
+ "modalita": "dimostrativa",
+ "inizio": "2026-11-07T18:26:53+00:00",
+ "stato": "approvato",
+ "scambi": [
+  {
+   "t": "2026-11-07T18:26:53+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce.",
+   "dati": {
+    "brief": {
+     "formato": "prima_luce",
+     "id": "demo",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Questa è l'Italia di notte. Ad Atri era tutto spento.",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Poi Mia ha acceso la prima luce di Atri!",
+       "scena": "luce"
+      },
+      {
+       "i": 2,
+       "testo": "Ogni animale può accendere la sua città. La tua è ancora al buio?",
+       "scena": "commento"
+      },
+      {
+       "i": 3,
+       "testo": "Commenta città e nome del tuo animale.",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": "reel/assets/thor-apertura.mp4",
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "✨ La prima luce di Atri è di Mia, di @julieta_negri._! 👑\n\nSu Zampe d'Italia ogni animale accende una luce nella sua città, sulla mappa dell'Italia di notte (link in bio).\n👇 Il tuo comune è ancora al buio? Commenta la tua città e il nome del tuo cane o gatto (per esempio «Treviso, Luna, cane»): entro 15 minuti si accende col tuo @.\n\n🐾 In questo reel: @julieta_negri._\n\nVoce generata con IA.\n\n#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici ",
+     "voce": false,
+     "copertina": {
+      "luce": [
+       13.9754,
+       42.5797
+      ],
+      "sopra": "LA PRIMA LUCE",
+      "grande": "di Atri",
+      "sotto": "Mia 👑"
+     }
+    },
+    "mappa": [
+     {
+      "scena": 0,
+      "etichetta": "La prima luce di Atri",
+      "lat": 42.5797,
+      "lng": 13.9754,
+      "si_accende_in_scena": true,
+      "comune_sulla_mappa": "Atri",
+      "animali_li": [
+       "Mia (@julieta_negri._)",
+       "Ellie (@julieta_negri._)",
+       "Terremoto (@julieta_negri._)"
+      ],
+      "luci_li": 3
+     },
+     {
+      "scena": 1,
+      "etichetta": "Mia · @julieta_negri._",
+      "lat": 42.5797,
+      "lng": 13.9754,
+      "si_accende_in_scena": false,
+      "comune_sulla_mappa": "Atri",
+      "animali_li": [
+       "Mia (@julieta_negri._)",
+       "Ellie (@julieta_negri._)",
+       "Terremoto (@julieta_negri._)"
+      ],
+      "luci_li": 3
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-07T18:26:53+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "risposta",
+   "testo": "ESEMPIO: apertura con Thor 3 s, zoom 1,9, luce al 40% della scena.",
+   "dati": {
+    "apertura": {
+     "usa_video": true,
+     "secondi": 3.0,
+     "perche": "ESEMPIO: un cane vero aggancia, ma la mappa deve arrivare presto"
+    },
+    "zoom": 1.9,
+    "accensione": 0.4,
+    "note_per_il_montaggio": [
+     "ESEMPIO: la luce di Atri deve accendersi entro il quinto secondo"
+    ],
+    "decisione": "ESEMPIO: apertura con Thor 3 s, zoom 1,9, luce al 40% della scena."
+   }
+  },
+  {
+   "t": "2026-11-07T18:26:53+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Montaggio avviato con le scelte del Direttore.",
+   "dati": {
+    "apertura": "reel/assets/thor-apertura.mp4",
+    "intro_durata": 3.0
+   }
+  },
+  {
+   "t": "2026-11-07T18:28:31+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.4 LUFS, picco -1.0 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.4,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -18.3,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-07T18:28:31+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (17.4 s): ti mando 18 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 17.4,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17
+    ]
+   }
+  },
+  {
+   "t": "2026-11-07T18:28:31+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "risposta",
+   "testo": "ESEMPIO: da correggere, due difetti.",
+   "dati": {
+    "approvato": false,
+    "difetti": [
+     {
+      "secondo": 1.0,
+      "area": "primi5s",
+      "problema": "ESEMPIO: per 3 secondi si vede solo il cane, il gioco non si capisce ancora",
+      "correzione": "Accorcia l'apertura a 2,5 s"
+     },
+     {
+      "secondo": 5.0,
+      "area": "leggibilita",
+      "problema": "ESEMPIO: l'etichetta del comune è piccola sul telefono",
+      "correzione": "Avvicina la mappa su Atri"
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-07T18:28:31+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "correzione",
+   "testo": "ESEMPIO: apertura accorciata a 2,5 s e mappa più vicina su Atri (zoom 2,2).",
+   "dati": {
+    "azioni": [
+     {
+      "azione": "intro",
+      "secondi": 2.5
+     },
+     {
+      "azione": "zoom",
+      "scena": 0,
+      "valore": 2.2
+     }
+    ],
+    "non_correggibili": []
+   }
+  },
+  {
+   "t": "2026-11-07T18:29:47+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 2: -14.3 LUFS, picco -1.0 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.3,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -18.0,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-07T18:29:47+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 2 esportata (16.9 s): ti mando 17 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 16.9,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   }
+  },
+  {
+   "t": "2026-11-07T18:29:47+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "risposta",
+   "testo": "ESEMPIO: approvata la versione 2.",
+   "dati": {
+    "approvato": true,
+    "difetti": []
+   }
+  },
+  {
+   "t": "2026-11-07T18:29:47+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "decisione",
+   "testo": "Approvata la versione 2: si pubblica una volta sola."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 17.4,
+   "fotogrammi": [
+    "fotogrammi/demo/v1/s000.5.jpg",
+    "fotogrammi/demo/v1/s001.0.jpg",
+    "fotogrammi/demo/v1/s002.0.jpg",
+    "fotogrammi/demo/v1/s003.0.jpg",
+    "fotogrammi/demo/v1/s004.0.jpg",
+    "fotogrammi/demo/v1/s005.0.jpg",
+    "fotogrammi/demo/v1/s006.0.jpg",
+    "fotogrammi/demo/v1/s007.0.jpg",
+    "fotogrammi/demo/v1/s008.0.jpg",
+    "fotogrammi/demo/v1/s009.0.jpg",
+    "fotogrammi/demo/v1/s010.0.jpg",
+    "fotogrammi/demo/v1/s011.0.jpg",
+    "fotogrammi/demo/v1/s012.0.jpg",
+    "fotogrammi/demo/v1/s013.0.jpg",
+    "fotogrammi/demo/v1/s014.0.jpg",
+    "fotogrammi/demo/v1/s015.0.jpg",
+    "fotogrammi/demo/v1/s016.0.jpg",
+    "fotogrammi/demo/v1/s017.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.4,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -18.3,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "v": 2,
+   "durata": 16.9,
+   "fotogrammi": [
+    "fotogrammi/demo/v2/s000.5.jpg",
+    "fotogrammi/demo/v2/s001.0.jpg",
+    "fotogrammi/demo/v2/s002.0.jpg",
+    "fotogrammi/demo/v2/s003.0.jpg",
+    "fotogrammi/demo/v2/s004.0.jpg",
+    "fotogrammi/demo/v2/s005.0.jpg",
+    "fotogrammi/demo/v2/s006.0.jpg",
+    "fotogrammi/demo/v2/s007.0.jpg",
+    "fotogrammi/demo/v2/s008.0.jpg",
+    "fotogrammi/demo/v2/s009.0.jpg",
+    "fotogrammi/demo/v2/s010.0.jpg",
+    "fotogrammi/demo/v2/s011.0.jpg",
+    "fotogrammi/demo/v2/s012.0.jpg",
+    "fotogrammi/demo/v2/s013.0.jpg",
+    "fotogrammi/demo/v2/s014.0.jpg",
+    "fotogrammi/demo/v2/s015.0.jpg",
+    "fotogrammi/demo/v2/s016.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.3,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -18.0,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "direttore_modello": "esempio",
+ "approvata": 2,
+ "fine": "2026-11-07T18:29:47+00:00",
+ "nota": "Sessione dimostrativa: risposte d'esempio, non è un reel registrato."
+}

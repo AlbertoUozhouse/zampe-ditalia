@@ -823,7 +823,7 @@ def prima_luce(D, rng, st):
     autore = _clip(D, st, a["u"])
     rz = _razza(a)
     frasi = [
-        (f"Questa è l'Italia di notte. {_a(a['c']).capitalize()} era tutto spento.", {"tipo": "luce", "centro": [a["lng"], a["lat"]], "intorno": _intorno(D, a, escludi=[a]),
+        (f"Questa è l'Italia di notte. {_a(a['c'])[:1].upper() + _a(a['c'])[1:]} era tutto spento.", {"tipo": "luce", "centro": [a["lng"], a["lat"]], "intorno": _intorno(D, a, escludi=[a]),
           "punti": [{"lng": a["lng"], "lat": a["lat"], "acceso": False, "testo": f"La prima luce di {a['c']}"}]}),
         (f"Poi {a['n']}{', ' + rz + ',' if rz else ''} ha acceso la prima luce di {a['c']}!", {"tipo": "luce", "centro": [a["lng"], a["lat"]], "vicino": True, "intorno": _intorno(D, a, escludi=[a]),
           "punti": [{"lng": a["lng"], "lat": a["lat"], "testo": f"{a['n']} · @{a['u']}"}]}),

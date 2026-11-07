@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Centro Agenzia · Zampe d'Italia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Nunito:wght@600;800;900&display=swap">
+<link rel="stylesheet" href="agenzia.css">
+</head>
+<body>
+<header class="testa">
+  <div><h1>Centro Agenzia</h1><p>Zampe d'Italia · la stanza dei reel</p></div>
+  <div class="modi" role="tablist">
+    <button type="button" role="tab" id="mOp" aria-selected="true">Operativa</button>
+    <button type="button" role="tab" id="mDemo" aria-selected="false">Dimostrativa</button>
+  </div>
+</header>
+<div class="demo-banner" id="demoBanner" hidden>⚠️ SESSIONE DIMOSTRATIVA · gli scambi qui sotto sono un esempio, non sono stati registrati da un reel vero</div>
+<div class="barra"><label for="sess">Sessione</label><select id="sess"></select><span id="stato" class="stato"></span><button type="button" id="apriSess" class="stato">📼 Scambio e prima/dopo</button></div>
+<main>
+  <div class="pianta" id="pianta" aria-label="L'ufficio visto dall'alto: tocca un reparto o una postazione"></div>
+</main>
+<section class="pannello" id="pannello" hidden></section>
+<script src="agenzia.js"></script>
+</body>
+</html>

@@ -214,7 +214,8 @@ def main():
 
     c = copione.get("conteggio", {"cani": 0, "gatti": 0})
     b0 = 0.3  # 2/11: la richiesta di commentare sta in basso per tutto il video, come una fascia fissa
-    (prog / "index.html").write_text(INDEX.format(nota=copione.get("formato", ""), durata=durata, vol_musica=0.22 if con_voce else 0.6, bg0=S.T["bg"][0], bg1=S.T["bg"][1], bg2=S.T["bg"][2], host="\n".join(host), titolo=S.ESC(copione["testata"]["titolo"]),
+    (prog / "index.html").write_text(INDEX.format(nota=copione.get("formato", ""), durata=durata, vol_musica=copione.get("vol_musica", 0.22 if con_voce else 0.6),  # il Direttore video può chiedere la musica più bassa (motore/agenzia.py)
+         bg0=S.T["bg"][0], bg1=S.T["bg"][1], bg2=S.T["bg"][2], host="\n".join(host), titolo=S.ESC(copione["testata"]["titolo"]),
         cani=c["cani"], gatti=c["gatti"], b0=b0, bd=round(durata - b0, 2), banner=S.ESC(copione.get("banner", "📍 Scrivi città, nome e razza 👇")),
         dvoce=round(fine_voce + 0.1, 2)))
     subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *gruppi_sottotitoli(frasi)], check=True)
@@ -234,11 +235,12 @@ def main():
     if copione.get("intro"):  # qualche secondo di video vero prima del reel (un animale vero, mandato col consenso), poi la mappa
         intro = ROOT / copione["intro"]
         di = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(intro)], capture_output=True, text=True).stdout)
+        di = min(di, float(copione.get("intro_durata") or di))  # il Direttore video può accorciare l'apertura
         # il suono vero del video (ambiente) resta, con la musica bassa sotto (7/11); senza audio, solo musica
         ambiente = bool(subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index", "-of", "csv=p=0", str(intro)], capture_output=True, text=True).stdout.strip())
         (out / "effetti_intro.json").write_text(json.dumps({"durata": di, "pop": [0.25, 2.45]}))
         subprocess.run([sys.executable, str(ROOT / "reel/musica.py"), str(out / "effetti_intro.json"), str(out / "intro.wav")], check=True)
-        subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(intro), "-i", str(out / "intro.wav"), "-i", str(out / "reel.mp4"), "-filter_complex",
+        subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-t", f"{di:.2f}", "-i", str(intro), "-i", str(out / "intro.wav"), "-i", str(out / "reel.mp4"), "-filter_complex",
                         f"[0:v]scale=1080:1920,fps=30,setsar=1,format=yuv420p[v0];[2:v]fps=30,setsar=1,format=yuv420p[v1];"
                         + (f"[1:a]atrim=0:{di},apad=whole_dur={di},volume=0.6,aresample=48000,aformat=channel_layouts=stereo[a0];" if not ambiente else
                          f"[1:a]atrim=0:{di},apad=whole_dur={di},volume=0.25,aresample=48000,aformat=channel_layouts=stereo[m0];[0:a]atrim=0:{di},apad=whole_dur={di},aresample=48000,aformat=channel_layouts=stereo[s0];[s0][m0]amix=inputs=2:duration=first:normalize=0[a0];")

@@ -1,0 +1,52 @@
+# Centro Agenzia: revisione del Direttore video (OpenAI) su un reel già montato e già sul sito, senza ripubblicarlo.
+# Serve per il primo giro di prova e per rivedere un reel uscito: v1 è il file pubblicato, v2 (se serve) è rimontato con le correzioni.
+name: agenzia
+
+on:
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "id del reel, per esempio 2026-11-07-1802-prima_luce (servono docs/media/auto/<id>.mp4 e docs/contenuti/auto/<id>.json)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  revisione:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      ID: ${{ inputs.id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Strumenti
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji >/dev/null
+          pip install -q numpy pillow
+          [ -n "$OPENAI_API_KEY" ] && echo "chiave OpenAI: presente" || echo "chiave OpenAI: MANCA (OPENAI_API_KEY nei Secrets)"
+      - name: Revisione del Direttore e correzioni
+        run: |
+          mkdir -p /tmp/reel && cp "docs/media/auto/$ID.mp4" /tmp/reel/reel.mp4 && cp "docs/contenuti/auto/$ID.json" /tmp/copione.json
+          set +e; python3 -I motore/agenzia.py revisione /tmp/copione.json /tmp/reel 1; esito=$?; set -e
+          if [ "$esito" = 10 ]; then
+            rm -rf /tmp/reel && python3 reel/costruisci.py /tmp/copione.json /tmp/reel
+            set +e; python3 -I motore/agenzia.py revisione /tmp/copione.json /tmp/reel 2; esito=$?; set -e
+            mkdir -p docs/media/bozze && cp /tmp/reel/reel.mp4 "docs/media/bozze/$ID-v2.mp4"
+          fi
+          echo "esito finale: $esito (0 approvato, 20 bozza)"
+      - name: Salva nella stanza
+        if: always()
+        run: |
+          git config user.name "zampe-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/agenzia docs/agenzia docs/media/bozze 2>/dev/null || true
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Centro Agenzia: revisione del reel $ID"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done

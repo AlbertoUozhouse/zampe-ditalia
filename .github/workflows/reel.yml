@@ -39,6 +39,7 @@ jobs:
       IG_TOKEN: ${{ secrets.IG_TOKEN }}
       ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}  # il Direttore video (motore/agenzia.py); senza, i reel escono come prima
       GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
@@ -51,10 +52,26 @@ jobs:
           pip install -q numpy pillow  # pillow: la copertina con la mappa vera (reel/copertina.py, 7/11)
       - name: Copione
         if: ${{ !startsWith(inputs.formato, 'pronto-') }}
-        run: python3 motore/copione.py "${{ inputs.formato }}" /tmp/copione.json
-      - name: Video
+        run: |
+          python3 motore/copione.py "${{ inputs.formato }}" /tmp/copione.json
+          # Centro Agenzia: prima del montaggio il Direttore video sceglie apertura, inquadratura e momento della luce
+          python3 -I motore/agenzia.py prima /tmp/copione.json || echo "Direttore video non raggiungibile: si monta col copione"
+      - name: Video e revisione del Direttore
         if: ${{ !startsWith(inputs.formato, 'pronto-') }}
-        run: python3 reel/costruisci.py /tmp/copione.json /tmp/reel
+        run: |
+          # al massimo 2 revisioni: approvato = si pubblica; corretto = si rimonta e si rimanda; difetti dopo 2 giri = bozza e reel di riserva
+          for giro in 1 2; do
+            rm -rf /tmp/reel; python3 reel/costruisci.py /tmp/copione.json /tmp/reel
+            set +e; python3 -I motore/agenzia.py revisione /tmp/copione.json /tmp/reel $giro; esito=$?; set -e
+            [ "$esito" = 0 ] && exit 0
+            [ "$esito" = 10 ] && [ "$giro" = 1 ] && continue
+            ID=$(python3 -c "import json;print(json.load(open('/tmp/copione.json'))['id'])")
+            mkdir -p docs/media/bozze; cp /tmp/reel/reel.mp4 "docs/media/bozze/$ID.mp4"
+            git config user.name "zampe-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add docs/media/bozze docs/data/agenzia docs/agenzia; git commit -q -m "Reel in bozza (il Direttore video non l'ha approvato) $ID"
+            for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
+            echo "reel in bozza: parte il reel di riserva"; exit 1
+          done
       - name: Reel già montato
         if: ${{ startsWith(inputs.formato, 'pronto-') }}
         run: F="${{ inputs.formato }}"; python3 reel/pronto.py "${F#pronto-}" /tmp/copione.json /tmp/reel
@@ -72,7 +89,10 @@ jobs:
           for f in docs/media/auto/*; do n=$(basename "$f"); if [ "${n:0:10}" \< "$LIMITE" ]; then rm -f "$f"; fi; done
           git config user.name "zampe-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/media/auto docs/contenuti/auto motore/reel_fatti.json
+          LIMITE2=$(date -u -d '14 days ago' +%Y-%m-%d)  # fotogrammi della stanza e bozze: due settimane
+          for f in docs/agenzia/fotogrammi/* docs/media/bozze/*; do [ -e "$f" ] || continue; n=$(basename "$f"); if [ "${n:0:10}" \< "$LIMITE2" ]; then rm -rf "$f"; fi; done
+          cp /tmp/copione.json "docs/contenuti/auto/$ID.json"  # il copione resta: serve per rivedere e rimontare un reel già uscito
+          git add docs/media/auto docs/contenuti/auto motore/reel_fatti.json docs/data/agenzia docs/agenzia
           git commit -q -m "Reel automatico $ID"
           for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
           echo "id=$ID" >> "$GITHUB_OUTPUT"
