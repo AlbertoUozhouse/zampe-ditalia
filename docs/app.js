@@ -6,7 +6,7 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const fmt = n => n.toLocaleString("it-IT");
 const ANTEPRIMA = new URLSearchParams(location.search).has("anteprima");
-const COL = { cane: [255, 197, 92], gatto: [207, 227, 107], altro: [130, 220, 235], sogno: [190, 205, 255], stella: [255, 244, 222] };
+const COL = { cane: [255, 190, 90], gatto: [255, 214, 128], altro: [255, 170, 110], sogno: [190, 205, 255], stella: [255, 244, 222] }; // luci ambrate, come i paesi visti di notte
 
 // ---------- mappa ----------
 const map = L.map("map", { zoomControl: false, attributionControl: false, minZoom: 5, maxZoom: 16, zoomSnap: 0.25,
@@ -15,6 +15,8 @@ const ITALY = L.latLngBounds([36.4, 6.4], [47.2, 18.7]);
 const PAD = () => ({ paddingTopLeft: [0, innerWidth < 600 ? 175 : 165], paddingBottomRight: [0, innerWidth < 600 ? 160 : 150] });
 map.fitBounds(ITALY, PAD());
 map.setMaxBounds(ITALY.pad(0.4));
+// L'Italia di notte con coste e rilievi veri (strumenti/rilievo.py, dati di altitudine pubblici AWS Terrain Tiles: SRTM, GMTED, ETOPO1)
+L.tileLayer("tiles/{z}/{x}/{y}.jpg", { minZoom: 5, maxNativeZoom: 9, maxZoom: 16, bounds: L.latLngBounds([33.5, 2.0], [50.5, 22.5]), keepBuffer: 3 }).addTo(map);
 // Se la pagina si apre nascosta (anteprime, schede in background) la mappa nasce senza dimensioni: la reinquadro appena ne ha.
 let fitted = map.getSize().y > 0;
 new ResizeObserver(() => { map.invalidateSize(); if (!fitted && map.getSize().y > 0) { fitted = true; map.fitBounds(ITALY, PAD()); } redraw(); }).observe(map.getContainer());
@@ -33,6 +35,11 @@ const SPR = { cane: sprite(COL.cane), gatto: sprite(COL.gatto), altro: sprite(CO
 let DATA = [], VISIBLE = [], recentCount = 0;
 const DOM_ZOOM = 12.5; // da qui in su compaiono i paesi disegnati
 
+function onda(p, dt) {
+  const k = (dt % 1333) / 1333, R = 8 + 60 * k;
+  gx.save(); gx.globalCompositeOperation = "source-over"; gx.globalAlpha = (1 - k) * 0.8 * (1 - dt / 4000);
+  gx.strokeStyle = "rgb(255,205,120)"; gx.lineWidth = 2; gx.beginPath(); gx.arc(p.x, p.y, R, 0, Math.PI * 2); gx.stroke(); gx.restore();
+}
 function drawGlow(t = performance.now()) {
   const s = map.getSize(), dpr = Math.min(devicePixelRatio || 1, 2);
   if (glow.width !== s.x * dpr) { glow.width = s.x * dpr; glow.height = s.y * dpr; glow.style.width = s.x + "px"; glow.style.height = s.y + "px"; }
@@ -43,7 +50,8 @@ function drawGlow(t = performance.now()) {
     const p = map.latLngToContainerPoint(d.ll);
     if (p.x < -40 || p.y < -40 || p.x > s.x + 40 || p.y > s.y + 40) continue;
     let r = base * (d.k === "tifo" ? 0.6 : d.k === "stella" ? 0.6 : 1) * (1 + Math.min(0.7, d.pt / 250));
-    if (d.recent) r *= 1 + 0.35 * Math.sin(t / 380 + d.seed);
+    const dt = d.nato ? t - d.nato : 1e9; // un nuovo animale: la luce pulsa per 4 secondi e lascia un'onda
+    if (dt < 4000) { r *= 1 + 0.9 * Math.sin(Math.PI * Math.min(1, dt / 700)) + 0.25 * Math.sin(dt / 160) * (1 - dt / 4000); onda(p, dt); }
     if (near && d.k !== "tifo" && d.villa?.mostra) continue; // da vicino il paese disegnato ha già il suo bagliore
     gx.globalAlpha = far;
     gx.drawImage(SPR[d.k === "tifo" ? d.t : d.k === "animale" ? d.t : d.k], p.x - r, p.y - r, r * 2, r * 2);
@@ -51,15 +59,14 @@ function drawGlow(t = performance.now()) {
   gx.globalAlpha = 1;
 }
 let raf = 0;
-const loop = t => { drawGlow(t); raf = recentCount && !matchMedia("(prefers-reduced-motion: reduce)").matches ? requestAnimationFrame(loop) : 0; };
+const pulsano = t => DATA.some(d => d.nato && t - d.nato < 4000);
+const loop = t => { drawGlow(t); raf = pulsano(t) && !matchMedia("(prefers-reduced-motion: reduce)").matches ? requestAnimationFrame(loop) : 0; };
 const redraw = () => { if (!raf) drawGlow(); };
 
 // ---------- regioni ----------
 let regLayer;
 fetch("data/regioni.json").then(r => r.json()).then(REG => {
-  L.geoJSON(REG, { style: () => ({ color: "#5577C9", weight: 7, opacity: 0.22, fill: false }), interactive: false }).addTo(map);
-  regLayer = L.geoJSON(REG, { style: () => ({ color: "#34508F", weight: 1.1, fillColor: "#1E3266", fillOpacity: 1 }), interactive: false }).addTo(map);
-  L.geoJSON(REG, { style: () => ({ color: "#5577C9", weight: 1.6, opacity: 0.75, fill: false }), interactive: false }).addTo(map);
+  regLayer = L.geoJSON(REG, { style: () => ({ color: "#8FA6D8", weight: 0.8, opacity: 0.28, fill: false, dashArray: "3 4" }), interactive: false }).addTo(map);
 });
 
 // ---------- dati ----------
@@ -225,9 +232,13 @@ function syncPets() {
 }
 function syncCities(cities) {
   cityLabels.clearLayers();
-  const z = map.getZoom(), n = z < 6.5 ? 6 : z < 8 ? 14 : 40;
-  (z < DOM_ZOOM ? cities : cities.filter(c => !VILLE.get(c.c + "|" + c.p)?.mostra)).slice(0, n).forEach(c => cityLabels.addLayer(L.marker([c.lat, c.lng], { interactive: false,
-    icon: L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="city">${esc(c.c)} · ${fmt(c.tot)}</div>` }) })));
+  const z = map.getZoom(), n = z < 6.5 ? 6 : z < 8 ? 14 : z < 9.5 ? 40 : 160, vb = map.getBounds().pad(0.1);
+  const occupati = []; // i nomi non si accavallano: passa prima il comune con più luci, gli altri aspettano lo zoom
+  const libero = c => { const p = map.latLngToContainerPoint([c.lat, c.lng]), w = 7.2 * (c.c.length + 5), r = [p.x - w / 2, p.y + 6, p.x + w / 2, p.y + 24];
+    if (occupati.some(o => r[0] < o[2] && r[2] > o[0] && r[1] < o[3] && r[3] > o[1])) return false; occupati.push(r); return true; };
+  (z < DOM_ZOOM ? cities : cities.filter(c => !VILLE.get(c.c + "|" + c.p)?.mostra)).filter(c => z < 8 || vb.contains([c.lat, c.lng])).slice(0, n).filter(libero).forEach(c => {
+    // il nome non cattura il tocco: lo prende la mappa, che apre il comune più vicino al dito (il nome sta subito sotto la sua luce)
+    cityLabels.addLayer(L.marker([c.lat, c.lng], { interactive: false, icon: L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="city">${esc(c.c)} · ${fmt(c.tot)}</div>` }) })); });
 }
 
 // ---------- statistiche ----------
@@ -337,7 +348,7 @@ function show(v) {
   }
   if (v === "regole") {
     s.innerHTML = `<h2>Come si gioca</h2><p class="sub">Si gioca nei commenti dei reel di @zampeditalia. Entro 15 minuti la luce si accende.</p><ul class="rules">
-      <li><b>🐶🐱 Il tuo animale · +10</b>Scrivi città, nome e razza: <code>Treviso, Luna, golden</code> oppure <code>Milano, Micio, gatto rosso</code>. Il primo del comune diventa Fondatore (+20).</li>
+      <li><b>🐶🐱 Il tuo animale · +10</b>Scrivi città e nome, e se è un cane o un gatto: <code>Treviso, Luna, cane</code> oppure <code>Milano, Micio, gatto</code>. La razza è facoltativa. Il primo del comune diventa Fondatore (+20).</li><li><small>Rilievo e coste: AWS Terrain Tiles (SRTM, GMTED, ETOPO1).</small></li>
       <li><b>🐰🦎🐢 Tutti gli animali</b>Conigli, furetti, gechi, tartarughe, pappagalli…: <code>Padova, Ugo, furetto</code>. Accendono la città con una luce azzurra. Quando arrivano a 15 luci entrano nella sfida: Cani contro Gatti contro Altri animali!</li>
       <li><b>🐺 Capobranco</b>Ogni domenica alle 21 chi ha più punti nel suo comune (con almeno 3 luci) diventa Capobranco per una settimana. Commenta ogni giorno (+5) e tagga gli amici (+3) per salire.</li>
       <li><b>⛲ La tua città cresce</b>A 5 luci la fontanella, a 10 il parco cani, a 25 il gattile, a 50 la clinica veterinaria, a 100 la piazza dei Fondatori.</li>
@@ -401,10 +412,35 @@ $("#searchForm").addEventListener("submit", async e => {
 $("#zin").onclick = () => map.zoomIn(); $("#zout").onclick = () => map.zoomOut();
 $("#zall").onclick = () => map.flyToBounds(ITALY, { ...PAD(), duration: 0.8 });
 
+// ---------- scheda del comune: toccando un comune si vedono gli ultimi animali arrivati ----------
+function apriComune(key) {
+  const [nome, prov] = key.split("|"), qui = DATA.filter(d => d.c === nome && d.p === prov && d.k !== "stella");
+  if (!qui.length) return;
+  const ultimi = [...qui].sort((a, b) => (b.ts || "").localeCompare(a.ts || "")).slice(0, 8), cani = qui.filter(d => d.t === "cane").length;
+  const fond = qui.find(d => d.fondatore);
+  const quando = ts => { if (!ts) return ""; const m = (Date.now() - Date.parse(ts)) / 60000; return m < 60 ? `${Math.max(1, Math.round(m))} min fa` : m < 1440 ? `${Math.round(m / 60)} ore fa` : `${Math.round(m / 1440)} giorni fa`; };
+  document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", "false"));
+  const s = $("#sheet"); s.hidden = false;
+  s.innerHTML = `<h2>${esc(nome)} <small>${esc(prov)}</small></h2><p class="sub">${fmt(qui.length)} ${qui.length === 1 ? "luce accesa" : "luci accese"} · 🐶 ${fmt(cani)} · 🐱 ${fmt(qui.length - cani)}${fond ? ` · la prima luce: <b>${esc(fond.n)}</b> 👑` : ""}</p>
+    <h3>Gli ultimi arrivati</h3><ol class="list">` + ultimi.map(d => `<li class="row" data-id="${esc(d.id)}"><span class="pos">${icona(d)}</span><span class="who">${esc(d.n)} · @${esc(d.u)}<small>${esc(d.razza_testo || d.razza || d.t)} · ${quando(d.ts)}</small></span></li>`).join("") + `</ol>
+    <p class="sub">🐾 Accendi anche il tuo: commenta l'ultimo reel con <b>«${esc(nome)}, nome, cane»</b> (o gatto).</p><p><a class="btn" href="${CONFIG.ig}" target="_blank" rel="noopener">Commenta su Instagram</a></p>`;
+  s.querySelectorAll(".row").forEach(r => r.onclick = () => { s.hidden = true; focus(DATA.find(d => d.id === r.dataset.id)); });
+}
+map.on("click", e => { // il comune più vicino al dito, entro 36 pixel
+  if (map.getZoom() >= DOM_ZOOM) return;
+  const p = map.latLngToContainerPoint(e.latlng); let best = null, bd = 36;
+  for (const c of STATS.city || []) { const q = map.latLngToContainerPoint([c.lat, c.lng]), dd = Math.hypot(q.x - p.x, q.y - p.y) - 3 * Math.log1p(c.tot); if (dd < bd) { bd = dd; best = c; } } // a parità di distanza vince il comune con più luci
+  if (best) apriComune(best.c + "|" + best.p);
+});
+
 // ---------- avvio ----------
+let VISTI = null; // gli id già sulla mappa: chi arriva dopo pulsa
 function refresh(list) {
   DATA = prepare(list); stats(); ville(); renderHeader(); syncPets(); syncCities(STATS.city);
-  if (!raf && recentCount) raf = requestAnimationFrame(loop); else redraw();
+  const ora = performance.now();
+  DATA.forEach((d, i) => { if (VISTI ? !VISTI.has(d.id) : d.recent) d.nato = ora + (VISTI ? 0 : (i % 7) * 350); });
+  VISTI = new Set(DATA.map(d => d.id));
+  if (!raf && pulsano(ora)) raf = requestAnimationFrame(loop); else redraw();
   if (!$("#sheet").hidden) show(document.querySelector('.tab[aria-selected="true"]').dataset.v);
 }
 map.on("move zoom resize", redraw);

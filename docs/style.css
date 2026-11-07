@@ -10,7 +10,7 @@
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 body{background:var(--night);color:var(--cream);font-family:var(--f-body);overflow:hidden;-webkit-font-smoothing:antialiased}
-#map{position:fixed;inset:0;z-index:1;background:radial-gradient(ellipse at 55% 38%,var(--night2),var(--night) 72%)}
+#map{position:fixed;inset:0;z-index:1;background:#040C24} /* il mare al largo, come le piastrelle del rilievo */
 .leaflet-container{background:transparent;font-family:var(--f-body)}
 .leaflet-control-attribution{display:none}
 #glow{position:absolute;inset:0;z-index:450;pointer-events:none}
