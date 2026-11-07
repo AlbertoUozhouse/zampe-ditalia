@@ -105,7 +105,7 @@ def claude(istruzioni, contenuto):
     """Claude, il montatore: traduce le correzioni del Direttore in azioni che il montaggio sa fare."""
     k = os.environ.get("ANTHROPIC_API_KEY")
     if not k: return None
-    body = {"model": CLAUDE, "max_tokens": 2000, "system": istruzioni, "messages": [{"role": "user", "content": contenuto}]}
+    body = {"model": CLAUDE, "max_tokens": 8000, "system": istruzioni, "messages": [{"role": "user", "content": contenuto}], "output_config": {"effort": "medium"}}
     try:
         r = urllib.request.Request("https://api.anthropic.com/v1/messages", data=json.dumps(body).encode(),
                                    headers={"x-api-key": k, "anthropic-version": "2023-06-01", "content-type": "application/json"})
@@ -135,7 +135,10 @@ def lavora(sistema, contenuto, modello=None):
     if not k: return None, 0
     modelli = [modello or PERSONE] + ([CLAUDE] if (modello or PERSONE) != CLAUDE else [])
     for m in modelli:
-        body = {"model": m, "max_tokens": 600, "system": sistema, "messages": [{"role": "user", "content": contenuto}]}
+        # Haiku 5.5 e Sonnet 5.5 pensano prima di rispondere e il pensiero consuma max_tokens (7/11: risposte vuote o tagliate a 600):
+        # sforzo basso, spazio largo, e su Haiku il pensiero spento (permesso fino allo sforzo «high»)
+        body = {"model": m, "max_tokens": 4000 if m == CLAUDE else 1500, "system": sistema, "messages": [{"role": "user", "content": contenuto}],
+                "output_config": {"effort": "low"}, **({"thinking": {"type": "disabled"}} if "haiku" in m else {})}
         for tentativo in range(5):
             try:
                 r = urllib.request.Request("https://api.anthropic.com/v1/messages", data=json.dumps(body).encode(),
