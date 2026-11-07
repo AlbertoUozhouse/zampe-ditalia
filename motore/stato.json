@@ -10137,9 +10137,7 @@
 "18666851569016117",
 "18668921470032586"
 ],
-"risposte": [
-1794060922.2657018
-],
+"risposte": [],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -18483,5 +18481,11 @@
 "piu_bello": {
 "id": "jacopo.cavadini|animale|yuki",
 "giorno": "2026-11-01"
-}
+},
+"follower_ore": [
+[
+"2026-11-07T15:22+00:00",
+1719
+]
+]
 }
