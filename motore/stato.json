@@ -9380,6 +9380,7 @@
 "18397351933163012",
 "18397359058165537",
 "18397446649166871",
+"18397462603228889",
 "18397538089163509",
 "18397609915161214",
 "18397668976166547",
@@ -10108,7 +10109,8 @@
 1794044524.4329095,
 1794044530.491674,
 1794044531.5767531,
-1794045301.8800757
+1794045301.8800757,
+1794047009.943635
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12189,7 +12191,8 @@
 "totaro_yt": "2026-11-07",
 "tommasotigli": "2026-11-07",
 "gioeleflavio45": "2026-11-07",
-"antonio_benci": "2026-11-07"
+"antonio_benci": "2026-11-07",
+"julieta_negri._": "2026-11-07"
 },
 "media_letti": {},
 "pezzi": {
@@ -14236,7 +14239,8 @@
 "ivanbianchi_": 30,
 "pi_dou": 30,
 "francesco.puricella": 5,
-"antonio_benci": 30
+"antonio_benci": 30,
+"julieta_negri._": 30
 },
 "inviti_giorno": {
 "2026-10-31": {
@@ -15073,7 +15077,7 @@
 "fede_sporty_": "premiato",
 "brunac80": "premiato",
 "organize_time_italy": "premiato",
-"julieta_negri._": "in_attesa",
+"julieta_negri._": "premiato",
 "ivanbianchi_": "premiato",
 "pi_dou": "premiato",
 "antonio_benci": "premiato"
@@ -18331,11 +18335,13 @@
 "93cf4067d8ea177a",
 "6eed7ef34d77c63e",
 "bd67fe1deac7aa21",
-"3ba1bb986357b20a"
+"3ba1bb986357b20a",
+"d258074b066c1dab"
 ],
 "privati_ora": [
 1794043748.9104478,
-1794044524.4329417
+1794044524.4329417,
+1794047009.9436703
 ],
 "derby_premiati": [
 "2026-10-28NARM"
