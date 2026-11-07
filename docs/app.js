@@ -331,7 +331,7 @@ function show(v) {
       <div class="art boost-art"><span class="anteprima"><span class="emo">⚡</span></span><span class="who"><b>Boost x2 per 24 ore</b><small>Tutti i punti di commenti e amici valgono doppio. Si somma al Boost di oggi!</small></span>
         <button type="button" class="btn compra" data-k="boost" ${scelto && NEGOZIO.boost ? "" : "disabled"}>1 €</button></div>
       ${sfilata(scelto)}
-      <p class="sub piccolo">${Object.keys(NEGOZIO).length ? "Pagamento sicuro con Stripe. L'accessorio compare sulla mappa entro 15 minuti, e il tuo regalo finisce nella storia di @zampeditalia 🎉" : "Il negozio apre a breve: gli accessori arrivano nei prossimi giorni."} Nessun abbonamento, si paga una volta sola.</p>`;
+      <p class="sub piccolo">${Object.keys(NEGOZIO).length ? "Pagamento sicuro con Stripe. L'accessorio compare sulla mappa e il tuo regalo finisce nella storia di @zampeditalia 🎉" : "Il negozio apre a breve: gli accessori arrivano nei prossimi giorni."} Nessun abbonamento, si paga una volta sola.</p>`;
     const cerca = $("#mio"), lista = $("#miei");
     $("#cercaMio").onsubmit = e => e.preventDefault();
     cerca.oninput = () => { const q = cerca.value.trim().toLowerCase().replace(/^@/, ""); if (q.length < 2) return;
@@ -347,7 +347,7 @@ function show(v) {
       location.href = NEGOZIO[b.dataset.k] + (NEGOZIO[b.dataset.k].includes("?") ? "&" : "?") + "client_reference_id=" + codice(scelto.id); });
   }
   if (v === "regole") {
-    s.innerHTML = `<h2>Come si gioca</h2><p class="sub">Si gioca nei commenti dei reel di @zampeditalia. Entro 15 minuti la luce si accende.</p><ul class="rules">
+    s.innerHTML = `<h2>Come si gioca</h2><p class="sub">Si gioca nei commenti dei reel di @zampeditalia. La luce si accende.</p><ul class="rules">
       <li><b>🐶🐱 Il tuo animale · +10</b>Scrivi città e nome, e se è un cane o un gatto: <code>Treviso, Luna, cane</code> oppure <code>Milano, Micio, gatto</code>. La razza è facoltativa. Il primo del comune diventa Fondatore (+20).</li><li><small>Rilievo e coste: AWS Terrain Tiles (SRTM, GMTED, ETOPO1).</small></li>
       <li><b>🐰🦎🐢 Tutti gli animali</b>Conigli, furetti, gechi, tartarughe, pappagalli…: <code>Padova, Ugo, furetto</code>. Accendono la città con una luce azzurra. Quando arrivano a 15 luci entrano nella sfida: Cani contro Gatti contro Altri animali!</li>
       <li><b>🐺 Capobranco</b>Ogni domenica alle 21 chi ha più punti nel suo comune (con almeno 3 luci) diventa Capobranco per una settimana. Commenta ogni giorno (+5) e tagga gli amici (+3) per salire.</li>

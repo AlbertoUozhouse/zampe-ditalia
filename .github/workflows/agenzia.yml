@@ -8,6 +8,10 @@ on:
       id:
         description: "id del reel, per esempio 2026-11-07-1802-prima_luce (servono docs/media/auto/<id>.mp4 e docs/contenuti/auto/<id>.json)"
         required: true
+      rimonta:
+        description: "Rimonta comunque la versione 2 dal copione (anche senza correzioni del Direttore), senza pubblicarla"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -35,7 +39,8 @@ jobs:
         run: |
           mkdir -p /tmp/reel && cp "docs/media/auto/$ID.mp4" /tmp/reel/reel.mp4 && cp "docs/contenuti/auto/$ID.json" /tmp/copione.json
           set +e; python3 -I motore/agenzia.py revisione /tmp/copione.json /tmp/reel 1; esito=$?; set -e
-          if [ "$esito" = 10 ]; then
+          if [ "$esito" = 10 ] || [ "${{ inputs.rimonta }}" = true ]; then
+            [ "$esito" = 10 ] || python3 -I motore/agenzia.py prima /tmp/copione.json || true  # Crescita e Direttore prima del rimontaggio
             rm -rf /tmp/reel && python3 reel/costruisci.py /tmp/copione.json /tmp/reel
             set +e; python3 -I motore/agenzia.py revisione /tmp/copione.json /tmp/reel 2; esito=$?; set -e
             mkdir -p docs/media/bozze && cp /tmp/reel/reel.mp4 "docs/media/bozze/$ID-v2.mp4"

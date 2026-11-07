@@ -46,6 +46,19 @@ def attribuisci(righe, reel):
         r["follower_dopo"] = b - a
         if r.get("reach"): r["follower_ogni_1000"] = round(1000 * (b - a) / r["reach"], 1)
 
+def fotografa(righe):
+    """Una fotografia al giorno dei numeri di ogni reel, per giorni dalla pubblicazione (motore/rendimento_storia.json):
+    il verbale dei 7 giorni confronta reel diversi alla stessa distanza dall'uscita."""
+    from datetime import datetime, timezone
+    p = ROOT / "motore/rendimento_storia.json"
+    st = json.loads(p.read_text()) if p.exists() else {}
+    ora = datetime.now(timezone.utc)
+    for r in righe:
+        d = int((ora - datetime.fromisoformat(r["ts"])).total_seconds() // 86400)
+        if d > 14: continue
+        st.setdefault(r["id"], {}).setdefault(f"g{d}", {k: r.get(k) for k in ("views", "reach", "comments", "shares", "follower_dopo")})
+    p.write_text(json.dumps(st, ensure_ascii=False, indent=0) + "\n")
+
 def main():
     token = os.environ.get("IG_TOKEN") or sys.exit("Manca IG_TOKEN.")
     reel = [x for x in json.loads((ROOT / "motore/pubblicati.json").read_text()) if x["tipo"] == "REELS"]
@@ -53,8 +66,9 @@ def main():
     for x in reel:
         m = re.search(r"(\d{4}-\d\d-\d\d)-(\d{4})-(\w+)\.mp4", x["media"])
         formato, quando = (m.group(3), f"{m.group(1)} {m.group(2)[:2]}:{m.group(2)[2:]}") if m else ("lancio", x["ts"][:16])
-        righe.append({"quando": quando, "formato": formato, "ts": x["ts"], **numeri(x["id"], token)})
+        righe.append({"quando": quando, "formato": formato, "ts": x["ts"], "id": x["id"], "file": Path(x["media"]).stem, **numeri(x["id"], token)})
     attribuisci(righe, reel)
+    fotografa(righe)
     (ROOT / "motore/rendimento.json").write_text(json.dumps(righe, ensure_ascii=False, indent=1) + "\n")
     chiavi = [k for k in METRICHE if any(k in r for r in righe)]
     print("quando            formato     " + " ".join(f"{k[:9]:>9}" for k in chiavi))

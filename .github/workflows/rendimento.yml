@@ -18,13 +18,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          sparse-checkout: motore  # il sito pesa quasi 1 GB: qui servono solo i numeri (3/11 la copia intera superava i 10 minuti)
+          sparse-checkout: |
+            motore
+            docs/contenuti/auto
+            docs/data/agenzia
       - run: python3 -I motore/rendimento.py
+      - name: Verbale dei 7 giorni
+        run: python3 -I motore/verbale.py
       - name: Salva
         run: |
           git config user.name "zampe-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add motore/rendimento.json
+          git add motore/rendimento.json motore/rendimento_storia.json motore/decisioni-reel.md docs/data/agenzia
           git diff --cached --quiet && exit 0
           git commit -q -m "Rendimento dei reel"
           for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done

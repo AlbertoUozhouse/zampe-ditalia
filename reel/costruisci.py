@@ -242,12 +242,23 @@ def main():
         subprocess.run([sys.executable, str(ROOT / "reel/musica.py"), str(out / "effetti_intro.json"), str(out / "intro.wav")], check=True)
         subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-t", f"{di:.2f}", "-i", str(intro), "-i", str(out / "intro.wav"), "-i", str(out / "reel.mp4"), "-filter_complex",
                         f"[0:v]scale=1080:1920,fps=30,setsar=1,format=yuv420p[v0];[2:v]fps=30,setsar=1,format=yuv420p[v1];"
-                        + (f"[1:a]atrim=0:{di},apad=whole_dur={di},volume=0.6,aresample=48000,aformat=channel_layouts=stereo[a0];" if not ambiente else
+                        + (f"[1:a]atrim=0:{di},apad=whole_dur={di},volume=1.0,aresample=48000,aformat=channel_layouts=stereo[a0];" if not ambiente else
                          f"[1:a]atrim=0:{di},apad=whole_dur={di},volume=0.25,aresample=48000,aformat=channel_layouts=stereo[m0];[0:a]atrim=0:{di},apad=whole_dur={di},aresample=48000,aformat=channel_layouts=stereo[s0];[s0][m0]amix=inputs=2:duration=first:normalize=0[a0];")
                         + "[2:a]aresample=48000,aformat=channel_layouts=stereo[a1];"
                         "[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]", "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "20", "-preset", "medium",
                         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out / "con_intro.mp4")], check=True)
         shutil.move(out / "con_intro.mp4", out / "reel.mp4"); dur += di
+    # i tempi veri di ogni scena nel file finale (con l'apertura davanti): il Centro Agenzia li usa per dire a che secondo si accende la luce
+    off = round(dur - durata, 2) if copione.get("intro") else 0.0
+    tempi = []
+    for n, f in enumerate(copione["frasi"]):
+        a = round(inizi[n], 2); b = round(inizi[n + 1], 2) if n + 1 < len(inizi) else durata; sc = f["scena"]
+        x = {"scena": n, "tipo": sc["tipo"], "inizio": round(a + off, 2), "fine": round(b + off, 2)}
+        if sc["tipo"] == "luce":
+            spenti = [q for q in sc.get("punti", []) if not q.get("acceso", True)]
+            x["accensione"] = round(a + off + (sc.get("accendi", 0.35) * (b - a) if spenti else 0.6), 2)  # come scene.luce
+        tempi.append(x)
+    (out / "tempi.json").write_text(json.dumps({"apertura_s": off, "durata_s": round(dur, 2), "scene": tempi}, ensure_ascii=False))
     (out / "didascalia.txt").write_text(copione["didascalia"].strip() + "\n")
     print(f"reel pronto: {out / 'reel.mp4'} · {dur:.1f} s")
 

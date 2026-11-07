@@ -43,8 +43,9 @@ REPARTI = [
                                 "SEGUO e inviti", "Moderazione", "Star del giorno", "Benvenuti"]),
     ("coppa", "Coppa delle Zampe", ["Commissario della Coppa", "Abbinamenti", "Prova del giorno", "Luce Misteriosa", "Indovina la Zampa", "Staffetta",
                                      "Punti e codici", "Trofei e albo", "Reel di apertura e verdetto", "Misure del turno"]),
-    ("analisi", "Analisi e crescita", ["Analista capo", "Follower ogni 1.000 account", "Organico e sponsorizzato", "Views e commenti", "Visione media", "Orari migliori",
-                                       "Confronto formati", "Registro decisioni", "Controllo quotidiano", "Concorrenza"]),
+    # 7/11 Alberto: l'acquisizione di follower al centro. La Crescita propone pubblico, gancio e motivo per seguire prima del montaggio
+    ("crescita", "Crescita (follower)", ["Responsabile crescita", "Pubblico da raggiungere", "Gancio per chi non ci conosce", "Motivo per seguire", "Prossimo episodio",
+                                         "Follower ogni 1.000 account", "Organico e sponsorizzato", "Confronto a 7 giorni", "Scelte da riprovare", "Verbale dei 7 giorni"]),
 ]
 
 def ufficio():
@@ -213,16 +214,24 @@ def progetto_in_breve():
 
 # ---------------------------------------------------------------- materiali per il Direttore
 
-def dati_mappa(cop):
-    """I dati verificati della mappa per le scene del reel: comune, coordinate, animale e @ veri (docs/data/animali.json)."""
+def dati_mappa(cop, cartella=None):
+    """I dati verificati della mappa per le scene del reel: comune, coordinate, animale e @ veri (docs/data/animali.json),
+    e il secondo esatto in cui la luce si accende nel file finale (tempi.json scritto dal montaggio)."""
     A = json.loads((ROOT / "docs/data/animali.json").read_text())["animali"]
+    tempi = {}
+    if cartella and (Path(cartella) / "tempi.json").exists():
+        tempi = {t["scena"]: t for t in json.loads((Path(cartella) / "tempi.json").read_text())["scene"]}
     out = []
     for i, f in enumerate(cop["frasi"]):
         sc = f["scena"]
         for q in sc.get("punti", []):
-            vicini = [a for a in A if a.get("k") == "animale" and abs(a.get("lat", 0) - q["lat"]) < 0.02 and abs(a.get("lng", 0) - q["lng"]) < 0.02]
-            out.append({"scena": i, "etichetta": q.get("testo"), "lat": q["lat"], "lng": q["lng"], "si_accende_in_scena": not q.get("acceso", True),
-                        "comune_sulla_mappa": vicini[0]["c"] if vicini else None, "animali_li": [f"{a['n']} (@{a['u']})" for a in vicini[:5]], "luci_li": len(vicini)})
+            vicini = sorted((a for a in A if a.get("k") == "animale" and abs(a.get("lat", 0) - q["lat"]) < 0.02 and abs(a.get("lng", 0) - q["lng"]) < 0.02), key=lambda a: str(a.get("ts", "")))
+            t = tempi.get(i, {})
+            out.append({"scena": i, "etichetta": q.get("testo"), "lat": q["lat"], "lng": q["lng"],
+                        "luce": ("spenta all'inizio della scena, si accende" if not q.get("acceso", True) else "già accesa") + (f" al secondo {t['accensione']} del reel" if t.get("accensione") is not None else ""),
+                        "scena_dal_secondo": t.get("inizio"), "scena_al_secondo": t.get("fine"),
+                        "comune_sulla_mappa": vicini[0]["c"] if vicini else None,
+                        "animali_li_in_ordine_di_arrivo": [f"{a['n']} (@{a['u']}, {str(a.get('ts', ''))[:10]})" for a in vicini[:5]], "luci_li_oggi": len(vicini)})
     return out
 
 def audio(mp4):
@@ -259,11 +268,20 @@ def trascrizione(cartella, cop):
 
 # ---------------------------------------------------------------- le due fasi
 
+CRESCITA_PRIMA = """Sei il Responsabile crescita di Zampe d'Italia (pagina Instagram: ogni animale accende una luce nella sua città sulla mappa dell'Italia di notte).
+Il lavoro dell'agenzia ha un obiettivo: nuovi follower. Prima del montaggio, sul brief di questo reel proponi: il pubblico da raggiungere (chi è, concreto),
+il gancio dei primi 2 secondi per chi NON conosce il progetto, il motivo per cui quella persona dovrebbe seguire Zampe d'Italia (una frase che regge da sola),
+e la frase di chiusura che lega la storia al prossimo episodio (massimo 14 parole, per esempio «Atri si è accesa. Segui Zampe d'Italia per vedere la prossima luce.»).
+Non promettere tempi o premi che non sono nel brief. Rispondi solo JSON: {"pubblico": "...", "gancio": "...", "motivo_per_seguire": "...", "chiusura": "...", "perche": "una frase"}"""
+
 DIR_PRIMA = """Sei il Direttore video di Zampe d'Italia, pagina Instagram italiana: ogni animale accende una luce nella sua città sulla mappa dell'Italia di notte.
 Ricevi il brief del reel e i dati verificati della mappa. Prima del montaggio scegli: l'apertura (il video vero di un animale per i primi secondi: tenerlo e quanto),
 l'inquadratura della mappa (zoom tra 0.8 e 2.4: più alto = più vicino al comune) e il momento in cui la luce si accende nella scena della mappa (frazione della scena tra 0.2 e 0.7).
-Chi guarda deve capire il gioco nei primi 5 secondi. Rispondi solo JSON:
-{"apertura": {"usa_video": true/false, "secondi": 2.5-4.5, "perche": "..."}, "zoom": 0.8-2.4, "accensione": 0.2-0.7, "note_per_il_montaggio": ["..."], "decisione": "una frase"}"""
+Chi guarda deve capire il gioco nei primi 5 secondi. Il reparto Crescita ti propone pubblico, gancio, motivo per seguire e chiusura («proposta_crescita»):
+verifica che il motivo per seguire si capisca anche per chi vede il progetto per la prima volta; se no, riscrivilo tu. Rispondi solo JSON:
+{"apertura": {"usa_video": true/false, "secondi": 2.5-4.5, "perche": "..."}, "zoom": 0.8-2.4, "accensione": 0.2-0.7,
+ "crescita": {"motivo_chiaro_per_chi_non_ci_conosce": true/false, "motivo_per_seguire": "quello approvato o riscritto", "gancio": "...", "chiusura": "massimo 14 parole"},
+ "note_per_il_montaggio": ["..."], "decisione": "una frase"}"""
 
 DIR_DOPO = """Sei il Direttore video di Zampe d'Italia e rispondi della qualità. Ricevi i fotogrammi del reel esportato (ogni immagine ha il suo secondo), la trascrizione con i tempi,
 i dati verificati della mappa e le misure audio. Controlla: realismo (niente che sembri finto o sbagliato), chiarezza nei primi 5 secondi (si capisce che ogni animale accende una luce nella sua città?),
@@ -304,12 +322,23 @@ def applica(cop, azioni):
 def prima(cop_path):
     cop = json.loads(Path(cop_path).read_text())
     S = Sessione(cop["id"], cop.get("formato"))
-    S.scrivi("montaggio-1", "direzione-1", "proposta", "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce.", {"brief": _brief(cop), "mappa": dati_mappa(cop)})
-    r, chi = openai(DIR_PRIMA, json.dumps({"brief": _brief(cop), "dati_mappa": dati_mappa(cop)}, ensure_ascii=False))
+    S.scrivi("montaggio-1", "crescita-1", "proposta", "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?", {"brief": _brief(cop)})
+    cr, _ = lavora(CRESCITA_PRIMA, json.dumps({"brief": _brief(cop), "progetto": progetto_in_breve()}, ensure_ascii=False), CLAUDE)
+    if cr:
+        S.scrivi("crescita-1", "direzione-1", "proposta", f"Pubblico: {cr.get('pubblico', '')} · Gancio: {cr.get('gancio', '')} · Motivo per seguire: {cr.get('motivo_per_seguire', '')} · Chiusura: {cr.get('chiusura', '')}", cr)
+        S.d["crescita"] = cr
+    S.scrivi("montaggio-1", "direzione-1", "proposta", "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.", {"brief": _brief(cop), "mappa": dati_mappa(cop)})
+    r, chi = openai(DIR_PRIMA, json.dumps({"brief": _brief(cop), "dati_mappa": dati_mappa(cop), "proposta_crescita": cr}, ensure_ascii=False))
     if r is None:
         S.scrivi("direzione-1", "montaggio-1", "nota", f"Direttore video non collegato ({chi}): il montaggio parte con le scelte del copione."); return
     S.d["direttore_modello"] = chi
     S.scrivi("direzione-1", "montaggio-1", "risposta", r.get("decisione", "Scelte fatte."), r)
+    vc = r.get("crescita") or {}
+    if vc.get("chiusura") and len(vc["chiusura"].split()) <= 14 and cop["frasi"]:  # la chiusura verificata dal Direttore lega la storia al prossimo episodio
+        cop["frasi"][-1]["testo"] = vc["chiusura"]
+    if vc.get("motivo_per_seguire"):
+        cop["didascalia"] = cop.get("didascalia", "").rstrip() + f"\n➕ {vc['motivo_per_seguire']}"
+    S.scrivi("direzione-1", "crescita-1", "decisione", ("Motivo per seguire chiaro anche per chi non ci conosce." if vc.get("motivo_chiaro_per_chi_non_ci_conosce") else "Motivo per seguire riscritto dal Direttore.") + f" «{vc.get('motivo_per_seguire', '')}»", vc)
     ap = r.get("apertura") or {}
     if cop.get("intro") and ap.get("usa_video") is False: cop.pop("intro", None)
     elif cop.get("intro") and ap.get("secondi"): cop["intro_durata"] = max(2.0, min(4.5, float(ap["secondi"])))
@@ -328,7 +357,7 @@ def revisione(cop_path, cartella, giro):
     au = audio(mp4)
     S.d["versioni"] = [v for v in S.d["versioni"] if v["v"] != giro] + [{"v": giro, "durata": round(dur, 1), "fotogrammi": [f"fotogrammi/{cop['id']}/v{giro}/{f.name}" for _, f in foto], "audio": au}]
     S.scrivi("audio-1", "direzione-1", "proposta", f"Controllo audio della versione {giro}: {au['lufs']} LUFS, picco {au['picco_dbfs']} dBFS, silenzi {au['silenzi_s'] or 'nessuno'}.", au)
-    mat = {"versione": giro, "durata_s": round(dur, 1), "trascrizione": trascrizione(cartella, cop), "dati_mappa": dati_mappa(cop), "audio": au, "brief": _brief(cop),
+    mat = {"versione": giro, "durata_s": round(dur, 1), "trascrizione": trascrizione(cartella, cop), "dati_mappa": dati_mappa(cop, cartella), "audio": au, "brief": _brief(cop),
            "fotogrammi_secondi": [s for s, _ in foto]}
     S.scrivi("montaggio-1", "direzione-1", "proposta", f"Versione {giro} esportata ({dur:.1f} s): ti mando {len(foto)} fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
              {k: mat[k] for k in ("durata_s", "fotogrammi_secondi")})
@@ -348,7 +377,7 @@ def revisione(cop_path, cartella, giro):
     if giro >= MAX_REVISIONI:
         S.scrivi("direzione-1", "pubblicazione-1", "decisione", f"Dopo {giro} revisioni restano difetti: il reel resta in bozza e parte quello di riserva.", {"difetti": difetti})
         S.d["stato"] = "bozza"; S.d["fine"] = _ora(); S.salva(); return 20
-    c = claude(CLA_CORR, json.dumps({"brief": _brief(cop), "difetti": difetti, "dati_mappa": dati_mappa(cop), "relazioni_reparti": mat.get("relazioni_reparti", [])[:6]}, ensure_ascii=False)) or {"azioni": [], "messaggio_al_direttore": "Claude non ha risposto."}
+    c = claude(CLA_CORR, json.dumps({"brief": _brief(cop), "difetti": difetti, "dati_mappa": dati_mappa(cop, cartella), "relazioni_reparti": mat.get("relazioni_reparti", [])[:6]}, ensure_ascii=False)) or {"azioni": [], "messaggio_al_direttore": "Claude non ha risposto."}
     fatte = applica(cop, c.get("azioni"))
     Path(cop_path).write_text(json.dumps(cop, ensure_ascii=False))
     S.scrivi("montaggio-1", "direzione-1", "correzione", c.get("messaggio_al_direttore") or f"Applicate {len(fatte)} correzioni.", {"azioni": fatte, "non_correggibili": c.get("non_correggibili", [])})
