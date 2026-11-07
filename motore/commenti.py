@@ -447,6 +447,8 @@ class Gioco:
         if FOLLOWER:  # il traguardo di tutti, e i follower di ogni giorno (ora italiana) per misurare la crescita
             storia = self.stato.setdefault("follower_giorno", {}); storia[datetime.now(timezone(timedelta(hours=1))).date().isoformat()] = FOLLOWER
             self.stato["follower_giorno"] = storia = dict(sorted(storia.items())[-90:])
+            ore = self.stato.setdefault("follower_ore", [])  # ogni cambio, con l'ora: rendimento.py dà a ogni reel i follower arrivati dopo di lui
+            if not ore or ore[-1][1] != FOLLOWER: ore.append([datetime.now(timezone.utc).isoformat(timespec="minutes"), FOLLOWER]); self.stato["follower_ore"] = ore[-3000:]
             self.dati["follower"] = {"n": FOLLOWER, "traguardo": next((t for t in TRAGUARDI if FOLLOWER < t), TRAGUARDI[-1]), "fatti": [t for t in TRAGUARDI if FOLLOWER >= t], "storia": storia}
         self.stato["visti"] = sorted(self.visti)[-50000:]
         oggi = datetime.now(timezone.utc).date().isoformat()

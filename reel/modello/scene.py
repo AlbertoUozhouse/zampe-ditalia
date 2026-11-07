@@ -270,5 +270,44 @@ def foto(cid, dur, file, nome, utente=None, comune=None):
         js += f'\n    tl.fromTo("#{cid}-tag", {{ y: 20, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0.55);'
     return _pagina(cid, f"Foto vera: {nome}.", css, corpo, js)
 
-TIPI = {"foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+def luce(cid, dur, img, w, h, centro, punti, intorno=(), s0=0.46, s1=1.7, accendi=0.35, vicino=False, italia_c=None):
+    """La mappa del sito nel reel (stessa immagine dell'Italia di notte, strumenti/rilievo.py): si parte da tutta l'Italia,
+    si scende sul comune e il punto passa da spento ad acceso. centro/punti/intorno sono già in pixel dell'immagine.
+    punti: [{"x","y","testo","acceso": True|False}] (acceso False = si accende in scena); intorno: le altre luci vere vicine."""
+    cx, cy = centro
+    fx, fy = 540, 800  # dove arriva il comune nel fotogramma
+    glow = f'<radialGradient id="{cid}-gl"><stop offset="0" stop-color="#FFF6DC"/><stop offset=".22" stop-color="#FFC35A"/><stop offset=".6" stop-color="#FF9F2E" stop-opacity=".35"/><stop offset="1" stop-color="#FF9F2E" stop-opacity="0"/></radialGradient>'
+    vicine = "".join(f'<circle cx="{x:.0f}" cy="{y:.0f}" r="7" fill="url(#{cid}-gl)"/>' for x, y in intorno)
+    pp, etichette, js = [], [], []
+    for i, q in enumerate(punti):
+        on = q.get("acceso", True)
+        pp.append(f'<g transform="translate({q["x"]:.0f} {q["y"]:.0f})"><circle id="{cid}-sp{i}" r="5" fill="#6E7A99" stroke="#C9D3EA" stroke-width="1.5" opacity="{0 if on else 1}"/>'
+                  f'<circle id="{cid}-on{i}" r="40" fill="url(#{cid}-gl)" opacity="{1 if on else 0}"/><circle id="{cid}-onda{i}" r="8" fill="none" stroke="#FFD27A" stroke-width="2.5" opacity="0"/></g>')
+        if q.get("testo"):
+            etichette.append(f'<div class="pill" id="{cid}-t{i}" data-i="{i}">{ESC(q["testo"])}</div>')
+        t_on = accendi * dur if not on else 0.6
+        if not on:
+            js.append(f'    tl.to("#{cid}-sp{i}", {{ opacity: 0, duration: 0.15 }}, {t_on:.2f});')
+            js.append(f'    tl.fromTo("#{cid}-on{i}", {{ opacity: 0, attr: {{ r: 4 }} }}, {{ opacity: 1, attr: {{ r: 46 }}, duration: 0.45, ease: "back.out(3)" }}, {t_on:.2f});')
+        for k in range(2):
+            js.append(f'    tl.fromTo("#{cid}-onda{i}", {{ attr: {{ r: 8 }}, opacity: .95 }}, {{ attr: {{ r: 70 }}, opacity: 0, duration: 0.7, ease: "power1.out" }}, {t_on + 0.05 + k * 0.55:.2f});')
+        js.append(f'    tl.fromTo("#{cid}-t{i}", {{ y: 20, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, {t_on + 0.15:.2f});' if q.get("testo") else "")
+    # le etichette stanno nel fotogramma (non si ingrandiscono): sotto il comune, una per riga
+    css = f"""#root .mondo {{ position: absolute; left: 0; top: 0; width: {w}px; height: {h}px; transform-origin: 0 0; }}
+    #root .mondo img, #root .mondo svg {{ position: absolute; left: 0; top: 0; width: {w}px; height: {h}px; }}
+    #root .pills {{ position: absolute; left: 60px; right: 60px; top: {fy + 70}px; display: flex; flex-direction: column; align-items: center; gap: 14px; }}
+    #root .pill {{ font: 800 48px/1.1 "Bricolage Grotesque", sans-serif; color: #FFF4DE; background: rgba(4,12,36,.86); border: 4px solid #FFC35A; border-radius: 999px; padding: 12px 34px; text-align: center; }}"""
+    corpo = f"""<div class="mondo" id="{cid}-m"><img src="assets/img/italia-notte.jpg" alt=""><svg viewBox="0 0 {w} {h}"><defs>{glow}</defs><g>{vicine}</g>{"".join(pp)}</svg></div>
+    <div class="pills">{"".join(etichette)}</div>"""
+    # da tutta l'Italia al comune: trasformazione della «carta» (scala attorno all'origine, poi spostamento)
+    ix, iy = italia_c or (w * 0.5, h * 0.5)  # il centro dell'Italia nell'immagine (costruisci.py)
+    a = (540 - ix * s0, 900 - iy * s0)
+    b = (fx - cx * s1, fy - cy * s1)
+    if vicino:  # seconda scena sullo stesso comune: si resta vicini, niente volo da tutta l'Italia
+        a = (b[0] + cx * s1 * 0.06, b[1] + cy * s1 * 0.06); s0 = s1 * 0.94
+    js.insert(0, f'    tl.fromTo("#{cid}-m", {{ x: {a[0]:.0f}, y: {a[1]:.0f}, scale: {s0} }}, {{ x: {b[0]:.0f}, y: {b[1]:.0f}, scale: {s1}, duration: {max(0.8, accendi * dur - 0.05):.2f}, ease: "power2.inOut" }}, 0);')
+    js.append(f'    tl.to("#{cid}-m", {{ x: {b[0] - cx * 0.08:.0f}, y: {b[1] - cy * 0.08:.0f}, scale: {s1 * 1.08:.3f}, duration: {max(0.4, dur * (1 - accendi)):.2f}, ease: "none" }}, {accendi * dur:.2f});')
+    return _pagina(cid, "La mappa del sito: un punto si accende.", css, corpo, "\n".join(j for j in js if j))
+
+TIPI = {"luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}

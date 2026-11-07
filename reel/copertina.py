@@ -39,9 +39,50 @@ svg{{position:absolute;left:0;top:0;opacity:.45}}
 </div></body></html>"""
 
 
+PAGINA_LUCE = """<!doctype html><html lang="it"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Nunito:wght@800;900&display=swap">
+<style>*{{box-sizing:border-box;margin:0}} html,body{{width:1080px;height:1920px;overflow:hidden;background:#040C24}}
+.s{{position:relative;width:1080px;height:1920px;background:url('{fondo}') center/cover}}
+.box{{position:absolute;left:50px;right:50px;top:330px;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}}
+.sopra{{font:900 56px Nunito;letter-spacing:6px;color:#FFC35A;background:rgba(4,12,36,.8);border:4px solid #FFC35A;border-radius:999px;padding:12px 40px}}
+.grande{{font:800 {fs}px/1 'Bricolage Grotesque';letter-spacing:-2px;color:#FFF4DE;-webkit-text-stroke:8px #040C24;paint-order:stroke fill;text-shadow:0 0 60px rgba(255,195,90,.6)}}
+.sotto{{position:absolute;left:0;right:0;top:1130px;text-align:center;font:900 64px Nunito;color:#FFD27A;-webkit-text-stroke:6px #040C24;paint-order:stroke fill}}
+.marca{{position:absolute;bottom:330px;left:0;right:0;text-align:center;font:800 44px 'Bricolage Grotesque';color:#FFC55C}}
+</style></head><body><div class="s"><div class="box"><div class="sopra">{sopra}</div><div class="grande">{grande}</div></div><div class="sotto">{sotto}</div><div class="marca">Zampe d'Italia</div></div></body></html>"""
+
+def fondo_luce(lng, lat, uscita):
+    """L'immagine protagonista: la mappa vera dell'Italia di notte attorno al comune, con la sua luce accesa al centro."""
+    import math
+    from PIL import Image, ImageDraw, ImageFilter
+    M = json.loads((ROOT / "reel/assets/italia-notte.json").read_text())
+    x = (lng + 180) / 360 * 256 * 2 ** M["z"] - M["x0"]; y = (1 - math.asinh(math.tan(math.radians(lat))) / math.pi) / 2 * 256 * 2 ** M["z"] - M["y0"]
+    im = Image.open(ROOT / "reel/assets/italia-notte.jpg").convert("RGB")
+    w, h = 1080 / 1.6, 1920 / 1.6  # ingrandimento 1,6: si vedono coste e rilievi attorno al comune
+    cx, cy = x, y + h * 0.04  # la luce un po' sopra il centro, il testo sotto ha spazio
+    im = im.crop((int(cx - w / 2), int(cy - h * 0.55), int(cx + w / 2), int(cy + h * 0.45))).resize((1080, 1920), Image.LANCZOS)
+    px, py = 540, int(1920 * 0.55 - 1920 * 0.04)
+    alone = Image.new("RGB", im.size, (0, 0, 0)); d = ImageDraw.Draw(alone)
+    for r, c in ((220, (90, 55, 10)), (120, (190, 120, 30)), (55, (255, 190, 90)), (22, (255, 240, 210))):
+        d.ellipse((px - r, py - r, px + r, py + r), fill=c)
+    alone = alone.filter(ImageFilter.GaussianBlur(40))
+    from PIL import ImageChops
+    im = ImageChops.add(im, alone)
+    ImageDraw.Draw(im).ellipse((px - 12, py - 12, px + 12, py + 12), fill=(255, 248, 230))
+    im.save(uscita, quality=90)
+
 def main():
     cop = json.loads(Path(sys.argv[1]).read_text())
     c = cop.get("copertina") or {"sopra": cop.get("testata", {}).get("titolo", "ZAMPE D'ITALIA"), "grande": "Accendi<br>la tua luce", "sotto": "Scrivi città, nome e animale 👇", "tema": "voto"}
+    if c.get("luce"):  # la serie della mappa (7/11): un'immagine protagonista e poche parole, per esempio «La prima luce di Atri»
+        tmp = Path(tempfile.mkdtemp()); fondo_luce(*c["luce"], tmp / "fondo.jpg")
+        n = len(c["grande"]); fs = 150 if n <= 9 else 120 if n <= 13 else 96 if n <= 18 else 78
+        (tmp / "c.html").write_text(PAGINA_LUCE.format(fondo=(tmp / "fondo.jpg").as_uri(), fs=fs, sopra=html.escape(c["sopra"]), grande=html.escape(c["grande"]), sotto=html.escape(c.get("sotto", ""))))
+        png = tmp / "c.png"
+        subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=1", "--window-size=1080,1920", "--allow-file-access-from-files",
+                        "--virtual-time-budget=6000", f"--user-data-dir={tmp / '.chrome'}", f"--screenshot={png}", (tmp / "c.html").as_uri()], capture_output=True, timeout=120)
+        if not png.exists(): sys.exit("copertina non creata")
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(png), "-q:v", "3", sys.argv[2]], check=True)
+        return print(f"copertina: {sys.argv[2]}")
     accento, fondo = TEMI.get(c.get("tema"), TEMI["voto"])
     righe = [p.strip() for p in c["grande"].split("<br>")]
     grande = "<br>".join("<i>vs</i>" if r == "<i>vs</i>" else html.escape(r) for r in righe)

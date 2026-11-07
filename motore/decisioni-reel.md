@@ -3,6 +3,16 @@
 Registro delle scelte sui reel automatici: cosa si cambia, perché (numeri da motore/rendimento.json), e cosa si guarda dopo.
 Lo aggiorna ogni mattina il controllo delle 10:30. Solo numeri e formati, nessun nome utente (il repository è pubblico).
 
+## SERIE DELLA MAPPA (Alberto, 7/11/2026) — vale più delle regole sotto
+
+Obiettivo: chi vede la pagina per la prima volta capisce subito il gioco (ogni animale accende una luce nella sua città).
+- Ogni reel apre con un animale vero in movimento (video mandato in DM da chi ci segue, col suo SÌ: docs/media/ugc/*.mp4, 4,5 s col suono vero), poi entro il quinto secondo la mappa del sito (scena `luce`, stessa immagine dell'Italia di notte del sito) col punto che si accende. Senza video: si apre direttamente sulla mappa. Niente Thor. Nessuna ricostruzione IA per ora (non abbiamo uno strumento per farle).
+- Se si racconta un animale preciso si mostra la sua luce vera sulla mappa.
+- Copertina: la mappa vera attorno al comune con la luce accesa e poche parole («La prima luce / di Atri»).
+- Episodi: `prima_luce` (13:00), `questa_luce` (18:00, annuncia «le prossime luci domani alle 18»), `testa_a_testa` (13:00 l'8, 10, 12 e 14/11: due comuni vicini sulla mappa e nel punteggio). 21:00 puntata.
+- Misura: follower arrivati dopo ogni reel (fino al reel dopo, massimo 6 ore) ogni 1.000 account raggiunti: rendimento.json «follower_ogni_1000» (dal 7/11). Il reel sponsorizzato del 26/10 (config.json «sponsorizzati») si tiene a parte. Confronto dopo 7 giorni: 14/11.
+- Controllo quotidiano: sito online (mappa e piastrelle), nuove luci nelle ultime 24 ore, reel previsti contro pubblicati.
+
 ## REGOLE IN VIGORE (2/11/2026, dopo l'analisi del concorrente) — valgono più di tutto quello che c'è sotto
 
 Il concorrente (case sulla mappa, stesso meccanismo) ha 12.200 follower con 19 post. Anche lui cala: da 357.000 views del primo reel a 11.800 dell'ultimo.

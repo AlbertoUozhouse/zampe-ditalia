@@ -5,7 +5,7 @@ Formati: duello (9:00), vetrina (13:00), fondatore (18:00), puntata (21:00). "au
 Regola: nessun numero inventato. I numeri e i nomi vengono dai dati; Claude (se c'è ANTHROPIC_API_KEY) può solo
 riformulare le frasi, e la riformulazione si scarta se cambia numeri o nomi o allunga troppo il testo.
 """
-import unicodedata, json, os, random, re, sys, urllib.request
+import math, unicodedata, json, os, random, re, sys, urllib.request
 from datetime import datetime, date, timedelta
 from collections import Counter
 from pathlib import Path
@@ -549,7 +549,7 @@ def star(D, rng, st):
     """La star di oggi: la foto vera di un animale, mandata in privato da chi lo ha e col suo SÌ (messaggi.py → stato «ugc»).
     Niente disegni: è il reel meno «IA» che abbiamo. Senza foto nuove, esce la gara."""
     fatte = set(st.get("star_fatte", []))
-    ugc = [x for x in carica(ROOT / "motore/stato.json", {}).get("ugc", []) if x["f"] not in fatte and (ROOT / "docs/media/ugc" / x["f"]).exists()
+    ugc = [x for x in carica(ROOT / "motore/stato.json", {}).get("ugc", []) if x["f"].endswith(".jpg") and x["f"] not in fatte and (ROOT / "docs/media/ugc" / x["f"]).exists()
            and x["u"].lower() not in ESCLUSI]
     if not ugc: return fondatore(D, rng, st)  # 2/11: il fondatore rende più della gara (2.700 views medie contro 2.000)
     x = ugc[0]; st["star_fatte"] = (st.get("star_fatte", []) + [x["f"]])[-500:]
@@ -779,7 +779,126 @@ def amici(D, rng, st):
     st["senza_bonus"] = True
     return "👥 PORTA 2 AMICI", frasi, did
 
-FORMATI = {"amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+# ---------------------------------------------------------------- la serie della mappa (Alberto, 7/11): chi vede la pagina per la prima volta
+# deve capire il gioco in pochi secondi. Ogni episodio usa la mappa vera del sito (scena «luce») e, se c'è, apre con un video vero.
+
+def _dist(a, b):
+    return math.hypot((a["lat"] - b["lat"]) * 111, (a["lng"] - b["lng"]) * 111 * math.cos(math.radians(a["lat"])))
+
+def _a(c):  # «ad Atri», «a Treviso»
+    return ("ad " if c[:1].lower() == "a" else "a ") + c
+
+def _razza(a):
+    r = (a.get("razza_testo") or a.get("razza") or "").replace("_", " ").strip()
+    return "" if r in ("", "cane", "gatto") else r
+
+def _intorno(D, centro, km=2000, escludi=()):  # tutte le luci vere: l'Italia di notte è già accesa, manca solo quel comune
+    return [(a["lng"], a["lat"]) for a in D["animali"] if a.get("k") == "animale" and "lat" in a and a not in escludi and _dist(a, centro) < km][:4000]
+
+def _clip(D, st, utente=None):
+    """Un video vero per i primi secondi (docs/media/ugc/*.mp4, mandato in DM da chi ci segue, col suo SÌ). Meglio se è dell'animale raccontato."""
+    fatte = set(st.get("clip_fatte", []))
+    clip = [x for x in carica(ROOT / "motore/stato.json", {}).get("ugc", []) if x["f"].endswith(".mp4") and x["f"] not in fatte
+            and (ROOT / "docs/media/ugc" / x["f"]).exists() and x["u"].lower() not in ESCLUSI]
+    if not clip: return None
+    x = next((c for c in clip if utente and c["u"].lower() == utente.lower()), clip[0])
+    st["clip_fatte"] = (st.get("clip_fatte", []) + [x["f"]])[-500:]
+    st["intro"] = f"docs/media/ugc/{x['f']}"
+    return x["u"]
+
+def prima_luce(D, rng, st):
+    """1. La prima luce: quale animale ha acceso per primo un comune. Il momento forte è il punto che passa da spento ad acceso."""
+    an = [a for a in D["animali"] if a.get("k") == "animale" and _ts(a) and a["u"].lower() not in ESCLUSI and "lat" in a]
+    primi = {}
+    for a in sorted(an, key=lambda a: a["ts"]):
+        primi.setdefault((a["c"], a.get("p")), a)
+    usati = set(st.get("prime_luci", []))
+    cand = sorted((a for a in primi.values() if a["c"] not in usati), key=lambda a: a["ts"], reverse=True)
+    cand = [a for a in cand if a["u"].lower() in D["seguono"]][:10] or cand[:10]
+    if not cand: return puntata(D, rng, st)
+    a = cand[0]; st["prime_luci"] = (list(usati) + [a["c"]])[-400:]
+    st["luci_raccontate"] = (st.get("luci_raccontate", []) + [a["id"]])[-1000:]  # «Questa luce è di…» non racconta di nuovo lo stesso animale
+    autore = _clip(D, st, a["u"])
+    rz = _razza(a)
+    frasi = [
+        (f"Questa è l'Italia di notte. {_a(a['c']).capitalize()} era tutto spento.", {"tipo": "luce", "centro": [a["lng"], a["lat"]], "intorno": _intorno(D, a, escludi=[a]),
+          "punti": [{"lng": a["lng"], "lat": a["lat"], "acceso": False, "testo": f"La prima luce di {a['c']}"}]}),
+        (f"Poi {a['n']}{', ' + rz + ',' if rz else ''} ha acceso la prima luce di {a['c']}!", {"tipo": "luce", "centro": [a["lng"], a["lat"]], "vicino": True, "intorno": _intorno(D, a, escludi=[a]),
+          "punti": [{"lng": a["lng"], "lat": a["lat"], "testo": f"{a['n']} · @{a['u']}"}]}),
+        ("Ogni animale può accendere la sua città. La tua è ancora al buio?", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, Luna, cane"}),
+        ("Commenta città e nome del tuo animale.", {"tipo": "chiusura", "testo": "💬 Commenta città e nome 👇"}),
+    ]
+    st["tag_extra"] = [a["u"]]
+    did = (f"✨ La prima luce di {a['c']} è di {a['n']}{' (' + rz + ')' if rz else ''}, di @{a['u']}! 👑\n\n"
+           "Su Zampe d'Italia ogni animale accende una luce nella sua città, sulla mappa dell'Italia di notte (link in bio).\n"
+           "👇 Il tuo comune è ancora al buio? Commenta la tua città e il nome del tuo cane o gatto (per esempio «Treviso, Luna, cane»): entro 15 minuti si accende col tuo @."
+           + (f"\n🎥 Il video è di @{autore}" if autore else ""))
+    st["copertina"] = {"luce": [a["lng"], a["lat"]], "sopra": "LA PRIMA LUCE", "grande": f"di {a['c']}", "sotto": f"{a['n']} 👑"}
+    st["senza_bonus"] = True
+    return f"✨ LA PRIMA LUCE", frasi, did
+
+def testa_a_testa(D, rng, st):
+    """2. Il derby: due comuni davvero vicini, sulla mappa e nel punteggio. Si mostra il distacco e si invita a partecipare."""
+    an = [a for a in D["animali"] if a.get("k") == "animale" and "lat" in a and a.get("t") != "altro"]
+    luoghi = {}
+    for a in an:
+        l = luoghi.setdefault(a["c"], {"c": a["c"], "lat": a["lat"], "lng": a["lng"], "n": 0}); l["n"] += 1
+    L = [l for l in luoghi.values() if l["n"] >= 2]
+    fatti = set(st.get("derby_vicini", []))
+    coppie = sorted(((abs(x["n"] - y["n"]), _dist(x, y), x, y) for i, x in enumerate(L) for y in L[i + 1:]
+                     if 3 < _dist(x, y) < 45 and abs(x["n"] - y["n"]) <= 2 and f"{x['c']}|{y['c']}" not in fatti), key=lambda t: (t[0], -min(t[2]["n"], t[3]["n"])))
+    if not coppie: return prima_luce(D, rng, st)
+    _, km, x, y = coppie[0]
+    if x["n"] < y["n"]: x, y = y, x
+    st["derby_vicini"] = (list(fatti) + [f"{x['c']}|{y['c']}", f"{y['c']}|{x['c']}"])[-200:]
+    _clip(D, st)
+    mezzo = {"lat": (x["lat"] + y["lat"]) / 2, "lng": (x["lng"] + y["lng"]) / 2}
+    pari = x["n"] == y["n"]
+    frasi = [
+        (f"{x['c']} contro {y['c']}: {round(km)} chilometri, e la sfida è aperta.", {"tipo": "luce", "centro": [mezzo["lng"], mezzo["lat"]], "s1": 1.5, "intorno": _intorno(D, mezzo, 50),
+          "punti": [{"lng": x["lng"], "lat": x["lat"], "testo": f"{x['c']} · {x['n']}"}, {"lng": y["lng"], "lat": y["lat"], "testo": f"{y['c']} · {y['n']}"}]}),
+        ((f"Pari: {x['n']} a {y['n']}. Il prossimo animale decide chi passa avanti." if pari else
+          f"{x['n']} a {y['n']}: basta {'un animale' if x['n'] - y['n'] == 1 else 'due animali'} e {y['c']} pareggia."),
+         {"tipo": "duello", "sinistra": {"titolo": x["c"], "valore": str(x["n"])}, "destra": {"titolo": y["c"], "valore": str(y["n"])}}),
+        (f"Sei di {y['c']} o di {x['c']}? Commenta città e nome del tuo animale!", {"tipo": "chiusura", "testo": f"💬 {y['c']} o {x['c']}? 👇"}),
+    ]
+    did = (f"⚔️ {x['c']} {x['n']} – {y['n']} {y['c']}: due comuni a {round(km)} km, e la sfida è aperta!\n\n"
+           "Ogni animale accende una luce nella sua città sulla mappa dell'Italia di notte (link in bio).\n"
+           f"👇 Commenta la tua città e il nome del tuo cane o gatto (per esempio «{y['c']}, Luna, cane»): entro 15 minuti si accende col tuo @ e conta per la tua città.\n"
+           "👥 Tagga chi è di lì!")
+    st["copertina"] = {"luce": [mezzo["lng"], mezzo["lat"]], "sopra": "TESTA A TESTA", "grande": f"{x['n']} – {y['n']}", "sotto": f"{x['c']} vs {y['c']}"}
+    st["senza_bonus"] = True
+    return "⚔️ TESTA A TESTA", frasi, did
+
+PROSSIME_LUCI = "domani alle 18"  # l'appuntamento della serie «Questa luce è di…» (config.json, orari: 18:00 questa_luce)
+
+def questa_luce(D, rng, st):
+    """3. Questa luce è di [Nome]: una nuova iscrizione in pochi secondi, e l'appuntamento con le prossime luci (un motivo per seguire)."""
+    an = [a for a in D["animali"] if a.get("k") == "animale" and _ts(a) and a["u"].lower() not in ESCLUSI and "lat" in a]
+    fatte = set(st.get("luci_raccontate", []))
+    nuovi = sorted((a for a in an if a["id"] not in fatte), key=lambda a: a["ts"], reverse=True)
+    nuovi = [a for a in nuovi[:30] if a["u"].lower() in D["seguono"]][:1] or nuovi[:1]
+    if not nuovi: return prima_luce(D, rng, st)
+    a = nuovi[0]; st["luci_raccontate"] = (list(fatte) + [a["id"]])[-1000:]
+    autore = _clip(D, st, a["u"])
+    rz = _razza(a)
+    frasi = [
+        (f"Questa luce è di {a['n']}{', ' + rz if rz else ''}, {_a(a['c'])}.", {"tipo": "luce", "centro": [a["lng"], a["lat"]], "intorno": _intorno(D, a, escludi=[a]),
+          "punti": [{"lng": a["lng"], "lat": a["lat"], "acceso": False, "testo": f"Questa luce è di {a['n']}"}]}),
+        ("Un commento, e il tuo animale si accende sulla mappa.", {"tipo": "commento", "testo": f"{a['c']}, {a['n']}, {a.get('t', 'cane')}"}),
+        (f"Le prossime luci {PROSSIME_LUCI}. Seguici per vedere la tua!", {"tipo": "chiusura", "testo": f"➕ Le prossime luci {PROSSIME_LUCI}"}),
+    ]
+    st["tag_extra"] = [a["u"]]
+    did = (f"💡 Questa luce è di {a['n']}{' (' + rz + ')' if rz else ''}, {_a(a['c'])}: benvenuti @{a['u']}! 🐾\n\n"
+           "Su Zampe d'Italia ogni animale accende una luce nella sua città (la mappa è nel link in bio).\n"
+           f"👇 Commenta la tua città e il nome del tuo cane o gatto: entro 15 minuti si accende col tuo @.\n"
+           f"➕ Le prossime luci {PROSSIME_LUCI}: seguici per vedere se c'è la tua!"
+           + (f"\n🎥 Il video è di @{autore}" if autore else ""))
+    st["copertina"] = {"luce": [a["lng"], a["lat"]], "sopra": "QUESTA LUCE", "grande": f"è di {a['n']}", "sotto": a["c"]}
+    st["senza_bonus"] = True
+    return "💡 QUESTA LUCE È DI…", frasi, did
+
+FORMATI = {"prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -862,7 +981,7 @@ def main():
         did = did.strip() + "\n\n"
     else:  # una richiesta sola: con 8 richieste diverse in didascalia (ottobre) non se ne faceva nessuna
         if "città e nome" not in did: did = did.strip() + "\n\n👇 Commenta la tua città e il nome del tuo cane o gatto (es. «Treviso, Luna, cane»): si accende sulla mappa col tuo @."
-        if formato != "star": did = did.strip() + "\n📸 Ci segui? Mandaci in privato la foto più bella del tuo animale: ogni giorno una diventa la star del reel!"
+        if formato != "star": did = did.strip() + "\n📸 Ci segui? Mandaci in privato una foto o 5 secondi di video del tuo animale che corre o gioca: finisce nei nostri reel, col tuo @!"
         # dal 30/10 sera, togliendo questa riga, i follower sono passati da circa 250 a 20-30 al giorno: resta sempre
         did = did.strip() + f"\n\n➕ Seguici e scrivi SEGUO: {PS} punti" + (" e il costume di Halloween per il tuo animale" if ORA.date().isoformat() <= "2026-11-02" else " e le lucine sulla cuccia") + ". Nei reel mettiamo prima gli animali di chi ci segue."
         fw = D.get("follower") or {}

@@ -25,6 +25,27 @@ def numeri(mid, token):
         if isinstance(v, (int, float)): out[d["name"]] = v
     return out
 
+def attribuisci(righe, reel):
+    """Follower portati da ogni reel (7/11): quelli arrivati tra la sua uscita e il reel dopo (al massimo 6 ore), dai cambi registrati
+    da commenti.py (stato «follower_ore»), e quanti ogni 1.000 account raggiunti. È una stima: chi segue per un reel vecchio conta per l'ultimo.
+    I reel sponsorizzati (config.json «sponsorizzati») si tengono a parte."""
+    from datetime import datetime, timedelta
+    ore = [(datetime.fromisoformat(t), n) for t, n in json.loads((ROOT / "motore/stato.json").read_text()).get("follower_ore", [])]
+    spons = set(json.loads((ROOT / "motore/config.json").read_text()).get("sponsorizzati", []))
+    def n_a(t):
+        prima = [n for tt, n in ore if tt <= t]
+        return prima[-1] if prima else None
+    tempi = [datetime.fromisoformat(x["ts"]) for x in reel]
+    for i, (r, x) in enumerate(zip(righe, reel)):
+        r["sponsorizzato"] = x["id"] in spons
+        if not ore or tempi[i] < ore[0][0]: continue  # prima del 7/11 i follower si contavano solo una volta al giorno
+        fine = min(tempi[i + 1] if i + 1 < len(tempi) else tempi[i] + timedelta(hours=6), tempi[i] + timedelta(hours=6))
+        if fine > ore[-1][0] + timedelta(minutes=30): continue  # finestra non ancora chiusa
+        a, b = n_a(tempi[i]), n_a(fine)
+        if a is None or b is None: continue
+        r["follower_dopo"] = b - a
+        if r.get("reach"): r["follower_ogni_1000"] = round(1000 * (b - a) / r["reach"], 1)
+
 def main():
     token = os.environ.get("IG_TOKEN") or sys.exit("Manca IG_TOKEN.")
     reel = [x for x in json.loads((ROOT / "motore/pubblicati.json").read_text()) if x["tipo"] == "REELS"]
@@ -33,6 +54,7 @@ def main():
         m = re.search(r"(\d{4}-\d\d-\d\d)-(\d{4})-(\w+)\.mp4", x["media"])
         formato, quando = (m.group(3), f"{m.group(1)} {m.group(2)[:2]}:{m.group(2)[2:]}") if m else ("lancio", x["ts"][:16])
         righe.append({"quando": quando, "formato": formato, "ts": x["ts"], **numeri(x["id"], token)})
+    attribuisci(righe, reel)
     (ROOT / "motore/rendimento.json").write_text(json.dumps(righe, ensure_ascii=False, indent=1) + "\n")
     chiavi = [k for k in METRICHE if any(k in r for r in righe)]
     print("quando            formato     " + " ".join(f"{k[:9]:>9}" for k in chiavi))

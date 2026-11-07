@@ -180,6 +180,14 @@ def main():
             sc["svg"] = svg_di("gatto" if tipo == "gatto" else "cane", sc.pop("razza"), sc.pop("seme", n + 3), serve)
         if tipo == "foto":  # la foto vera della star (docs/media/ugc)
             (prog / "assets/img").mkdir(parents=True, exist_ok=True); shutil.copy(ROOT / "docs/media/ugc" / sc["file"], prog / "assets/img" / sc["file"])
+        if tipo == "luce":  # la mappa del sito (reel/assets/italia-notte.jpg): coordinate vere -> pixel dell'immagine
+            (prog / "assets/img").mkdir(parents=True, exist_ok=True); shutil.copy(ROOT / "reel/assets/italia-notte.jpg", prog / "assets/img/italia-notte.jpg")
+            M = json.loads((ROOT / "reel/assets/italia-notte.json").read_text())
+            px = lambda lng, lat: ((lng + 180) / 360 * 256 * 2 ** M["z"] - M["x0"], (1 - math.asinh(math.tan(math.radians(lat))) / math.pi) / 2 * 256 * 2 ** M["z"] - M["y0"])
+            sc["img"], sc["w"], sc["h"] = "italia-notte.jpg", M["w"], M["h"]
+            sc["centro"] = px(*sc["centro"]); sc["italia_c"] = px(12.6, 41.9)
+            sc["punti"] = [{**q, **dict(zip(("x", "y"), px(q["lng"], q["lat"])))} for q in sc["punti"]]
+            sc["intorno"] = [px(lng, lat) for lng, lat in sc.get("intorno", [])]
         if tipo == "vetrina":
             sc["animali"] = [{"svg": svg_di(x["t"], x["razza"], x.get("seme", k + 1), serve), "nome": x["nome"], "t": x["t"]} for k, x in enumerate(sc["animali"])]
         if tipo in ("duello", "chiusura"):
@@ -194,7 +202,7 @@ def main():
         if not any(x.kind == x.VAR_KEYWORD for x in firma.values()):
             sc = {k: v for k, v in sc.items() if k in firma}
         pagina = S.TIPI[tipo](cid, d, **sc)
-        if n == 0 and tipo != "mappa":  # mai aprire sul buio (la mappa ha già la sua versione "subito")
+        if n == 0 and tipo not in ("mappa", "luce"):  # mai aprire sul buio (le mappe hanno già la loro apertura piena)
             testa, js = pagina.split("<script>", 1)
             pagina = testa + "<script>" + S._primo_fotogramma(js)
         (prog / "compositions" / f"{cid}.html").write_text(pagina)
@@ -223,14 +231,18 @@ def main():
                     "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", str(out / "reel.mp4")], check=True)
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(out / "reel.mp4")], capture_output=True, text=True).stdout)
     if abs(dur - durata) > 0.5: raise SystemExit(f"Il video dura {dur}s invece di {durata}s")
-    if copione.get("intro"):  # qualche secondo di video vero prima del reel (Thor, l'arbitro del derby), con la stessa musica
+    if copione.get("intro"):  # qualche secondo di video vero prima del reel (un animale vero, mandato col consenso), poi la mappa
         intro = ROOT / copione["intro"]
         di = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(intro)], capture_output=True, text=True).stdout)
+        # il suono vero del video (ambiente) resta, con la musica bassa sotto (7/11); senza audio, solo musica
+        ambiente = bool(subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index", "-of", "csv=p=0", str(intro)], capture_output=True, text=True).stdout.strip())
         (out / "effetti_intro.json").write_text(json.dumps({"durata": di, "pop": [0.25, 2.45]}))
         subprocess.run([sys.executable, str(ROOT / "reel/musica.py"), str(out / "effetti_intro.json"), str(out / "intro.wav")], check=True)
         subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(intro), "-i", str(out / "intro.wav"), "-i", str(out / "reel.mp4"), "-filter_complex",
                         f"[0:v]scale=1080:1920,fps=30,setsar=1,format=yuv420p[v0];[2:v]fps=30,setsar=1,format=yuv420p[v1];"
-                        f"[1:a]atrim=0:{di},apad=whole_dur={di},volume=0.6,aresample=48000,aformat=channel_layouts=stereo[a0];[2:a]aresample=48000,aformat=channel_layouts=stereo[a1];"
+                        + (f"[1:a]atrim=0:{di},apad=whole_dur={di},volume=0.6,aresample=48000,aformat=channel_layouts=stereo[a0];" if not ambiente else
+                         f"[1:a]atrim=0:{di},apad=whole_dur={di},volume=0.25,aresample=48000,aformat=channel_layouts=stereo[m0];[0:a]atrim=0:{di},apad=whole_dur={di},aresample=48000,aformat=channel_layouts=stereo[s0];[s0][m0]amix=inputs=2:duration=first:normalize=0[a0];")
+                        + "[2:a]aresample=48000,aformat=channel_layouts=stereo[a1];"
                         "[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]", "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "20", "-preset", "medium",
                         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out / "con_intro.mp4")], check=True)
         shutil.move(out / "con_intro.mp4", out / "reel.mp4"); dur += di

@@ -32,12 +32,18 @@ SEGUE = re.compile(r"(?i)\b(ti seguo|seguo|seguito|seguita|follow)\b")
 UGC = ROOT / "docs/media/ugc"
 SI, NO = re.compile(r"(?i)^\W*(s[iì]+|certo|ok|va bene|volentieri)\b"), re.compile(r"(?i)^\W*no\b")
 
-def foto_di(m):
-    """L'indirizzo della foto allegata a un messaggio privato (i video per ora no), oppure None."""
+def media_di(m):
+    """La foto o il video allegati a un messaggio privato: (indirizzo, è_video), oppure (None, False).
+    Dal 7/11 anche i video: i primi secondi dei reel mostrano un animale vero in movimento."""
     for a in (m.get("attachments") or {}).get("data", []):
+        v = (a.get("video_data") or {}).get("url") or ((a.get("payload") or {}).get("url") if a.get("type") == "video" else None)
+        if v: return v, True
         u = (a.get("image_data") or {}).get("url") or ((a.get("payload") or {}).get("url") if a.get("type") == "image" else None)
-        if u: return u
-    return None
+        if u: return u, False
+    return None, False
+
+def foto_di(m):
+    return media_di(m)[0]
 
 def salva_foto(url):
     """Scarica la foto e la salva ridotta e senza dati nascosti (ffmpeg non copia EXIF né posizione). Restituisce il nome del file."""
@@ -48,6 +54,26 @@ def salva_foto(url):
     subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(grezza), "-vf", "scale='min(1080,iw)':-2", "-map_metadata", "-1", "-q:v", "3", str(UGC / nome)], check=True)
     grezza.unlink()
     return nome
+
+def salva_clip(url):
+    """Il video: i primi 4,5 secondi, verticale 1080x1920 (ritagliato al centro), 30 fps, suono vero tenuto, senza dati nascosti."""
+    UGC.mkdir(parents=True, exist_ok=True)
+    nome = hashlib.sha256(("zampe-ugc" + url).encode()).hexdigest()[:12] + ".mp4"
+    grezza = UGC / ("_" + nome)
+    grezza.write_bytes(urllib.request.urlopen(url, timeout=120).read())
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(grezza), "-t", "4.5", "-vf", "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,format=yuv420p",
+                    "-map_metadata", "-1", "-c:v", "libx264", "-crf", "21", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(UGC / nome)], check=True)
+    grezza.unlink()
+    return nome
+
+def fotogramma(url):
+    """Un fotogramma del video (a 1 secondo), per farlo giudicare come una foto."""
+    import tempfile
+    with tempfile.TemporaryDirectory() as t:
+        v, j = Path(t) / "v", Path(t) / "f.jpg"
+        v.write_bytes(urllib.request.urlopen(url, timeout=120).read())
+        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", "1", "-i", str(v), "-frames:v", "1", "-q:v", "3", str(j)], check=True)
+        return j.read_bytes()
 
 
 def manda(ig, igsid, messaggio):
@@ -120,7 +146,7 @@ def main():
                     storie.append((da.get("id"), da.get("username", "")))
                 continue
             if impronta not in fatti and m.get("created_time", "").replace("+0000", "+00:00") >= limite and foto_di(m) and not (m.get("message") or "").strip():
-                fatti.add(impronta); foto_nuove.append((da.get("id"), foto_di(m), da.get("username", "")))  # una foto del suo animale: la guardiamo e chiediamo se possiamo usarla
+                fatti.add(impronta); foto_nuove.append((da.get("id"), *media_di(m), da.get("username", "")))  # una foto del suo animale: la guardiamo e chiediamo se possiamo usarla
                 continue
             if impronta not in fatti and m.get("created_time", "").replace("+0000", "+00:00") >= limite and (m.get("message") or "").strip():
                 p["nuovi"].append((impronta, p["tutti"][-1]))
@@ -161,18 +187,18 @@ def main():
     attesa_foto, ugc_nuove = st.setdefault("foto_attesa", {}), 0
     chiave_foto = lambda i: hashlib.sha256(("zampe-foto" + str(i)).encode()).hexdigest()[:16]  # nel repository solo impronte, niente ID
     seguono = {k for k, v in gioco.stato.get("seguono", {}).items() if v == "premiato"}
-    for igsid, url, u in foto_nuove:
+    for igsid, url, video, u in foto_nuove:
         if u.lower() not in seguono:  # la star è un premio per chi ci segue (Alberto, 1/11)
             try: manda(ig, igsid, {"text": "Che bello! 😍 La star del giorno è riservata a chi ci segue: seguici, scrivi SEGUO sotto un nostro reel e poi rimandaci la foto ⭐"})
             except urllib.error.HTTPError as e: print(f"messaggio non mandato: errore {e.code}", file=sys.stderr)
             continue
         # l'ID anonimo che Instagram dà alla nostra app serve per rispondere dopo il giudizio (come in «in_attesa»): niente nomi né testi
-        attesa_foto[chiave_foto(igsid)] = {"url": url, "t": time.time(), "igsid": igsid, "giudicata": False}
+        attesa_foto[chiave_foto(igsid)] = {"url": url, "t": time.time(), "igsid": igsid, "giudicata": False, "video": video}
     for cf, f in list(attesa_foto.items()):
         if f.get("giudicata", True):
             continue
         try:  # solo foto belle: niente sfocate, buie, con persone in primo piano o screenshot
-            giudizio = lettore.giudica_foto(urllib.request.urlopen(f["url"], timeout=60).read())
+            giudizio = lettore.giudica_foto(fotogramma(f["url"]) if f.get("video") else urllib.request.urlopen(f["url"], timeout=60).read())
             if giudizio is None:
                 continue  # Claude non risponde: si riprova al prossimo giro
             if not giudizio.get("ok"):
@@ -180,7 +206,8 @@ def main():
                 manda(ig, f["igsid"], {"text": f"Grazie! 🐾 Questa è {giudizio.get('motivo', 'difficile da vedere bene')}: mandacene un'altra con il tuo animale ben visibile, a fuoco e con tanta luce 📸"})
                 continue
             f["giudicata"] = True
-            manda(ig, f["igsid"], {"text": "Che bella! 😍 Possiamo metterla nel reel «La star di oggi» di @zampeditalia, col tuo @? Rispondi SÌ oppure NO"})
+            manda(ig, f["igsid"], {"text": "Che bel video! 😍 Possiamo usarlo all'inizio di un reel di @zampeditalia, col tuo @? Rispondi SÌ oppure NO" if f.get("video") else
+                                   "Che bella! 😍 Possiamo metterla nel reel «La star di oggi» di @zampeditalia, col tuo @? Rispondi SÌ oppure NO"})
         except Exception as e:
             print(f"foto della star non gestita: {type(e).__name__}", file=sys.stderr)
     for igsid, p in persone.items():
@@ -193,9 +220,9 @@ def main():
             f = attesa_foto.pop(cf)
             try:
                 if si:
-                    nome = salva_foto(f["url"])
+                    nome = salva_clip(f["url"]) if f.get("video") else salva_foto(f["url"])
                     gioco.stato.setdefault("ugc", []).append({"f": nome, "u": u, "t": time.time()}); ugc_nuove += 1
-                    manda(ig, igsid, {"text": "Fatto! ⭐ Sarà la star di uno dei prossimi reel, col tuo @. Intanto scrivi città, nome e razza sotto un reel: si accende anche sulla mappa 🐾"})
+                    manda(ig, igsid, {"text": "Fatto! ⭐ Sarà in uno dei prossimi reel, col tuo @. Intanto scrivi città e nome del tuo animale sotto un reel: si accende anche sulla mappa 🐾"})
                 else:
                     manda(ig, igsid, {"text": "Va bene, niente reel 👍 Grazie lo stesso!"})
             except Exception as e:
