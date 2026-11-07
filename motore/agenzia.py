@@ -126,21 +126,30 @@ CAPO = """Sei «{ruolo}», capo del reparto «{reparto}» del Centro Agenzia di 
 Decidi per il reparto: cosa va corretto adesso (solo cose vere e importanti, con secondo, problema e correzione) e quale idea portare avanti.
 Rispondi solo JSON: {{"decisione": "una frase", "da_correggere": [{{"secondo": numero o null, "problema": "...", "correzione": "..."}}], "idea_scelta": "..."}}"""
 
+ERRORI_PERSONE = []
+
 def lavora(sistema, contenuto, modello=None):
-    """Una persona dell'ufficio al lavoro (Claude). Restituisce (json, token) oppure (None, 0)."""
+    """Una persona dell'ufficio al lavoro (Claude). Restituisce (json, token) oppure (None, 0).
+    Con troppe richieste insieme (429/529) aspetta e riprova; se il modello delle persone non c'è, usa quello dei capi."""
     k = os.environ.get("ANTHROPIC_API_KEY")
     if not k: return None, 0
-    body = {"model": modello or PERSONE, "max_tokens": 600, "system": sistema, "messages": [{"role": "user", "content": contenuto}]}
-    for tentativo in range(2):
-        try:
-            r = urllib.request.Request("https://api.anthropic.com/v1/messages", data=json.dumps(body).encode(),
-                                       headers={"x-api-key": k, "anthropic-version": "2023-06-01", "content-type": "application/json"})
-            out = json.loads(urllib.request.urlopen(r, timeout=90).read())
-            t = next(b["text"] for b in out["content"] if b.get("type") == "text")
-            u = out.get("usage", {})
-            return _json(t), u.get("input_tokens", 0) + u.get("output_tokens", 0)
-        except Exception:
-            time.sleep(2)
+    modelli = [modello or PERSONE] + ([CLAUDE] if (modello or PERSONE) != CLAUDE else [])
+    for m in modelli:
+        body = {"model": m, "max_tokens": 600, "system": sistema, "messages": [{"role": "user", "content": contenuto}]}
+        for tentativo in range(5):
+            try:
+                r = urllib.request.Request("https://api.anthropic.com/v1/messages", data=json.dumps(body).encode(),
+                                           headers={"x-api-key": k, "anthropic-version": "2023-06-01", "content-type": "application/json"})
+                out = json.loads(urllib.request.urlopen(r, timeout=90).read())
+                t = next(b["text"] for b in out["content"] if b.get("type") == "text")
+                u = out.get("usage", {})
+                return _json(t), u.get("input_tokens", 0) + u.get("output_tokens", 0)
+            except urllib.error.HTTPError as e:
+                ERRORI_PERSONE.append(f"{m}: {e.code}")
+                if e.code in (429, 529, 500, 503): time.sleep(4 * (tentativo + 1)); continue
+                break  # 400/404: modello non disponibile -> si passa al prossimo
+            except Exception as e:
+                ERRORI_PERSONE.append(f"{m}: {type(e).__name__}"); time.sleep(2)
     return None, 0
 
 def ufficio_al_lavoro(S, mat):
@@ -156,7 +165,7 @@ def ufficio_al_lavoro(S, mat):
         rid, nome, p = x
         return x, lavora(PERSONA.format(ruolo=p["ruolo"], reparto=nome), testo)
     rel = {}
-    with ThreadPoolExecutor(10) as ex:
+    with ThreadPoolExecutor(4) as ex:  # 4 alla volta: con 10 insieme la chiave va oltre il limite di richieste
         for (rid, nome, p), (r, t) in ex.map(uno, lavori):
             token += t
             capo = f"{rid}-1"
@@ -178,6 +187,9 @@ def ufficio_al_lavoro(S, mat):
     for rid in ("direzione", "montaggio"):  # le loro persone riferiscono direttamente al Direttore e al Montatore
         if rel.get(rid): decisioni.append({"reparto": dict((a, b) for a, b, _ in REPARTI)[rid], "relazioni": rel[rid]})
     S.d["token_persone"] = S.d.get("token_persone", 0) + token
+    if ERRORI_PERSONE:
+        from collections import Counter
+        S.d["errori_persone"] = dict(Counter(ERRORI_PERSONE)); print("agenzia: errori delle persone", S.d["errori_persone"], file=sys.stderr)
     S.salva()
     return decisioni
 
