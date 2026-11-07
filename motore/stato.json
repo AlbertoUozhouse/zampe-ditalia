@@ -18440,7 +18440,7 @@
 "2026-11-04": 1637,
 "2026-11-05": 1677,
 "2026-11-06": 1702,
-"2026-11-07": 1719
+"2026-11-07": 1717
 },
 "gioco_pappa": {
 "2026-W44": {
@@ -18486,6 +18486,2001 @@
 [
 "2026-11-07T15:22+00:00",
 1719
+],
+[
+"2026-11-07T15:38+00:00",
+1717
 ]
+],
+"coppa": {
+"turno": 1,
+"inizio": "2026-11-07T16:38:27.792914+01:00",
+"fine": "2026-11-15T20:00:00+01:00",
+"coppie": [
+[
+"Napoli|NA",
+"Roma|RM"
+],
+[
+"Torino|TO",
+"Milano|MI"
+],
+[
+"Catania|CT",
+"Genova|GE"
+],
+[
+"Brescia|BS",
+"Cagliari|CA"
+],
+[
+"Firenze|FI",
+"Palermo|PA"
+],
+[
+"Bergamo|BG",
+"Modena|MO"
+],
+[
+"Bari|BA",
+"Venezia|VE"
+],
+[
+"Bologna|BO",
+"Messina|ME"
+],
+[
+"Ravenna|RA",
+"Reggio di Calabria|RC"
+],
+[
+"Caserta|CE",
+"Livorno|LI"
+],
+[
+"Mordano|BO",
+"Cecina|LI"
+],
+[
+"Padova|PD",
+"Avellino|AV"
+],
+[
+"Cosenza|CS",
+"Cesena|FC"
+],
+[
+"Foggia|FG",
+"Pisa|PI"
+],
+[
+"Trapani|TP",
+"Trieste|TS"
+],
+[
+"Verona|VR",
+"Vicenza|VI"
+],
+[
+"Como|CO",
+"Salerno|SA"
+],
+[
+"Brindisi|BR",
+"Grosseto|GR"
+],
+[
+"Orvieto|TR",
+"Perugia|PG"
+],
+[
+"San Rufo|SA",
+"Treviso|TV"
+],
+[
+"Ancona|AN",
+"Cesenatico|FC"
+],
+[
+"Latina|LT",
+"Taranto|TA"
+],
+[
+"Trento|TN",
+"Lecce|LE"
+],
+[
+"Matera|MT",
+"Muggia|TS"
+],
+[
+"Pescara|PE",
+"Piacenza|PC"
+],
+[
+"Quartu Sant'Elena|CA",
+"Rieti|RI"
+],
+[
+"Siracusa|SR",
+"Varese|VA"
+],
+[
+"Vercelli|VC",
+"Belluno|BL"
+],
+[
+"Castellammare di Stabia|NA",
+"Catanzaro|CZ"
+],
+[
+"Ferrara|FE",
+"Giugliano in Campania|NA"
+],
+[
+"Modica|RG",
+"Parma|PR"
+],
+[
+"Reggio nell'Emilia|RE",
+"Tivoli|RM"
+],
+[
+"Agliana|PT",
+"Ascoli Piceno|AP"
+],
+[
+"Assemini|CA",
+"Asti|AT"
+],
+[
+"Barletta|BT",
+"Carrara|MS"
+],
+[
+"Castelfranco di Sotto|PI",
+"Formia|LT"
+],
+[
+"Ivrea|TO",
+"L'Aquila|AQ"
+],
+[
+"Marsala|TP",
+"Mussolente|VI"
+],
+[
+"Paese|TV",
+"Pozzuoli|NA"
+],
+[
+"Ribera|AG",
+"San Vincenzo|LI"
+],
+[
+"Sassari|SS",
+"Ventimiglia|IM"
+],
+[
+"Alessandria|AL",
+"Anagni|FR"
+],
+[
+"Anzio|RM",
+"Aosta|AO"
+],
+[
+"Aversa|CE",
+"Bassano del Grappa|VI"
+],
+[
+"Bolzano|BZ",
+"Bresso|MI"
+],
+[
+"Briosco|MB",
+"Busto Arsizio|VA"
+],
+[
+"Campobasso|CB",
+"Casal di Principe|CE"
+],
+[
+"Cassano Magnago|VA",
+"Castrezzato|BS"
+],
+[
+"Cervia|RA",
+"Chioggia|VE"
+],
+[
+"Dalmine|BG",
+"Empoli|FI"
+],
+[
+"Fano|PU",
+"Filottrano|AN"
+],
+[
+"Fonte Nuova|RM",
+"Forlì|FC"
+],
+[
+"Gavi|AL",
+"La Spezia|SP"
+],
+[
+"Mantova|MN",
+"Maser|TV"
+],
+[
+"Mogliano Veneto|TV",
+"Mola di Bari|BA"
+],
+[
+"Monza|MB",
+"Orgosolo|NU"
+],
+[
+"Pedara|CT",
+"Portici|NA"
+],
+[
+"Portogruaro|VE",
+"Rho|MI"
+],
+[
+"San Benedetto del Tronto|AP",
+"Scandicci|FI"
+],
+[
+"Spoleto|PG",
+"Torre di Santa Maria|SO"
+],
+[
+"Vasto|CH",
+"Velletri|RM"
+],
+[
+"Vigodarzere|PD",
+"Acerra|NA"
+],
+[
+"Aci Catena|CT",
+"Afragola|NA"
+],
+[
+"Aprilia|LT",
+"Arese|MI"
+],
+[
+"Arezzo|AR",
+"Argenta|FE"
+],
+[
+"Bagnacavallo|RA",
+"Baranzate|MI"
+],
+[
+"Barcellona Pozzo di Gotto|ME",
+"Barlassina|MB"
+],
+[
+"Battipaglia|SA",
+"Biella|BI"
+],
+[
+"Bisceglie|BT",
+"Bomarzo|VT"
+],
+[
+"Caltagirone|CT",
+"Capaci|PA"
+],
+[
+"Capo d'Orlando|ME",
+"Carsoli|AQ"
+],
+[
+"Castel Volturno|CE",
+"Castelfranco Veneto|TV"
+],
+[
+"Cerveteri|RM",
+"Codevigo|PD"
+],
+[
+"Domodossola|VB",
+"Eboli|SA"
+],
+[
+"Faenza|RA",
+"Ferentino|FR"
+],
+[
+"Gragnano|NA",
+"Grumento Nova|PZ"
+],
+[
+"Marino|RM",
+"Marostica|VI"
+],
+[
+"Mirandola|MO",
+"Molfetta|BA"
+],
+[
+"Monfumo|TV",
+"Montegiorgio|FM"
+],
+[
+"Morciano di Romagna|RN",
+"Paternò|CT"
+],
+[
+"Pesaro|PU",
+"Piombino|LI"
+],
+[
+"Prato|PO",
+"San Sebastiano al Vesuvio|NA"
+],
+[
+"San Zenone degli Ezzelini|TV",
+"Senago|MI"
+],
+[
+"Spresiano|TV",
+"Trepuzzi|LE"
+],
+[
+"Viareggio|LU",
+"Vittorio Veneto|TV"
+],
+[
+"Acireale|CT",
+"Alba|CN"
+],
+[
+"Alpignano|TO",
+"Alzano Scrivia|AL"
+],
+[
+"Arzano|NA",
+"Atri|TE"
+],
+[
+"Augusta|SR",
+"Avezzano|AQ"
+],
+[
+"Basiglio|MI",
+"Bibbiena|AR"
+],
+[
+"Bra|CN",
+"Casoria|NA"
+],
+[
+"Cassino|FR",
+"Castelmauro|CB"
+],
+[
+"Castelvetro di Modena|MO",
+"Cattolica|RN"
+],
+[
+"Cava de' Tirreni|SA",
+"Cogliate|MB"
+],
+[
+"Cogoleto|GE",
+"Colloredo di Monte Albano|UD"
+],
+[
+"Cremona|CR",
+"Cressa|NO"
+],
+[
+"Crotone|KR",
+"Ercolano|NA"
+],
+[
+"Fasano|BR",
+"Fiumicino|RM"
+],
+[
+"Fonni|NU",
+"Fontaniva|PD"
+],
+[
+"Gavardo|BS",
+"Giaveno|TO"
+],
+[
+"Isernia|IS",
+"Itri|LT"
+],
+[
+"Ladispoli|RM",
+"Lamezia Terme|CZ"
+],
+[
+"Latisana|UD",
+"Lucca|LU"
+],
+[
+"Maddaloni|CE",
+"Magliano Romano|RM"
+],
+[
+"Manduria|TA",
+"Mangone|CS"
+],
+[
+"Marano di Napoli|NA",
+"Milazzo|ME"
+],
+[
+"Mondragone|CE",
+"Monopoli|BA"
+],
+[
+"Monte San Giusto|MC",
+"Monteparano|TA"
+],
+[
+"Montepulciano|SI",
+"Monterosi|VT"
+],
+[
+"Montescudaio|PI",
+"Montesilvano|PE"
+],
+[
+"Nereto|TE",
+"Nonantola|MO"
+],
+[
+"Novara|NO",
+"Novi Ligure|AL"
+],
+[
+"Nuoro|NU",
+"Oggiono|LC"
+],
+[
+"Olgiate Molgora|LC",
+"Oliena|NU"
+],
+[
+"Ome|BS",
+"Pavia|PV"
+],
+[
+"Peschici|FG",
+"Poggibonsi|SI"
+],
+[
+"Poggiomarino|NA",
+"Pompei|NA"
+],
+[
+"Pordenone|PN",
+"Recanati|MC"
+],
+[
+"Rignano Flaminio|RM",
+"Rimini|RN"
+],
+[
+"Rivarolo Canavese|TO",
+"Robbio|PV"
+],
+[
+"Salò|BS",
+"San Bonifacio|VR"
+],
+[
+"San Giovanni Valdarno|AR",
+"San Severo|FG"
+],
+[
+"San Valentino Torio|SA",
+"Sanremo|IM"
+],
+[
+"Santa Maria Capua Vetere|CE",
+"Santa Maria Maggiore|VB"
+],
+[
+"Savona|SV",
+"Sepino|CB"
+],
+[
+"Sessa Aurunca|CE",
+"Settimo Torinese|TO"
+],
+[
+"Siena|SI",
+"Siniscola|NU"
+],
+[
+"Soliera|MO",
+"Solopaca|BN"
+],
+[
+"Tarquinia|VT",
+"Tezze sul Brenta|VI"
+],
+[
+"Torre Annunziata|NA",
+"Udine|UD"
+],
+[
+"Venaria Reale|TO",
+"Verbania|VB"
+],
+[
+"Vibo Valentia|VV",
+"Vieste|FG"
+],
+[
+"Vigevano|PV",
+"Vignola|MO"
+],
+[
+"Viterbo|VT",
+"Abbiategrasso|MI"
+],
+[
+"Acate|RG",
+"Acquanegra sul Chiese|MN"
+],
+[
+"Acquaviva delle Fonti|BA",
+"Agrigento|AG"
+],
+[
+"Alba Adriatica|TE",
+"Albaredo d'Adige|VR"
+],
+[
+"Albisola Superiore|SV",
+"Alcara li Fusi|ME"
+],
+[
+"Alghero|SS",
+"Altivole|TV"
+],
+[
+"Amelia|TR",
+"Andalo|TN"
+],
+[
+"Ardea|RM",
+"Ariano nel Polesine|RO"
+],
+[
+"Assisi|PG",
+"Atessa|CH"
+],
+[
+"Avigliana|TO",
+"Bagno di Romagna|FC"
+],
+[
+"Baiano|AV",
+"Bellinzago Novarese|NO"
+],
+[
+"Benevento|BN",
+"Borgo San Dalmazzo|CN"
+],
+[
+"Borgo San Giacomo|BS",
+"Borgo San Lorenzo|FI"
+],
+[
+"Borgo Valsugana|TN",
+"Bovisio-Masciago|MB"
+],
+[
+"Brusciano|NA",
+"Buja|UD"
+],
+[
+"Caivano|NA",
+"Calcinaia|PI"
+],
+[
+"Calderara di Reno|BO",
+"Camponogara|VE"
+],
+[
+"Camporosso|IM",
+"Cantù|CO"
+],
+[
+"Capri Leone|ME",
+"Carate Brianza|MB"
+],
+[
+"Carini|PA",
+"Carpegna|PU"
+],
+[
+"Carpi|MO",
+"Casalecchio di Reno|BO"
+],
+[
+"Casarano|LE",
+"Castelnuovo Berardenga|SI"
+],
+[
+"Cefalù|PA",
+"Cerchio|AQ"
+],
+[
+"Cesate|MI",
+"Chiaromonte|PZ"
+],
+[
+"Ciampino|RM",
+"Cingoli|MC"
+],
+[
+"Cittadella|PD",
+"Civitanova Marche|MC"
+],
+[
+"Civitavecchia|RM",
+"Codigoro|FE"
+],
+[
+"Colleferro|RM",
+"Cologna Veneta|VR"
+],
+[
+"Comiso|RG",
+"Concordia sulla Secchia|MO"
+],
+[
+"Cossato|BI",
+"Cureggio|NO"
+],
+[
+"Curtatone|MN",
+"Darfo Boario Terme|BS"
+],
+[
+"Desana|VC",
+"Desenzano del Garda|BS"
+],
+[
+"Desulo|NU",
+"Diano Castello|IM"
+],
+[
+"Dolo|VE",
+"Este|PD"
+],
+[
+"Fabriano|AN",
+"Feltre|BL"
+],
+[
+"Fermo|FM",
+"Fiesso d'Artico|VE"
+],
+[
+"Fondi|LT",
+"Forlimpopoli|FC"
+],
+[
+"Formigine|MO",
+"Fornovo di Taro|PR"
+],
+[
+"Frosinone|FR",
+"Gabicce Mare|PU"
+],
+[
+"Gadoni|NU",
+"Galatina|LE"
+],
+[
+"Galliate|NO",
+"Giardini-Naxos|ME"
+],
+[
+"Goro|FE",
+"Gravina di Catania|CT"
+],
+[
+"Imola|BO",
+"Inveruno|MI"
+],
+[
+"La Loggia|TO",
+"Lariano|RM"
+],
+[
+"Lauria|PZ",
+"Lecco|LC"
+],
+[
+"Lestizza|UD",
+"Limbiate|MB"
+],
+[
+"Lissone|MB",
+"Livigno|SO"
+],
+[
+"Lizzanello|LE",
+"Lodi Vecchio|LO"
+],
+[
+"Lodi|LO",
+"Lugnano in Teverina|TR"
+],
+[
+"Lugo|RA",
+"Macerata|MC"
+],
+[
+"Maglie|LE",
+"Marigliano|NA"
+],
+[
+"Marsciano|PG",
+"Massa|MS"
+],
+[
+"Melito di Napoli|NA",
+"Mesagne|BR"
+],
+[
+"Minturno|LT",
+"Mirabella Imbaccari|CT"
+],
+[
+"Miradolo Terme|PV",
+"Mirano|VE"
+],
+[
+"Modugno|BA",
+"Mogoro|OR"
+],
+[
+"Monasterace|RC",
+"Moncalieri|TO"
+],
+[
+"Monfalcone|GO",
+"Montebelluna|TV"
+],
+[
+"Montefalcone Appennino|FM",
+"Montefalco|PG"
+],
+[
+"Montelupo Fiorentino|FI",
+"Monterotondo|RM"
+],
+[
+"Morolo|FR",
+"Narni|TR"
+],
+[
+"Nichelino|TO",
+"Noto|SR"
+],
+[
+"Noventa di Piave|VE",
+"Oderzo|TV"
+],
+[
+"Olbia|SS",
+"Oleggio|NO"
+],
+[
+"Olgiate Olona|VA",
+"Opera|MI"
+],
+[
+"Oristano|OR",
+"Orta Nova|FG"
+],
+[
+"Orzivecchi|BS",
+"Osimo|AN"
+],
+[
+"Ostuni|BR",
+"Pachino|SR"
+],
+[
+"Paglieta|CH",
+"Palazzolo Acreide|SR"
+],
+[
+"Palestrina|RM",
+"Partinico|PA"
+],
+[
+"Petriolo|MC",
+"Pisogne|BS"
+],
+[
+"Pistoia|PT",
+"Pojana Maggiore|VI"
+],
+[
+"Pomezia|RM",
+"Pomigliano d'Arco|NA"
+],
+[
+"Porto San Giorgio|FM",
+"Pozzallo|RG"
+],
+[
+"Pradamano|UD",
+"Predazzo|TN"
+],
+[
+"Quarto|NA",
+"Rivoli|TO"
+],
+[
+"Ronago|CO",
+"Roncofreddo|FC"
+],
+[
+"Rosta|TO",
+"Rovigo|RO"
+],
+[
+"Saint-Vincent|AO",
+"San Donà di Piave|VE"
+],
+[
+"San Giovanni Rotondo|FG",
+"San Giuseppe Vesuviano|NA"
+],
+[
+"San Marco in Lamis|FG",
+"San Marzano sul Sarno|SA"
+],
+[
+"San Michele al Tagliamento|VE",
+"Sant'Agata sul Santerno|RA"
+],
+[
+"Sarzana|SP",
+"Scafati|SA"
+],
+[
+"Scandiano|RE",
+"Scanzano Jonico|MT"
+],
+[
+"Sciacca|AG",
+"Selargius|CA"
+],
+[
+"Seregno|MB",
+"Seriate|BG"
+],
+[
+"Seveso|MB",
+"Sora|FR"
+],
+[
+"Sorrento|NA",
+"Spadola|VV"
+],
+[
+"Stanghella|PD",
+"Stienta|RO"
+],
+[
+"Stroppiana|VC",
+"Terni|TR"
+],
+[
+"Tombolo|PD",
+"Trevi nel Lazio|FR"
+],
+[
+"Treviglio|BG",
+"Trezzano sul Naviglio|MI"
+],
+[
+"Vado Ligure|SV",
+"Valvasone Arzene|PN"
+],
+[
+"Varallo|VC",
+"Varedo|MB"
+],
+[
+"Varese Ligure|SP",
+"Varzi|PV"
+],
+[
+"Veroli|FR",
+"Vezza d'Oglio|BS"
+],
+[
+"Vigarano Mainarda|FE",
+"Villaricca|NA"
+],
+[
+"Villasanta|MB",
+"Vittoria|RG"
+],
+[
+"Volpago del Montello|TV",
+"Acqui Terme|AL"
+],
+[
+"Adelfia|BA",
+"Adrano|CT"
+],
+[
+"Adrara San Martino|BG",
+"Agnone|IS"
+],
+[
+"Alatri|FR",
+"Albairate|MI"
+],
+[
+"Albano Laziale|RM",
+"Albano di Lucania|PZ"
+],
+[
+"Albissola Marina|SV",
+"Alcamo|TP"
+],
+[
+"Alliste|LE",
+"Allumiere|RM"
+],
+[
+"Altamura|BA",
+"Altofonte|PA"
+],
+[
+"Andrano|LE",
+"Andria|BT"
+],
+[
+"Apricena|FG",
+"Aradeo|LE"
+],
+[
+"Arcevia|AN",
+"Arce|FR"
+],
+[
+"Ariccia|RM",
+"Arlena di Castro|VT"
+],
+[
+"Arzignano|VI",
+"Asiago|VI"
+],
+[
+"Asola|MN",
+"Aurigo|IM"
+],
+[
+"Ausonia|FR",
+"Azzano San Paolo|BG"
+],
+[
+"Bacoli|NA",
+"Badia Polesine|RO"
+],
+[
+"Bagheria|PA",
+"Barasso|VA"
+],
+[
+"Barberino Tavarnelle|FI",
+"Bardineto|SV"
+],
+[
+"Bardolino|VR",
+"Baronissi|SA"
+],
+[
+"Basaluzzo|AL",
+"Baselga di Pinè|TN"
+],
+[
+"Bastia Umbra|PG",
+"Bastiglia|MO"
+],
+[
+"Bellaria-Igea Marina|RN",
+"Bellegra|RM"
+],
+[
+"Bellizzi|SA",
+"Bene Vagienna|CN"
+],
+[
+"Bentivoglio|BO",
+"Besenello|TN"
+],
+[
+"Bianzone|SO",
+"Bollate|MI"
+],
+[
+"Borgo Ticino|NO",
+"Boscoreale|NA"
+],
+[
+"Botticino|BS",
+"Boves|CN"
+],
+[
+"Brandizzo|TO",
+"Brendola|VI"
+],
+[
+"Bressana Bottarone|PV",
+"Brissogne|AO"
+],
+[
+"Brolo|ME",
+"Brugherio|MB"
+],
+[
+"Buccino|SA",
+"Budrio|BO"
+],
+[
+"Burgos|SS",
+"Cabiate|CO"
+],
+[
+"Cadoneghe|PD",
+"Cagli|PU"
+],
+[
+"Calamonaci|AG",
+"Calenzano|FI"
+],
+[
+"Caltanissetta|CL",
+"Caltignaga|NO"
+],
+[
+"Calusco d'Adda|BG",
+"Caluso|TO"
+],
+[
+"Camaiore|LU",
+"Campi Bisenzio|FI"
+],
+[
+"Candelo|BI",
+"Candiolo|TO"
+],
+[
+"Canegrate|MI",
+"Canicattì|AG"
+],
+[
+"Capannoli|PI",
+"Capannori|LU"
+],
+[
+"Capena|RM",
+"Capizzone|BG"
+],
+[
+"Capurso|BA",
+"Caraglio|CN"
+],
+[
+"Caravaggio|BG",
+"Caravate|VA"
+],
+[
+"Carbonera|TV",
+"Carbonia|SU"
+],
+[
+"Cardinale|CZ",
+"Carenno|LC"
+],
+[
+"Cariati|CS",
+"Caronno Pertusella|VA"
+],
+[
+"Carosino|TA",
+"Carugate|MI"
+],
+[
+"Casale Monferrato|AL",
+"Casalromano|MN"
+],
+[
+"Casapesenna|CE",
+"Caselette|TO"
+],
+[
+"Casirate d'Adda|BG",
+"Cassina de' Pecchi|MI"
+],
+[
+"Castel San Giorgio|SA",
+"Castel San Pietro Terme|BO"
+],
+[
+"Castel di Sangro|AQ",
+"Castelfranco Emilia|MO"
+],
+[
+"Castelgomberto|VI",
+"Castelguglielmo|RO"
+],
+[
+"Castello di Cisterna|NA",
+"Castelvetrano|TP"
+],
+[
+"Castiglione delle Stiviere|MN",
+"Castro dei Volsci|FR"
+],
+[
+"Castrovillari|CS",
+"Cavaion Veronese|VR"
+],
+[
+"Ceccano|FR",
+"Celano|AQ"
+],
+[
+"Celleno|VT",
+"Cepagatti|PE"
+],
+[
+"Cerano|NO",
+"Cercemaggiore|CB"
+],
+[
+"Cercola|NA",
+"Cerignola|FG"
+],
+[
+"Certosa di Pavia|PV",
+"Cervignano del Friuli|UD"
+],
+[
+"Cetraro|CS",
+"Chiaravalle|AN"
+],
+[
+"Chieri|TO",
+"Chieti|CH"
+],
+[
+"Ciriè|TO",
+"Cislago|VA"
+],
+[
+"Cisterna di Latina|LT",
+"Cisternino|BR"
+],
+[
+"Civitella Paganico|GR",
+"Coazze|TO"
+],
+[
+"Codroipo|UD",
+"Colli al Metauro|PU"
+],
+[
+"Cologno al Serio|BG",
+"Colonna|RM"
+],
+[
+"Colosimi|CS",
+"Comacchio|FE"
+],
+[
+"Concesio|BS",
+"Contigliano|RI"
+],
+[
+"Copertino|LE",
+"Corbetta|MI"
+],
+[
+"Corciano|PG",
+"Cori|LT"
+],
+[
+"Cormano|MI",
+"Cormons|GO"
+],
+[
+"Correzzana|MB",
+"Cortona|AR"
+],
+[
+"Costa Masnaga|LC",
+"Crema|CR"
+],
+[
+"Crispiano|TA",
+"Cuneo|CN"
+],
+[
+"Curinga|CZ",
+"Custonaci|TP"
+],
+[
+"Daverio|VA",
+"Dello|BS"
+],
+[
+"Desio|MB",
+"Due Carrare|PD"
+],
+[
+"Entratico|BG",
+"Erba|CO"
+],
+[
+"Erbusco|BS",
+"Esine|BS"
+],
+[
+"Falconara Marittima|AN",
+"Feroleto della Chiesa|RC"
+],
+[
+"Ficarazzi|PA",
+"Ficarolo|RO"
+],
+[
+"Fiesse|BS",
+"Firmo|CS"
+],
+[
+"Fiscaglia|FE",
+"Fiumefreddo di Sicilia|CT"
+],
+[
+"Fogliano Redipuglia|GO",
+"Foligno|PG"
+],
+[
+"Follina|TV",
+"Follonica|GR"
+],
+[
+"Forio|NA",
+"Forte dei Marmi|LU"
+],
+[
+"Fossano|CN",
+"Frabosa Sottana|CN"
+],
+[
+"Fragagnano|TA",
+"Francavilla Fontana|BR"
+],
+[
+"Francavilla al Mare|CH",
+"Frascati|RM"
+],
+[
+"Frignano|CE",
+"Fucecchio|FI"
+],
+[
+"Fuscaldo|CS",
+"Galbiate|LC"
+],
+[
+"Garbagnate Milanese|MI",
+"Gardone Val Trompia|BS"
+],
+[
+"Gargnano|BS",
+"Garlasco|PV"
+],
+[
+"Gavorrano|GR",
+"Gela|CL"
+],
+[
+"Genazzano|RM",
+"Genzano di Lucania|PZ"
+],
+[
+"Genzano di Roma|RM",
+"Ghedi|BS"
+],
+[
+"Giaglione|TO",
+"Giffoni Valle Piana|SA"
+],
+[
+"Ginosa|TA",
+"Gioia Sannitica|CE"
+],
+[
+"Gioiosa Ionica|RC",
+"Giuliana|PA"
+],
+[
+"Giulianova|TE",
+"Giussano|MB"
+],
+[
+"Gonars|UD",
+"Gonnosfanadiga|SU"
+],
+[
+"Gorizia|GO",
+"Grammichele|CT"
+],
+[
+"Gravedona ed Uniti|CO",
+"Gravellona Lomellina|PV"
+],
+[
+"Gravina in Puglia|BA",
+"Grizzana Morandi|BO"
+],
+[
+"Grosio|SO",
+"Grottaminarda|AV"
+],
+[
+"Guardialfiera|CB",
+"Guastalla|RE"
+],
+[
+"Gubbio|PG",
+"Guidonia Montecelio|RM"
+],
+[
+"Iglesias|SU",
+"Introbio|LC"
+],
+[
+"Ischitella|FG",
+"Isola della Scala|VR"
+],
+[
+"Ispica|RG",
+"Ispra|VA"
+],
+[
+"Istrana|TV",
+"La Maddalena|SS"
+],
+[
+"Lacco Ameno|NA",
+"Lainate|MI"
+],
+[
+"Lanciano|CH",
+"Lanuvio|RM"
+],
+[
+"Lapio|AV",
+"Lavagno|VR"
+],
+[
+"Lavis|TN",
+"Lazzate|MB"
+],
+[
+"Lentini|SR",
+"Leonessa|RI"
+],
+[
+"Lesina|FG",
+"Lettomanoppello|PE"
+],
+[
+"Leverano|LE",
+"Limana|BL"
+],
+[
+"Limatola|BN",
+"Liveri|NA"
+],
+[
+"Loano|SV",
+"Locate di Triulzi|MI"
+],
+[
+"Lodrino|BS",
+"Lograto|BS"
+],
+[
+"Lonate Ceppino|VA",
+"Lonigo|VI"
+],
+[
+"Loria|TV",
+"Lucera|FG"
+],
+[
+"Luco dei Marsi|AQ",
+"Lunamatrona|SU"
+],
+[
+"Luzzi|CS",
+"Magnago|MI"
+],
+[
+"Manfredonia|FG",
+"Mansuè|TV"
+],
+[
+"Marano Vicentino|VI",
+"Marano di Valpolicella|VR"
+],
+[
+"Marcallo con Casone|MI",
+"Marcellina|RM"
+],
+[
+"Marcianise|CE",
+"Marineo|PA"
+],
+[
+"Marnate|VA",
+"Martina Franca|TA"
+],
+[
+"Masate|MI",
+"Mascali|CT"
+],
+[
+"Massino Visconti|NO",
+"Matelica|MC"
+],
+[
+"Mazara del Vallo|TP",
+"Meda|MB"
+],
+[
+"Melfi|PZ",
+"Mentana|RM"
+],
+[
+"Meolo|VE",
+"Mercato Saraceno|FC"
+],
+[
+"Mercogliano|AV",
+"Mergozzo|VB"
+],
+[
+"Mesero|MI",
+"Meta|NA"
+],
+[
+"Mezzolombardo|TN",
+"Minerbio|BO"
+],
+[
+"Mira|VE",
+"Misilmeri|PA"
+],
+[
+"Misinto|MB",
+"Missaglia|LC"
+],
+[
+"Molare|AL",
+"Molochio|RC"
+],
+[
+"Mondovì|CN",
+"Monselice|PD"
+],
+[
+"Montaldo Scarampi|AT",
+"Montalto Pavese|PV"
+],
+[
+"Monte San Savino|AR",
+"Montecatini-Terme|PT"
+],
+[
+"Montecchio Maggiore|VI",
+"Montereale Valcellina|PN"
+],
+[
+"Monterubbiano|FM",
+"Montesano sulla Marcellana|SA"
+],
+[
+"Montescaglioso|MT",
+"Montevarchi|AR"
+],
+[
+"Montichiari|BS",
+"Montoro|AV"
+],
+[
+"Morbegno|SO",
+"Morlupo|RM"
+],
+[
+"Mornago|VA",
+"Mortara|PV"
+],
+[
+"Motta Visconti|MI",
+"Motta di Livenza|TV"
+],
+[
+"Mozzanica|BG",
+"Musei|SU"
+],
+[
+"Nardò|LE",
+"Nembro|BG"
+],
+[
+"Nemi|RM",
+"Nettuno|RM"
+],
+[
+"Nicolosi|CT",
+"Nicosia|EN"
+],
+[
+"Nicotera|VV",
+"Niscemi|CL"
+],
+[
+"Noceto|PR",
+"Nola|NA"
+],
+[
+"Nole|TO",
+"Novate Milanese|MI"
+],
+[
+"Novoli|LE",
+"Occhieppo Inferiore|BI"
+],
+[
+"Ormelle|TV",
+"Orosei|NU"
+],
+[
+"Orsogna|CH",
+"Orta di Atella|CE"
+],
+[
+"Ortezzano|FM",
+"Ortovero|SV"
+],
+[
+"Osnago|LC",
+"Ospedaletti|IM"
+],
+[
+"Otranto|LE",
+"Ovada|AL"
+],
+[
+"Paderno Dugnano|MI",
+"Padru|SS"
+],
+[
+"Pagani|SA",
+"Palmanova|UD"
+],
+[
+"Palmi|RC",
+"Pantelleria|TP"
+],
+[
+"Paola|CS",
+"Paolisi|BN"
+],
+[
+"Paruzzaro|NO",
+"Pegognaga|MN"
+],
+[
+"Persico Dosimo|CR",
+"Pertica Alta|BS"
+],
+[
+"Pescasseroli|AQ",
+"Petrella Tifernina|CB"
+],
+[
+"Pietrapaola|CS",
+"Pinasca|TO"
+],
+[
+"Pinerolo|TO",
+"Piove di Sacco|PD"
+],
+[
+"Piscina|TO",
+"Pisticci|MT"
+],
+[
+"Poggio Catino|RI",
+"Poggio Rusco|MN"
+],
+[
+"Poggio San Vicino|MC",
+"Poggiridenti|SO"
+],
+[
+"Polistena|RC",
+"Polpenazze del Garda|BS"
+],
+[
+"Ponte dell'Olio|PC",
+"Pontecorvo|FR"
+],
+[
+"Pontelongo|PD",
+"Ponteranica|BG"
+],
+[
+"Ponte|BN",
+"Potenza Picena|MC"
+],
+[
+"Prata di Pordenone|PN",
+"Predaia|TN"
+],
+[
+"Pressana|VR",
+"Priero|CN"
+],
+[
+"Pula|CA",
+"Pulsano|TA"
+],
+[
+"Pumenengo|BG",
+"Qualiano|NA"
+],
+[
+"Quarto d'Altino|VE",
+"Quinto di Treviso|TV"
+],
+[
+"Ragalna|CT",
+"Ragusa|RG"
+],
+[
+"Raiano|AQ",
+"Rapallo|GE"
+],
+[
+"Resana|TV",
+"Rescaldina|MI"
+],
+[
+"Riccione|RN",
+"Riese Pio X|TV"
+],
+[
+"Riomaggiore|SP",
+"Ripi|FR"
+],
+[
+"Riva del Garda|TN",
+"Rivalta di Torino|TO"
+],
+[
+"Rizziconi|RC",
+"Rocca Canavese|TO"
+],
+[
+"Roccamorice|PE",
+"Roccaraso|AQ"
+],
+[
+"Roddi|CN",
+"Rodi Garganico|FG"
+],
+[
+"Roghudi|RC",
+"Rogliano|CS"
+],
+[
+"Romano d'Ezzelino|VI",
+"Ronchi dei Legionari|GO"
+],
+[
+"Ronco Briantino|MB",
+"Rosignano Marittimo|LI"
+],
+[
+"Rosolini|SR",
+"Rovato|BS"
+],
+[
+"Rovereto|TN",
+"Rozzano|MI"
+],
+[
+"Rubiera|RE",
+"Ruvo di Puglia|BA"
+],
+[
+"Sagrado|GO",
+"Salsomaggiore Terme|PR"
+],
+[
+"Samarate|VA",
+"Samassi|SU"
+],
+[
+"Sampeyre|CN",
+"San Benigno Canavese|TO"
+],
+[
+"San Gennaro Vesuviano|NA",
+"San Giorgio a Cremano|NA"
+],
+[
+"San Giovanni Lupatoto|VR",
+"San Giustino|PG"
+],
+[
+"San Lazzaro di Savena|BO",
+"San Lorenzo Dorsino|TN"
+],
+[
+"San Marcellino|CE",
+"San Martino Siccomario|PV"
+],
+[
+"San Maurizio Canavese|TO",
+"San Miniato|PI"
+],
+[
+"San Nicola la Strada|CE",
+"San Pietro Vernotico|BR"
+],
+[
+"San Polo d'Enza|RE",
+"San Raffaele Cimena|TO"
+],
+[
+"San Salvo|CH",
+"San Sperate|SU"
+],
+[
+"San Vito al Torre|UD",
+"Sanarica|LE"
+],
+[
+"Sannicola|LE",
+"Sant'Agnello|NA"
+],
+[
+"Sant'Ambrogio sul Garigliano|FR",
+"Sant'Antonio Abate|NA"
+],
+[
+"Santa Flavia|PA",
+"Santa Margherita Ligure|GE"
+],
+[
+"Santa Maria di Sala|VE",
+"Santa Marinella|RM"
+],
+[
+"Santa Venerina|CT",
+"Santarcangelo di Romagna|RN"
+],
+[
+"Santeramo in Colle|BA",
+"Santo Stefano di Magra|SP"
+],
+[
+"Sarno|SA",
+"Savigliano|CN"
+],
+[
+"Savignano sul Rubicone|FC",
+"Scalenghe|TO"
+],
+[
+"Scarperia e San Piero|FI",
+"Schio|VI"
+],
+[
+"Scicli|RG",
+"Segrate|MI"
+],
+[
+"Selvazzano Dentro|PD",
+"Serdiana|SU"
+],
+[
+"Serina|BG",
+"Serramazzoni|MO"
+],
+[
+"Serre|SA",
+"Servigliano|FM"
+],
+[
+"Sestri Levante|GE",
+"Sestu|CA"
+],
+[
+"Settimo Milanese|MI",
+"Sezze|LT"
+],
+[
+"Sinnai|CA",
+"Sirmione|BS"
+],
+[
+"Siziano|PV",
+"Sizzano|NO"
+],
+[
+"Solofra|AV",
+"Sona|VR"
+],
+[
+"Sparanise|CE",
+"Spello|PG"
+],
+[
+"Spezzano della Sila|CS",
+"Spinea|VE"
+],
+[
+"Spoltore|PE",
+"Squinzano|LE"
+],
+[
+"Staranzano|GO",
+"Stigliano|MT"
+],
+[
+"Stilo|RC",
+"Striano|NA"
+],
+[
+"Succivo|CE",
+"Suisio|BG"
+],
+[
+"Surbo|LE",
+"Taggia|IM"
+],
+[
+"Taormina|ME",
+"Tarcento|UD"
+],
+[
+"Taurisano|LE",
+"Teano|CE"
+],
+[
+"Tempio Pausania|SS",
+"Teramo|TE"
+],
+[
+"Terlizzi|BA",
+"Terme Vigliatore|ME"
+],
+[
+"Termini Imerese|PA",
+"Termoli|CB"
+],
+[
+"Terracina|LT",
+"Terrasini|PA"
+],
+[
+"Tolentino|MC",
+"Toritto|BA"
+],
+[
+"Torrazza Piemonte|TO",
+"Torre Pellice|TO"
+],
+[
+"Torre del Greco|NA",
+"Torregrotta|ME"
+],
+[
+"Torretta|PA",
+"Torrile|PR"
+],
+[
+"Torrita di Siena|SI",
+"Tortora|CS"
+],
+[
+"Trani|BT",
+"Trecate|NO"
+],
+[
+"Tricase|LE",
+"Trinità d'Agultu e Vignola|SS"
+],
+[
+"Umbertide|PG",
+"Vallata|AV"
+],
+[
+"Valle Agricola|CE",
+"Vallefiorita|CZ"
+],
+[
+"Vallo della Lucania|SA",
+"Valva|SA"
+],
+[
+"Verano Brianza|MB",
+"Verdellino|BG"
+],
+[
+"Vergiate|VA",
+"Verolengo|TO"
+],
+[
+"Viguzzolo|AL",
+"Villa di Briano|CE"
+],
+[
+"Villadose|RO",
+"Villarosa|EN"
+],
+[
+"Ville d'Anaunia|TN",
+"Vimodrone|MI"
+],
+[
+"Vinovo|TO",
+"Visciano|NA"
+],
+[
+"Voghera|PV",
+"Volturino|FG"
+],
+[
+"Zafferana Etnea|CT",
+"Zocca|MO"
 ]
+],
+"attesa": null,
+"punti": {},
+"giocatori": {},
+"squadra": {},
+"giorni": {},
+"storia": [],
+"chiuso": false,
+"prima": []
+}
 }
