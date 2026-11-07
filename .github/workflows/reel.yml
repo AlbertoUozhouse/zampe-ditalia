@@ -67,7 +67,9 @@ jobs:
           cp /tmp/reel/didascalia.txt "docs/contenuti/auto/$ID.txt"
           python3 reel/copertina.py /tmp/copione.json "docs/media/auto/$ID.jpg" || echo "copertina non creata: si usa il primo fotogramma"
           # sul sito restano solo i reel degli ultimi 3 giorni
-          find docs/media/auto \( -name '*.mp4' -o -name '*.jpg' \) -mtime +3 -delete
+          # (7/11: con -mtime non si cancellava niente, perché la copia appena scaricata ha tutti i file «nuovi»: si usa la data nel nome)
+          LIMITE=$(date -u -d '3 days ago' +%Y-%m-%d)
+          for f in docs/media/auto/*; do n=$(basename "$f"); if [ "${n:0:10}" \< "$LIMITE" ]; then rm -f "$f"; fi; done
           git config user.name "zampe-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/media/auto docs/contenuti/auto motore/reel_fatti.json

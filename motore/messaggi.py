@@ -71,6 +71,13 @@ def online(url):
         return False
 
 
+def pulisci_cartoline(st):
+    """7/11: docs/cartoline era arrivata a 743 MB (1 MB a cartolina) e GitHub Pages ci metteva più di 10 minuti a pubblicare: reel persi.
+    Una cartolina serve solo finché Instagram non l'ha presa (DM mandato, storia pubblicata): si tengono solo quelle ancora in attesa."""
+    in_uso = json.dumps(st)
+    for f in CARTOLINE.glob("*.png"):
+        if f.name not in in_uso: f.unlink()
+
 def main():
     ig = Instagram(os.environ.get("IG_TOKEN") or sys.exit("Manca IG_TOKEN"))
     me = ig.io()
@@ -92,6 +99,7 @@ def main():
             print(f"API dei messaggi: errore {e.code} · {err.get('type')} · codice {err.get('code')} · {str(err.get('message'))[:160]}")
         return
     st = carica(STATO, {"fatti": []})
+    pulisci_cartoline(st)
     fatti = set(st["fatti"])  # solo impronte (hash) dei messaggi già visti: nel repository pubblico non finisce chi ci scrive
     dati = carica(ANIMALI, {"animali": []})
     limite = (datetime.now(timezone.utc) - timedelta(hours=23)).isoformat()
