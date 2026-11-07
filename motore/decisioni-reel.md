@@ -3,6 +3,11 @@
 Registro delle scelte sui reel automatici: cosa si cambia, perché (numeri da motore/rendimento.json), e cosa si guarda dopo.
 Lo aggiorna ogni mattina il controllo delle 10:30. Solo numeri e formati, nessun nome utente (il repository è pubblico).
 
+## CENTRO AGENZIA (Alberto, 7/11/2026)
+
+Ogni reel passa dal Direttore video (agente OpenAI, motore/agenzia.py): prima del montaggio sceglie apertura, inquadratura e momento della luce; dopo l'esportazione riceve fotogrammi coi secondi, trascrizione, dati verificati della mappa e misure audio, e restituisce secondo, problema e correzione. Claude traduce le correzioni in azioni del montaggio e rimonta. Al massimo 2 revisioni: approvato = si pubblica una volta sola; difetti dopo 2 giri = bozza (docs/media/bozze) e reel di riserva. Ogni scambio è nella stanza (zampeditalia.it/agenzia/, non collegata e non indicizzata). Senza Direttore raggiungibile i reel escono come prima e la stanza lo registra.
+7/11 sera: primo giro sul reel delle 18 (prima_luce di Atri): la chiave OpenAI nei Secrets risponde 401 (non valida). Serve una chiave valida da Alberto.
+
 ## COPPA DELLE ZAMPE (Alberto, 7/11/2026)
 
 Campionato settimanale tra comuni (motore/coppa.py, docs/coppa.js). Si gioca sul sito («🏆 Gioca per la tua città» sulla mappa); la prova del giorno dà il codice «COPPA XY» da commentare sotto un reel: un punto al giorno per persona alla città del suo animale (resta quella per tutto il turno). Coppie di comuni con un numero simile di giocatori attivi. Chiude la domenica alle 20, trofeo a chi vince la sua sfida (mappa e albo), riparte il lunedì a mezzanotte. Staffetta: 3 giocatori dello stesso comune = anello dorato e cartolina «Io gioco per…».
