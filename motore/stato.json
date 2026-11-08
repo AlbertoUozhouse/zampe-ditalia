@@ -6364,6 +6364,7 @@
 "18119727395056662",
 "18119729446989239",
 "18119730080283907",
+"18119746109094531",
 "18119750960093763",
 "18119752459987894",
 "18119759018074852",
@@ -10245,7 +10246,8 @@
 ],
 "risposte": [
 1794166094.708565,
-1794166901.6403313
+1794166901.6403313,
+1794168422.925112
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12352,7 +12354,8 @@
 "phantom20_13": "2026-11-08",
 "alfoooo65": "2026-11-08",
 "nicola.sportello": "2026-11-08",
-"andrew__4x4": "2026-11-08"
+"andrew__4x4": "2026-11-08",
+"giovannifarinola681": "2026-11-08"
 },
 "media_letti": {},
 "pezzi": {
@@ -14414,7 +14417,7 @@
 "alessandropacera": 3,
 "stegada96_runner": 50,
 "4l3_il_pro": 35,
-"itsnotsilva": 30,
+"itsnotsilva": 50,
 "ciccio1973it": 30,
 "virgyrosso": 30,
 "fsk_antoo": 30,
@@ -14451,7 +14454,18 @@
 "michael_wolf_98": 46,
 "phantom20_13": 40,
 "alfoooo65": 30,
-"nicola.sportello": 30
+"nicola.sportello": 30,
+"_ssofiawithanf": 20,
+"alyscursefri3s._.104": 20,
+"andrea.sntn_": 20,
+"andrew__4x4": 20,
+"ascaniogosso": 20,
+"emma.nacher14": 20,
+"francesco_chirico2018": 20,
+"lauramaties2": 20,
+"only.niniy_": 20,
+"silvetti.simone": 20,
+"tommiaso23": 20
 },
 "inviti_giorno": {
 "2026-11-01": {
@@ -18598,13 +18612,16 @@
 "ec5ecec21a980f7a",
 "68199e008b2ed2ad",
 "9cdbab5f2558886e",
-"36abb82d17db0c5c"
+"36abb82d17db0c5c",
+"b81495dfe0e5435b"
 ],
 "privati_ora": [
-1794166094.7086027
+1794166094.7086027,
+1794168422.925147
 ],
 "derby_premiati": [
-"2026-10-28NARM"
+"2026-10-28NARM",
+"2026-11-01MITO"
 ],
 "acquisti": {
 "nicolassctt|animale|artur": [
@@ -18696,10 +18713,10 @@
 }
 },
 "elezione": "2026-11-08",
-"bello_sett": "2026-44",
+"bello_sett": "2026-45",
 "piu_bello": {
 "id": "jacopo.cavadini|animale|yuki",
-"giorno": "2026-11-01"
+"giorno": "2026-11-08"
 },
 "follower_ore": [
 [
