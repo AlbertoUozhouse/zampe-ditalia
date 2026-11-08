@@ -252,10 +252,12 @@ def dati_mappa(cop, cartella=None):
             vicini = [] if q.get("spento") else suoi + sorted((a for a in vicini if a not in suoi), key=lambda a: (a["lat"] - q["lat"]) ** 2 + (a["lng"] - q["lng"]) ** 2)
             t = tempi.get(i, {})
             out.append({"scena": i, "etichetta": q.get("testo"), "lat": q["lat"], "lng": q["lng"],
-                        "luce": ("spenta all'inizio della scena, si accende" if not q.get("acceso", True) else "già accesa") + (f" al secondo {t['accensione']} del reel" if t.get("accensione") is not None else ""),
+                        "luce": ("resta spenta: è il comune al buio (nessun animale col suo nome, nessuno entro 1 km dal centro; quelli intorno sono dei comuni vicini)" if q.get("spento") else
+                                 "spenta all'inizio della scena, si accende" if not q.get("acceso", True) else "già accesa") + (f" al secondo {t['accensione']} del reel" if t.get("accensione") is not None else ""),
                         "scena_dal_secondo": t.get("inizio"), "scena_al_secondo": t.get("fine"),
                         "comune_sulla_mappa": vicini[0]["c"] if vicini else None,
-                        "animali_li_in_ordine_di_arrivo": [f"{a['n']} (@{a['u']}, {str(a.get('ts', ''))[:10]})" for a in vicini[:5]], "luci_li_oggi": len(vicini)})
+                        "animali_li_in_ordine_di_arrivo": [f"{a['n']} (@{a['u']}, {str(a.get('ts', ''))[:10]})" for a in vicini[:5]], "luci_li_oggi": len(vicini),
+                        "luci_del_comune_dell_etichetta": sum(1 for a in A if a.get("c") == nome and a.get("k") != "stella") if nome else None})
     return out
 
 def audio(mp4):
