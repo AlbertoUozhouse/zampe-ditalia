@@ -7,7 +7,10 @@
   "traccia": "gioco",
   "aperto": "2026-11-08",
   "scadenza": "2026-11-10",
-  "stato": "da costruire"
+  "stato": "in costruzione",
+  "aggiornato": "2026-11-08",
+  "nota": "Staffetta di quartiere costruita nel motore (coppa.py, commenti.py, coppa.js) per il test di crescita; si accende con il test (config test_crescita). Reel e realismo in pausa durante il test.",
+  "passi_proposti": []
  },
  "reel": {
   "idea": "Il Racconto dal Vivo: il reel parte da una ripresa reale, poi arriva la luce sulla mappa",
@@ -17,7 +20,10 @@
   "traccia": "reel",
   "aperto": "2026-11-08",
   "scadenza": "2026-11-10",
-  "stato": "da costruire"
+  "stato": "in costruzione",
+  "passi_proposti": [],
+  "aggiornato": "2026-11-08",
+  "nota": "In pausa durante il test di crescita: non si cambiano i reel mentre si confrontano."
  },
  "realismo": {
   "idea": "Il Paese in Tasca: vista 3D del comune sul rilievo reale",
@@ -27,6 +33,9 @@
   "traccia": "realismo",
   "aperto": "2026-11-08",
   "scadenza": "2026-11-10",
-  "stato": "da costruire"
+  "stato": "in costruzione",
+  "passi_proposti": [],
+  "aggiornato": "2026-11-08",
+  "nota": "In pausa durante il test di crescita."
  }
 }
