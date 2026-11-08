@@ -52,5 +52,14 @@
   "stato": "senza direttore",
   "fine": "2026-11-08T20:14:04+00:00",
   "scambi": 126
+ },
+ {
+  "id": "2026-11-09-0012-campanile_rivale",
+  "formato": "campanile_rivale",
+  "modalita": "operativa",
+  "inizio": "2026-11-08T23:12:55+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-08T23:17:21+00:00",
+  "scambi": 130
  }
 ]
