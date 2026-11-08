@@ -51,13 +51,19 @@ jobs:
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji >/dev/null
           pip install -q numpy pillow  # pillow: la copertina con la mappa vera (reel/copertina.py, 7/11)
       - name: Copione
+        id: copione
         if: ${{ !startsWith(inputs.formato, 'pronto-') }}
         run: |
-          python3 motore/copione.py "${{ inputs.formato }}" /tmp/copione.json
-          # Centro Agenzia: prima del montaggio il Direttore video sceglie apertura, inquadratura e momento della luce
-          python3 -I motore/agenzia.py prima /tmp/copione.json || echo "Direttore video non raggiungibile: si monta col copione"
+          # 78 = il reel salta (test di crescita: nessun caso verificato, o alle 21 nessuna storia con un motivo per uscire): si registra il motivo, non è un errore
+          set +e; python3 motore/copione.py "${{ inputs.formato }}" /tmp/copione.json; e=$?; set -e
+          if [ "$e" = 78 ]; then echo "salta=1" >> "$GITHUB_OUTPUT"; exit 0; fi
+          [ "$e" = 0 ] || exit "$e"
+          # Centro Agenzia: prima del montaggio il Direttore video sceglie apertura, inquadratura e momento della luce (nel test: Mappa e dati verifica il caso)
+          set +e; python3 -I motore/agenzia.py prima /tmp/copione.json; a=$?; set -e
+          if [ "$a" = 78 ]; then echo "salta=1" >> "$GITHUB_OUTPUT"; exit 0; fi
+          [ "$a" = 0 ] || echo "Direttore video non raggiungibile: si monta col copione"
       - name: Video e revisione del Direttore
-        if: ${{ !startsWith(inputs.formato, 'pronto-') }}
+        if: ${{ !startsWith(inputs.formato, 'pronto-') && steps.copione.outputs.salta != '1' }}
         run: |
           # al massimo 2 revisioni: approvato = si pubblica; corretto = si rimonta e si rimanda; difetti dopo 2 giri = bozza e reel di riserva
           for giro in 1 2; do
@@ -75,11 +81,37 @@ jobs:
       - name: Reel già montato
         if: ${{ startsWith(inputs.formato, 'pronto-') }}
         run: F="${{ inputs.formato }}"; python3 reel/pronto.py "${F#pronto-}" /tmp/copione.json /tmp/reel
+      - name: Verifica di Mappa e dati
+        id: verifica
+        if: ${{ !startsWith(inputs.formato, 'pronto-') && steps.copione.outputs.salta != '1' }}
+        run: |
+          # il caso raccontato è ancora vero adesso, dopo il montaggio? (il paese ancora al buio, la sfida e il punteggio uguali) Se no, il reel si ferma
+          set +e; python3 motore/copione.py verifica /tmp/copione.json; e=$?; set -e
+          if [ "$e" = 78 ]; then echo "salta=1" >> "$GITHUB_OUTPUT"; fi
+      - name: Registra il reel saltato
+        if: ${{ steps.copione.outputs.salta == '1' || steps.verifica.outputs.salta == '1' }}
+        run: |
+          git config user.name "zampe-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add motore/reel_fatti.json; for d in docs/data/agenzia docs/agenzia; do [ -e "$d" ] && git add "$d"; done
+          git diff --cached --quiet || git commit -q -m "Reel saltato: nessun caso verificato (${{ inputs.formato }})"
+          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
       - name: Carica sul sito
         id: carica
+        if: ${{ steps.copione.outputs.salta != '1' && steps.verifica.outputs.salta != '1' }}
         run: |
           ID=$(python3 -c "import json;print(json.load(open('/tmp/copione.json'))['id'])")
-          mkdir -p docs/media/auto docs/contenuti/auto
+          mkdir -p docs/media/auto docs/contenuti/auto docs/media/bozze/anteprime
+          if [ "${{ inputs.pubblica }}" != "true" ]; then
+            # anteprima (pubblica = false): il video va tra le bozze, il copione non consuma i casi del test, niente attesa del sito
+            cp /tmp/reel/reel.mp4 "docs/media/bozze/anteprime/$ID.mp4"; cp /tmp/copione.json "docs/media/bozze/anteprime/$ID.json"; cp /tmp/reel/didascalia.txt "docs/media/bozze/anteprime/$ID.txt"
+            python3 reel/copertina.py /tmp/copione.json "docs/media/bozze/anteprime/$ID.jpg" || true
+            git checkout motore/reel_fatti.json
+            git config user.name "zampe-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add docs/media/bozze/anteprime; for d in docs/data/agenzia docs/agenzia; do [ -e "$d" ] && git add "$d"; done
+            git commit -q -m "Anteprima $ID (non pubblicata)"
+            for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
+            echo "id=$ID" >> "$GITHUB_OUTPUT"; exit 0
+          fi
           cp /tmp/reel/reel.mp4 "docs/media/auto/$ID.mp4"
           cp /tmp/reel/didascalia.txt "docs/contenuti/auto/$ID.txt"
           python3 reel/copertina.py /tmp/copione.json "docs/media/auto/$ID.jpg" || echo "copertina non creata: si usa il primo fotogramma"
@@ -104,14 +136,14 @@ jobs:
           done
           echo "il video non è comparso sul sito"; exit 1
       - name: Pubblica su Instagram
-        if: inputs.pubblica
+        if: ${{ inputs.pubblica && steps.copione.outputs.salta != '1' && steps.verifica.outputs.salta != '1' }}
         run: |
           TAG=$(python3 -c "import json;print(','.join(json.load(open('/tmp/copione.json')).get('tag', [])))")
           python3 -I motore/pubblica.py --tipo REELS --media "media/auto/${{ steps.carica.outputs.id }}.mp4" --didascalia "contenuti/auto/${{ steps.carica.outputs.id }}.txt" --tag "$TAG" \
             $( [ -f "docs/media/auto/${{ steps.carica.outputs.id }}.jpg" ] && echo --copertina "media/auto/${{ steps.carica.outputs.id }}.jpg" ) \
             ${{ inputs.prova && '--trial' || '' }}
       - name: Salva il registro
-        if: inputs.pubblica
+        if: ${{ inputs.pubblica && steps.copione.outputs.salta != '1' && steps.verifica.outputs.salta != '1' }}
         run: |
           git add motore/pubblicati.json
           git diff --cached --quiet && exit 0

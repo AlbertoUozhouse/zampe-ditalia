@@ -291,7 +291,8 @@ CRESCITA_PRIMA = """Sei il Responsabile crescita di Zampe d'Italia (pagina Insta
 Il lavoro dell'agenzia ha un obiettivo: nuovi follower. Prima del montaggio, sul brief di questo reel proponi: il pubblico da raggiungere (chi è, concreto),
 il gancio dei primi 2 secondi per chi NON conosce il progetto, il motivo per cui quella persona dovrebbe seguire Zampe d'Italia (una frase che regge da sola),
 e la frase di chiusura che lega la storia al prossimo episodio (massimo 14 parole, per esempio «Atri si è accesa. Segui Zampe d'Italia per vedere la prossima luce.»).
-Non promettere tempi o premi che non sono nel brief. Rispondi solo JSON: {"pubblico": "...", "gancio": "...", "motivo_per_seguire": "...", "chiusura": "...", "perche": "una frase"}"""
+Proponi anche il primo fotogramma: cosa si vede e cosa c'è scritto, perché il gancio si capisca a volume zero.
+Non promettere tempi o premi che non sono nel brief. Rispondi solo JSON: {"pubblico": "...", "gancio": "...", "primo_fotogramma": "...", "motivo_per_seguire": "...", "chiusura": "...", "perche": "una frase"}"""
 
 DIR_PRIMA = """Sei il Direttore video di Zampe d'Italia, pagina Instagram italiana: ogni animale accende una luce nella sua città sulla mappa dell'Italia di notte.
 Ricevi il brief del reel e i dati verificati della mappa. Prima del montaggio scegli: l'apertura (il video vero di un animale per i primi secondi: tenerlo e quanto),
@@ -330,6 +331,7 @@ def applica(cop, azioni):
     for a in azioni or []:
         try:
             t = a.get("azione"); sc = cop["frasi"][int(a["scena"])]["scena"] if "scena" in a else None
+            if cop.get("test") and t in ("frase", "intro", "fascia", "didascalia_togli", "musica", "zoom"): continue  # test di crescita: gancio, testi e voce/testo restano quelli del piano
             if t == "zoom" and sc and sc["tipo"] == "luce": sc["s1"] = max(0.8, min(2.4, float(a["valore"])))
             elif t == "accensione" and sc and sc["tipo"] == "luce": sc["accendi"] = max(0.2, min(0.7, float(a["valore"])))
             elif t == "etichetta" and sc and sc["tipo"] == "luce": sc["punti"][int(a["punto"])]["testo"] = str(a["testo"])[:40]
@@ -353,15 +355,22 @@ def prima(cop_path):
     indic = json.loads((DATI / "crescita.json").read_text()) if (DATI / "crescita.json").exists() else None
     cr, _ = lavora(CRESCITA_PRIMA, json.dumps({"brief": _brief(cop), "progetto": progetto_in_breve(), "indicazione_del_giorno": indic}, ensure_ascii=False), CLAUDE)
     if cr:
-        S.scrivi("crescita-1", "direzione-1", "proposta", f"Pubblico: {cr.get('pubblico', '')} · Gancio: {cr.get('gancio', '')} · Motivo per seguire: {cr.get('motivo_per_seguire', '')} · Chiusura: {cr.get('chiusura', '')}", cr)
+        S.scrivi("crescita-1", "direzione-1", "proposta", f"Pubblico: {cr.get('pubblico', '')} · Gancio: {cr.get('gancio', '')} · Primo fotogramma: {cr.get('primo_fotogramma', '')} · Motivo per seguire: {cr.get('motivo_per_seguire', '')} · Chiusura: {cr.get('chiusura', '')}", cr)
         S.d["crescita"] = cr
+    if cop.get("test"):  # test di crescita: Mappa e dati verifica il caso; gancio, primo fotogramma e chiusura sono quelli del piano (la proposta resta a verbale)
+        sys.path.insert(0, str(ROOT / "motore")); import copione as CO
+        err = CO.verifica(cop); S.d["test"] = cop["test"]
+        S.scrivi("mappa-1", "pubblicazione-1", "correzione" if err else "decisione", f"Errore dimostrato: {err}. Il reel si ferma." if err else
+                 f"Caso verificato sui dati della mappa: {json.dumps(cop['test'].get('caso'), ensure_ascii=False)[:300]}", {"caso": cop["test"].get("caso"), "errore": err})
+        S.scrivi("crescita-1", "montaggio-1", "nota", f"Test di crescita ({cop['test']['formato']}, versione {cop['test']['variante']}): gancio, primo fotogramma e chiusura fissati dal piano; la mia proposta resta a verbale per il confronto.")
+        if err: S.d["stato"] = "fermato da Mappa e dati"; S.salva(); sys.exit(78)
     S.scrivi("montaggio-1", "direzione-1", "proposta", "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.", {"brief": _brief(cop), "mappa": dati_mappa(cop)})
     r, chi = openai(DIR_PRIMA, json.dumps({"brief": _brief(cop), "dati_mappa": dati_mappa(cop), "proposta_crescita": cr}, ensure_ascii=False))
     if r is None:
         S.scrivi("direzione-1", "montaggio-1", "nota", f"Direttore video non collegato ({chi}): il montaggio parte con le scelte del copione."); return
     S.d["direttore_modello"] = chi
     S.scrivi("direzione-1", "montaggio-1", "risposta", r.get("decisione", "Scelte fatte."), r)
-    vc = r.get("crescita") or {}
+    vc = {} if cop.get("test") else (r.get("crescita") or {})
     if vc.get("chiusura") and len(vc["chiusura"].split()) <= 14 and cop["frasi"]:  # la chiusura verificata dal Direttore lega la storia al prossimo episodio
         cop["frasi"][-1]["testo"] = vc["chiusura"]
     if vc.get("motivo_per_seguire"):
@@ -372,7 +381,7 @@ def prima(cop_path):
     elif cop.get("intro") and ap.get("secondi"): cop["intro_durata"] = max(2.0, min(4.5, float(ap["secondi"])))
     for f in cop["frasi"]:
         if f["scena"]["tipo"] == "luce":
-            if r.get("zoom"): f["scena"]["s1"] = max(0.8, min(2.4, float(r["zoom"])))
+            if r.get("zoom") and not cop.get("test"): f["scena"]["s1"] = max(0.8, min(2.4, float(r["zoom"])))
             if r.get("accensione") and not f["scena"].get("vicino"): f["scena"]["accendi"] = max(0.2, min(0.7, float(r["accensione"])))
     Path(cop_path).write_text(json.dumps(cop, ensure_ascii=False))
     S.scrivi("montaggio-1", "direzione-1", "decisione", "Montaggio avviato con le scelte del Direttore.", {"apertura": cop.get("intro"), "intro_durata": cop.get("intro_durata")})
@@ -532,7 +541,9 @@ def innovazione_giorno():
                 tr = TRACCIA.get(p["ruolo"], "reel"); aperti[tr].setdefault("passi_proposti", []).append({"giorno": oggi, "ruolo": p["ruolo"], **r})
                 S.d["scambi"].append({"t": _ora(), "da": p["id"], "a": "innovazione-1", "tipo": "proposta", "testo": f"Cantiere «{aperti[tr].get('idea', '')}»: {r.get('passo', '')}"[:400], "dati": r}); continue
             if r: idee.append({"ruolo": p["ruolo"], **r}); S.d["scambi"].append({"t": _ora(), "da": p["id"], "a": "innovazione-1", "tipo": "proposta", "testo": f"{r.get('idea', '')}: {r.get('come_funziona', '')}"[:400], "dati": r})
-    liberi = [k for k in ("gioco", "reel", "realismo") if k not in aperti]
+    # 8/11 test di crescita: durante il test non si aprono cantieri nuovi (config test_crescita.cantieri_in_pausa); le idee restano nel registro
+    pausa = (CONFIG.get("test_crescita") or {}).get("cantieri_in_pausa") and (CONFIG.get("test_crescita") or {}).get("stato") != "spento"
+    liberi = [] if pausa else [k for k in ("gioco", "reel", "realismo") if k not in aperti]
     d, t = (lavora(INNOVA_CAPO + f"\nScegli SOLO per queste tracce (le altre hanno un cantiere aperto): {', '.join(liberi)}.", json.dumps(idee, ensure_ascii=False), CLAUDE) if liberi and idee else ({}, 0))
     S.d["token_persone"] = S.d.get("token_persone", 0) + t
     scad = (datetime.now(timezone.utc).date() + timedelta(days=2)).isoformat()

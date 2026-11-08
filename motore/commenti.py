@@ -981,6 +981,12 @@ def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
         return "altri", {}
     return None, {}
 
+def staffetta_attiva():
+    """La Staffetta di quartiere è accesa da config.json (test_crescita): «staffetta_quartiere» true, oppure il test attivo."""
+    try: t = json.loads((ROOT / "motore/config.json").read_text()).get("test_crescita") or {}
+    except (FileNotFoundError, json.JSONDecodeError): return False
+    return bool(t.get("staffetta_quartiere") or t.get("stato") == "attivo")
+
 def vuoto():
     return {"animali": [], "senza_comune": [], "senza_nome": [], "estero": False, "voti": [], "segue": False, "rimuovi": False, "domanda": None}
 
@@ -1139,6 +1145,17 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
                 extra.append("🏁 La Coppa di questa settimana è chiusa: lunedì a mezzanotte riparte, ti aspettiamo!")
             else:
                 extra.append("🐾 Per giocare per la tua città serve il tuo animale sulla mappa: scrivi qui città e nome (es. «Treviso, Luna, cane») e poi ricommenta il codice.")
+        # Staffetta di quartiere (test di crescita 8/11, motore/coppa.py): un commento valido col proprio animale, nel comune in sfida, porta la staffetta a 1/3, 2/3, 3/3
+        if not letto["rimuovi"] and u.lower() not in ESCLUSI and staffetta_attiva():
+            for x in letto["animali"]:
+                if x.get("k") != "animale" or x.get("id_commento") not in ids: continue
+                k_sq = f"{x['luogo']['c']}|{x['luogo'].get('p', '')}"
+                esito_q, dq = coppa.partecipa(gioco.stato, gioco.animali, u, k_sq, x["id_commento"])
+                if esito_q == "ok":
+                    gioco.cambiato = True; nome_q = x["luogo"]["c"]
+                    extra.append(f"🔁 Staffetta di {nome_q}: {dq['n']}/{coppa.STAFFETTA}! " + (f"Prova chiusa: un punto per {nome_q} nella Coppa delle Zampe 🏆" if dq.get("chiusa") else
+                                 f"Tagga {coppa.STAFFETTA - dq['n']} {'amico' if coppa.STAFFETTA - dq['n'] == 1 else 'amici'} di {nome_q}: col loro animale chiudete la staffetta e portate un punto alla città."))
+                break
         if taggati:
             extra.append(frase("tag" if gioco.ha_luce(u) else "tag_senza_luce", amici=", ".join("@" + a for a in taggati[:5])))
         if premiati:

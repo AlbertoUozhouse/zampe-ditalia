@@ -50,5 +50,43 @@
   "lun 13:00": "coppa_apertura",
   "gio 21:00": "coppa_sorpasso",
   "dom 21:00": "coppa_verdetto"
+ },
+ "test_crescita": {
+  "nota": "Test di crescita (Alberto, 8/11): quali reel portano più follower. stato: «anteprima» = nessuna uscita, solo anteprime; «attivo» = dal giorno «dal» il piano sostituisce gli orari delle 13, 18 e 21 per 7 giorni; «spento» = tutto come prima. Per tornare indietro basta «spento».",
+  "stato": "anteprima",
+  "dal": null,
+  "piano": [
+   {
+    "13:00": "paese_al_buio:voce",
+    "18:00": "aggiornamento"
+   },
+   {
+    "13:00": "aggiornamento",
+    "18:00": "paese_al_buio:testo"
+   },
+   {
+    "13:00": "campanile_rivale:voce",
+    "18:00": "aggiornamento"
+   },
+   {
+    "13:00": "aggiornamento",
+    "18:00": "campanile_rivale:testo"
+   },
+   {
+    "13:00": "paese_al_buio:testo",
+    "18:00": "aggiornamento"
+   },
+   {
+    "13:00": "aggiornamento",
+    "18:00": "paese_al_buio:voce"
+   },
+   {
+    "13:00": "campanile_rivale:testo",
+    "18:00": "aggiornamento"
+   }
+  ],
+  "sera": "verdetto_sera",
+  "staffetta_quartiere": false,
+  "cantieri_in_pausa": true
  }
 }

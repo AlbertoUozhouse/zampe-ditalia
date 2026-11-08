@@ -3,6 +3,17 @@
 Registro delle scelte sui reel automatici: cosa si cambia, perché (numeri da motore/rendimento.json), e cosa si guarda dopo.
 Lo aggiorna ogni mattina il controllo delle 10:30. Solo numeri e formati, nessun nome utente (il repository è pubblico).
 
+## TEST DI CRESCITA (Alberto, 8/11/2026) — quali reel portano più follower
+
+- Config: `test_crescita` in motore/config.json. «anteprima» = nessuna uscita (si guardano le anteprime); «attivo» dal giorno «dal» per 7 giorni; «spento» = tutto come prima.
+- Due format di scoperta: **Il paese al buio** («Cesano Maderno è ancora al buio.») e **Il campanile rivale** («Crotone contro Ercolano. Chi passa?»), almeno 2 episodi ciascuno, alternando le 13 e le 18. L'altro slot è un aggiornamento del gioco. Alle 21 solo una storia con un motivo (il paese al buio che si accende, una staffetta chiusa), altrimenti si salta e si registra il motivo.
+- Primo fotogramma = il gancio scritto grande (si capisce a volume zero), senza video prima. La mappa entra solo per mostrare un cambiamento (il buco al buio tra le luci, il punteggio). Niente volo da tutta l'Italia.
+- Voce sintetica dichiarata contro solo testo con musica ed effetti, su episodi dello stesso format (variante scritta nel copione, campo «test»).
+- Mappa e dati verifica il caso prima del montaggio e prima del caricamento: un errore dimostrato ferma il reel (copione.py verifica).
+- Staffetta di quartiere: tre persone diverse dello stesso comune in sfida, ognuna col suo animale, commentano città e nome: 1/3, 2/3, 3/3 e un punto della Coppa. Un commento riletto o un giro ripetuto non conta due volte.
+- Verbale: docs/data/agenzia/test_crescita.json (verbale.py): per episodio follower, account raggiunti, follower ogni 1.000, metrica secondaria, fonte, dati mancanti; base = mediana dei reel organici delle 13 e 18 nei 14 giorni prima. Il sponsorizzato resta fuori. Si tiene un format solo se migliora la base su più episodi.
+- Durante il test: niente cantieri nuovi dell'Innovazione.
+
 ## CENTRO AGENZIA (Alberto, 7/11/2026)
 
 Ogni reel passa dal Direttore video (agente OpenAI, motore/agenzia.py): prima del montaggio sceglie apertura, inquadratura e momento della luce; dopo l'esportazione riceve fotogrammi coi secondi, trascrizione, dati verificati della mappa e misure audio, e restituisce secondo, problema e correzione. Claude traduce le correzioni in azioni del montaggio e rimonta. Al massimo 2 revisioni: approvato = si pubblica una volta sola; difetti dopo 2 giri = bozza (docs/media/bozze) e reel di riserva. Ogni scambio è nella stanza (zampeditalia.it/agenzia/, non collegata e non indicizzata). Senza Direttore raggiungibile i reel escono come prima e la stanza lo registra.

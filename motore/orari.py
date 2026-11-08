@@ -40,6 +40,7 @@ def main():
     giorno_sett = ["lun", "mar", "mer", "gio", "ven", "sab", "dom"][ora.weekday()]  # i reel di ogni settimana (la Coppa delle Zampe): «lun 13:00»
     orari.update({k[4:]: v for k, v in cfg.get("settimanali", {}).items() if k[:3] == giorno_sett})
     orari.update({k[11:]: v for k, v in cfg.get("una_tantum", {}).items() if k[:10] == oggi})  # reel di un giorno solo, «AAAA-MM-GG HH:MM»
+    orari.update(piano_test(cfg, ora, giorno_sett))
     for hhmm, formato in sorted(orari.items()):
         h, m = map(int, hhmm.split(":"))
         inizio = ora.replace(hour=h, minute=m, second=0, microsecond=0)
@@ -58,6 +59,17 @@ def main():
             return
     f = festa(ora, st, fatti)
     if f: print(f)
+
+def piano_test(cfg, ora, giorno_sett):
+    """Test di crescita (config «test_crescita», 8/11): per 7 giorni dal giorno «dal», alle 13 e alle 18 un reel di scoperta e uno di aggiornamento
+    (si alternano gli slot), alle 21 un reel solo se c'è una storia con un motivo per uscire. I reel della Coppa delle 21 (giovedì, domenica) restano."""
+    t = cfg.get("test_crescita") or {}
+    if t.get("stato") != "attivo" or not t.get("dal"): return {}
+    g = (ora.date() - datetime.fromisoformat(t["dal"]).date()).days
+    if not 0 <= g < len(t.get("piano", [])): return {}
+    out = dict(t["piano"][g])
+    if t.get("sera") and f"{giorno_sett} 21:00" not in cfg.get("settimanali", {}): out["21:00"] = t["sera"]
+    return out
 
 def foto_nuove(st):
     """Ci sono foto della star (stato «ugc», col SÌ di chi le ha mandate) non ancora usate in un reel?"""

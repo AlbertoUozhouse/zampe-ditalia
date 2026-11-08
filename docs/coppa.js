@@ -58,13 +58,13 @@
     else {
       const p = partita(sq.k), anello = (C.anelli || []).includes(sq.k);
       corpo = `<div class="coppa-match"><div><b>${esc(nome(sq.k))}</b><span>${p.noi}</span></div><i>vs</i><div><b>${esc(nome(p.rivale) || "in attesa")}</b><span>${p.loro}</span></div></div>
-        <p class="sub">🔁 Staffetta: ${Math.min(p.g, C.staffetta)}/${C.staffetta} giocatori di ${esc(nome(sq.k))} questa settimana${anello ? " · <b>anello dorato acceso!</b> ✨" : ""}</p>
+        <p class="sub">🔁 Staffetta di quartiere: ${(C.quartiere?.[sq.k]?.n) || 0}/${C.staffetta} persone di ${esc(nome(sq.k))}${(C.quartiere?.[sq.k]?.chiuse) ? ` · prove chiuse: ${C.quartiere[sq.k].chiuse} (+${C.quartiere[sq.k].chiuse} punti)` : ""}${anello ? " · <b>anello dorato acceso!</b> ✨" : ""}</p>
         ${fattoOggi ? risultatoHtml(sq.k, true) : `<button class="btn grande" id="coppaVia" type="button">▶ Prova di oggi: ${prova.titolo}</button><p class="sub">${prova.sotto}</p>`}
         <p class="sub piccolo">Giochi per ${esc(nome(sq.k))} fino a domenica · chiude ${chiude()}</p>`;
     }
     const albo = (C.albo || []).slice(-1)[0];
     s.innerHTML = `<h2>🏆 Coppa delle Zampe</h2><p class="sub">Turno ${C.turno}: ${fmt(C.tutte || C.sfide.length)} sfide tra comuni con un numero simile di giocatori. Un punto al giorno per chi gioca, gratis. Domenica il trofeo va sulla mappa.</p>${corpo}
-      <h3>Come si gioca</h3><ol class="regole"><li>Scegli la tua città (quella del tuo animale sulla mappa).</li><li>Fai la prova del giorno: alla fine hai un codice <b>COPPA XY</b>.</li><li>Commentalo sotto l'ultimo reel di @zampeditalia: un punto alla tua città, uno al giorno.</li><li>Con 3 giocatori dello stesso comune si accende l'anello dorato 🔁.</li></ol>
+      <h3>Come si gioca</h3><ol class="regole"><li>Scegli la tua città (quella del tuo animale sulla mappa).</li><li>Fai la prova del giorno: alla fine hai un codice <b>COPPA XY</b>.</li><li>Commentalo sotto l'ultimo reel di @zampeditalia: un punto alla tua città, uno al giorno.</li><li>Staffetta di quartiere 🔁: tre persone dello stesso comune commentano città, nome e cane o gatto, ognuna col suo animale. Alla terza, un punto in più e l'anello dorato.</li></ol>
       ${albo ? `<h3>Albo dei vincitori · turno ${albo.turno}</h3><ol class="list">` + albo.vincitori.slice(0, 10).map(v => `<li class="row"><span class="pos">🏆</span><span class="who">${esc(nome(v.c))}<small>${v.p} – ${v.pc} contro ${esc(nome(v.contro))}</small></span></li>`).join("") + `</ol>` : ""}`;
     const fm = $("#coppaForm"); if (fm) fm.onsubmit = e => { e.preventDefault(); const x = scegli($("#coppaSq").value);
       if (!x) { $("#coppaErr").textContent = "Non trovo né il tuo @ né la città: prima accendi il tuo animale commentando un reel con città e nome."; return; }

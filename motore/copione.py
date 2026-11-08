@@ -821,6 +821,8 @@ def prima_luce(D, rng, st):
         primi.setdefault((a["c"], a.get("p")), a)
     usati = set(st.get("prime_luci", []))
     cand = sorted((a for a in primi.values() if a["c"] not in usati), key=lambda a: a["ts"], reverse=True)
+    forza = st.pop("forza_prima_luce", None)  # test di crescita: il paese raccontato al buio che si è acceso
+    if forza: cand = [a for a in primi.values() if a["c"] == forza] or cand
     cand = [a for a in cand if a["u"].lower() in D["seguono"]][:10] or cand[:10]
     if not cand: return puntata(D, rng, st)
     a = cand[0]; st["prime_luci"] = (list(usati) + [a["c"]])[-400:]
@@ -1002,7 +1004,185 @@ def coppa_verdetto(D, rng, st):
     st["senza_bonus"] = True
     return "🏆 IL VERDETTO", frasi, did
 
-FORMATI = {"coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+# ================================================================ TEST DI CRESCITA (Alberto, 8/11): quali reel portano più follower
+# Due format di scoperta, «Il paese al buio» e «Il campanile rivale», con il gancio scritto grande nel primo fotogramma (si capisce a volume zero),
+# niente apertura con un video (il gancio è il primo fotogramma), la mappa solo quando mostra un cambiamento (uno svelamento, un punteggio).
+# Ogni episodio esce in due versioni a confronto: voce sintetica dichiarata, oppure solo testo a schermo con musica ed effetti.
+# Prima del rendering si verifica che il caso sia vero (verifica()); se non c'è un caso verificato l'episodio salta e si registra il motivo.
+
+TEST_FORMATI = {"paese_al_buio": True, "campanile_rivale": True}
+
+class Salta(Exception):
+    """Non c'è un caso verificato (o una storia con un motivo per uscire): il reel non esce, e si registra perché."""
+
+def _comuni():
+    return [{"c": c, "p": p, "r": r, "lat": lat, "lng": lng} for c, p, r, lat, lng in carica(ROOT / "dati/comuni_min.json", [])]
+
+def _luci_vere():
+    """Tutte le luci della mappa in questo momento (docs/data/animali.json), per la verifica dei casi."""
+    return [a for a in carica(ROOT / "docs/data/animali.json", {"animali": []})["animali"] if a.get("k") != "stella" and "lat" in a]
+
+def _al_buio(com, luci):
+    """Un comune è al buio se nessuna luce porta il suo nome e provincia, e nessuna luce sta a meno di 1 km dal suo centro."""
+    return not any((a["c"] == com["c"] and a.get("p", "") == com["p"]) or _dist(a, com) < 1.0 for a in luci)
+
+def _con_maiuscola(t): return t[:1].upper() + t[1:]
+
+def paese_al_buio(D, rng, st):
+    """Test 1 · Il paese al buio: «Atri è ancora al buio.» Tutto intorno è acceso, quel comune no. Chi è di lì accende la prima luce."""
+    luci = _luci_vere()
+    per_c = {}
+    for a in luci: per_c.setdefault((a["c"], a.get("p", "")), []).append(a)
+    griglia = {}
+    for (c, p), v in per_c.items():
+        x = v[0]; griglia.setdefault((round(x["lat"] * 5), round(x["lng"] * 5)), []).append({"c": c, "p": p, "lat": x["lat"], "lng": x["lng"], "n": len(v)})
+    usati = set(st.get("paesi_buio", []))
+    cand = []
+    for com in _comuni():
+        k = f"{com['c']}|{com['p']}"
+        if k in usati or (com["c"], com["p"]) in per_c: continue
+        gi, gj = round(com["lat"] * 5), round(com["lng"] * 5)
+        vic = [l for di in (-1, 0, 1) for dj in (-1, 0, 1) for l in griglia.get((gi + di, gj + dj), []) if _dist(l, com) <= 12]
+        if len(vic) < 3 or any(_dist(l, com) < 1.0 for l in vic): continue
+        cand.append((len(vic), sum(l["n"] for l in vic), com, vic))
+    if not cand: raise Salta("nessun comune al buio con almeno 3 comuni accesi entro 12 km")
+    cand.sort(key=lambda t: (-t[0], -t[1], t[2]["c"]))
+    _, _, com, vic = cand[rng.randrange(min(5, len(cand)))]
+    if not _al_buio(com, luci): raise Salta(f"{com['c']} non è al buio")
+    st["paesi_buio"] = (list(usati) + [f"{com['c']}|{com['p']}"])[-300:]
+    v1, v2 = sorted(vic, key=lambda l: (-l["n"], l["c"]))[:2]
+    c = com["c"]
+    frasi = [
+        (f"{c} è ancora al buio.", {"tipo": "gancio", "testo": f"*{c}* è ancora al buio.", "sotto": f"0 animali sulla mappa · {com['r']}", "icona": "🌑"}),
+        (f"Intorno, {v1['c']} ha {luci_n(v1['n'])} e {v2['c']} {v2['n']}. {_con_maiuscola(_a(c))}, nessuna.",
+         {"tipo": "luce", "centro": [com["lng"], com["lat"]], "s1": 5.0, "volo": "regione", "accendi": 0.3, "intorno": _intorno(D, com, 40),
+          "punti": [{"lng": com["lng"], "lat": com["lat"], "spento": True, "testo": f"{c} · 0"},
+                    {"lng": v1["lng"], "lat": v1["lat"], "testo": f"{v1['c']} · {v1['n']}"}, {"lng": v2["lng"], "lat": v2["lat"], "testo": f"{v2['c']} · {v2['n']}"}]}),
+        (f"Vivi {_a(c)}? Scrivi città, nome e cane o gatto.", {"tipo": "commento", "testo": f"{c}, Luna, cane"}),
+        ("Vediamo chi accende la prima luce.", {"tipo": "chiusura", "testo": f"💡 Chi accende {c}?"}),
+    ]
+    did = (f"🌑 {c} è ancora al buio sulla mappa degli animali d'Italia.\n"
+           f"Intorno {v1['c']} ha {luci_n(v1['n'])} e {v2['c']} {v2['n']}: {_a(c)} ancora nessuna.\n\n"
+           f"👇 Vivi {_a(c)}? Scrivi qui sotto città, nome e cane o gatto (per esempio «{c}, Luna, cane»): chi commenta per primo accende la prima luce di {c}, col suo @.\n"
+           f"👥 Tagga chi è di {c}!\n➕ Segui Zampe d'Italia per vedere chi la accende.")
+    st["copertina"] = {"luce": [com["lng"], com["lat"]], "sopra": "ANCORA AL BUIO", "grande": c, "sotto": "Chi accende la prima luce?"}
+    st["banner_reel"] = f"💬 Vivi {_a(c)}? Commenta città e nome 👇"
+    st["test_caso"] = {"tipo": "paese_al_buio", "comune": c, "p": com["p"], "lat": com["lat"], "lng": com["lng"], "vicini": [[v1["c"], v1["n"]], [v2["c"], v2["n"]]]}
+    st["hashtag"] = "#cani #gatti #italia #animalidomestici "
+    st["senza_bonus"] = True
+    return "🌑 IL PAESE AL BUIO", frasi, did
+
+def _stato_coppa():
+    return carica(ROOT / "motore/stato.json", {}).get("coppa")
+
+def campanile_rivale(D, rng, st):
+    """Test 2 · Il campanile rivale: «Treviso contro Como. Chi passa?» Una sfida vera della Coppa, il punteggio, la Staffetta di quartiere."""
+    import coppa as CP
+    C = _stato_coppa()
+    if not C or C.get("chiuso"): raise Salta("nessun turno della Coppa aperto")
+    pos = {f"{x['c']}|{x['p']}": x for x in _comuni()}
+    n_an = {}
+    for a in D["animali"]:
+        if a.get("k") == "animale": n_an[f"{a['c']}|{a.get('p', '')}"] = n_an.get(f"{a['c']}|{a.get('p', '')}", 0) + 1
+    P, fatti = C.get("punti", {}), set(st.get("campanili", []))
+    cand = [(a, b) for a, b in C.get("coppie", []) if a in pos and b in pos and n_an.get(a, 0) >= 2 and n_an.get(b, 0) >= 2
+            and f"{C['turno']}|{a}|{b}" not in fatti and a.split("|")[0] != b.split("|")[0]]
+    if not cand: raise Salta("nessuna sfida della Coppa con due comuni attivi ancora da raccontare")
+    cand.sort(key=lambda x: (-(P.get(x[0], 0) + P.get(x[1], 0)), abs(P.get(x[0], 0) - P.get(x[1], 0)), -(n_an[x[0]] + n_an[x[1]])))
+    a, b = cand[0]
+    if P.get(b, 0) > P.get(a, 0): a, b = b, a
+    pa, pb = P.get(a, 0), P.get(b, 0)
+    A, B, xa, xb = _n(a), _n(b), pos[a], pos[b]
+    st["campanili"] = (list(fatti) + [f"{C['turno']}|{a}|{b}"])[-300:]
+    km = _dist(xa, xb); mezzo = {"lat": (xa["lat"] + xb["lat"]) / 2, "lng": (xa["lng"] + xb["lng"]) / 2}
+    s1 = max(0.6, min(1.8, 600 / max(km / 0.43, 1)))  # tutte e due le città nel fotogramma
+    qa, qb = CP.quartiere(C, a), CP.quartiere(C, b)
+    fine = datetime.fromisoformat(C["fine"]); gg = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"][fine.weekday()]
+    pt = lambda n: "1 punto" if n == 1 else f"{n} punti"
+    frasi = [
+        (f"{A} contro {B}. Chi passa?", {"tipo": "gancio", "testo": f"*{A}* contro *{B}*", "sotto": "Chi passa? · Coppa delle Zampe", "icona": "⚔️"}),
+        (f"{A} {pt(pa)}, {B} {pt(pb)}: si chiude {gg} alle 20.", {"tipo": "luce", "centro": [mezzo["lng"], mezzo["lat"]], "s1": round(s1, 2), "volo": "regione", "accendi": 0.3,
+          "intorno": _intorno(D, mezzo, max(60, km)), "punti": [{"lng": xa["lng"], "lat": xa["lat"], "testo": f"{A} · {pa}"}, {"lng": xb["lng"], "lat": xb["lat"], "testo": f"{B} · {pb}"}]}),
+        ("Tre persone dello stesso comune, ognuna col suo animale: un punto in più.",
+         {"tipo": "classifica", "titolo": "🔁 Staffetta di quartiere", "righe": [{"nome": A, "valore": f"{qa['n']}/3"}, {"nome": B, "valore": f"{qb['n']}/3"}]}),
+        ("Chiama due amici del tuo comune. In tre completate la staffetta.", {"tipo": "chiusura", "testo": f"👥 Tagga 2 amici di {A} o {B}"}),
+    ]
+    did = (f"⚔️ {A} {pa} – {pb} {B}: chi passa? La sfida della Coppa delle Zampe si chiude {gg} alle 20.\n\n"
+           f"🔁 Staffetta di quartiere: tre persone dello stesso comune commentano qui sotto città, nome e cane o gatto (per esempio «{A}, Luna, cane»). "
+           f"Alla terza, un punto della Coppa per la città.\n👥 Chiama due amici del tuo comune!\n➕ Segui Zampe d'Italia per il verdetto di domenica alle 21.")
+    st["copertina"] = {"luce": [mezzo["lng"], mezzo["lat"]], "sopra": "CHI PASSA?", "grande": f"{pa} – {pb}", "sotto": f"{A} vs {B}"}
+    st["banner_reel"] = f"👥 {A} o {B}? In tre chiudete la staffetta 👇"
+    st["test_caso"] = {"tipo": "campanile_rivale", "a": a, "b": b, "turno": C["turno"], "punti": [pa, pb], "staffetta": [qa["n"], qb["n"]]}
+    st["hashtag"] = "#cani #gatti #italia #animalidomestici "
+    st["senza_bonus"] = True
+    return "⚔️ IL CAMPANILE RIVALE", frasi, did
+
+def aggiornamento(D, rng, st):
+    """Test: il reel di aggiornamento del gioco (l'altro slot del giorno). Lunedì la Coppa che parte, poi l'ultimo sorpasso, altrimenti la luce nuova."""
+    if ORA.weekday() == 0: return coppa_apertura(D, rng, st)
+    C = _stato_coppa() or {}
+    ultimo = (C.get("storia") or [{}])[-1].get("t")
+    if ultimo and ultimo != st.get("sorpasso_raccontato"):
+        st["sorpasso_raccontato"] = ultimo; return coppa_sorpasso(D, rng, st)
+    return questa_luce(D, rng, st)
+
+def staffetta_fatta(D, rng, st, k, quando):
+    """La sera, solo se è successo: un comune ha chiuso la Staffetta di quartiere e ha preso il punto."""
+    C = _stato_coppa(); com = next((x for x in _comuni() if f"{x['c']}|{x['p']}" == k), None)
+    if not C or not com: raise Salta("staffetta non trovata")
+    import coppa as CP
+    r = CP.avversario(C, k); P = C.get("punti", {}); c = com["c"]
+    st["staffette_raccontate"] = (st.get("staffette_raccontate", []) + [f"{k}|{quando}"])[-200:]
+    frasi = [
+        (f"{c} ha chiuso la staffetta.", {"tipo": "gancio", "testo": f"*{c}* ha chiuso la staffetta", "sotto": "Tre persone, tre animali, un punto 🏆", "icona": "🔁"}),
+        (f"Tre persone di {c}, ognuna col suo animale: un punto nella Coppa delle Zampe.", {"tipo": "luce", "centro": [com["lng"], com["lat"]], "volo": "regione", "accendi": 0.3, "intorno": _intorno(D, com, 40),
+          "punti": [{"lng": com["lng"], "lat": com["lat"], "acceso": False, "testo": f"🔁 {c}"}]}),
+        (f"Ora {c} {P.get(k, 0)}, {_n(r)} {P.get(r, 0)}." if r else f"Ora {c} ha {P.get(k, 0)} punti.",
+         {"tipo": "duello", "sinistra": {"titolo": c, "valore": str(P.get(k, 0))}, "destra": {"titolo": _n(r) or "?", "valore": str(P.get(r, 0))}}),
+        ("Il tuo comune? Chiama due amici e completate la staffetta.", {"tipo": "chiusura", "testo": "👥 In tre si chiude la staffetta"}),
+    ]
+    did = (f"🔁 {c} ha chiuso la Staffetta di quartiere: tre persone, ognuna col suo animale, e un punto nella Coppa delle Zampe.\n\n"
+           "👇 Il tuo comune? Commenta città, nome e cane o gatto, e chiama due amici del tuo comune: in tre chiudete la staffetta.\n➕ Segui Zampe d'Italia per il verdetto di domenica alle 21.")
+    st["copertina"] = {"luce": [com["lng"], com["lat"]], "sopra": "STAFFETTA CHIUSA", "grande": c, "sotto": "+1 nella Coppa 🏆"}
+    st["test_caso"] = {"tipo": "staffetta_fatta", "comune": k, "quando": quando}
+    st["senza_bonus"] = True
+    return "🔁 STAFFETTA CHIUSA", frasi, did
+
+def verdetto_sera(D, rng, st):
+    """Test: alle 21 un reel solo se c'è una storia con un motivo per uscire. Prima il paese al buio che si è acceso, poi la staffetta chiusa."""
+    luci = _luci_vere()
+    for k in reversed(st.get("paesi_buio", [])[-14:]):  # un paese raccontato al buio che ora ha la sua prima luce: la storia si chiude
+        c, p = k.split("|")
+        if k in st.get("paesi_accesi", []): continue
+        if any(a["c"] == c and a.get("p", "") == p and a.get("k") == "animale" for a in luci):
+            st["paesi_accesi"] = (st.get("paesi_accesi", []) + [k])[-300:]
+            st["forza_prima_luce"] = c
+            st["test_caso"] = {"tipo": "paese_acceso", "comune": c, "p": p}
+            return prima_luce(D, rng, st)
+    C = _stato_coppa() or {}
+    for k, q in (C.get("quartiere") or {}).items():
+        for ev in q.get("log", []):
+            if f"{k}|{ev['t']}" not in st.get("staffette_raccontate", []) and ev["t"][:10] >= (ORA - timedelta(days=1)).date().isoformat():
+                return staffetta_fatta(D, rng, st, k, ev["t"])
+    raise Salta("alle 21 nessuna storia con un motivo per uscire (nessun paese al buio acceso, nessuna staffetta chiusa)")
+
+def verifica(cop):
+    """Mappa e dati, prima di caricare il reel: il caso raccontato è ancora vero? Restituisce l'errore dimostrato, o None."""
+    t = (cop.get("test") or {}).get("caso") or {}
+    if t.get("tipo") == "paese_al_buio":
+        com = {"c": t["comune"], "p": t["p"], "lat": t["lat"], "lng": t["lng"]}
+        acc = [a for a in _luci_vere() if (a["c"] == com["c"] and a.get("p", "") == com["p"]) or _dist(a, com) < 1.0]
+        if acc: return f"{com['c']} non è più al buio: ci sono {luci_n(len(acc))} (la prima alle {str(acc[0].get('ts', ''))[11:16]})."
+    if t.get("tipo") == "campanile_rivale":
+        C = _stato_coppa()
+        if not C or C.get("chiuso") or C.get("turno") != t["turno"]: return "il turno della Coppa raccontato non è più aperto"
+        if [t["a"], t["b"]] not in C.get("coppie", []) and [t["b"], t["a"]] not in C.get("coppie", []): return f"la sfida {_n(t['a'])} – {_n(t['b'])} non esiste nel turno"
+        ora = [C.get("punti", {}).get(t["a"], 0), C.get("punti", {}).get(t["b"], 0)]
+        if ora != t["punti"]: return f"il punteggio è cambiato: {ora[0]}–{ora[1]} invece di {t['punti'][0]}–{t['punti'][1]}"
+    return None
+
+
+FORMATI = {"paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -1056,13 +1236,31 @@ def varia(frasi, didascalia, D):
         print(f"variazione di Claude non disponibile ({e}): uso il modello fisso"); return frasi, didascalia
 
 def main():
-    formato, uscita = sys.argv[1].split(":")[0], sys.argv[2]  # «fondatore:prova» è un Trial Reel: il copione è lo stesso
+    if sys.argv[1] == "verifica":  # Mappa e dati prima di caricare: il caso è ancora vero? (reel.yml)
+        cop = json.loads(Path(sys.argv[2]).read_text()); err = verifica(cop)
+        if err:
+            st = carica(STORICO, {})
+            st["test_saltati"] = (st.get("test_saltati", []) + [{"quando": ORA.strftime("%Y-%m-%d %H:%M"), "formato": cop.get("formato"), "id": cop.get("id"), "motivo": f"Mappa e dati: {err}"}])[-100:]
+            STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
+            print(f"Mappa e dati: errore dimostrato, il reel si ferma: {err}"); sys.exit(78)
+        print("Mappa e dati: caso verificato"); return
+    parti = sys.argv[1].split(":")
+    formato, uscita = parti[0], sys.argv[2]  # «fondatore:prova» è un Trial Reel: il copione è lo stesso; «paese_al_buio:testo» è la versione solo testo del test
+    variante_test = next((x for x in parti[1:] if x in ("voce", "testo")), None)
     if formato == "auto":
         formato = min(ORARI, key=lambda o: abs(o[0] - ORA.hour))[1]
     st = carica(STORICO, {})
     rng = random.Random(ORA.strftime("%Y%m%d%H") + formato)
     D = dati()
-    titolo, frasi, did = FORMATI[formato](D, rng, st)
+    try:
+        titolo, frasi, did = FORMATI[formato](D, rng, st)
+    except Salta as e:  # niente caso verificato: il reel non esce, e il motivo resta nel registro del test
+        st["test_saltati"] = (st.get("test_saltati", []) + [{"quando": ORA.strftime("%Y-%m-%d %H:%M"), "formato": formato, "motivo": str(e)}])[-100:]
+        STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
+        Path(uscita).write_text(json.dumps({"salta": str(e), "formato": formato}, ensure_ascii=False))
+        print(f"reel saltato ({formato}): {e}"); sys.exit(78)
+    caso = st.pop("test_caso", None)
+    test = TEST_FORMATI.get(formato) or (caso and caso.get("tipo") in ("paese_acceso", "staffetta_fatta"))
     # 10 prove diverse a rotazione (Alberto, 1/11: «non togliere la voce a prescindere, fai 10 prove di impatto»): voce sì/no,
     # apertura (solita, «siamo già N animali, manca il tuo?», la missione del paese virtuale più grande d'Italia), durata 48 o 32 parole.
     # Ogni reel segna la sua variante in st["varianti"]: il bot del mattino confronta views e follower per variante.
@@ -1072,6 +1270,8 @@ def main():
     VARIANTI = [("voce", "solita", 32)]
     nv = st.get("variante_n", 0); st["variante_n"] = nv + 1
     voce_v, apertura, max_parole = VARIANTI[nv % len(VARIANTI)]
+    if test:  # test di crescita: frasi fisse (niente riscrittura, il gancio è quello del test), voce o solo testo come da piano
+        voce_v, apertura, max_parole = (variante_test or "voce"), "gancio", 40
     if formato in ("star", "missione", "neopresidente"): apertura = "solita"  # hanno già la loro apertura
     tot_luci = len(luci(D))
     if apertura == "comunita":
@@ -1080,8 +1280,9 @@ def main():
         frasi.insert(0, ("Stiamo costruendo il paese virtuale con più animali d'Italia.", {"tipo": "mappa", "luci": luci(D)}))
     # Niente scena SEGUO dentro il video: l'1/11 occupava 5 secondi su 15 e chi guardava scorreva via (views da 3.000 a meno di 1.000).
     # La richiesta di seguire resta dove non ruba il contenuto: la scritta fissa in alto («➕ Seguici +30»), la didascalia e le risposte ai commenti.
-    per_attivita = st.pop("senza_bonus", False)
-    if per_attivita:
+    # 8/11: «senza_bonus» (didascalia che ha già la sua richiesta) non vuol dire «reel per le attività»: prima tutti questi reel prendevano gli hashtag dei veterinari
+    per_attivita = formato == "attivita"
+    if st.pop("senza_bonus", False) or per_attivita:
         did = did.strip() + "\n\n"
     else:  # una richiesta sola: con 8 richieste diverse in didascalia (ottobre) non se ne faceva nessuna
         if "città e nome" not in did: did = did.strip() + "\n\n👇 Commenta la tua città e il nome del tuo cane o gatto (es. «Treviso, Luna, cane»): si accende sulla mappa col tuo @."
@@ -1091,7 +1292,7 @@ def main():
         fw = D.get("follower") or {}
         if fw.get("n") and fw["n"] < 2000:  # il traguardo di tutti: per ora la priorità sono i follower
             did = did.strip() + f"\n\n🎆 A 2.000 follower facciamo i fuochi d'artificio su tutta la mappa d'Italia: ne mancano {2000 - fw['n']}. Seguici e dillo a un amico!"
-    if not per_attivita:  # nel reel per le attività la parola PRENOTA non si tocca
+    if not per_attivita and not test:  # nel reel per le attività la parola PRENOTA non si tocca; nel test il gancio resta quello scelto
         frasi, did = varia(frasi, did, D)
     frasi = taglia(frasi, max_parole)
     mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")} | set(st.pop("tag_extra", [])))
@@ -1119,7 +1320,9 @@ def main():
     copione = {"voce": voce_ia, "variante": f"{voce_v}-{apertura}-{max_parole}", "tema": tema, "id": id_reel, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
                "banner": st.pop("banner_reel", "💬 Commenta città e nome del tuo animale 👇"), "didascalia": did,
-               "tag": [u for u in mostrati if u.lower() not in ESCLUSI], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {})}
+               "tag": [u for u in mostrati if u.lower() not in ESCLUSI], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}),
+               **({"test": {"nome": "crescita-1", "formato": formato, "variante": voce_v, "slot": ORA.strftime("%H:%M"), "caso": caso}} if test else {})}
+    if test and intro: copione.pop("intro")  # nel test il primo fotogramma è il gancio: niente video prima
     Path(uscita).write_text(json.dumps(copione, ensure_ascii=False, indent=1))
     STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
     print(f"copione {copione['id']}: " + " / ".join(t for t, _ in frasi))

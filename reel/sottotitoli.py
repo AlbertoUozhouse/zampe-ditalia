@@ -12,6 +12,8 @@ VERDE = {"gatti", "gatto", "tetti"}
 
 def main():
     parole_json, progetto, durata, *frasi = sys.argv[1:]
+    salta = 0  # «--salta=N»: le prime N parole non hanno sottotitoli (il gancio è già scritto grande nella prima scena)
+    if frasi and frasi[0].startswith("--salta="): salta = int(frasi.pop(0)[8:])
     P = json.loads(Path(parole_json).read_text())["parole"]
     durata = float(durata)
     gruppi, i = [], 0
@@ -26,6 +28,7 @@ def main():
 
     html, js = [], []
     for gi, (a, b) in enumerate(gruppi):
+        if b < salta: continue
         ws = P[a:b + 1]
         s = max(0.1, ws[0]["s"] - 0.05)
         e = (P[b + 1]["s"] - 0.03) if b + 1 < len(P) else durata - 0.05
