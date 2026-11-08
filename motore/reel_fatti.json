@@ -97,7 +97,6 @@
   "Napoli"
  ],
  "temi": [
-  "giorno",
   "neon",
   "tramonto",
   "aurora",
@@ -106,9 +105,10 @@
   "aurora",
   "notte",
   "tramonto",
-  "neon"
+  "neon",
+  "giorno"
  ],
- "variante_n": 25,
+ "variante_n": 26,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -134,7 +134,8 @@
   "2026-11-07-1802-prima_luce": "voce-solita-32",
   "2026-11-07-2103-ospiti_sera": "voce-solita-32",
   "2026-11-08-1306-testa_a_testa": "voce-solita-32",
-  "2026-11-08-1807-questa_luce": "voce-solita-32"
+  "2026-11-08-1807-questa_luce": "voce-solita-32",
+  "2026-11-08-2110-coppa_apertura": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -930,5 +931,5 @@
   "Vicenza|Verona"
  ],
  "thor_giorno": "2026-11-08",
- "thor_ultimo_reel": true
+ "thor_ultimo_reel": false
 }

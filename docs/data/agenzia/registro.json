@@ -43,5 +43,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-08T17:10:57+00:00",
   "scambi": 118
+ },
+ {
+  "id": "2026-11-08-2110-coppa_apertura",
+  "formato": "coppa_apertura",
+  "modalita": "operativa",
+  "inizio": "2026-11-08T20:10:23+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-08T20:14:04+00:00",
+  "scambi": 126
  }
 ]
