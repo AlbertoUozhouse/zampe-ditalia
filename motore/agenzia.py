@@ -129,7 +129,7 @@ Rispondi solo JSON: {{"decisione": "una frase", "da_correggere": [{{"secondo": n
 
 ERRORI_PERSONE = []
 
-def lavora(sistema, contenuto, modello=None):
+def lavora(sistema, contenuto, modello=None, immagini=()):
     """Una persona dell'ufficio al lavoro (Claude). Restituisce (json, token) oppure (None, 0).
     Con troppe richieste insieme (429/529) aspetta e riprova; se il modello delle persone non c'è, usa quello dei capi."""
     k = os.environ.get("ANTHROPIC_API_KEY")
@@ -138,7 +138,9 @@ def lavora(sistema, contenuto, modello=None):
     for m in modelli:
         # Haiku 5.5 e Sonnet 5.5 pensano prima di rispondere e il pensiero consuma max_tokens (7/11: risposte vuote o tagliate a 600):
         # sforzo basso, spazio largo, e su Haiku il pensiero spento (permesso fino allo sforzo «high»)
-        body = {"model": m, "max_tokens": 4000 if m == CLAUDE else 1500, "system": sistema, "messages": [{"role": "user", "content": contenuto}],
+        parti = ([{"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(b).decode()}} for b in immagini]
+                 + [{"type": "text", "text": contenuto}]) if immagini else contenuto
+        body = {"model": m, "max_tokens": 4000 if m == CLAUDE else 1500, "system": sistema, "messages": [{"role": "user", "content": parti}],
                 "output_config": {"effort": "low"}, **({"thinking": {"type": "disabled"}} if "haiku" in m else {})}
         for tentativo in range(5):
             try:
@@ -156,18 +158,23 @@ def lavora(sistema, contenuto, modello=None):
                 ERRORI_PERSONE.append(f"{m}: {type(e).__name__}"); time.sleep(2)
     return None, 0
 
-def ufficio_al_lavoro(S, mat):
+VEDONO = {"direzione", "grafica", "copione", "mappa", "crescita"}  # 8/11: questi reparti ricevono anche 6 fotogrammi del video
+
+def ufficio_al_lavoro(S, mat, foto=()):
     """Le 100 persone lavorano sul reel: 90 relazioni + 8 decisioni dei capi reparto (il capo della Direzione è il Direttore OpenAI,
     quello del Montaggio è Claude). Tutto va nella stanza. Restituisce le decisioni dei reparti, che vanno al Direttore."""
     from concurrent.futures import ThreadPoolExecutor
     if not os.environ.get("ANTHROPIC_API_KEY") or CONFIG.get("agenzia_persone") is False: return []
     progetto = progetto_in_breve()
-    testo = json.dumps({**mat, "progetto": progetto}, ensure_ascii=False)[:24000]
+    scelti = [foto[i] for i in sorted({round(k * (len(foto) - 1) / 5) for k in range(6)})] if foto else []
+    immagini = [f.read_bytes() for _, f in scelti]
+    testo = json.dumps({**mat, "progetto": progetto, "fotogrammi_secondi_inviati": [s for s, _ in scelti]}, ensure_ascii=False)[:24000]
     lavori = [(rid, nome, p) for rid, nome, ruoli in REPARTI for p in ufficio_reparto(rid)[1:]]
     token = 0
     def uno(x):
         rid, nome, p = x
-        return x, lavora(PERSONA.format(ruolo=p["ruolo"], reparto=nome), testo)
+        return x, lavora(PERSONA.format(ruolo=p["ruolo"], reparto=nome) + ("\nRicevi anche 6 fotogrammi del reel: il secondo di ciascuno è in «fotogrammi_secondi_inviati»." if rid in VEDONO and immagini else ""),
+                         testo, None, immagini if rid in VEDONO else ())
     rel = {}
     with ThreadPoolExecutor(4) as ex:  # 4 alla volta: con 10 insieme la chiave va oltre il limite di richieste
         for (rid, nome, p), (r, t) in ex.map(uno, lavori):
@@ -290,6 +297,13 @@ e audio (voce chiara, musica sotto la voce, -14 LUFS circa, niente silenzi lungh
 Approva solo se non ci sono difetti che un utente noterebbe.
 Rispondi solo JSON: {"approvato": true/false, "difetti": [{"secondo": 3.0, "area": "realismo|primi5s|leggibilita|corrispondenza|audio", "problema": "...", "correzione": "..."}], "decisione": "una frase"}"""
 
+CLA_SQUADRA = """Sei Claude, il montatore di Zampe d'Italia. Ricevi le decisioni dei capi reparto sul reel. Correggi SOLO i difetti segnalati da almeno 3 reparti diversi
+(lo stesso problema detto con parole diverse conta come uno) e solo se sono veri guardando il brief, i dati della mappa coi secondi e le misure audio. Non correggere dubbi, lacune di dati o gusti.
+Azioni possibili: {"azione": "zoom", "scena": i, "valore": 0.8-2.4} · {"azione": "accensione", "scena": i, "valore": 0.2-0.7} · {"azione": "etichetta", "scena": i, "punto": j, "testo": "..."}
+· {"azione": "frase", "scena": i, "testo": "..."} (stesso senso, al massimo 14 parole) · {"azione": "intro", "secondi": 0-4.5} · {"azione": "musica", "volume": 0.08-0.4} · {"azione": "fascia", "testo": "..."}
+· {"azione": "didascalia_togli", "testo": "frase esatta da togliere"}.
+Rispondi solo JSON: {"azioni": [...], "perche": [{"difetto": "...", "reparti": ["..."]}], "messaggio": "cosa correggi e perché, una o due frasi"}"""
+
 CLA_CORR = """Sei Claude, il montatore di Zampe d'Italia. Il Direttore video ha trovato dei difetti. Traducili in azioni che il montaggio automatico sa fare; se un difetto non si può correggere con queste azioni, dillo.
 Azioni possibili: {"azione": "zoom", "scena": i, "valore": 0.8-2.4} · {"azione": "accensione", "scena": i, "valore": 0.2-0.7} · {"azione": "etichetta", "scena": i, "punto": j, "testo": "..."}
 · {"azione": "frase", "scena": i, "testo": "..."} (stesso senso, al massimo 14 parole) · {"azione": "intro", "secondi": 0-4.5} (0 = senza apertura) · {"azione": "musica", "volume": 0.08-0.4}
@@ -313,6 +327,7 @@ def applica(cop, azioni):
                 else: cop["intro_durata"] = max(2.0, min(4.5, float(a["secondi"])))
             elif t == "musica": cop["vol_musica"] = max(0.08, min(0.4, float(a["volume"])))
             elif t == "fascia": cop["banner"] = str(a["testo"])[:70]
+            elif t == "didascalia_togli" and str(a["testo"]) in cop.get("didascalia", ""): cop["didascalia"] = cop["didascalia"].replace(str(a["testo"]), "").replace("  ", " ")
             else: continue
             fatte.append(a)
         except (KeyError, ValueError, IndexError, TypeError):
@@ -323,7 +338,8 @@ def prima(cop_path):
     cop = json.loads(Path(cop_path).read_text())
     S = Sessione(cop["id"], cop.get("formato"))
     S.scrivi("montaggio-1", "crescita-1", "proposta", "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?", {"brief": _brief(cop)})
-    cr, _ = lavora(CRESCITA_PRIMA, json.dumps({"brief": _brief(cop), "progetto": progetto_in_breve()}, ensure_ascii=False), CLAUDE)
+    indic = json.loads((DATI / "crescita.json").read_text()) if (DATI / "crescita.json").exists() else None
+    cr, _ = lavora(CRESCITA_PRIMA, json.dumps({"brief": _brief(cop), "progetto": progetto_in_breve(), "indicazione_del_giorno": indic}, ensure_ascii=False), CLAUDE)
     if cr:
         S.scrivi("crescita-1", "direzione-1", "proposta", f"Pubblico: {cr.get('pubblico', '')} · Gancio: {cr.get('gancio', '')} · Motivo per seguire: {cr.get('motivo_per_seguire', '')} · Chiusura: {cr.get('chiusura', '')}", cr)
         S.d["crescita"] = cr
@@ -362,12 +378,21 @@ def revisione(cop_path, cartella, giro):
     S.scrivi("montaggio-1", "direzione-1", "proposta", f"Versione {giro} esportata ({dur:.1f} s): ti mando {len(foto)} fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
              {k: mat[k] for k in ("durata_s", "fotogrammi_secondi")})
     if giro == 1:  # l'ufficio al completo lavora sulla prima versione; le decisioni dei reparti vanno al Direttore
-        mat["relazioni_reparti"] = ufficio_al_lavoro(S, mat)
+        mat["relazioni_reparti"] = ufficio_al_lavoro(S, mat, foto)
     r, chi = openai(DIR_DOPO, json.dumps(mat, ensure_ascii=False), [f.read_bytes() for _, f in foto])
+    if r is None and giro == 1 and mat.get("relazioni_reparti"):  # niente Direttore: decide la squadra, a maggioranza di reparti
+        c = claude(CLA_SQUADRA, json.dumps({"brief": _brief(cop), "decisioni_reparti": mat["relazioni_reparti"], "dati_mappa": mat["dati_mappa"], "audio": au}, ensure_ascii=False)) or {}
+        fatte = applica(cop, c.get("azioni"))
+        if fatte:
+            Path(cop_path).write_text(json.dumps(cop, ensure_ascii=False))
+            S.scrivi("montaggio-1", "pubblicazione-1", "correzione", f"Correzione di squadra (Direttore non collegato): {c.get('messaggio', '')}", {"azioni": fatte, "perche": c.get("perche", [])})
+            return 10
+        S.scrivi("montaggio-1", "pubblicazione-1", "decisione", "La squadra non ha trovato difetti segnalati da almeno 3 reparti: nessuna correzione.", {"perche": c.get("perche", [])})
     if r is None:
         print(f"agenzia: Direttore video non raggiungibile ({chi})", file=sys.stderr)
-        S.scrivi("direzione-1", "pubblicazione-1", "nota", f"Direttore video non collegato ({chi}): il reel esce senza revisione, come prima.")
-        S.d["stato"] = "senza direttore"; S.d["fine"] = _ora(); S.salva(); return 0
+        corretto = any(x["testo"].startswith("Correzione di squadra") for x in S.d["scambi"])
+        S.scrivi("direzione-1", "pubblicazione-1", "nota", f"Direttore video non collegato ({chi}): " + ("esce la versione corretta dalla squadra." if corretto else "il reel esce con la revisione della sola squadra."))
+        S.d["stato"] = "corretto dalla squadra" if corretto else "senza direttore"; S.d["fine"] = _ora(); S.salva(); return 0
     S.d["direttore_modello"] = chi
     difetti = r.get("difetti") or []
     S.scrivi("direzione-1", "montaggio-1", "risposta", r.get("decisione") or ("Approvato." if r.get("approvato") else "Da correggere."), {"approvato": bool(r.get("approvato")), "difetti": difetti})
@@ -386,8 +411,47 @@ def revisione(cop_path, cartella, giro):
         S.d["stato"] = "bozza"; S.d["fine"] = _ora(); S.salva(); return 20
     return 10
 
+CRESCITA_GIORNO = """Sei «{ruolo}» nel reparto Crescita di Zampe d'Italia: l'obiettivo è portare nuovi follower. Ricevi i numeri veri degli ultimi reel
+(account raggiunti, commenti, condivisioni, follower arrivati dopo ciascuno e ogni 1.000 account, quando ci sono; «null» vuol dire dato non disponibile), le loro scelte creative
+(apertura, gancio, chiusura) e i verbali dei 7 giorni. Dal punto di vista della tua mansione proponi cosa provare domani. Non inventare numeri.
+Rispondi solo JSON: {{"osservazione": "cosa dicono i numeri, con il dato", "proposta": "cosa provare domani", "gancio": "primi 2 secondi, se lo proponi"}}"""
+
+CRESCITA_CAPO = """Sei il Responsabile crescita di Zampe d'Italia. Leggi le proposte delle tue 9 persone e decidi l'indicazione per i reel di domani.
+Rispondi solo JSON: {"pubblico": "...", "gancio": "...", "motivo_per_seguire": "...", "chiusura": "massimo 14 parole", "da_riprovare": "...", "da_evitare": "...", "dato": "su quale numero ti basi"}"""
+
+def crescita_giorno():
+    """Ogni mattina (rendimento.yml) la Crescita legge i numeri e lascia l'indicazione per i reel di domani: docs/data/agenzia/crescita.json.
+    Il reparto la usa prima del montaggio di ogni reel (fase «prima»)."""
+    from concurrent.futures import ThreadPoolExecutor
+    R = [x for x in json.loads((ROOT / "motore/rendimento.json").read_text()) if not x.get("sponsorizzato")][-12:]
+    righe = []
+    for x in R:
+        c = {}
+        if x.get("file") and (ROOT / f"docs/contenuti/auto/{x['file']}.json").exists():
+            cp = json.loads((ROOT / f"docs/contenuti/auto/{x['file']}.json").read_text()); fr = cp.get("frasi", [])
+            c = {"apertura": "video vero" if cp.get("intro") else "mappa", "gancio": fr[0]["testo"] if fr else None, "chiusura": fr[-1]["testo"] if fr else None}
+        righe.append({k: x.get(k) for k in ("quando", "formato", "views", "reach", "comments", "shares", "follower_dopo", "follower_ogni_1000")} | c)
+    ver = json.loads((DATI / "verbali.json").read_text())[-10:] if (DATI / "verbali.json").exists() else []
+    testo = json.dumps({"reel": righe, "verbali_7_giorni": ver, "progetto": progetto_in_breve()}, ensure_ascii=False)[:24000]
+    oggi = datetime.now(timezone.utc).date().isoformat()
+    S = Sessione(f"crescita-{oggi}", "crescita del giorno")
+    S.scrivi("crescita-10", "crescita-1", "nota", "Si parte dai numeri veri degli ultimi 12 reel organici e dai verbali dei 7 giorni.")
+    pers = ufficio_reparto("crescita")[1:]
+    rel = []
+    with ThreadPoolExecutor(4) as ex:
+        for p, (r, t) in zip(pers, ex.map(lambda p: lavora(CRESCITA_GIORNO.format(ruolo=p["ruolo"]), testo), pers)):
+            S.d["token_persone"] = S.d.get("token_persone", 0) + t
+            if r: rel.append({"ruolo": p["ruolo"], **r}); S.d["scambi"].append({"t": _ora(), "da": p["id"], "a": "crescita-1", "tipo": "proposta", "testo": f"{r.get('osservazione', '')} → {r.get('proposta', '')}"[:400], "dati": r})
+    d, t = lavora(CRESCITA_CAPO, json.dumps(rel, ensure_ascii=False), CLAUDE)
+    S.d["token_persone"] = S.d.get("token_persone", 0) + t
+    if d:
+        S.scrivi("crescita-1", "direzione-1", "decisione", f"Per domani: gancio «{d.get('gancio', '')}», chiusura «{d.get('chiusura', '')}». Dato: {d.get('dato', '')}", d)
+        (DATI / "crescita.json").write_text(json.dumps({"giorno": oggi, **d}, ensure_ascii=False, indent=1) + "\n")
+    S.d["stato"] = "fatto"; S.d["fine"] = _ora(); S.salva()
+
 if __name__ == "__main__":
     fase = sys.argv[1]
     if fase == "prima": prima(sys.argv[2])
     elif fase == "revisione": sys.exit(revisione(*sys.argv[2:5]))
+    elif fase == "crescita": crescita_giorno()
     elif fase == "ufficio": DATI.mkdir(parents=True, exist_ok=True); (DATI / "ufficio.json").write_text(json.dumps(ufficio(), ensure_ascii=False) + "\n")

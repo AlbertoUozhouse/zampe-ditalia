@@ -21,10 +21,14 @@ jobs:
           sparse-checkout: |
             motore
             docs/contenuti/auto
-            docs/data/agenzia
+            docs/data
       - run: python3 -I motore/rendimento.py
       - name: Verbale dei 7 giorni
         run: python3 -I motore/verbale.py
+      - name: La Crescita sui numeri (indicazione per i reel di domani)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 -I motore/agenzia.py crescita || echo "Crescita non riuscita oggi"
       - name: Salva
         run: |
           git config user.name "zampe-bot"
