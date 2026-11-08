@@ -1,0 +1,184 @@
+{
+ "id": "innovazione-2026-11-08",
+ "formato": "innovazione del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-08T14:29:56+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-08T14:30:00+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Scatto di Zampa (sfida dei comuni a tempo): Ogni sera alle 21 si apre un round di 60 secondi sul sito: il giocatore tocca il comune giusto sulla mappa reale d'Italia, in base a un indizio (una razza, un suono, una foto sfocata di un animale del paese). Il punteggio dipende da velocità e precisione, e il comune migliore del giorno compare nella Coppa delle Zampe.",
+   "dati": {
+    "traccia": "gioco",
+    "idea": "Scatto di Zampa (sfida dei comuni a tempo)",
+    "come_funziona": "Ogni sera alle 21 si apre un round di 60 secondi sul sito: il giocatore tocca il comune giusto sulla mappa reale d'Italia, in base a un indizio (una razza, un suono, una foto sfocata di un animale del paese). Il punteggio dipende da velocità e precisione, e il comune migliore del giorno compare nella Coppa delle Zampe.",
+    "perche_porta_follower": "Il gioco è breve, si può rifare subito e chi vince vuole vedere il proprio comune in classifica e condividerlo; il risultato del giorno dà un motivo concreto per tornare il giorno dopo e per seguire la pagina.",
+    "perche_e_bella": "Usa la mappa reale e i paesi disegnati già esistenti, quindi il giocatore impara la geografia d'Italia giocando e ogni risposta accende visivamente la luce del comune scelto.",
+    "cosa_serve": "Mappa con coste e altitudini reali già nel sito, disegni SVG delle razze e dei paesi, foto e video dei follower che hanno dato il consenso (per gli indizi), e una tabella di punteggi semplice nel database del sito.",
+    "come_misurarla": "Dopo 7 giorni guardare quanti giocatori tornano almeno due volte (utenti con più di un round completato) e quanti nuovi follower arrivano nei giorni in cui esce il round, rispetto ai giorni senza gioco; registrare il conteggio follower ogni sera alle 21 prima e dopo l'uscita."
+   }
+  },
+  {
+   "t": "2026-11-08T14:30:00+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Corsa della Staffetta di Quartiere: Ogni giorno la pagina apre una staffetta a squadre tra comuni nella Coppa delle Zampe: il sito mostra la prima tappa e chi la completa passa il testimone al comune successivo, con una nuova zampa sulla mappa a ogni passaggio. Il giocatore sceglie il proprio comune, corre la sua tappa in Zampe di corsa e lascia un SEGUO sulla tappa per essere ricontattato dalla s",
+   "dati": {
+    "traccia": "gioco",
+    "idea": "Corsa della Staffetta di Quartiere",
+    "come_funziona": "Ogni giorno la pagina apre una staffetta a squadre tra comuni nella Coppa delle Zampe: il sito mostra la prima tappa e chi la completa passa il testimone al comune successivo, con una nuova zampa sulla mappa a ogni passaggio. Il giocatore sceglie il proprio comune, corre la sua tappa in Zampe di corsa e lascia un SEGUO sulla tappa per essere ricontattato dalla squadra.",
+    "perche_porta_follower": "Lega il gioco a un comune reale: chi vede il proprio paese in gara torna per difenderlo e invita amici di quel territorio, e la mappa che si accende con ogni staffetta crea un motivo concreto per seguire il giro completo.",
+    "perche_e_bella": "Trasforma la Coppa in un percorso che attraversa l'Italia tappa dopo tappa, con il paese reale come protagonista e la luce sulla mappa che cresce passo dopo passo.",
+    "cosa_serve": "Il codice del minigioco Zampe di corsa e la Coppa delle Zampe già esistenti sul sito, la mappa reale con i comuni, i disegni SVG degli animali per razza e la lista dei comuni con le luci già accese.",
+    "come_misurarla": "Dopo 7 giorni guardare il numero di staffette completate (oggi 0) e il numero di SEGUO ricevuti sui reel che annunciano la tappa del giorno, rapportato ai follower del periodo."
+   }
+  },
+  {
+   "t": "2026-11-08T14:30:00+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in Scala: Sul sito, quando un utente tocca un comune sulla mappa, la vista 3D (three.js) mostra il paese reale costruito dalle altitudini vere, con le case in scala e gli animali che hanno acceso la luce in quel comune posizionati nelle strade o nei cortili, disegnati in SVG per razza. Il tutto si può ruotare col dito, e dopo ogni reel il comune in evidenza mostra il suo paese ingrandito.",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in Scala",
+    "come_funziona": "Sul sito, quando un utente tocca un comune sulla mappa, la vista 3D (three.js) mostra il paese reale costruito dalle altitudini vere, con le case in scala e gli animali che hanno acceso la luce in quel comune posizionati nelle strade o nei cortili, disegnati in SVG per razza. Il tutto si può ruotare col dito, e dopo ogni reel il comune in evidenza mostra il suo paese ingrandito.",
+    "perche_porta_follower": "Chi cerca il proprio paese ci entra per trovare il proprio animale nel posto giusto, quindi lo condivide e torna per vedere chi è arrivato dopo; il ritorno è dato dalla curiosità di vedere il paese cambiare ogni giorno.",
+    "perche_e_bella": "Trasforma una luce su una mappa in un luogo abitato e riconoscibile: l'animale non è più un punto, è un abitante di quella strada vera, con il rilievo reale sotto i piedi.",
+    "cosa_serve": "Dati di altitudine e mappa reale dell'Italia già in progetto, la libreria three.js per la vista 3D, i disegni SVG degli animali per razza, l'elenco dei comuni con le luci accese e le foto/video dei follower che hanno dato il loro SÌ.",
+    "come_misurarla": "Dopo 7 giorni guardare quanti utenti aprono la vista 3D di un comune (tempo medio di permanenza sulla vista) e quanti da lì tornano sulla mappa o lasciano un commento; il dato di riferimento è il rapporto tra aperture 3D e nuovi follower registrati nei due giorni successivi a ogni reel, da confrontare con il dato attuale di 21,5 follower ogni 1.000 di reach del formato 'ospiti_sera'."
+   }
+  },
+  {
+   "t": "2026-11-08T14:30:00+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Paese in 3D a luce del giorno: Sul sito, quando si apre il comune di un animale, la vista three.js del paese viene illuminata con l'ora reale del giorno e della notte (dati di altitudine già in mappa), così il borgo appare come nella realtà in quel momento. Ogni animale resta disegnato in SVG per razza, posizionato nella sua casa e con la luce della sua finestra accesa solo di sera.",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Paese in 3D a luce del giorno",
+    "come_funziona": "Sul sito, quando si apre il comune di un animale, la vista three.js del paese viene illuminata con l'ora reale del giorno e della notte (dati di altitudine già in mappa), così il borgo appare come nella realtà in quel momento. Ogni animale resta disegnato in SVG per razza, posizionato nella sua casa e con la luce della sua finestra accesa solo di sera.",
+    "perche_porta_follower": "Chi cerca il proprio paese o quello di un amico vede subito un luogo vero e lo condivide: il dato 'ospiti_sera' mostra che il pubblico risponde quando il contenuto è legato alla mappa e alla sera, e questa vista può essere mostrata in un reel serale con il gancio SEGUO.",
+    "perche_e_bella": "Il paese diventa un piccolo mondo che cambia col cielo: di giorno è luminoso, di notte si accendono le finestre degli animali, come se la mappa si avvicinasse a casa.",
+    "cosa_serve": "File SVG degli animali per razza, dati di altitudine e coste già usati nella mappa, libreria three.js già presente nel sito, foto e video dei comuni con il consenso dei follower, orario reale del luogo.",
+    "come_misurarla": "Dopo 7 giorni guardare i click sulla vista 3D rispetto alle aperture del sito e i follower ogni 1.000 account nei reel serali che la mostrano, confrontandoli con il campione 'ospiti_sera' del 7 novembre (21,5 ogni 1.000)."
+   }
+  },
+  {
+   "t": "2026-11-08T14:30:04+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Diario della Zampa: Ogni reel segue per 15 secondi un solo animale reale che ha dato il suo SÌ: video girato dal suo proprietario o dal follower, con una didascalia di una riga che racconta un fatto vero (es. 'Oggi ha vinto la sua prima staffetta'). Il montaggio è verticale e stringato: un solo piano lungo, nessuna voce sintetica, un suono ambientale reale (passi, abbaio, pioggia), e in chiusur",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Il Diario della Zampa",
+    "come_funziona": "Ogni reel segue per 15 secondi un solo animale reale che ha dato il suo SÌ: video girato dal suo proprietario o dal follower, con una didascalia di una riga che racconta un fatto vero (es. 'Oggi ha vinto la sua prima staffetta'). Il montaggio è verticale e stringato: un solo piano lungo, nessuna voce sintetica, un suono ambientale reale (passi, abbaio, pioggia), e in chiusura la mappa si vede solo come sfondo sfocato con la sua luce che si accende.",
+    "perche_porta_follower": "Lo spettatore riconosce un animale che conosce o un vicino di città, e il gancio naturale è 'Vuoi che il tuo compaia nel prossimo diario? Scrivi SEGUO': chi commenta entra nel giro della raccolta video, quindi torna per vedere se è uscito.",
+    "perche_e_bella": "Rompe con lo stile attuale (mappa, disegni, classifiche) e mette al centro la vita vera degli animali, con persone reali e suoni reali invece di grafica: è un formato intimo che si distingue dal rumore dei reel.",
+    "cosa_serve": "Video e foto dei follower che hanno dato il consenso (cartella con liberatoria), i dati di città dal database della mappa, un template di montaggio verticale semplice (taglio, didascalia, audio originale), e la lista dei SÌ registrati.",
+    "come_misurarla": "Dopo 7 giorni e 7 uscite del formato: il numero di follower guadagnati ogni 1.000 account raggiunti, confrontato con la media attuale (ospiti_sera a 21,5), registrando il conteggio follower prima e dopo ogni pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-08T14:30:04+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Racconto dal Vivo: Invece della mappa con la luce che scende, il reel apre con una ripresa reale: la mano di un follower che tiene la zampa del suo animale davanti al suo balcone o alla sua piazza, con un suono ambientale vero (campanelli, passi, voci del paese) al posto della voce sintetica. Il montaggio alterna 3 secondi di ripresa e una scritta in sovrimpressione con il nome del comune, chiu",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Il Racconto dal Vivo",
+    "come_funziona": "Invece della mappa con la luce che scende, il reel apre con una ripresa reale: la mano di un follower che tiene la zampa del suo animale davanti al suo balcone o alla sua piazza, con un suono ambientale vero (campanelli, passi, voci del paese) al posto della voce sintetica. Il montaggio alterna 3 secondi di ripresa e una scritta in sovrimpressione con il nome del comune, chiudendo sulla luce che si accende sulla mappa, così il reale precede il disegno.",
+    "perche_porta_follower": "Il formato 'ospiti_sera' è l'unico con dato follower positivo (7 nuovi su 326 di reach, circa 21,5 ogni 1.000) e lavorava già con persone reali; una ripresa vera di un proprietario che si riconosce nel reel dà un motivo concreto per commentare, taggare il comune e chiedere 'SEGUO' per esserci nel prossimo giro.",
+    "perche_e_bella": "Porta la vita di strada e i volti dei follower dentro uno stile che oggi è tutto disegno e mappa, mostrando che la luce sulla mappa corrisponde a una persona e a un posto veri.",
+    "cosa_serve": "Video e foto dei follower che hanno dato il loro SÌ esplicito, file audio ambientali dei comuni registrati con consenso, il file della mappa e le luci già esistenti nel progetto, un template di montaggio con sovrimpressioni del nome del comune.",
+    "come_misurarla": "Dopo 7 giorni confrontare il numero di follower ogni 1.000 di reach dei reel con ripresa reale contro quello degli 'ospiti_sera' (21,5 di riferimento), registrando il conteggio follower prima e dopo ogni uscita e cambiando un solo elemento alla volta."
+   }
+  },
+  {
+   "t": "2026-11-08T14:30:04+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Diario della Zampa: Ogni reel segue un solo animale reale che ha mandato la foto e il suo SÌ: si parte dalla sua foto a mano (non dalla mappa), con una ripresa a passo d'uomo nel suo comune e una didascalia scritta in prima persona dall'animale, con la voce sintetica che legge la sua frase. La mappa compare solo alla fine, per mostrare dove si accende la sua luce.",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Il Diario della Zampa",
+    "come_funziona": "Ogni reel segue un solo animale reale che ha mandato la foto e il suo SÌ: si parte dalla sua foto a mano (non dalla mappa), con una ripresa a passo d'uomo nel suo comune e una didascalia scritta in prima persona dall'animale, con la voce sintetica che legge la sua frase. La mappa compare solo alla fine, per mostrare dove si accende la sua luce.",
+    "perche_porta_follower": "Il reel mette in primo piano una persona concreta che i suoi amici e il suo paese riconoscono; chi è stato citato o ha un amico nel video condivide e commenta, e la chiusura 'scrivi SEGUO' riprende il formato 'ospiti_sera', l'unico con un segnale follower positivo (7 su 326 di reach).",
+    "perche_e_bella": "Cambia lo stile dei reel di oggi: non è un'altra mappa con una luce, ma un piccolo racconto con volto, voce e luogo veri, più vicino a un documentario breve che a un'animazione.",
+    "cosa_serve": "Foto e video dei follower che hanno dato il loro SÌ, la mappa reale per la chiusura, la voce sintetica già in uso per leggere la frase dell'animale, e il montaggio dei clip in verticale.",
+    "come_misurarla": "Dopo 7 giorni guardare il numero di follower ogni 1.000 account raggiunti (reach) per i reel 'Diario della Zampa' confrontato con il valore di 21,5 di 'ospiti_sera', e registrare il conteggio follower prima e subito dopo ogni uscita."
+   }
+  },
+  {
+   "t": "2026-11-08T14:30:04+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Coppa delle Zampe a staffetta di quartiere: Ogni comune ha una squadra di 3 follower e un animale; ogni giorno il sito propone una staffetta a tempo (Pappa al volo a turni: ogni giocatore porta il cibo giusto all'animale e passa il testimone al successivo). Il tempo totale della squadra viene pubblicato in classifica, e chi chiude per primo ottiene un reel dedicato con il proprio comune.",
+   "dati": {
+    "traccia": "gioco",
+    "idea": "Coppa delle Zampe a staffetta di quartiere",
+    "come_funziona": "Ogni comune ha una squadra di 3 follower e un animale; ogni giorno il sito propone una staffetta a tempo (Pappa al volo a turni: ogni giocatore porta il cibo giusto all'animale e passa il testimone al successivo). Il tempo totale della squadra viene pubblicato in classifica, e chi chiude per primo ottiene un reel dedicato con il proprio comune.",
+    "perche_porta_follower": "Una staffetta non si gioca da soli: serve invitare due persone del proprio paese, quindi ogni giocatore porta almeno un nuovo amico e ha un motivo concreto per tornare a vedere il risultato della squadra. Lo strumento della staffetta è già nel gioco 'Coppa delle Zampe' (ha 0 staffette oggi), quindi non si parte da zero.",
+    "perche_e_bella": "Trasforma la mappa in una gara tra paesi veri: un'Italia che corre insieme, con tempi che si sommano e un traguardo condiviso, invece di punteggi solitari.",
+    "cosa_serve": "Il codice della Coppa delle Zampe già esistente sul sito (modalità Staffetta), la mappa reale con i comuni, il gioco 'Pappa al volo' già pronto, le SVG degli animali per razza e un sistema di squadre legato ai comuni dei follower che hanno dato il consenso.",
+    "come_misurarla": "Dopo 7 giorni: numero di staffette completate (obiettivo sopra le 50, oggi 0) e quanti follower nuovi arrivano tramite inviti di squadra, confrontando il conteggio follower prima e dopo il periodo."
+   }
+  },
+  {
+   "t": "2026-11-08T14:30:07+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in Tasca: Il paese della scheda di ogni animale si apre nella vista 3D (three.js) già presente, costruita sul rilievo reale e sulle coste vere, con una piccola ripresa a volo d'uccello che parte dalla luce dell'animale e atterra sul suo quartiere. Chi ha dato il suo SÌ vede la propria foto o il proprio animale comparire come segnaposto nel paese, e il sito conta quanti follower hanno tocc",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in Tasca",
+    "come_funziona": "Il paese della scheda di ogni animale si apre nella vista 3D (three.js) già presente, costruita sul rilievo reale e sulle coste vere, con una piccola ripresa a volo d'uccello che parte dalla luce dell'animale e atterra sul suo quartiere. Chi ha dato il suo SÌ vede la propria foto o il proprio animale comparire come segnaposto nel paese, e il sito conta quanti follower hanno toccato la loro zona.",
+    "perche_porta_follower": "Trasforma la mappa in qualcosa da esplorare e condividere: ognuno cerca il proprio paese e il proprio animale, lo mostra a chi conosce, e il dato 'ospiti_sera' indica che il pubblico risponde quando vede un risultato concreto che lo riguarda.",
+    "perche_e_bella": "Usa solo ciò che esiste già (rilievo reale, paesi disegnati da vicino, animali in SVG per razza) e lo fa diventare un luogo vero e tuo, senza inventare nulla e senza mostrare persone che non hanno detto di sì.",
+    "cosa_serve": "Il modulo three.js della vista 3D, i dati di altitudine e i confini comunali, i disegni SVG degli animali per razza, le foto e i nomi dei follower che hanno dato il loro SÌ, e il conteggio dei tocchi già registrato dal sito.",
+    "come_misurarla": "Dopo 7 giorni guardare quanti follower tornano sul sito dopo aver aperto la vista 3D (sessioni di ritorno) e quanti commenti o condivisioni arrivano sui reel che mostrano un paese in 3D, confrontando con la media attuale dei reel del progetto."
+   }
+  },
+  {
+   "t": "2026-11-08T14:30:20+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "GIOCO: «Staffetta di quartiere nella Coppa delle Zampe (con 'Pappa al volo' a turni)» (primo passo: Nel codice esistente della Coppa delle Zampe attivare la modalità Staffetta (oggi 0 staffette) e collegarla al minigioco 'Pappa al volo'. Creare nel database due tabelle: 'squadre' (comune, 3 slot giocatore, link d'invito) e 'staffette' (squadra, tempo di ogni tappa, tempo totale, data). Poi generare un link d'invito per squadra e mostrare la classifica del giorno sulla mappa.) · REEL: «Il Racconto dal Vivo: il reel parte da una ripresa reale, poi arriva la luce sulla mappa» (primo passo: Preparare un template di montaggio verticale (3 clip da 3 secondi, sovrimpressione con il nome del comune, chiusura con l'animazione della luce già esistente). Creare una cartella con liberatoria per i video dei follower con SÌ registrato. Poi montare il primo reel con un solo follower e un solo suono ambientale.) · REALISMO: «Il Paese in Tasca: vista 3D del comune sul rilievo reale» (primo passo: Collegare il modulo three.js esistente alla scheda animale: passare il codice del comune, caricare altitudini e confini comunali di quel comune, e posizionare il segnaposto SVG della razza nel punto della luce. Aggiungere un evento di tracciamento 'apertura_vista_3d' con id comune e un evento 'tocco_zona'. Partire con 3 comuni di prova.)",
+   "dati": {
+    "gioco": {
+     "idea": "Staffetta di quartiere nella Coppa delle Zampe (con 'Pappa al volo' a turni)",
+     "come_funziona": "Ogni comune ha una squadra di 3 follower e un animale. Ogni giorno il sito propone una staffetta a tempo: ogni giocatore porta il cibo giusto all'animale con 'Pappa al volo' e passa il testimone al successivo. Il tempo totale della squadra va in classifica e a ogni passaggio si accende una zampa sulla mappa. Per giocare bisogna invitare due persone del proprio paese, quindi il gioco porta nuovi follower per costruzione. Chi chiude per primo ottiene un reel dedicato al suo comune.",
+     "primo_passo": "Nel codice esistente della Coppa delle Zampe attivare la modalità Staffetta (oggi 0 staffette) e collegarla al minigioco 'Pappa al volo'. Creare nel database due tabelle: 'squadre' (comune, 3 slot giocatore, link d'invito) e 'staffette' (squadra, tempo di ogni tappa, tempo totale, data). Poi generare un link d'invito per squadra e mostrare la classifica del giorno sulla mappa.",
+     "come_misurarla": "Dopo 7 giorni contare le staffette completate (obiettivo oltre 50, oggi 0) e i nuovi follower arrivati da link d'invito di squadra. Registrare il conteggio follower ogni sera alle 21 prima e dopo l'uscita della staffetta e confrontarlo con i giorni senza gioco."
+    },
+    "reel": {
+     "idea": "Il Racconto dal Vivo: il reel parte da una ripresa reale, poi arriva la luce sulla mappa",
+     "come_funziona": "Il reel si apre con una ripresa vera: la mano di un follower che tiene la zampa del suo animale davanti al suo balcone o alla sua piazza. Si sente un suono ambientale reale (campanelli, passi, voci del paese) al posto della voce sintetica. Il montaggio alterna riprese di 3 secondi a una scritta con il nome del comune e chiude sulla luce che si accende sulla mappa, così il reale precede il disegno. In chiusura il gancio 'scrivi SEGUO per esserci nel prossimo giro'. Si usano solo video e audio di chi ha dato un SÌ esplicito.",
+     "primo_passo": "Preparare un template di montaggio verticale (3 clip da 3 secondi, sovrimpressione con il nome del comune, chiusura con l'animazione della luce già esistente). Creare una cartella con liberatoria per i video dei follower con SÌ registrato. Poi montare il primo reel con un solo follower e un solo suono ambientale.",
+     "come_misurarla": "Dopo 7 giorni e 7 uscite confrontare i follower ogni 1.000 di reach con il riferimento 'ospiti_sera' (21,5, cioè 7 su 326). Registrare il conteggio follower prima e dopo ogni pubblicazione e cambiare un solo elemento alla volta (per esempio solo il suono o solo la durata delle clip)."
+    },
+    "realismo": {
+     "idea": "Il Paese in Tasca: vista 3D del comune sul rilievo reale",
+     "come_funziona": "Dalla scheda di ogni animale si apre la vista 3D three.js già presente, costruita su rilievo e coste reali. Una breve ripresa a volo d'uccello parte dalla luce dell'animale e atterra sul suo quartiere. Chi ha dato il SÌ vede la propria foto o il proprio animale come segnaposto nel paese. Il sito conta quanti follower toccano la propria zona. Si mostrano solo animali e persone che hanno detto di sì.",
+     "primo_passo": "Collegare il modulo three.js esistente alla scheda animale: passare il codice del comune, caricare altitudini e confini comunali di quel comune, e posizionare il segnaposto SVG della razza nel punto della luce. Aggiungere un evento di tracciamento 'apertura_vista_3d' con id comune e un evento 'tocco_zona'. Partire con 3 comuni di prova.",
+     "come_misurarla": "Dopo 7 giorni guardare le aperture della vista 3D, il tempo medio di permanenza e le sessioni di ritorno dopo l'apertura. Contare commenti e condivisioni sui reel che mostrano un paese in 3D e confrontare con la media attuale dei reel e con i 21,5 follower ogni 1.000 di reach di 'ospiti_sera'."
+    },
+    "perche": "Sono le tre idee che si appoggiano a ciò che esiste già (Coppa con staffetta, formato 'ospiti_sera' con persone reali, vista three.js), portano follower per meccanismo (inviti di squadra, SEGUO, ricerca del proprio paese) e rispettano il consenso dei follower."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 32589,
+ "fine": "2026-11-08T14:30:20+00:00"
+}
