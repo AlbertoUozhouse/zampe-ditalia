@@ -46,6 +46,9 @@ REPARTI = [
     # 7/11 Alberto: l'acquisizione di follower al centro. La Crescita propone pubblico, gancio e motivo per seguire prima del montaggio
     ("crescita", "Crescita (follower)", ["Responsabile crescita", "Pubblico da raggiungere", "Gancio per chi non ci conosce", "Motivo per seguire", "Prossimo episodio",
                                          "Follower ogni 1.000 account", "Organico e sponsorizzato", "Confronto a 7 giorni", "Scelte da riprovare", "Verbale dei 7 giorni"]),
+    # 8/11 Alberto: «serve un reparto innovazione per inventarsi cose nuove» (undicesima stanza: 110 persone)
+    ("innovazione", "Innovazione", ["Capo innovazione", "Nuovi formati di reel", "Serie a episodi", "Nuovi giochi sul sito", "Eventi e ricorrenze",
+                                     "Idee visive", "Format con i follower", "Tendenze di Instagram", "Collaborazioni", "Esperimenti misurabili"]),
 ]
 
 def ufficio():
@@ -120,12 +123,16 @@ def claude(istruzioni, contenuto):
 
 PERSONA = """Lavori nel Centro Agenzia di Zampe d'Italia, una pagina Instagram italiana: ogni animale accende una luce nella sua città sulla mappa dell'Italia di notte.
 Sei «{ruolo}» nel reparto «{reparto}». Fai SOLO la tua mansione sul reel qui sotto (materiali veri: copione, trascrizione coi secondi, dati verificati della mappa, misure audio, didascalia, numeri del progetto).
+Tutta l'agenzia lavora per due cose (Alberto, 8/11): portare NUOVI FOLLOWER e fare contenuti BELLI (immagini curate, ritmo, testi chiari, emozione).
+Guarda la tua mansione con questi due occhi: cosa in questo reel fa venire voglia di seguire la pagina, e cosa lo rende più bello o più brutto.
 Sii concreto e breve, in italiano. Se nella tua mansione è tutto a posto dillo. Non inventare dati che non sono nei materiali.
-Rispondi solo JSON: {{"controllato": "cosa hai controllato, una frase", "esito": "ok" oppure "segnalo", "secondo": numero o null, "problema": "...", "correzione": "...", "idea": "una proposta utile per i prossimi reel, oppure vuoto"}}"""
+Rispondi solo JSON: {{"controllato": "cosa hai controllato, una frase", "esito": "ok" oppure "segnalo", "secondo": numero o null, "problema": "...", "correzione": "...",
+ "per_i_follower": "cosa aiuta o frena il follow, una frase", "per_la_bellezza": "cosa lo rende più bello, una frase", "idea": "una proposta utile per i prossimi reel, oppure vuoto"}}"""
 
 CAPO = """Sei «{ruolo}», capo del reparto «{reparto}» del Centro Agenzia di Zampe d'Italia. Ricevi le relazioni delle tue 9 persone su questo reel.
-Decidi per il reparto: cosa va corretto adesso (solo cose vere e importanti, con secondo, problema e correzione) e quale idea portare avanti.
-Rispondi solo JSON: {{"decisione": "una frase", "da_correggere": [{{"secondo": numero o null, "problema": "...", "correzione": "..."}}], "idea_scelta": "..."}}"""
+Decidi per il reparto con due obiettivi: più follower e contenuti più belli. Cosa va corretto adesso (solo cose vere e importanti, con secondo, problema e correzione)
+e quale idea portare avanti. Rispondi solo JSON: {{"decisione": "una frase", "da_correggere": [{{"secondo": numero o null, "problema": "...", "correzione": "..."}}],
+ "per_i_follower": "una frase", "per_la_bellezza": "una frase", "idea_scelta": "..."}}"""
 
 ERRORI_PERSONE = []
 
@@ -434,6 +441,7 @@ def crescita_giorno():
     ver = json.loads((DATI / "verbali.json").read_text())[-10:] if (DATI / "verbali.json").exists() else []
     testo = json.dumps({"reel": righe, "verbali_7_giorni": ver, "progetto": progetto_in_breve()}, ensure_ascii=False)[:24000]
     oggi = datetime.now(timezone.utc).date().isoformat()
+    if (DATI / f"sessioni/crescita-{oggi}.json").exists(): return  # una volta al giorno
     S = Sessione(f"crescita-{oggi}", "crescita del giorno")
     S.scrivi("crescita-10", "crescita-1", "nota", "Si parte dai numeri veri degli ultimi 12 reel organici e dai verbali dei 7 giorni.")
     pers = ufficio_reparto("crescita")[1:]
@@ -449,9 +457,48 @@ def crescita_giorno():
         (DATI / "crescita.json").write_text(json.dumps({"giorno": oggi, **d}, ensure_ascii=False, indent=1) + "\n")
     S.d["stato"] = "fatto"; S.d["fine"] = _ora(); S.salva()
 
+INNOVA = """Sei «{ruolo}» nel reparto Innovazione di Zampe d'Italia (pagina Instagram: ogni animale accende una luce nella sua città sulla mappa dell'Italia di notte;
+c'è un sito con la mappa, i minigiochi e la Coppa delle Zampe tra comuni; i reel escono 3 volte al giorno). Il tuo lavoro è inventare cose NUOVE che portino follower
+e siano belle da vedere, dal punto di vista della tua mansione. Parti da quello che esiste (te lo diamo) e dai numeri veri; niente cose già fatte, niente spese, niente follower finti,
+niente nomi di altre pagine. Rispondi solo JSON: {{"idea": "nome breve", "come_funziona": "2-3 frasi", "perche_porta_follower": "...", "perche_e_bella": "...",
+ "cosa_serve": "con i materiali che abbiamo", "come_misurarla": "quale numero guardare dopo 7 giorni"}}"""
+
+INNOVA_CAPO = """Sei il Capo innovazione di Zampe d'Italia. Leggi le idee delle tue 9 persone. Scegli UNA idea da provare questa settimana: quella che può portare più follower,
+è bella da vedere e si può fare subito con i materiali che abbiamo. Scrivi anche le due di riserva. Rispondi solo JSON:
+{"scelta": {"idea": "...", "come_funziona": "...", "primo_passo": "cosa si fa domani", "come_misurarla": "..."}, "riserve": ["...", "..."], "perche": "una frase"}"""
+
+def innovazione_giorno():
+    """Ogni mattina (rendimento.yml) l'Innovazione inventa: 9 idee, il capo ne sceglie una da provare (docs/data/agenzia/innovazione.json).
+    Il controllo quotidiano la legge e, se è fattibile e rispetta le regole, la mette in produzione (una novità alla volta)."""
+    from concurrent.futures import ThreadPoolExecutor
+    esiste = {"formati_reel": sorted({x.get("formato") for x in json.loads((ROOT / "motore/rendimento.json").read_text())}),
+              "giochi_sito": ["Zampe di corsa", "Pappa al volo", "Riporta il bastone", "Coppa delle Zampe (Luce Misteriosa, Indovina la Zampa, Staffetta)"],
+              "eventi_fatti": ["Re degli animali d'Italia", "fuochi a 2.000 follower", "star del giorno con foto dei follower", "porta 2 amici"],
+              "progetto": progetto_in_breve(), "indicazione_crescita": json.loads((DATI / "crescita.json").read_text()) if (DATI / "crescita.json").exists() else None,
+              "idee_gia_proposte": [x.get("scelta", {}).get("idea") for x in (json.loads((DATI / "innovazione.json").read_text()) if (DATI / "innovazione.json").exists() else [])][-20:]}
+    testo = json.dumps(esiste, ensure_ascii=False)[:20000]
+    oggi = datetime.now(timezone.utc).date().isoformat()
+    if (DATI / f"sessioni/innovazione-{oggi}.json").exists(): return  # una volta al giorno
+    S = Sessione(f"innovazione-{oggi}", "innovazione del giorno")
+    pers = ufficio_reparto("innovazione")[1:]
+    idee = []
+    with ThreadPoolExecutor(4) as ex:
+        for p, (r, t) in zip(pers, ex.map(lambda p: lavora(INNOVA.format(ruolo=p["ruolo"]), testo), pers)):
+            S.d["token_persone"] = S.d.get("token_persone", 0) + t
+            if r: idee.append({"ruolo": p["ruolo"], **r}); S.d["scambi"].append({"t": _ora(), "da": p["id"], "a": "innovazione-1", "tipo": "proposta", "testo": f"{r.get('idea', '')}: {r.get('come_funziona', '')}"[:400], "dati": r})
+    d, t = lavora(INNOVA_CAPO, json.dumps(idee, ensure_ascii=False), CLAUDE)
+    S.d["token_persone"] = S.d.get("token_persone", 0) + t
+    if d:
+        sc = d.get("scelta", {})
+        S.scrivi("innovazione-1", "direzione-1", "decisione", f"Da provare: «{sc.get('idea', '')}». Primo passo: {sc.get('primo_passo', '')} Misura: {sc.get('come_misurarla', '')}", d)
+        reg = DATI / "innovazione.json"; storia = json.loads(reg.read_text()) if reg.exists() else []
+        reg.write_text(json.dumps((storia + [{"giorno": oggi, **d}])[-60:], ensure_ascii=False, indent=1) + "\n")
+    S.d["stato"] = "fatto"; S.d["fine"] = _ora(); S.salva()
+
 if __name__ == "__main__":
     fase = sys.argv[1]
     if fase == "prima": prima(sys.argv[2])
     elif fase == "revisione": sys.exit(revisione(*sys.argv[2:5]))
     elif fase == "crescita": crescita_giorno()
+    elif fase == "innovazione": innovazione_giorno()
     elif fase == "ufficio": DATI.mkdir(parents=True, exist_ok=True); (DATI / "ufficio.json").write_text(json.dumps(ufficio(), ensure_ascii=False) + "\n")

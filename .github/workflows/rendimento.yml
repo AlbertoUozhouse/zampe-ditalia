@@ -28,7 +28,9 @@ jobs:
       - name: La Crescita sui numeri (indicazione per i reel di domani)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python3 -I motore/agenzia.py crescita || echo "Crescita non riuscita oggi"
+        run: |
+          python3 -I motore/agenzia.py crescita || echo "Crescita non riuscita oggi"
+          python3 -I motore/agenzia.py innovazione || echo "Innovazione non riuscita oggi"
       - name: Salva
         run: |
           git config user.name "zampe-bot"
