@@ -948,6 +948,7 @@
 "17915405301501234",
 "17915405487494181",
 "17915416713280849",
+"17915421195514241",
 "17915426955549424",
 "17915427231510947",
 "17915438448285046",
@@ -4611,6 +4612,7 @@
 "18099124919103889",
 "18099133298423138",
 "18099143609411100",
+"18099150590234249",
 "18099164834451128",
 "18099172199390373",
 "18099181871421927",
@@ -8897,6 +8899,7 @@
 "18213355459366501",
 "18213548323365928",
 "18213716875366842",
+"18213830827364069",
 "18214035052362733",
 "18214226368363387",
 "18214243909369208",
@@ -10235,7 +10238,8 @@
 ],
 "risposte": [
 1794150785.217063,
-1794152364.0677783
+1794152364.0677783,
+1794153151.2454784
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12317,7 +12321,7 @@
 "tommasotigli": "2026-11-07",
 "gioeleflavio45": "2026-11-07",
 "antonio_benci": "2026-11-07",
-"julieta_negri._": "2026-11-07",
+"julieta_negri._": "2026-11-08",
 "espositic": "2026-11-07",
 "federico.fioravantii": "2026-11-07",
 "peppe.privato014": "2026-11-07",
@@ -13461,7 +13465,8 @@
 "lary_013_4>_only_ale._",
 "michael_wolf_98>>cristinaek",
 "michael_wolf_98>cristinaek",
-"fede_sporty_>nicola.sportello"
+"fede_sporty_>nicola.sportello",
+"fede_sporty_>>nicola.sportello"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14414,7 +14419,7 @@
 "icantbreathebutimliving": 40,
 "osteo_psycho": 30,
 "matteoo.boi": 35,
-"fede_sporty_": 56,
+"fede_sporty_": 86,
 "alan407103": 30,
 "brunac80": 40,
 "organize_time_italy": 30,
@@ -14422,7 +14427,7 @@
 "pi_dou": 30,
 "francesco.puricella": 5,
 "antonio_benci": 30,
-"julieta_negri._": 30,
+"julieta_negri._": 40,
 "nemi.rove": 5,
 "maryg78a": 40,
 "ciopicelle": 30,
@@ -14438,7 +14443,8 @@
 "cristinaek": 30,
 "michael_wolf_98": 46,
 "phantom20_13": 40,
-"alfoooo65": 30
+"alfoooo65": 30,
+"nicola.sportello": 30
 },
 "inviti_giorno": {
 "2026-11-01": {
@@ -15289,7 +15295,8 @@
 "maty._000": "in_attesa",
 "cristinaek": "premiato",
 "phantom20_13": "premiato",
-"alfoooo65": "premiato"
+"alfoooo65": "premiato",
+"nicola.sportello": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -18643,7 +18650,7 @@
 "2026-11-05": 1677,
 "2026-11-06": 1702,
 "2026-11-07": 1723,
-"2026-11-08": 1757
+"2026-11-08": 1758
 },
 "gioco_pappa": {
 "2026-W44": {
@@ -18826,6 +18833,10 @@
 [
 "2026-11-08T15:39+00:00",
 1757
+],
+[
+"2026-11-08T15:52+00:00",
+1758
 ]
 ],
 "coppa": {
