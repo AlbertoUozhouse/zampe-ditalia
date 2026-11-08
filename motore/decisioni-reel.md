@@ -205,3 +205,28 @@ Reel `amici` oggi alle 18:00 (al posto di star/fondatore) e domani 7/11 alle 13:
 Follower 1.714: +25 il 6/11, +12 stamattina. Il 6/11 alle 18 il reel «amici» si è fermato al controllo HyperFrames (riga «Nome · @utente» tagliata nella classifica: corretto in reel/modello/scene.py, i nomi lunghi si rimpiccioliscono; provato qui, controllo ok).
 Alle 21 l'incoronazione era montata ma GitHub Pages non l'ha messa online in 10 minuti: è uscita una riserva (fondatore). Il controllo del mattino ha già portato l'attesa a 20 minuti. L'incoronazione è stata pubblicata a mano oggi alle 11:17.
 Il Re del 5/11: 652 views e 121 commenti ogni 1.000 (record). Oggi: 13:00 amici, 18:00 star/fondatore, 21:00 ospiti_sera. Nessun altro cambiamento.
+
+
+## 2026-11-08 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-10-28-1136-voto: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-28-1227-voto: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-28-1236-altri: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-28-1243-buio: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-28-1535-attivita: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-28-1807-fondatore: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-28-1932-derby: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-28-2112-puntata: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-29-1239-buio: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-29-1542-attivita: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-29-1818-gara: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-29-2105-puntata: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-30-1118-presidente: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-30-1534-presidente: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-30-1811-gara: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-30-2104-puntata: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-30-2243-corsa_luna: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-31-1127-neopresidente: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-31-1334-nomi: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-31-1505-presidente: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-10-31-1636-derby: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
