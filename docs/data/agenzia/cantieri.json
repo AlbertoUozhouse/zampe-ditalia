@@ -1,0 +1,32 @@
+{
+ "gioco": {
+  "idea": "Staffetta di quartiere nella Coppa delle Zampe (con 'Pappa al volo' a turni)",
+  "come_funziona": "Ogni comune ha una squadra di 3 follower e un animale. Ogni giorno il sito propone una staffetta a tempo: ogni giocatore porta il cibo giusto all'animale con 'Pappa al volo' e passa il testimone al successivo. Il tempo totale della squadra va in classifica e a ogni passaggio si accende una zampa sulla mappa. Per giocare bisogna invitare due persone del proprio paese, quindi il gioco porta nuovi follower per costruzione. Chi chiude per primo ottiene un reel dedicato al suo comune.",
+  "primo_passo": "Nel codice esistente della Coppa delle Zampe attivare la modalità Staffetta (oggi 0 staffette) e collegarla al minigioco 'Pappa al volo'. Creare nel database due tabelle: 'squadre' (comune, 3 slot giocatore, link d'invito) e 'staffette' (squadra, tempo di ogni tappa, tempo totale, data). Poi generare un link d'invito per squadra e mostrare la classifica del giorno sulla mappa.",
+  "come_misurarla": "Dopo 7 giorni contare le staffette completate (obiettivo oltre 50, oggi 0) e i nuovi follower arrivati da link d'invito di squadra. Registrare il conteggio follower ogni sera alle 21 prima e dopo l'uscita della staffetta e confrontarlo con i giorni senza gioco.",
+  "traccia": "gioco",
+  "aperto": "2026-11-08",
+  "scadenza": "2026-11-10",
+  "stato": "da costruire"
+ },
+ "reel": {
+  "idea": "Il Racconto dal Vivo: il reel parte da una ripresa reale, poi arriva la luce sulla mappa",
+  "come_funziona": "Il reel si apre con una ripresa vera: la mano di un follower che tiene la zampa del suo animale davanti al suo balcone o alla sua piazza. Si sente un suono ambientale reale (campanelli, passi, voci del paese) al posto della voce sintetica. Il montaggio alterna riprese di 3 secondi a una scritta con il nome del comune e chiude sulla luce che si accende sulla mappa, così il reale precede il disegno. In chiusura il gancio 'scrivi SEGUO per esserci nel prossimo giro'. Si usano solo video e audio di chi ha dato un SÌ esplicito.",
+  "primo_passo": "Preparare un template di montaggio verticale (3 clip da 3 secondi, sovrimpressione con il nome del comune, chiusura con l'animazione della luce già esistente). Creare una cartella con liberatoria per i video dei follower con SÌ registrato. Poi montare il primo reel con un solo follower e un solo suono ambientale.",
+  "come_misurarla": "Dopo 7 giorni e 7 uscite confrontare i follower ogni 1.000 di reach con il riferimento 'ospiti_sera' (21,5, cioè 7 su 326). Registrare il conteggio follower prima e dopo ogni pubblicazione e cambiare un solo elemento alla volta (per esempio solo il suono o solo la durata delle clip).",
+  "traccia": "reel",
+  "aperto": "2026-11-08",
+  "scadenza": "2026-11-10",
+  "stato": "da costruire"
+ },
+ "realismo": {
+  "idea": "Il Paese in Tasca: vista 3D del comune sul rilievo reale",
+  "come_funziona": "Dalla scheda di ogni animale si apre la vista 3D three.js già presente, costruita su rilievo e coste reali. Una breve ripresa a volo d'uccello parte dalla luce dell'animale e atterra sul suo quartiere. Chi ha dato il SÌ vede la propria foto o il proprio animale come segnaposto nel paese. Il sito conta quanti follower toccano la propria zona. Si mostrano solo animali e persone che hanno detto di sì.",
+  "primo_passo": "Collegare il modulo three.js esistente alla scheda animale: passare il codice del comune, caricare altitudini e confini comunali di quel comune, e posizionare il segnaposto SVG della razza nel punto della luce. Aggiungere un evento di tracciamento 'apertura_vista_3d' con id comune e un evento 'tocco_zona'. Partire con 3 comuni di prova.",
+  "come_misurarla": "Dopo 7 giorni guardare le aperture della vista 3D, il tempo medio di permanenza e le sessioni di ritorno dopo l'apertura. Contare commenti e condivisioni sui reel che mostrano un paese in 3D e confrontare con la media attuale dei reel e con i 21,5 follower ogni 1.000 di reach di 'ospiti_sera'.",
+  "traccia": "realismo",
+  "aperto": "2026-11-08",
+  "scadenza": "2026-11-10",
+  "stato": "da costruire"
+ }
+}

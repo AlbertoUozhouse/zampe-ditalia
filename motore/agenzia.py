@@ -11,7 +11,7 @@ Chiavi solo nei Secrets di GitHub: OPENAI_API_KEY (Direttore), ANTHROPIC_API_KEY
 non blocca la produzione: si registra «Direttore non collegato» e il reel esce come prima.
 """
 import base64, json, os, re, subprocess, sys, time, urllib.error, urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -476,6 +476,20 @@ con quello che abbiamo, con il primo passo tecnico concreto. Rispondi solo JSON:
 TRACCIA = {"Giochi nuovi": "gioco", "Meccaniche di gioco": "gioco", "Fattibilità tecnica": "gioco", "Realismo degli animali": "realismo",
            "Realismo della mappa e del 3D": "realismo", "Esperimenti misurabili": "realismo", "Nuovi stili di reel": "reel", "Riprese e montaggio diversi": "reel", "Suono e musica nuovi": "reel"}
 
+INNOVA_PASSO = """Sei «{ruolo}» nel reparto Innovazione di Zampe d'Italia. La tua traccia «{traccia}» ha un CANTIERE aperto (lo trovi sotto): un'idea già scelta
+che va messa online entro la scadenza. Niente idee nuove: scrivi il PROSSIMO passo concreto per finirla, dal punto di vista della tua mansione,
+usando solo file e materiali che esistono (sito in docs/, motore in motore/, reel in reel/), senza spese e senza follower finti. Se il cantiere è in ritardo, proponi come tagliarlo
+per uscire domani con una versione più piccola ma bella. Rispondi solo JSON: {{"passo": "cosa fare, 1-2 frasi", "file": ["percorsi"], "fatto_quando": "come si vede che è finito"}}"""
+
+def cantieri():
+    f = DATI / "cantieri.json"
+    return json.loads(f.read_text()) if f.exists() else {}
+
+def salva_cantieri(c):
+    DATI.mkdir(parents=True, exist_ok=True)
+    for v in c.values(): v["passi_proposti"] = (v.get("passi_proposti") or [])[-12:]
+    (DATI / "cantieri.json").write_text(json.dumps(c, ensure_ascii=False, indent=1) + "\n")
+
 def innovazione_giorno():
     """Ogni mattina (rendimento.yml) l'Innovazione inventa: 9 idee, il capo ne sceglie una da provare (docs/data/agenzia/innovazione.json).
     Il controllo quotidiano la legge e, se è fattibile e rispetta le regole, la mette in produzione (una novità alla volta)."""
@@ -487,19 +501,38 @@ def innovazione_giorno():
               "eventi_fatti": ["Re degli animali d'Italia", "fuochi a 2.000 follower", "star del giorno con foto dei follower", "porta 2 amici"],
               "progetto": progetto_in_breve(), "indicazione_crescita": json.loads((DATI / "crescita.json").read_text()) if (DATI / "crescita.json").exists() else None,
               "idee_gia_proposte": [y.get("idea") for x in (json.loads((DATI / "innovazione.json").read_text()) if (DATI / "innovazione.json").exists() else []) for y in [x.get(k) or {} for k in ("scelta", "gioco", "reel", "realismo")] if y.get("idea")][-30:]}
-    testo = json.dumps(esiste, ensure_ascii=False)[:20000]
     oggi = datetime.now(timezone.utc).date().isoformat()
     if (DATI / f"sessioni/innovazione-{oggi}.json").exists(): return  # una volta al giorno
+    # 8/11 Alberto: «l'innovazione deve accelerare». Ogni idea scelta apre un CANTIERE con scadenza 48 ore: finché è aperto,
+    # quella traccia non sceglie altre idee, e le 3 persone della traccia scrivono i passi per finirlo (il cantiere delle 14 lo costruisce).
+    can = cantieri()
+    aperti = {k: v for k, v in can.items() if v.get("stato") in ("da costruire", "in costruzione")}
+    for v in aperti.values():
+        if v.get("scadenza", "9") < oggi: v["in_ritardo"] = True
+    esiste["cantieri_aperti"] = aperti
+    testo = json.dumps(esiste, ensure_ascii=False)[:20000]
     S = Sessione(f"innovazione-{oggi}", "innovazione del giorno")
     pers = ufficio_reparto("innovazione")[1:]
     idee = []
     with ThreadPoolExecutor(4) as ex:
         # 8/11: col solo invito sceglievano tutti «reel»; ogni mansione ha la sua traccia (3 gioco, 3 realismo, 3 reel)
-        for p, (r, t) in zip(pers, ex.map(lambda p: lavora(INNOVA.format(ruolo=p["ruolo"]) + f"\nLa tua traccia è «{TRACCIA.get(p['ruolo'], 'reel')}»: proponi un'idea solo in questa traccia.", testo), pers)):
+        def compito(p):
+            tr = TRACCIA.get(p["ruolo"], "reel")
+            if tr in aperti: return lavora(INNOVA_PASSO.format(ruolo=p["ruolo"], traccia=tr), json.dumps(aperti[tr], ensure_ascii=False) + "\n\n" + testo)
+            return lavora(INNOVA.format(ruolo=p["ruolo"]) + f"\nLa tua traccia è «{tr}»: proponi un'idea solo in questa traccia.", testo)
+        for p, (r, t) in zip(pers, ex.map(compito, pers)):
             S.d["token_persone"] = S.d.get("token_persone", 0) + t
+            if r and TRACCIA.get(p["ruolo"], "reel") in aperti:
+                tr = TRACCIA.get(p["ruolo"], "reel"); aperti[tr].setdefault("passi_proposti", []).append({"giorno": oggi, "ruolo": p["ruolo"], **r})
+                S.d["scambi"].append({"t": _ora(), "da": p["id"], "a": "innovazione-1", "tipo": "proposta", "testo": f"Cantiere «{aperti[tr].get('idea', '')}»: {r.get('passo', '')}"[:400], "dati": r}); continue
             if r: idee.append({"ruolo": p["ruolo"], **r}); S.d["scambi"].append({"t": _ora(), "da": p["id"], "a": "innovazione-1", "tipo": "proposta", "testo": f"{r.get('idea', '')}: {r.get('come_funziona', '')}"[:400], "dati": r})
-    d, t = lavora(INNOVA_CAPO, json.dumps(idee, ensure_ascii=False), CLAUDE)
+    liberi = [k for k in ("gioco", "reel", "realismo") if k not in aperti]
+    d, t = (lavora(INNOVA_CAPO + f"\nScegli SOLO per queste tracce (le altre hanno un cantiere aperto): {', '.join(liberi)}.", json.dumps(idee, ensure_ascii=False), CLAUDE) if liberi and idee else ({}, 0))
     S.d["token_persone"] = S.d.get("token_persone", 0) + t
+    scad = (datetime.now(timezone.utc).date() + timedelta(days=2)).isoformat()
+    for k in liberi:
+        if (d or {}).get(k, {}).get("idea"): can[k] = {**d[k], "traccia": k, "aperto": oggi, "scadenza": scad, "stato": "da costruire"}
+    salva_cantieri(can)
     if d:
         S.scrivi("innovazione-1", "direzione-1", "decisione", " · ".join(f"{k.upper()}: «{(d.get(k) or {}).get('idea', '')}» (primo passo: {(d.get(k) or {}).get('primo_passo', '')})" for k in ("gioco", "reel", "realismo")), d)
         reg = DATI / "innovazione.json"; storia = json.loads(reg.read_text()) if reg.exists() else []
@@ -512,4 +545,9 @@ if __name__ == "__main__":
     elif fase == "revisione": sys.exit(revisione(*sys.argv[2:5]))
     elif fase == "crescita": crescita_giorno()
     elif fase == "innovazione": innovazione_giorno()
+    elif fase == "cantiere":  # agenzia.py cantiere <gioco|reel|realismo> <in costruzione|online|scartato> [dove si vede / perché]
+        c = cantieri(); v = c[sys.argv[2]]; v["stato"] = sys.argv[3]; v["aggiornato"] = datetime.now(timezone.utc).date().isoformat()
+        if len(sys.argv) > 4: v["nota"] = sys.argv[4]
+        if sys.argv[3] == "online": v["online_dal"] = v["aggiornato"]
+        salva_cantieri(c)
     elif fase == "ufficio": DATI.mkdir(parents=True, exist_ok=True); (DATI / "ufficio.json").write_text(json.dumps(ufficio(), ensure_ascii=False) + "\n")

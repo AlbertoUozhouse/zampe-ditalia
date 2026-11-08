@@ -91,6 +91,13 @@
   }
   $("#sess").onchange = e => scegli(e.target.value);
   $("#apriSess").onclick = sessione;
+  // Cantieri dell'Innovazione: ogni idea scelta va online entro 48 ore (docs/data/agenzia/cantieri.json)
+  $("#apriCan").onclick = async () => {
+    const C = await json(BASE + "cantieri.json").catch(() => ({})), T = { gioco: "🎮 Gioco", reel: "🎬 Reel", realismo: "🌄 Realismo" };
+    apri(`<h2>Cantieri Innovazione</h2><p class="chi">Ogni idea scelta va online entro 48 ore; finché il cantiere è aperto la traccia non sceglie idee nuove.</p>${Object.entries(C).map(([k, v]) =>
+      `<div class="voce decisione"><b>${T[k] || esc(k)} · ${esc(v.stato)}${v.in_ritardo ? " · IN RITARDO" : ""} · aperto ${esc(v.aperto)} · scadenza ${esc(v.scadenza)}</b><p><b>${esc(v.idea)}</b>: ${esc(v.come_funziona)}</p>${
+        v.nota ? `<p>${esc(v.nota)}</p>` : ""}${(v.passi_proposti || []).length ? `<ul class="difetti">${v.passi_proposti.map(x => `<li>${esc(x.ruolo)}: ${esc(x.passo)}</li>`).join("")}</ul>` : ""}</div>`).join("") || `<p class="vuoto">Nessun cantiere aperto.</p>`}`);
+  };
   $("#mOp").onclick = () => { DEMO = false; $("#mOp").setAttribute("aria-selected", "true"); $("#mDemo").setAttribute("aria-selected", "false"); carica(); };
   $("#mDemo").onclick = () => { DEMO = true; $("#mDemo").setAttribute("aria-selected", "true"); $("#mOp").setAttribute("aria-selected", "false"); carica(); };
   carica();
