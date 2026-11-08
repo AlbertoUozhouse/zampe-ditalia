@@ -473,6 +473,9 @@ INNOVA_CAPO = """Sei il Capo innovazione di Zampe d'Italia. Leggi le idee delle 
 con quello che abbiamo, con il primo passo tecnico concreto. Rispondi solo JSON:
 {"gioco": {"idea": "...", "come_funziona": "...", "primo_passo": "...", "come_misurarla": "..."}, "reel": {...stessi campi}, "realismo": {...stessi campi}, "perche": "una frase"}"""
 
+TRACCIA = {"Giochi nuovi": "gioco", "Meccaniche di gioco": "gioco", "Fattibilità tecnica": "gioco", "Realismo degli animali": "realismo",
+           "Realismo della mappa e del 3D": "realismo", "Esperimenti misurabili": "realismo", "Nuovi stili di reel": "reel", "Riprese e montaggio diversi": "reel", "Suono e musica nuovi": "reel"}
+
 def innovazione_giorno():
     """Ogni mattina (rendimento.yml) l'Innovazione inventa: 9 idee, il capo ne sceglie una da provare (docs/data/agenzia/innovazione.json).
     Il controllo quotidiano la legge e, se è fattibile e rispetta le regole, la mette in produzione (una novità alla volta)."""
@@ -491,7 +494,8 @@ def innovazione_giorno():
     pers = ufficio_reparto("innovazione")[1:]
     idee = []
     with ThreadPoolExecutor(4) as ex:
-        for p, (r, t) in zip(pers, ex.map(lambda p: lavora(INNOVA.format(ruolo=p["ruolo"]), testo), pers)):
+        # 8/11: col solo invito sceglievano tutti «reel»; ogni mansione ha la sua traccia (3 gioco, 3 realismo, 3 reel)
+        for p, (r, t) in zip(pers, ex.map(lambda p: lavora(INNOVA.format(ruolo=p["ruolo"]) + f"\nLa tua traccia è «{TRACCIA.get(p['ruolo'], 'reel')}»: proponi un'idea solo in questa traccia.", testo), pers)):
             S.d["token_persone"] = S.d.get("token_persone", 0) + t
             if r: idee.append({"ruolo": p["ruolo"], **r}); S.d["scambi"].append({"t": _ora(), "da": p["id"], "a": "innovazione-1", "tipo": "proposta", "testo": f"{r.get('idea', '')}: {r.get('come_funziona', '')}"[:400], "dati": r})
     d, t = lavora(INNOVA_CAPO, json.dumps(idee, ensure_ascii=False), CLAUDE)
