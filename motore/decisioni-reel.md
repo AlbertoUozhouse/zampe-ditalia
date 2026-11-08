@@ -230,3 +230,11 @@ Il Re del 5/11: 652 views e 121 commenti ogni 1.000 (record). Oggi: 13:00 amici,
 - 2026-10-31-1334-nomi: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
 - 2026-10-31-1505-presidente: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
 - 2026-10-31-1636-derby: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+## 8/11/2026 — controllo del mattino
+
+Sito: GitHub Pages pubblica in meno di un minuto (docs 92 MB). Follower 1.736 (+21 il 7/11, +13 stamattina); luci nuove nelle 24 ore: 25.
+Reel del 7/11: 3 previsti (amici 13, prima_luce 18, ospiti_sera 21) e 3 pubblicati, più l'incoronazione recuperata alle 11:17.
+Primi follower attribuiti (finestra fino al reel dopo, dati non ancora maturi): prima_luce di Atri 0 su 232 account; ospiti_sera 7 su 286 (24,5 ogni 1.000).
+Centro Agenzia: 1 sessione, «senza direttore» (OpenAI risponde 401: chiave da sostituire, Alberto avvisato il 7/11). Coppa delle Zampe: turno 1, ancora 0 punti (il reel di apertura esce stasera alle 21).
+Nessun cambiamento oggi.
