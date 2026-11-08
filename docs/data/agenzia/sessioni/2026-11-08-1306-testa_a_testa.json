@@ -1,0 +1,1830 @@
+{
+ "id": "2026-11-08-1306-testa_a_testa",
+ "formato": "testa_a_testa",
+ "modalita": "operativa",
+ "inizio": "2026-11-08T12:06:14+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-08T12:06:14+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "testa_a_testa",
+     "id": "2026-11-08-1306-testa_a_testa",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta.",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Pari: 11 a 11. Il prossimo animale decide chi passa avanti.",
+       "scena": "duello"
+      },
+      {
+       "i": 2,
+       "testo": "Sei di Vicenza o di Verona? Commenta città e nome del tuo animale!",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": "reel/assets/thor-apertura.mp4",
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "⚔️ Verona 11 – 11 Vicenza: due comuni a 45 km, e la sfida è aperta!\n\nOgni animale accende una luce nella sua città sulla mappa dell'Italia di notte (link in bio).\n👇 Commenta la tua città e il nome del tuo cane o gatto (per esempio «Vicenza, Luna, cane»): si accende col tuo @ e conta per la tua città.\n👥 Tagga chi è di lì!\n\nVoce generata con IA.\n\n#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici #verona #vicenza",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       11.269749999999998,
+       45.49295
+      ],
+      "sopra": "TESTA A TESTA",
+      "grande": "11 – 11",
+      "sotto": "Verona vs Vicenza"
+     }
+    }
+   }
+  },
+  {
+   "t": "2026-11-08T12:06:17+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Chi vive o è cresciuto a Verona o a Vicenza e ha un cane o un gatto: gente che ama la rivalità tra le due città venete e ha voglia di difendere la propria. · Gancio: Verona 11, Vicenza 11: 45 chilometri e la sfida è in parità. Da che parte stai? · Motivo per seguire: Su Zampe d'Italia il tuo cane o gatto accende una luce nella tua città sulla mappa dell'Italia di notte, e la tua città può vincere le sfide contro le vicine. · Chiusura: Pari 11 a 11. Segui Zampe d'Italia: il prossimo animale decide chi passa avanti.",
+   "dati": {
+    "pubblico": "Chi vive o è cresciuto a Verona o a Vicenza e ha un cane o un gatto: gente che ama la rivalità tra le due città venete e ha voglia di difendere la propria.",
+    "gancio": "Verona 11, Vicenza 11: 45 chilometri e la sfida è in parità. Da che parte stai?",
+    "motivo_per_seguire": "Su Zampe d'Italia il tuo cane o gatto accende una luce nella tua città sulla mappa dell'Italia di notte, e la tua città può vincere le sfide contro le vicine.",
+    "chiusura": "Pari 11 a 11. Segui Zampe d'Italia: il prossimo animale decide chi passa avanti.",
+    "perche": "Una rivalità di campanile in parità spinge a schierarsi e commentare, e chi vuole vedere come finisce ha un buon motivo per seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-08T12:06:17+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "testa_a_testa",
+     "id": "2026-11-08-1306-testa_a_testa",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta.",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Pari: 11 a 11. Il prossimo animale decide chi passa avanti.",
+       "scena": "duello"
+      },
+      {
+       "i": 2,
+       "testo": "Sei di Vicenza o di Verona? Commenta città e nome del tuo animale!",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": "reel/assets/thor-apertura.mp4",
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "⚔️ Verona 11 – 11 Vicenza: due comuni a 45 km, e la sfida è aperta!\n\nOgni animale accende una luce nella sua città sulla mappa dell'Italia di notte (link in bio).\n👇 Commenta la tua città e il nome del tuo cane o gatto (per esempio «Vicenza, Luna, cane»): si accende col tuo @ e conta per la tua città.\n👥 Tagga chi è di lì!\n\nVoce generata con IA.\n\n#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici #verona #vicenza",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       11.269749999999998,
+       45.49295
+      ],
+      "sopra": "TESTA A TESTA",
+      "grande": "11 – 11",
+      "sotto": "Verona vs Vicenza"
+     }
+    },
+    "mappa": [
+     {
+      "scena": 0,
+      "etichetta": "Verona · 11",
+      "lat": 45.4384,
+      "lng": 10.9935,
+      "luce": "già accesa",
+      "scena_dal_secondo": null,
+      "scena_al_secondo": null,
+      "comune_sulla_mappa": "Verona",
+      "animali_li_in_ordine_di_arrivo": [
+       "Duvan (@samue_dimash, 2026-10-27)",
+       "Polpeto (@bonazz21, 2026-10-27)",
+       "Luna (@leardini_pietro, 2026-10-27)",
+       "Lupy (@fili_caccia14, 2026-10-28)",
+       "Willy (@fili_caccia14, 2026-10-28)"
+      ],
+      "luci_li_oggi": 12
+     },
+     {
+      "scena": 0,
+      "etichetta": "Vicenza · 11",
+      "lat": 45.5475,
+      "lng": 11.546,
+      "luce": "già accesa",
+      "scena_dal_secondo": null,
+      "scena_al_secondo": null,
+      "comune_sulla_mappa": "Vicenza",
+      "animali_li_in_ordine_di_arrivo": [
+       "Luna (@gio_zock22, 2026-10-27)",
+       "Zelda (@gio_zock22, 2026-10-27)",
+       "Perla (@sofiapellegrino5public, 2026-10-27)",
+       "Birba (@aurora.stefani5, 2026-10-27)",
+       "Luna (@aurora.stefani5, 2026-10-27)"
+      ],
+      "luci_li_oggi": 12
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-08T12:06:18+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-08T12:07:47+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.1 LUFS, picco -1.0 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.1,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -15.9,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:47+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (18.2 s): ti mando 19 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 18.2,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ]
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:50+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -15.9 dB, sotto il target complessivo di -14 LUFS (con la voce generata e la sigla che partono piano l'apertura risulta più debole). Inoltre al secondo 4.4 la frase 'Verona contro Vicenza' arriva mentre la luce sulla mappa è già accesa dal secondo 5.13 del reel,",
+   "dati": {
+    "controllato": "Primi 5 secondi del reel: copione, trascrizione coi secondi, coordinate e conteggi della mappa, misure audio (LUFS, picco, volume primi 5s) rispetto all'obiettivo.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il volume medio dei primi 5 secondi è -15.9 dB, sotto il target complessivo di -14 LUFS (con la voce generata e la sigla che partono piano l'apertura risulta più debole). Inoltre al secondo 4.4 la frase 'Verona contro Vicenza' arriva mentre la luce sulla mappa è già accesa dal secondo 5.13 del reel, quindi l'aggancio visivo-verbale è leggermente in ritardo rispetto all'etichetta 'Verona · 11'.",
+    "correzione": "Alzare il gain dei primi 5 secondi di circa 2 dB (mantenendo picco sotto -1 dBFS) e anticipare l'accensione della luce o la comparsa dell'etichetta di circa 0.5-1 s, così da sincronizzarla con 'Verona contro Vicenza' al secondo 4.4.",
+    "idea": "Per i prossimi testa a testa, mostrare nei primi 2 secondi il conteggio aggiornato (es. 11–11) già in sovrimpressione, così lo spettatore capisce subito la posta in gioco prima della frase."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:50+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La frase «Verona contro Vicenza: 45 chilometri» viene detta al secondo 4.4, mentre la scena della luce nei dati va da 4.53 a 8.68: il voiceover parte prima che la scena sia attiva. Inoltre, nella didascalia i due comuni sono indicati a «45 km», distanza che non risulta dai dati verificati della mapp",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati della mappa (coordinate e conteggi 11–11), misure audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase «Verona contro Vicenza: 45 chilometri» viene detta al secondo 4.4, mentre la scena della luce nei dati va da 4.53 a 8.68: il voiceover parte prima che la scena sia attiva. Inoltre, nella didascalia i due comuni sono indicati a «45 km», distanza che non risulta dai dati verificati della mappa, quindi non posso confermarla. Le misure audio sono nella norma (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio), ma il volume medio dei primi 5 secondi (-15.9 dB) è sotto il livello medio complessivo, da verificare.",
+    "correzione": "Spostare la frase di apertura a partire da 4.53 s o allineare la scena della luce al secondo 4.4; verificare la distanza di 45 km con una fonte prima di pubblicare (oppure toglierla); controllare che i primi 5 secondi siano abbastanza forti sul volume.",
+    "idea": "Per i prossimi reel testa a testa, indicare la distanza tra i comuni solo quando è calcolata dalle coordinate della mappa, così il numero è sempre verificabile."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:51+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La frase d'apertura 'Verona contro Vicenza: 45 chilometri' compare a 4.4 s, mentre la scena della luce (dati mappa) parte a 4.53 s e il reel dura 18.2 s: il testo arriva quando la mappa si sta appena inquadrando, quindi chi guarda senza audio perde il contesto. Inoltre la fascia '💬 Commenta città e ",
+   "dati": {
+    "controllato": "Leggibilità da telefono del reel testa_a_testa: copertina, sottotitoli/fascia, tempi della trascrizione, numeri su mappa e didascalia, coerenza con i dati verificati.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase d'apertura 'Verona contro Vicenza: 45 chilometri' compare a 4.4 s, mentre la scena della luce (dati mappa) parte a 4.53 s e il reel dura 18.2 s: il testo arriva quando la mappa si sta appena inquadrando, quindi chi guarda senza audio perde il contesto. Inoltre la fascia '💬 Commenta città e nome del tuo animale' non risulta nei tempi della trascrizione. Il conteggio 'Verona · 11' e 'Vicenza · 11' e' coerente con i dati, ma i 'luci_li_oggi: 12' per entrambe le città non è verificabile nei materiali come conteggio giornaliero della pagina e non è citato nel copione (non da segnalare come errore, solo da confermare).",
+    "correzione": "Anticipare la frase 'Verona contro Vicenza' a circa 4.5 s, in sincronia con l'inquadratura sulla mappa, e mostrare la fascia di commento a schermo nel secondo in cui viene pronunciata 'Commenta città e nome del tuo animale' (circa 14.1-15.8 s), con testo di almeno 40 px per la lettura da telefono. Verificare che l'audio rispetti l'obiettivo di -14 LUFS (misurati -14.1: ok) e picco sotto -1 dBFS (misurato -1.0: al limite, consigliato -1.5 per sicurezza).",
+    "idea": "Per i prossimi reel testa_a_testa, usare due etichette di città con il conteggio aggiornato a ogni luce, così lo spettatore vede il punteggio cambiare in tempo reale mentre ascolta il copione."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:51+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Verona contro Vicenza: 45 chilometri' compare a 4.4 s, ma la scena della mappa (luce) va dal secondo 4.53 all'8.68; la prima parola arriva prima che la scena inizi. Inoltre la didascalia dice 'Ogni animale accende una luce nella sua città', mentre i dati mostrano 12 luci oggi per ciascuna ",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, coordinate e luci di Verona e Vicenza sulla mappa, misure audio, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase 'Verona contro Vicenza: 45 chilometri' compare a 4.4 s, ma la scena della mappa (luce) va dal secondo 4.53 all'8.68; la prima parola arriva prima che la scena inizi. Inoltre la didascalia dice 'Ogni animale accende una luce nella sua città', mentre i dati mostrano 12 luci oggi per ciascuna città e nessun dato sulla distanza di 45 km, che non è verificabile dai materiali (le coordinate danno circa 45 km in linea d'aria, quindi il numero è plausibile ma non documentato). Infine l'audio è a -14.1 LUFS con picco -1.0 dBFS e volume dei primi 5 s a -15.9 dB, quindi nella norma, ma la voce è generata con IA e la didascalia la dichiara correttamente.",
+    "correzione": "Allineare l'inizio della frase 'Verona contro Vicenza' alla scena della mappa (dal secondo 4.53), oppure anticipare la scena della luce; verificare o rimuovere la cifra '45 chilometri' se non confermata; precisare nella didascalia che le luci contate sono quelle di oggi.",
+    "idea": "Per i prossimi testa a testa, mostrare sulla mappa il contatore di luci giornaliero di ciascuna città accanto al punteggio, così il numero nel video corrisponde ai dati visibili."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:52+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Apertura del reel testa a testa Verona-Vicenza: sincronia tra frase iniziale, secondi della trascrizione, scena della mappa e livelli audio.",
+   "dati": {
+    "controllato": "Apertura del reel testa a testa Verona-Vicenza: sincronia tra frase iniziale, secondi della trascrizione, scena della mappa e livelli audio.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel testa a testa, aprire con la luce già accesa nelle due città nei primi 2 secondi (la scena luce parte a 4.53 s, quindi lo spazio iniziale è vuoto) e, se possibile, mostrare il conteggio 11 – 11 già nel primo fotogramma per agganciare subito lo spettatore."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:54+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La luce di Verona e Vicenza è indicata come 'già accesa al secondo 5.13', ma la scena della mappa (scena 0) inizia a 4.53 s e la frase 'Verona contro Vicenza' arriva a 4.4 s: l'inquadratura sulle due città è corretta solo se la luce appare dopo l'inizio della scena; il dato dice che è già accesa a 5",
+   "dati": {
+    "controllato": "Scelta dell'inquadratura: coerenza tra copione, scene e dati mappa (Verona/Vicenza, luci, 11–11) e tempi delle scene rispetto alla trascrizione.",
+    "esito": "segnalo",
+    "secondo": 5.13,
+    "problema": "La luce di Verona e Vicenza è indicata come 'già accesa al secondo 5.13', ma la scena della mappa (scena 0) inizia a 4.53 s e la frase 'Verona contro Vicenza' arriva a 4.4 s: l'inquadratura sulle due città è corretta solo se la luce appare dopo l'inizio della scena; il dato dice che è già accesa a 5.13, quindi nel primo mezzo secondo della scena la mappa non mostra ancora le luci mentre il copione le nomina. Inoltre le frasi 'Pari: 11 a 11' (8.6 s) e 'Il prossimo animale decide' (10.7 s) cadono in una scena 'duello' che nei dati non compare come inquadratura mappa separata: manca il dato di scena per il duello.",
+    "correzione": "Far comparire le due luci (Verona e Vicenza) entro 4.4–4.6 s oppure spostare l'accensione a inizio scena; aggiungere nei materiali la scena 'duello' (8.6–12.4 s) con la sua inquadratura e verificare che il contatore 11–11 sia visibile in quel tratto.",
+    "idea": "Per i prossimi testa a testa, inserire nel brief per ogni frase la scena di inquadratura esplicita con i secondi di inizio e fine, così la coerenza luce/voce è verificabile senza ricostruirla."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:54+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il dato «45 chilometri» tra Verona e Vicenza non è verificabile dai materiali forniti (nei dati ci sono solo le coordinate, da cui non ricavo la distanza). Inoltre le misure audio sono solo nei primi 5 secondi: l'obiettivo di 'niente silenzi lunghi' non è confermabile oltre; l'audio è comunque confo",
+   "dati": {
+    "controllato": "Ho verificato in Direzione video il copione e le scene: trascrizione coi secondi, coordinate e comuni sulla mappa, misure audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio lungo, primi 5s a -15.9 dB), coerenza tra frasi, scene e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato «45 chilometri» tra Verona e Vicenza non è verificabile dai materiali forniti (nei dati ci sono solo le coordinate, da cui non ricavo la distanza). Inoltre le misure audio sono solo nei primi 5 secondi: l'obiettivo di 'niente silenzi lunghi' non è confermabile oltre; l'audio è comunque conforme a -14 LUFS e sotto -1 dBFS. Il volume medio dei primi 5s (-15.9 dB) è leggermente sotto il resto, ma non critico.",
+    "correzione": "Verificare la distanza reale (circa 45 km in linea d'aria tra i due comuni, da confermare con uno strumento di misura prima della pubblicazione) oppure sostituire il numero con una formulazione non numerica, ad esempio «a due passi l'una dall'altra». Controllare l'audio sull'intera durata del reel.",
+    "idea": "Per i prossimi testa a testa, mostrare in overlay la distanza calcolata sulla mappa e far comparire il conteggio delle luci a metà video, così lo spettatore segue la sfida senza dover leggere la didascalia."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:54+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La frase d'apertura \"Verona contro Vicenza: 45 chilometri\" inizia a 4.4s, ma la scena luce va da 4.53s a 8.68s e la mappa mostra le luci già accese al 5.13s: il primo secondo di voce (4.4s) cade prima dell'inquadratura della mappa e l'apertura del reel resta senza immagine per la frase iniziale. Ino",
+   "dati": {
+    "controllato": "Ho verificato tempi della trascrizione rispetto alla scena luce/duello, coordinate e conteggi della mappa per Verona e Vicenza, misure audio e coerenza di didascalia e frasi del brief.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase d'apertura \"Verona contro Vicenza: 45 chilometri\" inizia a 4.4s, ma la scena luce va da 4.53s a 8.68s e la mappa mostra le luci già accese al 5.13s: il primo secondo di voce (4.4s) cade prima dell'inquadratura della mappa e l'apertura del reel resta senza immagine per la frase iniziale. Inoltre la misura audio dei primi 5s è -15.9 dB, sotto l'obiettivo di -14 LUFS per l'apertura, e la didascalia dichiara voce generata con IA, cosa da tenere a mente per il tono. I dati di conteggio (11 a 11, 12 luci oggi per entrambe) e la distanza di 45 km non sono verificabili dai materiali e non li ho confermati.",
+    "correzione": "Allineare l'inizio della frase d'apertura alla scena luce (spostare la voce a ~4.5s o anticipare la scena luce a ~4.0s), alzare il volume dei primi 5 secondi di circa 2 dB per arrivare vicino a -14 LUFS, e verificare manualmente la distanza di 45 km e il conteggio 11–11 prima della pubblicazione.",
+    "idea": "Aprire il reel con la mappa già accesa su entrambe le città nei primi 2 secondi, così la sfida è visibile prima ancora che parta la voce."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:55+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio del testo a schermo non torna con i dati: alla frase 'Pari: 11 a 11' la mappa riporta 11 luci per Verona e 11 per Vicenza, ma nella trascrizione e nel brief è detto 'prossimo animale decide chi passa avanti' come se la sfida fosse ancora da decidere, mentre la didascalia dice 'Verona 11",
+   "dati": {
+    "controllato": "Sincronia tra trascrizione, scene e dati della mappa (Verona e Vicenza, 11 luci ciascuna, luci accese al secondo 5.13), coerenza delle frasi del brief con la trascrizione, didascalia e fascia commenti.",
+    "esito": "segnalo",
+    "secondo": 15.8,
+    "problema": "Il conteggio del testo a schermo non torna con i dati: alla frase 'Pari: 11 a 11' la mappa riporta 11 luci per Verona e 11 per Vicenza, ma nella trascrizione e nel brief è detto 'prossimo animale decide chi passa avanti' come se la sfida fosse ancora da decidere, mentre la didascalia dice 'Verona 11 – 11 Vicenza' e la copertina 'Verona vs Vicenza'. Inoltre 'dati_mappa' riporta 'luci_li_oggi: 12' per entrambe le città, che non corrisponde alle 11 del punteggio: il dato 'oggi' è incoerente con la sfida di 11 a 11. Infine l'audio è a -15.9 dB nei primi 5 secondi, sotto la soglia di volume medio che il progetto indica come obiettivo per l'apertura, anche se il LUFS complessivo (-14.1) e il picco (-1.0) sono nei limiti.",
+    "correzione": "Allineare il conteggio: verificare se il punteggio di riferimento è 11 a 11 o 12 a 12 (luci_li_oggi) e usare lo stesso numero in trascrizione, brief, didascalia e copertina. Verificare che le 11 luci elencate per ciascuna città corrispondano al totale. Alzare il volume dei primi 5 secondi di circa 2 dB per portarli verso l'obiettivo del progetto.",
+    "idea": "Mostrare a schermo il conteggio aggiornato delle luci di ogni città nel momento in cui un nuovo animale accende la luce, così il pubblico segue la sfida in tempo reale."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:57+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 8.6 la trascrizione dice «Pari: 11 a 11», ma la scena 'duello' del brief non ha un riscontro nei dati di scena: la scena 0 (luce) copre 4.53–8.68 s, quindi la frase 'Pari: 11 a 11' cade ancora nella scena luce mentre il brief la assegna a 'duello'. Inoltre la frase 'Verona contro Vicenza:",
+   "dati": {
+    "controllato": "Assemblaggio scene: sincronia testo/scena sui secondi, luci e dati mappa (Verona 11, Vicenza 11, 45 km), livelli audio, fascia e didascalia rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 8.6,
+    "problema": "Al secondo 8.6 la trascrizione dice «Pari: 11 a 11», ma la scena 'duello' del brief non ha un riscontro nei dati di scena: la scena 0 (luce) copre 4.53–8.68 s, quindi la frase 'Pari: 11 a 11' cade ancora nella scena luce mentre il brief la assegna a 'duello'. Inoltre la frase 'Verona contro Vicenza: 45 chilometri' inizia a 4.4 s, prima dell'inizio dichiarato della scena luce (4.53 s), e la scena dati non dichiara una scena 'duello' né 'chiusura' separate. Il reel ha quindi solo una scena di dati, mentre il brief ne prevede tre. Anche l'audio è sotto l'obiettivo sulla partenza: volume medio dei primi 5 s a -15.9 dB, mentre l'integrato è a -14.1 LUFS, accettabile ma da verificare sull'apertura.",
+    "correzione": "Allineare le scene al brief: far partire la scena 'luce' a 4.4 s e far cominciare la scena 'duello' a 8.6 s, con i dati di scena separati (duello e chiusura) come previsto. Verificare il livello dei primi 5 s (portarlo vicino a -14 LUFS) e confermare le luci del 2026-10-27/28 come da dati verificati prima della pubblicazione.",
+    "idea": "Per i testa a testa, mostrare nella scena 'duello' solo i due ultimi animali arrivati in ciascuna città, così il pubblico vede subito chi sta spingendo il punteggio."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:57+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Verona contro Vicenza: 45 chilometri' al secondo 4.4 è nella scena della luce, ma nei materiali non c'è alcuna fonte per la distanza di 45 km tra i due comuni: il dato non è verificabile dai dati della mappa. Inoltre le luci risultano già accese al secondo 5.13 del reel, quindi la frase sul",
+   "dati": {
+    "controllato": "Ho verificato la scena 0 (luce Verona/Vicenza, 4.53–8.68 s), i dati mappa (coordinate, comuni, conteggi 11–11), la trascrizione e la sincronia con le frasi del brief, più le misure audio.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'Verona contro Vicenza: 45 chilometri' al secondo 4.4 è nella scena della luce, ma nei materiali non c'è alcuna fonte per la distanza di 45 km tra i due comuni: il dato non è verificabile dai dati della mappa. Inoltre le luci risultano già accese al secondo 5.13 del reel, quindi la frase sulla distanza va in onda mentre la luce appare; è un dettaglio di sincronia da allineare. Anche l'audio è al limite: il volume medio dei primi 5 s è -15.9 dB, sotto l'obiettivo di -14 LUFS per l'apertura.",
+    "correzione": "Verificare la distanza di 45 km con una fonte affidabile prima della pubblicazione, oppure toglierla dalla voce e dalla didascalia. Riallineare la frase 'Verona contro Vicenza' con l'accensione della luce (5.13 s). Alzare leggermente il volume dei primi 5 s per portarli verso -14 LUFS, mantenendo il picco sotto -1 dBFS.",
+    "idea": "Per i testa a testa, usare solo distanze o dati ricavabili dalla mappa (es. numero di luci per comune) o indicare la fonte della distanza nella didascalia."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:58+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio della trascrizione non coincide con i dati di mappa: i dati mostrano 5 animali per città (Verona e Vicenza, 5 ciascuna) e 12 luci oggi per entrambe, mentre il copione dice 11 a 11 e la didascalia dice 'Verona 11 – 11 Vicenza'. Inoltre il volume medio dei primi 5s (-15,9 dB) è sotto l'ob",
+   "dati": {
+    "controllato": "Sottotitoli del reel testa a testa: allineamento trascrizione/copione, timing delle frasi, misure audio (LUFS, picco, silenzi, volume primi 5s), coerenza del conteggio 11–11 con i dati mappa, presenza della voce IA dichiarata.",
+    "esito": "segnalo",
+    "secondo": 15.8,
+    "problema": "Il conteggio della trascrizione non coincide con i dati di mappa: i dati mostrano 5 animali per città (Verona e Vicenza, 5 ciascuna) e 12 luci oggi per entrambe, mentre il copione dice 11 a 11 e la didascalia dice 'Verona 11 – 11 Vicenza'. Inoltre il volume medio dei primi 5s (-15,9 dB) è sotto l'obiettivo di -14 LUFS per l'apertura, anche se il LUFS integrato (-14,1) è corretto. La trascrizione finisce a 15.8s ma la durata è 18.2s: gli ultimi 2.4s non hanno sottotitoli. Il link 'in bio' non è verificabile dai materiali.",
+    "correzione": "Verificare il conteggio ufficiale (11 o 12 luci per città) e allineare copione, didascalia e copertina al dato di mappa. Aggiungere i sottotitoli per 15.8–18.2s o estendere la trascrizione fino a fine reel. Alzare leggermente il volume dei primi 5s per avvicinarsi a -14 LUFS senza superare il picco di -1 dBFS.",
+    "idea": "Mostrare sulla mappa il conteggio aggiornato all'inizio del reel per rendere visibile il pareggio e aggiungere una fascia con il nome della città che sta vincendo a metà video."
+   }
+  },
+  {
+   "t": "2026-11-08T12:07:59+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La luce di Verona e Vicenza è già accesa al secondo 5.13, ma la frase sulla sfida parte solo a 4.4s e la fascia «Commenta città e nome del tuo animale» compare nel copione senza un tempo di inizio. Inoltre la fascia dovrebbe comparire mentre si chiede il commento (circa 14.1s-15.8s), e nei materiali",
+   "dati": {
+    "controllato": "Fascia in basso: tempi della fascia rispetto alla trascrizione, coerenza con la mappa, copione e didascalia, misure audio.",
+    "esito": "segnalo",
+    "secondo": 5.13,
+    "problema": "La luce di Verona e Vicenza è già accesa al secondo 5.13, ma la frase sulla sfida parte solo a 4.4s e la fascia «Commenta città e nome del tuo animale» compare nel copione senza un tempo di inizio. Inoltre la fascia dovrebbe comparire mentre si chiede il commento (circa 14.1s-15.8s), e nei materiali non c'è la sua posizione temporale esatta. Le misure audio sono a -14.1 LUFS e picco -1.0 dBFS, quindi entro l'obiettivo, con volume iniziale -15.9 dB sui primi 5s, accettabile.",
+    "correzione": "Far comparire la fascia «💬 Commenta città e nome del tuo animale 👇» da circa 14.1s fino a 15.8s (o fino a fine frase), in sincronia con «Sei di Vicenza o di Verona?». Verificare che la luce accesa a 5.13s coincida con la pronuncia di «45 chilometri».",
+    "idea": "Per i prossimi testa a testa, mostrare nella fascia il conteggio aggiornato delle luci (es. «Verona 11 – 11 Vicenza») così chi guarda vede subito il punteggio mentre commenta."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:00+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il comune di Verona è assegnato alla scena 0 con luce già accesa al secondo 5.13, ma la frase 'Verona contro Vicenza: 45 chilometri' inizia a 4.4 s e la scena va da 4.53 a 8.68: la luce compare sulla mappa quasi insieme alla frase, senza margine. Inoltre il volume medio dei primi 5 s è -15.9 dB, sot",
+   "dati": {
+    "controllato": "Durata, trascrizione coi secondi, sincronia tra frasi e scene della mappa, livelli audio (LUFS, picco, silenzi) rispetto all'obiettivo, lunghezza della fascia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il comune di Verona è assegnato alla scena 0 con luce già accesa al secondo 5.13, ma la frase 'Verona contro Vicenza: 45 chilometri' inizia a 4.4 s e la scena va da 4.53 a 8.68: la luce compare sulla mappa quasi insieme alla frase, senza margine. Inoltre il volume medio dei primi 5 s è -15.9 dB, sotto la fascia di -14 LUFS, e il picco di -1.0 dBFS è al limite. La fascia di chiusura è 'Commenta città e nome del tuo animale' e la frase finale dice 'Commenta città e nome del tuo animale!': coerente.",
+    "correzione": "Spostare l'accensione della luce di Verona e Vicenza a circa 5.0 s o allineare il testo alla comparsa, e alzare leggermente il volume dei primi 5 s (circa +2 dB) mantenendo il picco sotto -1 dBFS (eventualmente con un limitatore).",
+    "idea": "Per i prossimi testa a testa, inserire un conteggio animato dei punti nella fascia alta mentre la frase 'Pari: 11 a 11' viene detta, così il pareggio è visivo oltre che sonoro."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:00+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Verona contro Vicenza: 45 chilometri' è detta al secondo 4.4, ma la scena della luce (scena 0) parte dal secondo 4.53 e la luce si accende al 5.13: il testo sulla distanza compare prima che la mappa mostri le città. Inoltre la didascalia afferma che Verona e Vicenza sono a 45 km, dato non ",
+   "dati": {
+    "controllato": "Montaggio del reel testa_a_testa: trascrizione coi secondi, scene e luci sulla mappa, audio (LUFS, picco, silenzi), didascalia e coerenza dei dati Verona/Vicenza.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase 'Verona contro Vicenza: 45 chilometri' è detta al secondo 4.4, ma la scena della luce (scena 0) parte dal secondo 4.53 e la luce si accende al 5.13: il testo sulla distanza compare prima che la mappa mostri le città. Inoltre la didascalia afferma che Verona e Vicenza sono a 45 km, dato non presente nei materiali (le coordinate danno una distanza in linea d'aria diversa, circa 45 km non verificati). L'audio è a -14.1 LUFS ma il volume medio dei primi 5 secondi è -15.9 dB, quindi l'apertura è più bassa dell'obiettivo rispetto al resto.",
+    "correzione": "Allineare la frase 'Verona contro Vicenza' alla comparsa delle due luci (dal secondo 5.13), oppure ritardare la voce di circa 0.7 s; verificare la distanza tra i due comuni con una fonte prima di pubblicarla o toglierla dalla didascalia e dalla voce; alzare di circa 1-2 dB il volume dei primi 5 secondi per portarlo vicino a -14 LUFS.",
+    "idea": "Un reel di chiusura del duello che mostri il conteggio finale delle luci per ciascuna città, con la distanza verificata come dato in sovrimpressione."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:01+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Verona contro Vicenza: 45 chilometri' al secondo 4.4, ma l'apertura del brief (scena 'luce') e la mappa indicano che la luce di Verona e Vicenza si accende già al secondo 5.13: il testo sulla distanza coincide con la scena luce, quindi è accettabile. Il problema reale è l'audio",
+   "dati": {
+    "controllato": "Esportazione: durata, trascrizione coi secondi, coerenza dati mappa (Verona 11, Vicenza 11, 45 km), audio LUFS/picco/silenzi, frasi del brief e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La trascrizione dice 'Verona contro Vicenza: 45 chilometri' al secondo 4.4, ma l'apertura del brief (scena 'luce') e la mappa indicano che la luce di Verona e Vicenza si accende già al secondo 5.13: il testo sulla distanza coincide con la scena luce, quindi è accettabile. Il problema reale è l'audio: il volume medio dei primi 5 secondi è -15.9 dB, sotto l'obiettivo di -14 LUFS, e la didascalia dice 'Voce generata con IA' ma il brief non lo richiede per la fascia; inoltre la fascia 'Commenta città e nome del tuo animale' compare nel brief ma non nella trascrizione con i secondi, quindi non è verificabile la sua tempistica.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 2 dB per portarli verso -14 LUFS, mantenendo il picco sotto -1 dBFS; verificare che la fascia di chiusura sia sincronizzata con la frase 'Sei di Vicenza o di Verona?' (circa 14.1 s).",
+    "idea": "Per i testa a testa, inserire nel brief il conteggio aggiornato degli animali di ciascuna città e, quando una città supera l'altra, una frase che lo dichiari, così il duello resta vivo fino alla chiusura."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:02+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase «Verona contro Vicenza: 45 chilometri» è al secondo 4.4, ma il copione la assegna alla scena 'luce' che nei dati di mappa inizia al secondo 4.53 e finisce all'8.68. Le luci sono già accese al secondo 5.13, quindi la frase iniziale parla di distanza mentre la mappa mostra ",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati della mappa, misure audio e didascalia del reel Verona-Vicenza.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione la frase «Verona contro Vicenza: 45 chilometri» è al secondo 4.4, ma il copione la assegna alla scena 'luce' che nei dati di mappa inizia al secondo 4.53 e finisce all'8.68. Le luci sono già accese al secondo 5.13, quindi la frase iniziale parla di distanza mentre la mappa mostra le luci non ancora tutte visibili. Inoltre le misure audio sono da correggere: -14.1 LUFS è vicino all'obiettivo, ma il volume medio dei primi 5 secondi (-15.9 dB) è più basso del resto e l'apertura risulta debole.",
+    "correzione": "Far partire la frase 'Verona contro Vicenza' e l'accensione delle luci dallo stesso punto (4.53 s) e allineare la trascrizione. Alzare di circa 1-2 dB il volume dei primi 5 secondi per portarlo vicino a -14 LUFS, mantenendo il picco sotto -1 dBFS. Verificare che la didascalia non dica '45 km' come dato di mappa: la distanza va confermata da una fonte, non è nei dati forniti.",
+    "idea": "Aggiungere una scena di riepilogo finale con il conteggio aggiornato delle luci per città (ora 12 a 12 oggi) per rendere visibile il vincitore del testa a testa."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:03+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Verona · 11' e 'Vicenza · 11' non corrisponde ai 'luci_li_oggi' (12 per entrambe): il conteggio 11–11 nel copione e nella copertina è riferito a un momento diverso dal dato odierno. Inoltre la trascrizione dice 'Verona contro Vicenza' a 4.4s, ma la scena della mappa parte dal secondo 4.53: ",
+   "dati": {
+    "controllato": "Ho verificato nel montaggio i secondi della trascrizione rispetto alle scene, la coerenza tra copione, didascalia e dati della mappa (Verona e Vicenza 11 luci ciascuna nei dati, 12 oggi), e le misure audio.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'Verona · 11' e 'Vicenza · 11' non corrisponde ai 'luci_li_oggi' (12 per entrambe): il conteggio 11–11 nel copione e nella copertina è riferito a un momento diverso dal dato odierno. Inoltre la trascrizione dice 'Verona contro Vicenza' a 4.4s, ma la scena della mappa parte dal secondo 4.53: la frase va bene solo se la luce è visibile dall'inizio della scena. Audio: LUFS -14.1 e picco -1.0 dBFS rispettano l'obiettivo; il volume medio dei primi 5s (-15.9 dB) è più basso del resto ma senza silenzi lunghi.",
+    "correzione": "Allineare il punteggio mostrato (11–11) al dato corrente della mappa oppure aggiornare il numero a 12–12 in copione, didascalia e copertina; verificare che la scena luce parta prima o insieme alla frase a 4.4s; facoltativamente alzare di qualche dB i primi 5 secondi.",
+    "idea": "Aggiungere in fondo al reel un conteggio automatico aggiornato (es. 'Aggiornato alle ore X') per evitare che i numeri del testo restino indietro rispetto alla mappa."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:03+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nei primi 2 secondi non compare nulla: la trascrizione parte a 4.4s, quindi il gancio («Verona contro Vicenza: 45 chilometri») arriva tardi. Inoltre la scena 0 (luce) inizia a 4.53s, dopo l'apertura, e la luce risulta già accesa al 5.13s: il pubblico non vede la sfida nei primi secondi, quando decid",
+   "dati": {
+    "controllato": "Apertura del copione (primi 2 secondi): testo, timing della trascrizione e coerenza della prima scena con la mappa e i dati Verona/Vicenza.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nei primi 2 secondi non compare nulla: la trascrizione parte a 4.4s, quindi il gancio («Verona contro Vicenza: 45 chilometri») arriva tardi. Inoltre la scena 0 (luce) inizia a 4.53s, dopo l'apertura, e la luce risulta già accesa al 5.13s: il pubblico non vede la sfida nei primi secondi, quando decide se restare.",
+    "correzione": "Spostare la frase di apertura a 0–2s (es. «Verona 11 – 11 Vicenza» in sovrimpressione con la voce che parte subito) e far cominciare la scena della mappa prima, in modo che la luce si veda entro i primi 2 secondi. Verificare inoltre che l'audio non sia silenzioso nei primi 5s (volume medio −15.9 dB, sotto l'obiettivo implicito del parlato).",
+    "idea": "Per i prossimi reel testa a testa, aprire con il punteggio già in sovrimpressione (numero grande) e la voce nel primo fotogramma, lasciando la mappa come prova visiva subito dopo."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:04+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La frase «Pari: 11 a 11. Il prossimo animale decide chi passa avanti.» nella trascrizione inizia al secondo 8.6, ma il copione la assegna alla scena «duello» che, nei dati, parte dal secondo 8.68; la frase 0 (\"45 chilometri\") finisce al 7.2, quindi la distanza è detta mentre la scena luce è ancora i",
+   "dati": {
+    "controllato": "Copione «Frasi della voce»: testo delle tre frasi contro trascrizione coi secondi, dati mappa (Verona 11, Vicenza 11, luci accese alla scena), distanza 45 km nel copione, sincronia della frase 1 e della frase 2 con la scena, audio.",
+    "esito": "segnalo",
+    "secondo": 8.6,
+    "problema": "La frase «Pari: 11 a 11. Il prossimo animale decide chi passa avanti.» nella trascrizione inizia al secondo 8.6, ma il copione la assegna alla scena «duello» che, nei dati, parte dal secondo 8.68; la frase 0 (\"45 chilometri\") finisce al 7.2, quindi la distanza è detta mentre la scena luce è ancora in corso e il pari arriva a ridosso del cambio scena. Inoltre la chiusura «Sei di Vicenza o di Verona?» è al secondo 14.1 ma la fascia di commento è ancora da verificare. Il dato «45 chilometri» non compare nei dati_mappa: va verificato sulla mappa e non è stato confermato dai materiali. Il conteggio 11 e 11 coincide con la mappa.",
+    "correzione": "Confermare la distanza di 45 km (tra i due comuni, dal dato mappa) prima di pubblicare; allineare il cambio scena al secondo 8.6 spostando «Pari: 11 a 11» a inizio scena duello e verificare che la fascia di commento compaia dal secondo 14.1.",
+    "idea": "Aggiungere in didascalia la fonte del dato distanza, e per i prossimi testa_a_testa mostrare in copertina il conteggio aggiornato solo quando la mappa lo conferma."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:04+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La didascalia dice «Verona 11 – 11 Vicenza» e il copione dice «Pari: 11 a 11», ma la mappa mostra 11 luci per città mentre il campo «luci_li_oggi» riporta 12 per entrambe, quindi il conteggio è incoerente. Inoltre la trascrizione dice «45 chilometri» mentre il progetto non fornisce una fonte verific",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (Verona e Vicenza, 11 luci ciascuna, distanza 45 km), didascalia e misure audio.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La didascalia dice «Verona 11 – 11 Vicenza» e il copione dice «Pari: 11 a 11», ma la mappa mostra 11 luci per città mentre il campo «luci_li_oggi» riporta 12 per entrambe, quindi il conteggio è incoerente. Inoltre la trascrizione dice «45 chilometri» mentre il progetto non fornisce una fonte verificata per la distanza, che va confermata. Infine la didascalia promette che l'animale «conta per la tua città», affermazione non verificabile dai materiali.",
+    "correzione": "Allineare il numero alle luci realmente accese al momento della pubblicazione (11 o 12 per città, con dato aggiornato dalla mappa) in copione, didascalia e copertina. Verificare la distanza di 45 km con una fonte. Rimuovere o verificare la frase sul conteggio dei commenti.",
+    "idea": "Mostrare sulla mappa il percorso di 45 km tra le due città, con il conteggio aggiornato in tempo reale nel reel successivo."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:06+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «Verona contro Vicenza: 45 chilometri» e «Pari: 11 a 11», ma la didascalia e la fascia parlano di «due comuni a 45 km» e dei commenti come voto per la propria città: la distanza di 45 km non è verificabile dai materiali (le coordinate danno circa 20 km in linea d'aria tra Verona e Vice",
+   "dati": {
+    "controllato": "Copione del reel testa_a_testa: trascrizione coi secondi, coerenza con i dati della mappa (Verona 11, Vicenza 11, luci accese alla scena 4.53–8.68 s), distanza di 45 km, didascalia e fascia di invito a commentare.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il testo dice «Verona contro Vicenza: 45 chilometri» e «Pari: 11 a 11», ma la didascalia e la fascia parlano di «due comuni a 45 km» e dei commenti come voto per la propria città: la distanza di 45 km non è verificabile dai materiali (le coordinate danno circa 20 km in linea d'aria tra Verona e Vicenza, quindi il numero è suscettibile di contestazione). Inoltre la scena 'luce' dichiara le luci già accese al secondo 5.13, mentre il pari 11–11 è detto solo al secondo 8.6: sincronizzazione ok ma la frase sulla distanza va verificata.",
+    "correzione": "Verificare la distanza con una fonte (es. strada o linea d'aria) prima della pubblicazione, oppure riformulare senza il numero, ad esempio «due città vicine, e la sfida è aperta». Allineare didascalia e voce sulla stessa formulazione.",
+    "idea": "Per i prossimi testa_a_testa, inserire nei materiali la distanza verificata e il metodo di misura, così il copione può citarla senza rischi."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:06+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il dato sulla distanza «45 chilometri» non è nei materiali verificati: la mappa fornisce solo coordinate e conteggi, quindi la frase del reel e la didascalia affermano un dato non supportato. Inoltre la trascrizione dice «[4.4s] Verona contro Vicenza» ma nel brief la frase 0 è in scena «luce», quind",
+   "dati": {
+    "controllato": "Ho verificato nel copione del reparto Copione la coerenza tra frasi, trascrizione coi secondi, mappa (Verona 11 e Vicenza 11, luci già accese dal secondo 5.13) e fascia/didascalia di invito a commentare.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato sulla distanza «45 chilometri» non è nei materiali verificati: la mappa fornisce solo coordinate e conteggi, quindi la frase del reel e la didascalia affermano un dato non supportato. Inoltre la trascrizione dice «[4.4s] Verona contro Vicenza» ma nel brief la frase 0 è in scena «luce», quindi la luce delle due città compare solo dal secondo 5.13, dopo che il testo è già partito.",
+    "correzione": "Rimuovere «45 chilometri» dalla frase e dalla didascalia oppure verificarlo e aggiungerlo ai dati; allineare la frase sulle luci al secondo 4.5-5.1 (es. far partire la scena luce dopo l'accensione, oppure spostare la frase di apertura a dopo il secondo 5.2).",
+    "idea": "Per i prossimi testa a testa, inserire nei materiali la distanza verificata tra i comuni (o usare solo dati già presenti come i conteggi) e usare una fascia che citi il numero reale di animali accesi nella sfida."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:07+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase è «Verona contro Vicenza: 45 chilometri, e la sfida è aperta», ma nel copione la frase 0 dice «Verona contro Vicenza: 45 chilometri, e la sfida è aperta.» (identica, ok); il problema è la frase 1: la trascrizione a 10.7s dice «Il prossimo animale decide chi passa avanti»,",
+   "dati": {
+    "controllato": "Grammatica e preposizioni del copione (frasi 0-2, didascalia, fascia) e loro coerenza con la trascrizione coi secondi.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione la frase è «Verona contro Vicenza: 45 chilometri, e la sfida è aperta», ma nel copione la frase 0 dice «Verona contro Vicenza: 45 chilometri, e la sfida è aperta.» (identica, ok); il problema è la frase 1: la trascrizione a 10.7s dice «Il prossimo animale decide chi passa avanti», mentre nel copione manca la preposizione del verbo: «decide chi passa avanti» va bene, ma «passa avanti» è colloquiale e la fascia usa «Commenta città e nome», senza articolo, incoerente con la didascalia («il nome del tuo cane o gatto»). Inoltre la didascalia dice «si accende col tuo @» senza articolo davanti a «@», accettabile ma poco chiaro. Il problema più rilevante è la preposizione «a» in «45 chilometri» assente nel copione: la distanza andrebbe espressa come «a 45 chilometri».",
+    "correzione": "Frase 0: «Verona contro Vicenza: due comuni a 45 chilometri, e la sfida è aperta.» Frase 1: «Pari: 11 a 11. Il prossimo animale decide chi passa in vantaggio.» Fascia: «💬 Commenta la tua città e il nome del tuo animale 👇». Didascalia: «si accende con il tuo @».",
+    "idea": "Usare sempre la formula «a [distanza]» e «il tuo [animale]» con articolo, così da mantenere una grammatica uniforme in tutti i reel del formato testa_a_testa."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:07+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il secondo 14.1 dice «Sei di Vicenza o di Verona?» ma la didascalia chiede di commentare città e nome dell'animale (con @): la frase è incompleta rispetto all'invito reale. Inoltre la distanza di 45 km tra Verona e Vicenza non è presente nei dati della mappa (che riportano solo coordinate e conteggi",
+   "dati": {
+    "controllato": "Copione: frasi, dati di Verona e Vicenza (distanza, conteggio 11-11, luci) e coerenza con trascrizione e mappa.",
+    "esito": "segnalo",
+    "secondo": 14.1,
+    "problema": "Il secondo 14.1 dice «Sei di Vicenza o di Verona?» ma la didascalia chiede di commentare città e nome dell'animale (con @): la frase è incompleta rispetto all'invito reale. Inoltre la distanza di 45 km tra Verona e Vicenza non è presente nei dati della mappa (che riportano solo coordinate e conteggi), quindi non è verificabile dai materiali forniti.",
+    "correzione": "Al secondo 14.1 aggiungere «Commenta città e nome del tuo animale!» (già presente a 15.8s, quindi si può accorciare la frase a 14.1 in «Sei di Vicenza o di Verona?» con l'invito al commento sulla fascia). Verificare la distanza di 45 km con una fonte prima della pubblicazione o rimuoverla dal copione.",
+    "idea": "Per i prossimi testa_a_testa, mostrare sulla mappa il conteggio aggiornato per città nell'ultimo secondo, così chi guarda vede subito chi passa avanti."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:09+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nel copione la frase «Pari: 11 a 11» è detta a 8.6s, ma la luce di Verona e Vicenza è accesa solo al secondo 5.13, cioè durante la frase «e la sfida è aperta» (4.4–7.2s), quindi l'accensione non è sincronizzata con il numero. Inoltre la didascalia dice «Verona 11 – 11 Vicenza» mentre il dato 'luci_l",
+   "dati": {
+    "controllato": "Copione: frasi, secondi della trascrizione, dati della mappa (Verona e Vicenza, 11 luci ciascuna, accese al secondo 5.13), coerenza tra didascalia e copione.",
+    "esito": "segnalo",
+    "secondo": 5.13,
+    "problema": "Nel copione la frase «Pari: 11 a 11» è detta a 8.6s, ma la luce di Verona e Vicenza è accesa solo al secondo 5.13, cioè durante la frase «e la sfida è aperta» (4.4–7.2s), quindi l'accensione non è sincronizzata con il numero. Inoltre la didascalia dice «Verona 11 – 11 Vicenza» mentre il dato 'luci_li_oggi' è 12 per entrambe: il pareggio 11–11 è il totale della coppa, non di oggi, e va chiarito. Infine la didascalia dice «Voce generata con IA» mentre il campo voce è true, coerente, ma il tag #veterinario/#toelettatura non è un problema di questa mansione.",
+    "correzione": "Far coincidere l'accensione delle luci (5.13s) con la frase «Pari: 11 a 11» (8.6s) oppure spostare la pronuncia del numero sul secondo 5.13; nella didascalia specificare che 11–11 è il punteggio della sfida e non le luci di oggi.",
+    "idea": "Per i prossimi reel usare sempre un'animazione della luce sincronizzata alla cifra pronunciata, e mostrare il punteggio della coppa in sovrimpressione."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:10+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «45 chilometri» ma i dati della mappa non contengono una distanza verificata tra Verona e Vicenza (ci sono solo le coordinate). Il numero andrebbe confermato prima della pubblicazione. Inoltre la trascrizione non copre il secondo 0.5–4.4 dell'apertura, dove la voce tace, e la frase «",
+   "dati": {
+    "controllato": "Ho verificato il copione: frasi, secondi della trascrizione, coerenza tra voce e scene, e i conteggi 11–11 e 45 km rispetto ai dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il copione dice «45 chilometri» ma i dati della mappa non contengono una distanza verificata tra Verona e Vicenza (ci sono solo le coordinate). Il numero andrebbe confermato prima della pubblicazione. Inoltre la trascrizione non copre il secondo 0.5–4.4 dell'apertura, dove la voce tace, e la frase «Pari: 11 a 11» è detta con il prossimo animale già indicato come decisivo: ok, ma la didascalia dice «Voce generata con IA» mentre il brief indica voce: true, coerente. Le misure audio (-14.1 LUFS, picco -1.0 dBFS) rispettano l'obiettivo, ma il volume medio dei primi 5 s (-15.9 dB) è sotto il resto e non ha silenzi lunghi dopo l'apertura, quindi ok.",
+    "correzione": "Verificare la distanza Verona–Vicenza su una fonte affidabile e, se non confermata, togliere «45 chilometri» dalla voce e dalla didascalia. Oppure sostituirla con una formulazione non numerica, ad esempio «due città vicine».",
+    "idea": "Per i prossimi reel, usare solo distanze o dati che si possano verificare dalla mappa, e aggiungere in didascalia la fonte del dato."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:10+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Verona contro Vicenza: 45 chilometri' non è verificabile nei materiali (la distanza non compare nei dati della mappa); inoltre nei dati le luci risultano 'già accese al secondo 5.13', cioè dopo la frase di apertura che parla di luce sulla mappa, quindi la scena 'luce' va sincronizzata. Anch",
+   "dati": {
+    "controllato": "Coordinate, etichette, conteggi (11 a 11), distanza di 45 km, orari della luce e trascrizione coi secondi della mia parte Mappa e dati.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'Verona contro Vicenza: 45 chilometri' non è verificabile nei materiali (la distanza non compare nei dati della mappa); inoltre nei dati le luci risultano 'già accese al secondo 5.13', cioè dopo la frase di apertura che parla di luce sulla mappa, quindi la scena 'luce' va sincronizzata. Anche la didascalia dice 'Verona 11 – 11 Vicenza' mentre la trascrizione dice 'Pari: 11 a 11' con i conteggi sulla mappa che coincidono, quindi ok; il dato 'luci_li_oggi: 12' per entrambe le città va verificato perché gli animali elencati per Verona sono 5 e per Vicenza 5, non 12.",
+    "correzione": "Verificare la distanza 45 km con fonte oppure toglierla dal copione e dalla didascalia; allineare la scena luce al momento in cui la luce compare sulla mappa; controllare il conteggio 'luci_li_oggi: 12' rispetto agli animali elencati (5 per città nell'elenco) e correggere il dato mostrato.",
+    "idea": "Per i prossimi testa a testa, mostrare nella mappa l'elenco completo degli animali di ciascuna città così che il conteggio sia sempre verificabile a schermo."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:10+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il dato «45 chilometri» non è verificabile nei materiali: non ci sono coordinate per calcolare la distanza, e la didascalia la presenta come fatto. Inoltre la mappa conta 12 luci per città (luci_li_oggi: 12), ma il titolo e il testo dicono 11 a 11: il punteggio non coincide con i dati della mappa. S",
+   "dati": {
+    "controllato": "Coordinate, conteggi (11 a 11), distanza 45 km, orari delle scene e ordine dei tempi del copione rispetto alla trascrizione, misure audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e corrispondenza tra luci di mappa e testo.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato «45 chilometri» non è verificabile nei materiali: non ci sono coordinate per calcolare la distanza, e la didascalia la presenta come fatto. Inoltre la mappa conta 12 luci per città (luci_li_oggi: 12), ma il titolo e il testo dicono 11 a 11: il punteggio non coincide con i dati della mappa. Secondo i dati Verona ha 5 animali elencati e Vicenza 5 (su 12 luci ciascuna, l'elenco è incompleto).",
+    "correzione": "Verificare la distanza reale tra i due comuni con le coordinate e scriverla solo se confermata; allineare il punteggio al conteggio aggiornato delle luci (12 – 12 oppure aggiornare il testo) prima della pubblicazione; controllare che l'elenco degli animali sia completo.",
+    "idea": "Mostrare sulla mappa la distanza calcolata automaticamente tra i due comuni, così il dato è sempre verificato."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:13+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Verona contro Vicenza: 45 chilometri' compare a 4.4s, ma il brief indica la scena 'luce' e le luci risultano già accese dal secondo 5.13: la frase inizia prima che la mappa sia attiva. Inoltre l'audio ha volume medio dei primi 5s a -15.9 dB, sotto l'obiettivo di -14 LUFS",
+   "dati": {
+    "controllato": "Dati mappa (coordinate, etichette, conteggi 11–11, luci accese durante la scena 4.53–8.68s), trascrizione e secondi, audio, didascalia e copertina rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione la frase 'Verona contro Vicenza: 45 chilometri' compare a 4.4s, ma il brief indica la scena 'luce' e le luci risultano già accese dal secondo 5.13: la frase inizia prima che la mappa sia attiva. Inoltre l'audio ha volume medio dei primi 5s a -15.9 dB, sotto l'obiettivo di -14 LUFS, e la didascalia dice 'link in bio' senza verifica del link nei materiali. Il dato 'follower_ogni_1000' è null o 0.0 in quasi tutti i reel, quindi non è affidabile come metrica.",
+    "correzione": "Allineare l'inizio della frase 'Verona contro Vicenza' alla scena luce (dal secondo 4.53, con le luci accese già da 5.13) o spostare la mappa al secondo 4.4; alzare il volume dei primi 5s di circa 1–2 dB per avvicinarsi a -14 LUFS; confermare che il link in bio sia attivo e corretto prima della pubblicazione; escludere o ricalcolare la metrica follower_ogni_1000 finché non ha valori validi.",
+    "idea": "Per i prossimi testa_a_testa, mostrare nella copertina o nel reel il numero di luci accese per ciascuna città nei primi 3 secondi, così lo spettatore vede subito chi sta vincendo."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:13+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Verona · 11' è coerente con la mappa, ma nella trascrizione la frase 'Verona contro Vicenza: 45 chilometri' parte a 4.4 s mentre la luce è già accesa solo dal secondo 5.13 della scena; inoltre la didascalia afferma 'Verona 11 – 11 Vicenza' senza che i materiali indichino il calcolo della di",
+   "dati": {
+    "controllato": "Coordinate sulla mappa: scena 0 (4.53–8.68 s), luci e conteggi Verona 11 e Vicenza 11, distanza dichiarata 45 km, audio -14.1 LUFS con picco -1.0 dBFS e nessun silenzio lungo.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'Verona · 11' è coerente con la mappa, ma nella trascrizione la frase 'Verona contro Vicenza: 45 chilometri' parte a 4.4 s mentre la luce è già accesa solo dal secondo 5.13 della scena; inoltre la didascalia afferma 'Verona 11 – 11 Vicenza' senza che i materiali indichino il calcolo della distanza di 45 km, che non è verificabile dai dati forniti (le coordinate danno circa 45 km in linea d'aria, ma il dato non è nei materiali come verificato). Infine la didascalia dice 'Voce generata con IA' mentre il campo 'voce' è true: coerente, nessun problema.",
+    "correzione": "Allineare la frase sulla distanza al momento in cui compare la luce (dopo 5.13 s) oppure verificare e indicare la fonte dei 45 km; confermare la dicitura 'Voce generata con IA' e lasciare invariato il conteggio 11–11.",
+    "idea": "Per i prossimi testa a testa, mostrare sulla mappa la linea tra le due città con la distanza calcolata dalle coordinate, così il dato è visibile e verificabile."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:13+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Coordinate di Verona e Vicenza, distanza di 45 km, conteggi 11–11 e luci già accese al secondo 5.13 contro la scena 4.53–8.68, misure audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio, primi 5s a -15.9 dB) e coerenza tra copione, trascrizione e didascalia.",
+   "dati": {
+    "controllato": "Coordinate di Verona e Vicenza, distanza di 45 km, conteggi 11–11 e luci già accese al secondo 5.13 contro la scena 4.53–8.68, misure audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio, primi 5s a -15.9 dB) e coerenza tra copione, trascrizione e didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa_a_testa, mostrare sulla mappa la linea tra le due città con la distanza in km, così il pubblico capisce subito la sfida."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:13+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il dato di mappa dice che le luci di Verona e Vicenza sono già accese al secondo 5.13, ma la scena della luce inizia a 4.53 e la frase 'Verona contro Vicenza' parte a 4.4s: la mappa risulta accesa prima della fine della frase e la trascrizione non ha un punto di sincronia. Inoltre le etichette 'Vero",
+   "dati": {
+    "controllato": "Coordinate, comuni, scene e conteggi della mappa per Verona e Vicenza, e il secondo in cui si accendono le luci rispetto alla frase sulla luce nel copione.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato di mappa dice che le luci di Verona e Vicenza sono già accese al secondo 5.13, ma la scena della luce inizia a 4.53 e la frase 'Verona contro Vicenza' parte a 4.4s: la mappa risulta accesa prima della fine della frase e la trascrizione non ha un punto di sincronia. Inoltre le etichette 'Verona · 11' e 'Vicenza · 11' e il numero 'luci_li_oggi: 12' per Verona non tornano con i 5 animali elencati per comune (ne mostrano 5 ciascuno, mentre il conteggio dichiarato è 11 per entrambi, quindi la lista è parziale), e nella voce 'luci_li_oggi' Verona ha 12 mentre l'etichetta dice 11.",
+    "correzione": "Allineare l'accensione delle luci alla frase 'Verona contro Vicenza' (dal secondo 4.4) o spostare l'accensione dopo la frase; verificare il conteggio 11 vs 12 'luci_li_oggi' per Verona e completare la lista animali in modo che corrisponda all'etichetta.",
+    "idea": "Mostrare sulla mappa una sola città per frase, con l'accensione sincronizzata al nome pronunciato, e una trascrizione con secondi precisi per ogni parola chiave."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:14+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La frase d'apertura dice «45 chilometri» ma i dati forniti non contengono una misura di distanza tra Verona e Vicenza: è un dato non verificato nei materiali. Inoltre i dati mostrano 'luci_li_oggi': 12 per entrambe le città, mentre il copione e la didascalia parlano di 11 a 11; il conteggio del reel",
+   "dati": {
+    "controllato": "Coordinate, etichette, conteggi 11–11, distanza 45 km, ordine delle luci e tempi della scena rispetto alla mappa nei dati verificati.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase d'apertura dice «45 chilometri» ma i dati forniti non contengono una misura di distanza tra Verona e Vicenza: è un dato non verificato nei materiali. Inoltre i dati mostrano 'luci_li_oggi': 12 per entrambe le città, mentre il copione e la didascalia parlano di 11 a 11; il conteggio del reel dovrebbe coincidere con il totale delle luci accese (11 nel dato di scena, 12 oggi), quindi va chiarito quale numero è quello corretto da mostrare.",
+    "correzione": "Togliere «45 chilometri» dalla voce e dalla didascalia, oppure fornire una fonte verificata per la distanza. Allineare il punteggio 11–11 al conteggio aggiornato (12 luci oggi per entrambe) o spiegare che il reel fotografa il conteggio di 11 luci al momento della scena e aggiornare di conseguenza la didascalia.",
+    "idea": "Per i prossimi testa a testa, mostrare in sovrimpressione il conteggio aggiornato in tempo reale dai dati della mappa, così il numero del video resta sempre allineato alla luce accesa."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:16+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella mappa Verona e Vicenza risultano entrambe a 11 luci, ma la didascalia e il conteggio 'luci_li_oggi: 12' per ciascuna città non tornano: il campo 'luci_li_oggi' dice 12 mentre la sfida è 11 a 11. Inoltre la luce di Verona e Vicenza è indicata come accesa a 5.13 s, quindi dentro la scena, ma la ",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (Verona e Vicenza, 11 luci ciascuna, distanza e luci accese al secondo 5.13), misure audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella mappa Verona e Vicenza risultano entrambe a 11 luci, ma la didascalia e il conteggio 'luci_li_oggi: 12' per ciascuna città non tornano: il campo 'luci_li_oggi' dice 12 mentre la sfida è 11 a 11. Inoltre la luce di Verona e Vicenza è indicata come accesa a 5.13 s, quindi dentro la scena, ma la frase 'Verona contro Vicenza: 45 chilometri' compare a 4.4 s, prima che la luce risulti accesa: il dato sulla mappa non è ancora visibile al momento della frase. Infine l'audio è sotto l'obiettivo di volume medio nei primi 5 s (-15.9 dB, sotto il target di -14 LUFS integrato, non grave ma da verificare).",
+    "correzione": "Allineare il conteggio: o le luci di oggi sono 11 per città (come la sfida) o la sfida va aggiornata a 12 a 12; far comparire la luce di Verona e Vicenza entro 4.4 s oppure spostare la frase 'Verona contro Vicenza' dopo 5.13 s; alzare leggermente il volume dei primi 5 s.",
+    "idea": "Mostrare a schermo il conteggio delle luci di ogni città in tempo reale durante il duello, così il pubblico vede il punteggio che cambia."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:16+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel copione la frase «Verona contro Vicenza: 45 chilometri, e la sfida è aperta» (scena luce) e il dato 'luce già accesa al secondo 5.13' non sono allineati: la mappa mostra le luci accese dal secondo 4.53, ma la trascrizione assegna la frase 'Pari: 11 a 11' all'istante 8.6s, mentre la frase 'Il pro",
+   "dati": {
+    "controllato": "Dati mappa (coordinate, conteggi 11–11, luci accese al secondo 5.13 nella scena 4.53–8.68), trascrizione coi secondi, audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio lungo), didascalia e copertina rispetto al copione.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nel copione la frase «Verona contro Vicenza: 45 chilometri, e la sfida è aperta» (scena luce) e il dato 'luce già accesa al secondo 5.13' non sono allineati: la mappa mostra le luci accese dal secondo 4.53, ma la trascrizione assegna la frase 'Pari: 11 a 11' all'istante 8.6s, mentre la frase 'Il prossimo animale decide' parte a 10.7s, cioè dentro la scena 'duello' che la mappa indica come scena 0 (4.53–8.68s). Inoltre i dati di mappa indicano 12 luci oggi per entrambe le città, mentre il conteggio dichiarato nel reel è 11–11: il numero del reel va verificato rispetto al dato vivo prima della pubblicazione. Infine, la didascalia dice 'Verona 11 – 11 Vicenza' ma la lista animali di Verona contiene 5 voci e quella di Vicenza 5 voci: i numeri 11 non sono ricavabili dai materiali forniti.",
+    "correzione": "Confermare il conteggio ufficiale (11 o 12 per città) e allinearlo a reel, copertina e didascalia; ricontrollare il secondo di accensione delle luci rispetto alla scena 'duello' (4.5–8.7s) e aggiornare la sincronizzazione della mappa; verificare che la frase 'Pari' cada nella scena giusta.",
+    "idea": "Aggiungere nel brief un campo 'conteggio_verificato_at' con l'ora del dato, così che i numeri nel reel e nella didascalia vengano sempre ricavati dallo stesso snapshot della mappa."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:16+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Volume della voce: LUFS, picco, silenzi e volume dei primi 5 secondi rispetto all'obiettivo -14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi.",
+   "dati": {
+    "controllato": "Volume della voce: LUFS, picco, silenzi e volume dei primi 5 secondi rispetto all'obiettivo -14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel testa a testa si potrebbe usare un'apertura sonora più marcata nei primi 5 secondi (il volume medio è -15,9 dB, un po' sotto il resto), senza superare il picco di -1 dBFS."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:16+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Volume della musica: misure audio (LUFS, picco, silenzi, volume primi 5s) rispetto all'obiettivo -14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo dopo l'apertura.",
+   "dati": {
+    "controllato": "Volume della musica: misure audio (LUFS, picco, silenzi, volume primi 5s) rispetto all'obiettivo -14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo dopo l'apertura.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa a testa, inserire una breve pausa musicale o un effetto sonoro sul numero «11 – 11» per dare più enfasi al duello nella fascia 8-10 s."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:16+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio del reel: loudness, picco, silenzi e volume dei primi 5 secondi, confrontati con l'obiettivo -14 LUFS / picco sotto -1 dBFS / nessun silenzio lungo dopo l'apertura.",
+   "dati": {
+    "controllato": "Audio del reel: loudness, picco, silenzi e volume dei primi 5 secondi, confrontati con l'obiettivo -14 LUFS / picco sotto -1 dBFS / nessun silenzio lungo dopo l'apertura.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa a testa, aggiungere un contatore dal vivo (es. «Verona 11 – Vicenza 11») come overlay nei primi 3 secondi, così chi guarda senza audio capisce subito la sfida."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:17+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio del reel (LUFS, picco, silenzi, volume primi 5s) confrontati con l'obiettivo di mansione: -14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo dopo l'apertura.",
+   "dati": {
+    "controllato": "Audio del reel (LUFS, picco, silenzi, volume primi 5s) confrontati con l'obiettivo di mansione: -14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo dopo l'apertura.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa a testa, mantenere la stessa struttura audio e, se possibile, aggiungere un breve effetto sonoro sul momento in cui la luce compare sulla mappa, per rafforzare il ritmo nei primi 5 secondi."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:18+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -15,9 dB, più basso dell'obiettivo di -14 LUFS; l'apertura risulta quindi più debole del resto del reel. Inoltre la voce è generata con IA e la didascalia la dichiara, quindi è corretto, ma va verificato che il tono sia naturale. Il resto (-14,1 LUFS integrati, ",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume primi 5s) e allineamento della trascrizione al copione e alla scena della luce su Verona/Vicenza.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il volume medio dei primi 5 secondi è -15,9 dB, più basso dell'obiettivo di -14 LUFS; l'apertura risulta quindi più debole del resto del reel. Inoltre la voce è generata con IA e la didascalia la dichiara, quindi è corretto, ma va verificato che il tono sia naturale. Il resto (-14,1 LUFS integrati, picco -1,0 dBFS, nessun silenzio) è nei limiti.",
+    "correzione": "Alzare di circa 1-2 dB il volume dei primi 5 secondi (fino a circa -14 dB medi) senza superare il picco di -1 dBFS, e riesportare; ricontrollare che la frase 'Verona contro Vicenza' cada entro 4,4 s come da trascrizione.",
+    "idea": "Per i testa a testa tra comuni vicini, aggiungere in apertura la distanza in km in forma visiva sulla mappa, così lo spettatore la vede prima di sentirla."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:19+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -15.9 dB, più basso dell'obiettivo di -14 LUFS e del livello del resto del reel: l'apertura «Verona contro Vicenza» rischia di arrivare piano. Inoltre la frase «Pari: 11 a 11» e la scena 0 sulla mappa mostrano le luci già accese al secondo 5.13, mentre la trascr",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (coordinate, conteggi 11–11, luci accese), misure audio (LUFS, picco, silenzi, volume primi 5s) e didascalia rispetto al brief della voce sintetica.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il volume medio dei primi 5 secondi è -15.9 dB, più basso dell'obiettivo di -14 LUFS e del livello del resto del reel: l'apertura «Verona contro Vicenza» rischia di arrivare piano. Inoltre la frase «Pari: 11 a 11» e la scena 0 sulla mappa mostrano le luci già accese al secondo 5.13, mentre la trascrizione segnala la frase «45 chilometri» al secondo 4.4: va verificato che la voce e la scena siano sincronizzate.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 2 dB (portandolo vicino a -14 LUFS, senza superare il picco di -1 dBFS) e verificare l'allineamento tra la frase al secondo 4.4 e l'accensione delle luci al 5.13.",
+    "idea": "Aggiungere in apertura un breve suono di campanello o di pubblico di stadio sotto la voce, per dare più energia al formato testa a testa."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:19+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio del reel (LUFS, picco, silenzi, volume primi 5s) confrontato con l'obiettivo di mansione: -14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo.",
+   "dati": {
+    "controllato": "Audio del reel (LUFS, picco, silenzi, volume primi 5s) confrontato con l'obiettivo di mansione: -14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa a testa, aggiungere in voce il nome di un animale di ciascuna città, così il duello risulta più personale e più facile da commentare."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:19+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio del reel: loudness, picco, silenzi e volume dei primi 5 secondi rispetto all'obiettivo, più coerenza tra copione e trascrizione.",
+   "dati": {
+    "controllato": "Audio del reel: loudness, picco, silenzi e volume dei primi 5 secondi rispetto all'obiettivo, più coerenza tra copione e trascrizione.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa a testa, aggiungere una frase finale che annunci il nome della città vincente al prossimo aggiornamento della mappa, così il pubblico torna a controllare il conteggio."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:19+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Loudness integrata, picco reale e silenzi del reel confrontati con l'obiettivo -14 LUFS / picco sotto -1 dBFS / niente silenzi dopo l'apertura.",
+   "dati": {
+    "controllato": "Loudness integrata, picco reale e silenzi del reel confrontati con l'obiettivo -14 LUFS / picco sotto -1 dBFS / niente silenzi dopo l'apertura.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa a testa, si potrebbe far partire la voce già dal primo secondo (il volume medio dei primi 5 s è -15,9 dB, leggermente basso rispetto al resto) così l'apertura pesa di più."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:21+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La copertina usa come punto luce [11.26995, 45.49295], che è lat/lng invertiti e cade in un punto diverso dalle due città (Verona è a lat 45.4384, lng 10.9935; Vicenza a lat 45.5475, lng 11.546). Inoltre il dato 'Verona · 11' e 'Vicenza · 11' sulla mappa è corretto, ma la copertina non indica quale ",
+   "dati": {
+    "controllato": "Copertina del reel: coordinate della luce, testi 'TESTA A TESTA', '11 – 11', 'Verona vs Vicenza' e coerenza con la didascalia e i dati di mappa.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La copertina usa come punto luce [11.26995, 45.49295], che è lat/lng invertiti e cade in un punto diverso dalle due città (Verona è a lat 45.4384, lng 10.9935; Vicenza a lat 45.5475, lng 11.546). Inoltre il dato 'Verona · 11' e 'Vicenza · 11' sulla mappa è corretto, ma la copertina non indica quale luce rappresenta la sfida. Il secondo 0 è il frame di copertina e non deve mostrare la luce già accesa in modo ambiguo.",
+    "correzione": "Impostare il punto della copertina sulle coordinate reali (es. punto medio tra Verona lat 45.4384, lng 10.9935 e Vicenza lat 45.5475, lng 11.546, cioè circa lat 45.493, lng 11.270), con l'ordine lat, lng corretto. Verificare che le due luci siano visibili nel frame di copertina.",
+    "idea": "Per i prossimi testa a testa, usare nella copertina le coordinate già verificate nei dati_mappa e mostrare entrambe le etichette con il punteggio, così lo spettatore riconosce subito le due città."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:21+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Copertina, scena della luce sulla mappa (Verona e Vicenza accese entro il secondo 5.13, dentro la scena 4.53–8.68), coerenza del conteggio 11–11 con l'elenco degli animali e corrispondenza delle coordinate ai comuni.",
+   "dati": {
+    "controllato": "Copertina, scena della luce sulla mappa (Verona e Vicenza accese entro il secondo 5.13, dentro la scena 4.53–8.68), coerenza del conteggio 11–11 con l'elenco degli animali e corrispondenza delle coordinate ai comuni.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa a testa, mostrare nella copertina l'animale che ha deciso la sfida (nome e città) per dare un volto concreto al duello e spingere i commenti."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:22+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La frase finale «Commenta città e nome del tuo animale!» termina al secondo 15.8, ma la fascia di chiusura «Commenta città e nome del tuo animale» è un invito che il copione presenta come ultima scena; la copertina dice «Verona vs Vicenza» con il numero 11–11, mentre la mappa indica già 12 luci oggi",
+   "dati": {
+    "controllato": "Copertina, testo di scena e didascalia del reel testa a testa Verona-Vicenza: coordinate, conteggi (11–11), distanza di 45 km, tempi della trascrizione e incipit della luce (4.53–8.68s).",
+    "esito": "segnalo",
+    "secondo": 15.8,
+    "problema": "La frase finale «Commenta città e nome del tuo animale!» termina al secondo 15.8, ma la fascia di chiusura «Commenta città e nome del tuo animale» è un invito che il copione presenta come ultima scena; la copertina dice «Verona vs Vicenza» con il numero 11–11, mentre la mappa indica già 12 luci oggi per entrambe le città, quindi il conteggio 11–11 nella grafica non corrisponde ai dati di oggi (i dati di mappa mostrano 11 come punteggio di riferimento della sfida ma 12 luci odierne).",
+    "correzione": "Allineare la copertina e la frase «Pari: 11 a 11» ai dati di mappa al momento della pubblicazione (aggiornare il conteggio se sono cambiati), oppure indicare la data del conteggio; verificare che la fascia di chiusura compaia nei secondi finali del video.",
+    "idea": "Aggiungere in copertina la data di aggiornamento del punteggio, così il conteggio resta verificabile anche quando le luci cambiano."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:22+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La fascia «💬 Commenta città e nome del tuo animale 👇» è nel brief ma la trascrizione mostra il testo di chiusura in parlato fino a 15,8 s: nei secondi finali (dopo 15,8 s) non c'è un testo grande che sostenga la call to action, quindi chi guarda senza audio perde l'invito proprio nel momento in cui ",
+   "dati": {
+    "controllato": "Font e testi grandi del reel: leggibilità della fascia, copertina e testo sovrapposto, in relazione alle scene e alla durata di 18,2 s.",
+    "esito": "segnalo",
+    "secondo": 15.8,
+    "problema": "La fascia «💬 Commenta città e nome del tuo animale 👇» è nel brief ma la trascrizione mostra il testo di chiusura in parlato fino a 15,8 s: nei secondi finali (dopo 15,8 s) non c'è un testo grande che sostenga la call to action, quindi chi guarda senza audio perde l'invito proprio nel momento in cui serve. Inoltre la copertina riporta «11 – 11» e «Verona vs Vicenza»: coerente coi dati, ma il testo sopra («TESTA A TESTA») va verificato a schermo per leggibilità con la mappa di sfondo.",
+    "correzione": "Mantenere la fascia della call to action visibile dai 15,8 s fino alla fine (ultimi 2-3 s), con font grande e contrasto alto sulla mappa notturna; verificare che il titolo «TESTA A TESTA» e «11 – 11» restino leggibili sui fotogrammi 0,5-3 s quando la luce sta ancora comparendo.",
+    "idea": "Per i prossimi reel testa a testa, mostrare in sovrimpressione il conteggio aggiornato (es. «Verona 11 · Vicenza 11») a ogni cambio di punteggio, così il numero resta leggibile anche senza audio."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:23+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Verona contro Vicenza: 45 chilometri' mentre la scena luce (4.53–8.68 s) mostra le due etichette già accese al secondo 5.13; la frase 'Pari: 11 a 11' arriva solo al secondo 8.6, quindi il numero compare sulla mappa prima che venga pronunciato. Inoltre la copertina riporta 'Verona vs",
+   "dati": {
+    "controllato": "Copertina, fascia, didascalia e scena 'luce' del reel Verona-Vicenza: coerenza tra copione, mappa (coordinate e 11–11 di luci) e timing della prima scena.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il copione dice 'Verona contro Vicenza: 45 chilometri' mentre la scena luce (4.53–8.68 s) mostra le due etichette già accese al secondo 5.13; la frase 'Pari: 11 a 11' arriva solo al secondo 8.6, quindi il numero compare sulla mappa prima che venga pronunciato. Inoltre la copertina riporta 'Verona vs Vicenza' con le coordinate di un punto intermedio (11.27, 45.49) che non corrisponde a nessuna delle due città sulla mappa.",
+    "correzione": "Far coincidere l'accensione delle etichette con la frase che le nomina (es. accensione di Verona e Vicenza sul 4.4 s, numeri 11 · 11 sulla frase 'Pari' a 8.6 s) e usare per la copertina il punto di una delle due città o il centro dell'asse Verona–Vicenza calcolato correttamente, verificandone le coordinate. Controllare anche che '45 chilometri' sia confermato dai dati (non presenti nei materiali forniti).",
+    "idea": "Per i prossimi testa a testa, sincronizzare ogni etichetta della mappa con il nome della città pronunciato nel copione, e mostrare in fascia il conteggio aggiornato solo dopo la frase che lo annuncia."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:24+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio 11 a 11 non corrisponde ai dati della mappa: Verona ha 5 animali elencati e Vicenza 5, con 12 luci oggi per ciascuna città nel campo luci_li_oggi, mentre il numero 11 compare solo nel campo etichetta. Inoltre la trascrizione dice «Verona contro Vicenza» al secondo 4.4, ma la luce della ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (coordinate, conteggi 11 e 11, luci accese al secondo 5.13), misure audio, didascalia e copertina del reel testa_a_testa.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il conteggio 11 a 11 non corrisponde ai dati della mappa: Verona ha 5 animali elencati e Vicenza 5, con 12 luci oggi per ciascuna città nel campo luci_li_oggi, mentre il numero 11 compare solo nel campo etichetta. Inoltre la trascrizione dice «Verona contro Vicenza» al secondo 4.4, ma la luce della mappa si accende al secondo 5.13, cioè dopo l'inizio della frase su Verona. Nella copertina la luce è centrata a 11.27, 45.49, che è tra le due città, quindi va bene, ma il numero da mostrare va verificato.",
+    "correzione": "Allineare il conteggio su «11 – 11» ai dati reali della mappa (oggi risultano 12 luci per città, da confermare col totale del progetto) e far partire l'indicazione «Verona» quando la luce si accende, cioè intorno al secondo 5.1 invece di 4.4. Verificare anche che l'audio sia sotto -1 dBFS come da obiettivo: il picco è -1.0, al limite.",
+    "idea": "Per i prossimi reel testa_a_testa, aggiornare il conteggio in tempo reale dai dati della mappa così il numero in copertina e nella voce corrisponde sempre alle luci accese."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:25+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La copertina riporta '11 – 11' e 'Verona vs Vicenza', ma la didascalia dice 'Verona 11 – 11 Vicenza' e la trascrizione apre con la scena luce a 4.4s. Il dato 'luci_li_oggi: 12' per entrambe le città non è coerente con il conteggio 11 mostrato in copertina e nel copione, e non è verificabile dai mate",
+   "dati": {
+    "controllato": "Copertina e grafica del reel testa a testa: coerenza tra copertina, mappa (Verona 11 e Vicenza 11, luci accese al secondo 5.13), numeri del brief e didascalia, più la verifica dei secondi della scena luce rispetto al copione.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La copertina riporta '11 – 11' e 'Verona vs Vicenza', ma la didascalia dice 'Verona 11 – 11 Vicenza' e la trascrizione apre con la scena luce a 4.4s. Il dato 'luci_li_oggi: 12' per entrambe le città non è coerente con il conteggio 11 mostrato in copertina e nel copione, e non è verificabile dai materiali. Inoltre la copertina indica il punto luce [11.27, 45.49], che è in provincia di Verona ma non corrisponde esattamente al comune di Verona (lat 45.4384, lng 10.9935): la posizione va verificata.",
+    "correzione": "Allineare il conteggio delle luci (11 nel copione e in copertina, o 12 se il dato 'luci_li_oggi' è aggiornato) e confermare il valore prima della pubblicazione. Verificare che il punto luce di copertina coincida con Verona. Mantenere il formato 'Verona 11 – 11 Vicenza' o 'Verona vs Vicenza' in modo uniforme.",
+    "idea": "Per i prossimi testa a testa, mostrare in copertina il conteggio aggiornato generato direttamente dai dati della mappa, così da evitare disallineamenti manuali tra grafica e numeri."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:26+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio della mappa è 11 a 11, ma il dato 'luci_li_oggi' è 12 per entrambe le città: la didascalia e il copione dicono 11, la mappa oggi ne mostra 12. Inoltre le etichette compaiono già accese dal secondo 4.53, mentre il dato indica 'già accesa al secondo 5.13', quindi l'etichetta è accesa circ",
+   "dati": {
+    "controllato": "Etichette sulla mappa: coordinate, nomi dei comuni e conteggio 11–11 di Verona e Vicenza rispetto ai dati della mappa, e il momento in cui le luci si accendono rispetto alla scena 'luce' (4.53–8.68 s).",
+    "esito": "segnalo",
+    "secondo": 4.53,
+    "problema": "Il conteggio della mappa è 11 a 11, ma il dato 'luci_li_oggi' è 12 per entrambe le città: la didascalia e il copione dicono 11, la mappa oggi ne mostra 12. Inoltre le etichette compaiono già accese dal secondo 4.53, mentre il dato indica 'già accesa al secondo 5.13', quindi l'etichetta è accesa circa mezzo secondo prima del riferimento dichiarato; la scena 'luce' (4.53) coincide con l'inizio dell'etichetta, senza il tempo di farla vedere accendersi.",
+    "correzione": "Allineare il numero nel copione e nella didascalia al dato reale della mappa (12 a 12 se il dato 'luci_li_oggi' è aggiornato, altrimenti verificare e riportare 11 con la fonte), e spostare l'accensione dell'etichetta a 5.13 s o oltre, così l'animazione della luce è visibile dentro la scena 4.53–8.68.",
+    "idea": "Mostrare nel reel il totale aggiornato di luci per comune con un'etichetta che si incrementa in tempo reale ogni volta che arriva un nuovo animale."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:27+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Le frasi del brief dicono 'Verona contro Vicenza: 45 chilometri' e 'Pari: 11 a 11', ma in trascrizione 'Pari: 11 a 11' inizia a 8.6 s, mentre la scena 'duello' e la fascia 'Commenta' vanno gestite in modo coerente; in più la didascalia dichiara 'Voce generata con IA' mentre il campo voce è true, qui",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, coordinate e luci della mappa, audio, fascia e copertina del reel testa_a_testa di Verona contro Vicenza, con i conteggi 11-11 e 45 km verificati.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Le frasi del brief dicono 'Verona contro Vicenza: 45 chilometri' e 'Pari: 11 a 11', ma in trascrizione 'Pari: 11 a 11' inizia a 8.6 s, mentre la scena 'duello' e la fascia 'Commenta' vanno gestite in modo coerente; in più la didascalia dichiara 'Voce generata con IA' mentre il campo voce è true, quindi è corretto, ma va verificato che la fascia compaia sopra la chiusura. Il problema più concreto: le luci di Verona e Vicenza risultano già accese dal secondo 5.13 (dentro la scena 0 che va da 4.53 a 8.68), quindi sulla mappa la luce compare prima della frase 'Verona contro Vicenza' completata a 7.2 s, e l'audio ha volume medio dei primi 5 s di -15.9 dB, sotto l'obiettivo di -14 LUFS dopo l'apertura.",
+    "correzione": "Allineare l'accensione delle luci alla frase 'Verona contro Vicenza' (dopo 7.2 s) e alzare il volume dei primi 5 secondi di circa 2 dB per avvicinarsi al target di -14 LUFS; confermare che la fascia 'Commenta città e nome del tuo animale' sia visibile durante la chiusura (da 14.1 s).",
+    "idea": "Per i prossimi testa_a_testa aggiungere in copertina il conteggio aggiornato di luci del giorno, così il numero sul video coincide con la mappa."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:28+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Verona contro Vicenza: 45 chilometri» e la trascrizione lo mette a 4.4s, ma la scena della luce parte dal secondo 4.53 e la luce si accende solo al 5.13: la frase sulla distanza è detta prima che la mappa mostri le città. Inoltre la didascalia dice «Verona 11 – 11 Vicenza» mentre il",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Verona 11, Vicenza 11, luci accese al secondo 5.13), misure audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio, volume primi 5s -15.9 dB) e didascalia rispetto al copione e ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il copione dice «Verona contro Vicenza: 45 chilometri» e la trascrizione lo mette a 4.4s, ma la scena della luce parte dal secondo 4.53 e la luce si accende solo al 5.13: la frase sulla distanza è detta prima che la mappa mostri le città. Inoltre la didascalia dice «Verona 11 – 11 Vicenza» mentre il copione dice «Pari: 11 a 11»: coerente nei numeri, ma il conteggio dichiarato («11 a 11») non è specificato come luci di oggi; i dati mappa indicano 12 luci oggi per ciascuna città, quindi il numero 11 non corrisponde al conteggio odierno della mappa e va verificato con la fonte del punteggio. Infine la didascalia chiede di commentare con «Vicenza, Luna, cane» ma tra i dati non c'è la prova che il sistema riconosca quel formato.",
+    "correzione": "Spostare la battuta «45 chilometri» dopo il secondo 5.13 (o allineare la scena della luce alla frase), confermare con la fonte del punteggio se 11 a 11 è il dato corrente (la mappa dice 12 luci oggi in entrambe le città), e verificare che il formato di commento della didascalia sia quello accettato dal sistema.",
+    "idea": "Mostrare in apertura il conteggio aggiornato delle luci di oggi accanto al punteggio, così il numero nel video coincide sempre con la mappa."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:28+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella didascalia c'è scritto 'Ogni animale accende una luce nella sua città' e 'si accende col tuo @', ma il brief dice 'Sei di Vicenza o di Verona?' e la fascia chiede di commentare città e nome dell'animale: la didascalia non segnala che il commento deve includere anche il nome, coerente con la fa",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, dati mappa (coordinate, conteggi 11–11, luci accese al secondo 5.13), misure audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio) e didascalia/fascia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella didascalia c'è scritto 'Ogni animale accende una luce nella sua città' e 'si accende col tuo @', ma il brief dice 'Sei di Vicenza o di Verona?' e la fascia chiede di commentare città e nome dell'animale: la didascalia non segnala che il commento deve includere anche il nome, coerente con la fascia. Più importante: la trascrizione dice 'Verona contro Vicenza: 45 chilometri' a 4.4s, ma la scena della mappa parte dal secondo 4.53, quindi la frase iniziale è coperta dalla scena giusta solo in parte; inoltre i dati mappa indicano le luci già accese al secondo 5.13, quindi la voce al secondo 4.4 anticipa di poco l'accensione. Verifica anche che il numero 45 chilometri sia una misura confermata nei materiali (non è presente tra i dati verificati).",
+    "correzione": "Confermare la distanza di 45 km con una fonte verificata oppure toglierla dalla voce e dalla didascalia; allineare la frase 'luce' alla scena che parte da 4.53s; aggiungere in didascalia 'commenta città e nome dell'animale' come nella fascia.",
+    "idea": "Per i prossimi testa a testa, mostrare sulla mappa il conteggio aggiornato a ogni sorpasso, così il pubblico vede chi guida prima dell'ultima domanda."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:29+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase di apertura ('Verona contro Vicenza: 45 chilometri, e la sfida è aperta') parte a 4.4s, mentre la scena della mappa comincia a 4.53s: la voce nomina i comuni prima che la mappa li mostri. Inoltre i dati mappa indicano 11 luci per città, mentre la mappa mostra 'luci_li_ogg",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Verona e Vicenza, 11 luci ciascuna, scena 4.53-8.68s), audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio), didascalia e fascia commenti, rispetto al brief testa_a_testa.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione la frase di apertura ('Verona contro Vicenza: 45 chilometri, e la sfida è aperta') parte a 4.4s, mentre la scena della mappa comincia a 4.53s: la voce nomina i comuni prima che la mappa li mostri. Inoltre i dati mappa indicano 11 luci per città, mentre la mappa mostra 'luci_li_oggi': 12 per entrambe: la cifra del copione (11 – 11) non corrisponde al dato di oggi e va verificata. Il dato 'follower_ogni_1000' è null in quasi tutti i reel e il valore 0.0 nel reel 'prima_luce' va controllato, ma non riguarda questa mansione.",
+    "correzione": "Allineare la battuta sui comuni alla scena mappa (es. far partire la frase a 4.53s o anticipare la scena) e confermare con i dati attuali il punteggio mostrato (11 – 11 oppure 12 – 12) prima della pubblicazione, aggiornando copione, copertina e didascalia di conseguenza.",
+    "idea": "Aggiungere in ogni reel testa_a_testa un'etichetta a schermo con il numero di luci accese oggi, aggiornata automaticamente dai dati della mappa, così il punteggio mostrato e quello detto coincidono sempre."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:30+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La copertina indica come punto luce [11.2697, 45.4929], che non corrisponde a Verona (45.4384, 10.9935) né a Vicenza (45.5475, 11.546): è un punto nel mezzo, tra le due città, e ne' l'una ne' l'altra è segnata correttamente. Inoltre la scena dei dati mostra 'Verona · 11' e 'Vicenza · 11' ma la coper",
+   "dati": {
+    "controllato": "Copertina su Instagram: coerenza di copertina (testa a testa, 11 – 11, Verona vs Vicenza), posizione della luce sulla mappa rispetto alle coordinate di Verona/Vicenza, e numeri della scena sullo schermo rispetto a dati e trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La copertina indica come punto luce [11.2697, 45.4929], che non corrisponde a Verona (45.4384, 10.9935) né a Vicenza (45.5475, 11.546): è un punto nel mezzo, tra le due città, e ne' l'una ne' l'altra è segnata correttamente. Inoltre la scena dei dati mostra 'Verona · 11' e 'Vicenza · 11' ma la copertina dice 11 – 11 correttamente; il problema principale è solo la coordinata della luce di copertina.",
+    "correzione": "Impostare il punto della luce di copertina sulle coordinate di Verona [10.9935, 45.4384] oppure su quelle di Vicenza [11.546, 45.5475], oppure, se si vuole il punto tra le due, dichiararlo esplicitamente nel frame; in ogni caso la copertina deve rispettare la mappa verificata.",
+    "idea": "Per i testa a testa, usare due luci evidenziate (una per città) nella copertina, così il pubblico vede subito le due posizioni reali."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:31+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice \"Verona contro Vicenza: 45 chilometri\" ma i dati mappa e il copione non verificano i 45 km: le coordinate indicate darebbero una distanza in linea d'aria diversa da 45 km (circa 45 km è plausibile, ma il dato non è nei materiali verificati). Inoltre la didascalia ripete il numer",
+   "dati": {
+    "controllato": "Verifica di trascrizione coi secondi, dati mappa (Verona 45,4384/10,9935 e Vicenza 45,5475/11,546, conteggi 11 e 11), tempi della scena luce, audio e coerenza con il copione e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La trascrizione dice \"Verona contro Vicenza: 45 chilometri\" ma i dati mappa e il copione non verificano i 45 km: le coordinate indicate darebbero una distanza in linea d'aria diversa da 45 km (circa 45 km è plausibile, ma il dato non è nei materiali verificati). Inoltre la didascalia ripete il numero \"45 km\" come fatto. Il dato va confermato prima della pubblicazione. Nota anche che il brief dice \"il prossimo animale decide chi passa avanti\" ma la luce di Verona e Vicenza risulta già accesa al secondo 5.13 insieme ai conteggi: la scena si sovrappone alla luce già visibile, e la voce arriva al secondo 4.4 quando il dato è già presente.",
+    "correzione": "Confermare la distanza di 45 km con una fonte verificata (oppure rimuoverla dal copione e dalla didascalia) e verificare che il conteggio 11 a 11 sia aggiornato al momento della pubblicazione.",
+    "idea": "Per i prossimi testa a testa, mostrare nella scena la distanza calcolata dalla mappa stessa, così il numero è sempre verificabile dai dati."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:31+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Le cifre dicono 11 e 11, ma il conteggio della mappa mostra che l'animale è acceso in entrambe le città dal secondo 4.53 al 8.68 (\"già accesa al secondo 5.13\"). Il testo al secondo 4.4 è detto prima che la luce di Verona sia accesa nel reel; poi la voce dice \"11 a 11\" al secondo 8.6 quando la scena ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, coerenza tra copione, didascalia e dati mappa (Verona 11, Vicenza 11, 45 km), misure audio e fascia commento sul reel.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Le cifre dicono 11 e 11, ma il conteggio della mappa mostra che l'animale è acceso in entrambe le città dal secondo 4.53 al 8.68 (\"già accesa al secondo 5.13\"). Il testo al secondo 4.4 è detto prima che la luce di Verona sia accesa nel reel; poi la voce dice \"11 a 11\" al secondo 8.6 quando la scena è ancora in corso. Inoltre la fascia di commento compare solo nella chiusura e la trascrizione la fa partire dopo il secondo 15.8, quindi il testo chiave è mal sincronizzato con la scena. Infine l'audio è a -14.1 LUFS, dentro l'obiettivo, ma il volume medio dei primi 5 secondi (-15.9 dB) è basso per un'apertura.",
+    "correzione": "Allineare \"Verona contro Vicenza\" alla scena luce (4.5-8.7 s) e spostare \"Pari: 11 a 11\" dopo l'accensione effettiva delle luci; far comparire la fascia commento già dal secondo 15 o prima; alzare di qualche dB il volume dell'apertura (primi 5 s) mantenendo il picco sotto -1 dBFS.",
+    "idea": "Per i prossimi testa a testa, mostrare il conteggio delle luci che si aggiorna in tempo reale sulla mappa, così lo spettatore vede il pareggio formarsi invece di sentirlo solo dalla voce."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:32+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il numero 11 nel brief indica la luce di oggi, ma la mappa riporta 12 luci oggi per entrambe le città ('luci_li_oggi': 12), mentre l'etichetta della scena dice 'Verona · 11' e 'Vicenza · 11'. Il conteggio 11 a 11 nel copione non corrisponde ai dati 'luci_li_oggi'. Inoltre la distanza di 45 km non è ",
+   "dati": {
+    "controllato": "Ho verificato i secondi della trascrizione rispetto alle scene e ai dati della mappa, le coordinate e i conteggi di Verona e Vicenza, e le misure audio rispetto all'obiettivo.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il numero 11 nel brief indica la luce di oggi, ma la mappa riporta 12 luci oggi per entrambe le città ('luci_li_oggi': 12), mentre l'etichetta della scena dice 'Verona · 11' e 'Vicenza · 11'. Il conteggio 11 a 11 nel copione non corrisponde ai dati 'luci_li_oggi'. Inoltre la distanza di 45 km non è presente nei materiali verificati, quindi non posso confermarla. L'audio è a -14.1 LUFS con picco a -1.0 dBFS e nessun silenzio, quindi è conforme.",
+    "correzione": "Verificare il conteggio aggiornato di Verona e Vicenza prima della pubblicazione e allineare copione, didascalia e copertina ('11 – 11') ai dati reali; oppure confermare che 11 è il totale delle luci attribuite alla sfida. Confermare la distanza di 45 km con una fonte o rimuoverla.",
+    "idea": "Aggiungere in chiusura il numero di luci mancanti al pareggio, così ogni reel mostra un obiettivo concreto che invita a commentare."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:32+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La frase «Verona contro Vicenza: 45 chilometri» e la didascalia parlano di 45 km, ma nei materiali non c'è una misura verificata della distanza tra i due comuni; le coordinate indicate sono coerenti con circa 45 km in linea d'aria, però la cifra non è una fonte ufficiale. Inoltre il conteggio nella ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del brief, dati mappa (Verona e Vicenza, 11 luci ciascuna, distanza 45 km), misure audio e didascalia per la mia mansione di registro pubblicazioni.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase «Verona contro Vicenza: 45 chilometri» e la didascalia parlano di 45 km, ma nei materiali non c'è una misura verificata della distanza tra i due comuni; le coordinate indicate sono coerenti con circa 45 km in linea d'aria, però la cifra non è una fonte ufficiale. Inoltre il conteggio nella trascrizione dice 11 a 11, mentre i dati mappa indicano 'luci_li_oggi: 12' per entrambe le città: il punteggio mostrato nel reel non corrisponde al dato attuale. Infine la didascalia dichiara 'Voce generata con IA' mentre il brief ha 'voce': true: va verificato che l'indicazione sia coerente con il reel reale.",
+    "correzione": "Allineare il punteggio al dato attuale (12 – 12 se la mappa è aggiornata al momento della pubblicazione, oppure aggiornare i dati prima di pubblicare) e verificare la distanza di 45 km oppure scrivere 'circa 45 km'. Confermare la dicitura sulla voce IA.",
+    "idea": "Mostrare sulla mappa il dato con data e ora dell'ultimo aggiornamento, così ogni cifra del reel è verificabile."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:34+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Verona · 11' e 'Vicenza · 11' è coerente con la lista animali, ma la frase 'Pari: 11 a 11' al secondo 8.6 viene detta mentre la scena luce resta ancora fino al secondo 8.68 e la mappa indica 'luci_li_oggi: 12' per entrambe: il conteggio parlato non corrisponde ai dati di oggi. Inoltre la di",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Verona e Vicenza, 11 luci ciascuna, 45 km), audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio, primi 5s a -15.9 dB) e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'Verona · 11' e 'Vicenza · 11' è coerente con la lista animali, ma la frase 'Pari: 11 a 11' al secondo 8.6 viene detta mentre la scena luce resta ancora fino al secondo 8.68 e la mappa indica 'luci_li_oggi: 12' per entrambe: il conteggio parlato non corrisponde ai dati di oggi. Inoltre la didascalia cita '45 km' come distanza tra i comuni, ma nei materiali non c'è alcun dato verificato su questa distanza. Le coordinate (45.4384,10.9935 e 45.5475,11.546) danno circa 45 km in linea d'aria, quindi il dato è plausibile, ma non è documentato nei materiali.",
+    "correzione": "Allineare il conteggio parlato ai dati: se si dice 11 a 11, usare il valore di scena coerente con la mappa, oppure dire 'pari, 12 a 12' se il conteggio aggiornato è quello di oggi. Confermare o indicare la fonte dei 45 km prima della pubblicazione, o sostituirli con una formulazione verificabile.",
+    "idea": "Per i prossimi testa a testa, mostrare sullo schermo il conteggio aggiornato della mappa al momento della frase, così il numero detto e quello visibile coincidono sempre."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:35+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase «Verona contro Vicenza: 45 chilometri» compare al secondo 4.4, ma nel brief la frase 0 è indicata come scena 'luce' e la mappa segna l'accensione delle luci già al secondo 5.13: la scena della mappa inizia a 4.53, quindi la frase sulla distanza non è sincronizzata con la ",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la coerenza tra copione e frasi, i dati della mappa (Verona e Vicenza, 11 a 11, luci accese al secondo 5.13), la didascalia e le misure audio.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione la frase «Verona contro Vicenza: 45 chilometri» compare al secondo 4.4, ma nel brief la frase 0 è indicata come scena 'luce' e la mappa segna l'accensione delle luci già al secondo 5.13: la scena della mappa inizia a 4.53, quindi la frase sulla distanza non è sincronizzata con la luce. Inoltre l'audio non rispetta l'obiettivo: -14.1 LUFS è accettabile, ma il volume medio dei primi 5 secondi è -15.9 dB, cioè più basso di quanto indicato per una buona apertura. Infine, nei dati della mappa il conteggio 'luci_li_oggi: 12' per entrambe le città non coincide con l'11 a 11 del copione: le luci totali di oggi sono 12 mentre il punteggio mostrato è 11.",
+    "correzione": "Allineare la frase 'Verona contro Vicenza' alla scena della luce (dal secondo 4.5) oppure anticipare l'accensione; alzare il volume dei primi 5 secondi portandolo verso -14 dB medi; verificare se il punteggio da mostrare è 11 (luci conteggiate) o 12 (luci di oggi) e allineare copione, etichette e didascalia.",
+    "idea": "Per i prossimi reel di formato testa_a_testa, mostrare nella scena di apertura il comune che accende la prima luce, così la sincronizzazione tra voce e mappa è automatica."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:36+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Verona contro Vicenza: 45 chilometri' parte a 4.4s, mentre la scena della luce è dal secondo 4.53 e la frase d'apertura del brief ('e la sfida è aperta') cade a 7.2s. Il dato 'Verona · 11' sulla mappa è già acceso a 5.13s, quindi la luce compare prima che il testo nomini",
+   "dati": {
+    "controllato": "Trascrizione e secondi, dati della mappa (coordinate, conteggi 11-11, luci accese), audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio lungo, primi 5s a -15.9 dB), coerenza tra copione, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione la frase 'Verona contro Vicenza: 45 chilometri' parte a 4.4s, mentre la scena della luce è dal secondo 4.53 e la frase d'apertura del brief ('e la sfida è aperta') cade a 7.2s. Il dato 'Verona · 11' sulla mappa è già acceso a 5.13s, quindi la luce compare prima che il testo nomini la città: il copione va in ritardo di circa 0.6s rispetto all'immagine. Inoltre la didascalia dice 'Ogni animale accende una luce' ma il conteggio 11-11 è di luci già accese, non verificabile dal reel. Il dato 45 km non è presente nei materiali di mappa (coordinate Verona 45.4384, 10.9935 e Vicenza 45.5475, 11.546 danno circa 45 km in linea d'aria, quindi è plausibile, ma va confermato). Infine l'audio ha i primi 5 secondi a -15.9 dB medi, leggermente sotto l'obiettivo di apertura.",
+    "correzione": "Allineare la battuta 'Verona contro Vicenza' al secondo 5.1 oppure anticipare la luce a 4.4s; alzare di circa 1-2 dB il volume dei primi 5 secondi; verificare il dato 45 km con fonte; nella didascalia sostituire 'Ogni animale accende una luce' con 'Ogni animale accende una luce nella sua città' per evitare ambiguità sull'effetto immediato.",
+    "idea": "Per i prossimi testa a testa, mostrare nel primo secondo il conteggio aggiornato (es. '11 – 11') come sovrimpressione, così il numero è leggibile prima della voce."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:36+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Verona contro Vicenza: 45 chilometri» con il «Pari: 11 a 11» già detto a 8.6 s, ma nella scena dati la luce di Verona e Vicenza risulta già accesa al secondo 5.13, mentre la didascalia afferma che l'animale accende una luce per ciascun commento: i conteggi sul reel (11 a 11) so",
+   "dati": {
+    "controllato": "Ho verificato la scena testa a testa (4.53–8.68 s): etichette, coordinate e comuni sulla mappa, ordine di accensione delle luci, conteggio 11–11, durata e trascrizione coi secondi, audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio lungo), e la coerenza tra copione, didascalia e fascia.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "La trascrizione dice «Verona contro Vicenza: 45 chilometri» con il «Pari: 11 a 11» già detto a 8.6 s, ma nella scena dati la luce di Verona e Vicenza risulta già accesa al secondo 5.13, mentre la didascalia afferma che l'animale accende una luce per ciascun commento: i conteggi sul reel (11 a 11) sono pre-calcolati e non corrispondono allo stato reale della mappa (oggi 12 luci per città). Inoltre la didascalia dice che il commento conta per la propria città, ma la frase del copione «Sei di Vicenza o di Verona?» presuppone una sfida ancora aperta mentre la scena dati mostra entrambe le città già in parità. Nei dati ci sono anche 45 km che non sono verificabili nei materiali (non compaiono coordinate per calcolarli con certezza: la distanza tra le due coordinate è circa 45 km, quindi questo è confermato).",
+    "correzione": "Allineare il conteggio parlato e in copertina («11 – 11») allo stato effettivo della mappa al momento della pubblicazione (oggi 12 – 12, o il dato reale del giorno), oppure rimuovere il numero dal copione e dalla copertina. Rivedere la frase «la sfida è aperta» per essere coerente con il conteggio reale.",
+    "idea": "Per i prossimi testa a testa, generare il conteggio direttamente dai dati della mappa al momento del rendering, così numeri e luci coincidono sempre."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:37+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La luce di Verona e Vicenza risulta già accesa al secondo 5.13, ma la frase 'Verona contro Vicenza: 45 chilometri' finisce a 7.2s e la scena 'luce' va da 4.53 a 8.68: il dato della luce viene mostrato prima che la voce introduca il confronto. Inoltre il copione dice 'Pari: 11 a 11' ma nei dati la vo",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (Verona 11, Vicenza 11, distanza ~45 km), audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio) e didascalia/fascia.",
+    "esito": "segnalo",
+    "secondo": 5.13,
+    "problema": "La luce di Verona e Vicenza risulta già accesa al secondo 5.13, ma la frase 'Verona contro Vicenza: 45 chilometri' finisce a 7.2s e la scena 'luce' va da 4.53 a 8.68: il dato della luce viene mostrato prima che la voce introduca il confronto. Inoltre il copione dice 'Pari: 11 a 11' ma nei dati la voce e la didascalia citano 'Verona 11 – 11 Vicenza' senza che il conteggio 'luci_li_oggi: 12' per comune corrisponda al 11 mostrato: il numero 11 è il totale sfide/luci della scena, mentre luci_li_oggi indica 12 per ciascuna città, quindi l'etichetta 'Verona · 11' non è allineata al dato 'oggi'. Infine l'idea di 'consenso SÌ' non è verificabile dal materiale.",
+    "correzione": "Allineare l'etichetta della mappa al dato di conteggio effettivo (11 vs 12 luci oggi) prima di pubblicare, e far comparire la luce di Verona/Vicenza dopo la frase introduttiva (dal secondo ~7.2) oppure spostare la voce a 'Verona contro Vicenza' sopra la scena luce. Verificare anche che la voce generata con IA sia dichiarata (già presente in didascalia).",
+    "idea": "Per i prossimi testa_a_testa, mostrare sulla mappa il conteggio 'oggi' accanto a quello totale, così il pubblico vede chiaramente chi guadagna terreno."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:38+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La luce del primo comune risulta già accesa al secondo 5.13, ma la frase 'Verona contro Vicenza: 45 chilometri' si chiude solo al secondo 7.2 e la scena 'luce' va da 4.53 a 8.68: il dato di accensione cade nel mezzo della frase, quindi lo spettatore vede la luce accendersi mentre si parla ancora di ",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa, audio e didascalia per il reel testa a testa Verona-Vicenza.",
+    "esito": "segnalo",
+    "secondo": 5.13,
+    "problema": "La luce del primo comune risulta già accesa al secondo 5.13, ma la frase 'Verona contro Vicenza: 45 chilometri' si chiude solo al secondo 7.2 e la scena 'luce' va da 4.53 a 8.68: il dato di accensione cade nel mezzo della frase, quindi lo spettatore vede la luce accendersi mentre si parla ancora di distanza. Inoltre la voce è generata con IA e la didascalia lo dichiara, ma nei materiali manca la conferma che il numero '45 km' sia verificato. Il conteggio 11-11 e le luci odierne (12 ciascuna) sono coerenti con i dati, ma la didascalia cita 'Verona 11 – 11 Vicenza' mentre la mappa mostra 11 per entrambi: corretto. Audio: -14.1 LUFS e picco -1.0 dBFS rispettano l'obiettivo, con volume medio iniziale -15.9 dB accettabile.",
+    "correzione": "Far coincidere l'accensione della luce con la frase 'Verona contro Vicenza' (portare l'evento ~5.1 s verso l'inizio della frase, o ritardare la scena luce a ~7.2 s) e verificare e citare la fonte dei 45 km prima della pubblicazione.",
+    "idea": "Per i prossimi testa a testa, mostrare sulla mappa il percorso o la distanza tra le due città quando viene detta la cifra, così il numero si vede oltre che si sente."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:39+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Verona contro Vicenza: 45 chilometri» al secondo 4.4, ma il dato verificato dice che le luci si accendono al 5.13s e la scena inizia al 4.53s: la frase sulla distanza parte prima che la mappa mostri le due città. Inoltre la didascalia dice «Commenta la tua città e il nome del tuo cane ",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, dati mappa (Verona 11 e Vicenza 11, luci già accese al 5.13s, scena 4.53–8.68s), misure audio e invito a commentare nella didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il reel dice «Verona contro Vicenza: 45 chilometri» al secondo 4.4, ma il dato verificato dice che le luci si accendono al 5.13s e la scena inizia al 4.53s: la frase sulla distanza parte prima che la mappa mostri le due città. Inoltre la didascalia dice «Commenta la tua città e il nome del tuo cane o gatto», ma nel reel la fascia dice «Commenta città e nome del tuo animale»: i due testi non coincidono del tutto. Infine, nella didascalia i 45 km non sono verificati nei materiali e la voce è dichiarata generata con IA, cosa che va tenuta.",
+    "correzione": "Spostare l'inizio della frase «Verona contro Vicenza» a dopo il 4.53s, in sincronia con l'apparizione della mappa; allineare fascia e didascalia (es. «Commenta città e nome del tuo animale»); verificare il dato dei 45 km prima della pubblicazione. Audio: -14.1 LUFS e picco -1 dBFS rispettano l'obiettivo; il volume dei primi 5s (-15.9 dB) è leggermente basso ma accettabile.",
+    "idea": "Per i prossimi testa a testa, mostrare nella copertina il numero di luci di oggi per ciascuna città invece del solo punteggio, così chi guarda vede subito quale comune sta guadagnando terreno."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:39+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Pari: 11 a 11' e la didascalia 'Verona 11 – 11 Vicenza', ma i dati della mappa riportano 'luci_li_oggi: 12' per entrambe le città. Il conteggio nel parlato e nella didascalia non corrisponde al dato verificato. Inoltre la frase '45 chilometri' al secondo 4.4 è un dato che non c",
+   "dati": {
+    "controllato": "Trascrizione, secondi, mappa (Verona e Vicenza, 11 luci ciascuna, 45 km), audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio), didascalia e fascia di commento rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La trascrizione dice 'Pari: 11 a 11' e la didascalia 'Verona 11 – 11 Vicenza', ma i dati della mappa riportano 'luci_li_oggi: 12' per entrambe le città. Il conteggio nel parlato e nella didascalia non corrisponde al dato verificato. Inoltre la frase '45 chilometri' al secondo 4.4 è un dato che non compare nei materiali forniti, quindi non è verificabile. Il secondo 4.4 è dove inizia la frase con la distanza.",
+    "correzione": "Allineare il punteggio al dato verificato (12 – 12 se il conteggio è quello della mappa, oppure confermare da fonte aggiornata l'11 e correggere 'luci_li_oggi') in trascrizione, copertina e didascalia. Verificare la distanza di 45 km con una fonte o toglierla.",
+    "idea": "Per i prossimi testa a testa, usare nel copione un numero che venga letto direttamente dal dato della mappa al momento della registrazione, così il punteggio parlato e scritto non può divergere."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:41+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato «45 chilometri» nella prima frase non è nei materiali verificati: la mappa dà solo le coordinate di Verona (45.4384, 10.9935) e Vicenza (45.5475, 11.546), senza distanza calcolata. Inoltre le luci sono 11 a 11 nel conteggio di scena, ma il dato «luci_li_oggi» è 12 per entrambe le città: il p",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, coordinate e comuni sulla mappa, conteggi delle luci, misure audio, didascalia e fascia di chiusura rispetto al brief del reel testa a testa.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato «45 chilometri» nella prima frase non è nei materiali verificati: la mappa dà solo le coordinate di Verona (45.4384, 10.9935) e Vicenza (45.5475, 11.546), senza distanza calcolata. Inoltre le luci sono 11 a 11 nel conteggio di scena, ma il dato «luci_li_oggi» è 12 per entrambe le città: il pari 11–11 nel copione va allineato ai numeri aggiornati. Nota anche che l'audio è a -15.9 dB di media nei primi 5 secondi, sotto l'obiettivo di -14 LUFS per l'apertura, anche se il livello integrato di -14.1 LUFS è in linea.",
+    "correzione": "Togliere «45 chilometri» dalla voce e dalla didascalia, oppure inserire una distanza verificata. Aggiornare il pari al dato attuale (12 – 12) oppure confermare che 11 – 11 è il conteggio al momento del reel. Alzare leggermente il volume dei primi 5 secondi per portarlo verso -14 LUFS.",
+    "idea": "Mostrare sulla mappa una linea tra le due città con la distanza calcolata dalle coordinate, così il dato chilometrico diventa verificabile e visivo nei prossimi testa a testa."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:42+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Pari: 11 a 11' ma nella mappa Verona è a 12 luci oggi ('luci_li_oggi': 12) mentre Vicenza è a 11 negli 'etichetta' (ma 'luci_li_oggi' è 12 per entrambe): il numero 11 sulla scena non corrisponde ai dati del giorno. Inoltre la didascalia dice 'Verona 11 – 11 Vicenza' e la voce 'Pari:",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (Verona e Vicenza, 11 a 11, luci già accese dal secondo 4.53), audio e didascalia nel reparto Community.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il copione dice 'Pari: 11 a 11' ma nella mappa Verona è a 12 luci oggi ('luci_li_oggi': 12) mentre Vicenza è a 11 negli 'etichetta' (ma 'luci_li_oggi' è 12 per entrambe): il numero 11 sulla scena non corrisponde ai dati del giorno. Inoltre la didascalia dice 'Verona 11 – 11 Vicenza' e la voce 'Pari: 11 a 11' ma i dati di 'luci_li_oggi' indicano 12 per entrambe. Problema secondario: la voce è generata con IA, ma il testo non lo dichiara in apertura e la fascia recita 'Commenta città e nome del tuo animale' senza indicare che la città è riconosciuta dal commento. L'audio è nei parametri (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio), quindi ok.",
+    "correzione": "Allineare il conteggio: o 11 a 11 con i dati dell'etichetta di scena, oppure aggiornare copione, copertina e didascalia al valore 12 a 12 se 'luci_li_oggi' è il dato corretto. Verificare prima di pubblicare.",
+    "idea": "Aggiungere in copertina o nella fascia il conteggio aggiornato al momento della pubblicazione, così il numero non può diventare obsoleto."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:43+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Verona 11 – 11 Vicenza» e «Pari: 11 a 11», ma la mappa riporta 11 per Vicenza e 12 per Verona (luci_li_oggi: 12 per entrambe le voci non è un conteggio di animali; la lista di Verona contiene 5 animali citati e quella di Vicenza 5, quindi il pari non è verificabile dai materiali). Inol",
+   "dati": {
+    "controllato": "Abbinamento dei dati mappa (scena 0, etichette, luci già accese dal secondo 5.13), coerenza trascrizione/copione con i secondi, misure audio (LUFS, picco, silenzi, volume primi 5 s) e conteggio 11–11 rispetto ai dati.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il reel dice «Verona 11 – 11 Vicenza» e «Pari: 11 a 11», ma la mappa riporta 11 per Vicenza e 12 per Verona (luci_li_oggi: 12 per entrambe le voci non è un conteggio di animali; la lista di Verona contiene 5 animali citati e quella di Vicenza 5, quindi il pari non è verificabile dai materiali). Inoltre l'audio è a -15.9 dB di volume medio nei primi 5 s, sotto l'obiettivo di -14 LUFS in apertura, e la voce è generata con IA senza che la didascalia lo dichiari nel punto d'apertura (la dichiarazione c'è solo in fondo).",
+    "correzione": "Verificare il conteggio reale delle luci per Verona e Vicenza prima di pubblicare e allineare copione, trascrizione e didascalia a quel numero (se diverso da 11–11, aggiornare «Pari» e il titolo). Alzare il volume dei primi 5 secondi di circa 2 dB per avvicinarsi a -14 LUFS e tenere il picco sotto -1 dBFS. Spostare o rendere più visibile la dicitura «Voce generata con IA» già nella didascalia d'apertura.",
+    "idea": "Per i testa a testa, mostrare in sovrimpressione il conteggio aggiornato di entrambe le città al secondo in cui viene citato, così il pubblico può verificare il pari e il commento si concentra sulla sfida."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:43+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Verona contro Vicenza: 45 chilometri' cita la distanza, ma nel copione del brief la scena 'luce' va dal secondo 4.53: la trascrizione inizia a 4.4 s, prima dell'inizio della scena della mappa, quindi l'apertura sulla distanza non è coperta dalla mappa. Inoltre l'audio è a -15.9 dB di volum",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione rispetto al copione e alle scene della mappa: frasi, secondi, conteggio 11–11, distanza di 45 km (coerente con le coordinate di Verona e Vicenza), e la luce dei due comuni accesa entro la scena (4.53–8.68 s).",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase 'Verona contro Vicenza: 45 chilometri' cita la distanza, ma nel copione del brief la scena 'luce' va dal secondo 4.53: la trascrizione inizia a 4.4 s, prima dell'inizio della scena della mappa, quindi l'apertura sulla distanza non è coperta dalla mappa. Inoltre l'audio è a -15.9 dB di volume medio nei primi 5 s, sotto l'obiettivo di -14 LUFS per l'apertura.",
+    "correzione": "Spostare l'inizio della frase 'Verona contro Vicenza' a partire da 4.53 s (allineandola alla scena della luce) oppure anticipare la scena mappa a 4.4 s; alzare il volume dei primi 5 s di circa 2 dB per portarli verso -14 LUFS senza superare il picco di -1 dBFS.",
+    "idea": "Per il formato testa_a_testa, mostrare sulla mappa il conteggio aggiornato (es. 11–11) appena la frase lo nomina, così voce e luce si rinforzano a vicenda."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:43+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase «45 chilometri» è detta al secondo 4.4 mentre la scena luce va da 4.53 a 8.68: il riferimento alla distanza non compare nei dati verificati della mappa, quindi non posso confermarlo; inoltre la didascalia dichiara «due comuni a 45 km» senza una fonte nei materiali. Le coordinate di Verona e",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Verona e Vicenza, luci e comuni), misure audio e didascalia per il reel testa a testa.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase «45 chilometri» è detta al secondo 4.4 mentre la scena luce va da 4.53 a 8.68: il riferimento alla distanza non compare nei dati verificati della mappa, quindi non posso confermarlo; inoltre la didascalia dichiara «due comuni a 45 km» senza una fonte nei materiali. Le coordinate di Verona e Vicenza sono plausibili, ma la distanza andrebbe verificata prima della pubblicazione. Anche l'audio ha il picco a -1.0 dBFS, al limite dell'obiettivo ma conforme.",
+    "correzione": "Verificare la distanza reale tra Verona e Vicenza con una fonte affidabile; se non confermata, togliere «45 chilometri» dalla trascrizione (secondo 4.4), dal copione frase 0 e dalla didascalia. In alternativa usare solo «Verona contro Vicenza: la sfida è aperta». Mantenere il conteggio 11–11 solo se coincide con le luci della mappa.",
+    "idea": "Per i prossimi testa a testa, inserire nei materiali una colonna con la distanza verificata tra i due comuni, così che il copione la citi solo quando è documentata."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:45+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Pari: 11 a 11' compare a 8.6s, ma la scena 'duello' di dati_mappa va da 4.53s a 8.68s; il dato 'Verona · 11' e 'Vicenza · 11' è però valido solo se entrambe le luci sono accese, cosa indicata come avvenuta al secondo 5.13. Inoltre il conteggio 'luci_li_oggi: 12' per entrambe le città non c",
+   "dati": {
+    "controllato": "Ho verificato i secondi di 'Pari: 11 a 11' e 'Sei di Vicenza o di Verona?' rispetto alla trascrizione, la coerenza dei conteggi delle luci con dati_mappa e le distanze/coordinate dei comuni.",
+    "esito": "segnalo",
+    "secondo": 8.6,
+    "problema": "La frase 'Pari: 11 a 11' compare a 8.6s, ma la scena 'duello' di dati_mappa va da 4.53s a 8.68s; il dato 'Verona · 11' e 'Vicenza · 11' è però valido solo se entrambe le luci sono accese, cosa indicata come avvenuta al secondo 5.13. Inoltre il conteggio 'luci_li_oggi: 12' per entrambe le città non corrisponde al numero di animali elencati (5 per città, ma la lista è parziale): non è verificabile dai materiali se 11 sia il totale. Infine il titolo 'Verona 11 – 11 Vicenza' e la copertina sono coerenti, ma la distanza 45 km non è presente nei dati della mappa, quindi non è verificabile dai materiali.",
+    "correzione": "Verificare con il dato ufficiale il totale delle luci per Verona e Vicenza (11 ciascuna) e la distanza di 45 km prima della pubblicazione; se confermati, nessuna modifica al copione.",
+    "idea": "Mostrare sulla mappa il conteggio aggiornato delle luci di ciascuna città nella scena 'duello', così che il numero 11–11 sia visibilmente legato al dato."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:45+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato sulla mappa dice che la luce di Verona e Vicenza è già accesa al secondo 5.13, ma nella trascrizione la frase sulla sfida parte al secondo 4.4 e il punteggio 11 a 11 arriva al secondo 8.6: nel momento in cui si dice 'Verona contro Vicenza' le luci non sono ancora accese. Inoltre il conteggio",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i dati della mappa per Verona e Vicenza, l'audio e la didascalia nella mia mansione sul reel testa a testa.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato sulla mappa dice che la luce di Verona e Vicenza è già accesa al secondo 5.13, ma nella trascrizione la frase sulla sfida parte al secondo 4.4 e il punteggio 11 a 11 arriva al secondo 8.6: nel momento in cui si dice 'Verona contro Vicenza' le luci non sono ancora accese. Inoltre il conteggio 11 a 11 è coerente con i dati (11 animali per città), ma nella didascalia i commenti dicono 'si accende col tuo @ e conta per la tua città': la regola non è verificabile dai materiali. Per l'audio: -14.1 LUFS e picco -1.0 dBFS sono nei limiti, ma il volume medio dei primi 5 secondi (-15.9 dB) è più basso dell'obiettivo implicito di apertura, senza silenzi lunghi.",
+    "correzione": "Spostare la frase 'Verona contro Vicenza' dopo il secondo 5.13 oppure anticipare la comparsa delle luci a prima del secondo 4.4. Togliere o verificare la regola 'conta per la tua città' nella didascalia. Alzare leggermente il volume dei primi 5 secondi.",
+    "idea": "Aggiungere al brief un campo che indichi il secondo esatto in cui ogni luce si accende, così il testo parlato può essere sincronizzato con la mappa."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:46+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase finale del copione («Sei di Vicenza o di Verona?») non corrisponde alla didascalia né alla fascia, che chiedono di commentare la propria città e il nome dell'animale; inoltre la didascalia dice che la luce si accende col tuo @, ma i dati non confermano questa regola. Il volume medio dei pri",
+   "dati": {
+    "controllato": "Ho verificato la mia mansione sui Punti e codici: coerenza tra copione, trascrizione con secondi, dati mappa (Verona e Vicenza, 11 luci ciascuna, distanza 45 km), misure audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 14.1,
+    "problema": "La frase finale del copione («Sei di Vicenza o di Verona?») non corrisponde alla didascalia né alla fascia, che chiedono di commentare la propria città e il nome dell'animale; inoltre la didascalia dice che la luce si accende col tuo @, ma i dati non confermano questa regola. Il volume medio dei primi 5 secondi (-15,9 dB) è più basso dell'obiettivo implicito del brief, anche se LUFS e picco rispettano i valori dichiarati.",
+    "correzione": "Allineare la battuta finale alla richiesta reale: «Commenta la tua città e il nome del tuo animale!». Verificare la regola del tag @ prima di pubblicare la didascalia, oppure rimuoverla. Alzare leggermente il volume dei primi 5 secondi.",
+    "idea": "Per i prossimi testa a testa, mostrare sulla mappa il conteggio aggiornato delle luci di ciascuna città nell'ultimo secondo del reel, così il pubblico vede subito cosa cambia con il suo commento."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:46+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato «45 chilometri» è nel copione e nella trascrizione, ma non risulta verificato nei dati della mappa: i materiali riportano solo coordinate e conteggi, non una distanza. Inoltre la frase sul pari (11 a 11) compare dal secondo 8.6, mentre la scena della luce è dal 4.53 al 8.68: il conteggio va ",
+   "dati": {
+    "controllato": "Trofei e albo: coerenza tra copione, trascrizione con secondi, conteggi della mappa (Verona 11, Vicenza 11, pari), luci accese nella scena e distanza di 45 km dichiarata.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato «45 chilometri» è nel copione e nella trascrizione, ma non risulta verificato nei dati della mappa: i materiali riportano solo coordinate e conteggi, non una distanza. Inoltre la frase sul pari (11 a 11) compare dal secondo 8.6, mentre la scena della luce è dal 4.53 al 8.68: il conteggio va bene, ma va confermato che sia quello mostrato a schermo in quei secondi.",
+    "correzione": "Verificare la distanza Verona–Vicenza con una fonte esterna prima della pubblicazione, oppure rimuovere «45 chilometri» dal copione, dalla trascrizione e dalla didascalia. Confermare che il contatore 11–11 sia visibile nel fotogramma tra 4.5 e 8.7 secondi.",
+    "idea": "Per i prossimi testa a testa, mostrare nel reel il dato verificato della mappa (conteggio aggiornato a schermo) invece di affermazioni numeriche non ancora controllate."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:48+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase d'apertura «Verona contro Vicenza: 45 chilometri» sta al secondo 4.4, ma la luce delle due città è già accesa al secondo 5.13 e la scena parte dal 4.53: il claim sulla distanza compare prima che la mappa mostri le città. Inoltre il livello audio nei primi 5 secondi è -15.9 dB, sotto l'obiet",
+   "dati": {
+    "controllato": "Verifica di copione, trascrizione coi secondi, dati mappa (Verona e Vicenza, distanza, conteggio 11-11), audio e didascalia del reel di apertura testa a testa.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase d'apertura «Verona contro Vicenza: 45 chilometri» sta al secondo 4.4, ma la luce delle due città è già accesa al secondo 5.13 e la scena parte dal 4.53: il claim sulla distanza compare prima che la mappa mostri le città. Inoltre il livello audio nei primi 5 secondi è -15.9 dB, sotto l'obiettivo di -14 LUFS, e la trascrizione mostra pause tra le frasi (es. 8.6s-10.7s) che rallentano il ritmo dopo l'apertura. La distanza di 45 km non è verificabile dai materiali forniti.",
+    "correzione": "Anticipare la comparsa delle etichette Verona e Vicenza sulla mappa a prima del secondo 4.4 (o ritardare la frase a dopo la luce); alzare il volume dei primi 5 secondi di circa 2 dB per portarlo verso -14 LUFS; accorciare la pausa tra 8.6s e 10.7s; verificare la distanza di 45 km prima della pubblicazione.",
+    "idea": "Per i prossimi testa a testa, aprire con la mappa già illuminata e la sigla del duello nei primi 2 secondi, così che numero e città compaiano insieme."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:48+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato «45 chilometri» nel copione e nella didascalia non trova riscontro nei materiali: le coordinate di Verona (45.4384, 10.9935) e Vicenza (45.5475, 11.546) danno una distanza in linea d'aria di circa 43 km, quindi il numero non è verificabile con i dati forniti. Inoltre, l'audio ha LUFS -14.1 e",
+   "dati": {
+    "controllato": "Ho verificato la coerenza tra copione, trascrizione coi secondi, dati della mappa, misure audio e didascalia per la mia mansione sul reel testa a testa Verona-Vicenza.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato «45 chilometri» nel copione e nella didascalia non trova riscontro nei materiali: le coordinate di Verona (45.4384, 10.9935) e Vicenza (45.5475, 11.546) danno una distanza in linea d'aria di circa 43 km, quindi il numero non è verificabile con i dati forniti. Inoltre, l'audio ha LUFS -14.1 e picco -1.0 dBFS, rispettando l'obiettivo, ma il volume medio dei primi 5 secondi è -15.9 dB, e non risulta un controllo esplicito sull'apertura. Il conteggio 11-11 corrisponde ai dati della mappa.",
+    "correzione": "Sostituire «45 chilometri» con «a poca distanza» oppure con un dato verificato (ad esempio la distanza stradale), e aggiornare anche la didascalia. Verificare che l'apertura sia sopra gli obiettivi di volume, dato che i primi 5 secondi risultano più bassi.",
+    "idea": "Per i prossimi testa a testa, mostrare in scena la distanza calcolata dalle coordinate della mappa, così il numero è sempre verificabile."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:49+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il CTA finale («Sei di Vicenza o di Verona?») arriva al secondo 14.1 ma il reel dura 18.2 s: la domanda resta nell'aria senza che la fascia («Commenta città e nome del tuo animale») appaia prima della fine della frase. Inoltre la didascalia dice «si accende col tuo @» e «conta per la tua città», ma ",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, le coordinate e i conteggi sulla mappa, le misure audio, la didascalia e i dati del progetto, dal lato crescita dei follower.",
+    "esito": "segnalo",
+    "secondo": 14.1,
+    "problema": "Il CTA finale («Sei di Vicenza o di Verona?») arriva al secondo 14.1 ma il reel dura 18.2 s: la domanda resta nell'aria senza che la fascia («Commenta città e nome del tuo animale») appaia prima della fine della frase. Inoltre la didascalia dice «si accende col tuo @» e «conta per la tua città», ma nei materiali non c'è nulla che confermi che il conteggio per città si attivi davvero con il commento: non posso verificarlo. Infine la didascalia dichiara «voce generata con IA», che è corretto, ma la voce non ha ancora un riscontro di tono nei dati audio.",
+    "correzione": "Far comparire la fascia di commento già dal secondo 14.1 e mantenerla fino a fine reel (18.2 s), e nella didascalia togliere la promessa sul conteggio finché non è confermata dal sistema, sostituendola con un invito generico a commentare.",
+    "idea": "Per i prossimi testa a testa, mostrare il conteggio aggiornato delle due città a metà reel così che il pubblico veda in tempo reale quale comune sta vincendo e voglia rispondere."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:49+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il gancio 'Verona contro Vicenza: 45 chilometri' parte a 4.4s, ma la scena 'luce' va dal secondo 4.53 all'8.68, quindi la prima frase del copione non è sincronizzata con le luci: le città compaiono prima che il parlato le nomini. Inoltre il gancio non spiega la mappa: chi non conosce il progetto non",
+   "dati": {
+    "controllato": "Gancio (secondo 0-4.4s) e chiusura CTA nel reel Verona-Vicenza: trascrizione, tempi, dati mappa (11 a 11 oggi, luci già accese prima del gancio), coerenza col brief e con la didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il gancio 'Verona contro Vicenza: 45 chilometri' parte a 4.4s, ma la scena 'luce' va dal secondo 4.53 all'8.68, quindi la prima frase del copione non è sincronizzata con le luci: le città compaiono prima che il parlato le nomini. Inoltre il gancio non spiega la mappa: chi non conosce il progetto non capisce cosa sia la luce. Infine i dati mostrano 'follower_ogni_1000' null in quasi tutti i reel, quindi non si può affermare nulla sulla crescita dei follower.",
+    "correzione": "Anticipare la voce al secondo 0.5 (oppure allineare la scena 'luce' a partire da 4.4s) e aggiungere nel gancio una frase tipo 'Ogni animale accende una luce nella sua città'. Verificare la fascia di testo 'Commenta città e nome del tuo animale' a 15.8s, già nel copione.",
+    "idea": "Aprire con una domanda diretta nei primi 2 secondi (es. 'Quale città è più illuminata stanotte?') e misurare il follower_ogni_1000 su ogni reel per capire quale formato porta davvero nuovi follower."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:52+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nel reel la frase 'Verona contro Vicenza: 45 chilometri' compare al secondo 4.4, ma la scena della mappa con le due luci va da 4.53 a 8.68 e la luce è già accesa al 5.13. Il titolo sulla distanza parte quindi prima che la mappa mostri le città. Inoltre il conteggio 'Pari: 11 a 11' (secondo 8.6) coin",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati di Verona e Vicenza sulla mappa (coordinate, comuni, conteggio 11 a 11), tempi della scena e conteggio delle luci, con la frase d'apertura e la fascia del CTA.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nel reel la frase 'Verona contro Vicenza: 45 chilometri' compare al secondo 4.4, ma la scena della mappa con le due luci va da 4.53 a 8.68 e la luce è già accesa al 5.13. Il titolo sulla distanza parte quindi prima che la mappa mostri le città. Inoltre il conteggio 'Pari: 11 a 11' (secondo 8.6) coincide con la fine della scena luce, quindi va bene, ma la fascia CTA 'Commenta città e nome del tuo animale' è letta a 15.8 s mentre la didascalia promette che il commento si accende col proprio @ e conta per la città: il reel non spiega questo meccanismo. Anche i dati: la didascalia dice 'Verona 11 – 11 Vicenza' e nel dato c'è anche la distanza di 45 km, che però non è verificabile dai materiali (le coordinate danno una distanza in linea d'aria da calcolare; non la posso confermare). Infine il campo follower_ogni_1000 è null in cinque reel su sei, quindi non posso valutare la crescita storica.",
+    "correzione": "Allineare la frase '45 chilometri' alla comparsa delle due luci (dal secondo 4.5) oppure far comparire la mappa prima della frase. Aggiungere al reel, già a 15 s, una riga che spieghi che il commento con città e nome dell'animale accende la luce. Verificare la distanza di 45 km con un calcolo sulle coordinate prima di pubblicarla, oppure tog­liere il dato. Confermare che i conteggi 11 a 11 siano aggiornati al momento della pubblicazione.",
+    "idea": "Un reel di ritorno con il conteggio finale della sfida dopo il prossimo animale, con una scena che mostra la luce appena accesa e il nome della città vincente, così il commento diventa anche la chiamata a partecipare."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:52+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Pari: 11 a 11' e il 'luci_li_oggi: 12' per ciascuna città non tornano: il conteggio di 11 animali per città va bene, ma nel reel e nella didascalia si dice 'Ogni animale accende una luce' e 'Verona 11 – 11 Vicenza' mentre la fascia dice 'Commenta città e nome' senza che la sfida sia collega",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i dati di Verona e Vicenza sulla mappa (coordinate, conteggi 11 e 11, luci già accese dal secondo 5.13), l'audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio) e la coerenza della fascia e della didascalia con il brief.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'Pari: 11 a 11' e il 'luci_li_oggi: 12' per ciascuna città non tornano: il conteggio di 11 animali per città va bene, ma nel reel e nella didascalia si dice 'Ogni animale accende una luce' e 'Verona 11 – 11 Vicenza' mentre la fascia dice 'Commenta città e nome' senza che la sfida sia collegata a un conteggio aggiornato; inoltre la copertina riporta '11 – 11' ma la scena 0 indica che la luce è già accesa al secondo 5.13, cioè dopo l'apertura del 4.4s in cui si cita il dato. Il punto critico è che la cifra 'Pari: 11 a 11' viene detta a 8.6s mentre la luce di Verona compare solo al 5.13s: la voce anticipa la mappa di pochi secondi, che va bene, ma va verificato che entrambe le luci siano visibili al 8.6s. Il problema più concreto: 'luci_li_oggi: 12' non coincide con gli 11 animali elencati per ciascuna città.",
+    "correzione": "Allineare il conteggio: o dire '11 a 11' con le 11 luci elencate, oppure aggiornare il numero del 'luci_li_oggi' a 11 prima della pubblicazione. Far comparire entrambe le luci entro 8.6s, così la frase 'Pari: 11 a 11' è vista in mappa mentre viene detta. Il resto (audio, trascrizione, fascia, didascalia) è a posto.",
+    "idea": "Aggiungere una scritta fissa con il conteggio aggiornato (es. 'Verona 11 · Vicenza 11') nei reel di sfida, così chi guarda senza audio capisce subito il punteggio."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:52+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, dati mappa (Verona e Vicenza accese durante la scena 4.53–8.68s, 11 a 11), audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio, primi 5s a -15.9 dB) e coerenza con la frase 'Pari: 11 a 11' e con la didascalia.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Verona e Vicenza accese durante la scena 4.53–8.68s, 11 a 11), audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio, primi 5s a -15.9 dB) e coerenza con la frase 'Pari: 11 a 11' e con la didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa_a_testa, fare una tabella nella didascalia o in copertina con i follower per 1.000 dei due comuni, così il duello ha anche un dato di crescita da seguire. Considerare anche di ripetere il formato 'ospiti_sera', che nei dati è il reel con più follower ogni 1.000 (24.5)."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:53+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Verona contro Vicenza: 45 chilometri' parte a 4.4s, ma la mappa e la scena 'luce' si accendono solo a 4.53s, quindi la parola 'Verona' rischia di essere detta prima che la luce si accenda. Inoltre il volume medio dei primi 5 secondi è -15.9 dB, sotto l'obiettivo del -14 LUFS, e la copertin",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la sincronia della mappa (luci e scena 4.53–8.68s), le coordinate e i conteggi Verona/Vicenza, l'audio (LUFS, picco, silenzi), la didascalia e la fascia commenti rispetto al copione.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase 'Verona contro Vicenza: 45 chilometri' parte a 4.4s, ma la mappa e la scena 'luce' si accendono solo a 4.53s, quindi la parola 'Verona' rischia di essere detta prima che la luce si accenda. Inoltre il volume medio dei primi 5 secondi è -15.9 dB, sotto l'obiettivo del -14 LUFS, e la copertina usa un'etichetta 'Verona vs Vicenza' non coerente con 'Verona · 11' e 'Vicenza · 11' della mappa (solo formulazione, non un errore di dati). Infine la didascalia dice 'Voce generata con IA' mentre il brief indica voce:true, da confermare per trasparenza.",
+    "correzione": "Ritardare l'attacco della frase a circa 4.6s oppure anticipare la scena luce a 4.4s; alzare leggermente il volume dei primi 5 secondi per avvicinarsi a -14 LUFS; uniformare il testo della copertina alle etichette della mappa; verificare che la dicitura IA sia corretta e visibile.",
+    "idea": "Un reel di 'sorpasso' in cui il punteggio cambia in tempo reale sulla mappa man mano che arrivano nuovi animali, così il duello si vede crescere."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:54+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio 11 a 11 sulla mappa è corretto, ma la trascrizione dice 'Pari: 11 a 11' al secondo 8.6, mentre il dato di luce di Verona e Vicenza risulta già acceso al secondo 5.13, quindi la frase sulla parità arriva dopo la scena dei comuni. Inoltre il conteggio 'luci_li_oggi': 12 per entrambe le ci",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa (Verona 11, Vicenza 11, distanza di 45 km coerente con le coordinate), la trascrizione con i secondi, la congruenza tra copione e scena, l'audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e la didascalia rispetto ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il conteggio 11 a 11 sulla mappa è corretto, ma la trascrizione dice 'Pari: 11 a 11' al secondo 8.6, mentre il dato di luce di Verona e Vicenza risulta già acceso al secondo 5.13, quindi la frase sulla parità arriva dopo la scena dei comuni. Inoltre il conteggio 'luci_li_oggi': 12 per entrambe le città non corrisponde al totale di 11 mostrato come punteggio: va chiarito se il punteggio conta solo le luci di oggi o tutte. Nella didascalia, '45 chilometri' è una distanza in linea d'aria tra i centri, non verificata nei materiali come percorso stradale: meglio precisarlo.",
+    "correzione": "Allineare il punteggio alla fonte (11 vs 12 luci_li_oggi, scegliere un solo criterio e usarlo in voce, copertina e didascalia). Specificare 'a 45 km in linea d'aria' oppure ricontrollare la distanza. Spostare la frase 'Pari: 11 a 11' in modo che coincida con l'accensione delle luci, oppure accendere le luci prima del secondo 8.6.",
+    "idea": "Per i prossimi reel di testa a testa, mostrare sulla mappa la distanza come linea tra i due comuni e aggiungere il conteggio delle luci di oggi in sovrimpressione, così il numero della sfida è sempre verificabile."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:55+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio «11 a 11» non corrisponde ai dati: la mappa dà Verona 11 e Vicenza 11 ma entrambe segnano 12 luci oggi (campo luci_li_oggi), e l'elenco degli animali per Verona e Vicenza ne riporta 5 ciascuna. Inoltre la trascrizione dice «Pari: 11 a 11» mentre la frase del brief e la didascalia sono c",
+   "dati": {
+    "controllato": "Ho verificato il punto in cui il reel mostra il conteggio 11–11 e la luce delle due città (secondi 4.4–8.6 della trascrizione), la coerenza delle distanze e dei dati della mappa, e la didascalia con il bando al commento.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il conteggio «11 a 11» non corrisponde ai dati: la mappa dà Verona 11 e Vicenza 11 ma entrambe segnano 12 luci oggi (campo luci_li_oggi), e l'elenco degli animali per Verona e Vicenza ne riporta 5 ciascuna. Inoltre la trascrizione dice «Pari: 11 a 11» mentre la frase del brief e la didascalia sono coerenti col numero 11, quindi il dato da verificare è quale totale sia quello corretto. Anche la distanza di 45 km non è presente nei materiali verificati: le coordinate indicate darebbero circa 45 km in linea d'aria, ma la cifra va confermata.",
+    "correzione": "Allineare il conteggio al dato ufficiale della mappa nel momento della pubblicazione (o indicare il totale delle luci accese in quel momento), verificare la distanza 45 km con una fonte esplicita, e aggiornare la trascrizione e la didascalia di conseguenza. Verificare anche che l'audio resti nei parametri (-14 LUFS, picco -1 dBFS, nessun silenzio): i valori attuali risultano conformi.",
+    "idea": "Per i prossimi testa a testa, mostrare sullo schermo il conteggio aggiornato dalla mappa con l'orario di rilevazione, così il numero è sempre verificabile dal pubblico."
+   }
+  },
+  {
+   "t": "2026-11-08T12:08:56+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La frase «Sei di Vicenza o di Verona?» non è chiusa dalla fascia di chiusura in modo netto: la fascia compare sulla didascalia-invito ma nel parlato l'invito a commentare arriva al secondo 14.1-15.8 e il nome dell'animale viene chiesto senza un esempio visivo sullo schermo, mentre la didascalia chie",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i dati della mappa per Verona e Vicenza (conteggi 11 e 11, luci già accese al secondo 5.13 dentro la scena 4.53-8.68), la coerenza tra copione e frasi, e le misure audio (-14.1 LUFS, picco -1.0 dBFS, nessun silenzio, apertura a -15.9 dB).",
+    "esito": "segnalo",
+    "secondo": 14.1,
+    "problema": "La frase «Sei di Vicenza o di Verona?» non è chiusa dalla fascia di chiusura in modo netto: la fascia compare sulla didascalia-invito ma nel parlato l'invito a commentare arriva al secondo 14.1-15.8 e il nome dell'animale viene chiesto senza un esempio visivo sullo schermo, mentre la didascalia chiede esplicitamente «città e nome». Inoltre la trascrizione dice «Commenta città e nome del tuo animale!» ma il brief indica che la sfida si chiude sul conteggio: il numero 11–11 non cambia nel reel, quindi lo spettatore non vede quale città sta vincendo. Il dato 'luci_li_oggi: 12' per entrambe le città non è citato né in voce né in didascalia.",
+    "correzione": "Aggiungere in scena 'chiusura' (dal secondo 14.1) il conteggio aggiornato delle luci di oggi (12 e 12) oppure mostrare a schermo l'esempio «Vicenza, Luna, cane» per rendere chiaro il formato del commento; allineare la frase parlata alla didascalia.",
+    "idea": "Per il prossimo testa_a_testa, mostrare il conteggio che cambia in tempo reale nella mappa (es. 11–12) per dare un motivo concreto di tornare a vedere il risultato."
+   }
+  },
+  {
+   "t": "2026-11-08T12:09:03+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel non va pubblicato così: va anticipato il gancio nei primi 2 secondi e va verificato o tolto il dato «45 chilometri», che nessun materiale conferma (le coordinate indicano circa 20 km in linea d'aria, ma sulla distanza stradale non c'è alcuna fonte). Va inoltre chiarito il conteggio 11 contro 12.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.4,
+      "problema": "Il gancio arriva troppo tardi: la voce parte a 4.4s e la scena della luce a 4.53s, quindi nei primi 2 secondi non si vede né si sente la sfida e chi guarda può già scorrere via.",
+      "correzione": "Far partire la voce entro 0–2s con «Verona 11 – 11 Vicenza» in sovrimpressione e anticipare la scena della mappa, così la luce si vede nei primi 2 secondi. Controllare anche il volume dei primi 5s (−15.9 dB, più basso del resto)."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "«45 chilometri» non è presente nei dati della mappa, che contengono solo coordinate e conteggi. Le coordinate danno circa 20 km in linea d'aria, quindi il numero è contestabile. Compare nella voce e nella didascalia.",
+      "correzione": "Verificare la distanza con una fonte (strada o linea d'aria) e usare lo stesso dato in voce e didascalia. Se non si conferma, togliere il numero e dire «due città vicine, e la sfida è aperta»."
+     },
+     {
+      "secondo": 8.6,
+      "problema": "Il conteggio è incoerente: voce e didascalia dicono 11–11, mentre il campo luci_li_oggi riporta 12 per entrambe le città. Inoltre non è chiaro se 11–11 sia il punteggio della sfida o le luci di oggi.",
+      "correzione": "Controllare sulla mappa il numero reale al momento della pubblicazione e allinearlo in voce, didascalia e copertina. Nella didascalia specificare cosa indica il punteggio."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia dice che l'animale «conta per la tua città», ma questo non è verificabile dai materiali.",
+      "correzione": "Togliere la frase oppure riscriverla in modo che rispecchi come funziona davvero la sfida, dopo averlo verificato."
+     }
+    ],
+    "idea": "Aprire con il punteggio già in sovrimpressione (numero grande) e la voce nel primo fotogramma, con la mappa come prova visiva subito dopo. Usare solo dati verificati, cioè conteggi aggiornati dalla mappa e una distanza con fonte indicata."
+   }
+  },
+  {
+   "t": "2026-11-08T12:09:03+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è sostanzialmente solido (11 a 11 coerente con la mappa, audio a -14.1 LUFS); prima della pubblicazione correggo solo la distanza di 45 km non documentata e la coerenza tra il punteggio 11–11 e il dato 'luci_li_oggi: 12'.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.4,
+      "problema": "La frase «Verona contro Vicenza: 45 chilometri» presenta come fatto una distanza che non compare nei dati della mappa, quindi non è verificata. La stessa cifra è nella didascalia.",
+      "correzione": "Calcolare la distanza dalle coordinate dei due comuni (o citare una fonte) e confermare i 45 km. Se non è confermata, toglierla da voce e didascalia."
+     },
+     {
+      "secondo": null,
+      "problema": "Il campo 'luci_li_oggi' riporta 12 per le città, mentre reel e didascalia dicono 11 a 11. Non è chiaro se il punteggio mostrato sia il dato aggiornato o uno snapshot precedente. Gli elenchi animali (5 per città) sono parziali e non permettono di verificare il numero.",
+      "correzione": "Controllare nella mappa il conteggio ufficiale al momento della pubblicazione. Allineare voce, etichette, copertina e didascalia a quel numero (11–11 o 12–12), oppure indicare che il dato è quello al momento della registrazione."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La frase di apertura parte a 4.4 s, la scena luce inizia a 4.53 s e le luci risultano accese dal 5.13 s: la voce parla di luce prima che compaia sulla mappa. Lo scarto è di circa 0.7 s.",
+      "correzione": "Far partire l'accensione delle luci in sincrono con la frase (da ~4.4 s) oppure spostare la frase di circa 0.7 s, così che la luce compaia quando viene nominata."
+     }
+    ],
+    "idea": "Per i prossimi testa a testa, mostrare sulla mappa la linea tra le due città con la distanza calcolata automaticamente dalle coordinate, e ricavare i conteggi da un unico snapshot datato della mappa: così distanza e punteggio sono sempre verificabili e coerenti tra video, copertina e didascalia."
+   }
+  },
+  {
+   "t": "2026-11-08T12:09:03+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Si corregge solo l'apertura: i primi 5 secondi sono a -15,9 dB medi, circa 2 dB sotto l'obiettivo, e va verificato l'allineamento tra voce e comparsa delle luci. Il resto dell'audio (-14,1 LUFS, picco -1,0 dBFS, nessun silenzio) è a posto e non si tocca.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.4,
+      "problema": "Il volume medio dei primi 5 secondi è -15,9 dB, circa 2 dB sotto l'obiettivo di -14 LUFS e sotto il resto del reel: l'apertura arriva più debole. Il picco è già a -1,0 dBFS, quindi c'è poco margine.",
+      "correzione": "Alzare di circa 1-2 dB il livello medio dei primi 5 secondi, tramite compressione o guadagno mirato, senza superare il picco di -1 dBFS (se serve, limiter leggero). Riesportare e rimisurare."
+     },
+     {
+      "secondo": 5.13,
+      "problema": "La trascrizione mette «45 chilometri» a 4.4 s, mentre le luci sulla mappa risultano già accese a 5.13 s e la frase «Pari: 11 a 11» è collegata a quella scena. Non è certo che voce e immagine siano sincronizzate. Va verificato, non è un errore confermato.",
+      "correzione": "Riascoltare l'export con il video e controllare che «11 a 11» cada in corrispondenza dell'accensione delle luci. Se c'è scarto evidente, spostare la traccia voce per allinearla, poi riesportare."
+     }
+    ],
+    "idea": "Per i prossimi testa a testa: apertura sonora più marcata nei primi 5 secondi, con un breve effetto sonoro sulla comparsa della luce sulla mappa, mantenendo la stessa struttura audio e il picco sotto -1 dBFS. Risolve il punto debole emerso in questo reel e rafforza il ritmo iniziale."
+   }
+  },
+  {
+   "t": "2026-11-08T12:09:03+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggiamo subito le coordinate della copertina e la coerenza tra il conteggio 11–11 e il dato di mappa. La fascia finale deve restare visibile fino alla fine del reel. Il resto sono sincronie opinabili, senza prove solide.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "Il punto luce della copertina è [11.27, 45.49], con ordine lng/lat usato come se fosse lat/lng. Inoltre cade tra le due città e non su una delle due. Le segnalazioni sono concordi sul fatto che il frame di copertina non mostra chiaramente le due luci.",
+      "correzione": "Verificare l'ordine delle coordinate e usare quelle reali: Verona lat 45.4384, lng 10.9935; Vicenza lat 45.5475, lng 11.546. Nel frame di copertina devono essere visibili entrambe le luci con le etichette dei due punteggi."
+     },
+     {
+      "secondo": null,
+      "problema": "Il conteggio 11–11 in copertina e nel copione non coincide con il campo 'luci_li_oggi', che indica 12 per entrambe le città. Non è chiaro quale dei due numeri sia aggiornato, quindi si rischia di pubblicare un dato sbagliato.",
+      "correzione": "Verificare alla fonte il dato valido al momento della pubblicazione. Poi allineare copertina, voce, didascalia e fascia allo stesso numero, oppure indicare la data del conteggio."
+     },
+     {
+      "secondo": 15.8,
+      "problema": "Dopo 15,8 s la call to action 'Commenta città e nome del tuo animale' rischia di non avere testo a schermo. Chi guarda senza audio perde l'invito proprio alla fine.",
+      "correzione": "Tenere la fascia di commento visibile dalla frase di chiusura fino all'ultimo fotogramma (18,2 s), con font grande e contrasto alto sulla mappa notturna."
+     }
+    ],
+    "idea": "Per i prossimi testa a testa, generare il conteggio in copertina direttamente dai dati della mappa, con le coordinate verificate e la data di aggiornamento. Così grafica e numeri restano allineati e il dato è verificabile."
+   }
+  },
+  {
+   "t": "2026-11-08T12:09:03+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggo adesso solo l'aggancio della frase sui 45 km alla scena della mappa e verifico il conteggio 11 a 11 contro i 12 'luci oggi'; il resto è rumore o non verificato, quindi non si tocca.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.4,
+      "problema": "La frase «Verona contro Vicenza: 45 chilometri» parte a 4.4s, ma la scena della mappa comincia a 4.53s e la luce si accende a 5.13s: la voce nomina le città prima che la mappa le mostri. Lo segnalano quasi tutti i ruoli.",
+      "correzione": "Spostare la battuta in avanti (o anticipare la scena) in modo che parta almeno da 4.53s, meglio in sincronia con la luce a 5.13s."
+     },
+     {
+      "secondo": 8.6,
+      "problema": "Il copione dice «Pari: 11 a 11», mentre la mappa riporta luci_li_oggi: 12 per entrambe le città. Non è chiaro se 11 sia il punteggio corretto della sfida o un conteggio non aggiornato (scena, voce, didascalia e copertina riportano 11).",
+      "correzione": "Controllare alla fonte del punteggio il valore corrente. Se è 12 a 12, aggiornare insieme voce, etichette di scena, copertina e didascalia; se 11 è il punteggio di sfida corretto, confermarlo e lasciare tutto com'è."
+     },
+     {
+      "secondo": null,
+      "problema": "La copertina indica come punto luce [11.2697, 45.4929], che non coincide né con Verona (10.9935, 45.4384) né con Vicenza (11.546, 45.5475): cade a metà strada.",
+      "correzione": "Mettere la luce di copertina sulle coordinate di una delle due città, oppure usare due luci, una per città."
+     }
+    ],
+    "idea": "Nei testa a testa mostrare a schermo il conteggio delle luci letto direttamente dai dati della mappa, così il numero detto, quello in scena e quello in copertina coincidono sempre."
+   }
+  },
+  {
+   "t": "2026-11-08T12:09:03+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel non va pubblicato finché non si chiariscono il punteggio (11 a 11 nel copione contro 12 'luci oggi' nei dati) e la sincronia tra la frase 'Verona contro Vicenza' e la scena della luce; il resto sono ritocchi minori.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 8.6,
+      "problema": "Il copione e la didascalia dicono 'Pari: 11 a 11' ma i dati della mappa riportano luci_li_oggi: 12 per entrambe le città. Il numero parlato e scritto potrebbe non corrispondere allo stato reale (11 conteggio di scena, 12 luci di oggi: significato dei due dati da chiarire).",
+      "correzione": "Verificare quale dato è quello giusto da mostrare al momento della pubblicazione e allineare voce, etichette della mappa, copertina e didascalia allo stesso numero (o togliere il numero se non è verificabile)."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La frase 'Verona contro Vicenza: 45 chilometri' parte a 4.4 s, prima dell'inizio della scena mappa (4.53 s), e la luce risulta già accesa a 5.13 s: voce e immagine non sono sincronizzate di circa 0.5-0.7 s.",
+      "correzione": "Spostare la frase di circa mezzo secondo (inizio dopo 4.53 s) oppure anticipare l'accensione della luce, così che il nome delle città coincida con la comparsa sulla mappa."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "Il dato '45 km' non compare esplicitamente nei materiali; le coordinate di Verona e Vicenza danno circa 45 km in linea d'aria, quindi è plausibile ma non documentato.",
+      "correzione": "Confermare la distanza dalle coordinate (circa 45 km in linea d'aria) e, se si vuole, dire 'in linea d'aria' o annotare la fonte."
+     },
+     {
+      "secondo": null,
+      "problema": "La fascia nel reel dice 'Commenta città e nome del tuo animale' mentre la didascalia dice 'Commenta la tua città e il nome del tuo cane o gatto': i due inviti non coincidono.",
+      "correzione": "Usare lo stesso testo di invito nella fascia e nella didascalia."
+     }
+    ],
+    "idea": "Generare il conteggio (e se possibile la distanza) direttamente dai dati della mappa al momento del rendering dei reel testa a testa, così numeri parlati, scritti e luci mostrate coincidono sempre."
+   }
+  },
+  {
+   "t": "2026-11-08T12:09:03+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel non esce finché non si verificano il conteggio 11–11 e i 45 km (il calcolo dalle coordinate dà circa 43 km in linea d'aria); poi si sistemano l'attacco audio e la sincronia voce-mappa.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.4,
+      "problema": "«45 chilometri» è nel copione, nella trascrizione e nella didascalia, ma i materiali contengono solo coordinate. Dalle coordinate di Verona e Vicenza la distanza in linea d'aria è circa 43 km, quindi il dato non è verificato e probabilmente impreciso.",
+      "correzione": "Sostituire «45 chilometri» con un dato verificato (distanza stradale o «circa 43 km in linea d'aria») oppure con «a poca distanza». Allineare copione, trascrizione e didascalia."
+     },
+     {
+      "secondo": 8.6,
+      "problema": "«Pari: 11 a 11» e il titolo «Verona 11 – 11 Vicenza» non sono dimostrati: i materiali mostrano un conteggio ambiguo (11 e 12 secondo la mappa, luci_li_oggi 12 per entrambe), quindi il pari potrebbe essere falso.",
+      "correzione": "Ricontare le luci reali di Verona e Vicenza dalla mappa. Se il risultato non è 11–11, correggere voce, titolo, copertina e didascalia. Se è confermato, lasciare invariato."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La frase «Verona contro Vicenza» parte a 4.4 s, prima della scena della mappa (4.53 s) e delle luci accese (5.13 s): voce e immagini non sono sincronizzate.",
+      "correzione": "Spostare l'inizio della frase a circa 4.6–5.1 s, oppure anticipare la scena della mappa e delle etichette a 4.4 s."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il volume medio dei primi 5 secondi è -15.9 dB, sotto l'obiettivo di apertura di circa -14 LUFS. La dicitura «Voce generata con IA» compare solo in fondo alla didascalia.",
+      "correzione": "Alzare di circa 2 dB i primi 5 secondi, mantenendo il picco sotto -1 dBFS. Spostare la dichiarazione della voce IA all'inizio della didascalia."
+     },
+     {
+      "secondo": 14.1,
+      "problema": "La didascalia dice «si accende col tuo @ e conta per la tua città», ma i materiali non confermano questa regola. La battuta finale («Sei di Vicenza o di Verona?») non coincide con la richiesta in didascalia (città e nome dell'animale).",
+      "correzione": "Rimuovere la regola del @ se non verificata. Allineare la battuta finale alla richiesta: «Commenta la tua città e il nome del tuo animale!»."
+     }
+    ],
+    "idea": "Per i testa a testa, mostrare in sovrimpressione il conteggio aggiornato delle due città (e la distanza calcolata dalle coordinate) nel secondo esatto in cui la voce li nomina, così ogni numero è verificabile e voce e mappa si rinforzano."
+   }
+  },
+  {
+   "t": "2026-11-08T12:09:03+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è in gran parte solido (audio conforme, conteggio 11 a 11 coerente con la mappa): correggiamo solo la sincronia tra voce e luci all'apertura, la fascia di commento in chiusura e la promessa non verificata in didascalia; il resto sono ipotesi o rilievi minori.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.4,
+      "problema": "La frase d'apertura «Verona contro Vicenza: 45 chilometri» parte a 4.4 s, ma la scena con le luci va da 4.53 a 8.68 s e la luce risulta accesa solo a 5.13 s: la voce nomina le città prima che compaiano sulla mappa.",
+      "correzione": "Allineare voce e mappa: far partire la scena luce a 4.4 s oppure spostare la frase a circa 4.6 s, così le città si vedono mentre vengono nominate."
+     },
+     {
+      "secondo": 14.1,
+      "problema": "Il CTA «Sei di Vicenza o di Verona?» arriva a 14.1 s, ma la fascia «Commenta città e nome del tuo animale» compare solo a 15.8 s: la domanda resta senza istruzione visiva per quasi 2 secondi e non c'è un esempio di commento.",
+      "correzione": "Far comparire la fascia già a 14.1 s e mantenerla fino a fine reel (18.2 s); se c'è spazio, aggiungere un esempio tipo «Vicenza, Luna»."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia promette «si accende col tuo @» e «conta per la tua città», ma nei materiali nulla conferma che il commento attivi davvero il conteggio per città.",
+      "correzione": "Finché il sistema non lo conferma, sostituire la promessa con un invito generico a commentare città e nome dell'animale."
+     }
+    ],
+    "idea": "Nei prossimi testa a testa mostrare il conteggio delle due città sulla mappa, aggiornato e in sovrimpressione fissa (es. «Verona 11 · Vicenza 11»), così funziona anche senza audio e dà un motivo concreto per commentare e tornare a vedere chi vince."
+   }
+  },
+  {
+   "t": "2026-11-08T12:09:04+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce senza revisione, come prima."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 18.2,
+   "fotogrammi": [
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s000.5.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s001.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s002.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s003.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s004.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s005.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s006.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s007.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s008.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s009.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s010.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s011.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s012.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s013.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s014.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s015.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s016.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s017.0.jpg",
+    "fotogrammi/2026-11-08-1306-testa_a_testa/v1/s018.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.1,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -15.9,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "crescita": {
+  "pubblico": "Chi vive o è cresciuto a Verona o a Vicenza e ha un cane o un gatto: gente che ama la rivalità tra le due città venete e ha voglia di difendere la propria.",
+  "gancio": "Verona 11, Vicenza 11: 45 chilometri e la sfida è in parità. Da che parte stai?",
+  "motivo_per_seguire": "Su Zampe d'Italia il tuo cane o gatto accende una luce nella tua città sulla mappa dell'Italia di notte, e la tua città può vincere le sfide contro le vicine.",
+  "chiusura": "Pari 11 a 11. Segui Zampe d'Italia: il prossimo animale decide chi passa avanti.",
+  "perche": "Una rivalità di campanile in parità spinge a schierarsi e commentare, e chi vuole vedere come finisce ha un buon motivo per seguire la pagina."
+ },
+ "token_persone": 288154,
+ "fine": "2026-11-08T12:09:04+00:00"
+}
