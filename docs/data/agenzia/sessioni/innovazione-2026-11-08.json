@@ -1,0 +1,167 @@
+{
+ "id": "innovazione-2026-11-08",
+ "formato": "innovazione del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-08T14:14:29+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-08T14:14:33+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Specchio del Derby: Due animali della stessa regione (es. Sardegna vs Sicilia) si sfidano in un reel corto dove la mappa mostra le loro luci che si accendono a turno ogni volta che un follower scrive il nome della propria città nei commenti. Il comune con più voti guadagna un punto nella Coppa delle Zampe, collegando direttamente il reel al minigioco esistente.",
+   "dati": {
+    "idea": "Specchio del Derby",
+    "come_funziona": "Due animali della stessa regione (es. Sardegna vs Sicilia) si sfidano in un reel corto dove la mappa mostra le loro luci che si accendono a turno ogni volta che un follower scrive il nome della propria città nei commenti. Il comune con più voti guadagna un punto nella Coppa delle Zampe, collegando direttamente il reel al minigioco esistente.",
+    "perche_porta_follower": "Chi vive in una città coinvolta è spinto a commentare e a invitare amici per 'portare' il voto al proprio comune, creando condivisioni mirate e nuovi account che seguono per vedere il risultato. Il formato 'derby' e 'testa_a_testa' esistono già ma non sono mai stati legati alla raccolta di nomi di città come leva di partecipazione.",
+    "perche_e_bella": "La mappa notturna diventa un tabellone vivo: ogni commento accende una piccola luce in più sulla città scelta, e il video mostra il duello illuminarsi in tempo reale sopra l'Italia buia, con un effetto visivo coerente con il brand.",
+    "cosa_serve": "Riprese e grafica della mappa già disponibili, il sito con la Coppa delle Zampe per collegare il punteggio, e un conteggio manuale dei commenti con nome città durante la settimana; nessun acquisto né strumento extra.",
+    "come_misurarla": "Dopo 7 giorni confrontare i follower registrati prima del primo reel e subito dopo l'ultimo, e calcolare i follower ogni 1.000 account raggiunti (il rapporto usato per 'ospiti_sera'), confrontandolo con la media dei reel dove il dato è disponibile."
+   }
+  },
+  {
+   "t": "2026-11-08T14:14:33+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Mappa Vivente del Passaparola: Ogni reel serale mostra in diretta sulla mappa d'Italia le luci accese dai nuovi follower del giorno, con il comune di ciascuno che si illumina. Chi vede il proprio comune acceso è invitato a condividere la storia alla sua cerchia con il codice SEGUO, e il sito mostra un contatore dei comuni che hanno 'portato amici'.",
+   "dati": {
+    "idea": "Mappa Vivente del Passaparola",
+    "come_funziona": "Ogni reel serale mostra in diretta sulla mappa d'Italia le luci accese dai nuovi follower del giorno, con il comune di ciascuno che si illumina. Chi vede il proprio comune acceso è invitato a condividere la storia alla sua cerchia con il codice SEGUO, e il sito mostra un contatore dei comuni che hanno 'portato amici'.",
+    "perche_porta_follower": "Il formato 'ospiti_sera' è l'unico che ha convertito (7 follower ogni 326 di reach), e questa idea ne amplifica il meccanismo: chi si riconosce nella mappa ha un motivo personale per condividere e per dire SEGUO. Ogni comune diventa un piccolo gruppo di persone che si chiama a vicenda.",
+    "perche_e_bella": "Una mappa notturna che si accende comune per comune, con luci che compaiono in tempo reale, dà un senso di costellazione viva e di comunità che si vede crescere, senza bisogno di effetti costosi.",
+    "cosa_serve": "Mappa e luci già esistenti sul sito, il conteggio dei follower del giorno, una schermata di registrazione del reel serale e un piccolo blocco nel sito per il contatore dei comuni; nessun costo aggiuntivo.",
+    "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 di reach sui reel serali con la mappa (confronto con il 21,5 del 7 novembre) e il numero di commenti con la parola SEGUO, registrando il conteggio follower prima e dopo ogni uscita."
+   }
+  },
+  {
+   "t": "2026-11-08T14:14:33+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Lo Specchio delle Zampe: Ogni sera, alle 21, la pagina ricalcola la mappa e sceglie a caso una luce accesa da un follower che ha scritto SEGUO nei commenti del reel serale. Il suo animale compare in un mini-reel di 10 secondi, con la sua città evidenziata sulla mappa e la scritta 'Sei tu la luce di stasera'. Chi viene scelto è invitato a condividere la storia nei commenti.",
+   "dati": {
+    "idea": "Lo Specchio delle Zampe",
+    "come_funziona": "Ogni sera, alle 21, la pagina ricalcola la mappa e sceglie a caso una luce accesa da un follower che ha scritto SEGUO nei commenti del reel serale. Il suo animale compare in un mini-reel di 10 secondi, con la sua città evidenziata sulla mappa e la scritta 'Sei tu la luce di stasera'. Chi viene scelto è invitato a condividere la storia nei commenti.",
+    "perche_porta_follower": "Il dato più forte finora viene dal reel serale 'ospiti_sera' (21,5 follower ogni 1.000 account) e dai commenti; questa idea premia proprio chi commenta con SEGUO, trasformando il commento in un biglietto per essere mostrato, e chi viene mostrato porta i propri amici a vedere il reel.",
+    "perche_e_bella": "Usa la mappa notturna che già esiste: vedere una luce specifica accendersi e illuminare una città reale, con la foto dell'animale, dà un tocco personale e rende ogni sera un piccolo momento di riconoscimento.",
+    "cosa_serve": "La mappa e i dati delle luci già presenti nel sito, un elenco dei commenti con SEGUO raccolto ogni sera, il formato 'ospiti_sera' con apertura 'mappa' e foto o video degli animali inviati dai follower; nessuna spesa.",
+    "come_misurarla": "Dopo 7 giorni confrontare i follower giornalieri e il dato 'follower ogni 1.000 di reach' dei reel serali con lo Specchio rispetto ai 6 reel precedenti, contando anche quanti commenti SEGUO arrivano ogni sera. Registrare il conteggio dei follower prima e subito dopo ogni uscita, come indicato nella nota di crescita."
+   }
+  },
+  {
+   "t": "2026-11-08T14:14:33+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Mappa delle Promesse: Ogni sera, dopo il reel serale 'ospiti_sera', pubblichiamo una storia con la mappa dell'Italia e le luci dei nuovi arrivati della giornata, con il nome della città di ciascuno. Chi vede la propria città accesa è invitato a rispondere con SEGUO per entrare nel giro di domani.",
+   "dati": {
+    "idea": "Mappa delle Promesse",
+    "come_funziona": "Ogni sera, dopo il reel serale 'ospiti_sera', pubblichiamo una storia con la mappa dell'Italia e le luci dei nuovi arrivati della giornata, con il nome della città di ciascuno. Chi vede la propria città accesa è invitato a rispondere con SEGUO per entrare nel giro di domani.",
+    "perche_porta_follower": "Usa il gancio 'Promessa mantenuta' già testato e la parola-chiave SEGUO, che chiede un'azione minima e misurabile. Chi si riconosce sulla mappa ha un motivo personale per condividere o commentare, portando nuove persone dal pubblico che non conosce ancora la pagina.",
+    "perche_e_bella": "Trasforma i numeri in qualcosa di visibile: ogni nuovo follower diventa una luce in più sulla mappa, collegando il sito e i reel in un'unica immagine che cresce giorno dopo giorno.",
+    "cosa_serve": "La mappa già esistente sul sito, un'immagine statica o un breve video di pochi secondi generato dalle luci della giornata, le storie di Instagram e il conteggio dei follower che registriamo già prima e dopo ogni uscita.",
+    "come_misurarla": "Dopo 7 giorni guardare il numero di follower netti guadagnati nelle 2 ore successive a ciascuna storia serale, rapportato alla reach del reel 'ospiti_sera' (follower ogni 1.000 account), confrontandolo con il dato di partenza di 21,5 e con il numero di risposte SEGUO ricevute."
+   }
+  },
+  {
+   "t": "2026-11-08T14:14:37+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La Luce Vivente: Ogni giorno un reel di 15 secondi mostra la mappa d'Italia di notte con una sola luce che si accende nel comune di un follower che ha appena scritto SEGUO nei commenti del reel serale. Chi vede la propria città illuminata è invitato a condividerlo come prova di presenza. Il sito mostra la stessa mappa con il contatore di luci in tempo reale.",
+   "dati": {
+    "idea": "La Luce Vivente",
+    "come_funziona": "Ogni giorno un reel di 15 secondi mostra la mappa d'Italia di notte con una sola luce che si accende nel comune di un follower che ha appena scritto SEGUO nei commenti del reel serale. Chi vede la propria città illuminata è invitato a condividerlo come prova di presenza. Il sito mostra la stessa mappa con il contatore di luci in tempo reale.",
+    "perche_porta_follower": "Lega il gesto semplice del commento (SEGUO) a un riconoscimento concreto e personale: chi si vede illuminato tende a condividere e a seguire per non perdere il prossimo giro, e i nuovi arrivati hanno un motivo immediato per iscriversi.",
+    "perche_e_bella": "Una mappa scura punteggiata di luci che nascono una alla volta, con il nome del comune che appare, è un'immagine ipnotica che si presta a inquadrature pulite e a un ritmo calmo, coerente con l'estetica notturna del progetto.",
+    "cosa_serve": "La mappa e il sito già esistenti, il contatore delle luci (2.782), i commenti dei reel serali e un'animazione semplice da fare con gli strumenti attuali; nessuna spesa aggiuntiva.",
+    "come_misurarla": "Dopo 7 giorni guardare il numero di follower ogni 1.000 account raggiunti dai reel della Luce Vivente, confrontandolo con il 21,5 del reel 'ospiti_sera', e in parallelo il numero di commenti con la parola SEGUO."
+   }
+  },
+  {
+   "t": "2026-11-08T14:14:37+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Mappa-Staffetta dei Nuovi Arrivi: Ogni sera, dopo il reel delle 21, il sito mostra una mappa a tempo con le luci dei nuovi follower del giorno, e chi scrive SEGUO sotto il reel riceve una zampa di colore nella propria città. Le città con più nuovi arrivi entrano in una mini-staffetta della Coppa delle Zampe, usando il tabellone già esistente.",
+   "dati": {
+    "idea": "Mappa-Staffetta dei Nuovi Arrivi",
+    "come_funziona": "Ogni sera, dopo il reel delle 21, il sito mostra una mappa a tempo con le luci dei nuovi follower del giorno, e chi scrive SEGUO sotto il reel riceve una zampa di colore nella propria città. Le città con più nuovi arrivi entrano in una mini-staffetta della Coppa delle Zampe, usando il tabellone già esistente.",
+    "perche_porta_follower": "Trasforma il commento SEGUO in un gesto che fa comparire il proprio nome e la propria città nella mappa, quindi chi scrive ha un motivo concreto per restare e tornare a vedere se la sua zona si è accesa; il dato 'ospiti_sera' (21,5 follower ogni 1.000 account) è il segnale più forte che abbiamo e questa idea lo rafforza invece di cambiare formato.",
+    "perche_e_bella": "Per chi guarda, la mappa notturna che si accende città per città, con le luci che compaiono di sera, diventa un piccolo spettacolo collettivo che si vede e si racconta.",
+    "cosa_serve": "Il sito con la mappa e il tabellone della Coppa delle Zampe, il formato reel 'ospiti_sera' già esistente, un foglio di conteggio per registrare i follower prima e dopo ogni uscita, e il tempo del team per aggiornare la mappa ogni sera.",
+    "come_misurarla": "Dopo 7 giorni confrontare i follower guadagnati nei giorni con la mappa-staffetta rispetto ai giorni 'ospiti_sera' senza, dividendo per 1.000 account di reach, e guardare il numero di commenti SEGUO rispetto ai commenti totali."
+   }
+  },
+  {
+   "t": "2026-11-08T14:14:37+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Mappa Ritorno Luci: Ogni sera, il reel 'ospiti_sera' mostra sulla mappa dell'Italia le luci accese da ogni comune nelle ultime 24 ore, con un fermo immagine finale che ricorda ai nuovi arrivati di scrivere SEGUO nei commenti. Il giorno dopo, nella storia, si ripete la stessa mappa con solo i nuovi comuni evidenziati, così chi ha partecipato si riconosce.",
+   "dati": {
+    "idea": "Mappa Ritorno Luci",
+    "come_funziona": "Ogni sera, il reel 'ospiti_sera' mostra sulla mappa dell'Italia le luci accese da ogni comune nelle ultime 24 ore, con un fermo immagine finale che ricorda ai nuovi arrivati di scrivere SEGUO nei commenti. Il giorno dopo, nella storia, si ripete la stessa mappa con solo i nuovi comuni evidenziati, così chi ha partecipato si riconosce.",
+    "perche_porta_follower": "Il formato serale è l'unico ad aver portato follower nei dati disponibili (7 su 326 di reach, 21,5 ogni 1.000). Ripetere lo schema con una call to action fissa e un ritorno nelle storie crea un'abitudine e un motivo di ritorno, dando a chi arriva un motivo concreto per seguire.",
+    "perche_e_bella": "Le luci sulla mappa notturna sono già il cuore visivo del progetto: vederle accendersi comune per comune, con il buio che si scalda, rende il video contemplativo e riconoscibile in un feed pieno di contenuti rumorosi.",
+    "cosa_serve": "Mappa e dati delle luci già disponibili sul sito, un template video semplice per il reel serale, una schermata finale con la parola SEGUO e uno slot nelle storie per la versione del giorno dopo. Nessuna spesa aggiuntiva.",
+    "come_misurarla": "Dopo 7 giorni confrontare il numero di follower registrato prima della prima uscita con quello di 7 giorni dopo, e calcolare i follower ogni 1.000 di reach dei soli reel 'ospiti_sera' con questo formato, isolando l'effetto dal resto dei contenuti."
+   }
+  },
+  {
+   "t": "2026-11-08T14:14:37+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Lo Specchio della Notte: Ogni sera, dopo il reel delle 21, pubblichiamo una storia con la mappa dell'Italia in cui compare un unico punto luminoso: quello della città del nuovo follower che ha scritto SEGUO nei commenti del reel. Chi vede il proprio comune accendersi è invitato a rispondere con la zampa del proprio animale nella storia successiva.",
+   "dati": {
+    "idea": "Lo Specchio della Notte",
+    "come_funziona": "Ogni sera, dopo il reel delle 21, pubblichiamo una storia con la mappa dell'Italia in cui compare un unico punto luminoso: quello della città del nuovo follower che ha scritto SEGUO nei commenti del reel. Chi vede il proprio comune accendersi è invitato a rispondere con la zampa del proprio animale nella storia successiva.",
+    "perche_porta_follower": "Il dato di 'ospiti_sera' (21,5 nuovi follower ogni 1.000 account raggiunti) suggerisce che la chiusura con SEGUO funziona; questa idea la rende più concreta e personale, perché chi commenta vede davvero il proprio posto sulla mappa e tende a restare e a condividere con la sua città.",
+    "perche_e_bella": "Una mappa notturna in cui si accende un solo punto alla volta, con la luce che si espande lentamente verso il comune, crea un momento visivo semplice e ipnotico, adatto a una storia da 15 secondi.",
+    "cosa_serve": "La mappa già esistente sul sito, un'animazione semplice di un punto luminoso (anche fatta con uno strumento di editing già in uso), il conteggio dei commenti SEGUO del giorno e la lista dei comuni dei nuovi follower, se disponibile in forma aggregata.",
+    "come_misurarla": "Dopo 7 giorni confrontare il numero di follower netti guadagnati nelle serate con la storia attiva rispetto alla media delle serate precedenti, e il rapporto follower ogni 1.000 account raggiunti dai reel serali, tenendo conto che il campione è ancora piccolo."
+   }
+  },
+  {
+   "t": "2026-11-08T14:14:40+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Mappa Lampo dei Nuovi Arrivi: Ogni sera alle 21, un reel breve mostra la mappa dell'Italia con le luci appena accese nelle ultime 24 ore e una voce fuori campo che legge tre città nuove con il nome dell'animale. Chi vuole vedere la propria città nel prossimo giro scrive SEGUO nei commenti, e il giorno dopo i nomi di chi ha scritto vengono aggiunti alla mappa come 'luci di ritorno' sul sito.",
+   "dati": {
+    "idea": "Mappa Lampo dei Nuovi Arrivi",
+    "come_funziona": "Ogni sera alle 21, un reel breve mostra la mappa dell'Italia con le luci appena accese nelle ultime 24 ore e una voce fuori campo che legge tre città nuove con il nome dell'animale. Chi vuole vedere la propria città nel prossimo giro scrive SEGUO nei commenti, e il giorno dopo i nomi di chi ha scritto vengono aggiunti alla mappa come 'luci di ritorno' sul sito.",
+    "perche_porta_follower": "Usa il gancio già emerso dal campione positivo ('ospiti_sera', 21,5 follower ogni 1.000) e lo rende ripetibile: la parola SEGUO crea un'azione concreta e il ritorno sulla mappa dà una ragione per restare.",
+    "perche_e_bella": "Le luci che si accendono città per città sulla mappa notturna sono un'immagine forte e semplice, e vedere il proprio comune illuminarsi è un piccolo momento di appartenenza.",
+    "cosa_serve": "La mappa e le luci già presenti sul sito, il formato 'ospiti_sera' con una voce fuori campo, e la possibilità di aggiornare a mano i nomi nel sito dopo i commenti.",
+    "come_misurarla": "Dopo 7 giorni guardare la variazione di follower rispetto al conteggio registrato prima della prima uscita, e rapportarla ai 'follower_ogni_1000' dei reel serali pubblicati nello stesso periodo."
+   }
+  },
+  {
+   "t": "2026-11-08T14:14:45+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Da provare: «La Luce Vivente». Primo passo: Domani si prepara il template di animazione di 15 secondi (mappa scura, una luce che nasce, nome del comune) e si sceglie dai commenti SEGUO del reel serale il primo comune da accendere. Si registra il conteggio dei follower prima della pubblicazione e si pubblica la sera stessa. Misura: Per 7 giorni si registrano i follower prima e subito dopo ogni uscita. Si calcolano i follower ogni 1.000 account raggiunti dai reel della Luce Vivente e si confrontano con il 21,5 di 'ospiti_sera'. In parallelo si conta il numero di commenti con SEGUO ogni sera. Il campione è piccolo, quindi i risultati vanno letti come indicazione.",
+   "dati": {
+    "scelta": {
+     "idea": "La Luce Vivente",
+     "come_funziona": "Ogni sera, dopo il reel delle 21, si pubblica un reel di 15 secondi con la mappa d'Italia al buio. Si accende una sola luce, nel comune di un follower che ha appena scritto SEGUO nei commenti, e compare il nome della città. Chi si riconosce è invitato a condividere il reel come prova di presenza. Il sito mostra la stessa mappa con il contatore delle luci (oggi 2.782).",
+     "primo_passo": "Domani si prepara il template di animazione di 15 secondi (mappa scura, una luce che nasce, nome del comune) e si sceglie dai commenti SEGUO del reel serale il primo comune da accendere. Si registra il conteggio dei follower prima della pubblicazione e si pubblica la sera stessa.",
+     "come_misurarla": "Per 7 giorni si registrano i follower prima e subito dopo ogni uscita. Si calcolano i follower ogni 1.000 account raggiunti dai reel della Luce Vivente e si confrontano con il 21,5 di 'ospiti_sera'. In parallelo si conta il numero di commenti con SEGUO ogni sera. Il campione è piccolo, quindi i risultati vanno letti come indicazione."
+    },
+    "riserve": [
+     "Specchio del Derby: due animali della stessa regione si sfidano e i commenti con il nome della città accendono le luci sulla mappa. I punti vanno alla Coppa delle Zampe.",
+     "Lo Specchio delle Zampe: ogni sera si estrae una luce tra chi ha scritto SEGUO e il suo animale compare in un mini-reel di 10 secondi con la città evidenziata."
+    ],
+    "perche": "È l'idea più semplice da realizzare con mappa e luci già esistenti, e dà un riconoscimento personale a chi scrive SEGUO, il gesto legato al formato serale che finora ha convertito meglio."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 26724,
+ "fine": "2026-11-08T14:14:45+00:00"
+}

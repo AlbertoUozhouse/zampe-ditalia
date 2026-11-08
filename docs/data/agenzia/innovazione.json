@@ -1,0 +1,16 @@
+[
+ {
+  "giorno": "2026-11-08",
+  "scelta": {
+   "idea": "La Luce Vivente",
+   "come_funziona": "Ogni sera, dopo il reel delle 21, si pubblica un reel di 15 secondi con la mappa d'Italia al buio. Si accende una sola luce, nel comune di un follower che ha appena scritto SEGUO nei commenti, e compare il nome della città. Chi si riconosce è invitato a condividere il reel come prova di presenza. Il sito mostra la stessa mappa con il contatore delle luci (oggi 2.782).",
+   "primo_passo": "Domani si prepara il template di animazione di 15 secondi (mappa scura, una luce che nasce, nome del comune) e si sceglie dai commenti SEGUO del reel serale il primo comune da accendere. Si registra il conteggio dei follower prima della pubblicazione e si pubblica la sera stessa.",
+   "come_misurarla": "Per 7 giorni si registrano i follower prima e subito dopo ogni uscita. Si calcolano i follower ogni 1.000 account raggiunti dai reel della Luce Vivente e si confrontano con il 21,5 di 'ospiti_sera'. In parallelo si conta il numero di commenti con SEGUO ogni sera. Il campione è piccolo, quindi i risultati vanno letti come indicazione."
+  },
+  "riserve": [
+   "Specchio del Derby: due animali della stessa regione si sfidano e i commenti con il nome della città accendono le luci sulla mappa. I punti vanno alla Coppa delle Zampe.",
+   "Lo Specchio delle Zampe: ogni sera si estrae una luce tra chi ha scritto SEGUO e il suo animale compare in un mini-reel di 10 secondi con la città evidenziata."
+  ],
+  "perche": "È l'idea più semplice da realizzare con mappa e luci già esistenti, e dà un riconoscimento personale a chi scrive SEGUO, il gesto legato al formato serale che finora ha convertito meglio."
+ }
+]

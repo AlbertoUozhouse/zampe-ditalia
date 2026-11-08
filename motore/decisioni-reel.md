@@ -243,3 +243,8 @@ Nessun cambiamento oggi.
 ## 2026-11-08 — verbale dei 7 giorni (automatico, motore/verbale.py)
 
 - 2026-11-01-1206-fondatore: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+
+## 2026-11-08 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-01-1509-presidente: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
