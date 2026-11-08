@@ -61,5 +61,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-08T23:17:21+00:00",
   "scambi": 130
+ },
+ {
+  "id": "2026-11-09-0041-paese_al_buio",
+  "formato": "paese_al_buio",
+  "modalita": "operativa",
+  "inizio": "2026-11-08T23:41:26+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-08T23:44:43+00:00",
+  "scambi": 128
  }
 ]
