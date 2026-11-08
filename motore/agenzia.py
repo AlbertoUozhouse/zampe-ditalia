@@ -269,8 +269,9 @@ def fotogrammi(mp4, cartella, versione, reel_id):
     dove = FOTO / reel_id / f"v{versione}"; dove.mkdir(parents=True, exist_ok=True)
     out = []
     for s in [0.5] + list(range(1, int(dur) + 1)):
-        s = min(s, dur - 0.05); f = dove / f"s{s:05.1f}.jpg"
-        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{s}", "-i", str(mp4), "-frames:v", "1", "-vf", "scale=360:-2", "-q:v", "6", str(f)], check=True)
+        s = min(s, dur - 0.3); f = dove / f"s{s:05.1f}.jpg"  # 9/11: a dur-0.05 il video a volte non ha più fotogrammi (ffmpeg 234) e il reel si fermava
+        r = subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-ss", f"{s}", "-i", str(mp4), "-frames:v", "1", "-vf", "scale=360:-2", "-q:v", "6", str(f)])
+        if r.returncode or not f.exists(): continue  # un fotogramma che non si estrae non ferma il reel
         out.append((round(s, 1), f))
     return dur, out
 
