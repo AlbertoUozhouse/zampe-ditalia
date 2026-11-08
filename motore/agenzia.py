@@ -47,8 +47,9 @@ REPARTI = [
     ("crescita", "Crescita (follower)", ["Responsabile crescita", "Pubblico da raggiungere", "Gancio per chi non ci conosce", "Motivo per seguire", "Prossimo episodio",
                                          "Follower ogni 1.000 account", "Organico e sponsorizzato", "Confronto a 7 giorni", "Scelte da riprovare", "Verbale dei 7 giorni"]),
     # 8/11 Alberto: «serve un reparto innovazione per inventarsi cose nuove» (undicesima stanza: 110 persone)
-    ("innovazione", "Innovazione", ["Capo innovazione", "Nuovi formati di reel", "Serie a episodi", "Nuovi giochi sul sito", "Eventi e ricorrenze",
-                                     "Idee visive", "Format con i follower", "Tendenze di Instagram", "Collaborazioni", "Esperimenti misurabili"]),
+    # missione (Alberto, 8/11): giochi nuovi che servono, reel che evolvono in modo diverso, gioco sempre più realistico
+    ("innovazione", "Innovazione", ["Capo innovazione", "Giochi nuovi", "Meccaniche di gioco", "Realismo degli animali", "Realismo della mappa e del 3D",
+                                     "Nuovi stili di reel", "Riprese e montaggio diversi", "Suono e musica nuovi", "Fattibilità tecnica", "Esperimenti misurabili"]),
 ]
 
 def ufficio():
@@ -458,24 +459,31 @@ def crescita_giorno():
     S.d["stato"] = "fatto"; S.d["fine"] = _ora(); S.salva()
 
 INNOVA = """Sei «{ruolo}» nel reparto Innovazione di Zampe d'Italia (pagina Instagram: ogni animale accende una luce nella sua città sulla mappa dell'Italia di notte;
-c'è un sito con la mappa, i minigiochi e la Coppa delle Zampe tra comuni; i reel escono 3 volte al giorno). Il tuo lavoro è inventare cose NUOVE che portino follower
-e siano belle da vedere, dal punto di vista della tua mansione. Parti da quello che esiste (te lo diamo) e dai numeri veri; niente cose già fatte, niente spese, niente follower finti,
-niente nomi di altre pagine. Rispondi solo JSON: {{"idea": "nome breve", "come_funziona": "2-3 frasi", "perche_porta_follower": "...", "perche_e_bella": "...",
- "cosa_serve": "con i materiali che abbiamo", "come_misurarla": "quale numero guardare dopo 7 giorni"}}"""
+c'è un sito con la mappa, i minigiochi e la Coppa delle Zampe tra comuni; i reel escono 3 volte al giorno). Il reparto ha tre compiti (Alberto, 8/11):
+1) «gioco»: giochi NUOVI che servono davvero (portano gente a giocare, a tornare, a commentare e a seguire);
+2) «reel»: far evolvere i reel in modo DIVERSO da quelli di oggi (non un'altra mappa con una luce: altro stile, ripresa, montaggio, racconto, suono);
+3) «realismo»: rendere il gioco sempre più realistico (animali, paesi, mappa, 3D sul sito).
+Dal punto di vista della tua mansione proponi UNA idea in UNA di queste tre tracce. Parti da quello che esiste (te lo diamo) e dai numeri veri; niente cose già fatte,
+niente spese, niente follower finti, niente nomi di altre pagine, e solo cose che si possono fare col codice e i materiali che abbiamo (disegni SVG, three.js, mappa reale, foto e video dei follower col loro SÌ).
+Rispondi solo JSON: {{"traccia": "gioco|reel|realismo", "idea": "nome breve", "come_funziona": "2-3 frasi", "perche_porta_follower": "...", "perche_e_bella": "...",
+ "cosa_serve": "file e materiali che abbiamo", "come_misurarla": "quale numero guardare dopo 7 giorni"}}"""
 
-INNOVA_CAPO = """Sei il Capo innovazione di Zampe d'Italia. Leggi le idee delle tue 9 persone. Scegli UNA idea da provare questa settimana: quella che può portare più follower,
-è bella da vedere e si può fare subito con i materiali che abbiamo. Scrivi anche le due di riserva. Rispondi solo JSON:
-{"scelta": {"idea": "...", "come_funziona": "...", "primo_passo": "cosa si fa domani", "come_misurarla": "..."}, "riserve": ["...", "..."], "perche": "una frase"}"""
+INNOVA_CAPO = """Sei il Capo innovazione di Zampe d'Italia. Leggi le idee delle tue persone e scegli UNA idea per ciascuna traccia: «gioco» (un gioco nuovo che serve),
+«reel» (un modo diverso di fare i reel), «realismo» (un passo per rendere il gioco più realistico). Per ognuna: quella che porta più follower, è bella e si può fare subito
+con quello che abbiamo, con il primo passo tecnico concreto. Rispondi solo JSON:
+{"gioco": {"idea": "...", "come_funziona": "...", "primo_passo": "...", "come_misurarla": "..."}, "reel": {...stessi campi}, "realismo": {...stessi campi}, "perche": "una frase"}"""
 
 def innovazione_giorno():
     """Ogni mattina (rendimento.yml) l'Innovazione inventa: 9 idee, il capo ne sceglie una da provare (docs/data/agenzia/innovazione.json).
     Il controllo quotidiano la legge e, se è fattibile e rispetta le regole, la mette in produzione (una novità alla volta)."""
     from concurrent.futures import ThreadPoolExecutor
     esiste = {"formati_reel": sorted({x.get("formato") for x in json.loads((ROOT / "motore/rendimento.json").read_text())}),
-              "giochi_sito": ["Zampe di corsa", "Pappa al volo", "Riporta il bastone", "Coppa delle Zampe (Luce Misteriosa, Indovina la Zampa, Staffetta)"],
+              "giochi_sito": ["Zampe di corsa (corsa a ostacoli)", "Pappa al volo (prendi il cibo giusto)", "Riporta il bastone (lancio a tempo)", "Coppa delle Zampe (Luce Misteriosa, Indovina la Zampa, Staffetta)"],
+              "stili_reel_oggi": ["mappa dell'Italia di notte che scende su un comune e una luce che si accende", "apertura col video di Thor", "classifiche e duelli disegnati", "cucce e gatti disegnati in SVG", "voce sintetica e musica"],
+              "realismo_oggi": ["mappa con rilievo e coste vere (dati di altitudine)", "animali disegnati in SVG per razza", "paesi disegnati da vicino", "una vista 3D del paese (three.js)"],
               "eventi_fatti": ["Re degli animali d'Italia", "fuochi a 2.000 follower", "star del giorno con foto dei follower", "porta 2 amici"],
               "progetto": progetto_in_breve(), "indicazione_crescita": json.loads((DATI / "crescita.json").read_text()) if (DATI / "crescita.json").exists() else None,
-              "idee_gia_proposte": [x.get("scelta", {}).get("idea") for x in (json.loads((DATI / "innovazione.json").read_text()) if (DATI / "innovazione.json").exists() else [])][-20:]}
+              "idee_gia_proposte": [y.get("idea") for x in (json.loads((DATI / "innovazione.json").read_text()) if (DATI / "innovazione.json").exists() else []) for y in [x.get(k) or {} for k in ("scelta", "gioco", "reel", "realismo")] if y.get("idea")][-30:]}
     testo = json.dumps(esiste, ensure_ascii=False)[:20000]
     oggi = datetime.now(timezone.utc).date().isoformat()
     if (DATI / f"sessioni/innovazione-{oggi}.json").exists(): return  # una volta al giorno
@@ -489,8 +497,7 @@ def innovazione_giorno():
     d, t = lavora(INNOVA_CAPO, json.dumps(idee, ensure_ascii=False), CLAUDE)
     S.d["token_persone"] = S.d.get("token_persone", 0) + t
     if d:
-        sc = d.get("scelta", {})
-        S.scrivi("innovazione-1", "direzione-1", "decisione", f"Da provare: «{sc.get('idea', '')}». Primo passo: {sc.get('primo_passo', '')} Misura: {sc.get('come_misurarla', '')}", d)
+        S.scrivi("innovazione-1", "direzione-1", "decisione", " · ".join(f"{k.upper()}: «{(d.get(k) or {}).get('idea', '')}» (primo passo: {(d.get(k) or {}).get('primo_passo', '')})" for k in ("gioco", "reel", "realismo")), d)
         reg = DATI / "innovazione.json"; storia = json.loads(reg.read_text()) if reg.exists() else []
         reg.write_text(json.dumps((storia + [{"giorno": oggi, **d}])[-60:], ensure_ascii=False, indent=1) + "\n")
     S.d["stato"] = "fatto"; S.d["fine"] = _ora(); S.salva()
