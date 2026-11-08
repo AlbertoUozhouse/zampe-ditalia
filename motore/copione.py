@@ -800,9 +800,14 @@ def _clip(D, st, utente=None):
     fatte = set(st.get("clip_fatte", []))
     clip = [x for x in carica(ROOT / "motore/stato.json", {}).get("ugc", []) if x["f"].endswith(".mp4") and x["f"] not in fatte
             and (ROOT / "docs/media/ugc" / x["f"]).exists() and x["u"].lower() not in ESCLUSI]
-    if not clip:  # nessun video dei follower: Thor, il golden di Alberto (Alberto, 7/11: «usa Thor»), ritagliato senza scritte, luce naturale
-        st["intro"] = "reel/assets/thor-apertura.mp4"
+    if not clip:  # nessun video dei follower: Thor (Alberto, 7/11: «usa Thor»), ma non sempre (8/11: «non puoi usare sempre Thor»):
+        oggi = ORA.date().isoformat()   # al massimo un reel al giorno e mai due di fila; negli altri si apre direttamente sulla mappa
+        if st.get("thor_giorno") != oggi and not st.get("thor_ultimo_reel"):
+            st["intro"] = "reel/assets/thor-apertura.mp4"; st["thor_giorno"] = oggi; st["thor_ultimo_reel"] = True
+        else:
+            st["thor_ultimo_reel"] = False
         return None
+    st["thor_ultimo_reel"] = False
     x = next((c for c in clip if utente and c["u"].lower() == utente.lower()), clip[0])
     st["clip_fatte"] = (st.get("clip_fatte", []) + [x["f"]])[-500:]
     st["intro"] = f"docs/media/ugc/{x['f']}"
