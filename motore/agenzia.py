@@ -245,6 +245,11 @@ def dati_mappa(cop, cartella=None):
         sc = f["scena"]
         for q in sc.get("punti", []):
             vicini = sorted((a for a in A if a.get("k") == "animale" and abs(a.get("lat", 0) - q["lat"]) < 0.02 and abs(a.get("lng", 0) - q["lng"]) < 0.02), key=lambda a: str(a.get("ts", "")))
+            # 9/11: due comuni attaccati (Ercolano e San Giorgio a Cremano) davano il nome del vicino e la squadra «correggeva» un'etichetta giusta:
+            # prima gli animali del comune scritto nell'etichetta, poi il più vicino; un punto al buio resta senza animali
+            nome = str(q.get("testo") or "").split(" · ")[0].strip()
+            suoi = [a for a in vicini if a.get("c") and a["c"] in nome]
+            vicini = [] if q.get("spento") else suoi + sorted((a for a in vicini if a not in suoi), key=lambda a: (a["lat"] - q["lat"]) ** 2 + (a["lng"] - q["lng"]) ** 2)
             t = tempi.get(i, {})
             out.append({"scena": i, "etichetta": q.get("testo"), "lat": q["lat"], "lng": q["lng"],
                         "luce": ("spenta all'inizio della scena, si accende" if not q.get("acceso", True) else "già accesa") + (f" al secondo {t['accensione']} del reel" if t.get("accensione") is not None else ""),
@@ -332,7 +337,7 @@ def applica(cop, azioni):
     for a in azioni or []:
         try:
             t = a.get("azione"); sc = cop["frasi"][int(a["scena"])]["scena"] if "scena" in a else None
-            if cop.get("test") and t in ("frase", "intro", "fascia", "didascalia_togli", "musica", "zoom"): continue  # test di crescita: gancio, testi e voce/testo restano quelli del piano
+            if cop.get("test") and t in ("frase", "intro", "fascia", "didascalia_togli", "musica", "zoom", "etichetta"): continue  # le etichette del test vengono dai dati verificati  # test di crescita: gancio, testi e voce/testo restano quelli del piano
             if t == "zoom" and sc and sc["tipo"] == "luce": sc["s1"] = max(0.8, min(2.4, float(a["valore"])))
             elif t == "accensione" and sc and sc["tipo"] == "luce": sc["accendi"] = max(0.2, min(0.7, float(a["valore"])))
             elif t == "etichetta" and sc and sc["tipo"] == "luce": sc["punti"][int(a["punto"])]["testo"] = str(a["testo"])[:40]
