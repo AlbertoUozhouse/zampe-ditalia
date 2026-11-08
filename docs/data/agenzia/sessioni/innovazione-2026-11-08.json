@@ -1,0 +1,184 @@
+{
+ "id": "innovazione-2026-11-08",
+ "formato": "innovazione del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-08T14:27:29+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-08T14:27:33+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Racconto del Giorno con il Vero Protagonista: Il reel non parte dalla mappa ma da una persona reale: un follower che ha mandato la foto o il video del proprio animale, ripreso nella sua casa o nel suo parco, con 2-3 frasi scritte da lui stesso sul perché il suo animale ha acceso la luce. Il montaggio alterna la clip vera con una breve sequenza della mappa che si accende solo alla fine, sulla su",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Il Racconto del Giorno con il Vero Protagonista",
+    "come_funziona": "Il reel non parte dalla mappa ma da una persona reale: un follower che ha mandato la foto o il video del proprio animale, ripreso nella sua casa o nel suo parco, con 2-3 frasi scritte da lui stesso sul perché il suo animale ha acceso la luce. Il montaggio alterna la clip vera con una breve sequenza della mappa che si accende solo alla fine, sulla sua città, con suono ambientale reale e nessuna voce sintetica.",
+    "perche_porta_follower": "Il dato 'ospiti_sera' (7 follower ogni 326 di reach) dice che funziona quando il reel porta persone vere e riconoscibili; chi vede il proprio vicino o la propria città può commentare, taggare e seguire per vedere il prossimo giro.",
+    "perche_e_bella": "Passa da un reel grafico a una storia umana e documentaria: la mappa diventa il finale che dà senso al racconto invece dell'unico contenuto, e il suono reale la rende diversa da tutto ciò che la pagina ha già mostrato.",
+    "cosa_serve": "Foto e video dei follower che hanno dato il loro SÌ esplicito, le loro frasi scritte, lo screenshot della mappa col punto del loro comune, editing con suono ambiente originale del luogo.",
+    "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 di reach dei reel di questo formato (confrontandoli con il 21,5 di 'ospiti_sera') e il numero di commenti per reel, registrando il conteggio follower prima e dopo ogni uscita."
+   }
+  },
+  {
+   "t": "2026-11-08T14:27:33+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Diario del Quartiere: Ogni reel segue un solo animale reale del progetto, ripreso con video veri dei follower (con il loro SÌ) in un ritmo lento da documentario: si apre su una foto nella città, poi un breve racconto in prima persona del proprietario di 10 secondi e un montaggio di 3 scene dal suo quartiere, chiudendo con la luce che si accende sulla mappa. Non è una mappa con una luce: la mapp",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Il Diario del Quartiere",
+    "come_funziona": "Ogni reel segue un solo animale reale del progetto, ripreso con video veri dei follower (con il loro SÌ) in un ritmo lento da documentario: si apre su una foto nella città, poi un breve racconto in prima persona del proprietario di 10 secondi e un montaggio di 3 scene dal suo quartiere, chiudendo con la luce che si accende sulla mappa. Non è una mappa con una luce: la mappa compare solo alla fine, come firma.",
+    "perche_porta_follower": "Lo spettatore conosce una persona e una città vera, quindi ha un motivo concreto per commentare il proprio animale o il proprio paese e per taggare un amico della stessa zona. Il dato più forte finora (21,5 follower ogni 1.000 account su 'ospiti_sera') nasce proprio dalla presenza di persone reali, e questa idea la rende la regola invece dell'eccezione.",
+    "perche_e_bella": "Trasforma le luci in storie di vicinato: il pubblico vede il paese prima del punto sulla mappa, con suoni ambientali veri (campane, traffico, pioggia) al posto della voce sintetica.",
+    "cosa_serve": "Video e audio dei follower che hanno dato il consenso, foto delle città, la mappa reale con rilievo già esistente per la chiusura, e il formato 'ospiti_sera' come base. Nessun materiale nuovo da acquistare.",
+    "come_misurarla": "Dopo 7 giorni e almeno 3 uscite di questo formato, confrontare follower ogni 1.000 account (reach) con quello di 'ospiti_sera' del 7 novembre (21,5): se la media resta sopra 10 e i commenti superano 20 per reel, l'idea è da tenere."
+   }
+  },
+  {
+   "t": "2026-11-08T14:27:33+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Diario della Luce: Ogni reel mostra il percorso di UN solo animale dalla sua città alla mappa: una ripresa a mano del paese di giorno (foto e brevi video dei follower che hanno dato il SÌ), un montaggio che segue il ritratto disegnato in SVG dell'animale, e alla fine la luce che si accende sulla mappa notturna. Lo stile cambia rispetto alla mappa che scende: racconto in prima persona dell'anima",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Il Diario della Luce",
+    "come_funziona": "Ogni reel mostra il percorso di UN solo animale dalla sua città alla mappa: una ripresa a mano del paese di giorno (foto e brevi video dei follower che hanno dato il SÌ), un montaggio che segue il ritratto disegnato in SVG dell'animale, e alla fine la luce che si accende sulla mappa notturna. Lo stile cambia rispetto alla mappa che scende: racconto in prima persona dell'animale tramite didascalie brevi, suono ambientale del paese invece della voce sintetica, e un finale in cui il follower riceve un 'diario' che può condividere.",
+    "perche_porta_follower": "Il pubblico vede una storia concreta e riconoscibile (la sua città, il suo animale, una persona che conosce) e chi è nel video tende a condividerlo o a commentare con il nome del proprio paese, che è un gancio naturale verso chi non ci conosce ancora. Il dato di 'ospiti_sera' (21,5 follower ogni 1.000 account, unico campione positivo) suggerisce che i contenuti con persone reali e un invito semplice funzionano meglio dei formati astratti.",
+    "perche_e_bella": "Trasforma la luce sulla mappa da un puntino anonimo a una piccola storia di un posto preciso, con la gente vera che la abita, e dà al reel un ritmo diverso dagli altri: meno classifica, più racconto.",
+    "cosa_serve": "Le foto e i video dei follower che hanno dato il SÌ (con liberatoria), i disegni SVG degli animali già esistenti, la mappa reale con rilievo, una registrazione dei suoni ambientali dei paesi (solo se autorizzata), e il sito/pagina per la mappa notturna come chiusura del reel.",
+    "come_misurarla": "Dopo 7 giorni dalla prima uscita, confrontare i follower di Zampe d'Italia registrati prima e dopo, rapportati alla reach (follower ogni 1.000 account), e confrontarlo con il 21,5 di 'ospiti_sera'; un test alla volta, usando la chiusura SEGUO già proposta."
+   }
+  },
+  {
+   "t": "2026-11-08T14:27:33+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Racconto del Comune: Invece della mappa con la luce che scende, il reel apre con una ripresa a campo largo di un solo comune reale (con il paese disegnato da vicino) e poi stacca su un'intervista audio di 10 secondi a un follower con il suo SÌ, che racconta cosa fa il suo animale nel quartiere. Chiude con la voce sintetica che legge il nome del comune e la parola SEGUO. Montaggio veloce, niente",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Il Racconto del Comune",
+    "come_funziona": "Invece della mappa con la luce che scende, il reel apre con una ripresa a campo largo di un solo comune reale (con il paese disegnato da vicino) e poi stacca su un'intervista audio di 10 secondi a un follower con il suo SÌ, che racconta cosa fa il suo animale nel quartiere. Chiude con la voce sintetica che legge il nome del comune e la parola SEGUO. Montaggio veloce, niente classifiche né duelli.",
+    "perche_porta_follower": "Lo spettatore vede una persona e un posto che conosce o che può riconoscere, e la chiusura con SEGUO è legata a un volto reale: chi arriva dal reel serale ha un motivo concreto per restare e tornare.",
+    "perche_e_bella": "Passa dal 'gioco con i numeri' alla storia di un luogo vero, con voci e suoni del paese, e dà al reel un'identità diversa dagli altri formati già usati.",
+    "cosa_serve": "Foto e video dei follower che hanno dato il SÌ, la mappa reale con rilievo e i disegni SVG dei paesi, una registrazione audio di 10 secondi per ogni protagonista, e la voce sintetica già disponibile.",
+    "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti (il dato 'follower_ogni_1000') confrontandolo con il 21,5 di 'ospiti_sera', oltre a reach e commenti, pubblicando un solo test alla volta."
+   }
+  },
+  {
+   "t": "2026-11-08T14:27:37+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Reel Vero del Paese: Invece della mappa con la luce che scende, il reel apre con una ripresa reale (foto e video dei follower che hanno dato il loro SÌ) del paese del protagonista del giorno, con montaggio a stacchi brevi e una frase di voce sintetica sopra. Il finale mostra la luce che si accende sulla mappa come conseguenza, non come apertura, così la storia la racconta chi vive in quel posto",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Il Reel Vero del Paese",
+    "come_funziona": "Invece della mappa con la luce che scende, il reel apre con una ripresa reale (foto e video dei follower che hanno dato il loro SÌ) del paese del protagonista del giorno, con montaggio a stacchi brevi e una frase di voce sintetica sopra. Il finale mostra la luce che si accende sulla mappa come conseguenza, non come apertura, così la storia la racconta chi vive in quel posto.",
+    "perche_porta_follower": "Il dato 'ospiti_sera' è l'unico che ha portato follower (21,5 ogni 1.000 account), e ha un volto e una storia dentro. Chi riconosce il proprio paese o un amico nel video commenta e condivide più facilmente, e il gancio 'scrivi SEGUO' regge meglio se chi guarda vede persone reali.",
+    "perche_e_bella": "Trasforma un reel che si ripete in un racconto diverso ogni giorno: ogni comune diventa un piccolo documentario di 20 secondi, con la luce che nasce dalla gente del posto e non da un'animazione uguale per tutti.",
+    "cosa_serve": "Foto e video dei follower con consenso (SÌ) già raccolti, un modello di montaggio ripetibile (apertura, due stacchi, chiusura con la luce), una voce sintetica già presente nel progetto, la mappa SVG esistente per la chiusura, e il calendario delle uscite a 3 al giorno.",
+    "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account di reach per i reel in questo formato, confrontandoli con il 21,5 di 'ospiti_sera' del 7 novembre; come controllo secondario contare i commenti con la parola SEGUO. Ricordare di registrare il conteggio dei follower prima e dopo ogni uscita, per non basarsi solo su reach e commenti."
+   }
+  },
+  {
+   "t": "2026-11-08T14:27:37+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Diario della Notte: Ogni reel mostra la stessa scena notturna ripresa dal punto di vista di un animale reale che accende la sua luce, con un montaggio a piani sequenza e una voce narrante che racconta in prima persona cosa ha visto quella notte nella sua città. Il finale è sempre il video vero di un follower col suo SÌ, collegato alla luce che si accende sulla mappa, così il formato cambia stru",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Il Diario della Notte",
+    "come_funziona": "Ogni reel mostra la stessa scena notturna ripresa dal punto di vista di un animale reale che accende la sua luce, con un montaggio a piani sequenza e una voce narrante che racconta in prima persona cosa ha visto quella notte nella sua città. Il finale è sempre il video vero di un follower col suo SÌ, collegato alla luce che si accende sulla mappa, così il formato cambia struttura invece di ripetere la mappa che scende su un comune.",
+    "perche_porta_follower": "Il racconto in prima persona crea una tensione che fa restare fino alla fine, e il finale con un follower reale invita gli amici di quella persona a cercare la propria città sulla mappa e a scrivere SEGUO, come è già successo con 'ospiti_sera' (21,5 follower ogni 1.000 account).",
+    "perche_e_bella": "Porta lo spettatore dentro la notte italiana vista con gli occhi di un animale, un punto di vista che oggi non esiste nei reel e che dà un'identità nuova al progetto senza cambiare la mappa.",
+    "cosa_serve": "Video e foto dei follower con consenso (SÌ), la mappa reale e i dati di altitudine già disponibili, la voce sintetica già in uso per il testo narrato, la musica di sottofondo, e i disegni SVG degli animali per le transizioni.",
+    "come_misurarla": "Dopo 7 giorni e 7 reel con questo formato, guardare il numero di follower registrato prima e dopo ogni uscita e confrontare i follower ogni 1.000 account con il dato di 'ospiti_sera' (21,5), tenendo fisso l'orario delle 21 e cambiando un solo elemento alla volta."
+   }
+  },
+  {
+   "t": "2026-11-08T14:27:37+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Diario del Quartiere in Camera a Mano: Invece della mappa che scende su un comune, il reel parte da una sola zampa ripresa in camera a mano nel paese vero, con i suoni ambientali registrati sul posto (campanile, cani, traffico). Ogni settimana si gira in un comune diverso con un follower che ha dato il suo SÌ, e il montaggio segue la sua giornata in tre inquadrature brevi, senza voce sintetica.",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Diario del Quartiere in Camera a Mano",
+    "come_funziona": "Invece della mappa che scende su un comune, il reel parte da una sola zampa ripresa in camera a mano nel paese vero, con i suoni ambientali registrati sul posto (campanile, cani, traffico). Ogni settimana si gira in un comune diverso con un follower che ha dato il suo SÌ, e il montaggio segue la sua giornata in tre inquadrature brevi, senza voce sintetica.",
+    "perche_porta_follower": "Il reel 'ospiti_sera' è l'unico che ha portato follower (21,5 ogni 1.000 account) e il racconto con una persona reale in un luogo riconoscibile dà a chi arriva dal reel un motivo per seguire la storia del paese, non solo il numero della classifica. Chi viene da un comune vede il proprio posto e tende a commentare e a seguire per vedere il prossimo.",
+    "perche_e_bella": "Cambia lo stile del reel: cambia la ripresa (mano, non grafica), il montaggio (tre inquadrature) e il suono (ambiente reale), e tiene l'Italia vera al centro senza ripetere la mappa con la luce che si accende.",
+    "cosa_serve": "Video e foto dei follower che hanno dato il loro SÌ per comune, registrazioni audio ambientali fatte sul posto, il formato 'ospiti_sera' già esistente e il sito con la mappa reale come riferimento finale.",
+    "come_misurarla": "Dopo 7 giorni confrontare il numero di follower ogni 1.000 account di reach dei reel in camera a mano con il 21,5 di 'ospiti_sera' del 7 novembre, registrando il conteggio follower prima e subito dopo ogni uscita."
+   }
+  },
+  {
+   "t": "2026-11-08T14:27:38+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Diario del Quartiere: Ogni reel segue un solo animale reale che ha acceso la luce oggi, con una ripresa di 20-25 secondi girata col video che il follower ha già inviato, montata come un diario: prima il suo cortile o la sua strada, poi il messaggio del proprietario sovrapposto in testo e una voce sintetica che legge una sola frase scritta da lui. La mappa compare solo nell'ultimo secondo, con l",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Il Diario del Quartiere",
+    "come_funziona": "Ogni reel segue un solo animale reale che ha acceso la luce oggi, con una ripresa di 20-25 secondi girata col video che il follower ha già inviato, montata come un diario: prima il suo cortile o la sua strada, poi il messaggio del proprietario sovrapposto in testo e una voce sintetica che legge una sola frase scritta da lui. La mappa compare solo nell'ultimo secondo, con la luce che si accende nel suo comune, invece di aprire il video come oggi.",
+    "perche_porta_follower": "Lo spettatore vede una persona e un luogo che riconosce, non solo un punto luminoso; questo invita a commentare con il nome del proprio animale o della propria città e a taggare chi ha lo stesso tipo di cane o gatto. Il formato 'ospiti_sera' ha già mostrato che la chiusura con una parola-chiave e un volto reale converte, quindi la traccia riprende quella leva con uno stile diverso.",
+    "perche_e_bella": "Cambia il punto di vista: non è più la mappa che guarda gli animali, ma un animale che racconta il suo posto. Il montaggio lento, i suoni ambientali veri e la mappa usata come rivelazione finale danno al reel un'identità riconoscibile e diversa da tutti gli altri formati.",
+    "cosa_serve": "Video e foto dei follower con consenso già ricevuto, la mappa reale con i comuni (già disponibile), il font e la voce sintetica già in uso, una piccola libreria di suoni ambientali liberi o registrati dal team, e il template di montaggio da creare su un editor video.",
+    "come_misurarla": "Dopo 7 giorni e almeno 5 reel con questo formato, confrontare i follower guadagnati per ogni 1.000 account raggiunti con la media degli ultimi formati (il valore di riferimento è 21,5 di 'ospiti_sera'), registrando il conteggio follower prima e dopo ogni uscita come indicato nella nota di crescita."
+   }
+  },
+  {
+   "t": "2026-11-08T14:27:41+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Diario della Luce (reel 'telecamera sul campo'): Ogni reel racconta un singolo animale reale con foto e brevi clip dei follower che hanno dato il loro SÌ, montate in stile diario: una giornata, una domanda al padrone, un suono ambientale vero (cane che abbaia, passi sul selciato) al posto della voce sintetica. Al posto della mappa che scende sul comune, il reel si apre con una frase in prima pe",
+   "dati": {
+    "traccia": "reel",
+    "idea": "Il Diario della Luce (reel 'telecamera sul campo')",
+    "come_funziona": "Ogni reel racconta un singolo animale reale con foto e brevi clip dei follower che hanno dato il loro SÌ, montate in stile diario: una giornata, una domanda al padrone, un suono ambientale vero (cane che abbaia, passi sul selciato) al posto della voce sintetica. Al posto della mappa che scende sul comune, il reel si apre con una frase in prima persona dell'animale e si chiude sulla sua luce che si accende sulla mappa, come firma finale.",
+    "perche_porta_follower": "Il formato 'ospiti_sera' è l'unico che ha portato follower (21,5 ogni 1.000 account, 7 su 326 di reach), e il suo punto di forza è la presenza di persone reali; qui si moltiplica questa leva: chi compare nel reel o ha il suo animale nel racconto condivide e commenta, e il finale 'scrivi SEGUO' diventa naturale.",
+    "perche_e_bella": "Cambia il linguaggio: non più un'animazione che sale sulla mappa ma una piccola storia vera, con il suono del quartiere e la voce dell'animale. Chi guarda sente che la luce accesa è di qualcuno che esiste davvero, non un segnaposto.",
+    "cosa_serve": "Foto e video dei follower che hanno firmato il consenso, registrazioni audio ambientali (con permesso), il file della mappa SVG per la chiusura, un modello di scheda consenso già in uso, e il montaggio con strumenti video standard.",
+    "come_misurarla": "Dopo 7 giorni e 4-5 reel di questo formato, guardare il rapporto follower ogni 1.000 account raggiunti (il dato che nei reel passati era presente solo per 'ospiti_sera' e 'prima_luce') e confrontarlo con il 21,5 di riferimento; registrare il conteggio follower prima e dopo ogni uscita."
+   }
+  },
+  {
+   "t": "2026-11-08T14:27:51+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "GIOCO: «Non ci sono idee valide per la traccia «gioco»: tutte le proposte ricevute sono di traccia «reel»» (primo passo: Chiedere alle persone del ruolo «Giochi nuovi» e «Meccaniche di gioco» una nuova tornata di proposte con traccia «gioco», che usino solo mappa, disegni SVG e SÌ dei follower già disponibili.) · REEL: «Il Diario del Quartiere: un reel per ogni animale reale, aperto da un follower vero e dalla sua città, con la mappa solo come firma finale» (primo passo: Scegliere 3 follower che hanno già dato il SÌ e hanno inviato un video. Creare in un editor un template ripetibile: video del follower, testo con la sua frase, stacco sulla mappa SVG con la luce nell'ultimo secondo. Montare il primo reel con audio originale del video e pubblicarlo alle 21, orario di 'ospiti_sera'.) · REALISMO: «Non ci sono idee valide per la traccia «realismo»: tutte le proposte ricevute sono di traccia «reel»» (primo passo: Chiedere alle persone di «Realismo degli animali» e «Realismo della mappa e del 3D» nuove proposte con traccia «realismo», partendo dai disegni SVG e dai dati di altitudine già disponibili.)",
+   "dati": {
+    "gioco": {
+     "idea": "Non ci sono idee valide per la traccia «gioco»: tutte le proposte ricevute sono di traccia «reel»",
+     "come_funziona": "Nessuna idea per un nuovo gioco è arrivata in questo giro, quindi non ne scelgo una inventandola. Serve una nuova raccolta di idee dedicata al gioco.",
+     "primo_passo": "Chiedere alle persone del ruolo «Giochi nuovi» e «Meccaniche di gioco» una nuova tornata di proposte con traccia «gioco», che usino solo mappa, disegni SVG e SÌ dei follower già disponibili.",
+     "come_misurarla": "Non applicabile finché non c'è un'idea. Quando arriverà, usare follower ogni 1.000 di reach a 7 giorni, confrontati con il 21,5 di 'ospiti_sera'."
+    },
+    "reel": {
+     "idea": "Il Diario del Quartiere: un reel per ogni animale reale, aperto da un follower vero e dalla sua città, con la mappa solo come firma finale",
+     "come_funziona": "Il reel dura 20-25 secondi e segue un solo animale. Si apre sul video o sulla foto già inviati dal follower (con il suo SÌ), poi mostra una frase scritta da lui, con suono ambientale reale. Nell'ultimo secondo la luce si accende sulla mappa, nel suo comune, e chiude la parola SEGUO.",
+     "primo_passo": "Scegliere 3 follower che hanno già dato il SÌ e hanno inviato un video. Creare in un editor un template ripetibile: video del follower, testo con la sua frase, stacco sulla mappa SVG con la luce nell'ultimo secondo. Montare il primo reel con audio originale del video e pubblicarlo alle 21, orario di 'ospiti_sera'.",
+     "come_misurarla": "Dopo 7 giorni e almeno 3 uscite: follower ogni 1.000 di reach (riferimento 21,5 di 'ospiti_sera') e commenti per reel. Registrare il conteggio follower prima e dopo ogni uscita. Si tiene se la media resta sopra 10 e i commenti superano 20 per reel."
+    },
+    "realismo": {
+     "idea": "Non ci sono idee valide per la traccia «realismo»: tutte le proposte ricevute sono di traccia «reel»",
+     "come_funziona": "Nessuna proposta riguarda un passo concreto per rendere il gioco più realistico (animali, mappa o 3D), quindi non ne scelgo una fuori traccia.",
+     "primo_passo": "Chiedere alle persone di «Realismo degli animali» e «Realismo della mappa e del 3D» nuove proposte con traccia «realismo», partendo dai disegni SVG e dai dati di altitudine già disponibili.",
+     "come_misurarla": "Non applicabile finché non c'è un'idea. Quando arriverà, confrontare follower ogni 1.000 di reach e commenti prima e dopo il cambiamento."
+    },
+    "perche": "Tutte le idee erano di traccia «reel» e convergevano sullo stesso formato (persone vere, mappa finale), che sfrutta l'unico dato positivo, 'ospiti_sera' a 21,5 follower ogni 1.000, quindi ho scelto la versione più fattibile e lasciato vuote le altre due tracce invece di forzare idee fuori traccia."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 32692,
+ "fine": "2026-11-08T14:27:51+00:00"
+}

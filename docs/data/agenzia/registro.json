@@ -25,5 +25,14 @@
   "stato": "fatto",
   "fine": "2026-11-08T14:08:52+00:00",
   "scambi": 11
+ },
+ {
+  "id": "innovazione-2026-11-08",
+  "formato": "innovazione del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-08T14:27:29+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-08T14:27:51+00:00",
+  "scambi": 10
  }
 ]

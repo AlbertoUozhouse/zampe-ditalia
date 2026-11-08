@@ -12,5 +12,27 @@
    "Lo Specchio delle Zampe: ogni sera si estrae una luce tra chi ha scritto SEGUO e il suo animale compare in un mini-reel di 10 secondi con la città evidenziata."
   ],
   "perche": "È l'idea più semplice da realizzare con mappa e luci già esistenti, e dà un riconoscimento personale a chi scrive SEGUO, il gesto legato al formato serale che finora ha convertito meglio."
+ },
+ {
+  "giorno": "2026-11-08",
+  "gioco": {
+   "idea": "Non ci sono idee valide per la traccia «gioco»: tutte le proposte ricevute sono di traccia «reel»",
+   "come_funziona": "Nessuna idea per un nuovo gioco è arrivata in questo giro, quindi non ne scelgo una inventandola. Serve una nuova raccolta di idee dedicata al gioco.",
+   "primo_passo": "Chiedere alle persone del ruolo «Giochi nuovi» e «Meccaniche di gioco» una nuova tornata di proposte con traccia «gioco», che usino solo mappa, disegni SVG e SÌ dei follower già disponibili.",
+   "come_misurarla": "Non applicabile finché non c'è un'idea. Quando arriverà, usare follower ogni 1.000 di reach a 7 giorni, confrontati con il 21,5 di 'ospiti_sera'."
+  },
+  "reel": {
+   "idea": "Il Diario del Quartiere: un reel per ogni animale reale, aperto da un follower vero e dalla sua città, con la mappa solo come firma finale",
+   "come_funziona": "Il reel dura 20-25 secondi e segue un solo animale. Si apre sul video o sulla foto già inviati dal follower (con il suo SÌ), poi mostra una frase scritta da lui, con suono ambientale reale. Nell'ultimo secondo la luce si accende sulla mappa, nel suo comune, e chiude la parola SEGUO.",
+   "primo_passo": "Scegliere 3 follower che hanno già dato il SÌ e hanno inviato un video. Creare in un editor un template ripetibile: video del follower, testo con la sua frase, stacco sulla mappa SVG con la luce nell'ultimo secondo. Montare il primo reel con audio originale del video e pubblicarlo alle 21, orario di 'ospiti_sera'.",
+   "come_misurarla": "Dopo 7 giorni e almeno 3 uscite: follower ogni 1.000 di reach (riferimento 21,5 di 'ospiti_sera') e commenti per reel. Registrare il conteggio follower prima e dopo ogni uscita. Si tiene se la media resta sopra 10 e i commenti superano 20 per reel."
+  },
+  "realismo": {
+   "idea": "Non ci sono idee valide per la traccia «realismo»: tutte le proposte ricevute sono di traccia «reel»",
+   "come_funziona": "Nessuna proposta riguarda un passo concreto per rendere il gioco più realistico (animali, mappa o 3D), quindi non ne scelgo una fuori traccia.",
+   "primo_passo": "Chiedere alle persone di «Realismo degli animali» e «Realismo della mappa e del 3D» nuove proposte con traccia «realismo», partendo dai disegni SVG e dai dati di altitudine già disponibili.",
+   "come_misurarla": "Non applicabile finché non c'è un'idea. Quando arriverà, confrontare follower ogni 1.000 di reach e commenti prima e dopo il cambiamento."
+  },
+  "perche": "Tutte le idee erano di traccia «reel» e convergevano sullo stesso formato (persone vere, mappa finale), che sfrutta l'unico dato positivo, 'ospiti_sera' a 21,5 follower ogni 1.000, quindi ho scelto la versione più fattibile e lasciato vuote le altre due tracce invece di forzare idee fuori traccia."
  }
 ]
