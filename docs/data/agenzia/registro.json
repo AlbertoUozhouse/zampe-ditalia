@@ -16,5 +16,14 @@
   "stato": "senza direttore",
   "fine": "2026-11-08T12:09:04+00:00",
   "scambi": 105
+ },
+ {
+  "id": "crescita-2026-11-08",
+  "formato": "crescita del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-08T14:08:38+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-08T14:08:52+00:00",
+  "scambi": 11
  }
 ]

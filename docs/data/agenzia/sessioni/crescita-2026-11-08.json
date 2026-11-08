@@ -1,0 +1,143 @@
+{
+ "id": "crescita-2026-11-08",
+ "formato": "crescita del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-08T14:08:38+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-08T14:08:38+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Si parte dai numeri veri degli ultimi 12 reel organici e dai verbali dei 7 giorni."
+  },
+  {
+   "t": "2026-11-08T14:08:42+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Su 15 reel con dati, i follower attribuiti esistono solo per 2 uscite: 'prima_luce' (382 reach, 0 follower, 0,0 ogni 1.000 account) e 'ospiti_sera' del 7 novembre (326 reach, 7 follower, 21,5 ogni 1.000). Il gancio 'Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!' e la chiusura con invito a scrivere SEGUO sono arrivati insieme a 7 nuovi follower, ma con un solo campione non si può attribu",
+   "dati": {
+    "osservazione": "Su 15 reel con dati, i follower attribuiti esistono solo per 2 uscite: 'prima_luce' (382 reach, 0 follower, 0,0 ogni 1.000 account) e 'ospiti_sera' del 7 novembre (326 reach, 7 follower, 21,5 ogni 1.000). Il gancio 'Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!' e la chiusura con invito a scrivere SEGUO sono arrivati insieme a 7 nuovi follower, ma con un solo campione non si può attribuire il risultato al formato. Per gli altri reel il dato follower è null, quindi non esistono confronti affidabili. Dai verbali, i reel più grandi (presidente, gara, puntata, corsa_luna) hanno reach a 7 giorni tra 1.000 e 2.000, ma il conteggio follower non copre quelle uscite, quindi non si può dire che portino più follower.",
+    "proposta": "Domani ripetere la formula che ha portato follower, cioè chiusura con invito esplicito a seguire e a scrivere una parola-chiave, su un formato 'ospiti_sera' o 'mappa', e registrare subito il conteggio follower prima e dopo l'uscita, così da avere un dato utile per il confronto. In parallelo, testare un'apertura con video vero e domanda sulla città o sul nome dell'animale, come nel reel 'testa_a_testa', che ha avuto 7 commenti ma nessun dato follower.",
+    "gancio": "Ecco chi è entrato oggi nella mappa: se sei arrivato adesso, scrivi SEGUO e ti trovi nel prossimo giro."
+   }
+  },
+  {
+   "t": "2026-11-08T14:08:42+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato di follower è disponibile solo per 2 reel su 17 (prima_luce: 0 follower ogni 1.000 account raggiunti, con reach 256; ospiti_sera del 7 novembre: 7 follower, 21,5 ogni 1.000, con reach 326). Il reel con più reach nel periodo (fondatore, 679) non ha dato follower registrato, quindi la reach da sola non porta iscritti. Nei reel con il gancio «Questa è l'Italia di notte» e «Promessa mantenuta»",
+   "dati": {
+    "osservazione": "Il dato di follower è disponibile solo per 2 reel su 17 (prima_luce: 0 follower ogni 1.000 account raggiunti, con reach 256; ospiti_sera del 7 novembre: 7 follower, 21,5 ogni 1.000, con reach 326). Il reel con più reach nel periodo (fondatore, 679) non ha dato follower registrato, quindi la reach da sola non porta iscritti. Nei reel con il gancio «Questa è l'Italia di notte» e «Promessa mantenuta» il numero di commenti è alto (52 sul reel che ha convertito), mentre il reel «re» del 5 novembre con 81 commenti non ha un dato di conversione: non si può dire quale dei due elementi abbia fatto la differenza. Tutti i verbali a 7 giorni hanno follower indisponibili, quindi non si può valutare nessun formato sul fronte crescita.",
+    "proposta": "Domani pubblicare un reel «ospiti_sera» con la stessa struttura del 7 novembre (apertura mappa, gancio di promessa e chiusura con invito a scrivere SEGUO) e registrare subito il conteggio follower dopo l'uscita, così da avere un secondo dato di conversione confrontabile con il 21,5 ogni 1.000. In parallelo, segnare per ogni reel se il conteggio follower è disponibile, per evitare altri giorni con il dato mancante.",
+    "gancio": "Promessa mantenuta: ecco chi si è unito oggi a Zampe d'Italia."
+   }
+  },
+  {
+   "t": "2026-11-08T14:08:42+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Su 15 reel nei dati, il follower_ogni_1000 è disponibile solo per 2 (prima_luce: 0.0 follower ogni 1.000 account, su reach 256; ospiti_sera del 7 novembre: 21.5 follower ogni 1.000 account, 7 follower su reach 326, con apertura 'mappa' e gancio 'Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!'). Il reel 'fondatore' ha il reach più alto (679) e 4 condivisioni, ma nessun dato di follower. T",
+   "dati": {
+    "osservazione": "Su 15 reel nei dati, il follower_ogni_1000 è disponibile solo per 2 (prima_luce: 0.0 follower ogni 1.000 account, su reach 256; ospiti_sera del 7 novembre: 21.5 follower ogni 1.000 account, 7 follower su reach 326, con apertura 'mappa' e gancio 'Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!'). Il reel 'fondatore' ha il reach più alto (679) e 4 condivisioni, ma nessun dato di follower. Tra i reel con commenti, 're' del 5 novembre ne ha 81 su reach 384: è l'interazione più alta, ma senza conversione misurata. Nei verbali dei 7 giorni il dato follower è indisponibile per tutti gli 8 reel.",
+    "proposta": "Domani ripeti il formato 'ospiti_sera' con apertura 'mappa' e un gancio che promette un risultato concreto e verificabile, come il numero di nuovi amici del giorno. Pubblicalo nella fascia serale e chiudi con una richiesta semplice e specifica (es. scrivere SEGUO). Registra nel verbale l'eventuale follower entro 6 ore, così il dato sarà disponibile per il confronto.",
+    "gancio": "Promessa mantenuta: ecco i nuovi amici di oggi, uno per uno."
+   }
+  },
+  {
+   "t": "2026-11-08T14:08:42+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Su 15 reel nei dati, il solo dato di follower attribuiti disponibile è per due uscite: «prima_luce» (382 reach, 0 follower, 0 ogni 1.000 reach) e «ospiti_sera» del 7 novembre (326 reach, 7 follower, 21,5 ogni 1.000 reach). Per tutti gli altri reel il dato follower è null, e per i 7 verbali di 7 giorni i follower sono indisponibili: non è quindi possibile stabilire quale formato porti più follower.",
+   "dati": {
+    "osservazione": "Su 15 reel nei dati, il solo dato di follower attribuiti disponibile è per due uscite: «prima_luce» (382 reach, 0 follower, 0 ogni 1.000 reach) e «ospiti_sera» del 7 novembre (326 reach, 7 follower, 21,5 ogni 1.000 reach). Per tutti gli altri reel il dato follower è null, e per i 7 verbali di 7 giorni i follower sono indisponibili: non è quindi possibile stabilire quale formato porti più follower. Quello che i numeri dicono con certezza è che i commenti sono alti sugli ospiti serali (52 il 7/11) e sui reel «re» (81 il 5/11), mentre «fondatore» (679 reach, 4 condivisioni) è il reel con la portata maggiore. Il progetto è a 1.753 follower.",
+    "proposta": "Domani ripetere il formato «ospiti_sera», perché è l'unico con follower attribuiti positivi e con commenti alti, e chiudere con la richiesta di commento già usata (SEGUO). Insieme, testare una variante «fondatore» con un gancio diverso per capire se la portata alta si traduce anche in follower. Chiedere che il conteggio dei follower venga registrato per ogni reel, altrimenti la prossima decisione resterà senza dati.",
+    "gancio": "Il prossimo ospite di stasera è uno di voi: guardate chi è arrivato per primo, poi scrivete SEGUO."
+   }
+  },
+  {
+   "t": "2026-11-08T14:08:45+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Su 15 reel nei dati, il follower attribuito è disponibile solo per 2 (prima_luce 18:02: 0 follower, 0.0 ogni 1.000 account, reach 256; ospiti_sera 21:03 del 7 novembre: 7 follower, 21.5 ogni 1.000 account, reach 326). Tutti gli altri hanno follower null, quindi non si può dire quali formati portino follower. Il dato più solido è l'engagement: il reel 'fondatore' del 6 novembre (21:23) ha il reach ",
+   "dati": {
+    "osservazione": "Su 15 reel nei dati, il follower attribuito è disponibile solo per 2 (prima_luce 18:02: 0 follower, 0.0 ogni 1.000 account, reach 256; ospiti_sera 21:03 del 7 novembre: 7 follower, 21.5 ogni 1.000 account, reach 326). Tutti gli altri hanno follower null, quindi non si può dire quali formati portino follower. Il dato più solido è l'engagement: il reel 'fondatore' del 6 novembre (21:23) ha il reach più alto (679) e 4 condivisioni; il 're' del 5 novembre (13:12) ha 81 commenti con reach 384, il rapporto commenti/reach più alto del campione. Nei verbali a 7 giorni, i follower attribuiti sono indisponibili per tutti e 8 i reel, quindi non c'è una mediana follower per formato.",
+    "proposta": "Domani ripetere il formato 'ospiti_sera' del 7 novembre, l'unico con follower misurati (7 follower, 21.5 ogni 1.000), usando la stessa chiusura che chiede di seguire e scrivere SEGUO, e registrare il dato follower dopo l'uscita per avere un secondo punto di confronto. In parallelo, testare una domanda aperta come nel 're' con i commenti alti, per capire se la discussione porta anche follower.",
+    "gancio": "Promessa mantenuta: benvenuti ai nuovi amici di oggi! Il prossimo è il tuo?"
+   }
+  },
+  {
+   "t": "2026-11-08T14:08:45+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Su 15 reel nei dati, il solo dato di follower attribuiti disponibile è per 3 reel: 'prima_luce' (0 follower, 0 ogni 1.000 reach) e 'ospiti_sera' del 7 novembre (7 follower, 21,5 ogni 1.000 reach); 'testa_a_testa' non ha il dato. Gli altri 12 reel hanno follower «null», quindi non posso dire quale formato porti davvero follower. Il dato più solido è quello sui commenti: 're' del 5 novembre ha 81 co",
+   "dati": {
+    "osservazione": "Su 15 reel nei dati, il solo dato di follower attribuiti disponibile è per 3 reel: 'prima_luce' (0 follower, 0 ogni 1.000 reach) e 'ospiti_sera' del 7 novembre (7 follower, 21,5 ogni 1.000 reach); 'testa_a_testa' non ha il dato. Gli altri 12 reel hanno follower «null», quindi non posso dire quale formato porti davvero follower. Il dato più solido è quello sui commenti: 're' del 5 novembre ha 81 commenti su 384 reach, il picco di interazione, mentre 'fondatore' ha la reach più alta (679) con 39 commenti e 4 condivisioni. Nei verbali dei 7 giorni, 'presidente' e 'gara' hanno reach a 7 giorni tra 1.100 e 2.400, ma anche qui il dato follower è indisponibile per tutti e 9 i reel.",
+    "proposta": "Domani ripeti il formato 'ospiti_sera' del 7 novembre, l'unico con conversione follower verificata (7 su 326 reach), mantenendo il gancio che promette qualcosa di concreto e la chiusura con invito a scrivere una parola chiave. In parallelo, registra per ogni reel il conteggio follower dopo l'uscita, così da avere il dato mancante per decidere con numeri veri.",
+    "gancio": "Promessa mantenuta: benvenuti ai nuovi amici di oggi!"
+   }
+  },
+  {
+   "t": "2026-11-08T14:08:45+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Sui reel con dato follower disponibile c'è un solo campione utile: 'ospiti_sera' del 2026-11-07 21:03 (reach 326, 52 commenti) ha portato 7 follower, cioè 21,5 ogni 1.000 account raggiunti; 'prima_luce' (reach 256) ne ha portati 0. Per gli altri 9 reel del periodo il dato follower è null, quindi non è possibile confrontare i formati su questa metrica. Per engagement, 'fondatore' (reach 679, 39 com",
+   "dati": {
+    "osservazione": "Sui reel con dato follower disponibile c'è un solo campione utile: 'ospiti_sera' del 2026-11-07 21:03 (reach 326, 52 commenti) ha portato 7 follower, cioè 21,5 ogni 1.000 account raggiunti; 'prima_luce' (reach 256) ne ha portati 0. Per gli altri 9 reel del periodo il dato follower è null, quindi non è possibile confrontare i formati su questa metrica. Per engagement, 'fondatore' (reach 679, 39 commenti, 4 condivisioni) e 'incoronazione' (393 reach, 22 commenti) sono i più forti tra i reel con dato completo; 're' del 2026-11-05 13:12 ha il picco di commenti (81) con reach 384. Nei verbali dei 7 giorni il follower attribuito è indisponibile per tutti i reel, quindi non ci sono ancora conclusioni sulla crescita reale.",
+    "proposta": "Domani ripubblica il formato 'ospiti_sera' con apertura 'mappa' e chiusura con invito a scrivere SEGUO, perché è l'unico caso con follower attribuiti (7) e il tasso più alto (21,5 ogni 1.000). Nello stesso slot, prova una variante con il gancio della prima luce ('Questa è l'Italia di notte...') per capire se il video vero aiuta. Controlla il conteggio dei follower ora per ora dopo ogni uscita, così da avere il dato per i prossimi verbali.",
+    "gancio": "Promessa mantenuta: ecco chi si è unito oggi, e il prossimo potresti essere tu."
+   }
+  },
+  {
+   "t": "2026-11-08T14:08:46+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato più solido è il reel del 7 novembre 'ospiti_sera' (apertura 'mappa', gancio 'Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!'): 609 views, 326 reach, 52 commenti, e 7 follower attribuiti su 326 di reach (21,5 ogni 1.000). È l'unico reel con follower attribuiti e il valore più alto disponibile. Il 'prima_luce' dello stesso giorno, con apertura 'video vero', ha portato 0 follower su",
+   "dati": {
+    "osservazione": "Il dato più solido è il reel del 7 novembre 'ospiti_sera' (apertura 'mappa', gancio 'Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!'): 609 views, 326 reach, 52 commenti, e 7 follower attribuiti su 326 di reach (21,5 ogni 1.000). È l'unico reel con follower attribuiti e il valore più alto disponibile. Il 'prima_luce' dello stesso giorno, con apertura 'video vero', ha portato 0 follower su 256 di reach. Quasi tutti gli altri reel non hanno il conteggio dei follower (null), quindi non si possono confrontare. Il formato 'fondatore' del 6 novembre è quello con più reach (679), ma senza dato sui follower. Nei verbali dei 7 giorni, i follower attribuiti sono indisponibili per tutti i reel, quindi non c'è una mediana affidabile da confrontare.",
+    "proposta": "Riprovare l'impostazione del reel 'ospiti_sera' del 7 novembre: apertura 'mappa', gancio legato a un risultato concreto e numerato, chiusura che invita a seguire per il prossimo. Mantenere la chiusura con call to action esplicita e un'azione semplice (scrivere una parola in commento). Per capire se è l'apertura o il gancio a fare la differenza, alternare nei prossimi giorni la mappa con un video vero e misurare i follower attribuiti di ciascuno, così da avere un confronto con dati reali.",
+    "gancio": "Promessa mantenuta: benvenuti ai nuovi amici di oggi! Ecco chi ha risposto."
+   }
+  },
+  {
+   "t": "2026-11-08T14:08:48+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Su 15 reel dei 7 giorni, i dati di follower sono disponibili solo per 2 (prima_luce: 0 follower ogni 1.000 account raggiunti, reach 256; ospiti_sera del 7/11: 7 follower dopo, 21,5 ogni 1.000 account, reach 326, 52 commenti). Tutti gli altri reel hanno follower_dopo e follower_ogni_1000 nulli, quindi non posso attribuire crescita a formati o scelte creative. Nei dati disponibili il formato con più",
+   "dati": {
+    "osservazione": "Su 15 reel dei 7 giorni, i dati di follower sono disponibili solo per 2 (prima_luce: 0 follower ogni 1.000 account raggiunti, reach 256; ospiti_sera del 7/11: 7 follower dopo, 21,5 ogni 1.000 account, reach 326, 52 commenti). Tutti gli altri reel hanno follower_dopo e follower_ogni_1000 nulli, quindi non posso attribuire crescita a formati o scelte creative. Nei dati disponibili il formato con più commenti e reach è 'ospiti_sera' (52 commenti il 7/11, 37 e 27 nei giorni precedenti), mentre 'fondatore' (reach 679, 4 condivisioni) è il più visto ma senza dato follower. I verbali segnalano follower 'indisponibile' per tutti i reel del 30–31/10 e 1/11, quindi non esiste una mediana utile per confronto.",
+    "proposta": "Domani ripetere il formato 'ospiti_sera' con apertura 'mappa' e chiusura con invito a scrivere SEGUO, perché è l'unico con un dato follower positivo e alta partecipazione. Registrare sempre il conteggio follower dopo ogni uscita, per poter confrontare i formati nei prossimi giorni.",
+    "gancio": "Promessa mantenuta: benvenuti ai nuovi amici di oggi!"
+   }
+  },
+  {
+   "t": "2026-11-08T14:08:52+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Per domani: gancio «Promessa mantenuta: ecco chi si è unito oggi a Zampe d'Italia. Se sei arrivato adesso, scrivi SEGUO.», chiusura «Vuoi esserci nel prossimo giro? Scrivi SEGUO nei commenti e ti troviamo.». Dato: 'ospiti_sera' del 7 novembre: 7 follower su 326 di reach, 21,5 ogni 1.000 account. È l'unico campione positivo: 'prima_luce' ha 0 su 256 e gli altri 13 reel hanno il dato follower null. Con un solo campione è un indizio, non una prova.",
+   "dati": {
+    "pubblico": "Persone che non conoscono ancora Zampe d'Italia e arrivano dal reel serale: amanti degli animali che reagiscono con un commento semplice.",
+    "gancio": "Promessa mantenuta: ecco chi si è unito oggi a Zampe d'Italia. Se sei arrivato adesso, scrivi SEGUO.",
+    "motivo_per_seguire": "Vedere ogni giorno chi entra nella mappa e trovare anche il proprio posto nel prossimo giro: un risultato concreto, con un numero di nuovi amici.",
+    "chiusura": "Vuoi esserci nel prossimo giro? Scrivi SEGUO nei commenti e ti troviamo.",
+    "da_riprovare": "Formato 'ospiti_sera' con apertura 'mappa', gancio 'Promessa mantenuta' e chiusura con parola-chiave SEGUO, in fascia serale (circa le 21). Registrare il conteggio follower prima e subito dopo l'uscita, per ottenere un secondo punto di confronto.",
+    "da_evitare": "Trarre conclusioni dalla sola reach o dai commenti ('fondatore', 're'), e pubblicare senza registrare i follower. Evitare anche di cambiare più elementi insieme: un solo test alla volta, per esempio la mappa contro il video vero.",
+    "dato": "'ospiti_sera' del 7 novembre: 7 follower su 326 di reach, 21,5 ogni 1.000 account. È l'unico campione positivo: 'prima_luce' ha 0 su 256 e gli altri 13 reel hanno il dato follower null. Con un solo campione è un indizio, non una prova."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 49883,
+ "fine": "2026-11-08T14:08:52+00:00"
+}

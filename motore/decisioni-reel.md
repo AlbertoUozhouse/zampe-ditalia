@@ -238,3 +238,8 @@ Reel del 7/11: 3 previsti (amici 13, prima_luce 18, ospiti_sera 21) e 3 pubblica
 Primi follower attribuiti (finestra fino al reel dopo, dati non ancora maturi): prima_luce di Atri 0 su 232 account; ospiti_sera 7 su 286 (24,5 ogni 1.000).
 Centro Agenzia: 1 sessione, «senza direttore» (OpenAI risponde 401: chiave da sostituire, Alberto avvisato il 7/11). Coppa delle Zampe: turno 1, ancora 0 punti (il reel di apertura esce stasera alle 21).
 Nessun cambiamento oggi.
+
+
+## 2026-11-08 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-01-1206-fondatore: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
