@@ -75,7 +75,7 @@ jobs:
             mkdir -p docs/media/bozze; cp /tmp/reel/reel.mp4 "docs/media/bozze/$ID.mp4"
             git config user.name "zampe-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             for d in docs/media/bozze docs/data/agenzia docs/agenzia; do [ -e "$d" ] && git add "$d"; done; git commit -q -m "Reel in bozza (il Direttore video non l'ha approvato) $ID"
-            for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
+            for i in 1 2 3; do git pull -q --rebase --autostash && git push -q && break; sleep 15; done
             echo "reel in bozza: parte il reel di riserva"; exit 1
           done
       - name: Reel già montato
@@ -94,7 +94,7 @@ jobs:
           git config user.name "zampe-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add motore/reel_fatti.json; for d in docs/data/agenzia docs/agenzia; do [ -e "$d" ] && git add "$d"; done
           git diff --cached --quiet || git commit -q -m "Reel saltato: nessun caso verificato (${{ inputs.formato }})"
-          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
+          for i in 1 2 3; do git pull -q --rebase --autostash && git push -q && break; sleep 15; done
       - name: Carica sul sito
         id: carica
         if: ${{ steps.copione.outputs.salta != '1' && steps.verifica.outputs.salta != '1' }}
@@ -109,7 +109,7 @@ jobs:
             git config user.name "zampe-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add docs/media/bozze/anteprime; for d in docs/data/agenzia docs/agenzia; do [ -e "$d" ] && git add "$d"; done
             git commit -q -m "Anteprima $ID (non pubblicata)"
-            for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
+            for i in 1 2 3; do git pull -q --rebase --autostash && git push -q && break; sleep 15; done
             echo "id=$ID" >> "$GITHUB_OUTPUT"; exit 0
           fi
           cp /tmp/reel/reel.mp4 "docs/media/auto/$ID.mp4"
@@ -127,7 +127,7 @@ jobs:
           git add docs/media/auto docs/contenuti/auto motore/reel_fatti.json
           for d in docs/data/agenzia docs/agenzia; do [ -e "$d" ] && git add "$d"; done
           git commit -q -m "Reel automatico $ID"
-          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
+          for i in 1 2 3; do git pull -q --rebase --autostash && git push -q && break; sleep 15; done
           echo "id=$ID" >> "$GITHUB_OUTPUT"
           # Pages a volte ci mette più di 10 minuti (ieri 2 reel su 3 persi per questo): si aspetta fino a 20
           for i in $(seq 1 80); do
@@ -148,7 +148,7 @@ jobs:
           git add motore/pubblicati.json
           git diff --cached --quiet && exit 0
           git commit -q -m "Registro pubblicazioni"
-          for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 15; done
+          for i in 1 2 3; do git pull -q --rebase --autostash && git push -q && break; sleep 15; done
       - name: Reel di riserva
         if: failure() && inputs.pubblica && !inputs.riserva
         # un reel fallito non lascia il buco: parte un Fondatore (diverso da tutti gli altri), ma solo se nelle ultime 2 ore non è uscito niente
