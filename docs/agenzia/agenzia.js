@@ -11,27 +11,70 @@
 
   async function json(u) { const r = await fetch(u + "?t=" + Date.now()); if (!r.ok) throw new Error(u); return r.json(); }
 
-  // ---------- la pianta: 10 stanze in due colonne, 10 scrivanie ciascuna ----------
+  // ---------- la pianta: l'ufficio di notte visto dall'alto, stanze accese quando lavorano ----------
+  const REP = { direzione: ["🎬", "#7C6CF0"], montaggio: ["✂️", "#E8795E"], copione: ["✍️", "#3B8FE0"], mappa: ["🗺️", "#1FB58F"], audio: ["🎧", "#E55A9B"],
+    grafica: ["🎨", "#F2B23E"], pubblicazione: ["🚀", "#5AA9F5"], community: ["💬", "#3CCB9C"], coppa: ["🏆", "#E9A21A"], crescita: ["📈", "#35B864"],
+    innovazione: ["💡", "#9B8CF7"], grafica3d: ["🧊", "#19BFC2"] };
+  const PELLE = ["#F1C9A5", "#E0AC84", "#C68B62", "#9C6A45", "#F5D5B8", "#7A4E33"], CAPELLI = ["#2B2018", "#5A3A22", "#8C5A2B", "#C9A15A", "#1C1C24", "#A23E2A", "#D8D2C8", "#4A3426"];
+  const h = s => [...s].reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 7);
   function pianta() {
-    const W = 1000, RW = 480, RH = 330, G = 20, righe = Math.ceil(UFF.length / 2), H = righe * (RH + G) + G;
+    const col1 = innerWidth < 700, RW = 470, RH = 340, GX = 20, GY = 26, M = col1 ? 14 : 22, C = col1 ? 1 : 2, W = col1 ? RW + 2 * M : 1000,
+      righe = Math.ceil(UFF.length / C), H = M * 2 + righe * RH + (righe - 1) * GY;
     const attivi = new Set((S?.scambi || []).flatMap(x => [x.da, x.a]));
-    let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg"><rect width="${W}" height="${H}" fill="#CFC6B5"/>`;
+    const parla = new Set((S?.scambi || []).filter(x => x.tipo === "proposta" || x.tipo === "decisione" || x.tipo === "correzione").map(x => x.da));
+    let svg = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg"><defs>
+      <pattern id="parquet" width="60" height="24" patternUnits="userSpaceOnUse"><rect width="60" height="24" fill="#B98556"/><rect width="60" height="12" fill="#C4915F"/>
+        <path d="M0 12H60M0 0H60M30 0V12M10 12V24M50 12V24" stroke="#9E6E44" stroke-width="1.2" opacity=".6"/></pattern>
+      <pattern id="fuori" width="40" height="40" patternUnits="userSpaceOnUse"><rect width="40" height="40" fill="#161C2B"/><circle cx="8" cy="12" r="1" fill="#3A4560"/><circle cx="28" cy="30" r=".8" fill="#3A4560"/></pattern>
+      <radialGradient id="luce" cx=".5" cy=".45" r=".7"><stop offset="0" stop-color="#FFE3A3" stop-opacity=".38"/><stop offset="1" stop-color="#FFE3A3" stop-opacity="0"/></radialGradient>
+      <radialGradient id="lampada"><stop offset="0" stop-color="#FFE9B0" stop-opacity=".75"/><stop offset="1" stop-color="#FFE9B0" stop-opacity="0"/></radialGradient>
+      <radialGradient id="schermo"><stop offset="0" stop-color="#8FDCFF" stop-opacity=".7"/><stop offset="1" stop-color="#8FDCFF" stop-opacity="0"/></radialGradient>
+      <filter id="ombra" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#000" flood-opacity=".35"/></filter></defs>
+      <rect width="${W}" height="${H}" fill="url(#fuori)"/>
+      ${col1 ? "" : `<rect x="${W / 2 - 9}" y="${M}" width="18" height="${H - 2 * M}" rx="4" fill="#8E2F3A" opacity=".85"/><path d="M${W / 2} ${M + 6}V${H - M - 6}" stroke="#E8A93A" stroke-width="1.5" stroke-dasharray="2 10" opacity=".7"/>`}`;
     UFF.forEach((r, i) => {
-      const x = G + (i % 2) * (RW + G), y = G + Math.floor(i / 2) * (RH + G);
-      svg += `<g class="stanza" data-r="${r.id}"><rect class="pav" x="${x}" y="${y}" width="${RW}" height="${RH}" rx="6"/>
-        <path class="muri" d="M${x} ${y + 60} V${y} H${x + RW} V${y + RH} H${x + 200} M${x + 270} ${y + RH} H${x} V${y + 110}"/>
-        <rect x="${x + 12}" y="${y + 12}" width="${RW - 24}" height="40" rx="8" fill="rgba(255,255,255,.75)"/>
-        <text class="targa" x="${x + 24}" y="${y + 40}">${esc(r.nome)}</text>
-        <text class="sotto" x="${x + RW - 24}" y="${y + 40}" text-anchor="end">${r.postazioni.filter(p => attivi.has(p.id)).length}/10 al lavoro</text>
-        <circle cx="${x + RW - 30}" cy="${y + RH - 30}" r="16" fill="#5E9C63"/><circle cx="${x + RW - 36}" cy="${y + RH - 36}" r="9" fill="#78B97D"/></g>`;
+      const x = M + (i % C) * (RW + GX), y = M + Math.floor(i / C) * (RH + GY), [emo, col] = REP[r.id] || ["🏢", "#888"];
+      const quanti = r.postazioni.filter(p => attivi.has(p.id)).length, acceso = quanti > 0;
+      svg += `<g class="stanza${acceso ? " accesa" : ""}" data-r="${r.id}">
+        <rect x="${x}" y="${y}" width="${RW}" height="${RH}" rx="10" fill="url(#parquet)"/>
+        <rect x="${x + 18}" y="${y + 74}" width="${RW - 36}" height="${RH - 92}" rx="18" fill="${col}" opacity=".2"/>
+        <rect x="${x + 26}" y="${y + 82}" width="${RW - 52}" height="${RH - 108}" rx="13" fill="none" stroke="${col}" stroke-opacity=".45" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round"/>
+        ${acceso ? `<rect x="${x}" y="${y}" width="${RW}" height="${RH}" rx="10" fill="url(#luce)"/>` : ""}
+        <rect x="${x}" y="${y}" width="${RW}" height="${RH}" rx="10" fill="none" stroke="#262D3F" stroke-width="12"/>
+        ${[0.18, 0.5, 0.82].map(f => `<rect x="${x + RW * f - 34}" y="${y - 4}" width="68" height="8" rx="3" fill="${acceso ? "#FFD27A" : "#5C6A8A"}" opacity="${acceso ? .9 : .6}"/>`).join("")}
+        <rect x="${x + RW - 150}" y="${y + RH - 8}" width="70" height="16" fill="#C4915F"/><path d="M${x + RW - 150} ${y + RH - 6}a70 70 0 0 1 70 -62" fill="none" stroke="#8C9BB8" stroke-width="2" stroke-dasharray="4 4" opacity=".7"/>
+        <g filter="url(#ombra)"><rect x="${x + 16}" y="${y + 16}" width="${RW - 32}" height="46" rx="12" fill="#FFFBF4"/></g>
+        <rect x="${x + 16}" y="${y + 16}" width="8" height="46" rx="4" fill="${col}"/>
+        <text x="${x + 36}" y="${y + 47}" font-size="22">${emo}</text>
+        <text class="targa" x="${x + 68}" y="${y + 47}">${esc(r.nome)}</text>
+        <rect x="${x + RW - 128}" y="${y + 27}" width="98" height="24" rx="12" fill="${acceso ? col : "#C9C2B5"}"/>
+        <text class="conta" x="${x + RW - 79}" y="${y + 44}" text-anchor="middle">${quanti}/10 ${acceso ? "al lavoro" : "in pausa"}</text>
+        <g transform="translate(${x + RW - 34} ${y + RH - 34})"><circle r="15" fill="#8B5A3C"/><circle r="11" fill="#5C3A26"/>
+          <circle cx="-7" cy="-6" r="9" fill="#3E9B57"/><circle cx="7" cy="-4" r="8" fill="#56B86C"/><circle cx="0" cy="6" r="8" fill="#2F8A4A"/><circle cx="2" cy="-1" r="5" fill="#7BD08A"/></g>
+        <g transform="translate(${x + 36} ${y + RH - 34})"><rect x="-14" y="-14" width="28" height="28" rx="5" fill="#3B4255"/><rect x="-9" y="-9" width="18" height="12" rx="2" fill="#20263A"/>
+          <circle cx="0" cy="8" r="3" fill="${acceso ? "#E8A93A" : "#666"}"/><text x="0" y="1" text-anchor="middle" font-size="9">☕</text></g>
+        ${acceso ? "" : `<rect x="${x}" y="${y}" width="${RW}" height="${RH}" rx="10" fill="#0E1322" opacity=".42" pointer-events="none"/>`}</g>`;
       r.postazioni.forEach((p, k) => {
-        const px = x + 30 + (k % 5) * 88, py = y + 80 + Math.floor(k / 5) * 120, on = attivi.has(p.id);
-        const tipo = p.id === "direzione-1" ? " openai" : p.id === "montaggio-1" ? " claude" : "";
-        svg += `<g class="post${on ? " attivo" : ""}${tipo}" data-p="${p.id}">
-          <rect class="scrivania" x="${px}" y="${py}" width="72" height="40" rx="5"/><rect class="schermo" x="${px + 22}" y="${py + 5}" width="28" height="8" rx="2"/>
-          <circle class="sedia" cx="${px + 36}" cy="${py + 62}" r="17"/>${on ? `<circle class="alone" cx="${px + 36}" cy="${py + 60}" r="22"/>` : ""}
-          <ellipse class="corpo" cx="${px + 36}" cy="${py + 62}" rx="15" ry="10"/><circle class="testa-p" cx="${px + 36}" cy="${py + 58}" r="8"/>
-          <text x="${px + 36}" y="${py + 98}" text-anchor="middle">${k + 1}</text></g>`;
+        const px = x + 40 + (k % 5) * 84, py = y + 96 + Math.floor(k / 5) * 112, on = attivi.has(p.id), hh = h(p.id);
+        const tipo = p.id === "direzione-1" ? "openai" : p.id === "montaggio-1" ? "claude" : "";
+        const maglia = tipo === "openai" ? "#10A37F" : tipo === "claude" ? "#D97757" : on ? col : "#8B92A3", cx = px + 32;
+        svg += `<g class="post${on ? " attivo" : ""}" data-p="${p.id}">
+          ${on ? `<circle cx="${cx}" cy="${py + 8}" r="44" fill="url(#lampada)" opacity=".55"/>` : ""}
+          <g filter="url(#ombra)"><rect x="${px}" y="${py}" width="64" height="34" rx="6" fill="#E3C49B"/></g>
+          <rect x="${px}" y="${py}" width="64" height="5" rx="3" fill="#CFA977"/>
+          ${on ? `<ellipse cx="${cx}" cy="${py + 16}" rx="26" ry="14" fill="url(#schermo)"/>` : ""}
+          <rect x="${px + 14}" y="${py + 6}" width="36" height="10" rx="2" fill="${on ? "#9BE2FF" : "#2B3140"}" stroke="#1E2430" stroke-width="2"/>
+          ${on ? `<path class="righe" d="M${px + 18} ${py + 10}h14M${px + 18} ${py + 13}h22" stroke="#2E5AA8" stroke-width="1.4" style="animation-delay:-${hh % 30 / 10}s"/>` : ""}
+          <rect x="${px + 20}" y="${py + 20}" width="24" height="6" rx="2" fill="#F7F3EC"/>
+          <circle cx="${px + 54}" cy="${py + 24}" r="4" fill="${["#E55A5A", "#5AA9F5", "#F2B23E", "#FFFFFF"][hh % 4]}" stroke="#1E2430" stroke-width="1"/>
+          <circle cx="${cx}" cy="${py + 58}" r="19" fill="#3B4255"/>
+          <ellipse cx="${cx}" cy="${py + 54}" rx="19" ry="11" fill="${maglia}"/>
+          <circle cx="${cx}" cy="${py + 50}" r="9.5" fill="${PELLE[hh % PELLE.length]}"/>
+          <path d="M${cx - 9.5} ${py + 51}a9.5 9.5 0 0 1 19 0a9.5 6 0 0 0 -19 0" fill="${CAPELLI[(hh >> 3) % CAPELLI.length]}"/>
+          ${tipo ? `<circle cx="${cx}" cy="${py + 52}" r="25" fill="none" stroke="${maglia}" stroke-width="3" class="aura"/><rect x="${cx - 26}" y="${py + 76}" width="52" height="15" rx="7" fill="${maglia}"/>
+            <text class="nome-ia" x="${cx}" y="${py + 87}" text-anchor="middle">${tipo === "openai" ? "OpenAI" : "Claude"}</text>` : `<text class="num" x="${cx}" y="${py + 90}" text-anchor="middle">${k + 1}</text>`}
+          ${on && parla.has(p.id) ? `<g class="fumetto" style="animation-delay:-${(hh % 70) / 10}s"><path d="M${cx + 12} ${py + 30}h26a6 6 0 0 1 6 6v10a6 6 0 0 1 -6 6h-18l-6 6v-6h-2a6 6 0 0 1 -6 -6v-10a6 6 0 0 1 6 -6z" fill="#FFFBF4" stroke="#1E2430" stroke-width="1.5"/>
+            <circle cx="${cx + 21}" cy="${py + 41}" r="1.8" fill="#1E2430"/><circle cx="${cx + 27}" cy="${py + 41}" r="1.8" fill="#1E2430"/><circle cx="${cx + 33}" cy="${py + 41}" r="1.8" fill="#1E2430"/></g>` : ""}</g>`;
       });
     });
     $("#pianta").innerHTML = svg + "</svg>";
@@ -89,6 +132,7 @@
     st.className = "stato" + (S?.stato === "approvato" ? " ok" : S?.stato === "bozza" ? " ko" : "");
     pianta();
   }
+  let largo = innerWidth < 700; addEventListener("resize", () => { if ((innerWidth < 700) !== largo) { largo = !largo; pianta(); } });
   $("#sess").onchange = e => scegli(e.target.value);
   $("#apriSess").onclick = sessione;
   // Cantieri dell'Innovazione: ogni idea scelta va online entro 48 ore (docs/data/agenzia/cantieri.json)

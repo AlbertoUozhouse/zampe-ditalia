@@ -1,7 +1,7 @@
 :root{--carta:#F3EDE2;--muro:#2F3542;--legno:#C99A6B;--legno2:#B4845A;--moq:#DCD3C4;--oro:#E8A93A;--verde:#2E9E6A;--rosso:#D9483B;--blu:#2E5AA8;--testo:#1E2430;--grigio:#6B7280;
   --f-d:"Bricolage Grotesque",system-ui,sans-serif;--f-b:"Nunito",system-ui,sans-serif}
 *{box-sizing:border-box}
-body{margin:0;background:#E9E3D6;color:var(--testo);font-family:var(--f-b);-webkit-font-smoothing:antialiased}
+body{margin:0;background:#E7E0D2;color:var(--testo);font-family:var(--f-b);-webkit-font-smoothing:antialiased}
 .testa{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px;background:#1E2430;color:#FFF4DE}
 .testa h1{margin:0;font:800 20px var(--f-d)}
 .testa p{margin:0;font-size:12px;opacity:.75;font-weight:700}
@@ -14,23 +14,21 @@ body{margin:0;background:#E9E3D6;color:var(--testo);font-family:var(--f-b);-webk
 .stato{font-size:12px;padding:4px 10px;border-radius:999px;background:#fff;border:1.5px solid #B9AE9A}
 .stato.ok{background:#DDF3E7;border-color:var(--verde)}.stato.ko{background:#FBE1DE;border-color:var(--rosso)}
 main{padding:0 10px 120px}
-.pianta svg{width:100%;height:auto;display:block;filter:drop-shadow(0 8px 18px rgba(0,0,0,.18))}
+.pianta{max-width:1000px;margin:0 auto}
+.pianta svg{width:100%;height:auto;display:block;border-radius:18px;box-shadow:0 14px 34px rgba(10,14,28,.35)}
 .stanza{cursor:pointer}
-.stanza .pav{fill:var(--moq)}
-.stanza .muri{fill:none;stroke:var(--muro);stroke-width:10}
-.stanza .targa{font:800 22px var(--f-d);fill:#1E2430}
-.stanza .sotto{font:700 14px var(--f-b);fill:var(--grigio)}
+.stanza .targa{font:800 21px var(--f-d);fill:#1E2430}
+.stanza .conta{font:900 12px var(--f-b);fill:#fff}
 .post{cursor:pointer}
-.post .scrivania{fill:var(--legno);stroke:var(--legno2);stroke-width:2}
-.post .schermo{fill:#2B3140}
-.post.attivo .schermo{fill:#7FD3FF}
-.post .sedia{fill:#59606E}
-.post .corpo{fill:#9AA3B5}.post .testa-p{fill:#E9C7A8}
-.post.attivo .corpo{fill:var(--oro)}
-.post.attivo .alone{fill:rgba(232,169,58,.35);animation:batte 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-.post.openai .corpo{fill:#10A37F}.post.claude .corpo{fill:#D97757}
-@keyframes batte{50%{transform:scale(1.25);opacity:.4}}
-.post text{font:800 13px var(--f-b);fill:#1E2430}
+.post .num{font:900 12px var(--f-b);fill:#3A2A1A;opacity:.7}
+.post .nome-ia{font:900 10px var(--f-b);fill:#fff}
+.post .aura{animation:batte 1.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.post .righe{animation:scrive 3s steps(3) infinite}
+.post .fumetto{animation:parla 7s ease-in-out infinite;transform-box:fill-box;transform-origin:0 100%}
+@keyframes batte{50%{transform:scale(1.18);opacity:.35}}
+@keyframes scrive{0%{opacity:1}50%{opacity:.35}}
+@keyframes parla{0%,62%,100%{opacity:0;transform:scale(.6)}68%,90%{opacity:1;transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.post .aura,.post .righe,.post .fumetto{animation:none}.post .fumetto{opacity:1}}
 .pannello{position:fixed;left:0;right:0;bottom:0;z-index:10;max-height:78vh;overflow:auto;background:#FFFBF4;border-radius:22px 22px 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.25);
   padding:16px 16px calc(20px + env(safe-area-inset-bottom,0px))}
 .pannello h2{margin:0 0 2px;font:800 20px var(--f-d)}
