@@ -50,6 +50,10 @@ REPARTI = [
     # missione (Alberto, 8/11): giochi nuovi che servono, reel che evolvono in modo diverso, gioco sempre più realistico
     ("innovazione", "Innovazione", ["Capo innovazione", "Giochi nuovi", "Meccaniche di gioco", "Realismo degli animali", "Realismo della mappa e del 3D",
                                      "Nuovi stili di reel", "Riprese e montaggio diversi", "Suono e musica nuovi", "Fattibilità tecnica", "Esperimenti misurabili"]),
+    # 8/11 Alberto: «il reparto grafica 3D» (dodicesima stanza: 120 persone). Fanno il 3D del sito (three.js: mondo3d.js, paese.js)
+    # e delle scene dei reel; ogni mattina lavorano con l'Innovazione sulla traccia «realismo», nei reel guardano i fotogrammi.
+    ("grafica3d", "Grafica 3D", ["Capo grafica 3D", "Animali in 3D", "Paesi e piazze in 3D", "Rilievo e terreno veri", "Luci della notte in 3D",
+                                 "Materiali e texture", "Camere e inquadrature 3D", "Animazioni 3D", "Scene 3D per i reel", "3D leggero sul telefono"]),
 ]
 
 def ufficio():
@@ -166,7 +170,7 @@ def lavora(sistema, contenuto, modello=None, immagini=()):
                 ERRORI_PERSONE.append(f"{m}: {type(e).__name__}"); time.sleep(2)
     return None, 0
 
-VEDONO = {"direzione", "grafica", "copione", "mappa", "crescita"}  # 8/11: questi reparti ricevono anche 6 fotogrammi del video
+VEDONO = {"direzione", "grafica", "grafica3d", "copione", "mappa", "crescita"}  # 8/11: questi reparti ricevono anche 6 fotogrammi del video
 
 def ufficio_al_lavoro(S, mat, foto=()):
     """Le 100 persone lavorano sul reel: 90 relazioni + 8 decisioni dei capi reparto (il capo della Direzione è il Direttore OpenAI,
@@ -474,7 +478,7 @@ con quello che abbiamo, con il primo passo tecnico concreto. Rispondi solo JSON:
 {"gioco": {"idea": "...", "come_funziona": "...", "primo_passo": "...", "come_misurarla": "..."}, "reel": {...stessi campi}, "realismo": {...stessi campi}, "perche": "una frase"}"""
 
 TRACCIA = {"Giochi nuovi": "gioco", "Meccaniche di gioco": "gioco", "Fattibilità tecnica": "gioco", "Realismo degli animali": "realismo",
-           "Realismo della mappa e del 3D": "realismo", "Esperimenti misurabili": "realismo", "Nuovi stili di reel": "reel", "Riprese e montaggio diversi": "reel", "Suono e musica nuovi": "reel"}
+           "Realismo della mappa e del 3D": "realismo", **{r: "realismo" for r in REPARTI[-1][2][1:]}, "Esperimenti misurabili": "realismo", "Nuovi stili di reel": "reel", "Riprese e montaggio diversi": "reel", "Suono e musica nuovi": "reel"}
 
 INNOVA_PASSO = """Sei «{ruolo}» nel reparto Innovazione di Zampe d'Italia. La tua traccia «{traccia}» ha un CANTIERE aperto (lo trovi sotto): un'idea già scelta
 che va messa online entro la scadenza. Niente idee nuove: scrivi il PROSSIMO passo concreto per finirla, dal punto di vista della tua mansione,
@@ -512,12 +516,14 @@ def innovazione_giorno():
     esiste["cantieri_aperti"] = aperti
     testo = json.dumps(esiste, ensure_ascii=False)[:20000]
     S = Sessione(f"innovazione-{oggi}", "innovazione del giorno")
-    pers = ufficio_reparto("innovazione")[1:]
+    pers = ufficio_reparto("innovazione")[1:] + ufficio_reparto("grafica3d")[1:]  # la Grafica 3D lavora sulla traccia «realismo»
     idee = []
     with ThreadPoolExecutor(4) as ex:
         # 8/11: col solo invito sceglievano tutti «reel»; ogni mansione ha la sua traccia (3 gioco, 3 realismo, 3 reel)
         def compito(p):
             tr = TRACCIA.get(p["ruolo"], "reel")
+            if p["id"].startswith("grafica3d") and tr not in aperti:  # idea di realismo in 3D, dal punto di vista della mansione
+                return lavora(INNOVA.format(ruolo=p["ruolo"] + " (reparto Grafica 3D)") + "\nLa tua traccia è «realismo»: proponi un passo in 3D (three.js nel sito o una scena 3D nei reel), bello da vedere sul telefono.", testo)
             if tr in aperti: return lavora(INNOVA_PASSO.format(ruolo=p["ruolo"], traccia=tr), json.dumps(aperti[tr], ensure_ascii=False) + "\n\n" + testo)
             return lavora(INNOVA.format(ruolo=p["ruolo"]) + f"\nLa tua traccia è «{tr}»: proponi un'idea solo in questa traccia.", testo)
         for p, (r, t) in zip(pers, ex.map(compito, pers)):
