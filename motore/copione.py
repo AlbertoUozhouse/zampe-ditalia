@@ -1102,7 +1102,7 @@ def campanile_rivale(D, rng, st):
     frasi = [
         (f"{A} contro {B}. Chi passa?", {"tipo": "gancio", "testo": f"*{A}* contro *{B}*", "sotto": "Chi passa? · Coppa delle Zampe", "icona": "⚔️"}),
         (f"{A} {pt(pa)}, {B} {pt(pb)}: si chiude {gg} alle 20.", {"tipo": "luce", "centro": [mezzo["lng"], mezzo["lat"]], "s1": round(s1, 2), "volo": "regione", "accendi": 0.3,
-          "intorno": _intorno(D, mezzo, max(60, km)), "punti": [{"lng": xa["lng"], "lat": xa["lat"], "testo": f"{A} · {pa}"}, {"lng": xb["lng"], "lat": xb["lat"], "testo": f"{B} · {pb}"}]}),
+          "intorno": _intorno(D, mezzo, max(60, km)), "punti": [{"lng": xa["lng"], "lat": xa["lat"], "testo": f"{A} · {pt(pa)}"}, {"lng": xb["lng"], "lat": xb["lat"], "testo": f"{B} · {pt(pb)}"}]}),
         ("Tre persone dello stesso comune, ognuna col suo animale: un punto in più.",
          {"tipo": "classifica", "titolo": "🔁 Staffetta di quartiere", "righe": [{"nome": A, "valore": f"{qa['n']}/3"}, {"nome": B, "valore": f"{qb['n']}/3"}]}),
         ("Chiama due amici del tuo comune. In tre completate la staffetta.", {"tipo": "chiusura", "testo": f"👥 Tagga 2 amici di {A} o {B}"}),
