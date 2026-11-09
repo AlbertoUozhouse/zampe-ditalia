@@ -1,0 +1,301 @@
+{
+ "id": "innovazione-2026-11-09",
+ "formato": "innovazione del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-09T10:17:49+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-09T10:17:51+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Staffetta di quartiere nella Coppa delle Zampe (con 'Pappa al volo' a turni)»: Nel motore, attivare la modalità Staffetta in coppa.py (config test_crescita attiva) collegandola al minigioco 'Pappa al volo', e creare le tabelle 'squadre' e 'staffette' con la generazione del link d'invito per squadra. Dato che il cantiere è in ritardo (0 staffette, scadenza 2026-11-10), per uscire domani p",
+   "dati": {
+    "passo": "Nel motore, attivare la modalità Staffetta in coppa.py (config test_crescita attiva) collegandola al minigioco 'Pappa al volo', e creare le tabelle 'squadre' e 'staffette' con la generazione del link d'invito per squadra. Dato che il cantiere è in ritardo (0 staffette, scadenza 2026-11-10), per uscire domani proponi una versione ridotta: una sola squadra di prova per comune (3 slot), una sola tappa al giorno, classifica del giorno come lista semplice nel sito invece che sulla mappa animata.",
+    "file": [
+     "motore/coppa.py",
+     "motore/commenti.py",
+     "docs/coppa.js",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Una squadra di prova completa una staffetta di una tappa dal link d'invito, il tempo viene salvato nella tabella 'staffette' e compare nella classifica del giorno sul sito."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:51+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Staffetta di quartiere nella Coppa delle Zampe (con 'Pappa al volo' a turni)»: Nel motore, attivare la modalità Staffetta nella Coppa delle Zampe (coppa.py) collegandola al minigioco 'Pappa al volo', e aggiungere le tabelle 'squadre' e 'staffette' nel database con generazione del link d'invito per squadra; la staffetta è già costruita, quindi il lavoro residuo è il collegamento e la clas",
+   "dati": {
+    "passo": "Nel motore, attivare la modalità Staffetta nella Coppa delle Zampe (coppa.py) collegandola al minigioco 'Pappa al volo', e aggiungere le tabelle 'squadre' e 'staffette' nel database con generazione del link d'invito per squadra; la staffetta è già costruita, quindi il lavoro residuo è il collegamento e la classifica del giorno sulla mappa, da chiudere entro il 10 novembre.",
+    "file": [
+     "motore/coppa.py",
+     "motore/commenti.py",
+     "docs/coppa.js"
+    ],
+    "fatto_quando": "Una squadra di prova (3 slot) può completare una staffetta a tempo dal sito, il tempo totale compare nella classifica del giorno sulla mappa, il link d'invito funziona e nel database compare la riga in 'staffette' con data e tempo; se entro il 10 novembre non ci si arriva, si esce con una versione ridotta: solo la staffetta di 1 squadra di prova e la classifica testuale, senza la mappa."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:51+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Preparare la versione ridotta della vista 3D: collegare il modulo three.js esistente alla scheda animale per un solo comune di prova, con altitudini e confini caricati e il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Il tracciamento 'apertura_vista_3d' va aggiunto, ma la vista resta s",
+   "dati": {
+    "passo": "Preparare la versione ridotta della vista 3D: collegare il modulo three.js esistente alla scheda animale per un solo comune di prova, con altitudini e confini caricati e il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Il tracciamento 'apertura_vista_3d' va aggiunto, ma la vista resta senza tocco_zona e senza sistema di ricerca per altri comuni per uscire domani.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Su una scheda animale di un comune di prova si apre la vista 3D con rilievo reale e segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con id comune."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:51+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Collegare il modulo three.js esistente alla scheda animale: passare il codice ISTAT del comune, caricare altitudini e confini comunali per quel comune e posizionare il segnaposto SVG della razza nel punto della luce. Per tagliare: partire solo con 1 comune di prova, senza ripresa a volo d'uccello, e aggiungere solo il tracciament",
+   "dati": {
+    "passo": "Collegare il modulo three.js esistente alla scheda animale: passare il codice ISTAT del comune, caricare altitudini e confini comunali per quel comune e posizionare il segnaposto SVG della razza nel punto della luce. Per tagliare: partire solo con 1 comune di prova, senza ripresa a volo d'uccello, e aggiungere solo il tracciamento 'apertura_vista_3d'.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Dalla scheda di un animale del comune di prova si apre la vista 3D sul rilievo reale con il segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con l'id del comune."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:52+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Racconto dal Vivo: il reel parte da una ripresa reale, poi arriva la luce sulla mappa»: Creare la cartella della liberatoria con i video dei follower che hanno dato un SÌ esplicito e costruire il template di montaggio verticale (3 clip da 3 secondi, sovrimpressione del nome del comune, chiusura sull'animazione della luce già esistente), così il primo reel del Racconto dal Vivo può usc",
+   "dati": {
+    "passo": "Creare la cartella della liberatoria con i video dei follower che hanno dato un SÌ esplicito e costruire il template di montaggio verticale (3 clip da 3 secondi, sovrimpressione del nome del comune, chiusura sull'animazione della luce già esistente), così il primo reel del Racconto dal Vivo può uscire entro il 10 novembre usando un solo follower e un solo suono ambientale.",
+    "file": [
+     "reel/",
+     "docs/"
+    ],
+    "fatto_quando": "Nella cartella reel/ esistono il template di montaggio verticale e la cartella della liberatoria con il SÌ registrato del primo follower, e il primo reel con un solo follower e un solo suono ambientale è montato e pubblicato entro la scadenza del 2026-11-10."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:53+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Racconto dal Vivo: il reel parte da una ripresa reale, poi arriva la luce sulla mappa»: Creare la cartella della liberatoria e il template di montaggio verticale (3 clip da 3 secondi, sovrimpressione del nome del comune, chiusura sull'animazione della luce già esistente), poi montare il primo reel con un solo follower che ha dato un SÌ esplicito e un solo suono ambientale. Per restare",
+   "dati": {
+    "passo": "Creare la cartella della liberatoria e il template di montaggio verticale (3 clip da 3 secondi, sovrimpressione del nome del comune, chiusura sull'animazione della luce già esistente), poi montare il primo reel con un solo follower che ha dato un SÌ esplicito e un solo suono ambientale. Per restare entro il 2026-11-10 si può tagliare a un unico reel con 2 clip invece di 3, mantenendo la chiusura sulla luce della mappa.",
+    "file": [
+     "reel/",
+     "docs/",
+     "motore/"
+    ],
+    "fatto_quando": "Esiste nella cartella reel/ un file verticale del Racconto dal Vivo con la liberatoria registrata del follower nella cartella dedicata, pubblicato entro il 2026-11-10 con la chiusura 'scrivi SEGUO' e il conteggio follower registrato prima e dopo l'uscita."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:53+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Racconto dal Vivo: il reel parte da una ripresa reale, poi arriva la luce sulla mappa»: Preparare il template di montaggio verticale per il reel del Racconto dal Vivo: 3 clip da 3 secondi, sovrimpressione con il nome del comune e chiusura sull'animazione della luce già esistente, più una cartella con la liberatoria e il registro dei SÌ dei follower. Il reel va montato con un solo foll",
+   "dati": {
+    "passo": "Preparare il template di montaggio verticale per il reel del Racconto dal Vivo: 3 clip da 3 secondi, sovrimpressione con il nome del comune e chiusura sull'animazione della luce già esistente, più una cartella con la liberatoria e il registro dei SÌ dei follower. Il reel va montato con un solo follower e un solo suono ambientale, rispettando il blocco in pausa durante il test di crescita.",
+    "file": [
+     "reel/",
+     "docs/",
+     "motore/"
+    ],
+    "fatto_quando": "Il template esiste in reel/ e funziona su una clip di prova; la cartella di liberatoria contiene il SÌ registrato del follower scelto; il primo reel è montato e pronto per la scadenza del 2026-11-10 (senza pubblicazione prima della fine del test)."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:53+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Staffetta di quartiere nella Coppa delle Zampe (con 'Pappa al volo' a turni)»: Nel motore, attiva la modalità Staffetta in motore/coppa.py collegandola al minigioco 'Pappa al volo' con config test_crescita attiva, e crea le tabelle 'squadre' e 'staffette' con la generazione del link d'invito per squadra. Per uscire domani, riduci a una sola squadra di prova per comune (3 slot), una tappa",
+   "dati": {
+    "passo": "Nel motore, attiva la modalità Staffetta in motore/coppa.py collegandola al minigioco 'Pappa al volo' con config test_crescita attiva, e crea le tabelle 'squadre' e 'staffette' con la generazione del link d'invito per squadra. Per uscire domani, riduci a una sola squadra di prova per comune (3 slot), una tappa al giorno, e mostra la classifica come lista semplice in docs/coppa.js invece che sulla mappa animata.",
+    "file": [
+     "motore/coppa.py",
+     "motore/commenti.py",
+     "docs/coppa.js",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Una squadra di prova completa una staffetta di una tappa dal link d'invito, il tempo viene salvato nella tabella 'staffette' e compare nella classifica del giorno come lista semplice sul sito."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:54+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Collegare il modulo three.js esistente alla scheda animale per un solo comune di prova: caricare altitudini e confini comunali e posizionare il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il tracciamento 'apertura_vista_3d' con id comune; per uscire domani tagliare tocco_zo",
+   "dati": {
+    "passo": "Collegare il modulo three.js esistente alla scheda animale per un solo comune di prova: caricare altitudini e confini comunali e posizionare il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il tracciamento 'apertura_vista_3d' con id comune; per uscire domani tagliare tocco_zona, la ripresa a volo d'uccello e la ricerca di altri comuni.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Su una scheda animale di un comune di prova si apre la vista 3D con rilievo reale e segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con l'id del comune."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:55+00:00",
+   "da": "grafica3d-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Creare la versione ridotta della vista 3D sul comune di prova: collegare il modulo three.js esistente alla scheda animale, caricare altitudini e confini di quel solo comune e posizionare il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il solo evento 'apertura_vista_3d' con i",
+   "dati": {
+    "passo": "Creare la versione ridotta della vista 3D sul comune di prova: collegare il modulo three.js esistente alla scheda animale, caricare altitudini e confini di quel solo comune e posizionare il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il solo evento 'apertura_vista_3d' con id comune; niente 'tocco_zona', niente ripresa a volo d'uccello e nessun sistema di ricerca per altri comuni.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Dalla scheda di un animale del comune di prova si apre la vista 3D sul rilievo reale con il segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con l'id del comune."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:55+00:00",
+   "da": "grafica3d-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Collega il modulo three.js esistente alla scheda animale per un solo comune di prova: passa il codice ISTAT, carica altitudini e confini comunali e posiziona il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungi il solo evento 'apertura_vista_3d' con l'id del comune; per uscire doma",
+   "dati": {
+    "passo": "Collega il modulo three.js esistente alla scheda animale per un solo comune di prova: passa il codice ISTAT, carica altitudini e confini comunali e posiziona il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungi il solo evento 'apertura_vista_3d' con l'id del comune; per uscire domani lascia fuori la ripresa a volo d'uccello, 'tocco_zona' e la ricerca di altri comuni.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Dalla scheda di un animale del comune di prova si apre la vista 3D sul rilievo reale con il segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con l'id del comune."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:55+00:00",
+   "da": "grafica3d-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Collegare la vista three.js esistente alla scheda animale per un solo comune di prova: caricare altitudini e confini comunali di quel comune, posizionare il segnaposto SVG della razza nel punto della luce e mostrare solo animali con SÌ esplicito. Aggiungere solo il tracciamento 'apertura_vista_3d' con id comune; senza ripresa a v",
+   "dati": {
+    "passo": "Collegare la vista three.js esistente alla scheda animale per un solo comune di prova: caricare altitudini e confini comunali di quel comune, posizionare il segnaposto SVG della razza nel punto della luce e mostrare solo animali con SÌ esplicito. Aggiungere solo il tracciamento 'apertura_vista_3d' con id comune; senza ripresa a volo d'uccello, senza 'tocco_zona' e senza ricerca per altri comuni, per uscire domani.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Dalla scheda di un animale del comune di prova si apre la vista 3D sul rilievo reale con il segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con l'id del comune."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:55+00:00",
+   "da": "grafica3d-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Collegare il modulo three.js alla scheda animale per un solo comune di prova: caricare altitudini e confini di quel comune e posizionare il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il tracciamento 'apertura_vista_3d' con id comune; per uscire domani lasciare fuori tocco_",
+   "dati": {
+    "passo": "Collegare il modulo three.js alla scheda animale per un solo comune di prova: caricare altitudini e confini di quel comune e posizionare il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il tracciamento 'apertura_vista_3d' con id comune; per uscire domani lasciare fuori tocco_zona, ricerca di altri comuni e ripresa a volo d'uccello. Nota: il cantiere è in stato 'in pausa' durante il test di crescita, quindi questo passo va eseguito solo dopo aver sbloccato la pausa.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Su una scheda animale di un comune di prova si apre la vista 3D con rilievo reale e segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con id comune."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:56+00:00",
+   "da": "grafica3d-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Lavorare solo sulla versione ridotta della vista 3D: collegare il modulo three.js esistente alla scheda animale per un solo comune di prova, caricando altitudini e confini comunali e posizionando il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il tracciamento 'apertura_vista",
+   "dati": {
+    "passo": "Lavorare solo sulla versione ridotta della vista 3D: collegare il modulo three.js esistente alla scheda animale per un solo comune di prova, caricando altitudini e confini comunali e posizionando il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il tracciamento 'apertura_vista_3d' con id comune; per uscire domani tagliare tocco_zona, la ripresa a volo d'uccello e la ricerca di altri comuni. Nota: il cantiere risulta in pausa per il test di crescita, quindi conviene confermare prima di riaprirlo.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Su una scheda animale di un comune di prova si apre la vista 3D con rilievo reale e segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con l'id del comune."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:56+00:00",
+   "da": "grafica3d-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Preparare la versione ridotta della vista 3D: collegare il modulo three.js esistente alla scheda animale per un solo comune di prova, caricando altitudini e confini comunali e posizionando il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il tracciamento 'apertura_vista_3d' co",
+   "dati": {
+    "passo": "Preparare la versione ridotta della vista 3D: collegare il modulo three.js esistente alla scheda animale per un solo comune di prova, caricando altitudini e confini comunali e posizionando il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il tracciamento 'apertura_vista_3d' con id comune; per uscire domani tagliare tocco_zona, la ripresa a volo d'uccello e la ricerca di altri comuni.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Su una scheda animale di un comune di prova si apre la vista 3D con rilievo reale e segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con l'id del comune."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:57+00:00",
+   "da": "grafica3d-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Collegare il modulo three.js esistente alla scheda animale per un solo comune di prova: caricare altitudini e confini comunali e posizionare il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il tracciamento 'apertura_vista_3d' con id comune, senza tocco_zona, senza ripresa a v",
+   "dati": {
+    "passo": "Collegare il modulo three.js esistente alla scheda animale per un solo comune di prova: caricare altitudini e confini comunali e posizionare il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il tracciamento 'apertura_vista_3d' con id comune, senza tocco_zona, senza ripresa a volo d'uccello e senza ricerca di altri comuni per uscire domani.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Su una scheda animale di un comune di prova si apre la vista 3D con rilievo reale e segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con l'id del comune."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:58+00:00",
+   "da": "grafica3d-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Collega il modulo three.js esistente alla scheda animale per un solo comune di prova: passa il codice ISTAT, carica altitudini e confini comunali e posiziona il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungi solo il tracciamento 'apertura_vista_3d' con id del comune; per uscire ",
+   "dati": {
+    "passo": "Collega il modulo three.js esistente alla scheda animale per un solo comune di prova: passa il codice ISTAT, carica altitudini e confini comunali e posiziona il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungi solo il tracciamento 'apertura_vista_3d' con id del comune; per uscire domani lascia fuori la ripresa a volo d'uccello, 'tocco_zona' e la ricerca di altri comuni.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Dalla scheda di un animale del comune di prova si apre la vista 3D sul rilievo reale con il segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con l'id del comune."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:58+00:00",
+   "da": "grafica3d-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca: vista 3D del comune sul rilievo reale»: Nel modulo three.js esistente, collegare la vista 3D alla scheda animale per un solo comune di prova: caricare altitudini e confini comunali di quel comune e posizionare il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il solo tracciamento 'apertura_vista_3d' con id comune; p",
+   "dati": {
+    "passo": "Nel modulo three.js esistente, collegare la vista 3D alla scheda animale per un solo comune di prova: caricare altitudini e confini comunali di quel comune e posizionare il segnaposto SVG della razza nel punto della luce, mostrando solo animali con SÌ esplicito. Aggiungere il solo tracciamento 'apertura_vista_3d' con id comune; per uscire domani tagliare ripresa a volo d'uccello, 'tocco_zona' e ricerca di altri comuni. Nota: il cantiere risulta in pausa durante il test di crescita, quindi eseguire questo passo solo dopo aver sbloccato la pausa.",
+    "file": [
+     "docs/",
+     "motore/",
+     "reel/"
+    ],
+    "fatto_quando": "Dalla scheda di un animale del comune di prova si apre la vista 3D sul rilievo reale con il segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con l'id del comune."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 97600,
+ "fine": "2026-11-09T10:17:58+00:00"
+}

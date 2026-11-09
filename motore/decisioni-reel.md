@@ -259,3 +259,11 @@ Nessun cambiamento oggi.
 ## 2026-11-08 — verbale dei 7 giorni (automatico, motore/verbale.py)
 
 - 2026-11-01-1509-presidente: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+
+## 2026-11-09 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-01-1637-derby: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-11-01-1809-star: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-11-01-1937-gioco_bastone: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-11-01-2113-missione: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).

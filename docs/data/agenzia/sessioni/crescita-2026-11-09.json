@@ -1,0 +1,143 @@
+{
+ "id": "crescita-2026-11-09",
+ "formato": "crescita del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-09T10:17:33+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-09T10:17:33+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Si parte dai numeri veri degli ultimi 12 reel organici e dai verbali dei 7 giorni."
+  },
+  {
+   "t": "2026-11-09T10:17:37+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel 'coppa_apertura' ha il reach più alto degli ultimi (1.211 account, 1.615 views), ma genera solo 6 follower e 5,0 ogni 1.000 account, meno di 'testa_a_testa' (38,0 ogni 1.000 con 237 account) e 'ospiti_sera' (19,0 con 368). Il 'fondatore' del 6 novembre ha 692 account raggiunti, ma il dato follower non è disponibile. Nei verbali a 7 giorni, i follower attribuiti sono indisponibili per tutti",
+   "dati": {
+    "osservazione": "Il reel 'coppa_apertura' ha il reach più alto degli ultimi (1.211 account, 1.615 views), ma genera solo 6 follower e 5,0 ogni 1.000 account, meno di 'testa_a_testa' (38,0 ogni 1.000 con 237 account) e 'ospiti_sera' (19,0 con 368). Il 'fondatore' del 6 novembre ha 692 account raggiunti, ma il dato follower non è disponibile. Nei verbali a 7 giorni, i follower attribuiti sono indisponibili per tutti i reel, quindi non si può confrontare la conversione dei formati storici. Negli ultimi reel la conversione migliore arriva dai video con sfida diretta o invito a commentare con città e nome dell'animale ('testa_a_testa' 38,0; 'ospiti_sera' 19,0), mentre l'apertura 'mappa' del reel di maggior reach converte poco.",
+    "proposta": "Domani ripetere la struttura di 'testa_a_testa' (sfida tra due città, invito a commentare con città e nome dell'animale) su un formato diverso dal solito, tenendo la chiusura con invito esplicito a seguire. Confrontare il dato follower ogni 1.000 account con quello di 'testa_a_testa' e 'ospiti_sera'. Registrare il follower_dopo anche per i reel senza tracciamento, così da poter fare la mediana dei formati.",
+    "gancio": "Sei di Vicenza o di Verona? Lo sai quale città ha più zampe in gara?"
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:37+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Su 8 reel con dato follower (quelli dal 7 al 8 novembre), la quota di follower ogni 1.000 account raggiunti oscilla molto: 0 (prima_luce, reach 291), 19 (ospiti_sera, reach 368), 38 (testa_a_testa, reach 237), 8.9 (questa_luce, reach 225), 5.0 (coppa_apertura, reach 1.211). Il reel con più reach (coppa_apertura, 1.211) ha convertito meno di quelli piccoli, quindi la portata da sola non porta follo",
+   "dati": {
+    "osservazione": "Su 8 reel con dato follower (quelli dal 7 al 8 novembre), la quota di follower ogni 1.000 account raggiunti oscilla molto: 0 (prima_luce, reach 291), 19 (ospiti_sera, reach 368), 38 (testa_a_testa, reach 237), 8.9 (questa_luce, reach 225), 5.0 (coppa_apertura, reach 1.211). Il reel con più reach (coppa_apertura, 1.211) ha convertito meno di quelli piccoli, quindi la portata da sola non porta follower. I reel che chiudono con un invito diretto e una domanda da commentare (ospiti_sera, testa_a_testa) hanno i valori più alti. Il dato è però basato su pochi campioni (2 reel sopra 8 follower) e i verbali a 7 giorni non hanno follower attribuiti, quindi non si può ancora separare l'effetto del formato da quello dell'orario o del contenuto. Non ci sono dati di follower per i reel del 5-6 novembre.",
+    "proposta": "Domani ripetere il formato testa_a_testa (Verona vs Vicenza ha convertito 38 ogni 1.000) con una variante: stesso gancio di sfida tra due città, ma chiusura che chiede esplicitamente di commentare città e nome dell'animale, e pubblicazione alle 13 come quello di riferimento. Contemporaneamente tracciare follower_dopo per ogni reel, in modo da avere mediane utilizzabili nei verbali a 7 giorni.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:37+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato più forte è 'testa_a_testa' (8 nov, 13:06): 38 follower ogni 1.000 account raggiunti (9 follower su 237 reach), e 13 commenti, con apertura 'video vero' e gancio sulla sfida Verona-Vicenza. Il 'questa_luce' (8 nov, 18:07) ha 8,9 follower ogni 1.000 con gancio personale ('Stella, labrador, a Carosino'). 'ospiti_sera' del 7 nov ha 19 ogni 1.000 e 60 commenti: il formato che genera più conver",
+   "dati": {
+    "osservazione": "Il dato più forte è 'testa_a_testa' (8 nov, 13:06): 38 follower ogni 1.000 account raggiunti (9 follower su 237 reach), e 13 commenti, con apertura 'video vero' e gancio sulla sfida Verona-Vicenza. Il 'questa_luce' (8 nov, 18:07) ha 8,9 follower ogni 1.000 con gancio personale ('Stella, labrador, a Carosino'). 'ospiti_sera' del 7 nov ha 19 ogni 1.000 e 60 commenti: il formato che genera più conversazione. Il 'coppa_apertura' ha la reach più alta (1.211) ma solo 5 follower ogni 1.000, quindi raggiunge molte persone senza convertirle. Su 7 reel la serie di follower non è completa: i verbali dei 7 giorni non hanno follower attribuiti (null), quindi non posso confrontare i formati di inizio periodo.",
+    "proposta": "Domani ripetere la struttura di 'testa_a_testa' e 'questa_luce': un video vero con una domanda diretta a chi guarda e un dettaglio personale legato a un animale o a una città specifica. Pubblicare nella stessa fascia (18) e chiudere con un invito concreto a commentare. Tenere la Coppa come contenuto di supporto, non come apertura principale.",
+    "gancio": "Di chi è il primo animale che vedi in questa luce? Scrivi città e nome."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:37+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Su 15 reel con i dati, il follower attribuito è disponibile solo per 6 uscite (dal 7 all'8 novembre), con 0 follower dopo 'prima_luce' (reach 291) e 7 dopo 'ospiti_sera' (reach 368, 60 commenti, 19 follower ogni 1.000 account). 'testa_a_testa' ha il tasso più alto: 9 follower su reach 237, cioè 38 ogni 1.000. 'coppa_apertura' ha il reach più alto (1.211) ma solo 6 follower, cioè 5 ogni 1.000. Nei ",
+   "dati": {
+    "osservazione": "Su 15 reel con i dati, il follower attribuito è disponibile solo per 6 uscite (dal 7 all'8 novembre), con 0 follower dopo 'prima_luce' (reach 291) e 7 dopo 'ospiti_sera' (reach 368, 60 commenti, 19 follower ogni 1.000 account). 'testa_a_testa' ha il tasso più alto: 9 follower su reach 237, cioè 38 ogni 1.000. 'coppa_apertura' ha il reach più alto (1.211) ma solo 6 follower, cioè 5 ogni 1.000. Nei verbali di 7 giorni il follower è indisponibile per tutti gli 8 reel. Il progetto conta 1.773 follower e 2.794 luci. Non posso dire quale formato porti più follower con affidabilità, perché i campioni sono pochi e i dati mancanti per gran parte dei reel.",
+    "proposta": "Domani ripeti il formato 'testa_a_testa' (38 follower ogni 1.000 account, il dato più alto disponibile) con un confronto tra due città vicine e una domanda diretta nei commenti. Pubblicalo nella fascia delle 13, già usata con reach e commenti buoni. Chiudi con un invito a commentare città e nome dell'animale, come nel reel dell'8 novembre. Tieni traccia dei follower subito dopo l'uscita, così da avere un campione più utile.",
+    "gancio": "Due città a meno di un'ora di distanza, un solo podio: chi vince?"
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:40+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Su 15 reel con dato, il follower_ogni_1000 è disponibile solo per 4 reel recenti (prima_luce 0.0 ogni 1.000 account, ospiti_sera 19.0, testa_a_testa 38.0, questa_luce 8.9, coppa_apertura 5.0): è un campione troppo piccolo per confronti solidi. Il segnale più forte è il commento: testa_a_testa ha 13 commenti su 237 reach (5,5%) e ospiti_sera 60 su 368 (16%), mentre coppa_apertura, col reach più alt",
+   "dati": {
+    "osservazione": "Su 15 reel con dato, il follower_ogni_1000 è disponibile solo per 4 reel recenti (prima_luce 0.0 ogni 1.000 account, ospiti_sera 19.0, testa_a_testa 38.0, questa_luce 8.9, coppa_apertura 5.0): è un campione troppo piccolo per confronti solidi. Il segnale più forte è il commento: testa_a_testa ha 13 commenti su 237 reach (5,5%) e ospiti_sera 60 su 368 (16%), mentre coppa_apertura, col reach più alto (1.211), ne ha solo 22 (1,8%). Anche i verbali a 7 giorni non attribuiscono follower per nessun reel, quindi la conversione in nuovi follower resta non misurata. Il reel fondatore del 6 novembre (692 reach, 4 condivisioni) è il più condiviso tra i reel con dato.",
+    "proposta": "Ripetere il formato ospiti_sera, che unisce commenti alti (60) e conversione registrata (19 ogni 1.000), con un invito esplicito a seguire nella chiusura, e tenere traccia dei follower per ogni uscita per poter confrontare davvero.",
+    "gancio": "Ecco chi ha acceso la luce stanotte: il prossimo nome sei tu?"
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:40+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "I reel con dato follower mostrano un segnale debole e instabile: 0 follower ogni 1.000 account per 'prima_luce' (reach 291), 19 per 'ospiti_sera' (reach 368, 60 commenti), 38 per 'testa_a_testa' (reach 237, 13 commenti), 8,9 per 'questa_luce' (reach 225) e 5 per 'coppa_apertura' (reach 1.211, 22 commenti). Il reel con reach più alto (coppa_apertura) ha il tasso più basso: la portata larga non conv",
+   "dati": {
+    "osservazione": "I reel con dato follower mostrano un segnale debole e instabile: 0 follower ogni 1.000 account per 'prima_luce' (reach 291), 19 per 'ospiti_sera' (reach 368, 60 commenti), 38 per 'testa_a_testa' (reach 237, 13 commenti), 8,9 per 'questa_luce' (reach 225) e 5 per 'coppa_apertura' (reach 1.211, 22 commenti). Il reel con reach più alto (coppa_apertura) ha il tasso più basso: la portata larga non converte in follower. Il formato con più commenti (ospiti_sera, 60) ha convertito 7 follower. Nei reel precedenti il dato follower non è disponibile, quindi non è possibile confrontare i formati su quel fronte. Il campione è troppo piccolo (6 reel con dato) per concludere.",
+    "proposta": "Domani ripetere la struttura di 'ospiti_sera' (apertura mappa, chiusura con invito a scrivere una parola-chiave come SEGUO) su un contenuto legato a una luce specifica con nome e luogo, e tracciare i follower entro 6 ore per ogni reel. Evitare aperture generiche da 'coppa' con grande reach ma nessuna richiesta di azione immediata.",
+    "gancio": "Promessa mantenuta: ecco chi si è acceso stanotte, e il tuo comune è il prossimo?"
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:41+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato più forte è 'testa_a_testa' (apertura video vero, gancio Verona contro Vicenza): 38 follower ogni 1.000 account raggiunti, con 237 di reach. 'ospiti_sera' (apertura mappa, gancio 'benvenuti ai 15 nuovi amici') ha 19 ogni 1.000 su 368 di reach. Il reel 'coppa_apertura' ha il reach più alto (1.211) ma solo 5 ogni 1.000: molto pubblico, poca conversione, probabilmente perché il gancio parla d",
+   "dati": {
+    "osservazione": "Il dato più forte è 'testa_a_testa' (apertura video vero, gancio Verona contro Vicenza): 38 follower ogni 1.000 account raggiunti, con 237 di reach. 'ospiti_sera' (apertura mappa, gancio 'benvenuti ai 15 nuovi amici') ha 19 ogni 1.000 su 368 di reach. Il reel 'coppa_apertura' ha il reach più alto (1.211) ma solo 5 ogni 1.000: molto pubblico, poca conversione, probabilmente perché il gancio parla di una competizione e non di un invito a seguire. I reel 'prima_luce' e 'questa_luce' hanno 0 e 8,9 ogni 1.000: il gancio narrativo funziona meno dei ganci con una domanda diretta alla comunità. Nei verbali di 7 giorni i follower attribuiti sono indisponibili per tutti i reel, quindi non posso confrontare i formati su questa metrica; il reach a 7 giorni più alto è 'presidente' con 1.489, ma senza follower non è un dato di conversione.",
+    "proposta": "Domani ripeti il formato 'testa_a_testa' con un confronto tra due città vicine, aprendo con il video vero e chiudendo con la domanda su città e nome dell'animale, che ha già generato commenti. Pubblica nella stessa fascia (18-21) e inserisci un invito a seguire esplicito nella chiusura, come hanno fatto gli ospiti di sera. Tieni traccia dei follower per ogni uscita, così da avere il dato che oggi manca.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:41+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Su 15 reel, il dato follower è disponibile solo per 4 (dal 7 all'8 novembre: prima_luce 0 follower su 291 reach; ospiti_sera 7 follower su 368 reach, 19 ogni 1.000; testa_a_testa 9 follower su 237 reach, 38 ogni 1.000; questa_luce 2 follower su 225 reach, 8,9 ogni 1.000; coppa_apertura 6 follower su 1.211 reach, 5 ogni 1.000). Per i reel precedenti e per tutti i verbali a 7 giorni il dato follower",
+   "dati": {
+    "osservazione": "Su 15 reel, il dato follower è disponibile solo per 4 (dal 7 all'8 novembre: prima_luce 0 follower su 291 reach; ospiti_sera 7 follower su 368 reach, 19 ogni 1.000; testa_a_testa 9 follower su 237 reach, 38 ogni 1.000; questa_luce 2 follower su 225 reach, 8,9 ogni 1.000; coppa_apertura 6 follower su 1.211 reach, 5 ogni 1.000). Per i reel precedenti e per tutti i verbali a 7 giorni il dato follower è null, quindi non si può dire quale formato porti più follower. Il formato con più interazioni è 'fondatore' del 6 novembre (1.006 views, 39 commenti, 4 condivisioni), ma senza dato follower non è collegabile a crescita. Il picco di reach (coppa_apertura, 1.211) ha portato pochi follower in rapporto, mentre 'testa_a_testa' ha il rapporto più alto ma su soli 237 reach, quindi campione piccolo. Tra i follower il progetto è a 1.773.",
+    "proposta": "Ripetere il formato testa_a_testa con una sfida tra due città vicine e chiedere nel commento città e nome dell'animale, mantenendo la chiusura con invito diretto a seguire. Contemporaneamente registrare sempre il conteggio follower dopo ogni uscita, perché senza questo dato la scelta resta una stima.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:43+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Su 15 reel con dati, il follower attribuito è disponibile solo per gli ultimi 6 (7-8 novembre): 0 su 429 reach (prima_luce), 7 follower per 368 reach (ospiti_sera, 19.0 ogni 1.000), 9 per 237 (testa_a_testa, 38.0 ogni 1.000), 2 per 225 (questa_luce, 8.9 ogni 1.000), 6 per 1.211 (coppa_apertura, 5.0 ogni 1.000). I verbali dei 7 giorni non hanno follower attribuiti (tutti null), quindi non posso con",
+   "dati": {
+    "osservazione": "Su 15 reel con dati, il follower attribuito è disponibile solo per gli ultimi 6 (7-8 novembre): 0 su 429 reach (prima_luce), 7 follower per 368 reach (ospiti_sera, 19.0 ogni 1.000), 9 per 237 (testa_a_testa, 38.0 ogni 1.000), 2 per 225 (questa_luce, 8.9 ogni 1.000), 6 per 1.211 (coppa_apertura, 5.0 ogni 1.000). I verbali dei 7 giorni non hanno follower attribuiti (tutti null), quindi non posso confrontare formati su quella base. Il reel più visto (coppa_apertura, 1.615 views) ha il tasso più basso tra quelli con dato, mentre il tasso più alto è testa_a_testa, con reach contenuto e 13 commenti: il pubblico risponde più alla domanda diretta che alla copertura ampia.",
+    "proposta": "Domani provare un formato a domanda diretta sul territorio, come testa_a_testa, con chiusura che chiede una risposta precisa (città e nome dell'animale), e pubblicarlo alle 21 come ospiti_sera. Tenere traccia dei follower per ogni uscita, così da avere un confronto reale.",
+    "gancio": "Di che città sei? Il tuo animale sta già acceso nella mappa?"
+   }
+  },
+  {
+   "t": "2026-11-09T10:17:48+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Per domani: gancio «Verona contro Vicenza: 45 chilometri, e la sfida è aperta.», chiusura «Scrivi nei commenti città e nome del tuo animale: segui per vedere chi vince.». Dato: 'testa_a_testa': 9 follower su 237 account raggiunti, cioè 38 ogni 1.000 (contro 19 di 'ospiti_sera' e 5 di 'coppa_apertura', che ha il reach massimo con 1.211). Campione piccolo, su 5 reel con dato, e follower a 7 giorni non disponibili: è un'indicazione da verificare, non una certezza.",
+   "dati": {
+    "pubblico": "Persone del Nord-Est (Veneto in primis) che non ci conoscono ancora, legate alla propria città e ai propri animali, raggiunte con una sfida di campanile tra due città vicine.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta.",
+    "motivo_per_seguire": "Seguire Zampe d'Italia per vedere la propria città salire nella sfida tra territori e far accendere la luce del proprio animale: scrivi città e nome nei commenti e partecipi.",
+    "chiusura": "Scrivi nei commenti città e nome del tuo animale: segui per vedere chi vince.",
+    "da_riprovare": "Il formato 'testa_a_testa': video vero in apertura, sfida tra due città vicine, domanda diretta su città e nome dell'animale, invito esplicito a seguire in chiusura. Come variante, unire la chiusura di 'ospiti_sera', che ha generato 60 commenti. Registrare il follower_dopo di ogni reel.",
+    "da_evitare": "Aperture generiche in stile 'coppa_apertura' (mappa e competizione) senza richiesta di azione: molto reach ma poca conversione. Evitare anche ganci solo narrativi come 'prima_luce' (0 follower) e uscite senza follower_dopo registrato.",
+    "dato": "'testa_a_testa': 9 follower su 237 account raggiunti, cioè 38 ogni 1.000 (contro 19 di 'ospiti_sera' e 5 di 'coppa_apertura', che ha il reach massimo con 1.211). Campione piccolo, su 5 reel con dato, e follower a 7 giorni non disponibili: è un'indicazione da verificare, non una certezza."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 51329,
+ "fine": "2026-11-09T10:17:48+00:00"
+}

@@ -88,5 +88,23 @@
   "stato": "senza direttore",
   "fine": "2026-11-09T00:21:17+00:00",
   "scambi": 128
+ },
+ {
+  "id": "crescita-2026-11-09",
+  "formato": "crescita del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-09T10:17:33+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-09T10:17:48+00:00",
+  "scambi": 11
+ },
+ {
+  "id": "innovazione-2026-11-09",
+  "formato": "innovazione del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-09T10:17:49+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-09T10:17:58+00:00",
+  "scambi": 18
  }
 ]

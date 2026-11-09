@@ -1,10 +1,10 @@
 {
- "giorno": "2026-11-08",
- "pubblico": "Persone che non conoscono ancora Zampe d'Italia e arrivano dal reel serale: amanti degli animali che reagiscono con un commento semplice.",
- "gancio": "Promessa mantenuta: ecco chi si è unito oggi a Zampe d'Italia. Se sei arrivato adesso, scrivi SEGUO.",
- "motivo_per_seguire": "Vedere ogni giorno chi entra nella mappa e trovare anche il proprio posto nel prossimo giro: un risultato concreto, con un numero di nuovi amici.",
- "chiusura": "Vuoi esserci nel prossimo giro? Scrivi SEGUO nei commenti e ti troviamo.",
- "da_riprovare": "Formato 'ospiti_sera' con apertura 'mappa', gancio 'Promessa mantenuta' e chiusura con parola-chiave SEGUO, in fascia serale (circa le 21). Registrare il conteggio follower prima e subito dopo l'uscita, per ottenere un secondo punto di confronto.",
- "da_evitare": "Trarre conclusioni dalla sola reach o dai commenti ('fondatore', 're'), e pubblicare senza registrare i follower. Evitare anche di cambiare più elementi insieme: un solo test alla volta, per esempio la mappa contro il video vero.",
- "dato": "'ospiti_sera' del 7 novembre: 7 follower su 326 di reach, 21,5 ogni 1.000 account. È l'unico campione positivo: 'prima_luce' ha 0 su 256 e gli altri 13 reel hanno il dato follower null. Con un solo campione è un indizio, non una prova."
+ "giorno": "2026-11-09",
+ "pubblico": "Persone del Nord-Est (Veneto in primis) che non ci conoscono ancora, legate alla propria città e ai propri animali, raggiunte con una sfida di campanile tra due città vicine.",
+ "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta.",
+ "motivo_per_seguire": "Seguire Zampe d'Italia per vedere la propria città salire nella sfida tra territori e far accendere la luce del proprio animale: scrivi città e nome nei commenti e partecipi.",
+ "chiusura": "Scrivi nei commenti città e nome del tuo animale: segui per vedere chi vince.",
+ "da_riprovare": "Il formato 'testa_a_testa': video vero in apertura, sfida tra due città vicine, domanda diretta su città e nome dell'animale, invito esplicito a seguire in chiusura. Come variante, unire la chiusura di 'ospiti_sera', che ha generato 60 commenti. Registrare il follower_dopo di ogni reel.",
+ "da_evitare": "Aperture generiche in stile 'coppa_apertura' (mappa e competizione) senza richiesta di azione: molto reach ma poca conversione. Evitare anche ganci solo narrativi come 'prima_luce' (0 follower) e uscite senza follower_dopo registrato.",
+ "dato": "'testa_a_testa': 9 follower su 237 account raggiunti, cioè 38 ogni 1.000 (contro 19 di 'ospiti_sera' e 5 di 'coppa_apertura', che ha il reach massimo con 1.211). Campione piccolo, su 5 reel con dato, e follower a 7 giorni non disponibili: è un'indicazione da verificare, non una certezza."
 }
