@@ -267,3 +267,11 @@ Nessun cambiamento oggi.
 - 2026-11-01-1809-star: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
 - 2026-11-01-1937-gioco_bastone: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
 - 2026-11-01-2113-missione: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+## 2026-11-09 — controllo del giorno
+
+- Sito ok (docs 124 MB), motore vivo (ultima mappa 10:03 UTC). 18 luci nuove in 24 ore, follower 1.766 → 1.773.
+- Reel dell'8/11: 3 su 3 pubblicati (13 testa_a_testa, 18 questa_luce corretto dalla squadra, 21 coppa_apertura). Direttore OpenAI ancora 401 (Alberto avvisato).
+- Rendimento (lanciato a mano: quello delle 8:40 non è partito): testa_a_testa 9 follower su 237 raggiunti = 38 ogni 1.000, il migliore finora; questa_luce 8,9; coppa_apertura 1.615 views ma 5,0 ogni 1.000; ospiti_sera ora 19,0.
+- Coppa: 3 punti in tutto, nessuna staffetta. Test di crescita in «anteprima» (non attivo): attende l'approvazione delle anteprime. Cantieri in pausa: nessuno nuovo aperto.
+- Nessun cambiamento oggi.
