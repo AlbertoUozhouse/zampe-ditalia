@@ -106,5 +106,14 @@
   "stato": "fatto",
   "fine": "2026-11-09T10:17:58+00:00",
   "scambi": 18
+ },
+ {
+  "id": "2026-11-09-1301-prima_luce",
+  "formato": "prima_luce",
+  "modalita": "operativa",
+  "inizio": "2026-11-09T12:02:01+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-09T12:07:00+00:00",
+  "scambi": 128
  }
 ]

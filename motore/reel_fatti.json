@@ -91,7 +91,6 @@
   "Napoli"
  ],
  "temi": [
-  "neon",
   "tramonto",
   "aurora",
   "giorno",
@@ -100,9 +99,10 @@
   "notte",
   "tramonto",
   "neon",
-  "giorno"
+  "giorno",
+  "notte"
  ],
- "variante_n": 26,
+ "variante_n": 27,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -129,7 +129,8 @@
   "2026-11-07-2103-ospiti_sera": "voce-solita-32",
   "2026-11-08-1306-testa_a_testa": "voce-solita-32",
   "2026-11-08-1807-questa_luce": "voce-solita-32",
-  "2026-11-08-2110-coppa_apertura": "voce-solita-32"
+  "2026-11-08-2110-coppa_apertura": "voce-solita-32",
+  "2026-11-09-1301-prima_luce": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -914,16 +915,18 @@
   "zerbino__9"
  ],
  "prime_luci": [
-  "Atri"
+  "Atri",
+  "Monno"
  ],
  "luci_raccontate": [
   "julieta_negri._|animale|mia",
-  "nicola.sportello|animale|stella"
+  "nicola.sportello|animale|stella",
+  "tania_ghensi|animale|keyla"
  ],
  "derby_vicini": [
   "Verona|Vicenza",
   "Vicenza|Verona"
  ],
- "thor_giorno": "2026-11-08",
- "thor_ultimo_reel": false
+ "thor_giorno": "2026-11-09",
+ "thor_ultimo_reel": true
 }
