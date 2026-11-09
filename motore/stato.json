@@ -14479,13 +14479,6 @@
 "giovannifarinola681": 50
 },
 "inviti_giorno": {
-"2026-11-01": {
-"fra_cassano17": 1,
-"idk_lel3": 1,
-"tani__2014": 1,
-"francesco.tolin_012": 1,
-"stella_zenna": 1
-},
 "2026-11-02": {
 "madd.a14": 1,
 "ayoitz_m4ry": 1,
@@ -18646,10 +18639,7 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {
-"lary_013_4": "2026-11-08",
-"michael_wolf_98": "2026-11-08"
-},
+"missioni_fatte": {},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
@@ -18663,19 +18653,6 @@
 "Lombardia": "jacopo.cavadini|animale|yuki"
 },
 "corsa": {
-"2026-W44": {
-"andrea655654": 552,
-"bboy_bryanstorm": 591,
-"gretaaltamura": 372,
-"christian.pelli15": 833,
-"therichischool": 4069,
-"emma_finessi": 1012,
-"francy_pisu": 382,
-"jacopo.cavadini": 1996,
-"gada_raffy": 1517,
-"il_priv_del_suv": 827,
-"il_priv2_jenny": 707
-},
 "2026-W45": {
 "friz_tommy": 391
 }
@@ -18694,19 +18671,6 @@
 "2026-11-09": 1767
 },
 "gioco_pappa": {
-"2026-W44": {
-"gretaaltamura": 380,
-"emma_finessi": 5040,
-"francy_pisu": 1730,
-"jacopo.cavadini": 10085,
-"il_priv_del_suv": 525,
-"_priv_amy_aut_": 3645,
-"andreabombardi08": 5740,
-"andrea655654": 5055,
-"paolo_mag1": 4625,
-"christian.pelli15": 705,
-"dimaio_13": 1310
-},
 "2026-W45": {
 "_la.nnoeee__": 1820,
 "angel_mussolino": 6175,
@@ -18714,11 +18678,6 @@
 }
 },
 "gioco_bastone": {
-"2026-W44": {
-"christian.pelli15": 364,
-"dimaio_13": 479,
-"_.andreaacampaagnolo._": 378
-},
 "2026-W45": {
 "_la.nnoeee__": 454,
 "il_priv_del_suv": 492,
