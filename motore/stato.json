@@ -2134,6 +2134,7 @@
 "17974927908170596",
 "17975005377172098",
 "17975068845173906",
+"17975130699157784",
 "17975131374156866",
 "17975251164153672",
 "17975283939155903",
@@ -12375,7 +12376,8 @@
 "nicola.sportello": "2026-11-08",
 "andrew__4x4": "2026-11-08",
 "giovannifarinola681": "2026-11-08",
-"tania_ghensi": "2026-11-09"
+"tania_ghensi": "2026-11-09",
+"gloria_cucco": "2026-11-09"
 },
 "media_letti": {},
 "pezzi": {
@@ -14488,7 +14490,8 @@
 "only.niniy_": 20,
 "silvetti.simone": 20,
 "tommiaso23": 20,
-"giovannifarinola681": 50
+"giovannifarinola681": 50,
+"gloria_cucco": 10
 },
 "inviti_giorno": {
 "2026-11-02": {
@@ -15339,7 +15342,8 @@
 "nicola.sportello": "premiato",
 "giovannifarinola681": "premiato",
 "vittoria_011_": "premiato",
-"michael_wolf_98": "premiato"
+"michael_wolf_98": "premiato",
+"gloria_cucco": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -18685,7 +18689,7 @@
 "2026-11-06": 1702,
 "2026-11-07": 1723,
 "2026-11-08": 1766,
-"2026-11-09": 1769
+"2026-11-09": 1771
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -18894,6 +18898,10 @@
 [
 "2026-11-09T07:19+00:00",
 1769
+],
+[
+"2026-11-09T07:56+00:00",
+1771
 ]
 ],
 "coppa": {
