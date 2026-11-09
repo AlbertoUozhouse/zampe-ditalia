@@ -275,3 +275,9 @@ Nessun cambiamento oggi.
 - Rendimento (lanciato a mano: quello delle 8:40 non è partito): testa_a_testa 9 follower su 237 raggiunti = 38 ogni 1.000, il migliore finora; questa_luce 8,9; coppa_apertura 1.615 views ma 5,0 ogni 1.000; ospiti_sera ora 19,0.
 - Coppa: 3 punti in tutto, nessuna staffetta. Test di crescita in «anteprima» (non attivo): attende l'approvazione delle anteprime. Cantieri in pausa: nessuno nuovo aperto.
 - Nessun cambiamento oggi.
+
+
+## 2026-11-09 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-02-1144-presidente: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-11-02-1345-buio: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
