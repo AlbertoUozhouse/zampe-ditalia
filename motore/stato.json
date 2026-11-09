@@ -2227,6 +2227,7 @@
 "17978291148133065",
 "17978307387130631",
 "17978407368149058",
+"17978442585135764",
 "17978454123076270",
 "17978460363134528",
 "17978476293132324",
@@ -7236,6 +7237,7 @@
 "18130894057701504",
 "18130903717853392",
 "18130913234495201",
+"18130928822495368",
 "18130931965876483",
 "18130945456763900",
 "18130953538872941",
@@ -9436,6 +9438,7 @@
 "18376329634243439",
 "18376372993213886",
 "18376437775245236",
+"18376591633208330",
 "18376687213241462",
 "18376730803241361",
 "18377044663208938",
@@ -10266,7 +10269,10 @@
 "18668921470032586"
 ],
 "risposte": [
-1794213818.519819
+1794213818.519819,
+1794214580.013525,
+1794214582.9384868,
+1794214584.183513
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -13333,9 +13339,6 @@
 ],
 "lary_013_4": [
 "_only_ale._"
-],
-"keyla_ghensi": [
-"tania_ghensi"
 ]
 },
 "premiati": [
@@ -13498,7 +13501,8 @@
 "fede_sporty_>>nicola.sportello",
 "cristinaek>>michael_wolf_98",
 "cristinaek>michael_wolf_98",
-"fede_sporty_>tanialapesa"
+"fede_sporty_>tanialapesa",
+"tania_ghensi>keyla_ghensi"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14489,7 +14493,9 @@
 "silvetti.simone": 20,
 "tommiaso23": 20,
 "giovannifarinola681": 50,
-"gloria_cucco": 10
+"gloria_cucco": 10,
+"tania_ghensi": 23,
+"gab.07_bl": 10
 },
 "inviti_giorno": {
 "2026-11-02": {
@@ -14523,7 +14529,8 @@
 },
 "2026-11-09": {
 "cristinaek": 1,
-"fede_sporty_": 1
+"fede_sporty_": 1,
+"tania_ghensi": 1
 }
 },
 "seguono": {
@@ -15342,7 +15349,10 @@
 "giovannifarinola681": "premiato",
 "vittoria_011_": "premiato",
 "michael_wolf_98": "premiato",
-"gloria_cucco": "premiato"
+"gloria_cucco": "premiato",
+"tania_ghensi": "premiato",
+"keyla_ghensi": "in_attesa",
+"gab.07_bl": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -17200,7 +17210,8 @@
 "lorenzotrovo26": "2026-11-08",
 "andrew__4x4": "2026-11-08",
 "giovannifarinola681": "2026-11-08",
-"tania_ghensi": "2026-11-09"
+"tania_ghensi": "2026-11-09",
+"tanialapesa": "2026-11-09"
 },
 "boost_follow": true,
 "privati": [
@@ -18660,7 +18671,9 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {},
+"missioni_fatte": {
+"tania_ghensi": "2026-11-09"
+},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
@@ -18689,7 +18702,7 @@
 "2026-11-06": 1702,
 "2026-11-07": 1723,
 "2026-11-08": 1766,
-"2026-11-09": 1772
+"2026-11-09": 1773
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -18914,6 +18927,10 @@
 [
 "2026-11-09T08:43+00:00",
 1772
+],
+[
+"2026-11-09T08:56+00:00",
+1773
 ]
 ],
 "coppa": {
