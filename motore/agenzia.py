@@ -570,6 +570,10 @@ if __name__ == "__main__":
     elif fase == "revisione": sys.exit(revisione(*sys.argv[2:5]))
     elif fase == "crescita": crescita_giorno()
     elif fase == "innovazione": innovazione_giorno()
+    elif fase == "registro":  # 9/11: dopo un conflitto di git il registro si ricostruisce dalle sessioni (nessuna sessione persa)
+        S = [json.loads(f.read_text()) for f in (DATI / "sessioni").glob("*.json")]
+        r = sorted(({k: d.get(k) for k in ("id", "formato", "modalita", "inizio", "stato", "fine")} | {"scambi": len(d.get("scambi", []))} for d in S if d.get("inizio")), key=lambda x: x["inizio"])
+        (DATI / "registro.json").write_text(json.dumps(r[-60:], ensure_ascii=False, indent=1) + "\n")
     elif fase == "cantiere":  # agenzia.py cantiere <gioco|reel|realismo> <in costruzione|online|scartato> [dove si vede / perché]
         c = cantieri(); v = c[sys.argv[2]]; v["stato"] = sys.argv[3]; v["aggiornato"] = datetime.now(timezone.utc).date().isoformat()
         if len(sys.argv) > 4: v["nota"] = sys.argv[4]

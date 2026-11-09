@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-07-2103-ospiti_sera",
+  "formato": "ospiti_sera",
+  "modalita": "operativa",
+  "inizio": "2026-11-07T20:03:38+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-07T20:04:40+00:00",
+  "scambi": 5
+ },
+ {
   "id": "2026-11-07-1802-prima_luce",
   "formato": "prima_luce",
   "modalita": "operativa",
