@@ -10342,9 +10342,7 @@
 "18666851569016117",
 "18668921470032586"
 ],
-"risposte": [
-1794240444.5651755
-],
+"risposte": [],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -14578,7 +14576,8 @@
 "gab.07_bl": 10,
 "isabella_leggieri": 10,
 "alessandroasaro_": 10,
-"mostinoo.priv": 10
+"mostinoo.priv": 10,
+"j.jen_9": 10
 },
 "inviti_giorno": {
 "2026-11-02": {
@@ -15438,7 +15437,8 @@
 "gab.07_bl": "premiato",
 "alessandroasaro_": "premiato",
 "mostinoo.priv": "premiato",
-"mike007887": "in_attesa"
+"mike007887": "in_attesa",
+"j.jen_9": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -18809,7 +18809,7 @@
 "2026-11-06": 1702,
 "2026-11-07": 1723,
 "2026-11-08": 1766,
-"2026-11-09": 1785
+"2026-11-09": 1786
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19090,6 +19090,10 @@
 [
 "2026-11-09T17:00+00:00",
 1785
+],
+[
+"2026-11-09T17:13+00:00",
+1786
 ]
 ],
 "coppa": {
