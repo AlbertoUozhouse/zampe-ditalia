@@ -6527,6 +6527,7 @@
 "18120666580986096",
 "18120670589053736",
 "18120671965971982",
+"18120692329996101",
 "18120694438756580",
 "18120697987751250",
 "18120707572967240",
@@ -10256,7 +10257,9 @@
 "18666851569016117",
 "18668921470032586"
 ],
-"risposte": [],
+"risposte": [
+1794186204.3302238
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -12355,7 +12358,7 @@
 "vittoria_011_": "2026-11-08",
 "la_mietta_del_2013": "2026-11-08",
 "mncn_ginny": "2026-11-08",
-"michael_wolf_98": "2026-11-08",
+"michael_wolf_98": "2026-11-09",
 "lorenzotrovo26": "2026-11-08",
 "leny.defilippi._": "2026-11-08",
 "cristinaek": "2026-11-08",
@@ -13322,9 +13325,6 @@
 ],
 "lary_013_4": [
 "_only_ale._"
-],
-"michael_wolf_98": [
-"cristinaek"
 ]
 },
 "premiati": [
@@ -13484,7 +13484,9 @@
 "michael_wolf_98>>cristinaek",
 "michael_wolf_98>cristinaek",
 "fede_sporty_>nicola.sportello",
-"fede_sporty_>>nicola.sportello"
+"fede_sporty_>>nicola.sportello",
+"cristinaek>>michael_wolf_98",
+"cristinaek>michael_wolf_98"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14458,8 +14460,8 @@
 "vittoria_011_": 50,
 "la_mietta_del_2013": 30,
 "mncn_ginny": 30,
-"cristinaek": 30,
-"michael_wolf_98": 46,
+"cristinaek": 48,
+"michael_wolf_98": 56,
 "phantom20_13": 40,
 "alfoooo65": 30,
 "nicola.sportello": 30,
@@ -14505,6 +14507,9 @@
 "lary_013_4": 1,
 "michael_wolf_98": 1,
 "fede_sporty_": 1
+},
+"2026-11-09": {
+"cristinaek": 1
 }
 },
 "seguono": {
@@ -15321,7 +15326,8 @@
 "alfoooo65": "premiato",
 "nicola.sportello": "premiato",
 "giovannifarinola681": "premiato",
-"vittoria_011_": "premiato"
+"vittoria_011_": "premiato",
+"michael_wolf_98": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
