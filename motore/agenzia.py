@@ -564,12 +564,73 @@ def innovazione_giorno():
         reg.write_text(json.dumps((storia + [{"giorno": oggi, **d}])[-60:], ensure_ascii=False, indent=1) + "\n")
     S.d["stato"] = "fatto"; S.d["fine"] = _ora(); S.salva()
 
+# ---------------------------------------------------------------- la regia dell'apertura 3D (Alberto 10/11: «il reparto deve fare di più innovazione»)
+# A ogni reel l'Innovazione con la Grafica 3D inventa lo stile del paese di notte e il volo della telecamera: mai uguale ai precedenti.
+VOLI = ["discesa", "orbita", "radente", "rivelazione", "spirale"]
+EFFETTI = ["nessuno", "foglie", "lanterne", "stelle_cadenti", "fuochi"]
+TAVOLOZZE = [  # di riserva, se il reparto non risponde: nomi e colori già provati
+    {"nome_stile": "Notte blu", "cielo_basso": "#21336B", "cielo_alto": "#050A1E", "nebbia_colore": "#0E1A3E", "lampioni_colore": "#FFB862", "lucciole_colore": "#FFF3A0"},
+    {"nome_stile": "Tramonto viola", "cielo_basso": "#6B2E6E", "cielo_alto": "#120624", "nebbia_colore": "#2A1036", "lampioni_colore": "#FF9F5A", "lucciole_colore": "#FFC8E8"},
+    {"nome_stile": "Aurora", "cielo_basso": "#0F5A55", "cielo_alto": "#02121A", "nebbia_colore": "#06302F", "lampioni_colore": "#FFD27A", "lucciole_colore": "#7DFFC8"},
+    {"nome_stile": "Notte d'oro", "cielo_basso": "#4A3415", "cielo_alto": "#0A0612", "nebbia_colore": "#2A1C10", "lampioni_colore": "#FFC55C", "lucciole_colore": "#FFE08A"},
+    {"nome_stile": "Mezzanotte gelida", "cielo_basso": "#1E3A5A", "cielo_alto": "#03070F", "nebbia_colore": "#122A44", "lampioni_colore": "#CFE6FF", "lucciole_colore": "#BFE4FF"},
+    {"nome_stile": "Rosa d'alba", "cielo_basso": "#A0526E", "cielo_alto": "#1A0B2A", "nebbia_colore": "#4A2140", "lampioni_colore": "#FFB37A", "lucciole_colore": "#FFD6E6"},
+]
+REGIA = """Sei il Capo innovazione di Zampe d'Italia, insieme al reparto Grafica 3D. Ogni reel si apre con un volo di 3-4 secondi sul paese 3D di notte
+dell'animale raccontato (cucce, piazza, lampioni, lucciole; il meteo vero del comune lo aggiunge il motore). Il tuo lavoro: inventare la REGIA di questa apertura,
+diversa dalle ultime («ultime_regie») e adatta alla storia del reel («brief»): deve sembrare un altro film, bello e realistico, mai una copia.
+Scegli: il cielo (due colori esadecimali, basso all'orizzonte e alto allo zenit: deve restare un cielo di notte o di crepuscolo, mai giorno pieno),
+il colore della nebbia, dei lampioni e delle lucciole, quante lucciole (0-300), il bagliore (bloom 0.3-1.0), l'esposizione (1.2-2.0),
+un effetto tra foglie (autunno), lanterne (lanterne di carta che salgono), stelle_cadenti, fuochi (solo per una festa o un primato) o nessuno,
+il volo della telecamera tra discesa (dall'alto all'animale), orbita (giro attorno al paese), radente (rasoterra tra le cucce), rivelazione (dall'animale si allarga su tutto il paese), spirale (dall'alto a spirale),
+e la durata (3-4.5 secondi). Rispondi solo JSON: {"nome_stile": "2-3 parole", "perche": "una frase: perché è nuovo e perché è bello per questa storia",
+"cielo_basso": "#RRGGBB", "cielo_alto": "#RRGGBB", "nebbia_colore": "#RRGGBB", "lampioni_colore": "#RRGGBB", "lucciole_colore": "#RRGGBB", "lucciole": 0-300,
+"bloom": 0.3-1.0, "esposizione": 1.2-2.0, "effetto": "...", "volo": "...", "secondi": 3-4.5}"""
+
+def _pulisci_regia(r, storia):
+    import random as _r
+    hexok = lambda c: isinstance(c, str) and re.fullmatch(r"#[0-9A-Fa-f]{6}", c)
+    base = dict(_r.choice([t for t in TAVOLOZZE if t["nome_stile"] not in [x.get("nome_stile") for x in storia[-3:]]] or TAVOLOZZE))
+    out = {**base, "lucciole": 120, "bloom": 0.5, "esposizione": 1.55, "effetto": "nessuno", "volo": "discesa", "secondi": 3.6, "perche": "regia di riserva del motore"}
+    for k in ("cielo_basso", "cielo_alto", "nebbia_colore", "lampioni_colore", "lucciole_colore"):
+        if hexok((r or {}).get(k)): out[k] = r[k]
+    for k, a, b in (("lucciole", 0, 300), ("bloom", 0.3, 1.0), ("esposizione", 1.2, 2.0), ("secondi", 3.0, 4.5)):
+        try: out[k] = max(a, min(b, float(r[k])))
+        except (KeyError, TypeError, ValueError): pass
+    if (r or {}).get("volo") in VOLI: out["volo"] = r["volo"]
+    if (r or {}).get("effetto") in EFFETTI: out["effetto"] = r["effetto"]
+    for k in ("nome_stile", "perche"):
+        if isinstance((r or {}).get(k), str) and r[k].strip(): out[k] = r[k].strip()[:120]
+    if not r:  # senza il reparto: anche l'effetto cambia a rotazione (i fuochi solo quando li sceglie il reparto per una festa)
+        usati = [x.get("effetto") for x in storia[-2:]]
+        out["effetto"] = _r.choice([e for e in EFFETTI if e != "fuochi" and e not in usati] or ["nessuno"])
+    ultimi = [(x.get("volo"), x.get("effetto")) for x in storia[-2:]]
+    if (out["volo"], out["effetto"]) in ultimi or [x.get("volo") for x in storia[-1:]] == [out["volo"]]:  # mai lo stesso volo due volte di fila
+        usati = [x.get("volo") for x in storia[-4:]]
+        out["volo"] = next((v for v in VOLI if v not in usati), VOLI[(VOLI.index(out["volo"]) + 1) % len(VOLI)])
+    return out
+
+def regia(cop_path, uscita):
+    cop = json.loads(Path(cop_path).read_text())
+    reg = DATI / "regie.json"; storia = json.loads(reg.read_text()) if reg.exists() else []
+    r, t = (lavora(REGIA, json.dumps({"brief": _brief(cop), "paese": cop.get("intro_3d"), "mese": datetime.now(timezone.utc).strftime("%m"),
+                                     "ultime_regie": storia[-8:]}, ensure_ascii=False), CLAUDE) if os.environ.get("ANTHROPIC_API_KEY") else (None, 0))
+    out = _pulisci_regia(r, storia)
+    Path(uscita).write_text(json.dumps(out, ensure_ascii=False))
+    reg.write_text(json.dumps((storia + [{**out, "reel": cop.get("id")}])[-40:], ensure_ascii=False, indent=1) + "\n")
+    S = Sessione(cop["id"], cop.get("formato"))
+    S.scrivi("innovazione-1", "grafica3d-1", "proposta", f"Regia dell'apertura 3D: «{out['nome_stile']}» — volo {out['volo']}, effetto {out['effetto']}, "
+             f"cielo {out['cielo_basso']}→{out['cielo_alto']}, lampioni {out['lampioni_colore']}. {out['perche']}", out)
+    S.scrivi("grafica3d-1", "montaggio-1", "decisione", f"Applico la regia «{out['nome_stile']}» al paese 3D di {(cop.get('intro_3d') or {}).get('comune', '')}.")
+    print(f"regia: {out['nome_stile']} · {out['volo']} · {out['effetto']}")
+
 if __name__ == "__main__":
     fase = sys.argv[1]
     if fase == "prima": prima(sys.argv[2])
     elif fase == "revisione": sys.exit(revisione(*sys.argv[2:5]))
     elif fase == "crescita": crescita_giorno()
     elif fase == "innovazione": innovazione_giorno()
+    elif fase == "regia": regia(sys.argv[2], sys.argv[3])
     elif fase == "registro":  # 9/11: dopo un conflitto di git il registro si ricostruisce dalle sessioni (nessuna sessione persa)
         S = [json.loads(f.read_text()) for f in (DATI / "sessioni").glob("*.json")]
         r = sorted(({k: d.get(k) for k in ("id", "formato", "modalita", "inizio", "stato", "fine")} | {"scambi": len(d.get("scambi", []))} for d in S if d.get("inizio")), key=lambda x: x["inizio"])

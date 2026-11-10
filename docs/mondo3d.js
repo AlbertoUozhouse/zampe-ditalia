@@ -189,7 +189,8 @@ async function apri(v, opz = {}) {
   // cielo: sfumato dal blu notte all'orizzonte più chiaro, stelle e luna
   const cielo = new THREE.Mesh(new THREE.SphereGeometry(600, 32, 16), new THREE.ShaderMaterial({ side: THREE.BackSide, depthWrite: false, fog: false,
     vertexShader: "varying vec3 p; void main(){ p = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.); }",
-    fragmentShader: "varying vec3 p; void main(){ float h = clamp(normalize(p).y, 0., 1.); vec3 c = mix(vec3(.13,.2,.42), vec3(.02,.04,.12), pow(h,.55)); gl_FragColor = vec4(c,1.); }" }));
+    uniforms: { basso: { value: new THREE.Color(.13, .2, .42) }, alto: { value: new THREE.Color(.02, .04, .12) } },
+    fragmentShader: "uniform vec3 basso; uniform vec3 alto; varying vec3 p; void main(){ float h = clamp(normalize(p).y, 0., 1.); vec3 c = mix(basso, alto, pow(h,.55)); gl_FragColor = vec4(c,1.); }" }));
   scene.add(cielo);
   const sp = []; for (let i = 0; i < 1400; i++) { const a = Math.random() * Math.PI * 2, e = 0.08 + Math.random() * 1.4, r = 560; sp.push(r * Math.cos(a) * Math.cos(e), r * Math.sin(e), r * Math.sin(a) * Math.cos(e)); }
   scene.add(new THREE.Points(new THREE.BufferGeometry().setAttribute("position", new THREE.Float32BufferAttribute(sp, 3)), new THREE.PointsMaterial({ color: "#FFFFFF", size: 1.6, sizeAttenuation: false, fog: false })));
@@ -379,6 +380,52 @@ async function apri(v, opz = {}) {
   const lucc = new THREE.Points(new THREE.BufferGeometry().setAttribute("position", new THREE.BufferAttribute(lp, 3)),
     new THREE.PointsMaterial({ color: new THREE.Color("#FFF3A0").multiplyScalar(3), size: 0.22, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false }));
   scene.add(lucc);
+
+  // ---------- la regia del reparto Innovazione (10/11): ogni reel ha il suo stile (motore/agenzia.py regia → reel/volo3d.js → opz.stile) ----------
+  const stileGira = [], st = opz.stile || null;
+  if (st) {
+    const col = (c, d) => { try { return new THREE.Color(c); } catch (e) { return new THREE.Color(d); } };
+    if (st.cielo_basso) cielo.material.uniforms.basso.value = col(st.cielo_basso, "#21336B");
+    if (st.cielo_alto) cielo.material.uniforms.alto.value = col(st.cielo_alto, "#050A1E");
+    if (st.nebbia_colore) scene.fog.color = col(st.nebbia_colore, "#0E1A3E");
+    if (st.nebbia_densita && scene.fog.density < 0.012) scene.fog.density = st.nebbia_densita;  // il meteo vero (nebbia, pioggia) ha la precedenza
+    if (st.lampioni_colore) { const c = col(st.lampioni_colore, "#FFB862"); lam.forEach(l => l.color = c); bulbo.emissive = c.clone(); }
+    if (st.lucciole_colore) lucc.material.color = col(st.lucciole_colore, "#FFF3A0").multiplyScalar(3);
+    if (st.lucciole !== undefined) lucc.geometry.setDrawRange(0, Math.max(0, Math.min(NL, Math.round(st.lucciole / 300 * NL))));
+    if (st.esposizione) renderer.toneMappingExposure = st.esposizione;
+    const area = R + 30;
+    if (st.effetto === "foglie") {  // novembre: foglie d'autunno che cadono girando
+      const N = 700, pos = new Float32Array(N * 3), colori = new Float32Array(N * 3), base = [...Array(N)].map(() => [(Math.random() * 2 - 1) * area, (Math.random() * 2 - 1) * area, Math.random() * 30, Math.random() * 9]);
+      const tinte = ["#C8551E", "#E08A2A", "#B5341F", "#D9A441", "#8E3B1A"].map(c => new THREE.Color(c));
+      base.forEach((_, i) => { const c = tinte[i % tinte.length]; colori.set([c.r, c.g, c.b], i * 3); });
+      const g = new THREE.BufferGeometry().setAttribute("position", new THREE.BufferAttribute(pos, 3)).setAttribute("color", new THREE.BufferAttribute(colori, 3));
+      const foglie = new THREE.Points(g, new THREE.PointsMaterial({ size: 0.6, vertexColors: true, transparent: true, opacity: 0.95 })); scene.add(foglie);
+      stileGira.push(t => { for (let i = 0; i < N; i++) { const [x, z, h, f] = base[i], y = 30 - ((h + t * 0.0022) % 30);
+        pos[i * 3] = x + Math.sin(t / 700 + f) * 1.6; pos[i * 3 + 1] = y; pos[i * 3 + 2] = z + Math.cos(t / 950 + f) * 1.2; } g.attributes.position.needsUpdate = true; });
+    }
+    if (st.effetto === "lanterne") {  // lanterne di carta che salgono lente sopra il paese
+      const N = 46, pos = new Float32Array(N * 3), base = [...Array(N)].map(() => [(Math.random() * 2 - 1) * (R + 6), (Math.random() * 2 - 1) * (R + 6), Math.random() * 40, Math.random() * 7]);
+      const g = new THREE.BufferGeometry().setAttribute("position", new THREE.BufferAttribute(pos, 3));
+      scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: new THREE.Color("#FF9A3C").multiplyScalar(4), size: 0.9, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending })));
+      stileGira.push(t => { for (let i = 0; i < N; i++) { const [x, z, h, f] = base[i]; pos[i * 3] = x + Math.sin(t / 1500 + f) * 0.8; pos[i * 3 + 1] = 2 + ((h + t * 0.0016) % 40); pos[i * 3 + 2] = z; } g.attributes.position.needsUpdate = true; });
+    }
+    if (st.effetto === "stelle_cadenti") {  // scie che attraversano il cielo, una ogni due secondi
+      const N = 4, pos = new Float32Array(N * 6), g = new THREE.BufferGeometry().setAttribute("position", new THREE.BufferAttribute(pos, 3));
+      const scie = new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: new THREE.Color("#FFFFFF").multiplyScalar(3), transparent: true, opacity: 0.95, fog: false })); scene.add(scie);
+      stileGira.push(t => { for (let i = 0; i < N; i++) { const q = ((t / 1900) + i / N) % 1, a = i * 1.7 + Math.floor(t / 1900 + i / N) * 2.3, x0 = Math.cos(a) * 300, z0 = Math.sin(a) * 300 - 120, y0 = 210 + (i % 2) * 50;
+        const x = x0 - q * 160, y = y0 - q * 70, on = q < 0.35 ? 1 : 0; pos.set([x, y * on - 999 * (1 - on), z0, x + 26, (y + 11) * on - 999 * (1 - on), z0], i * 6); } g.attributes.position.needsUpdate = true; });
+    }
+    if (st.effetto === "fuochi") {  // fuochi d'artificio sopra la piazza (la festa della città)
+      const N = 5, P = 70, pos = new Float32Array(N * P * 3), colori = new Float32Array(N * P * 3), dir = [...Array(N * P)].map(() => new THREE.Vector3().randomDirection());
+      const tinte = ["#FFC55C", "#FF5FA2", "#6FE3FF", "#B9FF6F", "#FFFFFF"].map(c => new THREE.Color(c).multiplyScalar(3));
+      for (let i = 0; i < N * P; i++) { const c = tinte[Math.floor(i / P) % tinte.length]; colori.set([c.r, c.g, c.b], i * 3); }
+      const g = new THREE.BufferGeometry().setAttribute("position", new THREE.BufferAttribute(pos, 3)).setAttribute("color", new THREE.BufferAttribute(colori, 3));
+      const fx = new THREE.Points(g, new THREE.PointsMaterial({ size: 0.5, vertexColors: true, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending })); scene.add(fx);
+      stileGira.push(t => { for (let b = 0; b < N; b++) { const q = ((t / 1400) + b / N) % 1, cx = Math.cos(b * 2.1) * 9, cz = Math.sin(b * 2.1) * 9, cy = 16 + (b % 3) * 3;
+        for (let j = 0; j < P; j++) { const d = dir[b * P + j], k = Math.sqrt(q) * 7; pos.set([cx + d.x * k, cy + d.y * k - q * q * 4, cz + d.z * k], (b * P + j) * 3); } }
+        g.attributes.position.needsUpdate = true; fx.material.opacity = 1; });
+    }
+  }
   const CUORI = ["❤️", "💛", "🐾", "✨", "🦴"].map(e => EMOJI(THREE, e)), volanti = [], fuochi = pet.filter(p => p.d.acc?.includes("fuochi")), scoppi = [];
   const scoppio = p => { const n = 60, pos = new Float32Array(n * 3), dir = [...Array(n)].map(() => new THREE.Vector3().randomDirection().multiplyScalar(0.7 + Math.random() * 0.5));
     const col = new THREE.Color(["#FF5A6E", "#FFD23F", "#4FB4FF", "#5BE37D", "#FF9A3C"][Math.floor(Math.random() * 5)]).multiplyScalar(3);
@@ -430,6 +477,7 @@ async function apri(v, opz = {}) {
       if (k >= 1) { scene.remove(b.pts); b.pts.geometry.dispose(); scoppi.splice(i, 1); } }
     for (const f of gira) f(t);
     for (const f of meteoGira) f(t);
+    for (const f of stileGira) f(t);
     lam.forEach((l, i) => l.intensity = 20 + Math.sin(t / 470 + i * 1.7) * 2.5);
     if (volo) { const q = Math.min(1, (t - volo.t0) / 1100), e = 1 - Math.pow(1 - q, 3); camera.position.lerpVectors(volo.da, volo.a, e); controls.target.lerpVectors(volo.tda, volo.ta, e); if (q >= 1) volo = null; }
     controls.update(); composer.render();
