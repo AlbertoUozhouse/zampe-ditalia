@@ -433,5 +433,20 @@
   "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
   "riprovare": null,
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "17910509853589251",
+  "file": "2026-11-02-2110-sfida",
+  "formato": "sfida",
+  "uscita": "2026-11-02T20:14:46+00:00",
+  "follower": null,
+  "reach_7g": 507,
+  "follower_ogni_1000": null,
+  "mediana_simili": null,
+  "simili": 0,
+  "scelte": null,
+  "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
+  "riprovare": null,
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]

@@ -281,3 +281,8 @@ Nessun cambiamento oggi.
 
 - 2026-11-02-1144-presidente: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
 - 2026-11-02-1345-buio: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+
+## 2026-11-10 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-02-2110-sfida: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
