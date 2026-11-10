@@ -90,7 +90,6 @@
   "Napoli"
  ],
  "temi": [
-  "giorno",
   "neon",
   "aurora",
   "notte",
@@ -99,9 +98,10 @@
   "giorno",
   "notte",
   "tramonto",
-  "aurora"
+  "aurora",
+  "neon"
  ],
- "variante_n": 29,
+ "variante_n": 30,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -131,7 +131,8 @@
   "2026-11-08-2110-coppa_apertura": "voce-solita-32",
   "2026-11-09-1301-prima_luce": "voce-solita-32",
   "2026-11-09-1803-questa_luce": "voce-solita-32",
-  "2026-11-09-2110-puntata": "voce-solita-32"
+  "2026-11-09-2110-puntata": "voce-solita-32",
+  "2026-11-10-1303-testa_a_testa": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -926,9 +927,11 @@
   "mostinoo.priv|animale|zoe"
  ],
  "derby_vicini": [
+  "Vicenza|Verona",
   "Verona|Vicenza",
-  "Vicenza|Verona"
+  "Livorno|Cecina",
+  "Cecina|Livorno"
  ],
- "thor_giorno": "2026-11-09",
- "thor_ultimo_reel": false
+ "thor_giorno": "2026-11-10",
+ "thor_ultimo_reel": true
 }

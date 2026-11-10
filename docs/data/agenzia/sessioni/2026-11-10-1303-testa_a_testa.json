@@ -1,0 +1,2290 @@
+{
+ "id": "2026-11-10-1303-testa_a_testa",
+ "formato": "testa_a_testa",
+ "modalita": "operativa",
+ "inizio": "2026-11-10T12:03:44+00:00",
+ "stato": "corretto dalla squadra",
+ "scambi": [
+  {
+   "t": "2026-11-10T12:03:44+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "testa_a_testa",
+     "id": "2026-11-10-1303-testa_a_testa",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta.",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Pari: 14 a 14. Il prossimo animale decide chi passa avanti.",
+       "scena": "duello"
+      },
+      {
+       "i": 2,
+       "testo": "Sei di Cecina o di Livorno? Commenta città e nome del tuo animale!",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": "reel/assets/thor-apertura.mp4",
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "⚔️ Livorno 14 – 14 Cecina: due comuni a 32 km, e la sfida è aperta!\n\nOgni animale accende una luce nella sua città sulla mappa dell'Italia di notte (link in bio).\n👇 Commenta la tua città e il nome del tuo cane o gatto (per esempio «Cecina, Luna, cane»): si accende col tuo @ e conta per la tua città.\n👥 Tagga chi è di lì!\n\nVoce generata con IA.\n\n#cani #gatti #italia #canicontrogatti #animalidomestici #livorno #cecina",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       10.41405,
+       43.432249999999996
+      ],
+      "sopra": "TESTA A TESTA",
+      "grande": "14 – 14",
+      "sotto": "Livorno vs Cecina"
+     }
+    }
+   }
+  },
+  {
+   "t": "2026-11-10T12:03:48+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Chi vive a Livorno o a Cecina (o in provincia) e ha un cane o un gatto: persone che ancora non ci seguono e che reagiscono a un confronto tra due città vicine e a una domanda diretta nei commenti. · Gancio: Livorno contro Cecina: 32 chilometri, e la sfida è aperta. Il tuo animale da che parte sta? · Primo fotogramma: Il video vero di Thor a tutto schermo, con la mappa dell'Italia di notte e le due luci di Livorno e Cecina che brillano. Scritta grande: «LIVORNO 14 – 14 CECINA». Sotto, piccola: «Il tuo animale decide chi vince». Così il duello si capisce anche a volume zero. · Motivo per seguire: Seguendo Zampe d'Italia vedi ogni giorno la sfida tra città vicine e puoi far accendere la luce del tuo animale sulla mappa per far vincere la tua città. · Chiusura: Livorno o Cecina? Commenta città e nome del tuo animale: la prossima luce è tua.",
+   "dati": {
+    "pubblico": "Chi vive a Livorno o a Cecina (o in provincia) e ha un cane o un gatto: persone che ancora non ci seguono e che reagiscono a un confronto tra due città vicine e a una domanda diretta nei commenti.",
+    "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta. Il tuo animale da che parte sta?",
+    "primo_fotogramma": "Il video vero di Thor a tutto schermo, con la mappa dell'Italia di notte e le due luci di Livorno e Cecina che brillano. Scritta grande: «LIVORNO 14 – 14 CECINA». Sotto, piccola: «Il tuo animale decide chi vince». Così il duello si capisce anche a volume zero.",
+    "motivo_per_seguire": "Seguendo Zampe d'Italia vedi ogni giorno la sfida tra città vicine e puoi far accendere la luce del tuo animale sulla mappa per far vincere la tua città.",
+    "chiusura": "Livorno o Cecina? Commenta città e nome del tuo animale: la prossima luce è tua.",
+    "perche": "Il testa a testa dell'8/11 ha reso 34,5 follower ogni 1.000 raggiunti contro 4,6 della coppa, ma il campione è piccolo: cambio solo la coppia di città per verificarlo, con una sfida locale e una domanda diretta."
+   }
+  },
+  {
+   "t": "2026-11-10T12:03:48+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "testa_a_testa",
+     "id": "2026-11-10-1303-testa_a_testa",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta.",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Pari: 14 a 14. Il prossimo animale decide chi passa avanti.",
+       "scena": "duello"
+      },
+      {
+       "i": 2,
+       "testo": "Sei di Cecina o di Livorno? Commenta città e nome del tuo animale!",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": "reel/assets/thor-apertura.mp4",
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "⚔️ Livorno 14 – 14 Cecina: due comuni a 32 km, e la sfida è aperta!\n\nOgni animale accende una luce nella sua città sulla mappa dell'Italia di notte (link in bio).\n👇 Commenta la tua città e il nome del tuo cane o gatto (per esempio «Cecina, Luna, cane»): si accende col tuo @ e conta per la tua città.\n👥 Tagga chi è di lì!\n\nVoce generata con IA.\n\n#cani #gatti #italia #canicontrogatti #animalidomestici #livorno #cecina",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       10.41405,
+       43.432249999999996
+      ],
+      "sopra": "TESTA A TESTA",
+      "grande": "14 – 14",
+      "sotto": "Livorno vs Cecina"
+     }
+    },
+    "mappa": [
+     {
+      "scena": 0,
+      "etichetta": "Livorno · 14",
+      "lat": 43.5523,
+      "lng": 10.3087,
+      "luce": "già accesa",
+      "scena_dal_secondo": null,
+      "scena_al_secondo": null,
+      "comune_sulla_mappa": "Livorno",
+      "animali_li_in_ordine_di_arrivo": [
+       "Merlino (@la_dena13, 2026-10-27)",
+       "Penelope (@benedetti4139, 2026-10-27)",
+       "Brenda (@benedetti4139, 2026-10-27)",
+       "Zoe (@benedetti4139, 2026-10-27)",
+       "Kira (@benedetti4139, 2026-10-27)"
+      ],
+      "luci_li_oggi": 16,
+      "luci_del_comune_dell_etichetta": 16
+     },
+     {
+      "scena": 0,
+      "etichetta": "Cecina · 14",
+      "lat": 43.3122,
+      "lng": 10.5194,
+      "luce": "già accesa",
+      "scena_dal_secondo": null,
+      "scena_al_secondo": null,
+      "comune_sulla_mappa": "Cecina",
+      "animali_li_in_ordine_di_arrivo": [
+       "Dodi (@_bularosa_, 2026-10-27)",
+       "Gino (@rosiannuu, 2026-10-27)",
+       "Fiocco (@giulia_labrii, 2026-10-27)",
+       "Nina (@_engyannuu_, 2026-10-27)",
+       "Piero (@alessia.linda2014, 2026-10-27)"
+      ],
+      "luci_li_oggi": 14,
+      "luci_del_comune_dell_etichetta": 14
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-10T12:03:50+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-10T12:04:58+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.1 LUFS, picco -0.8 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.1,
+    "picco_dbfs": -0.8,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.2,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-10T12:04:58+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (19.0 s): ti mando 20 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 19.0,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     18.7
+    ]
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:03+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il primo fotogramma (0.5s) è un primo piano di cane senza alcun riferimento al formato testa a testa; la frase «Livorno contro Cecina» arriva solo al secondo 4.4, quindi nei primi 5 secondi lo spettatore non capisce subito di cosa parla il reel. Inoltre la mappa con le luci compare solo dopo il seco",
+   "dati": {
+    "controllato": "Primi 5 secondi del reel: apertura video, frase iniziale, luce sulla mappa, audio e coerenza con dati e trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il primo fotogramma (0.5s) è un primo piano di cane senza alcun riferimento al formato testa a testa; la frase «Livorno contro Cecina» arriva solo al secondo 4.4, quindi nei primi 5 secondi lo spettatore non capisce subito di cosa parla il reel. Inoltre la mappa con le luci compare solo dopo il secondo 4.5, mentre la scena Livorno/Cecina è già accesa al 5.09: il primo impatto visivo non regge il messaggio. Dati: l'audio è a -14.1 LUFS e picco -0.8 dBFS, quindi è fuori dall'obiettivo sul picco (limite sotto -1 dBFS), ma è un dettaglio minore.",
+    "correzione": "Anticipare nei primi 2 secondi la scritta «TESTA A TESTA» e il duello «Livorno 14 – Cecina 14» sopra il primo piano del cane, poi tagliare il video di apertura a 1-2 secondi; abbassare leggermente il picco audio sotto -1 dBFS.",
+    "idea": "Aprire ogni testa a testa con il punteggio grande in primo piano e l'animale in secondo piano, così il gancio è immediato e il video resta bello."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:03+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la voce dice 'Livorno contro Cecina: 32 chilometri' ma nel brief non c'è verifica della distanza; inoltre al secondo 8 la mappa mostra già i due comuni ma il conteggio 14–14 compare solo dopo: la cifra 'Pari: 14 a 14' arriva prima che lo spettatore abbia visto il duello. Il dato '",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione, dati mappa (14 vs 14, Livorno e Cecina) e didascalia, più misure audio e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 8,
+    "problema": "Nella trascrizione la voce dice 'Livorno contro Cecina: 32 chilometri' ma nel brief non c'è verifica della distanza; inoltre al secondo 8 la mappa mostra già i due comuni ma il conteggio 14–14 compare solo dopo: la cifra 'Pari: 14 a 14' arriva prima che lo spettatore abbia visto il duello. Il dato 'Livorno · 14' sulla mappa è corretto ma il titolo in alto 'TESTA A TESTA | 1940 – 774' è un totale nazionale non spiegato nel reel. Audio: LUFS -14.1 e picco -0.8 dBFS sono nei limiti, nessun silenzio, ma il volume medio dei primi 5 s è -16.2 dB, un po' basso per l'apertura.",
+    "correzione": "Verificare i 32 km con una fonte o toglierli dalla voce; far comparire il punteggio 14–14 nella scena della mappa prima della voce 'Pari'; alzare leggermente il volume dei primi 5 secondi; chiarire o rimuovere il totale 1940–774 dal banner.",
+    "idea": "Un reel di 'ultimo turno' che mostri il comune in svantaggio e chieda il voto di chi vive lì, per rinnovare la sfida con un aggancio locale."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:03+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 le etichette 'Livorno · 14' e 'Cecina · 14' sono leggibili ma piccole rispetto allo schermo verticale, e il titolo in alto 'TESTA A TESTA | 1940 – 774' è sottile; sul fotogramma del secondo 8 la scritta 'È APERTA.' sul mare e le etichette si leggono bene, ma la fascia di commento in bas",
+   "dati": {
+    "controllato": "Leggibilità da telefono di testi, etichette e mappa nei sei fotogrammi, con i secondi e i dati verificati del reel.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 le etichette 'Livorno · 14' e 'Cecina · 14' sono leggibili ma piccole rispetto allo schermo verticale, e il titolo in alto 'TESTA A TESTA | 1940 – 774' è sottile; sul fotogramma del secondo 8 la scritta 'È APERTA.' sul mare e le etichette si leggono bene, ma la fascia di commento in basso è piccola e si perde facilmente. Inoltre il conteggio 'Livorno 14 - Cecina 14' compare nel titolo come '1940 – 774', che riguarda i totali nazionali di cani e gatti, non il duello: può confondere.",
+    "correzione": "Ingrandire le etichette dei due comuni di almeno il 20% e aumentare il contrasto del titolo; spostare o ingrandire la fascia 'Commenta città e nome del tuo animale' e chiarire nel titolo che il punteggio 1940–774 è il conteggio nazionale, oppure sostituirlo con il punteggio del duello.",
+    "idea": "Due reel di intro con i cuccioli in primo piano (le immagini iniziali sono molto belle) seguiti da una sfida che mostra il punteggio del duello in grande, così la gente capisce subito chi vince."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:03+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice 'Livorno contro Cecina: 32 chilometri' ma nei materiali non c'è il dato della distanza tra i due comuni, quindi il numero non è verificabile. Inoltre la mappa mostra 16 luci a Livorno nei dati, mentre il reel parla di 14 a 14 con Livorno a 14 sull'etichetta: il punteggio dell'etichetta ",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i dati della mappa (Livorno 16 luci, Cecina 14, coerenti con il 14–14 del reel), l'audio e la didascalia, più i fotogrammi del reel.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il reel dice 'Livorno contro Cecina: 32 chilometri' ma nei materiali non c'è il dato della distanza tra i due comuni, quindi il numero non è verificabile. Inoltre la mappa mostra 16 luci a Livorno nei dati, mentre il reel parla di 14 a 14 con Livorno a 14 sull'etichetta: il punteggio dell'etichetta va allineato al dato corrente prima della pubblicazione.",
+    "correzione": "Togliere '32 chilometri' o inserire la distanza verificata; allineare il punteggio mostrato (14 o 16 per Livorno) ai dati reali del momento in cui si pubblica.",
+    "idea": "Usare la distanza tra i due comuni solo se calcolata dai dati del progetto, e mostrare il punteggio aggiornato in tempo reale nella scena finale."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:06+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "I primi secondi sono due close-up di un cane tra l'erba senza alcun riferimento al tema (Livorno vs Cecina, testa a testa). Chi scorre non capisce subito di cosa parla il reel, e la trascrizione parte solo a 4.4s. Anche il volume medio dei primi 5 secondi (-16.2 dB) è più basso dell'obiettivo.",
+   "dati": {
+    "controllato": "Apertura del reel (fotogrammi a 0.5s e 4s, audio e trascrizione): il primo frame mostra solo il cane in primo piano, senza elementi testuali o di mappa, e la sfida compare solo dopo.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "I primi secondi sono due close-up di un cane tra l'erba senza alcun riferimento al tema (Livorno vs Cecina, testa a testa). Chi scorre non capisce subito di cosa parla il reel, e la trascrizione parte solo a 4.4s. Anche il volume medio dei primi 5 secondi (-16.2 dB) è più basso dell'obiettivo.",
+    "correzione": "Far comparire nei primi 0.5-1 secondi il titolo «TESTA A TESTA» o la scritta «Livorno 14 – 14 Cecina» sopra il cane, oppure partire direttamente dalla mappa con le luci. Alzare leggermente il volume dei primi 5 secondi per arrivare vicino a -14 LUFS.",
+    "idea": "Per i prossimi testa a testa, aprire con un primo piano dell'animale che ha acceso l'ultima luce della sfida, con il nome e la città scritti sopra, così il primo secondo collega subito l'emozione alla gara."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:06+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il primo fotogramma (0.5s) è un primo piano sfocato e a fuoco parziale del cane, con erba davanti al muso: l'aggancio visivo iniziale non chiarisce subito che è un reel di sfida tra città. Inoltre i primi due fotogrammi sono primi piani di animali, mentre il testo dice subito «Livorno contro Cecina»",
+   "dati": {
+    "controllato": "Inquadrature dei 6 fotogrammi e loro corrispondenza con copione e secondi: la mappa è inquadrata sui due comuni, il duello e la chiusura sono leggibili e coerenti con la trascrizione.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Il primo fotogramma (0.5s) è un primo piano sfocato e a fuoco parziale del cane, con erba davanti al muso: l'aggancio visivo iniziale non chiarisce subito che è un reel di sfida tra città. Inoltre i primi due fotogrammi sono primi piani di animali, mentre il testo dice subito «Livorno contro Cecina», quindi c'è un disallineamento tra immagine d'apertura e messaggio.",
+    "correzione": "Partire dal fotogramma della mappa con il titolo «TESTA A TESTA» e i due comuni (o dalla copertina 14–14), tenendo il primo piano del cane come secondo plano o inserendolo dopo il primo secondo.",
+    "idea": "Per i prossimi reel testa a testa aprire con il punteggio in grande nei primi due secondi e tenere i primi piani degli animali solo come stacco tra un turno e l'altro."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:06+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio nella voce dice 14 a 14, ma la mappa oggi mostra Livorno a 16 luci contro 14 di Cecina: la scena finale rischia di contraddire i dati reali. Inoltre la trascrizione pronuncia «Livorno contro Cecina» mentre la didascalia cita «Livorno 14 – 14 Cecina»: lo stesso dato in due forme diverse.",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i dati della mappa (Livorno 14 e Cecina 14, poi 16 e 14 oggi), l'audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e il rapporto tra copione e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 16.7,
+    "problema": "Il conteggio nella voce dice 14 a 14, ma la mappa oggi mostra Livorno a 16 luci contro 14 di Cecina: la scena finale rischia di contraddire i dati reali. Inoltre la trascrizione pronuncia «Livorno contro Cecina» mentre la didascalia cita «Livorno 14 – 14 Cecina»: lo stesso dato in due forme diverse.",
+    "correzione": "Allineare la voce e la scena di chiusura ai dati del momento di pubblicazione (o rigenerare la voce dopo aver aggiornato il conteggio), e usare un'unica formula per il punteggio in voce, didascalia e copertina.",
+    "idea": "Quando il conteggio cambia, mostrare il punteggio aggiornato in tempo reale nella chiusura, così il reel resta vero e invita a tornare a vedere chi vince."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:07+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio sulla mappa mostra Livorno a 16 luci (dati di oggi), ma il reel e la scena del duello dicono 14 a 14. Il dato parlato e scritto nel reel è già superato dai dati aggiornati; inoltre la trascrizione dice 'Livorno contro Cecina: 32 chilometri' con la scena di luce che parte al secondo 4.4,",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i dati della mappa (Livorno 14→16 luci, Cecina 14), il conteggio 14–14, l'audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e la coerenza tra fotogrammi e copione.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il conteggio sulla mappa mostra Livorno a 16 luci (dati di oggi), ma il reel e la scena del duello dicono 14 a 14. Il dato parlato e scritto nel reel è già superato dai dati aggiornati; inoltre la trascrizione dice 'Livorno contro Cecina: 32 chilometri' con la scena di luce che parte al secondo 4.4, mentre sulla mappa l'etichetta Livorno·14 appare già al secondo 5.09.",
+    "correzione": "Allineare il numero: aggiornare la scena del duello e l'etichetta a 16 – 14 (o rigenerare la cifra con il dato del momento di pubblicazione), e verificare che la didascalia riporti lo stesso punteggio. Tenere la mappa e il testo sulla stessa cifra.",
+    "idea": "Quando il punteggio cambia nel corso della giornata, pubblicare una versione 'aggiornamento' del reel con il nuovo risultato, così i numeri restano sempre corretti e si stimola un secondo passaggio di commenti."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:10+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi dal secondo 11 al 15 la scritta 'Pari: 14 a 14' compare sullo schermo ma la voce al secondo 11.6 dice 'Il prossimo animale decide chi passa avanti' senza ripetere il punteggio: questo va bene. Il problema reale è che nella scena 'luce' (secondi 4–8) la mappa mostra Livorno e Cecina a ",
+   "dati": {
+    "controllato": "Ho verificato il testo della scena 2 (secondi 11.6–13.3) con la trascrizione audio, i numeri 14 a 14 con la mappa e le etichette di Livorno e Cecina con i dati della mappa, più loudness e picco audio.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Nei fotogrammi dal secondo 11 al 15 la scritta 'Pari: 14 a 14' compare sullo schermo ma la voce al secondo 11.6 dice 'Il prossimo animale decide chi passa avanti' senza ripetere il punteggio: questo va bene. Il problema reale è che nella scena 'luce' (secondi 4–8) la mappa mostra Livorno e Cecina a 14 ciascuno, mentre il dato 'luci_li_oggi' di Livorno è 16 (non 14): l'etichetta sulla mappa mostra 14 ma il conteggio odierno del comune è 16, quindi il numero visualizzato non coincide con il dato verificato.",
+    "correzione": "Allineare l'etichetta 'Livorno · 14' al conteggio verificato (16) oppure chiarire che il 14 è il dato della sfida, non il totale luci del comune, e aggiornare di conseguenza la scena 'duello' e la voce.",
+    "idea": "Ripetere il testa a testa con coppie di città vicine e far votare i follower con un emoji nei commenti per dare un finale aperto alla serie."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:10+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «Livorno contro Cecina» e «Pari: 14 a 14», ma sulla mappa Livorno risulta a 16 luci contro le 14 di Cecina: il pareggio raccontato nel reel non corrisponde ai dati verificati del comune. Inoltre il copione dice «Pari» mentre l'etichetta mappa è «Livorno · 14»; l'audio è a -14.1 LUFS co",
+   "dati": {
+    "controllato": "Sincronia trascrizione/scene, dati mappa (Livorno 16 e Cecina 14 luci, coerenti con il 14–14 del copione), audio e fotogrammi inviati.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il testo dice «Livorno contro Cecina» e «Pari: 14 a 14», ma sulla mappa Livorno risulta a 16 luci contro le 14 di Cecina: il pareggio raccontato nel reel non corrisponde ai dati verificati del comune. Inoltre il copione dice «Pari» mentre l'etichetta mappa è «Livorno · 14»; l'audio è a -14.1 LUFS con picco -0.8 dBFS, quindi sopra l'obiettivo di -1 dBFS sul picco.",
+    "correzione": "Allineare il numero del copione e la didascalia ai conteggi reali (oggi Livorno 16, Cecina 14, oppure aggiornare il dato sulla mappa prima della pubblicazione); abbassare il picco audio sotto -1 dBFS.",
+    "idea": "Mostrare nel reel il numero aggiornato delle luci mentre cambia (es. contatore che sale), così il dato resta sempre vero e diventa esso stesso uno spettacolo."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:10+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Coordinate e luci delle due città sulla mappa, sincronia della scena con il testo, misure audio e fotogrammi campionati.",
+   "dati": {
+    "controllato": "Coordinate e luci delle due città sulla mappa, sincronia della scena con il testo, misure audio e fotogrammi campionati.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa a testa, mostrare nei primi secondi il conteggio delle luci già accese in entrambe le città per rendere subito chiara la posta in gioco."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:10+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il primo sottotitolo (4.4s) compare dopo l'apertura: nel copione la frase 'Livorno contro Cecina' e il dato di apertura hanno tempi diversi dalla trascrizione, e la frase 'Pari: 14 a 14' parte a 8.8s mentre il brief la lega alla scena duello. Inoltre la fascia 'Commenta città e nome del tuo animale'",
+   "dati": {
+    "controllato": "Sottotitoli vs trascrizione, tempi delle frasi, coerenza con i dati mappa (14–14, 16 luci Livorno), voce e fascia commenti.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il primo sottotitolo (4.4s) compare dopo l'apertura: nel copione la frase 'Livorno contro Cecina' e il dato di apertura hanno tempi diversi dalla trascrizione, e la frase 'Pari: 14 a 14' parte a 8.8s mentre il brief la lega alla scena duello. Inoltre la fascia 'Commenta città e nome del tuo animale' compare dopo 16.7s, senza margine per leggerla con la CTA finale.",
+    "correzione": "Allineare i sottotitoli ai secondi della trascrizione (4.4, 7.3, 8.8, 11.6, 13.3, 14.9, 16.7) e anticipare la fascia commenti a circa 14.9s per dare tempo di leggerla prima della fine a 19s.",
+    "idea": "Replicare il testa a testa con una sfida a sorpresa dove il voto decide il comune che passa avanti, mostrando il conteggio aggiornato a fine reel."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:12+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La fascia «💬 Commenta città e nome del tuo animale 👇» non è nel brief come testo della scena di chiusura: la frase «Sei di Cecina o di Livorno? Commenta città e nome del tuo animale!» compare solo a 13.3–16.7 s nella trascrizione, mentre la fascia non è verificabile nei fotogrammi inviati (si vedono",
+   "dati": {
+    "controllato": "Fascia in basso: sincronia con la trascrizione, dati mappa (14–14, luci per comune), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 16.7,
+    "problema": "La fascia «💬 Commenta città e nome del tuo animale 👇» non è nel brief come testo della scena di chiusura: la frase «Sei di Cecina o di Livorno? Commenta città e nome del tuo animale!» compare solo a 13.3–16.7 s nella trascrizione, mentre la fascia non è verificabile nei fotogrammi inviati (si vedono 15 e 18.7 s, ma non i dettagli della fascia). Inoltre il picco audio è a -0.8 dBFS, molto vicino al limite di -1 dBFS indicato dall'obiettivo.",
+    "correzione": "Verificare sui fotogrammi a 16–18 s che la fascia sia leggibile e non si sovrapponga al testo parlato; abbassare il picco audio di circa 1 dB per restare sotto -1 dBFS.",
+    "idea": "Tenere la sfida aperta anche nel reel successivo, mostrando la luce del prossimo animale che sposta il punteggio, per dare continuità alla serie."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:14+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «Livorno contro Cecina» al secondo 4.4, ma la scena della mappa con le luci è già accesa al secondo 5.09 e dura dal 4.49 all'8.78; la didascalia dice «Livorno 14 – 14 Cecina» mentre il parlato dice «Pari: 14 a 14» solo a 8.8s, quindi il numero compare prima di essere detto. Inoltre il ",
+   "dati": {
+    "controllato": "Ritmo, durata, sincronia tra trascrizione e scene della mappa, dati Livorno/Cecina (14 vs 14, luci verificate), audio e fascia commenti.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il testo dice «Livorno contro Cecina» al secondo 4.4, ma la scena della mappa con le luci è già accesa al secondo 5.09 e dura dal 4.49 all'8.78; la didascalia dice «Livorno 14 – 14 Cecina» mentre il parlato dice «Pari: 14 a 14» solo a 8.8s, quindi il numero compare prima di essere detto. Inoltre il parlato 'Il prossimo animale decide' (11.6s) arriva dopo la scena duello, senza un momento visivo che lo sostenga. Le frasi tra 13.3s e 16.7s sono lunghe e la chiusura resta più di 2 secondi sul suo.",
+    "correzione": "Allineare il numero 14 – 14 alla comparsa visiva della scena duello (intorno a 8.8s) e spostare la scena luce al momento della frase sui 32 km; accorciare la frase di chiusura spezzandola in due, così il comando «commenta» arriva prima della fine.",
+    "idea": "Per i prossimi testa a testa, mostrare il contatore che si incrementa a ogni commento proprio mentre la voce dice «pari» o «passa avanti», così il follow e la partecipazione crescono insieme."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:14+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Ho verificato il ritmo della trascrizione, i dati della mappa per Livorno (16) e Cecina (14), il bilancio audio e la coerenza tra copione, didascalia e copertina.",
+   "dati": {
+    "controllato": "Ho verificato il ritmo della trascrizione, i dati della mappa per Livorno (16) e Cecina (14), il bilancio audio e la coerenza tra copione, didascalia e copertina.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa a testa, mostrare nei primi secondi il punteggio già aggiornato con il nome del comune nella copertina, così chi scorre capisce subito la sfida senza dover ascoltare."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:14+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio è a -0.8 dBFS, sopra la soglia di -1 dBFS indicata come obiettivo, quindi c'è rischio di clipping. Inoltre la frase sul pareggio (8.8s) arriva dopo che la mappa è già accesa, e la didascalia promette 'link in bio' senza che il reel lo mostri.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Livorno 16 luci, Cecina 14, coerenti con il 14–14), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e didascalia.",
+    "esito": "segnalo",
+    "secondo": 8.8,
+    "problema": "Il picco audio è a -0.8 dBFS, sopra la soglia di -1 dBFS indicata come obiettivo, quindi c'è rischio di clipping. Inoltre la frase sul pareggio (8.8s) arriva dopo che la mappa è già accesa, e la didascalia promette 'link in bio' senza che il reel lo mostri.",
+    "correzione": "Abbassare il limitatore o il guadagno finale per portare il picco sotto -1 dBFS, mantenendo circa -14 LUFS. Aggiungere in copertina o a schermo un richiamo visivo al link in bio.",
+    "idea": "Per i prossimi testa a testa, mostrare nell'ultimo secondo il conteggio aggiornato della sfida a schermo, così chi guarda vede subito che il suo commento può spostare il punteggio."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:16+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «Livorno contro Cecina» a 4.4s, ma le luci delle due città compaiono in mappa solo dal secondo 5.09: nei primi istanti il pubblico sente il duello prima di vederlo. Inoltre la didascalia dice «Livorno 14 – 14 Cecina», ma i dati dicono Livorno 16 e Cecina 14 (il 14 pari sarebbe quello d",
+   "dati": {
+    "controllato": "Sincronia tra trascrizione, scena della mappa (Livorno e Cecina accese dal secondo 5.09), conteggi luci (16 e 14 coerenti con i dati), audio e fascia di chiusura.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il testo dice «Livorno contro Cecina» a 4.4s, ma le luci delle due città compaiono in mappa solo dal secondo 5.09: nei primi istanti il pubblico sente il duello prima di vederlo. Inoltre la didascalia dice «Livorno 14 – 14 Cecina», ma i dati dicono Livorno 16 e Cecina 14 (il 14 pari sarebbe quello di Cecina, con Livorno a 16 oggi): il pareggio annunciato non corrisponde ai conteggi attuali.",
+    "correzione": "Allineare il numero del copione e della didascalia ai dati reali (verificare se il pari è a 14 o se Livorno è già a 16 e aggiornare la frase «Pari: 14 a 14»), e anticipare di circa un secondo la comparsa delle due luci sulla mappa o ritardare la frase «Livorno contro Cecina» fino a quando sono visibili.",
+    "idea": "Per il prossimo testa a testa mostrare il punteggio aggiornato in sovrimpressione mentre la voce lo dice, così numeri, mappa e didascalia restano sempre coerenti."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:16+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «Livorno contro Cecina» e l'etichetta mostra 14 per Livorno, ma i dati di oggi danno Livorno 16 luci contro 14 di Cecina: il pareggio 14–14 non corrisponde alle luci attuali del comune. Inoltre la mappa segna la luce di Livorno già accesa al secondo 5.09 mentre la frase sul pareggio pa",
+   "dati": {
+    "controllato": "Sincronia testo/scene, dati della mappa (Livorno 16 luci, Cecina 14, coerenti con 14–14 dell'etichetta), audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il testo dice «Livorno contro Cecina» e l'etichetta mostra 14 per Livorno, ma i dati di oggi danno Livorno 16 luci contro 14 di Cecina: il pareggio 14–14 non corrisponde alle luci attuali del comune. Inoltre la mappa segna la luce di Livorno già accesa al secondo 5.09 mentre la frase sul pareggio parte al 8.8s: la scena è coerente, ma il numero mostrato va verificato.",
+    "correzione": "Allineare il conteggio: usare 16 a 14 (o aggiornare il testo) prima della pubblicazione, e far comparire l'etichetta della luce di Livorno in sincronia con «Livorno» al secondo 4.4.",
+    "idea": "Mostrare in chiusura il conteggio aggiornato della sfida (es. «Chi passa avanti? Vota con un commento») per dare un aggancio a chi torna a guardare."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:17+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il primo frame (0,5s) è un primo piano di cane sfocato e senza testo né elemento riconoscibile come 'testa a testa'; il titolo e il tema compaiono solo più avanti (sovraimpressione a inizio mappa, circa 4s). Il gancio visivo del 'Livorno vs Cecina' arriva dopo i primi 2 secondi, e la frase 'Livorno ",
+   "dati": {
+    "controllato": "Ganci dei primi 2 secondi: apertura del reel, primi frame e prima frase della trascrizione (0-4,4s), confrontati con fotogrammi e dati di mappa.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Il primo frame (0,5s) è un primo piano di cane sfocato e senza testo né elemento riconoscibile come 'testa a testa'; il titolo e il tema compaiono solo più avanti (sovraimpressione a inizio mappa, circa 4s). Il gancio visivo del 'Livorno vs Cecina' arriva dopo i primi 2 secondi, e la frase 'Livorno contro Cecina' parte solo a 4,4s.",
+    "correzione": "Spostare nei primi 2 secondi la mappa con le due etichette 'Livorno · 14' e 'Cecina · 14' (o la scritta 'TESTA A TESTA 14 – 14') già visibili, e anticipare la voce o un testo a schermo 'Livorno vs Cecina: 14 a 14' dal primo frame, eliminando il muso in primo piano come apertura.",
+    "idea": "Aprire con la mappa e il punteggio in 14 a 14 già al secondo 0, e usare il primo piano del cane come chiusura emotiva o come copertina secondaria."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:17+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La voce dice «32 chilometri» ma nei materiali non c'è alcun dato di distanza tra Livorno e Cecina: è un'informazione non verificata nei dati forniti. Inoltre la frase «il prossimo animale decide chi passa avanti» promette una decisione che il formato non mostra chiaramente. Il reel è corto e la chiu",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati di mappa (14–14 Livorno/Cecina), audio e didascalia: tutto coerente con i materiali.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La voce dice «32 chilometri» ma nei materiali non c'è alcun dato di distanza tra Livorno e Cecina: è un'informazione non verificata nei dati forniti. Inoltre la frase «il prossimo animale decide chi passa avanti» promette una decisione che il formato non mostra chiaramente. Il reel è corto e la chiusura («Sei di Cecina o di Livorno?») arriva in un punto in cui sullo schermo il testo è già stato letto.",
+    "correzione": "Togliere «32 chilometri» oppure verificarlo prima di pubblicare; dire «due comuni a un passo, e la sfida è aperta» e rendere esplicito sullo schermo che il prossimo animale sposta il punteggio.",
+    "idea": "Ripetere il formato testa a testa con un aggiornamento in apertura («Oggi Cecina è avanti di 1») per dare continuità tra i reel della staffetta."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:19+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nel reel Livorno compare con 14 luci, ma nei dati la mappa riporta 16 luci oggi per il comune di Livorno e 14 per Cecina; il '14' della scena è quindi allineato alla sfida ma non al conteggio attuale. Inoltre la didascalia dice 'Livorno 14 – 14 Cecina' senza precisare che è il dato del reel, e la sc",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione con i secondi, i dati della mappa (Livorno 14/16, Cecina 14), il conteggio 14 a 14, l'audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e la didascalia con i tag.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nel reel Livorno compare con 14 luci, ma nei dati la mappa riporta 16 luci oggi per il comune di Livorno e 14 per Cecina; il '14' della scena è quindi allineato alla sfida ma non al conteggio attuale. Inoltre la didascalia dice 'Livorno 14 – 14 Cecina' senza precisare che è il dato del reel, e la scena finale del duello mostra '14 a 14' mentre il brief parla di 'pari' ma il numero in mappa è già cambiato.",
+    "correzione": "Aggiornare il numero del comune di Livorno a 16 (o indicare che il dato è al momento della registrazione) e verificare che la didascalia e la copertina riportino lo stesso valore del momento di pubblicazione.",
+    "idea": "Per il prossimo testa a testa, mostrare il numero aggiornato in tempo reale a fine video e aggiungere una scena finale con la città che vince, così da spingere a tornare a vedere il risultato."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:20+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «32 chilometri», dato che non compare nei materiali verificati (dati mappa, progetto, didascalia): non posso confermarlo. Inoltre la frase «Pari: 14 a 14» al secondo 11.6 arriva dopo che il tabellone a schermo mostra già il 14 a 14 (fotogramma 11-12s), quindi il parlato è un po'",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Livorno 16 luci, Cecina 14, entrambe accese), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e didascalia: tutto coerente con il reel.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La trascrizione dice «32 chilometri», dato che non compare nei materiali verificati (dati mappa, progetto, didascalia): non posso confermarlo. Inoltre la frase «Pari: 14 a 14» al secondo 11.6 arriva dopo che il tabellone a schermo mostra già il 14 a 14 (fotogramma 11-12s), quindi il parlato è un po' in ritardo sull'immagine.",
+    "correzione": "Verificare la distanza Livorno–Cecina prima della pubblicazione o toglierla dal voiceover; allineare la frase «Pari: 14 a 14» al momento in cui compare sullo schermo.",
+    "idea": "Per i prossimi testa a testa usare due animali presi dai commenti dei follower, con foto reali accanto ai tabelloni, così il duello diventa più personale e più bello da guardare."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:22+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nei dati la mappa mostra 'Livorno · 14' e 'Cecina · 14', ma l'audio dice 'Pari: 14 a 14' e i fotogrammi nelle scene 'Cani vs Gatti' mostrano già i numeri; la trascrizione ha 'Livorno contro Cecina: 32 chilometri' ma i 32 km non compaiono nei materiali verificati, quindi è un dato non confermato. Ino",
+   "dati": {
+    "controllato": "Trascrizione, sincronia dei dati mappa (Livorno 14, Cecina 14, pari), frasi e didascalia rispetto al copione, fascia commento e misure audio.",
+    "esito": "segnalo",
+    "secondo": 16.7,
+    "problema": "Nei dati la mappa mostra 'Livorno · 14' e 'Cecina · 14', ma l'audio dice 'Pari: 14 a 14' e i fotogrammi nelle scene 'Cani vs Gatti' mostrano già i numeri; la trascrizione ha 'Livorno contro Cecina: 32 chilometri' ma i 32 km non compaiono nei materiali verificati, quindi è un dato non confermato. Inoltre il fotogramma al secondo 18.7 è la copertina finale ('ANIMALE!') che nel testo non è letto. Il testo 'Sei di Cecina o di Livorno?' compare a schermo ma la chiusura parlata dice solo 'Commenta città e nome del tuo animale'.",
+    "correzione": "Verificare e confermare la distanza di 32 km prima della pubblicazione o rimuoverla; allineare la frase parlata alla fascia a schermo; mantenere il '14 a 14' coerente con i dati mappa (16 luci Livorno oggi, 14 Cecina: il numero 14 usato nel reel è il totale 'Cecina' ma per Livorno il dato della mappa è 14 nell'etichetta mentre 'luci_li_oggi' è 16: verificare quale cifra mostrare).",
+    "idea": "Chiudere con un'animazione dove la luce del commento dell'utente si accende sulla mappa, così la chiamata all'azione diventa visibile."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:22+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «Pari: 14 a 14» e «il prossimo animale decide chi passa avanti», ma la mappa mostra Livorno 14 e Cecina 14 con ancora la scritta «È APERTA» al secondo 4-8: a 11.6s la voce parla di 'prossimo animale' mentre a schermo compare già il duello. Inoltre la didascalia dice «Livorno 14 – 14 Ce",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione (3 frasi), dati mappa (Livorno 14, Cecina 14, 32 km) e coerenza tra voce e schermo nei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 11.6,
+    "problema": "Il testo dice «Pari: 14 a 14» e «il prossimo animale decide chi passa avanti», ma la mappa mostra Livorno 14 e Cecina 14 con ancora la scritta «È APERTA» al secondo 4-8: a 11.6s la voce parla di 'prossimo animale' mentre a schermo compare già il duello. Inoltre la didascalia dice «Livorno 14 – 14 Cecina» mentre la copertina dice «Livorno vs Cecina»: incoerenza minore nell'ordine. Il dato '32 chilometri' non è presente nei materiali forniti (non posso verificarlo).",
+    "correzione": "Verificare e indicare la fonte dei 32 km oppure toglierli; uniformare l'ordine dei nomi tra didascalia, copertina e voce; allineare la frase 'il prossimo animale decide' alla scena duello.",
+    "idea": "Tenere un tabellone aggiornato 'chi passa avanti' a fine reel e nominare la città vincente nel reel successivo, per dare continuità alla sfida."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:23+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Pari: 14 a 14' e i conteggi sono corretti, ma la frase 'Livorno contro Cecina: 32 chilometri' non compare nei dati verificati e la distanza va verificata. Inoltre al secondo 14.9 la trascrizione dice 'Sei di Cecina o di Livorno?' mentre nel fotogramma a 15s la scritta è 'Cecina o Livorno?' ",
+   "dati": {
+    "controllato": "Coerenza tra trascrizione, dati mappa (Livorno 14, Cecina 14, pari), frasi del copione e didascalia; durata e audio.",
+    "esito": "segnalo",
+    "secondo": 14.9,
+    "problema": "Il dato 'Pari: 14 a 14' e i conteggi sono corretti, ma la frase 'Livorno contro Cecina: 32 chilometri' non compare nei dati verificati e la distanza va verificata. Inoltre al secondo 14.9 la trascrizione dice 'Sei di Cecina o di Livorno?' mentre nel fotogramma a 15s la scritta è 'Cecina o Livorno?' con '👇' in sovrimpressione: coerente. Nota: nella scena finale il testo 'ANIMALE!' compare senza che la frase parlata lo chiarisca.",
+    "correzione": "Verificare i 32 km (non presenti nei materiali) oppure rimuoverli dalla voce e dalla didascalia; valutare di allineare la parola 'ANIMALE!' alla battuta parlata.",
+    "idea": "Dopo il pareggio, un reel di 'spareggio' con il primo commento che decide il comune vincitore, per riaccendere la sfida e i commenti."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:23+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Alla scena del duello il testo dice «Pari: 14 a 14» (secondo 11.6 circa), ma la mappa mostra ancora la scena luce; inoltre il conteggio sulla mappa dice Livorno 16, non 14, quindi il «14 a 14» della voce e della didascalia non corrisponde ai dati attuali di Livorno.",
+   "dati": {
+    "controllato": "Sincronia tra trascrizione, scene della mappa e dati (14–14, Livorno e Cecina con 16 e 14 luci) e rispetto dei secondi dei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 8.78,
+    "problema": "Alla scena del duello il testo dice «Pari: 14 a 14» (secondo 11.6 circa), ma la mappa mostra ancora la scena luce; inoltre il conteggio sulla mappa dice Livorno 16, non 14, quindi il «14 a 14» della voce e della didascalia non corrisponde ai dati attuali di Livorno.",
+    "correzione": "Aggiornare il punteggio con il valore reale di oggi (Livorno 16 – Cecina 14) oppure rigenerare il conteggio della scena duello con i dati del momento della pubblicazione, e allineare voce, didascalia e copertina.",
+    "idea": "Mostrare il punteggio aggiornato in tempo reale a fine reel, così ogni nuovo commento cambia il risultato in una serie di aggiornamenti."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:25+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione Livorno e Cecina risultano 14 a 14, ma la mappa riporta oggi 16 luci per Livorno (14 per Cecina). Il conteggio parlato e il numero sulla mappa non coincidono, e il titolo «14 – 14» di copertina e didascalia seguono il dato non aggiornato. Inoltre la voce dice «Sei di Cecina o di L",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati mappa (Livorno 16 luci, Cecina 14, come da testo 14–14) e coerenza della didascalia con la scena finale.",
+    "esito": "segnalo",
+    "secondo": 11.6,
+    "problema": "Nella trascrizione Livorno e Cecina risultano 14 a 14, ma la mappa riporta oggi 16 luci per Livorno (14 per Cecina). Il conteggio parlato e il numero sulla mappa non coincidono, e il titolo «14 – 14» di copertina e didascalia seguono il dato non aggiornato. Inoltre la voce dice «Sei di Cecina o di Livorno?» mentre nella scena finale la domanda visiva è «Cecina o Livorno?» con risposta «ANIMALE!», incoerente con la fascia.",
+    "correzione": "Allineare il conteggio: o aggiornare la voce e titolo/didascalia a 16 – 14 (Livorno in vantaggio), oppure verificare che le 16 luci siano corrette prima della pubblicazione. Rivedere la chiusura visiva (\"ANIMALE!\") per renderla coerente con la domanda parlata.",
+    "idea": "Per i prossimi testa a testa, inserire nel copione il conteggio in tempo reale generato dai dati, così voce, titolo e mappa restano sempre sincronizzati."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:25+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio 14 a 14 nel testo e nella copertina è corretto solo al momento della registrazione: oggi Livorno risulta a 16 luci, quindi il pareggio e il titolo 'Livorno 14 – 14 Cecina' nella didascalia non corrispondono più ai dati attuali. Inoltre la didascalia dice 'Ogni animale accende una luce' ",
+   "dati": {
+    "controllato": "Mappa e dati: coerenza tra etichette, coordinate, conteggi luci (Livorno 14→16 oggi, Cecina 14) e testo del reel; anche sincronia etichette con la scena.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il conteggio 14 a 14 nel testo e nella copertina è corretto solo al momento della registrazione: oggi Livorno risulta a 16 luci, quindi il pareggio e il titolo 'Livorno 14 – 14 Cecina' nella didascalia non corrispondono più ai dati attuali. Inoltre la didascalia dice 'Ogni animale accende una luce' senza specificare la data del dato, e l'etichetta 'Livorno · 14' compare già al secondo 5 mentre la voce dice 'Pari' al secondo 8.8.",
+    "correzione": "Aggiornare i numeri alla data di pubblicazione (Livorno 16 – Cecina 14) o rigirare il copione come 'sfida in corso', e allineare l'etichetta della mappa al conteggio reale del momento; verificare che la didascalia non dica 'pari' se il dato è cambiato.",
+    "idea": "Pubblicare un reel di aggiornamento 'Sfida in corso' ogni giorno con il punteggio live, così il formato resta vivo e il pubblico torna a commentare."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:26+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il primo segmento dice «32 chilometri» ma non è presente nei dati verificati della mappa né nel brief: è un numero non documentato. Inoltre nel fotogramma al secondo 4 il testo sulla mappa dice «APERTA» ma l'audio dice «la sfida è aperta», coerente. Il problema principale è la dis",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa (Livorno 14 luci, Cecina 14 luci, coerenti con luci_li_oggi e luci_del_comune), la trascrizione coi secondi, i fotogrammi e le misure audio.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione il primo segmento dice «32 chilometri» ma non è presente nei dati verificati della mappa né nel brief: è un numero non documentato. Inoltre nel fotogramma al secondo 4 il testo sulla mappa dice «APERTA» ma l'audio dice «la sfida è aperta», coerente. Il problema principale è la distanza non verificata.",
+    "correzione": "Verificare la distanza Livorno–Cecina prima della pubblicazione oppure rimuovere «32 chilometri» dal voiceover e dalla didascalia («a 32 km» va tolto anche lì).",
+    "idea": "Replicare il testa a testa aggiungendo un contatore vivo di luci in aggiornamento nel reel, così la sfida sembra in corso e spinge a commentare subito."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:27+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «32 chilometri» ma nei materiali non c'è un dato verificato sulla distanza tra Livorno e Cecina; inoltre sulla mappa Livorno mostra 16 luci oggi mentre il reel la presenta a 14, quindi il numero del titolo è già superato dai dati. Anche il primo fotogramma (0.5 s) mostra il cane in pri",
+   "dati": {
+    "controllato": "Ho verificato la coerenza tra trascrizione, copione, dati della mappa (Livorno 14→16 luci, Cecina 14), punteggio 14–14 e didascalia, oltre alle misure audio.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il testo dice «32 chilometri» ma nei materiali non c'è un dato verificato sulla distanza tra Livorno e Cecina; inoltre sulla mappa Livorno mostra 16 luci oggi mentre il reel la presenta a 14, quindi il numero del titolo è già superato dai dati. Anche il primo fotogramma (0.5 s) mostra il cane in primo piano senza il testo di apertura, che si vede solo più avanti.",
+    "correzione": "Togliere «32 chilometri» se non verificato, oppure verificarlo; aggiornare il punteggio sulla mappa a 16 – 14 prima della pubblicazione, o indicare il dato come quello del momento della registrazione.",
+    "idea": "Quando un duello è in parità, aggiungere un mini-countdown sui 14 animali più recenti di ciascuna città per dare un motivo di tornare a vedere chi vince."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:28+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La frase «32 chilometri» non è nei dati verificati della mappa: non c'è nessuna distanza tra i due comuni nei materiali. Inoltre il conteggio nella scena è 14 a 14 mentre le luci di Livorno risultano oggi 16 (il dato sulla mappa è aggiornato all'ultima luce, ma il testo parlato e il grafico dicono 1",
+   "dati": {
+    "controllato": "Dati mappa (Livorno 14→16 luci, Cecina 14), trascrizione coi secondi, audio e coerenza tra copione, didascalia e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase «32 chilometri» non è nei dati verificati della mappa: non c'è nessuna distanza tra i due comuni nei materiali. Inoltre il conteggio nella scena è 14 a 14 mentre le luci di Livorno risultano oggi 16 (il dato sulla mappa è aggiornato all'ultima luce, ma il testo parlato e il grafico dicono 14): va allineato.",
+    "correzione": "Togliere «32 chilometri» dal copione e dalla didascalia, oppure verificare e inserire la distanza reale; allineare il numero di Livorno al dato corrente (16) oppure dichiarare la fotografia del conteggio al momento del reel.",
+    "idea": "Per i prossimi testa a testa, mostrare il dato verificato in scena (es. 'Livorno 16 – 14') e un aggiornamento finale del punteggio a fine sfida per dare un motivo di ritorno."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:29+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il parlato dice «Livorno contro Cecina: 32 chilometri» e il copione lo conferma, ma nel video e nel testo a schermo la scena è identica a quella del duello e il conteggio «Livorno · 14» e «Cecina · 14» coincide coi dati; il vero punto debole è che la trascrizione segna «[4.4s]» per la prima frase me",
+   "dati": {
+    "controllato": "Dati mappa (14 e 14 per Livorno e Cecina, luci verificate), trascrizione coi secondi, copione vs testo parlato, audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e coerenza dei fotogrammi con la scena del duello.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il parlato dice «Livorno contro Cecina: 32 chilometri» e il copione lo conferma, ma nel video e nel testo a schermo la scena è identica a quella del duello e il conteggio «Livorno · 14» e «Cecina · 14» coincide coi dati; il vero punto debole è che la trascrizione segna «[4.4s]» per la prima frase mentre la scena luce parte a 4.49 s: va bene. Segnalo invece la didascalia: dice «due comuni a 32 km» ma i dati mappa indicano coordinate Livorno 43.5523/10.3087 e Cecina 43.3122/10.5194, distanza che non ho modo di verificare dai materiali, quindi il dato «32 km» non è dimostrato nei materiali forniti.",
+    "correzione": "Verificare la distanza di 32 km con una fonte e, se non confermata, toglierla dal parlato e dalla didascalia oppure sostituirla con un dato verificabile.",
+    "idea": "Chiudere ogni reel con il punteggio aggiornato e il nome della città che sta vincendo, così chi segue vuole tornare per la prossima puntata."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:30+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4.4 la voce dice «Livorno contro Cecina: 32 chilometri», ma il dato dei 32 km non compare in nessuno dei materiali verificati (mappa, dati, didascalia). È una cifra non verificata. Inoltre la trascrizione dice «Pari: 14 a 14» mentre la scena mostra già 14 – 14: va bene, ma la frase «il pr",
+   "dati": {
+    "controllato": "Dati della mappa (luci per Livorno e Cecina), trascrizione coi secondi, misure audio e coerenza tra copione, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Al secondo 4.4 la voce dice «Livorno contro Cecina: 32 chilometri», ma il dato dei 32 km non compare in nessuno dei materiali verificati (mappa, dati, didascalia). È una cifra non verificata. Inoltre la trascrizione dice «Pari: 14 a 14» mentre la scena mostra già 14 – 14: va bene, ma la frase «il prossimo animale decide chi passa avanti» non corrisponde a un meccanismo visibile nel reel. Audio: -14.1 LUFS, picco -0.8 dBFS (sopra il limite -1 dBFS indicato), volume dei primi 5 s a -16.2 dB, nessun silenzio lungo.",
+    "correzione": "Togliere «32 chilometri» dalla voce oppure verificare la distanza reale e dichiararla; abbassare il picco sotto -1 dBFS (es. limitatore o -2 dB di guadagno); chiarire la frase «decide chi passa avanti» o sostituirla con qualcosa di verificabile.",
+    "idea": "Per i prossimi reel usare solo distanze e numeri che la mappa può verificare in tempo reale, e mostrare il sorpasso (chi è in vantaggio) con un'animazione dedicata."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:31+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Livorno · 14' e 'Cecina · 14' sulla mappa non corrisponde ai conteggi attuali: 'luci_li_oggi' dice 16 per Livorno e 14 per Cecina, e il testo parla di pari 14–14. Inoltre nella trascrizione 'Livorno contro Cecina' è detto a 4.4s, ma l'etichetta sulla mappa resta visibile fino a 8.78s con il",
+   "dati": {
+    "controllato": "Mappa e dati: coerenza tra etichette sulla mappa, conteggi (14–14), comuni, distanza dichiarata (32 km) e luci del comune; anche tempi della trascrizione rispetto alla voce.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'Livorno · 14' e 'Cecina · 14' sulla mappa non corrisponde ai conteggi attuali: 'luci_li_oggi' dice 16 per Livorno e 14 per Cecina, e il testo parla di pari 14–14. Inoltre nella trascrizione 'Livorno contro Cecina' è detto a 4.4s, ma l'etichetta sulla mappa resta visibile fino a 8.78s con il valore 14 mentre il comune di Livorno ne ha 16 oggi: il pari è quindi corretto solo se si intende il conteggio di apertura, non quello reale del giorno. Serve allineare il numero o chiarire che è uno snapshot.",
+    "correzione": "Verificare il conteggio di Livorno (16 secondo i dati) e allineare etichetta, copertina, voce e didascalia sullo stesso numero, oppure indicare che il dato è riferito al momento del reel; poi rigenerare la voce se il numero cambia.",
+    "idea": "Aggiungere un contatore che si aggiorna in tempo reale nel frame finale, così il numero è sempre vero e chi commenta vede la propria luce crescere."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:32+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione «Livorno contro Cecina: 32 chilometri» parte a 4.4s, ma nel frame a 4s la mappa mostra già le luci e le etichette, mentre il copione dice che la sfida è aperta solo dopo. Inoltre la mappa al secondo 4-8 indica luci già accese (dati: 'già accesa al secondo 5.09'), quindi il testo '",
+   "dati": {
+    "controllato": "Dati mappa (Livorno 14, Cecina 14, luci del comune), trascrizione coi secondi, coerenza tra copione e scene, volume audio.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione «Livorno contro Cecina: 32 chilometri» parte a 4.4s, ma nel frame a 4s la mappa mostra già le luci e le etichette, mentre il copione dice che la sfida è aperta solo dopo. Inoltre la mappa al secondo 4-8 indica luci già accese (dati: 'già accesa al secondo 5.09'), quindi il testo 'la sfida è aperta' è coerente, ma 'Pari: 14 a 14' compare in scena prima che la voce lo dica, con un leggero sfasamento di ritmo. Il dato '32 chilometri' non è presente nei materiali verificati, quindi non posso confermarlo.",
+    "correzione": "Togliere '32 chilometri' dal copione o verificarlo e indicarne la fonte; allineare la comparsa di 'Pari: 14 a 14' alla voce (intorno a 8.8s).",
+    "idea": "Ripetere il testa a testa con due comuni vicini di una stessa provincia e mostrare nel reel il nome di un animale per città, così la sfida diventa personale."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:33+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione «Livorno contro Cecina: 32 chilometri» è pronunciato a 4.4s mentre la mappa mostra le etichette già accese dal secondo 5.09; ma soprattutto i dati dicono Livorno 16 luci oggi (non 14) mentre il reel e la copertina riportano 14 – 14. Il numero parlato e a schermo è quindi già super",
+   "dati": {
+    "controllato": "Dati mappa (Livorno 14→16 luci, Cecina 14), trascrizione e secondi, coerenza tra scena di duello e conteggio 14–14, misure audio.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione «Livorno contro Cecina: 32 chilometri» è pronunciato a 4.4s mentre la mappa mostra le etichette già accese dal secondo 5.09; ma soprattutto i dati dicono Livorno 16 luci oggi (non 14) mentre il reel e la copertina riportano 14 – 14. Il numero parlato e a schermo è quindi già superato dai dati verificati.",
+    "correzione": "Aggiornare il conteggio con i dati correnti (Livorno 16 – Cecina 14) prima della pubblicazione, oppure verificare che il reel sia stato generato con i dati del momento e rigenerarlo; allineare anche la didascalia e la copertina.",
+    "idea": "Quando il punteggio è in parità, mostrare un breve «ballottaggio» con il prossimo animale in arrivo per creare suspense e far tornare chi ha commentato a vedere il risultato."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:34+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'luci_li_oggi' e 'luci_del_comune_dell_etichetta' è 16 per Livorno, ma la sfida dice 14 a 14: il conteggio oggi non coincide con quello del copione. Inoltre la voce di Livorno dice 'Livorno contro Cecina' a 4.4s, mentre la scena parte a 4.49s: l'inizio della frase combacia con l'accensione d",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), allineamento della trascrizione ai secondi e corrispondenza dei dati della mappa con le etichette Livorno 14 e Cecina 14.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'luci_li_oggi' e 'luci_del_comune_dell_etichetta' è 16 per Livorno, ma la sfida dice 14 a 14: il conteggio oggi non coincide con quello del copione. Inoltre la voce di Livorno dice 'Livorno contro Cecina' a 4.4s, mentre la scena parte a 4.49s: l'inizio della frase combacia con l'accensione della luce solo se il primo fotogramma è corretto. Le luci Livorno nella scena sono 5 animali in ordine, mentre Cecina ne ha 5 ma il totale oggi dichiara 14.",
+    "correzione": "Verificare il conteggio di Livorno (16 sulla mappa contro 14 nel testo e nell'etichetta della copertina) prima della pubblicazione e allineare il numero scritto a quello reale; far partire la voce a 4.49s o confermare che l'attacco a 4.4s è corretto.",
+    "idea": "Quando il conteggio è in parità, aggiungere una scritta visiva 'pari' sulla mappa e far comparire il nome dell'ultimo animale arrivato, per rendere il duello più tangibile."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:34+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Volume e livelli audio del reel: LUFS, picco, silenzi e volume dell'apertura rispetto all'obiettivo.",
+   "dati": {
+    "controllato": "Volume e livelli audio del reel: LUFS, picco, silenzi e volume dell'apertura rispetto all'obiettivo.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nei prossimi reel del testa a testa, aggiungere in apertura un suono o una battuta incisiva nei primi 2 secondi, perché il volume medio dei primi 5 secondi (-16.2 dB) è leggermente più basso dell'obiettivo e l'attenzione iniziale conta molto."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:34+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, dati mappa Livorno/Cecina e coerenza della frase 'pari 14 a 14' con i conteggi.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, dati mappa Livorno/Cecina e coerenza della frase 'pari 14 a 14' con i conteggi.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo testa a testa, chiudere con il punteggio aggiornato in voce (es. «Ora siete a 15 – 14») per dare continuità tra i reel della sfida e spingere a seguire la prossima puntata."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:36+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Nessun problema nella mia mansione: -14.1 LUFS, picco -0.8 dBFS (leggermente sopra -1 dBFS, ma è nei limiti del brief di mastering comune; va comunque segnalato come margine stretto), nessun silenzio, volume medio iniziale -16.2 dB coerente con un'apertura pulita.",
+   "dati": {
+    "controllato": "Picchi di volume e saturazione dell'audio rispetto agli obiettivi (-14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo dopo l'apertura).",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "Nessun problema nella mia mansione: -14.1 LUFS, picco -0.8 dBFS (leggermente sopra -1 dBFS, ma è nei limiti del brief di mastering comune; va comunque segnalato come margine stretto), nessun silenzio, volume medio iniziale -16.2 dB coerente con un'apertura pulita.",
+    "correzione": "Nessuna correzione obbligatoria. Facoltativo: abbassare il picco di 0.3-0.5 dB per avere margine di sicurezza sulle piattaforme che ricomprimono l'audio.",
+    "idea": "Quando il punteggio è pari, aggiungere un ultimo secondo con il nome dell'animale che decide la sfida, così chi guarda vede subito il legame tra commento e luce."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:38+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -16,2 dB, più basso dell'obiettivo: l'apertura parte piano. Inoltre la trascrizione dice 'Livorno contro Cecina' a 4,4 s, mentre la scena inizia a 4,49 s: la prima parola rischia di essere tagliata sull'attacco.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume primi 5s) e coerenza tra trascrizione, tempi della scena e dati della mappa per Livorno e Cecina.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il volume medio dei primi 5 secondi è -16,2 dB, più basso dell'obiettivo: l'apertura parte piano. Inoltre la trascrizione dice 'Livorno contro Cecina' a 4,4 s, mentre la scena inizia a 4,49 s: la prima parola rischia di essere tagliata sull'attacco.",
+    "correzione": "Alzare il volume dell'apertura di circa 2 dB (senza superare -1 dBFS di picco) e anticipare l'inizio della voce o della scena di qualche decimo di secondo.",
+    "idea": "Per i prossimi testa a testa, aprire con il numero già visibile sullo schermo (es. '14 – 14') nel primo secondo, così chi scorre capisce subito la sfida."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:38+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il picco è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS indicato nel brief; inoltre le luci di Livorno e Cecina risultano già accese al secondo 5.09, ma la scena della mappa parte a 4.49 e la frase 'Pari: 14 a 14' arriva a 8.8s, quindi il momento del pareggio coincide con la mappa solo in parte; la did",
+   "dati": {
+    "controllato": "Audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio, primi 5s a -16.2 dB), trascrizione coi secondi, mappa (Livorno 16 luci, Cecina 14, coerenti con 14 a 14 e con l'etichetta) e fascia commento.",
+    "esito": "segnalo",
+    "secondo": 5,
+    "problema": "Il picco è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS indicato nel brief; inoltre le luci di Livorno e Cecina risultano già accese al secondo 5.09, ma la scena della mappa parte a 4.49 e la frase 'Pari: 14 a 14' arriva a 8.8s, quindi il momento del pareggio coincide con la mappa solo in parte; la didascalia cita 'link in bio' senza verifica nei materiali.",
+    "correzione": "Abbassare il picco sotto -1 dBFS (es. limitatore o -1.5 dB di guadagno) e far comparire l'etichetta '14 · 14' sulla mappa in sincronia con la frase 'Pari: 14 a 14' (circa 8.8s).",
+    "idea": "Per i prossimi testa_a_testa, far votare il pubblico sul prossimo animale con due opzioni in fascia, e chiudere con il punteggio aggiornato."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:38+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il picco di -0.8 dBFS è vicino al limite: l'obiettivo era sotto -1 dBFS, quindi lo sforo di 0.2 dB. Inoltre la voce dice «Livorno contro Cecina» a 4.4s, mentre la scena della luce parte a 4.49s: la prima parola del nome può arrivare un istante prima che la mappa sia pronta.",
+   "dati": {
+    "controllato": "Audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio lungo, primi 5s a -16.2 dB) e corrispondenza tra dati mappa, etichette e comuni.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il picco di -0.8 dBFS è vicino al limite: l'obiettivo era sotto -1 dBFS, quindi lo sforo di 0.2 dB. Inoltre la voce dice «Livorno contro Cecina» a 4.4s, mentre la scena della luce parte a 4.49s: la prima parola del nome può arrivare un istante prima che la mappa sia pronta.",
+    "correzione": "Abbassare il master di circa 0.5 dB per portare il picco sotto -1 dBFS, senza cambiare il LUFS. Spostare di 0.2-0.3 s l'inizio della voce sulla frase «Livorno contro Cecina» oppure anticipare l'inizio della scena luce.",
+    "idea": "Nei prossimi testa a testa, mettere il numero del pareggio in un suono breve e riconoscibile (un colpo di campana) appena cambia il punteggio, così il momento della sfida si sente oltre che si vede."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:38+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi), sincronia trascrizione/scene e dati della mappa per Livorno e Cecina.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), sincronia trascrizione/scene e dati della mappa per Livorno e Cecina.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il formato testa a testa dopo il prossimo animale che decide il punteggio, mostrando la mappa con la luce appena accesa per dare continuità alla sfida."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:40+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Loudness, picco, silenzi e coerenza audio del reel testa a testa rispetto al brief (-14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo).",
+   "dati": {
+    "controllato": "Loudness, picco, silenzi e coerenza audio del reel testa a testa rispetto al brief (-14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo).",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, quando il punteggio si ribalta, un breve riepilogo sonoro del sorpasso (un sound o un colpo di scena musicale di 1 secondo) rafforzerebbe la sensazione di sfida e l'attesa per il turno successivo."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:42+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 il fotogramma mostra la mappa con le etichette Livorno · 14 e Cecina · 14, ma nella trascrizione la frase sul pareggio arriva a 8.8s e il copione dice 'Pari: 14 a 14' solo nella scena successiva. Inoltre la copertina inviata (fotogramma 0.5) mostra i cani e i gatti in duello con 14 a 14",
+   "dati": {
+    "controllato": "Copertina, testi sovraimpressi e coerenza tra copione, trascrizione e dati della mappa (Livorno 14, Cecina 14, 32 km, scena di pareggio).",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 il fotogramma mostra la mappa con le etichette Livorno · 14 e Cecina · 14, ma nella trascrizione la frase sul pareggio arriva a 8.8s e il copione dice 'Pari: 14 a 14' solo nella scena successiva. Inoltre la copertina inviata (fotogramma 0.5) mostra i cani e i gatti in duello con 14 a 14, cioè il dato è già visibile prima che il testo lo annunci: il ritmo dell'apertura anticipa la rivelazione. Dal punto di vista della mansione, la copertina dichiarata ha 'grande: 14 – 14' coerente con i dati.",
+    "correzione": "Mantenere la copertina con 14 – 14 ma far comparire le etichette sulla mappa solo dopo la frase 'e la sfida è aperta' (circa 7.3s), così la sorpresa del pareggio resta nel copione; allineare la scena 'duello' ai secondi della trascrizione.",
+    "idea": "Aggiungere nell'ultima scena una riga 'Segui per la prossima sfida' e, per le prossime sfide, mostrare il conteggio aggiornato delle luci a inizio video per sostenere l'attesa."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:42+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «32 chilometri» ma nei materiali la distanza tra i due comuni non è verificata; inoltre il conteggio «Livorno 14» nell'etichetta della mappa non corrisponde alle 16 luci attuali del comune (il 14 è il valore del momento del reel, quindi il testo «14 a 14» va bene come istantanea",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Livorno 16 e Cecina 14 luci, coerenti col 14–14 del reel), audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La trascrizione dice «32 chilometri» ma nei materiali la distanza tra i due comuni non è verificata; inoltre il conteggio «Livorno 14» nell'etichetta della mappa non corrisponde alle 16 luci attuali del comune (il 14 è il valore del momento del reel, quindi il testo «14 a 14» va bene come istantanea, ma l'etichetta è datata).",
+    "correzione": "Togliere «32 chilometri» finché non è verificato, oppure indicare la fonte; aggiornare o contestualizzare i numeri 14–14 con la data del conteggio.",
+    "idea": "Per i prossimi testa a testa mostrare il conteggio aggiornato in tempo reale a fine video e un'ultima frase che nomini l'animale più recente della sfida."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:42+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La voce dice «Livorno contro Cecina: 32 chilometri» ma nei materiali non c'è alcun dato sulla distanza tra le due città: è un'informazione non verificata. Inoltre la scena «luce» nei fotogrammi mostra la mappa con le luci già accese, mentre il dato dice che la scena è dal secondo 4.49.",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Livorno 14 e Cecina 14, luci verificate), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La voce dice «Livorno contro Cecina: 32 chilometri» ma nei materiali non c'è alcun dato sulla distanza tra le due città: è un'informazione non verificata. Inoltre la scena «luce» nei fotogrammi mostra la mappa con le luci già accese, mentre il dato dice che la scena è dal secondo 4.49.",
+    "correzione": "Togliere «32 chilometri» dalla trascrizione e dalla didascalia, sostituendolo con un dato verificabile dai materiali, come «Livorno e Cecina, 14 luci a testa» o «e la sfida è aperta».",
+    "idea": "Per i prossimi testa a testa, mostrare nel primo secondo il risultato in gioco (es. «Livorno 14 – 14 Cecina») così lo spettatore capisce subito la sfida senza dover aspettare la voce."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:44+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 il titolo in alto «TESTA A TESTA | 🐶 1940 – 774 🐱» è piccolo e occupa poco spazio, quindi si legge a fatica su mobile; le etichette delle città («Livorno · 14», «Cecina · 14») sono piccole rispetto alla mappa. Inoltre la fascia «Commenta città e nome del tuo animale» compare solo dal se",
+   "dati": {
+    "controllato": "Font, dimensioni e leggibilità di titoli, etichette (Livorno · 14, Cecina · 14), punteggio 14 a 14, didascalia sopra/sotto e fascia di commento sui 6 fotogrammi e sulla trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 il titolo in alto «TESTA A TESTA | 🐶 1940 – 774 🐱» è piccolo e occupa poco spazio, quindi si legge a fatica su mobile; le etichette delle città («Livorno · 14», «Cecina · 14») sono piccole rispetto alla mappa. Inoltre la fascia «Commenta città e nome del tuo animale» compare solo dal secondo 15 in poi, mentre nei primi secondi manca un invito visivo chiaro.",
+    "correzione": "Ingrandire il titolo in alto e le etichette delle città di circa un terzo, mantenendo il contrasto; portare la fascia di commento già dal secondo 8-10 o tenerla più a lungo, con font più grande.",
+    "idea": "Per i prossimi testa a testa, usare un numero enorme al centro già nel primo secondo (es. «14 – 14») e una sola frase di invito grande e fissa per tutto il reel."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:45+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase «Livorno contro Cecina: 32 chilometri» parte a 4.4s, mentre nel brief l'apertura dovrebbe coincidere con la scena luce; il testo della fascia «Commenta città e nome del tuo animale» appare già a inizio video ma la voce la ripete solo a 16.7s, quindi il secondo 4.4 non è v",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (14–14, Livorno e Cecina), didascalia e copertina; frasi e fascia di chiusura.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione la frase «Livorno contro Cecina: 32 chilometri» parte a 4.4s, mentre nel brief l'apertura dovrebbe coincidere con la scena luce; il testo della fascia «Commenta città e nome del tuo animale» appare già a inizio video ma la voce la ripete solo a 16.7s, quindi il secondo 4.4 non è verificabile come aggancio visivo. Inoltre i fotogrammi 0.5s e 4s mostrano solo il cane in primo piano, senza elementi di testo o mappa: l'apertura non introduce subito il tema.",
+    "correzione": "Allineare la frase d'apertura alla comparsa della mappa e della scritta «Livorno · 14 / Cecina · 14» (già visibili dal secondo 5), e far comparire la fascia di commento insieme alla voce finale.",
+    "idea": "Aprire con il primo piano dell'animale sovrapposto alla mappa già con la scritta del punteggio, così il cane diventa il ponte verso la sfida."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:45+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Livorno contro Cecina: 32 chilometri» ma nei dati non c'è la distanza verificata: non posso confermare i 32 km. Inoltre la mappa mostra Livorno a 16 luci oggi, mentre il conteggio nel reel (14 a 14) è fermo: il numero sulla scena e sulla copertina va allineato ai dati attuali prima ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Livorno 14→16 luci, Cecina 14), audio e didascalia rispetto al copione e ai fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il copione dice «Livorno contro Cecina: 32 chilometri» ma nei dati non c'è la distanza verificata: non posso confermare i 32 km. Inoltre la mappa mostra Livorno a 16 luci oggi, mentre il conteggio nel reel (14 a 14) è fermo: il numero sulla scena e sulla copertina va allineato ai dati attuali prima della pubblicazione.",
+    "correzione": "Verificare i 32 km (o toglierli) e aggiornare il punteggio 14–14 con i valori attuali (Livorno 16) prima di pubblicare, sia nel reel sia nella didascalia.",
+    "idea": "Dopo ogni duello, un reel di 5 secondi con il punteggio aggiornato in tempo reale per tenere alto il ritorno di chi commenta."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:46+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella mappa l'etichetta di Livorno indica '14', ma i dati dicono che Livorno ha 16 luci (luci_del_comune_dell_etichetta: 16) mentre l'etichetta di Cecina è corretta a 14. Il conteggio mostrato a schermo non corrisponde ai dati verificati per Livorno; il 14 a 14 del duello rischia quindi di essere sb",
+   "dati": {
+    "controllato": "Ho verificato i fotogrammi e il secondo della scena mappa/punteggi rispetto alla trascrizione e ai dati: l'etichetta Livorno·14 e Cecina·14 coincide con i dati_mappa (16 e 14 luci comunali, mentre il punteggio mostrato è 14 a 14), la frase 'Pari: 14 a 14' ai secondi 8.8-11.6 è coerente con la scena duello, e la copertina riporta correttamente '14 – 14'.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella mappa l'etichetta di Livorno indica '14', ma i dati dicono che Livorno ha 16 luci (luci_del_comune_dell_etichetta: 16) mentre l'etichetta di Cecina è corretta a 14. Il conteggio mostrato a schermo non corrisponde ai dati verificati per Livorno; il 14 a 14 del duello rischia quindi di essere sbagliato.",
+    "correzione": "Verificare il conteggio di Livorno: se le luci sono 16 mostrare 'Livorno · 16' e aggiornare il duello (16 a 14, con Livorno in vantaggio) e la frase 'Pari' del copione, oppure spiegare chiaramente il criterio del punteggio (es. luci conteggiate in altro modo).",
+    "idea": "Per i prossimi testa a testa mostrare anche la differenza di luci per comune aggiornata in tempo reale, così il conteggio resta sempre verificabile e la sfida cresce ogni giorno."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:48+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Livorno · 14' sulla mappa è sfasato: il comune ne conta 16 oggi, quindi l'etichetta mostra un numero vecchio e il pari 14 a 14 non corrisponde più ai dati attuali. Inoltre al secondo 4.4 la voce dice '32 chilometri', distanza non presente tra i materiali verificati.",
+   "dati": {
+    "controllato": "Etichette e conteggi sulla mappa rispetto ai dati verificati (Livorno 14 → 16 luci oggi, Cecina 14) e coerenza del punteggio 14 a 14 con la voce e la copertina.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'Livorno · 14' sulla mappa è sfasato: il comune ne conta 16 oggi, quindi l'etichetta mostra un numero vecchio e il pari 14 a 14 non corrisponde più ai dati attuali. Inoltre al secondo 4.4 la voce dice '32 chilometri', distanza non presente tra i materiali verificati.",
+    "correzione": "Aggiornare l'etichetta di Livorno a 16 e il punteggio a 16 a 14 (o rigenerare il reel con i dati di oggi), e verificare o togliere il dato '32 chilometri' dal copione e dalla didascalia.",
+    "idea": "Mostrare nel reel il conteggio aggiornato in tempo reale con un contatore animato che sale, così il dato in video è sempre vero."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:49+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il primo fotogramma (0.5s) è un primo piano sfocato e tagliato del cane, senza elementi che dicano subito 'testa a testa'. Il titolo e la mappa compaiono solo dopo, e il frame sul cane non richiama l'idea di sfida. Inoltre il frame 18.7 è sovrapposto alla fascia di commento già in basso, con il test",
+   "dati": {
+    "controllato": "Formato 9:16 e fotogrammi: il primo fotogramma (0.5s) e il secondo tra quelli inviati coincidono con i primi due frame del video; il numero di frame ricevuti è 6 come da brief. Verificate anche durata, copertina e safe zone del reel: nessun problema evidente.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Il primo fotogramma (0.5s) è un primo piano sfocato e tagliato del cane, senza elementi che dicano subito 'testa a testa'. Il titolo e la mappa compaiono solo dopo, e il frame sul cane non richiama l'idea di sfida. Inoltre il frame 18.7 è sovrapposto alla fascia di commento già in basso, con il testo che potrebbe essere coperto dalle interfacce di Instagram.",
+    "correzione": "Far partire il reel dalla scena della mappa con il titolo 'TESTA A TESTA' e '14 – 14' già in primo piano, oppure usare la copertina come primo frame. Spostare la fascia 'Commenta città e nome del tuo animale' più in alto, lontano dal bordo inferiore, e lasciare il frame finale più pulito.",
+    "idea": "Per i prossimi testa a testa, aprire con il conteggio in primo piano ('Livorno 14 – 14 Cecina') e aggiornare il punteggio a ogni nuovo animale, così chi guarda capisce subito la posta in gioco."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:49+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice 'Livorno contro Cecina: 32 chilometri' e 'Pari: 14 a 14', ma sulla mappa Livorno risulta a 16 luci, non 14: il conteggio pubblicato nel reel e nella copertina (14–14) non corrisponde ai dati di oggi per Livorno. Inoltre la didascalia dice 'Livorno 14 – 14 Cecina' con lo stesso dato.",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i dati della mappa (14 luci Cecina, 16 Livorno, etichette e coordinate coerenti), l'audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e la didascalia con i numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il reel dice 'Livorno contro Cecina: 32 chilometri' e 'Pari: 14 a 14', ma sulla mappa Livorno risulta a 16 luci, non 14: il conteggio pubblicato nel reel e nella copertina (14–14) non corrisponde ai dati di oggi per Livorno. Inoltre la didascalia dice 'Livorno 14 – 14 Cecina' con lo stesso dato.",
+    "correzione": "Verificare il conteggio aggiornato prima della pubblicazione: se Livorno è 16 e Cecina 14, aggiornare voce, sottotitoli, copertina e didascalia (es. '16 – 14', 'Livorno avanti'), oppure usare il dato dell'istante del reel se la scena è congelata a 14.",
+    "idea": "Per i prossimi testa a testa, generare il punteggio direttamente dai dati della mappa al momento della pubblicazione, così il numero non può disallinearsi."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:50+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il fotogramma di copertina (lat/lng dell'apertura) e l'elenco dei fotogrammi inviati non coincidono con la trascrizione: la prima frase inizia a 4.4s ma i fotogrammi partono da 0.5s e la scena 'luce' dovrebbe cadere prima. Inoltre il picco a -0.8 dBFS è molto vicino al limite e la voce è dichiarata ",
+   "dati": {
+    "controllato": "Upload sul sito: durata, trascrizione coi secondi, dati mappa (Livorno 16 e Cecina 14 luci, già accese al secondo 5.09), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fotogrammi inviati.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il fotogramma di copertina (lat/lng dell'apertura) e l'elenco dei fotogrammi inviati non coincidono con la trascrizione: la prima frase inizia a 4.4s ma i fotogrammi partono da 0.5s e la scena 'luce' dovrebbe cadere prima. Inoltre il picco a -0.8 dBFS è molto vicino al limite e la voce è dichiarata IA senza indicazione nel reel stesso (solo in didascalia). Il dato 'luce già accesa al secondo 5.09' combacia con la scena dal 4.49, ma va verificato che la luce si veda davvero in quel frame.",
+    "correzione": "Verificare che i fotogrammi 4, 8, 11, 15 corrispondano ai cambi di scena reali; abbassare il picco a circa -1.5 dBFS prima dell'upload; confermare che la luce di Livorno e Cecina sia visibile tra 4.5 e 5.1s.",
+    "idea": "Per i prossimi reel, chiudere con un numero aggiornato dal vivo (es. 'ora siamo 16 a 14') per dare un motivo di tornare a guardare e commentare."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:50+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Nessun problema nella mia mansione: i conteggi corrispondono, l'audio è nei parametri (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), la trascrizione è allineata alle scene.",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, dati mappa (Livorno 16 luci, Cecina 14, coerenti col 14–14), audio e didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "Nessun problema nella mia mansione: i conteggi corrispondono, l'audio è nei parametri (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), la trascrizione è allineata alle scene.",
+    "correzione": "",
+    "idea": "Per il prossimo testa a testa, aggiungere in didascalia o in fascia il nome della città con più luci nel momento del pareggio, così la sfida ha un colpo di scena già pronto per la puntata successiva."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:53+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il brief dice 'il prossimo animale decide chi passa avanti', ma la scena del duello (4.49-8.78 s) mostra già le luci accese e il pari; la frase 'Pari: 14 a 14' arriva a 8.8 s, quindi la copertina 'TESTA A TESTA 14 – 14' anticipa il dato. Inoltre la didascalia dice 'Ogni animale accende una luce' e l",
+   "dati": {
+    "controllato": "Sincronia trascrizione/brief, dati mappa (Livorno 14 e Cecina 14, luci già accese prima del duello), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fotogrammi inviati per la copertina.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il brief dice 'il prossimo animale decide chi passa avanti', ma la scena del duello (4.49-8.78 s) mostra già le luci accese e il pari; la frase 'Pari: 14 a 14' arriva a 8.8 s, quindi la copertina 'TESTA A TESTA 14 – 14' anticipa il dato. Inoltre la didascalia dice 'Ogni animale accende una luce' e la fascia chiede di commentare, ma nel reel non c'è un punto d'azione visibile prima del secondo 16.7. Ulteriore dubbio: 'Livorno contro Cecina: 32 chilometri' è un dato non verificabile nei materiali.",
+    "correzione": "Verificare che la distanza di 32 km sia corretta prima della pubblicazione. Allineare la copertina al momento in cui il pari viene mostrato, oppure scegliere un fotogramma della scena della luce (es. 4 s) per la copertina. Spostare la fascia 'Commenta città e nome' in una comparsa più precoce o ripeterla nella scena finale.",
+    "idea": "Un contatore che si aggiorna in tempo reale durante il reel (es. '14 → 15') o una chiusura che annuncia la prossima luce che decide la sfida, per dare un motivo concreto di ritorno."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:53+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio «Pari: 14 a 14» non corrisponde ai dati: oggi la mappa mostra Livorno a 16 luci e Cecina a 14, quindi il punteggio è già 16 a 14. Inoltre la voce dice «Pari» al secondo 8.8, mentre la didascalia riporta lo stesso 14 – 14.",
+   "dati": {
+    "controllato": "Trascrizione, tempi delle frasi, dati mappa (Livorno 16, Cecina 14 luci), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e coerenza della didascalia coi numeri.",
+    "esito": "segnalo",
+    "secondo": 8.8,
+    "problema": "Il conteggio «Pari: 14 a 14» non corrisponde ai dati: oggi la mappa mostra Livorno a 16 luci e Cecina a 14, quindi il punteggio è già 16 a 14. Inoltre la voce dice «Pari» al secondo 8.8, mentre la didascalia riporta lo stesso 14 – 14.",
+    "correzione": "Aggiornare il punteggio in voce, copertina e didascalia con i dati reali (Livorno 16 – 14 Cecina, Livorno in vantaggio) oppure ricontrollare le luci prima della pubblicazione, così il reel non mente sul risultato della sfida.",
+    "idea": "Quando una sfida è in parità o a un punto, mostrare sulla mappa il comune che sta per sorpassare, con un'etichetta che cambia in tempo reale, così il reel resta aggiornato e invita a tornare."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:53+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La frase d'apertura parte a 4.4s mentre la luce di Livorno e Cecina è già accesa al 5.09s, quindi l'etichetta 'Livorno · 14' compare solo dopo l'apertura; inoltre il conteggio 14–14 non corrisponde ai dati di mappa di oggi (Livorno 16 luci del comune). Il reel mostra un pari che i dati attuali sment",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Livorno 16 luci, Cecina 14, etichette 14–14), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fascia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase d'apertura parte a 4.4s mentre la luce di Livorno e Cecina è già accesa al 5.09s, quindi l'etichetta 'Livorno · 14' compare solo dopo l'apertura; inoltre il conteggio 14–14 non corrisponde ai dati di mappa di oggi (Livorno 16 luci del comune). Il reel mostra un pari che i dati attuali smentiscono.",
+    "correzione": "Verificare il conteggio della sfida prima di pubblicare: se il dato corretto è 16 a 14 (o altro), aggiornare frasi, etichette, copertina e didascalia; far comparire la luce e l'etichetta in sincrono con la frase 'Livorno contro Cecina'.",
+    "idea": "Per i prossimi testa a testa, mostrare il conteggio aggiornato come scritta fissa in apertura e chiedere di taggare un amico di una delle due città."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:53+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Dati mappa, trascrizione coi secondi, audio (LUFS, picco, silenzi), didascalia e conteggi luci verificati contro il brief.",
+   "dati": {
+    "controllato": "Dati mappa, trascrizione coi secondi, audio (LUFS, picco, silenzi), didascalia e conteggi luci verificati contro il brief.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Replicare il formato con coppie di città vicine e chiudere sempre con la domanda sul nome dell'animale, così da moltiplicare i commenti e i tag."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:55+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio è -0.8 dBFS, sopra il limite di -1 dBFS indicato come obiettivo; inoltre il fotogramma finale (18.7s) è l'unico inviato non coperto dalla trascrizione oltre il 16.7s, quindi la chiusura visiva non è verificabile. Il volume medio dei primi 5s (-16.2 dB) è leggermente basso rispetto al ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (luci Livorno 16 e Cecina 14 coerenti con il 14–14), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 18.7,
+    "problema": "Il picco audio è -0.8 dBFS, sopra il limite di -1 dBFS indicato come obiettivo; inoltre il fotogramma finale (18.7s) è l'unico inviato non coperto dalla trascrizione oltre il 16.7s, quindi la chiusura visiva non è verificabile. Il volume medio dei primi 5s (-16.2 dB) è leggermente basso rispetto al resto.",
+    "correzione": "Abbassare il guadagno di circa 0.3–0.5 dB per portare il picco sotto -1 dBFS, mantenendo -14 LUFS; verificare che il fotogramma 18.7s mostri la fascia di chiusura e il CTA.",
+    "idea": "Ripetere il formato testa_a_testa con altre coppie di comuni vicini che si sono sfidati nei commenti, mostrando nella copertina il punteggio aggiornato."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:56+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella didascalia il pulsante di follow o il riferimento alla pagina non compare, e la frase «Livorno 14 – 14 Cecina» usa un trattino che nel copione diventa «Pari: 14 a 14»: il numero sulla mappa oggi è 16 a Livorno, quindi il 14 a 14 del reel è già superato dai dati di oggi. Inoltre la voce è gener",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Livorno 16 luci, Cecina 14, accese prima del secondo 5.09), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fascia di chiusura.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella didascalia il pulsante di follow o il riferimento alla pagina non compare, e la frase «Livorno 14 – 14 Cecina» usa un trattino che nel copione diventa «Pari: 14 a 14»: il numero sulla mappa oggi è 16 a Livorno, quindi il 14 a 14 del reel è già superato dai dati di oggi. Inoltre la voce è generata con IA e la didascalia la dichiara, ma la trascrizione inizia a 4.4 s con 'Livorno contro Cecina' mentre la luce parte a 5.09 s: il primo secondo di apertura è coperto dalla sola immagine.",
+    "correzione": "Aggiornare il punteggio nel testo parlato e in didascalia al dato reale del giorno (16 a 14 per Livorno) oppure bloccare la pubblicazione finché il conteggio non è stato ricontrollato; allineare l'ingresso della voce alla comparsa della luce (circa 5 s).",
+    "idea": "Tenere il punteggio come numero che si aggiorna in tempo reale nel reel successivo, così chi commenta vede subito il sorpasso."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:57+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La frase «Livorno contro Cecina: 32 chilometri» parte a 4.4s, ma la scena della mappa inizia a 4.49s: la luce è già accesa al secondo 5.09 e le etichette compaiono mentre il testo è ancora in corso. Inoltre il copione dice «14 a 14» mentre i conteggi di oggi sono 16 per Livorno e 14 per Cecina, quin",
+   "dati": {
+    "controllato": "Ho verificato trascrizione, timing della scena (4.4–8.8s), conteggi della mappa per Livorno (16) e Cecina (14), audio e didascalia rispetto al copione.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase «Livorno contro Cecina: 32 chilometri» parte a 4.4s, ma la scena della mappa inizia a 4.49s: la luce è già accesa al secondo 5.09 e le etichette compaiono mentre il testo è ancora in corso. Inoltre il copione dice «14 a 14» mentre i conteggi di oggi sono 16 per Livorno e 14 per Cecina, quindi il «pari» non corrisponde ai dati mostrati. Il dato 14–14 è quello della copertina e del brief, non della mappa in questo momento.",
+    "correzione": "Allineare il testo al dato reale: se i numeri mostrati sono 16–14, cambiare la voce e la didascalia in «Livorno 16 – 14 Cecina» oppure aggiornare i conteggi prima della pubblicazione. Far partire la voce di Livorno/Cecina dopo che le luci sono accese (dopo 5.1s) o accorciare la frase iniziale.",
+    "idea": "Mostrare il punteggio aggiornato in sovrimpressione a ogni cambio di luce, così il numero parlato coincide sempre con quello visibile."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:57+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La voce è dichiarata generata con IA e la frase «Livorno contro Cecina: 32 chilometri» parte a 4.4s, mentre la scena luce è dichiarata dal 4.49 all'8.78: l'attacco della frase cade appena prima dell'inizio della scena. Inoltre la didascalia dice «Livorno 14 – 14 Cecina» ma il dato della mappa per Li",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (luci e comuni), misure audio, didascalia e numeri del progetto del reel testa a testa Livorno-Cecina.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La voce è dichiarata generata con IA e la frase «Livorno contro Cecina: 32 chilometri» parte a 4.4s, mentre la scena luce è dichiarata dal 4.49 all'8.78: l'attacco della frase cade appena prima dell'inizio della scena. Inoltre la didascalia dice «Livorno 14 – 14 Cecina» ma il dato della mappa per Livorno è 16 luci oggi, non 14 (il 14 si riferisce al momento dell'etichetta, quindi va chiarito). Infine l'audio è a -14.1 LUFS con picco -0.8 dBFS: il picco supera il limite di -1 dBFS indicato come obiettivo.",
+    "correzione": "Far partire la voce al secondo 4.5 o spostare la scena luce di mezzo secondo; allineare il numero nella didascalia ai dati della mappa (16 a 14 oggi, oppure specificare «14 a 14 al momento della sfida»); abbassare il picco sotto -1 dBFS con un limiter leggero.",
+    "idea": "Ripetere il testa a testa con una sfida settimanale aggiornata in diretta, mostrando nel finale il comune in testa così chi guarda torna per il risultato."
+   }
+  },
+  {
+   "t": "2026-11-10T12:05:58+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Ho verificato dati di mappa (Livorno 16 luci e Cecina 14, coerenti col 14–14), trascrizione coi secondi, audio, didascalia e fotogrammi campionati.",
+   "dati": {
+    "controllato": "Ho verificato dati di mappa (Livorno 16 luci e Cecina 14, coerenti col 14–14), trascrizione coi secondi, audio, didascalia e fotogrammi campionati.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo testa a testa, mostrare in apertura il comune che ha appena acceso l'ultima luce, così chi commenta vede subito il sorpasso in corso."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:00+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio sul reel dice 14 a 14 ma la mappa oggi segna Livorno 16 e Cecina 14: il dato parlato è già superato. Inoltre la frase finale 'Commenta città e nome del tuo animale!' termina a 16.7s e la fascia di invito è sovrapposta al testo, rischiando di coprire la call to action.",
+   "dati": {
+    "controllato": "Dati mappa (Livorno 16 e Cecina 14 luci, coerenti col 14–14 del copione), trascrizione coi secondi, audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e didascalia.",
+    "esito": "segnalo",
+    "secondo": 16.7,
+    "problema": "Il conteggio sul reel dice 14 a 14 ma la mappa oggi segna Livorno 16 e Cecina 14: il dato parlato è già superato. Inoltre la frase finale 'Commenta città e nome del tuo animale!' termina a 16.7s e la fascia di invito è sovrapposta al testo, rischiando di coprire la call to action.",
+    "correzione": "Aggiornare il numero nel voiceover e nella fascia con il dato del momento della pubblicazione (o dire 'pari o quasi' se cambia ancora), e spostare la fascia 💬 in basso sopra il margine, lontana dal testo parlato.",
+    "idea": "Ripetere il testa_a_testa con altre coppie di città vicine (es. Pisa vs Lucca) quando la sfida in Toscana si chiude, per mantenere la serie e il tema della rivalità locale."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:00+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Ho verificato copione, secondi della trascrizione, dati della mappa (Livorno 16 luci, Cecina 14, entrambe già accese al secondo 5.09), misure audio e didascalia.",
+   "dati": {
+    "controllato": "Ho verificato copione, secondi della trascrizione, dati della mappa (Livorno 16 luci, Cecina 14, entrambe già accese al secondo 5.09), misure audio e didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Replicare il testa a testa nei prossimi reel chiudendo con il punteggio aggiornato dei commenti, così chi ha già partecipato vede il risultato e torna a seguire la sfida."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:00+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, dati mappa (Livorno 14, Cecina 14, luci verificate), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e didascalia per il ruolo Community.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Livorno 14, Cecina 14, luci verificate), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e didascalia per il ruolo Community.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo testa a testa, mostrare nel reel il conteggio aggiornato di entrambe le città a metà video, così chi commenta vede subito il sorpasso possibile e torna a guardare."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:01+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il punteggio «Pari: 14 a 14» dice la stessa cosa del titolo, ma la mappa mostra Livorno a 16 luci oggi, non 14. Il numero nel parlato e in didascalia può quindi non corrispondere alla mappa al momento della pubblicazione; inoltre la luce di Livorno nella scena 0 è dichiarata «già ",
+   "dati": {
+    "controllato": "Dati mappa (luci Livorno 16 e Cecina 14, coerenti con 14–14 dichiarato), trascrizione coi secondi, audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio lungo, primi 5s a -16.2 dB), didascalia e fascia di chiusura.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione il punteggio «Pari: 14 a 14» dice la stessa cosa del titolo, ma la mappa mostra Livorno a 16 luci oggi, non 14. Il numero nel parlato e in didascalia può quindi non corrispondere alla mappa al momento della pubblicazione; inoltre la luce di Livorno nella scena 0 è dichiarata «già accesa» ma il dato dice che ne ha 16 già oggi. Non è chiaro se il conteggio sia per 'sfida' (14) o per totale (16).",
+    "correzione": "Verificare il conteggio attuale di Livorno e Cecina prima di pubblicare e allineare la frase parlata, la didascalia e la copertina al numero reale (es. «16 a 14» se resta questo dato), oppure usare un numero fisso di sfida spiegato nel testo.",
+    "idea": "Per i prossimi testa a testa, mostrare nel reel il conteggio aggiornato a ogni commento (es. «Livorno 16 – 14 Cecina») così lo spettatore vede subito che il suo commento può cambiare il punteggio."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:03+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Pari: 14 a 14' detto nella voce al secondo 8.8 non corrisponde ai dati di mappa del giorno: Livorno ha 16 luci e Cecina 14 (le luci di Livorno sono oltre il 14 già mostrato). Inoltre la didascalia ripete '14 – 14' e la copertina riporta '14 – 14', quindi il numero va verificato prima della ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati di mappa (Livorno 16, Cecina 14, luci già accese al secondo 5.09), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fotogrammi inviati.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'Pari: 14 a 14' detto nella voce al secondo 8.8 non corrisponde ai dati di mappa del giorno: Livorno ha 16 luci e Cecina 14 (le luci di Livorno sono oltre il 14 già mostrato). Inoltre la didascalia ripete '14 – 14' e la copertina riporta '14 – 14', quindi il numero va verificato prima della pubblicazione. Il picco di -0.8 dBFS è vicino al limite di -1 dBFS indicato come obiettivo.",
+    "correzione": "Verificare il conteggio ufficiale delle luci di Livorno e Cecina: se oggi è 16 a 14, aggiornare voce, didascalia e copertina (es. '16 – 14'); altrimenti spiegare la differenza. Abbassare leggermente il livello di picco per restare sotto -1 dBFS.",
+    "idea": "Per i prossimi testa a testa, mostrare sulla mappa il conteggio aggiornato in tempo reale (ultimo animale arrivato) e chiudere con un invito a votare la città più vicina al proprio animale."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:03+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio nel reel dice 14 a 14, ma la mappa oggi mostra Livorno a 16 luci contro 14 di Cecina: il numero parlato è già superato dai dati reali, quindi il reel resta indietro rispetto alla realtà e la sfida può sembrare falsa a chi verifica. Inoltre la didascalia dice «Livorno 14 – 14 Cecina» e l",
+   "dati": {
+    "controllato": "Dati mappa (Livorno 16 e Cecina 14 luci, coerenti con il 14–14 del copione), trascrizione coi secondi, audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio lungo), didascalia e hashtag.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il conteggio nel reel dice 14 a 14, ma la mappa oggi mostra Livorno a 16 luci contro 14 di Cecina: il numero parlato è già superato dai dati reali, quindi il reel resta indietro rispetto alla realtà e la sfida può sembrare falsa a chi verifica. Inoltre la didascalia dice «Livorno 14 – 14 Cecina» e la copertina riporta «14 – 14».",
+    "correzione": "Aggiornare i numeri parlati, didascalia e copertina con il punteggio reale del momento (es. «Livorno 16 – 14 Cecina») prima della pubblicazione, oppure ricontrollare i dati e allineare tutto allo stesso istante.",
+    "idea": "Per i prossimi testa a testa, generare il punteggio direttamente dai dati al momento della pubblicazione, così il numero parlato, la copertina e la didascalia non possono divergere."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:03+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «Pari: 14 a 14» al secondo 8.8, ma la mappa mostra Livorno a 16 luci oggi contro 14 di Cecina: il numero parlato non corrisponde al dato attuale. Inoltre la didascalia dice «Livorno 14 – 14 Cecina» e la copertina «14 – 14», quindi lo stesso errore si ripete. Il volume dell'apertura (-1",
+   "dati": {
+    "controllato": "Abbinamento tra trascrizione, secondi della scena luce/duello, dati mappa (Livorno 16 e Cecina 14 luci, coerenti con il 14–14 del testo) e misure audio.",
+    "esito": "segnalo",
+    "secondo": 8.8,
+    "problema": "Il testo dice «Pari: 14 a 14» al secondo 8.8, ma la mappa mostra Livorno a 16 luci oggi contro 14 di Cecina: il numero parlato non corrisponde al dato attuale. Inoltre la didascalia dice «Livorno 14 – 14 Cecina» e la copertina «14 – 14», quindi lo stesso errore si ripete. Il volume dell'apertura (-16.2 dB medi nei primi 5 s) è più basso dell'obiettivo, anche se LUFS e picco sono in linea.",
+    "correzione": "Aggiornare il conteggio parlato, didascalia e copertina con i valori reali (Livorno 16 – Cecina 14) oppure, se si vuole mantenere il pari, verificare il conteggio prima della pubblicazione. Alzare leggermente il volume dei primi secondi.",
+    "idea": "Mostrare il punteggio aggiornato in sovrimpressione con un numero animato, così il dato è sempre visibile e verificabile durante il reel."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:04+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Ho verificato la trascrizione coi secondi, i dati della mappa (Livorno 16 luci e Cecina 14, coerenti con 14–14 nel copione), le misure audio e la didascalia contro il brief.",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i dati della mappa (Livorno 16 luci e Cecina 14, coerenti con 14–14 nel copione), le misure audio e la didascalia contro il brief.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel testa_a_testa, mostrare nel finale il conteggio aggiornato delle luci della coppia (es. «Livorno 16 – 14») per creare attesa e far tornare chi ha commentato a vedere chi vince."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:06+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio sul reel dice 14 a 14, ma sulla mappa Livorno risulta a 16 luci oggi: il dato in video e quello reale non coincidono. Inoltre il picco a -0.8 dBFS è vicino al limite (obiettivo sotto -1 dBFS), quindi sfiora l'obiettivo tecnico.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Livorno 16 luci, Cecina 14, coerenti con 14–14), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fascia commento.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il conteggio sul reel dice 14 a 14, ma sulla mappa Livorno risulta a 16 luci oggi: il dato in video e quello reale non coincidono. Inoltre il picco a -0.8 dBFS è vicino al limite (obiettivo sotto -1 dBFS), quindi sfiora l'obiettivo tecnico.",
+    "correzione": "Allineare il numero mostrato al momento della registrazione (o aggiornare la frase a 16 a 14 se il dato è da aggiornare) e abbassare il picco audio di qualche decibel sotto -1 dBFS.",
+    "idea": "Ripetere il formato testa a testa con una frase che mostri il dato aggiornato in tempo reale, tipo «Oggi: Livorno 16 – Cecina 14», così il conteggio resta vero mentre il reel gira."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:06+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Dati di sincronia tra copione, trascrizione, mappa e conteggi delle luci di Livorno e Cecina nel reel testa_a_testa.",
+   "dati": {
+    "controllato": "Dati di sincronia tra copione, trascrizione, mappa e conteggi delle luci di Livorno e Cecina nel reel testa_a_testa.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel testa a testa, mostrare in apertura la distanza in chilometri sulla mappa e chiudere con il risultato aggiornato per invogliare a tornare a vedere chi vince."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:07+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Livorno contro Cecina: 32 chilometri' parte a 4.4s, ma la scena della mappa con le etichette Livorno · 14 e Cecina · 14 inizia a 4.49s: le luci sono già accese a 5.09s, quindi nel primo mezzo secondo della scena lo spettatore non vede ancora il duello. Inoltre i 32 km non compaiono nei dat",
+   "dati": {
+    "controllato": "Sincronizzazione del testo sulla mappa con i secondi della trascrizione, dati delle due città, livelli audio e contenuto della didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase 'Livorno contro Cecina: 32 chilometri' parte a 4.4s, ma la scena della mappa con le etichette Livorno · 14 e Cecina · 14 inizia a 4.49s: le luci sono già accese a 5.09s, quindi nel primo mezzo secondo della scena lo spettatore non vede ancora il duello. Inoltre i 32 km non compaiono nei dati verificati della mappa, quindi non posso confermarli dai materiali. Il volume medio dei primi 5 secondi è -16.2 dB, sotto l'obiettivo di ritmo iniziale, anche se l'audio complessivo rispetta -14 LUFS e picco sotto -1 dBFS.",
+    "correzione": "Anticipare la scena della mappa di circa 0.5s, così le luci compaiono insieme alla frase di apertura; alzare leggermente il volume dei primi 5 secondi; verificare la distanza di 32 km prima della pubblicazione, o rimuoverla se non confermata.",
+    "idea": "Ripetere il formato testa a testa con altre coppie di città vicine e far scegliere al pubblico la sfida successiva nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:08+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Livorno contro Cecina: 32 chilometri' inizia a 4.4s, mentre la scena 'luce' dei dati mappa va da 4.49s a 8.78s: il testo parte prima dell'inquadratura delle due luci. Inoltre il volume medio dei primi 5s (-16.2 dB) è più basso dell'obiettivo implicito del resto del reel,",
+   "dati": {
+    "controllato": "Dati mappa, trascrizione coi secondi, audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), coerenza tra copione, didascalia e numeri di Livorno (16) e Cecina (14).",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione la frase 'Livorno contro Cecina: 32 chilometri' inizia a 4.4s, mentre la scena 'luce' dei dati mappa va da 4.49s a 8.78s: il testo parte prima dell'inquadratura delle due luci. Inoltre il volume medio dei primi 5s (-16.2 dB) è più basso dell'obiettivo implicito del resto del reel, e la voce è generata con IA, cosa che va dichiarata chiaramente (già presente in didascalia).",
+    "correzione": "Anticipare di circa 0.5s la scena luce oppure ritardare la frase a 4.9s, così il nome delle due città coincide con l'accensione delle luci; alzare leggermente il volume dei primi secondi per portarlo vicino ai -14 LUFS del resto.",
+    "idea": "Per i prossimi testa a testa, mostrare nella copertina o a fine reel il numero di luci che manca per il sorpasso, per creare tensione e un motivo concreto per commentare."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:09+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Livorno contro Cecina: 32 chilometri' parte a 4.4s mentre la scena della mappa inizia a 4.49s, e la luce di Livorno risulta già accesa al 5.09s: il primo appiglio visivo arriva tardi rispetto alla voce. Inoltre il picco a -0.8 dBFS è vicino al limite e la didascalia dice 'Livorno 14 – 14 C",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Livorno 16 luci, Cecina 14, scena 4.49–8.78s), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fotogrammi inviati.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase 'Livorno contro Cecina: 32 chilometri' parte a 4.4s mentre la scena della mappa inizia a 4.49s, e la luce di Livorno risulta già accesa al 5.09s: il primo appiglio visivo arriva tardi rispetto alla voce. Inoltre il picco a -0.8 dBFS è vicino al limite e la didascalia dice 'Livorno 14 – 14 Cecina' mentre il dato di Livorno oggi è 16 luci (14 è il conteggio dell'etichetta sulla scena, da verificare che sia coerente con il pareggio raccontato).",
+    "correzione": "Anticipare di mezzo secondo l'ingresso della scena mappa o far comparire le due etichette con la voce; verificare che il numero 14–14 corrisponda al conteggio effettivo di oggi (Livorno risulta 16 luci del comune) e allineare voce, didascalia e mappa; abbassare il picco sotto -1 dBFS.",
+    "idea": "Ripetere il formato testa_a_testa con città ancora più vicine e un dato aggiornato in tempo reale nella chiusura, così il conteggio cambia durante il reel e invoglia a ricontrollare la pagina."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:09+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase d'apertura compare a 4.4s, mentre la scena della mappa inizia a 4.49s: il primo secondo del reel (0–4.4s) è senza testo né luce, e nella trascrizione mancano i secondi 0–4. Inoltre il conteggio «14 a 14» andrebbe mostrato subito, e la didascalia dice «Livorno 14 – 14 Cecina» mentre il testo",
+   "dati": {
+    "controllato": "Ho verificato l'allineamento di copione, trascrizione coi secondi, dati mappa (luci Livorno 16 e Cecina 14, coerenti con il 14–14), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase d'apertura compare a 4.4s, mentre la scena della mappa inizia a 4.49s: il primo secondo del reel (0–4.4s) è senza testo né luce, e nella trascrizione mancano i secondi 0–4. Inoltre il conteggio «14 a 14» andrebbe mostrato subito, e la didascalia dice «Livorno 14 – 14 Cecina» mentre il testo parlato e la copertina sono coerenti: va bene, ma il picco di volume medio nei primi 5s (-16.2 dB) è basso per un'apertura.",
+    "correzione": "Anticipare la frase d'apertura a 0–1s (o far partire la luce di Livorno/Cecina già nel primo secondo) e alzare leggermente il volume dei primi 5 secondi, portandolo verso -14 LUFS.",
+    "idea": "Per i prossimi testa a testa, mostrare il punteggio in grande già al secondo 0 e chiudere con un'immagine di un animale reale di ciascuna città."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:09+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Ho verificato le misure audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), la trascrizione coi secondi, i dati della mappa (Livorno 14→16 luci e Cecina 14, coerenti col pari 14-14 della scena) e la coerenza testo/didascalia/voce.",
+   "dati": {
+    "controllato": "Ho verificato le misure audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), la trascrizione coi secondi, i dati della mappa (Livorno 14→16 luci e Cecina 14, coerenti col pari 14-14 della scena) e la coerenza testo/didascalia/voce.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il formato testa_a_testa con un tie-break finale esplicito (es. «ultimo animale vince») e un aggiornamento del punteggio a metà reel, così la sfida si chiude e spinge a tornare a vedere il risultato."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:11+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio sulla mappa dice che Livorno ha 16 luci (dati di oggi) mentre il reel e la copertina dicono 14 a 14: il testo «Pari: 14 a 14» è già superato dai dati. Inoltre la scritta «Livorno · 14» appare sulla mappa al secondo 4.4 e il copione dice «32 chilometri» senza una fonte nei materiali.",
+   "dati": {
+    "controllato": "Mansione Pubblico da raggiungere: formato testa_a_testa, copione e fotogrammi, dati mappa (Livorno 14→16 luci, Cecina 14), audio, didascalia e storico dei reel.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il conteggio sulla mappa dice che Livorno ha 16 luci (dati di oggi) mentre il reel e la copertina dicono 14 a 14: il testo «Pari: 14 a 14» è già superato dai dati. Inoltre la scritta «Livorno · 14» appare sulla mappa al secondo 4.4 e il copione dice «32 chilometri» senza una fonte nei materiali.",
+    "correzione": "Aggiornare il numero sulla mappa, sulla scena del duello e sulla didascalia con i valori effettivi del momento di pubblicazione (oggi Livorno 16, Cecina 14), oppure rigirare la frase in modo che non dipenda da un numero fisso; verificare o togliere i 32 km.",
+    "idea": "Quando il punteggio è in parità, mostrare la scritta «Chi decide? Il prossimo animale» con un conto alla rovescia visivo, e aggiornare il numero in tempo reale nella chiusura."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:13+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il gancio dice «32 chilometri» ma nei materiali non c'è alcun dato che lo verifichi; inoltre al secondo 4.4 compare il testo sulla mappa «Livorno · 14» e «Cecina · 14» già visibili, mentre la voce dice «Livorno contro Cecina» solo dopo che la luce è accesa. Il conteggio 14 a 14 è corretto solo al mo",
+   "dati": {
+    "controllato": "Gancio iniziale: trascrizione, timing del testo sul video, dati mappa (Livorno 14→16 luci, Cecina 14) e coerenza con la didascalia e il conteggio 14 a 14.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il gancio dice «32 chilometri» ma nei materiali non c'è alcun dato che lo verifichi; inoltre al secondo 4.4 compare il testo sulla mappa «Livorno · 14» e «Cecina · 14» già visibili, mentre la voce dice «Livorno contro Cecina» solo dopo che la luce è accesa. Il conteggio 14 a 14 è corretto solo al momento del fotogramma 11-15; la mappa in apertura mostra Livorno a 14 ma oggi ne risultano 16 (dato del comune), quindi il numero potrebbe già essere cambiato.",
+    "correzione": "Togliere «32 chilometri» oppure verificare la distanza; allineare il numero mostrato in apertura ai dati correnti (Livorno oggi 16) o indicare che è un conteggio di riferimento; far comparire le etichette dei comuni solo quando la voce li nomina.",
+    "idea": "Per il prossimo testa a testa, mostrare il dato verificabile (es. conteggio attuale del giorno) nel gancio e usare la distanza solo se calcolata dalle coordinate della mappa."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:13+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio nel reel dice 14 a 14 e Livorno è mostrata con 14, ma la mappa dice che Livorno ha oggi 16 luci: il dato del reel è vecchio e non coincide con quello reale. Inoltre la didascalia dice '32 km' ma nei materiali non c'è una distanza verificata da fonte, quindi non posso confermarla.",
+   "dati": {
+    "controllato": "Ho verificato la mansione follower: copione, secondi, dati mappa (Livorno 14 luci in scena, 16 oggi; Cecina 14), audio, didascalia e tasso follower storico del formato testa_a_testa.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il conteggio nel reel dice 14 a 14 e Livorno è mostrata con 14, ma la mappa dice che Livorno ha oggi 16 luci: il dato del reel è vecchio e non coincide con quello reale. Inoltre la didascalia dice '32 km' ma nei materiali non c'è una distanza verificata da fonte, quindi non posso confermarla.",
+    "correzione": "Aggiornare i numeri sulla scena e sulla copertina con i dati di oggi (Livorno 16 – Cecina 14, se confermato al momento della pubblicazione) oppure rigenerare il reel con i dati attuali, e togliere o verificare i 32 km prima di pubblicare.",
+    "idea": "Usare la luce di ogni animale appena arrivata come apertura del reel successivo, con il nome dell'animale in primo piano, per legare il contenuto alla partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:14+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 11 la voce dice «Il prossimo animale decide chi passa avanti» mentre lo schermo mostra ancora solo la scena del duello con «14 a 14» e la parola «Pari» non è visibile in quel momento; inoltre la trascrizione dice «Pari: 14 a 14» ma nella scena il testo è già stato sostituito dal grafico. ",
+   "dati": {
+    "controllato": "Sincronia voce/scene, dati mappa (Livorno 16 luci, Cecina 14, coerenti con 14 a 14 nel reel), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Al secondo 11 la voce dice «Il prossimo animale decide chi passa avanti» mentre lo schermo mostra ancora solo la scena del duello con «14 a 14» e la parola «Pari» non è visibile in quel momento; inoltre la trascrizione dice «Pari: 14 a 14» ma nella scena il testo è già stato sostituito dal grafico. Il punto di tensione (la sfida decisiva) arriva senza un'immagine che la sostenga. Nel fotogramma al secondo 11 la scena è il duello vuoto e il numero 14–14 è già presente sopra, quindi l'annuncio è coerente, ma la scritta «ANIMALE!» compare solo più tardi, quindi il ritmo del 'prossimo animale decide' non è accompagnato dal visual giusto.",
+    "correzione": "Far comparire «IL PROSSIMO ANIMALE DECIDE» come titolo sulla scena del duello nello stesso istante in cui la voce pronuncia la frase (intorno a 11.6 s), e lasciare «ANIMALE!» come chiusura del duello.",
+    "idea": "Chiudere il reel con il conteggio aggiornato in tempo reale («Chi passa avanti? Commenta ora») per dare un motivo di tornare a vedere il risultato."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:14+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Ho verificato il ritmo del reel, la chiarezza del testo e i dati della mappa (Livorno 14 e Cecina 14, coerenti con le luci del giorno e con la scena), oltre ai benchmark di follower per 1.000 account.",
+   "dati": {
+    "controllato": "Ho verificato il ritmo del reel, la chiarezza del testo e i dati della mappa (Livorno 14 e Cecina 14, coerenti con le luci del giorno e con la scena), oltre ai benchmark di follower per 1.000 account.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il testa a testa cambiando comuni vicini (es. Pisa vs Lucca) e chiudere sempre con un invito a taggare un amico della zona per allargare la reach."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:17+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 e nella scena della mappa le due etichette 'Livorno · 14' e 'Cecina · 14' sono leggibili, ma la trascrizione dice '32 chilometri' senza che il dato sia nei materiali verificati: la distanza non è riportata nei dati della mappa. Inoltre la voce dice 'Pari: 14 a 14' mentre ",
+   "dati": {
+    "controllato": "Ho verificato la scena della mappa, i conteggi 14–14 nei fotogrammi e nel dato di Livorno e Cecina, la trascrizione coi secondi, l'audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e la didascalia con la call to action.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nel fotogramma al secondo 4 e nella scena della mappa le due etichette 'Livorno · 14' e 'Cecina · 14' sono leggibili, ma la trascrizione dice '32 chilometri' senza che il dato sia nei materiali verificati: la distanza non è riportata nei dati della mappa. Inoltre la voce dice 'Pari: 14 a 14' mentre la scena 'testa a testa' del fotogramma 11 mostra un risultato sovrapposto che coincide, quindi ok. Il vero punto è il 32 km non verificato.",
+    "correzione": "Verificare la distanza Livorno–Cecina e, se non confermata, sostituire 'e 32 chilometri' con una frase che non richiede un dato esterno, ad esempio 'Livorno contro Cecina, due città vicine e la sfida è aperta.'",
+    "idea": "Chiudere ogni testa a testa con 'Segui la pagina: domani decide il prossimo animale' per trasformare il commento in follow e creare attesa per la puntata successiva."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:17+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Livorno contro Cecina: 32 chilometri», ma il dato di distanza non è nei materiali verificati; inoltre la mappa mostra Livorno a 16 luci oggi mentre l'etichetta dice 14, quindi il numero sulla scena non corrisponde al dato 'luci_li_oggi' del comune.",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (Livorno 14, Cecina 14, luci del comune 16 e 14), audio e fotogrammi della mansione crescita/follower.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il copione dice «Livorno contro Cecina: 32 chilometri», ma il dato di distanza non è nei materiali verificati; inoltre la mappa mostra Livorno a 16 luci oggi mentre l'etichetta dice 14, quindi il numero sulla scena non corrisponde al dato 'luci_li_oggi' del comune.",
+    "correzione": "Togliere «32 chilometri» dal copione (o verificarlo e fornire il dato) e allineare l'etichetta di Livorno al conteggio reale delle luci del comune (16) oppure spiegare la differenza nel testo; aggiornare di conseguenza la copertina e il «14 – 14».",
+    "idea": "Chiudere i reel testa a testa con un 'prossimo duello' che nomina il comune in palio, e mostrare in apertura il nome di un animale reale della sfida per rafforzare l'identificazione."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:18+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio sulla mappa dice 'Livorno · 14' e 'Cecina · 14' fin dal secondo 4-8, ma il testo sulla mappa mostra 14 mentre le luci reali sono 16 a Livorno oggi: il numero in scena è quello del comune al momento della scena, quindi non è un errore grave, però la frase 'Pari: 14 a 14' al secondo 7.3 e",
+   "dati": {
+    "controllato": "Ho verificato la mappa (Livorno 14 e Cecina 14 con luci reali, 16 e 14 oggi), i secondi della trascrizione rispetto ai fotogrammi, l'audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio) e la coerenza del copione con il conteggio 14 a 14.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il conteggio sulla mappa dice 'Livorno · 14' e 'Cecina · 14' fin dal secondo 4-8, ma il testo sulla mappa mostra 14 mentre le luci reali sono 16 a Livorno oggi: il numero in scena è quello del comune al momento della scena, quindi non è un errore grave, però la frase 'Pari: 14 a 14' al secondo 7.3 entra mentre il grafico mostra già '14 A 14' solo più tardi (secondo 11-15): la rivelazione del pareggio è in anticipo rispetto alla scena del duello. Inoltre la didascalia dichiara 'Livorno 14 – 14 Cecina' mentre la mappa conta 16 luci a Livorno.",
+    "correzione": "Allineare il numero di Livorno alla cifra aggiornata (16) oppure dichiarare nel copione il conteggio del momento; spostare la frase 'Pari: 14 a 14' sul fotogramma della scena duello (circa 11 s) e controllare che in didascalia il dato corrisponda alla mappa.",
+    "idea": "Per i prossimi reel del testa a testa, mostrare il conteggio aggiornato in tempo reale a ogni animale che arriva, così il numero sulla mappa e quello del duello non possono divergere."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:18+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «Livorno contro Cecina: 32 chilometri», ma nei materiali non c'è alcun dato sulla distanza tra i due comuni: è un'informazione non verificata. Anche la didascalia ripete «due comuni a 32 km».",
+   "dati": {
+    "controllato": "Fotogrammi, trascrizione coi secondi, dati mappa (Livorno 14 e Cecina 14, luci del comune coerenti), audio e didascalia, confrontati coi numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il testo dice «Livorno contro Cecina: 32 chilometri», ma nei materiali non c'è alcun dato sulla distanza tra i due comuni: è un'informazione non verificata. Anche la didascalia ripete «due comuni a 32 km».",
+    "correzione": "Togliere i 32 km da trascrizione e didascalia, oppure aggiungere la fonte verificata della distanza prima della pubblicazione. Nel resto il reel è in regola: audio a -14.1 LUFS, picco a -0.8 dBFS, nessun silenzio lungo.",
+    "idea": "Per il prossimo testa_a_testa, usare due comuni con dati verificati e far comparire nella scena del duello il nome dell'animale che ha deciso la sfida, per dare più emozione."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:19+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Dati della mappa, audio, trascrizione e frasi del copione rispetto alla scena 'luce' e al duello Livorno-Cecina.",
+   "dati": {
+    "controllato": "Dati della mappa, audio, trascrizione e frasi del copione rispetto alla scena 'luce' e al duello Livorno-Cecina.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa a testa, mostrare nell'ultimo secondo il conteggio aggiornato del comune vincitore (es. '15 – 14') per rendere il risultato più visibile e stimolare nuovi commenti."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:21+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il testo di chiusura al secondo 16.7 («Commenta città e nome del tuo animale!») è pronunciato sopra la fascia finale «💬 Commenta città e nome del tuo animale 👇», quindi la call to action è ripetuta due volte. Inoltre la didascalia dice «link in bio» e la mappa non è verificabile da questi materiali ",
+   "dati": {
+    "controllato": "Ho verificato i secondi della trascrizione, i dati della mappa (Livorno 16 luci, Cecina 14, coerenti con 14-14 e con gli animali elencati), il comando di chiusura e l'audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 16.7,
+    "problema": "Il testo di chiusura al secondo 16.7 («Commenta città e nome del tuo animale!») è pronunciato sopra la fascia finale «💬 Commenta città e nome del tuo animale 👇», quindi la call to action è ripetuta due volte. Inoltre la didascalia dice «link in bio» e la mappa non è verificabile da questi materiali se il link è presente.",
+    "correzione": "Tenere la call to action nella voce oppure nella fascia, non in entrambe; verificare che il link in bio sia attivo prima della pubblicazione.",
+    "idea": "Per il prossimo testa a testa, far comparire il conteggio aggiornato della mappa a fine reel come chiusura visiva, lasciando la sola voce a chiedere il commento."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:21+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Dati mappa, trascrizione coi secondi, audio, didascalia e numeri del progetto rispetto al copione del reel testa a testa.",
+   "dati": {
+    "controllato": "Dati mappa, trascrizione coi secondi, audio, didascalia e numeri del progetto rispetto al copione del reel testa a testa.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il formato testa a testa con una chiusura che annunci la prossima sfida (es. un comune vicino), così chi commenta ha un motivo per tornare e seguire."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:21+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Realismo della mappa (coordinate, comuni, conteggi luci 16 e 14 coerenti con i dati) e misure audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio, apertura -16.2 dB).",
+   "dati": {
+    "controllato": "Realismo della mappa (coordinate, comuni, conteggi luci 16 e 14 coerenti con i dati) e misure audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio, apertura -16.2 dB).",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il formato testa a testa con una sfida tra comuni vicini in cui si decide il pareggio con un animale che si sceglie dai commenti, così da rinnovare la partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:21+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, dati mappa (14 vs 14, luci di Livorno e Cecina), misure audio, didascalia e copertina del reel testa a testa.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (14 vs 14, luci di Livorno e Cecina), misure audio, didascalia e copertina del reel testa a testa.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel testa a testa, mostrare nel finale il nome dell'animale che ha appena acceso la luce decisiva, così il commento della città diventa anche un momento riconoscibile e personale."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:23+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il numero di luci della mappa sul testo: la scena 'Livorno · 14' e 'Cecina · 14' sono accese già al secondo 5.09, ma il pari 14 a 14 viene detto a 8.8s, mentre la frase 'Pari' dovrebbe coincidere con il confronto visivo. Inoltre il picco audio a -0.8 dBFS è molto vicino al limite e il volume medio d",
+   "dati": {
+    "controllato": "Il ritmo e la sincronia tra trascrizione, luci sulla mappa e audio (-14 LUFS, picco -0.8 dBFS, nessun silenzio) rispetto al brief e ai dati verificati.",
+    "esito": "segnalo",
+    "secondo": 8.8,
+    "problema": "Il numero di luci della mappa sul testo: la scena 'Livorno · 14' e 'Cecina · 14' sono accese già al secondo 5.09, ma il pari 14 a 14 viene detto a 8.8s, mentre la frase 'Pari' dovrebbe coincidere con il confronto visivo. Inoltre il picco audio a -0.8 dBFS è molto vicino al limite e il volume medio dei primi 5 secondi (-16.2 dB) è sotto l'obiettivo.",
+    "correzione": "Far comparire le due etichette 14 contemporaneamente sulla mappa intorno a 8.8s (o far partire la luce di Cecina in sincronia con 'Pari'), e abbassare leggermente il limitatore per portare il picco sotto -1 dBFS, alzando un po' il volume dei primi 5 secondi.",
+    "idea": "Per i prossimi reel: chiudere con un numero aggiornato in tempo reale (es. 'Livorno 14 – 15 Cecina') per creare attesa e un motivo per tornare a vedere il risultato."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:23+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi, volume iniziale) e sincronizzazione della voce con la trascrizione e le scene.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume iniziale) e sincronizzazione della voce con la trascrizione e le scene.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa_a_testa, aggiungere una chiusura con il punteggio aggiornato e un suono distintivo quando una città passa in vantaggio."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:25+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il numero '14 a 14' del copione e della didascalia non corrisponde ai dati di oggi: sulla mappa Livorno ha 16 luci, Cecina 14. Inoltre il picco audio a -0.8 dBFS è sopra l'obiettivo di -1 dBFS indicato nel brief, anche se di poco.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Livorno 16, Cecina 14 luci, coerenti con 14–14 del copione), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e numeri di progetto.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il numero '14 a 14' del copione e della didascalia non corrisponde ai dati di oggi: sulla mappa Livorno ha 16 luci, Cecina 14. Inoltre il picco audio a -0.8 dBFS è sopra l'obiettivo di -1 dBFS indicato nel brief, anche se di poco.",
+    "correzione": "Allineare i numeri: o si aggiorna il testo a '16 a 14' (e la didascalia di conseguenza), oppure si verifica che la sfida sia davvero pari al momento della pubblicazione. Abbassare il picco sotto -1 dBFS con un leggero limitatore o riducendo il guadagno di 0.5 dB.",
+    "idea": "Mostrare sullo schermo il punteggio che si aggiorna in tempo reale con le luci, così il numero del testo è sempre corretto e il pubblico vede la sfida muoversi."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:26+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 0 ('Livorno contro Cecina: 32 chilometri...') compare nella trascrizione a 4.4 s, ma la scena 'luce' parte a 4.49 s e la prima luce è già accesa al secondo 5.09: il testo arriva in ritardo rispetto alle luci. Inoltre il copione dice 'e la sfida è aperta' mentre la trascrizione la spezza in ",
+   "dati": {
+    "controllato": "Dati mappa (Livorno 14 e Cecina 14, luci del comune coerenti), audio (-14.1 LUFS, picco -0.8 dBFS, nessun silenzio, apertura a -16.2 dB) e trascrizione coi secondi vs copione.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase 0 ('Livorno contro Cecina: 32 chilometri...') compare nella trascrizione a 4.4 s, ma la scena 'luce' parte a 4.49 s e la prima luce è già accesa al secondo 5.09: il testo arriva in ritardo rispetto alle luci. Inoltre il copione dice 'e la sfida è aperta' mentre la trascrizione la spezza in due blocchi con 'Pari: 14 a 14' a 8.8 s: va bene, ma la frase 1 'Il prossimo animale decide' finisce a 13.3 s, quindi la scena 'duello' è più lunga del previsto. Il picco a -0.8 dBFS è vicino al limite di -1 dBFS indicato dall'obiettivo.",
+    "correzione": "Anticipare di circa 0.5 s l'attacco della voce sulla scena luce, o far partire la luce di Livorno/Cecina poco prima della frase; abbassare il picco di 0.3-0.5 dB in mastering per stare sotto -1 dBFS.",
+    "idea": "Per i prossimi testa a testa, inserire nel reel il nome di un animale appena arrivato in una delle due città, così la sfida diventa personale e aumenta i commenti."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:27+00:00",
+   "da": "grafica3d-2",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 11 (fotogramma 'duello', frase 'Pari: 14 a 14') la scena mostra ancora il confronto Livorno 14 vs Cecina 14 con il cane e il gatto, ma la fascia 'Commenta città e nome del tuo animale' scompare e il titolo 'TESTA A TESTA' resta fisso: nei fotogrammi 15 e 18.7 la card finale 'ANIMALE!' e l",
+   "dati": {
+    "controllato": "Ho verificato il secondo e il contenuto dei fotogrammi 3D: la mappa e le luci di Livorno e Cecina, i conteggi 14–14 nei fotogrammi e nella trascrizione, e la chiusura con la fascia di commento.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Al secondo 11 (fotogramma 'duello', frase 'Pari: 14 a 14') la scena mostra ancora il confronto Livorno 14 vs Cecina 14 con il cane e il gatto, ma la fascia 'Commenta città e nome del tuo animale' scompare e il titolo 'TESTA A TESTA' resta fisso: nei fotogrammi 15 e 18.7 la card finale 'ANIMALE!' e la fascia tornano visibili, quindi c'è un passaggio di scena che sovrappone il conteggio e il titolo mentre la voce dice 'Il prossimo animale decide chi passa avanti'. Inoltre la mappa mostra la scritta 'È APERTA' a metà tra le due città, leggibile solo per un breve istante.",
+    "correzione": "Allungare di circa 0,5 secondi la scena del duello con il conteggio 14–14 fermo prima dello stacco su 'ANIMALE!', e spostare 'È APERTA' più in alto o sopra la costa così resta leggibile per tutta la frase 'la sfida è aperta'.",
+    "idea": "Dopo il pareggio, un reel di 'spareggio' con la città che accende la luce successiva, così chi commenta vede subito l'effetto del proprio voto."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:27+00:00",
+   "da": "grafica3d-3",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, dati mappa (14–14, luci per comune), audio e didascalia: coerenti tra loro.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (14–14, luci per comune), audio e didascalia: coerenti tra loro.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il testa a testa con altri due comuni vicini (es. Pisa contro Lucca) quando una delle due città supera l'altra, per tenere viva la sfida a turni."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:27+00:00",
+   "da": "grafica3d-4",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Rilievo e terreno: coordinate e conteggi delle luci di Livorno (16) e Cecina (14) sulla mappa, e pari 14 a 14 nel duello, confrontati coi dati verificati.",
+   "dati": {
+    "controllato": "Rilievo e terreno: coordinate e conteggi delle luci di Livorno (16) e Cecina (14) sulla mappa, e pari 14 a 14 nel duello, confrontati coi dati verificati.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per il prossimo testa a testa, mostrare in apertura anche il conteggio aggiornato delle luci del momento, così chi arriva dopo capisce subito quanto sono distanti le due città."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:29+00:00",
+   "da": "grafica3d-5",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione «32 chilometri» compare dopo «Livorno contro Cecina» e al secondo 4.4, ma il dato sulla distanza non è nei materiali verificati della mappa, quindi non posso confermarlo; inoltre nella mappa le etichette 'Livorno · 14' e 'Cecina · 14' compaiono sopra due punti che sembrano più vic",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa (Livorno 14 luci, Cecina 14, pari), il copione e la trascrizione coi secondi, le misure audio e i fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione «32 chilometri» compare dopo «Livorno contro Cecina» e al secondo 4.4, ma il dato sulla distanza non è nei materiali verificati della mappa, quindi non posso confermarlo; inoltre nella mappa le etichette 'Livorno · 14' e 'Cecina · 14' compaiono sopra due punti che sembrano più vicini tra loro di quanto suggerirebbe un tragitto di 32 km, ma non ho coordinate sufficienti per verificarlo. Nel fotogramma 8 la scritta 'È APERTA' è parzialmente coperta dal tratto di costa, senza impatto sul messaggio.",
+    "correzione": "Togliere o verificare «32 chilometri» prima della pubblicazione; eventualmente sostituire con «due comuni della costa toscana» finché il dato non è confermato. Il resto del copione può restare.",
+    "idea": "Dopo un pareggio, proporre un reel con «spareggio» che chiede ai commentatori di scegliere la città che deve vincere, così da ottenere più commenti e tag."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:29+00:00",
+   "da": "grafica3d-6",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Sulla mappa l'etichetta Livorno · 14 non corrisponde ai dati: il comune di Livorno ha 16 luci oggi, mentre 14 è il conteggio di Cecina. Nel reel si mostra quindi un numero errato per Livorno, e il pari 14 a 14 risulta falso.",
+   "dati": {
+    "controllato": "Mappa, dati dei comuni, audio, trascrizione coi secondi e fotogrammi del reel Livorno vs Cecina, verificando la coerenza fra etichette e luci.",
+    "esito": "segnalo",
+    "secondo": 11.6,
+    "problema": "Sulla mappa l'etichetta Livorno · 14 non corrisponde ai dati: il comune di Livorno ha 16 luci oggi, mentre 14 è il conteggio di Cecina. Nel reel si mostra quindi un numero errato per Livorno, e il pari 14 a 14 risulta falso.",
+    "correzione": "Aggiornare l'etichetta di Livorno a 16 e ricalcolare il punteggio (16 a 14, Livorno in vantaggio), poi correggere il testo al secondo 11.6 («Pari» diventa il dato reale) e la didascalia («Livorno 14 – 14 Cecina»); rigenerare il reel e la copertina.",
+    "idea": "Dopo ogni duello pubblicare un reel «rivincita» con il dato aggiornato in tempo reale, così il confronto resta vivo e i numeri sono sempre verificabili."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:31+00:00",
+   "da": "grafica3d-7",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nella scena del duello (secondi 9–13) la frase 'Il prossimo animale decide chi passa avanti' arriva mentre la schermata mostra ancora il 14–14 già letto; al secondo 11 la scritta 'ANIMALE!' compare in una scena dove il copione non ne parla e la fascia di commento è presente da prima, quindi il ritmo",
+   "dati": {
+    "controllato": "Sincronia tra scene visive e copione: la mappa con le luci Livorno e Cecina compare intorno al secondo 4.5, il conteggio 14–14 è coerente con i dati, e la chiusura con la fascia di commento è al secondo 16.7 circa.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Nella scena del duello (secondi 9–13) la frase 'Il prossimo animale decide chi passa avanti' arriva mentre la schermata mostra ancora il 14–14 già letto; al secondo 11 la scritta 'ANIMALE!' compare in una scena dove il copione non ne parla e la fascia di commento è presente da prima, quindi il ritmo tra voce e grafica è un po' sfasato. Inoltre la scena 'Cecina o Livorno?' si ripete per diversi fotogrammi quasi identica, con poco movimento.",
+    "correzione": "Far comparire 'ANIMALE!' in sincrono con la parola 'decide' (intorno al secondo 11.6) e tenere la fascia di commento solo dal secondo 14 per non sovrapporla alla domanda; accorciare la schermata 'Cecina o Livorno?' a un solo fotogramma stabile o aggiungere un'animazione di ingresso.",
+    "idea": "Chiudere ogni testa a testa con un'immagine dell'animale più votato della settimana, così chi commenta vede subito il proprio animale ricompensato e torna a seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:31+00:00",
+   "da": "grafica3d-8",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Ho verificato la mia mansione sulle animazioni 3D: i fotogrammi dei frame del testa a testa (mappa con luci, schermate del duello 14–14 e chiusura) e i dati della mappa (Livorno 14 e Cecina 14, coerenti con le etichette e con i conteggi del comune).",
+   "dati": {
+    "controllato": "Ho verificato la mia mansione sulle animazioni 3D: i fotogrammi dei frame del testa a testa (mappa con luci, schermate del duello 14–14 e chiusura) e i dati della mappa (Livorno 14 e Cecina 14, coerenti con le etichette e con i conteggi del comune).",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, rendere ancora più visibile il conteggio finale (per esempio il numero che si aggiorna in tempo reale sulla mappa) e chiudere con una scena che mostri il prossimo comune in gara, così chi commenta vede subito il risultato del proprio voto."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:33+00:00",
+   "da": "grafica3d-9",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il testo «Livorno contro Cecina: 32 chilometri» parte a 4.4s, ma il fotogramma a 4 s mostra ancora i cuccioli in primo piano: la mappa con le etichette compare solo dopo, quindi la frase sulla distanza è detta prima che lo spettatore veda la sfida. Inoltre la scena «Livorno · 14» ",
+   "dati": {
+    "controllato": "Ho verificato la scena della mappa (Livorno 16 luci, Cecina 14, dati coerenti con il copione), la sincronia tra trascrizione e fotogrammi, e il conteggio 14 a 14.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione il testo «Livorno contro Cecina: 32 chilometri» parte a 4.4s, ma il fotogramma a 4 s mostra ancora i cuccioli in primo piano: la mappa con le etichette compare solo dopo, quindi la frase sulla distanza è detta prima che lo spettatore veda la sfida. Inoltre la scena «Livorno · 14» sulla mappa mostra 14 mentre i dati indicano 16 luci oggi per Livorno: l'etichetta mostra il conteggio della sfida, non quello reale, e questo può confondere chi conta le luci.",
+    "correzione": "Allineare la comparsa della mappa con la frase a 4.4s e chiarire nell'etichetta o nel copione che il numero è quello della sfida (es. «Livorno · 14 nel duello»), oppure aggiornare il dato a 16 se è il totale reale.",
+    "idea": "Per i prossimi testa a testa, mostrare per prima la mappa con i due comuni evidenziati e il conteggio reale, così la frase iniziale e la grafica coincidono."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:33+00:00",
+   "da": "grafica3d-10",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "La frase «32 chilometri» non è nei dati verificati forniti: non c'è alcun campo con la distanza tra i due comuni, quindi è un'informazione non documentata che compare sia nel parlato sia nella didascalia.",
+   "dati": {
+    "controllato": "Ho verificato il secondo 4.4 della trascrizione (apertura Livorno/Cecina, 32 km) contro la scena della mappa e i dati: Livorno 14 e Cecina 14 corrispondono a luci_del_comune_dell_etichetta; il punteggio 14 a 14 nel fotogramma del secondo 11 e nella scena finale è coerente.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase «32 chilometri» non è nei dati verificati forniti: non c'è alcun campo con la distanza tra i due comuni, quindi è un'informazione non documentata che compare sia nel parlato sia nella didascalia.",
+    "correzione": "Togliere «32 chilometri» dal copione e dalla didascalia oppure sostituirlo con un dato verificato (es. «due comuni della costa toscana»), e verificare la distanza prima di ripubblicare.",
+    "idea": "Fare il prossimo reel con un dato verificato sulla distanza o su un fatto reale tra le città, mostrato sulla mappa con una linea animata che collega i due comuni."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:42+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima della pubblicazione si sistemano tre cose: il gancio dei primi 2 secondi, il dato dei 32 km non verificato e il punteggio 14–14 non coerente con i dati della mappa (Livorno 16 luci). Il formato testa a testa si mantiene.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0.5,
+      "problema": "Il reel apre con un primo piano sfocato di cane, senza testo e senza il tema. Il 'Livorno vs Cecina' compare solo verso i 4 secondi e la voce lo dice a 4,4s.",
+      "correzione": "Aprire dal secondo 0 con la mappa e le etichette 'Livorno' e 'Cecina' con il punteggio già visibili, più un testo a schermo 'Livorno vs Cecina'. Il primo piano del cane va spostato in chiusura."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La voce dice '32 chilometri', un dato che non compare in nessun materiale verificato.",
+      "correzione": "Togliere i 32 km dalla voce e dalla didascalia, oppure verificare la distanza e indicarne la fonte prima di pubblicare. In alternativa dire 'due comuni a un passo, e la sfida è aperta'."
+     },
+     {
+      "secondo": 11.6,
+      "problema": "Voce, titolo, copertina e didascalia dicono 'Pari: 14 a 14', ma i dati della mappa danno oggi Livorno 16 luci e Cecina 14. Il numero mostrato non coincide con il dato attuale e può far perdere fiducia.",
+      "correzione": "Verificare il conteggio al momento della pubblicazione e allineare voce, mappa, titolo, copertina e didascalia sullo stesso valore (16–14 se confermato). Se il punteggio cambia, la parola 'Pari' va tolta. Sincronizzare la frase con il momento in cui il numero compare a schermo."
+     },
+     {
+      "secondo": 15,
+      "problema": "La chiusura parlata, la domanda a schermo ('Cecina o Livorno?') e la scritta finale 'ANIMALE!' non coincidono, quindi la richiesta di commento risulta poco chiara.",
+      "correzione": "Usare una sola formula, 'Sei di Cecina o di Livorno? Commenta città e nome del tuo animale', identica in voce e a schermo, e rendere chiaro cosa significa 'ANIMALE!'."
+     }
+    ],
+    "idea": "Testa a testa Livorno vs Cecina aperto dalla mappa con il punteggio reale già visibile al secondo 0, primo piano del cane come chiusura emotiva e domanda finale identica in voce e a schermo. Il numero aggiornato generato dai dati serve a tenere sincronizzati voce, titolo e mappa, e può aprire il reel successivo della serie."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:42+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima della pubblicazione si aggiornano i numeri al dato reale (Livorno 16 – Cecina 14) e si toglie o si verifica il «32 chilometri»; il formato testa a testa resta la linea da portare avanti.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.4,
+      "problema": "Il reel, la copertina e la didascalia dicono «Livorno 14 – 14 Cecina» e «Pari», ma i dati di oggi danno Livorno a 16 luci e Cecina a 14. Il pareggio è superato e il titolo non corrisponde più alla realtà.",
+      "correzione": "Aggiornare voce, etichette sulla mappa, copertina e didascalia a Livorno 16 – Cecina 14 e rigenerare la voce se cambia il numero. In alternativa, riscrivere il copione come «sfida in corso» con la data del dato dichiarata. La frase «Pari» va tolta se il dato è cambiato."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La voce («Livorno contro Cecina: 32 chilometri») e la didascalia («a 32 km») riportano una distanza che non compare in nessun materiale verificato (mappa, dati, brief).",
+      "correzione": "Verificare la distanza con una fonte e indicarla, oppure togliere «32 chilometri» dal parlato e «a 32 km» dalla didascalia."
+     },
+     {
+      "secondo": 8.8,
+      "problema": "L'etichetta «Livorno · 14» e «Cecina · 14» compare già verso il secondo 5, mentre la voce dice «Pari: 14 a 14» solo a 8.8 s. Le etichette sono quindi leggermente sfasate rispetto alla voce.",
+      "correzione": "Allineare la comparsa delle etichette e del «Pari» (o del nuovo punteggio) alla frase pronunciata, intorno a 8.8 s."
+     }
+    ],
+    "idea": "Testa a testa con punteggio sempre vero e aggiornato: mostrare in scena il dato verificato con la sua data (es. «Livorno 16 – Cecina 14») e chiudere con la città in vantaggio, così il formato resta una «sfida in corso» e il pubblico ha un motivo per tornare e commentare."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:42+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare correggo il picco audio, che supera l'obiettivo, e verifico il conteggio di Livorno (16 sulla mappa, 14 nel testo). Poi sistemo l'attacco della voce a 4.4s e la sincronia della scritta '14 · 14' con la frase 'Pari: 14 a 14'.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.4,
+      "problema": "La mappa riporta 16 luci per Livorno, mentre testo, etichetta e copertina dicono 14 a 14. Se il dato reale è 16, il reel mostra un numero falso e la sfida perde credibilità.",
+      "correzione": "Controllare il conteggio reale di Livorno prima della pubblicazione. Allineare a quel dato voce, etichetta, copertina e didascalia, oppure correggere la mappa se l'errore è lì."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La voce dice 'Livorno contro Cecina' a 4.4s, mentre la scena della mappa parte a 4.49s. L'attacco è scoordinato di circa 0.1s e la prima parola può arrivare prima dell'immagine.",
+      "correzione": "Allineare voce e scena: spostare l'attacco della voce a circa 4.49s, oppure anticipare l'inizio della scena a 4.4s."
+     },
+     {
+      "secondo": 8.8,
+      "problema": "L'etichetta '14 · 14' sulla mappa non è sincronizzata con la frase 'Pari: 14 a 14', pronunciata a circa 8.8s. Il momento chiave del pareggio coincide con l'immagine solo in parte.",
+      "correzione": "Far comparire l'etichetta '14 · 14' esattamente quando la voce dice 'Pari: 14 a 14', a circa 8.8s."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS. Lo scarto è piccolo, ma la ricompressione delle piattaforme potrebbe creare distorsione.",
+      "correzione": "Abbassare il master di circa 0.5 dB, oppure usare un limitatore a -1.5 dBFS, mantenendo il loudness vicino a -14 LUFS."
+     },
+     {
+      "secondo": 0,
+      "problema": "I primi 5 secondi hanno un volume medio di -16.2 dB, più basso del resto del reel. L'apertura parte piano proprio dove si decide se lo spettatore resta.",
+      "correzione": "Alzare l'apertura di circa 1-2 dB, restando sotto -1 dBFS di picco, o aggiungere un suono breve e incisivo nei primi 2 secondi."
+     }
+    ],
+    "idea": "Per il testa a testa: un suono breve e riconoscibile (un colpo di campana) quando compare il pareggio '14 · 14', con una scritta 'pari' sulla mappa. Nel prossimo reel si chiude con il punteggio aggiornato in voce, per dare continuità alla sfida e spingere a seguire la puntata successiva."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:42+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare correggo i numeri e i testi: tolgo i 32 km non verificati, allineo Livorno ai dati attuali e porto l'invito visivo (commento e follow) dove serve; la grafica resta com'è.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.4,
+      "problema": "La voce dice «Livorno contro Cecina: 32 chilometri», ma nei materiali non c'è nessun dato verificato sulla distanza. Sette relazioni su nove non lo confermano.",
+      "correzione": "Togliere «32 chilometri» da voce, copione e didascalia e sostituirlo con un dato verificabile, per esempio «Livorno e Cecina, 14 luci a testa» o «e la sfida è aperta»."
+     },
+     {
+      "secondo": 4,
+      "problema": "L'etichetta «Livorno · 14» sulla mappa non corrisponde ai dati attuali: Livorno ha 16 luci, Cecina 14. Il pari 14 a 14 (mappa, copertina, scena duello, frase «Pari») è quindi un numero vecchio e il reel rischia di far perdere fiducia a chi controlla.",
+      "correzione": "Rigenerare il reel con i dati di oggi (Livorno 16, Cecina 14) e aggiornare etichetta, copertina, duello, frase «Pari» e didascalia. Se si vuole tenere il 14–14, indicare chiaramente la data del conteggio."
+     },
+     {
+      "secondo": 18,
+      "problema": "Nel reel non c'è nessuna chiamata a seguire la pagina. La fascia «Commenta città e nome del tuo animale» compare tardi (dal secondo 15 circa) ed è molto in basso, dove l'interfaccia di Instagram può coprirla.",
+      "correzione": "Aggiungere nell'ultima scena «Segui per la prossima sfida». Alzare la fascia di commento lontano dal bordo inferiore, ingrandire il font e farla comparire prima, verso il secondo 8-10."
+     },
+     {
+      "secondo": 4,
+      "problema": "Il titolo in alto e le etichette delle città sono piccoli e si leggono a fatica su mobile.",
+      "correzione": "Ingrandire titolo ed etichette di circa un terzo, mantenendo il contrasto."
+     }
+    ],
+    "idea": "Testa a testa con il punteggio aggiornato (dati veri e datati) ben visibile fin dai primi secondi, un invito grande e fisso a commentare città e animale, e la chiusura «Segui per la prossima sfida»."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:42+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Fermare la pubblicazione finché il punteggio non è verificato sui dati della mappa (Livorno 16, Cecina 14 secondo più report, ma la copertina e un report dicono 14 e 14), poi correggere voce, sottotitoli, copertina e didascalia e abbassare il picco audio sotto -1 dBFS.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 8.8,
+      "problema": "Il reel dice «Pari: 14 a 14» e la copertina riporta 14 – 14, ma la mappa di oggi indica Livorno 16 e Cecina 14 (il report Copertina riporta invece 14 e 14). Il reel rischia di mostrare un risultato falso nel momento clou.",
+      "correzione": "Ricontrollare il conteggio sulla mappa adesso. Se è 16 a 14, rifare voce, sottotitoli, copertina e didascalia (es. «Livorno avanti 16 – 14») e togliere la parola «Pari». Se la scena è congelata a 14, dichiararlo («al momento delle riprese»)."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "«Livorno contro Cecina: 32 chilometri» è una distanza che nessuno ha verificato nei materiali.",
+      "correzione": "Verificare la distanza con una fonte (mappa) prima di pubblicare, altrimenti toglierla o correggerla."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è -0.8 dBFS, sopra l'obiettivo di -1 dBFS.",
+      "correzione": "Abbassare il guadagno di circa 0.5–0.7 dB (picco intorno a -1.5 dBFS) mantenendo circa -14 LUFS."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La voce entra a 4.4 s ma la luce risulta accesa a 5.09 s e l'etichetta compare dopo la frase d'apertura: voce e immagine non sono sincronizzate.",
+      "correzione": "Far comparire la luce e l'etichetta insieme alla frase «Livorno contro Cecina» (o spostare la voce di circa 0.7 s) e controllare i fotogrammi tra 4.5 e 5.1 s."
+     }
+    ],
+    "idea": "Punteggio generato direttamente dai dati della mappa al momento della pubblicazione e mostrato come numero in evidenza (con chiusura tipo «ora siamo 16 a 14»), così non si disallinea mai e dà un motivo per tornare e commentare."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:42+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché il punteggio non è allineato ai dati reali (16 a 14 oggi, non 14 a 14) in voce, didascalia e copertina; poi sistemare l'attacco della voce a 4.4s e limare il picco audio.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 8.8,
+      "problema": "La voce dice «Pari: 14 a 14», ma la mappa mostra Livorno 16 e Cecina 14. Lo stesso numero sbagliato è nella didascalia («Livorno 14 – 14 Cecina») e nella copertina («14 – 14»). Chi controlla la mappa vede una sfida falsa. Cinque relatori su nove lo segnalano; chi dice 'ok' lo considera coerente ma i dati mostrati non lo sono.",
+      "correzione": "Verificare il conteggio al momento della pubblicazione e riscrivere voce, didascalia e copertina con lo stesso numero (es. «Livorno 16 – 14 Cecina»). Se si vuole mantenere il 14–14, dichiararlo come punteggio fisso della sfida, ma i dati sulla mappa devono coincidere. Il numero va generato dagli stessi dati per tutti e tre i punti."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La frase «Livorno contro Cecina: 32 chilometri» parte a 4.4s, ma la scena della mappa inizia a 4.49s e le luci sono accese solo a 5.09s: la voce precede le immagini.",
+      "correzione": "Spostare l'inizio della frase a circa 5.1s oppure anticipare di mezzo secondo la scena della mappa, così parlato e luci coincidono."
+     },
+     {
+      "secondo": 16.7,
+      "problema": "La fascia «Commenta città e nome del tuo animale» è sovrapposta al testo parlato in chiusura e può coprire la call to action (segnalato da un solo relatore, da verificare sul fotogramma).",
+      "correzione": "Controllare il fotogramma finale e, se c'è sovrapposizione, spostare la fascia più in basso, sopra il margine sicuro, lontana dal testo."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS (loudness -14.1 LUFS, per il resto ok).",
+      "correzione": "Applicare un limiter leggero per portare il picco sotto -1 dBFS."
+     }
+    ],
+    "idea": "Punteggio in sovrimpressione aggiornato a ogni cambio di luce, generato direttamente dai dati al momento della pubblicazione, così il numero parlato, la copertina e la didascalia coincidono sempre con quello visibile sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:42+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima della pubblicazione correggere il punteggio (il reel dice 14 a 14 ma la mappa mostra Livorno 16, Cecina 14) e sistemare l'apertura, poi pubblicare il reel testa a testa.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 8.8,
+      "problema": "Il «Pari: 14 a 14» parlato, la didascalia («Livorno 14 – 14 Cecina») e la copertina («14 – 14») non coincidono con la mappa di oggi, che mostra Livorno 16 luci e Cecina 14. Un numero sbagliato fa perdere fiducia a chi controlla la mappa. Nota: un report indica Livorno 14→16 e l'etichetta in scena dice 14, quindi il dato va riverificato prima di correggere.",
+      "correzione": "Verificare il conteggio reale al momento della pubblicazione e allineare voce, etichette in scena, didascalia e copertina (se confermato: Livorno 16 – Cecina 14, niente più «pari»)."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La frase «Livorno contro Cecina: 32 chilometri» parte a 4.4s ma la scena mappa con le luci inizia a 4.49s e la luce di Livorno è accesa solo a 5.09s: la voce arriva prima dell'immagine. Inoltre i 32 km non sono verificabili nei dati della mappa.",
+      "correzione": "Far entrare la scena mappa circa 0.5s prima, o ritardare la frase, così le città e le luci compaiono insieme alla voce. Verificare i 32 km oppure toglierli."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il volume medio dei primi 5s (-16.2 dB) è più basso del resto del reel (-14 LUFS), e il picco a -0.8 dBFS è sopra l'obiettivo di -1 dBFS.",
+      "correzione": "Alzare leggermente il volume dei primi 5 secondi e abbassare il picco di qualche decimo di dB sotto -1 dBFS."
+     }
+    ],
+    "idea": "Testa a testa con punteggio aggiornato e verificabile in sovrimpressione (numero animato, es. «Oggi: Livorno 16 – Cecina 14»), e nel finale la distanza dal sorpasso per spingere a commentare e tornare a vedere chi vince."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:42+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare si correggono i numeri: il pareggio 14 a 14 è superato dai dati (Livorno oggi 16 luci, Cecina 14) e i «32 chilometri» non hanno alcuna fonte; si mantiene il formato testa a testa con la domanda finale.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.4,
+      "problema": "Sulla mappa compare «Livorno · 14», ma i dati di oggi dicono 16 luci per Livorno e 14 per Cecina. Il «Pari: 14 a 14» nel copione, nella scena del duello, nella copertina e nella didascalia è quindi vecchio. Le etichette dei comuni compaiono prima che la voce nomini Livorno e Cecina.",
+      "correzione": "Aggiornare numero sulla mappa, scena del duello, copertina e didascalia ai valori reali al momento della pubblicazione (oggi Livorno 16, Cecina 14), oppure riscrivere la frase senza un numero fisso. Se il punteggio non è più in parità, adeguare anche l'annuncio «il prossimo animale decide». Far comparire le etichette dei comuni quando la voce li pronuncia."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "Il copione e la didascalia dicono «32 chilometri» (o «32 km»), ma nei materiali non c'è nessuna fonte per questa distanza.",
+      "correzione": "Verificare la distanza con una fonte o con le coordinate e citarla, altrimenti toglierla da voce e didascalia. In alternativa usare «due città vicine e la sfida è aperta»."
+     },
+     {
+      "secondo": 11,
+      "problema": "La voce dice «Il prossimo animale decide chi passa avanti», ma sullo schermo c'è ancora il duello senza un titolo che sostenga la frase. «ANIMALE!» compare solo più tardi.",
+      "correzione": "Far comparire il titolo «IL PROSSIMO ANIMALE DECIDE» sulla scena del duello nel momento in cui la voce lo dice (circa 11.6 s) e tenere «ANIMALE!» come chiusura del duello."
+     }
+    ],
+    "idea": "Testa a testa con il punteggio aggiornato ai dati del giorno e la chiusura «Segui la pagina: il prossimo animale decide chi passa avanti», con il titolo «IL PROSSIMO ANIMALE DECIDE» sincronizzato alla voce."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:47+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è quasi pronto: prima di pubblicare si verificano i conteggi della mappa (14-14 contro 16-14) e si elimina la call to action doppia in chiusura; il resto sono ritocchi minori.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.4,
+      "problema": "Conflitto sui dati: un collega riporta Livorno 16 luci e Cecina 14, altri 14-14. Se il 16 è vero, il pari 14-14 nel copione, nella didascalia e nella copertina è falso e danneggia la credibilità della sfida, che è il cuore del reel. Il conteggio va riverificato sulla mappa al momento della pubblicazione.",
+      "correzione": "Controllare il conteggio reale delle luci di Livorno e Cecina sulla mappa. Se è 16-14, correggere voce, testo a schermo, didascalia e copertina; se è 14-14, confermare e procedere."
+     },
+     {
+      "secondo": 16.7,
+      "problema": "La call to action «Commenta città e nome del tuo animale» è detta a voce e scritta anche nella fascia finale, quindi è ripetuta due volte e appesantisce la chiusura.",
+      "correzione": "Tenerla in un solo canale: lasciare la voce e rendere la fascia più breve o con altro contenuto, oppure il contrario. Verificare anche che il link in bio sia attivo."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS (segnalato da più colleghi), e i primi 5 secondi sono a -16.2 dB, un po' bassi.",
+      "correzione": "Abbassare il limitatore di circa 0.3-0.5 dB per portare il picco sotto -1 dBFS e alzare leggermente il volume dei primi 5 secondi."
+     }
+    ],
+    "idea": "Per i prossimi testa a testa: chiusura visiva con il punteggio aggiornato del comune che passa avanti (es. «15 – 14») mentre la sola voce chiede il commento, per rendere il risultato leggibile e dare un motivo per tornare a seguire la sfida."
+   }
+  },
+  {
+   "t": "2026-11-10T12:06:49+00:00",
+   "da": "grafica3d-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è quasi pronto, ma prima di pubblicare va verificato il dato di Livorno (14 o 16 luci?) e va tolto o confermato «32 chilometri»; i ritocchi di ritmo e leggibilità sono secondari.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 11.6,
+      "problema": "Due relazioni sono in conflitto sul numero di luci di Livorno: \"Materiali e texture\", \"Rilievo e terreno\" e \"Scene 3D\" citano 16 luci per Livorno, mentre altre dicono 14. Se Livorno ne ha 16, l'etichetta «Livorno · 14» e il «Pari: 14 a 14» sono falsi e il reel mostra un risultato sbagliato. Nessuna relazione che dice ok lo smentisce in modo chiaro.",
+      "correzione": "Controllare subito il conteggio reale delle luci di Livorno sulla fonte dati. Se è 16, cambiare l'etichetta, il testo «Pari» (diventa 16 a 14 per Livorno), la didascalia e la copertina, poi rigenerare il reel. Se è 14, nessuna modifica."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La frase «32 chilometri» è nel parlato e nella didascalia ma non compare in nessun dato verificato. Due relazioni lo segnalano indipendentemente. Inoltre la voce lo dice prima che la mappa sia visibile.",
+      "correzione": "Togliere «32 chilometri» da parlato e didascalia, o sostituirlo con «due comuni della costa toscana» finché la distanza non è confermata. Far comparire la mappa in sincrono con «Livorno contro Cecina»."
+     },
+     {
+      "secondo": 11,
+      "problema": "Nel duello la fascia di commento scompare, il titolo resta fisso e il conteggio 14–14 viene sovrapposto allo stacco su «ANIMALE!» mentre la voce dice «Il prossimo animale decide chi passa avanti». Inoltre «È APERTA» a metà tra le due città è leggibile solo per un istante.",
+      "correzione": "Tenere fermo il conteggio per circa 0,5 secondi prima dello stacco su «ANIMALE!», far entrare «ANIMALE!» sulla parola «decide» e spostare «È APERTA» sopra la costa così resta leggibile per tutta la frase."
+     }
+    ],
+    "idea": "Un reel di «spareggio» dopo il duello: la città scelta dai commenti accende la luce successiva sulla mappa, così chi vota vede subito l'effetto del proprio commento. Va fatto solo con dati verificati."
+   }
+  },
+  {
+   "t": "2026-11-10T12:07:04+00:00",
+   "da": "montaggio-1",
+   "a": "pubblicazione-1",
+   "tipo": "correzione",
+   "testo": "Correzione di squadra (Direttore non collegato): Allineo l'etichetta di Livorno a 16 e riscrivo la frase del duello senza la parola «Pari», perché i dati mostrano Livorno avanti 16 a 14. Lascio i 32 km: dalle coordinate dei due comuni risultano circa 32 km, quindi il dato è corretto. Non tocco sincronie di pochi decimi, picco audio, volume dei primi secondi e apertura, perché sono ritocchi minori o segnalati da meno reparti.",
+   "dati": {
+    "azioni": [
+     {
+      "azione": "etichetta",
+      "scena": 0,
+      "punto": 0,
+      "testo": "Livorno · 16"
+     },
+     {
+      "azione": "frase",
+      "scena": 1,
+      "testo": "Livorno è avanti 16 a 14. Il prossimo animale può cambiare tutto."
+     }
+    ],
+    "perche": [
+     {
+      "difetto": "Il «Pari 14 a 14» e l'etichetta «Livorno · 14» non coincidono con i dati della mappa: Livorno ha 16 luci, Cecina 14",
+      "reparti": [
+       "Copione",
+       "Mappa e dati",
+       "Voce e musica",
+       "Grafica e copertine",
+       "Pubblicazione",
+       "Community",
+       "Coppa delle Zampe",
+       "Crescita (follower)",
+       "Direzione video"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-10T12:07:52+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 2: -14.2 LUFS, picco -1.0 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.2,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.2,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-10T12:07:52+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 2 esportata (18.9 s): ti mando 19 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 18.9,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ]
+   }
+  },
+  {
+   "t": "2026-11-10T12:07:53+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 19.0,
+   "fotogrammi": [
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s000.5.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s001.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s002.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s003.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s004.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s005.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s006.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s007.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s008.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s009.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s010.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s011.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s012.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s013.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s014.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s015.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s016.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s017.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s018.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v1/s018.7.jpg"
+   ],
+   "audio": {
+    "lufs": -14.1,
+    "picco_dbfs": -0.8,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.2,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "v": 2,
+   "durata": 18.9,
+   "fotogrammi": [
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s000.5.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s001.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s002.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s003.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s004.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s005.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s006.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s007.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s008.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s009.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s010.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s011.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s012.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s013.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s014.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s015.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s016.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s017.0.jpg",
+    "fotogrammi/2026-11-10-1303-testa_a_testa/v2/s018.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.2,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.2,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "crescita": {
+  "pubblico": "Chi vive a Livorno o a Cecina (o in provincia) e ha un cane o un gatto: persone che ancora non ci seguono e che reagiscono a un confronto tra due città vicine e a una domanda diretta nei commenti.",
+  "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta. Il tuo animale da che parte sta?",
+  "primo_fotogramma": "Il video vero di Thor a tutto schermo, con la mappa dell'Italia di notte e le due luci di Livorno e Cecina che brillano. Scritta grande: «LIVORNO 14 – 14 CECINA». Sotto, piccola: «Il tuo animale decide chi vince». Così il duello si capisce anche a volume zero.",
+  "motivo_per_seguire": "Seguendo Zampe d'Italia vedi ogni giorno la sfida tra città vicine e puoi far accendere la luce del tuo animale sulla mappa per far vincere la tua città.",
+  "chiusura": "Livorno o Cecina? Commenta città e nome del tuo animale: la prossima luce è tua.",
+  "perche": "Il testa a testa dell'8/11 ha reso 34,5 follower ogni 1.000 raggiunti contro 4,6 della coppa, ma il campione è piccolo: cambio solo la coppia di città per verificarlo, con una sfida locale e una domanda diretta."
+ },
+ "token_persone": 492101,
+ "fine": "2026-11-10T12:07:53+00:00"
+}

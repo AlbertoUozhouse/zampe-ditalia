@@ -151,5 +151,14 @@
   "stato": "fatto",
   "fine": "2026-11-10T10:16:58+00:00",
   "scambi": 18
+ },
+ {
+  "id": "2026-11-10-1303-testa_a_testa",
+  "formato": "testa_a_testa",
+  "modalita": "operativa",
+  "inizio": "2026-11-10T12:03:44+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-10T12:07:53+00:00",
+  "scambi": 128
  }
 ]
