@@ -5924,6 +5924,7 @@
 "18115195730030500",
 "18115196387166511",
 "18115203566134833",
+"18115207352165433",
 "18115224688858362",
 "18115233515138653",
 "18115242371032171",
@@ -6390,6 +6391,7 @@
 "18119320573960708",
 "18119324281950845",
 "18119324413784816",
+"18119328356012955",
 "18119340362088062",
 "18119342968798866",
 "18119342975058142",
@@ -10415,7 +10417,9 @@
 "18668921470032586"
 ],
 "risposte": [
-1794340006.9913466
+1794340006.9913466,
+1794341556.9323893,
+1794341561.805632
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12550,7 +12554,9 @@
 "bessomatteo": "2026-11-10",
 "sim.o_._": "2026-11-10",
 "danielerusso314": "2026-11-10",
-"michele.ioni": "2026-11-10"
+"michele.ioni": "2026-11-10",
+"giulixx_013": "2026-11-10",
+"maxmolinu": "2026-11-10"
 },
 "media_letti": {},
 "pezzi": {
@@ -13513,9 +13519,6 @@
 "anita._sigala": [
 "uli_alfa.fan"
 ],
-"giulixx_013": [
-"uli_alfa.fan"
-],
 "pezzonigiulia": [
 "uli_alfa.fan"
 ]
@@ -13682,7 +13685,8 @@
 "cristinaek>michael_wolf_98",
 "fede_sporty_>tanialapesa",
 "tania_ghensi>keyla_ghensi",
-"iamfrancescarusso>danielerusso314"
+"iamfrancescarusso>danielerusso314",
+"uli_alfa.fan>giulixx_013"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14648,7 +14652,7 @@
 "maryg78a": 40,
 "ciopicelle": 30,
 "samu_el_gallo": 5,
-"uli_alfa.fan": 55,
+"uli_alfa.fan": 71,
 "blaze_the_violet_cat": 30,
 "beppekala": 30,
 "lary_013_4": 46,
@@ -14718,7 +14722,8 @@
 "tania_ghensi": 1
 },
 "2026-11-10": {
-"iamfrancescarusso": 1
+"iamfrancescarusso": 1,
+"uli_alfa.fan": 1
 }
 },
 "seguono": {
@@ -18900,10 +18905,13 @@
 "399adb049641eb93",
 "da12ed3fd08d22ae",
 "b9da781456af1edd",
-"62e7ab1aeea81482"
+"62e7ab1aeea81482",
+"b3b1d98c86d5878b",
+"531d6051a1b1bac6"
 ],
 "privati_ora": [
-1794336091.3187528
+1794341556.9324162,
+1794341561.805653
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -18918,7 +18926,8 @@
 ]
 },
 "missioni_fatte": {
-"iamfrancescarusso": "2026-11-10"
+"iamfrancescarusso": "2026-11-10",
+"uli_alfa.fan": "2026-11-10"
 },
 "boost": {},
 "negozio_fatti": [
@@ -18949,7 +18958,7 @@
 "2026-11-07": 1723,
 "2026-11-08": 1766,
 "2026-11-09": 1793,
-"2026-11-10": 1805
+"2026-11-10": 1808
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19342,6 +19351,10 @@
 [
 "2026-11-10T18:14+00:00",
 1805
+],
+[
+"2026-11-10T20:12+00:00",
+1808
 ]
 ],
 "coppa": {
@@ -21326,11 +21339,12 @@
 "Zocca|MO"
 ]
 ],
-"attesa": null,
+"attesa": "Burcei|SU",
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
-"Terni|TR": 1
+"Terni|TR": 1,
+"Darfo Boario Terme|BS": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21380,6 +21394,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-10T20:12+00:00",
+"sorpasso": "Darfo Boario Terme|BS",
+"su": "Curtatone|MN",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -21387,10 +21410,12 @@
 "quartiere": {
 "Darfo Boario Terme|BS": {
 "u": [
-"uli_alfa.fan"
+"uli_alfa.fan",
+"giulixx_013"
 ],
 "c": [
-"18073884893772181"
+"18073884893772181",
+"18115207352165433"
 ],
 "chiuse": 0,
 "log": []
@@ -21407,7 +21432,8 @@
 }
 },
 "luci": [
-"michele.ioni|animale|miele"
+"michele.ioni|animale|miele",
+"giulixx_013|animale|gianpiero"
 ]
 }
 }
