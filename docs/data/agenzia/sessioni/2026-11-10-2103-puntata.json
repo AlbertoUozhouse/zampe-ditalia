@@ -1,0 +1,2315 @@
+{
+ "id": "2026-11-10-2103-puntata",
+ "formato": "puntata",
+ "modalita": "operativa",
+ "inizio": "2026-11-10T20:03:16+00:00",
+ "stato": "corretto dalla squadra",
+ "scambi": [
+  {
+   "t": "2026-11-10T20:03:16+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "puntata",
+     "id": "2026-11-10-2103-puntata",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Il tuo animale è già su questa mappa? 2789 luci accese in Italia.",
+       "scena": "mappa"
+      },
+      {
+       "i": 1,
+       "testo": "Cani 1944, gatti 775.",
+       "scena": "duello"
+      },
+      {
+       "i": 2,
+       "testo": "Ogni commento è una luce: scrivi città e nome.",
+       "scena": "commento"
+      },
+      {
+       "i": 3,
+       "testo": "Scrivi qui sotto e accendi la tua luce!",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": null,
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "Giorno 16 della mappa di Zampe d'Italia 🌙 2789 luci accese: cani 1944, gatti 775.\n\nScrivi qui sotto città e nome del tuo animale e accendi la tua luce col tuo @. Il primo di ogni comune diventa il Fondatore 👑\n📸 Ci segui? Mandaci in privato una foto o 5 secondi di video del tuo animale che corre o gioca: finisce nei nostri reel, col tuo @!\n\n➕ Seguici e scrivi SEGUO: +10 punti e le lucine sulla cuccia. Nei reel mettiamo prima gli animali di chi ci segue.\n\n🎆 A 2.000 follower facciamo i fuochi d'artificio su tutta la mappa d'Italia: ne mancano 195. Seguici e dillo a un amico!\n\nVoce generata con IA",
+     "voce": true,
+     "copertina": {
+      "sopra": "GIORNO 16",
+      "grande": "2789<br>luci",
+      "sotto": "La mappa di stasera 🌙",
+      "tema": "puntata"
+     }
+    }
+   }
+  },
+  {
+   "t": "2026-11-10T20:03:20+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Chi ha un cane o un gatto e vive in Veneto, soprattutto a Verona o Vicenza, non segue ancora la pagina e scorrendo si ferma se vede la propria città nominata e può rispondere con un commento. · Gancio: Verona o Vicenza: quale città ha più animali accesi sulla mappa? Il tuo da che parte sta? · Primo fotogramma: Mappa dell'Italia di notte con zoom sul Veneto: una luce a Verona e una a Vicenza, collegate da una linea. Testo grande: «VERONA vs VICENZA». Sotto, più piccolo: «Il tuo animale da che parte sta?» · Motivo per seguire: Zampe d'Italia mette ogni animale come una luce sulla mappa dell'Italia di notte e fa sfidare le città tra loro: seguici per vedere se la tua città vince e per accendere la luce del tuo animale. · Chiusura: Scrivi città e nome del tuo animale. Segui Zampe d'Italia: domani la sfida continua.",
+   "dati": {
+    "pubblico": "Chi ha un cane o un gatto e vive in Veneto, soprattutto a Verona o Vicenza, non segue ancora la pagina e scorrendo si ferma se vede la propria città nominata e può rispondere con un commento.",
+    "gancio": "Verona o Vicenza: quale città ha più animali accesi sulla mappa? Il tuo da che parte sta?",
+    "primo_fotogramma": "Mappa dell'Italia di notte con zoom sul Veneto: una luce a Verona e una a Vicenza, collegate da una linea. Testo grande: «VERONA vs VICENZA». Sotto, più piccolo: «Il tuo animale da che parte sta?»",
+    "motivo_per_seguire": "Zampe d'Italia mette ogni animale come una luce sulla mappa dell'Italia di notte e fa sfidare le città tra loro: seguici per vedere se la tua città vince e per accendere la luce del tuo animale.",
+    "chiusura": "Scrivi città e nome del tuo animale. Segui Zampe d'Italia: domani la sfida continua.",
+    "perche": "Il confronto locale tra due città vicine e la domanda diretta sono il formato che ha convertito meglio (34,5 follower ogni 1.000 su pochi reel, da confermare), e il primo fotogramma con i due nomi si capisce anche a volume zero."
+   }
+  },
+  {
+   "t": "2026-11-10T20:03:20+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "puntata",
+     "id": "2026-11-10-2103-puntata",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Il tuo animale è già su questa mappa? 2789 luci accese in Italia.",
+       "scena": "mappa"
+      },
+      {
+       "i": 1,
+       "testo": "Cani 1944, gatti 775.",
+       "scena": "duello"
+      },
+      {
+       "i": 2,
+       "testo": "Ogni commento è una luce: scrivi città e nome.",
+       "scena": "commento"
+      },
+      {
+       "i": 3,
+       "testo": "Scrivi qui sotto e accendi la tua luce!",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": null,
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "Giorno 16 della mappa di Zampe d'Italia 🌙 2789 luci accese: cani 1944, gatti 775.\n\nScrivi qui sotto città e nome del tuo animale e accendi la tua luce col tuo @. Il primo di ogni comune diventa il Fondatore 👑\n📸 Ci segui? Mandaci in privato una foto o 5 secondi di video del tuo animale che corre o gioca: finisce nei nostri reel, col tuo @!\n\n➕ Seguici e scrivi SEGUO: +10 punti e le lucine sulla cuccia. Nei reel mettiamo prima gli animali di chi ci segue.\n\n🎆 A 2.000 follower facciamo i fuochi d'artificio su tutta la mappa d'Italia: ne mancano 195. Seguici e dillo a un amico!\n\nVoce generata con IA",
+     "voce": true,
+     "copertina": {
+      "sopra": "GIORNO 16",
+      "grande": "2789<br>luci",
+      "sotto": "La mappa di stasera 🌙",
+      "tema": "puntata"
+     }
+    },
+    "mappa": []
+   }
+  },
+  {
+   "t": "2026-11-10T20:03:22+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-10T20:04:44+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.4 LUFS, picco -0.7 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.4,
+    "picco_dbfs": -0.7,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.7,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:44+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (16.8 s): ti mando 17 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 16.8,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16
+    ]
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:47+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il numero 2789 compare sullo schermo al secondo 1.1 (fotogramma 3s non lo mostra ancora in primo piano, appare dopo), mentre la voce dice 'Il tuo animale è già su questa mappa?' e la domanda non ha un testo a schermo nei primi 3 secondi: nei primi frame la scritta centrale è 'IL TUO ANIMALE' senza u",
+   "dati": {
+    "controllato": "Primi 5 secondi: apertura visiva (mappa con luci, badge Giorno 16, numero 2789 e luci Napoli) e prima frase parlata, in relazione ai dati verificati e alla trascrizione.",
+    "esito": "segnalo",
+    "secondo": 1.1,
+    "problema": "Il numero 2789 compare sullo schermo al secondo 1.1 (fotogramma 3s non lo mostra ancora in primo piano, appare dopo), mentre la voce dice 'Il tuo animale è già su questa mappa?' e la domanda non ha un testo a schermo nei primi 3 secondi: nei primi frame la scritta centrale è 'IL TUO ANIMALE' senza un gancio chiaro. Inoltre l'audio parte a -16.7 dB medi nei primi 5 secondi, circa 2-3 dB sotto l'obiettivo, quindi l'apertura è più fiacca del resto del reel.",
+    "correzione": "Portare la domanda 'Il tuo animale è già su questa mappa?' anche a schermo già dal primo frame e alzare il livello della voce nei primi 5 secondi, così il gancio è visibile e sentito subito.",
+    "idea": "Nel prossimo reel mostrare a schermo un esempio reale di commento con città e nome (anonimizzato) per far capire subito come partecipare."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:49+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 il numero '2789' è ancora visibile sulla mappa e poi scompare, mentre la voce dice 'luci accese' a 1,1-4,1 s e poi passa a 'Cani 1944' a 4,1 s: il testo 'luci' sparisce insieme al numero; inoltre la didascalia dice 'Il primo di ogni comune diventa il Fondatore' ma il copi",
+   "dati": {
+    "controllato": "Trascrizione, secondi delle frasi, copione, didascalia e misure audio del reel 'puntata' (16,8 s) rispetto ai dati di progetto e ai fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 il numero '2789' è ancora visibile sulla mappa e poi scompare, mentre la voce dice 'luci accese' a 1,1-4,1 s e poi passa a 'Cani 1944' a 4,1 s: il testo 'luci' sparisce insieme al numero; inoltre la didascalia dice 'Il primo di ogni comune diventa il Fondatore' ma il copione non lo ripete, e il numero di follower mancanti (195) non è verificabile dai dati, che indicano 1805 follower (2000-1805=195, quindi è coerente). Il problema concreto è la sincronia: il numero 2789 compare sulla mappa solo nei secondi 1-4 come testo isolato senza etichetta 'luci', e la scritta 'OGNI' sul fotogramma 10 è tagliata ('Mo' al secondo 6 e 'Monza, Penny, maltese' al secondo 10 sono la stessa animazione, quindi il testo di esempio e il titolo compaiono in momenti diversi dalla voce).",
+    "correzione": "Mostrare '2789 luci' insieme, per tutti i 4 secondi iniziali, e allineare il testo 'OGNI NOME' sul fotogramma con la frase 'Ogni commento è una luce' (circa 2,4-4 s dopo l'avvio della scena commento). Verificare che il commento di esempio appaia prima della parola 'nome'.",
+    "idea": "Chiudere il reel mostrando il contatore dei follower che si avvicina a 2000 (1805/2000) per legare la call to action all'obiettivo dei fuochi d'artificio."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:49+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 10 il titolo grande «2789 luci» e il riquadro «Cani 1944 / Gatti 775» restano in scena mentre la didascalia sta ancora nel brief; inoltre il numero 2789 nella scena d'apertura (secondo 1) compare in forma isolata e senza etichetta, quindi chi guarda al volo non capisce cosa conti. Più imp",
+   "dati": {
+    "controllato": "Leggibilità da telefono di testo, mappa e fasce nei fotogrammi campionati, più coerenza tra trascrizione, copione e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "Al secondo 10 il titolo grande «2789 luci» e il riquadro «Cani 1944 / Gatti 775» restano in scena mentre la didascalia sta ancora nel brief; inoltre il numero 2789 nella scena d'apertura (secondo 1) compare in forma isolata e senza etichetta, quindi chi guarda al volo non capisce cosa conti. Più importante: la didascalia dice «2789 luci» mentre il progetto riporta 2820 luci, e la frase di chiusura nella trascrizione parla di «accendi la tua luce», coerente con la scena finale ma non con la fascia 'Commenta città e nome'.",
+    "correzione": "Allineare il numero di luci (2789 o 2820) tra didascalia, copertina e reel, e aggiungere un'etichetta («luci accese») al numero isolato del secondo 1, così resta chiaro anche con audio spento.",
+    "idea": "Inserire nell'ultimo fotogramma una riga «Seguici per accendere la tua luce» oltre alla fascia commenti, per unire commento e follow in un solo gesto."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:49+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 10.8 la voce dice 'Ogni commento è una luce: scrivi città e nome', ma nel fotogramma 10 il testo a schermo è ancora 'Mo' / 'Monza, Penny, maltese' appare solo nel fotogramma 10 e il 'NOME.' compare dopo. Il concetto 'ogni commento è una luce' non è mostrato a schermo nel momento in cui vi",
+   "dati": {
+    "controllato": "Sincronia tra trascrizione, scene e fotogrammi, audio (-14 LUFS, picco -0.7 dBFS, nessun silenzio) e coerenza di cifre e didascalia con i dati di progetto.",
+    "esito": "segnalo",
+    "secondo": 10.8,
+    "problema": "Al secondo 10.8 la voce dice 'Ogni commento è una luce: scrivi città e nome', ma nel fotogramma 10 il testo a schermo è ancora 'Mo' / 'Monza, Penny, maltese' appare solo nel fotogramma 10 e il 'NOME.' compare dopo. Il concetto 'ogni commento è una luce' non è mostrato a schermo nel momento in cui viene detto, e la scena del commento arriva in ritardo rispetto al parlato. Inoltre la didascalia dice 'Il primo di ogni comune diventa il Fondatore', affermazione che non è verificabile dai materiali forniti. Nel fotogramma iniziale (0.5s) il titolo 'IL TUO ANIMALE' non corrisponde al testo parlato 'Il tuo animale è già su questa mappa?'.",
+    "correzione": "Allineare la comparsa di 'Monza, Penny, maltese' e 'OGNI... NOME.' alla frase parlata, mostrando il commento di esempio mentre si dice 'Ogni commento è una luce'. Sostituire il titolo fisso 'IL TUO ANIMALE' con la domanda parlata, o tenerlo solo se coincide con la voce. Verificare o rimuovere 'Il primo di ogni comune diventa il Fondatore' se non è una regola reale del progetto.",
+    "idea": "Aggiungere nell'ultimo fotogramma un breve 'Seguici' animato con la luce che si accende, e usare un commento reale di un follower come esempio nella scena commento."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:51+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il brief non ha un'apertura definita (apertura: null) e il primo frame mostra solo la mappa con 'IL TUO ANIMALE' senza la domanda che c'è nel copione ('Il tuo animale è già su questa mappa?'); la prima frase compare solo a ~1.1s e il testo 'IL TUO ANIMALE' appare a metà frame quando il pubblico non ",
+   "dati": {
+    "controllato": "Apertura del reel: primi secondi, frame iniziale con titolo 'Il tuo animale' e mappa, confronto con il copione e il brief (manca apertura dichiarata, apertura è null).",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Il brief non ha un'apertura definita (apertura: null) e il primo frame mostra solo la mappa con 'IL TUO ANIMALE' senza la domanda che c'è nel copione ('Il tuo animale è già su questa mappa?'); la prima frase compare solo a ~1.1s e il testo 'IL TUO ANIMALE' appare a metà frame quando il pubblico non ha ancora capito cosa succede. Inoltre il frame di 0.5s è quasi vuoto come gancio visivo.",
+    "correzione": "Far partire il reel con la domanda a tutto schermo nei primi 0.5s (es. 'Il tuo animale è già su questa mappa?') sopra la mappa già accesa, e sostituire 'IL TUO ANIMALE' con il dato forte '2789 luci' o 'Cani 1944 vs Gatti 775' come gancio; compilare il campo apertura nel brief.",
+    "idea": "Per i prossimi reel usare un'apertura con il numero principale in grande e un'anteprima dell'animale nominato nel commento (es. 'Monza, Penny, maltese') per creare curiosità immediata."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:51+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 3 la mappa mostra il numero '2789' isolato in basso a sinistra ma la scena copione dice 'mappa' con il conteggio; il numero appare senza etichetta e cambia la composizione rispetto agli altri fotogrammi. Inoltre il frame 6 mostra il duello con la scritta 'CANI 1944,' ancora parziale mentr",
+   "dati": {
+    "controllato": "Inquadrature dei 6 fotogrammi (mappa, duello cani/gatti, card commento, chiusura) rispetto a copione, scene e timing.",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "Al secondo 3 la mappa mostra il numero '2789' isolato in basso a sinistra ma la scena copione dice 'mappa' con il conteggio; il numero appare senza etichetta e cambia la composizione rispetto agli altri fotogrammi. Inoltre il frame 6 mostra il duello con la scritta 'CANI 1944,' ancora parziale mentre la voce è già avanti: la composizione è fissa su un testo che si completa dopo, quindi il quadro resta vuoto per qualche istante.",
+    "correzione": "Al secondo 3 mostrare il '2789 luci' con etichetta in posizione stabile, sotto la mappa e centrato; nel duello far comparire 'GATTI 775' in stesso frame di 'CANI 1944' invece di una scritta a metà, così l'inquadratura è completa nel momento in cui la voce la nomina.",
+    "idea": "Per i prossimi reel, aggiungere nell'ultimo secondo una piccola scritta 'SEGUICI' sotto la card commento, in modo che il follow sia visibile anche senza leggere la didascalia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:53+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il numero '2789 luci' compare a schermo al secondo 1 ma nel fotogramma del secondo 3 il riquadro è vuoto e sulla mappa compare solo la scritta '2789' senza 'luci'; la voce dice 'luci' solo a 4.1 s e la copertina con 'luci' non è nel reel. Inoltre dal secondo 3 al 6 la scena 'duello' appare con 'CANI",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio e coerenza tra voce, scene e didascalia del reel 'puntata' (16.8 s).",
+    "esito": "segnalo",
+    "secondo": 4.1,
+    "problema": "Il numero '2789 luci' compare a schermo al secondo 1 ma nel fotogramma del secondo 3 il riquadro è vuoto e sulla mappa compare solo la scritta '2789' senza 'luci'; la voce dice 'luci' solo a 4.1 s e la copertina con 'luci' non è nel reel. Inoltre dal secondo 3 al 6 la scena 'duello' appare con 'CANI 1944, GATTI 775' già scritti prima che la voce li dica (a 7.6 s), quindi il testo anticipa il parlato. Nei fotogrammi a 13 e 16 s le frasi finali ('TUA LUCE!') sono coerenti, ma la frase 'Scrivi qui sotto' compare senza il sottotitolo 'accendi la tua luce' fino alla fine, con una pausa visiva lunga sulla chiusura.",
+    "correzione": "Mostrare '2789 luci' per intero (numero e parola) già dal primo frame della mappa, far comparire 'CANI 1944, GATTI 775' in sincronia con la voce (intorno a 4-7 s) e allungare di circa un secondo la scritta finale 'TUA LUCE!' per darle tempo di essere letta.",
+    "idea": "Per i prossimi reel usare un numero animato che sale fino a 2.000 follower, così la scadenza dei fuochi d'artificio diventa visibile nel video oltre che nella didascalia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:53+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 1 il numero 2789 compare da solo e lo si legge a fatica, mentre nei fotogrammi successivi la scritta 'luci' e la frase non sono ancora chiare; inoltre nella trascrizione la voce dice '2789 luci' ma sullo schermo 'luci' non appare finché non è tardi. Il testo del tuo animale resta vuoto ne",
+   "dati": {
+    "controllato": "Ho verificato la mappa e i numeri (2789 luci, cani 1944, gatti 775), la trascrizione coi secondi, il sincronismo dei testi sui fotogrammi e i dati audio.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Al secondo 1 il numero 2789 compare da solo e lo si legge a fatica, mentre nei fotogrammi successivi la scritta 'luci' e la frase non sono ancora chiare; inoltre nella trascrizione la voce dice '2789 luci' ma sullo schermo 'luci' non appare finché non è tardi. Il testo del tuo animale resta vuoto nella prima scena, e la mappa non mostra nessun animale evidenziato.",
+    "correzione": "Mostrare '2789 luci' insieme già al secondo 1, con la scritta 'luci' visibile, e far comparire la frase 'Il tuo animale è già su questa mappa?' sopra il numero.",
+    "idea": "Nel prossimo reel evidenziare con un'animazione una luce di un commento reale, così chi commenta si vede subito sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:55+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 10 la scena del commento mostra il testo «Mo» / «Monza, Penny, maltese» e la frase «Ogni commento è una luce» arriva al secondo 10.8, quindi l'esempio compare a schermo prima che la voce lo introduca; inoltre il picco audio a -0.7 dBFS è molto vicino al limite e il volume iniziale (-16.7 ",
+   "dati": {
+    "controllato": "Sincronia tra trascrizione, scene e testi a schermo, più audio (-14 LUFS, picco -0.7 dBFS, silenzi e volume iniziale).",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "Al secondo 10 la scena del commento mostra il testo «Mo» / «Monza, Penny, maltese» e la frase «Ogni commento è una luce» arriva al secondo 10.8, quindi l'esempio compare a schermo prima che la voce lo introduca; inoltre il picco audio a -0.7 dBFS è molto vicino al limite e il volume iniziale (-16.7 dB) è più basso dell'obiettivo. Nella puntata la frase «Il tuo animale è già su questa mappa?» parte senza un vero aggancio visivo e la mappa resta ferma per i primi secondi.",
+    "correzione": "Allineare il comparire dell'esempio «Monza, Penny, maltese» alla frase «Ogni commento è una luce» (circa 10.8 s), abbassare il picco a circa -1.5 dBFS e alzare leggermente il volume dei primi 5 secondi, con una piccola animazione sulla mappa già al secondo 0.5.",
+    "idea": "Aggiungere nel reel un'ultima inquadratura con la scritta «Seguici» e una luce che si accende sulla cuccia, così il follow diventa visibile nel video oltre che nella didascalia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:55+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il campo dati_mappa è vuoto, quindi i conteggi 2789 luci, cani 1944 e gatti 775 non risultano verificati nei materiali. Inoltre il picco audio a -0.7 dBFS supera l'obiettivo di -1 dBFS indicato nel brief.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, frasi del brief, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo), dati della mappa e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 0.0,
+    "problema": "Il campo dati_mappa è vuoto, quindi i conteggi 2789 luci, cani 1944 e gatti 775 non risultano verificati nei materiali. Inoltre il picco audio a -0.7 dBFS supera l'obiettivo di -1 dBFS indicato nel brief.",
+    "correzione": "Verificare i conteggi sulla mappa reale prima della pubblicazione e, se necessario, abbassare il picco audio sotto -1 dBFS mantenendo il livello a -14 LUFS.",
+    "idea": "Mostrare nel reel il conteggio delle luci che sale in tempo reale, così il numero 2789 si vede crescere durante la voce."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:56+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "dati_mappa è vuoto: non ci sono coordinate verificate per le città, quindi l'animazione delle luci non può essere collegata a dati reali. Inoltre la didascalia promette 'il primo di ogni comune diventa il Fondatore' e '+10 punti' per chi scrive SEGUO, regole che non risultano dai materiali.",
+   "dati": {
+    "controllato": "Mansione Animazioni della mappa: dati di mappa, audio e fotogrammi del reel puntata 2026-11-10.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "dati_mappa è vuoto: non ci sono coordinate verificate per le città, quindi l'animazione delle luci non può essere collegata a dati reali. Inoltre la didascalia promette 'il primo di ogni comune diventa il Fondatore' e '+10 punti' per chi scrive SEGUO, regole che non risultano dai materiali.",
+    "correzione": "Popolare dati_mappa con le luci verificate prima del montaggio finale, oppure non mostrare punti sulla mappa; verificare con il reparto Copy le regole Fondatore e +10 punti prima della pubblicazione. Audio ok: -14.4 LUFS, picco -0.7 dBFS (sotto -1 dBFS, lievemente oltre l'obiettivo; abbassare di 0.5 dB), nessun silenzio lungo.",
+    "idea": "Un reel con la luce di un animale di un follower appena acceso, mostrando il nome e la città in primo piano."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:56+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Cani 1944, [7.6s] gatti 775' ma il brief e la didascalia riportano 'Cani 1944, gatti 775' senza problemi; il vero scarto è sul secondo 4.1: la frase 'luci accese in Italia' è sottotitolata come 'accese in Italia' mentre il brief contiene '2789 luci accese in Italia' con 'luci' ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, sincronia delle frasi del brief, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e numeri della didascalia rispetto ai dati di progetto.",
+    "esito": "segnalo",
+    "secondo": 4.1,
+    "problema": "La trascrizione dice 'Cani 1944, [7.6s] gatti 775' ma il brief e la didascalia riportano 'Cani 1944, gatti 775' senza problemi; il vero scarto è sul secondo 4.1: la frase 'luci accese in Italia' è sottotitolata come 'accese in Italia' mentre il brief contiene '2789 luci accese in Italia' con 'luci' ripetuto nel grande numero della copertina: verificare che il sottotitolo non ripeta 'luci' due volte. Inoltre il picco a -0.7 dBFS è molto vicino al limite di -1 dBFS.",
+    "correzione": "Allineare il sottotitolo del secondo 4.1 al testo del brief senza ripetizioni e abbassare leggermente il picco audio (sotto -1 dBFS) con un limiter.",
+    "idea": "Mostrare nel reel una luce che si accende a ogni commento letto ad alta voce, per legare visivamente il numero al gesto del pubblico."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:57+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La didascalia promette 'Il primo di ogni comune diventa il Fondatore' e 'lucine sulla cuccia' e '+10 punti', ma nel reel non c'è nulla che lo mostri; inoltre la fascia in basso dice 'Commenta città e nome' mentre il copione dice 'Scrivi qui sotto', piccola discordanza. Il dato '195 mancanti' (2000-1",
+   "dati": {
+    "controllato": "Trascrizione, secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e corrispondenza tra copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "La didascalia promette 'Il primo di ogni comune diventa il Fondatore' e 'lucine sulla cuccia' e '+10 punti', ma nel reel non c'è nulla che lo mostri; inoltre la fascia in basso dice 'Commenta città e nome' mentre il copione dice 'Scrivi qui sotto', piccola discordanza. Il dato '195 mancanti' (2000-1805) è corretto ma va verificato al momento della pubblicazione. Il reel finisce a 16.8 s mentre l'ultimo fotogramma inviato è a 16 s: il frame finale e l'invito 'accendi la tua luce' non sono controllati visivamente.",
+    "correzione": "Allineare la fascia al copione ('Scrivi qui sotto città e nome') e, se possibile, mostrare a schermo per un secondo il Fondatore o le lucine sulla cuccia; ricontrollare il frame a 16.8 s prima della pubblicazione.",
+    "idea": "Un reel dedicato solo al primo Fondatore di un comune, con il suo animale e la mappa che si accende, così il premio della didascalia diventa visibile."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:58+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio è a -0.7 dBFS, sopra l'obiettivo di -1 dBFS. Inoltre i fotogrammi inviati (0.5, 3, 6, 10, 13, 16) non coincidono con quelli richiesti (0.5, 1, 2…16): mancano 1, 2, 4, 5, 7, 8, 9, 11, 12, 14, 15. La trascrizione dichiara 16.8 s ma il fotogramma finale è al 16. Il campo 'apertura' è nul",
+   "dati": {
+    "controllato": "Durata, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo), coerenza di cifre tra trascrizione, brief e didascalia (2789, cani 1944, gatti 775, mancano 195 ai 2000) e fotogrammi inviati rispetto a quelli richiesti.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Il picco audio è a -0.7 dBFS, sopra l'obiettivo di -1 dBFS. Inoltre i fotogrammi inviati (0.5, 3, 6, 10, 13, 16) non coincidono con quelli richiesti (0.5, 1, 2…16): mancano 1, 2, 4, 5, 7, 8, 9, 11, 12, 14, 15. La trascrizione dichiara 16.8 s ma il fotogramma finale è al 16. Il campo 'apertura' è null e 'dati_mappa' è vuoto, quindi non posso verificare i numeri della mappa contro dati reali.",
+    "correzione": "Abbassare il picco sotto -1 dBFS (es. -2 dBFS) mantenendo circa -14 LUFS, e rigenerare l'invio dei fotogrammi richiesti per intero, includendo il 16.8 s finale. Verificare i dati della mappa prima della pubblicazione.",
+    "idea": "Una scena finale in cui una luce nuova si accende sulla mappa in tempo reale, per collegare il commento al risultato visibile."
+   }
+  },
+  {
+   "t": "2026-11-10T20:04:59+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "L'apertura è assente: brief.apertura è null e la prima frase parte a 0.0s senza un gancio visivo o verbale forte; inoltre il picco a -0.7 dBFS supera l'obiettivo di -1 dBFS indicato nel brief.",
+   "dati": {
+    "controllato": "Apertura, durata, audio (-14 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e coerenza tra trascrizione, copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "L'apertura è assente: brief.apertura è null e la prima frase parte a 0.0s senza un gancio visivo o verbale forte; inoltre il picco a -0.7 dBFS supera l'obiettivo di -1 dBFS indicato nel brief.",
+    "correzione": "Impostare un'apertura esplicita nei primi 1-2 secondi (es. domanda o numero 2789 in grande sulla mappa) e abbassare il picco sotto -1 dBFS mantenendo il livello intorno a -14 LUFS.",
+    "idea": "Per i prossimi reel usare un'apertura fissa di 1 secondo con il numero delle luci in grande, poi il CTA di follow in chiusura, così da tenere insieme follower e bellezza."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:00+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il campo 'apertura' del brief è vuoto e il primo fotogramma inviato è a 0.5s, quindi la scena mappa non ha un'apertura visiva forte: la frase 'Il tuo animale è già su questa mappa?' parte al secondo 0.0 e il volume medio dei primi 5s (-16.7 dB) è basso per un hook. Inoltre 'dati_mappa' è vuoto, quin",
+   "dati": {
+    "controllato": "Audio (-14 LUFS, picco -0.7 dBFS, nessun silenzio lungo), trascrizione coi secondi e corrispondenza con le frasi del brief, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il campo 'apertura' del brief è vuoto e il primo fotogramma inviato è a 0.5s, quindi la scena mappa non ha un'apertura visiva forte: la frase 'Il tuo animale è già su questa mappa?' parte al secondo 0.0 e il volume medio dei primi 5s (-16.7 dB) è basso per un hook. Inoltre 'dati_mappa' è vuoto, quindi non posso verificare i conteggi 2789/1944/775 mostrati nel video.",
+    "correzione": "Far partire il reel con la mappa già accesa e una frase più incisiva o un leggero aumento di volume nei primi secondi; verificare i dati della mappa prima della pubblicazione.",
+    "idea": "Un reel con l'animale del follower più recente acceso sulla mappa in primo piano, con la sua città nominata nei primi 3 secondi."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:01+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il brief dichiara la scena 'mappa' sulla frase d'apertura, ma i fotogrammi inviati (0.5, 3, 6, 10, 13, 16 s) non documentano la mappa con dati_mappa vuoto; inoltre la didascalia dice 'Giorno 16' e 'puntata' mentre il id è 2026-11-10: la numerazione del giorno non è verificabile dai materiali. Il pri",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, coerenza tra brief, trascrizione e didascalia, dati numerici rispetto al progetto.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Il brief dichiara la scena 'mappa' sulla frase d'apertura, ma i fotogrammi inviati (0.5, 3, 6, 10, 13, 16 s) non documentano la mappa con dati_mappa vuoto; inoltre la didascalia dice 'Giorno 16' e 'puntata' mentre il id è 2026-11-10: la numerazione del giorno non è verificabile dai materiali. Il primo fotogramma (0.5 s) cade prima della frase 'Il tuo animale è già su questa mappa?' a 0.0-1.1 s, quindi l'aggancio visivo va verificato.",
+    "correzione": "Verificare che il fotogramma a 0.5 s mostri già la mappa con le luci e che la scritta 'Giorno 16' corrisponda al conteggio reale prima della pubblicazione; se non confermabile, togliere il numero del giorno dalla copertina e dalla didascalia.",
+    "idea": "Ripetere il formato 'prima_luce' che ha il miglior rapporto follower ogni 1000 reach, mostrando un animale appena acceso sulla mappa con la città in sovraimpressione."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:02+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il reel ha 'dati_mappa' vuoto e la didascalia cita '2789 luci' e 'cani 1944, gatti 775' senza verifica mappa; inoltre la fascia e la didascalia dicono 'Il primo di ogni comune diventa il Fondatore' e i 'fuochi a 2.000 follower' con 195 mancanti (1805+195=2000, coerente), ma il campo 'apertura' è nul",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, copione, didascalia e dati mappa rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il reel ha 'dati_mappa' vuoto e la didascalia cita '2789 luci' e 'cani 1944, gatti 775' senza verifica mappa; inoltre la fascia e la didascalia dicono 'Il primo di ogni comune diventa il Fondatore' e i 'fuochi a 2.000 follower' con 195 mancanti (1805+195=2000, coerente), ma il campo 'apertura' è null: il primo secondo non ha un gancio visivo dichiarato. Il fotogramma 0.5s è in 'fotogrammi_secondi_inviati' solo come primo campione.",
+    "correzione": "Verificare i conteggi sulla mappa prima di pubblicare (dati_mappa è vuoto) e definire un'apertura esplicita nei primi 1-2 secondi, ad esempio mostrando subito una luce che si accende sulla mappa.",
+    "idea": "Aprire con un animale reale che accende la sua luce nei primi secondi e mettere 'SEGUO' nella prima riga della didascalia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:02+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nei primi 2 secondi la scritta centrale 'IL TUO ANIMALE' è in primo piano ma senza un gancio forte: il dubbio 'è già su questa mappa?' arriva solo dalla voce e dal secondo frame (1.1s), mentre la prima scena mostra solo la mappa con l'etichetta Napoli. Il numero 2789 compare dopo 1 secondo e il conf",
+   "dati": {
+    "controllato": "Ganci dei primi 2 secondi: apertura del reel, primo frame e testo sovrimpresso nei primi 2 secondi.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nei primi 2 secondi la scritta centrale 'IL TUO ANIMALE' è in primo piano ma senza un gancio forte: il dubbio 'è già su questa mappa?' arriva solo dalla voce e dal secondo frame (1.1s), mentre la prima scena mostra solo la mappa con l'etichetta Napoli. Il numero 2789 compare dopo 1 secondo e il confronto cani/gatti solo al secondo 4: il gancio per chi scorre è ritardato.",
+    "correzione": "Portare il numero 2789 o la domanda 'Il tuo animale è già su questa mappa?' nel primo frame, già in scritta grande dal secondo 0, e tenere 'IL TUO ANIMALE' come secondo elemento.",
+    "idea": "Per i prossimi reel aprire con un numero grande in movimento (es. 'Mancano 195 follower al fuoco d'artificio') e chiudere con la richiesta di seguire, che oggi compare solo in didascalia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:04+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la scritta 'Cani 1944, gatti 775' resta visibile e compare solo a 7.6s nella trascrizione, mentre la frase della voce sui numeri è parzialmente sovrapposta alla scena del duello in cui il testo 'CANI 1944,' appare ancora incompleto; inoltre la frase sul commento ('Ogni commento è una lu",
+   "dati": {
+    "controllato": "Trascrizione, secondi delle frasi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e coerenza con il copione e i dati di mappa (2789 luci, cani 1944, gatti 775).",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la scritta 'Cani 1944, gatti 775' resta visibile e compare solo a 7.6s nella trascrizione, mentre la frase della voce sui numeri è parzialmente sovrapposta alla scena del duello in cui il testo 'CANI 1944,' appare ancora incompleto; inoltre la frase sul commento ('Ogni commento è una luce') è introdotta da un fotogramma con un riquadro di commento vuoto ('Mo') che si legge come testo tagliato. Il tempo tra la scritta 'Ogni' e 'NOME.' è lungo rispetto al ritmo del resto del reel.",
+    "correzione": "Far comparire 'GATTI 775' insieme alla voce (intorno a 7.6s) e portare il riquadro commento a sincronia con 'Ogni commento è una luce' (circa 10.8s), accorciando il vuoto tra 'OGNI' e 'NOME.'.",
+    "idea": "Chiudere con un'ultima inquadratura della luce che si accende sulla città più vicina al commento, con 'Seguici' in sovrimpressione, per unire follow e partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:05+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 10 la scritta della frase 'Ogni commento è una luce' compare già a metà e il testo utente 'Mo' resta sul pannello in apertura senza essere completato con chiarezza; soprattutto la didascalia dice 'ne mancano 195' per arrivare a 2.000 follower, ma i materiali indicano 1805 follower: 2000-1",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione, didascalia e numeri: la trascrizione coincide con le frasi del brief e i dati della mappa (2789 luci, cani 1944, gatti 775) sono coerenti con il progetto (2820 luci).",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "Al secondo 10 la scritta della frase 'Ogni commento è una luce' compare già a metà e il testo utente 'Mo' resta sul pannello in apertura senza essere completato con chiarezza; soprattutto la didascalia dice 'ne mancano 195' per arrivare a 2.000 follower, ma i materiali indicano 1805 follower: 2000-1805=195, quindi il numero è corretto. Segnalo invece che la didascalia cita 'Voce generata con IA' e la scena del commento al secondo 10 mostra un nome ('Monza, Penny, maltese') che può sembrare un utente reale: va chiarito che è un esempio.",
+    "correzione": "Aggiungere in sovrimpressione 'esempio' sul pannello commento e rendere il testo 'Ogni commento è una luce' più leggibile, mantenendolo fermo almeno 1,5 secondi.",
+    "idea": "Un reel con un vero commento di un follower acceso sulla mappa, con il suo nome e la sua città, per dare prova sociale."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:05+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "A 10s il testo 'Ogni commento è una luce' compare su schermo come 'Ogni' e poi 'Mo' (come se stesse scrivendo) prima di completarsi: il fotogramma del secondo 10 mostra 'OGNI' con il box del commento vuoto, e il box 'Mo' appare solo fino al secondo 13; la sincronia tra frase parlata (10.8s) e compar",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, testi a schermo, dati mappa (2789 luci, cani 1944, gatti 775) e coerenza con il copione: tutto corrisponde.",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "A 10s il testo 'Ogni commento è una luce' compare su schermo come 'Ogni' e poi 'Mo' (come se stesse scrivendo) prima di completarsi: il fotogramma del secondo 10 mostra 'OGNI' con il box del commento vuoto, e il box 'Mo' appare solo fino al secondo 13; la sincronia tra frase parlata (10.8s) e comparsa del testo sul commento è fragile e può sembrare un glitch.",
+    "correzione": "Allineare la comparsa di 'Ogni commento è una luce' al parlato (circa 10.8s) e far comparire il nome utente finto solo dopo che la frase è completa, evitando lo stato intermedio 'Mo'.",
+    "idea": "Chiudere con un'ultima scena che mostra un numero live di luci che sale, così la chiamata a commentare diventa un obiettivo visibile e il follow si può chiedere a voce nell'ultimo secondo."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:06+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "A 10.8s la voce dice «Ogni commento è una luce: scrivi città e nome», ma nel fotogramma del secondo 10 la scena mostra ancora il tweet «Monza, Penny, maltese» e la scritta «NOME.» compare solo dopo; la frase sul commento è detta mentre l'esempio è ancora in corso, quindi il collegamento è debole. In",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, frasi e fascia di chiusura: le frasi parlate corrispondono al copione e la CTA di commento è chiara, con la didascalia che promette la mappa e il follow.",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "A 10.8s la voce dice «Ogni commento è una luce: scrivi città e nome», ma nel fotogramma del secondo 10 la scena mostra ancora il tweet «Monza, Penny, maltese» e la scritta «NOME.» compare solo dopo; la frase sul commento è detta mentre l'esempio è ancora in corso, quindi il collegamento è debole. Inoltre nel reel non compare mai l'invito esplicito a seguire la pagina: il follow è solo nella didascalia.",
+    "correzione": "Allungare di mezzo secondo la scena del commento prima di dire «scrivi città e nome», e aggiungere in chiusura (scena finale) una riga visiva tipo «Seguici +1» o «SEGUO per accendere la tua luce» con la voce che la nomina.",
+    "idea": "Nei prossimi reel del formato puntata, chiudere sempre con un'inquadratura fissa di 2 secondi che dice «Seguici e accendi la tua luce» insieme alla fascia, così il follow entra nel video e non solo nella didascalia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:08+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice \"Il tuo animale è già [1.1s] su questa mappa?\" ma nel copione la frase è \"Il tuo animale è già su questa mappa? 2789 luci accese in Italia.\" e nel reel il numero 2789 compare a circa 1 secondo, mentre il testo \"2789 luci\" resta a schermo solo per la prima parte: sul fotogramma d",
+   "dati": {
+    "controllato": "Grammatica, preposizioni e corrispondenza tra copione, trascrizione coi secondi e fotogrammi del reel.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La trascrizione dice \"Il tuo animale è già [1.1s] su questa mappa?\" ma nel copione la frase è \"Il tuo animale è già su questa mappa? 2789 luci accese in Italia.\" e nel reel il numero 2789 compare a circa 1 secondo, mentre il testo \"2789 luci\" resta a schermo solo per la prima parte: sul fotogramma del secondo 1 il numero è isolato senza la parola \"luci\", che arriva dopo. Inoltre \"Scrivi qui sotto e accendi la tua luce!\" usa \"accendi\" senza il pronome \"la\" coerente con la scena finale, dove il testo dice \"Accendi la tua luce qui sotto\": due formulazioni diverse per lo stesso invito, poco chiare sul soggetto del verbo.",
+    "correzione": "Allineare la frase parlata alla scena: \"Il tuo animale è già su questa mappa? 2789 luci accese in Italia.\" con \"luci\" a schermo insieme al numero; usare un'unica formula d'invito, ad esempio \"Scrivi qui sotto e accendi la tua luce!\" oppure \"Accendi la tua luce qui sotto\", senza cambiare tra le due.",
+    "idea": "Chiudere il reel con un'ultima scena \"Seguici e scrivi SEGUO\" accanto alla mappa, così il follow compare nel video e non solo nella didascalia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:10+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La voce dice '2789 luci accese' ma sulla mappa l'unico numero visibile è '2789' senza etichetta, mentre la frase 'luci' compare solo nella copertina; inoltre al secondo 1 la scritta 'Napoli · 89 luci' è visibile, quindi il conteggio totale non è spiegato a schermo. Nel fotogramma a 13s la frase 'CAN",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia e misure audio (-14 LUFS, picco -0.7 dBFS, nessun silenzio): il testo parlato corrisponde al copione e i numeri 2789, 1944, 775 coincidono con i dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.1,
+    "problema": "La voce dice '2789 luci accese' ma sulla mappa l'unico numero visibile è '2789' senza etichetta, mentre la frase 'luci' compare solo nella copertina; inoltre al secondo 1 la scritta 'Napoli · 89 luci' è visibile, quindi il conteggio totale non è spiegato a schermo. Nel fotogramma a 13s la frase 'CANI 1944,' resta incompleta (la parte 'gatti 775' compare solo dopo), quindi il ritmo del confronto è corretto ma la frase va letta intera per chi guarda senza audio. Non ci sono altri errori di dato.",
+    "correzione": "Far comparire '2789 luci' per esteso (non solo '2789') già al secondo 1-2, e tenere la scritta del confronto cani/gatti finché non compare anche '775' in chiaro.",
+    "idea": "Chiudere il reel con un fotogramma fisso 'Seguici: 195 follower ai fuochi d'artificio' per portare il follow dentro il video e non solo nella didascalia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:10+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 1 compare solo la mappa con la scritta 'IL TUO ANIMALE' e il numero '2789' appare in ritardo, mentre il dato 2789 luci esce nel copione già al secondo 1.1. Inoltre nel fotogramma al secondo 16 l'ultima frase 'accendi la tua luce!' è già sullo schermo ma la trascrizione la mette a 14.3s: i",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, frasi del copione, dati della mappa (2789 luci, cani 1944, gatti 775), audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e fotogrammi nei secondi indicati.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Al secondo 1 compare solo la mappa con la scritta 'IL TUO ANIMALE' e il numero '2789' appare in ritardo, mentre il dato 2789 luci esce nel copione già al secondo 1.1. Inoltre nel fotogramma al secondo 16 l'ultima frase 'accendi la tua luce!' è già sullo schermo ma la trascrizione la mette a 14.3s: il ritmo visivo e quello audio non coincidono del tutto. Nei fotogrammi 'Cani 1944' e 'Gatti 775' c'è un piccolo sfasamento rispetto al parlato.",
+    "correzione": "Far comparire il numero 2789 insieme alla frase 'Il tuo animale è già su questa mappa?' e allineare i cambi di scena ai secondi della trascrizione (duello a 4.1s, commento a 10.8s, chiusura a 12.6s).",
+    "idea": "Chiudere il reel con un'ultima luce che si accende sulla città più vicina a chi guarda, più il promemoria 'Seguici per vedere la tua'."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:10+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Nessun errore: la trascrizione coincide con il copione e i numeri corrispondono ai dati verificati. Nei fotogrammi il testo è leggibile e la mappa è coerente con le luci dichiarate.",
+   "dati": {
+    "controllato": "Testi del copione confrontati con la trascrizione, i secondi, i dati della mappa (2789 luci, cani 1944, gatti 775) e i fotogrammi.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "Nessun errore: la trascrizione coincide con il copione e i numeri corrispondono ai dati verificati. Nei fotogrammi il testo è leggibile e la mappa è coerente con le luci dichiarate.",
+    "correzione": "",
+    "idea": "Nel reel successivo, aggiungere in chiusura una riga visiva 'Seguici per vedere la tua luce accendersi' per rendere esplicito il follow senza appesantire il messaggio."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:12+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il titolo dice 2789 luci ma la somma di cani (1944) e gatti (775) è 2719: la differenza di 70 non è spiegata nel reel e può far perdere fiducia a chi fa i conti. Inoltre la mappa ha già 'Napoli · 89 luci' ma nel reel la scritta 2789 compare solo al secondo 1.1 senza collegamento visivo chiaro col to",
+   "dati": {
+    "controllato": "Mappa e dati: numeri 2789 luci, cani 1944 e gatti 775 (sommano a 2719, non a 2789 — 70 luci mancanti nel confronto), trascrizione coi secondi e sincronia delle scene con il copione.",
+    "esito": "segnalo",
+    "secondo": 1.1,
+    "problema": "Il titolo dice 2789 luci ma la somma di cani (1944) e gatti (775) è 2719: la differenza di 70 non è spiegata nel reel e può far perdere fiducia a chi fa i conti. Inoltre la mappa ha già 'Napoli · 89 luci' ma nel reel la scritta 2789 compare solo al secondo 1.1 senza collegamento visivo chiaro col totale.",
+    "correzione": "Verificare nei dati il totale e, se 70 luci sono di altre specie, scrivere 'cani 1944, gatti 775, altri 70' oppure allineare il totale alla somma reale prima di pubblicare.",
+    "idea": "Mostrare per 1 secondo la somma (1944 + 775 + altri) sulla mappa, così il totale si capisce visivamente e il duello diventa anche un piccolo gioco numerico."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:12+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 1 la scritta sulla mappa dice '2789' ma nel fotogramma successivo il numero è al centro senza etichetta chiara, e la trascrizione dice '2789 luci' solo a 1.1s; il dato in sovrimpressione non è accompagnato da 'luci' per quasi tutto il primo secondo. Inoltre al secondo 13 il testo 'CANI 19",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa (2789 luci, cani 1944, gatti 775, Napoli 89 luci) con la trascrizione e i fotogrammi: coincidono.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Al secondo 1 la scritta sulla mappa dice '2789' ma nel fotogramma successivo il numero è al centro senza etichetta chiara, e la trascrizione dice '2789 luci' solo a 1.1s; il dato in sovrimpressione non è accompagnato da 'luci' per quasi tutto il primo secondo. Inoltre al secondo 13 il testo 'CANI 1944,' è troncato rispetto al copione ('Cani 1944, gatti 775'), quindi la frase 'gatti 775' compare solo nella voce e non in scritta.",
+    "correzione": "Mostrare 'luci' già insieme a '2789' dal primo fotogramma e far comparire 'GATTI 775' in scritta sincronizzata con la voce a circa 7.6s.",
+    "idea": "Inserire un ultimo fotogramma con il conto alla rovescia verso i 2.000 follower (195 mancanti) per unire emozione e motivo di follow."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:12+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio sulla mappa non è verificabile dai materiali: il dato 'dati_mappa' è vuoto, quindi 2789 e 1944/775 non risultano confrontati con fonti. Inoltre la chiusura al secondo 16 mostra 'TUA LUCE!' con la fascia 'Commenta città e nome' ancora presente: il messaggio di chiusura non cambia sulla s",
+   "dati": {
+    "controllato": "Numeri della mappa (2789 luci, cani 1944, gatti 775), trascrizione coi secondi, sincronia testo-scene e audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio).",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Il conteggio sulla mappa non è verificabile dai materiali: il dato 'dati_mappa' è vuoto, quindi 2789 e 1944/775 non risultano confrontati con fonti. Inoltre la chiusura al secondo 16 mostra 'TUA LUCE!' con la fascia 'Commenta città e nome' ancora presente: il messaggio di chiusura non cambia sulla scena finale.",
+    "correzione": "Verificare e allegare i conteggi della mappa prima della pubblicazione; nel frame finale sostituire o rimuovere la fascia ripetuta per dare un'unica call to action pulita.",
+    "idea": "Per il prossimo reel, mostrare un'ultima luce appena accesa con il nome reale di un follower, così la chiusura diventa personale e chi la vede vuole comparire anche lui."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:13+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Ogni commento è una luce» e «Scrivi qui sotto e accendi la tua luce», ma nei fotogrammi la scritta «Accendi la tua luce qui sotto» compare solo nell'ultimo frame, mentre la fascia in basso dice «Commenta città e nome». Inoltre la voce è generata con IA e non compaiono dati mancanti: il",
+   "dati": {
+    "controllato": "Dati della mappa (2789 luci, cani 1944, gatti 775, Napoli 89 luci) e coerenza tra trascrizione, copione e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 10.8,
+    "problema": "Il reel dice «Ogni commento è una luce» e «Scrivi qui sotto e accendi la tua luce», ma nei fotogrammi la scritta «Accendi la tua luce qui sotto» compare solo nell'ultimo frame, mentre la fascia in basso dice «Commenta città e nome». Inoltre la voce è generata con IA e non compaiono dati mancanti: il dato verificabile è solo nei materiali; «dati_mappa» è vuoto, quindi non posso confermare il conteggio di 89 luci a Napoli né i totali con la mappa.",
+    "correzione": "Allineare il messaggio: usare «Commenta città e nome» in tutte le scene in cui si parla di accendere la luce, e verificare che il conteggio di Napoli (89) e i totali derivino dai dati reali della mappa prima della pubblicazione.",
+    "idea": "Un reel con il conteggio in tempo reale delle luci nella propria regione, che mostri la crescita verso quota 2000, con il tuo @ acceso sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:15+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel secondo 1 la mappa mostra '2789' sopra la mappa dell'Italia, ma il copione dice '2789 luci' e nel fotogramma il numero è isolato e senza etichetta, quindi non è chiaro cosa rappresenti; inoltre la trascrizione dice 'Il tuo animale è già su questa mappa?' mentre la pagina è in 'Mappa e dati', e i",
+   "dati": {
+    "controllato": "Dati della mappa (2789 luci, cani 1944, gatti 775, Napoli 89 luci) e trascrizione coi secondi confrontati con i fotogrammi e il copione.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nel secondo 1 la mappa mostra '2789' sopra la mappa dell'Italia, ma il copione dice '2789 luci' e nel fotogramma il numero è isolato e senza etichetta, quindi non è chiaro cosa rappresenti; inoltre la trascrizione dice 'Il tuo animale è già su questa mappa?' mentre la pagina è in 'Mappa e dati', e il conteggio di 2789 non corrisponde alla differenza di 'luci' del progetto (2820), che è un dato diverso e non va confuso.",
+    "correzione": "Nel fotogramma 1s aggiungere l'etichetta 'luci accese' accanto a 2789 e allineare il numero alla fonte verificata; verificare che 2789 sia il totale aggiornato (il progetto riporta 2820 luci).",
+    "idea": "Aggiungere nel reel un breve 'SEGUO' a voce o a schermo nell'ultimo secondo, e usare un'animazione di 'luce che si accende' sulla città di chi commenta per rafforzare il legame."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:15+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel secondo 2 la mappa mostra '2789' senza la parola 'luci', mentre il dato è 2789 luci; il testo parlato dice '2789 luci' al secondo 1-4 e il numero resta isolato sullo schermo senza unità, quindi il frame è poco chiaro. Inoltre il conteggio nella fascia Napoli '89 luci' non è verificabile dai mate",
+   "dati": {
+    "controllato": "Dati della mappa, trascrizione coi secondi, copione e didascalia rispetto ai numeri verificati (2789 luci, cani 1944, gatti 775) e alle misure audio.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Nel secondo 2 la mappa mostra '2789' senza la parola 'luci', mentre il dato è 2789 luci; il testo parlato dice '2789 luci' al secondo 1-4 e il numero resta isolato sullo schermo senza unità, quindi il frame è poco chiaro. Inoltre il conteggio nella fascia Napoli '89 luci' non è verificabile dai materiali e non ha fonte nella mappa dati (dati_mappa è vuoto).",
+    "correzione": "Aggiungere 'luci' accanto a 2789 nel frame 1-3 secondi, e verificare il dato Napoli 89 o rimuovere la fascia finché non è confermato.",
+    "idea": "Mostrare un'animazione che accende in tempo reale una luce nuova sulla mappa quando arriva un commento, così il reel diventa sempre diverso."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:16+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 3 la mappa mostra 2789 senza etichetta né contesto (la scritta è isolata e in basso a sinistra), mentre la voce dice 'Il tuo animale è già su questa mappa? 2789 luci accese' con il numero già a 1,1s; a 0.5s la mappa è senza numero. Più grave: il dato 'Napoli · 89 luci' e il",
+   "dati": {
+    "controllato": "Dati della mappa e numeri del progetto: il conteggio 2789 luci e i valori cani 1944 / gatti 775 nei fotogrammi corrispondono al brief; la trascrizione e i secondi dei fotogrammi sono coerenti.",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "Nel fotogramma al secondo 3 la mappa mostra 2789 senza etichetta né contesto (la scritta è isolata e in basso a sinistra), mentre la voce dice 'Il tuo animale è già su questa mappa? 2789 luci accese' con il numero già a 1,1s; a 0.5s la mappa è senza numero. Più grave: il dato 'Napoli · 89 luci' e il numero 2789 non corrispondono al totale 2820 luci del progetto (differenza di 31, forse aggiornamento in corso, non verificabile dai materiali). Inoltre il tag 'Cani 1944' è detto dalla voce a 7.6s ma il fotogramma al 6s mostra già 'CANI 1944,' anticipando il testo.",
+    "correzione": "Allineare il totale luci al dato verificato (2820 o il valore aggiornato) e far comparire il numero sulla mappa insieme all'etichetta 'luci accese' già al secondo 1; sincronizzare il tag Cani/Gatti con la voce.",
+    "idea": "Mostrare la mappa con un'animazione di luci che si accendono mentre il contatore sale, così il dato 2789 diventa un evento visivo e non solo un numero."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:16+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 2789 luci nel reel non coincide con le 2820 luci del progetto; inoltre nel video compare 'Napoli · 89 luci' mentre la mappa dati non è fornita, quindi non posso verificarlo.",
+   "dati": {
+    "controllato": "Dati della mappa (luci, conteggi cani/gatti) e coerenza tra trascrizione, copione e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il dato 2789 luci nel reel non coincide con le 2820 luci del progetto; inoltre nel video compare 'Napoli · 89 luci' mentre la mappa dati non è fornita, quindi non posso verificarlo.",
+    "correzione": "Allineare il numero di luci al dato verificato (2820 o il valore del giorno) e confermare il conteggio di Napoli prima della pubblicazione.",
+    "idea": "Mostrare nella prima scena il nome di una città reale che si accende in diretta, così il pubblico si riconosce subito."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:19+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la scritta '2789' compare da sola sulla mappa come numero nudo, senza etichetta, mentre il testo dice '2789 luci'; sul frame la cifra è poco leggibile e non c'è alcun riferimento a 'luci' finché non parte la voce. Inoltre il conteggio non torna con i dati di progetto: il progetto dichia",
+   "dati": {
+    "controllato": "Dati della mappa (nessun dato nel JSON, quindi nessun numero da verificare) e coerenza dei numeri 2789 / cani 1944 / gatti 775 con la trascrizione e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la scritta '2789' compare da sola sulla mappa come numero nudo, senza etichetta, mentre il testo dice '2789 luci'; sul frame la cifra è poco leggibile e non c'è alcun riferimento a 'luci' finché non parte la voce. Inoltre il conteggio non torna con i dati di progetto: il progetto dichiara 2820 luci e il reel dice 2789, senza che ci sia un dato di mappa a spiegare la differenza.",
+    "correzione": "Aggiungere 'luci' sotto o accanto a 2789 nel frame del secondo 4 e verificare il totale (2789 o 2820) prima della pubblicazione, allineando reel e didascalia.",
+    "idea": "Chiudere il reel con un frame 'Seguici per accendere la tua luce' accanto al fondatore, oppure mostrare la barra dei follower verso i 2.000."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:19+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il dato '2789 luci' nel copione e nella didascalia è coerente col progetto, ma il vocale dice 'Il tuo animale è già' a 0.0s mentre la parola 'Il' e il numero arrivano con un ritardo di circa 1.1s dopo l'inizio; inoltre la trascrizione mostra il numero '2789' pronunciato a 1.1-4.1s, quindi l'apertura",
+   "dati": {
+    "controllato": "Volume e livelli audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e coerenza tra copione, trascrizione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.1,
+    "problema": "Il dato '2789 luci' nel copione e nella didascalia è coerente col progetto, ma il vocale dice 'Il tuo animale è già' a 0.0s mentre la parola 'Il' e il numero arrivano con un ritardo di circa 1.1s dopo l'inizio; inoltre la trascrizione mostra il numero '2789' pronunciato a 1.1-4.1s, quindi l'apertura è lenta. Segnalo anche che il volume medio dei primi 5 secondi (-16.7 dB) è più basso del resto, quindi l'attacco risulta più debole.",
+    "correzione": "Anticipare il numero '2789 luci' all'inizio o alzare leggermente il volume dei primi 5 secondi per dare subito energia all'apertura.",
+    "idea": "Aggiungere in voce, nella scena di chiusura, un invito esplicito a seguire la pagina per sbloccare le luci dei follower, così il reel parla anche al bisogno di crescita."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:19+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Volume e loudness del reel: -14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo, tutto nell'obiettivo.",
+   "dati": {
+    "controllato": "Volume e loudness del reel: -14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo, tutto nell'obiettivo.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Il formato 'puntata' ha ottenuto 17.1 follower ogni 1000 reach: vale la pena replicare la chiusura con il comando di commento anche nei prossimi reel."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:20+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il reel dichiara 'Voce generata con IA' ma il campo 'voce' è true e il copione è letto: ok per la trasparenza. Il problema è nei fotogrammi: ne sono stati inviati solo 6 (0.5, 3, 6, 10, 13, 16) su 17 previsti, quindi non posso verificare visivamente la scena 'duello' e la mappa. Inoltre dati_mappa è",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi e corrispondenza con il copione, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Il reel dichiara 'Voce generata con IA' ma il campo 'voce' è true e il copione è letto: ok per la trasparenza. Il problema è nei fotogrammi: ne sono stati inviati solo 6 (0.5, 3, 6, 10, 13, 16) su 17 previsti, quindi non posso verificare visivamente la scena 'duello' e la mappa. Inoltre dati_mappa è vuoto, quindi il dato 2789 luci non è verificabile dai materiali della mia mansione.",
+    "correzione": "Inviare tutti i fotogrammi richiesti (0.5-16 s ogni secondo) e popolare dati_mappa con i conteggi verificati di cani e gatti prima della pubblicazione.",
+    "idea": "Un reel con il conteggio in tempo reale delle luci che si accendono sulla mappa, mostrando il salto da 2789 a 2820 come prova visiva della crescita."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:21+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il reel dura 16.8 s ma la trascrizione finisce a 14.3 s e i fotogrammi arrivano fino a 16 s: l'ultimo secondo e mezzo resta senza parlato, e la didascalia promette 'Il primo di ogni comune diventa il Fondatore' senza che sia detto nel reel. Inoltre dati_mappa è vuoto, quindi non posso verificare la ",
+   "dati": {
+    "controllato": "Volume, picco, silenzi audio e allineamento tra trascrizione, copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Il reel dura 16.8 s ma la trascrizione finisce a 14.3 s e i fotogrammi arrivano fino a 16 s: l'ultimo secondo e mezzo resta senza parlato, e la didascalia promette 'Il primo di ogni comune diventa il Fondatore' senza che sia detto nel reel. Inoltre dati_mappa è vuoto, quindi non posso verificare la scena mappa.",
+    "correzione": "Allungare la chiusura sul CTA fino a 16.8 s oppure tagliare il tail vuoto; aggiungere alla voce o a fascia la frase sul Fondatore, o toglierla dalla didascalia; far comparire il conteggio 2789 sulla mappa reale con dati_mappa compilati.",
+    "idea": "Per i prossimi reel, mostrare nel primo secondo un animale reale della mappa con il suo nome e città, così la promessa 'il tuo animale è già qui?' diventa visiva e immediata."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:22+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il brief ha 'apertura': null, cioè nessuna apertura definita per la puntata, e la trascrizione parte subito con 'Il tuo animale è già su questa mappa?' senza un gancio sonoro o visivo distintivo nei primi secondi. Inoltre 'dati_mappa' è vuoto, quindi non posso verificare i numeri 2789, 1944 e 775 co",
+   "dati": {
+    "controllato": "Apertura audio, volume e silenzi del reel puntata, con la trascrizione e i secondi dell'apertura.",
+    "esito": "segnalo",
+    "secondo": 0.0,
+    "problema": "Il brief ha 'apertura': null, cioè nessuna apertura definita per la puntata, e la trascrizione parte subito con 'Il tuo animale è già su questa mappa?' senza un gancio sonoro o visivo distintivo nei primi secondi. Inoltre 'dati_mappa' è vuoto, quindi non posso verificare i numeri 2789, 1944 e 775 contro la mappa.",
+    "correzione": "Definire un'apertura esplicita per la puntata (es. un suono breve di 'accensione' o un colpo di campana nei primi 0.5s) e verificare i dati della mappa prima della pubblicazione.",
+    "idea": "Usare sempre lo stesso suono di 'accensione' come firma sonora dell'apertura, così la serie si riconosce subito e il primo secondo diventa un richiamo."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:23+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio a -0.7 dBFS supera l'obiettivo di stare sotto -1 dBFS. Inoltre il volume medio dei primi 5 secondi (-16.7 dB) è più basso del resto, quindi l'apertura rischia di sembrare debole. Anche la trascrizione dice 'Il tuo animale è già [1.1s] su questa mappa?' ma nel copione la frase è identi",
+   "dati": {
+    "controllato": "Audio (LUFS -14.4, picco -0.7 dBFS, nessun silenzio), trascrizione coi secondi, coerenza tra copione, trascrizione e didascalia, e numeri citati (2789 luci, cani 1944, gatti 775).",
+    "esito": "segnalo",
+    "secondo": 16.8,
+    "problema": "Il picco audio a -0.7 dBFS supera l'obiettivo di stare sotto -1 dBFS. Inoltre il volume medio dei primi 5 secondi (-16.7 dB) è più basso del resto, quindi l'apertura rischia di sembrare debole. Anche la trascrizione dice 'Il tuo animale è già [1.1s] su questa mappa?' ma nel copione la frase è identica: ok. I numeri di luci e specie sono coerenti con i dati del progetto.",
+    "correzione": "Abbassare il livello di picco di circa 0.5 dB in mix/limiter per portarlo sotto -1 dBFS, e alzare leggermente la voce nei primi 5 secondi per allinearla al resto.",
+    "idea": "Per i prossimi reel, un'apertura con un suono o una frase più carica nei primi secondi, e un contatore che mostra 'mancano 195 follower' già nella scena della mappa, così l'obiettivo dei fuochi d'artificio è visibile subito."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:23+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi), durata e tempi della voce rispetto al copione, più la coerenza tra numeri detti e dati del progetto.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), durata e tempi della voce rispetto al copione, più la coerenza tra numeri detti e dati del progetto.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Il picco a -0,7 dBFS supera di poco l'obiettivo di -1 dBFS: un limitatore leggero in uscita lo porterebbe sotto senza perdere volume percepito."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:24+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "L'apertura del copione è 'null' e la prima frase inizia a 0.0s, quindi l'hook non ha un momento d'attenzione dedicato. Inoltre la trascrizione di 'Cani 1944, gatti 775' (7.6s) è più lunga della frase del copione, e il dato 2789 luci nel testo non coincide con il totale 2820 del progetto (il dato del",
+   "dati": {
+    "controllato": "Loudness, picco, silenzi e coerenza tra trascrizione, copione e didascalia della puntata.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "L'apertura del copione è 'null' e la prima frase inizia a 0.0s, quindi l'hook non ha un momento d'attenzione dedicato. Inoltre la trascrizione di 'Cani 1944, gatti 775' (7.6s) è più lunga della frase del copione, e il dato 2789 luci nel testo non coincide con il totale 2820 del progetto (il dato della mappa è vuoto, quindi non posso verificarlo).",
+    "correzione": "Impostare un'apertura esplicita nei primi 1-2 secondi (es. 'Il tuo animale è già su questa mappa?' con la mappa in primo piano) e allineare il numero di luci al dato verificato della mappa prima della pubblicazione.",
+    "idea": "Un'inquadratura finale con un animale reale che 'accende' la sua luce sulla mappa, così da collegare il conteggio a una storia visiva."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:24+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Livello audio (LUFS, picco, silenzi) e allineamento trascrizione/copione rispetto ai secondi e alla durata.",
+   "dati": {
+    "controllato": "Livello audio (LUFS, picco, silenzi) e allineamento trascrizione/copione rispetto ai secondi e alla durata.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, testare un'apertura visiva più forte nei primi 0.5 s con l'animale più vicino alla propria città, sfruttando i numeri che variano molto tra formati."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:25+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il fotogramma al secondo 1 mostra il numero '2789' in basso a sinistra su uno sfondo vuoto, senza etichetta né contesto: in quel momento il testo 'luci' non è ancora comparso e la scritta resta isolata, più confusa che d'impatto. Inoltre il fotogramma al secondo 0.5 mostra ancora il placeholder 'IL ",
+   "dati": {
+    "controllato": "Grafica dei 6 fotogrammi, leggibilità dei testi e coerenza visiva con la mappa e il copione.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il fotogramma al secondo 1 mostra il numero '2789' in basso a sinistra su uno sfondo vuoto, senza etichetta né contesto: in quel momento il testo 'luci' non è ancora comparso e la scritta resta isolata, più confusa che d'impatto. Inoltre il fotogramma al secondo 0.5 mostra ancora il placeholder 'IL TUO ANIMALE', che è un testo segnaposto visibile per una frazione di secondo.",
+    "correzione": "Far comparire '2789 luci' insieme (stesso frame) e togliere o sostituire il placeholder 'IL TUO ANIMALE' con un titolo definitivo dall'apertura.",
+    "idea": "Nel finale (secondo 16) aggiungere un badge 'Seguici' accanto alla luce dell'utente, così la chiusura spinge sia il commento sia il follow."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:26+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 16 la scritta finale 'TUA LUCE!' è centrata sotto il duello, ma la frase 'Accendi la tua luce qui sotto' in alto è in un box giallo che copre parzialmente la barra GIORNO 16, e il testo 'CANI 1944, GATTI 775' al secondo 7 sovrappone la scritta 'CANI 1944,' ai numeri della trascrizione sen",
+   "dati": {
+    "controllato": "Ho verificato la grafica dei 6 fotogrammi, la coerenza del testo a schermo con la trascrizione e i secondi, e la leggibilità della fascia commenti.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Al secondo 16 la scritta finale 'TUA LUCE!' è centrata sotto il duello, ma la frase 'Accendi la tua luce qui sotto' in alto è in un box giallo che copre parzialmente la barra GIORNO 16, e il testo 'CANI 1944, GATTI 775' al secondo 7 sovrappone la scritta 'CANI 1944,' ai numeri della trascrizione senza una pausa visiva chiara. Inoltre al secondo 0.5 la mappa mostra il numero '2789' apparire solo dal secondo 1, quindi il dato chiave arriva in ritardo rispetto all'apertura.",
+    "correzione": "Far comparire '2789 luci' già nei primi 0.5 secondi, sovrapposto alla mappa, e dare al box 'Accendi la tua luce' uno spazio separato dalla barra GIORNO 16.",
+    "idea": "Nel prossimo reel chiudere con una frase tipo 'Seguici per vedere la tua luce accendersi' con il logo, per unire commento e follow in un'unica call to action."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:28+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 6 la card dell'utente ('Mo') è un frammento: il testo è parziale e la sequenza di scrittura appare un po' lenta, con molti fotogrammi quasi identici. Inoltre la mappa mostra 'Napoli · 89 luci' ma il conteggio totale a schermo ('2789') compare solo in una scena isolata, quindi il numero ch",
+   "dati": {
+    "controllato": "Grafica e copertine: layout, leggibilità dei testi a schermo e coerenza visiva dei fotogrammi nei secondi inviati, con confronto ai dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 6,
+    "problema": "Al secondo 6 la card dell'utente ('Mo') è un frammento: il testo è parziale e la sequenza di scrittura appare un po' lenta, con molti fotogrammi quasi identici. Inoltre la mappa mostra 'Napoli · 89 luci' ma il conteggio totale a schermo ('2789') compare solo in una scena isolata, quindi il numero chiave non ha un punto fermo. Il titolo in alto 'GIORNO 16' è piccolo rispetto alla grafica.",
+    "correzione": "Accorciare la scena di scrittura della card (es. mostrare subito il testo completo 'Monza, Penny, maltese') e tenere il numero '2789 luci' in sovraimpressione fissa sulla mappa per più secondi, ingrandendo leggermente il titolo 'GIORNO 16'.",
+    "idea": "Aggiungere in chiusura una scena fissa 'Seguici +10 punti' accanto alla luce dell'utente, e usare la card di un commento reale come aggancio finale per aumentare la partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:28+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 6 il titolo a schermo è 'Mo' con 'OGNI' sotto: la parola si legge a metà, il testo del post 'Monza, Penny, maltese' compare solo al secondo 7 e la frase 'Ogni commento è una luce' resta leggibile solo tramite il parlato. Inoltre i numeri 2789 al secondo 1 sono isolati e poco contestualizz",
+   "dati": {
+    "controllato": "Testi grandi e leggibili su tutti e 6 i fotogrammi, sovrapposizioni e coerenza tra copione e testo a schermo (cani 1944, gatti 775, 2789 luci).",
+    "esito": "segnalo",
+    "secondo": 6,
+    "problema": "Al secondo 6 il titolo a schermo è 'Mo' con 'OGNI' sotto: la parola si legge a metà, il testo del post 'Monza, Penny, maltese' compare solo al secondo 7 e la frase 'Ogni commento è una luce' resta leggibile solo tramite il parlato. Inoltre i numeri 2789 al secondo 1 sono isolati e poco contestualizzati, e il testo 'Cani 1944 / Gatti 775' è troppo piccolo nei fotogrammi 3-4 rispetto al resto.",
+    "correzione": "Allungare la durata del post di esempio sul secondo 6 e del testo 'OGNI' fino a completare la frase; aumentare la dimensione di 'Cani/Gatti' e dei numeri, e mantenere 2789 con la scritta 'luci accese' accanto.",
+    "idea": "Chiudere il reel con un fotogramma fisso 'Seguici e accendi la tua luce' con il conteggio dei follower verso i 2.000, così il invito al follow è visivo oltre che nella didascalia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:29+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi al secondo 6 e 10 il duello mostra la cuccia del cane e il tetto del gatto con icone e didascalia sovrapposte e l'animazione del 'VS' a metà transizione; al secondo 10 il testo 'CANI 1944' compare sopra l'icona del gatto, lasciando la scena poco leggibile. Inoltre l'icona della cuccia",
+   "dati": {
+    "controllato": "Icone e trofei: icone (cane, gatto, cuccia, tetto), coerenza grafica dei fotogrammi e contrasto del simbolo cani/gatti nel duello.",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "Nei fotogrammi al secondo 6 e 10 il duello mostra la cuccia del cane e il tetto del gatto con icone e didascalia sovrapposte e l'animazione del 'VS' a metà transizione; al secondo 10 il testo 'CANI 1944' compare sopra l'icona del gatto, lasciando la scena poco leggibile. Inoltre l'icona della cuccia è un po' piccola rispetto al tetto, creando squilibrio visivo tra i due soggetti.",
+    "correzione": "Allineare le due icone alla stessa scala e centrarle sotto il titolo, far comparire il testo 'CANI 1944' e 'GATTI 775' solo dopo che l'animazione del 'VS' è finita, lasciando almeno mezzo secondo di pausa tra i due.",
+    "idea": "Per i prossimi reel, usare un'icona-trofeo (la coppa o una lucina dorata) che si accende accanto al nome della città quando il commento arriva, per legare visivamente l'invito a commentare alla mappa."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:30+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 3 il testo 'CANI 1944,' è appena leggibile ma tagliato a metà tra le due scene: la scritta resta sospesa sopra la fascia gialla, sembra un fotogramma di transizione non finito. Inoltre al secondo 6 la card 'Mo' è un frame di digitazione troppo breve per essere letto e il testo 'OGNI' non ",
+   "dati": {
+    "controllato": "Copertine e fotogrammi della mia mansione: testi leggibili, layout coerente, transizioni tra cani/gatti e commento, e la copertina 'Giorno 16' con '2789 luci' è nel brief.",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "Al secondo 3 il testo 'CANI 1944,' è appena leggibile ma tagliato a metà tra le due scene: la scritta resta sospesa sopra la fascia gialla, sembra un fotogramma di transizione non finito. Inoltre al secondo 6 la card 'Mo' è un frame di digitazione troppo breve per essere letto e il testo 'OGNI' non è allineato al resto della grafica.",
+    "correzione": "Allungare la scritta 'CANI 1944, GATTI 775.' di qualche decimo di secondo con un'animazione di comparsa completa, e centrare 'OGNI' nello stesso asse della card di digitazione. Verificare che la card del nome non compaia prima che 'Mo' sia stato digitato per intero.",
+    "idea": "Per i prossimi reel, mostrare una luce che si accende in tempo reale sulla mappa dopo ogni commento, così il pubblico vede subito il proprio contributo."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:31+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 1 la mappa mostra il numero '2789' isolato in basso a sinistra, sopra la Sardegna-area, senza etichetta, e in un fotogramma successivo sparisce: appare come elemento fuori posto e poco leggibile sulla mappa. Inoltre la copertina ha il titolo '2789 luci' ma la mappa non mostra il conteggio",
+   "dati": {
+    "controllato": "Grafica e copertine: testi leggibili, coerenza della mappa con le luci e del duello cani/gatti, sovrapposizioni e contrasto dei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Al secondo 1 la mappa mostra il numero '2789' isolato in basso a sinistra, sopra la Sardegna-area, senza etichetta, e in un fotogramma successivo sparisce: appare come elemento fuori posto e poco leggibile sulla mappa. Inoltre la copertina ha il titolo '2789 luci' ma la mappa non mostra il conteggio in modo chiaro.",
+    "correzione": "Ancorare il numero 2789 in una posizione fissa e stabile (es. sotto il titolo GIORNO 16), mantenendolo visibile per tutta la scena mappa; evitare che compaia e scompaia a metà.",
+    "idea": "Mostrare per un attimo la luce del commento che si accende sulla mappa con il nome del comune, per rendere concreta la promessa 'accendi la tua luce'."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:31+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 2 la mappa mostra la cifra '2789' isolata in basso a sinistra, senza etichetta né contesto, mentre il copione dice 'luci accese in Italia' solo più avanti: il numero appare prima di essere spiegato e può confondere. Inoltre il dato 'Napoli · 89 luci' è corretto solo se verificato, ma non ",
+   "dati": {
+    "controllato": "Etichette e numeri sulla mappa, coerenza tra copione, fotogrammi e dati (2789 luci, cani 1944, gatti 775, Napoli 89 luci).",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Al secondo 2 la mappa mostra la cifra '2789' isolata in basso a sinistra, senza etichetta né contesto, mentre il copione dice 'luci accese in Italia' solo più avanti: il numero appare prima di essere spiegato e può confondere. Inoltre il dato 'Napoli · 89 luci' è corretto solo se verificato, ma non ci sono dati di mappa nei materiali per confermarlo.",
+    "correzione": "Far comparire la cifra 2789 già con l'etichetta 'luci accese in Italia' sotto o accanto, oppure ritardarla di mezzo secondo dopo la frase del copione; verificare il conteggio di Napoli prima della pubblicazione.",
+    "idea": "Per i prossimi reel, inserire una luce che si accende sulla mappa in tempo reale quando un commento arriva, così il pubblico vede subito l'effetto della propria partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:33+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 compare il testo 'Mo' in un box con @il.tuo.nome, mentre la trascrizione dice 'Cani 1944' in quel momento: la scena 'commento' con la frase 'Ogni commento è una luce' arriva con un ritardo di circa 6 secondi rispetto alla voce ('Ogni commento è' a 10.8s, il box 'Mo' fino al secondo 5). ",
+   "dati": {
+    "controllato": "Formato 9:16: copertina, testi sovrapposti, leggibilità dei fotogrammi e coerenza tra trascrizione, secondi e scene.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 compare il testo 'Mo' in un box con @il.tuo.nome, mentre la trascrizione dice 'Cani 1944' in quel momento: la scena 'commento' con la frase 'Ogni commento è una luce' arriva con un ritardo di circa 6 secondi rispetto alla voce ('Ogni commento è' a 10.8s, il box 'Mo' fino al secondo 5). Inoltre il box 'Monza, Penny, maltese' compare solo a 5-6 secondi, quindi il testo 'OGNI NOME' resta scoperto per alcuni secondi. Il secondo 13 (chiusura 'ACCENDI LA TUA LUCE') si sovrappone al testo 'TUA LUCE!' senza pausa visiva sufficiente.",
+    "correzione": "Allineare il box commento alla voce (comparire a 10.8s con 'Ogni commento è una luce') e far dissolvere 'OGNI' e 'NOME.' in sincrono con il box; dare 1 secondo di respiro tra la scena duello e la chiusura; sostituire 'Mo' con un nome di esempio completo fin dal primo frame del box.",
+    "idea": "Per i prossimi reel usare un'unica scena 'commento reale' con uno screenshot vero di un commento e la città che si accende sulla mappa: più credibile e più emozionale del box inventato."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:34+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il campo 'dati_mappa' è vuoto, quindi le cifre 2789 luci, 1944 cani e 775 gatti non sono verificabili dai materiali; in più il picco audio a -0.7 dBFS sta vicino al limite di -1 dBFS indicato come obiettivo. La didascalia promette anche 'Il primo di ogni comune diventa il Fondatore' e 'lucine sulla ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, dati mappa e misure audio (-14 LUFS, picco -0.7 dBFS, nessun silenzio lungo) per la mansione di pubblicazione.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Il campo 'dati_mappa' è vuoto, quindi le cifre 2789 luci, 1944 cani e 775 gatti non sono verificabili dai materiali; in più il picco audio a -0.7 dBFS sta vicino al limite di -1 dBFS indicato come obiettivo. La didascalia promette anche 'Il primo di ogni comune diventa il Fondatore' e 'lucine sulla cuccia' senza riferimenti nei materiali.",
+    "correzione": "Riempire 'dati_mappa' con il conteggio verificato prima di pubblicare e abbassare leggermente il picco audio sotto -1 dBFS (es. -2 dBFS), mantenendo il livello complessivo a -14 LUFS.",
+    "idea": "Nei prossimi reel mostrare in apertura una città reale con la sua luce appena accesa, così l'immagine della mappa diventa più personale e memorabile."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:35+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi inviati mancano quelli del 1°-2° secondo della scena di apertura (mappa, 0-1.1s) e del momento 'Cani 1944, gatti 775' (duello, 4.1-7.6s) è coperto solo dal fotogramma a 6s; il fotogramma al 16° secondo coincide con la chiusura ma la didascalia dice 'ne mancano 195' e la fascia è 'Comm",
+   "dati": {
+    "controllato": "Trascrizione, secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e corrispondenza tra copione, didascalia e dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Nei fotogrammi inviati mancano quelli del 1°-2° secondo della scena di apertura (mappa, 0-1.1s) e del momento 'Cani 1944, gatti 775' (duello, 4.1-7.6s) è coperto solo dal fotogramma a 6s; il fotogramma al 16° secondo coincide con la chiusura ma la didascalia dice 'ne mancano 195' e la fascia è 'Commenta città e nome', quindi l'invito al follow nel testo non è nel reel. Inoltre 'apertura' è null e la didascalia cita 'Voce generata con IA' senza indicazione nel parlato. Il dato 'dati_mappa' è vuoto, quindi i numeri 2789 e 1944/775 non sono verificabili nei materiali.",
+    "correzione": "Aggiungere un fotogramma a 1s e uno a 5s per coprire apertura e duello; verificare i conteggi 2789/1944/775 con i dati della mappa prima di pubblicare; aggiungere nel reel o nella fascia la call to action 'Seguici' presente in didascalia.",
+    "idea": "Mostrare nel reel, a fine video, un contatore 'mancano 195 follower' con un'animazione delle luci che si accendono, così il follow diventa parte visiva del racconto."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:35+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La didascalia promette fuochi d'artificio a 2.000 follower, ma i dati dicono 1805 follower: mancano 195, come scritto. Però la fascia in sovrimpressione 'Commenta città e nome' arriva a 14.3s e il reel finisce a 16.8s, mentre la didascalia dice 'Scrivi qui sotto' senza indicare la fascia. Inoltre 'd",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo), didascalia e numeri del progetto: il reel rispetta gli obiettivi tecnici.",
+    "esito": "segnalo",
+    "secondo": 16.8,
+    "problema": "La didascalia promette fuochi d'artificio a 2.000 follower, ma i dati dicono 1805 follower: mancano 195, come scritto. Però la fascia in sovrimpressione 'Commenta città e nome' arriva a 14.3s e il reel finisce a 16.8s, mentre la didascalia dice 'Scrivi qui sotto' senza indicare la fascia. Inoltre 'dati_mappa' è vuoto e il reel cita cifre (2789 luci, 1944 cani, 775 gatti) che non sono verificabili nei materiali forniti: il progetto dice 2820 luci, quindi 2789 non corrisponde.",
+    "correzione": "Allineare il numero di luci al dato verificato (2820 oppure confermare 2789 con la mappa) e controllare cani e gatti con i dati reali prima della pubblicazione; mantenere la fascia commento fino alla fine del reel.",
+    "idea": "Un reel dedicato al countdown dei 195 follower mancanti, mostrando in apertura la mappa con le luci dei commentatori più recenti."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:37+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il fotogramma a 0.5 s, che sarà la copertina, non è stato riportato nei fotogrammi inviati e non si può verificare visivamente; inoltre la copertina dichiara 'GIORNO 16' e '2789 luci', coerenti coi dati, ma il titolo 'La mappa di stasera' non è verificabile dai materiali senza il fotogramma.",
+   "dati": {
+    "controllato": "Copertina e fotogrammi del reel: campionati 6 fotogrammi (0.5, 3, 6, 10, 13, 16 s) su 17 previsti, testi e numeri verificati contro copione, didascalia e dati di progetto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il fotogramma a 0.5 s, che sarà la copertina, non è stato riportato nei fotogrammi inviati e non si può verificare visivamente; inoltre la copertina dichiara 'GIORNO 16' e '2789 luci', coerenti coi dati, ma il titolo 'La mappa di stasera' non è verificabile dai materiali senza il fotogramma.",
+    "correzione": "Inviare il fotogramma 0.5 s (o uno al secondo 0) per verificare la copertina prima della pubblicazione, e controllare che il testo non superi il margine sicuro sui bordi.",
+    "idea": "Nei prossimi reel mostrare il conteggio dei follower verso i 2.000 in sovrimpressione: il formato 'puntata' ha il miglior tasso di follower (17.1 ogni 1000 reach) e un contatore visibile può rafforzare questa spinta."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:37+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La didascalia promette 'Il primo di ogni comune diventa il Fondatore' e 'Seguici e scrivi SEGUO: +10 punti', ma nei materiali i dati_mappa sono vuoti e non ci sono prove che queste meccaniche esistano già; inoltre 'Voce generata con IA' va bene come trasparenza, ma la fascia in apertura dice 'Commen",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa, misure audio e didascalia del reel 'puntata' del giorno 16 rispetto ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "La didascalia promette 'Il primo di ogni comune diventa il Fondatore' e 'Seguici e scrivi SEGUO: +10 punti', ma nei materiali i dati_mappa sono vuoti e non ci sono prove che queste meccaniche esistano già; inoltre 'Voce generata con IA' va bene come trasparenza, ma la fascia in apertura dice 'Commenta', mentre la chiusura del copione non chiede di seguire. Non c'è modo di verificare dalla mia mansione i numeri 2789/1944/775 sulla mappa perché dati_mappa è vuoto.",
+    "correzione": "Verificare che il Fondatore e il +10 punti siano attivi prima della pubblicazione, oppure toglierli; aggiungere nel copione una frase esplicita di follow (es. 'Seguici e scrivi SEGUO') e riempire dati_mappa con i conteggi verificati.",
+    "idea": "Nel prossimo reel mettere la richiesta di follow nella scena di chiusura, con un animale che si accende sulla mappa come prova visiva dell'incentivo."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:38+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La mappa non ha dati verificati (dati_mappa è vuoto) ma il copione cita 2789 luci, 1944 cani e 775 gatti; inoltre la didascalia riporta 2789 luci mentre il progetto dice 2820. Il numero 'puntata' è anche in conflitto con l'obiettivo di 2.000 follower: 1805 più 195 è corretto, ma va verificato sui da",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, misure audio e didascalia del reel 'puntata' del giorno 16.",
+    "esito": "segnalo",
+    "secondo": 2.5,
+    "problema": "La mappa non ha dati verificati (dati_mappa è vuoto) ma il copione cita 2789 luci, 1944 cani e 775 gatti; inoltre la didascalia riporta 2789 luci mentre il progetto dice 2820. Il numero 'puntata' è anche in conflitto con l'obiettivo di 2.000 follower: 1805 più 195 è corretto, ma va verificato sui dati reali.",
+    "correzione": "Ripristinare i dati della mappa nel file di verifica e allineare tutti i numeri (2789 vs 2820) prima della pubblicazione; se non verificabili, usare solo il conteggio confermato.",
+    "idea": "Mostrare un animale reale della community accendere la sua luce nei primi 3 secondi, con il nome in sovraimpressione."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:39+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La didascalia dice 'Nei reel mettiamo prima gli animali di chi ci segue' e promette +10 punti, ma nei materiali non c'è nulla che confermi questa regola o il sistema di punti; inoltre il reel usa 'Commenta' e 'Scrivi' ma il dato 'mappa' è vuoto, quindi non verificabile. La didascalia contiene anche ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio) e numeri del progetto (2789 luci, 1944 cani, 775 gatti, 195 mancanti ai 2.000 follower).",
+    "esito": "segnalo",
+    "secondo": 16.8,
+    "problema": "La didascalia dice 'Nei reel mettiamo prima gli animali di chi ci segue' e promette +10 punti, ma nei materiali non c'è nulla che confermi questa regola o il sistema di punti; inoltre il reel usa 'Commenta' e 'Scrivi' ma il dato 'mappa' è vuoto, quindi non verificabile. La didascalia contiene anche 'Voce generata con IA' senza che sia indicato nei materiali se la voce è effettivamente IA (il campo 'voce' è true, quindi coerente, ma va verificato). Il dato 'dati_mappa' è vuoto: i numeri del reel non sono supportati da una fonte visibile.",
+    "correzione": "Confermare la regola 'animali di chi segue prima' e il bonus +10 punti prima di pubblicare, oppure rimuovere la frase; verificare i conteggi 2789/1944/775 contro la mappa reale.",
+    "idea": "Usare la barra dei 195 follower mancanti come elemento visivo animato nel reel, così il messaggio di follow diventa anche immagine."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:40+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella didascalia si dice 'Nei reel mettiamo prima gli animali di chi ci segue' e 'a 2.000 follower facciamo i fuochi d'artificio': promesse non presenti nei materiali del reel, da verificare prima di pubblicare. Inoltre il picco a -0.7 dBFS è molto vicino al limite di -1 dBFS indicato come obiettivo",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e coerenza tra copione, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 16.8,
+    "problema": "Nella didascalia si dice 'Nei reel mettiamo prima gli animali di chi ci segue' e 'a 2.000 follower facciamo i fuochi d'artificio': promesse non presenti nei materiali del reel, da verificare prima di pubblicare. Inoltre il picco a -0.7 dBFS è molto vicino al limite di -1 dBFS indicato come obiettivo. Il dato 'dati_mappa' è vuoto, quindi i numeri 2789/1944/775 non risultano verificati dai materiali.",
+    "correzione": "Confermare con chi gestisce la mappa che i conteggi 2789, 1944 e 775 siano aggiornati; abbassare il picco audio sotto -1 dBFS; confermare che la promessa sugli animali dei follower e quella dei fuochi a 2.000 follower siano operative prima di pubblicarle.",
+    "idea": "Un reel con il conteggio in tempo reale dei follower verso i 2.000 e una scena dedicata a un animale di un follower, mostrato con il suo nome."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:41+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Scrivi qui sotto e accendi la tua luce!' ma la trascrizione chiude a 14.3s e la durata è 16.8s: gli ultimi 2.5s sono senza parlato. Inoltre la didascalia dichiara 'Voce generata con IA' (trasparenza, ok) ma il dato 'dati_mappa' è vuoto, quindi il conteggio 2789 non è verificabile da",
+   "dati": {
+    "controllato": "Trascrizione, secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo), didascalia e numeri del progetto rispetto al copione.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Il copione dice 'Scrivi qui sotto e accendi la tua luce!' ma la trascrizione chiude a 14.3s e la durata è 16.8s: gli ultimi 2.5s sono senza parlato. Inoltre la didascalia dichiara 'Voce generata con IA' (trasparenza, ok) ma il dato 'dati_mappa' è vuoto, quindi il conteggio 2789 non è verificabile dal materiale. Nei numeri, 'ultimi_reel' riporta follower_ogni_1000 molto diversi tra formati, e il reel 'coppa_apertura' con più views ha il tasso più basso.",
+    "correzione": "Allungare la chiusura parlata fino a coprire tutta la durata oppure accorciare il video a circa 14.5s; allegare i dati_mappa verificati per il 2789 prima della pubblicazione.",
+    "idea": "Ripetere il formato 'prima_luce' che ha il miglior tasso di follower e mostrare in chiusura il contatore dei 195 mancanti in sovraimpressione."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:41+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La mappa è vuota nei dati (dati_mappa: []) e il copione dice 'Il tuo animale è già su questa mappa?' mentre la frase 1 dice 'Cani 1944, gatti 775' sopra il duello, ma il conteggio dei commenti e il ritmo di 'Scrivi qui sotto' restano lenti: il CTA arriva a 12.6s e la chiusura è sovrapposta. Inoltre ",
+   "dati": {
+    "controllato": "Trascrizione, copione, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo), didascalia e numeri del progetto rispetto alla mia mansione sul reel.",
+    "esito": "segnalo",
+    "secondo": 12.6,
+    "problema": "La mappa è vuota nei dati (dati_mappa: []) e il copione dice 'Il tuo animale è già su questa mappa?' mentre la frase 1 dice 'Cani 1944, gatti 775' sopra il duello, ma il conteggio dei commenti e il ritmo di 'Scrivi qui sotto' restano lenti: il CTA arriva a 12.6s e la chiusura è sovrapposta. Inoltre i fotogrammi inviati sono 6 su 17 disponibili, quindi non ho visto la scena del commento per intero.",
+    "correzione": "Verificare con l'analista che i numeri 2789/1944/775 siano coerenti con i dati della mappa prima della pubblicazione, e anticipare il CTA 'scrivi città e nome' a circa 10s per lasciare respiro alla chiusura.",
+    "idea": "Aggiungere nel video, a 14s, il messaggio 'Seguici' in sovrimpressione, e far vedere un animale reale della community accendere la sua luce."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:42+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "L'apertura parte senza silenzi, ma il primo secondo (0-1.1s) è solo il titolo sulla mappa e il volume medio dei primi 5 secondi è -16.7 dB, più basso dell'obiettivo; inoltre la frase 'Il tuo animale è già su questa mappa?' arriva con 1.1s di ritardo sulla voce. Nei dati, 'dati_mappa' è vuoto, quindi",
+   "dati": {
+    "controllato": "Trascrizione, copione, didascalia, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e numeri del progetto rispetto alla mappa.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "L'apertura parte senza silenzi, ma il primo secondo (0-1.1s) è solo il titolo sulla mappa e il volume medio dei primi 5 secondi è -16.7 dB, più basso dell'obiettivo; inoltre la frase 'Il tuo animale è già su questa mappa?' arriva con 1.1s di ritardo sulla voce. Nei dati, 'dati_mappa' è vuoto, quindi non posso verificare i numeri 2789/1944/775 sulla mappa.",
+    "correzione": "Portare il volume dei primi 5 secondi vicino a -14 LUFS e far partire la voce entro 0.3s; verificare i conteggi di luci, cani e gatti contro la mappa prima della pubblicazione.",
+    "idea": "Inserire nella voce il vantaggio di seguire (animali di chi segue nei reel) e mostrare a schermo il contatore dei 195 mancanti ai 2.000 follower."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:44+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il reel è stato inviato con fotogrammi solo a 0.5, 3, 6, 10, 13 e 16 secondi, ma il reparto ne aveva estratti 17 (ogni secondo). Inoltre 'dati_mappa' è vuoto, quindi non è verificabile che la mappa mostri davvero i numeri detti in voce (2789 luci, cani 1944, gatti 775). Il fotogramma a 16s coincide ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, audio e didascalia del reel 'puntata' del reparto Community: tutto coerente, nessun dato contraddetto.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Il reel è stato inviato con fotogrammi solo a 0.5, 3, 6, 10, 13 e 16 secondi, ma il reparto ne aveva estratti 17 (ogni secondo). Inoltre 'dati_mappa' è vuoto, quindi non è verificabile che la mappa mostri davvero i numeri detti in voce (2789 luci, cani 1944, gatti 775). Il fotogramma a 16s coincide con la chiusura, quindi la scena finale va controllata.",
+    "correzione": "Verificare che i dati_mappa siano popolati e corrispondano a 2789 luci, 1944 cani, 775 gatti prima della pubblicazione; riesportare o includere i fotogrammi mancanti (1-2, 4-5, 7-9, 11-12, 14-15) per controllare la scena mappa e la scena duello.",
+    "idea": "Inserire nel video, nei secondi finali, una riga testuale 'Scrivi SEGUO e accendi la tua luce' così da portare il follow anche a chi non legge la didascalia; e aggiungere un'apertura visiva nei primi 0.5 secondi, ora assente."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:44+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Ogni commento è una luce' sta a 10.8s mentre la scena 'commento' parte prima; inoltre i 6 fotogrammi inviati (0.5, 3, 6, 10, 13, 16) non coprono l'apertura 0-1s con la domanda, quindi non posso verificare la mappa nei primi secondi. Le frasi 'Il primo di ogni comune diventa il Fondatore' e ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione e didascalia, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e numeri del progetto per la mia mansione di Community.",
+    "esito": "segnalo",
+    "secondo": 10.8,
+    "problema": "Il dato 'Ogni commento è una luce' sta a 10.8s mentre la scena 'commento' parte prima; inoltre i 6 fotogrammi inviati (0.5, 3, 6, 10, 13, 16) non coprono l'apertura 0-1s con la domanda, quindi non posso verificare la mappa nei primi secondi. Le frasi 'Il primo di ogni comune diventa il Fondatore' e 'a 2.000 follower ne mancano 195' sono coerenti coi dati (1805+195=2000), ma il 'SEGUO: +10 punti' e 'lucine sulla cuccia' non sono verificabili dai materiali.",
+    "correzione": "Inviare fotogrammi a 1s e 2s per verificare l'apertura, e confermare o togliere la promessa di +10 punti e delle lucine sulla cuccia se non esistono davvero nell'app.",
+    "idea": "Inserire la richiesta 'Seguici' anche nella chiusura parlata o nella fascia a schermo, e usare il formato puntata che ha il miglior rapporto follower ogni 1000 reach con più condivisioni."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:45+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il numero 2789 luci compare nel parlato a 4.1s, ma nella didascalia c'è la frase 'Giorno 16' e nel progetto risultano 2820 luci: i dati della mappa (dati_mappa) sono vuoti, quindi il 2789 non è verificabile dai materiali. Inoltre la didascalia dice che i fuochi d'artificio arrivano a 2.000 follower ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e dati della mappa usati nel testo.",
+    "esito": "segnalo",
+    "secondo": 4.1,
+    "problema": "Il numero 2789 luci compare nel parlato a 4.1s, ma nella didascalia c'è la frase 'Giorno 16' e nel progetto risultano 2820 luci: i dati della mappa (dati_mappa) sono vuoti, quindi il 2789 non è verificabile dai materiali. Inoltre la didascalia dice che i fuochi d'artificio arrivano a 2.000 follower mancandone 195, cioè 1805+195=2000, coerente, ma il reel dichiara 'Nei reel mettiamo prima gli animali di chi ci segue' e 'Voce generata con IA' in didascalia senza che nel brief si dica dove appare.",
+    "correzione": "Allineare il numero di luci al dato verificato (2820 da progetto, o confermare 2789 con dati_mappa) sia nel parlato sia nella copertina e didascalia.",
+    "idea": "Mostrare a schermo il contatore delle luci che sale mentre la voce dice il numero, così il dato è visibile e verificabile."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:46+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La didascalia promette 'Nei reel mettiamo prima gli animali di chi ci segue' e 'Il primo di ogni comune diventa il Fondatore', ma nei materiali non c'è nessun dato che confermi che la promessa sia attiva o gestita; inoltre 'Voce generata con IA' è dichiarato ma il reel non ha una scena o un segnale ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, audio e numeri del progetto del reel 'puntata' del 10/11; la mia mansione è il richiamo al follow e l'invito a interagire.",
+    "esito": "segnalo",
+    "secondo": 10.8,
+    "problema": "La didascalia promette 'Nei reel mettiamo prima gli animali di chi ci segue' e 'Il primo di ogni comune diventa il Fondatore', ma nei materiali non c'è nessun dato che confermi che la promessa sia attiva o gestita; inoltre 'Voce generata con IA' è dichiarato ma il reel non ha una scena o un segnale visivo che lo renda chiaro. Il richiamo SEGUO è presente solo in didascalia, non nel parlato o nella grafica del reel.",
+    "correzione": "Aggiungere al secondo 13-16 una scritta o una frase parlata 'Seguici e scrivi SEGUO' per portare il richiamo al follow dentro il video, e verificare che la promessa dei reel prioritari per chi segue sia davvero operativa prima di pubblicarla.",
+    "idea": "Un reel di chiusura dedicato al conteggio verso i 2.000 follower, con la barra di avanzamento e il contatore dei 195 mancanti in sovrimpressione, così il richiamo a seguire diventa visivo e misurabile."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:48+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice 'Il tuo animale è già su questa mappa?' ma i 'dati_mappa' sono vuoti e l'apertura è null; la scena 'mappa' non ha una schermata verificata nei materiali. Inoltre la fascia dice 'Commenta città e nome' mentre il copione chiede di scrivere 'qui sotto', va bene, ma i numeri 2789 luci e 282",
+   "dati": {
+    "controllato": "Trascrizione, secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e coerenza tra copione, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il reel dice 'Il tuo animale è già su questa mappa?' ma i 'dati_mappa' sono vuoti e l'apertura è null; la scena 'mappa' non ha una schermata verificata nei materiali. Inoltre la fascia dice 'Commenta città e nome' mentre il copione chiede di scrivere 'qui sotto', va bene, ma i numeri 2789 luci e 2820 luci nel progetto non coincidono (la differenza può dipendere dall'aggiornamento, va verificato). Sul fotogramma 0 la frase è già in corso: manca un aggancio visivo chiaro nei primi secondi.",
+    "correzione": "Verificare e allineare il conteggio luci (2789 nel reel, 2820 nel progetto) prima della pubblicazione; compilare i dati_mappa con l'estrazione reale; far partire la mappa con un'immagine forte già al secondo 0 e un cane o gatto visibile nei primi 1,5 secondi.",
+    "idea": "Un reel con il primo commento reale della giornata mostrato a schermo, così il pubblico vede subito che la sua luce può accendersi."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:48+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La didascalia dice 'Il primo di ogni comune diventa il Fondatore' e 'Seguici e scrivi SEGUO: +10 punti' ma nel reel non c'è nessun richiamo a questo; inoltre 'mappa di stasera' e 'Giorno 16' non sono verificabili dai materiali. Il picco a -0.7 dBFS è vicino al limite di -1 dBFS richiesto. Il reel no",
+   "dati": {
+    "controllato": "Trascrizione, secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e coerenza tra copione, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "La didascalia dice 'Il primo di ogni comune diventa il Fondatore' e 'Seguici e scrivi SEGUO: +10 punti' ma nel reel non c'è nessun richiamo a questo; inoltre 'mappa di stasera' e 'Giorno 16' non sono verificabili dai materiali. Il picco a -0.7 dBFS è vicino al limite di -1 dBFS richiesto. Il reel non ha fotogrammi o dati mappa (dati_mappa vuoto), quindi non posso confermare che la mappa mostrata corrisponda ai 2789 luci dichiarati.",
+    "correzione": "Aggiungere nel copione (o in overlay all'ultimo secondo) il richiamo a SEGUO/+10 punti; abbassare il picco a sotto -1 dBFS; verificare e allegare i dati della mappa prima della pubblicazione.",
+    "idea": "Chiudere con un frame che mostra il contatore dei follower verso i 2.000 e le lucine di un animale appena acceso, per far vedere il traguardo che la didascalia promette."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:48+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Cani 1944, gatti 775' somma a 2719, non a 2789: manca circa 70 luci (forse altri animali non elencati). Inoltre la didascalia dice 'Il primo di ogni comune diventa il Fondatore' e promette 'fuochi d'artificio' a 2.000 follower: sono promesse da verificare. Il campo 'dati_mappa' è vuoto, qui",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e didascalia rispetto ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.1,
+    "problema": "Il dato 'Cani 1944, gatti 775' somma a 2719, non a 2789: manca circa 70 luci (forse altri animali non elencati). Inoltre la didascalia dice 'Il primo di ogni comune diventa il Fondatore' e promette 'fuochi d'artificio' a 2.000 follower: sono promesse da verificare. Il campo 'dati_mappa' è vuoto, quindi non posso confermare i numeri sulla mappa.",
+    "correzione": "Aggiungere la voce 'altri' (es. 'altri animali 70') oppure correggere il totale nel copione e in didascalia; verificare che il Fondatore e i fuochi a 2.000 follower siano davvero attivi prima di pubblicare. Compilare i dati_mappa.",
+    "idea": "Usare il conteggio esatto in una scena dedicata (es. contatore che sale) per rendere visibile la crescita della mappa e spingere i commenti."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:49+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il numero 2789 nel parlato è ripetuto anche nella didascalia e nella copertina come 2789, ma i dati del progetto dicono 2820 luci: il numero del reel non corrisponde al dato attuale. Inoltre la didascalia dice 'Voce generata con IA' e il video mostra solo 6 fotogrammi inviati, quindi la verifica vis",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, fascia, didascalia, dati audio (LUFS, picco, silenzi) e numeri della mappa rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 4.1,
+    "problema": "Il numero 2789 nel parlato è ripetuto anche nella didascalia e nella copertina come 2789, ma i dati del progetto dicono 2820 luci: il numero del reel non corrisponde al dato attuale. Inoltre la didascalia dice 'Voce generata con IA' e il video mostra solo 6 fotogrammi inviati, quindi la verifica visiva è parziale. Il reel dichiara 'Giorno 16' e la chiusura 'accendi la tua luce', coerenti col brief.",
+    "correzione": "Allineare il numero di luci al dato verificato del giorno (2820 se è quello aggiornato) in parlato, copertina e didascalia, oppure indicare la fonte del 2789 e la sua data.",
+    "idea": "Mostrare nel reel un animale reale dalla mappa con città, per dare un volto concreto ai numeri e aumentare la voglia di commentare."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:51+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il brief dice 'apertura: null' e non c'è nessuna scena di apertura forte: la frase iniziale parte a 0.0s senza un gancio visivo verificabile nei fotogrammi inviati (0.5s, 3s, 6s, 10s, 13s, 16s). Inoltre dati_mappa è vuoto, quindi non posso confermare che la mappa mostri davvero 2789 luci nel primo f",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, dati audio e numeri di progetto per la mia mansione, la «Prova del giorno».",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief dice 'apertura: null' e non c'è nessuna scena di apertura forte: la frase iniziale parte a 0.0s senza un gancio visivo verificabile nei fotogrammi inviati (0.5s, 3s, 6s, 10s, 13s, 16s). Inoltre dati_mappa è vuoto, quindi non posso confermare che la mappa mostri davvero 2789 luci nel primo frame. Il silenzio iniziale tra 0.0 e 1.1s e il volume medio dei primi 5s (-16.7 dB) sono sotto l'obiettivo, quindi l'attacco è debole.",
+    "correzione": "Inviare fotogrammi a 0.0s e 1.0s per verificare l'apertura, portare il volume dei primi 5s verso -14 LUFS, e controllare che il numero 2789 sia visibile sulla mappa nei primi secondi.",
+    "idea": "Aprire con un animale singolo che 'accende' la sua luce in primo piano, poi allargare alla mappa, così il numero 2789 arriva dopo l'emozione."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:52+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato sui follower dichiarato nella didascalia ('ne mancano 195' per i 2.000) è coerente con i 1805 del progetto, ma la mappa (dati_mappa) è vuota: il conteggio 2789 luci nel parlato non è verificabile dai materiali. Inoltre nel progetto le luci sono 2820 mentre nel reel si dice 2789, senza spiega",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, dati mappa e misure audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio), con il numero di luci e le cifre dei cani/gatti in testo.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il dato sui follower dichiarato nella didascalia ('ne mancano 195' per i 2.000) è coerente con i 1805 del progetto, ma la mappa (dati_mappa) è vuota: il conteggio 2789 luci nel parlato non è verificabile dai materiali. Inoltre nel progetto le luci sono 2820 mentre nel reel si dice 2789, senza spiegazione. Il picco audio a -0.7 dBFS è sopra la soglia obiettivo di -1 dBFS.",
+    "correzione": "Verificare il numero di luci (2789 nel reel contro 2820 nel progetto) e aggiornare il parlato e la didascalia; abbassare il picco sotto -1 dBFS; la fascia 'Commenta città e nome' va bene.",
+    "idea": "Nel prossimo reel mostrare a schermo il contatore 'mancano 195' e un'animazione di luce che si accende quando viene letto un commento."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:52+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio a -0.7 dBFS è sopra l'obiettivo di -1 dBFS, e il campo 'dati_mappa' è vuoto: le cifre 2789/1944/775 non sono verificabili dai materiali forniti. Inoltre la trascrizione dice 'Cani 1944, gatti 775', ma 1944+775=2719, quindi manca circa il 2,5% delle luci che il testo non spiega.",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e numeri del progetto: la mia mansione è la sfida 'Indovina la Zampa' e il reel è una puntata con cifre coerenti tra copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il picco audio a -0.7 dBFS è sopra l'obiettivo di -1 dBFS, e il campo 'dati_mappa' è vuoto: le cifre 2789/1944/775 non sono verificabili dai materiali forniti. Inoltre la trascrizione dice 'Cani 1944, gatti 775', ma 1944+775=2719, quindi manca circa il 2,5% delle luci che il testo non spiega.",
+    "correzione": "Abbassare il picco sotto -1 dBFS e verificare le cifre contro la mappa reale prima di pubblicare; oppure allineare i numeri alla fonte e chiarire la differenza tra luci totali e specie.",
+    "idea": "Mostrare sulla mappa la luce appena accesa da un commento reale, così la promessa 'ogni commento è una luce' diventa visibile e verificabile."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:52+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Cani 1944, gatti 775' è detto a 4.1s ma nella trascrizione il numero '2789 luci' è pronunciato prima e la frase 'Cani 1944' compare solo a 7.6s: la sequenza è corretta, però 'dati_mappa' è vuoto, quindi i numeri 2789, 1944 e 775 non sono verificabili dai materiali forniti. Inoltre la didasc",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e didascalia del reel 'puntata' della Coppa delle Zampe.",
+    "esito": "segnalo",
+    "secondo": 4.1,
+    "problema": "Il dato 'Cani 1944, gatti 775' è detto a 4.1s ma nella trascrizione il numero '2789 luci' è pronunciato prima e la frase 'Cani 1944' compare solo a 7.6s: la sequenza è corretta, però 'dati_mappa' è vuoto, quindi i numeri 2789, 1944 e 775 non sono verificabili dai materiali forniti. Inoltre la didascalia ripete 'Giorno 16' e 'Fondatore 👑' senza fonte nei dati, e il reel è in formato 'puntata' senza apertura definita ('apertura': null).",
+    "correzione": "Verificare i conteggi (luci totali, cani, gatti) contro la mappa prima della pubblicazione e compilare 'dati_mappa'; definire un'apertura esplicita nel brief.",
+    "idea": "Mostrare nel reel un esempio reale di luce accesa da un commento (città e nome visibili) per rendere concreta la promessa."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:54+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'dati_mappa' è vuoto, quindi non posso verificare che 2789 luci e i conteggi cani 1944 / gatti 775 corrispondano alla mappa; inoltre nella didascalia 'Giorno 16' e '2789 luci' sono presentati come dati certi, mentre il progetto riporta 2820 luci. Il conteggio nel reel (2789) non coincide con",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione e didascalia, misure audio (LUFS, picco, silenzi), coerenza dei numeri con i dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.1,
+    "problema": "Il dato 'dati_mappa' è vuoto, quindi non posso verificare che 2789 luci e i conteggi cani 1944 / gatti 775 corrispondano alla mappa; inoltre nella didascalia 'Giorno 16' e '2789 luci' sono presentati come dati certi, mentre il progetto riporta 2820 luci. Il conteggio nel reel (2789) non coincide con quello del progetto (2820).",
+    "correzione": "Verificare i numeri su dati_mappa prima di pubblicare, e allineare il reel e la didascalia al dato aggiornato (2820) oppure dichiarare la data del conteggio.",
+    "idea": "Mostrare il numero di luci come contatore animato sulla mappa, aggiornato con il dato verificato, così il pubblico vede la crescita in tempo reale."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:54+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Cani 1944, gatti 775' arriva dopo il 'Cani' in trascrizione e nel brief è scritto come 'Cani 1944, gatti 775' senza la frase completa, mentre i dati della mappa sono vuoti (dati_mappa: []) quindi non c'è verifica dei numeri 2789, 1944 e 775 nei materiali. Inoltre la didascalia dichiara 'Voc",
+   "dati": {
+    "controllato": "Trofei e albo: trascrizione coi secondi, copione, audio e didascalia del reel 'puntata' della Coppa delle Zampe.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Il dato 'Cani 1944, gatti 775' arriva dopo il 'Cani' in trascrizione e nel brief è scritto come 'Cani 1944, gatti 775' senza la frase completa, mentre i dati della mappa sono vuoti (dati_mappa: []) quindi non c'è verifica dei numeri 2789, 1944 e 775 nei materiali. Inoltre la didascalia dichiara 'Voce generata con IA' e la fascia dice 'Commenta città e nome', ma la chiusura del brief non ha un invito esplicito al follow.",
+    "correzione": "Verificare i numeri con i dati della mappa prima della pubblicazione (dati_mappa è vuoto) e aggiungere nella chiusura un richiamo al follow, es. 'Seguici e accendi la tua luce!'.",
+    "idea": "Nei prossimi reel mostrare in apertura un animale reale con la sua luce accesa sulla mappa, così il numero 2789 diventa anche una storia visiva."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:56+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio di -0.7 dBFS è sopra l'obiettivo di -1 dBFS, quindi c'è un leggero rischio di clipping. Inoltre la didascalia dice 'Voce generata con IA' senza che il brief lo richieda in modo esplicito, e il campo 'apertura' è null. Il secondo 16 coincide con la chiusura, quindi serve un frame final",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo), coerenza dei numeri (2789 = 1944+775 e 2789 luci) e didascalia con le soglie 2.000 follower e 195 mancanti (2000-1805).",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Il picco audio di -0.7 dBFS è sopra l'obiettivo di -1 dBFS, quindi c'è un leggero rischio di clipping. Inoltre la didascalia dice 'Voce generata con IA' senza che il brief lo richieda in modo esplicito, e il campo 'apertura' è null. Il secondo 16 coincide con la chiusura, quindi serve un frame finale leggibile.",
+    "correzione": "Abbassare il picco sotto -1 dBFS (es. -2 dBFS) mantenendo circa -14 LUFS. Verificare che l'avviso sull'IA sia obbligatorio o meno secondo le regole della pagina. Compilare l'apertura con la frase 'Il tuo animale è già su questa mappa?' sul primo frame.",
+    "idea": "Usare nel reel un animale reale che accende la sua luce nella mappa, con un primo piano di 2 secondi, così il pubblico si riconosce subito. Per i prossimi reel, mostrare il numero di luci che cresce in tempo reale come contatore visivo."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:56+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il campo 'apertura' del brief è null e l'apertura audio è di -16.7 dB nei primi 5 secondi, sotto l'obiettivo, anche se il picco e il LUFS sono in regola. Inoltre la trascrizione dice '2789 luci' mentre il progetto segna 2820 luci totali, e la didascalia non dice da dove viene il dato. I fotogrammi i",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi e didascalia del reel 'puntata' verso il brief, nella mia mansione sulle misure del turno.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il campo 'apertura' del brief è null e l'apertura audio è di -16.7 dB nei primi 5 secondi, sotto l'obiettivo, anche se il picco e il LUFS sono in regola. Inoltre la trascrizione dice '2789 luci' mentre il progetto segna 2820 luci totali, e la didascalia non dice da dove viene il dato. I fotogrammi inviati (0.5, 3, 6, 10, 13, 16) non coincidono con quelli di servizio (0.5-16 ogni secondo).",
+    "correzione": "Impostare un'apertura esplicita nel brief (scena o frase che parte subito col movimento della mappa), alzare leggermente il volume dei primi 5 secondi, allineare il numero di luci con quello verificato della mappa e indicare l'istante del dato, e usare i fotogrammi di servizio completi.",
+    "idea": "Per i prossimi reel: aprire con un'immagine della mappa che si accende sulla città di un commento reale, con un suono breve e netto nel primo secondo, e poi il numero delle luci."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:58+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 compare il numero 2789 sopra la mappa, ma nella trascrizione la frase è «2789 luci accese in Italia» al secondo 1.1 e la scritta 'luci' non compare in quel fotogramma: il numero appare isolato e senza etichetta per alcuni secondi, poco leggibile. Inoltre la scena 'duello' parte al secon",
+   "dati": {
+    "controllato": "Tempi della trascrizione e dei fotogrammi, frasi del copione, dati della mappa (2789 luci, cani 1944, gatti 775), audio (-14.4 LUFS, picco -0.7 dBFS) e coerenza tra voce, testo a schermo e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 compare il numero 2789 sopra la mappa, ma nella trascrizione la frase è «2789 luci accese in Italia» al secondo 1.1 e la scritta 'luci' non compare in quel fotogramma: il numero appare isolato e senza etichetta per alcuni secondi, poco leggibile. Inoltre la scena 'duello' parte al secondo 4 ma la voce dice 'Cani 1944' solo a 4.1s, quindi va bene, però il titolo 'CANI 1944,' a schermo resta incompleto fino al secondo 9 (la scritta 'GATTI 775' non si legge mai intera nei fotogrammi campionati). Il picco audio è vicino al limite (-0.7 dBFS, obiettivo sotto -1).",
+    "correzione": "Mostrare '2789 luci' per intero dal secondo 1 e farla restare fino a 4 secondi; completare il testo 'GATTI 775' nel duello prima del secondo 10; abbassare il picco audio di 1 dB per restare sotto -1 dBFS.",
+    "idea": "Chiudere ogni reel con un contatore vivo ('ne mancano 195 ai fuochi') accanto al CTA, così follow e commenti vengono spinti insieme."
+   }
+  },
+  {
+   "t": "2026-11-10T20:05:58+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 1.1 compare la cifra '2789' sopra la mappa, ma nel reel la scritta '2789' resta isolata a sinistra e non è accompagnata da 'luci' finché il testo non appare: sul fotogramma 3 la parola 'luci' non è visibile, mentre il copione la pronuncia. Inoltre nel fotogramma del secondo 16 la frase 'T",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (2789 luci, cani 1944, gatti 775), audio e fotogrammi del reel.",
+    "esito": "segnalo",
+    "secondo": 1.1,
+    "problema": "Al secondo 1.1 compare la cifra '2789' sopra la mappa, ma nel reel la scritta '2789' resta isolata a sinistra e non è accompagnata da 'luci' finché il testo non appare: sul fotogramma 3 la parola 'luci' non è visibile, mentre il copione la pronuncia. Inoltre nel fotogramma del secondo 16 la frase 'TUA LUCE!' è coperta dalla scena precedente, quindi la chiusura non è leggibile in modo pulito.",
+    "correzione": "Mostrare '2789 luci' insieme al secondo 1.1 e assicurarsi che la scritta di chiusura 'Accendi la tua luce' resti a schermo per almeno 2 secondi prima della fine.",
+    "idea": "Ripetere il formato con un numero in evidenza sul giorno 1 (es. 'Il primo cane di Napoli') per creare curiosità immediata nei primi 2 secondi."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:00+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "A 1.1s compare il numero '2789' da solo, senza etichetta, nello stesso punto in cui la voce dice 'Il tuo animale è già su questa mappa?'. Lo spettatore vede un numero isolato e non capisce cosa rappresenti. Inoltre la mappa del fotogramma a 0.5s mostra la scritta 'IL TUO ANIMALE' che poi sparisce, m",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, numeri del progetto e fotogrammi: ho verificato che i dati mostrati (2789 luci, cani 1944, gatti 775) coincidano con il testo e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.1,
+    "problema": "A 1.1s compare il numero '2789' da solo, senza etichetta, nello stesso punto in cui la voce dice 'Il tuo animale è già su questa mappa?'. Lo spettatore vede un numero isolato e non capisce cosa rappresenti. Inoltre la mappa del fotogramma a 0.5s mostra la scritta 'IL TUO ANIMALE' che poi sparisce, mentre il testo della voce non la menziona: il messaggio è poco chiaro nei primi secondi. Nella didascalia la CTA 'Commenta città e nome' è ripetuta tre volte in 16 secondi, e la didascalia promette 'Il primo di ogni comune diventa il Fondatore', che nel reel non compare.",
+    "correzione": "Mostrare '2789 luci' con etichetta completa nello stesso frame (es. 'Già 2789 luci accese') e far comparire 'IL TUO ANIMALE' solo quando la voce lo dice; aggiungere nel reel un accenno al Fondatore o toglierlo dalla didascalia.",
+    "idea": "Chiudere con un frame che ricorda 'Seguici: mancano 195 follower ai fuochi d'artificio', così il reel spinge il follow oltre al commento."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:00+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nel secondo 1 il numero è già 2789 ma la frase viene letta a 1.1s con 'luci' ancora fuori schermo; nella scena mappa la parola 'luci' compare solo dopo, quindi il numero resta isolato e senza contesto per circa 2 secondi. Inoltre al secondo 0.5 (apertura) il titolo 'IL TUO ANIMALE' è vuoto di signif",
+   "dati": {
+    "controllato": "Ho verificato il secondo 3 e il copione della mia mansione: sincronia testo/scene, leggibilità della fascia e coerenza dei numeri con i dati forniti (2789 luci, cani 1944, gatti 775).",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nel secondo 1 il numero è già 2789 ma la frase viene letta a 1.1s con 'luci' ancora fuori schermo; nella scena mappa la parola 'luci' compare solo dopo, quindi il numero resta isolato e senza contesto per circa 2 secondi. Inoltre al secondo 0.5 (apertura) il titolo 'IL TUO ANIMALE' è vuoto di significato prima della domanda.",
+    "correzione": "Far apparire il testo '2789 luci accese' già dal secondo 0 o 0.5, in modo che il numero abbia subito il suo contesto, e anticipare di circa 0.5s la domanda 'Il tuo animale è già su questa mappa?' per agganciare subito lo spettatore.",
+    "idea": "Aggiungere in chiusura (secondi 14-16) una scritta 'Seguici e accendi' accanto alla luce, e nei prossimi reel usare un numero-countdown verso i 2.000 follower (ne mancano 195) mostrato sulla mappa come obiettivo visivo."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:01+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella didascalia compare «ne mancano 195» per arrivare a 2.000 follower, ma il progetto dice 1.805 follower: 2.000 − 1.805 = 195, quindi il numero è corretto. Il problema è che al secondo 16 (ultimo fotogramma) la chiusura mostra ancora la fascia «Commenta città e nome», mentre il CTA «Accendi la tu",
+   "dati": {
+    "controllato": "Il tuo reparto: follower ogni 1.000 account, cioè la capacità del reel di spingere al follow, valutata su copione, trascrizione, didascalia, dati di performance e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Nella didascalia compare «ne mancano 195» per arrivare a 2.000 follower, ma il progetto dice 1.805 follower: 2.000 − 1.805 = 195, quindi il numero è corretto. Il problema è che al secondo 16 (ultimo fotogramma) la chiusura mostra ancora la fascia «Commenta città e nome», mentre il CTA «Accendi la tua luce» compare solo come etichetta testuale, senza invito a seguire. Inoltre i dati di mappa in «dati_mappa» sono vuoti, quindi non posso verificare il conteggio 2789 né il dato «Napoli · 89 luci» mostrato nel video.",
+    "correzione": "Nella chiusura (ultimi 2-3 secondi) aggiungere una riga «Seguici e scrivi SEGUO» sopra o accanto alla fascia commento, così il frame finale spinge anche al follow, non solo al commento. Verificare il dato 2789 luci con la mappa reale prima della pubblicazione.",
+    "idea": "Per i prossimi reel: chiudere sempre con un frame «Seguici» separato di 1,5 secondi, e mostrare un contatore vivo (es. «ne mancano 195 ai fuochi») direttamente nel video, non solo nella didascalia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:02+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il testo 'Ogni commento è una luce' compare al secondo 10.8 con la fascia sovrapposta, ma nel fotogramma al secondo 10 il commento mostrato dice ancora 'Mo' e la frase 'OGNI' è visibile; la scritta 'NOME.' arriva più tardi. Inoltre la trascrizione dice '2789 luci accese' mentre la scena a 1s mostra ",
+   "dati": {
+    "controllato": "Sincronia tra copione, trascrizione coi secondi, fotogrammi, dati mappa e didascalia sul reel 'puntata' del Giorno 16.",
+    "esito": "segnalo",
+    "secondo": 10.8,
+    "problema": "Il testo 'Ogni commento è una luce' compare al secondo 10.8 con la fascia sovrapposta, ma nel fotogramma al secondo 10 il commento mostrato dice ancora 'Mo' e la frase 'OGNI' è visibile; la scritta 'NOME.' arriva più tardi. Inoltre la trascrizione dice '2789 luci accese' mentre la scena a 1s mostra il contatore '2789' senza la parola 'luci', e la mappa al secondo 0.5 mostra ancora il titolo 'IL TUO ANIMALE' sovrapposto alla frase iniziale. Il conteggio dei dati mappa è vuoto nel materiale, quindi non verificabile sulla mappa stessa.",
+    "correzione": "Allineare la comparsa di 'Ogni commento è una luce' e di 'nome.' alla trascrizione, e far comparire '2789 luci' insieme alla frase di apertura invece di un numero isolato.",
+    "idea": "Per i prossimi reel mostrare in chiusura il nome reale dell'ultimo utente acceso sulla mappa, così l'effetto 'la tua luce' diventa più personale."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:04+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 16 il fotogramma finale mostra la frase 'TUA LUCE!' ma la trascrizione chiude con 'accendi la tua luce!' e la scena 'chiusura' nel brief è coperta dal logo/fascia senza un call to action visivo sul follow; inoltre la scena 'Mo' → 'Monza, Penny, maltese' è un testo di commento-esempio che ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi e fotogrammi del reel 'puntata' (Giorno 16): ritmo, leggibilità del testo e coerenza tra voce, scene e dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Al secondo 16 il fotogramma finale mostra la frase 'TUA LUCE!' ma la trascrizione chiude con 'accendi la tua luce!' e la scena 'chiusura' nel brief è coperta dal logo/fascia senza un call to action visivo sul follow; inoltre la scena 'Mo' → 'Monza, Penny, maltese' è un testo di commento-esempio che può confondere il pubblico sul tipo di contenuto richiesto. Il testo 'Il tuo animale è già su questa mappa?' compare a 1.1s ma la mappa del fotogramma 0.5s non ha ancora la luce di Napoli evidenziata nel modo previsto dal brief.",
+    "correzione": "Mostrare il CTA 'SEGUICI + scrivi SEGUO' già nell'ultima scena (ultimi 3 secondi) e rendere più chiaro l'esempio di commento con un formato del tipo 'Napoli · Penny'.",
+    "idea": "Per i prossimi reel: chiudere sempre con un fotogramma che mostri il contatore follower verso i 2.000 (es. 'ne mancano 195') come elemento visivo, così il follow diventa il protagonista del finale."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:04+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 10 la trascrizione dice 'Ogni commento è una luce', ma il fotogramma mostra ancora il tabellone 'Cani vs Gatti' e il tag 'Ogni' compare solo nei secondi precedenti: il testo sullo schermo ('OGNI' / 'NOME.') è scandito in ritardo rispetto alla voce e al copione, e la scena del commento com",
+   "dati": {
+    "controllato": "Ho verificato la mia mansione sul reel: sincronia tra copione e fotogrammi, dati della mappa (2789 luci, cani 1944, gatti 775), audio e coerenza della didascalia coi numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "Al secondo 10 la trascrizione dice 'Ogni commento è una luce', ma il fotogramma mostra ancora il tabellone 'Cani vs Gatti' e il tag 'Ogni' compare solo nei secondi precedenti: il testo sullo schermo ('OGNI' / 'NOME.') è scandito in ritardo rispetto alla voce e al copione, e la scena del commento compare solo dopo. Inoltre il tabellone finale 'Cani 1944 vs Gatti 775' resta a schermo mentre la voce ha già chiuso il dato, con un vuoto di circa 3 secondi tra 'gatti 775' e 'Ogni commento'.",
+    "correzione": "Allineare i testi a schermo alla voce: 'Ogni commento è una luce' va mostrato a 7-8 s con la scena commento, e ridurre la pausa tra 'gatti 775' e la frase successiva a meno di 1 secondo.",
+    "idea": "Chiudere il reel con la tua luce che si accende sulla mappa (animazione del punto nella città del commentatore) e aggiungere un breve 'SEGUI' in sovraimpressione nell'ultimo secondo."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:05+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 1 la frase «Il tuo animale è già su questa mappa?» compare senza un gancio visivo forte: nel fotogramma il titolo «IL TUO ANIMALE» c'è, ma il numero «2789» appare solo al secondo 2, quindi il dato chiave arriva dopo la domanda. Inoltre la didascalia dice «2.000 follower» e il progetto ne ",
+   "dati": {
+    "controllato": "Audio (-14 LUFS, picco -0.7 dBFS, nessun silenzio lungo), trascrizione coi secondi, copione e frasi, coerenza dei numeri (2789 luci, cani 1944, gatti 775) con i fotogrammi e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Al secondo 1 la frase «Il tuo animale è già su questa mappa?» compare senza un gancio visivo forte: nel fotogramma il titolo «IL TUO ANIMALE» c'è, ma il numero «2789» appare solo al secondo 2, quindi il dato chiave arriva dopo la domanda. Inoltre la didascalia dice «2.000 follower» e il progetto ne ha 1805: i 195 mancanti sono corretti, ma non viene detto che il reel ha un picco di 2789 luci, che può confondere chi legge di follower e luci.",
+    "correzione": "Far comparire «2789 luci» già nel primo secondo, insieme alla domanda, e chiarire in didascalia che il conteggio sono le luci (non i follower).",
+    "idea": "Nei prossimi reel mostrare nel primo secondo una luce che si accende su una città reale con il nome del commentatore, così la mappa diventa il gancio principale."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:06+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Cani 1944, gatti 775' è in 'Cani 1944, [7.6s] gatti 775', ma le frasi del brief lo ripartiscono in una scena 'duello' e il campo dati_mappa è vuoto: non ci sono conteggi verificati per la mappa su cui basarsi. Inoltre il reel non ha apertura (brief.apertura null) e la trascrizione nota un r",
+   "dati": {
+    "controllato": "Sincronia tra trascrizione, frasi del brief e numeri della mappa, più misure audio e fascia di testo.",
+    "esito": "segnalo",
+    "secondo": 4.1,
+    "problema": "Il dato 'Cani 1944, gatti 775' è in 'Cani 1944, [7.6s] gatti 775', ma le frasi del brief lo ripartiscono in una scena 'duello' e il campo dati_mappa è vuoto: non ci sono conteggi verificati per la mappa su cui basarsi. Inoltre il reel non ha apertura (brief.apertura null) e la trascrizione nota un ritardo di 1.1s prima della prima parola utile, con dati di sfondo non verificabili in questo pacchetto.",
+    "correzione": "Compilare dati_mappa con i conteggi verificati (luci totali, cani, gatti) prima della pubblicazione, e allineare la scena 'duello' ai secondi reali della trascrizione (circa 4.1s-7.6s) per evitare che il numero appaia senza fonte visibile.",
+    "idea": "Mostrare nel reel un'immagine concreta di una luce che si accende nella città di un commento, così il follow nasce dal vedere la propria città sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:08+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La mappa dichiarata (2789 luci, cani 1944, gatti 775) non è verificabile: dati_mappa è vuoto, quindi il reel mostra numeri non supportati dai materiali. Inoltre la didascalia dice 'Il primo di ogni comune diventa il Fondatore' e 'Nei reel mettiamo prima gli animali di chi ci segue' come meccaniche, ",
+   "dati": {
+    "controllato": "Meccaniche di gioco: sincronia copione/trascrizione, ritmo, audio e coerenza tra didascalia, dati e invito a commentare.",
+    "esito": "segnalo",
+    "secondo": 10.8,
+    "problema": "La mappa dichiarata (2789 luci, cani 1944, gatti 775) non è verificabile: dati_mappa è vuoto, quindi il reel mostra numeri non supportati dai materiali. Inoltre la didascalia dice 'Il primo di ogni comune diventa il Fondatore' e 'Nei reel mettiamo prima gli animali di chi ci segue' come meccaniche, ma sono promesse che il sistema di gioco deve garantire davvero. Le fotogrammi inviate (6) non coprono i secondi 1, 2, 4, 5, 7-9 e 11-12, quindi non so se la mappa e il commento sono visivamente allineati al momento giusto.",
+    "correzione": "Verificare i numeri 2789/1944/775 con i dati reali della mappa prima della pubblicazione (o mostrare solo il totale verificato), confermare che le regole del Fondatore e della priorità nei reel siano attive, e allineare la scena 'commento' (frase 2, circa 6.9-10.8s) con un fotogramma dedicato.",
+    "idea": "Per i prossimi reel, mostrare un animale reale della mappa a ogni numero citato, così il dato diventa visivo e verificabile."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:08+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "L'apertura è debole: i primi 5 secondi sono a -16.7 dB medi, sotto il resto del reel, e la campana d'apertura non c'è (campo 'apertura' null). Inoltre dati_mappa è vuoto, quindi le cifre 2789/1944/775 non sono verificabili nei materiali.",
+   "dati": {
+    "controllato": "Audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio, volume primi 5s -16.7 dB) e trascrizione coi secondi, confrontati con l'obiettivo di mansione.",
+    "esito": "segnalo",
+    "secondo": 0.0,
+    "problema": "L'apertura è debole: i primi 5 secondi sono a -16.7 dB medi, sotto il resto del reel, e la campana d'apertura non c'è (campo 'apertura' null). Inoltre dati_mappa è vuoto, quindi le cifre 2789/1944/775 non sono verificabili nei materiali.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 2-3 dB senza superare -1 dBFS, e confermare le cifre della mappa con il dato verificato prima di pubblicare.",
+    "idea": "Aggiungere un'apertura sonora di 1 secondo sul primo fotogramma e mostrare un animale reale nel frame a 0.5s per alzare la curiosità."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:09+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Nessun dato della mappa nei materiali (dati_mappa: []), quindi il realismo della mappa e del 3D non è verificabile. Inoltre i fotogrammi inviati sono 6 (0.5, 3, 6, 10, 13, 16 s) mentre la lista generale ne contiene 17: non posso controllare i passaggi 1-2 s e 4-5 s.",
+   "dati": {
+    "controllato": "Realismo di mappa e 3D: il campo dati_mappa è vuoto, quindi non posso verificare i dati della mappa né la coerenza visiva delle luci sui comuni.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Nessun dato della mappa nei materiali (dati_mappa: []), quindi il realismo della mappa e del 3D non è verificabile. Inoltre i fotogrammi inviati sono 6 (0.5, 3, 6, 10, 13, 16 s) mentre la lista generale ne contiene 17: non posso controllare i passaggi 1-2 s e 4-5 s.",
+    "correzione": "Inviare i dati di posizione delle luci (comuni e coordinate) e tutti i fotogrammi previsti, così da verificare che ogni luce cada sul comune giusto e che il 3D sia coerente.",
+    "idea": "Mostrare nel reel un comune specifico che si accende in primo piano (zoom sulla città) con il nome dell'animale, così la luce diventa personale e più memorabile."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:09+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il reel dura 16.8 s e i fotogrammi inviati coprono solo fino a 16 s; il frame finale (chiusura con 'accendi la tua luce') non è stato verificato. Inoltre 'dati_mappa' è vuoto, quindi il conteggio 2789 luci non è confrontabile con la mappa nel reel. La didascalia dice 'seguici e scrivi SEGUO' e prome",
+   "dati": {
+    "controllato": "Trascrizione, secondi, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo), didascalia e numeri del progetto rispetto alla mansione Nuovi stili di reel.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Il reel dura 16.8 s e i fotogrammi inviati coprono solo fino a 16 s; il frame finale (chiusura con 'accendi la tua luce') non è stato verificato. Inoltre 'dati_mappa' è vuoto, quindi il conteggio 2789 luci non è confrontabile con la mappa nel reel. La didascalia dice 'seguici e scrivi SEGUO' e promette 'fuochi d'artificio a 2.000 follower, ne mancano 195': 1805+195=2000 è coerente, ma va verificato che la promessa sia mantenibile.",
+    "correzione": "Inviare il fotogramma a 16.8 s e confrontare il conteggio luci (2789) con dati_mappa, popolando i dati prima della pubblicazione.",
+    "idea": "Dopo ogni tappa (es. 2000 follower) mostrare un breve 'prima e dopo' della mappa con le luci accese, per trasformare la promessa in una scena visiva memorabile."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:11+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il primo fotogramma è a 0.5s, ma la scena di apertura è la mappa mentre la frase 'Il tuo animale è già su questa mappa?' dura fino a 1.1s: il fotogramma iniziale potrebbe mostrare la copertina o una transizione invece della mappa piena. Inoltre i fotogrammi inviati (0.5, 3, 6, 10, 13, 16) non copron",
+   "dati": {
+    "controllato": "Riprese e montaggio: trascrizione coi secondi, durata, audio (LUFS, picco, silenzi), fotogrammi inviati e coerenza con il copione e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Il primo fotogramma è a 0.5s, ma la scena di apertura è la mappa mentre la frase 'Il tuo animale è già su questa mappa?' dura fino a 1.1s: il fotogramma iniziale potrebbe mostrare la copertina o una transizione invece della mappa piena. Inoltre i fotogrammi inviati (0.5, 3, 6, 10, 13, 16) non coprono il passaggio tra le scene 'duello' (cani/gatti, circa 4-7s) e 'commento' (circa 10-12s) in modo uniforme, e il campo 'dati_mappa' è vuoto, quindi non posso verificare che i numeri 2789, 1944 e 775 siano mostrati a schermo.",
+    "correzione": "Aggiungere un fotogramma a 2s (mappa con 2789 luci visibili) e uno a 8s (scena duello con cifre cani/gatti leggibili), e compilare 'dati_mappa' con i valori verificati per poter confermare la corrispondenza grafica.",
+    "idea": "Inserire nell'ultimo secondo un frame con il conteggio 'mancano 195 per i fuochi' e il @ dell'account, così il messaggio di follow resta visibile anche senza leggere la didascalia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:12+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il picco di -0.7 dBFS supera l'obiettivo di -1 dBFS, quindi il margine è sotto la soglia richiesta; inoltre il primo secondo di voce è a -16.7 dB, più basso del resto, e 'Il tuo animale è già' parte in modo lento. Infine la fascia 'Commenta città e nome' e la didascalia dicono 'Scrivi qui sotto' con",
+   "dati": {
+    "controllato": "Audio (LUFS -14.4, picco -0.7 dBFS, nessun silenzio, volume iniziale -16.7 dB) e coerenza tra trascrizione, copione e numeri della mappa (2789 luci, cani 1944, gatti 775: sommano bene).",
+    "esito": "segnalo",
+    "secondo": 4.1,
+    "problema": "Il picco di -0.7 dBFS supera l'obiettivo di -1 dBFS, quindi il margine è sotto la soglia richiesta; inoltre il primo secondo di voce è a -16.7 dB, più basso del resto, e 'Il tuo animale è già' parte in modo lento. Infine la fascia 'Commenta città e nome' e la didascalia dicono 'Scrivi qui sotto' con due formule diverse, ma non è un problema audio.",
+    "correzione": "Abbassare il picco a circa -1.5 dBFS con un limiter e alzare leggermente il volume della prima frase (0-1.1 s) di 2-3 dB per tenere l'attacco vivo.",
+    "idea": "Inserire una breve pausa musicale o un suono di 'accensione' al secondo 10.8 (quando si dice 'ogni commento è una luce') per dare un momento sonoro che rafforzi l'idea della luce che si accende."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:13+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il reel è in formato 'puntata' e nella didascalia promette 'Il primo di ogni comune diventa il Fondatore' e '+10 punti' per chi scrive SEGUO, ma la mappa dati_mappa è vuota e i fotogrammi inviati si fermano al secondo 16 con la chiusura senza mostrare la mappa aggiornata né la luce del commento. Ino",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo) e didascalia rispetto al brief e ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Il reel è in formato 'puntata' e nella didascalia promette 'Il primo di ogni comune diventa il Fondatore' e '+10 punti' per chi scrive SEGUO, ma la mappa dati_mappa è vuota e i fotogrammi inviati si fermano al secondo 16 con la chiusura senza mostrare la mappa aggiornata né la luce del commento. Inoltre la voce è generata con IA e il picco a -0.7 dBFS è molto vicino al limite.",
+    "correzione": "Verificare che i dati della mappa (2789 luci, cani 1944, gatti 775) siano confermati prima della pubblicazione, mostrare nei fotogrammi finali una luce accesa da commento per rendere concreta la promessa, e abbassare leggermente il picco audio per avere margine sotto -1 dBFS.",
+    "idea": "Nei prossimi reel mostrare in apertura una luce che si accende in tempo reale con il nome di un animale appena commentato: rende visibile la promessa del 'accendi la tua luce' e spinge più commenti e follow."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:13+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Audio (-14 LUFS, picco -0.7 dBFS, nessun silenzio, volume iniziale -16.7 dB nei primi 5s) e coerenza tra trascrizione, copione e didascalia sui numeri 2789, 1944, 775.",
+   "dati": {
+    "controllato": "Audio (-14 LUFS, picco -0.7 dBFS, nessun silenzio, volume iniziale -16.7 dB nei primi 5s) e coerenza tra trascrizione, copione e didascalia sui numeri 2789, 1944, 775.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo reel mostrare una luce che si accende in tempo reale su una città specifica, con il nome dell'animale del commento letto a voce, così il pubblico si riconosce subito."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:15+00:00",
+   "da": "grafica3d-2",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 6 la card del commento mostra ancora il testo 'Mo' e la parola 'OGNI' è isolata: il testo sta comparendo in modo incompleto e si legge a scatti, con la scena 'commento' che dura troppo poco per leggere il nome di esempio 'Monza, Penny, maltese'. Inoltre al secondo 0.5 la mappa è già piena",
+   "dati": {
+    "controllato": "Sequenza 3D: mappa con luci, duello cani/gatti, card commento e chiusura, confrontati con copione, secondi e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 6,
+    "problema": "Al secondo 6 la card del commento mostra ancora il testo 'Mo' e la parola 'OGNI' è isolata: il testo sta comparendo in modo incompleto e si legge a scatti, con la scena 'commento' che dura troppo poco per leggere il nome di esempio 'Monza, Penny, maltese'. Inoltre al secondo 0.5 la mappa è già piena di luci ma il numero 2789 compare solo al secondo 1, quindi il dato chiave arriva in ritardo rispetto all'apertura.",
+    "correzione": "Far apparire la card del commento in un unico blocco (o con un'animazione più lenta e leggibile) e allungare di almeno 1 secondo la scena con l'esempio 'Monza, Penny, maltese'; anticipare il 2789 già nei primi 0.5 secondi, sopra o accanto alla mappa.",
+    "idea": "Per i prossimi reel, una scena finale con una luce che si accende sulla città del primo commento più recente, così la mappa 'reagisce' al pubblico e rende la call to action più concreta."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:16+00:00",
+   "da": "grafica3d-3",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 16 il testo 'TUA LUCE!' e il box 'Accendi la tua luce qui sotto' sono ben leggibili, ma nel fotogramma del secondo 1 il titolo 'IL TUO ANIMALE' e la domanda sono in 3D senza sfondo, mentre al secondo 3 il numero '2789' compare isolato a sinistra senza etichetta, quindi lo s",
+   "dati": {
+    "controllato": "Grafica 3D del reel: mappa, numeri (2789 luci, cani 1944, gatti 775), coerenza tra fotogrammi, testo sovrapposto e leggibilità.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Nel fotogramma al secondo 16 il testo 'TUA LUCE!' e il box 'Accendi la tua luce qui sotto' sono ben leggibili, ma nel fotogramma del secondo 1 il titolo 'IL TUO ANIMALE' e la domanda sono in 3D senza sfondo, mentre al secondo 3 il numero '2789' compare isolato a sinistra senza etichetta, quindi lo spettatore non capisce subito cosa conta. Inoltre la mappa al secondo 0.5 mostra la scritta 'Napoli · 89 luci' che resta sovrapposta alla mappa anche quando il testo cambia, creando un po' di confusione visiva.",
+    "correzione": "Aggiungere al numero '2789' l'etichetta 'luci accese' già dal secondo 1 (es. '2789 luci accese' sotto la mappa), e rendere più coerente il passaggio tra le scene del duello cani/gatti con un'unica cornice fissa.",
+    "idea": "Inserire in chiusura una scritta 'Seguici: +10 punti' ben visibile e mostrare per 1 secondo una luce che si accende su una città reale della mappa, così il follow diventa parte della storia."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:16+00:00",
+   "da": "grafica3d-4",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 1 il numero '2789' appare su sfondo vuoto, sotto la mappa, senza etichetta né contesto visivo, e la mappa in quel fotogramma è già piena: il numero sembra un elemento che non si integra con la scena. Inoltre la mappa al secondo 0.5 mostra un'area Napoli evidenziata che poi sparisce, quind",
+   "dati": {
+    "controllato": "Grafica 3D della mappa: luci, etichetta Napoli·89, numeri 2789/1944/775 e la coerenza visiva dei fotogrammi rispetto al copione e alla trascrizione.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Al secondo 1 il numero '2789' appare su sfondo vuoto, sotto la mappa, senza etichetta né contesto visivo, e la mappa in quel fotogramma è già piena: il numero sembra un elemento che non si integra con la scena. Inoltre la mappa al secondo 0.5 mostra un'area Napoli evidenziata che poi sparisce, quindi il focus visivo cambia senza motivo chiaro.",
+    "correzione": "Far comparire '2789 luci' sopra o accanto alla mappa, animato in sincronia con la frase (0.0-1.1s), e mantenere fisso il riquadro di Napoli o farlo entrare/uscire con transizione dichiarata.",
+    "idea": "Per i prossimi reel, mostrare una luce che si accende in tempo reale quando arriva un commento, così il pubblico vede subito l'effetto della propria partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:17+00:00",
+   "da": "grafica3d-5",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 la scena del duello mostra 'CANI 1944,' e la voce dice 'gatti 775' solo più avanti; nei fotogrammi del secondo 6 e 10 il testo sovrapposto non combacia con la frase in corso. Inoltre la scena 'Mo / OGNI' con il finto tweet ha il titolo 'Mo' a metà parola, poi 'Monza, Penny, maltese' com",
+   "dati": {
+    "controllato": "Ho verificato i fotogrammi (scene mappa, duello cani/gatti, commento, chiusura) rispetto alla trascrizione, alla durata di 16.8s, ai numeri (2789 luci, cani 1944, gatti 775) e alla resa audio (-14.4 LUFS, picco -0.7 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 la scena del duello mostra 'CANI 1944,' e la voce dice 'gatti 775' solo più avanti; nei fotogrammi del secondo 6 e 10 il testo sovrapposto non combacia con la frase in corso. Inoltre la scena 'Mo / OGNI' con il finto tweet ha il titolo 'Mo' a metà parola, poi 'Monza, Penny, maltese' compare dopo che la trascrizione dice già 'Ogni commento è una luce', quindi il tempo di lettura del nome è breve. Il punto del nome proposto è più chiaro della frase, ma l'inizio di questa scena appare vuoto per circa un secondo.",
+    "correzione": "Allineare il titolo 'CANI 1944, GATTI 775' alla parola pronunciata (sincronizzazione fine dei sottotitoli) e allungare di circa 0,5 s la scena del tweet di esempio, con il nome completo visibile per almeno 1,5 s.",
+    "idea": "Aggiungere nell'ultimo fotogramma una piccola scritta 'SEGUICI +10 punti' vicino alla cuccia, così il reel spinge anche il follow oltre al commento."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:19+00:00",
+   "da": "grafica3d-6",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 1 la mappa mostra il numero '2789' in bianco su sfondo scuro, ma nella trascrizione la frase è 'Il tuo animale è già su questa mappa? 2789 luci accese' e a schermo non compare la domanda: il testo visivo non accompagna la voce. Inoltre nel fotogramma 0.5 appare 'IL TUO ANIMALE' mentre la ",
+   "dati": {
+    "controllato": "Ho verificato i fotogrammi, la trascrizione con i secondi, l'audio (-14.4 LUFS, picco -0.7 dBFS) e la coerenza del testo a schermo con la voce.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Al secondo 1 la mappa mostra il numero '2789' in bianco su sfondo scuro, ma nella trascrizione la frase è 'Il tuo animale è già su questa mappa? 2789 luci accese' e a schermo non compare la domanda: il testo visivo non accompagna la voce. Inoltre nel fotogramma 0.5 appare 'IL TUO ANIMALE' mentre la voce dice altro, e la scritta 'Napoli · 89 luci' resta invariata per tutto il reel senza motivo narrativo.",
+    "correzione": "Far comparire 'Il tuo animale è già qui?' a schermo insieme alla voce al secondo 0-1 e mostrare '2789 luci' in evidenza al secondo 1-4, poi allineare la scritta 'Napoli · 89 luci' a una città che cambia per dare movimento.",
+    "idea": "Aggiungere nel reel una scritta finale 'Seguici: ne mancano 195 ai fuochi 🎆' sopra la mappa, e un'animazione di luce che si accende sulla città di chi commenta come momento di chiusura."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:19+00:00",
+   "da": "grafica3d-7",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Camere e inquadrature 3D: zoom sulla mappa, stacco al duello cani/gatti e ritmo delle scene sul copione di 16,8 secondi.",
+   "dati": {
+    "controllato": "Camere e inquadrature 3D: zoom sulla mappa, stacco al duello cani/gatti e ritmo delle scene sul copione di 16,8 secondi.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo reel si può dare più peso alla mappa con un leggero avvicinamento sulla città che riceve il commento, così lo spettatore si riconosce subito."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:20+00:00",
+   "da": "grafica3d-8",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 10 il riquadro «Mo» e poi «Monza, Penny, maltese» è un mockup di commento con @il.tuo.nome, ma la trascrizione dice «Ogni commento è una luce» al 10.8s: il mockup compare con un ritardo rispetto alla frase. Inoltre la scritta «NOME.» resta isolata a 13s mentre la voce parla ancora di citt",
+   "dati": {
+    "controllato": "Animazioni 3D: fotogrammi, sincronia delle scene con la trascrizione e coerenza visiva della mappa e dei dati (2789 luci, cani 1944, gatti 775).",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "Al secondo 10 il riquadro «Mo» e poi «Monza, Penny, maltese» è un mockup di commento con @il.tuo.nome, ma la trascrizione dice «Ogni commento è una luce» al 10.8s: il mockup compare con un ritardo rispetto alla frase. Inoltre la scritta «NOME.» resta isolata a 13s mentre la voce parla ancora di città e nome, quindi la sincronia tra testo a schermo e audio è sfasata di circa un secondo. Nel fotogramma del secondo 0.5 la mappa mostra già Napoli con 89 luci, ma il titolo «IL TUO ANIMALE» è sovrapposto alla mappa senza un chiaro passaggio dalla scena precedente.",
+    "correzione": "Anticipare di circa 1 secondo la comparsa del mockup commento e della scritta «NOME» per allinearle a «Ogni commento è una luce: scrivi città e nome», e far partire il titolo «IL TUO ANIMALE» solo dopo che la mappa si è stabilizzata, con una dissolvenza più chiara.",
+    "idea": "Nel prossimo reel mostrare un commento reale anonimizzato che accende una luce sulla mappa, e chiudere con un contatore animato verso 2.000 follower per tenere alta l'attesa dei fuochi."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:21+00:00",
+   "da": "grafica3d-9",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma 1s la mappa mostra 'Napoli · 89 luci' e nei fotogrammi successivi compaiono numeri sovrapposti ('2789' al secondo 3 e 'CANI 1944' ecc.), ma il dato '2789 luci' è citato come totale nazionale: la scritta 'Napoli · 89 luci' resta visibile in alto a sinistra fino al secondo 4 senza che i",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, fotogrammi della mappa e misure audio del reel 'puntata' (Giorno 16).",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nel fotogramma 1s la mappa mostra 'Napoli · 89 luci' e nei fotogrammi successivi compaiono numeri sovrapposti ('2789' al secondo 3 e 'CANI 1944' ecc.), ma il dato '2789 luci' è citato come totale nazionale: la scritta 'Napoli · 89 luci' resta visibile in alto a sinistra fino al secondo 4 senza che il copione la menzioni, e nel fotogramma a 1s è presente un'etichetta città che non ha riscontro nei dati verificati della mappa (lista dati_mappa vuota).",
+    "correzione": "Verificare che l'etichetta 'Napoli · 89 luci' sia un dato reale della mappa; se non verificabile, rimuovere l'etichetta città o sostituirla con il solo totale nazionale (2789).",
+    "idea": "Mostrare un commento reale di un utente sulla mappa (con il suo @ e la sua luce accesa) nei prossimi reel per dare prova sociale e aumentare la partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:22+00:00",
+   "da": "grafica3d-10",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel primo fotogramma (0.5s) il titolo centrale è 'IL TUO ANIMALE' mentre il copione dice di aprire con la domanda 'Il tuo animale è già su questa mappa?': la scena d'apertura non corrisponde alla frase. Inoltre la scritta '2789' compare solo al secondo 1 e in un punto della mappa dove non ha un anco",
+   "dati": {
+    "controllato": "Grafica 3D: mappa, luci, duello cani/gatti, fotogrammi e coerenza visiva col brief e i numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nel primo fotogramma (0.5s) il titolo centrale è 'IL TUO ANIMALE' mentre il copione dice di aprire con la domanda 'Il tuo animale è già su questa mappa?': la scena d'apertura non corrisponde alla frase. Inoltre la scritta '2789' compare solo al secondo 1 e in un punto della mappa dove non ha un ancoraggio visivo (fluttua a sinistra, sopra la Sardegna), e il badge 'Napoli · 89 luci' resta fisso mentre la mappa dovrebbe mostrare il conteggio. Al secondo 6 il duello e il titolo 'CANI 1944,' sono fuori sincrono con la voce, che al 7.6s dice ancora la prima metà della frase.",
+    "correzione": "Allineare il titolo del primo fotogramma alla domanda del copione, ancorare '2789 luci' al centro della mappa o alla sua etichetta, e far comparire 'CANI 1944' e 'GATTI 775' in sincrono con le parole (cani al ~4.5s, gatti al ~6.5s).",
+    "idea": "Nel fotogramma finale mostrare un'ultima luce che si accende sulla città del commentatore più recente, così la chiusura premia chi partecipa e spinge a seguire."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:29+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è solido nei dati (2789 luci, cani 1944, gatti 775 coerenti): correggiamo l'apertura, la sincronia testo-voce nel blocco commento e aggiungiamo un invito a seguire dentro il video.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "Il gancio è debole: nel primo frame c'è solo la mappa con l'etichetta Napoli; il numero 2789 arriva dopo circa 1 secondo (senza la parola «luci») e la domanda sul proprio animale solo dalla voce.",
+      "correzione": "Dal secondo 0 mostrare in grande «2789 luci» insieme alla domanda «Il tuo animale è già su questa mappa?», tenendo «IL TUO ANIMALE» come elemento successivo."
+     },
+     {
+      "secondo": 4,
+      "problema": "Nel duello cani/gatti la scritta «CANI 1944,» resta incompleta mentre la voce dice i numeri; «GATTI 775» arriva dopo (circa 7.6s), quindi chi guarda senza audio perde il confronto.",
+      "correzione": "Far comparire «GATTI 775» in sincronia con la voce e mantenere il confronto completo a schermo finché non è letto per intero."
+     },
+     {
+      "secondo": 10,
+      "problema": "Nel blocco commento compare lo stato intermedio «Mo» / riquadro vuoto, che sembra un glitch, e il testo «Ogni commento è una luce» non è allineato alla voce (10.8s); l'esempio «Monza, Penny, maltese» può sembrare un utente reale.",
+      "correzione": "Allineare la comparsa del testo al parlato (circa 10.8s), eliminare lo stato «Mo», far comparire il nome d'esempio solo a frase completa, aggiungere la dicitura «esempio» e accorciare il vuoto tra «OGNI» e «NOME.»."
+     },
+     {
+      "secondo": 13,
+      "problema": "Il follow non è mai chiesto nel video, solo nella didascalia; inoltre l'invito finale è formulato in due modi diversi («Scrivi qui sotto e accendi la tua luce!» e «Accendi la tua luce qui sotto»).",
+      "correzione": "Nella scena finale usare una sola formula d'invito e aggiungere una riga visiva e vocale tipo «Seguici e accendi la tua luce», tenuta ferma almeno 1,5 secondi."
+     }
+    ],
+    "idea": "Aprire con «2789 luci» in grande e la domanda sul proprio animale, e chiudere con la luce che si accende sulla mappa con «Seguici e accendi la tua luce» in sovrimpressione, unendo follow e commento."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:29+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima della pubblicazione si verifica il totale delle luci sui dati reali e si chiariscono le etichette: sul numero 2789 e sulla fascia finale si corregge il necessario e si lascia stare il resto, che funziona.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1.1,
+      "problema": "Il titolo dice 2789 luci, ma cani 1944 + gatti 775 fa 2719: mancano 70 luci non spiegate. Altri colleghi citano 2820 come totale di progetto, ma il dato non è verificabile dai materiali (dati_mappa vuoto). Chi fa i conti perde fiducia.",
+      "correzione": "Controllare il totale sui dati reali della mappa. Se 70 luci sono di altre specie, scrivere 'cani 1944, gatti 775, altri 70'; altrimenti allineare il totale alla somma reale. Allineare anche didascalia e reel allo stesso numero."
+     },
+     {
+      "secondo": 1,
+      "problema": "Nei primi secondi il numero 2789 compare isolato, senza l'etichetta 'luci', e resta poco chiaro finché non parte la voce.",
+      "correzione": "Mostrare 'luci' (o 'luci accese') insieme a 2789 dal primo fotogramma in cui il numero compare."
+     },
+     {
+      "secondo": 16,
+      "problema": "Nella chiusura 'TUA LUCE!' convive con la fascia 'Commenta città e nome': la call to action è doppia e la formulazione cambia tra le scene.",
+      "correzione": "Tenere un'unica call to action pulita nel frame finale, con la stessa formula 'Commenta città e nome' usata nelle altre scene."
+     },
+     {
+      "secondo": 7.6,
+      "problema": "In scritta compare 'CANI 1944,' mentre 'gatti 775' resta solo a voce, con possibile anticipo o sfasamento rispetto all'audio.",
+      "correzione": "Far comparire 'GATTI 775' in scritta sincronizzata con la voce a circa 7.6s e allineare il tag Cani alla voce."
+     },
+     {
+      "secondo": null,
+      "problema": "Il dato 'Napoli · 89 luci' non è confermato da una fonte allegata.",
+      "correzione": "Verificare il conteggio di Napoli sui dati reali; se non è confermato, togliere la fascia."
+     }
+    ],
+    "idea": "Mostrare la somma sulla mappa (cani + gatti + altri) per un secondo, così il totale si capisce a colpo d'occhio, e chiudere con la luce che si accende sulla città di chi commenta e con la barra verso i 2.000 follower."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:29+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggiamo subito tre cose concrete sull'audio: picco sopra l'obiettivo, apertura più debole del resto e coda finale senza voce. Verifichiamo poi il dato delle luci prima della pubblicazione.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0.0,
+      "problema": "L'apertura è più debole del resto: i primi 5 secondi sono a circa -16,7 dB, contro i -14,4 LUFS medi. Inoltre la voce parte con un ritardo di circa 1,1 s e non c'è alcun gancio sonoro distintivo.",
+      "correzione": "Alzare di circa 2 dB la voce nei primi 5 secondi, accorciare l'attacco in modo che la prima parola parta quasi subito e aggiungere un breve suono di 'accensione' nei primi 0,5 s."
+     },
+     {
+      "secondo": 16.8,
+      "problema": "Il picco è a -0,7 dBFS, sopra l'obiettivo di -1 dBFS, e la voce finisce a 14,3 s su 16,8 s, quindi l'ultimo secondo e mezzo resta vuoto.",
+      "correzione": "Inserire un limitatore in uscita a -1 dBFS e chiudere sul CTA 'Scrivi qui sotto e accendi la tua luce!' fino alla fine, oppure tagliare la coda vuota."
+     },
+     {
+      "secondo": null,
+      "problema": "dati_mappa è vuoto, quindi 2789 luci (1944 cani e 775 gatti) non si può verificare. Il totale del progetto risulta 2820, e la didascalia promette il Fondatore del comune senza che il reel lo dica.",
+      "correzione": "Prima di pubblicare, verificare il numero sui dati reali della mappa e allinearlo in voce, fascia e didascalia. Aggiungere la frase sul Fondatore oppure toglierla dalla didascalia."
+     }
+    ],
+    "idea": "Un suono di 'accensione' come firma sonora fissa dell'apertura di ogni puntata, seguito dalla domanda 'Il tuo animale è già su questa mappa?' e da un invito a seguire nella chiusura."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:30+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggere subito l'apertura (il numero 2789 isolato e il placeholder 'IL TUO ANIMALE'), la scena del commento al secondo 6 e il finale senza invito a seguire; poi portare avanti l'idea della luce che si accende sulla mappa insieme alla chiusura con 'Seguici'.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0.5,
+      "problema": "Resta visibile per una frazione di secondo il testo segnaposto 'IL TUO ANIMALE' (segnalato da Copertine).",
+      "correzione": "Sostituire il placeholder con un titolo definitivo fin dal primo fotogramma, oppure toglierlo."
+     },
+     {
+      "secondo": 1,
+      "problema": "Il numero '2789' compare isolato in basso a sinistra, senza etichetta, e il testo 'luci' arriva dopo. Il dato chiave risulta confuso e in ritardo (segnalato da 5 colleghi).",
+      "correzione": "Far comparire '2789 luci accese in Italia' tutto insieme, in una posizione fissa (ad esempio sotto il titolo GIORNO 16), e tenerlo visibile per tutta la scena della mappa."
+     },
+     {
+      "secondo": 6,
+      "problema": "La card di digitazione 'Mo' è troppo breve e a metà: 'Monza, Penny, maltese' arriva solo dopo e 'OGNI' resta spezzato e non allineato (segnalato da 4 colleghi). Il commento non è sincronizzato con la voce.",
+      "correzione": "Mostrare la card con il testo completo 'Monza, Penny, maltese' dall'inizio, tenerla più a lungo, allinearla alla voce e centrare 'OGNI' sullo stesso asse."
+     },
+     {
+      "secondo": 7,
+      "problema": "'CANI 1944, GATTI 775' è troppo piccolo, appare tagliato a metà tra due scene e si sovrappone ad altri elementi, senza una pausa visiva.",
+      "correzione": "Ingrandire il testo, dargli un'animazione di comparsa completa e farlo apparire solo a transizione finita."
+     },
+     {
+      "secondo": 10,
+      "problema": "Nel duello 'CANI 1944' finisce sopra l'icona del gatto, il 'VS' è a metà transizione e le icone cuccia e tetto hanno scale diverse.",
+      "correzione": "Allineare le due icone alla stessa scala, mostrare i numeri dopo il 'VS' con almeno mezzo secondo di pausa."
+     },
+     {
+      "secondo": 16,
+      "problema": "Il box giallo 'Accendi la tua luce' copre in parte la barra GIORNO 16 e nel video non c'è nessun invito esplicito a seguire (c'è solo nella didascalia).",
+      "correzione": "Dare al box uno spazio separato dalla barra e aggiungere nel finale un badge 'Seguici' accanto alla luce dell'utente."
+     }
+    ],
+    "idea": "Una luce dorata si accende sulla mappa, con il nome del comune, quando arriva un commento, e la chiusura fissa dice 'Seguici e accendi la tua luce'. Lega la promessa al risultato visibile e unisce commento e follow in un unico invito."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:30+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché non sono verificati i numeri (2789 luci, 1944 cani, 775 gatti, con il progetto che indica 2820) e le promesse in didascalia (Fondatore, +10 punti, animali di chi segue per primi); poi correggere chiusura e invito al follow nel video.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 2.5,
+      "problema": "Le cifre del reel (2789 luci, 1944 cani, 775 gatti) non sono verificabili perché dati_mappa è vuoto, e il progetto indica 2820 luci: c'è un'incoerenza tra reel, copertina, didascalia e dati.",
+      "correzione": "Riempire dati_mappa con il conteggio reale, decidere se il valore giusto è 2789 o 2820 e allineare copione, copertina e didascalia; verificare anche la somma cani+gatti."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia promette 'Il primo di ogni comune diventa il Fondatore', '+10 punti' con SEGUO e 'prima gli animali di chi ci segue', senza alcuna conferma che queste regole esistano.",
+      "correzione": "Confermare che le meccaniche siano attive prima di pubblicare, altrimenti togliere le frasi dalla didascalia."
+     },
+     {
+      "secondo": 14.3,
+      "problema": "Il parlato e la fascia 'Commenta città e nome' finiscono a 14.3s mentre il reel dura 16.8s: gli ultimi 2.5s restano senza voce né invito, e il follow compare solo in didascalia, non nel video.",
+      "correzione": "Accorciare il video a circa 14.5-15s oppure riempire il finale con una frase 'Seguici e scrivi SEGUO' e tenere la fascia fino alla fine."
+     },
+     {
+      "secondo": 16,
+      "problema": "Il picco audio a -0.7 dBFS è sopra l'obiettivo di -1 dBFS.",
+      "correzione": "Abbassare il picco a circa -2 dBFS mantenendo -14 LUFS."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Il fotogramma della copertina e quelli di apertura (0-1s) e duello (4-7s) non sono stati inviati, quindi non sono controllati visivamente.",
+      "correzione": "Controllare i fotogrammi a 0.5s, 1s e 5s e verificare che i testi stiano nei margini sicuri."
+     }
+    ],
+    "idea": "Chiudere ogni reel 'puntata' con un contatore visivo 'mancano 195 follower' e una luce che si accende sulla mappa, con la frase 'Seguici e scrivi SEGUO'; in apertura mostrare una città reale con la sua luce appena accesa."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:30+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare si verificano i numeri (2789 luci, 1944 cani, 775 gatti, contro i 2820 del progetto) e si porta il richiamo a seguire dentro il video; il resto delle segnalazioni non è sufficientemente fondato per intervenire.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.1,
+      "problema": "I numeri non tornano: 1944 cani + 775 gatti = 2719, non 2789, e il progetto indica 2820 luci. I dati_mappa sono vuoti, quindi non si può verificare cosa mostri la mappa. Un numero sbagliato detto in voce e in copertina toglie credibilità.",
+      "correzione": "Estrarre i dati reali della mappa e allineare totale, cani e gatti in voce, copertina e didascalia. Se la differenza è dovuta ad altri animali, dirlo o togliere la ripartizione."
+     },
+     {
+      "secondo": 14,
+      "problema": "L'invito a seguire compare solo nella didascalia e non nel video: chi guarda senza leggere non riceve la richiesta di follow, che è l'obiettivo principale.",
+      "correzione": "Aggiungere negli ultimi secondi una scritta e una frase parlata breve, tipo 'Seguici e scrivi SEGUO', senza sovrapporla alla chiusura."
+     },
+     {
+      "secondo": null,
+      "problema": "Le promesse in didascalia (+10 punti per SEGUO, il Fondatore del comune, i reel con prima gli animali di chi segue, i fuochi a 2.000 follower) non sono verificabili dai materiali.",
+      "correzione": "Confermare che ciascuna promessa sia attiva nell'app e nel progetto, altrimenti toglierla dalla didascalia prima di pubblicare."
+     }
+    ],
+    "idea": "Reel 'puntata' con contatore luci animato e chiusura 'Seguici e scrivi SEGUO' in sovrimpressione, con la barra dei 195 mancanti ai 2.000 follower; il formato puntata è già quello con il miglior rapporto follower ogni 1000 views."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:30+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché non si verifica il numero di luci (2789 nel reel contro 2820 nel progetto), si abbassa il picco audio sotto -1 dBFS e si dà più forza ai primi secondi.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.1,
+      "problema": "Il reel, la copertina e la didascalia dicono 2789 luci, ma il dato del progetto è 2820. Inoltre dati_mappa è vuoto, quindi nessuno ha potuto verificare 2789, 1944 e 775. Cani + gatti fa 2719, non 2789, e il testo non spiega la differenza di 70.",
+      "correzione": "Controllare i conteggi sulla mappa reale e usare lo stesso numero aggiornato in parlato, copertina e didascalia. Se la somma di cani e gatti non copre il totale, dire che le altre sono altre specie, oppure togliere la ripartizione."
+     },
+     {
+      "secondo": 16,
+      "problema": "Il picco audio è a -0.7 dBFS, sopra l'obiettivo di -1 dBFS, con rischio di clipping. Lo segnalano più colleghi, ma non Abbinamenti né Trofei e albo, che lo danno per in regola.",
+      "correzione": "Abbassare il picco a circa -2 dBFS mantenendo circa -14 LUFS."
+     },
+     {
+      "secondo": 0,
+      "problema": "L'attacco è debole: c'è silenzio o parlato lento fino a circa 1.1 secondi, i primi 5 secondi sono a circa -16.7 dB, sotto l'obiettivo, e il campo apertura è null, quindi manca un gancio definito.",
+      "correzione": "Partire subito con la mappa che si accende o con un animale in primo piano, con un suono netto nel primo secondo. Alzare il volume dei primi 5 secondi verso -14 LUFS."
+     },
+     {
+      "secondo": 16,
+      "problema": "Il parlato non invita esplicitamente a seguire: il follow compare solo nel testo e nella didascalia.",
+      "correzione": "Chiudere a voce con 'Seguici e accendi la tua luce', mostrando a schermo 'mancano 195' ai 2.000 follower."
+     }
+    ],
+    "idea": "Aprire con un animale reale, con città e nome visibili, che accende la sua luce sulla mappa in primo piano per 2 secondi, poi allargare alla mappa con il contatore delle luci aggiornato al dato verificato."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:30+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima della pubblicazione correggiamo l'etichetta del numero iniziale, la chiusura senza invito a seguire e la sincronia dei testi con la voce; il resto del reel resta com'è.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1.1,
+      "problema": "Il numero 2789 compare isolato, senza la parola «luci», mentre la voce dice «2789 luci accese». Lo segnalano quasi tutti i colleghi. Lo spettatore non capisce cosa conti quel numero. Il titolo «IL TUO ANIMALE» a 0.5s compare prima della frase che lo spiega.",
+      "correzione": "Mostrare «2789 luci» per intero nello stesso frame in cui la voce lo dice. Far comparire «IL TUO ANIMALE» solo quando la voce pronuncia la domanda."
+     },
+     {
+      "secondo": 16,
+      "problema": "La chiusura non invita a seguire: resta la fascia «Commenta città e nome» e «TUA LUCE!» è poco leggibile. Il follow è chiesto solo nella didascalia, e questo pesa sull'obiettivo follower.",
+      "correzione": "Negli ultimi 2-3 secondi mostrare «Accendi la tua luce» intera per almeno 2 secondi, con sopra una riga «Seguici e scrivi SEGUO»."
+     },
+     {
+      "secondo": 10,
+      "problema": "I testi a schermo («OGNI», «NOME.») arrivano in ritardo rispetto alla voce «Ogni commento è una luce». Tra «gatti 775» e la frase successiva c'è una pausa di circa 3 secondi, durante la quale resta il tabellone.",
+      "correzione": "Allineare la comparsa di «Ogni commento è una luce» e di «nome.» alla trascrizione. Ridurre la pausa dopo «gatti 775» a meno di 1 secondo."
+     },
+     {
+      "secondo": 9,
+      "problema": "Nel duello cani/gatti il testo «GATTI 775» non si legge mai intero nei fotogrammi campionati. Un solo collega lo segnala, quindi va controllato sul montaggio.",
+      "correzione": "Controllare il montaggio e mostrare «CANI 1944» e «GATTI 775» completi prima del secondo 10."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è a -0.7 dBFS, sopra l'obiettivo di -1.",
+      "correzione": "Abbassare il volume di circa 1 dB per portare il picco sotto -1 dBFS."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia promette «Il primo di ogni comune diventa il Fondatore», che nel reel non compare.",
+      "correzione": "Aggiungere nel reel un breve accenno al Fondatore oppure togliere la frase dalla didascalia."
+     }
+    ],
+    "idea": "Chiudere ogni reel con un contatore vivo («ne mancano 195 ai fuochi») e la richiesta «Seguici e scrivi SEGUO» accanto alla luce che si accende sulla mappa nella città di chi commenta, così follow e commenti vengono spinti insieme."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:34+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare correggo solo ciò che è confermato: audio (picco troppo vicino al limite e attacco debole) e dati della mappa non verificati. Poi punto su una luce che si accende nella città del commento, con il follow visibile nel video.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": null,
+      "problema": "Il campo dati_mappa è vuoto: i numeri citati (2789 luci, cani 1944, gatti 775) non sono verificati con i materiali. Il totale quadra (1944+775=2719), ma restano 70 luci non spiegate.",
+      "correzione": "Controllare i valori sulla mappa reale e compilare dati_mappa prima di pubblicare. Se la differenza di 70 non ha una spiegazione, mostrare solo il totale verificato."
+     },
+     {
+      "secondo": 0.0,
+      "problema": "I primi 5 secondi sono a circa -16.7 dB, più bassi del resto del reel, e l'apertura parte debole.",
+      "correzione": "Alzare di 2-3 dB la prima frase (0-1.1 s) senza superare il limite di -1 dBFS, e se possibile aggiungere un suono d'apertura breve."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è a -0.7 dBFS, sopra il target di -1 dBFS e senza margine.",
+      "correzione": "Applicare un limiter a circa -1.5 dBFS sul master."
+     },
+     {
+      "secondo": null,
+      "problema": "La promessa del follow (+10 punti, animali di chi segue in cima ai reel) compare solo nella didascalia e non nel video.",
+      "correzione": "Aggiungere nell'ultimo secondo una scritta con l'invito a seguire e il conteggio 'mancano 195 ai 2.000'."
+     }
+    ],
+    "idea": "Una luce che si accende in tempo reale sulla città di un commento, con zoom sul comune, il nome dell'animale letto a voce e un suono di accensione. Chiude con il conteggio 'mancano 195' e l'invito a seguire."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:36+00:00",
+   "da": "grafica3d-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggo la sincronia dei testi e l'apertura: il 2789 va mostrato subito con la sua etichetta, la card del commento deve essere leggibile e la chiusura deve invitare anche a seguire, poi portiamo avanti la luce che si accende sulla città di chi commenta.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1,
+      "problema": "Il numero 2789 compare senza etichetta e senza ancoraggio alla mappa, in ritardo rispetto all'apertura (la mappa è già piena a 0.5s). Lo spettatore non capisce subito cosa conta.",
+      "correzione": "Mostrare '2789 luci accese' ancorato alla mappa già nei primi 0.5-1 secondi, in sincronia con la voce."
+     },
+     {
+      "secondo": 6,
+      "problema": "La card del commento compare a scatti ('Mo', 'OGNI' isolata) e la scena con 'Monza, Penny, maltese' dura troppo poco per leggere il nome di esempio.",
+      "correzione": "Far apparire la card in un unico blocco o con animazione più lenta, e tenere il nome completo visibile per almeno 1,5 secondi allungando la scena di circa 1 secondo."
+     },
+     {
+      "secondo": 7,
+      "problema": "Il testo 'CANI 1944, GATTI 775' non è sincronizzato con la voce, che dice 'gatti 775' più avanti; anche il mockup del commento e la scritta 'NOME' (secondo 10-13) sono sfasati di circa un secondo rispetto alla frase 'Ogni commento è una luce: scrivi città e nome'.",
+      "correzione": "Allineare i testi alle parole pronunciate: cani al ~4.5s, gatti al ~6.5s, e anticipare di circa 1 secondo il mockup commento e la scritta 'NOME'."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Il titolo d'apertura 'IL TUO ANIMALE' non riporta la domanda del copione, e l'etichetta 'Napoli · 89 luci' resta fissa e sovrapposta alla mappa senza motivo narrativo; non è nemmeno verificata nei dati della mappa.",
+      "correzione": "Mostrare a schermo la domanda 'Il tuo animale è già su questa mappa?' insieme alla voce; verificare il dato di Napoli, e se non è confermato rimuovere l'etichetta o sostituirla con il solo totale 2789."
+     },
+     {
+      "secondo": 16,
+      "problema": "Nel video manca un invito visivo a seguire: il follow è solo in didascalia.",
+      "correzione": "Aggiungere in chiusura una scritta breve, tipo 'Seguici' con il richiamo ai 2.000 follower, vicino alla call to action 'Accendi la tua luce'."
+     }
+    ],
+    "idea": "In chiusura, una luce che si accende sulla città del commento più recente, con la scritta 'Seguici' accanto: la mappa reagisce al pubblico e la call to action diventa concreta."
+   }
+  },
+  {
+   "t": "2026-11-10T20:06:52+00:00",
+   "da": "montaggio-1",
+   "a": "pubblicazione-1",
+   "tipo": "correzione",
+   "testo": "Correzione di squadra (Direttore non collegato): Porto il follow dentro il video, nella fascia e nella frase finale, che riempie anche la coda senza voce. Rinforzo l'apertura con un'accensione sulla prima scena e abbasso la musica per riportare il picco sotto -1 dBFS. Non tocco le cifre, perché dati_mappa è vuoto e non si possono verificare. Non tocco nemmeno la sincronia dei testi, perché nessuna delle azioni disponibili la corregge.",
+   "dati": {
+    "azioni": [
+     {
+      "azione": "fascia",
+      "testo": "➕ Seguici e commenta città e nome del tuo animale 👇"
+     },
+     {
+      "azione": "frase",
+      "scena": 3,
+      "testo": "Seguici e scrivi qui sotto: accendi la tua luce!"
+     },
+     {
+      "azione": "musica",
+      "volume": 0.12
+     }
+    ],
+    "perche": [
+     {
+      "difetto": "Nel video non c'è nessun invito a seguire: il follow compare solo nella didascalia",
+      "reparti": [
+       "Copione",
+       "Voce e musica",
+       "Grafica e copertine",
+       "Pubblicazione",
+       "Community",
+       "Coppa delle Zampe",
+       "Crescita (follower)",
+       "Innovazione",
+       "Grafica 3D"
+      ]
+     },
+     {
+      "difetto": "Il picco audio è a -0,7 dBFS, sopra l'obiettivo di -1 dBFS",
+      "reparti": [
+       "Voce e musica",
+       "Pubblicazione",
+       "Coppa delle Zampe",
+       "Crescita (follower)",
+       "Innovazione",
+       "Montaggio"
+      ]
+     },
+     {
+      "difetto": "L'apertura è debole: i primi 5 secondi sono a -16,7 dB contro i -14,4 LUFS medi e manca un gancio",
+      "reparti": [
+       "Copione",
+       "Voce e musica",
+       "Coppa delle Zampe",
+       "Innovazione",
+       "Direzione video"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-10T20:07:54+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 2: -14.4 LUFS, picco -1.0 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.4,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -17.0,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-10T20:07:54+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 2 esportata (17.0 s): ti mando 18 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 17.0,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     16.7
+    ]
+   }
+  },
+  {
+   "t": "2026-11-10T20:07:55+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 16.8,
+   "fotogrammi": [
+    "fotogrammi/2026-11-10-2103-puntata/v1/s000.5.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s001.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s002.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s003.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s004.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s005.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s006.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s007.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s008.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s009.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s010.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s011.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s012.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s013.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s014.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s015.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v1/s016.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.4,
+    "picco_dbfs": -0.7,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.7,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "v": 2,
+   "durata": 17.0,
+   "fotogrammi": [
+    "fotogrammi/2026-11-10-2103-puntata/v2/s000.5.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s001.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s002.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s003.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s004.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s005.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s006.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s007.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s008.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s009.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s010.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s011.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s012.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s013.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s014.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s015.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s016.0.jpg",
+    "fotogrammi/2026-11-10-2103-puntata/v2/s016.7.jpg"
+   ],
+   "audio": {
+    "lufs": -14.4,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -17.0,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "crescita": {
+  "pubblico": "Chi ha un cane o un gatto e vive in Veneto, soprattutto a Verona o Vicenza, non segue ancora la pagina e scorrendo si ferma se vede la propria città nominata e può rispondere con un commento.",
+  "gancio": "Verona o Vicenza: quale città ha più animali accesi sulla mappa? Il tuo da che parte sta?",
+  "primo_fotogramma": "Mappa dell'Italia di notte con zoom sul Veneto: una luce a Verona e una a Vicenza, collegate da una linea. Testo grande: «VERONA vs VICENZA». Sotto, più piccolo: «Il tuo animale da che parte sta?»",
+  "motivo_per_seguire": "Zampe d'Italia mette ogni animale come una luce sulla mappa dell'Italia di notte e fa sfidare le città tra loro: seguici per vedere se la tua città vince e per accendere la luce del tuo animale.",
+  "chiusura": "Scrivi città e nome del tuo animale. Segui Zampe d'Italia: domani la sfida continua.",
+  "perche": "Il confronto locale tra due città vicine e la domanda diretta sono il formato che ha convertito meglio (34,5 follower ogni 1.000 su pochi reel, da confermare), e il primo fotogramma con i due nomi si capisce anche a volume zero."
+ },
+ "token_persone": 445045,
+ "fine": "2026-11-10T20:07:55+00:00"
+}
