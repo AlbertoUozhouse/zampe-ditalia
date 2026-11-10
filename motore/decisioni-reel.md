@@ -293,3 +293,8 @@ Nessun cambiamento oggi.
 - Reel del 9/11: 3 su 3 pubblicati (13:09 prima_luce, 18:11 questa_luce, 21:18 puntata), tutti corretti dalla squadra (accensione allineata alla voce, musica più bassa, invito a seguire nella fascia). Direttore OpenAI ancora 401.
 - Rendimento (lanciato a mano, quello delle 8:40 ancora in ritardo): follower ogni 1.000 raggiunti — testa_a_testa 8/11 34,5; questa_luce 9/11 21,5; puntata 9/11 19,5; ospiti_sera 7/11 17,9; prima_luce 9/11 16,6 (543 raggiunti, 9 follower); questa_luce 8/11 7,7; coppa_apertura 4,6 (molte views, pochi follower).
 - Coppa: 3 punti, nessuna staffetta. Test di crescita ancora in «anteprima»: attende l'approvazione di Alberto. Nessun cambiamento oggi.
+
+
+## 2026-11-10 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-03-1310-buio: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
