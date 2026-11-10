@@ -25,3 +25,4 @@ reel/**/node_modules/
 reel/notte/*.mp4
 storia-thor.jpg
 __pycache__/
+reel/assets/tmp/

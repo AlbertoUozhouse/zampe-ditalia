@@ -216,6 +216,7 @@ body.fuochi::before{content:"";position:fixed;inset:0;pointer-events:none;z-inde
 .pop .entra-qui{margin-top:6px;width:100%;border:0;border-radius:10px;padding:7px 10px;font:inherit;font-weight:800;background:#4FB4FF;color:#06223D;cursor:pointer}
 .mondo3d{position:fixed;inset:0;z-index:5000;background:#0B1638}
 .mondo3d canvas{display:block;touch-action:none}
+.mondo3d.cattura .m3-top,.mondo3d.cattura .m3-esci,.mondo3d.cattura .m3-scheda{display:none!important}
 .m3-top{position:absolute;top:calc(12px + env(safe-area-inset-top));left:12px;right:60px;color:#FFF4DE;text-shadow:0 2px 6px #000;pointer-events:none}
 .m3-top b{display:block;font:800 22px var(--f-display);color:#FFD23F}
 .m3-top span{font-size:13px;opacity:.85}

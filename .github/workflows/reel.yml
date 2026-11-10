@@ -62,6 +62,19 @@ jobs:
           set +e; python3 -I motore/agenzia.py prima /tmp/copione.json; a=$?; set -e
           if [ "$a" = 78 ]; then echo "salta=1" >> "$GITHUB_OUTPUT"; exit 0; fi
           [ "$a" = 0 ] || echo "Direttore video non raggiungibile: si monta col copione"
+      - name: Apertura 3D
+        # 10/11 Alberto: «basta Thor». Senza video dei follower il reel si apre col volo 3D di notte sul paese della storia (reel/volo3d.js).
+        # Se il 3D non riesce, il reel parte lo stesso dalla mappa: non si perde mai un reel per l'apertura.
+        if: ${{ !startsWith(inputs.formato, 'pronto-') && steps.copione.outputs.salta != '1' }}
+        continue-on-error: true
+        timeout-minutes: 12
+        run: |
+          A=$(python3 -c "import json;c=json.load(open('/tmp/copione.json'));i=c.get('intro_3d');print((i['comune']+'|'+i.get('nome','')) if i and not c.get('intro') else '')")
+          [ -n "$A" ] || { echo "nessuna apertura 3D per questo reel"; exit 0; }
+          npm install --prefix /tmp/pw playwright@1.49.1 --silent && /tmp/pw/node_modules/.bin/playwright install --with-deps chromium >/dev/null
+          mkdir -p reel/assets/tmp
+          NODE_PATH=/tmp/pw/node_modules node reel/volo3d.js "${A%%|*}" "${A#*|}" reel/assets/tmp/apertura3d.mp4 3.6
+          python3 -c "import json;p='/tmp/copione.json';c=json.load(open(p));c['intro']='reel/assets/tmp/apertura3d.mp4';c['intro_durata']=3.6;json.dump(c,open(p,'w'),ensure_ascii=False)"
       - name: Video e revisione del Direttore
         if: ${{ !startsWith(inputs.formato, 'pronto-') && steps.copione.outputs.salta != '1' }}
         run: |

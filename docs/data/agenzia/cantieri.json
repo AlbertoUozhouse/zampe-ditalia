@@ -92,7 +92,7 @@
   "traccia": "reel",
   "aperto": "2026-11-08",
   "scadenza": "2026-11-10",
-  "stato": "in costruzione",
+  "stato": "scartato",
   "passi_proposti": [
    {
     "giorno": "2026-11-09",
@@ -157,8 +157,8 @@
     "fatto_quando": "In reel/ esistono il template verticale e la cartella di liberatoria con il SÌ registrato del follower, il reel con un solo suono ambientale è montato e pubblicato entro il 2026-11-10 con la chiusura 'scrivi SEGUO' e il conteggio follower prima e dopo l'uscita registrato."
    }
   ],
-  "aggiornato": "2026-11-08",
-  "nota": "In pausa durante il test di crescita: non si cambiano i reel mentre si confrontano."
+  "aggiornato": "2026-11-10",
+  "nota": "Il Racconto dal Vivo non si può fare: non abbiamo nessun video dei follower. Al suo posto, online dal 10/11: l'apertura 3D dei reel (reel/volo3d.js), il volo di notte sul paese fino alla cuccia dell'animale. Thor non apre più i reel."
  },
  "realismo": {
   "idea": "Il Paese in Tasca: vista 3D del comune sul rilievo reale",

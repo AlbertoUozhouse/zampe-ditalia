@@ -299,7 +299,7 @@ async function apri(v, opz = {}) {
   }
   // il tuo animale: una freccia che rimbalza
   const mio = opz.mio && pet.find(p => p.d === opz.mio); let freccia = null;
-  if (mio) { freccia = ETICHETTA(THREE, "⬇ TU", { size: 52, fg: "#4A2C04", bg: "#FFD23F", bordo: "#8C4A00" }); freccia.scale.multiplyScalar(1.3); mio.g.add(freccia);
+  if (mio) { freccia = ETICHETTA(THREE, opz.cattura?.nome ? "⬇ " + opz.cattura.nome : "⬇ TU", { size: 52, fg: "#4A2C04", bg: "#FFD23F", bordo: "#8C4A00" }); freccia.scale.multiplyScalar(1.3); mio.g.add(freccia);
     const { x, z } = mio.g.position, L = Math.hypot(x, z) || 1; controls.target.set(x, 2, z); camera.position.set(x + (x / L) * 11, 8, z + (Math.hypot(x, z) ? z / L : 1) * 11); controls.autoRotate = false; }
 
   // lucciole, cuori e fuochi d'artificio
@@ -332,12 +332,13 @@ async function apri(v, opz = {}) {
   let volo = null;
   const vola = p => { const w = p.g.position, L = Math.hypot(w.x, w.z) || 1, ux = w.x / L, uz = Math.hypot(w.x, w.z) ? w.z / L : 1;
     volo = { t0: performance.now(), da: camera.position.clone(), a: new THREE.Vector3(w.x + ux * 4.6, 2.6, w.z + uz * 4.6), tda: controls.target.clone(), ta: new THREE.Vector3(w.x, 1.3, w.z) }; controls.autoRotate = false; };
-  if (mio) vola(mio);
+  if (mio && !opz.cattura) vola(mio);
   const composer = new EffectComposer(renderer); composer.addPass(new RenderPass(scene, camera));
   const bloom = new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), 0.9, 0.5, 1.0); composer.addPass(bloom); composer.addPass(new OutputPass());
   let uC = 0, uF = 0, raf = 0;
-  const giro = t => {
-    raf = requestAnimationFrame(giro);
+  // opz.cattura (10/11, l'apertura 3D dei reel: reel/volo3d.js): niente animazione da sola, la telecamera la muove chi registra e ogni fotogramma si disegna con passo(t)
+  const giro = t => { raf = requestAnimationFrame(giro); passo(t); };
+  const passo = t => {
     for (const p of pet) { let y = p.base.y + Math.max(0, Math.sin(t / 900 + p.fase)) * 0.06;
       if (p.salto) { const q = (t - p.salto) / 650; if (q < 1) y += Math.sin(q * Math.PI) * 1.1; else p.salto = 0; } else if (Math.random() < 0.0006) p.salto = t;
       p.s.position.y = y;
@@ -360,11 +361,12 @@ async function apri(v, opz = {}) {
     if (volo) { const q = Math.min(1, (t - volo.t0) / 1100), e = 1 - Math.pow(1 - q, 3); camera.position.lerpVectors(volo.da, volo.a, e); controls.target.lerpVectors(volo.tda, volo.ta, e); if (q >= 1) volo = null; }
     controls.update(); composer.render();
   };
-  raf = requestAnimationFrame(giro);
+  if (opz.cattura) { controls.autoRotate = false; controls.enableDamping = false; box.classList.add("cattura"); }
+  else raf = requestAnimationFrame(giro);
   const resize = () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); composer.setSize(innerWidth, innerHeight); };
   addEventListener("resize", resize);
   box.querySelector(".m3-esci").onclick = chiudi;
-  M = { renderer, box, scene, pet, stop: () => { cancelAnimationFrame(raf); removeEventListener("resize", resize); } };
+  M = { renderer, box, scene, pet, camera, controls, THREE, R, passo, mio, stop: () => { cancelAnimationFrame(raf); removeEventListener("resize", resize); } };
 }
 
 function chiudi() {

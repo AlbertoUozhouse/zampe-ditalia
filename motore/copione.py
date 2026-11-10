@@ -795,19 +795,16 @@ def _razza(a):
 def _intorno(D, centro, km=2000, escludi=()):  # tutte le luci vere: l'Italia di notte è già accesa, manca solo quel comune
     return [(a["lng"], a["lat"]) for a in D["animali"] if a.get("k") == "animale" and "lat" in a and a not in escludi and _dist(a, centro) < km][:4000]
 
-def _clip(D, st, utente=None):
-    """Un video vero per i primi secondi (docs/media/ugc/*.mp4, mandato in DM da chi ci segue, col suo SÌ). Meglio se è dell'animale raccontato."""
+def _clip(D, st, utente=None, a=None):
+    """Un video vero per i primi secondi (docs/media/ugc/*.mp4, mandato in DM da chi ci segue, col suo SÌ). Meglio se è dell'animale raccontato.
+    10/11 Alberto: «basta Thor». Senza video dei follower il reel si apre col volo 3D di notte sul paese della storia
+    (reel/volo3d.js, il paese 3D del sito): ogni apertura è diversa e mostra l'animale vero nella sua cuccia."""
     fatte = set(st.get("clip_fatte", []))
     clip = [x for x in carica(ROOT / "motore/stato.json", {}).get("ugc", []) if x["f"].endswith(".mp4") and x["f"] not in fatte
             and (ROOT / "docs/media/ugc" / x["f"]).exists() and x["u"].lower() not in ESCLUSI]
-    if not clip:  # nessun video dei follower: Thor (Alberto, 7/11: «usa Thor»), ma non sempre (8/11: «non puoi usare sempre Thor»):
-        oggi = ORA.date().isoformat()   # al massimo un reel al giorno e mai due di fila; negli altri si apre direttamente sulla mappa
-        if st.get("thor_giorno") != oggi and not st.get("thor_ultimo_reel"):
-            st["intro"] = "reel/assets/thor-apertura.mp4"; st["thor_giorno"] = oggi; st["thor_ultimo_reel"] = True
-        else:
-            st["thor_ultimo_reel"] = False
+    if not clip:
+        if a and a.get("c"): st["intro_3d"] = {"comune": a["c"], "nome": a.get("n", "")}
         return None
-    st["thor_ultimo_reel"] = False
     x = next((c for c in clip if utente and c["u"].lower() == utente.lower()), clip[0])
     st["clip_fatte"] = (st.get("clip_fatte", []) + [x["f"]])[-500:]
     st["intro"] = f"docs/media/ugc/{x['f']}"
@@ -827,7 +824,7 @@ def prima_luce(D, rng, st):
     if not cand: return puntata(D, rng, st)
     a = cand[0]; st["prime_luci"] = (list(usati) + [a["c"]])[-400:]
     st["luci_raccontate"] = (st.get("luci_raccontate", []) + [a["id"]])[-1000:]  # «Questa luce è di…» non racconta di nuovo lo stesso animale
-    autore = _clip(D, st, a["u"])
+    autore = _clip(D, st, a["u"], a)
     rz = _razza(a)
     frasi = [
         (f"Questa è l'Italia di notte. {_a(a['c'])[:1].upper() + _a(a['c'])[1:]} era tutto spento.", {"tipo": "luce", "centro": [a["lng"], a["lat"]], "intorno": _intorno(D, a, escludi=[a]),
@@ -862,7 +859,7 @@ def testa_a_testa(D, rng, st):
     _, km, x, y = coppie[0]
     if x["n"] < y["n"]: x, y = y, x
     st["derby_vicini"] = (list(fatti) + [f"{x['c']}|{y['c']}", f"{y['c']}|{x['c']}"])[-200:]
-    _clip(D, st)
+    _clip(D, st, a={"c": y["c"]})
     mezzo = {"lat": (x["lat"] + y["lat"]) / 2, "lng": (x["lng"] + y["lng"]) / 2}
     pari = x["n"] == y["n"]
     frasi = [
@@ -891,7 +888,7 @@ def questa_luce(D, rng, st):
     nuovi = [a for a in nuovi[:30] if a["u"].lower() in D["seguono"]][:1] or nuovi[:1]
     if not nuovi: return prima_luce(D, rng, st)
     a = nuovi[0]; st["luci_raccontate"] = (list(fatte) + [a["id"]])[-1000:]
-    autore = _clip(D, st, a["u"])
+    autore = _clip(D, st, a["u"], a)
     rz = _razza(a)
     frasi = [
         (f"Questa luce è di {a['n']}{', ' + rz if rz else ''}, {_a(a['c'])}.", {"tipo": "luce", "centro": [a["lng"], a["lat"]], "intorno": _intorno(D, a, escludi=[a]),
@@ -1310,6 +1307,7 @@ def main():
     voce_ia = voce_v == "voce"  # senza voce artificiale niente avviso in didascalia
     did = did.strip() + ("\n\nVoce generata con IA.\n\n" if voce_ia else "\n\n") + ("#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici " if per_attivita else st.pop("hashtag", "#cani #gatti #italia #canicontrogatti #animalidomestici ")) + tag_citta
     intro = st.pop("intro", None)
+    intro_3d = st.pop("intro_3d", None)
     # l'aspetto grafico a rotazione: mai uguale ai due reel prima (reel/modello/scene.py, TEMI)
     temi = ["notte", "tramonto", "aurora", "giorno", "neon"]  # colori resi abbastanza scuri da passare il controllo di contrasto (reel/modello/scene.py)
     gia = st.get("temi", [])[-2:]
@@ -1320,9 +1318,9 @@ def main():
     copione = {"voce": voce_ia, "variante": f"{voce_v}-{apertura}-{max_parole}", "tema": tema, "id": id_reel, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
                "banner": st.pop("banner_reel", "💬 Commenta città e nome del tuo animale 👇"), "didascalia": did,
-               "tag": [u for u in mostrati if u.lower() not in ESCLUSI], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}),
+               "tag": [u for u in mostrati if u.lower() not in ESCLUSI], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}),
                **({"test": {"nome": "crescita-1", "formato": formato, "variante": voce_v, "slot": ORA.strftime("%H:%M"), "caso": caso}} if test else {})}
-    if test and intro: copione.pop("intro")  # nel test il primo fotogramma è il gancio: niente video prima
+    if test: copione.pop("intro", None); copione.pop("intro_3d", None)  # nel test il primo fotogramma è il gancio: niente video prima
     Path(uscita).write_text(json.dumps(copione, ensure_ascii=False, indent=1))
     STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
     print(f"copione {copione['id']}: " + " / ".join(t for t, _ in frasi))
