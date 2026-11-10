@@ -4411,6 +4411,7 @@
 "18093810749204175",
 "18093846647695091",
 "18093851447194767",
+"18093853277204135",
 "18093887120494847",
 "18093889175205689",
 "18093967970677173",
@@ -10424,7 +10425,8 @@
 1794341556.9323893,
 1794341561.805632,
 1794342329.0769358,
-1794342330.1058397
+1794342330.1058397,
+1794344609.5145035
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12561,7 +12563,8 @@
 "danielerusso314": "2026-11-10",
 "michele.ioni": "2026-11-10",
 "giulixx_013": "2026-11-10",
-"maxmolinu": "2026-11-10"
+"maxmolinu": "2026-11-10",
+"kataria_mohit389": "2026-11-10"
 },
 "media_letti": {},
 "pezzi": {
@@ -18914,11 +18917,13 @@
 "b9da781456af1edd",
 "62e7ab1aeea81482",
 "b3b1d98c86d5878b",
-"531d6051a1b1bac6"
+"531d6051a1b1bac6",
+"ba910d3d6585d2d8"
 ],
 "privati_ora": [
 1794341556.9324162,
-1794341561.805653
+1794341561.805653,
+1794344609.514529
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -18965,7 +18970,7 @@
 "2026-11-07": 1723,
 "2026-11-08": 1766,
 "2026-11-09": 1793,
-"2026-11-10": 1810
+"2026-11-10": 1811
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19370,6 +19375,10 @@
 [
 "2026-11-10T20:38+00:00",
 1810
+],
+[
+"2026-11-10T21:03+00:00",
+1811
 ]
 ],
 "coppa": {
@@ -21352,14 +21361,19 @@
 [
 "Zafferana Etnea|CT",
 "Zocca|MO"
+],
+[
+"Burcei|SU",
+"Casalmaggiore|CR"
 ]
 ],
-"attesa": "Burcei|SU",
+"attesa": null,
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
 "Terni|TR": 1,
-"Darfo Boario Terme|BS": 1
+"Darfo Boario Terme|BS": 1,
+"Casalmaggiore|CR": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21418,6 +21432,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-10T21:03+00:00",
+"sorpasso": "Casalmaggiore|CR",
+"su": "Burcei|SU",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -21444,11 +21467,22 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Casalmaggiore|CR": {
+"u": [
+"kataria_mohit389"
+],
+"c": [
+"18093853277204135"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
 "michele.ioni|animale|miele",
-"giulixx_013|animale|gianpiero"
+"giulixx_013|animale|gianpiero",
+"kataria_mohit389|animale|lacky"
 ]
 }
 }
