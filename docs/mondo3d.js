@@ -487,7 +487,8 @@ async function apri(v, opz = {}) {
   const resize = () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); composer.setSize(innerWidth, innerHeight); };
   addEventListener("resize", resize);
   box.querySelector(".m3-esci").onclick = chiudi;
-  M = { renderer, box, scene, pet, camera, controls, THREE, R, passo, mio, bloom, cielo: testoCielo, stop: () => { cancelAnimationFrame(raf); removeEventListener("resize", resize); } };
+  const cieloBreve = [tipo ? tipo[1].split(" ")[0] + (meteo.temp !== undefined ? " " + meteo.temp + "°" : "") : "", tipo && ["coperto", "pioggia", "pioviggine", "temporale", "neve", "nebbia"].includes(tipo[0]) ? "" : fase.nome].filter(Boolean).join(" · ");
+  M = { renderer, box, scene, pet, camera, controls, THREE, R, passo, mio, bloom, cielo: testoCielo, cieloBreve, stop: () => { cancelAnimationFrame(raf); removeEventListener("resize", resize); } };
 }
 
 function chiudi() {

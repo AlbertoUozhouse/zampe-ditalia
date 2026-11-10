@@ -592,8 +592,12 @@ def _pulisci_regia(r, storia):
     hexok = lambda c: isinstance(c, str) and re.fullmatch(r"#[0-9A-Fa-f]{6}", c)
     base = dict(_r.choice([t for t in TAVOLOZZE if t["nome_stile"] not in [x.get("nome_stile") for x in storia[-3:]]] or TAVOLOZZE))
     out = {**base, "lucciole": 120, "bloom": 0.5, "esposizione": 1.55, "effetto": "nessuno", "volo": "discesa", "secondi": 3.6, "perche": "regia di riserva del motore"}
+    tetto = {"cielo_basso": 0x90, "cielo_alto": 0x40, "nebbia_colore": 0x48}  # 10/11: una nebbia chiara sbiancava tutto il paese: cielo e nebbia restano di notte
+    def scurisci(c, m):
+        v = [int(c[i:i + 2], 16) for i in (1, 3, 5)]; f = min(1, m / max(v)) if max(v) else 1
+        return "#" + "".join(f"{int(x * f):02X}" for x in v)
     for k in ("cielo_basso", "cielo_alto", "nebbia_colore", "lampioni_colore", "lucciole_colore"):
-        if hexok((r or {}).get(k)): out[k] = r[k]
+        if hexok((r or {}).get(k)): out[k] = scurisci(r[k], tetto[k]) if k in tetto else r[k]
     for k, a, b in (("lucciole", 0, 300), ("bloom", 0.3, 1.0), ("esposizione", 1.2, 2.0), ("secondi", 3.0, 4.5)):
         try: out[k] = max(a, min(b, float(r[k])))
         except (KeyError, TypeError, ValueError): pass

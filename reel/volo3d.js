@@ -40,9 +40,9 @@ const server = http.createServer((req, res) => {
     if (!v) return "comune non trovato";
     const mio = nome ? v.lista.find(d => (d.n || "").toLowerCase() === nome.toLowerCase()) : null;
     await window.Mondo3D.apri(v, { svg: petSvg, mio, cattura: { nome: mio ? mio.n : "" }, scheda: () => "", stile: regia, ...(meteo ? { meteo } : {}) });
-    const cielo = window.Mondo3D.mondo.cielo;  // il tempo vero di adesso nel comune e la luna di stanotte (mondo3d.js)
+    const cielo = window.Mondo3D.mondo.cieloBreve;  // su una riga: «⛅ 10° · 🌑 luna nuova»  // il tempo vero di adesso nel comune e la luna di stanotte (mondo3d.js)
     const t = document.createElement("div");
-    t.innerHTML = `<b>${comune.toUpperCase()}</b><span>${mio ? "la casa di " + mio.n : "di notte"} · ${v.luci} ${v.luci === 1 ? "luce" : "luci"}</span>${cielo ? `<span>${new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", timeZone: "Europe/Rome" })}: ${cielo}</span>` : ""}`;
+    t.innerHTML = `<b>${comune.toUpperCase()}</b><span>${mio ? "la casa di " + mio.n : "di notte"} · ${v.luci} ${v.luci === 1 ? "luce" : "luci"}</span>${cielo ? `<span>${new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", timeZone: "Europe/Rome" })} · ${cielo}</span>` : ""}`;
     t.style.cssText = "position:fixed;left:0;right:0;top:8%;z-index:6000;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;font-family:'Bricolage Grotesque',system-ui,sans-serif;color:#FFF4DE;text-shadow:0 4px 0 #060B1A,0 0 24px rgba(6,11,26,.9)";
     t.firstChild.style.cssText = "font-size:58px;line-height:1;font-weight:800;letter-spacing:-1px;color:#FFC55C";
     [...t.children].slice(1).forEach(x => x.style.cssText = "font-size:22px;font-weight:800;background:rgba(6,11,26,.6);border:2px solid rgba(255,197,92,.6);border-radius:999px;padding:6px 16px");
