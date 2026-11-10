@@ -3548,6 +3548,7 @@
 "18054054992811136",
 "18054109685811627",
 "18054143843812041",
+"18054210026812491",
 "18054214499806698",
 "18054459470808118",
 "18054464051813377",
@@ -14624,14 +14625,6 @@
 "bruschi6456": 10
 },
 "inviti_giorno": {
-"2026-11-02": {
-"madd.a14": 1,
-"ayoitz_m4ry": 1,
-"just_rora_148": 1,
-"victoriacrimi8": 1,
-"diego_coglia": 1,
-"valerio_elav": 1
-},
 "2026-11-03": {
 "cosmico1278": 1
 },
@@ -18834,9 +18827,7 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {
-"tania_ghensi": "2026-11-09"
-},
+"missioni_fatte": {},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
