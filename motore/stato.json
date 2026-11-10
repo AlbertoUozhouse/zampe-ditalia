@@ -4568,6 +4568,7 @@
 "18097787693440212",
 "18097801094410669",
 "18097818767536580",
+"18097827773246779",
 "18097839056112769",
 "18097849832439508",
 "18097852106560034",
@@ -4860,6 +4861,7 @@
 "18101557646356350",
 "18101601905410652",
 "18101603636423566",
+"18101618582550284",
 "18101623940338430",
 "18101627489553274",
 "18101628731653083",
@@ -10402,9 +10404,10 @@
 "18668921470032586"
 ],
 "risposte": [
-1794319873.5367997,
 1794320715.451037,
-1794320719.766635
+1794320719.766635,
+1794323337.009078,
+1794323339.7103107
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12530,14 +12533,15 @@
 "bruschi6456": "2026-11-09",
 "shevarash": "2026-11-09",
 "giacomo.ruaro": "2026-11-09",
-"iamfrancescarusso": "2026-11-09",
+"iamfrancescarusso": "2026-11-10",
 "__mia__mimi__": "2026-11-10",
 "banci_marco99": "2026-11-10",
 "sofibellesini": "2026-11-10",
 "_sara_prizzon_": "2026-11-10",
 "vinz_conlazeta": "2026-11-10",
 "bessomatteo": "2026-11-10",
-"sim.o_._": "2026-11-10"
+"sim.o_._": "2026-11-10",
+"danielerusso314": "2026-11-10"
 },
 "media_letti": {},
 "pezzi": {
@@ -13659,7 +13663,8 @@
 "cristinaek>>michael_wolf_98",
 "cristinaek>michael_wolf_98",
 "fede_sporty_>tanialapesa",
-"tania_ghensi>keyla_ghensi"
+"tania_ghensi>keyla_ghensi",
+"iamfrancescarusso>danielerusso314"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14664,7 +14669,8 @@
 "_ryan.gaia_": 5,
 "sofibellesini": 10,
 "vinz_conlazeta": 10,
-"sim.o_._": 10
+"sim.o_._": 10,
+"iamfrancescarusso": 21
 },
 "inviti_giorno": {
 "2026-11-03": {
@@ -14692,6 +14698,9 @@
 "cristinaek": 1,
 "fede_sporty_": 1,
 "tania_ghensi": 1
+},
+"2026-11-10": {
+"iamfrancescarusso": 1
 }
 },
 "seguono": {
@@ -18869,11 +18878,11 @@
 "932aeaf52fcd7a67",
 "df3f3f44b263f368",
 "399adb049641eb93",
-"da12ed3fd08d22ae"
+"da12ed3fd08d22ae",
+"b9da781456af1edd"
 ],
 "privati_ora": [
-1794318168.8168435,
-1794319036.756791
+1794323339.7103503
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -18887,7 +18896,9 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {},
+"missioni_fatte": {
+"iamfrancescarusso": "2026-11-10"
+},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
