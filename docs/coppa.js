@@ -43,6 +43,14 @@
   }
   const chiude = () => C ? new Date(C.fine).toLocaleString("it-IT", { weekday: "long", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Rome" }) : "";
 
+  // le sfide dove si sta giocando davvero, dalla più combattuta (10/11: ogni animale nuovo è un punto, il tabellone si muove ogni giorno)
+  function calde() {
+    const v = (C?.sfide || []).filter(x => x.pa + x.pb > 0).sort((a, b) => (b.pa + b.pb) - (a.pa + a.pb) || Math.abs(a.pa - a.pb) - Math.abs(b.pa - b.pb)).slice(0, 8);
+    if (!v.length) return `<h3>🔥 Le sfide più calde</h3><p class="sub">Ancora nessun punto in questo turno: il primo animale nuovo della tua città apre la sfida.</p>`;
+    return `<h3>🔥 Le sfide più calde</h3><ol class="list">` + v.map(x => `<li class="row"><span class="pos">${x.pa === x.pb ? "⚖️" : "⚔️"}</span><span class="who">${esc(nome(x.a))} <b>${x.pa} – ${x.pb}</b> ${esc(nome(x.b))}<small>${
+      x.pa === x.pb ? "pari: il prossimo animale decide" : `${esc(nome(x.pa > x.pb ? x.b : x.a))} insegue: ${Math.abs(x.pa - x.pb) === 1 ? "basta un animale per pareggiare" : "servono " + Math.abs(x.pa - x.pb) + " animali"}`}</small></span></li>`).join("") + `</ol>`;
+  }
+
   // ---------- la scheda della Coppa ----------
   function apri(pref) {
     if (typeof pref === "string") apri.pref = pref;
@@ -65,6 +73,7 @@
     const albo = (C.albo || []).slice(-1)[0];
     s.innerHTML = `<h2>🏆 Coppa delle Zampe</h2><p class="sub">Turno ${C.turno}: ${fmt(C.tutte || C.sfide.length)} sfide tra comuni con un numero simile di giocatori. Ogni animale nuovo è un punto, e chi gioca la prova del giorno ne porta un altro. Gratis. Domenica il trofeo va sulla mappa.</p>${corpo}
       <h3>Come si gioca</h3><ol class="regole"><li><b>Ogni animale nuovo della tua città è un punto</b>: commenta un reel con città, nome e cane o gatto, e porta i tuoi amici del paese.</li><li>Scegli la tua città (quella del tuo animale sulla mappa).</li><li>Fai la prova del giorno: alla fine hai un codice <b>COPPA XY</b>.</li><li>Commentalo sotto l'ultimo reel di @zampeditalia: un punto alla tua città, uno al giorno.</li><li>Staffetta di quartiere 🔁: tre persone dello stesso comune commentano città, nome e cane o gatto, ognuna col suo animale. Alla terza, un punto in più e l'anello dorato.</li></ol>
+      ${calde()}
       ${albo ? `<h3>Albo dei vincitori · turno ${albo.turno}</h3><ol class="list">` + albo.vincitori.slice(0, 10).map(v => `<li class="row"><span class="pos">🏆</span><span class="who">${esc(nome(v.c))}<small>${v.p} – ${v.pc} contro ${esc(nome(v.contro))}</small></span></li>`).join("") + `</ol>` : ""}`;
     const fm = $("#coppaForm"); if (fm) fm.onsubmit = e => { e.preventDefault(); const x = scegli($("#coppaSq").value);
       if (!x) { $("#coppaErr").textContent = "Non trovo né il tuo @ né la città: prima accendi il tuo animale commentando un reel con città e nome."; return; }

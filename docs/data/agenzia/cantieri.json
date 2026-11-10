@@ -168,7 +168,7 @@
   "traccia": "realismo",
   "aperto": "2026-11-08",
   "scadenza": "2026-11-10",
-  "stato": "in costruzione",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-10",
@@ -303,7 +303,8 @@
     "fatto_quando": "Dalla scheda di un animale del comune di prova si apre la vista 3D sul rilievo reale con il segnaposto nel punto della luce, e nel log compare un evento 'apertura_vista_3d' con l'id del comune."
    }
   ],
-  "aggiornato": "2026-11-08",
-  "nota": "In pausa durante il test di crescita."
+  "aggiornato": "2026-11-10",
+  "nota": "Il paese 3D ha il tempo vero di adesso nel comune (pioggia, neve, nebbia, nuvole, temporale, da Open-Meteo) e la vera fase della luna di stanotte: sul sito entrando in un paese, e nell'apertura 3D dei reel con la data.",
+  "online_dal": "2026-11-10"
  }
 }

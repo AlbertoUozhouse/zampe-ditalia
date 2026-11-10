@@ -298,3 +298,10 @@ Nessun cambiamento oggi.
 ## 2026-11-10 — verbale dei 7 giorni (automatico, motore/verbale.py)
 
 - 2026-11-03-1310-buio: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+## 2026-11-10 — «basta Thor», realismo e gara (Alberto)
+
+- Apertura dei reel: niente più Thor. Volo 3D di notte sul paese della storia fino alla cuccia dell'animale (reel/volo3d.js); se il 3D non riesce il reel parte dalla mappa.
+- Realismo: nel paese 3D il tempo vero di adesso nel comune e la luna vera di stanotte (docs/mondo3d.js: leggiMeteo, faseLuna). Nel reel compare con la data del giorno.
+- Gara: ogni animale nuovo è un punto per la sua città nella Coppa (coppa.luce, una volta per animale; config «coppa_punto_per_luce»); la risposta al commento dice il punteggio e chi insegue; sul sito «Le sfide più calde»; Staffetta di quartiere accesa. Prima: 3 punti in 3 giorni, perché serviva il codice dal sito.
+- Officina Innovazione ogni giorno alle 14:41: una novità visibile online al giorno (reel, sito/grafica, gioco a rotazione), con priorità a realismo e gara.

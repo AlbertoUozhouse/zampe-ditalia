@@ -134,6 +134,34 @@ function accessori3d(THREE, g, d) {
     const l = sfera(THREE, 0.025, new THREE.MeshStandardMaterial({ color: c, emissive: c, emissiveIntensity: 2.5 }), Math.cos(i) * 0.17, 0.82 + Math.sin(i * 2) * 0.01, 0.07 + Math.sin(i) * 0.17); g.add(l); } }
 }
 
+// ---------- realismo (Alberto, 10/11: «dobbiamo spingere sul realismo») ----------
+// Il tempo vero di adesso nel comune (Open-Meteo: gratis, senza chiave) e la vera fase della luna di stanotte.
+async function leggiMeteo(lat, lng) {
+  try {
+    const c = new AbortController(); setTimeout(() => c.abort(), 4000);
+    const r = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat.toFixed(3)}&longitude=${lng.toFixed(3)}&current=temperature_2m,weather_code,cloud_cover,wind_speed_10m&timezone=Europe%2FRome`, { signal: c.signal });
+    const j = (await r.json()).current; return { codice: j.weather_code, temp: Math.round(j.temperature_2m), nuvole: j.cloud_cover, vento: j.wind_speed_10m };
+  } catch (e) { return null; }
+}
+function tipoMeteo(m) {
+  if (!m) return null;
+  const c = m.codice;
+  if (c >= 95) return ["temporale", "⛈️ temporale"];
+  if (c >= 85 || (c >= 71 && c <= 77)) return ["neve", "🌨️ neve"];
+  if (c >= 80 || (c >= 61 && c <= 67)) return ["pioggia", "🌧️ pioggia"];
+  if (c >= 51 && c <= 57) return ["pioviggine", "🌦️ pioviggine"];
+  if (c === 45 || c === 48) return ["nebbia", "🌫️ nebbia"];
+  if (c === 3 || m.nuvole > 80) return ["coperto", "☁️ cielo coperto"];
+  if (c === 2 || m.nuvole > 40) return ["nuvole", "⛅ qualche nuvola"];
+  return ["sereno", "✨ cielo sereno"];
+}
+function faseLuna(d = new Date()) {  // 0 = luna nuova, 0.5 = piena (mese sinodico dalla luna nuova del 6/1/2000)
+  const p = (((d - Date.UTC(2000, 0, 6, 18, 14)) / 86400000) / 29.530588853) % 1;
+  const nomi = [[0.03, "🌑 luna nuova"], [0.22, "🌒 luna crescente"], [0.28, "🌓 primo quarto"], [0.47, "🌔 luna gibbosa crescente"], [0.53, "🌕 luna piena"],
+                [0.72, "🌖 luna gibbosa calante"], [0.78, "🌗 ultimo quarto"], [0.97, "🌘 luna calante"], [1.01, "🌑 luna nuova"]];
+  return { p, nome: nomi.find(([s]) => p < s)[1], luce: (1 - Math.cos(2 * Math.PI * p)) / 2 };
+}
+
 async function apri(v, opz = {}) {
   if (M) chiudi();
   const THREE = await import("three");
@@ -172,6 +200,50 @@ async function apri(v, opz = {}) {
   const luna = new THREE.DirectionalLight("#C8D6FF", 2.2); luna.position.set(-50, 80, -60); luna.castShadow = true;
   luna.shadow.mapSize.set(piccolo ? 1024 : 2048, piccolo ? 1024 : 2048); const sc = luna.shadow.camera; sc.left = sc.bottom = -R - 20; sc.right = sc.top = R + 20; sc.near = 1; sc.far = 300; luna.shadow.bias = -0.0005; luna.shadow.normalBias = 0.04;
   scene.add(luna);
+
+  // la luna di stanotte: un disco scuro davanti alla luna lascia la falce giusta (crescente a destra, calante a sinistra)
+  const fase = faseLuna(), lato = new THREE.Vector3(360, 0, -230).normalize();
+  if (fase.luce < 0.97) {
+    const ombra = new THREE.Mesh(new THREE.SphereGeometry(14.3, 32, 16), new THREE.MeshBasicMaterial({ color: "#101A3C", fog: false }));
+    ombra.position.copy(lunaM.position).multiplyScalar(0.985).addScaledVector(lato, (fase.p < 0.5 ? -1 : 1) * 28 * fase.luce); scene.add(ombra);
+  }
+  luna.intensity = 0.6 + 1.8 * fase.luce;  // con la luna nuova il paese è più buio, con la piena le ombre sono nette
+  // il tempo di adesso nel comune: pioggia, neve, nebbia, nuvole, temporale
+  const meteoGira = [];
+  const meteo = opz.meteo !== undefined ? opz.meteo : await leggiMeteo(v.ll.lat, v.ll.lng), tipo = tipoMeteo(meteo);
+  const stelleM = scene.children.find(o => o.isPoints), emi = scene.children.find(o => o.isHemisphereLight);
+  if (tipo) {
+    const [k] = tipo;
+    if (["coperto", "pioggia", "pioviggine", "temporale", "neve", "nebbia"].includes(k)) { stelleM.visible = false; lunaM.visible = false; scene.children.filter(o => o.isMesh && o.geometry?.parameters?.radius === 14.3).forEach(o => o.visible = false); luna.intensity = 0.5; }
+    else if (k === "nuvole") stelleM.material.opacity = 0.4, stelleM.material.transparent = true;
+    if (k === "nebbia") scene.fog.density = 0.03;
+    if (k === "coperto" || k === "pioggia" || k === "temporale") scene.fog.density = 0.013;
+    const area = R + 34, alto = 42;
+    if (["pioggia", "pioviggine", "temporale"].includes(k)) {
+      const N = k === "pioviggine" ? 1600 : 4200, pos = new Float32Array(N * 6), base = [...Array(N)].map((_, i) => [(Math.random() * 2 - 1) * area, (Math.random() * 2 - 1) * area, Math.random() * alto]);
+      const obl = Math.min(0.5, (meteo.vento || 0) / 60), lung = k === "pioviggine" ? 0.5 : 1.1;
+      const gocce = new THREE.LineSegments(new THREE.BufferGeometry().setAttribute("position", new THREE.BufferAttribute(pos, 3)),
+        new THREE.LineBasicMaterial({ color: "#A9C0F0", transparent: true, opacity: k === "pioviggine" ? 0.35 : 0.55, fog: true }));
+      scene.add(gocce);
+      meteoGira.push(t => { for (let i = 0; i < N; i++) { const [x, z, h] = base[i], y = alto - ((h + t * 0.03) % alto);
+        pos[i * 6] = x + obl * y; pos[i * 6 + 1] = y; pos[i * 6 + 2] = z; pos[i * 6 + 3] = x + obl * (y + lung); pos[i * 6 + 4] = y + lung; pos[i * 6 + 5] = z; }
+        gocce.geometry.attributes.position.needsUpdate = true; });
+      if (k === "temporale") meteoGira.push(t => { const q = t % 5200; emi.intensity = q < 90 || (q > 180 && q < 250) ? 7 : 1.5; });
+    }
+    if (k === "neve") {
+      const N = 2600, pos = new Float32Array(N * 3), base = [...Array(N)].map(() => [(Math.random() * 2 - 1) * area, (Math.random() * 2 - 1) * area, Math.random() * alto, Math.random() * 6]);
+      const fiocchi = new THREE.Points(new THREE.BufferGeometry().setAttribute("position", new THREE.BufferAttribute(pos, 3)), new THREE.PointsMaterial({ color: "#FFFFFF", size: 0.42, transparent: true, opacity: 0.92, depthWrite: false,
+        map: new THREE.CanvasTexture(tela(32, 32, (x, w) => { const g = x.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2); g.addColorStop(0, "#fff"); g.addColorStop(.6, "rgba(255,255,255,.85)"); g.addColorStop(1, "rgba(255,255,255,0)"); x.fillStyle = g; x.fillRect(0, 0, w, w); })) }));
+      scene.add(fiocchi);
+      // la neve si posa: un velo bianco sul paese
+      const velo = new THREE.Mesh(new THREE.CircleGeometry(R + 60, 48), new THREE.MeshBasicMaterial({ color: "#DCE8FF", transparent: true, opacity: 0.16, depthWrite: false }));
+      velo.rotation.x = -Math.PI / 2; velo.position.y = 0.06; scene.add(velo);
+      meteoGira.push(t => { for (let i = 0; i < N; i++) { const [x, z, h, f] = base[i], y = alto - ((h + t * 0.0035) % alto);
+        pos[i * 3] = x + Math.sin(t / 900 + f) * 0.8; pos[i * 3 + 1] = y; pos[i * 3 + 2] = z + Math.cos(t / 1100 + f) * 0.8; } fiocchi.geometry.attributes.position.needsUpdate = true; });
+    }
+  }
+  const testoCielo = (tipo ? `${tipo[1]}${meteo.temp !== undefined ? ", " + meteo.temp + "°" : ""}` : "") + (tipo && ["coperto", "pioggia", "pioviggine", "temporale", "neve", "nebbia"].includes(tipo[0]) ? "" : (tipo ? " · " : "") + fase.nome);
+  const top = box.querySelector(".m3-top span"); if (top && testoCielo) top.textContent = `${testoCielo} adesso a ${v.nome} · ${top.textContent}`;
 
   const mat = (c, o = {}) => new THREE.MeshStandardMaterial({ color: c, roughness: 0.8, ...o });
   const ombre = m => { m.traverse(o => { if (o.isMesh) { o.castShadow = true; o.receiveShadow = true; } }); return m; };
@@ -357,6 +429,7 @@ async function apri(v, opz = {}) {
       b.dir.forEach((dv, j) => p.setXYZ(j, dv.x * k * 5, dv.y * k * 5 - k * k * 2.5, dv.z * k * 5)); p.needsUpdate = true; b.pts.material.opacity = 1 - k * k;
       if (k >= 1) { scene.remove(b.pts); b.pts.geometry.dispose(); scoppi.splice(i, 1); } }
     for (const f of gira) f(t);
+    for (const f of meteoGira) f(t);
     lam.forEach((l, i) => l.intensity = 20 + Math.sin(t / 470 + i * 1.7) * 2.5);
     if (volo) { const q = Math.min(1, (t - volo.t0) / 1100), e = 1 - Math.pow(1 - q, 3); camera.position.lerpVectors(volo.da, volo.a, e); controls.target.lerpVectors(volo.tda, volo.ta, e); if (q >= 1) volo = null; }
     controls.update(); composer.render();
@@ -366,7 +439,7 @@ async function apri(v, opz = {}) {
   const resize = () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); composer.setSize(innerWidth, innerHeight); };
   addEventListener("resize", resize);
   box.querySelector(".m3-esci").onclick = chiudi;
-  M = { renderer, box, scene, pet, camera, controls, THREE, R, passo, mio, bloom, stop: () => { cancelAnimationFrame(raf); removeEventListener("resize", resize); } };
+  M = { renderer, box, scene, pet, camera, controls, THREE, R, passo, mio, bloom, cielo: testoCielo, stop: () => { cancelAnimationFrame(raf); removeEventListener("resize", resize); } };
 }
 
 function chiudi() {
