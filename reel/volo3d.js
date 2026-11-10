@@ -45,6 +45,7 @@ const server = http.createServer((req, res) => {
     return mio ? "ok" : "ok senza animale";
   }, [comune, nome || ""]);
   if (!ok.startsWith("ok")) { console.error(ok); process.exit(2); }
+  await page.evaluate(() => { const M = window.Mondo3D.mondo; M.bloom.strength = 0.5; M.bloom.threshold = 0.85; });  // da vicino i lampioni abbagliavano
   const cartella = fs.mkdtempSync(path.join(os.tmpdir(), "volo3d-"));
   for (let i = 0; i < N; i++) {
     await page.evaluate(([i, N]) => {
