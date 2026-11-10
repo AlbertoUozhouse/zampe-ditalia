@@ -6,6 +6,8 @@ Qui il bot lo controlla e dà UN punto al giorno per persona alla sua squadra (r
 I comuni sono abbinati a coppie con un numero simile di giocatori attivi, così anche i paesi piccoli possono vincere.
 Domenica alle 20 si chiude: chi vince la sua sfida prende il trofeo (sulla mappa e nell'albo). Lunedì a mezzanotte parte il turno dopo.
 La Staffetta: tre persone diverse dello stesso comune nella stessa settimana accendono l'anello dorato attorno alla città.
+Ogni luce nuova è un punto (Alberto, 10/11: «la gara ho bisogno di molto di più»): ogni animale nuovo commentato durante il turno
+porta un punto al suo comune, una volta sola per animale. Così la gara si muove con quello che la gente fa già, senza codici da copiare.
 La Staffetta di quartiere (test di crescita, 8/11): tre persone diverse dello stesso comune, ognuna col suo animale, commentano
 «città, nome, cane o gatto» mentre il comune è in sfida. A 3/3 la prova è chiusa: un punto della Coppa al comune e l'anello dorato.
 Ogni commento e ogni persona contano una volta sola per comune e per turno (un commento riletto o un giro ripetuto non cambia nulla).
@@ -71,7 +73,7 @@ def nuovo_turno(stato, animali, ora):
         fine += timedelta(days=7)
     coppie, attesa = abbina(_taglia(animali, prima))
     C.update({"turno": C.get("turno", 0) + 1, "inizio": inizio.isoformat(), "fine": fine.isoformat(), "coppie": coppie, "attesa": attesa,
-              "punti": {}, "giocatori": {}, "squadra": {}, "giorni": {}, "storia": [], "chiuso": False, "quartiere": {}})
+              "punti": {}, "giocatori": {}, "squadra": {}, "giorni": {}, "storia": [], "chiuso": False, "quartiere": {}, "luci": []})
     C["prima"] = sorted({u for v in prima.values() for u in v})  # chi aveva giocato il turno scorso: per contare chi torna
     return C
 
@@ -199,6 +201,40 @@ def punto(stato, animali, utente, codice_scritto, ora=None):
         C["storia"] = C["storia"][-200:]
     d["staffetta_nuova"] = len(gioc) == STAFFETTA
     return "ok", d
+
+
+def _in_gara(C, k):
+    """Un comune nuovo nel turno sfida chi è in attesa, oppure aspetta il prossimo (come nella prova del giorno)."""
+    if avversario(C, k): return True
+    if C.get("attesa") and C["attesa"] != k: C["coppie"].append([C["attesa"], k]); C["attesa"] = None; return True
+    if not C.get("attesa"): C["attesa"] = k
+    return False
+
+
+def _sorpasso(C, k, prima, ora):
+    d = dettagli(C, k)
+    if prima.get("rivale") and prima["noi"] <= prima["loro"] and d["noi"] > d["loro"]:
+        C["storia"].append({"t": ora.isoformat(timespec="minutes"), "sorpasso": k, "su": d["rivale"], "punti": [d["noi"], d["loro"]]})
+        C["storia"] = C["storia"][-200:]
+        return True
+    return False
+
+
+def luce(stato, animali, a, ora=None):
+    """Un animale nuovo sulla mappa (commenti.py): un punto al suo comune nella Coppa, una volta sola per animale (id) e per turno.
+    Restituisce (esito, dettagli): ok, gia, fuori."""
+    ora = ora or datetime.now(timezone.utc)
+    C = aggiorna(stato, animali, ora)
+    if C.get("chiuso") or a.get("k") != "animale": return "fuori", {}
+    k = chiave(a)
+    contate = C.setdefault("luci", [])
+    if a.get("id") in contate: return "gia", dettagli(C, k)
+    if not _in_gara(C, k): return "fuori", {}
+    contate.append(a.get("id"))
+    prima = dettagli(C, k)
+    C["punti"][k] = C["punti"].get(k, 0) + 1
+    sorp = _sorpasso(C, k, prima, ora)
+    return "ok", {**dettagli(C, k), "sorpasso": sorp}
 
 
 def dettagli(C, k):

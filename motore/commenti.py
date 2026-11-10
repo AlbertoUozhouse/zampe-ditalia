@@ -981,6 +981,11 @@ def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
         return "altri", {}
     return None, {}
 
+def gara_luci():
+    """Ogni luce nuova è un punto nella Coppa (config.json «coppa_punto_per_luce», 10/11): si spegne mettendolo a false."""
+    try: return json.loads((ROOT / "motore/config.json").read_text()).get("coppa_punto_per_luce", True) is not False
+    except (FileNotFoundError, json.JSONDecodeError): return True
+
 def staffetta_attiva():
     """La Staffetta di quartiere è accesa da config.json (test_crescita): «staffetta_quartiere» true, oppure il test attivo."""
     try: t = json.loads((ROOT / "motore/config.json").read_text()).get("test_crescita") or {}
@@ -1145,6 +1150,15 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
                 extra.append("🏁 La Coppa di questa settimana è chiusa: lunedì a mezzanotte riparte, ti aspettiamo!")
             else:
                 extra.append("🐾 Per giocare per la tua città serve il tuo animale sulla mappa: scrivi qui città e nome (es. «Treviso, Luna, cane») e poi ricommenta il codice.")
+        # 10/11 Alberto: «la gara ho bisogno di molto di più». Ogni animale nuovo è un punto per la sua città nella Coppa (motore/coppa.py, una volta per animale)
+        if nuovi_a and chiave not in ("stella", "sogno") and u.lower() not in ESCLUSI and gara_luci():
+            for a_n in nuovi_a:
+                esito_l, dl = coppa.luce(gioco.stato, gioco.animali, a_n)
+                if esito_l != "ok": continue
+                gioco.cambiato = True; nc = lambda k: (k or "").split("|")[0]
+                extra.insert(0, (f"🔥 SORPASSO! " if dl.get("sorpasso") else "🏆 ") + f"Punto per {nc(dl['comune'])} nella Coppa delle Zampe: {nc(dl['comune'])} {dl['noi']} – {dl['loro']} {nc(dl['rivale'])}. "
+                                 + ("Ogni animale nuovo di " + nc(dl['comune']) + " è un punto: tagga chi è di lì! 👥" if dl["noi"] <= dl["loro"] + 1 else "Tenete il vantaggio fino a domenica alle 20! 👥"))
+                break
         # Staffetta di quartiere (test di crescita 8/11, motore/coppa.py): un commento valido col proprio animale, nel comune in sfida, porta la staffetta a 1/3, 2/3, 3/3
         if not letto["rimuovi"] and u.lower() not in ESCLUSI and staffetta_attiva():
             for x in letto["animali"]:

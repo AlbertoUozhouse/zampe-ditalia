@@ -925,8 +925,8 @@ def _match(dove, a, b, pa, pb):
             "punti": [{"lng": x["lng"], "lat": x["lat"], "testo": f"{_n(a)} · {pa}"}, {"lng": y["lng"], "lat": y["lat"], "testo": f"{_n(b)} · {pb}"}]}
 
 D_CORRENTE = [None]
-INVITO_COPPA = ("🏆 Gioca anche tu per la tua città: su zampeditalia.it (link in bio) tocca «Gioca per la tua città», fai la prova del giorno "
-                "e commenta qui sotto il codice COPPA che ti dà il sito. Un punto al giorno, gratis.\n➕ Seguici per vedere il verdetto domenica alle 21!")
+INVITO_COPPA = ("🏆 Ogni animale nuovo è un punto per la sua città: commenta qui sotto città, nome e cane o gatto (es. «Treviso, Luna, cane») e tagga chi è del tuo paese. "
+                "Un punto in più con la prova del giorno su zampeditalia.it (link in bio).\n➕ Seguici per vedere il verdetto domenica alle 21!")
 
 def coppa_apertura(D, rng, st):
     """Lunedì: parte il turno. Una sfida grande e una tra paesi piccoli, per far capire che vince anche chi è piccolo."""

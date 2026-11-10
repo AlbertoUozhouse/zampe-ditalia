@@ -86,7 +86,8 @@
    }
   ],
   "sera": "verdetto_sera",
-  "staffetta_quartiere": false,
+  "staffetta_quartiere": true,
   "cantieri_in_pausa": false
- }
+ },
+ "coppa_punto_per_luce": true
 }
