@@ -1,0 +1,18 @@
+[
+ {
+  "nome_stile": "Lume sul lago",
+  "cielo_basso": "#2B3A55",
+  "cielo_alto": "#070B1A",
+  "nebbia_colore": "#6F7F96",
+  "lampioni_colore": "#FFB45A",
+  "lucciole_colore": "#FFD98A",
+  "lucciole": 90.0,
+  "bloom": 0.8,
+  "esposizione": 1.6,
+  "effetto": "nessuno",
+  "volo": "rivelazione",
+  "secondi": 4.0,
+  "perche": "Una sola luce calda che si accende tra le cucce di Luino, con un cielo blu-petrolio da novembre sul Lago Maggiore e una ",
+  "reel": "2026-11-10-1812-questa_luce"
+ }
+]

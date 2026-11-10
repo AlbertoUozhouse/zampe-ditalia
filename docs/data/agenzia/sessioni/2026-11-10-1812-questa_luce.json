@@ -1,0 +1,2244 @@
+{
+ "id": "2026-11-10-1812-questa_luce",
+ "formato": "questa_luce",
+ "modalita": "operativa",
+ "inizio": "2026-11-10T17:12:14+00:00",
+ "stato": "corretto dalla squadra",
+ "scambi": [
+  {
+   "t": "2026-11-10T17:12:14+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "questa_luce",
+     "id": "2026-11-10-1812-questa_luce",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Questa luce è di Nina, a Luino.",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Un commento, e il tuo animale si accende sulla mappa.",
+       "scena": "commento"
+      },
+      {
+       "i": 2,
+       "testo": "Le prossime luci domani alle 18. Seguici per vedere la tua!",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": null,
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "💡 Questa luce è di Nina, a Luino: benvenuti @sim.o_._! 🐾\n\nSu Zampe d'Italia ogni animale accende una luce nella sua città (la mappa è nel link in bio).\n👇 Commenta la tua città e il nome del tuo cane o gatto: si accende col tuo @.\n➕ Le prossime luci domani alle 18: seguici per vedere se c'è la tua!\n\n🐾 In questo reel: @sim.o_._\n\nVoce generata con IA.\n\n#cani #gatti #italia #canicontrogatti #animalidomestici ",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       8.7424,
+       46.0025
+      ],
+      "sopra": "QUESTA LUCE",
+      "grande": "è di Nina",
+      "sotto": "Luino"
+     }
+    }
+   }
+  },
+  {
+   "t": "2026-11-10T17:12:18+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Proprietari di cani e gatti di Luino e del Verbano (Varese, Lago Maggiore) che non seguono ancora la pagina e amano vedere il proprio animale e la propria città citati con nome e cognome sui social. · Gancio: Questa luce è di Nina, a Luino. C'è un'altra luce che aspetta il tuo animale. · Primo fotogramma: Mappa dell'Italia di notte, zoom sul Lago Maggiore con una sola luce che si accende su Luino. Scritta grande: «QUESTA LUCE è di Nina». Sotto, più piccolo: «Luino». In basso la fascia: «Commenta città e nome del tuo animale». · Motivo per seguire: Su Zampe d'Italia ogni cane e ogni gatto accende una luce nella sua città sulla mappa dell'Italia di notte: se segui, puoi vedere accendersi anche la tua. · Chiusura: Nina ha acceso Luino. Segui Zampe d'Italia per vedere la prossima luce.",
+   "dati": {
+    "pubblico": "Proprietari di cani e gatti di Luino e del Verbano (Varese, Lago Maggiore) che non seguono ancora la pagina e amano vedere il proprio animale e la propria città citati con nome e cognome sui social.",
+    "gancio": "Questa luce è di Nina, a Luino. C'è un'altra luce che aspetta il tuo animale.",
+    "primo_fotogramma": "Mappa dell'Italia di notte, zoom sul Lago Maggiore con una sola luce che si accende su Luino. Scritta grande: «QUESTA LUCE è di Nina». Sotto, più piccolo: «Luino». In basso la fascia: «Commenta città e nome del tuo animale».",
+    "motivo_per_seguire": "Su Zampe d'Italia ogni cane e ogni gatto accende una luce nella sua città sulla mappa dell'Italia di notte: se segui, puoi vedere accendersi anche la tua.",
+    "chiusura": "Nina ha acceso Luino. Segui Zampe d'Italia per vedere la prossima luce.",
+    "perche": "Il brief è un «questa_luce» con un nome e una città reali, quindi il gancio parte da Nina e Luino e invita chi non conosce il progetto a commentare e poi a seguire, senza promettere nulla oltre all'orario già indicato nel brief."
+   }
+  },
+  {
+   "t": "2026-11-10T17:12:18+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "questa_luce",
+     "id": "2026-11-10-1812-questa_luce",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Questa luce è di Nina, a Luino.",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Un commento, e il tuo animale si accende sulla mappa.",
+       "scena": "commento"
+      },
+      {
+       "i": 2,
+       "testo": "Le prossime luci domani alle 18. Seguici per vedere la tua!",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": null,
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "💡 Questa luce è di Nina, a Luino: benvenuti @sim.o_._! 🐾\n\nSu Zampe d'Italia ogni animale accende una luce nella sua città (la mappa è nel link in bio).\n👇 Commenta la tua città e il nome del tuo cane o gatto: si accende col tuo @.\n➕ Le prossime luci domani alle 18: seguici per vedere se c'è la tua!\n\n🐾 In questo reel: @sim.o_._\n\nVoce generata con IA.\n\n#cani #gatti #italia #canicontrogatti #animalidomestici ",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       8.7424,
+       46.0025
+      ],
+      "sopra": "QUESTA LUCE",
+      "grande": "è di Nina",
+      "sotto": "Luino"
+     }
+    },
+    "mappa": [
+     {
+      "scena": 0,
+      "etichetta": "Questa luce è di Nina",
+      "lat": 46.0025,
+      "lng": 8.7424,
+      "luce": "spenta all'inizio della scena, si accende",
+      "scena_dal_secondo": null,
+      "scena_al_secondo": null,
+      "comune_sulla_mappa": "Luino",
+      "animali_li_in_ordine_di_arrivo": [
+       "Nina (@sim.o_._, 2026-11-10)"
+      ],
+      "luci_li_oggi": 1,
+      "luci_del_comune_dell_etichetta": 0
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-10T17:12:19+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-10T17:12:38+00:00",
+   "da": "innovazione-1",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Regia dell'apertura 3D: «Lume sul lago» — volo rivelazione, effetto nessuno, cielo #2B3A55→#070B1A, lampioni #FFB45A. Una sola luce calda che si accende tra le cucce di Luino, con un cielo blu-petrolio da novembre sul Lago Maggiore e una ",
+   "dati": {
+    "nome_stile": "Lume sul lago",
+    "cielo_basso": "#2B3A55",
+    "cielo_alto": "#070B1A",
+    "nebbia_colore": "#6F7F96",
+    "lampioni_colore": "#FFB45A",
+    "lucciole_colore": "#FFD98A",
+    "lucciole": 90.0,
+    "bloom": 0.8,
+    "esposizione": 1.6,
+    "effetto": "nessuno",
+    "volo": "rivelazione",
+    "secondi": 4.0,
+    "perche": "Una sola luce calda che si accende tra le cucce di Luino, con un cielo blu-petrolio da novembre sul Lago Maggiore e una "
+   }
+  },
+  {
+   "t": "2026-11-10T17:12:38+00:00",
+   "da": "grafica3d-1",
+   "a": "montaggio-1",
+   "tipo": "decisione",
+   "testo": "Applico la regia «Lume sul lago» al paese 3D di Luino."
+  },
+  {
+   "t": "2026-11-10T17:16:19+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.0 LUFS, picco -1.0 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.0,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.3,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:19+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (14.5 s): ti mando 15 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 14.5,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ]
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:25+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nei primi 5 secondi la frase chiave 'Questa luce è di Nina, a Luino' arriva al secondo 4.0, mentre la scena 0 della mappa dice che la luce si accende solo al secondo 4.92. Il voiceover anticipa l'accensione di quasi un secondo. Inoltre nei primi 5 secondi il volume medio è -16.3 dB, sotto l'obiettiv",
+   "dati": {
+    "controllato": "Primi 5 secondi del reel: apertura (scena del titolo, luce di Nina), tempi del voiceover, dati mappa e audio.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nei primi 5 secondi la frase chiave 'Questa luce è di Nina, a Luino' arriva al secondo 4.0, mentre la scena 0 della mappa dice che la luce si accende solo al secondo 4.92. Il voiceover anticipa l'accensione di quasi un secondo. Inoltre nei primi 5 secondi il volume medio è -16.3 dB, sotto l'obiettivo di -14 LUFS, quindi l'apertura risulta un po' più debole del resto del reel.",
+    "correzione": "Sincronizzare la voce sull'accensione della luce (far partire 'Questa luce è di Nina' dal secondo 4.9) oppure ritardare la parola 'Nina' allo stesso istante; alzare di circa 2 dB il volume dei primi 5 secondi, senza superare -1 dBFS di picco.",
+    "idea": "Mettere la frase 'Seguici per vedere la tua!' nei primi 5 secondi come overlay testuale e usare il primo fotogramma (la casetta di Nina con la luce accesa) come copertina forte; il formato 'questa_luce' nei dati ha un buon ritorno di follower ogni 1000 views, quindi conviene tenerlo come base."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:25+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nella scena della mappa 3D (0.5-3 s) la voce non è ancora partita e nel fotogramma a 3 s la luce di Nina è già accesa, mentre il dato dice che si accende al 4.92 s: sfasamento di circa 2 s tra immagine e audio. Inoltre la trascrizione dice 'Un commento, e il tuo animale si accende sulla mappa' ma ne",
+   "dati": {
+    "controllato": "Coerenza tra scena, mappa e trascrizione: la luce di Nina si accende al secondo 4.92 quando la voce dice 'Questa luce è di Nina, a Luino', e i dati mappa (Luino, 1 luce) corrispondono.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "Nella scena della mappa 3D (0.5-3 s) la voce non è ancora partita e nel fotogramma a 3 s la luce di Nina è già accesa, mentre il dato dice che si accende al 4.92 s: sfasamento di circa 2 s tra immagine e audio. Inoltre la trascrizione dice 'Un commento, e il tuo animale si accende sulla mappa' ma nel fotogramma a 11 s la scena è la sfida cani vs gatti, senza una luce che si accenda sulla mappa: il 'si accende' non è mostrato nell'immagine nel momento in cui è detto. Il picco audio di -1 dBFS e il LUFS -14 sono nel target, nessun silenzio lungo.",
+    "correzione": "Spostare l'accensione visiva della luce di Nina sul secondo 4.9 (o far partire la voce 'Questa luce è di Nina' prima) e aggiungere a circa 7-8 s una breve inquadratura della mappa con una nuova luce che si accende, così la frase 'il tuo animale si accende' è illustrata.",
+    "idea": "Per i prossimi reel questa_luce: mostrare in apertura il conteggio 'luci di oggi' che sale (1, 2, 3...) per dare ritmo e senso di comunità, e chiudere con una luce 'in attesa' sul comune dell'utente con il suo nome in sovrimpressione."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:25+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 il cartello '↓ Nina' e l'etichetta sulla casetta sono piccoli e il tema scuro li fa sparire; nelle scene 3D la luce di Nina è piccola e poco leggibile sulla mappa. Inoltre la voce dice 'il tuo animale si accende sulla mappa' mentre la luce si accende al secondo 4.9, quind",
+   "dati": {
+    "controllato": "Leggibilità da telefono di fotogrammi, testi e fascia commento, più sincronia della luce con la trascrizione e misure audio.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 il cartello '↓ Nina' e l'etichetta sulla casetta sono piccoli e il tema scuro li fa sparire; nelle scene 3D la luce di Nina è piccola e poco leggibile sulla mappa. Inoltre la voce dice 'il tuo animale si accende sulla mappa' mentre la luce si accende al secondo 4.9, quindi la parola 'Questa luce' e la luce sono alline, ma nella scena 3D il dettaglio è minuscolo. Lo schermo finale mostra 'LA TUA!' con sfondo viola e testo bianco-giallo sufficientemente leggibile.",
+    "correzione": "Ingrandire il cartello '↓ Nina' e l'etichetta sulla casetta, aumentare il contrasto della luce di Nina nelle scene 3D, e ritardare di mezzo secondo la comparsa dei testi grandi per dare tempo di leggere.",
+    "idea": "Mostrare nel finale una luce 'a sorpresa' di un animale che si accende in tempo reale, per aumentare l'attesa verso la puntata successiva."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:25+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'luce accesa al secondo 4.92' non torna con la scena: la scena dei dati mappa va da 4.12 a 6.41 s e la trascrizione dice 'Questa luce è di Nina' a 4.0 s, quindi l'accensione della luce coincide con la frase solo in modo approssimativo. Inoltre l'audio è a -16.3 dB medi nei primi 5 s, sotto l",
+   "dati": {
+    "controllato": "Dati mappa, trascrizione coi secondi, misure audio e didascalia del reel 'Questa luce è di Nina' (Luino).",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "Il dato 'luce accesa al secondo 4.92' non torna con la scena: la scena dei dati mappa va da 4.12 a 6.41 s e la trascrizione dice 'Questa luce è di Nina' a 4.0 s, quindi l'accensione della luce coincide con la frase solo in modo approssimativo. Inoltre l'audio è a -16.3 dB medi nei primi 5 s, sotto l'obiettivo di -14 LUFS (la misura complessiva è -14.0 LUFS, quindi il problema è solo nell'apertura). Anche nella copertina la frase 'è di Nina' è scritta come 'benvenuti @sim.o_._' nella didascalia, ma la trascrizione non la pronuncia e il tag è corretto.",
+    "correzione": "Allineare il momento di accensione della luce alla frase 'Questa luce è di Nina' (circa 4.0 s) e alzare il volume dei primi 5 secondi di circa 2 dB per avvicinarsi a -14 LUFS.",
+    "idea": "Mostrare nei primi 2 secondi la città e il nome dell'animale in grande, per aumentare l'aggancio e il numero di commenti."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:27+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nei primi 0.5s il titolo LUINO, il cartello 'Nina' e la scena 3D sono già tutti visibili e centrati, quindi l'apertura non crea attesa: il gancio 'Questa luce è di...' arriva solo dopo, al secondo 4. Inoltre nel primo frame la dicitura 'Nina' compare due volte (cartello grande e etichetta sul cane),",
+   "dati": {
+    "controllato": "Apertura del reel: frame 0.5s e sequenza di fotogrammi, durata, timing della mappa (luce di Nina accesa al secondo 4.92, scena 4.12–6.41s) e coerenza tra scena e trascrizione.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nei primi 0.5s il titolo LUINO, il cartello 'Nina' e la scena 3D sono già tutti visibili e centrati, quindi l'apertura non crea attesa: il gancio 'Questa luce è di...' arriva solo dopo, al secondo 4. Inoltre nel primo frame la dicitura 'Nina' compare due volte (cartello grande e etichetta sul cane), appesantendo la prima scena.",
+    "correzione": "Far partire il reel dalla mappa notturna con la domanda 'Di chi è questa luce?' nei primi 0.5–1s, poi zoomare su Luino; togliere l'etichetta ridondante sul cane o il cartello grande nei primi secondi; allineare la comparsa della luce di Nina (4.92s) a un picco visivo più forte.",
+    "idea": "Per i prossimi reel 'questa luce' provare un'apertura con la mappa che si accende dal buio e la domanda in sovraimpressione, e un'ultima scena che mostra il numero di luci del comune per dare un motivo in più a salvare o condividere."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:27+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la scena della mappa stringe sull'Italia, ma la luce di Nina è ancora spenta e si accende solo al 4.92 secondo; nei fotogrammi 3-6 secondi l'inquadratura resta larga e il punto luminoso non è centrato, quindi la frase «Questa luce è di Nina» arriva prima che lo spettatore veda dove guar",
+   "dati": {
+    "controllato": "Inquadrature e montaggio dei 6 fotogrammi rispetto al copione, alla trascrizione coi secondi e alla posizione della luce sulla mappa di Luino.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la scena della mappa stringe sull'Italia, ma la luce di Nina è ancora spenta e si accende solo al 4.92 secondo; nei fotogrammi 3-6 secondi l'inquadratura resta larga e il punto luminoso non è centrato, quindi la frase «Questa luce è di Nina» arriva prima che lo spettatore veda dove guardare. Inoltre la scena del cane in primo piano (fotogramma 0.5) compare solo per un attimo prima del passaggio alla mappa.",
+    "correzione": "Far coincidere lo zoom di avvicinamento alla luce di Luino con la battuta 'Questa luce è di Nina' (circa 4.9 s), con un leggero stacco di 0.5 s dopo l'accensione, e tenere il primo piano del cane almeno 1.5 s in apertura.",
+    "idea": "Per i prossimi reel 'Questa luce è di...' usare uno zoom sincronizzato con il nome dell'animale e mettere la sfida cani contro gatti come gancio a metà video."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:27+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel brief la voce dice 'Questa luce è di Nina' da 4.0s, ma la luce si accende solo al secondo 4.92 e il dato 'scena_dal_secondo' è 4.12: la voce anticipa di quasi un secondo l'accensione. Inoltre la didascalia dice 'Voce generata con IA' ma nel copione la frase finale 'Seguici per vedere la tua!' è ",
+   "dati": {
+    "controllato": "Dati mappa, trascrizione coi secondi, fascia commento, didascalia e sincronia della luce di Nina sulla scena 0 del reel.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Nel brief la voce dice 'Questa luce è di Nina' da 4.0s, ma la luce si accende solo al secondo 4.92 e il dato 'scena_dal_secondo' è 4.12: la voce anticipa di quasi un secondo l'accensione. Inoltre la didascalia dice 'Voce generata con IA' ma nel copione la frase finale 'Seguici per vedere la tua!' è nel reel, mentre nei fotogrammi la scena 'LA TUA!' compare dopo il testo: verificare che la voce non copra il momento della luce.",
+    "correzione": "Spostare l'inizio della frase 'Questa luce è di Nina' a circa 4.9s, in modo che coincida con l'accensione visibile; mantenere la fascia commento visibile fino alla fine.",
+    "idea": "Inserire il nome dell'animale in sovraimpressione già al momento dell'accensione, per rendere immediato il legame tra luce e animale."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:29+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'scena dal secondo 4.12, luce si accende al secondo 4.92' coincide con la frase 'Questa luce è di Nina' nella trascrizione (4.0s), ma nella scena della mappa la luce di Luino è visibile solo sulla mappa del fotogramma 4; nel fotogramma 3 (secondo 3) la scena mostra ancora il titolo 'Questa l",
+   "dati": {
+    "controllato": "Dati della mappa, trascrizione coi secondi e fotogrammi: la luce di Nina compare nella scena del secondo 4 e la voce dice 'Questa luce è di Nina, a Luino' in linea con la mappa.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il dato 'scena dal secondo 4.12, luce si accende al secondo 4.92' coincide con la frase 'Questa luce è di Nina' nella trascrizione (4.0s), ma nella scena della mappa la luce di Luino è visibile solo sulla mappa del fotogramma 4; nel fotogramma 3 (secondo 3) la scena mostra ancora il titolo 'Questa luce è di…' senza luce evidenziata. Inoltre nel fotogramma 6-8 la scena 'ANIMALE' e 'Cani vs Gatti' mostrano l'etichetta 'LA TUA!' al secondo 14, con lo stesso testo di chiusura, ok. Il problema reale: la didascalia dice 'benvenuti @sim.o_._' ma nel reel il nome visibile è 'il.tuo.nome' nel mockup del commento, che può confondere chi guarda.",
+    "correzione": "Allineare l'accensione della luce alla parola 'Nina' (circa 4.0s) e chiarire nel mockup il nome dell'utente di esempio, oppure mostrare @sim.o_._ anche nel commento simulato.",
+    "idea": "Per aumentare i follower, usare la copertina con la città dell'animale più vicina al pubblico e anticipare nell'apertura il nome del comune con un'animazione che accende la luce più in fretta."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:29+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma nei dati mappa la scena dell'etichetta inizia al secondo 4.12 e la luce si accende al 4.92: la frase parte qualche decimo prima che l'evento visivo corrisponda. Inoltre la didascalia cita '@sim.o_._' mentre il nome account nel mockup è '@il.tuo",
+   "dati": {
+    "controllato": "Dati della mappa, trascrizione coi secondi, copertina e didascalia rispetto ai dati verificati del reel 'questa_luce' (Luino, Nina, 1 luce, 10 novembre).",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma nei dati mappa la scena dell'etichetta inizia al secondo 4.12 e la luce si accende al 4.92: la frase parte qualche decimo prima che l'evento visivo corrisponda. Inoltre la didascalia cita '@sim.o_._' mentre il nome account nel mockup è '@il.tuo.nome': è un'anteprima di esempio, quindi va verificato che la pubblicazione usi il tag reale.",
+    "correzione": "Allineare l'inizio della frase 'Questa luce è di Nina' al secondo 4.9 (quando la luce si accende), oppure anticipare la luce di qualche decimo. Verificare che il tag in didascalia sia l'account reale di Nina e non il segnaposto.",
+    "idea": "Aggiungere un rapido zoom sulla luce nel momento esatto in cui si accende, sincronizzato con la voce 'Questa luce è di Nina', per rendere più forte il momento clou."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:31+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0 s e il dato di accensione è 4.92 s, quindi la luce si accende a metà frase, prima che la voce arrivi a 'il tuo animale si accende' (7.3 s); inoltre la frase 'Questa luce è di Nina' compare in trascrizione a 4.0 s ma la scena parte a 4.12 s, quindi l",
+   "dati": {
+    "controllato": "Scena 'luce' sulla mappa: coordinate Luino, orario di accensione (4.92 s, dentro la scena 4.12–6.41 s), comune e conteggi; poi trascrizione coi secondi, audio e durata.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0 s e il dato di accensione è 4.92 s, quindi la luce si accende a metà frase, prima che la voce arrivi a 'il tuo animale si accende' (7.3 s); inoltre la frase 'Questa luce è di Nina' compare in trascrizione a 4.0 s ma la scena parte a 4.12 s, quindi la prima parola potrebbe essere fuori scena. Il dato 'luci_li_oggi: 1' e il follow_ogni_1000 molto variabile sono insufficienti per misurare l'effetto. Il picco audio di -1.0 dBFS è al limite dell'obiettivo e i primi 5 s sono a -16.3 dB (piu bassi di -14 LUFS).",
+    "correzione": "Allineare l'accensione della luce alla parola 'si accende' (circa 7.3 s) oppure spostare il clic a 4.9 s dopo 'Questa luce è di Nina'; abbassare il picco sotto -1 dBFS (es. -2) e alzare leggermente il volume dell'apertura.",
+    "idea": "Quando le luci del giorno sono poche, mostrare la mappa con tutte le luci accese finora invece di una sola, così il reel sembra più pieno."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:31+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La luce si accende al secondo 4.92, ma nel copione la frase 'Questa luce è di Nina, a Luino' finisce a 4.0s e la scena della luce va da 4.12 a 6.41: l'accensione arriva in ritardo di circa un secondo rispetto alla parola 'Luino' e sul pezzo 'il tuo animale si accende' (7.3s) la luce è già accesa da ",
+   "dati": {
+    "controllato": "Animazione della mappa nel reel: posizione della luce di Nina su Luino, tempi della scena e del riquadro, numero di luci del comune, audio contro i target.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La luce si accende al secondo 4.92, ma nel copione la frase 'Questa luce è di Nina, a Luino' finisce a 4.0s e la scena della luce va da 4.12 a 6.41: l'accensione arriva in ritardo di circa un secondo rispetto alla parola 'Luino' e sul pezzo 'il tuo animale si accende' (7.3s) la luce è già accesa da un pezzo. Inoltre l'audio è a -16.3 dB sui primi 5 secondi, circa 2 dB sotto il target di -14 LUFS, dato che l'apertura è il momento più importante per trattenere chi scorre. I dati di Luino (una sola luce, nessuna altra nel comune) confermano il messaggio, quindi nessun dato da correggere.",
+    "correzione": "Anticipare l'accensione della luce a circa 4.1-4.3s, cioè subito dopo la parola 'Luino', e alzare il volume dei primi 5 secondi di circa 2 dB per portarlo verso -14 LUFS, mantenendo il picco sotto -1 dBFS.",
+    "idea": "Quando una luce compare in un comune già popolato, mostrare per un attimo anche le altre luci vicine per dare il senso di una comunità che si accende."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:33+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma la scena della mappa inizia a 4.12s e la luce si accende a 4.92s: il sottotitolo parte prima della scena. Inoltre la frase 'Un commento, e il tuo animale si accende sulla mappa' è spezzata in più blocchi con pause che rallentano il ritmo (il se",
+   "dati": {
+    "controllato": "Sottotitoli vs trascrizione e secondi della scena luce, coerenza con la mappa e con la didascalia, timing del testo rispetto all'audio.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma la scena della mappa inizia a 4.12s e la luce si accende a 4.92s: il sottotitolo parte prima della scena. Inoltre la frase 'Un commento, e il tuo animale si accende sulla mappa' è spezzata in più blocchi con pause che rallentano il ritmo (il segmento 'Un commento, e' a 5.5s coincide con il cambio scena). Nella didascalia manca il riferimento al comune corretto: il dato dice comune Luino, ok, ma l'etichetta di scena 'Questa luce è di Nina' va allineata alla comparsa del punto luminoso.",
+    "correzione": "Far partire il sottotitolo 'Questa luce è di Nina, a Luino' a 4.12s, quando inizia la scena, e sincronizzare 'il tuo animale si accende' con l'accensione reale a 4.92s; unire le frasi 'Un commento, e il tuo animale si accende sulla mappa' in un unico blocco leggibile.",
+    "idea": "Inserire nel testo il nome dell'animale in sovrimpressione mentre la luce si accende, così il follow nasce dal riconoscersi nella mappa."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:33+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'il tuo animale si accende' a 7.3s, ma nei dati la luce si accende a 4.92s, quindi la voce arriva dopo l'accensione. Inoltre la frase 'Un commento, e il tuo animale si accende' è detta mentre la luce di Nina è già accesa, e i fotogrammi inviati (0.5, 3, 6, 8, 11, 14) non includo",
+   "dati": {
+    "controllato": "Ho verificato i secondi della trascrizione rispetto alla scena della mappa, la luce che si accende a 4.92s, le coordinate e i nomi nel dato, e il tono della didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'il tuo animale si accende' a 7.3s, ma nei dati la luce si accende a 4.92s, quindi la voce arriva dopo l'accensione. Inoltre la frase 'Un commento, e il tuo animale si accende' è detta mentre la luce di Nina è già accesa, e i fotogrammi inviati (0.5, 3, 6, 8, 11, 14) non includono un frame vicino a 4.92s, quindi il momento chiave dell'accensione non è controllabile. Il dato 'luci_del_comune_dell_etichetta: 0' con 'luci_li_oggi: 1' è coerente, ma la didascalia dice 'benvenuti', che va bene.",
+    "correzione": "Allineare la voce: anticipare 'il tuo animale si accende' a circa 4.5s oppure far partire l'accensione intorno a 7.3s. Aggiungere un fotogramma a 4.9s per verificare visivamente l'accensione. Verificare anche che la didascalia non contenga il dato 'Voce generata con IA' in modo che sembri un errore.",
+    "idea": "Per i prossimi reel, far comparire il nome dell'animale sulla mappa nello stesso istante in cui si accende la luce, e chiudere con un'immagine della mappa piena di luci per rafforzare il senso di comunità."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:35+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione mette 'Questa luce è di Nina' a 4.0s e 'Un commento' a 5.5s, ma la luce si accende solo al secondo 4.92, cioè a metà della frase 'a Luino', e la scena va dal 4.12 al 6.41. Il testo 'il tuo animale si accende sulla mappa' a 7.3s arriva quando la luce è già accesa da due secondi. Inolt",
+   "dati": {
+    "controllato": "Ritmo, durata e sincronia tra trascrizione, scena della mappa e audio (-14 LUFS, picco -1 dBFS, nessun silenzio).",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione mette 'Questa luce è di Nina' a 4.0s e 'Un commento' a 5.5s, ma la luce si accende solo al secondo 4.92, cioè a metà della frase 'a Luino', e la scena va dal 4.12 al 6.41. Il testo 'il tuo animale si accende sulla mappa' a 7.3s arriva quando la luce è già accesa da due secondi. Inoltre il fotogramma di chiusura a 14s è dopo la fine della voce (12.3s + pausa); la durata di 14.5s contiene circa 2 secondi di coda vuota.",
+    "correzione": "Allineare l'accensione della luce alla frase 'Questa luce è di Nina' (o spostare 'si accende' a 4.9s) e accorciare la coda finale a circa 12.8s, tenendo il logo o la call to action fino alla fine della voce.",
+    "idea": "Provare un reel dove la luce si accende esattamente sulla parola del nome dell'animale, con la città come sottotitolo, per legare meglio voce e immagine."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:35+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice \"il tuo animale si accende\" a 8.6s, mentre il dato mappa dice che la luce si accende al secondo 4.92, cioè quando la voce dice \"Questa luce è di Nina\" o poco dopo. Il testo e l'accensione non sono allineati. Inoltre l'audio misura -16.3 dB di volume medio nei primi 5 secondi, pi",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (luce di Nina a Luino, si accende al secondo 4.92), audio (-14 LUFS, picco -1 dBFS, nessun silenzio), didascalia e copertina del reel.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice \"il tuo animale si accende\" a 8.6s, mentre il dato mappa dice che la luce si accende al secondo 4.92, cioè quando la voce dice \"Questa luce è di Nina\" o poco dopo. Il testo e l'accensione non sono allineati. Inoltre l'audio misura -16.3 dB di volume medio nei primi 5 secondi, più basso dell'obiettivo di -14 LUFS, quindi l'apertura è più debole del resto.",
+    "correzione": "Far coincidere l'accensione della luce con la frase \"il tuo animale si accende\" (o spostare il dato a 8.6s) e alzare il volume dei primi 5 secondi di circa 2 dB per rientrare nell'obiettivo di -14 LUFS.",
+    "idea": "Per i prossimi reel \"questa_luce\", mostrare la luce che si accende esattamente sulla parola \"si accende\" e usare un'apertura con volume pieno fin dal primo secondo."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:37+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il fotogramma inviato più vicino all'accensione della luce è 3s e poi 6s: il momento in cui la luce si accende (4.92s) non è tra i fotogrammi campionati, quindi non posso confermare visivamente l'effetto. Inoltre la trascrizione dice 'il tuo animale si accende' (7.3s) mentre la luce di Nina si accen",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la sincronia della luce sulla mappa (si accende al 4.92s, nella scena 4.12–6.41s), i dati della mappa, l'audio e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Il fotogramma inviato più vicino all'accensione della luce è 3s e poi 6s: il momento in cui la luce si accende (4.92s) non è tra i fotogrammi campionati, quindi non posso confermare visivamente l'effetto. Inoltre la trascrizione dice 'il tuo animale si accende' (7.3s) mentre la luce di Nina si accende a 4.92s, mentre l'etichetta 'Questa luce è di Nina' appare da 4.0s: l'ordine è coerente, ma la frase 'il tuo animale' arriva dopo che la luce si è già accesa. Nella didascalia la fascia dice 'Commenta città e nome' ma la CTA 'Seguici per vedere la tua' arriva a 12.3s, verso il finale.",
+    "correzione": "Aggiungere un fotogramma tra 4.5s e 5.5s per verificare l'accensione; valutare di anticipare la frase 'il tuo animale si accende' a ridosso del 4.9s; tenere la CTA di follow come chiusura come già fatto.",
+    "idea": "Mostrare nel reel la luce che si accende a tempo con una pausa breve prima della frase 'il tuo animale si accende', per dare più peso all'effetto visivo e all'invito a commentare."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:38+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s e la luce si accende al secondo 4.92, ma la frase 'il tuo animale si accende sulla mappa' parte a 7.3s: l'accensione avviene prima che la voce descriva l'effetto. Inoltre la scena della mappa (4.12-6.41s) è quasi tutta occupata dall'etichetta mentr",
+   "dati": {
+    "controllato": "Sincronia tra trascrizione, secondo in cui la luce si accende sulla mappa e dati di scena, più audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s e la luce si accende al secondo 4.92, ma la frase 'il tuo animale si accende sulla mappa' parte a 7.3s: l'accensione avviene prima che la voce descriva l'effetto. Inoltre la scena della mappa (4.12-6.41s) è quasi tutta occupata dall'etichetta mentre il commento arriva dopo. Non sono nei materiali: l'audio misurato (LUFS, picco, silenzi) e il volume dei primi 5s (-16.3 dB) sono fuori dall'obiettivo di apertura, perché il primo tratto è più basso dei target del brief.",
+    "correzione": "Spostare l'accensione della luce a ridosso della frase 'il tuo animale si accende' (circa 7.3s) oppure allineare la scena della mappa alla frase 'Questa luce è di Nina'. Alzare il volume dei primi 5 secondi di circa 2 dB per avvicinarli a -14 LUFS, mantenendo il picco sotto -1 dBFS.",
+    "idea": "Per i prossimi reel del formato questa_luce, mostrare nello stesso frame il contatore delle luci del giorno che cresce (es. 1 → 2 → 3) per dare un senso di comunità in movimento e motivare il commento."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:38+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'il tuo animale si accende sulla mappa' a 7.3s, ma la luce di Nina si accende già a 4.92s, cioè prima che la frase venga detta. Inoltre la trascrizione dice 'Questa luce è di Nina' a 4.0s e l'etichetta arriva nella scena da 4.12s: il timing voce-immagine è sfasato di circa 0.8s. La m",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i dati della mappa (luce accesa al 4.92s, dentro la scena 4.12–6.41s), l'audio e la didascalia rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Il copione dice 'il tuo animale si accende sulla mappa' a 7.3s, ma la luce di Nina si accende già a 4.92s, cioè prima che la frase venga detta. Inoltre la trascrizione dice 'Questa luce è di Nina' a 4.0s e l'etichetta arriva nella scena da 4.12s: il timing voce-immagine è sfasato di circa 0.8s. La mappa ha una sola luce e il copione parla di 'prossime luci', che è coerente. L'audio è dentro gli obiettivi (-14 LUFS, picco -1 dBFS, nessun silenzio), ma i primi 5s sono a -16.3 dB, quindi l'apertura è un po' più bassa del resto.",
+    "correzione": "Allineare la frase 'il tuo animale si accende sulla mappa' al secondo 4.9 (anticipare o spostare l'accensione della luce) e alzare di circa 2 dB il volume dei primi 5 secondi.",
+    "idea": "Far partire la voce solo dopo che la luce si è accesa, e chiudere con la città del prossimo animale per dare curiosità di follow."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:38+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma l'etichetta compare sul fotogramma già dal secondo 0.5 e il titolo LUINO è visibile fin da subito: il gancio è chiaro, ma nei primi 2 secondi non c'è ancora una domanda o una promessa che spinga a restare. Inoltre la luce si accende solo al 4.9",
+   "dati": {
+    "controllato": "Ganci dei primi 2 secondi: apertura, tempi della trascrizione e allineamento della scena di Luino con i dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma l'etichetta compare sul fotogramma già dal secondo 0.5 e il titolo LUINO è visibile fin da subito: il gancio è chiaro, ma nei primi 2 secondi non c'è ancora una domanda o una promessa che spinga a restare. Inoltre la luce si accende solo al 4.92s (dati mappa), quindi il momento più spettacolare arriva dopo il gancio.",
+    "correzione": "Anticipare l'accensione della luce entro i primi 2 secondi o aprire con una domanda tipo «Di chi è questa luce?» prima di rivelare Nina e Luino a circa 2.5s.",
+    "idea": "Per i prossimi reel della serie, mostrare la luce che si accende nei primi secondi e far comparire subito il numero di luci della città (es. «1 luce a Luino»)."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:41+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La voce dice 'Questa luce è di Nina' a 4.0s e 'a Luino' a 5.5s, ma nei dati la luce si accende al secondo 4.92: la voce sul nome arriva prima dell'accensione. Inoltre 'Il tuo animale si accende' (7.3s) cade mentre la scena del commento è già in corso, quindi il rapporto parola-immagine è un po' sfas",
+   "dati": {
+    "controllato": "Trascrizione, tempi della voce rispetto alle scene e dati della mappa (Luino, Nina, 1 luce) confrontati con copione e didascalia: coerenti.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "La voce dice 'Questa luce è di Nina' a 4.0s e 'a Luino' a 5.5s, ma nei dati la luce si accende al secondo 4.92: la voce sul nome arriva prima dell'accensione. Inoltre 'Il tuo animale si accende' (7.3s) cade mentre la scena del commento è già in corso, quindi il rapporto parola-immagine è un po' sfasato. Il reel dichiara 'Voce generata con IA' nella didascalia, cosa corretta.",
+    "correzione": "Spostare la battuta 'Questa luce è di Nina' a partire dal secondo 4.9, oppure allungare la scena 0 di circa un secondo così che il nome coincida con l'accensione; allineare 'il tuo animale si accende' alla scena del commento.",
+    "idea": "Per questo formato, usare la voce solo per il nome dell'animale e lasciare respirare la luce che si accende, con 0,5 s di silenzio prima della frase finale."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:41+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, mentre i dati mappa indicano che la luce si accende al secondo 4.92: la frase parla prima che la luce sia visibile. Inoltre nella didascalia la prima riga ('Questa luce è di Nina, a Luino') e la voce coincidono, ma la scena 'luce' ha scena_dal_sec",
+   "dati": {
+    "controllato": "Didascalia, trascrizione con secondi, dati mappa (Luino, Nina, luce accesa al secondo 4.92) e coerenza con la voce del reel.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, mentre i dati mappa indicano che la luce si accende al secondo 4.92: la frase parla prima che la luce sia visibile. Inoltre nella didascalia la prima riga ('Questa luce è di Nina, a Luino') e la voce coincidono, ma la scena 'luce' ha scena_dal_secondo 4.12, quindi il testo arriva un attimo in anticipo rispetto all'accensione.",
+    "correzione": "Spostare la battuta 'Questa luce è di Nina' a circa 4.9s, oppure far partire la voce a 4.9s e allungare di mezzo secondo la scena 'luce' per allineare audio e accensione.",
+    "idea": "Mostrare nel reel un piccolo numero concreto (es. 'è la luce n. 2.819') per dare senso di comunità e far crescere la curiosità; e far comparire la fascia commento già dal primo secondo."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:41+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina, a Luino' arriva a 4.0s, ma nel fotogramma a 3s la luce non è ancora accesa e la mappa mostra solo l'etichetta; la luce si accende al 4.9s, quindi il nome compare prima che il pubblico veda la luce accendersi. Inoltre la scena 'testo sulla mappa' e il conteggio 'Le pr",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (luce di Nina a Luino, scena 4.1–6.4s), audio e didascalia del reel 'questa_luce' del 10/11.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "La frase 'Questa luce è di Nina, a Luino' arriva a 4.0s, ma nel fotogramma a 3s la luce non è ancora accesa e la mappa mostra solo l'etichetta; la luce si accende al 4.9s, quindi il nome compare prima che il pubblico veda la luce accendersi. Inoltre la scena 'testo sulla mappa' e il conteggio 'Le prossime luci domani alle 18' sono coerenti, ma la frase 'Seguici per vedere la tua!' è troppo lunga per la scena chiusura.",
+    "correzione": "Allineare 'Questa luce è di Nina' all'accensione (≈4.9s) e spostare 'Un commento, e il tuo animale si accende' a dopo lo stacco, accorciando la chiusura a 'Seguici per vedere la tua!'.",
+    "idea": "Per il formato 'questa_luce' provare a mostrare il nome dell'animale sulla luce già nei primi 2 secondi, così la curiosità scatta prima dello stacco."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:42+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Le prossime luci domani alle 18», ma nei fotogrammi la scena di chiusura (cani vs gatti) mostra prima «LA TUA!» e poi la sola frase «DOMANI ALLE 18.»: la frase finale e la scena non combaciano bene. Inoltre la trascrizione indica «Seguici per vedere la tua!» a 12.3s, mentre il testo",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del formato «Questa luce», didascalia e fascia commento rispetto ai fotogrammi e al brief.",
+    "esito": "segnalo",
+    "secondo": 10.3,
+    "problema": "Il copione dice «Le prossime luci domani alle 18», ma nei fotogrammi la scena di chiusura (cani vs gatti) mostra prima «LA TUA!» e poi la sola frase «DOMANI ALLE 18.»: la frase finale e la scena non combaciano bene. Inoltre la trascrizione indica «Seguici per vedere la tua!» a 12.3s, mentre il testo a schermo arriva con «LA TUA!» già prima. Anche la didascalia dice «Seguici per vedere se c'è la tua!», quindi il messaggio sul follow non è uguale in voce, testo a schermo e didascalia.",
+    "correzione": "Allineare la frase vocale alla scena: portare «LA TUA!» e «DOMANI ALLE 18» in sequenza con la voce, e usare la stessa formulazione del call to action (es. «Seguici per vedere la tua») anche nella didascalia.",
+    "idea": "Per il formato «Questa luce», aggiungere nell'ultima scena un'anteprima della mappa con la prossima luce in arrivo, così la promessa «la tua!» è visibile e motivante."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:44+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma la luce della mappa si accende solo al secondo 4.92: la frase arriva prima dell'accensione visiva. Inoltre la fascia «Commenta città e nome del tuo animale» compare già nei primi fotogrammi e resta per tutto il reel, mentre la voce chiede il co",
+   "dati": {
+    "controllato": "Trascrizione, secondi, dati mappa (Luino, 1 luce, 1 animale), didascalia e copertina rispetto al brief: coerenti tra loro.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma la luce della mappa si accende solo al secondo 4.92: la frase arriva prima dell'accensione visiva. Inoltre la fascia «Commenta città e nome del tuo animale» compare già nei primi fotogrammi e resta per tutto il reel, mentre la voce chiede il commento solo a 7.3s, quindi il messaggio è ripetuto e leggermente sfasato.",
+    "correzione": "Spostare l'inizio della frase «Questa luce è di Nina» a circa 4.9s, in modo che coincida con l'accensione, e far comparire la fascia di commento solo dopo la frase «Un commento, e il tuo animale si accende» (circa 7.3s).",
+    "idea": "Mostrare per un attimo il contatore «1 luce → 2 luci» nel comune di Luino, così il pubblico vede crescere la mappa comune per comune."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:46+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La voce dice 'Questa luce è di Nina, a Luino' a 4.0s, ma nel fotogramma a 3s e 6s la scena è ancora quella dell'apertura 3D; l'etichetta 'Questa luce è di Nina' compare sullo schermo solo dopo che la voce ha già iniziato. Inoltre la frase 'Un commento, e il tuo animale si accende' parte a 5.5s mentr",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Luino, luce di Nina al secondo 4.92 nella scena 4.12-6.41), coerenza tra voce, didascalia e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La voce dice 'Questa luce è di Nina, a Luino' a 4.0s, ma nel fotogramma a 3s e 6s la scena è ancora quella dell'apertura 3D; l'etichetta 'Questa luce è di Nina' compare sullo schermo solo dopo che la voce ha già iniziato. Inoltre la frase 'Un commento, e il tuo animale si accende' parte a 5.5s mentre il dato mappa dice che la luce si accende al 4.92s: la luce si accende prima che la frase la descriva. Nei fotogrammi 8s e 11s la mappa mostra già la scena della luce con l'etichetta 'Questa luce è di Nina', quindi il ritmo fra voce e testo a schermo è leggermente sfasato.",
+    "correzione": "Allineare la battuta 'Questa luce è di Nina' all'istante in cui compare l'etichetta a schermo (intorno a 4.1s) e far partire 'Un commento, e il tuo animale si accende' solo dopo l'accensione reale della luce (dopo 4.9s), per far coincidere parola e immagine.",
+    "idea": "Mostrare in apertura il nome e la città insieme (es. 'Luino, Nina') e far comparire il commento come 'domanda' per invitare subito la risposta di chi guarda."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:46+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina' inizia a 4.0s, ma nei dati la luce di Nina si accende al secondo 4.92: l'annuncio arriva prima che la luce si veda sulla mappa. Inoltre la didascalia dice 'benvenuti @sim.o_._' mentre nel reel compare solo il nome Nina, senza handle visibile.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Luino, 1 luce, scena 4.12–6.41s), audio, didascalia e fotogrammi del reel.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La frase 'Questa luce è di Nina' inizia a 4.0s, ma nei dati la luce di Nina si accende al secondo 4.92: l'annuncio arriva prima che la luce si veda sulla mappa. Inoltre la didascalia dice 'benvenuti @sim.o_._' mentre nel reel compare solo il nome Nina, senza handle visibile.",
+    "correzione": "Spostare l'inizio della frase 'Questa luce è di Nina' a circa 4.9s, oppure allineare la parola 'Nina' al momento in cui la luce si accende; verificare che l'handle citato in didascalia compaia anche nel video.",
+    "idea": "Mostrare nei primi 2 secondi la luce già accesa con il nome dell'animale in primo piano, così l'attenzione si aggancia prima dell'annuncio vocale."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:46+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il testo della voce dice 'Questa luce è di Nina' già al secondo 4.0, ma nel brief la frase è sulla scena 'luce' e nei dati la luce si accende al secondo 4.92: la frase arriva prima che la luce si accenda sulla mappa. Inoltre la trascrizione dice 'Un commento, e il tuo animale si accende sulla mappa'",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati mappa (Luino, luce di Nina), audio e didascalia del reel 'questa_luce'.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "Il testo della voce dice 'Questa luce è di Nina' già al secondo 4.0, ma nel brief la frase è sulla scena 'luce' e nei dati la luce si accende al secondo 4.92: la frase arriva prima che la luce si accenda sulla mappa. Inoltre la trascrizione dice 'Un commento, e il tuo animale si accende sulla mappa' mentre il brief lo colloca dopo il secondo 5.5, quindi la sincronia tra voce e scena è leggermente sfalsata.",
+    "correzione": "Allineare l'inizio della frase 'Questa luce è di Nina' al secondo 4.9, quando la luce si accende, e far partire 'Un commento...' sulla scena commento già visibile.",
+    "idea": "Per i prossimi reel 'questa_luce', mostrare nel finale una luce in zoom sulla propria città con il nome dell'animale che si accende in tempo reale, così la chiamata a commentare diventa visivamente più forte."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:47+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Nessun problema nei dati di mappa: Luino corrisponde alle coordinate, la luce di Nina compare al secondo 4.9 come da dati, il conteggio di 1 luce oggi è coerente.",
+   "dati": {
+    "controllato": "Coordinate e comune della luce (Luino, scena 4.1–6.4 s), conteggio luci e trascrizione/secondi vs dati della mappa.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "Nessun problema nei dati di mappa: Luino corrisponde alle coordinate, la luce di Nina compare al secondo 4.9 come da dati, il conteggio di 1 luce oggi è coerente.",
+    "correzione": "",
+    "idea": "Nel finale mostrare per un istante una luce appena accesa da un commento reale, così chi guarda vede subito che il meccanismo funziona."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:48+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel copione la frase 'Questa luce è di Nina, a Luino' parte al secondo 4.0, ma nei dati la luce si accende al secondo 4.92 e la scena dell'etichetta inizia al 4.12. Il testo annuncia la luce prima che si accenda. Inoltre la pagina dichiara 'Voce generata con IA' ma il dato 'voce: true' è presente, q",
+   "dati": {
+    "controllato": "Ho verificato la mappa: la scena 0 con l'etichetta 'Questa luce è di Nina' (Luino) e il tempo in cui la luce si accende, confrontati con i dati verificati e col copione.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel copione la frase 'Questa luce è di Nina, a Luino' parte al secondo 4.0, ma nei dati la luce si accende al secondo 4.92 e la scena dell'etichetta inizia al 4.12. Il testo annuncia la luce prima che si accenda. Inoltre la pagina dichiara 'Voce generata con IA' ma il dato 'voce: true' è presente, quindi non c'è incoerenza, solo da tenere presente.",
+    "correzione": "Far coincidere la frase 'Questa luce è di Nina' con l'accensione reale (circa 4.9s), oppure spostare la frase di qualche decimo di secondo in avanti e allineare il fotogramma del 4° secondo con la luce accesa.",
+    "idea": "Mostrare nella copertina o nei primi 2 secondi la luce già accesa con il nome dell'animale, così lo spettatore capisce subito il meccanismo; e rendere più evidente la fascia 'Commenta' nei primi secondi per spingere la partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:50+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma nei dati la luce si accende a 4.92s, cioè dopo che la frase è già iniziata; in più la scena della mappa parte a 4.12s, quindi la luce arriva in ritardo rispetto al testo. Inoltre il reel è basato su 1 sola luce di oggi, mentre la didascalia pro",
+   "dati": {
+    "controllato": "Dati della mappa (Luino, 1 luce, Nina) e sincronia della luce rispetto alla trascrizione e alla scena, più controllo dei numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma nei dati la luce si accende a 4.92s, cioè dopo che la frase è già iniziata; in più la scena della mappa parte a 4.12s, quindi la luce arriva in ritardo rispetto al testo. Inoltre il reel è basato su 1 sola luce di oggi, mentre la didascalia promette 'le prossime luci domani alle 18' senza che i materiali indichino quante luci attendere.",
+    "correzione": "Far accendere la luce di Nina entro 4.0-4.3s (o spostare la frase 'Questa luce è di Nina' a dopo il secondo 4.9), e verificare nei dati che la fascia 'domani alle 18' corrisponda a un orario reale di pubblicazione.",
+    "idea": "Per i prossimi reel di questo formato, inserire un animale 'con foto' o un nome che dia calore emotivo (es. il gatto di una comunità nota) e mostrare il conteggio 'siamo a X luci' per creare attesa e voglia di partecipare."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:52+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il reel mostra la luce di Nina come 'a Luino' ma nella mappa la luce compare al secondo 4.92 mentre la voce dice 'a Luino' a 5.5s; la scena di zoom sul paese (secondi 0.5–3) mostra la casa di Nina e la luce già accesa prima che la mappa la riveli, quindi l'ordine narrativo è invertito rispetto all'a",
+   "dati": {
+    "controllato": "Dati mappa e sincronia: la luce di Nina compare al secondo 4.92, dentro la scena 'Questa luce è di Nina' (4.1–6.4s) e subito dopo la voce 'Questa luce è di Nina, a Luino'; coordinate e comune Luino coerenti; luce e conteggi (1 luce oggi) coerenti coi dati.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Il reel mostra la luce di Nina come 'a Luino' ma nella mappa la luce compare al secondo 4.92 mentre la voce dice 'a Luino' a 5.5s; la scena di zoom sul paese (secondi 0.5–3) mostra la casa di Nina e la luce già accesa prima che la mappa la riveli, quindi l'ordine narrativo è invertito rispetto all'animazione della mappa. Inoltre la trascrizione dice 'il tuo animale si accende' mentre nel frame 8 la didascalia 'Commenta città' compare senza ancora essere letta, leggero scollamento.",
+    "correzione": "Allineare la comparsa della luce sulla mappa (4.9s) alla frase 'a Luino' (5.5s) anticipando di circa 0.6s l'accensione, oppure far partire la voce 'a Luino' al momento dell'accensione; verificare che la scena dello zoom e la mappa non si contraddicano sul nome del paese.",
+    "idea": "Inserire una breve inquadratura del commento reale o del nome dell'animale che si accende, così il follower vede subito il suo ruolo e il reel diventa più personale."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:52+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma nei dati la luce si accende solo al secondo 4.92. Nel fotogramma a 3s la luce è ancora spenta e a 6s è già accesa: la voce anticipa di quasi un secondo l'accensione visiva, e le frasi sono sfalsate rispetto all'animazione.",
+   "dati": {
+    "controllato": "Dati mappa (Luino, coordinate, 1 luce del giorno, animale Nina) e secondo in cui la luce si accende rispetto alla trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4.9,
+    "problema": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma nei dati la luce si accende solo al secondo 4.92. Nel fotogramma a 3s la luce è ancora spenta e a 6s è già accesa: la voce anticipa di quasi un secondo l'accensione visiva, e le frasi sono sfalsate rispetto all'animazione.",
+    "correzione": "Allineare l'inizio della voce «Questa luce è di Nina» al secondo 4.9, oppure ritardare la frase di circa 0,9 secondi nella sincronizzazione.",
+    "idea": "Quando una luce è in un comune con pochi animali, inquadrare la zona vicina per mostrare le luci già accese intorno e far sentire la comunità locale."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:52+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase «Questa luce è di Nina, a Luino» parte a 4.0 s, ma la luce si accende a 4.9 s: la voce annuncia l'animale mentre il punto sulla mappa non è ancora acceso. Inoltre nei fotogrammi 0.5–3 s la scena 3D mostra Nina già illuminata a Luino e la mappa 2D compare solo dopo: il rit",
+   "dati": {
+    "controllato": "Coerenza tra mappa, trascrizione, didascalia e secondi del reel: luce di Nina a Luino, comune e coordinate corrispondono, la luce si accende al secondo 4.9 dentro la scena 4.1–6.4 s.",
+    "esito": "segnalo",
+    "secondo": 4.9,
+    "problema": "Nella trascrizione la frase «Questa luce è di Nina, a Luino» parte a 4.0 s, ma la luce si accende a 4.9 s: la voce annuncia l'animale mentre il punto sulla mappa non è ancora acceso. Inoltre nei fotogrammi 0.5–3 s la scena 3D mostra Nina già illuminata a Luino e la mappa 2D compare solo dopo: il ritmo tra apertura 3D e mappa è poco chiaro. La didascalia dice «benvenuti @sim.o_._!» ma il tag è solo in fondo.",
+    "correzione": "Spostare l'audio «Questa luce è di Nina» a 4.9 s (o accendere la luce a 4.0 s) e allineare il titolo «A LUINO» alla comparsa del punto luminoso; rendere più evidente il tag @sim.o_._ nel testo a schermo.",
+    "idea": "Aggiungere una piccola animazione di accensione della luce sincronizzata con la voce e un'anteprima della luce 'la tua' con il nome dell'utente sul fondo."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:52+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Coerenza tra dati della mappa, trascrizione e didascalia: il comune Luino, la luce accesa al secondo 4.9 e il conteggio di 1 luce oggi sono coerenti; la frase finale 'domani alle 18' è coerente con la scena delle prossime luci.",
+   "dati": {
+    "controllato": "Coerenza tra dati della mappa, trascrizione e didascalia: il comune Luino, la luce accesa al secondo 4.9 e il conteggio di 1 luce oggi sono coerenti; la frase finale 'domani alle 18' è coerente con la scena delle prossime luci.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nella scena finale mostrare per un istante una luce vuota con un punto interrogativo sulla mappa, così chi guarda immagina la propria città e il follow diventa più personale."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:54+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma nei dati la luce si accende al secondo 4.92 (la scena inizia a 4.12s). La parola 'Luino' arriva a 5.5s, mentre la scena dati chiude a 6.41s: il punto in cui la luce si accende non coincide con la frase, quindi l'animazione potrebbe partire prim",
+   "dati": {
+    "controllato": "Dati della mappa: luogo (Luino), etichetta, comune, numero di luci e tempi della scena confrontati con la trascrizione e il brief.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma nei dati la luce si accende al secondo 4.92 (la scena inizia a 4.12s). La parola 'Luino' arriva a 5.5s, mentre la scena dati chiude a 6.41s: il punto in cui la luce si accende non coincide con la frase, quindi l'animazione potrebbe partire prima o dopo la voce. Inoltre nel fotogramma a 0.5s/3s c'è già la scritta 'Nina' e l'animale è illuminato, mentre la mappa a 6s mostra la luce di Nina accesa, coerente con i dati.",
+    "correzione": "Allineare l'accensione della luce di Nina sulla mappa al punto esatto in cui si pronuncia 'Questa luce è di Nina' (circa 4.0-4.5s), oppure spostare la frase di qualche decimo di secondo dopo l'accensione.",
+    "idea": "Mostrare nel reel un commento reale (anonimizzato) di qualcuno che ha appena acceso la sua luce, così il follow nasce da una partecipazione concreta."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:57+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Questa luce è di Nina» a 4.0s e «a Luino» a 5.5s, ma nei dati la luce si accende al secondo 4.92: la frase d'apertura parte prima dell'accensione visiva. Inoltre nel fotogramma a 6s la scena 'luce' è già la mappa d'Italia, quindi il testo 'a Luino' arriva mentre la mappa è anco",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa (luce di Nina a Luino, coordinate, comune, orario di accensione al secondo 4.92), la trascrizione coi secondi, l'audio (-14 LUFS, picco -1 dBFS) e la coerenza tra didascalia e scene.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice «Questa luce è di Nina» a 4.0s e «a Luino» a 5.5s, ma nei dati la luce si accende al secondo 4.92: la frase d'apertura parte prima dell'accensione visiva. Inoltre nel fotogramma a 6s la scena 'luce' è già la mappa d'Italia, quindi il testo 'a Luino' arriva mentre la mappa è ancora nella vista generale. Nei dati mappa la scena è indicata come 'Questa luce è di Nina' ma la luce è 'spenta all'inizio della scena'.",
+    "correzione": "Allineare l'annuncio «Questa luce è di Nina» all'accensione reale (4.9s) e far comparire «a Luino» dopo che la camera ha inquadrato Luino, oppure spostare di ~1s la frase per farla coincidere con il lampo della luce.",
+    "idea": "Per i prossimi reel 'questa_luce' sincronizzare il testo sul lampo della luce e mostrare il nome dell'animale nella didascalia della mappa, che nei dati ha il miglior rapporto follower ogni 1000 views (19.3 con la formula testa a testa non ancora sostituita)."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:57+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "L'audio è a -14 LUFS con picco a -1 dBFS, quindi nei target. Però la trascrizione dice 'Questa luce è di Nina' a 4.0s e la scena della luce va da 4.12s a 6.41s, mentre la luce si accende solo al secondo 4.92: nel primo secondo di scena la voce parla ma sulla mappa non succede nulla. Inoltre il volum",
+   "dati": {
+    "controllato": "Volume audio (LUFS, picco, silenzi) e corrispondenza tra trascrizione, secondi e accensione della luce sulla mappa.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "L'audio è a -14 LUFS con picco a -1 dBFS, quindi nei target. Però la trascrizione dice 'Questa luce è di Nina' a 4.0s e la scena della luce va da 4.12s a 6.41s, mentre la luce si accende solo al secondo 4.92: nel primo secondo di scena la voce parla ma sulla mappa non succede nulla. Inoltre il volume medio dei primi 5s è -16.3 dB, più basso del resto, quindi l'apertura è un po' sommessa.",
+    "correzione": "Allineare l'accensione della luce alla parola 'Nina' (circa 4.0-4.1s) oppure anticipare la frase di qualche decimo di secondo; alzare di 1-2 dB il volume dei primi 5 secondi.",
+    "idea": "Per i prossimi reel questa_luce, far accendere la luce esattamente sulla parola del nome dell'animale, così lo spettatore vede subito il collegamento voce-mappa."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:57+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice 'Questa luce è di Nina' a 4.0s, ma la scena della luce va dal secondo 4.12 e la luce si accende solo al 4.92: la voce parte prima che la scena e la luce siano in sincronia. Inoltre la trascrizione dà 'a Luino' a 5.5s, mentre il commento arriva a 7.3s e la chiusura a 10.3s: il ritmo è c",
+   "dati": {
+    "controllato": "Volume e audio: LUFS -14 e picco -1 dBFS come da obiettivo, nessun silenzio lungo; ho verificato anche la trascrizione coi secondi.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "Il testo dice 'Questa luce è di Nina' a 4.0s, ma la scena della luce va dal secondo 4.12 e la luce si accende solo al 4.92: la voce parte prima che la scena e la luce siano in sincronia. Inoltre la trascrizione dà 'a Luino' a 5.5s, mentre il commento arriva a 7.3s e la chiusura a 10.3s: il ritmo è corretto, ma l'apertura audio è leggermente anticipata rispetto all'immagine.",
+    "correzione": "Far partire la voce 'Questa luce è di Nina' al secondo 4.9 (quando la luce si accende), spostando di conseguenza il resto della trascrizione; oppure allineare la scena della luce a 4.0s.",
+    "idea": "Per i prossimi reel, far comparire il nome dell'animale sulla mappa nello stesso istante in cui la voce lo pronuncia, così il legame luce-animale resta immediato."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:57+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Questa luce è di Nina» a 4.0s, ma nei dati la scena della luce parte a 4.12s e la luce si accende a 4.92s: la voce anticipa l'accensione di quasi un secondo. In più, l'audio ha 2 secondi di silenzio dopo l'apertura: la trascrizione va da 0 a 4.0s senza parlato, e la misura dice silenzi",
+   "dati": {
+    "controllato": "Audio, trascrizione coi secondi, copione, dati della mappa e didascalia per la mia parte di voce e musica.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "Il reel dice «Questa luce è di Nina» a 4.0s, ma nei dati la scena della luce parte a 4.12s e la luce si accende a 4.92s: la voce anticipa l'accensione di quasi un secondo. In più, l'audio ha 2 secondi di silenzio dopo l'apertura: la trascrizione va da 0 a 4.0s senza parlato, e la misura dice silenzi_s vuoto, quindi il silenzio andrebbe verificato. Il volume medio dei primi 5s (-16.3 dB) è sotto il target -14 LUFS.",
+    "correzione": "Far partire la frase «Questa luce è di Nina» al secondo 4.9 (accensione) oppure spostare la luce a 4.0 nel montaggio; alzare il volume dei primi 5 secondi di circa 2 dB per allinearlo ai -14 LUFS.",
+    "idea": "Dare alla luce un suono breve nell'istante in cui si accende, così voce, immagine e suono coincidono sul secondo 4.9."
+   }
+  },
+  {
+   "t": "2026-11-10T17:16:59+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "L'audio è a -14 LUFS con picco a -1 dBFS (in linea), ma il volume medio dei primi 5 secondi è -16,3 dB, sotto il resto del reel: l'apertura parte più piano. La trascrizione dice 'Questa luce è di Nina' a 4.0s, mentre la luce si accende solo al secondo 4.92, cioè dopo che la voce ha già nominato Nina",
+   "dati": {
+    "controllato": "Picco audio, LUFS e silenzi, più trascrizione coi secondi e sincronia della luce sulla mappa.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "L'audio è a -14 LUFS con picco a -1 dBFS (in linea), ma il volume medio dei primi 5 secondi è -16,3 dB, sotto il resto del reel: l'apertura parte più piano. La trascrizione dice 'Questa luce è di Nina' a 4.0s, mentre la luce si accende solo al secondo 4.92, cioè dopo che la voce ha già nominato Nina e Luino.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 2 dB e, se possibile, anticipare l'accensione della luce a ~4.0s, in modo che coincida con la frase; oppure spostare la battuta 'si accende sulla mappa' sull'accensione reale.",
+    "idea": "Usare la luce come 'punto' che cresce sulla mappa mentre la voce dice il nome, e chiudere mostrando la mappa con la luce accesa per qualche secondo prima della CTA finale."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:00+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina' inizia a 4.0s, ma la scena della luce dura da 4.12s e la luce si accende solo al 4.92s. Il volume medio dei primi 5 secondi è -16.3 dB, quindi l'apertura è più bassa dell'obiettivo di -14 LUFS. Inoltre la didascalia dice 'si accende col tuo @' mentre il copione dice ",
+   "dati": {
+    "controllato": "Sincronia tra copione, trascrizione con secondi, audio (LUFS, picco, silenzi) e primi 5 secondi del reel, più coerenza di cifre e didascalia con i dati.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La frase 'Questa luce è di Nina' inizia a 4.0s, ma la scena della luce dura da 4.12s e la luce si accende solo al 4.92s. Il volume medio dei primi 5 secondi è -16.3 dB, quindi l'apertura è più bassa dell'obiettivo di -14 LUFS. Inoltre la didascalia dice 'si accende col tuo @' mentre il copione dice solo 'si accende sulla mappa': è una promessa diversa, da allineare.",
+    "correzione": "Far partire la voce a 4.12s (o far accendere la luce a 4.0s) per allineare parola e accensione; alzare il volume dei primi 5 secondi di circa 2 dB senza superare il picco di -1 dBFS; rendere la didascalia coerente col copione.",
+    "idea": "Quando le luci sono poche, mostrare due o tre accensioni vicine in sequenza per dare l'idea di una comunità che cresce."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:01+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma nei dati della mappa la luce si accende al secondo 4.92: la voce parte prima che la luce si accenda. Inoltre la didascalia dice «Le prossime luci domani alle 18» e la voce dice lo stesso, ma nei materiali non c'è alcun dato che confermi questo ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati della mappa, misure audio (-14 LUFS, picco -1 dBFS, nessun silenzio), didascalia e statistiche dei reel recenti.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma nei dati della mappa la luce si accende al secondo 4.92: la voce parte prima che la luce si accenda. Inoltre la didascalia dice «Le prossime luci domani alle 18» e la voce dice lo stesso, ma nei materiali non c'è alcun dato che confermi questo orario di pubblicazione.",
+    "correzione": "Ritardare la frase «Questa luce è di Nina» in modo che coincida con l'accensione (circa 4.9s), oppure far partire l'etichetta con la luce. Verificare l'orario di pubblicazione prima di scrivere «domani alle 18» nella voce e nella didascalia.",
+    "idea": "Per i prossimi reel questa_luce, legare l'accensione a una città con più luci già presenti (il comune di Luino ne aveva zero) e usare la chiusura per invitare a commentare con la propria città, che ha già prodotto più commenti nei formati interattivi."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:01+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma la luce si accende al secondo 4.92: la voce annuncia la luce prima che compaia. Inoltre il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto, quindi l'apertura è un po' sommessa. Il copione dice 'Seguici per vedere la tua!' ma ne",
+   "dati": {
+    "controllato": "Audio (-14 LUFS, picco -1 dBFS, nessun silenzio) e trascrizione coi secondi, confrontati con il copione e con la scena della luce sulla mappa.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma la luce si accende al secondo 4.92: la voce annuncia la luce prima che compaia. Inoltre il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto, quindi l'apertura è un po' sommessa. Il copione dice 'Seguici per vedere la tua!' ma nella trascrizione manca il punto esclamativo, ininfluente sull'audio.",
+    "correzione": "Allineare la voce alla scena: far partire 'Questa luce è di Nina' a circa 4.9s o ritardare l'accensione della luce di un secondo; alzare di 1-2 dB il volume dell'apertura (portandolo verso -14 come il resto).",
+    "idea": "Per i prossimi reel della serie 'questa_luce', far comparire la luce subito dopo il nome pronunciato e chiudere con la copertina (città e nome) per rinforzare il richiamo al follow."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:03+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma la scena della luce va dal 4.12s e la luce si accende solo al 4.92s: la voce annuncia la luce prima che si accenda. Inoltre il volume medio dei primi 5s è -16.3 dB, più basso dell'obiettivo, e i fotogrammi inviati (0.5, 3, 6, 8, 11, 14) non coi",
+   "dati": {
+    "controllato": "Audio, trascrizione coi secondi, sincronia della luce sulla mappa e coerenza della voce col copione e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma la scena della luce va dal 4.12s e la luce si accende solo al 4.92s: la voce annuncia la luce prima che si accenda. Inoltre il volume medio dei primi 5s è -16.3 dB, più basso dell'obiettivo, e i fotogrammi inviati (0.5, 3, 6, 8, 11, 14) non coincidono con quelli del brief (da 0.5 a 14 ogni secondo): la verifica visiva potrebbe perdere l'accensione.",
+    "correzione": "Spostare la battuta 'Questa luce è di Nina' di circa 1 secondo più tardi, in modo che parta con l'accensione a 4.92s, oppure anticipare l'accensione; alzare di circa 2 dB il volume dei primi 5 secondi; rimandare a controllo i fotogrammi 5, 6 e 7 per vedere la luce accesa.",
+    "idea": "Far comparire il nome del primo animale già nella copertina e ripetere nel reel l'orario delle prossime luci in scritta a schermo, così chi guarda senza audio capisce subito cosa fare."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:04+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s e 'Un commento' a 5.5s, ma la luce si accende solo al 4.92s, dentro la scena del nome; il picco di volume medio nei primi 5s è -16.3 dB, sotto l'obiettivo -14 LUFS, e la misura integrata di -14.0 LUFS va verificata sull'intero file. I silenzi sono ",
+   "dati": {
+    "controllato": "Loudness, picco, silenzi e allineamento della trascrizione ai secondi della scena luce/commento/chiusura nel reel.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s e 'Un commento' a 5.5s, ma la luce si accende solo al 4.92s, dentro la scena del nome; il picco di volume medio nei primi 5s è -16.3 dB, sotto l'obiettivo -14 LUFS, e la misura integrata di -14.0 LUFS va verificata sull'intero file. I silenzi sono assenti, quindi nessun problema lì.",
+    "correzione": "Allineare la battuta 'Questa luce è di Nina' in modo che inizi al secondo 4.9 o poco prima, così la voce accompagna l'accensione; alzare il livello della voce nei primi 5 secondi di circa 2 dB senza superare -1 dBFS di picco e ricontrollare il LUFS integrato.",
+    "idea": "Far coincidere il suono di accensione della luce con la parola 'si accende' e aggiungere un breve tono o click a 4.9s, così voce, luce e ritmo sono sincronizzati."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:04+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 (dove la scena della mappa inizia) la parola 'Nina' compare sopra il cane, ma l'etichetta 'Nina' sulla copertina non è più sul soggetto giusto nel primo frame; più importante: la copertina dichiara 'Questa luce è di Nina' mentre il reel mostra la scena della casa, quindi ",
+   "dati": {
+    "controllato": "Copertina, copione e secondi dei fotogrammi: la mappa, l'etichetta 'Questa luce è di Nina' e la città Luino corrispondono ai dati verificati.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 (dove la scena della mappa inizia) la parola 'Nina' compare sopra il cane, ma l'etichetta 'Nina' sulla copertina non è più sul soggetto giusto nel primo frame; più importante: la copertina dichiara 'Questa luce è di Nina' mentre il reel mostra la scena della casa, quindi il titolo funziona, ma il pannello 'Luino · 1 luce' e il nome sono già leggibili solo fino al secondo 4. Nel fotogramma 3 la scritta '1 luce' è tagliata dal bordo superiore del riquadro sulla copertina di apertura.",
+    "correzione": "Ingrandire di poco il riquadro 'Luino · 1 luce' nei primi 4 secondi e centrare il nome 'Nina' sopra la cuccia, lasciando la copertina come è.",
+    "idea": "Dedicare un reel alla luce più lontana dal resto d'Italia, con la mappa che zooma fino a quel punto: più stupore e più commenti."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:04+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 e nei successivi la mappa mostra la luce di Nina, ma la didascalia e il brief dicono 'benvenuti @sim.o_._' mentre la scena di Luino nel fotogramma 0.5 è già illuminata con etichetta 'Nina' prima che la luce si accenda sulla mappa (dati: si accende al secondo 4.92, scena 4",
+   "dati": {
+    "controllato": "Grafica e copertina del reel: fotogrammi, etichette, coerenza tra mappa, testo e dati verificati (Luino, Nina, 1 luce, 10 novembre).",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 e nei successivi la mappa mostra la luce di Nina, ma la didascalia e il brief dicono 'benvenuti @sim.o_._' mentre la scena di Luino nel fotogramma 0.5 è già illuminata con etichetta 'Nina' prima che la luce si accenda sulla mappa (dati: si accende al secondo 4.92, scena 4.12-6.41). Inoltre la copertina dichiara 'è di Nina' ma nel fotogramma 0.5 il titolo 'LUINO' e il box '1 luce' sono già visibili: anticipazione del dato prima dell'accensione.",
+    "correzione": "Far comparire il box '1 luce' e l'etichetta 'Nina' solo dopo il secondo 4.9, in sincronia con l'accensione sulla mappa; oppure lasciare la scena 3D come apertura senza dati finché la luce non si accende.",
+    "idea": "Mostrare per un attimo la luce di Nina che si accende in primo piano (zoom dalla mappa generale al comune) per dare un momento 'wow' al centro del reel."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:08+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 0.5 la copertina mostra già «LUINO» e il banner «la casa di Nina · 1 luce», ma la mappa dei dati segna la luce spenta fino al secondo 4.12 e accesa solo al 4.92: la schermata iniziale anticipa l'informazione. Inoltre il fotogramma dell'apertura 3D (0.5–3s) ha il banner meteo «10 novembre:",
+   "dati": {
+    "controllato": "Copertine e grafica dei 6 fotogrammi, con verifica dei fotogrammi sui secondi indicati e dei testi sovrapposti rispetto al copione.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Al secondo 0.5 la copertina mostra già «LUINO» e il banner «la casa di Nina · 1 luce», ma la mappa dei dati segna la luce spenta fino al secondo 4.12 e accesa solo al 4.92: la schermata iniziale anticipa l'informazione. Inoltre il fotogramma dell'apertura 3D (0.5–3s) ha il banner meteo «10 novembre: qualche nuvola, 10°» che resta su tutta la scena, mentre nei fotogrammi 6–8 secondi la didascalia visiva «Questa luce è di Nina» compare a 4s, quindi il testo centrale arriva con un leggero ritardo rispetto all'audio; non è un errore grave ma va allineato.",
+    "correzione": "Far comparire il banner «LUINO» e l'etichetta «Nina» solo quando la luce si accende (dal secondo 4.9), oppure spostare la luce all'inizio. Allineare la comparsa della scritta «Questa luce è di Nina» al pronunciamento di «Questa luce è di Nina» nel copione (4.0s).",
+    "idea": "Nel prossimo reel mostrare la scritta «la tua!» con una luce che lampeggia sul comune reale dell'utente (quando possibile) per aumentare il senso di appartenenza."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:08+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 8 il tag \"Nina\" sulla casetta e il cartello \"↓ Nina\" sono piccoli e il testo \"Questa luce è di Nina\" compare solo sui fotogrammi di mappa; nei fotogrammi 0.5-3 la didascalia in alto \"10 novembre: qualche nuvola, 10°\" è lunga e va su due righe, quindi poco leggibile. Inoltre nel fotogramma",
+   "dati": {
+    "controllato": "Testi grandi e leggibili, copertina, didascalia e fascia commento sui fotogrammi, coerenza del testo a schermo con il copione e il dato della mappa (Luino, Nina, 1 luce).",
+    "esito": "segnalo",
+    "secondo": 8,
+    "problema": "Al secondo 8 il tag \"Nina\" sulla casetta e il cartello \"↓ Nina\" sono piccoli e il testo \"Questa luce è di Nina\" compare solo sui fotogrammi di mappa; nei fotogrammi 0.5-3 la didascalia in alto \"10 novembre: qualche nuvola, 10°\" è lunga e va su due righe, quindi poco leggibile. Inoltre nel fotogramma 8 la scritta \"Questa luce è di Nina / A LUINO.\" è ben visibile, ma la fascia \"Commenta città e nome del tuo animale\" resta identica per tutto il reel, senza variare.",
+    "correzione": "Accorciare la riga meteo in alto (es. solo \"10 nov · 10°\") per evitare il doppio rigo e ingrandire il tag del nome sulla casetta; sul finale, rendere la scritta \"LA TUA!\" più grande o con un colore d'accento.",
+    "idea": "Per i prossimi reel, mantenere un solo elemento meteo/luna per volta o toglierlo, così i testi grandi restano il centro della scena."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:09+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi la scena della mappa a 6 secondi mostra la luce di Nina accesa ma la fascia in alto riporta '1 luce' mentre nel brief l'etichetta compare dal secondo 4.12; inoltre al secondo 6 la card con l'animale ('Luino, Nina, cane') usa il segnaposto @il.tuo.nome, che in un reel pubblicato sembra",
+   "dati": {
+    "controllato": "Grafica e copertina del reel: fascia di testo, didascalia, coerenza tra etichetta della luce e mappa (Luino, coordinate e comune corrispondenti), leggibilità dei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 6,
+    "problema": "Nei fotogrammi la scena della mappa a 6 secondi mostra la luce di Nina accesa ma la fascia in alto riporta '1 luce' mentre nel brief l'etichetta compare dal secondo 4.12; inoltre al secondo 6 la card con l'animale ('Luino, Nina, cane') usa il segnaposto @il.tuo.nome, che in un reel pubblicato sembra un errore di montaggio. Anche la scena 'Cani vs Gatti' è ripetuta quasi identica per due fotogrammi, con il testo 'LA TUA!' che appare sopra un'immagine che non cambia.",
+    "correzione": "Sostituire il segnaposto @il.tuo.nome con @sim.o_._ (l'animale citato in didascalia) oppure con il nome reale; allineare la comparsa dell'etichetta alla scena di apertura; differenziare il frame finale 'LA TUA!' con una piccola animazione o un cambio di sfondo.",
+    "idea": "Per i prossimi reel usare un vero @ del proprietario come segnaposto e una scena finale con l'animale fotografato reale, per dare un senso di comunità a chi si riconosce."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:09+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 6 la scena passa dalla mappa al commento senza una transizione chiara, e la scritta '1 luce' in alto sulla scheda di Luino è piccola e poco leggibile su mobile. Inoltre il dato 'comune_sulla_mappa' e la scena di Luino tra il secondo 4 e il 6 sono coerenti, ma nel fotogramma",
+   "dati": {
+    "controllato": "Grafica e copertina del reel: fotogrammi, testo sovrapposto, coerenza con la mappa e con i dati verificati (luce di Nina a Luino, 1 luce oggi).",
+    "esito": "segnalo",
+    "secondo": 6,
+    "problema": "Nel fotogramma al secondo 6 la scena passa dalla mappa al commento senza una transizione chiara, e la scritta '1 luce' in alto sulla scheda di Luino è piccola e poco leggibile su mobile. Inoltre il dato 'comune_sulla_mappa' e la scena di Luino tra il secondo 4 e il 6 sono coerenti, ma nel fotogramma iniziale la didascalia della scheda ('10 novembre: qualche nuvola, 10°') occupa spazio che potrebbe servire al nome dell'animale.",
+    "correzione": "Ingrandire il testo '1 luce' sulla scheda di Luino e, se possibile, far durare la scena della luce accesa almeno un secondo in più, così lo spettatore vede chiaramente da dove arriva la luce prima del commento.",
+    "idea": "Aggiungere in chiusura il conteggio delle luci accese in quel momento (es. 'siamo già a 2819 luci'), per rendere tangibile la crescita della mappa e rafforzare il senso di appartenenza."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:11+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Questa luce è di Nina' a 4.0s, ma nei dati la scena della mappa inizia a 4.12s e la luce si accende a 4.92s: la frase sulla mappa è detta prima che la luce compaia. Inoltre nel fotogramma a 3s la scritta 'Questa luce è di Nina' è già visibile sopra il tassello 'A LUINO', mentre la l",
+   "dati": {
+    "controllato": "Copertina, fotogrammi, coerenza dati mappa (Luino, luce di Nina, 1 luce oggi), fascia commento e didascalia rispetto al copione.",
+    "esito": "segnalo",
+    "secondo": 4.12,
+    "problema": "Il copione dice 'Questa luce è di Nina' a 4.0s, ma nei dati la scena della mappa inizia a 4.12s e la luce si accende a 4.92s: la frase sulla mappa è detta prima che la luce compaia. Inoltre nel fotogramma a 3s la scritta 'Questa luce è di Nina' è già visibile sopra il tassello 'A LUINO', mentre la luce tra la scena 3D e la mappa non si vede chiaramente. Il tutto rende l'apertura un po' confusa a livello di sincronia.",
+    "correzione": "Spostare la voce 'Questa luce è di Nina' a circa 4.9s, quando la luce si accende, oppure ritardare la comparsa della scritta sulla mappa di qualche decimo di secondo.",
+    "idea": "Usare nella copertina il nome dell'animale e la città in evidenza come ponte verso il commento, e chiudere il reel con il numero di luci già accese per creare attesa."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:12+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "L'etichetta 'Questa luce è di Nina' compare già al secondo 4.1, mentre la trascrizione dice 'Questa luce è di Nina' a 4.0s e la luce si accende al 4.92: la voce parla prima che la luce si accenda sulla mappa. Inoltre nei fotogrammi la scritta 'Nina' sulla mappa e sulla casetta è presente, ma nel fot",
+   "dati": {
+    "controllato": "Etichetta «Questa luce è di Nina» sulla mappa: posizione Luino, comune, scena e secondi della luce rispetto alla trascrizione, più il cartellino 'Nina' sul fotogramma iniziale.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "L'etichetta 'Questa luce è di Nina' compare già al secondo 4.1, mentre la trascrizione dice 'Questa luce è di Nina' a 4.0s e la luce si accende al 4.92: la voce parla prima che la luce si accenda sulla mappa. Inoltre nei fotogrammi la scritta 'Nina' sulla mappa e sulla casetta è presente, ma nel fotogramma a 0.5s della mappa 3D la scritta 'Nina' compare ancora sul cartellino mentre la luce è accesa solo in quella scena: coerente. Il problema reale è il tempo: l'etichetta appare prima dell'accensione della luce.",
+    "correzione": "Far comparire l'etichetta 'Questa luce è di Nina' e la frase vocale solo dopo il secondo 4.9, quando la luce si accende, oppure anticipare l'accensione a 4.0s.",
+    "idea": "Per i prossimi reel 'questa_luce' sincronizza l'etichetta con l'accensione della luce, e usa il dato di follower ogni 1000 views (questo formato è a 7.6, più basso di 'prima_luce' a 16.2 e 'questa_luce' precedente a 19.3) per testare un'apertura più forte sul nome dell'animale."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:12+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi il comune 'Luino' compare già nel titolo in alto e la scena della mappa con la luce di Nina si vede solo a partire da circa 4 secondi, mentre la frase 'Questa luce è di Nina' parte al secondo 4.0: la rivelazione arriva tardi rispetto all'apertura, che è ferma sul cane in primo piano p",
+   "dati": {
+    "controllato": "Formato 9:16 del reel 'Questa luce è di Nina': fotogrammi, sincronia tra scena della mappa e secondi, leggibilità dei testi e dell'overlay, copertina e rapporto con i dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nei fotogrammi il comune 'Luino' compare già nel titolo in alto e la scena della mappa con la luce di Nina si vede solo a partire da circa 4 secondi, mentre la frase 'Questa luce è di Nina' parte al secondo 4.0: la rivelazione arriva tardi rispetto all'apertura, che è ferma sul cane in primo piano per quasi 3 secondi. Inoltre il testo in alto ('1943 – 775' e il tema 'Questa luce è di...') occupa molta parte del frame, e la fascia del commento compare identica in tutti i fotogrammi.",
+    "correzione": "Anticipare la frase 'Questa luce è di Nina' o il nome dell'animale nei primi 2 secondi, accorciare la fermata sul cane e far partire la zoomata sulla mappa prima del secondo 3; uniformare la dimensione del titolo sopra allo schermo.",
+    "idea": "Per i prossimi reel: far comparire la prima luce della giornata con un piccolo effetto di accensione sincronizzato con la voce, e usare un colore diverso per i gatti e i cani nella mappa finale."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:12+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina' inizia a 4.0s, ma la scena della luce va da 4.12s e la luce si accende solo al 4.92s: il testo parte prima che l'accensione sia visibile. Inoltre l'audio è a -16.3 dB nei primi 5s, più basso dell'obiettivo -14 LUFS, e la frase 'Le prossime luci domani alle 18' dice '",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (scena, luce, comune), misure audio, didascalia e fascia rispetto al brief e al copione.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La frase 'Questa luce è di Nina' inizia a 4.0s, ma la scena della luce va da 4.12s e la luce si accende solo al 4.92s: il testo parte prima che l'accensione sia visibile. Inoltre l'audio è a -16.3 dB nei primi 5s, più basso dell'obiettivo -14 LUFS, e la frase 'Le prossime luci domani alle 18' dice 'domani alle 18' senza il giorno esplicito, che in didascalia è corretto ma nel voiceover resta generico.",
+    "correzione": "Far partire la voce 'Questa luce è di Nina' dopo il secondo 4.9 (quando la luce si accende), alzare il volume dei primi 5 secondi di circa 2 dB per avvicinarsi a -14 LUFS, e mantenere l'orario 18 nel copione con la stessa formulazione della didascalia.",
+    "idea": "Inserire il nome della città nel commento come sfida rapida e mostrare a fine reel la luce del commento più recente, così chi commenta vede subito il risultato."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:15+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il fotogramma inviato a 6 secondi e la scena della luce (4.12-6.41s) non coincidono con il momento in cui la luce si accende (4.92s): la trascrizione dice 'Questa luce è di Nina' a 4.0s, ma i fotogrammi selezionati non mostrano bene l'accensione. Inoltre i fotogrammi inviati (0.5, 3, 6, 8, 11, 14) s",
+   "dati": {
+    "controllato": "Ho verificato upload, trascrizione coi secondi, dati mappa, audio (-14 LUFS, picco -1 dBFS, nessun silenzio), didascalia e fotogrammi inviati rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Il fotogramma inviato a 6 secondi e la scena della luce (4.12-6.41s) non coincidono con il momento in cui la luce si accende (4.92s): la trascrizione dice 'Questa luce è di Nina' a 4.0s, ma i fotogrammi selezionati non mostrano bene l'accensione. Inoltre i fotogrammi inviati (0.5, 3, 6, 8, 11, 14) sono 6 su 15 previsti e non includono il secondo 4.92 dell'accensione.",
+    "correzione": "Aggiungere un fotogramma a 4.9s (accensione) e verificare che la copertina/anteprima mostri la luce accesa su Luino; allineare la frase 'Questa luce è di Nina' alla scena.",
+    "idea": "Per i prossimi reel: far comparire il nome della città prima dell'accensione (es. 'Luino?') per creare attesa, e alternare il formato con una scena di 'luce accesa' più lunga per dare tempo di riconoscersi sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:16+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'il tuo animale si accende sulla mappa' a 7.3s, ma nei dati la luce di Nina si accende già al secondo 4.92, cioè prima che la frase la descriva. Inoltre la scena 'luce' (4.12-6.41s) e la frase 'Questa luce è di Nina' vengono presentate dopo che la luce si è accesa. Anche 'luci_d",
+   "dati": {
+    "controllato": "Trascrizione, tempi della luce sulla mappa, didascalia, audio e copertina del reel 'questa_luce' per Nina a Luino.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'il tuo animale si accende sulla mappa' a 7.3s, ma nei dati la luce di Nina si accende già al secondo 4.92, cioè prima che la frase la descriva. Inoltre la scena 'luce' (4.12-6.41s) e la frase 'Questa luce è di Nina' vengono presentate dopo che la luce si è accesa. Anche 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_oggi' è 1, quindi Nina è la prima luce di Luino oggi: il testo non lo dice, ma la didascalia 'benvenuti' lo implica correttamente. Infine la didascalia dice 'Le prossime luci domani alle 18', ma la trascrizione dice la stessa cosa: coerente. Il rapporto follower ogni 1000 views è alto su 'questa_luce' (7.6 e 19.3), quindi il formato funziona.",
+    "correzione": "Allineare il copione alla luce: far accendere la luce nel momento in cui viene nominata (intorno a 4.9s) oppure spostare la frase 'il tuo animale si accende' dopo il secondo 4.9. Verificare che lo sfondo mostri Luino quando si nomina il comune.",
+    "idea": "Due o tre parole in più sull'animale nella scena luce (es. una foto o il nome in sovrimpressione) per rendere il momento dell'accensione più riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:16+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La copertina non è stata inviata come fotogramma tra quelli elencati: i fotogrammi inviati sono a 0.5, 3, 6, 8, 11 e 14 s, quindi non c'è un'immagine della copertina da verificare. In più, la trascrizione dice che la luce si accende ad ancora 4.0 s ma i dati dicono scena dal 4.12 e accensione al 4.9",
+   "dati": {
+    "controllato": "Copertina del reel: cover (luce di Nina a Luino), trascrizione, secondi della scena luce sulla mappa, audio e didascalia rispetto ai dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La copertina non è stata inviata come fotogramma tra quelli elencati: i fotogrammi inviati sono a 0.5, 3, 6, 8, 11 e 14 s, quindi non c'è un'immagine della copertina da verificare. In più, la trascrizione dice che la luce si accende ad ancora 4.0 s ma i dati dicono scena dal 4.12 e accensione al 4.92: la voce parla di 'luce' mentre la mappa si accende dopo. Il volume medio delle prime frasi è -16.3 dB, sotto l'obiettivo di -14 LUFS, e la frase finale 'Seguici per vedere la tua!' arriva a 12.3 s con 2 s di coda a fine video senza pausa tra voce e chiusura.",
+    "correzione": "Inviare la copertina come fotogramma e verificare che il testo 'QUESTA LUCE / è di Nina / Luino' sia leggibile. Allineare la frase 'il tuo animale si accende' alla scena reale (4.9 s). Alzare il volume della voce delle prime 5 s fino a circa -14 LUFS.",
+    "idea": "Per i prossimi reel 'questa_luce', mostrare la luce che si accende con un fotogramma in più e chiudere con il nome del comune in grande, come la prima luce che ha convertito meglio."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:16+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina' inizia a 4.0s, ma la scena della luce è dal 4.12s e la luce si accende al 4.92s: la voce parte prima che la scena sia visibile. Inoltre la trascrizione ha la frase 'Un commento, e' a 5.5s mentre la scena 'commento' non è indicata nei dati, e la didascalia dice 'benve",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, sincronia della luce sulla mappa (si accende al 4.92s, dentro la scena 4.12–6.41s), dati della mappa (Luino, 1 luce oggi), audio e coerenza della didascalia coi materiali.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La frase 'Questa luce è di Nina' inizia a 4.0s, ma la scena della luce è dal 4.12s e la luce si accende al 4.92s: la voce parte prima che la scena sia visibile. Inoltre la trascrizione ha la frase 'Un commento, e' a 5.5s mentre la scena 'commento' non è indicata nei dati, e la didascalia dice 'benvenuti @sim.o_._' ma il tag nel testo è corretto solo se Nina ha quel profilo (confermato nei dati).",
+    "correzione": "Spostare l'inizio della voce 'Questa luce è di Nina' a circa 4.1s, in modo che coincida con l'apertura della scena luce, e allineare la sincronia del clic di accensione (4.92s) con la parola 'si accende' della trascrizione.",
+    "idea": "Nei prossimi reel 'questa_luce' mostrare per un frame il commento dell'utente prima di accendere la luce, così il collegamento tra commento e luce è immediato."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:18+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina' parte a 4.0s ma la luce si accende solo a 4.92s; la voce annuncia 'il tuo animale si accende sulla mappa' a 7.3s, quando la luce di Nina è già accesa da tempo. Inoltre il fotogramma di apertura 'reel/assets/tmp/apertura3d.mp4' è un file temporaneo: va verificato che ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (luce di Nina accesa a 4.92s, scena 4.12-6.41s), audio (-14 LUFS, picco -1 dBFS, nessun silenzio), didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La frase 'Questa luce è di Nina' parte a 4.0s ma la luce si accende solo a 4.92s; la voce annuncia 'il tuo animale si accende sulla mappa' a 7.3s, quando la luce di Nina è già accesa da tempo. Inoltre il fotogramma di apertura 'reel/assets/tmp/apertura3d.mp4' è un file temporaneo: va verificato che sia il finale e non un asset di prova. La didascalia dice 'benvenuti @sim.o_._' ma l'account è nei dati come @sim.o_._ (coerente), nessun errore lì.",
+    "correzione": "Allineare la battuta 'Questa luce è di Nina' al momento in cui la luce si accende (circa 4.9s) oppure anticipare la frase 'Questa luce' di qualche decimo. Verificare che l'asset di apertura sia quello definitivo prima della pubblicazione.",
+    "idea": "Dopo il commento dell'utente, mostrare brevemente il commento a schermo mentre la luce si accende: rende il legame tra partecipazione e mappa più concreto e aumenta i commenti, che nei reel migliori sono il segnale più forte."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:20+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice che la luce è accesa dal secondo 4.0 (sincronia con la voce 'Questa luce è di Nina'), mentre i dati mappa dicono che la luce si accende al secondo 4.92, cioè dopo che la frase è stata detta. Inoltre l'audio ha volume medio di -16.3 dB nei primi 5 secondi, quindi l'apertura è più",
+   "dati": {
+    "controllato": "Sincronia tra copione, trascrizione coi secondi, dati mappa (scena della luce di Nina su Luino) e misure audio, più la coerenza della didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice che la luce è accesa dal secondo 4.0 (sincronia con la voce 'Questa luce è di Nina'), mentre i dati mappa dicono che la luce si accende al secondo 4.92, cioè dopo che la frase è stata detta. Inoltre l'audio ha volume medio di -16.3 dB nei primi 5 secondi, quindi l'apertura è più bassa dell'obiettivo di -14 LUFS.",
+    "correzione": "Allineare l'accensione della luce al momento in cui parte la frase 'Questa luce è di Nina' (o spostare la frase a 4.9s) e alzare il volume dell'apertura di circa 2 dB per portarla verso -14 LUFS, senza superare il picco di -1 dBFS.",
+    "idea": "Mostrare nel reel una frase con il nome della città evidenziata sulla mappa al momento in cui si accende la luce, così il collegamento tra voce e luce è immediato e il commento invita a provarlo."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:20+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina, a Luino' parte a 4.0s, ma la luce si accende solo al 4.92s: il testo introduce la luce prima che appaia sulla mappa. Inoltre la frase 'il tuo animale si accende' (7.3s) cade dopo la scena luce, quindi il ritmo tra voce e immagine è leggermente sfasato. Il volume medi",
+   "dati": {
+    "controllato": "Sincronia tra trascrizione, scena della mappa (accensione al secondo 4.92), dati della luce e misure audio rispetto agli obiettivi.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La frase 'Questa luce è di Nina, a Luino' parte a 4.0s, ma la luce si accende solo al 4.92s: il testo introduce la luce prima che appaia sulla mappa. Inoltre la frase 'il tuo animale si accende' (7.3s) cade dopo la scena luce, quindi il ritmo tra voce e immagine è leggermente sfasato. Il volume medio dei primi 5s (-16.3 dB) è più basso dell'obiettivo di -14 LUFS, cioè l'apertura risulta più debole del resto.",
+    "correzione": "Ritardare la voce 'Questa luce è di Nina' a circa 4.9s, far coincidere 'Il tuo animale si accende' con l'accensione, e alzare il volume dei primi 5 secondi di circa 2 dB per allinearlo al target.",
+    "idea": "Per i prossimi reel: far partire la voce insieme alla luce (un colpo visivo netto) e usare il nome dell'animale nella copertina per creare curiosità immediata."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:20+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina' inizia a 4.0s ma la luce si accende solo al 4.92s, quindi la voce annuncia la luce prima che si veda. Inoltre la scena luce dura solo 2.3s e il rapporto tra frasi e immagini è stretto. Nella didascalia '@sim.o_._' va bene come tag, ma il nome Nina compare solo nell'a",
+   "dati": {
+    "controllato": "Trascrizione, secondi della scena luce, dati della mappa (Luino, luce accesa al 4.92s), audio, didascalia e copertina del reel Questa luce.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La frase 'Questa luce è di Nina' inizia a 4.0s ma la luce si accende solo al 4.92s, quindi la voce annuncia la luce prima che si veda. Inoltre la scena luce dura solo 2.3s e il rapporto tra frasi e immagini è stretto. Nella didascalia '@sim.o_._' va bene come tag, ma il nome Nina compare solo nell'audio e nella copertina.",
+    "correzione": "Far partire la voce 'Questa luce è di Nina' dopo il 4.9s, oppure allungare la scena luce a 5-6s con la luce già accesa al momento della frase, e verificare che l'audio resti sotto -1 dBFS.",
+    "idea": "Per i prossimi reel della serie 'Questa luce', far comparire la luce già nel primo secondo e annunciare il nome solo dopo, così il formato con più follower ogni 1000 visualizzazioni (19.3 e 17.1) parte più forte."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:23+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s e 'a Luino' a 5.5s, ma la luce si accende al secondo 4.92, cioè mentre la frase è ancora in corso. Inoltre il brief del reel dice 'il tuo animale si accende' al secondo 7.3s, ma la mappa mostra l'accensione già a 4.92s, quindi il testo e l'immagine",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (luce di Nina a Luino, accensione al secondo 4.92), audio e didascalia del reel 'questa_luce'.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s e 'a Luino' a 5.5s, ma la luce si accende al secondo 4.92, cioè mentre la frase è ancora in corso. Inoltre il brief del reel dice 'il tuo animale si accende' al secondo 7.3s, ma la mappa mostra l'accensione già a 4.92s, quindi il testo e l'immagine non sono allineati. Il dato di audio è in regola (-14 LUFS, picco -1 dBFS, nessun silenzio), ma l'audio medio dei primi 5s è -16.3 dB, un po' basso per l'apertura.",
+    "correzione": "Allineare la battuta 'il tuo animale si accende' al momento reale dell'accensione (4.92s) oppure spostare l'accensione sulla mappa vicino a 7.3s. Portare il volume dei primi 5 secondi vicino a -14 LUFS.",
+    "idea": "Dato che il formato questa_luce ha reach basso (264) ma molti commenti per view, potrebbe funzionare una chiusura che annuncia il nome del prossimo animale o comune, così da dare un motivo preciso per tornare domani alle 18."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:23+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'il tuo animale si accende' a 7.3s e 'Questa luce è di Nina' a 4.0s, ma nei dati la luce si accende al secondo 4.92, cioè prima della frase 'il tuo animale si accende'. Inoltre l'audio è a -14 LUFS con picco -1 dBFS, nei target, ma il volume medio dei primi 5 secondi è -16.3 dB,",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (luce di Nina a Luino, accensione a 4.92s), misure audio, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'il tuo animale si accende' a 7.3s e 'Questa luce è di Nina' a 4.0s, ma nei dati la luce si accende al secondo 4.92, cioè prima della frase 'il tuo animale si accende'. Inoltre l'audio è a -14 LUFS con picco -1 dBFS, nei target, ma il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto: l'apertura rischia di sembrare sotto-volume. Infine la didascalia dice 'Le prossime luci domani alle 18' e il copione lo stesso, quindi coerente; nessun problema lì.",
+    "correzione": "Allineare la battuta 'il tuo animale si accende' al momento reale dell'accensione (intorno a 4.9s) oppure spostare l'accensione sulla frase; alzare di circa 2 dB il volume dei primi 5 secondi, senza superare il picco di -1 dBFS.",
+    "idea": "Mostrare per due secondi la luce che compare sulla mappa con un leggero zoom sul comune, e far dire il nome del comune dalla voce mentre la luce si accende, così il momento dell'accensione coincide con la frase."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:24+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice che la luce di Nina si accende nella scena da 4.12 a 6.41 s, ma nei dati la luce si accende al secondo 4.92. Il testo 'Questa luce è di Nina' parte a 4.0 s, quindi l'accensione avviene a metà frase. Inoltre i fotogrammi inviati sono a 0.5, 3, 6, 8, 11, 14 s: non c'è nessun fotog",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati della mappa, audio, didascalia e fotogrammi inviati per il reel 'questa_luce' del 10/11.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice che la luce di Nina si accende nella scena da 4.12 a 6.41 s, ma nei dati la luce si accende al secondo 4.92. Il testo 'Questa luce è di Nina' parte a 4.0 s, quindi l'accensione avviene a metà frase. Inoltre i fotogrammi inviati sono a 0.5, 3, 6, 8, 11, 14 s: non c'è nessun fotogramma tra 4 e 6 s, cioè proprio il momento in cui la luce si accende, quindi la verifica visiva di quell'istante non è possibile. Infine l'audio medio dei primi 5 s è -16.3 dB, sotto l'obiettivo implicito di partenza, ma i valori LUFS e picco sono nei target.",
+    "correzione": "Allineare l'accensione della luce alla parola 'Nina' (o spostare l'accensione a 4.0 s) e inviare un fotogramma a circa 5 s per controllare che la luce sia visibile nel momento giusto.",
+    "idea": "Per i prossimi reel 'questa_luce', mostrare la foto reale dell'animale prima dell'accensione della luce e programmare un fotogramma di controllo nel punto esatto dell'accensione."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:24+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La mappa non mostra la luce nella scena: la luce si accende al secondo 4.92, ma la frase 'Questa luce è di Nina' parte al secondo 4.0 e la scena va da 4.12 a 6.41. Inoltre i fotogrammi inviati sono 0.5, 3, 6, 8, 11, 14, mentre quelli del brief sono 15 fotogrammi: l'anteprima usata non copre tutto il",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la scena della luce sulla mappa (Luino, coordinate e tempi di accensione), le misure audio e la didascalia rispetto ai dati forniti.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La mappa non mostra la luce nella scena: la luce si accende al secondo 4.92, ma la frase 'Questa luce è di Nina' parte al secondo 4.0 e la scena va da 4.12 a 6.41. Inoltre i fotogrammi inviati sono 0.5, 3, 6, 8, 11, 14, mentre quelli del brief sono 15 fotogrammi: l'anteprima usata non copre tutto il reel. Infine il volume medio delle prime 5 secondi (-16.3 dB) è sotto l'obiettivo, ma il dato di LUFS complessivo è in linea.",
+    "correzione": "Allineare la frase 'Questa luce è di Nina' alla comparsa della luce (circa 4.9 s), verificare che la luce sia visibile nella scena e rivedere l'anteprima con tutti i fotogrammi previsti; alzare leggermente il volume dei primi 5 secondi.",
+    "idea": "Provare a mostrare la luce che si accende sulla mappa con un leggero zoom sul comune, per dare più enfasi al momento chiave del reel."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:26+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice 'Questa luce è di Nina, a Luino' a 4.0s, ma la luce si accende solo a 4.92s: l'annuncio è leggermente anticipato rispetto all'effetto visivo. Inoltre l'audio è a -14 LUFS con picco -1 dBFS e silenzi vuoti, quindi tecnicamente a posto, ma i primi 5 secondi sono a -16.3 dB medi, più bass",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (scena 4.12–6.41s, luce accesa a 4.92s), audio, didascalia e copertina: sincronia e coerenza ok.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Il testo dice 'Questa luce è di Nina, a Luino' a 4.0s, ma la luce si accende solo a 4.92s: l'annuncio è leggermente anticipato rispetto all'effetto visivo. Inoltre l'audio è a -14 LUFS con picco -1 dBFS e silenzi vuoti, quindi tecnicamente a posto, ma i primi 5 secondi sono a -16.3 dB medi, più bassi del resto e questo può far calare l'attenzione all'apertura. Il reel è corto (14.5s) e la CTA 'Seguici per vedere la tua!' arriva a 12.3s, quindi resta tempo utile.",
+    "correzione": "Allineare la frase 'Questa luce è di Nina' al momento in cui la luce si accende (intorno a 4.9s), e alzare leggermente il volume dei primi 5 secondi portandolo vicino agli altri tratti.",
+    "idea": "Ripetere il formato 'questa_luce' con una CTA che chiede di commentare la propria città, sfruttando i commenti che già generano, e valutare un'apertura con la luce che si accende a inizio reel."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:28+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma nei dati mappa la luce si accende solo al secondo 4.92: il testo parla prima che la luce appaia. Inoltre la frase 'il tuo animale si accende' a 7.3s coincide con la scena di chiusura, ma la luce di Nina risulta accesa alla 4.92 e resta l'unica ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (scena e luce di Nina su Luino), audio e didascalia del reel 'questa_luce'.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma nei dati mappa la luce si accende solo al secondo 4.92: il testo parla prima che la luce appaia. Inoltre la frase 'il tuo animale si accende' a 7.3s coincide con la scena di chiusura, ma la luce di Nina risulta accesa alla 4.92 e resta l'unica del giorno, quindi l'effetto 'si accende' è gia avvenuto. Il volume medio delle prime scene (-16.3 dB) è sotto l'obiettivo di -14 LUFS, e la copertina/fotogrammi restano coerenti con la luce di Luino.",
+    "correzione": "Allineare la battuta 'Questa luce è di Nina' alla accensione reale (dopo 4.9s), oppure ritardare l'audio di circa 1 secondo; alzare il volume delle prime scene di circa 2 dB per avvicinarsi a -14 LUFS.",
+    "idea": "Testare un reel 'prima_luce' con la stessa struttura, dato che ha prodotto piu follower ogni 1000 views e più commenti."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:28+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina' inizia al secondo 4.0 e la luce si accende solo al 4.92, quindi il dato sulla mappa e il parlato non sono perfettamente sincronizzati. Inoltre l'audio è a -16.3 dB di volume medio nei primi 5 secondi, sotto l'obiettivo di -14 LUFS, e la didascalia non dichiara il nom",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, dati della mappa (luce di Nina accesa a Luino al secondo 4.92), misure audio, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La frase 'Questa luce è di Nina' inizia al secondo 4.0 e la luce si accende solo al 4.92, quindi il dato sulla mappa e il parlato non sono perfettamente sincronizzati. Inoltre l'audio è a -16.3 dB di volume medio nei primi 5 secondi, sotto l'obiettivo di -14 LUFS, e la didascalia non dichiara il nome del reel come da formato. Il reel ha inoltre solo 0 condivisioni e ha portato un numero basso di views (381), con 7.6 follower ogni 1000 sotto la media dei formati migliori.",
+    "correzione": "Far coincidere la battuta 'Questa luce è di Nina' con l'accensione della luce (intorno al 4.9s), alzare il volume dell'apertura portandolo verso -14 LUFS senza superare -1 dBFS di picco, e aggiungere nella didascalia un invito esplicito a condividere o taggare un amico con animale.",
+    "idea": "Mostrare nel reel la prossima luce in arrivo con un conto alla rovescia verso le 18, per trasformare l'attesa in un motivo di follow e di ritorno."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:28+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma la luce si accende nei dati solo al secondo 4.92, cioè dopo la frase. Il testo parla di una luce già accesa mentre sulla mappa si accende dopo. Inoltre l'audio è a -16.3 dB nei primi 5 secondi, sotto l'obiettivo di -14 LUFS, e la scena luce dur",
+   "dati": {
+    "controllato": "Trascrizione, secondi della scena e dati della mappa (luce di Nina a Luino, accensione al secondo 4.92), audio, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma la luce si accende nei dati solo al secondo 4.92, cioè dopo la frase. Il testo parla di una luce già accesa mentre sulla mappa si accende dopo. Inoltre l'audio è a -16.3 dB nei primi 5 secondi, sotto l'obiettivo di -14 LUFS, e la scena luce dura solo fino al 6.41 con un'apertura lunga circa 3 secondi.",
+    "correzione": "Allineare la battuta «Questa luce è di Nina» al momento in cui la luce si accende (intorno al 4.9s), oppure spostarla dopo l'accensione. Alzare il volume dei primi 5 secondi di circa 2 dB per avvicinarsi a -14 LUFS.",
+    "idea": "Un reel in cui la luce si accende a tempo con una parola chiave (la città letta ad alta voce), così il momento dell'accensione diventa il punto forte del video."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:30+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice 'Le prossime luci domani alle 18' ma la didascalia dice 'Le prossime luci domani alle 18: seguici per vedere se c'è la tua!' e la voce chiude con 'vedere la tua!': il tono è ok, ma la voce di chiusura dice 'la tua' mentre la didascalia dice 'se c'è la tua', promessa diversa. Inoltre la ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (luce di Nina accesa al secondo 4.92 su Luino), audio, didascalia e numeri del progetto, per la mia mansione Community.",
+    "esito": "segnalo",
+    "secondo": 14.5,
+    "problema": "Il reel dice 'Le prossime luci domani alle 18' ma la didascalia dice 'Le prossime luci domani alle 18: seguici per vedere se c'è la tua!' e la voce chiude con 'vedere la tua!': il tono è ok, ma la voce di chiusura dice 'la tua' mentre la didascalia dice 'se c'è la tua', promessa diversa. Inoltre la trascrizione segna la luce accesa a 4.92 s ma l'etichetta compare già da 4.0 s: il fotogramma di accensione è coerente, quindi non è un errore grave. Il problema concreto è la promessa: 'vedere la tua!' promette una luce sicura, mentre la mappa mostra che l'accensione dipende dal commento.",
+    "correzione": "Chiudere con 'Seguici per scoprire se c'è la tua!' sia nella voce sia nella didascalia, così la promessa resta allineata al meccanismo.",
+    "idea": "Mostrare nel reel il conteggio di luci della giornata (qui 1 luce oggi) per dare un senso di crescita e motivare il commento."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:31+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'luce spenta all'inizio della scena, si accende al secondo 4.92' cade dentro la frase 'Questa luce è di Nina' (4.0s-5.5s): la luce si accende prima che il testo indichi il comune, quindi l'effetto visivo e la voce non sono sincronizzati con 'a Luino'. Inoltre la voce dice 'il tuo animale si ",
+   "dati": {
+    "controllato": "Trascrizione, secondi della scena luce, dati della mappa (Luino, luce accesa al 4.92s), audio e didascalia del reel.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Il dato 'luce spenta all'inizio della scena, si accende al secondo 4.92' cade dentro la frase 'Questa luce è di Nina' (4.0s-5.5s): la luce si accende prima che il testo indichi il comune, quindi l'effetto visivo e la voce non sono sincronizzati con 'a Luino'. Inoltre la voce dice 'il tuo animale si accende' già mentre la luce è accesa solo da Nina. Il dato di comune e di luci del comune è coerente (1 luce oggi, 0 del comune).",
+    "correzione": "Spostare l'accensione della luce a 5.5s (fine di 'a Luino') oppure far partire la scena della luce dopo 'Questa luce è di Nina, a Luino.', e verificare che la frase 'il tuo animale si accende' coincida con un'accensione visibile.",
+    "idea": "Mostrare nella chiusura il nome e la città del commento successivo per creare attesa, e alzare leggermente il volume dei primi 5 secondi."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:31+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «il tuo animale si accende» a 7.3s, ma per i dati mappa la luce si accende al secondo 4.92, mentre la frase «Un commento, e» parte a 5.5s: il testo non è sincronizzato con l'accensione. Inoltre la didascalia dice «domani alle 18», coerente con la voce, ma il formato ha solo 1 lu",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (luce di Nina a Luino, accensione al secondo 4.92), audio (-14 LUFS, picco -1 dBFS, nessun silenzio), didascalia e copertina.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice «il tuo animale si accende» a 7.3s, ma per i dati mappa la luce si accende al secondo 4.92, mentre la frase «Un commento, e» parte a 5.5s: il testo non è sincronizzato con l'accensione. Inoltre la didascalia dice «domani alle 18», coerente con la voce, ma il formato ha solo 1 luce e 14,5 secondi: il tono è ok. Nessun problema audio.",
+    "correzione": "Anticipare la frase «il tuo animale si accende» a circa 4.9s, o far partire l'accensione della luce insieme alla parola «accende», così voce e immagine coincidono.",
+    "idea": "Mostrare nel reel la luce che compare sulla mappa in primo piano con uno zoom sul comune, così chi vede il reel capisce subito il meccanismo e vuole partecipare."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:31+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'il tuo animale si accende' a 7.3s, ma nei dati mappa la luce si accende al secondo 4.92, cioè prima della frase; inoltre il testo 'Questa luce è di Nina' parte a 4.0s. Il picco audio è a -1.0 dBFS e l'obiettivo è sotto -1, quindi è al limite; il volume medio dei primi 5s (-16.3",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (luce di Nina su Luino, acceso al 4.92s), audio, didascalia e numeri del progetto del reel 'questa_luce'.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'il tuo animale si accende' a 7.3s, ma nei dati mappa la luce si accende al secondo 4.92, cioè prima della frase; inoltre il testo 'Questa luce è di Nina' parte a 4.0s. Il picco audio è a -1.0 dBFS e l'obiettivo è sotto -1, quindi è al limite; il volume medio dei primi 5s (-16.3 dB) è più basso della media target. Il reel è breve (14.5s) con 'questa_luce' a 381 views e 264 reach, sotto la media degli altri formati.",
+    "correzione": "Allineare la frase 'il tuo animale si accende' al momento reale dell'accensione (circa 4.9s, non 7.3s) e abbassare leggermente il picco audio per restare chiaramente sotto -1 dBFS.",
+    "idea": "Far coincidere l'accensione della luce con la parola 'si accende' e aggiungere un commento visibile in scena per aumentare i commenti e la reach."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:33+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase sulla luce di Nina è a 4.0s, mentre la luce si accende a 4.92s; nella copertina la luce è indicata a Luino ma la scena della mappa 'questa luce' è di 2.3 secondi, troppo breve per leggere l'etichetta. Inoltre la didascalia non dice 'voce generata con IA' in modo chiaro su",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (scena 4.12-6.41s, luce accesa a 4.92s, Luino), audio, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Nella trascrizione la frase sulla luce di Nina è a 4.0s, mentre la luce si accende a 4.92s; nella copertina la luce è indicata a Luino ma la scena della mappa 'questa luce' è di 2.3 secondi, troppo breve per leggere l'etichetta. Inoltre la didascalia non dice 'voce generata con IA' in modo chiaro sul formato, e i dati mostrano che questa_luce ha reach bassa (264) con 0 condivisioni.",
+    "correzione": "Allineare la battuta 'Questa luce è di Nina' alla accensione effettiva della luce (circa 4.9s), allungare la scena della mappa a 3-4 secondi con l'etichetta leggibile per almeno 2 secondi, e aggiungere una call to action più precisa nella fascia finale.",
+    "idea": "Per i prossimi reel della serie questa_luce, far restare la mappa in primo piano per qualche secondo con zoom sul comune dell'animale e mostrare il conteggio delle luci del comune, che nei dati è ancora a zero per Luino."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:35+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma la luce si accende nei dati solo al secondo 4.92: la voce parla prima che la luce si accenda, con uno scarto di circa 0.9 secondi. Inoltre la voce dice 'il tuo animale si accende sulla mappa' mentre la frase 'Un commento' non è allineata alla s",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (luce di Nina a Luino, accensione al secondo 4.92), audio (-14 LUFS, picco -1 dBFS, nessun silenzio), didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma la luce si accende nei dati solo al secondo 4.92: la voce parla prima che la luce si accenda, con uno scarto di circa 0.9 secondi. Inoltre la voce dice 'il tuo animale si accende sulla mappa' mentre la frase 'Un commento' non è allineata alla scena del commento; la didascalia cita @sim.o_._ come benvenuto ma nei dati la scena copre solo 4.12-6.41s. Il dato 'luci_del_comune_dell_etichetta: 0' con 'luci_li_oggi: 1' va bene, ma il titolo copertina dice 'è di Nina' mentre il reel è pensato per invitare a commentare: l'invito all'azione arriva al secondo 7.3 e resta solo 7 secondi per il commento.",
+    "correzione": "Spostare l'annuncio 'Questa luce è di Nina' a dopo il secondo 4.9, oppure far cadere la parola 'luce' sull'accensione. Verificare che la scena commento copra il secondo 7.3 in cui si invita a commentare.",
+    "idea": "Per i prossimi reel di questo formato, tenere la luce accesa per più di un secondo prima di dire il nome, e chiudere con una frase che ripete la città per rafforzare il commento."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:35+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma la luce si accende solo al 4.92s, quindi la frase è detta prima che la luce compaia. Inoltre la voce dice «Un commento, e il tuo animale si accende» a 5.5s, mentre il secondo commento-luce è pianificato in una scena diversa dal copione. Il dato",
+   "dati": {
+    "controllato": "Sincronia tra copione, trascrizione coi secondi e dati della mappa (scena 4.12–6.41s, luce al 4.92s), più coerenza con la didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice «Questa luce è di Nina» a 4.0s, ma la luce si accende solo al 4.92s, quindi la frase è detta prima che la luce compaia. Inoltre la voce dice «Un commento, e il tuo animale si accende» a 5.5s, mentre il secondo commento-luce è pianificato in una scena diversa dal copione. Il dato 'luci_del_comune_dell_etichetta: 0' con luce di Luino da 1 non è incoerente, ma il testo 'Questa luce è di Nina' va allineato alla comparsa.",
+    "correzione": "Spostare la frase 'Questa luce è di Nina, a Luino' in modo che parta dal secondo 4.9 (quando la luce si accende), oppure ritardare la luce a ~4.0s. Verificare anche che 'Le prossime luci domani alle 18' sia coerente con l'ora di pubblicazione dichiarata nel brief (18:12).",
+    "idea": "Far comparire la luce sulla mappa esattamente sulla parola 'si accende', così il gesto visivo e quello vocale coincidono."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:35+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina, a Luino' parte a 4.0s, ma la luce si accende solo al 4.92s: il parlato anticipa l'effetto visivo di quasi un secondo. Inoltre i fotogrammi di controllo sono 0.5, 3, 6, 8, 11, 14 e non coprono il momento dell'accensione (4.92s) né la scena di chiusura con il dato sull",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (luce di Nina a Luino, si accende al 4.92s), audio e didascalia, più i numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La frase 'Questa luce è di Nina, a Luino' parte a 4.0s, ma la luce si accende solo al 4.92s: il parlato anticipa l'effetto visivo di quasi un secondo. Inoltre i fotogrammi di controllo sono 0.5, 3, 6, 8, 11, 14 e non coprono il momento dell'accensione (4.92s) né la scena di chiusura con il dato sulle luci di domani.",
+    "correzione": "Far partire la voce 'Questa luce è di Nina' in coincidenza con l'accensione (intorno a 4.9s) oppure spostare l'accensione sul parlato; aggiungere un fotogramma a circa 5s per verificare l'effetto.",
+    "idea": "Per i prossimi reel questa_luce, mostrare nei primi 3 secondi la mappa con la luce già accesa del commento precedente, così il follow ha un motivo visivo immediato."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:37+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'il tuo animale si accende' a 7.3s, ma nei dati mappa la luce di Nina si accende al secondo 4.92, cioè prima che la voce pronunci la frase. Inoltre l'audio è a -16.3 dB nei primi 5 secondi contro l'obiettivo di -14 LUFS, quindi l'apertura risulta più debole del resto. La didasca",
+   "dati": {
+    "controllato": "Trascrizione, tempi della mappa, audio, didascalia e coerenza dei dati del reel questa luce.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'il tuo animale si accende' a 7.3s, ma nei dati mappa la luce di Nina si accende al secondo 4.92, cioè prima che la voce pronunci la frase. Inoltre l'audio è a -16.3 dB nei primi 5 secondi contro l'obiettivo di -14 LUFS, quindi l'apertura risulta più debole del resto. La didascalia dice 'benvenuti @sim.o_._' e 'In questo reel' con lo stesso account, va bene ma conviene verificare che il tag sia corretto.",
+    "correzione": "Allineare la voce o la scena dell'accensione della luce al secondo 4.9, e alzare il volume dei primi 5 secondi di circa 2 dB per portarli verso -14 LUFS.",
+    "idea": "Mostrare nei primi secondi la luce che si accende insieme alla voce, così apertura e accensione coincidono e l'effetto sorpresa arriva subito."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:38+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'il tuo animale si accende' parte a 7.3s, mentre nei dati mappa la luce si accende al secondo 4.92: il testo parlato arriva circa 2.4 secondi dopo l'accensione visibile, quindi la voce non sincronizza con l'animazione. Inoltre l'audio è a -16.3 dB di volume medio nei prim",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (luce di Nina a Luino, accensione al secondo 4.92), misure audio e didascalia del reel 'questa_luce'.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Nella trascrizione la frase 'il tuo animale si accende' parte a 7.3s, mentre nei dati mappa la luce si accende al secondo 4.92: il testo parlato arriva circa 2.4 secondi dopo l'accensione visibile, quindi la voce non sincronizza con l'animazione. Inoltre l'audio è a -16.3 dB di volume medio nei primi 5 secondi, sotto l'obiettivo di -14 LUFS.",
+    "correzione": "Spostare la frase 'il tuo animale si accende' in modo che cada attorno al secondo 5 (accorciando la pausa precedente) oppure ritardare l'animazione della luce a circa 7.3s; alzare il volume dei primi 5 secondi portandolo verso -14 LUFS senza superare il picco di -1 dBFS.",
+    "idea": "Usare sempre un'animazione di accensione che parta esattamente sulla parola chiave, e aggiungere un breve suono di 'click' di luce nel punto dell'accensione per rafforzare l'effetto."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:38+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato di luogo ('a Luino') compare nel fotogramma del secondo 3 e viene detto a voce a 4.0s, ma la mappa mostra l'etichetta 'Questa luce è di Nina' solo fino al 6.4s; il titolo 'LUINO' e il box 'la casa di Nina · 1 luce' appaiono già nelle prime scene. Inoltre la didascalia dice 'benvenuti @sim.o_",
+   "dati": {
+    "controllato": "Dati della mappa, trascrizione coi secondi, audio e coerenza della didascalia rispetto al reel.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "Il dato di luogo ('a Luino') compare nel fotogramma del secondo 3 e viene detto a voce a 4.0s, ma la mappa mostra l'etichetta 'Questa luce è di Nina' solo fino al 6.4s; il titolo 'LUINO' e il box 'la casa di Nina · 1 luce' appaiono già nelle prime scene. Inoltre la didascalia dice 'benvenuti @sim.o_._!' mentre il reel mostra il nome 'Nina' senza handle nella scena: l'handle compare solo in fondo alla didascalia.",
+    "correzione": "Anticipare o ripetere l'etichetta 'Questa luce è di Nina' nel primo secondo, e mostrare l'handle @sim.o_._ accanto a Nina nella scena della luce.",
+    "idea": "Inserire nel reel il numero di luci del giorno (oggi 1 luce) come contatore animato, per dare senso di crescita e urgenza al follow."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:39+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Questa luce è di Nina' arriva a 4.0s, ma nei dati mappa la luce si accende al secondo 4.92 e la scena inizia a 4.12s: la voce anticipa l'accensione. Inoltre la scena della mappa (secondi 4-6) mostra ancora la luce di Nina in primo piano e la frase 'a Luino' parte a 5.5s,",
+   "dati": {
+    "controllato": "Gancio: cartello d'apertura, frasi e tempi del reel, coerenza tra voce, didascalia e dati della mappa (Luino, Nina, 1 luce oggi).",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella trascrizione la frase 'Questa luce è di Nina' arriva a 4.0s, ma nei dati mappa la luce si accende al secondo 4.92 e la scena inizia a 4.12s: la voce anticipa l'accensione. Inoltre la scena della mappa (secondi 4-6) mostra ancora la luce di Nina in primo piano e la frase 'a Luino' parte a 5.5s, quindi il ritmo tra nome e luogo è un po' serrato. Il cartello 'Nina' in alto nel primo fotogramma è sovrapposto al tetto della casetta, con poco contrasto.",
+    "correzione": "Spostare la battuta 'Questa luce è di Nina' a circa 4.9s, in sincronia con l'accensione, e allungare di mezzo secondo la pausa tra 'Nina' e 'a Luino'. Verificare il contrasto del cartello 'Nina' sul primo fotogramma.",
+    "idea": "Chiudere sempre con un fotogramma fisso della mappa con più luci già accese, così il follower vede subito la portata del progetto."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:41+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La frase «Questa luce è di Nina, a Luino» compare al secondo 4.0 (scena 4.12–6.41), ma la luce si accende solo al secondo 4.92: il testo arriva prima del punto luminoso e l'effetto «luce che si accende sul nome» si perde. Inoltre la chiusura («Le prossime luci domani alle 18») non è accompagnata da ",
+   "dati": {
+    "controllato": "Ho verificato la scena della mappa, il timing della luce di Nina (si accende al secondo 4.92, dentro la scena 4.12–6.41), la frase sul commento e la call to action finale, con i dati di follower per formato.",
+    "esito": "segnalo",
+    "secondo": 4.9,
+    "problema": "La frase «Questa luce è di Nina, a Luino» compare al secondo 4.0 (scena 4.12–6.41), ma la luce si accende solo al secondo 4.92: il testo arriva prima del punto luminoso e l'effetto «luce che si accende sul nome» si perde. Inoltre la chiusura («Le prossime luci domani alle 18») non è accompagnata da un'immagine della mappa, quindi lo spettatore non ha un motivo visivo immediato per restare.",
+    "correzione": "Far partire la frase «Questa luce è di Nina» con un leggero ritardo, in modo che il testo compaia nel momento in cui la luce si accende (intorno al secondo 4.9), e nel finale mostrare per un istante la mappa con le luci sparse mentre si pronuncia «seguici per vedere la tua!».",
+    "idea": "Ripetere il formato «Prima luce» (16.2 follower ogni 1000) con un'ultima scena in cui l'animale appena arrivato è chiamato per nome, per creare identificazione e commenti."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:42+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella frase 'Questa luce è di Nina, a Luino' la parola 'Luino' arriva al secondo 5.5 mentre la scena della luce si accende al 4.92 e la mappa mostra la luce solo dopo: il ritmo voce/immagine è poco allineato, e la frase 'Un commento, e il tuo animale si accende' parte quando la scena cambia. Inoltre",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la scena della luce (Luino, coordinate e comune coerenti con la mappa), i numeri di luci del comune e l'audio (-16.3 dB sui primi 5s, nessun silenzio lungo, obiettivo -14 LUFS).",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella frase 'Questa luce è di Nina, a Luino' la parola 'Luino' arriva al secondo 5.5 mentre la scena della luce si accende al 4.92 e la mappa mostra la luce solo dopo: il ritmo voce/immagine è poco allineato, e la frase 'Un commento, e il tuo animale si accende' parte quando la scena cambia. Inoltre nel reel il testo 'A LUINO.' compare insieme alla voce, ma la trascrizione dice 'Seguici per vedere la tua!' mentre lo schermo mostra 'LA TUA!': coerente, nessun errore. Il problema reale è l'audio: il volume medio dei primi 5 secondi (-16.3 dB) è più basso del target, quindi l'apertura risulta più debole del resto.",
+    "correzione": "Alzare il volume della voce nei primi 5 secondi (portarlo verso -14 LUFS) e far coincidere la parola 'Luino' con il momento in cui la luce si accende sulla mappa (intorno al secondo 4.9).",
+    "idea": "Nel prossimo reel 'Questa luce' far comparire in apertura il nome dell'animale già nel primo secondo, così la voce e la luce arrivano insieme."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:42+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Ho controllato i secondi e i fotogrammi del reel, il dato della mappa su Luino e la tabella dei follower ogni 1.000 account negli ultimi reel.",
+   "dati": {
+    "controllato": "Ho controllato i secondi e i fotogrammi del reel, il dato della mappa su Luino e la tabella dei follower ogni 1.000 account negli ultimi reel.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Il formato 'questa_luce' ha fatto 7,6 follower ogni 1.000 account, meno di 'prima_luce' (16,2) e 'puntata' (17,1): nel prossimo reel si potrebbe chiudere con un'anteprima visiva della luce di domani, per far sentire più urgente il seguire."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:42+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina, a Luino' compare al secondo 4.0, ma la luce di Nina si accende solo al secondo 4.92 (scena 'luce' da 4.12 a 6.41). Nei fotogrammi la mappa con la luce accesa arriva dopo, quindi il testo anticipa l'immagine di circa un secondo. Inoltre la trascrizione dice 'Un commen",
+   "dati": {
+    "controllato": "Ho verificato la scena della luce su Luino (dati mappa), la trascrizione con i secondi, l'audio e la coerenza tra didascalia, fascia e copertina.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La frase 'Questa luce è di Nina, a Luino' compare al secondo 4.0, ma la luce di Nina si accende solo al secondo 4.92 (scena 'luce' da 4.12 a 6.41). Nei fotogrammi la mappa con la luce accesa arriva dopo, quindi il testo anticipa l'immagine di circa un secondo. Inoltre la trascrizione dice 'Un commento, e il tuo animale si accende' al secondo 7.3, mentre la scena del commento inizia dopo, quindi il ritmo tra voce e immagini è leggermente sfasato.",
+    "correzione": "Far partire la voce 'Questa luce è di Nina' al secondo 4.9, oppure anticipare l'accensione della luce a circa 4.0 s. Allineare la frase del commento alla comparsa della fascia 'Commenta città e nome' (fotogramma ~7-8 s).",
+    "idea": "Testare una chiusura più esplicita con il nome dell'animale in sovrimpressione e far comparire la prossima luce in anteprima sulla mappa per aumentare l'attesa."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:44+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Questa luce è di Nina' è a 4.0s, ma nei dati mappa la luce si accende al secondo 4.92: il testo arriva prima dell'accensione visiva. Inoltre la scena della mappa inizia a 4.12s, quindi la frase 'a Luino' (5.5s) cade nella scena in cui la luce è già accesa, mentre nel ree",
+   "dati": {
+    "controllato": "Ho verificato la scena della mappa e la sua coerenza coi dati (luce di Nina a Luino, 1 luce, data e meteo nella scheda), la trascrizione coi secondi e la sincronia tra frase 'Questa luce è di Nina' e la scena.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella trascrizione la frase 'Questa luce è di Nina' è a 4.0s, ma nei dati mappa la luce si accende al secondo 4.92: il testo arriva prima dell'accensione visiva. Inoltre la scena della mappa inizia a 4.12s, quindi la frase 'a Luino' (5.5s) cade nella scena in cui la luce è già accesa, mentre nel reel la scritta 'A LUINO.' compare su una mappa che non ha ancora il punto evidenziato.",
+    "correzione": "Ritardare la frase 'Questa luce è di Nina' a circa 4.9s, in modo che coincida con l'accensione, e verificare che 'a Luino' arrivi quando il punto è ben visibile.",
+    "idea": "Inserire un piccolo 'contatore' di luci (es. 'sei la luce n. 2.820') per rendere ogni reel un traguardo condivisibile."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:45+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina' compare intorno al secondo 4, ma nei fotogrammi la mappa con l'etichetta 'Nina' e la luce che si accende è nella scena dal secondo 4.12 al 6.41; la voce dice 'Questa luce è di Nina' a 4.0s, quindi l'audio parte appena prima che la luce si accenda (la luce si accende ",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la coerenza tra scena della mappa e frase 'Questa luce è di Nina, a Luino', e i dati dei follower del reel.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "La frase 'Questa luce è di Nina' compare intorno al secondo 4, ma nei fotogrammi la mappa con l'etichetta 'Nina' e la luce che si accende è nella scena dal secondo 4.12 al 6.41; la voce dice 'Questa luce è di Nina' a 4.0s, quindi l'audio parte appena prima che la luce si accenda (la luce si accende al 4.92). Inoltre nel reel la scena 'Questa luce è di' scompare dopo 4.0s e il titolo cambia, il che è coerente. Il problema reale è la mancanza di pausa tra la chiusura (12.3s) e la fine di 14.5s: il messaggio 'Seguici per vedere la tua!' arriva a ridosso della fine, senza tempo per leggere la fascia di commento.",
+    "correzione": "Far partire la voce 'Questa luce è di Nina' dopo che la luce si è accesa (circa 5.0s), e lasciare almeno 2 secondi di schermata finale con la fascia 'Commenta città e nome del tuo animale' e il @ per il follow.",
+    "idea": "Nel finale mostrare per un istante la luce della propria città accendersi con il nome dell'utente, così il follow nasce dal desiderio di vedere la propria luce."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:46+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la voce dice 'Questa luce è di Nina' a 4.0s, ma il dato di mappa indica che la luce si accende al secondo 4.92: la frase arriva prima dell'accensione visiva. Inoltre la didascalia dice 'benvenuti @sim.o_._!' ma il mention appare anche come 'In questo reel', ripetendo l'handle due ",
+   "dati": {
+    "controllato": "Trascrizione, secondi e sincronia tra voce e scena della luce (Nina, Luino) nel reel 'Questa luce è di…'.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "Nella trascrizione la voce dice 'Questa luce è di Nina' a 4.0s, ma il dato di mappa indica che la luce si accende al secondo 4.92: la frase arriva prima dell'accensione visiva. Inoltre la didascalia dice 'benvenuti @sim.o_._!' ma il mention appare anche come 'In questo reel', ripetendo l'handle due volte.",
+    "correzione": "Far partire la frase 'Questa luce è di Nina' dopo il secondo 4.9, oppure spostare l'accensione della luce a ~4.0s; togliere una delle due citazioni dell'handle nella didascalia.",
+    "idea": "Dopo la luce, mostrare per un secondo il conteggio 'Nina è la luce n. 2.819' o la mappa piena per creare senso di comunità e voglia di partecipare."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:46+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina, a Luino' parte a 4.0s, ma la luce si accende solo a 4.92s; il commento sulla mappa ('si accende') arriva a 7.3s, quando la scena è già in chiusura. Inoltre i fotogrammi inviati (0.5, 3, 6, 8, 11, 14) non coincidono con quelli richiesti (0.5-14 ogni secondo), quindi n",
+   "dati": {
+    "controllato": "Sincronia tra trascrizione, scena della mappa (luce che si accende a 4.92s) e dati verificati del reel questa_luce.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La frase 'Questa luce è di Nina, a Luino' parte a 4.0s, ma la luce si accende solo a 4.92s; il commento sulla mappa ('si accende') arriva a 7.3s, quando la scena è già in chiusura. Inoltre i fotogrammi inviati (0.5, 3, 6, 8, 11, 14) non coincidono con quelli richiesti (0.5-14 ogni secondo), quindi non posso verificare visivamente l'accensione. Il reel dura 14.5s ma la scena luce finisce a 6.41s, con 2 secondi di pausa implicita prima del commento.",
+    "correzione": "Allineare l'annuncio del nome alla accensione (es. spostare 'Questa luce è di Nina' a 4.9s) e far partire 'il tuo animale si accende' in coincidenza con la scena commento; ricontrollare con tutti i fotogrammi richiesti.",
+    "idea": "Stringere la scena luce a 3 secondi massimo e usare il nome dell'animale come testo grande in apertura, per aumentare la ritenzione nei primi secondi."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:48+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma nei dati la scena parte a 4.12s e la luce si accende solo a 4.92s: la frase dell'animale e l'accensione non coincidono bene. Inoltre la frase 'il tuo animale si accende sulla mappa' (7.3s) arriva dopo che la luce di Nina è già accesa, quindi il",
+   "dati": {
+    "controllato": "Meccaniche di gioco: sincronia della luce sulla mappa rispetto alla trascrizione, dati della scena, tempi e logica dell'interazione (commento → luce).",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma nei dati la scena parte a 4.12s e la luce si accende solo a 4.92s: la frase dell'animale e l'accensione non coincidono bene. Inoltre la frase 'il tuo animale si accende sulla mappa' (7.3s) arriva dopo che la luce di Nina è già accesa, quindi il pubblico non capisce subito cosa succede. Il reel mostra anche una sola luce e il 'luci_del_comune' è 0, quindi il gioco di 'mappa che si popola' ha poco impatto visivo.",
+    "correzione": "Far accendere la luce di Nina sul tempo della parola 'Luino' (circa 4.9s) e spostare 'il tuo animale si accende' prima del commento; allineare la trascrizione alla scena reale (4.12s) e mostrare la luce in dissolvenza più evidente.",
+    "idea": "Quando un reel 'questa luce' ha poche luci, far comparire insieme le luci del giorno precedente in tenue, così la mappa sembra viva anche con pochi partecipanti."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:49+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma la luce si accende a 4.92s, quindi il testo parla dell'accensione prima che avvenga; inoltre 'il tuo animale si accende' a 7.3s arriva dopo l'accensione reale, con uno scarto di circa 2 secondi. Il dato 'volume medio primi 5s -16.3 dB' è sotto ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Luino, luce accesa a 4.92s), audio (-14 LUFS, picco -1 dBFS, nessun silenzio), didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La trascrizione dice 'Questa luce è di Nina' a 4.0s, ma la luce si accende a 4.92s, quindi il testo parla dell'accensione prima che avvenga; inoltre 'il tuo animale si accende' a 7.3s arriva dopo l'accensione reale, con uno scarto di circa 2 secondi. Il dato 'volume medio primi 5s -16.3 dB' è sotto l'obiettivo di -14 LUFS dell'apertura, anche se il target integrato è rispettato. Le sole cifre di follower/reach nei dati sono sufficienti, ma 'follower_ogni_1000' di 'questa_luce' (7.6 e 19.3) è molto variabile e il campione è piccolo.",
+    "correzione": "Allineare la voce alla luce: spostare 'Questa luce è di Nina' a circa 4.9s o far comparire la luce dopo la frase; anticipare 'il tuo animale si accende' di circa 2 secondi per farlo coincidere con l'accensione; verificare il livello delle prime 5 secondi per portarlo verso -14 LUFS.",
+    "idea": "Per i prossimi reel, far partire la voce insieme all'accensione della luce, usando il secondo esatto del dato 'scena_dal_secondo' come punto di aggancio."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:50+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice 'il tuo animale si accende sulla mappa' (7.3s) e la scena della luce parte a 4.12s, ma nei dati la luce si accende al secondo 4.92, cioè dentro la scena 'luce' e prima che la frase 'commento' finisca: la mappa mostra l'accensione quando la voce parla ancora di Nina. Inoltre il materiale",
+   "dati": {
+    "controllato": "Realismo della mappa e del 3D: coordinate di Luino, luce accesa al secondo 4.92 dentro la scena 4.12–6.41, etichetta e comune coerenti con i dati verificati.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Il reel dice 'il tuo animale si accende sulla mappa' (7.3s) e la scena della luce parte a 4.12s, ma nei dati la luce si accende al secondo 4.92, cioè dentro la scena 'luce' e prima che la frase 'commento' finisca: la mappa mostra l'accensione quando la voce parla ancora di Nina. Inoltre il materiale indica una luce singola (luci_li_oggi: 1), quindi la scena non mostra la mappa piena né la sensazione di 'molte luci', e la sovrapposizione tra voce e animazione può risultare confusa. Il fotogramma a 3s/6s va verificato per assicurarsi che l'etichetta 'Questa luce è di Nina' sia leggibile.",
+    "correzione": "Far partire la voce 'il tuo animale si accende' solo dal secondo 4.9, allineando la frase 'commento' all'accensione; mantenere l'etichetta sulla luce fino a 6.4s; verificare la leggibilità del fotogramma a 6s.",
+    "idea": "Per i prossimi reel 'questa_luce', mostrare due o tre luci che si accendono in sequenza in città diverse, così l'effetto 'la mappa si riempie' è visibile e il formato supera la singola luce."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:51+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina' parte a 4.0s, ma la luce si accende a 4.92s: il testo 'Un commento' (5.5s) arriva dopo, quindi l'accensione non coincide con la parola che la annuncia. Inoltre le frasi 'Le prossime luci domani alle 18' sono un'idea da verificare: il dato 'luci_li_oggi' è 1 e non ci ",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la sincronia della luce (accensione a 4.92s dentro la scena 4.12–6.41s) e la coerenza di didascalia e copertina con i dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La frase 'Questa luce è di Nina' parte a 4.0s, ma la luce si accende a 4.92s: il testo 'Un commento' (5.5s) arriva dopo, quindi l'accensione non coincide con la parola che la annuncia. Inoltre le frasi 'Le prossime luci domani alle 18' sono un'idea da verificare: il dato 'luci_li_oggi' è 1 e non ci sono informazioni sulle luci di domani nei materiali. Anche la didascalia è coerente, ma l'audio ha volume medio del primo 5s a -16.3 dB, sotto l'obiettivo di -14 LUFS in apertura.",
+    "correzione": "Allineare la frase 'Questa luce è di Nina' in modo che finisca prima del secondo 4.92 oppure spostare l'accensione della luce a ridosso della parola 'si accende'. Alzare il volume dei primi 5 secondi di circa 2 dB per avvicinarsi a -14 LUFS. Confermare con chi gestisce la programmazione che le luci del giorno dopo siano davvero alle 18 prima di tenere la frase.",
+    "idea": "Mostrare nel reel una luce che si accende in tempo reale sulla mappa con un suono leggero, e ripetere il commento dell'animale come cartellino a schermo per rafforzare il legame tra follower e luce."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:51+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il testo 'Questa luce è di Nina' parte a 4.0s ma la luce si accende solo a 4.92s; inoltre l'audio è a -16.3 dB nei primi 5s contro un obiettivo di -14 LUFS, quindi l'apertura risulta più debole del resto. Il video nei fotogrammi inviati non è visibile per verificare la sincronia visiva.",
+   "dati": {
+    "controllato": "Timing della trascrizione rispetto alla scena della mappa (etichetta, luce al secondo 4.92, comune Luino) e misure audio contro l'obiettivo.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Il testo 'Questa luce è di Nina' parte a 4.0s ma la luce si accende solo a 4.92s; inoltre l'audio è a -16.3 dB nei primi 5s contro un obiettivo di -14 LUFS, quindi l'apertura risulta più debole del resto. Il video nei fotogrammi inviati non è visibile per verificare la sincronia visiva.",
+    "correzione": "Far coincidere la frase 'Questa luce è di Nina' con l'accensione reale (4.92s) e alzare il volume dei primi 5 secondi per allinearlo a -14 LUFS.",
+    "idea": "Ripetere il formato con una luce mostrata già accesa nei primi secondi e la voce che la nomina, così da mantenere l'attenzione dei nuovi spettatori."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:52+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La voce dice 'Questa luce è di Nina' a 4.0s, ma la luce si accende solo al secondo 4.92: l'audio anticipa di quasi un secondo l'accensione visiva. Inoltre il volume medio dei primi 5s è -16.3 dB, più basso dei -14 LUFS dell'obiettivo, quindi l'apertura risulta un po' sottotono rispetto al resto.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume iniziale), trascrizione coi secondi e coerenza tra testo parlato e tempi della mappa.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La voce dice 'Questa luce è di Nina' a 4.0s, ma la luce si accende solo al secondo 4.92: l'audio anticipa di quasi un secondo l'accensione visiva. Inoltre il volume medio dei primi 5s è -16.3 dB, più basso dei -14 LUFS dell'obiettivo, quindi l'apertura risulta un po' sottotono rispetto al resto.",
+    "correzione": "Ritardare la frase 'Questa luce è di Nina' di circa un secondo, in modo che coincida con l'accensione a 4.92s, e alzare di circa 2 dB il livello dei primi 5 secondi (senza superare il picco di -1 dBFS).",
+    "idea": "Far pronunciare il nome dell'animale proprio nel momento in cui la sua luce si accende, e chiudere con la città evidenziata sulla mappa, così che ogni reel funzioni come piccola sorpresa personale."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:54+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina, a Luino' viene detta dal 4.0s, ma la luce si accende solo al 4.92s: il parlato anticipa l'accensione di quasi un secondo. Inoltre la trascrizione dice 'il tuo animale si accende' al 7.3s, mentre la mappa mostra la luce già accesa in quella scena; il rapporto tra paro",
+   "dati": {
+    "controllato": "Sincronia trascrizione/secondi, dati mappa (coordinate Luino, luce accesa al 4.92s dentro la scena 4.12-6.41s), misure audio, durata e didascalia rispetto al copione.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La frase 'Questa luce è di Nina, a Luino' viene detta dal 4.0s, ma la luce si accende solo al 4.92s: il parlato anticipa l'accensione di quasi un secondo. Inoltre la trascrizione dice 'il tuo animale si accende' al 7.3s, mentre la mappa mostra la luce già accesa in quella scena; il rapporto tra parola e immagine è quindi sfasato. Anche l'audio è a -16.3 dB nei primi 5 secondi, sotto il target di -14 LUFS, quindi l'apertura è più debole del resto.",
+    "correzione": "Far partire la frase 'Questa luce è di Nina' dal momento in cui la luce si accende (circa 4.9s), oppure spostare l'accensione della mappa sulla parola 'luce'. Alzare il volume dei primi 5 secondi di circa 2 dB per allinearsi al target di -14 LUFS.",
+    "idea": "Usare come gancio la luce appena accesa più una scena di confronto con la luce del comune di riferimento (ora 0 nel dato), e spostare l'invito al follow nel primo secondo, dove il formato puntata ha già mostrato buoni risultati."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:55+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Questa luce è di Nina' inizia a 4.0s, ma la luce si accende solo al 4.92s: la voce annuncia la luce prima che compaia. Inoltre la scena della luce dura solo fino a 6.41s, quindi la frase 'il tuo animale si accende sulla mappa' (7.3s) arriva dopo che la scena è già cambiata. Il progetto ha ",
+   "dati": {
+    "controllato": "Ho verificato la sincronia tra trascrizione, scena della luce sulla mappa (accensione al secondo 4.92, Luino), audio (-14 LUFS, picco -1 dBFS, nessun silenzio) e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "La frase 'Questa luce è di Nina' inizia a 4.0s, ma la luce si accende solo al 4.92s: la voce annuncia la luce prima che compaia. Inoltre la scena della luce dura solo fino a 6.41s, quindi la frase 'il tuo animale si accende sulla mappa' (7.3s) arriva dopo che la scena è già cambiata. Il progetto ha poi 'luci_del_comune_dell_etichetta: 0' e 'luci_li_oggi: 1', che è coerente, ma la didascalia dice 'benvenuti @sim.o_._' senza che il tag compaia in una scena visibile.",
+    "correzione": "Allineare la frase 'Questa luce è di Nina' all'accensione (circa 4.9s) e far restare la scena della mappa almeno fino a 8.5s, così la frase 'il tuo animale si accende' cade mentre la luce è visibile. Verificare che il tag @sim.o_._ compaia nel fotogramma.",
+    "idea": "Far partire la voce con la luce già accesa e un breve zoom sulla città, così la rivelazione coincide con la parola 'Luino' e l'emozione arriva insieme all'immagine."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:55+00:00",
+   "da": "grafica3d-2",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "La luce si accende al secondo 4.92 mentre la voce dice 'Questa luce è di Nina' al secondo 4.0 e la scena della mappa parte al 4.12: nel fotogramma del secondo 4 la luce non è ancora visibile, quindi il collegamento voce-luce arriva con quasi un secondo di ritardo. Inoltre la trascrizione dà 'Un comm",
+   "dati": {
+    "controllato": "Ho verificato la mia mansione sul reel: sincronia tra etichetta 'Questa luce è di Nina' e comparsa della luce sulla mappa, coerenza tra trascrizione, scene e testo a schermo, dati mappa (Luino, 1 luce) e misure audio.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "La luce si accende al secondo 4.92 mentre la voce dice 'Questa luce è di Nina' al secondo 4.0 e la scena della mappa parte al 4.12: nel fotogramma del secondo 4 la luce non è ancora visibile, quindi il collegamento voce-luce arriva con quasi un secondo di ritardo. Inoltre la trascrizione dà 'Un commento, e il tuo animale si accende' a 5.5s, ma la luce di Nina è sulla mappa già in scena 0, mentre le scene successive ripetono la fascia con le stesse luci: non ci sono errori di dati, ma il tempo di attesa dopo 'la luce è di Nina' è un po' lungo. Non rilevo problemi audio (misure nei target), né errori nei dati dichiarati.",
+    "correzione": "Anticipare l'accensione della luce di Nina a circa 4.0-4.2 secondi, in modo che coincida con la frase 'Questa luce è di Nina', e ridurre di mezzo secondo la scena fissa tra le due frasi.",
+    "idea": "Per i prossimi reel 'questa_luce' con pochi commenti, aggiungere al secondo 10 il nome di una città vicina con una luce accesa, così il follower riconosce subito il proprio territorio e il follow diventa più probabile."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:56+00:00",
+   "da": "grafica3d-3",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi al secondo 6 e 8 la scena del comune mostra la luce di Nina ben visibile, ma nell'inquadratura successiva (8s) la mappa d'insieme e la luce del punto restano poco leggibili per il pubblico; inoltre l'etichetta '1 luci' e 'la casa di Nina' compaiono sia nell'apertura sia nelle scene 3D",
+   "dati": {
+    "controllato": "Mansione grafica 3D: apertura, luce sulla mappa al secondo 4.9 coerente con la scena, coordinate e posizione di Luino, copertina e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 6,
+    "problema": "Nei fotogrammi al secondo 6 e 8 la scena del comune mostra la luce di Nina ben visibile, ma nell'inquadratura successiva (8s) la mappa d'insieme e la luce del punto restano poco leggibili per il pubblico; inoltre l'etichetta '1 luci' e 'la casa di Nina' compaiono sia nell'apertura sia nelle scene 3D, con un testo piccolo sopra la mappa che può sovrapporsi al cerchio della piazza.",
+    "correzione": "Ingrandire l'etichetta del punto (nome dell'animale) nella scena di zoom e ritardare di mezzo secondo il cambio di inquadratura per dare tempo di leggere la luce accesa.",
+    "idea": "Per i prossimi reel, aggiungere una breve sequenza in cui la luce appena accesa pulsa e lascia una scia verso il comune, per rendere più memorabile l'accensione."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:58+00:00",
+   "da": "grafica3d-4",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma 0.5s e 3s la scena 3D mostra la casa di Nina con etichetta 'Nina' e la luce già accesa, ma nel fotogramma 6s la mappa è ancora in transizione; la luce della mappa si accende solo al 4.9s mentre nella scena 3D la luce appare già in apertura, quindi il passaggio tra le due viste non è s",
+   "dati": {
+    "controllato": "Ho verificato la posizione della luce di Nina sulla mappa (Luino, coordinate coerenti con l'etichetta), l'accensione al secondo 4.9 e le scene 3D nei fotogrammi inviati.",
+    "esito": "segnalo",
+    "secondo": 4.9,
+    "problema": "Nel fotogramma 0.5s e 3s la scena 3D mostra la casa di Nina con etichetta 'Nina' e la luce già accesa, ma nel fotogramma 6s la mappa è ancora in transizione; la luce della mappa si accende solo al 4.9s mentre nella scena 3D la luce appare già in apertura, quindi il passaggio tra le due viste non è sincronizzato. Inoltre la scena 3D nel primo fotogramma mostra la didascalia 'LUINO' e il sottotitolo con la data e il meteo, mentre la dicitura 'luna nuova' occupa due righe e risulta poco leggibile su mobile.",
+    "correzione": "Allineare l'accensione della luce 3D e quella sulla mappa allo stesso secondo (circa 4.9s) e accorciare la riga meteo/luna per stare su una sola riga.",
+    "idea": "Ripetere la scena 3D con il nome dell'animale scritto sulla casetta mentre la luce si accende, così il collegamento tra animale e luce è visivo e non solo testuale."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:59+00:00",
+   "da": "grafica3d-5",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 6 la luce di Nina è ancora in fase di accensione mentre la voce dice 'questa luce è di Nina' già da 4.0s; la luce si accende al 4.92 e la scena 0 va da 4.12 a 6.41, quindi la sincronia è accettabile, ma la fascia 'Un commento, e il tuo animale si accende' parte a 7.3s mentr",
+   "dati": {
+    "controllato": "Mappa 3D: posizione di Luino, luce di Nina, etichetta e numeri sulla scena, coerenza con i dati verificati e con la trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Nel fotogramma al secondo 6 la luce di Nina è ancora in fase di accensione mentre la voce dice 'questa luce è di Nina' già da 4.0s; la luce si accende al 4.92 e la scena 0 va da 4.12 a 6.41, quindi la sincronia è accettabile, ma la fascia 'Un commento, e il tuo animale si accende' parte a 7.3s mentre nel fotogramma al secondo 8 la mappa mostra già l'inquadratura d'insieme senza una luce nuova evidenziata: il momento 'si accende' non è visivamente marcato. Inoltre la frase 'Le prossime luci domani alle 18' compare dopo che la scena 'cani vs gatti' è già presente da prima, con un leggero ritardo tra voce e testo.",
+    "correzione": "Far coincidere il lampo di una nuova luce sulla mappa con la parola 'si accende' (circa 8.6s) e anticipare di mezzo secondo la scena 'cani vs gatti' rispetto alla voce.",
+    "idea": "Per i prossimi reel 'questa luce', usare un effetto di onda luminosa che si propaga dalla città sulla mappa, così il momento dell'accensione diventa il picco visivo del video."
+   }
+  },
+  {
+   "t": "2026-11-10T17:17:59+00:00",
+   "da": "grafica3d-6",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 3 la casetta e il cane sono illuminati in modo molto caldo e uniforme, con un alone giallo che sfuma i dettagli della texture (tetto, pietra del cerchio). Sulla mappa notturna la luce è invece un puntino sfocato che si confonde con le altre: la differenza tra 'luce accesa' ",
+   "dati": {
+    "controllato": "Materiali e texture della scena 3D: la luce di Nina sulla mappa e la casa di Luino, con i fotogrammi tra 0.5s e 14s.",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "Nel fotogramma al secondo 3 la casetta e il cane sono illuminati in modo molto caldo e uniforme, con un alone giallo che sfuma i dettagli della texture (tetto, pietra del cerchio). Sulla mappa notturna la luce è invece un puntino sfocato che si confonde con le altre: la differenza tra 'luce accesa' e 'alone' non si legge bene a schermo piccolo.",
+    "correzione": "Ridurre il bloom dell'alone sulla casetta e aumentare il contrasto della texture del tetto e del selciato; sulla mappa rendere la luce di Nina un po' più piccola e nitida, con un halo più stretto.",
+    "idea": "Per i prossimi reel usare due o tre luci vicine con colori leggermente diversi, così la texture e l'illuminazione si distinguono meglio sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:01+00:00",
+   "da": "grafica3d-7",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la scena 'luce' è ancora in dissolvenza: la camera entra sulla casetta di Nina mentre la frase 'Questa luce è di Nina' parte già e la luce dell'animale si accende solo intorno al secondo 4.9 (dati mappa). Nei fotogrammi 3-6 il cane è già illuminato per ~1s prima del dato di accensione, ",
+   "dati": {
+    "controllato": "Camere e inquadrature 3D del reel 'Questa luce è di Nina' (Luino): cosa mostrano i 6 fotogrammi, il movimento camera sulla scena e la sincronia con la trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la scena 'luce' è ancora in dissolvenza: la camera entra sulla casetta di Nina mentre la frase 'Questa luce è di Nina' parte già e la luce dell'animale si accende solo intorno al secondo 4.9 (dati mappa). Nei fotogrammi 3-6 il cane è già illuminato per ~1s prima del dato di accensione, quindi l'effetto luce e la voce non sono allineati. Inoltre la mappa a 1 luce nella scena 2 (vista dall'alto, luci poco leggibili) dura più di quanto serva e riduce il ritmo.",
+    "correzione": "Anticipare il taglio alla scena mappa di circa 0,5 s o ritardare l'accensione della casetta a 4.9 s; accorciare la vista dall'alto a 1,5 s e far entrare la camera sulla casa con un movimento più netto; dare alla scritta 'A LUINO.' un fotogramma di stacco pulito prima della fascia commento.",
+    "idea": "Per i prossimi reel 'questa_luce' inserire una camera che ruota attorno al punto acceso prima dello zoom finale, e usare un bagliore più forte per le luci appena arrivate, così il nuovo follower si riconosce subito."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:01+00:00",
+   "da": "grafica3d-8",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Il dato della mappa dice che la luce si accende al secondo 4.92, ma la scena dell'etichetta inizia a 4.12 e la voce dice 'Questa luce è di Nina' già a 4.0s: l'accensione arriva dopo la frase. Inoltre nella scena in 3D (fotogrammi 0.5-3s) il pin di Nina è già illuminato prima della scena dell'etichet",
+   "dati": {
+    "controllato": "Animazioni 3D: coerenza della mappa, della luce di Nina su Luino e dell'apertura con la scena dell'etichetta e dei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il dato della mappa dice che la luce si accende al secondo 4.92, ma la scena dell'etichetta inizia a 4.12 e la voce dice 'Questa luce è di Nina' già a 4.0s: l'accensione arriva dopo la frase. Inoltre nella scena in 3D (fotogrammi 0.5-3s) il pin di Nina è già illuminato prima della scena dell'etichetta, quindi la sequenza luce-etichetta non combacia con il copione.",
+    "correzione": "Allineare l'accensione della luce di Nina sulla mappa al momento in cui compare l'etichetta 'Questa luce è di Nina' (circa 4.0-4.1s), e far partire la luce spenta nella scena 3D.",
+    "idea": "Per i prossimi reel 'questa_luce' usare un'inquadratura fissa sul pin che si accende esattamente sulla parola del nome dell'animale, per dare un momento di sorpresa più netto."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:03+00:00",
+   "da": "grafica3d-9",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi 0.5s e 3s la scena 3D di Luino è già visibile, ma la luce sulla mappa del reel si accende al 4.92s, mentre la voce dice 'Questa luce è di Nina' a 4.0s: il lampo di Nina nella mappa 2D arriva dopo la frase. Inoltre la scena 3D (fotogrammi 0.5–3s) mostra il cane Nina prima ancora che la",
+   "dati": {
+    "controllato": "Scene 3D del reel: sequenza dei 6 fotogrammi, coerenza della luce di Nina sulla mappa con i dati (Luino, scena 4.12–6.41s, luce accesa al 4.92s) e leggibilità delle scritte.",
+    "esito": "segnalo",
+    "secondo": 4.92,
+    "problema": "Nei fotogrammi 0.5s e 3s la scena 3D di Luino è già visibile, ma la luce sulla mappa del reel si accende al 4.92s, mentre la voce dice 'Questa luce è di Nina' a 4.0s: il lampo di Nina nella mappa 2D arriva dopo la frase. Inoltre la scena 3D (fotogrammi 0.5–3s) mostra il cane Nina prima ancora che la voce lo nomini, e la mappa 3D finale resta con la luce piccola e poco visibile.",
+    "correzione": "Spostare l'accensione della luce di Nina sulla mappa a circa 4.0s, allineata alla frase 'Questa luce è di Nina', e rendere la luce più grande e luminosa nel fotogramma di 6s, così che il pubblico la individui subito.",
+    "idea": "Inserire nei prossimi reel uno zoom rapido dalla mappa nazionale alla città con l'animale, per rendere l'accensione della luce più spettacolare e memorabile."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:04+00:00",
+   "da": "grafica3d-10",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 3 la mappa mostra l'etichetta 'Nina' e il cane acceso solo nella scena Luino, ma il dato indica che la luce si accende al secondo 4.92: nei fotogrammi 0.5–3 la piccola casa di Nina è già illuminata nella scena di apertura del villaggio (prima della scena mappa), quindi l'ac",
+   "dati": {
+    "controllato": "Coerenza tra mappa 3D, etichette e trascrizione: la luce di Nina si accende al secondo ~4.9, sulla scena Luino, con il nome giusto e le coordinate del comune.",
+    "esito": "segnalo",
+    "secondo": 4.9,
+    "problema": "Nel fotogramma al secondo 3 la mappa mostra l'etichetta 'Nina' e il cane acceso solo nella scena Luino, ma il dato indica che la luce si accende al secondo 4.92: nei fotogrammi 0.5–3 la piccola casa di Nina è già illuminata nella scena di apertura del villaggio (prima della scena mappa), quindi l'accensione non corrisponde al momento della trascrizione. Inoltre la trascrizione dice 'Un commento' mentre sullo schermo la fascia dice 'Commenta città e nome del tuo animale', che è coerente, ma il secondo 6 mostra ancora la scena dell'Italia senza evidenziare la luce, con un'accensione poco visibile nel fotogramma del secondo 8.",
+    "correzione": "Allineare l'accensione della luce di Nina (ora dichiarata a 4.9 s) con un fotogramma in cui la luce è chiaramente accesa sulla mappa dell'Italia, e rendere più evidente il cerchio luminoso sul comune di Luino nel fotogramma 6–8 s.",
+    "idea": "Mostrare nel reel il conteggio reale delle luci del giorno (es. 'luce n. 2819') per dare senso di comunità e aggiungere un'animazione di zoom sul comune prima del commento."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:11+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Sincronizziamo voce, testo a schermo e accensione della luce (4.9s) e rendiamo coerente il messaggio finale di follow; il resto del reel resta com'è.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4,
+      "problema": "La voce dice «Questa luce è di Nina» a 4.0s, ma la luce si accende solo a 4.92s: il nome arriva prima dell'immagine che dovrebbe accompagnarlo (segnalato da quasi tutti i controlli).",
+      "correzione": "Spostare la battuta «Questa luce è di Nina» a circa 4.9s, in modo che coincida con l'accensione, e lasciare mezzo secondo di respiro dopo."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Nei primi 2 secondi non c'è né una domanda né una promessa, e il momento più bello (la luce che si accende) arriva dopo il gancio.",
+      "correzione": "Aprire con una domanda tipo «Di chi è questa luce?» e/o anticipare l'accensione entro i primi 2 secondi, rivelando Nina e Luino subito dopo."
+     },
+     {
+      "secondo": 10.3,
+      "problema": "Il messaggio di follow non è uguale in voce («Seguici per vedere la tua!»), testo a schermo («LA TUA!», «DOMANI ALLE 18») e didascalia («vedere se c'è la tua»); la scena finale non accompagna la frase.",
+      "correzione": "Usare la stessa formula «Seguici per vedere la tua» ovunque e far uscire «LA TUA!» e «DOMANI ALLE 18» in sequenza con la voce."
+     },
+     {
+      "secondo": 7.3,
+      "problema": "La fascia «Commenta città e nome» è presente per tutto il reel ma la voce chiede il commento solo a 7.3s: richiesta ripetuta e sfasata.",
+      "correzione": "Far comparire la fascia in sincronia con «Un commento, e il tuo animale si accende», oppure tenerla ma allineare la frase alla scena del commento."
+     }
+    ],
+    "idea": "Aprire con «Di chi è questa luce?», accendere la luce entro i primi 2-5 secondi in sincronia con il nome (Nina, Luino) e chiudere con l'anteprima della prossima luce e «Seguici per vedere la tua»."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:11+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggiamo un solo problema reale, la sincronia tra la voce «Questa luce è di Nina» (parte a 4.0 s) e l'accensione della luce sulla mappa (4.92 s); i dati di mappa (Luino, coordinate, 1 luce) sono corretti e non si toccano.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.9,
+      "problema": "La voce annuncia «Questa luce è di Nina» a 4.0 s ma la luce si accende solo a 4.92 s (scena mappa da 4.12 s), quindi il testo anticipa l'immagine di circa 0.9 s. Anche «a Luino» (5.5 s) arriva a luce già accesa, ma questo è coerente se la frase viene spostata.",
+      "correzione": "Spostare l'inizio della frase «Questa luce è di Nina, a Luino» a circa 4.9 s (in alternativa anticipare l'accensione a ~4.0 s), così voce, titolo «A LUINO» e comparsa del punto luminoso coincidono."
+     }
+    ],
+    "idea": "Nel finale mostrare per un istante una luce appena accesa da un commento reale (anonimizzato) con il nome dell'animale, così chi guarda vede subito che il meccanismo funziona e vuole accendere la propria luce."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:11+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Allineare la voce all'accensione della luce (circa 4.9s), alzare di 1-2 dB i primi 5 secondi e rendere coerente la didascalia con il copione; il resto dell'audio è già nei target.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.0,
+      "problema": "La voce dice 'Questa luce è di Nina' a 4.0s, ma la scena della luce parte a 4.12s e la luce si accende solo a 4.92s: per quasi un secondo la voce parla e sulla mappa non succede nulla.",
+      "correzione": "Spostare la frase 'Questa luce è di Nina' in modo che il nome cada sull'accensione (circa 4.9s), oppure anticipare l'accensione a circa 4.1s, e riallineare di conseguenza il resto della trascrizione."
+     },
+     {
+      "secondo": null,
+      "problema": "Il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto del reel (-14 LUFS): l'apertura risulta sommessa.",
+      "correzione": "Alzare di circa 2 dB il livello dei primi 5 secondi senza superare il picco di -1 dBFS e ricontrollare il LUFS integrato."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia promette 'si accende col tuo @', mentre il copione dice solo 'si accende sulla mappa': promessa diversa.",
+      "correzione": "Rendere la didascalia coerente con il copione (o viceversa)."
+     },
+     {
+      "secondo": 10.3,
+      "problema": "La voce e la didascalia dicono 'Le prossime luci domani alle 18', ma nei materiali non c'è alcun dato che confermi questo orario.",
+      "correzione": "Verificare l'orario di pubblicazione prima di tenere la frase; se non confermato, toglierla o riformularla."
+     }
+    ],
+    "idea": "Far accendere la luce esattamente sulla parola del nome dell'animale (circa 4.9s), con un breve suono di accensione nello stesso istante, così voce, immagine e suono coincidono."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:11+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è solido e coerente con i dati verificati (Luino, Nina, 1 luce); l'unico problema reale e condiviso da più colleghi è la sincronia: nome, riquadro '1 luce' e frase 'Questa luce è di Nina' arrivano prima dell'accensione della luce sulla mappa (4.92 s). Correggo solo quello e la leggibilità del testo piccolo, senza toccare il resto.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.12,
+      "problema": "La frase 'Questa luce è di Nina' (4.0 s) e l'etichetta sulla mappa compaiono prima che la luce si accenda (4.92 s): il messaggio anticipa l'immagine e la rivelazione perde effetto.",
+      "correzione": "Allineare la comparsa dell'etichetta 'Nina' e della frase all'accensione della luce, intorno a 4.9 s; in alternativa anticipare l'accensione a circa 4.1 s, all'inizio della scena della mappa."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Nell'apertura 3D il titolo 'LUINO' e il riquadro '1 luce' sono già visibili prima dell'accensione sulla mappa, e il riquadro è piccolo e vicino al bordo, quindi poco leggibile su mobile.",
+      "correzione": "Ingrandire leggermente il riquadro '1 luce' e dargli margine dal bordo; tenere il dato '1 luce' in sincronia con l'accensione, lasciando in apertura il nome del comune e della casetta."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "La riga meteo '10 novembre: qualche nuvola, 10°' è lunga, va su due righe e sottrae spazio al nome dell'animale.",
+      "correzione": "Accorciarla (es. '10 nov · 10°') in modo che stia su una sola riga, e ingrandire il tag 'Nina' sulla casetta."
+     }
+    ],
+    "idea": "Un momento 'wow' centrale: zoom dalla mappa generale al comune di Luino e accensione della luce di Nina in sincronia con la voce, con nome ed etichetta che compaiono solo in quell'istante; in chiusura il conteggio delle luci accese per mostrare la crescita della mappa."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:11+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è quasi pronto: correggo solo la sincronia tra voce e accensione della luce (4.0s contro 4.92s) e il volume dei primi 5 secondi, poi si pubblica.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.0,
+      "problema": "La voce 'Questa luce è di Nina' parte a 4.0s, ma la scena della luce inizia a 4.12s e la luce si accende solo a 4.92s: il testo anticipa l'immagine. Segnalato da quasi tutti i colleghi.",
+      "correzione": "Spostare l'inizio della frase in modo che coincida con l'accensione (circa 4.9s), oppure ancorarla all'apertura della scena a 4.12s lasciando la parola 'accende' sul clic di 4.92s. Controllare che a quel punto lo sfondo mostri Luino."
+     },
+     {
+      "secondo": 0.0,
+      "problema": "Il volume medio dei primi 5 secondi è -16.3 dB, sotto l'obiettivo di -14 LUFS, quindi l'apertura è più debole del resto (segnalato da più colleghi).",
+      "correzione": "Alzare di circa 2 dB i primi 5 secondi senza superare il picco di -1 dBFS e riverificare il livello complessivo."
+     },
+     {
+      "secondo": null,
+      "problema": "Il file di apertura è 'reel/assets/tmp/apertura3d.mp4', in una cartella temporanea: potrebbe essere un asset di prova.",
+      "correzione": "Verificare che sia la versione definitiva prima di pubblicare, altrimenti sostituirlo."
+     }
+    ],
+    "idea": "Mostrare per un attimo il commento dell'utente e il nome della città evidenziato sulla mappa nel momento in cui la luce si accende, così il legame tra commento e luce è immediato e invita a commentare."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:11+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Allineare l'accensione della luce alla frase 'Questa luce è di Nina' intorno al secondo 4.9, alzare di circa 2 dB i primi 5 secondi e tenere la chiusura con promessa onesta; poi riproporre il formato con un motivo concreto per tornare.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.92,
+      "problema": "La frase 'Questa luce è di Nina' parte a 4.0s ma la luce sulla mappa si accende solo a 4.92s: voce e immagine non coincidono sul momento chiave del reel. Il brief inoltre colloca 'il tuo animale si accende' a 7.3s, quando l'accensione è già avvenuta.",
+      "correzione": "Far partire la frase (o la parola 'Nina') in corrispondenza dell'accensione a circa 4.9s, oppure anticipare l'accensione a 4.0s. Spostare 'il tuo animale si accende' in modo che segua l'accensione reale."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto del reel (-14 LUFS complessivo): l'apertura risulta debole.",
+      "correzione": "Alzare di circa 2 dB i primi 5 secondi, senza superare il picco di -1 dBFS."
+     },
+     {
+      "secondo": 14.5,
+      "problema": "La voce chiude con 'seguici per vedere la tua!', che promette una luce sicura, mentre la didascalia dice 'se c'è la tua': promesse diverse e la prima rischia di deludere.",
+      "correzione": "Usare la stessa formula in voce e didascalia: 'Seguici per scoprire se c'è la tua!'."
+     }
+    ],
+    "idea": "Riproporre questa_luce con l'accensione sincronizzata alla voce che dice il nome del comune, un leggero zoom sulla mappa e una chiusura che annuncia il prossimo animale o comune di domani alle 18."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:11+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel va corretto su un solo punto vero: la luce si accende a 4.92s e la voce non coincide, mentre il resto (invito a commentare, annuncio delle 18, copertina, audio pulito) funziona.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.92,
+      "problema": "L'accensione della luce sulla mappa (4.92s) non coincide con la voce: 'Questa luce è di Nina' parte a 4.0s, quindi la voce anticipa l'immagine di quasi un secondo, e 'il tuo animale si accende' arriva dopo (circa 7.3s secondo la trascrizione). Le relazioni riportano tempi in parte discordanti, quindi prima va riverificata la trascrizione.",
+      "correzione": "Controllare i tempi esatti nella trascrizione, poi far cadere l'accensione sulla parola 'accende' o su 'Questa luce', spostando voce o animazione di circa 1 secondo, così voce e luce coincidono. Aggiungere un fotogramma di controllo a circa 5s."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "L'audio medio dei primi 5 secondi è a circa -16,3 dB, sotto il target di -14 LUFS, quindi l'apertura è più debole del resto. Il picco è a -1 dBFS, al limite.",
+      "correzione": "Alzare di circa 2 dB i primi 5 secondi, mantenendo il picco chiaramente sotto -1 dBFS (ad esempio -1,5)."
+     }
+    ],
+    "idea": "La luce sulla mappa si accende esattamente sulla parola 'accende', con un breve click sonoro e un leggero zoom su Luino, così chi guarda capisce subito il meccanismo e vuole commentare per avere la propria luce."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:12+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggere subito la sincronia tra voce e accensione della luce di Nina (voce a 4.0s, luce a 4.92s), rinforzare l'apertura audio e anticipare e rendere più visibile l'invito a seguire, poi ripubblicare con la mappa piena nel finale.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.0,
+      "problema": "La voce dice 'Questa luce è di Nina' a 4.0s ma la luce si accende solo a 4.92s (scena 4.12–6.41). Anche 'a Luino' arriva a 5.5s, troppo ravvicinato al nome, e l'effetto 'la luce si accende sul nome' si perde.",
+      "correzione": "Spostare la battuta a circa 4.9s, in sincronia con l'accensione, e distanziare 'Nina' e 'a Luino' di circa mezzo secondo, così il punto luminoso è visibile quando si dice il luogo."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il volume dei primi 5 secondi è a -16.3 dB, sotto il target di -14 LUFS, quindi l'apertura risulta più debole. Il cartello 'Nina' sul primo fotogramma ha poco contrasto sul tetto della casetta.",
+      "correzione": "Alzare la voce dei primi 5 secondi verso -14 LUFS e aumentare il contrasto o aggiungere un fondino al cartello 'Nina'."
+     },
+     {
+      "secondo": 12,
+      "problema": "L'invito 'Seguici per vedere la tua!' arriva tardi, intorno ai 12s, a ridosso della fine (14.5s), senza tempo per leggere la fascia di commento, e il finale non mostra la mappa.",
+      "correzione": "Anticipare l'invito a seguire e lasciare circa 2 secondi di schermata finale con la fascia 'Commenta città e nome del tuo animale' e la mappa con le luci accese."
+     },
+     {
+      "secondo": null,
+      "problema": "Nella didascalia l'handle @sim.o_._ compare solo in fondo e potrebbe risultare ripetuto, mentre nel reel Nina appare senza handle.",
+      "correzione": "Mostrare l'handle accanto a Nina nella scena della luce e lasciare una sola citazione dell'handle nella didascalia."
+     }
+    ],
+    "idea": "Un finale con la mappa piena di luci e un contatore ('Nina è la luce n. X'), con il nome dell'animale visibile fin dal primo secondo: dà senso di comunità e crescita e rende il follow il passo naturale per vedere la propria luce."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:16+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggo la sincronia tra voce e accensione della luce (il problema vero, segnalato da tutti), alzo l'apertura audio e porto avanti l'idea di mostrare più luci sulla mappa, così il reel sembra vivo anche con un solo partecipante.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4.92,
+      "problema": "La voce dice 'Questa luce è di Nina, a Luino' dal secondo 4.0, ma la luce si accende solo a 4.92: il parlato anticipa l'immagine di quasi un secondo e la sorpresa si perde.",
+      "correzione": "Far coincidere l'accensione con il nome: spostare la frase a circa 4.9s oppure anticipare l'accensione della luce a 4.0s, così 'Nina' e 'Luino' arrivano insieme all'immagine."
+     },
+     {
+      "secondo": 7.3,
+      "problema": "La frase 'il tuo animale si accende sulla mappa' arriva a 7.3s, dopo la fine della scena della luce (6.41s): spiega il meccanismo quando l'immagine è già cambiata, con una pausa di circa 2 secondi.",
+      "correzione": "Anticipare la frase in modo che cada mentre la luce è visibile (tra 4.9s e 6.4s), oppure prolungare la scena mappa fino a coprirla, eliminando la pausa."
+     },
+     {
+      "secondo": 0.0,
+      "problema": "Il volume medio dei primi 5 secondi è -16.3 dB, più basso dell'obiettivo di -14 LUFS: l'apertura è debole proprio dove si decide se restare.",
+      "correzione": "Alzare di circa 2 dB i primi 5 secondi senza superare il picco di -1 dBFS."
+     }
+    ],
+    "idea": "Quando un reel 'questa_luce' ha pochi partecipanti, far comparire in tenue le luci dei giorni precedenti (o altre luci in sequenza) attorno alla luce nuova, e agganciare la voce al secondo esatto dell'accensione: la mappa sembra viva e la rivelazione di Nina a Luino arriva insieme all'immagine."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:17+00:00",
+   "da": "grafica3d-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggo la sincronia tra la frase 'Questa luce è di Nina' (4.0s) e l'accensione della luce (4.92s), perché è il punto debole su cui concordano quasi tutti i report, e rendo più leggibile la luce sulla mappa a schermo piccolo.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4,
+      "problema": "La voce dice 'Questa luce è di Nina' a 4.0s e la scena mappa parte a 4.12s, ma la luce si accende solo a 4.92s: il collegamento voce-luce arriva quasi un secondo dopo ed è il momento clou del reel.",
+      "correzione": "Anticipare l'accensione della luce di Nina a circa 4.0-4.2s, in modo che coincida con la frase. In alternativa, spostare leggermente la voce. Nella scena 3D iniziale tenere la luce spenta fino a quel momento, così l'accensione resta una sorpresa."
+     },
+     {
+      "secondo": 6,
+      "problema": "Nei fotogrammi tra 6 e 8s la luce di Nina sulla mappa è piccola, sfocata e poco leggibile a schermo piccolo. Il momento 'si accende' non è marcato visivamente.",
+      "correzione": "Rendere la luce di Nina più nitida e luminosa, con un halo più stretto e un cerchio evidente su Luino. Aggiungere un lampo o un impulso sulla parola 'si accende' (circa 7.3-8.6s). Ingrandire l'etichetta con il nome dell'animale."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Nei fotogrammi 0.5-3s la casetta e il cane sono già illuminati con un bloom giallo troppo forte che sfuma le texture, e la luce è accesa prima del suo momento narrativo.",
+      "correzione": "Partire con la casetta spenta e ridurre il bloom. Aumentare il contrasto della texture del tetto e del selciato, così la luce che si accende a 4s ha più impatto."
+     }
+    ],
+    "idea": "Un impulso luminoso (onda di luce) che parte dal punto di Nina esattamente sulla frase 'Questa luce è di Nina' e si propaga sulla mappa, così l'accensione diventa il picco visivo del reel e la sincronia voce-luce è perfetta."
+   }
+  },
+  {
+   "t": "2026-11-10T17:18:22+00:00",
+   "da": "montaggio-1",
+   "a": "pubblicazione-1",
+   "tipo": "correzione",
+   "testo": "Correzione di squadra (Direttore non collegato): Allungo l'apertura 3D a 4.9s, così la frase «Questa luce è di Nina» e l'accensione della luce coincidono invece di avere la voce in anticipo di circa un secondo. Il volume dei primi 5 secondi non lo tocco: non ho un'azione per farlo. Gli altri punti sono gusti, dubbi o segnalati da meno di 3 reparti.",
+   "dati": {
+    "azioni": [
+     {
+      "azione": "intro",
+      "secondi": 4.9
+     }
+    ],
+    "perche": [
+     {
+      "difetto": "La voce dice «Questa luce è di Nina» a 4.0s, ma la luce sulla mappa si accende solo a 4.92s: la voce anticipa l'immagine di circa un secondo. Per allinearle, l'apertura 3D dura fino a 4.9s e così scena, accensione e voce slittano insieme.",
+      "reparti": [
+       "Copione",
+       "Mappa e dati",
+       "Voce e musica",
+       "Grafica e copertine",
+       "Pubblicazione",
+       "Community",
+       "Coppa delle Zampe",
+       "Crescita (follower)",
+       "Innovazione",
+       "Grafica 3D",
+       "Direzione video",
+       "Montaggio"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-10T17:19:14+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 2: -14.4 LUFS, picco -1.0 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.4,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.5,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-10T17:19:14+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 2 esportata (14.4 s): ti mando 15 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 14.4,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14
+    ]
+   }
+  },
+  {
+   "t": "2026-11-10T17:19:14+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 14.5,
+   "fotogrammi": [
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s000.5.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s001.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s002.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s003.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s004.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s005.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s006.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s007.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s008.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s009.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s010.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s011.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s012.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s013.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v1/s014.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.0,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.3,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "v": 2,
+   "durata": 14.4,
+   "fotogrammi": [
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s000.5.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s001.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s002.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s003.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s004.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s005.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s006.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s007.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s008.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s009.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s010.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s011.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s012.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s013.0.jpg",
+    "fotogrammi/2026-11-10-1812-questa_luce/v2/s014.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.4,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.5,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "crescita": {
+  "pubblico": "Proprietari di cani e gatti di Luino e del Verbano (Varese, Lago Maggiore) che non seguono ancora la pagina e amano vedere il proprio animale e la propria città citati con nome e cognome sui social.",
+  "gancio": "Questa luce è di Nina, a Luino. C'è un'altra luce che aspetta il tuo animale.",
+  "primo_fotogramma": "Mappa dell'Italia di notte, zoom sul Lago Maggiore con una sola luce che si accende su Luino. Scritta grande: «QUESTA LUCE è di Nina». Sotto, più piccolo: «Luino». In basso la fascia: «Commenta città e nome del tuo animale».",
+  "motivo_per_seguire": "Su Zampe d'Italia ogni cane e ogni gatto accende una luce nella sua città sulla mappa dell'Italia di notte: se segui, puoi vedere accendersi anche la tua.",
+  "chiusura": "Nina ha acceso Luino. Segui Zampe d'Italia per vedere la prossima luce.",
+  "perche": "Il brief è un «questa_luce» con un nome e una città reali, quindi il gancio parte da Nina e Luino e invita chi non conosce il progetto a commentare e poi a seguire, senza promettere nulla oltre all'orario già indicato nel brief."
+ },
+ "token_persone": 457366,
+ "fine": "2026-11-10T17:19:14+00:00"
+}
