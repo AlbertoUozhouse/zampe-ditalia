@@ -34,5 +34,21 @@
    "come_misurarla": "Dopo 7 giorni guardare le aperture della vista 3D, il tempo medio di permanenza e le sessioni di ritorno dopo l'apertura. Contare commenti e condivisioni sui reel che mostrano un paese in 3D e confrontare con la media attuale dei reel e con i 21,5 follower ogni 1.000 di reach di 'ospiti_sera'."
   },
   "perche": "Sono le tre idee che si appoggiano a ciò che esiste già (Coppa con staffetta, formato 'ospiti_sera' con persone reali, vista three.js), portano follower per meccanismo (inviti di squadra, SEGUO, ricerca del proprio paese) e rispettano il consenso dei follower."
+ },
+ {
+  "giorno": "2026-11-11",
+  "reel": {
+   "idea": "Il Racconto dal Vivo",
+   "come_funziona": "Il reel non parte dalla mappa ma da una ripresa reale dell'animale di un follower (video con il suo SÌ), tenuta 3-4 secondi senza tagli e con il suono ambientale del posto. Poi il montaggio stacca su una mappa ferma che si ingrandisce sul comune, e solo alla fine si accende la luce. Chi ha girato il video dice in una frase dove vive.",
+   "primo_passo": "Scegliere tra i follower con SÌ esplicito 3 video verticali già ricevuti, tagliare ciascuno a 3-4 secondi con audio originale e montarli nel template testa_a_testa esistente, sostituendo l'apertura mappa con la clip. Poi collegare la mappa SVG dell'Italia di notte con zoom sul comune e la luce finale. Pubblicare 4 reel in 7 giorni alla stessa ora (21:00) per avere un confronto pulito.",
+   "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti dei reel nel nuovo stile, confrontandoli con il 15-18 dei formati mappa e con il 58,8 del testa_a_testa del 10/11. Il segnale è buono se resta sopra 30 su almeno 4 reel; il campione è piccolo, quindi leggerlo con cautela. Contare anche i commenti con il nome di una città."
+  },
+  "realismo": {
+   "idea": "Il Paese dal Vero: rilievo e animale nello stesso comune",
+   "come_funziona": "Quando un follower registra il suo animale, il sito mostra il suo comune con il rilievo reale già presente (altitudine e coste vere) e accanto un disegno SVG dell'animale nella razza giusta. Un piccolo riquadro three.js ruota il comune in 3D con la luce dell'animale accesa nel punto esatto della casa. Si usano solo i comuni di chi ha dato il suo SÌ.",
+   "primo_passo": "Nella pagina del comune aggiungere un riquadro three.js che carica il tile di altitudine già usato dalla mappa con rilievo, ritagliato attorno alle coordinate del comune. Crearne la mesh con PlaneGeometry spostata dai valori di altitudine, con OrbitControls per la rotazione col dito. Aggiungere un punto luminoso alle coordinate del comune e affiancare l'SVG della razza. Provarlo prima su un comune collinare e uno costiero, poi su Verona e Vicenza.",
+   "come_misurarla": "Dopo 7 giorni guardare la quota di visite al riquadro 3D sul totale delle visite alla pagina del comune (obiettivo sopra il 20%) e il numero di follower nuovi arrivati dalle pagine comunali rispetto alla settimana precedente."
+  },
+  "perche": "Entrambe partono dal riconoscersi nel proprio posto e dal campanile, il leva che col testa_a_testa ha dato 58,8 follower ogni 1.000 reach, e usano solo ciò che abbiamo già: video con SÌ, mappa, dati di altitudine e three.js."
  }
 ]

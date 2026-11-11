@@ -463,5 +463,20 @@
   "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
   "riprovare": null,
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18122165692994401",
+  "file": "2026-11-03-2116-puntata",
+  "formato": "puntata",
+  "uscita": "2026-11-03T20:21:52+00:00",
+  "follower": null,
+  "reach_7g": 312,
+  "follower_ogni_1000": null,
+  "mediana_simili": null,
+  "simili": 0,
+  "scelte": null,
+  "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
+  "riprovare": null,
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]

@@ -187,5 +187,23 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-10T20:07:55+00:00",
   "scambi": 128
+ },
+ {
+  "id": "crescita-2026-11-11",
+  "formato": "crescita del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-11T10:18:26+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-11T10:18:43+00:00",
+  "scambi": 11
+ },
+ {
+  "id": "innovazione-2026-11-11",
+  "formato": "innovazione del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-11T10:18:43+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-11T10:19:10+00:00",
+  "scambi": 19
  }
 ]
