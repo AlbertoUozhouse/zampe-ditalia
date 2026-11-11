@@ -6954,6 +6954,7 @@
 "18125851531903280",
 "18125887912713559",
 "18125903377916231",
+"18125904901921005",
 "18125960422928217",
 "18125971903932512",
 "18125974063907244",
@@ -10434,7 +10435,9 @@
 "18666851569016117",
 "18668921470032586"
 ],
-"risposte": [],
+"risposte": [
+1794382078.732564
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -12573,7 +12576,8 @@
 "maxmolinu": "2026-11-10",
 "kataria_mohit389": "2026-11-10",
 "19amala08": "2026-11-11",
-"d.barbato_17": "2026-11-11"
+"d.barbato_17": "2026-11-11",
+"atena_bengala": "2026-11-11"
 },
 "media_letti": {},
 "pezzi": {
@@ -18933,10 +18937,11 @@
 "531d6051a1b1bac6",
 "ba910d3d6585d2d8",
 "0fe3dcc182a87b38",
-"91d4e1ee62734438"
+"91d4e1ee62734438",
+"cedc2dc98ed47fb6"
 ],
 "privati_ora": [
-1794372628.5800033
+1794382078.7325926
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -18981,7 +18986,7 @@
 "2026-11-08": 1766,
 "2026-11-09": 1793,
 "2026-11-10": 1814,
-"2026-11-11": 1818
+"2026-11-11": 1820
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19426,6 +19431,10 @@
 [
 "2026-11-11T06:37+00:00",
 1818
+],
+[
+"2026-11-11T07:28+00:00",
+1820
 ]
 ],
 "coppa": {
@@ -21412,16 +21421,21 @@
 [
 "Burcei|SU",
 "Casalmaggiore|CR"
+],
+[
+"Calvi|BN",
+"Notaresco|TE"
 ]
 ],
-"attesa": "Calvi|BN",
+"attesa": null,
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
 "Terni|TR": 1,
 "Darfo Boario Terme|BS": 1,
 "Casalmaggiore|CR": 1,
-"Giugliano in Campania|NA": 1
+"Giugliano in Campania|NA": 1,
+"Notaresco|TE": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21498,6 +21512,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-11T07:27+00:00",
+"sorpasso": "Notaresco|TE",
+"su": "Calvi|BN",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -21544,13 +21567,24 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Notaresco|TE": {
+"u": [
+"atena_bengala"
+],
+"c": [
+"18125904901921005"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
 "michele.ioni|animale|miele",
 "giulixx_013|animale|gianpiero",
 "kataria_mohit389|animale|lacky",
-"19amala08|animale|pocho"
+"19amala08|animale|pocho",
+"atena_bengala|animale|atena"
 ]
 }
 }
