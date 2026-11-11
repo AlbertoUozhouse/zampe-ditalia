@@ -21,6 +21,7 @@
 "17865486636695700",
 "17865574005693813",
 "17865785001695642",
+"17866036788693694",
 "17866244751696942",
 "17866432734693123",
 "17867008089676911",
@@ -10070,6 +10071,7 @@
 "18483013618118278",
 "18483715594117632",
 "18484722790128959",
+"18485464477113462",
 "18485911246114466",
 "18485946955114630",
 "18486302197113794",
@@ -10456,7 +10458,6 @@
 "18668921470032586"
 ],
 "risposte": [
-1794401493.1614845,
 1794404698.536239
 ],
 "bonus": {
@@ -12601,7 +12602,8 @@
 "atena_bengala": "2026-11-11",
 "maldis.jewelry": "2026-11-11",
 "_gennaromorra_": "2026-11-11",
-"stefano_s_06": "2026-11-11"
+"stefano_s_06": "2026-11-11",
+"maty._000": "2026-11-11"
 },
 "media_letti": {},
 "pezzi": {
@@ -14743,7 +14745,8 @@
 "atena_bengala": 10,
 "maldis.jewelry": 10,
 "stefano_s_06": 10,
-"maxmolinu": 10
+"maxmolinu": 10,
+"maty._000": 10
 },
 "inviti_giorno": {
 "2026-11-04": {
@@ -15582,7 +15585,7 @@
 "la_mietta_del_2013": "premiato",
 "mncn_ginny": "premiato",
 "_only_ale._": "in_attesa",
-"maty._000": "in_attesa",
+"maty._000": "premiato",
 "cristinaek": "premiato",
 "phantom20_13": "premiato",
 "alfoooo65": "premiato",
@@ -19025,7 +19028,7 @@
 "2026-11-08": 1766,
 "2026-11-09": 1793,
 "2026-11-10": 1814,
-"2026-11-11": 1824
+"2026-11-11": 1822
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19490,6 +19493,10 @@
 [
 "2026-11-11T12:51+00:00",
 1824
+],
+[
+"2026-11-11T13:57+00:00",
+1822
 ]
 ],
 "coppa": {
@@ -21492,7 +21499,8 @@
 "Giugliano in Campania|NA": 1,
 "Notaresco|TE": 1,
 "Napoli|NA": 1,
-"Cervia|RA": 1
+"Cervia|RA": 1,
+"Massa|MS": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21596,6 +21604,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-11T13:57+00:00",
+"sorpasso": "Massa|MS",
+"su": "Marsciano|PG",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -21672,6 +21689,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Massa|MS": {
+"u": [
+"maty._000"
+],
+"c": [
+"18485464477113462"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -21681,7 +21708,8 @@
 "19amala08|animale|pocho",
 "atena_bengala|animale|atena",
 "_gennaromorra_|animale|margot",
-"stefano_s_06|animale|meghy"
+"stefano_s_06|animale|meghy",
+"maty._000|animale|damon"
 ]
 }
 }
