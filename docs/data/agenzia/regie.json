@@ -30,5 +30,21 @@
   "secondi": 4.0,
   "perche": "Una regia mai vista qui: il cielo si divide tra l'indaco del golfo di Stabia e un'alba ramata lontana, e la telecamera g",
   "reel": "2026-11-11-1301-testa_a_testa"
+ },
+ {
+  "nome_stile": "Due Fari Adriatici",
+  "cielo_basso": "#2E5560",
+  "cielo_alto": "#050A18",
+  "nebbia_colore": "#2C3F48",
+  "lampioni_colore": "#FFAA4D",
+  "lucciole_colore": "#B8F2C8",
+  "lucciole": 70.0,
+  "bloom": 0.9,
+  "esposizione": 1.7,
+  "effetto": "lanterne",
+  "volo": "radente",
+  "secondi": 3.8,
+  "perche": "Un cielo diviso tra il verde-petrolio freddo di Barletta e l'ambra calda di Molfetta, con la telecamera che scivola raso",
+  "reel": "2026-11-11-1448-testa_a_testa"
  }
 ]

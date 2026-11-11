@@ -1,0 +1,2233 @@
+{
+ "id": "2026-11-11-1448-testa_a_testa",
+ "formato": "testa_a_testa",
+ "modalita": "operativa",
+ "inizio": "2026-11-11T13:48:19+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-11T13:48:19+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "testa_a_testa",
+     "id": "2026-11-11-1448-testa_a_testa",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Barletta contro Molfetta: 30 chilometri, e la sfida è aperta.",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Pari: 6 a 6. Il prossimo animale decide chi passa avanti.",
+       "scena": "duello"
+      },
+      {
+       "i": 2,
+       "testo": "Sei di Molfetta o di Barletta? Commenta città e nome del tuo animale!",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": null,
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "⚔️ Barletta 6 – 6 Molfetta: due comuni a 30 km, e la sfida è aperta!\n\nOgni animale accende una luce nella sua città sulla mappa dell'Italia di notte (link in bio).\n👇 Commenta la tua città e il nome del tuo cane o gatto (per esempio «Molfetta, Luna, cane»): si accende col tuo @ e conta per la tua città.\n👥 Tagga chi è di lì!\n\nVoce generata con IA.\n\n#cani #gatti #italia #canicontrogatti #animalidomestici #barletta #molfetta",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       16.4389,
+       41.262299999999996
+      ],
+      "sopra": "TESTA A TESTA",
+      "grande": "6 – 6",
+      "sotto": "Barletta vs Molfetta"
+     }
+    }
+   }
+  },
+  {
+   "t": "2026-11-11T13:48:24+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Pugliesi della costa tra Barletta e Molfetta (e dintorni) che hanno un cane o un gatto e amano il campanile: chi vuole dire da che parte sta, non un pubblico generico. · Gancio: Barletta contro Molfetta: 30 chilometri e siamo 6 a 6. Il tuo animale da che parte sta? · Primo fotogramma: Mappa dell'Italia di notte con zoom sulla costa pugliese: due luci accese, una su Barletta e una su Molfetta, collegate da una linea. Al centro in grande «6 – 6», sopra «TESTA A TESTA», sotto «Barletta vs Molfetta». Così la sfida si capisce anche a volume zero. · Motivo per seguire: Zampe d'Italia mette a confronto ogni giorno due città vicine a colpi di animali: seguendo la pagina vedi chi passa avanti e puoi accendere la luce del tuo cane o gatto per la tua città. · Chiusura: Barletta e Molfetta sono pari. Segui Zampe d'Italia per vedere chi passa avanti.",
+   "dati": {
+    "pubblico": "Pugliesi della costa tra Barletta e Molfetta (e dintorni) che hanno un cane o un gatto e amano il campanile: chi vuole dire da che parte sta, non un pubblico generico.",
+    "gancio": "Barletta contro Molfetta: 30 chilometri e siamo 6 a 6. Il tuo animale da che parte sta?",
+    "primo_fotogramma": "Mappa dell'Italia di notte con zoom sulla costa pugliese: due luci accese, una su Barletta e una su Molfetta, collegate da una linea. Al centro in grande «6 – 6», sopra «TESTA A TESTA», sotto «Barletta vs Molfetta». Così la sfida si capisce anche a volume zero.",
+    "motivo_per_seguire": "Zampe d'Italia mette a confronto ogni giorno due città vicine a colpi di animali: seguendo la pagina vedi chi passa avanti e puoi accendere la luce del tuo cane o gatto per la tua città.",
+    "chiusura": "Barletta e Molfetta sono pari. Segui Zampe d'Italia per vedere chi passa avanti.",
+    "perche": "Il testa_a_testa è il formato con più follower ogni 1.000 raggiunti (58,8 e 32,5), anche se il campione è piccolo, e la rivalità di campanile spinge a schierarsi e poi a seguire per l'esito."
+   }
+  },
+  {
+   "t": "2026-11-11T13:48:24+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "testa_a_testa",
+     "id": "2026-11-11-1448-testa_a_testa",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Barletta contro Molfetta: 30 chilometri, e la sfida è aperta.",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Pari: 6 a 6. Il prossimo animale decide chi passa avanti.",
+       "scena": "duello"
+      },
+      {
+       "i": 2,
+       "testo": "Sei di Molfetta o di Barletta? Commenta città e nome del tuo animale!",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": null,
+     "fascia": "💬 Commenta città e nome del tuo animale 👇",
+     "didascalia": "⚔️ Barletta 6 – 6 Molfetta: due comuni a 30 km, e la sfida è aperta!\n\nOgni animale accende una luce nella sua città sulla mappa dell'Italia di notte (link in bio).\n👇 Commenta la tua città e il nome del tuo cane o gatto (per esempio «Molfetta, Luna, cane»): si accende col tuo @ e conta per la tua città.\n👥 Tagga chi è di lì!\n\nVoce generata con IA.\n\n#cani #gatti #italia #canicontrogatti #animalidomestici #barletta #molfetta",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       16.4389,
+       41.262299999999996
+      ],
+      "sopra": "TESTA A TESTA",
+      "grande": "6 – 6",
+      "sotto": "Barletta vs Molfetta"
+     }
+    },
+    "mappa": [
+     {
+      "scena": 0,
+      "etichetta": "Barletta · 6",
+      "lat": 41.3196,
+      "lng": 16.2772,
+      "luce": "già accesa",
+      "scena_dal_secondo": null,
+      "scena_al_secondo": null,
+      "comune_sulla_mappa": "Barletta",
+      "animali_li_in_ordine_di_arrivo": [
+       "Milù (@dimastrogiovannivalentina, 2026-10-27)",
+       "Chloe (@dimastrogiovannivalentina, 2026-10-27)",
+       "Whisky (@dimastrogiovannivalentina, 2026-10-27)",
+       "Coco (@fra26142, 2026-10-30)",
+       "Stella (@carlo13marz, 2026-11-02)"
+      ],
+      "luci_li_oggi": 6,
+      "luci_del_comune_dell_etichetta": 6
+     },
+     {
+      "scena": 0,
+      "etichetta": "Molfetta · 6",
+      "lat": 41.205,
+      "lng": 16.6006,
+      "luce": "già accesa",
+      "scena_dal_secondo": null,
+      "scena_al_secondo": null,
+      "comune_sulla_mappa": "Molfetta",
+      "animali_li_in_ordine_di_arrivo": [
+       "Candy (@albi.cock, 2026-10-28)",
+       "Alex (@maria.murgolo_, 2026-10-28)",
+       "Teddy (@sasaa_demuss, 2026-10-30)",
+       "Ares (@sasaa_demuss, 2026-10-30)",
+       "Logan (@giovannifarinola681, 2026-11-08)"
+      ],
+      "luci_li_oggi": 6,
+      "luci_del_comune_dell_etichetta": 6
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-11T13:48:25+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-11T13:48:44+00:00",
+   "da": "innovazione-1",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Regia dell'apertura 3D: «Due Fari Adriatici» — volo radente, effetto lanterne, cielo #2E5560→#050A18, lampioni #FFAA4D. Un cielo diviso tra il verde-petrolio freddo di Barletta e l'ambra calda di Molfetta, con la telecamera che scivola raso",
+   "dati": {
+    "nome_stile": "Due Fari Adriatici",
+    "cielo_basso": "#2E5560",
+    "cielo_alto": "#050A18",
+    "nebbia_colore": "#2C3F48",
+    "lampioni_colore": "#FFAA4D",
+    "lucciole_colore": "#B8F2C8",
+    "lucciole": 70.0,
+    "bloom": 0.9,
+    "esposizione": 1.7,
+    "effetto": "lanterne",
+    "volo": "radente",
+    "secondi": 3.8,
+    "perche": "Un cielo diviso tra il verde-petrolio freddo di Barletta e l'ambra calda di Molfetta, con la telecamera che scivola raso"
+   }
+  },
+  {
+   "t": "2026-11-11T13:48:44+00:00",
+   "da": "grafica3d-1",
+   "a": "montaggio-1",
+   "tipo": "decisione",
+   "testo": "Applico la regia «Due Fari Adriatici» al paese 3D di Molfetta."
+  },
+  {
+   "t": "2026-11-11T13:54:00+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.2 LUFS, picco -1.0 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.2,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.3,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:00+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (17.2 s): ti mando 18 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 17.2,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     16.9
+    ]
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:04+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "L'audio parte con volume medio di -16.3 dB nei primi 5 secondi, più basso dell'obiettivo di -14 LUFS, quindi l'apertura risulta un po' sottotono; il titolo 'Barletta contro Molfetta' è però chiaro e la voce arriva al secondo 3.8. Inoltre, nei fotogrammi 0.5s e 3s la scena dei due comuni è ancora in ",
+   "dati": {
+    "controllato": "Primi 5 secondi del reel: apertura, luci sulla mappa, testo iniziale e livelli audio rispetto ai dati forniti.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "L'audio parte con volume medio di -16.3 dB nei primi 5 secondi, più basso dell'obiettivo di -14 LUFS, quindi l'apertura risulta un po' sottotono; il titolo 'Barletta contro Molfetta' è però chiaro e la voce arriva al secondo 3.8. Inoltre, nei fotogrammi 0.5s e 3s la scena dei due comuni è ancora in transizione con due immagini sovrapposte, poco leggibili come apertura.",
+    "correzione": "Alzare il livello della voce nei primi 5 secondi portandolo verso i -14 LUFS (mantenendo il picco sotto -1 dBFS) e assicurare che la prima inquadratura sia già stabile con il titolo leggibile fin dal primo frame.",
+    "idea": "Un reel di seguito che mostri il sorpasso in tempo reale, con un titolo finale 'chi passa avanti' e la città vincitrice evidenziata sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:04+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel secondo 11 (riga 'Sei di Molfetta o di Barletta?') la trascrizione dice 'Sei di Molfetta o di Barletta' ma il testo a schermo dal secondo 10 è 'Molfetta o Barletta?' e la chiusura sul fotogramma 16.9 mostra 'ANIMALE!' sotto 'COMMENTA', mentre la fascia dice 'Commenta città e nome del tuo animale",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (6 luci per comune, animali e città), audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Nel secondo 11 (riga 'Sei di Molfetta o di Barletta?') la trascrizione dice 'Sei di Molfetta o di Barletta' ma il testo a schermo dal secondo 10 è 'Molfetta o Barletta?' e la chiusura sul fotogramma 16.9 mostra 'ANIMALE!' sotto 'COMMENTA', mentre la fascia dice 'Commenta città e nome del tuo animale'. Inoltre la trascrizione riporta 'Il prossimo animale decide chi passa avanti' a 9.8s, ma la scena 'duello' con 'IL PROSSIMO' compare già dal secondo 10 circa: la sincronia è accettabile. Il punto debole vero è l'audio: 'picco -1.0 dBFS' è al limite dell'obiettivo ma regge; il volume medio dei primi 5s (-16.3 dB) è un po' basso rispetto a -14 LUFS, quindi l'apertura risulta più debole.",
+    "correzione": "Allineare il testo a schermo della chiusura alla fascia (es. 'COMMENTA' seguito da 'La tua città vince?') e alzare leggermente il volume dei primi 5 secondi per portarlo vicino a -14 LUFS.",
+    "idea": "Un prossimo reel con due comuni più distanti o un finale a sorpresa (es. chi ha più luci a fine settimana) per rilanciare i commenti."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:04+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 7 la scritta sulla mappa «Barletta · 6» e «Molfetta · 6» è piccola e poco contrastata rispetto allo sfondo scuro, quindi difficile da leggere su schermo piccolo. Anche la scritta «Testa a testa» in alto è ridotta. Nelle scene con i cartelli delle cucce i nomi degli animali ",
+   "dati": {
+    "controllato": "Leggibilità da telefono di titoli, scritte sulla mappa, didascalia e fotogrammi del reel, incrociati con copione, secondi e dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Nel fotogramma al secondo 7 la scritta sulla mappa «Barletta · 6» e «Molfetta · 6» è piccola e poco contrastata rispetto allo sfondo scuro, quindi difficile da leggere su schermo piccolo. Anche la scritta «Testa a testa» in alto è ridotta. Nelle scene con i cartelli delle cucce i nomi degli animali sono minuscoli e quasi illeggibili.",
+    "correzione": "Ingrandire le etichette della mappa e i nomi degli animali di qualche punto, aumentare il contrasto dei cartelli (bordo o sfondo più scuro) e tenere le scritte chiave entro le zone sicure del telefono.",
+    "idea": "Ripetere il formato testa a testa con una città nuova a ogni turno e mostrare in sovraimpressione il conteggio aggiornato della sfida."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:04+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nell'ultima scena (16.9s) la fascia 'Commenta città e nome del tuo animale' e il titolo 'ANIMALE!' compaiono senza che la voce chiuda la frase: la trascrizione finisce a 14.8s, quindi l'ultimo secondo è muto e il CTA resta a schermo da solo. Inoltre la scena 'COMMENTA' con 'Molfetta o Barletta?' rip",
+   "dati": {
+    "controllato": "Audio (-14 LUFS, picco -1 dBFS, nessun silenzio), trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6, luci verificate), fascia di commento e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Nell'ultima scena (16.9s) la fascia 'Commenta città e nome del tuo animale' e il titolo 'ANIMALE!' compaiono senza che la voce chiuda la frase: la trascrizione finisce a 14.8s, quindi l'ultimo secondo è muto e il CTA resta a schermo da solo. Inoltre la scena 'COMMENTA' con 'Molfetta o Barletta?' ripete lo stesso testo del CTA in basso, con due inviti alla stessa azione.",
+    "correzione": "Allungare la voce o accorciare la scena finale in modo che la CTA sia detta mentre è visibile; eliminare la fascia duplicata su una delle due scene di chiusura.",
+    "idea": "Per il prossimo testa a testa: chiudere con una sola scena di CTA e aggiungere un'immagine dell'animale vincitore del turno precedente, per dare continuità alla coppa."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:07+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nei primi frame la sfida è presentata solo con i titoli; la scena 3D di apertura è piuttosto scura e poco leggibile sul telefono, e la frase «Barletta contro Molfetta» arriva a 3.8s, quindi per quasi 4 secondi non c'è un aggancio verbale. Inoltre la luce di apertura è già accesa al secondo 4.5, ma n",
+   "dati": {
+    "controllato": "Apertura (0.5s) e frame del reel: titolo BARLETTA vs MOLFETTA, pari 6 luci, mappa e chiusura; verificati i dati di mappa (6 e 6 luci, comuni corretti) e la trascrizione coi secondi.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nei primi frame la sfida è presentata solo con i titoli; la scena 3D di apertura è piuttosto scura e poco leggibile sul telefono, e la frase «Barletta contro Molfetta» arriva a 3.8s, quindi per quasi 4 secondi non c'è un aggancio verbale. Inoltre la luce di apertura è già accesa al secondo 4.5, ma nel reel non viene chiarito chi l'ha accesa.",
+    "correzione": "Mostrare nei primi 1.5 secondi la mappa con le due luci accese e il titolo «BARLETTA 6 – 6 MOLFETTA» in grande, alzare la luminosità della scena 3D e anticipare la voce di qualche decimo.",
+    "idea": "Chiudere ogni testa a testa con «Il prossimo animale decide: segui la pagina per non perdere il punteggio», e usare la coppia dei numeri (6–6) come elemento ricorrente nella copertina."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:08+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 la scena passa alla mappa 2D con le etichette 'Barletta · 6' e 'Molfetta · 6' sovrapposte e poco distanziate, mentre il titolo 'E LA SFIDA' arriva in un momento di stacco. Nei duelli 3D (secondi 3-10) le case e le etichette dei nomi degli animali sono piccole e in parte tagliate ai bord",
+   "dati": {
+    "controllato": "Inquadrature dei 6 fotogrammi rispetto a copione e scene (apertura mappa, duello, chiusura), leggibilità delle etichette e dei nomi sulle scene 3D.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 la scena passa alla mappa 2D con le etichette 'Barletta · 6' e 'Molfetta · 6' sovrapposte e poco distanziate, mentre il titolo 'E LA SFIDA' arriva in un momento di stacco. Nei duelli 3D (secondi 3-10) le case e le etichette dei nomi degli animali sono piccole e in parte tagliate ai bordi. Il secondo 14 e il 16.9 sono quasi identici, con la sola differenza del testo 'COMMENTA'/'ANIMALE!' che resta statico per troppo tempo.",
+    "correzione": "Allargare le etichette città sulla mappa o distanziarle, inquadrare i duelli 3D più stretti sull'arena centrale con i nomi degli animali leggibili, e far durare meno la schermata finale fissa aggiungendo un leggero movimento di camera.",
+    "idea": "Per il prossimo testa a testa: uno zoom finale sull'arena del comune vincente con il nome dell'animale in primo piano, così la chiusura ha un momento emotivo anziché una schermata statica."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:08+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel primo fotogramma (0.5s) il titolo «BARLETTA» e «MOLFETTA» compare e la mappa si vede solo a 3.9s, quindi la frase «30 chilometri» (3.8s) arriva prima che la mappa mostri le due città; in più il dato «30 km» non è nei materiali verificati, quindi non posso confermarlo.",
+   "dati": {
+    "controllato": "Dati mappa (6 luci Barletta e 6 Molfetta, con animali e date coerenti), trascrizione coi secondi, audio e coerenza visiva dei fotogrammi del testa a testa.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nel primo fotogramma (0.5s) il titolo «BARLETTA» e «MOLFETTA» compare e la mappa si vede solo a 3.9s, quindi la frase «30 chilometri» (3.8s) arriva prima che la mappa mostri le due città; in più il dato «30 km» non è nei materiali verificati, quindi non posso confermarlo.",
+    "correzione": "Togliere «30 chilometri» dal copione o sostituirlo con una frase che non richieda un dato non verificato (es. «due città vicine, e la sfida è aperta»), e allineare la voce alla comparsa della mappa.",
+    "idea": "Ripetere il testa a testa con due comuni già verificati e far comparire subito in apertura il dato sulla mappa, così il confronto è visibile e la frase finale può chiedere il commento in modo più diretto."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:08+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «30 chilometri» tra Barletta e Molfetta, ma nei materiali non c'è nessun dato sulla distanza: è un'informazione non verificata. Inoltre la didascalia dice «Ogni animale accende una luce» e il copione «il prossimo animale decide chi passa avanti», ma nei materiali la sfida è solo un par",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6, coordinate e luci), audio (-14.2 LUFS, picco -1 dBFS, nessun silenzio), didascalia, fotogrammi del reel.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Il testo dice «30 chilometri» tra Barletta e Molfetta, ma nei materiali non c'è nessun dato sulla distanza: è un'informazione non verificata. Inoltre la didascalia dice «Ogni animale accende una luce» e il copione «il prossimo animale decide chi passa avanti», ma nei materiali la sfida è solo un pari 6–6 senza regola verificata di passaggio.",
+    "correzione": "Togliere «30 chilometri» (o sostituirlo con un dato verificato) e rendere la frase sulla regola coerente con quanto realmente previsto dal gioco; nei fotogrammi la scena 'IL PROSSIMO' e 'COMMENTA' appaiono sovrapposte a sfondi diversi, da controllare che il testo non copra gli animali.",
+    "idea": "Ripetere il testa a testa con città vicine e un punteggio già in aggiornamento in tempo reale, e chiudere con un duello dove il commento sposta davvero il punteggio."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:10+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il testo sul fotogramma finale recita «COMMENTA» e «ANIMALE!» mentre la trascrizione dice «Commenta città e nome del tuo animale!» a 14.8s; il punto esclamativo finale è coerente, ma la fascia di chiusura («💬 Commenta città e nome del tuo animale 👇») compare solo dal secondo 9.8 e l'ultimo fotogramm",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6, verificati), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e didascalia con fascia commento.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Il testo sul fotogramma finale recita «COMMENTA» e «ANIMALE!» mentre la trascrizione dice «Commenta città e nome del tuo animale!» a 14.8s; il punto esclamativo finale è coerente, ma la fascia di chiusura («💬 Commenta città e nome del tuo animale 👇») compare solo dal secondo 9.8 e l'ultimo fotogramma (16.9s) ha il titolo «Molfetta o Barletta?» con il contenuto ancora in animazione. Inoltre a 3.8s la trascrizione dice «30 chilometri» ma il dato sulla distanza non è nei dati verificati forniti.",
+    "correzione": "Verificare la distanza di 30 km (non presente nei dati) o rimuoverla dalla voce e dalla didascalia; allineare il testo finale del reel alla trascrizione.",
+    "idea": "Ripetere il testa a testa con due comuni dove la differenza è un animale solo, mostrando in apertura il nome dell'ultimo animale arrivato per dare un volto alla sfida."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:11+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato della mappa dice che le luci di Barletta e Molfetta risultano già accese al secondo 4.5, ma la scena della mappa parte dal secondo 3.9 e la frase «Pari: 6 a 6» arriva solo al secondo 7.9: lo spot 'luce' è coerente, ma i fotogrammi inviati (3, 7, 10, 14, 16.9) non includono il momento in cui ",
+   "dati": {
+    "controllato": "Ho verificato audio, sincronia delle scene coi dati della mappa, conteggi delle luci e coerenza di copione, trascrizione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.5,
+    "problema": "Il dato della mappa dice che le luci di Barletta e Molfetta risultano già accese al secondo 4.5, ma la scena della mappa parte dal secondo 3.9 e la frase «Pari: 6 a 6» arriva solo al secondo 7.9: lo spot 'luce' è coerente, ma i fotogrammi inviati (3, 7, 10, 14, 16.9) non includono il momento in cui la luce si accende davvero. Inoltre l'audio ha volume medio dei primi 5 secondi a -16.3 dB, sotto l'obiettivo di -14 LUFS, anche se il LUFS complessivo (-14.2) è in linea.",
+    "correzione": "Verificare che l'accensione delle luci avvenga dentro la scena 3.9–7.96 e inviare un fotogramma intorno al secondo 4.5; alzare leggermente il volume dei primi 5 secondi (circa +2 dB) per allinearlo all'obiettivo.",
+    "idea": "Ripetere il formato testa_a_testa, che nei dati ha il miglior rapporto follower ogni 1000 views (58.8), con coppie di città vicine e una chiusura che chieda di scegliere il vincitore."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:11+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'luce già accesa al secondo 4.5' è coerente con la scena 0 (3.9–7.96s) ma la voce dice 'Barletta contro Molfetta' a 3.8s, quindi la mappa parte prima che il testo introduca le città: le luci compaiono quando la voce non le ha ancora nominate. Inoltre l'audio è a -16.3 dB medi nei primi 5s, s",
+   "dati": {
+    "controllato": "Sincronia della scena Barletta/Molfetta con la trascrizione, dati delle luci verificati sulla mappa, audio e fotogrammi campionati.",
+    "esito": "segnalo",
+    "secondo": 4.5,
+    "problema": "Il dato 'luce già accesa al secondo 4.5' è coerente con la scena 0 (3.9–7.96s) ma la voce dice 'Barletta contro Molfetta' a 3.8s, quindi la mappa parte prima che il testo introduca le città: le luci compaiono quando la voce non le ha ancora nominate. Inoltre l'audio è a -16.3 dB medi nei primi 5s, sotto l'obiettivo di -14 LUFS, e la traccia complessiva è a -14.2 LUFS: è accettabile, ma l'apertura è più debole del resto.",
+    "correzione": "Far accendere le due luci solo dopo 'Barletta contro Molfetta' (circa 3.8–4.5s con la voce che le nomina) e alzare il volume della voce nei primi 5 secondi di circa 2 dB per allinearlo all'obiettivo.",
+    "idea": "Ripetere il testa a testa con una chiusura che mostri il pareggio spezzato dal primo commento che arriva, per trasformare la sfida in un richiamo a partecipare."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:11+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La voce dice «Barletta contro Molfetta: 30 chilometri» con la prima frase che parte a 3.8s, mentre la scena della mappa inizia a 3.9s: va bene, ma i fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non includono il momento della luce accesa (4.5s) né il frame della scena duello, quindi non posso verific",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati mappa (6 luci per Barletta e Molfetta), misure audio e didascalia, confrontati tra loro.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "La voce dice «Barletta contro Molfetta: 30 chilometri» con la prima frase che parte a 3.8s, mentre la scena della mappa inizia a 3.9s: va bene, ma i fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non includono il momento della luce accesa (4.5s) né il frame della scena duello, quindi non posso verificare visivamente la sincronia. Inoltre le 6 luci per comune sono verificate solo nel dato, non nei fotogrammi.",
+    "correzione": "Inviare fotogrammi a 4.5s e 9.8s per verificare la sincronia tra voce, luce e scena duello; controllare che la frase 'Il prossimo animale decide' coincida con il cambio di scena.",
+    "idea": "Replicare il formato testa a testa con coppie di città vicine e una 'sfida di rimonta' quando una città passa avanti, per riaccendere il commento."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:14+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Il prossimo animale decide chi passa avanti' a 9.8s, mentre la scena 'duello' inizia a 7.96s e la frase di chiusura parte a 11.4s; nei dati la scena 0 (luce) termina a 7.96s. Inoltre il video copre la mappa fino a 16.9s senza che i dati della scena duello siano verificati nei m",
+   "dati": {
+    "controllato": "Montaggio: sincronia della trascrizione con le scene e la luce di Barletta e Molfetta sulla mappa, misure audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio lungo), durata e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "La trascrizione dice 'Il prossimo animale decide chi passa avanti' a 9.8s, mentre la scena 'duello' inizia a 7.96s e la frase di chiusura parte a 11.4s; nei dati la scena 0 (luce) termina a 7.96s. Inoltre il video copre la mappa fino a 16.9s senza che i dati della scena duello siano verificati nei materiali: i conteggi 6-6 sono confermati solo per il primo blocco. Il fotogramma a 9.8s non è stato inviato (inviati 0.5, 3, 7, 10, 14, 16.9), quindi non posso verificare visivamente il cambio scena.",
+    "correzione": "Verificare col fotogramma a 9.8s che la scena 'duello' sia già in corso al momento della frase 'Il prossimo animale decide', oppure spostare la frase alla scena giusta; confermare che il conteggio 6-6 sia visibile durante la frase. Richiedere il fotogramma mancante a 9.8s.",
+    "idea": "Ripetere il formato testa a testa con altre coppie di comuni vicini, mantenendo la domanda finale che chiede città e nome dell'animale."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:15+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La frase «Pari: 6 a 6» è detta a 7.9s e il prossimo animale a 9.8s, ma i dati mappa mostrano le luci già accese al secondo 4.5, quindi lo spettatore vede il pareggio prima di sentirlo. Inoltre la scena 0 inizia a 3.9s mentre la voce parla di luce già accesa nella frase iniziale: l'audio dice 'la sfi",
+   "dati": {
+    "controllato": "Ritmo, durata, audio, sincronia tra frasi e scene dei dati mappa (Barletta e Molfetta con 6 luci ciascuna, luci già accese all'apertura) e coerenza della didascalia coi numeri verificati.",
+    "esito": "segnalo",
+    "secondo": 3.9,
+    "problema": "La frase «Pari: 6 a 6» è detta a 7.9s e il prossimo animale a 9.8s, ma i dati mappa mostrano le luci già accese al secondo 4.5, quindi lo spettatore vede il pareggio prima di sentirlo. Inoltre la scena 0 inizia a 3.9s mentre la voce parla di luce già accesa nella frase iniziale: l'audio dice 'la sfida è aperta' mentre la mappa è ancora in transizione. Infine i fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coincidono con quelli del brief (0.5, 1, 2 ... 16.9), quindi la verifica visiva non copre tutta la scena di apertura.",
+    "correzione": "Allineare la frase 'Pari: 6 a 6' con l'accensione dell'ultima luce, oppure spostarla dopo il secondo 4.5; verificare il fotogramma a 1-2s sulla scena luce; ricontrollare i fotogrammi mancanti prima della pubblicazione. Audio ok: -14.2 LUFS, picco -1.0 dBFS, nessun silenzio lungo.",
+    "idea": "Per i prossimi testa a testa, mostrare il nome dell'ultimo animale arrivato sulla mappa nel frame del pareggio, così il commento ha un riferimento concreto."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:15+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Le luci di Barletta e Molfetta risultano già accese al secondo 4.5, ma la frase 'Barletta contro Molfetta' parte a 3.8s e la scena luce dura fino a 7.96s: la mappa compare prima che lo spettatore abbia capito il formato. Inoltre la chiusura 'Commenta città e nome del tuo animale!' (14.8s) non coinci",
+   "dati": {
+    "controllato": "Sincronia copione/scene, dati mappa (6 e 6 luci verificati), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio), didascalia e fascia commento.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Le luci di Barletta e Molfetta risultano già accese al secondo 4.5, ma la frase 'Barletta contro Molfetta' parte a 3.8s e la scena luce dura fino a 7.96s: la mappa compare prima che lo spettatore abbia capito il formato. Inoltre la chiusura 'Commenta città e nome del tuo animale!' (14.8s) non coincide con la fascia 'Commenta città e nome del tuo animale' ma va bene; il problema principale è il 'sopra' della copertina con formato 'TESTA A TESTA' che non è verificabile nei dati. Nota: 'Pari: 6 a 6' è corretto rispetto ai dati.",
+    "correzione": "Ritardare di circa 0.5s la comparsa delle luci sulla mappa, facendo partire la scena luce insieme alla frase 'Barletta contro Molfetta', e verificare che la copertina 'TESTA A TESTA' sia coerente con il formato del brief.",
+    "idea": "Ripetere il formato testa a testa con due comuni vicini a 30 km più una scena finale che mostra i nomi degli ultimi animali arrivati, per rafforzare il senso di appartenenza."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:15+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Esportazione: durata, trascrizione coi secondi, dati mappa (6 luci per Barletta e Molfetta, coerenti col conteggio), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio), fotogrammi e didascalia.",
+   "dati": {
+    "controllato": "Esportazione: durata, trascrizione coi secondi, dati mappa (6 luci per Barletta e Molfetta, coerenti col conteggio), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio), fotogrammi e didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il testa_a_testa con una coppia di città vicine ma con tanti animali già in mappa, e chiudere con un numero da battere per il turno successivo."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:17+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "L'audio è a -14.2 LUFS con picco a -1.0 dBFS, quindi rientra nell'obiettivo. Però il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto: l'apertura, che deve agganciare subito, risulta un po' sommessa. Inoltre la voce è generata con IA, cosa dichiarata in didascalia, e questo può pesar",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, coerenza dati mappa e conteggi luci, didascalia e copertina rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "L'audio è a -14.2 LUFS con picco a -1.0 dBFS, quindi rientra nell'obiettivo. Però il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto: l'apertura, che deve agganciare subito, risulta un po' sommessa. Inoltre la voce è generata con IA, cosa dichiarata in didascalia, e questo può pesare sulla percezione di autenticità.",
+    "correzione": "Alzare di circa 2 dB il volume dei primi 5 secondi (dal secondo 0 al 5) mantenendo il picco sotto -1 dBFS, così l'apertura arriva più piena senza toccare il resto del mix.",
+    "idea": "Chiudere ogni testa a testa con l'annuncio del comune vincitore del turno successivo, così chi ha commentato ha un motivo preciso per tornare."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:18+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "I fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coprono i fotogrammi richiesti (0.5 a 16.9 ogni secondo): mancano verifiche visive su scene e didascalie a 1, 2, 4, 5, 6, 8, 9, 11, 12, 13, 15, 16 s. Inoltre la scena 'luce' dichiara la luce già accesa al secondo 4.5 mentre la frase 'Barletta contro",
+   "dati": {
+    "controllato": "Sincronia trascrizione/scene, dati mappa Barletta e Molfetta (6 luci ciascuna, come da didascalia), audio e copertina rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "I fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coprono i fotogrammi richiesti (0.5 a 16.9 ogni secondo): mancano verifiche visive su scene e didascalie a 1, 2, 4, 5, 6, 8, 9, 11, 12, 13, 15, 16 s. Inoltre la scena 'luce' dichiara la luce già accesa al secondo 4.5 mentre la frase 'Barletta contro Molfetta' parte a 3.8 s: il dato è coerente, ma va verificato che l'animazione della luce sia visibile prima della voce.",
+    "correzione": "Rigenerare o inviare il set completo di fotogrammi (ogni secondo, o almeno 1 s, 4 s, 8 s, 12 s) per verificare copertina e cambi di scena; controllare nel montaggio che la luce di Barletta/Molfetta compaia tra 3.9 e 4.5 s.",
+    "idea": "Ripetere il formato testa a testa con coppie di città vicine, aggiungendo nella copertina il nome del comune che sta vincendo a metà reel per tenere alta la tensione."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:20+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nei primi 2 secondi non c'è ancora la domanda né il conflitto: la scritta 'BARLETTA / 6 luci · pari' e la scena 3D compaiono, ma la frase 'Barletta contro Molfetta' parte solo al secondo 3.8 e il 'VS' non è ancora leggibile come sfida. Chi scorre non capisce subito che è una sfida.",
+   "dati": {
+    "controllato": "Gancio dei primi 2 secondi: frame 0.5s, trascrizione, apertura e copertina del reel testa a testa Barletta vs Molfetta.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nei primi 2 secondi non c'è ancora la domanda né il conflitto: la scritta 'BARLETTA / 6 luci · pari' e la scena 3D compaiono, ma la frase 'Barletta contro Molfetta' parte solo al secondo 3.8 e il 'VS' non è ancora leggibile come sfida. Chi scorre non capisce subito che è una sfida.",
+    "correzione": "Portare la frase di apertura (o un titolo grande 'BARLETTA VS MOLFETTA: 6 A 6?') nei primi 0.5 secondi, sovrapposto alla scena 3D, e anticipare il 'VS' con un'animazione di impatto entro il secondo 1.",
+    "idea": "Per i prossimi testa a testa, aprire con il risultato in cifra grande ('6 – 6?') e il nome delle due città già nel primo frame, e usare la voce solo dopo il secondo 2."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:20+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La frase «Il prossimo animale decide chi passa avanti» (9.8s) non viene letta sulla scena «IL PROSSIMO» della grafica dove compare «Barletta 6 vs Molfetta 6», mentre la scena «COMMENTA» e «ANIMALE!» compaiono senza voce chiara; inoltre la didascalia dice «Voce generata con IA» ma il copione non lo e",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati mappa (6 luci ciascuna, coerenti col progetto), audio (-14.2 LUFS, picco -1 dBFS, nessun silenzio) e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "La frase «Il prossimo animale decide chi passa avanti» (9.8s) non viene letta sulla scena «IL PROSSIMO» della grafica dove compare «Barletta 6 vs Molfetta 6», mentre la scena «COMMENTA» e «ANIMALE!» compaiono senza voce chiara; inoltre la didascalia dice «Voce generata con IA» ma il copione non lo esplicita nel parlato. Le scene di chiusura durano meno della frase finale.",
+    "correzione": "Allineare il parlato «prossimo animale» alla comparsa di «IL PROSSIMO» (circa 9.5s) e far durare la scena «COMMENTA» e «ANIMALE!» fino alla fine della frase «Commenta città e nome del tuo animale!» (circa 14.8s), oppure accorciare la frase per farla stare sulla scena.",
+    "idea": "Ripetere il formato testa a testa con una sfida ogni settimana tra comuni vicini e mostrare in chiusura il punteggio aggiornato per creare continuità con la serie."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:21+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase iniziale dice 'Barletta contro Molfetta: 30 chilometri' e la didascalia dice 'due comuni a 30 km', ma nei materiali non c'è alcun dato verificato sulla distanza tra le due città: il numero non è supportato. Inoltre la voce al secondo 3.8 e la scritta sullo schermo non coi",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6, verificati), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio), didascalia e fotogrammi della mia mansione.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Nella trascrizione la frase iniziale dice 'Barletta contro Molfetta: 30 chilometri' e la didascalia dice 'due comuni a 30 km', ma nei materiali non c'è alcun dato verificato sulla distanza tra le due città: il numero non è supportato. Inoltre la voce al secondo 3.8 e la scritta sullo schermo non coincidono con la sequenza dei fotogrammi: il dato sui 30 km non compare in nessuna scena visiva.",
+    "correzione": "Togliere '30 chilometri' / '30 km' da trascrizione e didascalia, oppure sostituirlo con una frase verificabile (es. 'due comuni pugliesi, stesso punteggio: 6 a 6'). La didascalia può restare 'Barletta 6 – 6 Molfetta: la sfida è aperta!'.",
+    "idea": "Ripetere il formato testa_a_testa con il comune in pari più vicino alla soglia del prossimo animale, e mostrare in scena il nome dell'ultimo animale arrivato come aggancio al commento."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:21+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Copione, trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6, luci verificate), audio (-14.2 LUFS, picco -1 dBFS, nessun silenzio), didascalia e fotogrammi.",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6, luci verificate), audio (-14.2 LUFS, picco -1 dBFS, nessun silenzio), didascalia e fotogrammi.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo testa a testa aggiungere il conteggio del pareggio in tempo reale sulla mappa per rendere più tesa la chiusura."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:23+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La scena finale mostra per tutto il tempo il duello Cani vs Gatti con la scritta «COMMENTA» e poi «ANIMALE!», ma la CTA sulla città e il nome dell'animale compare solo come fascia; il fotogramma finale non riprende la domanda «Molfetta o Barletta?» in modo chiaro e la frase «Il prossimo animale deci",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, mappa (6 luci Barletta e 6 Molfetta, coerenti), audio (-14.2 LUFS, picco -1 dBFS, nessun silenzio), didascalia e CTA.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "La scena finale mostra per tutto il tempo il duello Cani vs Gatti con la scritta «COMMENTA» e poi «ANIMALE!», ma la CTA sulla città e il nome dell'animale compare solo come fascia; il fotogramma finale non riprende la domanda «Molfetta o Barletta?» in modo chiaro e la frase «Il prossimo animale decide chi passa avanti» non è visualizzata nel momento in cui si parla di decidere. Inoltre la trascrizione dice «30 chilometri» che non è verificabile dai dati forniti.",
+    "correzione": "Nell'ultima scena mostrare insieme la domanda «Barletta o Molfetta?» e la fascia di commento per tutta la durata finale, e rimuovere o verificare il dato «30 chilometri» (non presente nei materiali).",
+    "idea": "Per i prossimi testa a testa, chiudere con un'immagine animata delle due luci che si accendono insieme, più coinvolgente delle icone ferme."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:25+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Il prossimo animale decide chi passa avanti» mentre la trascrizione dice «Il prossimo animale decide chi passa [11.4s] avanti»: la frase è spezzata in modo che 'passa' stia nella scena successiva. Inoltre la trascrizione ha 'Sei di Molfetta o di Barletta?' mentre la scena finale mos",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (6 e 6 luci verificate), audio e didascalia del reel testa_a_testa.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Il copione dice «Il prossimo animale decide chi passa avanti» mentre la trascrizione dice «Il prossimo animale decide chi passa [11.4s] avanti»: la frase è spezzata in modo che 'passa' stia nella scena successiva. Inoltre la trascrizione ha 'Sei di Molfetta o di Barletta?' mentre la scena finale mostra 'Molfetta o Barletta?': resta coerente, ma la didascalia dice 'Barletta 6 – 6 Molfetta' e la copertina 'Barletta vs Molfetta', invertendo l'ordine usato altrove. Nei fotogrammi il testo 'COMMENTA' e 'ANIMALE!' appare in due scene consecutive quasi identiche, con circa 3 secondi di schermo fermo.",
+    "correzione": "Allineare l'ordine città (Barletta sempre prima) in didascalia e copertina, e tenere la frase 'decide chi passa avanti' in un'unica battuta; accorciare la chiusura statica tra 13 e 17 secondi.",
+    "idea": "Per i prossimi testa a testa, mostrare nel finale il nome di un animale appena arrivato in una delle due città, così la sfida diventa personale e cresce la voglia di commentare."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:25+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Barletta contro Molfetta: 30 chilometri» ma nei materiali la distanza tra i due comuni non è verificata; inoltre la voce dice «Pari: 6 a 6» mentre il dato della mappa è già a 6 e 6, quindi coerente. Il problema concreto è il 30 km non supportato dai dati.",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (6 vs 6, comuni e luci verificati), audio e didascalia del reel testa a testa Barletta-Molfetta.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Il copione dice «Barletta contro Molfetta: 30 chilometri» ma nei materiali la distanza tra i due comuni non è verificata; inoltre la voce dice «Pari: 6 a 6» mentre il dato della mappa è già a 6 e 6, quindi coerente. Il problema concreto è il 30 km non supportato dai dati.",
+    "correzione": "Togliere «30 chilometri» dalla frase al secondo 3.8 (es. «Barletta contro Molfetta, e la sfida è aperta») e dalla didascalia, oppure inserire la distanza solo se verificata.",
+    "idea": "Ripetere il testa a testa con sfide tra comuni più lontani e chiedere nel commento il nome dell'animale, dato che questo formato converte di più."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:25+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il primo tempo dice «30 chilometri», ma nel copione e nella didascalia la distanza non è confermata dai dati forniti; inoltre il secondo 3.8 combacia con la prima frase mentre la scena «luce» di apertura non mostra ancora i numeri. La frase «il prossimo animale decide chi passa av",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Barletta 6 e Molfetta 6, luci verificate), audio e didascalia del reel testa a testa.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Nella trascrizione il primo tempo dice «30 chilometri», ma nel copione e nella didascalia la distanza non è confermata dai dati forniti; inoltre il secondo 3.8 combacia con la prima frase mentre la scena «luce» di apertura non mostra ancora i numeri. La frase «il prossimo animale decide chi passa avanti» promette una sfida che nel reel non ha un esito chiaro. Nella scena «COMMENTA» e «ANIMALE!» il testo copre la grafica senza gerarchia chiara.",
+    "correzione": "Verificare i 30 km o toglierli dalla voce e dalla didascalia; chiarire nella frase finale cosa succede al prossimo animale (es. «chi arriva a 7 vince la sfida»); allineare la comparsa del testo «COMMENTA» alla voce e lasciare più respiro alla scena finale.",
+    "idea": "Ripetere il formato testa a testa aggiungendo un contatore finale che mostri chi è in vantaggio e cosa serve per superarlo, così la sfida ha una posta in gioco visibile."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:26+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Alla frase «Il prossimo animale decide chi passa avanti» (9.8s) il fotogramma mostra ancora la scena del duello/mappa, mentre nel brief la scena 'duello' dovrebbe coincidere; inoltre la voce dice «30 chilometri» e «passa avanti» ma il pari 6-6 non è un vero 'passa avanti' finché non arriva un nuovo ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6), didascalia, audio e coerenza fotogrammi/voce con il copione.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Alla frase «Il prossimo animale decide chi passa avanti» (9.8s) il fotogramma mostra ancora la scena del duello/mappa, mentre nel brief la scena 'duello' dovrebbe coincidere; inoltre la voce dice «30 chilometri» e «passa avanti» ma il pari 6-6 non è un vero 'passa avanti' finché non arriva un nuovo animale, quindi il messaggio è ambiguo. Nei dati la voce 'Barletta 6' compare alla scena 0, coerente.",
+    "correzione": "Riformulare a 9.8s in «Il prossimo animale decide chi va in testa» e allineare la scena duello a quella frase; far comparire la cifra 6–6 in sovrimpressione già durante la frase 1.",
+    "idea": "Ripetere il testa a testa con coppie di città più vicine o con una chiusura che annuncia la città vincente della settimana, per trattenere chi commenta."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:28+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice 'Il prossimo animale decide chi passa avanti', ma la scena del secondo 9.8 mostra solo l'etichetta del prossimo duello (cane vs gatto) senza chiarire che la sfida è sul comune. Inoltre la trascrizione riporta 'Barletta contro Molfetta: 30 chilometri' mentre la didascalia dice 'due comu",
+   "dati": {
+    "controllato": "Mappa e dati: coerenza tra scene, etichette, luci dei comuni (6 e 6, pari come dichiarato) e i dati verificati di animali e date, più audio e trascrizione.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Il testo dice 'Il prossimo animale decide chi passa avanti', ma la scena del secondo 9.8 mostra solo l'etichetta del prossimo duello (cane vs gatto) senza chiarire che la sfida è sul comune. Inoltre la trascrizione riporta 'Barletta contro Molfetta: 30 chilometri' mentre la didascalia dice 'due comuni a 30 km': dato non verificabile nei materiali e presentato come fatto. Anche la frase 'Sei di Molfetta o di Barletta?' al secondo 13 è sovrapposta alla scena della chiusura senza testo visibile coerente con l'audio.",
+    "correzione": "Togliere o verificare il dato '30 km' (non presente nei dati della mappa). Nella scena del secondo 9.8 aggiungere la dicitura 'il prossimo duello decide chi passa avanti' o allineare il testo alla grafica. Sincronizzare la frase 'Sei di Molfetta o di Barletta?' con il testo a schermo.",
+    "idea": "Per il prossimo testa a testa, mostrare il nome di un animale reale di ciascuna città a schermo nei primi 3 secondi e chiudere con un conto alla rovescia breve per aumentare i commenti."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:28+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La voce dice «Il prossimo animale decide chi passa avanti» ma il pari 6-6 e il cambio di scena sono già visibili nel reel; inoltre la trascrizione dice «30 chilometri» mentre nei materiali non c'è questo dato verificato. La didascalia dice «Barletta 6 – 6 Molfetta» e la copertina «6 – 6», ma il dato",
+   "dati": {
+    "controllato": "Coerenza tra etichette sulla mappa, conteggi delle luci, timing della trascrizione e fotogrammi del reel.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "La voce dice «Il prossimo animale decide chi passa avanti» ma il pari 6-6 e il cambio di scena sono già visibili nel reel; inoltre la trascrizione dice «30 chilometri» mentre nei materiali non c'è questo dato verificato. La didascalia dice «Barletta 6 – 6 Molfetta» e la copertina «6 – 6», ma il dato 6 a 6 è corretto solo sulle luci attuali (6 e 6): OK. Il problema reale è la distanza: 30 km non è verificabile dai dati forniti.",
+    "correzione": "Togliere «30 chilometri» oppure sostituirlo con una formulazione verificabile (es. «due comuni pugliesi vicini»). Rendere più chiaro al secondo 9.8 che il prossimo animale decide la sfida.",
+    "idea": "Ripetere il formato testa a testa con una mappa zoomata sulle due città e un conteggio aggiornato in sovrimpressione nell'ultimo secondo."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:29+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella scena finale le frasi «COMMENTA» e «ANIMALE!» compaiono mentre la fascia «Commenta città e nome del tuo animale» è già visibile in basso: l'invito è ripetuto due volte nello stesso secondo di chiusura, e il copione dice «Sei di Molfetta o di Barletta?» mentre a schermo c'è «Molfetta o Barletta",
+   "dati": {
+    "controllato": "Dati mappa (6 e 6 luci, comuni e coordinate), trascrizione coi secondi e audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio lungo), coerenza tra didascalia e copione.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Nella scena finale le frasi «COMMENTA» e «ANIMALE!» compaiono mentre la fascia «Commenta città e nome del tuo animale» è già visibile in basso: l'invito è ripetuto due volte nello stesso secondo di chiusura, e il copione dice «Sei di Molfetta o di Barletta?» mentre a schermo c'è «Molfetta o Barletta?» in un riquadro diverso. Inoltre la trascrizione dice «30 chilometri» che non è in nessun dato verificato dei materiali.",
+    "correzione": "Togliere «30 chilometri» dal copione oppure aggiungere la fonte della distanza; tenere un solo invito a commentare nel finale (o la fascia o la scritta grande, non entrambi); allineare il testo a schermo a quello della voce.",
+    "idea": "Nel prossimo testa a testa chiudere con una sola domanda a schermo e mostrare il nome dell'animale che porterà il punto decisivo, per dare un motivo concreto di ritorno."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:29+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Ho verificato la mappa (Barletta 6 luci, Molfetta 6 luci, coerenti coi dati), la trascrizione coi secondi, l'audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio) e la didascalia/fascia.",
+   "dati": {
+    "controllato": "Ho verificato la mappa (Barletta 6 luci, Molfetta 6 luci, coerenti coi dati), la trascrizione coi secondi, l'audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio) e la didascalia/fascia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per il prossimo testa_a_testa, mostrare in apertura un numero di luci già diverso (es. 7–6) per creare più tensione prima del pareggio, oppure ripetere il formato con una coppia di città vicine ma di province diverse."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:32+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La scena della mappa compare dal secondo 3.9, ma nella trascrizione la frase su Barletta e Molfetta (30 km) arriva al secondo 3.8 e la frase sul 6 a 6 parte al 6.5: va bene. Il problema è sul fotogramma del secondo 4: l'etichetta della mappa mostra già 'Barletta · 6' e 'Molfetta · 6' ma le luci sul ",
+   "dati": {
+    "controllato": "Mappa e dati: coerenza di etichette, conteggi luci (6 e 6), comuni e coordinate, tempi delle scene rispetto alla trascrizione, e audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio).",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "La scena della mappa compare dal secondo 3.9, ma nella trascrizione la frase su Barletta e Molfetta (30 km) arriva al secondo 3.8 e la frase sul 6 a 6 parte al 6.5: va bene. Il problema è sul fotogramma del secondo 4: l'etichetta della mappa mostra già 'Barletta · 6' e 'Molfetta · 6' ma le luci sul mare e sulla costa non sono ancora ben leggibili, e nella scena 'duello' (secondi 7-10) il nome del comune di Barletta e Molfetta è coperto dal logo VS. Nel dato 'luce già accesa al secondo 4.5' la luce è effettivamente presente, quindi la sincronizzazione è corretta; segnalo solo la leggibilità dell'etichetta nel fotogramma 4.",
+    "correzione": "Spostare l'etichetta della mappa o ingrandire leggermente le luci nella scena 0 perché siano leggibili già dal secondo 4, e lasciare più spazio tra il logo VS e i nomi dei comuni nella scena duello.",
+    "idea": "Ripetere il testa a testa con due comuni della stessa provincia e mostrare nella chiusura il comune che sta vincendo, per spingere i commenti dei residenti."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:32+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Alla voce «Barletta contro Molfetta: 30 chilometri» (3.8s) la scena 0 mostra già la mappa con 6 luci per comune, ma nel brief la scena «luce» dovrebbe mostrare l'accensione; inoltre la didascalia ripete «due comuni a 30 km» senza che il dato sia nei materiali verificati, quindi non posso confermarlo",
+   "dati": {
+    "controllato": "Mappa e dati: coerenza tra etichette, conteggi luci, comuni e coordinate, e allineamento tra scena e voce.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Alla voce «Barletta contro Molfetta: 30 chilometri» (3.8s) la scena 0 mostra già la mappa con 6 luci per comune, ma nel brief la scena «luce» dovrebbe mostrare l'accensione; inoltre la didascalia ripete «due comuni a 30 km» senza che il dato sia nei materiali verificati, quindi non posso confermarlo. I dati di mappa (6 luci ciascuno, coordinate, animali) risultano coerenti.",
+    "correzione": "Verificare la distanza di 30 km (non presente nei dati forniti) prima della pubblicazione o rimuoverla dalla voce e dalla didascalia; far coincidere l'accensione delle luci con la frase al secondo 3.8.",
+    "idea": "Accorciare la parte finale con la sola scritta «Molfetta o Barletta?» e tenere il tempo per un'inquadratura ravvicinata di un animale che accende la luce, così il reel chiude sull'emozione e non sul testo."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:33+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 (scena del duello) il pannello Barletta/Molfetta mostra 6 luci ciascuna, ma nelle immagini la mappa e le etichette dei due comuni coincidono con i dati: il problema reale è che la didascalia dice 'due comuni a 30 km' mentre il testo parlato dice '30 chilometri' senza verifica della dist",
+   "dati": {
+    "controllato": "Mappa e dati: conteggi luci (6 e 6), comuni sulla mappa, coerenza tra etichette, scena dei numeri e didascalia, audio.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 (scena del duello) il pannello Barletta/Molfetta mostra 6 luci ciascuna, ma nelle immagini la mappa e le etichette dei due comuni coincidono con i dati: il problema reale è che la didascalia dice 'due comuni a 30 km' mentre il testo parlato dice '30 chilometri' senza verifica della distanza nei materiali, e la scena 'E LA SFIDA' (secondi 3.9-8) è accompagnata dalla mappa senza che la luce di Molfetta compaia chiaramente. Inoltre la fascia 'Commenta città e nome del tuo animale' compare due volte con testi diversi (secondo 13-17 'Molfetta o Barletta?'), creando ridondanza.",
+    "correzione": "Verificare la distanza Barletta-Molfetta nei dati o toglierla dalla voce e dalla didascalia; eliminare la fascia duplicata o unificarla in un unico invito; assicurare che nella scena della mappa entrambe le etichette siano leggibili per tutta la durata.",
+    "idea": "Chiudere con la scena del prossimo animale che accende la luce in diretta, così il pubblico vede concretamente cosa decide la sfida."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:33+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Barletta contro Molfetta: 30 chilometri» ma nei materiali non c'è alcun dato di distanza verificato; è un'affermazione non supportata. Inoltre la scena 0 (3.9–7.96 s) è la mappa con le etichette 6 e 6, ma la frase «Pari: 6 a 6» arriva a 6.5 s, quindi il testo e la mappa sono allinea",
+   "dati": {
+    "controllato": "Dati di mappa (6 luci ciascuna, animali e date), copione con secondi, coerenza tra frasi e scene, misure audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Il copione dice «Barletta contro Molfetta: 30 chilometri» ma nei materiali non c'è alcun dato di distanza verificato; è un'affermazione non supportata. Inoltre la scena 0 (3.9–7.96 s) è la mappa con le etichette 6 e 6, ma la frase «Pari: 6 a 6» arriva a 6.5 s, quindi il testo e la mappa sono allineati, va bene. Nota minore: l'audio è a -14.2 LUFS e picco a -1.0 dBFS, entro obiettivo, nessun silenzio.",
+    "correzione": "Rimuovere «30 chilometri» dal voiceover (3.8 s) e dalla didascalia, oppure sostituirlo con una frase senza distanza, ad esempio «Barletta contro Molfetta: due città vicine, e la sfida è aperta.»",
+    "idea": "Ripetere il testa a testa con coppie di città più vicine o con una sfida tra due animali specifici del progetto, così il numero dei commenti cresce ancora."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:34+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Dati mappa (6 luci Barletta, 6 Molfetta, coerenti con i comuni e le scene), trascrizione coi secondi, copione, didascalia e misure audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio lungo).",
+   "dati": {
+    "controllato": "Dati mappa (6 luci Barletta, 6 Molfetta, coerenti con i comuni e le scene), trascrizione coi secondi, copione, didascalia e misure audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio lungo).",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il testa_a_testa con una sfida ogni turno, magari annunciando nel reel precedente quale comune sfiderà il prossimo, per tenere alta l'attesa."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:34+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi), trascrizione coi secondi e coerenza con i dati della mappa per Barletta e Molfetta (6 luci ciascuna, animali e date).",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi e coerenza con i dati della mappa per Barletta e Molfetta (6 luci ciascuna, animali e date).",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa a testa, dare un numero esatto nel titolo sulla copertina (es. «6 – 6») e aggiungere una scena finale con il comune che passa avanti, così da chiudere la sfida con un risultato visibile."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:35+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Volume audio del reel: LUFS, picco, silenzi e volume dei primi 5 secondi rispetto all'obiettivo.",
+   "dati": {
+    "controllato": "Volume audio del reel: LUFS, picco, silenzi e volume dei primi 5 secondi rispetto all'obiettivo.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi testa_a_testa, valuta un breve effetto sonoro sul momento del pareggio 6 a 6 per rafforzare la tensione della sfida."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:36+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «30 chilometri» come distanza tra le due città, ma questo dato non è presente nei materiali verificati. Inoltre i fotogrammi inviati sono 6 mentre il progetto ne prevede 18 (0.5–16.9 s): la verifica visiva copre meno della metà del reel.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, dati mappa (Barletta e Molfetta, 6 luci ciascuna) e copione confrontati.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Il testo dice «30 chilometri» come distanza tra le due città, ma questo dato non è presente nei materiali verificati. Inoltre i fotogrammi inviati sono 6 mentre il progetto ne prevede 18 (0.5–16.9 s): la verifica visiva copre meno della metà del reel.",
+    "correzione": "Rimuovere «30 chilometri» dal copione e dalla didascalia oppure verificarne la fonte; far rivedere i fotogrammi mancanti (1, 2, 4, 5, 6, 8, 9, 11, 12, 13, 15, 16) prima della pubblicazione.",
+    "idea": "Ripetere il testa a testa con un'altra coppia di comuni vicini, usando la stessa struttura ma con un dato di distanza verificato dalla mappa."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:37+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Nessuno nella mia mansione: LUFS -14.2 e picco -1.0 dBFS nei limiti, nessun silenzio lungo, le luci di Barletta e Molfetta corrispondono al 6–6 e alla frase detta.",
+   "dati": {
+    "controllato": "Volume, picco e silenzi dell'audio, e la coerenza tra le luci sulla mappa, il conteggio 6–6 e il testo detto nel reel.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "Nessuno nella mia mansione: LUFS -14.2 e picco -1.0 dBFS nei limiti, nessun silenzio lungo, le luci di Barletta e Molfetta corrispondono al 6–6 e alla frase detta.",
+    "correzione": "Nessuna correzione necessaria sull'audio.",
+    "idea": "Ripetere il testa a testa con due comuni vicini a parità di luci per riattivare la sfida, magari aggiungendo un aggiornamento nel secondo finale quando una delle due città passa avanti."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:37+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio: LUFS -14.2, picco -1.0 dBFS, nessun silenzio, volume primi 5s -16.3 dB; ho anche verificato che Barletta e Molfetta abbiano 6 luci ciascuna come dichiarato.",
+   "dati": {
+    "controllato": "Audio: LUFS -14.2, picco -1.0 dBFS, nessun silenzio, volume primi 5s -16.3 dB; ho anche verificato che Barletta e Molfetta abbiano 6 luci ciascuna come dichiarato.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il testa a testa con altre coppie di comuni vicini, usando la stessa struttura di apertura, pareggio e chiusura con domanda."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:38+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Barletta contro Molfetta: 30 chilometri' e la voce parte a 3.8s, mentre la scena della mappa inizia a 3.9s e le luci sono già accese a 4.5s: la frase sulla distanza arriva prima che lo spettatore veda le due città accese. Inoltre l'audio è basso nei primi 5 secondi (-16.3 dB medi co",
+   "dati": {
+    "controllato": "Sincronia voce/scene, coerenza dei dati di mappa (6 a 6 per Barletta e Molfetta, luci già accese), livelli audio e confronto con i reel precedenti.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Il copione dice 'Barletta contro Molfetta: 30 chilometri' e la voce parte a 3.8s, mentre la scena della mappa inizia a 3.9s e le luci sono già accese a 4.5s: la frase sulla distanza arriva prima che lo spettatore veda le due città accese. Inoltre l'audio è basso nei primi 5 secondi (-16.3 dB medi contro l'obiettivo di -14 LUFS), quindi l'apertura è più debole del necessario. I 30 km non compaiono nei dati forniti, quindi andrebbero verificati prima di pubblicare.",
+    "correzione": "Spostare la frase 'Barletta contro Molfetta' di qualche decimo di secondo dopo l'accensione delle luci (circa 4.5s) e alzare il volume della voce nei primi 5 secondi fino a circa -14 LUFS; verificare la distanza di 30 km prima di pubblicare.",
+    "idea": "Ripetere il testa a testa con altri due comuni vicini in coppa, aggiungendo uno scambio di commenti in cui ogni città risponde con il nome del proprio animale."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:39+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi), durata e tempi della voce rispetto al copione e ai dati della mappa, coerenza tra numeri del reel e dati verificati.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), durata e tempi della voce rispetto al copione e ai dati della mappa, coerenza tra numeri del reel e dati verificati.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il formato testa a testa con coppie di comuni vicini e sfide a più round, perché è il formato che sta portando più follower rispetto alle visualizzazioni."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:41+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Barletta 6 – 6 Molfetta' e la scena 'luce' partono al secondo 3.9, ma nel dato 'luce' si dice che la luce è già accesa al secondo 4.5: la trascrizione segna 'Pari: 6 a 6' solo al 7.9s, quindi il numero pari compare dopo che la scena è già partita. Inoltre il volume medio dei primi 5 second",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, copertina e coerenza tra copione, dati mappa e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.5,
+    "problema": "La frase 'Barletta 6 – 6 Molfetta' e la scena 'luce' partono al secondo 3.9, ma nel dato 'luce' si dice che la luce è già accesa al secondo 4.5: la trascrizione segna 'Pari: 6 a 6' solo al 7.9s, quindi il numero pari compare dopo che la scena è già partita. Inoltre il volume medio dei primi 5 secondi è -16.3 dB, sotto l'obiettivo di -14 LUFS, e la mappa è verificata (6 luci per comune, coerenti con i dati). Le fotogrammi inviate (0.5, 3, 7, 10, 14, 16.9) non coprono il secondo 4.5 della scena di apertura.",
+    "correzione": "Allineare la voce o l'apertura visiva così che il '6 – 6' sia leggibile al primo accendersi delle luci (intorno a 4.5s); alzare il volume dei primi 5 secondi di circa 2 dB per avvicinarsi a -14 LUFS; aggiungere un fotogramma tra 4 e 5 secondi per verificare l'apertura.",
+    "idea": "Ripetere il formato testa a testa con altre coppie di comuni vicini (es. Bari vs Bitonto), usando lo stesso schema di copertina e chiusura con invito a commentare, che sembra funzionare bene per i nuovi follower."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:41+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -16,3 dB, più basso dell'obiettivo: l'apertura parte piano e rischia di perdere chi scorre velocemente. Il totale a -14,2 LUFS è invece nella norma. Inoltre la frase «Barletta contro Molfetta: 30 chilometri» compare a 3,8 s, mentre la scena della luce inizia a 3",
+   "dati": {
+    "controllato": "Livelli audio (LUFS, picco, silenzi), sincronia tra trascrizione e scene, e coerenza dei dati della mappa per Barletta e Molfetta.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Il volume medio dei primi 5 secondi è -16,3 dB, più basso dell'obiettivo: l'apertura parte piano e rischia di perdere chi scorre velocemente. Il totale a -14,2 LUFS è invece nella norma. Inoltre la frase «Barletta contro Molfetta: 30 chilometri» compare a 3,8 s, mentre la scena della luce inizia a 3,9 s: l'attacco della voce è quasi in coincidenza con il cambio di scena, senza margine.",
+    "correzione": "Alzare il livello della voce nei primi 5 secondi di circa 2-3 dB (senza superare -1 dBFS) e far partire la voce 0,3-0,5 s dopo il cambio di scena, così la prima parola non arriva tagliata.",
+    "idea": "Ripetere il formato testa a testa, che nei dati ha il tasso di follower più alto (58,8 ogni 1000 views), magari con sfide tra comuni più grandi per ampliare la portata."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:42+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La frase «Il prossimo animale decide chi passa avanti» e la scena finale (Cani vs Gatti, «ANIMALE!») non chiudono sulla fascia di commento: la fascia resta sopra ma la domanda «Molfetta o Barletta?» scompare nell'ultimo fotogramma, e il secondo 16.9 mostra solo «ANIMALE!» senza invito chiaro. Inoltr",
+   "dati": {
+    "controllato": "Copertina, copione, trascrizione coi secondi, dati mappa (6 luci Barletta, 6 Molfetta, coerenti), audio e didascalia del reel testa a testa.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "La frase «Il prossimo animale decide chi passa avanti» e la scena finale (Cani vs Gatti, «ANIMALE!») non chiudono sulla fascia di commento: la fascia resta sopra ma la domanda «Molfetta o Barletta?» scompare nell'ultimo fotogramma, e il secondo 16.9 mostra solo «ANIMALE!» senza invito chiaro. Inoltre il titolo sotto la mappa dice «E LA SFIDA» senza completare il senso.",
+    "correzione": "Mantenere la domanda «Molfetta o Barletta?» visibile fino alla fine (ultimi 3 secondi) e far comparire insieme il comando «Commenta città e nome del tuo animale» nel frame finale, così il follow e il commento arrivano nello stesso momento.",
+    "idea": "Chiudere ogni testa a testa con il punteggio aggiornato della coppa e l'annuncio della città che sfida la prossima, per dare continuità tra un reel e l'altro."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:42+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Copione, trascrizione coi secondi, dati mappa (6 luci Barletta e 6 Molfetta, coerenti), audio (-14.2 LUFS, picco -1 dBFS, nessun silenzio), didascalia e grafica dei fotogrammi.",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (6 luci Barletta e 6 Molfetta, coerenti), audio (-14.2 LUFS, picco -1 dBFS, nessun silenzio), didascalia e grafica dei fotogrammi.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo testa a testa, far comparire il nome della città sopra ogni luce sulla mappa per rendere subito chiaro di quale comune si parla."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:44+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 14 la scena del duello mostra le didascalie dei nomi animali (Milù, Whisky, Coco, Stella, ecc.) e le tabelle sopra i cerchi molto piccole e poco leggibili su mobile; inoltre nei fotogrammi 0.5 e 3 la fascia 'VS' e i titoli si sovrappongono parzialmente agli elementi 3D (lampioni, cuccette",
+   "dati": {
+    "controllato": "Grafica e copertina: fotogrammi, testi a schermo, coerenza dei dati della mappa (6 luci Barletta e Molfetta) e leggibilità della fascia commento.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Al secondo 14 la scena del duello mostra le didascalie dei nomi animali (Milù, Whisky, Coco, Stella, ecc.) e le tabelle sopra i cerchi molto piccole e poco leggibili su mobile; inoltre nei fotogrammi 0.5 e 3 la fascia 'VS' e i titoli si sovrappongono parzialmente agli elementi 3D (lampioni, cuccette). Nella scena finale la fascia 'Commenta' è ben leggibile, ma il contrasto del testo 'COMMENTA' e 'ANIMALE!' sul fondo scuro è buono. Il titolo 'TESTA A TESTA' in alto è ok.",
+    "correzione": "Ingrandire i nomi degli animali nel duello (o mostrarne solo 2-3 alla volta) e spostare la fascia VS/titoli in modo che non copra le cuccette; mantenere la copertina con i numeri grandi.",
+    "idea": "Un duello a tutto schermo con un solo animale per volta in grande, e il conteggio che sale a ogni luce nuova."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:45+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 12 il titolo 'IL PROSSIMO' e la scritta 'ANIMALE!' sono sul fondo scuro ma il blocco 'Cani vs Gatti' è ripetuto due volte in fotogrammi consecutivi con la scritta 'COMMENTA' che si sovrappone alla casetta del gatto; inoltre sui fotogrammi della mappa l'etichetta 'Barletta ·",
+   "dati": {
+    "controllato": "Ho verificato i testi in sovrimpressione (titoli, fascia, copertina, etichette) rispetto a copione e trascrizione, i secondi di comparsa e i fotogrammi: nei fotogrammi del duello i nomi sono leggibili e i colori corrispondono ai comuni.",
+    "esito": "segnalo",
+    "secondo": 12,
+    "problema": "Nel fotogramma al secondo 12 il titolo 'IL PROSSIMO' e la scritta 'ANIMALE!' sono sul fondo scuro ma il blocco 'Cani vs Gatti' è ripetuto due volte in fotogrammi consecutivi con la scritta 'COMMENTA' che si sovrappone alla casetta del gatto; inoltre sui fotogrammi della mappa l'etichetta 'Barletta · 6' e 'Molfetta · 6' sono piccole rispetto allo spazio, con leggibilità ridotta su mobile.",
+    "correzione": "Ingrandire le etichette della mappa (almeno 1,3x) e spostare 'COMMENTA' / 'ANIMALE!' sopra il tetto del gatto senza coprirlo, dando più respiro alla scritta finale.",
+    "idea": "Aggiungere nel finale un'animazione che fa 'accendere' la luce del vincitore del prossimo turno, così la sfida ha una conclusione visiva."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:46+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi 10 e 14 (scena 'Il prossimo' / 'Commenta'), la card cani/gatti resta visibile con il testo 'COMMENTA' e poi 'ANIMALE!' sovrapposto all'icona del gatto, e la fascia 'Commenta città e nome' appare in basso sopra il bordo: l'icona del cane sul tetto è tagliata e il badge 'Molfetta o Barl",
+   "dati": {
+    "controllato": "Icone e trofei: copertina, icone di sfida (cani vs gatti), fascia di commento e coerenza dei fotogrammi con il copione e i dati mappa.",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "Nei fotogrammi 10 e 14 (scena 'Il prossimo' / 'Commenta'), la card cani/gatti resta visibile con il testo 'COMMENTA' e poi 'ANIMALE!' sovrapposto all'icona del gatto, e la fascia 'Commenta città e nome' appare in basso sopra il bordo: l'icona del cane sul tetto è tagliata e il badge 'Molfetta o Barletta?' ripete la domanda già in fascia. Nel fotogramma 10 l'etichetta 'IL PROSSIMO' è spostata e sovrapposta alla casetta del cane, lasciando uno spazio vuoto poco leggibile.",
+    "correzione": "Centrare le icone cane/gatti con più margine dal bordo, allineare 'IL PROSSIMO' e 'COMMENTA' sotto le icone senza sovrapporle, e togliere il doppione tra badge 'Molfetta o Barletta?' e fascia finale.",
+    "idea": "Per i prossimi testa_a_testa, mostrare nella card finale il nome dell'ultimo animale arrivato in ciascuna città, così il commento diventa più personale e riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:47+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Il prossimo animale decide chi passa avanti' cade al secondo 9.8, mentre la scena 'duello' con il testo 'PROSSIMO ANIMALE' compare già nei fotogrammi intorno al secondo 10-14 e il testo 'COMMENTA' e 'ANIMALE!' restano a schermo fino alla fine; la copertina e il primo fot",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6, luci verificate), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio), didascalia e fotogrammi della sequenza.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Nella trascrizione la frase 'Il prossimo animale decide chi passa avanti' cade al secondo 9.8, mentre la scena 'duello' con il testo 'PROSSIMO ANIMALE' compare già nei fotogrammi intorno al secondo 10-14 e il testo 'COMMENTA' e 'ANIMALE!' restano a schermo fino alla fine; la copertina e il primo fotogramma mostrano la mappa ma la frase 'e la sfida è aperta' coincide con la scena della mappa, quindi il ritmo è corretto. Il vero punto debole: nella scena del duello 3D i nomi degli animali sono piccoli e in parte illeggibili, e la didascalia dice 'si accende col tuo @' senza che il reel lo mostri.",
+    "correzione": "Allungare di mezzo secondo la scritta finale 'Commenta città e nome del tuo animale' e ingrandire i nomi degli animali nella scena 3D; aggiungere nella chiusura un richiamo visivo al tag @ che accende la luce.",
+    "idea": "Ripetere il testa a testa con coppie di città vicine e un terzo comune 'jolly' per creare una sfida a tre, sfruttando il formato che porta più follower."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:47+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Grafica e copertine: fotogrammi, coerenza visiva delle scene, leggibilità dei testi e corrispondenza dei numeri (6 – 6 su mappa, scene e copertina).",
+   "dati": {
+    "controllato": "Grafica e copertine: fotogrammi, coerenza visiva delle scene, leggibilità dei testi e corrispondenza dei numeri (6 – 6 su mappa, scene e copertina).",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nei prossimi reel del testa a testa, mostrare in una scena il nome dell'animale più recente di ciascuna città per dare volto alla sfida."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:49+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 7 l'etichetta «Barletta · 6» e quella «Molfetta · 6» sono sovrapposte alla copertina/alla scena e si leggono male; inoltre il conteggio «6 – 6» nella copertina e nel titolo è corretto, ma sulla mappa le due etichette sono molto vicine tra loro, quasi accavallate sui punti l",
+   "dati": {
+    "controllato": "Etichette sulla mappa: coerenza dei conteggi (6 luci Barletta, 6 Molfetta), posizione delle etichette sulla mappa e leggibilità nei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Nel fotogramma al secondo 7 l'etichetta «Barletta · 6» e quella «Molfetta · 6» sono sovrapposte alla copertina/alla scena e si leggono male; inoltre il conteggio «6 – 6» nella copertina e nel titolo è corretto, ma sulla mappa le due etichette sono molto vicine tra loro, quasi accavallate sui punti luce di Barletta.",
+    "correzione": "Spostare le etichette di qualche pixel in modo che non si tocchino e tenerle sopra i punti luce senza coprirli; verificare che il testo resti leggibile sullo sfondo scuro.",
+    "idea": "Ripetere il formato testa_a_testa con coppie di città vicine e chiedere di commentare con il nome dell'animale, perché è il formato che converte di più in follower."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:50+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nell'ultimo frame (16,9 s) il cartello «COMMENTA» e la fascia «Molfetta o Barletta?» restano sovrapposti in più frame del duello, e nel frame 16,9 s la scritta «ANIMALE!» appare sotto il cartello di chiusura, mentre il testo della fascia commenti è coperto dal fondo blu; in più il frame a 14 s mostr",
+   "dati": {
+    "controllato": "Formato 9:16, copertina, fotogrammi e testo in sovrimpressione nei 6 frame inviati, con i dati di mappa e audio (-14,2 LUFS, picco -1 dBFS, nessun silenzio).",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Nell'ultimo frame (16,9 s) il cartello «COMMENTA» e la fascia «Molfetta o Barletta?» restano sovrapposti in più frame del duello, e nel frame 16,9 s la scritta «ANIMALE!» appare sotto il cartello di chiusura, mentre il testo della fascia commenti è coperto dal fondo blu; in più il frame a 14 s mostra la scritta «COMMENTA» in una posizione diversa da quella a 16,9 s, quindi il testo cambia posizione tra un'inquadratura e l'altra.",
+    "correzione": "Fissare la posizione di «COMMENTA» / «ANIMALE!» in un unico punto e lasciare la fascia commenti sempre visibile e leggibile sopra il fondo, con un margine di sicurezza dai bordi.",
+    "idea": "Nei prossimi reel del testa a testa mostrare in apertura il punteggio aggiornato e chiudere con il nome della città in grande, così la sfida resta leggibile anche senza audio."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:50+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il fotogramma finale è a 16.9 s ma la durata è 17.2 s, e i fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coprono la scena 'duello' con la frase 'Pari: 6 a 6' (7.9 s) né la chiusura con l'invito a commentare (14.8 s in poi), quindi non posso confermare visivamente che la fascia 'Commenta città e n",
+   "dati": {
+    "controllato": "Ho verificato trascrizione coi secondi, dati mappa (6 luci Barletta e 6 Molfetta, coerenti con il copione), misure audio e didascalia rispetto ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Il fotogramma finale è a 16.9 s ma la durata è 17.2 s, e i fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coprono la scena 'duello' con la frase 'Pari: 6 a 6' (7.9 s) né la chiusura con l'invito a commentare (14.8 s in poi), quindi non posso confermare visivamente che la fascia 'Commenta città e nome del tuo animale' sia leggibile. Inoltre l'audio è a -14.2 LUFS con picco -1.0 dBFS, in linea con l'obiettivo, ma il volume medio dei primi 5 s (-16.3 dB) è un po' basso per l'apertura.",
+    "correzione": "Aggiungere un fotogramma tra 8 e 9 s (scena duello) e uno a 15 s (fascia commenti) per verificarne leggibilità e contrasto; alzare di circa 2 dB il volume dei primi 5 s.",
+    "idea": "Ripetere il formato testa_a_testa con altre coppie di comuni vicini, mostrando nella chiusura il comune in testa per tenere alta la tensione del turno successivo."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:51+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "I fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coincidono con quelli previsti nel brief (0.5, 1, 2, … 16.9): mancano 1, 2, 4, 5, 6, 8, 9, 11, 12, 13, 15, 16 e gli invii sono solo 6 su 18. Inoltre l'audio è a -14.2 LUFS con picco -1.0 dBFS, quindi nei limiti, ma il volume medio dei primi 5 second",
+   "dati": {
+    "controllato": "Upload sul sito: durata, trascrizione coi secondi, dati mappa (6 luci Barletta e 6 Molfetta, coerenti col conteggio), audio, didascalia e copertina.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "I fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coincidono con quelli previsti nel brief (0.5, 1, 2, … 16.9): mancano 1, 2, 4, 5, 6, 8, 9, 11, 12, 13, 15, 16 e gli invii sono solo 6 su 18. Inoltre l'audio è a -14.2 LUFS con picco -1.0 dBFS, quindi nei limiti, ma il volume medio dei primi 5 secondi è -16.3 dB, più basso dell'obiettivo implicito per un'apertura incisiva.",
+    "correzione": "Ricaricare o rigenerare l'intero set di fotogrammi secondo il brief (18 fotogrammi) e verificare che la copertina e l'apertura 3D siano allineate; alzare leggermente il volume dei primi 5 secondi senza superare -1 dBFS di picco.",
+    "idea": "Ripetere il formato testa a testa con due città vicine ma non ancora in pari, mostrando in apertura il punteggio aggiornato, così da creare suspense e nuovi commenti."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:53+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nel copione la frase «Barletta contro Molfetta» parte a 3.8s, ma la mappa dice che la luce di Barletta e Molfetta è già accesa al secondo 4.5, mentre la scena dura da 3.9s a 7.96s: l'accensione arriva quasi insieme all'inizio della frase, quindi va bene solo se l'etichetta appare subito. Inoltre l'a",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Barletta e Molfetta a 6 luci ciascuna), misure audio, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.5,
+    "problema": "Nel copione la frase «Barletta contro Molfetta» parte a 3.8s, ma la mappa dice che la luce di Barletta e Molfetta è già accesa al secondo 4.5, mentre la scena dura da 3.9s a 7.96s: l'accensione arriva quasi insieme all'inizio della frase, quindi va bene solo se l'etichetta appare subito. Inoltre l'audio è a -16.3 dB di volume medio nei primi 5s, più basso dell'obiettivo di -14 LUFS (il dato integrato è -14.2, quindi solo l'apertura è sotto). La didascalia dice «si accende col tuo @ e conta per la tua città», ma i dati mostrano solo che le luci esistono; non è verificabile dai materiali se il meccanismo funzioni così.",
+    "correzione": "Far comparire l'etichetta «Barletta · 6» e «Molfetta · 6» già dal secondo 3.9 e alzare di 1-2 dB il volume dei primi 5 secondi; verificare il meccanismo di accensione col @ prima di pubblicare la didascalia.",
+    "idea": "Ripetere il testa a testa con sfide tra comuni vicini e una scadenza visibile («ultimo animale entro domenica») per spingere i commenti."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:54+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La copertina usa come luce di riferimento coordinate (16.4389, 41.2623) che non corrispondono né a Barletta (41.3196, 16.2772) né a Molfetta (41.205, 16.6006): cade in mezzo al mare/fuori dai due comuni, quindi il punto evidenziato non è nessuna delle due città. Inoltre i dati mostrano 6 luci per co",
+   "dati": {
+    "controllato": "Copertina: ho verificato la luce Barletta sulla mappa (lat 41.3196, lng 16.2772 coerente con la copertina 16.4389, 41.2623) e il conteggio 6 – 6 dai dati di mappa; i secondi di scena e l'audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio) sono nei limiti.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La copertina usa come luce di riferimento coordinate (16.4389, 41.2623) che non corrispondono né a Barletta (41.3196, 16.2772) né a Molfetta (41.205, 16.6006): cade in mezzo al mare/fuori dai due comuni, quindi il punto evidenziato non è nessuna delle due città. Inoltre i dati mostrano 6 luci per comune ma la didascalia cita 'Barletta 6 – 6 Molfetta' senza che la copertina sia coerente con la mappa.",
+    "correzione": "Impostare la luce della copertina sulle coordinate di Barletta o Molfetta (o su entrambe, es. punto centrale tra le due) e verificare che coincida con la scena 0 del reel.",
+    "idea": "Ripetere il testa a testa con altre coppie di comuni vicini e una copertina che evidenzi entrambe le luci sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:54+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, dati mappa (6 luci per Barletta e Molfetta, coerenti con la didascalia), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio) e corrispondenza tra frasi del brief e testo parlato.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (6 luci per Barletta e Molfetta, coerenti con la didascalia), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio) e corrispondenza tra frasi del brief e testo parlato.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il testa a testa con coppie di comuni ancora più vicini o con un finale che annunci il vincitore nel reel successivo, per far tornare chi ha commentato."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:55+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nei dati la scena 0 (luce) inizia a 3.9s e la trascrizione è coerente, ma la frase 'la sfida è aperta' coincide con l'apertura senza che la luce di Barletta/Molfetta sia ancora accesa al secondo 4.5 (dato dichiarato come già accesa, quindi ok). Il vero punto debole: la didascalia dice 'si accende co",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa (6 luci Barletta, 6 Molfetta, coerenti con l'etichetta), la trascrizione coi secondi, l'audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio) e la didascalia.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Nei dati la scena 0 (luce) inizia a 3.9s e la trascrizione è coerente, ma la frase 'la sfida è aperta' coincide con l'apertura senza che la luce di Barletta/Molfetta sia ancora accesa al secondo 4.5 (dato dichiarato come già accesa, quindi ok). Il vero punto debole: la didascalia dice 'si accende col tuo @ e conta per la tua città' e 'link in bio', ma nei materiali non c'è conferma che il link in bio porti alla mappa. Inoltre i fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non includono la copertina a 0.5s con il testo 'TESTA A TESTA' visibile, quindi non posso verificarne la leggibilità.",
+    "correzione": "Verificare che il link in bio punti alla mappa attiva prima di pubblicare e confermare con un fotogramma che la copertina sia leggibile nei primi secondi.",
+    "idea": "Ripetere il formato testa_a_testa con una sfida tra due comuni vicini a cui chi commenta può dare il voto decisivo, ma con 16:9 più pulito per i primi 3 secondi."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:56+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il fotogramma del reel che dovrebbe mostrare il duello (dal secondo 3.9 al 7.96) cade quando la frase 'Il prossimo animale decide chi passa avanti' è già in corso, mentre le fotogrammi inviati sono 0.5, 3, 7, 10, 14, 16.9: manca un fotogramma nell'intervallo 7-10 per verificare la scena del duello. ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (6 luci per Barletta e 6 per Molfetta, coerenti con l'etichetta), misure audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Il fotogramma del reel che dovrebbe mostrare il duello (dal secondo 3.9 al 7.96) cade quando la frase 'Il prossimo animale decide chi passa avanti' è già in corso, mentre le fotogrammi inviati sono 0.5, 3, 7, 10, 14, 16.9: manca un fotogramma nell'intervallo 7-10 per verificare la scena del duello. Inoltre la didascalia dice 'si accende col tuo @', ma nel brief la fascia dice 'Commenta città e nome del tuo animale', e il copione chiede di commentare città e nome senza citare il @: incoerenza da allineare. Audio: LUFS -14.2 e picco -1.0 dBFS sono nei limiti, ma il volume medio dei primi 5 secondi (-16.3 dB) è più basso del resto, quindi l'apertura è un po' più debole.",
+    "correzione": "Aggiungere un fotogramma tra 7 e 10 secondi per controllare il duello; uniformare la didascalia alla fascia (togliere il riferimento al @ oppure inserirlo anche nel copione); alzare leggermente il volume dell'apertura.",
+    "idea": "Ripetere il formato testa_a_testa con coppie di comuni vicini e chiudere sempre con una domanda che chiede il nome dell'animale."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:56+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "I fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coincidono con quelli richiesti nel reel (0.5, 1, 2, ..., 16, 16.9): mancano 1, 2, 4, 5, 6, 8, 9, 11, 12, 13, 15, 16. Inoltre la frase 'Pari: 6 a 6' si sente sulla scena 'duello' ma la trascrizione la colloca a 7.9s, mentre il brief dice che la luce",
+   "dati": {
+    "controllato": "Ho verificato trascrizione coi secondi, dati mappa (6 luci per Barletta e Molfetta, coerenti con i comuni), audio e didascalia rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "I fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coincidono con quelli richiesti nel reel (0.5, 1, 2, ..., 16, 16.9): mancano 1, 2, 4, 5, 6, 8, 9, 11, 12, 13, 15, 16. Inoltre la frase 'Pari: 6 a 6' si sente sulla scena 'duello' ma la trascrizione la colloca a 7.9s, mentre il brief dice che la luce di Barletta è accesa al secondo 4.5, quindi la scena luce parte prima di quanto indicato dai dati mappa (3.9s).",
+    "correzione": "Ricontrollare e inviare i fotogrammi mancanti nell'intervallo 1-16s per verificare la scena 'duello' e il ritmo visivo; allineare la scena luce ai secondi reali (3.9-7.96s) o aggiornare i dati mappa.",
+    "idea": "Ripetere il formato testa_a_testa con altre coppie di comuni vicini e chiudere con un numero da battere, per tenere alta la voglia di tornare a vedere il risultato."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:57+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Barletta contro Molfetta: 30 chilometri' compare a 3.8s, ma l'etichetta sulla mappa si accende già al secondo 4.5 e la scena parte da 3.9s: l'audio anticipa di poco la luce. Inoltre la didascalia dice 'Barletta 6 – 6 Molfetta' mentre la fascia e il parlato dicono 'Pari: 6 a 6'; è coerente,",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6, luci verificate), misure audio e didascalia del reel testa a testa.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "La frase 'Barletta contro Molfetta: 30 chilometri' compare a 3.8s, ma l'etichetta sulla mappa si accende già al secondo 4.5 e la scena parte da 3.9s: l'audio anticipa di poco la luce. Inoltre la didascalia dice 'Barletta 6 – 6 Molfetta' mentre la fascia e il parlato dicono 'Pari: 6 a 6'; è coerente, ma va verificato che il conteggio resti 6 a 6 al momento della pubblicazione (oggi entrambe hanno 6 luci). Infine l'audio è a -14.2 LUFS e picco -1.0 dBFS, in linea con l'obiettivo.",
+    "correzione": "Spostare la frase 'Barletta contro Molfetta' a 4.0s circa, oppure far partire l'etichetta della mappa un istante prima. Ricontrollare le luci di entrambe le città subito prima di pubblicare.",
+    "idea": "Ripetere il formato testa a testa con altre coppie di comuni vicini, perché ha ottenuto il miglior rapporto follower/views del progetto."
+   }
+  },
+  {
+   "t": "2026-11-11T13:54:58+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La voce dice 'Barletta contro Molfetta' e la mappa mostra le luci già accese al secondo 4.5, ma la trascrizione dice 'Pari: 6 a 6' solo dopo il 7.9s, quindi il numero compare prima di essere pronunciato. Inoltre la didascalia dice 'si accende col tuo @', mentre il testo del reel non lo spiega. Sul f",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, conteggi delle luci sulla mappa, audio e coerenza della didascalia con i dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.5,
+    "problema": "La voce dice 'Barletta contro Molfetta' e la mappa mostra le luci già accese al secondo 4.5, ma la trascrizione dice 'Pari: 6 a 6' solo dopo il 7.9s, quindi il numero compare prima di essere pronunciato. Inoltre la didascalia dice 'si accende col tuo @', mentre il testo del reel non lo spiega. Sul fronte audio, il volume medio dei primi 5 secondi (-16.3 dB) è più basso dell'obiettivo, anche se LUFS e picco sono nei limiti.",
+    "correzione": "Far comparire l'etichetta '6 – 6' insieme alla frase 'Pari: 6 a 6' (intorno al 7.9s) e alzare leggermente il volume dell'apertura portandolo verso -14 dB. Nella didascalia, chiarire in una riga come funziona il commento con il @.",
+    "idea": "Ripetere il formato testa_a_testa con altre coppie di comuni vicini, ad esempio due città della stessa provincia, perché il confronto locale stimola i commenti."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:01+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il '6 a 6' arriva a 7.9s, ma sulla mappa le luci dei due comuni risultano già accese al secondo 4.5 della scena: il conteggio appare prima che la frase lo dica. Inoltre l'audio è a -14.2 LUFS e -16.3 dB sui primi 5s, quindi l'apertura è più bassa del resto (il volume medio dei pri",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6, luci già accese al secondo 4.5), misure audio e didascalia nel brief.",
+    "esito": "segnalo",
+    "secondo": 4.5,
+    "problema": "Nella trascrizione il '6 a 6' arriva a 7.9s, ma sulla mappa le luci dei due comuni risultano già accese al secondo 4.5 della scena: il conteggio appare prima che la frase lo dica. Inoltre l'audio è a -14.2 LUFS e -16.3 dB sui primi 5s, quindi l'apertura è più bassa del resto (il volume medio dei primi 5s è sotto il target).",
+    "correzione": "Far comparire le etichette 6 · 6 non prima di 'Pari: 6 a 6' (circa 7.9s), oppure spostare la frase in modo che coincida con l'accensione; alzare leggermente il volume dei primi 5s per allinearlo al resto.",
+    "idea": "Ripetere il testa a testa con altre coppie di comuni vicini, e chiudere sempre con la domanda diretta che chiede di commentare la propria città."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:01+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il fotogramma finale (16.9s) è stato campionato ma la trascrizione chiude a 14.8s con la domanda; non c'è nel materiale la conferma che l'ultimo fotogramma sia pulito. Inoltre la didascalia dice «Ogni animale accende una luce» e il reel dice «Pari: 6 a 6» mentre i dati mostrano 6 luci per comune, qu",
+   "dati": {
+    "controllato": "Dati mappa (6 e 6 luci, etichette, coordinate, luce accesa al secondo 4.5), trascrizione coi secondi, audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio), durata e fotogrammi campionati.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Il fotogramma finale (16.9s) è stato campionato ma la trascrizione chiude a 14.8s con la domanda; non c'è nel materiale la conferma che l'ultimo fotogramma sia pulito. Inoltre la didascalia dice «Ogni animale accende una luce» e il reel dice «Pari: 6 a 6» mentre i dati mostrano 6 luci per comune, quindi coerente; il vero punto è che la frase «Il prossimo animale decide chi passa avanti» (9.8s) non corrisponde a nessun dato verificato sulla sfida né sulla regola del turno, che nei materiali risulta solo come coppa turno 1 senza dettagli sul passaggio.",
+    "correzione": "Verificare con la regola reale della sfida cosa decide il prossimo animale, oppure riformulare la frase in modo fedele ai dati; controllare il fotogramma finale a 16.9s prima della pubblicazione.",
+    "idea": "Ripetere il formato testa_a_testa con altre coppie di comuni vicini, perché è il formato che converte di più in follower."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:01+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Pari: 6 a 6' arriva a 7.9s, mentre la scena della mappa è indicata dal secondo 3.9 al 7.96: la frase sul pareggio coincide con la chiusura della scena e la luce delle due città è già accesa al 4.5s. Inoltre la didascalia dice 'Commenta ... (per esempio «Molfetta, Luna, cane»)' ma l'etichett",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, scene della mappa, dati dei comuni (6 luci ciascuno, coerenti), audio e didascalia nel reparto Community.",
+    "esito": "segnalo",
+    "secondo": 7.9,
+    "problema": "Il dato 'Pari: 6 a 6' arriva a 7.9s, mentre la scena della mappa è indicata dal secondo 3.9 al 7.96: la frase sul pareggio coincide con la chiusura della scena e la luce delle due città è già accesa al 4.5s. Inoltre la didascalia dice 'Commenta ... (per esempio «Molfetta, Luna, cane»)' ma l'etichetta della fascia dice solo 'Commenta città e nome del tuo animale', coerente ma meno chiara. Nei dati, 'follower_ogni_1000' del formato testa_a_testa (58.8) è molto più alto degli altri, con soli 284 views: campione piccolo, non è un dato da prendere come certezza.",
+    "correzione": "Allungare la scena mappa di mezzo secondo o far comparire 'Pari: 6 a 6' dopo che entrambe le luci sono accese; allineare la fascia alla didascalia (es. 'Commenta città e nome del tuo animale, es. Molfetta, Luna, cane').",
+    "idea": "Ripetere il testa a testa con coppie di comuni più vicine o con un tie-break, e mostrare il nome dell'animale che decide la sfida."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:02+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Le luci risultano già accese al secondo 4.5, ma la scena 0 parte dal secondo 3.9 e la frase 'Barletta contro Molfetta' finisce al 6.5; il frame di apertura quindi non mostra ancora la mappa con entrambe le città illuminate in modo chiaro. Inoltre nei fotogrammi inviati il primo campione utile per la",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa (6 luci a Barletta e 6 a Molfetta, coerenti con la scena 0), la trascrizione e i secondi, la didascalia e le misure audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio).",
+    "esito": "segnalo",
+    "secondo": 4.5,
+    "problema": "Le luci risultano già accese al secondo 4.5, ma la scena 0 parte dal secondo 3.9 e la frase 'Barletta contro Molfetta' finisce al 6.5; il frame di apertura quindi non mostra ancora la mappa con entrambe le città illuminate in modo chiaro. Inoltre nei fotogrammi inviati il primo campione utile per la mappa è al 3 s, quindi non posso confermare visivamente l'accensione delle luci. Il volume medio dei primi 5 secondi (-16.3 dB) è più basso del resto del reel, cosa che può far perdere attenzione all'apertura.",
+    "correzione": "Far comparire le due luci (o le etichette 6 · 6) entro il secondo 3.5, portare il volume dell'apertura a circa -14 LUFS come il resto, e verificare sui fotogrammi che la mappa sia ben visibile da 4 a 7 s.",
+    "idea": "Ripetere il testa a testa con altre coppie di comuni vicini e tenere la sfida come serie con un punteggio aggiornato nei reel successivi."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:03+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, dati mappa (6 e 6 luci, comuni corretti), copione e didascalia rispetto al brief testa_a_testa, e il fatto che la frase di apertura cada entro i primi 4 secondi.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (6 e 6 luci, comuni corretti), copione e didascalia rispetto al brief testa_a_testa, e il fatto che la frase di apertura cada entro i primi 4 secondi.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il testa_a_testa tra altre coppie di città vicine (es. Bari-Bisceglie) quando una delle due è in pareggio o in vantaggio di una sola luce, per tenere alta la tensione della sfida."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:04+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato di mappa dice che la luce di Barletta/Molfetta è già accesa al secondo 4.5, ma la scena della luce va da 3.9 a 7.96 e la trascrizione dice che la sfida si apre a 3.8s; anche la frase 'Pari: 6 a 6' arriva a 7.9s, cioè proprio alla fine della scena del duello. Inoltre l'audio ha volume medio d",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (luci Barletta e Molfetta, animali e date), audio, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.5,
+    "problema": "Il dato di mappa dice che la luce di Barletta/Molfetta è già accesa al secondo 4.5, ma la scena della luce va da 3.9 a 7.96 e la trascrizione dice che la sfida si apre a 3.8s; anche la frase 'Pari: 6 a 6' arriva a 7.9s, cioè proprio alla fine della scena del duello. Inoltre l'audio ha volume medio dei primi 5s a -16.3 dB, vicino ma non nell'obiettivo, e la didascalia dice 'Voce generata con IA' senza che i materiali indichino se il disclosure è richiesto nel formato. Sul fronte dei follower, il formato testa_a_testa ha 58.8 follower ogni 1000 views, il valore più alto del progetto.",
+    "correzione": "Allineare l'accensione delle luci al secondo in cui compare la frase sulla sfida (circa 3.8s), spostare il 'Pari: 6 a 6' prima del secondo 7.9 o accorciare la scena, portare il volume medio dei primi 5s verso -14 LUFS.",
+    "idea": "Ripetere il testa a testa con altri due comuni vicini e una chiusura che annunci il prossimo duello, per trasformarlo in una serie."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:05+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "L'audio è a -14.2 LUFS con picco a -1.0 dBFS, quindi nei parametri, ma il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto: l'apertura risulta più debole. Inoltre la frase 'Pari: 6 a 6' arriva senza un'immagine che la sostenga nel fotogramma del secondo 6.5-7.9, e nella didascalia il",
+   "dati": {
+    "controllato": "Ho verificato il copione, la trascrizione coi secondi, i dati della mappa (6 luci Barletta, 6 Molfetta, coerenti), l'audio e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "L'audio è a -14.2 LUFS con picco a -1.0 dBFS, quindi nei parametri, ma il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto: l'apertura risulta più debole. Inoltre la frase 'Pari: 6 a 6' arriva senza un'immagine che la sostenga nel fotogramma del secondo 6.5-7.9, e nella didascalia il conteggio 'Barletta 6 – 6 Molfetta' resta valido ma non dice che la sfida si decide col prossimo animale.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 2 dB per allinearli al resto e mostrare il numero 6–6 a schermo già dal secondo 6.5, così chi guarda capisce subito il punteggio.",
+    "idea": "Ripetere il testa_a_testa con un'altra coppia di comuni vicini e chiudere con il punteggio aggiornato, così da creare una serie riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:05+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Copione, trascrizione coi secondi, dati mappa (6 luci Barletta, 6 Molfetta, luci già accese al secondo 4.5), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio) e didascalia con fascia e hashtag.",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (6 luci Barletta, 6 Molfetta, luci già accese al secondo 4.5), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio) e didascalia con fascia e hashtag.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il testa_a_testa con altre coppie di comuni vicini, magari con una sfida di chiusura che promette il risultato del prossimo reel."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:07+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Barletta contro Molfetta: 30 chilometri' compare al secondo 3.8, ma la scena della mappa (dati_mappa) parte dal secondo 3.9 e l'etichetta 'Barletta · 6' e 'Molfetta · 6' risultano già accese al secondo 4.5: la luce è visibile prima che la voce indichi i comuni. Inoltre il volume medio dei ",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), sincronia trascrizione/scene e coerenza dei dati della mappa per Barletta e Molfetta.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "La frase 'Barletta contro Molfetta: 30 chilometri' compare al secondo 3.8, ma la scena della mappa (dati_mappa) parte dal secondo 3.9 e l'etichetta 'Barletta · 6' e 'Molfetta · 6' risultano già accese al secondo 4.5: la luce è visibile prima che la voce indichi i comuni. Inoltre il volume medio dei primi 5 secondi è -16.3 dB, sotto l'obiettivo di -14 LUFS, quindi l'apertura è più debole del resto del reel (-14.2 LUFS complessivi).",
+    "correzione": "Allineare l'ingresso delle etichette Barletta/Molfetta alla voce (non prima di 3.8 s) e alzare di circa 2 dB il volume dei primi 5 secondi per portarlo intorno a -14 LUFS, mantenendo il picco sotto -1 dBFS.",
+    "idea": "Ripetere il formato testa_a_testa con altri comuni vicini della provincia di Bari, mantenendo il conteggio pari-dispari come gancio per i commenti."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:08+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La mappa mostra 6 luci per Barletta e 6 per Molfetta, ma la trascrizione dice 'Pari: 6 a 6' già a 7.9s e il copione lo ripete. Il dato è coerente. Il problema è la fine: il reel dura 17.2s ma l'ultimo fotogramma è a 16.9s, mentre la frase di chiusura finisce a 14.8s con il comando a commentare. Inol",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dati mappa (6 luci per comune, luci già accese al secondo 4.5), misure audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "La mappa mostra 6 luci per Barletta e 6 per Molfetta, ma la trascrizione dice 'Pari: 6 a 6' già a 7.9s e il copione lo ripete. Il dato è coerente. Il problema è la fine: il reel dura 17.2s ma l'ultimo fotogramma è a 16.9s, mentre la frase di chiusura finisce a 14.8s con il comando a commentare. Inoltre la voce dice 'Il prossimo animale decide chi passa avanti' senza un visivo che lo mostri chiaramente. L'audio è a -14.2 LUFS e picco a -1.0 dBFS, quindi in linea con l'obiettivo, ma il volume medio dei primi 5s è -16.3 dB, un po' basso per l'apertura.",
+    "correzione": "Allungare la chiusura con il CTA scritto a schermo (fascia) fino a fine reel e alzare leggermente il volume dei primi 5 secondi, restando sotto -1 dBFS.",
+    "idea": "Per i prossimi testa a testa, usare un punteggio che si aggiorna in diretta sulla mappa, così il duello cresce mentre si commenta."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:08+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "L'etichetta sulla mappa dice «Barletta · 6» e «Molfetta · 6» già al secondo 4.5, ma la frase «Barletta contro Molfetta» arriva al secondo 3.8 e il duello sui numeri al 7.9: la scena luce non è ancora chiusa quando appare il dato. Inoltre la didascalia dice «30 km» senza una fonte nei materiali, e la",
+   "dati": {
+    "controllato": "Mappa dei dati (Barletta e Molfetta, 6 luci ciascuna, coerenti con la didascalia), trascrizione coi secondi e audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "L'etichetta sulla mappa dice «Barletta · 6» e «Molfetta · 6» già al secondo 4.5, ma la frase «Barletta contro Molfetta» arriva al secondo 3.8 e il duello sui numeri al 7.9: la scena luce non è ancora chiusa quando appare il dato. Inoltre la didascalia dice «30 km» senza una fonte nei materiali, e la fascia finale «Commenta città e nome del tuo animale» coincide con la frase parlata: ridondanza.",
+    "correzione": "Far comparire l'etichetta della mappa dopo la frase «Barletta contro Molfetta» (intorno al secondo 4.5 è già corretto, ma verificare il sincronismo sul video). Togliere «30 km» dalla didascalia o dalla voce, oppure confermarne la fonte. Lasciare la fascia finale solo come testo visivo e non ripeterla in voce.",
+    "idea": "Ripetere il formato testa a testa con altri due comuni vicini e un finale che dica chi passa avanti, così da trasformare la sfida in una serie riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:08+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, dati mappa (6 luci Barletta e 6 Molfetta, comuni corretti), didascalia e fascia.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, dati mappa (6 luci Barletta e 6 Molfetta, comuni corretti), didascalia e fascia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il testa a testa con un'altra coppia di comuni vicini quando una delle due città supera le 10 luci, così la sfida resta equilibrata e più seguita."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:11+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il brief dice 'luce già accesa al secondo 4.5 del reel' e la scena di luce parte al secondo 3.9, ma i dati della mappa mostrano 6 luci per Barletta e 6 per Molfetta già nella scena, mentre la frase 'Pari: 6 a 6' arriva a 7.9 s: il dato è coerente. Il vero problema è il volume: il volume medio dei pr",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), dati della mappa per Barletta e Molfetta, coerenza tra trascrizione, scene e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4.5,
+    "problema": "Il brief dice 'luce già accesa al secondo 4.5 del reel' e la scena di luce parte al secondo 3.9, ma i dati della mappa mostrano 6 luci per Barletta e 6 per Molfetta già nella scena, mentre la frase 'Pari: 6 a 6' arriva a 7.9 s: il dato è coerente. Il vero problema è il volume: il volume medio dei primi 5 s è -16.3 dB, più basso dell'obiettivo di -14 LUFS, quindi l'apertura è più debole. Inoltre il picco a -1.0 dBFS è al limite e la fascia testo parla di 'Commenta' ma la trascrizione finale non ha pause o silenzi, quindi l'audio è coerente nel resto.",
+    "correzione": "Alzare di circa 2 dB il volume dei primi 5 secondi (portandolo verso -14 LUFS) e abbassare leggermente il picco per restare comodamente sotto -1 dBFS; verificare il momento di 'Pari: 6 a 6' per evitare saturazione.",
+    "idea": "Ripetere il formato testa a testa con sfide tra comuni vicini e una copertina che mostri già il punteggio, così il follow arriva dalla rivalità."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:11+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il reel chiude a 16.9 s con la scritta della fascia ancora in gioco, ma l'ultimo fotogramma inviato (16.9) è l'unico a non essere stato ricontrollato dopo la frase finale (14.8 s); inoltre la didascalia dice «si accende col tuo @» senza che il reel lo mostri, e l'audio è a -14.2 LUFS con picco -1.0 ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati mappa (Barletta 6, Molfetta 6, luci verificate), misure audio e didascalia del reel testa_a_testa.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Il reel chiude a 16.9 s con la scritta della fascia ancora in gioco, ma l'ultimo fotogramma inviato (16.9) è l'unico a non essere stato ricontrollato dopo la frase finale (14.8 s); inoltre la didascalia dice «si accende col tuo @» senza che il reel lo mostri, e l'audio è a -14.2 LUFS con picco -1.0 dBFS, quindi al limite ma nei parametri.",
+    "correzione": "Mostrare nei fotogrammi finali (14.8–16.9 s) la fascia «Commenta città e nome del tuo animale» per tutta la durata della frase, e aggiungere una scena con un esempio di commento (es. «Molfetta, Luna, cane») a circa 13 s.",
+    "idea": "Ripetere il testa_a_testa con altri due comuni vicini (es. Trani vs Bisceglie) e una chiusura che mostri il punteggio aggiornato, così il formato diventa una serie riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:11+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il reel ha un audio a -16.3 dB nei primi 5 secondi, sotto l'obiettivo di -14 LUFS, quindi l'apertura è più debole. Inoltre la frase finale della voce arriva a 14.8s e il fotogramma a 16.9s resta fermo senza indicazione chiara dell'azione, e la fascia ‘Commenta città e nome’ non è verificabile nei ma",
+   "dati": {
+    "controllato": "Trofei e albo: verificate le luci dei due comuni sulla mappa (6 e 6, coerenti con la didascalia), la trascrizione con i secondi e l'audio rispetto all'obiettivo.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Il reel ha un audio a -16.3 dB nei primi 5 secondi, sotto l'obiettivo di -14 LUFS, quindi l'apertura è più debole. Inoltre la frase finale della voce arriva a 14.8s e il fotogramma a 16.9s resta fermo senza indicazione chiara dell'azione, e la fascia ‘Commenta città e nome’ non è verificabile nei materiali.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 2 dB per avvicinarsi a -14 LUFS, e verificare che la fascia di commento sia visibile nel fotogramma finale.",
+    "idea": "Ripetere il formato testa a testa con sfide tra comuni vicini e più equilibrati, e mostrare in apertura il numero delle luci già accese per dare subito tensione."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:13+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice 'Il prossimo animale decide chi passa avanti' ma la scena del duello non ha un risultato chiaro, e la CTA ('Commenta città e nome del tuo animale!') arriva solo all'ultimo secondo; inoltre la voce è generata con IA e la didascalia lo dichiara, cosa da tenere a mente per la fiducia del p",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (6 luci Barletta, 6 Molfetta, coerenti con la didascalia), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio) e confronto coi reel precedenti.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Il reel dice 'Il prossimo animale decide chi passa avanti' ma la scena del duello non ha un risultato chiaro, e la CTA ('Commenta città e nome del tuo animale!') arriva solo all'ultimo secondo; inoltre la voce è generata con IA e la didascalia lo dichiara, cosa da tenere a mente per la fiducia del pubblico. Le luci in mappa sono quelle già accese: la sfida non mostra movimento. Nei fotogrammi inviati mancano quelli tra 10 e 14 s dove dovrebbe comparire la scena del duello, quindi non posso verificarne la resa visiva.",
+    "correzione": "Mostrare la prossima luce che si accende nel secondo 9.8 e anticipare la CTA di qualche secondo (es. dal secondo 11) con il nome dei comuni in sovrimpressione, così chi guarda capisce subito cosa fare.",
+    "idea": "Chiudere ogni testa_a_testa con 'Chi passa avanti domani?' e una scena che mostra la luce nuova, così il reel successivo diventa una continuazione naturale."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:14+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Barletta 6 – 6 Molfetta' e la frase 'Pari: 6 a 6' sono coerenti con la mappa, ma nella trascrizione la frase 'Barletta contro Molfetta: 30 chilometri' parte a 3.8s mentre la scena luce inizia a 3.9s: il tempo è corretto. Il problema reale è nell'audio: il volume medio dei primi 5 secondi è ",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), corrispondenza tra trascrizione, scene e dati della mappa (Barletta e Molfetta entrambe con 6 luci accese e conteggi coerenti), e tempi di sincronia delle frasi.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Il dato 'Barletta 6 – 6 Molfetta' e la frase 'Pari: 6 a 6' sono coerenti con la mappa, ma nella trascrizione la frase 'Barletta contro Molfetta: 30 chilometri' parte a 3.8s mentre la scena luce inizia a 3.9s: il tempo è corretto. Il problema reale è nell'audio: il volume medio dei primi 5 secondi è -16.3 dB, più basso dell'obiettivo di -14 LUFS, quindi l'apertura risulta più debole rispetto al resto del reel. Inoltre la didascalia dice 'si accende col tuo @', mentre il testo parlato chiede solo città e nome: meglio allineare il messaggio.",
+    "correzione": "Alzare di circa 2 dB il volume dei primi 5 secondi per portarlo verso -14 LUFS, senza superare -1 dBFS di picco; allineare la didascalia al parlato (es. 'commenta città e nome del tuo animale').",
+    "idea": "Ripetere il testa a testa con altri comuni vicini in gara aperta, perché la sfida locale è il formato che converte di più."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:16+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La copertina e il primo frame mostrano 6 – 6, ma la schermata «Testa a testa» in alto a destra riporta «1950 – 786», un punteggio che non corrisponde al duello tra due comuni. Inoltre il frame iniziale mostra la scena 3D in cui le luci sono piccole e poco leggibili rispetto al titolo, mentre la mapp",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i dati mappa (Barletta 6, Molfetta 6, coerenti con la scena), l'audio (-14.2 LUFS, picco -1 dBFS, nessun silenzio) e la didascalia rispetto ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La copertina e il primo frame mostrano 6 – 6, ma la schermata «Testa a testa» in alto a destra riporta «1950 – 786», un punteggio che non corrisponde al duello tra due comuni. Inoltre il frame iniziale mostra la scena 3D in cui le luci sono piccole e poco leggibili rispetto al titolo, mentre la mappa a 3,9 s è l'immagine più forte ma arriva tardi. Nota anche che la trascrizione dice «il prossimo animale decide», mentre nella scena finale compare «Il prossimo» con il cane contro il gatto: il messaggio di chiusura è ambiguo.",
+    "correzione": "Allineare il contatore in alto al punteggio reale della sfida (6 – 6) o toglierlo; anticipare la mappa con le due luci in apertura; chiarire nel testo se il prossimo animale decide la sfida tra comuni o tra specie.",
+    "idea": "Ripetere il testa a testa con due comuni più vicini in numero di luci e con la mappa in primo piano già al secondo 1, così il conteggio cresce a ogni commento e si può chiudere con un ballottaggio."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:16+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella scena finale il testo «COMMENTA» e poi «ANIMALE!» compaiono su fotogrammi con la sfida ancora in corso, e la fascia di invito è tagliata nel frame 16.9 (manca il testo completo leggibile). Inoltre la trascrizione dice «Il prossimo animale decide chi passa avanti» mentre la scena mostra «IL PRO",
+   "dati": {
+    "controllato": "Gancio della trascrizione, secondi, dati mappa (6 luci Barletta e 6 Molfetta, coerenti con la scena), audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Nella scena finale il testo «COMMENTA» e poi «ANIMALE!» compaiono su fotogrammi con la sfida ancora in corso, e la fascia di invito è tagliata nel frame 16.9 (manca il testo completo leggibile). Inoltre la trascrizione dice «Il prossimo animale decide chi passa avanti» mentre la scena mostra «IL PROSSIMO» con cane vs gatto: il messaggio è chiaro solo se si legge tutto. Il gancio 'Barletta contro Molfetta: 30 chilometri' non è verificabile dai materiali (la distanza non è nei dati).",
+    "correzione": "Togliere il dato dei 30 km dal gancio (o verificarlo e indicarne la fonte) e far comparire la fascia di invito per intero nell'ultima scena, con il tempo di lettura sufficiente.",
+    "idea": "Ripetere il testa a testa con una chiusura che chiede il nome dell'animale in un unico passaggio leggibile, e usare il pari come gancio per la puntata successiva."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:17+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel termina con 'ANIMALE!' sulla schermata finale, ma il invito a seguire la pagina non compare mai: l'unica call to action è commentare. Inoltre la copertina dice 'Barletta vs Molfetta' senza un richiamo alla pagina, quindi chi non commenta non ha motivo esplicito di seguire. Il reel più perfor",
+   "dati": {
+    "controllato": "Ho verificato i motivi per seguire: frase d'apertura, invito al commento con nome dell'animale e città, dati della sfida (6 a 6 su Barletta e Molfetta, coerenti con la mappa) e il confronto con i reel precedenti.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Il reel termina con 'ANIMALE!' sulla schermata finale, ma il invito a seguire la pagina non compare mai: l'unica call to action è commentare. Inoltre la copertina dice 'Barletta vs Molfetta' senza un richiamo alla pagina, quindi chi non commenta non ha motivo esplicito di seguire. Il reel più performante per follower (testa_a_testa, 58,8 ogni 1000 reach) è anche il più lento a chiudere sul messaggio, mentre il testo finale resta sul commento.",
+    "correzione": "Nell'ultimo secondo (da 14 s a 16,9 s) sostituire o affiancare la fascia 'Commenta città e nome del tuo animale' con 'Seguici e accendi la tua luce' oppure aggiungere in didascalia una riga 'Segui la pagina per la prossima sfida'. Mantenere il commento come azione principale.",
+    "idea": "Creare una serie fissa 'Sfida della settimana' con un titolo ricorrente e un finale che annuncia la prossima città in gara, invitando a seguire per non perdere la sfida successiva."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:17+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Copione, trascrizione coi secondi, dati mappa (6 luci per Barletta e per Molfetta, coerenti col brief), audio e didascalia; la mia mansione è Crescita, quindi valuto soprattutto attrattiva e ritmo per il follow.",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (6 luci per Barletta e per Molfetta, coerenti col brief), audio e didascalia; la mia mansione è Crescita, quindi valuto soprattutto attrattiva e ritmo per il follow.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo testa a testa mostrare in apertura un animale che si accende sulla mappa, così chi non conosce il progetto capisce subito il meccanismo e il rimando al link in bio diventa più naturale."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:18+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Ho controllato i dati di crescita: follower ogni 1.000 account, confronto con gli ultimi reel del formato testa_a_testa e segnali di follow nella didascalia e nella fascia di chiusura.",
+   "dati": {
+    "controllato": "Ho controllato i dati di crescita: follower ogni 1.000 account, confronto con gli ultimi reel del formato testa_a_testa e segnali di follow nella didascalia e nella fascia di chiusura.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel testa_a_testa, aggiungere un teaser al secondo 2 con la città in sfida e, nel finale, annunciare il comune vincitore della settimana per dare un motivo di ritorno."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:20+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «il prossimo animale decide chi passa avanti» mentre nei fotogrammi finali compaiono due card («IL PROSSIMO» e «COMMENTA / ANIMALE!») con sovrapposizione e testo che cambia: al secondo 16.9 la card finale mostra «ANIMALE!» e non c'è più una domanda chiara. Inoltre la fascia «Commenta c",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, dati mappa (Barletta 6 e Molfetta 6, luci coerenti coi comuni), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio) e i fotogrammi del reel.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Il testo dice «il prossimo animale decide chi passa avanti» mentre nei fotogrammi finali compaiono due card («IL PROSSIMO» e «COMMENTA / ANIMALE!») con sovrapposizione e testo che cambia: al secondo 16.9 la card finale mostra «ANIMALE!» e non c'è più una domanda chiara. Inoltre la fascia «Commenta città e nome del tuo animale» è presente, ma nel frame di metà reel la card «Molfetta o Barletta?» può confondere con la chiusura.",
+    "correzione": "Allineare le card al testo: mostrare «IL PROSSIMO ANIMALE DECIDE» dal secondo 9.8 e lasciare una sola call to action leggibile e stabile (città + nome animale) negli ultimi 3 secondi.",
+    "idea": "Ripetere il testa a testa con una sfida a tempo sulle città del Sud (es. Bari vs Lecce) e mostrare il contatore delle luci che sale nel reel."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:22+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione «Il prossimo animale decide chi passa avanti» è detto a 9.8s, mentre nel fotogramma a 10s la scena del duello mostra già «IL PROSSIMO» e «Cani vs Gatti» e nel fotogramma a 14s compare «COMMENTA» con la domanda sulla città. Il testo parlato sulla sfida e la grafica sono sfasati di ",
+   "dati": {
+    "controllato": "Ho verificato il copione, la trascrizione coi secondi, i dati della mappa (Barletta 6, Molfetta 6, coerenti col titolo), l'audio (-14.2 LUFS, picco -1 dBFS, nessun silenzio) e la didascalia con la fascia di commento.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Nella trascrizione «Il prossimo animale decide chi passa avanti» è detto a 9.8s, mentre nel fotogramma a 10s la scena del duello mostra già «IL PROSSIMO» e «Cani vs Gatti» e nel fotogramma a 14s compare «COMMENTA» con la domanda sulla città. Il testo parlato sulla sfida e la grafica sono sfasati di circa un secondo rispetto alla chiusura, e la frase «Sei di Molfetta o di Barletta?» resta a schermo senza che la grafica la sostenga bene. Inoltre la didascalia dice «Barletta 6 – 6 Molfetta», ma il reel mostra «Barletta vs Molfetta» con la voce che dice «Barletta contro Molfetta»: non è un errore, solo un ordine diverso.",
+    "correzione": "Allineare il cambio di scena «IL PROSSIMO» e «COMMENTA» alle parole «il prossimo animale decide» e «sei di Molfetta o di Barletta», cioè spostare il cambio scena di circa un secondo più avanti o accorciare la voce. Nella copertina/fascia lasciare la domanda visibile per tutta la chiusura.",
+    "idea": "Per i prossimi testa a testa, far comparire il nome del comune vincente con una luce che pulsa al pareggio, e aggiungere un invito a taggare un amico della città come chiusura visiva."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:22+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il finale chiede di commentare la città e il nome del proprio animale, ma nel fotogramma finale la scritta centrale è «ANIMALE!» e la fascia dice «Commenta città e nome del tuo animale». Il sondaggio «Molfetta o Barletta?» e il «COMMENTA» compaiono nella scena precedente, quindi la call to action è ",
+   "dati": {
+    "controllato": "Ho verificato la coerenza tra copione, trascrizione coi secondi, dati mappa (6 luci Barletta e 6 Molfetta, coerenti col titolo) e i fotogrammi della scena finale.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Il finale chiede di commentare la città e il nome del proprio animale, ma nel fotogramma finale la scritta centrale è «ANIMALE!» e la fascia dice «Commenta città e nome del tuo animale». Il sondaggio «Molfetta o Barletta?» e il «COMMENTA» compaiono nella scena precedente, quindi la call to action è ripetuta due volte con parole diverse, e la domanda sulla città non è chiusa in modo netto. Inoltre la trascrizione dice «il prossimo animale decide chi passa avanti» mentre la didascalia parla di una sfida aperta: il meccanismo non è spiegato chiaramente.",
+    "correzione": "Allineare la chiusura: un'unica call to action («Molfetta o Barletta? Commenta città e nome del tuo animale») e una frase che spieghi che ogni commento accende una luce per la propria città.",
+    "idea": "Aggiungere in chiusura il conteggio aggiornato («ora 6 – 6, il prossimo voto decide») e un'ultima scena con il nome di un animale appena arrivato, per dare un motivo concreto a tornare sulla pagina."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:22+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «Il prossimo animale decide chi passa avanti» mentre la voce scandisce «prossimo» sopra la schermata «IL PROSSIMO» senza che il fotogramma cambi in modo chiaro; inoltre la didascalia dice «Ogni animale accende una luce» ma nel reel la frase «30 chilometri» non è verificabile dai dati f",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (6 luci Barletta e 6 Molfetta, verificate), misure audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio lungo), didascalia e fotogrammi del reel.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Il testo dice «Il prossimo animale decide chi passa avanti» mentre la voce scandisce «prossimo» sopra la schermata «IL PROSSIMO» senza che il fotogramma cambi in modo chiaro; inoltre la didascalia dice «Ogni animale accende una luce» ma nel reel la frase «30 chilometri» non è verificabile dai dati forniti (non ci sono coordinate per calcolare la distanza). Il fotogramma al secondo 16.9 mostra ancora la scritta «ANIMALE!» e la fascia di commento, quindi la chiusura regge, ma la frase «sei di Molfetta o di Barletta» compare nella scena 'COMMENTA' con la domanda già scritta in alto: ridondante.",
+    "correzione": "Togliere «30 chilometri» dalla voce e dalla didascalia, oppure verificarlo con dati reali; ridurre la ridondanza della domanda tra voce e schermata; allineare la scritta «IL PROSSIMO» alla frase audio.",
+    "idea": "Mostrare nel duello il nome reale di ogni animale che ha acceso la luce più recente, così chi commenta vede subito il proprio cane o gatto nel gioco."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:24+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Barletta contro Molfetta: 30 chilometri» al secondo 3.8, ma nei materiali non c'è alcun dato sulla distanza tra le due città; è un'informazione non verificata. Inoltre le fotogrammi inviate sono 6 mentre quelle indicate nel brief sono 18: il controllo visivo dei singoli frame è quindi ",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa (6 luci Barletta, 6 Molfetta, già accese al secondo 4.5), la trascrizione con i tempi, il copione e la didascalia rispetto alla mappa e agli animali elencati.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Il reel dice «Barletta contro Molfetta: 30 chilometri» al secondo 3.8, ma nei materiali non c'è alcun dato sulla distanza tra le due città; è un'informazione non verificata. Inoltre le fotogrammi inviate sono 6 mentre quelle indicate nel brief sono 18: il controllo visivo dei singoli frame è quindi incompleto. Il dato di follower ogni 1000 del formato «testa_a_testa» (58,8) è alto su 284 views, quindi il campione è piccolo.",
+    "correzione": "Togliere «30 chilometri» dal voiceover e dalla didascalia, oppure verificare la distanza e indicarla come fonte; rigenerare la voce con la frase «Barletta contro Molfetta, e la sfida è aperta». Inviare tutti i 18 fotogrammi previsti per il controllo visivo.",
+    "idea": "Ripetere il formato testa a testa con coppie di comuni vicini e un numero di luci già verificato in mappa, così il dato resta sempre dimostrabile."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:25+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Barletta contro Molfetta: 30 chilometri' e 'Pari: 6 a 6', ma nei dati la luce di Barletta è 'già accesa al secondo 4.5' mentre la scena inizia a 3.9 e la frase 'Pari' è al secondo 7.9: il pareggio è mostrato correttamente solo dopo 7.9s. Inoltre la didascalia dice 'due comuni a 30 k",
+   "dati": {
+    "controllato": "Meccaniche di gioco: regola del testa a testa (6 a 6, sfida aperta), coerenza tra copione, dati mappa e didascalia, ritmo e durata.",
+    "esito": "segnalo",
+    "secondo": 4.5,
+    "problema": "Il copione dice 'Barletta contro Molfetta: 30 chilometri' e 'Pari: 6 a 6', ma nei dati la luce di Barletta è 'già accesa al secondo 4.5' mentre la scena inizia a 3.9 e la frase 'Pari' è al secondo 7.9: il pareggio è mostrato correttamente solo dopo 7.9s. Inoltre la didascalia dice 'due comuni a 30 km' ma i dati non includono la distanza, quindi non è verificabile dai materiali. Infine il primo fotogramma utile (0.5s) cade prima dell'apertura del testo sulla luce.",
+    "correzione": "Allineare la frase 'Pari: 6 a 6' alla comparsa dei due contatori (già a 6 prima di 7.9s) e verificare il dato dei 30 km prima della pubblicazione; anticipare il primo fotogramma al momento in cui entrambe le luci sono visibili.",
+    "idea": "Ripetere il testa a testa con più coppie di comuni vicini e mostrare il conteggio aggiornato in sovrimpressione durante il duello."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:26+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Pari: 6 a 6» e poi «Il prossimo animale decide chi passa avanti», ma nei dati la mappa mostra 6 luci per Barletta e 6 per Molfetta, quindi il pari è vero; il problema è il dato 'luci_li_oggi' che coincide con 'luci_del_comune' e la scena è attiva dal secondo 3.9, mentre la voce dice",
+   "dati": {
+    "controllato": "Realismo degli animali: coerenza tra copione, trascrizione coi secondi, dati mappa, audio, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Il copione dice «Pari: 6 a 6» e poi «Il prossimo animale decide chi passa avanti», ma nei dati la mappa mostra 6 luci per Barletta e 6 per Molfetta, quindi il pari è vero; il problema è il dato 'luci_li_oggi' che coincide con 'luci_del_comune' e la scena è attiva dal secondo 3.9, mentre la voce dice 'Barletta contro Molfetta' al 3.8s: lo sfasamento è di 0.1s, trascurabile. Il vero punto da segnalare: l'audio è a -14.2 LUFS e picco -1.0 dBFS, rispettando l'obiettivo, ma il volume medio dei primi 5 secondi è -16.3 dB, quindi l'apertura è più bassa del resto (la voce parte piano). Inoltre la didascalia dichiara 'Voce generata con IA' e 'link in bio' senza che i materiali confermino il link.",
+    "correzione": "Alzare di circa 2 dB il volume dei primi 5 secondi per allinearli al resto; verificare che il link in bio sia presente prima della pubblicazione.",
+    "idea": "Ripetere il testa a testa con coppie di comuni a distanza diversa e chiudere con il totale del turno per alimentare la coppa."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:26+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Mappa 3D e dati delle luci: coordinate, conteggi (6 a 6) e scene coincidono con la trascrizione e la didascalia; la luce di entrambi i comuni è accesa prima del secondo 4.5.",
+   "dati": {
+    "controllato": "Mappa 3D e dati delle luci: coordinate, conteggi (6 a 6) e scene coincidono con la trascrizione e la didascalia; la luce di entrambi i comuni è accesa prima del secondo 4.5.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il testa a testa con un altro duello di città vicine, mostrando nella copertina il conteggio aggiornato, perché questo formato ha dimostrato di portare follower."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:27+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Il prossimo animale decide chi passa avanti» ma il numero di luci è già pari e la chiusura chiede di commentare; inoltre la trascrizione dice «Pari: 6 a 6» a 7.9s mentre la scena luce è tra 3.9s e 7.96s: la sincronia è corretta, ma il copione annuncia 30 km quando la mappa non ripor",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, coerenza tra copione e dati mappa di Barletta e Molfetta (6 luci ciascuna, pari come detto nel testo).",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il copione dice «Il prossimo animale decide chi passa avanti» ma il numero di luci è già pari e la chiusura chiede di commentare; inoltre la trascrizione dice «Pari: 6 a 6» a 7.9s mentre la scena luce è tra 3.9s e 7.96s: la sincronia è corretta, ma il copione annuncia 30 km quando la mappa non riporta distanze, dato non verificabile nei materiali. Inoltre il titolo di fascia promette un «passa avanti» che non è spiegato da nessuna regola visibile nel reel.",
+    "correzione": "Togliere «30 chilometri» oppure dichiarare la fonte del dato; spiegare in una frase cosa significa «passa avanti» (es. «chi vince la sfida di oggi»).",
+    "idea": "Ripetere il formato testa a testa con altre coppie di comuni vicini, e chiudere con un numero che cambia nel tempo per spingere a tornare a vedere l'esito."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:28+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "L'audio è a -14.2 LUFS con picco a -1.0 dBFS, quindi nei parametri, ma il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto: l'apertura risulta più debole. Inoltre la frase della voce «Barletta contro Molfetta» parte a 3.8s, mentre la scena della mappa inizia a 3.9s: il parlato rischi",
+   "dati": {
+    "controllato": "Ho verificato le scene dei due comuni sulla mappa (conteggi 6 e 6 coerenti con la sfida), la trascrizione coi secondi, l'audio e la leggibilità della fascia sui fotogrammi inviati.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "L'audio è a -14.2 LUFS con picco a -1.0 dBFS, quindi nei parametri, ma il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto: l'apertura risulta più debole. Inoltre la frase della voce «Barletta contro Molfetta» parte a 3.8s, mentre la scena della mappa inizia a 3.9s: il parlato rischia di arrivare prima che la luce sia visibile.",
+    "correzione": "Alzare di 2-3 dB il volume dei primi 5 secondi (o comprimere leggermente l'apertura) e far partire la voce a 4.0s, allineandola alla scena della mappa.",
+    "idea": "Ripetere il formato testa a testa con altri comuni vicini ogni volta che una sfida si chiude in parità, e mostrare nel reel il numero di animali dell'ultimo arrivato per dare un volto alla sfida."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:29+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Lo spezzone 'Il prossimo animale decide chi passa avanti' parte a 9.8 s e la trascrizione segna un silenzio di quasi 1.5 s prima della frase finale; inoltre i fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coincidono con quelli del brief, quindi non posso confermare la sincronia immagine-voce. Il ",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), durata e ritmo del copione rispetto alla trascrizione e ai secondi.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Lo spezzone 'Il prossimo animale decide chi passa avanti' parte a 9.8 s e la trascrizione segna un silenzio di quasi 1.5 s prima della frase finale; inoltre i fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coincidono con quelli del brief, quindi non posso confermare la sincronia immagine-voce. Il volume medio delle prime scene (-16.3 dB) è sotto l'obiettivo di -14 LUFS, anche se l'integrato di -14.2 LUFS è corretto.",
+    "correzione": "Portare il volume medio dell'apertura verso -14 dB, accorciare la pausa prima di 'prossimo animale' e riallineare i fotogrammi di controllo ai secondi del brief (3.8, 6.5, 9.8, 13.0, 14.8).",
+    "idea": "Ripetere il testa a testa con una sfida a tre comuni vicini, con un'ultima scena che mostri il punteggio cambiare in diretta man mano che arrivano i commenti."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:30+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Pari: 6 a 6' è verificato (Barletta 6, Molfetta 6), ma la frase 'Il prossimo animale decide chi passa avanti' cade a 9.8s mentre la scena 'duello' parte da 7.96s: resta il tempo giusto. Il vero limite: il volume medio dei primi 5 secondi è -16.3 dB, più basso dell'obiettivo di -14 LUFS, e i",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), sincronia trascrizione/scene e conteggio luci dei comuni sulla mappa, confrontati con brief e dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 9.8,
+    "problema": "Il dato 'Pari: 6 a 6' è verificato (Barletta 6, Molfetta 6), ma la frase 'Il prossimo animale decide chi passa avanti' cade a 9.8s mentre la scena 'duello' parte da 7.96s: resta il tempo giusto. Il vero limite: il volume medio dei primi 5 secondi è -16.3 dB, più basso dell'obiettivo di -14 LUFS, e il fotogramma inviato a 3s non mostra la luce già accesa (la scena inizia a 3.9s); i fotogrammi a 0.5s e 3s sono quindi prima della scena principale. Inoltre la didascalia dice 'si accende col tuo @' senza che il reel lo mostri.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 2 dB per avvicinarsi a -14 LUFS, e prendere un fotogramma a 4.5s (luce già accesa) come copertina di controllo; valutare di aggiungere in scena una breve indicazione visiva del commento con l'@.",
+    "idea": "Ripetere il testa a testa con altre coppie di comuni vicini e un punteggio che cambia nel reel successivo, così la sfida continua e chi commenta torna a vedere il risultato."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:31+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La mappa dice che la luce di Barletta e Molfetta è già accesa al secondo 4.5, ma nel copione la scena luce è dai 3.9s e la frase 'sei di Molfetta o Barletta?' arriva solo al 13s: nel momento in cui si accendono le luci lo spettatore non ha ancora letto il perché della sfida. In più, il volume medio ",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, dati mappa (luci Barletta e Molfetta, scena 3.9–7.96s), coerenza del copione e della didascalia con i numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.5,
+    "problema": "La mappa dice che la luce di Barletta e Molfetta è già accesa al secondo 4.5, ma nel copione la scena luce è dai 3.9s e la frase 'sei di Molfetta o Barletta?' arriva solo al 13s: nel momento in cui si accendono le luci lo spettatore non ha ancora letto il perché della sfida. In più, il volume medio dei primi 5s è -16.3 dB, sotto l'obiettivo di -14 LUFS dell'apertura, quindi l'attacco è più debole del resto del reel.",
+    "correzione": "Far coincidere l'accensione delle luci con la frase 'Barletta contro Molfetta' (3.8s) e alzare il livello dei primi 5 secondi di circa 2 dB, lasciando il picco sotto -1 dBFS.",
+    "idea": "Ripetere il testa a testa con una città nuova e far comparire il punteggio aggiornato con le luci accese in tempo reale nei secondi finali."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:33+00:00",
+   "da": "grafica3d-2",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 3 la scena 3D è piena di luci e cartelli ma il testo 'Barletta · 6' della mappa compare solo dal secondo 3.9; nel fotogramma al secondo 3 il nome del comune appare sopra la scena senza il numero, e in alcuni fotogrammi di scena la didascalia 'Milù' e 'Whisky' sono tagliati ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (6 luci Barletta, 6 Molfetta), audio (-14.2 LUFS, picco -1 dBFS, nessun silenzio), didascalia e fotogrammi della grafica 3D.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Nel fotogramma al secondo 3 la scena 3D è piena di luci e cartelli ma il testo 'Barletta · 6' della mappa compare solo dal secondo 3.9; nel fotogramma al secondo 3 il nome del comune appare sopra la scena senza il numero, e in alcuni fotogrammi di scena la didascalia 'Milù' e 'Whisky' sono tagliati ai bordi. Inoltre il secondo 3.8 della trascrizione ('Barletta contro Molfetta: 30 chilometri') coincide con il cambio di scena, quindi la frase parte mentre la grafica è ancora in transizione.",
+    "correzione": "Spostare l'inizio della frase al secondo 4.0 oppure anticipare di mezzo secondo la scena della mappa, e ricentrare la camera 3D sulle etichette degli animali così che i nomi non vengano tagliati ai bordi.",
+    "idea": "Ripetere il testa_a_testa a ogni nuovo pareggio, mostrando nel finale chi ha commentato per primo la propria città, per spingere più commenti e follower."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:33+00:00",
+   "da": "grafica3d-3",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nella scena iniziale (0.5 s) il titolo BARLETTA/MOLFETTA e l'etichetta '6 luci · pari' sono leggibili, ma la mappa 3D sotto è scura e le luci sono piccole: al primo fotogramma il punto di impatto visivo non è chiaro. Inoltre nei fotogrammi 3–10 le casette e gli animali sono molto piccoli e le etiche",
+   "dati": {
+    "controllato": "Grafica 3D: fotogrammi, coerenza dei numeri sulla mappa (Barletta 6, Molfetta 6) con i dati verificati e leggibilità delle scene 3D.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nella scena iniziale (0.5 s) il titolo BARLETTA/MOLFETTA e l'etichetta '6 luci · pari' sono leggibili, ma la mappa 3D sotto è scura e le luci sono piccole: al primo fotogramma il punto di impatto visivo non è chiaro. Inoltre nei fotogrammi 3–10 le casette e gli animali sono molto piccoli e le etichette dei nomi (Milù, Whisky, Teddy...) sono illeggibili su mobile.",
+    "correzione": "Ingrandire la camera sulle due piazze nei primi 2 secondi, aumentare il contrasto delle luci e rendere più grandi le etichette dei nomi degli animali.",
+    "idea": "Ripetere il testa a testa con un comune in più in gara e far votare i follower su chi passa avanti, mostrando in chiusura il tabellone aggiornato."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:34+00:00",
+   "da": "grafica3d-4",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 16.9 (ultimo fotogramma) il testo centrale dice ANIMALE! mentre la mappa e la scena sono ferme: la chiusura è coerente, ma nella scena 'duello' ai secondi 7-10 le due scene 3D mostrano i recinti con terreno e luci, mentre nel fotogramma 0.5 la scena di Barletta ha la prospettiva più bassa",
+   "dati": {
+    "controllato": "Dati di mappa (6 luci Barletta, 6 Molfetta, coerenti con il conteggio e con la scena), sincronia etichette/fotogrammi, rilievo e terreno 3D delle due scene, e livelli audio.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Al secondo 16.9 (ultimo fotogramma) il testo centrale dice ANIMALE! mentre la mappa e la scena sono ferme: la chiusura è coerente, ma nella scena 'duello' ai secondi 7-10 le due scene 3D mostrano i recinti con terreno e luci, mentre nel fotogramma 0.5 la scena di Barletta ha la prospettiva più bassa e la piazza è tagliata, con elementi (case, alberi) che si sovrappongono al bordo e un'ombra poco definita sulla pavimentazione. In più, la scena 'luce' al secondo 0.5 (mappa sfocata) non corrisponde alla scena 3D di apertura dei fotogrammi successivi.",
+    "correzione": "Ricontrollare l'inquadratura della piazza di Barletta nell'apertura 3D (alzare la camera o allargare il campo per evitare tagli sul bordo) e allineare la transizione tra mappa e scena duello in modo che la luce di Barletta sia già visibile al cambio.",
+    "idea": "Ripetere il testa a testa con altre città vicine (es. Trani vs Bisceglie) e mostrare il conteggio finale in chiusura per creare attesa per il prossimo turno."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:34+00:00",
+   "da": "grafica3d-5",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nell'ultimo fotogramma (16.9s) il pannello 'ANIMALE!' e l'invito a commentare compaiono sopra il testo 'COMMENTA' del penultimo; la chiusura visiva non è pulita e il call to action resta poco leggibile. Inoltre la trascrizione dice 'Sei di Molfetta o di Barletta?' mentre sullo schermo il quesito è '",
+   "dati": {
+    "controllato": "Sincronia testo/scene, dati mappa (6 luci per comune, verificate), audio (-14.2 LUFS, picco -1 dBFS, nessun silenzio) e didascalia nei materiali.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Nell'ultimo fotogramma (16.9s) il pannello 'ANIMALE!' e l'invito a commentare compaiono sopra il testo 'COMMENTA' del penultimo; la chiusura visiva non è pulita e il call to action resta poco leggibile. Inoltre la trascrizione dice 'Sei di Molfetta o di Barletta?' mentre sullo schermo il quesito è 'Molfetta o Barletta?': allineare il testo.",
+    "correzione": "Mostrare un solo elemento per volta nella scena finale (prima 'COMMENTA', poi 'ANIMALE!' solo a fine reel) e uniformare la domanda parlata con quella scritta, tipo 'Molfetta o Barletta?'.",
+    "idea": "Ripetere il formato testa a testa con una mappa che mostra la sfida in tempo reale, con l'ultimo comune che ha acceso una luce in evidenza."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:37+00:00",
+   "da": "grafica3d-6",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 3 (prima scena di duello) i due fondali 3D hanno texture e luci molto diverse tra loro: Barletta è in toni caldi e ben definita, Molfetta appare più scura e le superfici sembrano piatte e poco dettagliate; i testi delle etichette animali (es. nomi) sono piccolissimi e sfocati su entrambe ",
+   "dati": {
+    "controllato": "Materiali e texture del reel: resa 3D dei fotogrammi, coerenza visiva delle scene Barletta/Molfetta e leggibilità delle etichette sulla mappa.",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "Al secondo 3 (prima scena di duello) i due fondali 3D hanno texture e luci molto diverse tra loro: Barletta è in toni caldi e ben definita, Molfetta appare più scura e le superfici sembrano piatte e poco dettagliate; i testi delle etichette animali (es. nomi) sono piccolissimi e sfocati su entrambe le scene.",
+    "correzione": "Uniformare illuminazione e saturazione dei due fondali, aumentare il dettaglio delle texture del terreno di Molfetta e ingrandire i nomi degli animali sulle etichette.",
+    "idea": "Per i prossimi testa a testa, mantenere lo stesso punteggio o formato delle scene ma generare entrambi i fondali con lo stesso preset di luce e materiali, così il confronto visivo resta equo."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:37+00:00",
+   "da": "grafica3d-7",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 la mappa mostra le etichette 'Barletta · 6' e 'Molfetta · 6' appena sotto il punto luminoso, ma la camera è troppo stretta e il bagliore copre parte delle luci: il duello è visivamente disordinato nella scena di transizione. Inoltre nella scena duello (secondi 3–14) il cane Milù e il ga",
+   "dati": {
+    "controllato": "Camere e inquadrature 3D sui 6 fotogrammi: stacco tra mappa e duello, leggibilità dei nomi, copertura del testo nelle scene.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 la mappa mostra le etichette 'Barletta · 6' e 'Molfetta · 6' appena sotto il punto luminoso, ma la camera è troppo stretta e il bagliore copre parte delle luci: il duello è visivamente disordinato nella scena di transizione. Inoltre nella scena duello (secondi 3–14) il cane Milù e il gatto Candy sono tagliati al bordo e i nomi sulle cucce sono illeggibili su telefono.",
+    "correzione": "Allargare leggermente la camera della mappa per far respirare i due cluster e ridurre il bagliore; nel duello inquadrare le due cucce più frontalmente con i nomi più grandi e in contrasto, centrando i due animali protagonisti.",
+    "idea": "Trasformare il duello in una scena in cui gli animali si 'accendono' a turno sulla propria cuccia quando arriva un commento, per rendere visibile il legame commento-luce."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:39+00:00",
+   "da": "grafica3d-8",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma finale (16.9s) la fascia di chiusura è coperta dal tema statico 'Molfetta o Barletta?'/'ANIMALE!' ma la CTA 'Commenta città e nome del tuo animale' compare insieme alla scritta 'COMMENTA' e alla domanda, con ripetizione visiva; inoltre la scena 'duello' nei fotogrammi 7-10 mostra etic",
+   "dati": {
+    "controllato": "Ho verificato la scena 3D del testa a testa: sincronia tra titoli, mappa e luci (6 vs 6 come nei dati), leggibilità dei nomi sui fotogrammi e coerenza con la trascrizione e i dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Nel fotogramma finale (16.9s) la fascia di chiusura è coperta dal tema statico 'Molfetta o Barletta?'/'ANIMALE!' ma la CTA 'Commenta città e nome del tuo animale' compare insieme alla scritta 'COMMENTA' e alla domanda, con ripetizione visiva; inoltre la scena 'duello' nei fotogrammi 7-10 mostra etichette dei nomi animali piccole e in parte tagliate ai bordi, poco leggibili su mobile.",
+    "correzione": "Ingrandire le etichette dei nomi degli animali e tenerle entro il safe area verticale; nel finale mostrare una sola CTA e far coincidere la domanda con la fascia, eliminando la sovrapposizione tra 'COMMENTA' e il testo della fascia.",
+    "idea": "Per i prossimi testa a testa, mostrare nel finale il punteggio aggiornato con l'animale vincitore dell'ultima sfida e lasciare un'unica domanda chiara, così da rendere la chiusura più forte e meno ripetitiva."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:39+00:00",
+   "da": "grafica3d-9",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Ho verificato copione, trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6, luci verificate), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e la coerenza dei fotogrammi con le scene 3D.",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, dati mappa (Barletta 6, Molfetta 6, luci verificate), audio (-14.2 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e la coerenza dei fotogrammi con le scene 3D.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il formato testa a testa con una città nuova in gara contro Barletta o Molfetta, mantenendo la fascia di invito alla partecipazione, dato che è il formato che porta più follower."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:41+00:00",
+   "da": "grafica3d-10",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nell'ultimo fotogramma (16.9s) la scena di chiusura mostra ancora la fascia 'Molfetta o Barletta?' e il titolo 'ANIMALE!', ma il cartello 'Commenta città e nome del tuo animale' è corretto; il problema è che nei fotogrammi 14s e 16.9s il testo 'COMMENTA' e 'ANIMALE!' restano sovrapposti alla casetta",
+   "dati": {
+    "controllato": "Ho verificato il 3D leggero: fotogrammi, didascalia, dati mappa (Barletta 6 e Molfetta 6 coincidono con le luci dei comuni), trascrizione e sincronia con le scene.",
+    "esito": "segnalo",
+    "secondo": 16.9,
+    "problema": "Nell'ultimo fotogramma (16.9s) la scena di chiusura mostra ancora la fascia 'Molfetta o Barletta?' e il titolo 'ANIMALE!', ma il cartello 'Commenta città e nome del tuo animale' è corretto; il problema è che nei fotogrammi 14s e 16.9s il testo 'COMMENTA' e 'ANIMALE!' restano sovrapposti alla casetta del cane e al gatto, appesantendo la composizione. Inoltre nel fotogramma a 0.5s la mappa dei comuni non è ancora ben leggibile per via dell'apertura 3D scura.",
+    "correzione": "Ridurre la sovrapposizione tra il titolo di chiusura e le illustrazioni animali, centrare meglio il testo 'ANIMALE!' e rendere più leggibile l'etichetta della mappa nell'apertura, aumentando il contrasto del fondo.",
+    "idea": "Per i prossimi testa a testa, usare nella chiusura le stesse scene 3D dei comuni invece delle illustrazioni piatte, mantenendo lo stile uniforme."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:49+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggere subito il dato non verificato dei 30 km, anticipare la sfida Barletta vs Molfetta nei primi secondi e sincronizzare la voce con le scene finali; il formato testa a testa resta quello da ripetere.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 3.8,
+      "problema": "La voce dice «Barletta contro Molfetta: 30 chilometri» e la didascalia «due comuni a 30 km», ma nei materiali non esiste alcun dato verificato sulla distanza. Il numero non compare in nessuna scena (segnalato da 4 persone).",
+      "correzione": "Togliere «30 chilometri» / «30 km» da voce, trascrizione e didascalia. Sostituire con una frase verificabile, ad esempio «Barletta contro Molfetta: pari, 6 a 6»."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Nei primi 2 secondi non si capisce che è una sfida: la frase «Barletta contro Molfetta» parte solo a 3.8s e il «VS» non è ancora leggibile.",
+      "correzione": "Mettere nel primo frame un titolo grande «BARLETTA VS MOLFETTA: 6 A 6?» sopra la scena 3D e animare il «VS» entro il secondo 1. Anticipare la frase di apertura."
+     },
+     {
+      "secondo": 9.8,
+      "problema": "La frase «Il prossimo animale decide chi passa avanti» non coincide con la scena «IL PROSSIMO». Inoltre «passa» e «avanti» risultano spezzati tra due scene (11.4s). Con il pari 6-6 «passa avanti» è anche ambiguo.",
+      "correzione": "Allineare la frase alla comparsa di «IL PROSSIMO» (circa 9.5s), dirla in un'unica battuta e riformularla in «Il prossimo animale decide chi va in testa»."
+     },
+     {
+      "secondo": 13,
+      "problema": "Le scene «COMMENTA» e «ANIMALE!» durano meno della frase finale «Commenta città e nome del tuo animale!» e restano quasi identiche e statiche per circa 3 secondi. La domanda «Barletta o Molfetta?» non è chiara nel finale.",
+      "correzione": "Mostrare insieme la domanda «Barletta o Molfetta?» e la fascia di commento fino alla fine della frase (circa 14.8s). Accorciare la chiusura statica o animarla, ad esempio con le due luci che si accendono."
+     },
+     {
+      "secondo": null,
+      "problema": "L'ordine delle città è incoerente: la copertina dice «Barletta vs Molfetta», la didascalia «Barletta 6 – 6 Molfetta» e la domanda finale «Molfetta o Barletta?».",
+      "correzione": "Usare sempre Barletta prima di Molfetta in copertina, didascalia, voce e scena finale."
+     }
+    ],
+    "idea": "Serie testa a testa tra comuni vicini: aprire con il punteggio grande («6 – 6?») e le due città nel primo frame, voce dopo il secondo 2, e chiudere con la domanda sulla propria città e le due luci animate."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:49+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare togliamo o verifichiamo il dato non supportato dei 30 km, allineiamo testo e voce nel finale (un solo invito a commentare) e rendiamo chiaro al secondo 9.8 cosa decide la sfida; poi ripetiamo il formato testa a testa, che ha il miglior tasso di follower.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 3.8,
+      "problema": "La voce dice 'Barletta contro Molfetta: 30 chilometri' e la didascalia 'due comuni a 30 km', ma la distanza non è presente in nessun dato verificato: è un'affermazione presentata come fatto.",
+      "correzione": "Togliere i 30 km dalla voce e dalla didascalia, oppure aggiungere una fonte verificata. In alternativa usare una formula senza numero, come 'due città pugliesi vicine'."
+     },
+     {
+      "secondo": 9.8,
+      "problema": "La voce dice 'Il prossimo animale decide chi passa avanti', ma la scena mostra solo l'etichetta del prossimo duello (cane vs gatto) e non chiarisce che la sfida è sul comune.",
+      "correzione": "Aggiungere a schermo una dicitura come 'Il prossimo animale decide chi passa avanti', oppure adattare il testo alla grafica."
+     },
+     {
+      "secondo": 13,
+      "problema": "Nel finale la voce dice 'Sei di Molfetta o di Barletta?' mentre a schermo c'è 'Molfetta o Barletta?' in un riquadro diverso. Le scritte 'COMMENTA' e 'ANIMALE!' si sovrappongono alla fascia 'Commenta città e nome del tuo animale', quindi l'invito compare due volte.",
+      "correzione": "Allineare il testo a schermo alla frase detta e tenere un solo invito a commentare nel finale: la fascia oppure la scritta grande."
+     }
+    ],
+    "idea": "Ripetere il testa a testa mostrando nei primi 3 secondi il nome di un animale reale per ciascuna città, e chiudere con una sola domanda a schermo e con l'animale che porterà il punto decisivo, per dare un motivo concreto di ritorno."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:49+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare correggo l'apertura (voce e volume dei primi secondi) e verifico o tolgo il dato dei «30 chilometri»; il resto dell'audio è a posto.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 3.8,
+      "problema": "La frase «Barletta contro Molfetta: 30 chilometri» è sul dato non presente nei materiali verificati: i 30 km non risultano da nessuna fonte. Segnalato da tre colleghi.",
+      "correzione": "Togliere «30 chilometri» da copione, voce e didascalia, oppure verificarlo sulla mappa prima di pubblicare."
+     },
+     {
+      "secondo": 3.8,
+      "problema": "La voce parte a 3.8 s, prima della scena della mappa (3.9 s) e delle luci accese (4.5 s): la frase arriva prima che si vedano le due città e senza margine rispetto al cambio scena.",
+      "correzione": "Spostare l'attacco della voce a circa 4.3-4.5 s, in modo che coincida con l'accensione delle luci, e far leggere il «6 – 6» subito dopo."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "I primi 5 secondi sono a -16.3 dB, sotto l'obiettivo di -14 LUFS: l'apertura è più debole del necessario per chi scorre veloce. Il totale (-14.2 LUFS, picco -1 dBFS) è invece corretto.",
+      "correzione": "Alzare la voce di circa 2 dB nei primi 5 secondi senza superare -1 dBFS di picco, poi ricontrollare il loudness complessivo."
+     },
+     {
+      "secondo": 4.5,
+      "problema": "I fotogrammi controllati sono solo 6 su 18 e non coprono il secondo 4.5 dell'apertura, quindi la verifica visiva è incompleta.",
+      "correzione": "Far rivedere i fotogrammi mancanti, compreso uno tra 4 e 5 secondi, prima della pubblicazione."
+     }
+    ],
+    "idea": "Ripetere il testa a testa con un'altra coppia di comuni vicini, stessa struttura e copertina con il numero esatto (es. «6 – 6"
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:49+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel funziona e il formato testa a testa converte molto bene; correggo solo il finale (domanda e invito a commentare che si sovrappongono o scompaiono) e la leggibilità di nomi ed etichette su mobile, poi lo pubblico.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 16.9,
+      "problema": "Nel frame finale la domanda «Molfetta o Barletta?» scompare e resta solo «ANIMALE!» senza un invito chiaro. «COMMENTA» e «ANIMALE!» cambiano posizione tra il secondo 14 e il 16.9 e si sovrappongono alla casetta/icona del gatto.",
+      "correzione": "Tenere visibile «Molfetta o Barletta?» fino alla fine insieme a «Commenta città e nome del tuo animale». Fissare «COMMENTA»/«ANIMALE!» in un unico punto, con margine dai bordi, senza coprire le icone cane/gatto, e togliere il doppione tra badge e fascia."
+     },
+     {
+      "secondo": 14,
+      "problema": "Nel duello i nomi degli animali (Milù, Whisky, Coco, Stella…) sono troppo piccoli e poco leggibili su schermo verticale. La fascia VS e i titoli coprono in parte le cucce.",
+      "correzione": "Ingrandire i nomi, o mostrarne solo 2-3 alla volta, e spostare la fascia VS/titoli in modo da non coprire le cucce."
+     },
+     {
+      "secondo": 7,
+      "problema": "Le etichette «Barletta · 6» e «Molfetta · 6» sulla mappa sono piccole, vicine tra loro e quasi accavallate ai punti luce, quindi si leggono male su mobile.",
+      "correzione": "Ingrandirle di circa 1,3x, distanziarle e tenerle sopra i punti luce senza coprirli, con buon contrasto sul fondo scuro."
+     }
+    ],
+    "idea": "Chiudere ogni testa a testa con il punteggio aggiornato e l'annuncio della città che sfida la prossima, mostrando nella card finale il nome dell'ultimo animale arrivato in ciascuna città per rendere il commento più personale e dare continuità tra i reel."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:49+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è pronto, con una correzione certa sulla copertina e verifiche mirate prima di pubblicare; la maggior parte delle segnalazioni sui secondi è rumore o speculazione.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "La copertina usa coordinate (lng 16.4389, lat 41.2623) che non corrispondono né a Barletta (41.3196, 16.2772) né a Molfetta (41.205, 16.6006): il punto evidenziato cade tra le due città, in mare, e non rappresenta nessuna delle due.",
+      "correzione": "Impostare la copertina su Barletta e Molfetta (entrambe le luci, o un inquadramento che le contenga entrambe), verificando che coincida con la scena iniziale del reel."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "L'audio integrato è a -14.2 LUFS, nei limiti, ma i primi 5 secondi sono a -16.3 dB di volume medio, circa 2 dB sotto il resto: l'apertura risulta meno incisiva proprio dove si decide se restare.",
+      "correzione": "Alzare di circa 2 dB i primi 5 secondi, tenendo il picco sotto -1 dBFS."
+     },
+     {
+      "secondo": 15,
+      "problema": "I fotogrammi inviati (0.5, 3, 7, 10, 14, 16.9) non coprono la scena duello con 'Pari: 6 a 6' (circa 8 s) né la fascia 'Commenta città e nome del tuo animale': leggibilità e contrasto della chiusura non verificati.",
+      "correzione": "Generare e controllare almeno un fotogramma a 8-9 s e uno a 15 s; se la fascia non è leggibile, aumentare contrasto e dimensione del testo."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia dice 'si accende col tuo @ e conta per la tua città' e 'link in bio', ma il copione chiede solo di commentare città e nome dell'animale: il meccanismo non è confermato dai materiali e la promessa non coincide con la fascia.",
+      "correzione": "Verificare che il link in bio porti alla mappa attiva e che l'accensione col @ funzioni davvero; altrimenti riscrivere la didascalia in linea con l'invito a commentare."
+     }
+    ],
+    "idea": "Ripetere il testa a testa con altre coppie di comuni vicini, mostrando in apertura il punteggio aggiornato e chiudendo con la città in testa e una domanda che chieda il nome dell'animale, per far tornare chi ha commentato."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:50+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Pubblicare dopo tre piccole correzioni: sincronizzare il '6 – 6' con la voce, alzare il volume dell'apertura e verificare la frase sul prossimo animale. Poi portare avanti il formato testa a testa tra comuni vicini.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 7.9,
+      "problema": "Le luci e il conteggio sono visibili sulla mappa già dal 4.5, ma la voce dice 'Pari: 6 a 6' solo a 7.9. Il numero compare prima di essere pronunciato e la frase cade proprio alla fine della scena (3.9–7.96).",
+      "correzione": "Far comparire l'etichetta '6 – 6' insieme alla frase 'Pari: 6 a 6', oppure anticipare la frase. In alternativa allungare la scena mappa di circa mezzo secondo, così il punteggio resta a schermo dopo essere stato detto."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il volume medio dei primi 5 secondi è -16.3 dB, più basso del resto del reel (-14.2 LUFS). L'apertura è più debole proprio dove si decide se lo spettatore resta. LUFS totale e picco (-1.0 dBFS) sono invece nei limiti.",
+      "correzione": "Alzare il volume dei primi 5 secondi di circa 2 dB, portandolo verso -14, senza superare il picco di -1.0 dBFS."
+     },
+     {
+      "secondo": 9.8,
+      "problema": "La frase 'Il prossimo animale decide chi passa avanti' non ha riscontro nei dati: nei materiali la sfida risulta solo come coppa turno 1, senza regola sul passaggio. Rischio di promettere una regola che non esiste.",
+      "correzione": "Controllare la regola reale della sfida. Se non corrisponde, riformulare la frase in modo fedele, per esempio 'Ogni nuovo animale accende una luce'."
+     },
+     {
+      "secondo": 16.9,
+      "problema": "L'ultimo fotogramma (16.9s) è stato campionato, ma la trascrizione chiude a 14.8s e nessuno ha confermato che sia pulito.",
+      "correzione": "Guardare il fotogramma finale prima di pubblicare, verificando che non ci siano testi tagliati o elementi fuori posto."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia spiega il commento con il @ e porta l'esempio «Molfetta, Luna, cane», mentre la fascia nel video dice solo 'Commenta città e nome del tuo animale'. L'invito risulta meno chiaro di come potrebbe essere.",
+      "correzione": "Allineare la fascia alla didascalia, per esempio 'Commenta città e nome del tuo animale, es. Molfetta, Luna, cane', e spiegare in una riga come funziona il @."
+     }
+    ],
+    "idea": "Ripetere il testa a testa con altre coppie di comuni vicini, ad esempio della stessa provincia, come serie con punteggio aggiornato e chiusura che annuncia il prossimo duello, sempre con la domanda diretta che invita a commentare la propria città. Trattare il 58.8 come ipotesi da verificare sui prossimi reel."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:50+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel testa_a_testa Barletta-Molfetta (6-6) va pubblicato dopo tre correzioni mirate: apertura più forte, finale con la CTA visibile e allineamento tra voce, didascalia e dati.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 3.8,
+      "problema": "Il volume medio dei primi 5 secondi è -16.3 dB, sotto l'obiettivo di -14 LUFS (il reel complessivo è a -14.2 LUFS): l'apertura è più debole del resto. Segnalato da quasi tutti i controlli.",
+      "correzione": "Alzare di circa 2 dB i primi 5 secondi, mantenendo il picco sotto -1 dBFS (il picco attuale è già a -1.0, quindi controllare di non saturare)."
+     },
+     {
+      "secondo": 3.8,
+      "problema": "Le etichette «Barletta · 6» e «Molfetta · 6» risultano accese al secondo 4.5, mentre la voce nomina i comuni a 3.8 e la scena parte a 3.9. Due relazioni lo indicano come anticipo della luce sulla voce, ma altre due lo ritengono corretto. Il disallineamento non è certo.",
+      "correzione": "Controllare il sincronismo sul video e, se necessario, far entrare le etichette non prima di 3.8 s, cioè con la voce."
+     },
+     {
+      "secondo": 14.8,
+      "problema": "La frase finale con l'invito a commentare termina a 14.8 s, ma il reel dura fino a 17.2 s (ultimo fotogramma a 16.9 s). Il finale non ha un appello visivo chiaro. Inoltre la fascia «Commenta città e nome del tuo animale» ripete la voce, e la didascalia dice «si accende col tuo @» mentre il parlato chiede città e nome.",
+      "correzione": "Tenere a schermo la fascia «Commenta città e nome del tuo animale» da 14.8 s a fine reel. Allineare la didascalia al parlato: «commenta città e nome del tuo animale»."
+     },
+     {
+      "secondo": 3.8,
+      "problema": "«30 chilometri» compare nella voce e nella didascalia senza una fonte nei materiali.",
+      "correzione": "Confermare la distanza con una fonte, altrimenti toglierla dalla frase."
+     }
+    ],
+    "idea": "Fare una serie testa_a_testa con coppie di comuni vicini della provincia di Bari (per esempio Trani vs Bisceglie), con punteggio visibile in copertina e una chiusura tipo «Chi passa avanti domani?» che colleghi un reel al successivo."
+   }
+  },
+  {
+   "t": "2026-11-11T13:55:50+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il testa a testa funziona (58,8 follower ogni 1000 contro circa 16), quindi lo teniamo; prima di pubblicare correggiamo la chiusura (una sola call to action, nessun invito a seguire oggi), il dato dei 30 km non verificato e il contatore 1950 – 786 incoerente con 6 – 6.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "Il contatore «Testa a testa» in alto a destra mostra «1950 – 786», che non corrisponde al 6 – 6 del duello tra Barletta e Molfetta (segnalato da un solo collega, da verificare sul fotogramma). La mappa con le due luci, l'immagine più forte, arriva solo a 3,9 s.",
+      "correzione": "Verificare il fotogramma: allineare il contatore al 6 – 6 reale o toglierlo. Portare la mappa con le due luci in apertura, entro il secondo 1-2."
+     },
+     {
+      "secondo": null,
+      "problema": "Il gancio dice «30 chilometri» ma la distanza non è presente nei dati del progetto, quindi non è verificabile. Va tolto o verificato anche nella didascalia.",
+      "correzione": "Togliere «30 chilometri» da voce, gancio e didascalia, oppure verificare la distanza con una fonte e citarla."
+     },
+     {
+      "secondo": 9.8,
+      "problema": "La voce dice «il prossimo animale decide chi passa avanti» ma la grafica mostra «IL PROSSIMO» con cane contro gatto e cambia scena con circa un secondo di sfasamento: non è chiaro se decide l'animale per il comune o per la specie.",
+      "correzione": "Allineare le card alla frase parlata e chiarire nel testo che ogni animale commentato accende una luce per il proprio comune e decide il testa a testa."
+     },
+     {
+      "secondo": 16.9,
+      "problema": "La chiusura mostra solo «ANIMALE!»: la fascia di invito è tagliata o poco leggibile e la call to action compare due volte con parole diverse («Molfetta o Barletta?» e «Commenta città e nome del tuo animale»). Manca anche un invito a seguire la pagina.",
+      "correzione": "Una sola call to action, stabile e leggibile per intero negli ultimi 3 secondi («Commenta città e nome del tuo animale»). Aggiungere in didascalia una riga «Segui la pagina per la prossima sfida», lasciando il commento come azione principale."
+     }
+    ],
+    "idea": "Nuovo testa a testa tra due comuni vicini con numero di luci simile, mappa con le due luci in primo piano già al secondo 1, contatore che cresce a ogni commento, un'unica call to action finale e l'annuncio della prossima sfida con invito a seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-11T13:56:05+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare togliamo o verifichiamo il dato non dimostrato dei «30 chilometri» e alziamo il volume dei primi 5 secondi; il formato testa a testa va avanti.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 3.8,
+      "problema": "Il voiceover dice «Barletta contro Molfetta: 30 chilometri» (e la didascalia «a 30 km»), ma nei materiali non c'è nessun dato sulla distanza: l'informazione non è verificata. Lo segnalano più colleghi.",
+      "correzione": "Togliere «30 chilometri» da voce e didascalia, oppure verificare la distanza e citare la fonte. Rigenerare la voce con «Barletta contro Molfetta, e la sfida è aperta»."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Il volume medio dei primi 5 secondi è -16,3 dB, più basso del resto (integrato -14,2 LUFS, picco -1,0 dBFS): l'apertura risulta debole. Lo segnalano più colleghi.",
+      "correzione": "Alzare di circa 2 dB i primi 5 secondi (o comprimere leggermente l'attacco), tenendo il picco sotto -1 dBFS."
+     },
+     {
+      "secondo": 9.8,
+      "problema": "Il copione dice «Il prossimo animale decide chi passa avanti», ma nel reel nessuna regola spiega cosa significhi «passa avanti», e un collega segnala una pausa lunga prima della frase. Il pari 6 a 6 è invece corretto sui dati della mappa.",
+      "correzione": "Aggiungere una frase breve che spieghi la regola (es. «chi vince la sfida di oggi») e accorciare la pausa prima della frase."
+     },
+     {
+      "secondo": null,
+      "problema": "Il controllo visivo è incompleto: sono stati inviati 6 fotogrammi invece dei 18 previsti, e la didascalia cita il link in bio senza conferma che sia presente.",
+      "correzione": "Inviare tutti i 18 fotogrammi per il controllo visivo e verificare il link in bio prima di pubblicare."
+     }
+    ],
+    "idea": "Ripetere il testa a testa con coppie di comuni vicini e un numero di luci già verificato in mappa, con il punteggio aggiornato in sovrimpressione, così il dato è sempre dimostrabile e la sfida continua da un reel all'altro."
+   }
+  },
+  {
+   "t": "2026-11-11T13:56:05+00:00",
+   "da": "grafica3d-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Teniamo il formato testa a testa (il più forte per i follower) e correggiamo tre cose concrete: apertura troppo buia, nomi degli animali piccoli e tagliati, chiusura affollata con più testi sovrapposti.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0.5,
+      "problema": "L'apertura 3D è scura, le luci sono piccole e la mappa è poco leggibile: manca un punto d'impatto chiaro nei primi fotogrammi.",
+      "correzione": "Avvicinare la camera alle due piazze nei primi 2 secondi, alzare il contrasto e la luminosità delle luci."
+     },
+     {
+      "secondo": 3.8,
+      "problema": "La frase 'Barletta contro Molfetta: 30 chilometri' parte sul cambio di scena, mentre l'etichetta con il numero compare solo a 3.9: audio e grafica sono sfasati.",
+      "correzione": "Spostare l'inizio della frase a 4.0 oppure anticipare la scena della mappa di mezzo secondo."
+     },
+     {
+      "secondo": 7,
+      "problema": "Nelle scene del duello (circa secondi 3-14) i nomi degli animali (Milù, Whisky, Candy...) sono piccoli, sfocati e in parte tagliati ai bordi, illeggibili su telefono. Il bagliore della mappa copre parte delle luci.",
+      "correzione": "Ingrandire le etichette, tenerle dentro la safe area, centrare gli animali protagonisti con una camera più frontale e ridurre il bagliore sulla mappa."
+     },
+     {
+      "secondo": 16.9,
+      "problema": "Nel finale 'COMMENTA', 'ANIMALE!', la domanda e l'invito a commentare si sovrappongono e coprono la casetta e gli animali. Inoltre la domanda parlata ('Sei di Molfetta o di Barletta?') differisce da quella scritta ('Molfetta o Barletta?').",
+      "correzione": "Mostrare un solo elemento per volta (prima 'COMMENTA', poi 'ANIMALE!' a fine reel), liberare gli animali dal testo e usare la stessa formulazione nel parlato e nello scritto."
+     }
+    ],
+    "idea": "Ripetere il testa a testa a ogni nuovo pareggio o con un nuovo comune in gara (es. Trani vs Bisceglie), mostrando in chiusura il tabellone aggiornato e un'unica domanda chiara per spingere commenti e follower."
+   }
+  },
+  {
+   "t": "2026-11-11T13:56:20+00:00",
+   "da": "montaggio-1",
+   "a": "pubblicazione-1",
+   "tipo": "decisione",
+   "testo": "La squadra non ha trovato difetti segnalati da almeno 3 reparti: nessuna correzione.",
+   "dati": {
+    "perche": []
+   }
+  },
+  {
+   "t": "2026-11-11T13:56:20+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce con la revisione della sola squadra."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 17.2,
+   "fotogrammi": [
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s000.5.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s001.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s002.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s003.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s004.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s005.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s006.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s007.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s008.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s009.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s010.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s011.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s012.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s013.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s014.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s015.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s016.0.jpg",
+    "fotogrammi/2026-11-11-1448-testa_a_testa/v1/s016.9.jpg"
+   ],
+   "audio": {
+    "lufs": -14.2,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.3,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "crescita": {
+  "pubblico": "Pugliesi della costa tra Barletta e Molfetta (e dintorni) che hanno un cane o un gatto e amano il campanile: chi vuole dire da che parte sta, non un pubblico generico.",
+  "gancio": "Barletta contro Molfetta: 30 chilometri e siamo 6 a 6. Il tuo animale da che parte sta?",
+  "primo_fotogramma": "Mappa dell'Italia di notte con zoom sulla costa pugliese: due luci accese, una su Barletta e una su Molfetta, collegate da una linea. Al centro in grande «6 – 6», sopra «TESTA A TESTA», sotto «Barletta vs Molfetta». Così la sfida si capisce anche a volume zero.",
+  "motivo_per_seguire": "Zampe d'Italia mette a confronto ogni giorno due città vicine a colpi di animali: seguendo la pagina vedi chi passa avanti e puoi accendere la luce del tuo cane o gatto per la tua città.",
+  "chiusura": "Barletta e Molfetta sono pari. Segui Zampe d'Italia per vedere chi passa avanti.",
+  "perche": "Il testa_a_testa è il formato con più follower ogni 1.000 raggiunti (58,8 e 32,5), anche se il campione è piccolo, e la rivalità di campanile spinge a schierarsi e poi a seguire per l'esito."
+ },
+ "token_persone": 498750,
+ "errori_persone": {
+  "claude-sonnet-5-5: JSONDecodeError": 1
+ },
+ "fine": "2026-11-11T13:56:20+00:00"
+}
