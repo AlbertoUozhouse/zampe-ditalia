@@ -5075,6 +5075,7 @@
 "18104906531052685",
 "18104922041342679",
 "18104926859355785",
+"18104990807530115",
 "18105011033459437",
 "18105020708635059",
 "18105022241327874",
@@ -6885,6 +6886,7 @@
 "18123565684940006",
 "18123591074597167",
 "18123596050929823",
+"18123659557958283",
 "18123722324070118",
 "18123755515994153",
 "18123811741993916",
@@ -7598,6 +7600,7 @@
 "18133011187752056",
 "18133016833774233",
 "18133019816498151",
+"18133029010805685",
 "18133042132761489",
 "18133079344746781",
 "18133081207805703",
@@ -9269,6 +9272,7 @@
 "18234710524325907",
 "18234996385325173",
 "18235304530325455",
+"18235603636318553",
 "18235870873325730",
 "18236157190323205",
 "18236449822323818",
@@ -9769,6 +9773,7 @@
 "18401108404204166",
 "18401173171205262",
 "18401255959161004",
+"18401383738207780",
 "18401546926160361",
 "18401746810207303",
 "18402974557207667",
@@ -10290,6 +10295,7 @@
 "18639629038025735",
 "18639653236059197",
 "18639754501026271",
+"18639772297005115",
 "18639866566006178",
 "18639957832022921",
 "18639993718053303",
@@ -10482,7 +10488,11 @@
 ],
 "risposte": [
 1794430749.3745909,
-1794430756.8060088
+1794430756.8060088,
+1794431609.4696014,
+1794431611.7033892,
+1794431615.3890254,
+1794431619.2863317
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12633,7 +12643,8 @@
 "gabriel_cantarellaa": "2026-11-11",
 "stavv_shaa": "2026-11-11",
 "andrea_piazza94": "2026-11-11",
-"orientalangel": "2026-11-11"
+"orientalangel": "2026-11-11",
+"giaduccia._": "2026-11-11"
 },
 "media_letti": {},
 "pezzi": {
@@ -13617,11 +13628,11 @@
 "antonellainterisano": [
 "andrea_piazza94"
 ],
-"nuvolele05": [
-"andrea_piazza94"
-],
 "elenapogliano": [
 "andrea_piazza94"
+],
+"andrea_piazza94": [
+"nuvolele05"
 ]
 },
 "premiati": [
@@ -13788,7 +13799,10 @@
 "tania_ghensi>keyla_ghensi",
 "iamfrancescarusso>danielerusso314",
 "uli_alfa.fan>giulixx_013",
-"andrea_piazza94>orientalangel"
+"andrea_piazza94>orientalangel",
+"andrea_piazza94>>orientalangel",
+"andrea_piazza94>nuvolele05",
+"orientalangel>nuvolele05"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14802,7 +14816,8 @@
 "stefano_s_06": 10,
 "maxmolinu": 10,
 "maty._000": 10,
-"andrea_piazza94": 13
+"andrea_piazza94": 31,
+"orientalangel": 23
 },
 "inviti_giorno": {
 "2026-11-04": {
@@ -14833,7 +14848,8 @@
 "uli_alfa.fan": 1
 },
 "2026-11-11": {
-"andrea_piazza94": 1
+"andrea_piazza94": 2,
+"orientalangel": 1
 }
 },
 "seguono": {
@@ -15667,7 +15683,8 @@
 "19amala08": "premiato",
 "atena_bengala": "premiato",
 "maldis.jewelry": "premiato",
-"stefano_s_06": "premiato"
+"stefano_s_06": "premiato",
+"orientalangel": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -17566,7 +17583,8 @@
 "la.fati.ignorante": "2026-11-11",
 "passionfruit.exe_": "2026-11-11",
 "gabriel_cantarellaa": "2026-11-11",
-"stavv_shaa": "2026-11-11"
+"stavv_shaa": "2026-11-11",
+"andrea_piazza94": "2026-11-11"
 },
 "boost_follow": true,
 "privati": [
@@ -19048,11 +19066,13 @@
 "d6253eb04096cde0",
 "12b1954be2e2a0d0",
 "e29863cbcc3c960e",
-"822c58fde4f090ab"
+"822c58fde4f090ab",
+"96166c5b57942ab2"
 ],
 "privati_ora": [
 1794430749.374622,
-1794430756.8060315
+1794430756.8060315,
+1794431615.389056
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19067,7 +19087,8 @@
 ]
 },
 "missioni_fatte": {
-"andrea_piazza94": "2026-11-11"
+"andrea_piazza94": "2026-11-11",
+"orientalangel": "2026-11-11"
 },
 "boost": {},
 "negozio_fatti": [
@@ -19099,7 +19120,7 @@
 "2026-11-08": 1766,
 "2026-11-09": 1793,
 "2026-11-10": 1814,
-"2026-11-11": 1830
+"2026-11-11": 1831
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19608,6 +19629,10 @@
 [
 "2026-11-11T20:59+00:00",
 1830
+],
+[
+"2026-11-11T21:13+00:00",
+1831
 ]
 ],
 "coppa": {
@@ -21622,7 +21647,8 @@
 "Massa|MS": 1,
 "Carovigno|BR": 1,
 "Venezia|VE": 1,
-"Bisignano|CS": 1
+"Bisignano|CS": 1,
+"Termini Imerese|PA": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21762,6 +21788,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-11T21:13+00:00",
+"sorpasso": "Termini Imerese|PA",
+"su": "Termoli|CB",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -21878,6 +21913,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Termini Imerese|PA": {
+"u": [
+"giaduccia._"
+],
+"c": [
+"18235603636318553"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -21891,7 +21936,8 @@
 "maty._000|animale|damon",
 "la.fati.ignorante|animale|pepe",
 "passionfruit.exe_|animale|nigel",
-"stavv_shaa|animale|chicco"
+"stavv_shaa|animale|chicco",
+"giaduccia._|animale|charlie"
 ]
 }
 }
