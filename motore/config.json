@@ -2,7 +2,7 @@
  "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana, almeno 90 minuti tra un reel e l'altro (orari.py salta un reel se ne è uscito uno da meno di 75 minuti). Niente «:prova» (i Trial Reel di ottobre: 235 views). Dal 31/10: 6 reel al giorno, voluti da Alberto, e il controllo delle 11:13 li cambia in base a follower e numeri (motore/decisioni-reel.md). «una_tantum» vale per un giorno solo e sostituisce l'orario uguale.",
  "reel_automatici": true,
  "orari": {
-  "13:00": "prima_luce",
+  "13:00": "testa_a_testa",
   "18:00": "questa_luce",
   "21:00": "puntata"
  },

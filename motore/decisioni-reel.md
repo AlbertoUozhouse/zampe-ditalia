@@ -311,3 +311,11 @@ Nessun cambiamento oggi.
 ## 2026-11-11 — verbale dei 7 giorni (automatico, motore/verbale.py)
 
 - 2026-11-03-2116-puntata: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+## 2026-11-11 — controllo del giorno
+
+- Sito ok (docs 152 MB), motore vivo (ultima mappa 11:02). 21 luci nuove in 24 ore, follower 1.793 → 1.822 in due giorni.
+- Reel del 10/11: 3 su 3 pubblicati, tutti corretti dalla squadra. Il 18 è il primo con l'apertura 3D (regia «Lume sul lago», meteo vero). Direttore OpenAI ancora 401.
+- Rendimento, follower ogni 1.000 raggiunti: testa_a_testa 10/11 **58,8** (11 follower su 187, record), puntata 10/11 37,4, questa_luce 9/11 17,9, questa_luce 10/11 (3D) 16,2, puntata 9/11 15,9, prima_luce 9/11 15,8. Il testa a testa è primo in entrambi gli episodi (34,5 e 58,8).
+- CAMBIAMENTO DEL GIORNO (coi numeri): alle 13 ogni giorno il testa a testa al posto della prima luce (config orari). Ci sono coppie di comuni vicini e pari per molti giorni.
+- Coppa: 8 punti (erano 3): il punto per ogni luce nuova funziona. Staffetta di quartiere: Darfo Boario Terme 2/3, altri 4 comuni a 1/3. Nessun doppio.
