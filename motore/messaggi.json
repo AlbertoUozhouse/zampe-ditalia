@@ -552,6 +552,7 @@
 "44fe27337ce77ce8",
 "44fec364800b0351",
 "44ffa1764171a287",
+"4520cc13d1e6c110",
 "4521e91eb57edf54",
 "4523737c4b05fdcb",
 "4530db3d7d50b8e2",
@@ -1107,6 +1108,7 @@
 "8dc59b80b7917045",
 "8dd199f05c3c847b",
 "8ddd3ca7201bcaff",
+"8e2b15f4a0438735",
 "8e342c9c480536e9",
 "8e38c533f595cf44",
 "8e48e5167d43c94d",
@@ -2004,7 +2006,15 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1465018525766877",
+"url": [
+"https://zampeditalia.it/cartoline/7802349435942b5a.png"
+],
+"t": 1794400811.144529
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
