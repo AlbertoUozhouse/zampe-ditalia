@@ -319,3 +319,4 @@ Nessun cambiamento oggi.
 - Rendimento, follower ogni 1.000 raggiunti: testa_a_testa 10/11 **58,8** (11 follower su 187, record), puntata 10/11 37,4, questa_luce 9/11 17,9, questa_luce 10/11 (3D) 16,2, puntata 9/11 15,9, prima_luce 9/11 15,8. Il testa a testa è primo in entrambi gli episodi (34,5 e 58,8).
 - CAMBIAMENTO DEL GIORNO (coi numeri): alle 13 ogni giorno il testa a testa al posto della prima luce (config orari). Ci sono coppie di comuni vicini e pari per molti giorni.
 - Coppa: 8 punti (erano 3): il punto per ogni luce nuova funziona. Staffetta di quartiere: Darfo Boario Terme 2/3, altri 4 comuni a 1/3. Nessun doppio.
+- 11/11 Officina (giorno «aspetto dei reel» + gara): il testa a testa si apre col duello in 3D, le due città rivali una sopra l'altra col nome, le luci e il VS in mezzo (reel/apertura3d.py). Provato su GitHub senza pubblicare (Barletta–Molfetta, regia del reparto «Due Fari Adriatici»): esce domani alle 13.

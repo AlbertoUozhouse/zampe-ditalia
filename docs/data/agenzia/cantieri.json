@@ -127,8 +127,11 @@
   "traccia": "reel",
   "aperto": "2026-11-11",
   "scadenza": "2026-11-13",
-  "stato": "da costruire",
-  "passi_proposti": []
+  "stato": "online",
+  "passi_proposti": [],
+  "aggiornato": "2026-11-11",
+  "nota": "11/11: il testa a testa delle 13 si apre col DUELLO in 3D, i due paesi rivali uno sopra l'altro col loro nome, le luci e il VS (reel/apertura3d.py); la regia la sceglie il reparto (la prima: «Due Fari Adriatici», Barletta–Molfetta).",
+  "online_dal": "2026-11-11"
  },
  "realismo": {
   "idea": "Il Paese dal Vero: rilievo e animale nello stesso comune",
