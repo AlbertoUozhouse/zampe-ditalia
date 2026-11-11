@@ -6005,6 +6005,7 @@
 "18115660511606840",
 "18115677038125838",
 "18115684646026624",
+"18115701311166334",
 "18115702241147624",
 "18115705736033527",
 "18115706660139578",
@@ -10476,9 +10477,13 @@
 "18665959441058699",
 "18666229375032518",
 "18666851569016117",
-"18668921470032586"
+"18668921470032586",
+"18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794430749.3745909,
+1794430756.8060088
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -12626,7 +12631,9 @@
 "la.fati.ignorante": "2026-11-11",
 "passionfruit.exe_": "2026-11-11",
 "gabriel_cantarellaa": "2026-11-11",
-"stavv_shaa": "2026-11-11"
+"stavv_shaa": "2026-11-11",
+"andrea_piazza94": "2026-11-11",
+"orientalangel": "2026-11-11"
 },
 "media_letti": {},
 "pezzi": {
@@ -13606,6 +13613,15 @@
 ],
 "passionfruit.exe_": [
 "gabriel_cantarellaa"
+],
+"antonellainterisano": [
+"andrea_piazza94"
+],
+"nuvolele05": [
+"andrea_piazza94"
+],
+"elenapogliano": [
+"andrea_piazza94"
 ]
 },
 "premiati": [
@@ -13771,7 +13787,8 @@
 "fede_sporty_>tanialapesa",
 "tania_ghensi>keyla_ghensi",
 "iamfrancescarusso>danielerusso314",
-"uli_alfa.fan>giulixx_013"
+"uli_alfa.fan>giulixx_013",
+"andrea_piazza94>orientalangel"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14784,7 +14801,8 @@
 "maldis.jewelry": 10,
 "stefano_s_06": 10,
 "maxmolinu": 10,
-"maty._000": 10
+"maty._000": 10,
+"andrea_piazza94": 13
 },
 "inviti_giorno": {
 "2026-11-04": {
@@ -14813,6 +14831,9 @@
 "2026-11-10": {
 "iamfrancescarusso": 1,
 "uli_alfa.fan": 1
+},
+"2026-11-11": {
+"andrea_piazza94": 1
 }
 },
 "seguono": {
@@ -19025,10 +19046,13 @@
 "acce4bd3afc38455",
 "fb7937525a0ad610",
 "d6253eb04096cde0",
-"12b1954be2e2a0d0"
+"12b1954be2e2a0d0",
+"e29863cbcc3c960e",
+"822c58fde4f090ab"
 ],
 "privati_ora": [
-1794424704.9209871
+1794430749.374622,
+1794430756.8060315
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19042,7 +19066,9 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {},
+"missioni_fatte": {
+"andrea_piazza94": "2026-11-11"
+},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
@@ -19073,7 +19099,7 @@
 "2026-11-08": 1766,
 "2026-11-09": 1793,
 "2026-11-10": 1814,
-"2026-11-11": 1827
+"2026-11-11": 1830
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19578,6 +19604,10 @@
 [
 "2026-11-11T20:45+00:00",
 1827
+],
+[
+"2026-11-11T20:59+00:00",
+1830
 ]
 ],
 "coppa": {
@@ -21578,7 +21608,7 @@
 "Bisignano|CS"
 ]
 ],
-"attesa": null,
+"attesa": "Rezzato|BS",
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
