@@ -860,6 +860,8 @@ def testa_a_testa(D, rng, st):
     if x["n"] < y["n"]: x, y = y, x
     st["derby_vicini"] = (list(fatti) + [f"{x['c']}|{y['c']}", f"{y['c']}|{x['c']}"])[-200:]
     _clip(D, st, a={"c": y["c"]})
+    if st.get("intro_3d"):  # 11/11: l'apertura è il duello, i due paesi 3D uno sopra l'altro (reel/apertura3d.py)
+        st["intro_3d"]["duello"] = [[x["c"], x["n"]], [y["c"], y["n"]]]
     mezzo = {"lat": (x["lat"] + y["lat"]) / 2, "lng": (x["lng"] + y["lng"]) / 2}
     pari = x["n"] == y["n"]
     frasi = [

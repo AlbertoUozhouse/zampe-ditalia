@@ -75,8 +75,8 @@ jobs:
           mkdir -p reel/assets/tmp
           # la regia la inventa il reparto Innovazione con la Grafica 3D: stile del paese ed effetto e volo della telecamera, diversi a ogni reel
           python3 -I motore/agenzia.py regia /tmp/copione.json /tmp/regia.json || echo '{}' > /tmp/regia.json
-          NODE_PATH=/tmp/pw/node_modules node reel/volo3d.js "${A%%|*}" "${A#*|}" reel/assets/tmp/apertura3d.mp4 3.6 /tmp/regia.json
-          python3 -c "import json;p='/tmp/copione.json';c=json.load(open(p));r=json.load(open('/tmp/regia.json'));c['intro']='reel/assets/tmp/apertura3d.mp4';c['intro_durata']=float(r.get('secondi',3.6));c['regia_3d']=r;json.dump(c,open(p,'w'),ensure_ascii=False)"
+          # un paese, oppure il duello del testa a testa (i due paesi uno sopra l'altro): reel/apertura3d.py
+          NODE_PATH=/tmp/pw/node_modules python3 reel/apertura3d.py /tmp/copione.json /tmp/regia.json
       - name: Video e revisione del Direttore
         if: ${{ !startsWith(inputs.formato, 'pronto-') && steps.copione.outputs.salta != '1' }}
         run: |

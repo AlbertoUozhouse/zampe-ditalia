@@ -8,7 +8,9 @@
 
 const { chromium } = require("playwright");
 const http = require("http"), fs = require("fs"), path = require("path"), os = require("os"), { execFileSync } = require("child_process");
-const [comune, nome, uscita, secArg = "3.6", regiaFile] = process.argv.slice(2);
+const [comune, nome, uscita, secArg = "3.6", regiaFile, opzArg] = process.argv.slice(2);
+// opzioni (11/11, il duello del testa a testa): {"altezza": 480 (mezzo schermo), "titolo": "...", "sotto": "...", "badge": "VS"}
+const OPZ = opzArg ? JSON.parse(opzArg) : {};
 // la regia del reparto Innovazione (motore/agenzia.py regia): stile del paese e volo della telecamera, diversi a ogni reel
 const REGIA = regiaFile && fs.existsSync(regiaFile) ? JSON.parse(fs.readFileSync(regiaFile, "utf8")) : {};
 const sec = String(REGIA.secondi || secArg);
@@ -25,7 +27,8 @@ const server = http.createServer((req, res) => {
   await new Promise(r => server.listen(0, r));
   const porta = server.address().port;
   const browser = await chromium.launch({ args: ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--ignore-gpu-blocklist"] });
-  const page = await browser.newPage({ viewport: { width: 540, height: 960 }, deviceScaleFactor: 2 });
+  const ALTO = OPZ.altezza || 960;
+  const page = await browser.newPage({ viewport: { width: 540, height: ALTO }, deviceScaleFactor: 2 });
   const loc = process.env.TRE_LOCALE;
   if (loc) {
     await page.route(/cdn\.jsdelivr\.net\/npm\/three@[^/]+\/(.*)$/, (r, q) => r.fulfill({ path: path.join(loc, "three", q.url().split(/three@[^/]+\//)[1]), contentType: "text/javascript" }));
@@ -35,20 +38,25 @@ const server = http.createServer((req, res) => {
   page.on("pageerror", e => console.error("pagina:", e.message));
   await page.goto(`http://localhost:${porta}/index.html`, { waitUntil: "domcontentloaded" });
   await page.waitForFunction(() => typeof VILLE !== "undefined" && VILLE.size > 0 && window.Mondo3D, null, { timeout: 90000 });
-  const ok = await page.evaluate(async ([comune, nome, meteo, regia]) => {
+  const ok = await page.evaluate(async ([comune, nome, meteo, regia, opz]) => {
     const v = [...VILLE.values()].find(v => v.nome.toLowerCase() === comune.toLowerCase());
     if (!v) return "comune non trovato";
     const mio = nome ? v.lista.find(d => (d.n || "").toLowerCase() === nome.toLowerCase()) : null;
     await window.Mondo3D.apri(v, { svg: petSvg, mio, cattura: { nome: mio ? mio.n : "" }, scheda: () => "", stile: regia, ...(meteo ? { meteo } : {}) });
     const cielo = window.Mondo3D.mondo.cieloBreve;  // su una riga: «⛅ 10° · 🌑 luna nuova»  // il tempo vero di adesso nel comune e la luna di stanotte (mondo3d.js)
     const t = document.createElement("div");
-    t.innerHTML = `<b>${comune.toUpperCase()}</b><span>${mio ? "la casa di " + mio.n : "di notte"} · ${v.luci} ${v.luci === 1 ? "luce" : "luci"}</span>${cielo ? `<span>${new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", timeZone: "Europe/Rome" })} · ${cielo}</span>` : ""}`;
+    if (opz.titolo) {  // il duello: nome della città, le sue luci, e il VS in fondo alla metà di sopra
+      t.innerHTML = `<b>${opz.titolo}</b><span>${opz.sotto || ""}</span>`;
+      if (opz.badge) { const b = document.createElement("div"); b.textContent = opz.badge;
+        b.style.cssText = "position:fixed;left:50%;bottom:10px;transform:translateX(-50%);z-index:6001;width:86px;height:86px;border-radius:50%;display:flex;align-items:center;justify-content:center;font:900 34px 'Bricolage Grotesque',system-ui,sans-serif;color:#2A1606;background:#FFC55C;border:5px solid #FFF4DE;box-shadow:0 0 30px rgba(255,197,92,.8)";
+        document.body.appendChild(b); }
+    } else t.innerHTML = `<b>${comune.toUpperCase()}</b><span>${mio ? "la casa di " + mio.n : "di notte"} · ${v.luci} ${v.luci === 1 ? "luce" : "luci"}</span>${cielo ? `<span>${new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", timeZone: "Europe/Rome" })} · ${cielo}</span>` : ""}`;
     t.style.cssText = "position:fixed;left:0;right:0;top:8%;z-index:6000;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;font-family:'Bricolage Grotesque',system-ui,sans-serif;color:#FFF4DE;text-shadow:0 4px 0 #060B1A,0 0 24px rgba(6,11,26,.9)";
     t.firstChild.style.cssText = "font-size:58px;line-height:1;font-weight:800;letter-spacing:-1px;color:#FFC55C";
     [...t.children].slice(1).forEach(x => x.style.cssText = "font-size:22px;font-weight:800;background:rgba(6,11,26,.6);border:2px solid rgba(255,197,92,.6);border-radius:999px;padding:6px 16px");
     document.body.appendChild(t);
     return mio ? "ok" : "ok senza animale";
-  }, [comune, nome || "", process.env.METEO_PROVA ? JSON.parse(process.env.METEO_PROVA) : null, REGIA]);
+  }, [comune, nome || "", process.env.METEO_PROVA ? JSON.parse(process.env.METEO_PROVA) : null, REGIA, OPZ]);
   if (!ok.startsWith("ok")) { console.error(ok); process.exit(2); }
   await page.evaluate(b => { const M = window.Mondo3D.mondo; M.bloom.strength = b; M.bloom.threshold = 0.85; }, Math.max(0.3, Math.min(1, REGIA.bloom || 0.5)));  // da vicino i lampioni abbagliavano
   const cartella = fs.mkdtempSync(path.join(os.tmpdir(), "volo3d-"));
@@ -75,7 +83,7 @@ const server = http.createServer((req, res) => {
     await page.screenshot({ path: path.join(cartella, `f${String(i).padStart(4, "0")}.jpg`), type: "jpeg", quality: 92 });
   }
   await browser.close(); server.close();
-  execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-framerate", String(FPS), "-i", path.join(cartella, "f%04d.jpg"), "-vf", "scale=1080:1920:flags=lanczos,format=yuv420p",
+  execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-framerate", String(FPS), "-i", path.join(cartella, "f%04d.jpg"), "-vf", `scale=1080:${ALTO * 2}:flags=lanczos,format=yuv420p`,
     "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-movflags", "+faststart", uscita], { stdio: "inherit" });
   fs.rmSync(cartella, { recursive: true, force: true });
   console.log(`apertura 3D: ${uscita} (${comune}${nome ? ", " + nome : ""}, ${N} fotogrammi)`);
