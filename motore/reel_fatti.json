@@ -91,7 +91,6 @@
   "Napoli"
  ],
  "temi": [
-  "tramonto",
   "neon",
   "giorno",
   "notte",
@@ -100,9 +99,10 @@
   "neon",
   "tramonto",
   "aurora",
-  "giorno"
+  "giorno",
+  "notte"
  ],
- "variante_n": 33,
+ "variante_n": 34,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -136,7 +136,8 @@
   "2026-11-10-1303-testa_a_testa": "voce-solita-32",
   "2026-11-10-1812-questa_luce": "voce-solita-32",
   "2026-11-10-2103-puntata": "voce-solita-32",
-  "2026-11-11-1301-testa_a_testa": "voce-solita-32"
+  "2026-11-11-1301-testa_a_testa": "voce-solita-32",
+  "2026-11-11-1803-questa_luce": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -925,11 +926,12 @@
   "Monno"
  ],
  "luci_raccontate": [
-  "nicola.sportello|animale|stella",
-  "julieta_negri._|animale|mia",
-  "mostinoo.priv|animale|zoe",
   "tania_ghensi|animale|keyla",
-  "sim.o_._|animale|nina"
+  "julieta_negri._|animale|mia",
+  "nicola.sportello|animale|stella",
+  "sim.o_._|animale|nina",
+  "mostinoo.priv|animale|zoe",
+  "maty._000|animale|damon"
  ],
  "derby_vicini": [
   "Verona|Vicenza",

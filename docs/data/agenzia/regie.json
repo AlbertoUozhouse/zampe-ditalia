@@ -46,5 +46,21 @@
   "secondi": 3.8,
   "perche": "Un cielo diviso tra il verde-petrolio freddo di Barletta e l'ambra calda di Molfetta, con la telecamera che scivola raso",
   "reel": "2026-11-11-1448-testa_a_testa"
+ },
+ {
+  "nome_stile": "Marmo e Mare",
+  "cielo_basso": "#6B4A6E",
+  "cielo_alto": "#0B0A22",
+  "nebbia_colore": "#443948",
+  "lampioni_colore": "#FFD08A",
+  "lucciole_colore": "#F6E7A1",
+  "lucciole": 160.0,
+  "bloom": 0.75,
+  "esposizione": 1.55,
+  "effetto": "foglie",
+  "volo": "discesa",
+  "secondi": 3.8,
+  "perche": "Un crepuscolo viola-lavanda che scende dalle Apuane verso il mare di Massa, con lampioni color miele e una discesa dall'",
+  "reel": "2026-11-11-1803-questa_luce"
  }
 ]
