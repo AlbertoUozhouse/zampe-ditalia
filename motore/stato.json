@@ -113,6 +113,7 @@
 "17875719495638003",
 "17875724439637388",
 "17875816299594109",
+"17875821537602271",
 "17875989606636950",
 "17876070900650101",
 "17876158932593810",
@@ -3492,6 +3493,7 @@
 "18043550105652871",
 "18043624190831828",
 "18043825808832888",
+"18044097347638295",
 "18044122505839022",
 "18044163335839473",
 "18044191043829294",
@@ -7885,6 +7887,7 @@
 "18136317466777429",
 "18136321177735064",
 "18136330069655238",
+"18136348540708110",
 "18136353679659752",
 "18136373968672458",
 "18136387867736784",
@@ -10510,7 +10513,8 @@
 1794432465.8858457,
 1794432471.455679,
 1794432474.526549,
-1794433377.514244
+1794433377.514244,
+1794434160.3404706
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12663,7 +12667,8 @@
 "andrea_piazza94": "2026-11-11",
 "orientalangel": "2026-11-11",
 "giaduccia._": "2026-11-11",
-"nuvolele05": "2026-11-11"
+"nuvolele05": "2026-11-11",
+"elena_gamiddo": "2026-11-11"
 },
 "media_letti": {},
 "pezzi": {
@@ -13652,9 +13657,6 @@
 ],
 "andrea_piazza94": [
 "nuvolele05"
-],
-"elena_gamiddo": [
-"orientalangel"
 ]
 },
 "premiati": [
@@ -13826,7 +13828,8 @@
 "andrea_piazza94>nuvolele05",
 "orientalangel>nuvolele05",
 "andrea_piazza94>>nuvolele05",
-"orientalangel>>nuvolele05"
+"orientalangel>>nuvolele05",
+"orientalangel>elena_gamiddo"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14841,7 +14844,7 @@
 "maxmolinu": 10,
 "maty._000": 10,
 "andrea_piazza94": 46,
-"orientalangel": 38,
+"orientalangel": 41,
 "nuvolele05": 10,
 "giaduccia._": 10
 },
@@ -14875,7 +14878,7 @@
 },
 "2026-11-11": {
 "andrea_piazza94": 2,
-"orientalangel": 1
+"orientalangel": 2
 }
 },
 "seguono": {
@@ -19097,13 +19100,15 @@
 "e29863cbcc3c960e",
 "822c58fde4f090ab",
 "96166c5b57942ab2",
-"7365834581a54472"
+"7365834581a54472",
+"d23e66d24207f9d6"
 ],
 "privati_ora": [
 1794430749.374622,
 1794430756.8060315,
 1794431615.389056,
-1794432471.4557073
+1794432471.4557073,
+1794434160.3405461
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19151,7 +19156,7 @@
 "2026-11-08": 1766,
 "2026-11-09": 1793,
 "2026-11-10": 1814,
-"2026-11-11": 1833
+"2026-11-11": 1834
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19672,6 +19677,10 @@
 [
 "2026-11-11T21:42+00:00",
 1833
+],
+[
+"2026-11-11T21:56+00:00",
+1834
 ]
 ],
 "coppa": {
@@ -21687,7 +21696,8 @@
 "Carovigno|BR": 1,
 "Venezia|VE": 1,
 "Bisignano|CS": 1,
-"Termini Imerese|PA": 1
+"Termini Imerese|PA": 1,
+"Brescia|BS": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21836,6 +21846,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-11T21:55+00:00",
+"sorpasso": "Brescia|BS",
+"su": "Cagliari|CA",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -21962,6 +21981,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Brescia|BS": {
+"u": [
+"elena_gamiddo"
+],
+"c": [
+"18044097347638295"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -21976,7 +22005,8 @@
 "la.fati.ignorante|animale|pepe",
 "passionfruit.exe_|animale|nigel",
 "stavv_shaa|animale|chicco",
-"giaduccia._|animale|charlie"
+"giaduccia._|animale|charlie",
+"elena_gamiddo|animale|bella"
 ]
 }
 }
