@@ -4896,6 +4896,7 @@
 "18101884625377750",
 "18101908049629552",
 "18101912783641718",
+"18101937854645755",
 "18101956010536771",
 "18101957522071743",
 "18101989445382065",
@@ -10447,7 +10448,8 @@
 "18668921470032586"
 ],
 "risposte": [
-1794396689.4339566
+1794396689.4339566,
+1794398278.7082434
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12589,7 +12591,8 @@
 "19amala08": "2026-11-11",
 "d.barbato_17": "2026-11-11",
 "atena_bengala": "2026-11-11",
-"maldis.jewelry": "2026-11-11"
+"maldis.jewelry": "2026-11-11",
+"_gennaromorra_": "2026-11-11"
 },
 "media_letti": {},
 "pezzi": {
@@ -18956,10 +18959,11 @@
 "0fe3dcc182a87b38",
 "91d4e1ee62734438",
 "cedc2dc98ed47fb6",
-"913b15127d185b2a"
+"913b15127d185b2a",
+"30747d528548ddf5"
 ],
 "privati_ora": [
-1794386179.2080472
+1794398278.7082698
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19004,7 +19008,7 @@
 "2026-11-08": 1766,
 "2026-11-09": 1793,
 "2026-11-10": 1814,
-"2026-11-11": 1822
+"2026-11-11": 1823
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19461,6 +19465,10 @@
 [
 "2026-11-11T09:58+00:00",
 1822
+],
+[
+"2026-11-11T11:58+00:00",
+1823
 ]
 ],
 "coppa": {
@@ -21461,7 +21469,8 @@
 "Darfo Boario Terme|BS": 1,
 "Casalmaggiore|CR": 1,
 "Giugliano in Campania|NA": 1,
-"Notaresco|TE": 1
+"Notaresco|TE": 1,
+"Napoli|NA": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21547,6 +21556,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-11T11:57+00:00",
+"sorpasso": "Napoli|NA",
+"su": "Roma|RM",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -21603,6 +21621,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Napoli|NA": {
+"u": [
+"_gennaromorra_"
+],
+"c": [
+"18101937854645755"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -21610,7 +21638,8 @@
 "giulixx_013|animale|gianpiero",
 "kataria_mohit389|animale|lacky",
 "19amala08|animale|pocho",
-"atena_bengala|animale|atena"
+"atena_bengala|animale|atena",
+"_gennaromorra_|animale|margot"
 ]
 }
 }
