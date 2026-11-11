@@ -232,5 +232,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-11T17:09:18+00:00",
   "scambi": 130
+ },
+ {
+  "id": "2026-11-11-2109-puntata",
+  "formato": "puntata",
+  "modalita": "operativa",
+  "inizio": "2026-11-11T20:10:04+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-11T20:14:51+00:00",
+  "scambi": 128
  }
 ]
