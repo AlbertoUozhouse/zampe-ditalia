@@ -6114,6 +6114,7 @@
 "18116835788077915",
 "18116840141159338",
 "18116842985586794",
+"18116862608165434",
 "18116862860019158",
 "18116868017086482",
 "18116870477021111",
@@ -10474,7 +10475,9 @@
 "18666851569016117",
 "18668921470032586"
 ],
-"risposte": [],
+"risposte": [
+1794424704.920963
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -12621,7 +12624,8 @@
 "maty._000": "2026-11-11",
 "la.fati.ignorante": "2026-11-11",
 "passionfruit.exe_": "2026-11-11",
-"gabriel_cantarellaa": "2026-11-11"
+"gabriel_cantarellaa": "2026-11-11",
+"stavv_shaa": "2026-11-11"
 },
 "media_letti": {},
 "pezzi": {
@@ -19018,11 +19022,11 @@
 "546bee30475efeab",
 "acce4bd3afc38455",
 "fb7937525a0ad610",
-"d6253eb04096cde0"
+"d6253eb04096cde0",
+"12b1954be2e2a0d0"
 ],
 "privati_ora": [
-1794416377.4467626,
-1794418269.23248
+1794424704.9209871
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19067,7 +19071,7 @@
 "2026-11-08": 1766,
 "2026-11-09": 1793,
 "2026-11-10": 1814,
-"2026-11-11": 1826
+"2026-11-11": 1827
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19560,6 +19564,10 @@
 [
 "2026-11-11T18:27+00:00",
 1826
+],
+[
+"2026-11-11T19:18+00:00",
+1827
 ]
 ],
 "coppa": {
@@ -21554,9 +21562,13 @@
 [
 "Reggello|FI",
 "Carovigno|BR"
+],
+[
+"Salzano|VE",
+"Bisignano|CS"
 ]
 ],
-"attesa": "Salzano|VE",
+"attesa": null,
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
@@ -21569,7 +21581,8 @@
 "Cervia|RA": 1,
 "Massa|MS": 1,
 "Carovigno|BR": 1,
-"Venezia|VE": 1
+"Venezia|VE": 1,
+"Bisignano|CS": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21700,6 +21713,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-11T19:18+00:00",
+"sorpasso": "Bisignano|CS",
+"su": "Salzano|VE",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -21806,6 +21828,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Bisignano|CS": {
+"u": [
+"stavv_shaa"
+],
+"c": [
+"18116862608165434"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -21818,7 +21850,8 @@
 "stefano_s_06|animale|meghy",
 "maty._000|animale|damon",
 "la.fati.ignorante|animale|pepe",
-"passionfruit.exe_|animale|nigel"
+"passionfruit.exe_|animale|nigel",
+"stavv_shaa|animale|chicco"
 ]
 }
 }
