@@ -320,3 +320,8 @@ Nessun cambiamento oggi.
 - CAMBIAMENTO DEL GIORNO (coi numeri): alle 13 ogni giorno il testa a testa al posto della prima luce (config orari). Ci sono coppie di comuni vicini e pari per molti giorni.
 - Coppa: 8 punti (erano 3): il punto per ogni luce nuova funziona. Staffetta di quartiere: Darfo Boario Terme 2/3, altri 4 comuni a 1/3. Nessun doppio.
 - 11/11 Officina (giorno «aspetto dei reel» + gara): il testa a testa si apre col duello in 3D, le due città rivali una sopra l'altra col nome, le luci e il VS in mezzo (reel/apertura3d.py). Provato su GitHub senza pubblicare (Barletta–Molfetta, regia del reparto «Due Fari Adriatici»): esce domani alle 13.
+
+
+## 2026-11-11 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-04-1309-fuochi: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).

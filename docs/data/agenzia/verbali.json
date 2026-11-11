@@ -478,5 +478,20 @@
   "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
   "riprovare": null,
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18167806765438332",
+  "file": "2026-11-04-1309-fuochi",
+  "formato": "fuochi",
+  "uscita": "2026-11-04T12:13:53+00:00",
+  "follower": null,
+  "reach_7g": 1223,
+  "follower_ogni_1000": null,
+  "mediana_simili": null,
+  "simili": 0,
+  "scelte": null,
+  "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
+  "riprovare": null,
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]
