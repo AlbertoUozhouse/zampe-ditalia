@@ -8793,6 +8793,7 @@
 "18180334765450454",
 "18180373624445477",
 "18180653113453049",
+"18180674131391586",
 "18180708466429622",
 "18180753469435769",
 "18180885685432752",
@@ -10457,7 +10458,9 @@
 "18666851569016117",
 "18668921470032586"
 ],
-"risposte": [],
+"risposte": [
+1794409067.0571814
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -12601,7 +12604,8 @@
 "maldis.jewelry": "2026-11-11",
 "_gennaromorra_": "2026-11-11",
 "stefano_s_06": "2026-11-11",
-"maty._000": "2026-11-11"
+"maty._000": "2026-11-11",
+"la.fati.ignorante": "2026-11-11"
 },
 "media_letti": {},
 "pezzi": {
@@ -18977,11 +18981,11 @@
 "cedc2dc98ed47fb6",
 "913b15127d185b2a",
 "30747d528548ddf5",
-"546bee30475efeab"
+"546bee30475efeab",
+"acce4bd3afc38455"
 ],
 "privati_ora": [
-1794398278.7082698,
-1794399852.296133
+1794409067.0572085
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19026,7 +19030,7 @@
 "2026-11-08": 1766,
 "2026-11-09": 1793,
 "2026-11-10": 1814,
-"2026-11-11": 1822
+"2026-11-11": 1823
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19495,6 +19499,10 @@
 [
 "2026-11-11T13:57+00:00",
 1822
+],
+[
+"2026-11-11T14:57+00:00",
+1823
 ]
 ],
 "coppa": {
@@ -21485,9 +21493,13 @@
 [
 "Calvi|BN",
 "Notaresco|TE"
+],
+[
+"Reggello|FI",
+"Carovigno|BR"
 ]
 ],
-"attesa": "Reggello|FI",
+"attesa": null,
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
@@ -21498,7 +21510,8 @@
 "Notaresco|TE": 1,
 "Napoli|NA": 1,
 "Cervia|RA": 1,
-"Massa|MS": 1
+"Massa|MS": 1,
+"Carovigno|BR": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21611,6 +21624,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-11T14:57+00:00",
+"sorpasso": "Carovigno|BR",
+"su": "Reggello|FI",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -21697,6 +21719,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Carovigno|BR": {
+"u": [
+"la.fati.ignorante"
+],
+"c": [
+"18180674131391586"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -21707,7 +21739,8 @@
 "atena_bengala|animale|atena",
 "_gennaromorra_|animale|margot",
 "stefano_s_06|animale|meghy",
-"maty._000|animale|damon"
+"maty._000|animale|damon",
+"la.fati.ignorante|animale|pepe"
 ]
 }
 }
