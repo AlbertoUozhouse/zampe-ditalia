@@ -8255,6 +8255,7 @@
 "18147093097573831",
 "18147125269576892",
 "18147125314580644",
+"18147125983580166",
 "18147153418605522",
 "18147219940586195",
 "18147231070599191",
@@ -10425,7 +10426,9 @@
 "18666851569016117",
 "18668921470032586"
 ],
-"risposte": [],
+"risposte": [
+1794366893.3893921
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -12562,7 +12565,8 @@
 "michele.ioni": "2026-11-10",
 "giulixx_013": "2026-11-10",
 "maxmolinu": "2026-11-10",
-"kataria_mohit389": "2026-11-10"
+"kataria_mohit389": "2026-11-10",
+"19amala08": "2026-11-11"
 },
 "media_letti": {},
 "pezzi": {
@@ -18916,12 +18920,11 @@
 "62e7ab1aeea81482",
 "b3b1d98c86d5878b",
 "531d6051a1b1bac6",
-"ba910d3d6585d2d8"
+"ba910d3d6585d2d8",
+"0fe3dcc182a87b38"
 ],
 "privati_ora": [
-1794341556.9324162,
-1794341561.805653,
-1794344609.514529
+1794366893.389406
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -21389,7 +21392,8 @@
 "Piombino|LI": 1,
 "Terni|TR": 1,
 "Darfo Boario Terme|BS": 1,
-"Casalmaggiore|CR": 1
+"Casalmaggiore|CR": 1,
+"Giugliano in Campania|NA": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21457,6 +21461,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-11T03:14+00:00",
+"sorpasso": "Giugliano in Campania|NA",
+"su": "Ferrara|FE",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -21493,12 +21506,23 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Giugliano in Campania|NA": {
+"u": [
+"19amala08"
+],
+"c": [
+"18147125983580166"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
 "michele.ioni|animale|miele",
 "giulixx_013|animale|gianpiero",
-"kataria_mohit389|animale|lacky"
+"kataria_mohit389|animale|lacky",
+"19amala08|animale|pocho"
 ]
 }
 }
