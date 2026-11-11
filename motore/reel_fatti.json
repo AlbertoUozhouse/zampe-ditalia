@@ -90,7 +90,6 @@
   "Napoli"
  ],
  "temi": [
-  "notte",
   "tramonto",
   "neon",
   "giorno",
@@ -99,9 +98,10 @@
   "aurora",
   "neon",
   "tramonto",
-  "aurora"
+  "aurora",
+  "giorno"
  ],
- "variante_n": 32,
+ "variante_n": 33,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -134,7 +134,8 @@
   "2026-11-09-2110-puntata": "voce-solita-32",
   "2026-11-10-1303-testa_a_testa": "voce-solita-32",
   "2026-11-10-1812-questa_luce": "voce-solita-32",
-  "2026-11-10-2103-puntata": "voce-solita-32"
+  "2026-11-10-2103-puntata": "voce-solita-32",
+  "2026-11-11-1301-testa_a_testa": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -930,10 +931,12 @@
   "sim.o_._|animale|nina"
  ],
  "derby_vicini": [
-  "Vicenza|Verona",
   "Verona|Vicenza",
+  "Vicenza|Verona",
+  "Cecina|Livorno",
   "Livorno|Cecina",
-  "Cecina|Livorno"
+  "Giugliano in Campania|Castellammare di Stabia",
+  "Castellammare di Stabia|Giugliano in Campania"
  ],
  "thor_giorno": "2026-11-10",
  "thor_ultimo_reel": true

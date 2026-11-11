@@ -14,5 +14,21 @@
   "secondi": 4.0,
   "perche": "Una sola luce calda che si accende tra le cucce di Luino, con un cielo blu-petrolio da novembre sul Lago Maggiore e una ",
   "reel": "2026-11-10-1812-questa_luce"
+ },
+ {
+  "nome_stile": "Duello al golfo",
+  "cielo_basso": "#5A3A4E",
+  "cielo_alto": "#0A1030",
+  "nebbia_colore": "#483942",
+  "lampioni_colore": "#FFC27A",
+  "lucciole_colore": "#9FE8D0",
+  "lucciole": 140.0,
+  "bloom": 0.65,
+  "esposizione": 1.5,
+  "effetto": "stelle_cadenti",
+  "volo": "orbita",
+  "secondi": 4.0,
+  "perche": "Una regia mai vista qui: il cielo si divide tra l'indaco del golfo di Stabia e un'alba ramata lontana, e la telecamera g",
+  "reel": "2026-11-11-1301-testa_a_testa"
  }
 ]
