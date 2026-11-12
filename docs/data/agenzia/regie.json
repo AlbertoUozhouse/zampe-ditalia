@@ -110,5 +110,21 @@
   "secondi": 4.0,
   "perche": "Dopo il verde smeraldo e le discese già viste su Kira, qui il cielo è una brace di novembre che sfuma in un viola profon",
   "reel": "2026-11-12-1811-questa_luce"
+ },
+ {
+  "nome_stile": "Notte di Tufo",
+  "cielo_basso": "#4C5A6E",
+  "cielo_alto": "#080C1E",
+  "nebbia_colore": "#323A48",
+  "lampioni_colore": "#FFCB85",
+  "lucciole_colore": "#BFE3FF",
+  "lucciole": 130.0,
+  "bloom": 0.72,
+  "esposizione": 1.55,
+  "effetto": "nessuno",
+  "volo": "rivelazione",
+  "secondi": 3.6,
+  "perche": "Dopo tanti duelli con cieli rossi o petrolio, qui il pari 6 a 6 diventa un cielo diviso tra l'argento freddo di Barletta",
+  "reel": "2026-11-12-2153-testa_a_testa"
  }
 ]

@@ -295,5 +295,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-12T20:13:47+00:00",
   "scambi": 128
+ },
+ {
+  "id": "2026-11-12-2153-testa_a_testa",
+  "formato": "testa_a_testa",
+  "modalita": "operativa",
+  "inizio": "2026-11-12T20:53:09+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-12T21:02:06+00:00",
+  "scambi": 130
  }
 ]
