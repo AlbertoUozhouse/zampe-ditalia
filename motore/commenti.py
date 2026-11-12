@@ -438,6 +438,7 @@ class Gioco:
         self.visti_ora = set()  # i commenti letti in questo giro
         self.cambiato = False
         self.amici_che_seguono = []  # chi ha invitato un amico che ora ci segue: riga nella risposta
+        self.gara_follower = None  # 12/11: esito della gara dei follower per la risposta al commento
 
     @property
     def animali(self):
@@ -471,7 +472,7 @@ class Gioco:
             if g == "corsa": self.dati["corsa"] = cl
             self.dati.setdefault("giochi", {})[g] = cl
         coppa.aggiorna(self.stato, self.animali)
-        coppa.pubblica(self.stato, OUT / "docs/data/coppa.json")
+        coppa.pubblica(self.stato, OUT / "docs/data/coppa.json", self.animali)
         self.elezione()
         self.derby()
         vestito = "halloween" if oggi <= HALLOWEEN_FINO else "lucine"  # il regalo per chi ci segue
@@ -711,6 +712,8 @@ class Gioco:
         if self.ha_luce(utente):
             self.punti_extra(utente, PUNTI["segue"]); st[utente.lower()] = "premiato"
             self.premia_amico_segue(utente)
+            if utente.lower() not in ESCLUSI:  # 12/11: la gara dei follower tra città (motore/coppa.py)
+                self.gara_follower = coppa.follower(self.stato, self.animali, utente)
             return "segue"
         if st.get(utente.lower()) == "in_attesa":
             return None  # gliel'abbiamo già detto
@@ -1176,6 +1179,13 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
             extra.append(frase("premio", chi=", ".join("@" + a for a in premiati[:3])))
         if frase_segue:
             extra.append(frase(frase_segue) + (COSTUME_ORA if frase_segue == "segue" else ""))
+            esito_f, df = getattr(gioco, "gara_follower", None) or (None, {})
+            gioco.gara_follower = None
+            if esito_f in ("ok", "solo_gara"):
+                nc = (df.get("comune") or "").split("|")[0]
+                extra.append(f"🏁 Gara dei follower: " + (f"+{coppa.PUNTI_FOLLOWER} per {nc} nella Coppa ({nc} {df['noi']} – {df['loro']} {(df.get('rivale') or '').split('|')[0]}). " if esito_f == "ok" else "")
+                             + (f"{nc} è {df['posto']}ª tra le città che ci seguono di più. " if df.get("posto") else "")
+                             + f"Tagga un amico di {nc}: se ci segue e scrive SEGUO, il tuo paese sale ancora! 👥")
         if gioco.amici_che_seguono:
             extra.append(frase("amico_segue", chi=", ".join("@" + a for a in dict.fromkeys(gioco.amici_che_seguono))))
             gioco.amici_che_seguono.clear()

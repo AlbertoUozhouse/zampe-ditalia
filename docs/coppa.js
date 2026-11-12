@@ -51,6 +51,17 @@
       x.pa === x.pb ? "pari: il prossimo animale decide" : `${esc(nome(x.pa > x.pb ? x.b : x.a))} insegue: ${Math.abs(x.pa - x.pb) === 1 ? "basta un animale per pareggiare" : "servono " + Math.abs(x.pa - x.pb) + " animali"}`}</small></span></li>`).join("") + `</ol>`;
   }
 
+  // la gara dei follower tra città (12/11): chi ci segue e scrive SEGUO porta 2 punti al suo paese; accanto, sempre, il totale vero dei follower
+  function garaFollower() {
+    const F = C?.follower; if (!F) return "";
+    const riga = (l, n) => l.map(([k, v], i) => `<li class="row"><span class="pos">${i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : i + 1}</span><span class="who">${esc(nome(k))}</span><span class="pts">${v}</span></li>`).join("");
+    const pc = F.totale ? Math.min(100, Math.round(F.totale / F.obiettivo * 100)) : 0;
+    return `<h3>🏁 La gara dei follower</h3><p class="sub">Seguici e scrivi <b>SEGUO</b> in un commento: +${F.punti} punti alla tua città nella Coppa. Vince la città che ci segue di più.</p>
+      ${F.totale ? `<div class="obiettivo"><div class="barra-ob"><i style="width:${pc}%"></i></div><p class="sub"><b>${F.totale.toLocaleString("it-IT")}</b> follower veri · a ${F.obiettivo.toLocaleString("it-IT")} i fuochi d'artificio su tutta la mappa 🎆</p></div>` : ""}
+      ${F.settimana?.length ? `<p class="sub"><b>Questa settimana</b></p><ol class="list">${riga(F.settimana.slice(0, 5))}</ol>` : ""}
+      <p class="sub"><b>Le città che ci seguono di più</b></p><ol class="list">${riga(F.sempre.slice(0, 8))}</ol>`;
+  }
+
   // ---------- la scheda della Coppa ----------
   function apri(pref) {
     if (typeof pref === "string") apri.pref = pref;
@@ -73,7 +84,7 @@
     const albo = (C.albo || []).slice(-1)[0];
     s.innerHTML = `<h2>🏆 Coppa delle Zampe</h2><p class="sub">Turno ${C.turno}: ${fmt(C.tutte || C.sfide.length)} sfide tra comuni con un numero simile di giocatori. Ogni animale nuovo è un punto, e chi gioca la prova del giorno ne porta un altro. Gratis. Domenica il trofeo va sulla mappa.</p>${corpo}
       <h3>Come si gioca</h3><ol class="regole"><li><b>Ogni animale nuovo della tua città è un punto</b>: commenta un reel con città, nome e cane o gatto, e porta i tuoi amici del paese.</li><li>Scegli la tua città (quella del tuo animale sulla mappa).</li><li>Fai la prova del giorno: alla fine hai un codice <b>COPPA XY</b>.</li><li>Commentalo sotto l'ultimo reel di @zampeditalia: un punto alla tua città, uno al giorno.</li><li>Staffetta di quartiere 🔁: tre persone dello stesso comune commentano città, nome e cane o gatto, ognuna col suo animale. Alla terza, un punto in più e l'anello dorato.</li></ol>
-      ${calde()}
+      ${calde()}${garaFollower()}
       ${albo ? `<h3>Albo dei vincitori · turno ${albo.turno}</h3><ol class="list">` + albo.vincitori.slice(0, 10).map(v => `<li class="row"><span class="pos">🏆</span><span class="who">${esc(nome(v.c))}<small>${v.p} – ${v.pc} contro ${esc(nome(v.contro))}</small></span></li>`).join("") + `</ol>` : ""}`;
     const fm = $("#coppaForm"); if (fm) fm.onsubmit = e => { e.preventDefault(); const x = scegli($("#coppaSq").value);
       if (!x) { $("#coppaErr").textContent = "Non trovo né il tuo @ né la città: prima accendi il tuo animale commentando un reel con città e nome."; return; }

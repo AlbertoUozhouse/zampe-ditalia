@@ -237,13 +237,58 @@ def luce(stato, animali, a, ora=None):
     return "ok", {**dettagli(C, k), "sorpasso": sorp}
 
 
+PUNTI_FOLLOWER = 2  # 12/11 Alberto: «una gara di follower»: chi ci segue (SEGUO) porta 2 punti alla sua città
+OBIETTIVO = 2000
+
+
+def primo_comune(animali, u):
+    """La città di una persona: quella del suo primo animale sulla mappa."""
+    suoi = sorted((a for a in animali if a.get("u", "").lower() == u.lower() and a.get("k") == "animale"), key=lambda a: str(a.get("ts", "")))
+    return chiave(suoi[0]) if suoi else None
+
+
+def follower(stato, animali, utente, ora=None):
+    """Un SEGUO nuovo (commenti.py, una volta sola per persona): 2 punti alla sua città nella Coppa e una riga nella gara dei follower.
+    Il SEGUO vale sulla parola (Instagram non dice chi ci segue): per questo accanto alla classifica si mostra sempre il totale vero dei follower."""
+    ora = ora or datetime.now(timezone.utc)
+    k = primo_comune(animali, utente)
+    if not k: return "fuori", {}
+    stato["gara_follower"] = (stato.get("gara_follower", []) + [{"k": k, "t": ora.isoformat(timespec="minutes")}])[-5000:]
+    C = aggiorna(stato, animali, ora)
+    if C.get("chiuso") or not _in_gara(C, k): return "solo_gara", {"comune": k, **classifica_follower(stato, animali, k)}
+    prima = dettagli(C, k)
+    C["punti"][k] = C["punti"].get(k, 0) + PUNTI_FOLLOWER
+    sorp = _sorpasso(C, k, prima, ora)
+    return "ok", {**dettagli(C, k), "sorpasso": sorp, **classifica_follower(stato, animali, k)}
+
+
+def classifica_follower(stato, animali, k=None):
+    """Le città che ci seguono di più: da sempre (chi ha scritto SEGUO, per la città del suo primo animale) e in questa settimana (turno della Coppa)."""
+    primo = {}
+    for a in sorted((a for a in animali if a.get("k") == "animale"), key=lambda a: str(a.get("ts", ""))):
+        primo.setdefault(a.get("u", "").lower(), chiave(a))
+    sempre = {}
+    for u, v in stato.get("seguono", {}).items():
+        if v == "premiato" and u in primo: sempre[primo[u]] = sempre.get(primo[u], 0) + 1
+    inizio = (stato.get("coppa") or {}).get("inizio", "")[:10]
+    sett = {}
+    for x in stato.get("gara_follower", []):
+        if x["t"][:10] >= inizio: sett[x["k"]] = sett.get(x["k"], 0) + 1
+    ordina = lambda d: sorted(d.items(), key=lambda kv: (-kv[1], kv[0]))
+    out = {"sempre": ordina(sempre)[:10], "settimana": ordina(sett)[:10]}
+    if k:
+        pos = [c for c, _ in ordina(sempre)]
+        out.update({"posto": pos.index(k) + 1 if k in pos else None, "suoi": sempre.get(k, 0), "settimana_suoi": sett.get(k, 0)})
+    return out
+
+
 def dettagli(C, k):
     r = avversario(C, k)
     return {"comune": k, "noi": C["punti"].get(k, 0), "rivale": r, "loro": C["punti"].get(r, 0) if r else 0,
             "giocatori": len(C["giocatori"].get(k, [])), "fine": C["fine"]}
 
 
-def pubblica(stato, out):
+def pubblica(stato, out, animali=None):
     """docs/data/coppa.json per il sito: le sfide coi punti, le staffette, i trofei dell'ultimo turno e l'albo. Niente nomi utente."""
     C = stato.get("coppa")
     if not C: return
@@ -255,4 +300,8 @@ def pubblica(stato, out):
             "anelli": staffette(C), "trofei": [v["c"] for v in (albo[-1]["vincitori"] if albo else [])], "albo": albo[-12:],
             "sorpassi": C.get("storia", [])[-10:],
             "quartiere": {k: quartiere(C, k) for k in C.get("quartiere", {})}}
+    if animali is not None:  # la gara dei follower (12/11): classifiche delle città e il totale vero verso l'obiettivo
+        g = classifica_follower(stato, animali)
+        ore = stato.get("follower_ore") or []
+        dati["follower"] = {"sempre": g["sempre"], "settimana": g["settimana"], "totale": ore[-1][1] if ore else None, "obiettivo": OBIETTIVO, "punti": PUNTI_FOLLOWER}
     Path(out).write_text(json.dumps(dati, ensure_ascii=False, separators=(",", ":")) + "\n")

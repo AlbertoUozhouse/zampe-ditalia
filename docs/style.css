@@ -273,3 +273,7 @@ body.fuochi::before{content:"";position:fixed;inset:0;pointer-events:none;z-inde
 .zampa.svelata svg{filter:none;transform:none}
 .btn.chiaro{background:transparent;color:var(--cream);border:1.5px solid var(--gold);box-shadow:none}
 body:has(#sheet:not([hidden])) .gioca-citta,body:has(#gioco) .gioca-citta{display:none} /* il pulsante non copre la scheda o la prova */
+
+/* la gara dei follower (12/11) */
+.obiettivo{margin:6px 0 10px}.barra-ob{height:14px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden;border:1px solid rgba(255,197,92,.5)}
+.barra-ob i{display:block;height:100%;background:linear-gradient(90deg,#FFB347,#FFC55C,#FFE08A);border-radius:999px}
