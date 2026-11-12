@@ -1,0 +1,38 @@
+{
+ "Barletta|BT": {
+  "fatto": null,
+  "abitanti": 91983,
+  "fonte": "https://it.wikipedia.org/wiki/Barletta",
+  "giorno": "2026-11-12"
+ },
+ "Bisceglie|BT": {
+  "fatto": null,
+  "abitanti": 53130,
+  "fonte": "https://it.wikipedia.org/wiki/Bisceglie",
+  "giorno": "2026-11-12"
+ },
+ "Napoli|NA": {
+  "fatto": null,
+  "abitanti": 902705,
+  "fonte": "https://it.wikipedia.org/wiki/Napoli",
+  "giorno": "2026-11-12"
+ },
+ "Roma|RM": {
+  "fatto": "la capitale della Repubblica Italiana",
+  "abitanti": 2743357,
+  "fonte": "https://it.wikipedia.org/wiki/Roma",
+  "giorno": "2026-11-12"
+ },
+ "Cagliari|CA": {
+  "fatto": null,
+  "abitanti": 145729,
+  "fonte": "https://it.wikipedia.org/wiki/Cagliari",
+  "giorno": "2026-11-12"
+ },
+ "Molfetta|BA": {
+  "fatto": null,
+  "abitanti": 57007,
+  "fonte": "https://it.wikipedia.org/wiki/Molfetta",
+  "giorno": "2026-11-12"
+ }
+}
