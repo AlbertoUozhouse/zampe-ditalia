@@ -115,23 +115,53 @@
      "docs/coppa.js"
     ],
     "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Giochi nuovi",
+    "passo": "Oggi, come Giochi nuovi, chiudi solo il collegamento minimo della Staffetta: in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva e crea le due tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa. Per uscire domani (scadenza 2026-11-10, cantiere in ritardo) la versione è una sola squadra di prova per comune (3 slot) con una tappa al giorno, e la classifica del giorno va come lista semplice in docs/coppa.js.",
+    "file": [
+     "motore/coppa.py",
+     "motore/config.json",
+     "docs/coppa.js"
+    ],
+    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Meccaniche di gioco",
+    "passo": "Oggi chiudi solo il collegamento minimo della Staffetta: in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva e crea le tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa. Per uscire domani (scadenza 2026-11-10) mostra la classifica del giorno come lista semplice in docs/coppa.js, con una sola squadra di prova per comune (3 slot) e una tappa al giorno.",
+    "file": [
+     "motore/coppa.py",
+     "motore/config.json",
+     "docs/coppa.js"
+    ],
+    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Fattibilità tecnica",
+    "passo": "Dal file motore/coppa.py attiva la modalità Staffetta nella config test_crescita e collegala a 'Pappa al volo', poi crea le due tabelle 'squadre' e 'staffette' nel database senza link d'invito né mappa. Per uscire entro il 10 novembre, la versione è una sola squadra di prova per comune (3 slot) con una tappa al giorno, classifica del giorno come lista semplice in docs/coppa.js.",
+    "file": [
+     "motore/coppa.py",
+     "motore/config.json",
+     "docs/coppa.js"
+    ],
+    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice sul sito."
    }
   ],
   "in_ritardo": true
  },
  "reel": {
-  "idea": "Il Racconto dal Vivo",
-  "come_funziona": "Il reel non parte dalla mappa ma da una ripresa reale dell'animale di un follower (video con il suo SÌ), tenuta 3-4 secondi senza tagli e con il suono ambientale del posto. Poi il montaggio stacca su una mappa ferma che si ingrandisce sul comune, e solo alla fine si accende la luce. Chi ha girato il video dice in una frase dove vive.",
-  "primo_passo": "Scegliere tra i follower con SÌ esplicito 3 video verticali già ricevuti, tagliare ciascuno a 3-4 secondi con audio originale e montarli nel template testa_a_testa esistente, sostituendo l'apertura mappa con la clip. Poi collegare la mappa SVG dell'Italia di notte con zoom sul comune e la luce finale. Pubblicare 4 reel in 7 giorni alla stessa ora (21:00) per avere un confronto pulito.",
-  "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti dei reel nel nuovo stile, confrontandoli con il 15-18 dei formati mappa e con il 58,8 del testa_a_testa del 10/11. Il segnale è buono se resta sopra 30 su almeno 4 reel; il campione è piccolo, quindi leggerlo con cautela. Contare anche i commenti con il nome di una città.",
+  "idea": "Sfida di Campanile: il reel dal vivo (derby tra comuni vicini con video vero)",
+  "come_funziona": "Il reel apre con un video vero e breve (4-6 secondi) di un animale di uno dei due comuni, con l'audio ambientale reale prima della musica e senza grafica disegnata sopra, come un video girato da un follower. Poi la mappa mostra le due luci che si accendono una dopo l'altra, quella dell'animale e quella del comune vicino a meno di 50 km, con i due nomi che si sfidano. La chiusura chiede ai due paesi di scegliere da che parte stare e di scrivere nei commenti la propria città e il nome del proprio animale per il prossimo confronto. Si parte dalle coppie già pronte, Livorno-Cecina e Verona-Vicenza, con il template testa_a_testa esistente.",
+  "primo_passo": "Prendere dall'archivio i video dei follower con il SÌ per Livorno, Cecina, Verona e Vicenza (almeno 4-6 secondi ciascuno) e verificare il consenso anche per l'audio ambientale. Poi duplicare il template testa_a_testa nel motore dei reel aggiungendo uno slot iniziale per il video vero con audio originale, e collegare le coordinate dei comuni già presenti nel progetto per far accendere le due luci in sequenza. Generare 2 reel di prova, uno per coppia, e pubblicarli.",
+  "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti dei reel derby con video vero, con obiettivo sopra 30 (il campione è piccolo: oggi 51,4 per Livorno-Cecina e 31,0 sull'altro), e confrontarli con la media dei reel precedenti. Contare anche i commenti che indicano una città diversa dalle due del reel e quelli con il nome di un animale.",
   "traccia": "reel",
-  "aperto": "2026-11-11",
-  "scadenza": "2026-11-13",
-  "stato": "online",
-  "passi_proposti": [],
-  "aggiornato": "2026-11-11",
-  "nota": "11/11: il testa a testa delle 13 si apre col DUELLO in 3D, i due paesi rivali uno sopra l'altro col loro nome, le luci e il VS (reel/apertura3d.py); la regia la sceglie il reparto (la prima: «Due Fari Adriatici», Barletta–Molfetta).",
-  "online_dal": "2026-11-11"
+  "aperto": "2026-11-12",
+  "scadenza": "2026-11-14",
+  "stato": "da costruire",
+  "passi_proposti": []
  },
  "realismo": {
   "idea": "Il Paese dal Vero: rilievo e animale nello stesso comune",
@@ -142,6 +172,140 @@
   "aperto": "2026-11-11",
   "scadenza": "2026-11-13",
   "stato": "da costruire",
-  "passi_proposti": []
+  "passi_proposti": [
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Realismo degli animali",
+    "passo": "Nella pagina del comune di docs/ aggiungere il riquadro three.js che carica il tile di altitudine già usato dalla mappa con rilievo, ritagliato sulle coordinate del comune, con PlaneGeometry spostata dai valori di altitudine e OrbitControls per la rotazione. Per uscire entro il 13 novembre, versione ridotta: solo il riquadro 3D su un comune collinare (test), con l'SVG della razza affiancato e il punto luminoso, senza la prova su costiero e su Verona e Vicenza.",
+    "file": [
+     "docs/",
+     "docs/mappa_rilievo.js",
+     "reel/"
+    ],
+    "fatto_quando": "La pagina del comune collinare mostra il riquadro 3D ruotabile col dito con il rilievo reale, il punto luminoso sulle coordinate del comune e l'SVG della razza accanto, e le visite al riquadro vengono registrate."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Realismo della mappa e del 3D",
+    "passo": "Nella pagina del comune (docs/), aggiungere un riquadro three.js che carica il tile di altitudine già usato dalla mappa con rilievo, ritagliato attorno alle coordinate del comune, e costruire la mesh con PlaneGeometry spostata dai valori di altitudine con OrbitControls per la rotazione. Per uscire entro il 13 novembre, tagliare a un solo comune di prova (uno collinare), senza luce animata né SVG della razza, che si aggiungono nella versione successiva.",
+    "file": [
+     "docs/comune.html",
+     "docs/comune.js",
+     "docs/mappa.js",
+     "docs/index.html"
+    ],
+    "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale che si ruota col dito, con il terreno che mostra le quote vere del comune."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Esperimenti misurabili",
+    "passo": "Nella pagina docs/comune.html aggiungere un riquadro three.js che carica il tile di altitudine già usato dalla mappa con rilievo (docs/mappa.js), ritagliato sulle coordinate di un solo comune collinare di prova, costruendo la mesh con PlaneGeometry spostata dai valori di altitudine e OrbitControls per la rotazione col dito. Per uscire entro il 13 novembre, versione ridotta: niente luce animata né SVG della razza, solo il riquadro 3D su un comune.",
+    "file": [
+     "docs/comune.html",
+     "docs/comune.js",
+     "docs/mappa.js"
+    ],
+    "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale ruotabile col dito, con il terreno che mostra le quote vere del comune, e le visite al riquadro vengono registrate."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Animali in 3D",
+    "passo": "Nella pagina del comune di docs/comune.html aggiungere un riquadro three.js che carica il tile di altitudine già usato da docs/mappa.js, ritagliato sulle coordinate di un solo comune collinare di prova, con PlaneGeometry spostata dai valori di quota e OrbitControls per la rotazione col dito; senza SVG della razza né luce animata, che arrivano dopo. Per uscire domani (2026-11-13) questo è il taglio minimo.",
+    "file": [
+     "docs/comune.html",
+     "docs/comune.js",
+     "docs/mappa.js"
+    ],
+    "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale che si ruota col dito, con il terreno che mostra le quote vere del comune, e le visite al riquadro vengono registrate."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Paesi e piazze in 3D",
+    "passo": "Nella pagina del comune di docs/comune.html, aggiungere un riquadro three.js che carica il tile di altitudine già usato da docs/mappa.js, ritagliato sulle coordinate di un solo comune collinare di prova, con PlaneGeometry spostata dai valori di quota e OrbitControls per la rotazione col dito; per uscire entro il 13 novembre niente luce animata né SVG della razza, che vanno nella versione successiva.",
+    "file": [
+     "docs/comune.html",
+     "docs/comune.js",
+     "docs/mappa.js"
+    ],
+    "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale che si ruota col dito e le visite al riquadro vengono registrate."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Rilievo e terreno veri",
+    "passo": "Oggi, nella pagina del comune in docs/comune.js, aggiungi un riquadro three.js minimo che carica il tile di altitudine già usato da docs/mappa_rilievo.js, ritagliato sulle coordinate di un solo comune collinare di prova, e costruisci la mesh con PlaneGeometry spostata dai valori di altitudine con OrbitControls. Niente luce animata né SVG della razza: quelli rimandali alla versione successiva, perché la scadenza del 13 novembre è vicina e il cantiere non è ancora partito.",
+    "file": [
+     "docs/comune.html",
+     "docs/comune.js",
+     "docs/mappa_rilievo.js"
+    ],
+    "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale che si ruota col dito, con il terreno che mostra le quote vere del comune."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Luci della notte in 3D",
+    "passo": "In docs/comune.js aggiungi un riquadro three.js nella pagina del comune di prova (uno collinare): carica il tile di altitudine già usato da docs/mappa.js, ritagliato sulle coordinate del comune, crea una PlaneGeometry spostando i vertici dai valori di quota e aggiungi OrbitControls per ruotarla col dito. Per uscire entro il 13 novembre tieni solo questo comune, senza luce animata né SVG della razza, che rimandi alla versione successiva.",
+    "file": [
+     "docs/comune.js",
+     "docs/mappa.js",
+     "docs/comune.html"
+    ],
+    "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale che si ruota col dito, con il terreno che mostra le quote vere del comune."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Materiali e texture",
+    "passo": "Nella pagina docs/comune.html aggiungere un riquadro three.js che carica il tile di altitudine già usato dalla mappa con rilievo (docs/mappa.js), ritagliato sulle coordinate di un solo comune collinare di prova, costruendo la mesh con PlaneGeometry spostata dai valori di altitudine e OrbitControls per la rotazione col dito. Cantiere in ritardo: per uscire entro il 13 novembre la versione è ridotta, niente luce animata né SVG della razza, solo il riquadro 3D su un comune.",
+    "file": [
+     "docs/comune.html",
+     "docs/comune.js",
+     "docs/mappa.js"
+    ],
+    "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale ruotabile col dito, con il terreno che mostra le quote vere del comune, e le visite al riquadro vengono registrate."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Camere e inquadrature 3D",
+    "passo": "Nella pagina docs/comune.html aggiungi un riquadro three.js che carica il tile di altitudine già usato dalla mappa con rilievo (docs/mappa.js), ritagliato sulle coordinate di un solo comune collinare di prova, costruendo la mesh con PlaneGeometry spostata dai valori di altitudine e OrbitControls per la rotazione col dito. Per uscire entro il 13 novembre, versione ridotta: niente luce animata né SVG della razza, solo il riquadro 3D su un comune.",
+    "file": [
+     "docs/comune.html",
+     "docs/comune.js",
+     "docs/mappa.js"
+    ],
+    "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale ruotabile col dito, con il terreno che mostra le quote vere del comune, e le visite al riquadro vengono registrate."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Animazioni 3D",
+    "passo": "Nella pagina docs/comune.html aggiungere un riquadro three.js che carica il tile di altitudine già usato da docs/mappa.js, ritagliato sulle coordinate di un solo comune collinare di prova, con PlaneGeometry spostata dai valori di quota e OrbitControls per la rotazione col dito; senza SVG della razza né luce animata, che arrivano dopo. Per uscire domani (2026-11-13) questo è il taglio minimo.",
+    "file": [
+     "docs/comune.html",
+     "docs/comune.js",
+     "docs/mappa.js"
+    ],
+    "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale che si ruota col dito, con il terreno che mostra le quote vere del comune, e le visite al riquadro vengono registrate."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "Scene 3D per i reel",
+    "passo": "Nella pagina docs/comune.html aggiungere un riquadro three.js che carica il tile di altitudine già usato da docs/mappa.js, ritagliato sulle coordinate di un solo comune collinare di prova, con PlaneGeometry spostata dai valori di quota e OrbitControls per la rotazione col dito; per uscire il 13 novembre niente luce animata né SVG della razza, che vanno nella versione successiva.",
+    "file": [
+     "docs/comune.html",
+     "docs/comune.js",
+     "docs/mappa.js"
+    ],
+    "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale che si ruota col dito, con il terreno che mostra le quote vere del comune, e le visite al riquadro vengono registrate."
+   },
+   {
+    "giorno": "2026-11-12",
+    "ruolo": "3D leggero sul telefono",
+    "passo": "Nella pagina docs/comune.html aggiungi un riquadro three.js minimo che carica il tile di altitudine già usato da docs/mappa.js, ritagliato sulle coordinate di un solo comune collinare di prova, costruendo la mesh con PlaneGeometry spostata dai valori di quota e OrbitControls per ruotarla col dito. Per uscire entro il 13 novembre tieni solo questo comune, senza luce animata né SVG della razza, che rimandi alla versione successiva.",
+    "file": [
+     "docs/comune.html",
+     "docs/comune.js",
+     "docs/mappa.js"
+    ],
+    "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale che si ruota col dito, con il terreno che mostra le quote vere del comune, e le visite al riquadro vengono registrate."
+   }
+  ]
  }
 }

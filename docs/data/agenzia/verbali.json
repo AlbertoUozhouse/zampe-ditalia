@@ -493,5 +493,50 @@
   "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
   "riprovare": null,
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "17907549567599319",
+  "file": "2026-11-04-1806-star",
+  "formato": "star",
+  "uscita": "2026-11-04T17:13:07+00:00",
+  "follower": null,
+  "reach_7g": 385,
+  "follower_ogni_1000": null,
+  "mediana_simili": null,
+  "simili": 0,
+  "scelte": null,
+  "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
+  "riprovare": null,
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "17900534934609464",
+  "file": "2026-11-04-1933-ospiti",
+  "formato": "ospiti",
+  "uscita": "2026-11-04T18:37:48+00:00",
+  "follower": null,
+  "reach_7g": 441,
+  "follower_ogni_1000": null,
+  "mediana_simili": null,
+  "simili": 0,
+  "scelte": null,
+  "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
+  "riprovare": null,
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18103807631381966",
+  "file": "2026-11-04-2107-ospiti_sera",
+  "formato": "ospiti_sera",
+  "uscita": "2026-11-04T20:12:37+00:00",
+  "follower": null,
+  "reach_7g": 350,
+  "follower_ogni_1000": null,
+  "mediana_simili": null,
+  "simili": 0,
+  "scelte": null,
+  "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
+  "riprovare": null,
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]

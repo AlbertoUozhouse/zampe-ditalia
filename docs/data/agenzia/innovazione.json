@@ -50,5 +50,17 @@
    "come_misurarla": "Dopo 7 giorni guardare la quota di visite al riquadro 3D sul totale delle visite alla pagina del comune (obiettivo sopra il 20%) e il numero di follower nuovi arrivati dalle pagine comunali rispetto alla settimana precedente."
   },
   "perche": "Entrambe partono dal riconoscersi nel proprio posto e dal campanile, il leva che col testa_a_testa ha dato 58,8 follower ogni 1.000 reach, e usano solo ciò che abbiamo già: video con SÌ, mappa, dati di altitudine e three.js."
+ },
+ {
+  "giorno": "2026-11-12",
+  "gioco": null,
+  "reel": {
+   "idea": "Sfida di Campanile: il reel dal vivo (derby tra comuni vicini con video vero)",
+   "come_funziona": "Il reel apre con un video vero e breve (4-6 secondi) di un animale di uno dei due comuni, con l'audio ambientale reale prima della musica e senza grafica disegnata sopra, come un video girato da un follower. Poi la mappa mostra le due luci che si accendono una dopo l'altra, quella dell'animale e quella del comune vicino a meno di 50 km, con i due nomi che si sfidano. La chiusura chiede ai due paesi di scegliere da che parte stare e di scrivere nei commenti la propria città e il nome del proprio animale per il prossimo confronto. Si parte dalle coppie già pronte, Livorno-Cecina e Verona-Vicenza, con il template testa_a_testa esistente.",
+   "primo_passo": "Prendere dall'archivio i video dei follower con il SÌ per Livorno, Cecina, Verona e Vicenza (almeno 4-6 secondi ciascuno) e verificare il consenso anche per l'audio ambientale. Poi duplicare il template testa_a_testa nel motore dei reel aggiungendo uno slot iniziale per il video vero con audio originale, e collegare le coordinate dei comuni già presenti nel progetto per far accendere le due luci in sequenza. Generare 2 reel di prova, uno per coppia, e pubblicarli.",
+   "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti dei reel derby con video vero, con obiettivo sopra 30 (il campione è piccolo: oggi 51,4 per Livorno-Cecina e 31,0 sull'altro), e confrontarli con la media dei reel precedenti. Contare anche i commenti che indicano una città diversa dalle due del reel e quelli con il nome di un animale."
+  },
+  "realismo": null,
+  "perche": "Unisce le tre proposte nella versione più concreta: sfrutta il testa_a_testa, il formato con più follower per 1.000 account raggiunti (51,4 contro 4,5 di coppa_apertura), e lo rende diverso con il video vero e il suono del paese, usando solo materiale con il SÌ già disponibile."
  }
 ]

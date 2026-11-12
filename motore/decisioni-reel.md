@@ -325,3 +325,10 @@ Nessun cambiamento oggi.
 ## 2026-11-11 — verbale dei 7 giorni (automatico, motore/verbale.py)
 
 - 2026-11-04-1309-fuochi: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+
+## 2026-11-12 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-04-1806-star: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-11-04-1933-ospiti: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-11-04-2107-ospiti_sera: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
