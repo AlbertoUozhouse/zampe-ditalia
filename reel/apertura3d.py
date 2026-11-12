@@ -30,7 +30,8 @@ def main():
         pezzi = []
         for k, (c, n, volo, badge) in enumerate([(a, na, regia.get("volo", "orbita"), "VS"), (b, nb, volo2, None)]):
             r = tmp / f"r{k}.json"; r.write_text(json.dumps({**regia, "volo": volo}))
-            opz = {"altezza": 480, "titolo": c.upper(), "sotto": f"{n} {'luce' if n == 1 else 'luci'}" + (" · in testa" if k == 0 and na > nb else " · pari" if na == nb else ""), **({"badge": badge} if badge else {})}
+            fatto = (i3.get("fatti") or [None, None])[k]  # 12/11: il fatto vero della città (motore/citta.py), se è corto
+            opz = {"altezza": 480, "titolo": c.upper(), "sotto": (fatto if fatto and len(fatto) <= 34 else f"{n} {'luce' if n == 1 else 'luci'}" + (" · in testa" if k == 0 and na > nb else " · pari" if na == nb else "")), **({"badge": badge} if badge else {})}
             subprocess.run(["node", VOLO3D, c, "", str(tmp / f"p{k}.mp4"), str(sec), str(r), json.dumps(opz)], check=True)
             pezzi.append(str(tmp / f"p{k}.mp4"))
         subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", pezzi[0], "-i", pezzi[1], "-filter_complex",

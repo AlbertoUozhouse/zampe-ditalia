@@ -864,15 +864,29 @@ def testa_a_testa(D, rng, st):
         st["intro_3d"]["duello"] = [[x["c"], x["n"]], [y["c"], y["n"]]]
     mezzo = {"lat": (x["lat"] + y["lat"]) / 2, "lng": (x["lng"] + y["lng"]) / 2}
     pari = x["n"] == y["n"]
+    # 12/11 Alberto: «aggiungere i padroni o qualcosa sulle varie città». Le città col loro fatto vero (motore/citta.py, da Wikipedia)
+    # e le squadre in campo: gli animali veri con il @ dei padroni, che vengono taggati (ricevono la notifica e condividono).
+    import citta
+    pv = {c: next((a.get("p", "") for a in an if a["c"] == c), "") for c in (x["c"], y["c"])}
+    fx, fy = ((citta.fatto(c, pv[c]) or {}).get("fatto") for c in (x["c"], y["c"]))
+    squadra = lambda c: sorted((a for a in an if a["c"] == c and a["u"].lower() not in ESCLUSI), key=lambda a: (a["u"].lower() not in D["seguono"], str(a.get("ts", ""))), reverse=False)
+    sx, sy = squadra(x["c"]), squadra(y["c"])
+    righe = [{"nome": f"{a['n']} · {x['c']}", "valore": "@" + a["u"]} for a in sx[:3]] + [{"nome": f"{a['n']} · {y['c']}", "valore": "@" + a["u"]} for a in sy[:2]]
+    nomi = lambda l: " e ".join([", ".join(a["n"] for a in l[:-1]), l[-1]["n"]] if len(l) > 1 else [l[0]["n"]]) if l else ""
+    st["tag_extra"] = list(dict.fromkeys(a["u"] for a in (sx[:10] + sy[:10])))[:20]
+    if st.get("intro_3d") and (fx or fy): st["intro_3d"]["fatti"] = [fx, fy]
     frasi = [
-        (f"{x['c']} contro {y['c']}: {round(km)} chilometri, e la sfida è aperta.", {"tipo": "luce", "centro": [mezzo["lng"], mezzo["lat"]], "s1": 1.5, "intorno": _intorno(D, mezzo, 50),
+        (f"{x['c']}{', ' + fx + ',' if fx else ''} contro {y['c']}{', ' + fy if fy else ''}: {round(km)} chilometri, e la sfida è aperta.", {"tipo": "luce", "centro": [mezzo["lng"], mezzo["lat"]], "s1": 1.5, "intorno": _intorno(D, mezzo, 50),
           "punti": [{"lng": x["lng"], "lat": x["lat"], "testo": f"{x['c']} · {x['n']}"}, {"lng": y["lng"], "lat": y["lat"], "testo": f"{y['c']} · {y['n']}"}]}),
         ((f"Pari: {x['n']} a {y['n']}. Il prossimo animale decide chi passa avanti." if pari else
           f"{x['n']} a {y['n']}: basta {'un animale' if x['n'] - y['n'] == 1 else 'due animali'} e {y['c']} pareggia."),
          {"tipo": "duello", "sinistra": {"titolo": x["c"], "valore": str(x["n"])}, "destra": {"titolo": y["c"], "valore": str(y["n"])}}),
-        (f"Sei di {y['c']} o di {x['c']}? Commenta città e nome del tuo animale!", {"tipo": "chiusura", "testo": f"💬 {y['c']} o {x['c']}? 👇"}),
     ]
-    did = (f"⚔️ {x['c']} {x['n']} – {y['n']} {y['c']}: due comuni a {round(km)} km, e la sfida è aperta!\n\n"
+    if sx and sy:
+        frasi.append((f"In campo {nomi(sx[:2])} per {x['c']}, {nomi(sy[:2])} per {y['c']}.", {"tipo": "classifica", "titolo": "⚔️ Le squadre in campo", "righe": righe}))
+    frasi.append((f"Sei di {y['c']} o di {x['c']}? Commenta città e nome del tuo animale!", {"tipo": "chiusura", "testo": f"💬 {y['c']} o {x['c']}? 👇"}))
+    did = (f"⚔️ {x['c']} {x['n']} – {y['n']} {y['c']}: due comuni a {round(km)} km, e la sfida è aperta!\n"
+           + (f"🏰 {x['c']}, {fx}" + (f" · {y['c']}, {fy}" if fy else "") + "\n" if fx else (f"🏰 {y['c']}, {fy}\n" if fy else "")) + "\n"
            "Ogni animale accende una luce nella sua città sulla mappa dell'Italia di notte (link in bio).\n"
            f"👇 Commenta la tua città e il nome del tuo cane o gatto (per esempio «{y['c']}, Luna, cane»): si accende col tuo @ e conta per la tua città.\n"
            "👥 Tagga chi è di lì!")
@@ -1182,7 +1196,7 @@ def verifica(cop):
 
 
 # ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
-FRASI_FISSE = {"indovina": 45, "figurina": 40}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
+FRASI_FISSE = {"indovina": 45, "figurina": 40, "testa_a_testa": 58, "gara_follower": 50}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
 
 MANTELLI = {"europeo", "grigio", "nero", "rosso", "bianco", "bicolore", "bicolore_rosso", "calico", "tartarugato", "meticcio"}  # colori, non razze: fuori dal quiz
 
@@ -1260,6 +1274,36 @@ def figurina_reel(D, rng, st):
     st["senza_bonus"] = True
     return "🃏 LE FIGURINE", frasi, did
 
+def gara_follower(D, rng, st):
+    """La gara dei follower (12/11, Alberto: «una gara di follower»): quale città ci segue di più? Barre vere (chi ha scritto SEGUO, per città),
+    il fatto vero della prima città, il totale vero dei follower verso i 2.000, e l'invito: SEGUO con la tua città, 2 punti al tuo paese."""
+    import coppa, citta
+    S = carica(ROOT / "motore/stato.json", {})
+    g = coppa.classifica_follower(S, D["animali"])
+    top = g["sempre"][:6]
+    if len(top) < 3: raise Salta("troppo poche città con chi ci segue")
+    nome = lambda k: k.split("|")[0]
+    f1 = (citta.fatto(nome(top[0][0]), top[0][0].split("|")[1]) or {}).get("fatto")
+    ore = S.get("follower_ore") or []; tot = ore[-1][1] if ore else (D.get("follower") or {}).get("n")
+    (a, na), (b, nb), (c, nc) = [(nome(k), n) for k, n in top[:3]]
+    righe = [{"nome": nome(k), "valore": n, **({"nota": f1} if i == 0 and f1 and len(f1) <= 26 else {})} for i, (k, n) in enumerate(top)]
+    frasi = [
+        ("Quale città ci segue di più?", {"tipo": "gancio", "testo": "Quale città ci segue *di più*?", "sotto": "🏁 La gara dei follower", "icona": "🏁"}),
+        (f"{a}{', ' + f1 + ',' if f1 else ''} è prima con {na}. Poi {b} con {nb} e {c} con {nc}.", {"tipo": "barre", "titolo": "🏁 Chi ci segue di più", "righe": righe}),
+    ]
+    if tot and tot < coppa.OBIETTIVO:
+        frasi.append((f"Siamo {tot}: a duemila facciamo i fuochi su tutta l'Italia.", {"tipo": "numero", "grande": f"{tot:,}".replace(",", "."), "sotto": f"follower veri · a {coppa.OBIETTIVO:,} i fuochi 🎆".replace(",", ".")}))
+    frasi.append(("Seguici e scrivi SEGUO con la tua città: due punti al tuo paese.", {"tipo": "chiusura", "testo": "🏁 SEGUO + la tua città 👇"}))
+    did = (f"🏁 La gara dei follower: quale città ci segue di più?\n👑 {a} {na} · 🥈 {b} {nb} · 🥉 {c} {nc}" + (f"\n{a}, {f1}: chi la batte?" if f1 else "") + "\n\n"
+           f"👇 Seguici e scrivi SEGUO qui sotto, con la tua città e il nome del tuo cane o gatto (es. «SEGUO, Treviso, Luna, cane»): +2 punti al tuo paese nella Coppa delle Zampe.\n"
+           f"👥 Tagga gli amici del tuo paese: ogni amico che ci segue fa salire la tua città."
+           + (f"\n🎆 Siamo {tot}: a {coppa.OBIETTIVO} accendiamo i fuochi su tutta la mappa!" if tot and tot < coppa.OBIETTIVO else ""))
+    st["banner_reel"] = "🏁 Scrivi SEGUO e la tua città 👇"
+    st["copertina"] = None
+    st["hashtag"] = "#cani #gatti #italia #campanilismo #animalidomestici "
+    st["senza_bonus"] = True
+    return "🏁 LA GARA DEI FOLLOWER", frasi, did
+
 def scelta_18():
     """Le 18 a rotazione (12/11): il quiz, le figurine, la luce nuova: tre idee diverse, mai lo stesso video due giorni di fila (dal 13/11)."""
     return ["indovina", "figurina", "questa_luce"][(ORA.date() - date(2026, 11, 13)).days % 3]
@@ -1268,7 +1312,7 @@ def sera_18(D, rng, st):
     return FORMATI[scelta_18()](D, rng, st)
 
 
-FORMATI = {"indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide

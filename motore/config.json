@@ -39,7 +39,8 @@
   "2026-11-10 13:00": "testa_a_testa",
   "2026-11-12 13:00": "testa_a_testa",
   "2026-11-14 13:00": "testa_a_testa",
-  "2026-11-09 13:00": "prima_luce"
+  "2026-11-09 13:00": "prima_luce",
+  "2026-11-13 21:00": "gara_follower"
  },
  "voce_ia": false,
  "feste_reel": false,
@@ -49,7 +50,9 @@
  "settimanali": {
   "lun 13:00": "coppa_apertura",
   "gio 21:00": "coppa_sorpasso",
-  "dom 21:00": "coppa_verdetto"
+  "dom 21:00": "coppa_verdetto",
+  "mer 21:00": "gara_follower",
+  "sab 21:00": "gara_follower"
  },
  "test_crescita": {
   "nota": "Test di crescita (Alberto, 8/11): quali reel portano più follower. stato: «anteprima» = nessuna uscita, solo anteprime; «attivo» = dal giorno «dal» il piano sostituisce gli orari delle 13, 18 e 21 per 7 giorni; «spento» = tutto come prima. Per tornare indietro basta «spento».",

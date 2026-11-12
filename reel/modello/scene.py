@@ -441,5 +441,27 @@ def figurina(cid, dur, svg, nome, comune, razza, numero, totale, rarita="comune"
     return _pagina(cid, f"Figurina Nº {numero}: {nome}.", css, corpo, js)
 
 
-TIPI = {"sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+def barre(cid, dur, titolo, righe, evidenzia=None):
+    """La gara a barre (12/11, la gara dei follower): le città in fila, le barre crescono una dopo l'altra, la prima ha la corona.
+    righe: [{"nome": "Napoli", "valore": 28, "nota": "la città del Vesuvio"}] in ordine; evidenzia: il nome da accendere."""
+    righe = righe[:8]; mx = max([r["valore"] for r in righe] + [1])
+    css = SPOT.format(a="#16365F", b="#08142E") + """
+    #root .tit { position: absolute; left: 50px; right: 50px; top: 300px; text-align: center; font: 800 76px/1 "Bricolage Grotesque", sans-serif; color: #FFC55C; text-shadow: 0 6px 0 #05030F; }
+    #root .lista { position: absolute; left: 60px; right: 60px; top: 420px; display: flex; flex-direction: column; gap: 14px; }
+    #root .r { position: relative; height: 76px; border-radius: 18px; background: rgba(255,255,255,.07); overflow: hidden; }
+    #root .r i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 18px; background: linear-gradient(90deg, #2E5AA8, #5AA9F5); }
+    #root .r.p i { background: linear-gradient(90deg, #E8A93A, #FFD27A); } #root .r.ev i { background: linear-gradient(90deg, #C2185B, #FF5FA2); }
+    #root .r b { position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font: 900 38px var(--font-body); color: #FFF4DE; text-shadow: 0 2px 6px rgba(0,0,0,.6); white-space: nowrap; }
+    #root .r b small { font-size: 26px; opacity: .85; font-weight: 800; }
+    #root .r span { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font: 800 44px "Bricolage Grotesque", sans-serif; color: #FFF4DE; }"""
+    li = "".join(f'<div class="r{" p" if i == 0 else ""}{" ev" if evidenzia and r["nome"] == evidenzia else ""}" id="{cid}-r{i}"><i id="{cid}-b{i}" style="width:{max(18, round(100 * r["valore"] / mx))}%"></i>'
+                 f'<b>{"👑 " if i == 0 else f"{i + 1}. "}{ESC(r["nome"])}{f" <small>· {ESC(r["nota"])}</small>" if r.get("nota") else ""}</b><span>{r["valore"]}</span></div>' for i, r in enumerate(righe))
+    corpo = f'<div class="spot"></div><div class="raggi" id="{cid}-x"></div><div class="tit">{ESC(titolo)}</div><div class="lista">{li}</div>'
+    js = f'    tl.to("#{cid}-x", {{ rotation: 20, duration: {dur:.2f}, ease: "none" }}, 0);'
+    for i in range(len(righe)):
+        t0 = 0.15 + (len(righe) - 1 - i) * 0.22  # dall'ultima alla prima: la corona arriva per ultima
+        js += f'\n    tl.set("#{cid}-b{i}", {{ scaleX: 0, transformOrigin: "0 50%" }}, 0); tl.to("#{cid}-b{i}", {{ scaleX: 1, duration: 0.5, ease: "power3.out" }}, {t0:.2f});'
+    return _pagina(cid, f"Gara a barre: {titolo}", css, corpo, js)
+
+TIPI = {"barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}
