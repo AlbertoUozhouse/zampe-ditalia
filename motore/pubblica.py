@@ -12,7 +12,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SITO = "https://zampeditalia.it/"
+# 12/11: se GitHub Pages è in ritardo, reel.yml passa SITO_MEDIA = la copia nel repository (raw.githubusercontent.com), disponibile subito dopo il push
+SITO = os.environ.get("SITO_MEDIA") or "https://zampeditalia.it/"
 API = "https://graph.instagram.com/v23.0"
 REGISTRO = ROOT / "motore/pubblicati.json"
 

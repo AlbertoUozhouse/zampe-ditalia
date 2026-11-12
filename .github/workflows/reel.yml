@@ -145,12 +145,20 @@ jobs:
           git commit -q -m "Reel automatico $ID"
           for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && { python3 -I motore/agenzia.py registro; git add docs/data/agenzia/registro.json; git diff --cached --quiet || git commit -q -m "Registro dell'agenzia"; } && git push -q && break; sleep 15; done
           echo "id=$ID" >> "$GITHUB_OUTPUT"
-          # Pages a volte ci mette più di 10 minuti (ieri 2 reel su 3 persi per questo): si aspetta fino a 20
-          for i in $(seq 1 80); do
+          # Pages a volte ci mette più di 20 minuti (11/11 il reel delle 21 perso così): si aspetta 10 minuti,
+          # poi Instagram prende video e copertina dalla copia nel repository, che c'è già (raw.githubusercontent.com)
+          for i in $(seq 1 40); do
             [ "$(curl -s -o /dev/null -w '%{http_code}' "https://zampeditalia.it/media/auto/$ID.mp4")" = "200" ] && exit 0
             sleep 15
           done
-          echo "il video non è comparso sul sito"; exit 1
+          RAW="https://raw.githubusercontent.com/${{ github.repository }}/main/docs/"
+          for i in $(seq 1 20); do
+            if [ "$(curl -s -o /dev/null -w '%{http_code}' "${RAW}media/auto/$ID.mp4")" = "200" ]; then
+              echo "il sito è in ritardo: pubblico dalla copia nel repository"; echo "SITO_MEDIA=$RAW" >> "$GITHUB_ENV"; exit 0
+            fi
+            sleep 15
+          done
+          echo "il video non è comparso né sul sito né nel repository"; exit 1
       - name: Pubblica su Instagram
         if: ${{ inputs.pubblica && steps.copione.outputs.salta != '1' && steps.verifica.outputs.salta != '1' }}
         run: |
