@@ -2830,6 +2830,7 @@
 "18004289763038935",
 "18004505718042771",
 "18004540839008394",
+"18004611938800910",
 "18005353518006339",
 "18005397180005695",
 "18005677649991678",
@@ -9923,6 +9924,7 @@
 "18424724761157921",
 "18425202820157906",
 "18425299948159592",
+"18425523523157719",
 "18425562721156749",
 "18425704330159733",
 "18425724901158168",
@@ -10554,7 +10556,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794506503.4983025
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -12716,7 +12720,8 @@
 "gabriele_diviccaro": "2026-11-12",
 "itsmasu_._": "2026-11-12",
 "valerio_2015_": "2026-11-12",
-"_letiziasabato_": "2026-11-12"
+"_letiziasabato_": "2026-11-12",
+"satorougoj476": "2026-11-12"
 },
 "media_letti": {},
 "pezzi": {
@@ -19184,11 +19189,11 @@
 "8089c83dd8e52475",
 "3c2faba099e7980c",
 "41ee18f8e1ec8ba7",
-"5fe03ea1bf1a45b6"
+"5fe03ea1bf1a45b6",
+"2baae67a33b9ea6b"
 ],
 "privati_ora": [
-1794494957.0405138,
-1794494963.4925826
+1794506503.4983299
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -21809,9 +21814,13 @@
 [
 "Pontremoli|MS",
 "Casavatore|NA"
+],
+[
+"Gallipoli|LE",
+"Canale|CN"
 ]
 ],
-"attesa": "Gallipoli|LE",
+"attesa": null,
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
@@ -21834,7 +21843,8 @@
 "Rezzato|BS": 1,
 "Casavatore|NA": 1,
 "Fucecchio|FI": 1,
-"Bisceglie|BT": 2
+"Bisceglie|BT": 2,
+"Canale|CN": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22042,6 +22052,15 @@
 "t": "2026-11-12T14:49+00:00",
 "sorpasso": "Bisceglie|BT",
 "su": "Bomarzo|VT",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-12T18:01+00:00",
+"sorpasso": "Canale|CN",
+"su": "Gallipoli|LE",
 "punti": [
 1,
 0
@@ -22256,6 +22275,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Canale|CN": {
+"u": [
+"satorougoj476"
+],
+"c": [
+"18004611938800910"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22280,7 +22309,8 @@
 "gabriele_diviccaro|animale|sky",
 "itsmasu_._|animale|diego",
 "valerio_2015_|animale|mia",
-"giu.se100|animale|queen"
+"giu.se100|animale|queen",
+"satorougoj476|animale|royma"
 ]
 }
 }
