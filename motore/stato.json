@@ -8775,6 +8775,7 @@
 "18172194010480964",
 "18172209577483965",
 "18172219108467038",
+"18172248112465271",
 "18172261678463856",
 "18172404325479702",
 "18172469347458388",
@@ -9978,6 +9979,7 @@
 "18441496360180532",
 "18441582733177418",
 "18441651424197259",
+"18441790222195052",
 "18441940822195561",
 "18442189066197800",
 "18442488577177221",
@@ -10532,7 +10534,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794486281.0584557
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -12690,7 +12694,8 @@
 "maria_dark_queen": "2026-11-12",
 "_ele.na_7": "2026-11-12",
 "gabriel.lai013": "2026-11-12",
-"kargioapuano": "2026-11-12"
+"kargioapuano": "2026-11-12",
+"gabriele_diviccaro": "2026-11-12"
 },
 "media_letti": {},
 "pezzi": {
@@ -19148,11 +19153,11 @@
 "e51080aa31841cf0",
 "f5cc21da6498a776",
 "e7255c223197a548",
-"98a731293803b768"
+"98a731293803b768",
+"8089c83dd8e52475"
 ],
 "privati_ora": [
-1794478274.7281468,
-1794480711.0107603
+1794486281.0584824
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -21749,9 +21754,13 @@
 [
 "Rezzato|BS",
 "Cascina|PI"
+],
+[
+"Pontremoli|MS",
+"Casavatore|NA"
 ]
 ],
-"attesa": "Pontremoli|MS",
+"attesa": null,
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
@@ -21771,7 +21780,8 @@
 "Arzano|NA": 1,
 "Vallo della Lucania|SA": 1,
 "Cascina|PI": 1,
-"Rezzato|BS": 1
+"Rezzato|BS": 1,
+"Casavatore|NA": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21956,6 +21966,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-12T12:24+00:00",
+"sorpasso": "Casavatore|NA",
+"su": "Pontremoli|MS",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -22134,6 +22153,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Casavatore|NA": {
+"u": [
+"gabriele_diviccaro"
+],
+"c": [
+"18172248112465271"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22154,7 +22183,8 @@
 "maria_dark_queen|animale|rocky",
 "_ele.na_7|animale|kira",
 "gabriel.lai013|animale|aris",
-"andrea_piazza94|animale|uga"
+"andrea_piazza94|animale|uga",
+"gabriele_diviccaro|animale|sky"
 ]
 }
 }
