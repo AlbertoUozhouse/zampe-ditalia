@@ -1094,6 +1094,7 @@
 "17918464995262638",
 "17918466078549561",
 "17918472306531092",
+"17918488017554403",
 "17918508801464564",
 "17918569707261898",
 "17918570703460801",
@@ -4946,6 +4947,7 @@
 "18101817152387394",
 "18101836376537856",
 "18101836502646339",
+"18101849792370169",
 "18101852606383295",
 "18101877053534309",
 "18101877344534451",
@@ -10575,10 +10577,10 @@
 "18798213136033257"
 ],
 "risposte": [
-1794513156.9987721,
-1794513157.8615031,
 1794513913.7631352,
-1794514746.6943817
+1794514746.6943817,
+1794517047.1107461,
+1794517054.1603742
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12745,7 +12747,9 @@
 "satorougoj476": "2026-11-12",
 "pao_lobartucci": "2026-11-12",
 "patrickmtb2026": "2026-11-12",
-"matteo_bruscobike": "2026-11-12"
+"matteo_bruscobike": "2026-11-12",
+"delprinodavide": "2026-11-12",
+"deby_gs81": "2026-11-12"
 },
 "media_letti": {},
 "pezzi": {
@@ -13714,9 +13718,6 @@
 "cbr_chriss": [
 "passionfruit.exe_"
 ],
-"deby_gs81": [
-"passionfruit.exe_"
-],
 "dil.cobas_": [
 "passionfruit.exe_"
 ],
@@ -13914,7 +13915,8 @@
 "orientalangel>>nuvolele05",
 "orientalangel>elena_gamiddo",
 "orientalangel>>elena_gamiddo",
-"nuvolele05>andrea_piazza94"
+"nuvolele05>andrea_piazza94",
+"passionfruit.exe_>deby_gs81"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14938,7 +14940,8 @@
 "_ele.na_7": 10,
 "_letiziasabato_": 10,
 "patrickmtb2026": 10,
-"matteo_bruscobike": 10
+"matteo_bruscobike": 10,
+"passionfruit.exe_": 6
 },
 "inviti_giorno": {
 "2026-11-05": {
@@ -14968,7 +14971,8 @@
 "orientalangel": 2
 },
 "2026-11-12": {
-"nuvolele05": 1
+"nuvolele05": 1,
+"passionfruit.exe_": 1
 }
 },
 "seguono": {
@@ -19225,11 +19229,13 @@
 "2baae67a33b9ea6b",
 "32712badf987e0b1",
 "5f566668460f4318",
-"399994a652c976b4"
+"399994a652c976b4",
+"d3d8c33da92df902",
+"84c8ef8094e3071d"
 ],
 "privati_ora": [
-1794511562.4525785,
-1794512382.5857077
+1794517047.1107717,
+1794517054.1603932
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19275,7 +19281,7 @@
 "2026-11-09": 1793,
 "2026-11-10": 1814,
 "2026-11-11": 1836,
-"2026-11-12": 1852
+"2026-11-12": 1853
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19859,6 +19865,10 @@
 [
 "2026-11-12T19:52+00:00",
 1852
+],
+[
+"2026-11-12T20:57+00:00",
+1853
 ]
 ],
 "coppa": {
@@ -21875,7 +21885,7 @@
 "Chiavenna|SO"
 ]
 ],
-"attesa": null,
+"attesa": "Bubbio|AT",
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
@@ -21888,7 +21898,7 @@
 "Cervia|RA": 1,
 "Massa|MS": 1,
 "Carovigno|BR": 1,
-"Venezia|VE": 1,
+"Venezia|VE": 2,
 "Bisignano|CS": 1,
 "Termini Imerese|PA": 1,
 "Brescia|BS": 1,
@@ -22241,10 +22251,12 @@
 },
 "Venezia|VE": {
 "u": [
-"passionfruit.exe_"
+"passionfruit.exe_",
+"deby_gs81"
 ],
 "c": [
-"17993408622113350"
+"17993408622113350",
+"18101849792370169"
 ],
 "chiuse": 0,
 "log": []
@@ -22407,7 +22419,8 @@
 "giu.se100|animale|queen",
 "satorougoj476|animale|royma",
 "patrickmtb2026|animale|jack",
-"matteo_bruscobike|animale|hero"
+"matteo_bruscobike|animale|hero",
+"deby_gs81|animale|tia"
 ]
 }
 }
