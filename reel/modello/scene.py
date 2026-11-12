@@ -342,5 +342,104 @@ def gancio(cid, dur, testo, sotto="", icona=""):
     if sotto: js += f'\n    tl.fromTo("#{cid}-s", {{ y: 20, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0);'
     return _pagina(cid, f"Gancio: {pulito}", css, corpo, js)
 
-TIPI = {"gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+# ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
+# Niente mappa e niente paese: il quiz della razza e le figurine da collezione. Le animazioni usano tl.set/tl.to (non fromTo),
+# così come prima scena il primo fotogramma è già pieno senza che _primo_fotogramma schiacci la sequenza.
+
+SPOT = """#root .spot {{ position: absolute; inset: 0; background: radial-gradient(ellipse 70% 45% at 50% 46%, {a} 0, {b} 55%, #05030F 100%); }}
+    #root .raggi {{ position: absolute; left: 50%; top: 46%; width: 2400px; height: 2400px; margin: -1200px 0 0 -1200px;
+      background: repeating-conic-gradient(from 0deg, rgba(255,255,255,.05) 0 6deg, transparent 6deg 18deg); }}"""
+
+def sagoma(cid, dur, svg, manche="1/2", titolo="INDOVINA LA RAZZA"):
+    """Il quiz: la sagoma nera dell'animale sotto un riflettore, un anello che si consuma (il tempo per rispondere)."""
+    css = SPOT.format(a="#4B2A8C", b="#1A0F3D") + """
+    #root .tit { position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 800 96px/1 "Bricolage Grotesque", sans-serif; color: #FFF4DE; letter-spacing: -1px;
+      text-shadow: 0 8px 0 #05030F, 0 0 40px rgba(155,120,255,.7); }
+    #root .man { position: absolute; left: 50%; top: 420px; transform: translateX(-50%); font: 900 40px var(--font-body); color: #2A1606; background: #FFC55C; border-radius: 999px; padding: 6px 26px; }
+    #root .ogg { position: absolute; left: 50%; top: 820px; width: 720px; height: 720px; margin: -360px 0 0 -360px; }
+    #root .ogg img { position: absolute; left: 80px; top: 80px; width: 560px; height: 560px; object-fit: contain; filter: brightness(0) drop-shadow(0 0 26px rgba(190,160,255,.95)); }
+    #root .ogg svg { position: absolute; inset: 0; transform: rotate(-90deg); }
+    #root .q { position: absolute; left: 0; right: 0; top: 520px; text-align: center; font: 800 520px/1 "Bricolage Grotesque", sans-serif; color: rgba(255,255,255,.06); }"""
+    corpo = f"""<div class="spot"></div><div class="raggi" id="{cid}-r"></div><div class="q">?</div>
+    <div class="tit" id="{cid}-t">{ESC(titolo)}</div><div class="man">{ESC(manche)}</div>
+    <div class="ogg" id="{cid}-o"><svg viewBox="0 0 720 720"><circle cx="360" cy="360" r="340" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="18"/>
+      <circle id="{cid}-a" cx="360" cy="360" r="340" fill="none" stroke="#FFC55C" stroke-width="18" stroke-linecap="round" stroke-dasharray="2136" stroke-dashoffset="0"/></svg>
+      <img id="{cid}-img" src="assets/svg/{svg}" alt=""></div>"""
+    js = f"""    tl.to("#{cid}-r", {{ rotation: 25, duration: {dur:.2f}, ease: "none" }}, 0);
+    tl.to("#{cid}-a", {{ attr: {{ "stroke-dashoffset": 2136 }}, duration: {max(0.6, dur - 0.2):.2f}, ease: "none" }}, 0);
+    tl.to("#{cid}-img", {{ scale: 1.06, duration: {dur / 2:.2f}, ease: "sine.inOut", yoyo: true, repeat: 1 }}, 0);
+    tl.to("#{cid}-o", {{ keyframes: [{{ x: -8, duration: 0.05 }}, {{ x: 8, duration: 0.05 }}, {{ x: -5, duration: 0.05 }}, {{ x: 0, duration: 0.05 }}] }}, {max(0.1, dur - 0.45):.2f});"""
+    return _pagina(cid, "Quiz: la sagoma della razza.", css, corpo, js)
+
+def svela(cid, dur, svg, razza, riga=""):
+    """La risposta del quiz: lampo, l'animale a colori, il nome della razza e quanti ce ne sono davvero sulla mappa."""
+    css = SPOT.format(a="#C47A1E", b="#3A1A08") + """
+    #root .tit { position: absolute; left: 40px; right: 40px; top: 300px; text-align: center; font: 800 112px/1 "Bricolage Grotesque", sans-serif; color: #FFC55C; letter-spacing: -2px;
+      text-shadow: 0 8px 0 #1A0A02, 0 0 50px rgba(255,197,92,.8); }
+    #root .ogg { position: absolute; left: 50%; top: 820px; width: 720px; height: 720px; margin: -360px 0 0 -360px; }
+    #root .ogg img { position: absolute; left: 80px; top: 80px; width: 560px; height: 560px; object-fit: contain; filter: drop-shadow(0 0 50px rgba(255,197,92,.7)); }
+    #root .riga { position: absolute; left: 60px; right: 60px; top: 1300px; text-align: center; }
+    #root .riga span { font: 900 44px/1.2 var(--font-body); color: #FFF4DE; background: rgba(26,10,2,.78); border: 3px solid #FFC55C; border-radius: 26px; padding: 12px 26px; display: inline-block; }
+    #root .lampo { position: absolute; inset: 0; background: #FFF6E0; }"""
+    corpo = f"""<div class="spot"></div><div class="raggi" id="{cid}-r"></div>
+    <div class="tit" id="{cid}-t">{ESC(razza.upper())}</div>
+    <div class="ogg"><img id="{cid}-img" src="assets/svg/{svg}" alt=""></div>
+    {f'<div class="riga"><span id="{cid}-g">{ESC(riga)}</span></div>' if riga else ""}<div class="lampo" id="{cid}-l"></div>"""
+    js = f"""    tl.set("#{cid}-img", {{ scale: 1.25 }}, 0); tl.set("#{cid}-t", {{ scale: 2.2, opacity: 0 }}, 0);
+    tl.to("#{cid}-l", {{ opacity: 0, duration: 0.35, ease: "power2.out" }}, 0);
+    tl.to("#{cid}-img", {{ scale: 1, duration: 0.5, ease: "back.out(2.2)" }}, 0.02);
+    tl.to("#{cid}-t", {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.6)" }}, 0.12);
+    tl.to("#{cid}-r", {{ rotation: -30, duration: {dur:.2f}, ease: "none" }}, 0);"""
+    if riga:
+        js += f'\n    tl.set("#{cid}-g", {{ y: 30, opacity: 0 }}, 0); tl.to("#{cid}-g", {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0.55);'
+    return _pagina(cid, f"Quiz: è un {razza}.", css, corpo, js)
+
+RARITA = {"comune": ("#6FB6FF", "#2E5AA8", "COMUNE"), "rara": ("#FFE08A", "#C98A1E", "★ RARA"), "leggendaria": ("#FF7AD9", "#6A4CFF", "★★ LEGGENDARIA")}
+
+def figurina(cid, dur, svg, nome, comune, razza, numero, totale, rarita="comune", motivo="", busta=False):
+    """La figurina da collezione: (busta che si apre), la carta che gira, il bagliore olografico che passa sopra."""
+    c1, c2, etich = RARITA.get(rarita, RARITA["comune"])
+    css = SPOT.format(a="#1E3F7A", b="#0A1430") + f"""
+    #root .carta {{ position: absolute; left: 230px; top: 330px; width: 620px; height: 800px; border-radius: 34px; padding: 16px;
+      background: linear-gradient(135deg, {c1}, {c2}); box-shadow: 0 30px 80px rgba(0,0,0,.6), 0 0 60px {c1}88; transform-style: preserve-3d; overflow: hidden; }}
+    #root .dentro {{ position: absolute; inset: 16px; border-radius: 22px; background: linear-gradient(180deg, #FFF8EA, #F1E3C6); overflow: hidden; }}
+    #root .num {{ position: absolute; left: 22px; right: 22px; top: 18px; display: flex; justify-content: space-between; font: 900 30px var(--font-body); color: #3A2410; }}
+    #root .fin {{ position: absolute; left: 34px; right: 34px; top: 74px; height: 430px; border-radius: 20px; background: radial-gradient(circle at 50% 45%, {c1}, {c2}); border: 5px solid #3A2410; }}
+    #root .fin img {{ position: absolute; left: 50%; top: 50%; width: 480px; height: 480px; margin: -240px 0 0 -240px; object-fit: contain; filter: drop-shadow(0 12px 18px rgba(0,0,0,.35)); }}
+    #root .nome {{ position: absolute; left: 20px; right: 20px; top: 522px; text-align: center; font: 800 {78 if len(nome) <= 10 else max(46, int(78 * 10 / len(nome)))}px/1 "Bricolage Grotesque", sans-serif; color: #2A1606; }}
+    #root .info {{ position: absolute; left: 20px; right: 20px; top: 612px; text-align: center; font: 900 34px/1.15 var(--font-body); color: #5A3A1A; }}
+    #root .rar {{ position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); white-space: nowrap; font: 900 30px var(--font-body); color: #FFF; background: linear-gradient(90deg, {c2}, {c1}); border-radius: 999px; padding: 8px 24px; }}
+    #root .holo {{ position: absolute; inset: -40%; background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,.75) 48%, rgba(255,120,220,.35) 52%, rgba(120,220,255,.35) 56%, transparent 64%); }}
+    #root .busta {{ position: absolute; left: 210px; top: 300px; width: 660px; height: 860px; }}
+    #root .busta .p {{ position: absolute; left: 0; right: 0; border-radius: 18px; background: linear-gradient(160deg, #F2F4FF 0%, #B9C3E8 30%, #FFFFFF 48%, #8E9BD0 70%, #E8ECFF 100%);
+      box-shadow: inset 0 0 0 8px rgba(255,255,255,.35), 0 30px 80px rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; }}
+    #root .busta .su {{ top: 0; height: 180px; border-radius: 18px 18px 6px 6px; }}
+    #root .busta .giu {{ top: 186px; height: 674px; flex-direction: column; gap: 18px; text-align: center; }}
+    #root .busta b {{ font: 800 92px/0.95 "Bricolage Grotesque", sans-serif; color: #1E2A6A; }}
+    #root .busta i {{ font: 900 italic 40px var(--font-body); color: #C0392B; background: #FFE08A; border-radius: 12px; padding: 6px 18px; }}"""
+    corpo = f"""<div class="spot"></div><div class="raggi" id="{cid}-r"></div>
+    <div class="carta" id="{cid}-c"><div class="dentro"><div class="num"><span>Nº {numero:04d}</span><span>ZAMPE D'ITALIA</span></div>
+      <div class="fin"><img src="assets/svg/{svg}" alt=""></div><div class="nome">{ESC(nome)}</div><div class="info">{ESC(razza)} · {ESC(comune)}</div>
+      <div class="rar">{ESC(etich)}{(" · " + ESC(motivo)) if motivo else ""}</div></div><div class="holo" id="{cid}-h"></div></div>"""
+    js = f"""    tl.to("#{cid}-r", {{ rotation: 30, duration: {dur:.2f}, ease: "none" }}, 0);
+    tl.set("#{cid}-h", {{ x: -700 }}, 0);"""
+    if busta:
+        corpo += f"""<div class="busta" id="{cid}-b"><div class="p su" id="{cid}-bs"><b style="font-size:46px">✂︎ · · · · · · · · · · ·</b></div>
+      <div class="p giu" id="{cid}-bg"><b>FIGURINE<br>DELLE ZAMPE</b><i>Nº ? di {totale}</i><b style="font-size:150px">🐾</b></div></div>"""
+        js += f"""
+    tl.set("#{cid}-c", {{ rotationY: 90, opacity: 0, y: 160 }}, 0);
+    tl.to("#{cid}-b", {{ keyframes: [{{ rotation: -3, duration: 0.07 }}, {{ rotation: 3, duration: 0.07 }}, {{ rotation: -2, duration: 0.07 }}, {{ rotation: 0, duration: 0.07 }}] }}, 0.1);
+    tl.to("#{cid}-bs", {{ y: -520, rotation: -28, opacity: 0, duration: 0.5, ease: "power2.in" }}, 0.4);
+    tl.to("#{cid}-bg", {{ y: 900, opacity: 0, duration: 0.55, ease: "power2.in" }}, 0.75);
+    tl.to("#{cid}-c", {{ rotationY: 0, opacity: 1, y: 0, duration: 0.6, ease: "back.out(1.8)" }}, 0.8);
+    tl.to("#{cid}-h", {{ x: 700, duration: 1.1, ease: "power1.inOut", repeat: 2, repeatDelay: 0.5 }}, 1.3);"""
+    else:
+        js += f"""
+    tl.set("#{cid}-c", {{ rotationY: -90, opacity: 0 }}, 0);
+    tl.to("#{cid}-c", {{ rotationY: 0, opacity: 1, duration: 0.55, ease: "back.out(1.8)" }}, 0.05);
+    tl.to("#{cid}-h", {{ x: 700, duration: 1.1, ease: "power1.inOut", repeat: 2, repeatDelay: 0.5 }}, 0.6);"""
+    return _pagina(cid, f"Figurina Nº {numero}: {nome}.", css, corpo, js)
+
+
+TIPI = {"sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}

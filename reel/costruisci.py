@@ -79,6 +79,20 @@ for (const [t,k,s] of {json.dumps(chiavi)}) {{ const svg=(t==="gatto"?D.gatto(k,
   fs.writeFileSync({json.dumps(str(cartella))}+"/"+k+"-"+s+".svg", svg); }}"""
     subprocess.run(["node", "-e", js], check=True)
 
+def solo_animale(cartella, t, razza, seme):
+    """Dal disegno con la cuccia (o il tetto per i gatti) tiene solo l'animale, come mondo3d.js soloAnimale: per il quiz della sagoma e le figurine."""
+    import xml.etree.ElementTree as ET
+    ns = "http://www.w3.org/2000/svg"; ET.register_namespace("", ns)
+    src = Path(cartella) / f"{razza}-{seme}.svg"; root = ET.fromstring(src.read_text())
+    cls = "micio" if t == "gatto" else "muso"
+    g = next((e for e in root.iter() if e.get("class", "").split() and cls in e.get("class", "").split()), None)
+    if g is None: return src.name
+    box = [6, -2, 52, 46] if t == "gatto" else [12, 18, 40, 40]
+    out = ET.Element(f"{{{ns}}}svg", {"width": str(box[2] * 10), "height": str(box[3] * 10), "viewBox": " ".join(map(str, box))})
+    for d in root.iter(f"{{{ns}}}defs"): out.append(d)
+    out.append(g)
+    dst = Path(cartella) / f"{razza}-{seme}-solo.svg"; dst.write_text(ET.tostring(out, encoding="unicode")); return dst.name
+
 def svg_di(t, razza, seme, serve):
     serve.add((t, razza, seme)); return f"{razza}-{seme}.svg"
 
@@ -171,11 +185,14 @@ def main():
     fine_voce = parole[-1]["e"]; durata = round(fine_voce + 0.95, 2)
     if not 8 <= durata <= 40: raise SystemExit(f"Durata {durata}s fuori dai limiti (8–40 s)")
 
-    serve, host, effetti = set(), [], {"durata": durata, "whoosh": [], "pop": [], "chime": []}
+    serve, host, effetti, soli = set(), [], {"durata": durata, "whoosh": [], "pop": [], "chime": []}, []
     ita = italia() if any(f["scena"]["tipo"] == "mappa" for f in copione["frasi"]) else ""
     for n, f in enumerate(copione["frasi"]):
         sc = dict(f["scena"]); tipo = sc.pop("tipo"); cid = f"s{n}"
         a = round(inizi[n], 2); b = round(inizi[n + 1], 2) if n + 1 < len(inizi) else durata; d = round(b - a, 2)
+        if tipo in ("sagoma", "svela", "figurina"):  # 12/11: il quiz e le figurine, col disegno della razza vera
+            t_, k_, s_ = sc.pop("t", "cane"), sc.pop("razza_k"), sc.pop("seme", n + 3)
+            svg_di(t_, k_, s_, serve); soli.append((t_, k_, s_)); sc["svg"] = f"{k_}-{s_}-solo.svg"  # solo l'animale (si estrae dopo i disegni)
         if tipo in ("cuccia", "gatto"):
             sc["svg"] = svg_di("gatto" if tipo == "gatto" else "cane", sc.pop("razza"), sc.pop("seme", n + 3), serve)
         if tipo == "foto":  # la foto vera della star (docs/media/ugc)
@@ -211,6 +228,7 @@ def main():
         effetti["pop"].append(round(a + 0.45, 2))
     effetti["riser"] = round(inizi[-1], 2)
     disegni(sorted(serve), prog / "assets/svg")
+    for t_, k_, s_ in soli: solo_animale(prog / "assets/svg", t_, k_, s_)
 
     c = copione.get("conteggio", {"cani": 0, "gatti": 0})
     b0 = 0.3  # 2/11: la richiesta di commentare sta in basso per tutto il video, come una fascia fissa

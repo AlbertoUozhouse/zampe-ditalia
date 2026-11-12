@@ -1181,7 +1181,94 @@ def verifica(cop):
     return None
 
 
-FORMATI = {"paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+# ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
+FRASI_FISSE = {"indovina": 45, "figurina": 40}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
+
+MANTELLI = {"europeo", "grigio", "nero", "rosso", "bianco", "bicolore", "bicolore_rosso", "calico", "tartarugato", "meticcio"}  # colori, non razze: fuori dal quiz
+
+def _nome_razza(D, t, k):
+    for r in D["razze"]["gatti" if t == "gatto" else "cani"]:
+        if r[0] == k: return r[1].split(" (")[0].split(" / ")[0]  # «Tricolore (calico)» → «Tricolore»: la voce non legge le parentesi
+    return k.replace("_", " ")
+
+def indovina(D, rng, st):
+    """Indovina la razza: la sagoma nera, tre secondi, poi la risposta con quanti ce ne sono davvero sulla mappa. Due manche."""
+    an = [a for a in D["animali"] if a.get("k") == "animale" and a.get("t") in ("cane", "gatto") and a.get("razza") and a["u"].lower() not in ESCLUSI]
+    conta = {}
+    for a in an:
+        if a["razza"] in MANTELLI: continue
+        conta.setdefault((a["t"], a["razza"]), []).append(a)
+    fatte = set(st.get("quiz_razze", []))
+    cand = [(k, v) for k, v in conta.items() if len(v) >= 6 and f"{k[0]}|{k[1]}" not in fatte]
+    if len(cand) < 2: st["quiz_razze"] = []; cand = [(k, v) for k, v in conta.items() if len(v) >= 6]
+    cani = [c for c in cand if c[0][0] == "cane"]; gatti = [c for c in cand if c[0][0] == "gatto"]
+    scelte = [rng.choice(cani)] + ([rng.choice(gatti)] if gatti else [rng.choice([c for c in cani if c is not cani[0]])])
+    st["quiz_razze"] = (list(fatte) + [f"{k[0]}|{k[1]}" for k, _ in scelte])[-60:]
+    frasi, tag = [], []
+    for i, ((t, k), v) in enumerate(scelte):
+        es = sorted(v, key=lambda a: (a["u"].lower() not in D["seguono"], str(a.get("ts", ""))), reverse=False)[0]
+        nome_r = _nome_razza(D, t, k); tag.append(es["u"])
+        frasi.append(("Indovina la razza: tre, due, uno." if i == 0 else "E questo? Tre, due, uno.",
+                      {"tipo": "sagoma", "t": t, "razza_k": k, "seme": rng.randrange(1, 99), "manche": f"{i + 1}/2", "titolo": "INDOVINA LA RAZZA" if i == 0 else "E QUESTO?"}))
+        frasi.append((f"{nome_r}! Sulla mappa sono {len(v)}, come {es['n']} di {es['c']}.",
+                      {"tipo": "svela", "t": t, "razza_k": k, "seme": frasi[-1][1]["seme"], "razza": nome_r, "riga": f"{len(v)} sulla mappa · come {es['n']} di {es['c']}"}))
+    frasi.append(("Quante ne hai indovinate? Rispondi con città e nome del tuo animale.", {"tipo": "chiusura", "testo": "💬 Quante ne hai indovinate?"}))
+    (t1, k1), _ = scelte[0]; (t2, k2), _ = scelte[1]
+    did = (f"🐾 Indovina la razza! Due sagome, tre secondi ciascuna. Era facile? 🤔\n\n"
+           f"Le risposte vere sono sulla mappa di Zampe d'Italia (link in bio): ogni animale è una luce nella sua città.\n"
+           f"👇 Scrivi quante ne hai indovinate, con la tua città e il nome del tuo cane o gatto (es. «2 su 2! Treviso, Luna, cane»): il tuo animale si accende sulla mappa col tuo @.\n"
+           "➕ Seguici: ogni settimana un quiz nuovo.")
+    st["tag_extra"] = tag
+    st["copertina"] = None
+    st["banner_reel"] = "🤔 Indovini la razza? Rispondi nei commenti 👇"
+    st["hashtag"] = "#cani #gatti #razze #quiz #italia #animalidomestici "
+    st["senza_bonus"] = True
+    return "🤔 INDOVINA LA RAZZA", frasi, did
+
+def figurina_reel(D, rng, st):
+    """Le figurine delle Zampe: si apre la bustina e escono due figurine vere, col numero d'arrivo sulla mappa e la rarità."""
+    an = sorted((a for a in D["animali"] if a.get("k") == "animale" and a.get("t") in ("cane", "gatto") and _ts(a)), key=lambda a: str(a.get("ts", "")))
+    numero = {a["id"]: i + 1 for i, a in enumerate(an)}
+    fatte = set(st.get("figurine", []))
+    buone = [a for a in an if a["u"].lower() not in ESCLUSI and a["id"] not in fatte]
+    recenti = buone[-120:]
+    def rar(a):
+        r = str(a.get("ruolo", ""))
+        if a.get("pres") or a.get("capo") or "Presidente" in r or "Capobranco" in r or "Re " in r: return "leggendaria", r.split("·")[0].strip()[:28] or "Capobranco"
+        if r.startswith("Fondatore") or a.get("fondatore"): return "rara", f"Fondatore di {a['c']}"
+        return "comune", ""
+    cane = next((a for a in sorted(recenti, key=lambda a: (a["u"].lower() not in D["seguono"], rng.random())) if a["t"] == "cane"), None)
+    gatto = next((a for a in sorted(recenti, key=lambda a: (a["u"].lower() not in D["seguono"], rng.random())) if a["t"] == "gatto"), None)
+    carte = [x for x in (cane, gatto) if x] or recenti[-2:]
+    st["figurine"] = (list(fatte) + [a["id"] for a in carte])[-2000:]
+    frasi = []
+    for i, a in enumerate(carte):
+        rz = _nome_razza(D, a["t"], a.get("razza") or ("europeo" if a["t"] == "gatto" else "meticcio")); r, motivo = rar(a)
+        frasi.append(((f"Figurina numero {numero[a['id']]}: " if i == 0 else f"E la numero {numero[a['id']]}: ") + f"{a['n']}, {rz.lower()} di {a['c']}.",
+                      {"tipo": "figurina", "t": a["t"], "razza_k": a.get("razza") or ("europeo" if a["t"] == "gatto" else "meticcio"), "seme": rng.randrange(1, 99),
+                       "nome": a["n"], "comune": a["c"], "razza": rz, "numero": numero[a["id"]], "totale": len(an), "rarita": r, "motivo": motivo, "busta": i == 0}))
+    frasi.append(("Vuoi la figurina del tuo animale? Commenta città e nome.", {"tipo": "chiusura", "testo": "🃏 Vuoi la tua figurina? 👇"}))
+    st["tag_extra"] = [a["u"] for a in carte]
+    elenco = " · ".join(f"Nº {numero[a['id']]} {a['n']} ({a['c']})" for a in carte)
+    did = (f"🃏 Le figurine delle Zampe! Ogni animale sulla mappa ha la sua, col numero d'arrivo: oggi {elenco}.\n\n"
+           f"Siamo a {len(an)} figurine in tutta Italia. Le rare sono dei Fondatori, le leggendarie di Capobranco e Presidenti.\n"
+           "👇 Vuoi la figurina del tuo animale? Commenta qui città, nome e cane o gatto (es. «Treviso, Luna, cane»): entra nella collezione col prossimo numero.\n"
+           "➕ Seguici: ogni settimana apriamo una bustina nuova.")
+    st["copertina"] = None
+    st["banner_reel"] = "🃏 Commenta città e nome: la tua figurina 👇"
+    st["hashtag"] = "#cani #gatti #figurine #italia #animalidomestici "
+    st["senza_bonus"] = True
+    return "🃏 LE FIGURINE", frasi, did
+
+def scelta_18():
+    """Le 18 a rotazione (12/11): il quiz, le figurine, la luce nuova: tre idee diverse, mai lo stesso video due giorni di fila (dal 13/11)."""
+    return ["indovina", "figurina", "questa_luce"][(ORA.date() - date(2026, 11, 13)).days % 3]
+
+def sera_18(D, rng, st):
+    return FORMATI[scelta_18()](D, rng, st)
+
+
+FORMATI = {"indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -1246,6 +1333,7 @@ def main():
     parti = sys.argv[1].split(":")
     formato, uscita = parti[0], sys.argv[2]  # «fondatore:prova» è un Trial Reel: il copione è lo stesso; «paese_al_buio:testo» è la versione solo testo del test
     variante_test = next((x for x in parti[1:] if x in ("voce", "testo")), None)
+    if formato == "sera_18": formato = scelta_18()  # il copione e il rendimento portano il nome vero del format
     if formato == "auto":
         formato = min(ORARI, key=lambda o: abs(o[0] - ORA.hour))[1]
     st = carica(STORICO, {})
@@ -1269,6 +1357,10 @@ def main():
     VARIANTI = [("voce", "solita", 32)]
     nv = st.get("variante_n", 0); st["variante_n"] = nv + 1
     voce_v, apertura, max_parole = VARIANTI[nv % len(VARIANTI)]
+    if FRASI_FISSE.get(formato):  # quiz e figurine: testi scritti apposta
+        voce_v, apertura, max_parole = (variante_test or "voce"), "fissa", 45
+        test_like = True
+    else: test_like = False
     if test:  # test di crescita: frasi fisse (niente riscrittura, il gancio è quello del test), voce o solo testo come da piano
         voce_v, apertura, max_parole = (variante_test or "voce"), "gancio", 40
     if formato in ("star", "missione", "neopresidente"): apertura = "solita"  # hanno già la loro apertura
@@ -1291,7 +1383,7 @@ def main():
         fw = D.get("follower") or {}
         if fw.get("n") and fw["n"] < 2000:  # il traguardo di tutti: per ora la priorità sono i follower
             did = did.strip() + f"\n\n🎆 A 2.000 follower facciamo i fuochi d'artificio su tutta la mappa d'Italia: ne mancano {2000 - fw['n']}. Seguici e dillo a un amico!"
-    if not per_attivita and not test:  # nel reel per le attività la parola PRENOTA non si tocca; nel test il gancio resta quello scelto
+    if not per_attivita and not test and not test_like:  # nel reel per le attività la parola PRENOTA non si tocca; nel test il gancio resta quello scelto
         frasi, did = varia(frasi, did, D)
     frasi = taglia(frasi, max_parole)
     mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")} | set(st.pop("tag_extra", [])))
