@@ -94,5 +94,21 @@
   "secondi": 3.9,
   "perche": "Dopo rivelazioni, spirali e orbite già viste, qui una discesa lenta dall'alto verso la sola luce di Kira, in un cielo ve",
   "reel": "2026-11-12-1448-questa_luce"
+ },
+ {
+  "nome_stile": "Brace del Cilento",
+  "cielo_basso": "#8A4A3A",
+  "cielo_alto": "#120A2A",
+  "nebbia_colore": "#483339",
+  "lampioni_colore": "#FFB04F",
+  "lucciole_colore": "#FFE7A8",
+  "lucciole": 180.0,
+  "bloom": 0.85,
+  "esposizione": 1.65,
+  "effetto": "lanterne",
+  "volo": "radente",
+  "secondi": 4.0,
+  "perche": "Dopo il verde smeraldo e le discese già viste su Kira, qui il cielo è una brace di novembre che sfuma in un viola profon",
+  "reel": "2026-11-12-1811-questa_luce"
  }
 ]

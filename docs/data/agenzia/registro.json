@@ -277,5 +277,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-12T13:57:32+00:00",
   "scambi": 130
+ },
+ {
+  "id": "2026-11-12-1811-questa_luce",
+  "formato": "questa_luce",
+  "modalita": "operativa",
+  "inizio": "2026-11-12T17:11:10+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-12T17:19:58+00:00",
+  "scambi": 130
  }
 ]
