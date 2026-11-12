@@ -403,7 +403,8 @@ async function apri(v, opz = {}) {
     U.basso.value = C(coperto && diurno ? "#A8B0BC" : tav[0]); U.alto.value = C(coperto && diurno ? "#6C7684" : tav[1]);
     scene.fog.color = C(coperto && diurno ? "#9AA4B2" : tav[2]); if (scene.fog.density < 0.012) scene.fog.density = tav[3];
     luna.color = C(tav[4]); luna.intensity = coperto ? tav[5] * 0.45 : tav[5]; emi.intensity = tav[6]; renderer.toneMappingExposure = tav[7];
-    if (diurno) { emi.color = C("#CFE3FF"); emi.groundColor = C("#4A5A3A"); }
+    if (diurno) { emi.color = C("#CFE3FF"); emi.groundColor = C("#4A5A3A");
+      if (!tipo || tipo[0] !== "nebbia") scene.fog.density = Math.min(scene.fog.density, coperto ? 0.0055 : 0.004); }  // di giorno si vede lontano (la nebbia vera resta fitta)
     const dx = Math.sin(sol.az) * Math.cos(Math.max(0.12, sol.alt * Math.PI / 180)), dz = Math.cos(sol.az) * Math.cos(Math.max(0.12, sol.alt * Math.PI / 180));
     luna.position.set(-dx * 80, Math.max(10, Math.sin(Math.max(0.12, sol.alt * Math.PI / 180)) * 100), -dz * 80);  // la luce viene da dove sta il sole
     stelleM.visible = !diurno && !coperto; if (!diurno) { stelleM.material.transparent = true; stelleM.material.opacity = 0.3; }
