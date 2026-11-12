@@ -332,3 +332,10 @@ Nessun cambiamento oggi.
 - 2026-11-04-1806-star: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
 - 2026-11-04-1933-ospiti: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
 - 2026-11-04-2107-ospiti_sera: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+## 2026-11-12 — controllo del giorno
+
+- Sito ok (docs 170 MB), motore vivo. 26 luci nuove in 24 ore, follower 1.814 → 1.842 in due giorni.
+- Reel dell'11/11: 2 su 3. Il reel delle 21 (puntata) è stato montato ma NON pubblicato: GitHub Pages non ha messo online il video in 20 minuti; la riserva non è partita (startup_failure di GitHub). Riparato: dopo 10 minuti di attesa Instagram prende il video dalla copia nel repository (raw.githubusercontent.com, motore/pubblica.py SITO_MEDIA). La puntata di ieri sera non si ripubblica (racconta la sera dell'11).
+- Rendimento, follower ogni 1.000 raggiunti: testa_a_testa 10/11 51,4; puntata 10/11 28,8; questa_luce 11/11 19,5 (748 views, le più alte degli ultimi giorni, apertura 3D «Marmo e Mare» con foglie); questa_luce 9/11 16,5; testa_a_testa 11/11 11,9. Media del testa a testa su 3 episodi: 32,6, sempre primo.
+- Coppa: 20 punti (3 → 8 → 20), Staffetta di quartiere: Darfo Boario Terme e Napoli a 2/3. Regie 3D usate: Lume sul lago, Duello al golfo, Marmo e Mare (tutte diverse). Nessun cambiamento oggi oltre alla riparazione.
