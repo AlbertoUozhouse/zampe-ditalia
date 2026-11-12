@@ -35,6 +35,15 @@ def wikipedia(comune):
             print(f"citta: Wikipedia non risponde per «{titolo}» ({e})", file=sys.stderr); continue
         testo = j.get("extract") or ""
         if j.get("type") == "standard" and re.search(r"\b(comune|città|frazione|capoluogo)\b", testo[:300], re.I):
+            # 12/11: il riassunto è quasi sempre solo amministrativo; il testo della voce (storia, monumenti, prodotti tipici) ha i fatti veri
+            try:
+                q = urllib.parse.urlencode({"action": "query", "prop": "extracts", "explaintext": 1, "exsectionformat": "plain", "exchars": 6000,
+                                            "titles": j.get("title", titolo), "format": "json", "redirects": 1})
+                pg = json.loads(urllib.request.urlopen(urllib.request.Request("https://it.wikipedia.org/w/api.php?" + q, headers=UA), timeout=15).read())["query"]["pages"]
+                lungo = next(iter(pg.values())).get("extract") or ""
+                if len(lungo) > len(testo): testo = lungo
+            except Exception as e:
+                print(f"citta: testo lungo non disponibile per «{titolo}» ({e})", file=sys.stderr)
             return {"testo": testo, "fonte": j.get("content_urls", {}).get("desktop", {}).get("page", "")}
     return None
 
@@ -49,7 +58,7 @@ def _vero(frase, testo):
 def fatto(comune, provincia=""):
     """{"fatto": "la città della Disfida" o None, "abitanti": 92000 o None, "fonte": url} per il comune; dalla cache se c'è già."""
     cache = _carica(); k = f"{comune}|{provincia}"
-    if k in cache: return cache[k]
+    if k in cache and cache[k].get("v", 1) >= 2: return cache[k]  # v2: col testo lungo della voce
     w = wikipedia(comune)
     if not w: return None  # senza rete non si salva niente: si riprova la volta dopo
     m = re.search(r"(\d{1,3}(?:[.\s ]\d{3})+|\d{3,6})\s+abitanti", w["testo"])
@@ -57,13 +66,13 @@ def fatto(comune, provincia=""):
     frase = None
     try:
         sys.path.insert(0, str(ROOT / "motore")); import agenzia
-        r, _ = agenzia.lavora(SISTEMA, f"Comune: {comune}\n\n{w['testo'][:1800]}")
+        r, _ = agenzia.lavora(SISTEMA, f"Comune: {comune}\n\n{w['testo'][:5000]}")
         f = (r or {}).get("fatto")
         if isinstance(f, str) and 2 <= len(f.split()) <= 9 and _vero(f, w["testo"]): frase = f.strip().rstrip(".")
         print(f"citta: {comune} → {('«' + frase + '»') if frase else 'nessuna frase verificata'} (proposta: {f!r})", file=sys.stderr)
     except Exception as e:
         print(f"citta: frase non scritta per {comune} ({e})", file=sys.stderr)
-    out = {"fatto": frase, "abitanti": abitanti, "fonte": w["fonte"], "giorno": date.today().isoformat()}
+    out = {"fatto": frase, "abitanti": abitanti, "fonte": w["fonte"], "giorno": date.today().isoformat(), "v": 2}
     cache[k] = out; CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=1) + "\n")
     return out
 
