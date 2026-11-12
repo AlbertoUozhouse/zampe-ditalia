@@ -89,7 +89,6 @@
   "Napoli"
  ],
  "temi": [
-  "giorno",
   "notte",
   "tramonto",
   "aurora",
@@ -98,9 +97,10 @@
   "aurora",
   "giorno",
   "notte",
-  "tramonto"
+  "tramonto",
+  "aurora"
  ],
- "variante_n": 35,
+ "variante_n": 36,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -136,7 +136,8 @@
   "2026-11-10-2103-puntata": "voce-solita-32",
   "2026-11-11-1301-testa_a_testa": "voce-solita-32",
   "2026-11-11-1803-questa_luce": "voce-solita-32",
-  "2026-11-11-2109-puntata": "voce-solita-32"
+  "2026-11-11-2109-puntata": "voce-solita-32",
+  "2026-11-12-1302-testa_a_testa": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -933,12 +934,14 @@
   "maty._000|animale|damon"
  ],
  "derby_vicini": [
-  "Verona|Vicenza",
+  "Castellammare di Stabia|Giugliano in Campania",
+  "Giugliano in Campania|Castellammare di Stabia",
   "Vicenza|Verona",
   "Cecina|Livorno",
   "Livorno|Cecina",
-  "Giugliano in Campania|Castellammare di Stabia",
-  "Castellammare di Stabia|Giugliano in Campania"
+  "Verona|Vicenza",
+  "Barletta|Molfetta",
+  "Molfetta|Barletta"
  ],
  "thor_giorno": "2026-11-10",
  "thor_ultimo_reel": true

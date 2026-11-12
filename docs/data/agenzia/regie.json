@@ -62,5 +62,21 @@
   "secondi": 3.8,
   "perche": "Un crepuscolo viola-lavanda che scende dalle Apuane verso il mare di Massa, con lampioni color miele e una discesa dall'",
   "reel": "2026-11-11-1803-questa_luce"
+ },
+ {
+  "nome_stile": "Scacco Adriatico",
+  "cielo_basso": "#7A3B3F",
+  "cielo_alto": "#081029",
+  "nebbia_colore": "#463648",
+  "lampioni_colore": "#FFB866",
+  "lucciole_colore": "#C9F5A8",
+  "lucciole": 210.0,
+  "bloom": 0.7,
+  "esposizione": 1.45,
+  "effetto": "foglie",
+  "volo": "spirale",
+  "secondi": 4.2,
+  "perche": "Dopo i duelli già visti con orbita, radente e stelle o lanterne, qui è una spirale dall'alto con un cielo che passa dal ",
+  "reel": "2026-11-12-1302-testa_a_testa"
  }
 ]
