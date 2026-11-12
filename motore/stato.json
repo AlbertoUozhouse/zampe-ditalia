@@ -4918,6 +4918,7 @@
 "18101628731653083",
 "18101632346453395",
 "18101647952562087",
+"18101661485552679",
 "18101692571428757",
 "18101695763541758",
 "18101744534453211",
@@ -10538,7 +10539,8 @@
 ],
 "risposte": [
 1794486281.0584557,
-1794487073.321394
+1794487073.321394,
+1794488668.017402
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12698,7 +12700,8 @@
 "_ele.na_7": "2026-11-12",
 "gabriel.lai013": "2026-11-12",
 "kargioapuano": "2026-11-12",
-"gabriele_diviccaro": "2026-11-12"
+"gabriele_diviccaro": "2026-11-12",
+"itsmasu_._": "2026-11-12"
 },
 "media_letti": {},
 "pezzi": {
@@ -19158,10 +19161,12 @@
 "f5cc21da6498a776",
 "e7255c223197a548",
 "98a731293803b768",
-"8089c83dd8e52475"
+"8089c83dd8e52475",
+"3c2faba099e7980c"
 ],
 "privati_ora": [
-1794486281.0584824
+1794486281.0584824,
+1794488668.0174274
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -21785,7 +21790,8 @@
 "Vallo della Lucania|SA": 1,
 "Cascina|PI": 1,
 "Rezzato|BS": 1,
-"Casavatore|NA": 1
+"Casavatore|NA": 1,
+"Fucecchio|FI": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21979,6 +21985,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-12T13:04+00:00",
+"sorpasso": "Fucecchio|FI",
+"su": "Frignano|CE",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -22167,6 +22182,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Fucecchio|FI": {
+"u": [
+"itsmasu_._"
+],
+"c": [
+"18101661485552679"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22188,7 +22213,8 @@
 "_ele.na_7|animale|kira",
 "gabriel.lai013|animale|aris",
 "andrea_piazza94|animale|uga",
-"gabriele_diviccaro|animale|sky"
+"gabriele_diviccaro|animale|sky",
+"itsmasu_._|animale|diego"
 ]
 }
 }
