@@ -31,8 +31,8 @@ def wikipedia(comune):
         try:
             r = urllib.request.Request("https://it.wikipedia.org/api/rest_v1/page/summary/" + urllib.parse.quote(titolo.replace(" ", "_")), headers=UA)
             j = json.loads(urllib.request.urlopen(r, timeout=12).read())
-        except Exception:
-            continue
+        except Exception as e:
+            print(f"citta: Wikipedia non risponde per «{titolo}» ({e})", file=sys.stderr); continue
         testo = j.get("extract") or ""
         if j.get("type") == "standard" and re.search(r"\b(comune|città|frazione|capoluogo)\b", testo[:300], re.I):
             return {"testo": testo, "fonte": j.get("content_urls", {}).get("desktop", {}).get("page", "")}
@@ -60,6 +60,7 @@ def fatto(comune, provincia=""):
         r, _ = agenzia.lavora(SISTEMA, f"Comune: {comune}\n\n{w['testo'][:1800]}")
         f = (r or {}).get("fatto")
         if isinstance(f, str) and 2 <= len(f.split()) <= 9 and _vero(f, w["testo"]): frase = f.strip().rstrip(".")
+        print(f"citta: {comune} → {('«' + frase + '»') if frase else 'nessuna frase verificata'} (proposta: {f!r})", file=sys.stderr)
     except Exception as e:
         print(f"citta: frase non scritta per {comune} ({e})", file=sys.stderr)
     out = {"fatto": frase, "abitanti": abitanti, "fonte": w["fonte"], "giorno": date.today().isoformat()}
@@ -74,4 +75,5 @@ def apposizione(comune, provincia=""):
 
 
 if __name__ == "__main__":
-    print(fatto(*sys.argv[1:3]))
+    for c in sys.argv[1:]:  # «Barletta|BT» «Bisceglie|BT» …
+        print(c, fatto(*(c.split("|") + [""])[:2]))

@@ -1,0 +1,39 @@
+# Le città raccontate (motore/citta.py): cerca su Wikipedia la frase vera di alcuni comuni e la salva in motore/citta.json.
+# Si lancia a mano per riempire la memoria o per controllare che Wikipedia risponda da GitHub.
+name: citta
+
+on:
+  workflow_dispatch:
+    inputs:
+      comuni:
+        description: "Comuni come «Barletta|BT Bisceglie|BT» (vuoto = le città in gara e le più seguite)"
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  citta:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Frasi vere delle città
+        run: |
+          C="${{ inputs.comuni }}"
+          if [ -z "$C" ]; then
+            C=$(python3 -c "
+          import json,sys; sys.path.insert(0,'motore'); import coppa
+          S=json.load(open('motore/stato.json')); A=json.load(open('docs/data/animali.json'))['animali']
+          g=coppa.classifica_follower(S,A); print(' '.join(k for k,_ in g['sempre'][:12]))")
+          fi
+          python3 motore/citta.py $C
+      - name: Salva
+        run: |
+          git config user.name "zampe-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          [ -f motore/citta.json ] || exit 0
+          git add motore/citta.json; git diff --cached --quiet && exit 0
+          git commit -q -m "Città raccontate: frasi vere da Wikipedia"
+          for i in 1 2 3; do git pull -q --rebase --autostash && git push -q && break; sleep 10; done
