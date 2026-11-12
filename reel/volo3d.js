@@ -42,7 +42,7 @@ const server = http.createServer((req, res) => {
     const v = [...VILLE.values()].find(v => v.nome.toLowerCase() === comune.toLowerCase());
     if (!v) return "comune non trovato";
     const mio = nome ? v.lista.find(d => (d.n || "").toLowerCase() === nome.toLowerCase()) : null;
-    await window.Mondo3D.apri(v, { svg: petSvg, mio, cattura: { nome: mio ? mio.n : "" }, scheda: () => "", stile: regia, ...(meteo ? { meteo } : {}) });
+    await window.Mondo3D.apri(v, { svg: petSvg, mio, cattura: { nome: mio ? mio.n : "" }, scheda: () => "", stile: regia, ...(meteo ? { meteo } : {}), ...(opz.quando ? { quando: opz.quando } : {}) });
     const cielo = window.Mondo3D.mondo.cieloBreve;  // su una riga: «⛅ 10° · 🌑 luna nuova»  // il tempo vero di adesso nel comune e la luna di stanotte (mondo3d.js)
     const t = document.createElement("div");
     if (opz.titolo) {  // il duello: nome della città, le sue luci, e il VS in fondo alla metà di sopra
@@ -58,7 +58,7 @@ const server = http.createServer((req, res) => {
     return mio ? "ok" : "ok senza animale";
   }, [comune, nome || "", process.env.METEO_PROVA ? JSON.parse(process.env.METEO_PROVA) : null, REGIA, OPZ]);
   if (!ok.startsWith("ok")) { console.error(ok); process.exit(2); }
-  await page.evaluate(b => { const M = window.Mondo3D.mondo; M.bloom.strength = b; M.bloom.threshold = 0.85; }, Math.max(0.3, Math.min(1, REGIA.bloom || 0.5)));  // da vicino i lampioni abbagliavano
+  await page.evaluate(b => { const M = window.Mondo3D.mondo; M.bloom.strength = M.diurno ? 0.2 : b; M.bloom.threshold = 0.85; }, Math.max(0.3, Math.min(1, REGIA.bloom || 0.5)));  // da vicino i lampioni abbagliavano
   const cartella = fs.mkdtempSync(path.join(os.tmpdir(), "volo3d-"));
   for (let i = 0; i < N; i++) {
     await page.evaluate(([i, N, volo]) => {

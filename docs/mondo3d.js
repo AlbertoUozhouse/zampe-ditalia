@@ -155,6 +155,15 @@ function tipoMeteo(m) {
   if (c === 2 || m.nuvole > 40) return ["nuvole", "⛅ qualche nuvola"];
   return ["sereno", "✨ cielo sereno"];
 }
+// il sole vero (12/11): altezza sull'orizzonte e direzione, per il comune e l'ora (formula astronomica semplice, precisa a meno di un grado)
+function sole(lat, lng, d = new Date()) {
+  const rad = Math.PI / 180, dd = d / 86400000 - 10957.5, g = (357.529 + 0.98560028 * dd) * rad, q = 280.459 + 0.98564736 * dd;
+  const L = (q + 1.915 * Math.sin(g) + 0.02 * Math.sin(2 * g)) * rad, e = (23.439 - 0.00000036 * dd) * rad;
+  const ra = Math.atan2(Math.cos(e) * Math.sin(L), Math.cos(L)), dec = Math.asin(Math.sin(e) * Math.sin(L));
+  const H = ((((18.697374558 + 24.06570982441908 * dd) % 24) + 24) % 24 * 15 + lng) * rad - ra, la = lat * rad;
+  const alt = Math.asin(Math.sin(la) * Math.sin(dec) + Math.cos(la) * Math.cos(dec) * Math.cos(H));
+  return { alt: alt / rad, az: Math.atan2(Math.sin(H), Math.cos(H) * Math.sin(la) - Math.tan(dec) * Math.cos(la)) };
+}
 function faseLuna(d = new Date()) {  // 0 = luna nuova, 0.5 = piena (mese sinodico dalla luna nuova del 6/1/2000)
   const p = (((d - Date.UTC(2000, 0, 6, 18, 14)) / 86400000) / 29.530588853) % 1;
   const nomi = [[0.03, "🌑 luna nuova"], [0.22, "🌒 luna crescente"], [0.28, "🌓 primo quarto"], [0.47, "🌔 luna gibbosa crescente"], [0.53, "🌕 luna piena"],
@@ -381,18 +390,48 @@ async function apri(v, opz = {}) {
     new THREE.PointsMaterial({ color: new THREE.Color("#FFF3A0").multiplyScalar(3), size: 0.22, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false }));
   scene.add(lucc);
 
+  // ---------- il paese all'ora vera (12/11, realismo): di giorno è giorno, al tramonto luce d'oro, al crepuscolo si accendono i lampioni ----------
+  const quando = opz.quando ? new Date(opz.quando) : new Date(), sol = sole(v.ll.lat, v.ll.lng, quando);
+  const ora = sol.alt > 8 ? "giorno" : sol.alt > -1 ? "oro" : sol.alt > -7 ? "crepuscolo" : "notte";
+  const coperto = tipo && ["coperto", "pioggia", "pioviggine", "temporale", "neve", "nebbia"].includes(tipo[0]);
+  const diurno = ora === "giorno" || ora === "oro";
+  if (ora !== "notte") {
+    const C = c => new THREE.Color(c), U = cielo.material.uniforms;
+    const tav = { giorno: ["#9CC8F0", "#3C78C8", "#B8D4EE", 0.005, "#FFF4E0", 3.2, 2.6, 1.0],
+                  oro: ["#F4B26A", "#5468A8", "#E8B88A", 0.006, "#FFB070", 2.6, 2.0, 1.15],
+                  crepuscolo: ["#C27088", "#232B5E", "#4A3050", 0.008, "#FF9A7A", 1.2, 1.6, 1.35] }[ora];
+    U.basso.value = C(coperto && diurno ? "#A8B0BC" : tav[0]); U.alto.value = C(coperto && diurno ? "#6C7684" : tav[1]);
+    scene.fog.color = C(coperto && diurno ? "#9AA4B2" : tav[2]); if (scene.fog.density < 0.012) scene.fog.density = tav[3];
+    luna.color = C(tav[4]); luna.intensity = coperto ? tav[5] * 0.45 : tav[5]; emi.intensity = tav[6]; renderer.toneMappingExposure = tav[7];
+    if (diurno) { emi.color = C("#CFE3FF"); emi.groundColor = C("#4A5A3A"); }
+    const dx = Math.sin(sol.az) * Math.cos(Math.max(0.12, sol.alt * Math.PI / 180)), dz = Math.cos(sol.az) * Math.cos(Math.max(0.12, sol.alt * Math.PI / 180));
+    luna.position.set(-dx * 80, Math.max(10, Math.sin(Math.max(0.12, sol.alt * Math.PI / 180)) * 100), -dz * 80);  // la luce viene da dove sta il sole
+    stelleM.visible = !diurno && !coperto; if (!diurno) { stelleM.material.transparent = true; stelleM.material.opacity = 0.3; }
+    lunaM.visible = false; scene.children.filter(o => o.isMesh && o.geometry?.parameters?.radius === 14.3).forEach(o => o.visible = false);
+    if (diurno && !coperto) {  // il disco del sole, basso sull'orizzonte d'inverno
+      const disco = new THREE.Mesh(new THREE.SphereGeometry(16, 24, 12), new THREE.MeshBasicMaterial({ color: C(ora === "oro" ? "#FFB060" : "#FFF6D8").multiplyScalar(3), fog: false }));
+      disco.position.set(-dx * 480, Math.max(20, Math.sin(sol.alt * Math.PI / 180) * 480), -dz * 480); scene.add(disco);
+    }
+    lucc.visible = !diurno;
+    if (diurno) { bulbo.emissiveIntensity = 0.25; }
+  }
+  const luceLam = diurno ? 0 : 1;
+  const emojiOra = { giorno: coperto ? "🕒" : "☀️", oro: "🌇", crepuscolo: "🌆", notte: fase.nome.split(" ")[0] }[ora];
+  const oraTesto = `${emojiOra} ${quando.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Rome" })}`;
+  if (top) top.textContent = `${oraTesto} · ${top.textContent}`;
+
   // ---------- la regia del reparto Innovazione (10/11): ogni reel ha il suo stile (motore/agenzia.py regia → reel/volo3d.js → opz.stile) ----------
   const stileGira = [], st = opz.stile || null;
   if (st) {
     const col = (c, d) => { try { return new THREE.Color(c); } catch (e) { return new THREE.Color(d); } };
-    if (st.cielo_basso) cielo.material.uniforms.basso.value = col(st.cielo_basso, "#21336B");
-    if (st.cielo_alto) cielo.material.uniforms.alto.value = col(st.cielo_alto, "#050A1E");
-    if (st.nebbia_colore) scene.fog.color = col(st.nebbia_colore, "#0E1A3E");
-    if (st.nebbia_densita && scene.fog.density < 0.012) scene.fog.density = st.nebbia_densita;  // il meteo vero (nebbia, pioggia) ha la precedenza
+    if (st.cielo_basso && !diurno) cielo.material.uniforms.basso.value = col(st.cielo_basso, "#21336B");
+    if (st.cielo_alto && !diurno) cielo.material.uniforms.alto.value = col(st.cielo_alto, "#050A1E");
+    if (st.nebbia_colore && !diurno) scene.fog.color = col(st.nebbia_colore, "#0E1A3E");
+    if (st.nebbia_densita && !diurno && scene.fog.density < 0.012) scene.fog.density = st.nebbia_densita;  // il meteo vero (nebbia, pioggia) ha la precedenza
     if (st.lampioni_colore) { const c = col(st.lampioni_colore, "#FFB862"); lam.forEach(l => l.color = c); bulbo.emissive = c.clone(); }
     if (st.lucciole_colore) lucc.material.color = col(st.lucciole_colore, "#FFF3A0").multiplyScalar(3);
     if (st.lucciole !== undefined) lucc.geometry.setDrawRange(0, Math.max(0, Math.min(NL, Math.round(st.lucciole / 300 * NL))));
-    if (st.esposizione) renderer.toneMappingExposure = st.esposizione;
+    if (st.esposizione && ora === "notte") renderer.toneMappingExposure = st.esposizione;
     const area = R + 30;
     if (st.effetto === "foglie") {  // novembre: foglie d'autunno che cadono girando
       const N = 700, pos = new Float32Array(N * 3), colori = new Float32Array(N * 3), base = [...Array(N)].map(() => [(Math.random() * 2 - 1) * area, (Math.random() * 2 - 1) * area, Math.random() * 30, Math.random() * 9]);
@@ -403,19 +442,19 @@ async function apri(v, opz = {}) {
       stileGira.push(t => { for (let i = 0; i < N; i++) { const [x, z, h, f] = base[i], y = 30 - ((h + t * 0.0022) % 30);
         pos[i * 3] = x + Math.sin(t / 700 + f) * 1.6; pos[i * 3 + 1] = y; pos[i * 3 + 2] = z + Math.cos(t / 950 + f) * 1.2; } g.attributes.position.needsUpdate = true; });
     }
-    if (st.effetto === "lanterne") {  // lanterne di carta che salgono lente sopra il paese
+    if (st.effetto === "lanterne" && !diurno) {  // lanterne di carta che salgono lente sopra il paese
       const N = 46, pos = new Float32Array(N * 3), base = [...Array(N)].map(() => [(Math.random() * 2 - 1) * (R + 6), (Math.random() * 2 - 1) * (R + 6), Math.random() * 40, Math.random() * 7]);
       const g = new THREE.BufferGeometry().setAttribute("position", new THREE.BufferAttribute(pos, 3));
       scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: new THREE.Color("#FF9A3C").multiplyScalar(4), size: 0.9, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending })));
       stileGira.push(t => { for (let i = 0; i < N; i++) { const [x, z, h, f] = base[i]; pos[i * 3] = x + Math.sin(t / 1500 + f) * 0.8; pos[i * 3 + 1] = 2 + ((h + t * 0.0016) % 40); pos[i * 3 + 2] = z; } g.attributes.position.needsUpdate = true; });
     }
-    if (st.effetto === "stelle_cadenti") {  // scie che attraversano il cielo, una ogni due secondi
+    if (st.effetto === "stelle_cadenti" && !diurno) {  // scie che attraversano il cielo, una ogni due secondi
       const N = 4, pos = new Float32Array(N * 6), g = new THREE.BufferGeometry().setAttribute("position", new THREE.BufferAttribute(pos, 3));
       const scie = new THREE.LineSegments(g, new THREE.LineBasicMaterial({ color: new THREE.Color("#FFFFFF").multiplyScalar(3), transparent: true, opacity: 0.95, fog: false })); scene.add(scie);
       stileGira.push(t => { for (let i = 0; i < N; i++) { const q = ((t / 1900) + i / N) % 1, a = i * 1.7 + Math.floor(t / 1900 + i / N) * 2.3, x0 = Math.cos(a) * 300, z0 = Math.sin(a) * 300 - 120, y0 = 210 + (i % 2) * 50;
         const x = x0 - q * 160, y = y0 - q * 70, on = q < 0.35 ? 1 : 0; pos.set([x, y * on - 999 * (1 - on), z0, x + 26, (y + 11) * on - 999 * (1 - on), z0], i * 6); } g.attributes.position.needsUpdate = true; });
     }
-    if (st.effetto === "fuochi") {  // fuochi d'artificio sopra la piazza (la festa della città)
+    if (st.effetto === "fuochi" && !diurno) {  // fuochi d'artificio sopra la piazza (la festa della città)
       const N = 5, P = 70, pos = new Float32Array(N * P * 3), colori = new Float32Array(N * P * 3), dir = [...Array(N * P)].map(() => new THREE.Vector3().randomDirection());
       const tinte = ["#FFC55C", "#FF5FA2", "#6FE3FF", "#B9FF6F", "#FFFFFF"].map(c => new THREE.Color(c).multiplyScalar(3));
       for (let i = 0; i < N * P; i++) { const c = tinte[Math.floor(i / P) % tinte.length]; colori.set([c.r, c.g, c.b], i * 3); }
@@ -478,7 +517,7 @@ async function apri(v, opz = {}) {
     for (const f of gira) f(t);
     for (const f of meteoGira) f(t);
     for (const f of stileGira) f(t);
-    lam.forEach((l, i) => l.intensity = 20 + Math.sin(t / 470 + i * 1.7) * 2.5);
+    lam.forEach((l, i) => l.intensity = (20 + Math.sin(t / 470 + i * 1.7) * 2.5) * luceLam);
     if (volo) { const q = Math.min(1, (t - volo.t0) / 1100), e = 1 - Math.pow(1 - q, 3); camera.position.lerpVectors(volo.da, volo.a, e); controls.target.lerpVectors(volo.tda, volo.ta, e); if (q >= 1) volo = null; }
     controls.update(); composer.render();
   };
@@ -487,8 +526,8 @@ async function apri(v, opz = {}) {
   const resize = () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); composer.setSize(innerWidth, innerHeight); };
   addEventListener("resize", resize);
   box.querySelector(".m3-esci").onclick = chiudi;
-  const cieloBreve = [tipo ? tipo[1].split(" ")[0] + (meteo.temp !== undefined ? " " + meteo.temp + "°" : "") : "", tipo && ["coperto", "pioggia", "pioviggine", "temporale", "neve", "nebbia"].includes(tipo[0]) ? "" : fase.nome].filter(Boolean).join(" · ");
-  M = { renderer, box, scene, pet, camera, controls, THREE, R, passo, mio, bloom, cielo: testoCielo, cieloBreve, stop: () => { cancelAnimationFrame(raf); removeEventListener("resize", resize); } };
+  const cieloBreve = [oraTesto, tipo ? tipo[1].split(" ")[0] + (meteo.temp !== undefined ? " " + meteo.temp + "°" : "") : "", ora === "notte" && !coperto ? fase.nome.split(" ").slice(1).join(" ") : ""].filter(Boolean).join(" · ");
+  M = { renderer, box, scene, pet, camera, controls, THREE, R, passo, mio, bloom, cielo: testoCielo, cieloBreve, ora, diurno, stop: () => { cancelAnimationFrame(raf); removeEventListener("resize", resize); } };
 }
 
 function chiudi() {

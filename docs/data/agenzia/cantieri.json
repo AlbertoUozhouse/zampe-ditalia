@@ -171,7 +171,7 @@
   "traccia": "realismo",
   "aperto": "2026-11-11",
   "scadenza": "2026-11-13",
-  "stato": "da costruire",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-12",
@@ -306,6 +306,9 @@
     ],
     "fatto_quando": "Sulla pagina del comune di prova compare un riquadro 3D del rilievo reale che si ruota col dito, con il terreno che mostra le quote vere del comune, e le visite al riquadro vengono registrate."
    }
-  ]
+  ],
+  "aggiornato": "2026-11-12",
+  "nota": "12/11: il paese 3D all'ora vera del comune — di giorno è giorno con il sole e le ombre veri, al tramonto luce d'oro, al crepuscolo si accendono i lampioni, di notte la luna vera (sito e apertura dei reel, con l'ora scritta).",
+  "online_dal": "2026-11-12"
  }
 }

@@ -36,6 +36,7 @@ let DATA = [], VISIBLE = [], recentCount = 0;
 const DOM_ZOOM = 12.5; // da qui in su compaiono i paesi disegnati
 
 function onda(p, dt) {
+  if (dt < 0) return;  // 12/11: appena arrivato l'impulso parte con dt negativo e il cerchio aveva raggio negativo (errore a ogni fotogramma)
   const k = (dt % 1333) / 1333, R = 8 + 60 * k;
   gx.save(); gx.globalCompositeOperation = "source-over"; gx.globalAlpha = (1 - k) * 0.8 * (1 - dt / 4000);
   gx.strokeStyle = "rgb(255,205,120)"; gx.lineWidth = 2; gx.beginPath(); gx.arc(p.x, p.y, R, 0, Math.PI * 2); gx.stroke(); gx.restore();
