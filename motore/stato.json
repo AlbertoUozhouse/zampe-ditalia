@@ -952,6 +952,7 @@
 "17915124081500468",
 "17915132232535418",
 "17915137140286835",
+"17915166468482498",
 "17915168136538477",
 "17915169507550576",
 "17915187480286137",
@@ -8293,6 +8294,7 @@
 "18146126632589342",
 "18146129290578183",
 "18146131876587741",
+"18146162395701563",
 "18146170144504015",
 "18146181406568215",
 "18146196931595514",
@@ -10529,7 +10531,9 @@
 ],
 "risposte": [
 1794478274.728121,
-1794479064.758989
+1794479064.758989,
+1794480708.0356066,
+1794480711.01074
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12679,7 +12683,7 @@
 "passionfruit.exe_": "2026-11-11",
 "gabriel_cantarellaa": "2026-11-11",
 "stavv_shaa": "2026-11-11",
-"andrea_piazza94": "2026-11-11",
+"andrea_piazza94": "2026-11-12",
 "orientalangel": "2026-11-12",
 "giaduccia._": "2026-11-11",
 "nuvolele05": "2026-11-11",
@@ -12687,7 +12691,8 @@
 "grissinorotondo1234": "2026-11-12",
 "maria_dark_queen": "2026-11-12",
 "_ele.na_7": "2026-11-12",
-"gabriel.lai013": "2026-11-12"
+"gabriel.lai013": "2026-11-12",
+"kargioapuano": "2026-11-12"
 },
 "media_letti": {},
 "pezzi": {
@@ -13674,9 +13679,6 @@
 "elenapogliano": [
 "andrea_piazza94"
 ],
-"andrea_piazza94": [
-"nuvolele05"
-],
 "angelazinoni": [
 "elena_gamiddo"
 ],
@@ -13858,7 +13860,8 @@
 "andrea_piazza94>>nuvolele05",
 "orientalangel>>nuvolele05",
 "orientalangel>elena_gamiddo",
-"orientalangel>>elena_gamiddo"
+"orientalangel>>elena_gamiddo",
+"nuvolele05>andrea_piazza94"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14874,7 +14877,7 @@
 "maty._000": 10,
 "andrea_piazza94": 46,
 "orientalangel": 71,
-"nuvolele05": 10,
+"nuvolele05": 16,
 "giaduccia._": 10,
 "elena_gamiddo": 10,
 "d.barbato_17": 10,
@@ -14907,6 +14910,9 @@
 "2026-11-11": {
 "andrea_piazza94": 2,
 "orientalangel": 2
+},
+"2026-11-12": {
+"nuvolele05": 1
 }
 },
 "seguono": {
@@ -19142,10 +19148,12 @@
 "f8d4e805f7765fde",
 "e51080aa31841cf0",
 "f5cc21da6498a776",
-"e7255c223197a548"
+"e7255c223197a548",
+"98a731293803b768"
 ],
 "privati_ora": [
-1794478274.7281468
+1794478274.7281468,
+1794480711.0107603
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -21744,7 +21752,7 @@
 "Cascina|PI"
 ]
 ],
-"attesa": null,
+"attesa": "Pontremoli|MS",
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
@@ -21763,7 +21771,8 @@
 "Brescia|BS": 1,
 "Arzano|NA": 1,
 "Vallo della Lucania|SA": 1,
-"Cascina|PI": 1
+"Cascina|PI": 1,
+"Rezzato|BS": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22116,6 +22125,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Rezzato|BS": {
+"u": [
+"andrea_piazza94"
+],
+"c": [
+"17915166468482498"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22135,7 +22154,8 @@
 "grissinorotondo1234|animale|fuffi",
 "maria_dark_queen|animale|rocky",
 "_ele.na_7|animale|kira",
-"gabriel.lai013|animale|aris"
+"gabriel.lai013|animale|aris",
+"andrea_piazza94|animale|uga"
 ]
 }
 }
