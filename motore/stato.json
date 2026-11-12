@@ -1109,6 +1109,7 @@
 "17918890161464909",
 "17918926464467501",
 "17919036135462512",
+"17919107940525393",
 "17919129402458892",
 "17919149850464558",
 "17919156486532075",
@@ -10584,7 +10585,8 @@
 1794517047.1107461,
 1794517054.1603742,
 1794517842.8643608,
-1794517843.9630077
+1794517843.9630077,
+1794520179.398524
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12753,7 +12755,8 @@
 "patrickmtb2026": "2026-11-12",
 "matteo_bruscobike": "2026-11-12",
 "delprinodavide": "2026-11-12",
-"deby_gs81": "2026-11-12"
+"deby_gs81": "2026-11-12",
+"filannino_giorgio7": "2026-11-12"
 },
 "media_letti": {},
 "pezzi": {
@@ -19237,11 +19240,13 @@
 "5f566668460f4318",
 "399994a652c976b4",
 "d3d8c33da92df902",
-"84c8ef8094e3071d"
+"84c8ef8094e3071d",
+"de7635459f173c50"
 ],
 "privati_ora": [
 1794517047.1107717,
-1794517054.1603932
+1794517054.1603932,
+1794520179.3985505
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -21921,7 +21926,8 @@
 "Bisceglie|BT": 2,
 "Canale|CN": 1,
 "Chiavenna|SO": 1,
-"Cavaion Veronese|VR": 1
+"Cavaion Veronese|VR": 1,
+"Barletta|BT": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22156,6 +22162,15 @@
 "t": "2026-11-12T19:39+00:00",
 "sorpasso": "Cavaion Veronese|VR",
 "su": "Castrovillari|CS",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-12T21:49+00:00",
+"sorpasso": "Barletta|BT",
+"su": "Carrara|MS",
 "punti": [
 1,
 0
@@ -22402,6 +22417,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Barletta|BT": {
+"u": [
+"filannino_giorgio7"
+],
+"c": [
+"17919107940525393"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22430,7 +22455,8 @@
 "satorougoj476|animale|royma",
 "patrickmtb2026|animale|jack",
 "matteo_bruscobike|animale|hero",
-"deby_gs81|animale|tia"
+"deby_gs81|animale|tia",
+"filannino_giorgio7|animale|gigino"
 ]
 }
 }
