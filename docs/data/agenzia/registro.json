@@ -286,5 +286,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-12T17:19:58+00:00",
   "scambi": 130
+ },
+ {
+  "id": "2026-11-12-2109-coppa_sorpasso",
+  "formato": "coppa_sorpasso",
+  "modalita": "operativa",
+  "inizio": "2026-11-12T20:09:37+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-12T20:13:47+00:00",
+  "scambi": 128
  }
 ]

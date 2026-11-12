@@ -91,7 +91,6 @@
   "Napoli"
  ],
  "temi": [
-  "tramonto",
   "aurora",
   "neon",
   "tramonto",
@@ -100,9 +99,10 @@
   "notte",
   "tramonto",
   "aurora",
-  "giorno"
+  "giorno",
+  "notte"
  ],
- "variante_n": 37,
+ "variante_n": 38,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -140,7 +140,8 @@
   "2026-11-11-1803-questa_luce": "voce-solita-32",
   "2026-11-11-2109-puntata": "voce-solita-32",
   "2026-11-12-1302-testa_a_testa": "voce-solita-32",
-  "2026-11-12-1811-questa_luce": "voce-solita-32"
+  "2026-11-12-1811-questa_luce": "voce-solita-32",
+  "2026-11-12-2109-coppa_sorpasso": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
