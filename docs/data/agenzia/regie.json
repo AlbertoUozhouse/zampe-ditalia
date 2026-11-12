@@ -78,5 +78,21 @@
   "secondi": 4.2,
   "perche": "Dopo i duelli già visti con orbita, radente e stelle o lanterne, qui è una spirale dall'alto con un cielo che passa dal ",
   "reel": "2026-11-12-1302-testa_a_testa"
+ },
+ {
+  "nome_stile": "Cilento Smeraldo",
+  "cielo_basso": "#2F4A45",
+  "cielo_alto": "#060E16",
+  "nebbia_colore": "#334844",
+  "lampioni_colore": "#FFC46B",
+  "lucciole_colore": "#FFE39A",
+  "lucciole": 120.0,
+  "bloom": 0.85,
+  "esposizione": 1.6,
+  "effetto": "nessuno",
+  "volo": "discesa",
+  "secondi": 3.9,
+  "perche": "Dopo rivelazioni, spirali e orbite già viste, qui una discesa lenta dall'alto verso la sola luce di Kira, in un cielo ve",
+  "reel": "2026-11-12-1448-questa_luce"
  }
 ]
