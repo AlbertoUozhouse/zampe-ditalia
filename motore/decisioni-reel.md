@@ -340,3 +340,8 @@ Nessun cambiamento oggi.
 - Rendimento, follower ogni 1.000 raggiunti: testa_a_testa 10/11 51,4; puntata 10/11 28,8; questa_luce 11/11 19,5 (748 views, le più alte degli ultimi giorni, apertura 3D «Marmo e Mare» con foglie); questa_luce 9/11 16,5; testa_a_testa 11/11 11,9. Media del testa a testa su 3 episodi: 32,6, sempre primo.
 - Coppa: 20 punti (3 → 8 → 20), Staffetta di quartiere: Darfo Boario Terme e Napoli a 2/3. Regie 3D usate: Lume sul lago, Duello al golfo, Marmo e Mare (tutte diverse). Nessun cambiamento oggi oltre alla riparazione.
 - 12/11 Officina (giorno «realismo»): il paese 3D all'ora vera del comune (posizione vera del sole): giorno con sole e ombre lunghe di novembre, tramonto d'oro, crepuscolo coi lampioni che si accendono, notte con la luna vera. Sul sito entrando in un paese e nell'apertura dei reel (le 13 escono di giorno, le 18 e le 21 di notte). Corretto anche un errore vecchio della mappa (impulso con raggio negativo).
+
+
+## 2026-11-12 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-05-1312-re: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
