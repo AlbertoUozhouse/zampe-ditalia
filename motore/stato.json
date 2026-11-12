@@ -3885,6 +3885,7 @@
 "18075756182575174",
 "18075776339790128",
 "18075777788737523",
+"18075833270504078",
 "18075862652771938",
 "18075874211467397",
 "18075921158765176",
@@ -10585,7 +10586,8 @@
 ],
 "risposte": [
 1794520179.398524,
-1794520949.8754163
+1794520949.8754163,
+1794522547.124096
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -11038,7 +11040,7 @@
 "leo.piana": "2026-10-27",
 "daniel_cristofolini": "2026-10-27",
 "rumenspammer": "2026-10-27",
-"dimastrogiovannivalentina": "2026-10-27",
+"dimastrogiovannivalentina": "2026-11-12",
 "frad_013": "2026-10-27",
 "asca_rn": "2026-10-27",
 "glitters.moka": "2026-10-27",
@@ -14119,7 +14121,7 @@
 "nicolo.simone_": 30,
 "fabio05.lideo": 30,
 "simocande_": 30,
-"dimastrogiovannivalentina": 30,
+"dimastrogiovannivalentina": 35,
 "gas.33_": 30,
 "fra.schi_": 30,
 "annaagriggio": 60,
@@ -22424,10 +22426,12 @@
 },
 "Barletta|BT": {
 "u": [
-"filannino_giorgio7"
+"filannino_giorgio7",
+"dimastrogiovannivalentina"
 ],
 "c": [
-"17919107940525393"
+"17919107940525393",
+"18075833270504078"
 ],
 "chiuse": 0,
 "log": []
