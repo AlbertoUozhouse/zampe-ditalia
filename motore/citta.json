@@ -1,38 +1,86 @@
 {
  "Barletta|BT": {
-  "fatto": null,
+  "fatto": "la città della Disfida",
   "abitanti": 91983,
   "fonte": "https://it.wikipedia.org/wiki/Barletta",
-  "giorno": "2026-11-12"
+  "giorno": "2026-11-12",
+  "v": 2
  },
  "Bisceglie|BT": {
-  "fatto": null,
+  "fatto": "la città del mare Adriatico",
   "abitanti": 53130,
   "fonte": "https://it.wikipedia.org/wiki/Bisceglie",
-  "giorno": "2026-11-12"
+  "giorno": "2026-11-12",
+  "v": 2
  },
  "Napoli|NA": {
-  "fatto": null,
+  "fatto": "la città di Partenope",
   "abitanti": 902705,
   "fonte": "https://it.wikipedia.org/wiki/Napoli",
-  "giorno": "2026-11-12"
+  "giorno": "2026-11-12",
+  "v": 2
  },
  "Roma|RM": {
-  "fatto": "la capitale della Repubblica Italiana",
+  "fatto": "la città eterna",
   "abitanti": 2743357,
   "fonte": "https://it.wikipedia.org/wiki/Roma",
-  "giorno": "2026-11-12"
+  "giorno": "2026-11-12",
+  "v": 2
  },
  "Cagliari|CA": {
-  "fatto": null,
+  "fatto": "la città dalla storia plurimillenaria",
   "abitanti": 145729,
   "fonte": "https://it.wikipedia.org/wiki/Cagliari",
-  "giorno": "2026-11-12"
+  "giorno": "2026-11-12",
+  "v": 2
  },
  "Molfetta|BA": {
-  "fatto": null,
+  "fatto": "la città del Pulo e del Mar Adriatico",
   "abitanti": 57007,
   "fonte": "https://it.wikipedia.org/wiki/Molfetta",
-  "giorno": "2026-11-12"
+  "giorno": "2026-11-12",
+  "v": 2
+ },
+ "Torino|TO": {
+  "fatto": "la prima capitale d'Italia",
+  "abitanti": 856343,
+  "fonte": "https://it.wikipedia.org/wiki/Torino",
+  "giorno": "2026-11-12",
+  "v": 2
+ },
+ "Catania|CT": {
+  "fatto": "la città etnea",
+  "abitanti": 296602,
+  "fonte": "https://it.wikipedia.org/wiki/Catania",
+  "giorno": "2026-11-12",
+  "v": 2
+ },
+ "Bari|BA": {
+  "fatto": "la città del Mare Adriatico",
+  "abitanti": 315921,
+  "fonte": "https://it.wikipedia.org/wiki/Bari",
+  "giorno": "2026-11-12",
+  "v": 2
+ },
+ "Messina|ME": {
+  "fatto": "la città dello Stretto",
+  "abitanti": 216300,
+  "fonte": "https://it.wikipedia.org/wiki/Messina",
+  "giorno": "2026-11-12",
+  "v": 2
+ },
+ "Palermo|PA": {
+  "fatto": "la città del sito UNESCO arabo-normanno",
+  "abitanti": 625075,
+  "fonte": "https://it.wikipedia.org/wiki/Palermo",
+  "giorno": "2026-11-12",
+  "v": 2
+ },
+ "Pisa|PI": {
+  "fatto": "la città della Torre pendente",
+  "abitanti": 90502,
+  "fonte": "https://it.wikipedia.org/wiki/Pisa",
+  "giorno": "2026-11-12",
+  "v": 2
  }
 }
