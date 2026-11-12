@@ -7954,6 +7954,7 @@
 "18137099836738172",
 "18137108368682519",
 "18137111303508919",
+"18137134759782396",
 "18137139100732254",
 "18137142247658671",
 "18137200564771133",
@@ -10520,7 +10521,7 @@
 "18798213136033257"
 ],
 "risposte": [
-1794469539.479334
+1794473571.7117956
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12676,7 +12677,8 @@
 "nuvolele05": "2026-11-11",
 "elena_gamiddo": "2026-11-11",
 "grissinorotondo1234": "2026-11-12",
-"maria_dark_queen": "2026-11-12"
+"maria_dark_queen": "2026-11-12",
+"_ele.na_7": "2026-11-12"
 },
 "media_letti": {},
 "pezzi": {
@@ -19125,11 +19127,11 @@
 "7365834581a54472",
 "d23e66d24207f9d6",
 "f8d4e805f7765fde",
-"e51080aa31841cf0"
+"e51080aa31841cf0",
+"f5cc21da6498a776"
 ],
 "privati_ora": [
-1794466828.2951221,
-1794468448.3374677
+1794473571.711822
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19175,7 +19177,7 @@
 "2026-11-09": 1793,
 "2026-11-10": 1814,
 "2026-11-11": 1836,
-"2026-11-12": 1839
+"2026-11-12": 1840
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19712,6 +19714,10 @@
 [
 "2026-11-12T07:27+00:00",
 1839
+],
+[
+"2026-11-12T08:52+00:00",
+1840
 ]
 ],
 "coppa": {
@@ -21729,7 +21735,8 @@
 "Bisignano|CS": 1,
 "Termini Imerese|PA": 1,
 "Brescia|BS": 1,
-"Arzano|NA": 1
+"Arzano|NA": 1,
+"Vallo della Lucania|SA": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21896,6 +21903,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-12T08:52+00:00",
+"sorpasso": "Vallo della Lucania|SA",
+"su": "Valva|SA",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -22044,6 +22060,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Vallo della Lucania|SA": {
+"u": [
+"_ele.na_7"
+],
+"c": [
+"18137134759782396"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22061,7 +22087,8 @@
 "giaduccia._|animale|charlie",
 "elena_gamiddo|animale|bella",
 "grissinorotondo1234|animale|fuffi",
-"maria_dark_queen|animale|rocky"
+"maria_dark_queen|animale|rocky",
+"_ele.na_7|animale|kira"
 ]
 }
 }
