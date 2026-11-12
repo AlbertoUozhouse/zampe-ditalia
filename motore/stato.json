@@ -5587,6 +5587,7 @@
 "18110694293622202",
 "18110697323628139",
 "18110712125581456",
+"18110720108257663",
 "18110721152351098",
 "18110732576231855",
 "18110734844622074",
@@ -5828,6 +5829,7 @@
 "18113733686177942",
 "18113735414114176",
 "18113744875892932",
+"18113745545178776",
 "18113750708039905",
 "18113761883175024",
 "18113770046618294",
@@ -10562,9 +10564,8 @@
 "18798213136033257"
 ],
 "risposte": [
-1794507383.8743384,
-1794507387.5474715,
-1794508422.0461924
+1794508422.0461924,
+1794511562.452552
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12729,7 +12730,8 @@
 "valerio_2015_": "2026-11-12",
 "_letiziasabato_": "2026-11-12",
 "satorougoj476": "2026-11-12",
-"pao_lobartucci": "2026-11-12"
+"pao_lobartucci": "2026-11-12",
+"patrickmtb2026": "2026-11-12"
 },
 "media_letti": {},
 "pezzi": {
@@ -19201,11 +19203,11 @@
 "41ee18f8e1ec8ba7",
 "5fe03ea1bf1a45b6",
 "2baae67a33b9ea6b",
-"32712badf987e0b1"
+"32712badf987e0b1",
+"5f566668460f4318"
 ],
 "privati_ora": [
-1794506503.4983299,
-1794507383.874364
+1794511562.4525785
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -21834,9 +21836,13 @@
 [
 "Gallipoli|LE",
 "Canale|CN"
+],
+[
+"San Ferdinando di Puglia|BT",
+"Chiavenna|SO"
 ]
 ],
-"attesa": "San Ferdinando di Puglia|BT",
+"attesa": null,
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
@@ -21860,7 +21866,8 @@
 "Casavatore|NA": 1,
 "Fucecchio|FI": 1,
 "Bisceglie|BT": 2,
-"Canale|CN": 1
+"Canale|CN": 1,
+"Chiavenna|SO": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22077,6 +22084,15 @@
 "t": "2026-11-12T18:01+00:00",
 "sorpasso": "Canale|CN",
 "su": "Gallipoli|LE",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-12T19:26+00:00",
+"sorpasso": "Chiavenna|SO",
+"su": "San Ferdinando di Puglia|BT",
 "punti": [
 1,
 0
@@ -22301,6 +22317,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Chiavenna|SO": {
+"u": [
+"patrickmtb2026"
+],
+"c": [
+"18110720108257663"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22326,7 +22352,8 @@
 "itsmasu_._|animale|diego",
 "valerio_2015_|animale|mia",
 "giu.se100|animale|queen",
-"satorougoj476|animale|royma"
+"satorougoj476|animale|royma",
+"patrickmtb2026|animale|jack"
 ]
 }
 }
