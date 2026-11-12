@@ -2387,6 +2387,7 @@
 "17986057461095490",
 "17986151667084537",
 "17986154912895957",
+"17986308335897831",
 "17986471314109040",
 "17986566111107848",
 "17986584870102194",
@@ -10510,7 +10511,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794466828.2950962
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -12663,7 +12666,8 @@
 "orientalangel": "2026-11-11",
 "giaduccia._": "2026-11-11",
 "nuvolele05": "2026-11-11",
-"elena_gamiddo": "2026-11-11"
+"elena_gamiddo": "2026-11-11",
+"grissinorotondo1234": "2026-11-12"
 },
 "media_letti": {},
 "pezzi": {
@@ -19103,14 +19107,11 @@
 "822c58fde4f090ab",
 "96166c5b57942ab2",
 "7365834581a54472",
-"d23e66d24207f9d6"
+"d23e66d24207f9d6",
+"f8d4e805f7765fde"
 ],
 "privati_ora": [
-1794430749.374622,
-1794430756.8060315,
-1794431615.389056,
-1794432471.4557073,
-1794434160.3405461
+1794466828.2951221
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -21701,7 +21702,8 @@
 "Venezia|VE": 1,
 "Bisignano|CS": 1,
 "Termini Imerese|PA": 1,
-"Brescia|BS": 1
+"Brescia|BS": 1,
+"Arzano|NA": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21859,6 +21861,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-12T07:00+00:00",
+"sorpasso": "Arzano|NA",
+"su": "Atri|TE",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -21995,6 +22006,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Arzano|NA": {
+"u": [
+"grissinorotondo1234"
+],
+"c": [
+"17986308335897831"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22010,7 +22031,8 @@
 "passionfruit.exe_|animale|nigel",
 "stavv_shaa|animale|chicco",
 "giaduccia._|animale|charlie",
-"elena_gamiddo|animale|bella"
+"elena_gamiddo|animale|bella",
+"grissinorotondo1234|animale|fuffi"
 ]
 }
 }
