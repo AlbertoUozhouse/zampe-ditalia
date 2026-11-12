@@ -14905,7 +14905,8 @@
 "elena_gamiddo": 10,
 "d.barbato_17": 10,
 "maria_dark_queen": 10,
-"_ele.na_7": 10
+"_ele.na_7": 10,
+"_letiziasabato_": 10
 },
 "inviti_giorno": {
 "2026-11-05": {
@@ -15775,7 +15776,8 @@
 "giaduccia._": "premiato",
 "elena_gamiddo": "premiato",
 "d.barbato_17": "premiato",
-"_ele.na_7": "premiato"
+"_ele.na_7": "premiato",
+"_letiziasabato_": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -19231,7 +19233,7 @@
 "2026-11-09": 1793,
 "2026-11-10": 1814,
 "2026-11-11": 1836,
-"2026-11-12": 1846
+"2026-11-12": 1847
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19796,6 +19798,10 @@
 [
 "2026-11-12T16:21+00:00",
 1846
+],
+[
+"2026-11-12T17:06+00:00",
+1847
 ]
 ],
 "coppa": {
