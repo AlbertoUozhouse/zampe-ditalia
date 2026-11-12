@@ -9957,6 +9957,7 @@
 "18438920623199464",
 "18438937711176879",
 "18438971767181616",
+"18438984100182575",
 "18439114651183115",
 "18439312549178483",
 "18439335439145895",
@@ -10525,8 +10526,8 @@
 "18798213136033257"
 ],
 "risposte": [
-1794474350.6488059,
-1794475120.617067
+1794475120.617067,
+1794478274.728121
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12683,7 +12684,8 @@
 "elena_gamiddo": "2026-11-11",
 "grissinorotondo1234": "2026-11-12",
 "maria_dark_queen": "2026-11-12",
-"_ele.na_7": "2026-11-12"
+"_ele.na_7": "2026-11-12",
+"gabriel.lai013": "2026-11-12"
 },
 "media_letti": {},
 "pezzi": {
@@ -19136,10 +19138,11 @@
 "d23e66d24207f9d6",
 "f8d4e805f7765fde",
 "e51080aa31841cf0",
-"f5cc21da6498a776"
+"f5cc21da6498a776",
+"e7255c223197a548"
 ],
 "privati_ora": [
-1794473571.711822
+1794478274.7281468
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19185,7 +19188,7 @@
 "2026-11-09": 1793,
 "2026-11-10": 1814,
 "2026-11-11": 1836,
-"2026-11-12": 1841
+"2026-11-12": 1842
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19730,6 +19733,10 @@
 [
 "2026-11-12T09:05+00:00",
 1841
+],
+[
+"2026-11-12T10:11+00:00",
+1842
 ]
 ],
 "coppa": {
@@ -21728,9 +21735,13 @@
 [
 "Salzano|VE",
 "Bisignano|CS"
+],
+[
+"Rezzato|BS",
+"Cascina|PI"
 ]
 ],
-"attesa": "Rezzato|BS",
+"attesa": null,
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
@@ -21748,7 +21759,8 @@
 "Termini Imerese|PA": 1,
 "Brescia|BS": 1,
 "Arzano|NA": 1,
-"Vallo della Lucania|SA": 1
+"Vallo della Lucania|SA": 1,
+"Cascina|PI": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -21924,6 +21936,15 @@
 1,
 0
 ]
+},
+{
+"t": "2026-11-12T10:11+00:00",
+"sorpasso": "Cascina|PI",
+"su": "Rezzato|BS",
+"punti": [
+1,
+0
+]
 }
 ],
 "chiuso": false,
@@ -22082,6 +22103,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Cascina|PI": {
+"u": [
+"gabriel.lai013"
+],
+"c": [
+"18438984100182575"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22100,7 +22131,8 @@
 "elena_gamiddo|animale|bella",
 "grissinorotondo1234|animale|fuffi",
 "maria_dark_queen|animale|rocky",
-"_ele.na_7|animale|kira"
+"_ele.na_7|animale|kira",
+"gabriel.lai013|animale|aris"
 ]
 }
 }
