@@ -553,5 +553,35 @@
   "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
   "riprovare": null,
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18028422407867698",
+  "file": "2026-11-05-1806-star",
+  "formato": "star",
+  "uscita": "2026-11-05T17:11:39+00:00",
+  "follower": null,
+  "reach_7g": 302,
+  "follower_ogni_1000": null,
+  "mediana_simili": null,
+  "simili": 0,
+  "scelte": null,
+  "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
+  "riprovare": null,
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18113680013579871",
+  "file": "2026-11-05-2111-ospiti_sera",
+  "formato": "ospiti_sera",
+  "uscita": "2026-11-05T20:20:25+00:00",
+  "follower": null,
+  "reach_7g": 454,
+  "follower_ogni_1000": null,
+  "mediana_simili": null,
+  "simili": 0,
+  "scelte": null,
+  "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
+  "riprovare": null,
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]

@@ -1,0 +1,321 @@
+{
+ "id": "innovazione-2026-11-13",
+ "formato": "innovazione del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-13T10:26:15+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-13T10:26:16+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Staffetta di quartiere nella Coppa delle Zampe (con 'Pappa al volo' a turni)»: Chiudi la Staffetta al minimo per uscire entro il 10 novembre (scadenza già superata, quindi la prossima uscita utile): in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva, collegala a 'Pappa al volo' e crea le tabelle 'squadre' e 'staffette' nel database, senza link d'invito né map",
+   "dati": {
+    "passo": "Chiudi la Staffetta al minimo per uscire entro il 10 novembre (scadenza già superata, quindi la prossima uscita utile): in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva, collegala a 'Pappa al volo' e crea le tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa; mostra la classifica del giorno come lista semplice in docs/coppa.js con una sola squadra di prova per comune (3 slot) e una tappa al giorno.",
+    "file": [
+     "motore/coppa.py",
+     "motore/config.json",
+     "docs/coppa.js"
+    ],
+    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice sul sito."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:16+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Staffetta di quartiere nella Coppa delle Zampe (con 'Pappa al volo' a turni)»: Oggi, come Meccaniche di gioco, chiudi solo il collegamento minimo della Staffetta: in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva e crea le tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa. Per uscire entro la scadenza del 10 novembre, la versione di ",
+   "dati": {
+    "passo": "Oggi, come Meccaniche di gioco, chiudi solo il collegamento minimo della Staffetta: in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva e crea le tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa. Per uscire entro la scadenza del 10 novembre, la versione di domani è una sola squadra di prova per comune (3 slot), una tappa al giorno, con la classifica del giorno come lista semplice in docs/coppa.js.",
+    "file": [
+     "motore/coppa.py",
+     "motore/config.json",
+     "docs/coppa.js"
+    ],
+    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice sul sito."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:19+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Ombra del Paese: luce che proietta il vero profilo del comune: Quando si accende la luce di un animale, sulla vista 3D del suo paese (three.js) compare un'ombra realistica proiettata dal rilievo reale del comune, orientata con l'ora locale della sera. Ogni comune mostra quindi il proprio profilo di colline e coste vere, e l'animale appare come un punto luminoso che si posa sul paese illuminato dal",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Ombra del Paese: luce che proietta il vero profilo del comune",
+    "come_funziona": "Quando si accende la luce di un animale, sulla vista 3D del suo paese (three.js) compare un'ombra realistica proiettata dal rilievo reale del comune, orientata con l'ora locale della sera. Ogni comune mostra quindi il proprio profilo di colline e coste vere, e l'animale appare come un punto luminoso che si posa sul paese illuminato dalla luce del tramonto.",
+    "perche_porta_follower": "Chi cerca la propria città vede il suo paese in 3D con l'ombra che lo segue, e la voglia di condividere la propria zona porta amici a guardare, lasciare un commento con la città e tornare a vedere la prossima luce.",
+    "perche_e_bella": "Il realismo nasce dai dati di altitudine veri e dall'ora reale della sera: ogni paese ha la sua ombra diversa, e la mappa diventa un posto che si riconosce a colpo d'occhio.",
+    "cosa_serve": "docs/ (vista 3D esistente in three.js), i dati di altitudine già usati per la mappa con rilievo, le coordinate dei comuni nel progetto, la data e l'ora locale per calcolare l'angolo del sole, più l'elenco degli animali con luce accesa.",
+    "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti dei reel che rimandano alla vista 3D e il numero di visite alla pagina 3D rispetto alla media delle altre pagine del sito."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:19+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese dal Vero in 3D: piazza del comune con il proprio animale: Sul sito, cliccando una luce sulla mappa, si apre una vista 3D del comune costruita con three.js sul rilievo reale già presente, con gli edifici e la piazza principali e la cuccia dell'animale al posto giusto nel paese. Il giorno dopo ogni nuova luce entra nella vista con la sua posizione reale, così la mappa diventa un paese che c",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese dal Vero in 3D: piazza del comune con il proprio animale",
+    "come_funziona": "Sul sito, cliccando una luce sulla mappa, si apre una vista 3D del comune costruita con three.js sul rilievo reale già presente, con gli edifici e la piazza principali e la cuccia dell'animale al posto giusto nel paese. Il giorno dopo ogni nuova luce entra nella vista con la sua posizione reale, così la mappa diventa un paese che cresce ogni sera. Chi ha dato il SÌ alla foto vede la propria cuccia nel 3D e può condividerla.",
+    "perche_porta_follower": "Chi cerca il proprio paese o il proprio animale arriva al sito da una scena concreta e riconoscibile, e la condivisione della propria cuccia nel 3D porta persone del paese a cercare la luce e a seguire la pagina per vedere la prossima.",
+    "perche_e_bella": "Trasforma un punto luminoso in un luogo vero che si può girare con il dito, e il rilievo reale dà la sensazione di un'Italia che esiste davvero.",
+    "cosa_serve": "Dati di altitudine e coste già presenti nel progetto, le coordinate dei comuni, la libreria three.js, le foto dei follower con il SÌ e le sagome SVG degli animali per razza.",
+    "come_misurarla": "Dopo 7 giorni contare le visite alla vista 3D e quante condivisioni partono da essa, e confrontare i follower ogni 1.000 account raggiunti dei reel che rimandano al 3D con quelli degli altri formati."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:19+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Sfida di Campanile: il reel dal vivo (derby tra comuni vicini con video vero)»: Dall'archivio dei follower prendi i video con consenso SÌ per Livorno, Cecina, Verona e Vicenza (4-6 secondi ciascuno, consenso anche per l'audio ambientale). Poi duplica il template testa_a_testa in reel/ con uno slot iniziale per il video reale con audio originale, collega le coordinate dei quattro comuni g",
+   "dati": {
+    "passo": "Dall'archivio dei follower prendi i video con consenso SÌ per Livorno, Cecina, Verona e Vicenza (4-6 secondi ciascuno, consenso anche per l'audio ambientale). Poi duplica il template testa_a_testa in reel/ con uno slot iniziale per il video reale con audio originale, collega le coordinate dei quattro comuni già presenti nel progetto per accendere le due luci in sequenza, e genera 2 reel di prova (uno per coppia). Se il tempo non basta, esci domani solo con la coppia Livorno-Cecina e il video reale, senza la coppia Verona-Vicenza.",
+    "file": [
+     "reel/template_testa_a_testa.py",
+     "reel/",
+     "motore/config.json",
+     "docs/index.html"
+    ],
+    "fatto_quando": "Esiste un reel MP4 di prova Livorno-Cecina in cui il video reale con audio originale apre il reel, seguito dall'accensione in sequenza delle due luci sulla mappa, e il file è salvato in reel/ pronto per la pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:19+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Sfida di Campanile: il reel dal vivo (derby tra comuni vicini con video vero)»: Dall'archivio dei follower prendere solo i video con consenso SÌ per Livorno, Cecina, Verona e Vicenza (4-6 secondi ciascuno), verificando il consenso anche per l'audio ambientale; scartare quelli senza consenso esplicito. Poi nel motore dei reel duplicare il template testa_a_testa aggiungendo uno slot inizia",
+   "dati": {
+    "passo": "Dall'archivio dei follower prendere solo i video con consenso SÌ per Livorno, Cecina, Verona e Vicenza (4-6 secondi ciascuno), verificando il consenso anche per l'audio ambientale; scartare quelli senza consenso esplicito. Poi nel motore dei reel duplicare il template testa_a_testa aggiungendo uno slot iniziale per il video reale con audio originale, collegando le coordinate già presenti per far accendere le due luci in sequenza, e generare un reel di prova per una sola coppia (Livorno-Cecina) da pubblicare, perché la scadenza è il 14 novembre e il cantiere parte oggi.",
+    "file": [
+     "reel/archivio_video/",
+     "motore/reel.py",
+     "motore/templates/testa_a_testa.py",
+     "motore/config.json",
+     "reel/"
+    ],
+    "fatto_quando": "Esiste un reel di prova Livorno-Cecina generato dal template duplicato, con video reale da 4-6 secondi con consenso verificato in apertura e le due luci che si accendono in sequenza, già pubblicato o pronto con la data di uscita fissata entro il 14 novembre."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:21+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Sfida di Campanile: il reel dal vivo (derby tra comuni vicini con video vero)»: Dall'archivio dei video dei follower con consenso SÌ, scegli un clip di 4-6 secondi per Livorno e uno per Cecina, verifica che il consenso copra anche l'audio ambientale, poi duplica il template testa_a_testa in motore/reel per aggiungere uno slot iniziale con video vero e audio originale, collegando le coord",
+   "dati": {
+    "passo": "Dall'archivio dei video dei follower con consenso SÌ, scegli un clip di 4-6 secondi per Livorno e uno per Cecina, verifica che il consenso copra anche l'audio ambientale, poi duplica il template testa_a_testa in motore/reel per aggiungere uno slot iniziale con video vero e audio originale, collegando le coordinate già presenti. Per uscire entro il 14 novembre, tagliare a una sola coppia (Livorno-Cecina) e un solo reel di prova, senza Verona-Vicenza.",
+    "file": [
+     "reel/",
+     "motore/reel",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Esiste un reel di prova Livorno-Cecina in cui il clip vero apre con audio originale, seguito dalle due luci che si accendono in sequenza sulla mappa, pubblicato entro il 14 novembre."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:21+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Staffetta di quartiere nella Coppa delle Zampe (con 'Pappa al volo' a turni)»: Chiudi la Staffetta al minimo per uscire appena possibile: in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva, collegala a 'Pappa al volo' e crea le tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa. Per tagliarlo, mostra la classifica del giorno come lista",
+   "dati": {
+    "passo": "Chiudi la Staffetta al minimo per uscire appena possibile: in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva, collegala a 'Pappa al volo' e crea le tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa. Per tagliarlo, mostra la classifica del giorno come lista semplice in docs/coppa.js con una sola squadra di prova per comune (3 slot) e una tappa al giorno.",
+    "file": [
+     "motore/coppa.py",
+     "motore/config.json",
+     "docs/coppa.js"
+    ],
+    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice sul sito."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:22+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in Tasca dal Vero: Sulla vista 3D del comune (three.js sul rilievo reale) l'animale appare in scala nella sua via o piazza, con la foto o il video vero del follower in una piccola cornice ancorata al punto della sua casa. Toccando la cornice si vede il nome, la razza e il numero di luci accese nel paese. Il comune si può ruotare per confrontare il rilievo reale con dove vivono gli animali",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in Tasca dal Vero",
+    "come_funziona": "Sulla vista 3D del comune (three.js sul rilievo reale) l'animale appare in scala nella sua via o piazza, con la foto o il video vero del follower in una piccola cornice ancorata al punto della sua casa. Toccando la cornice si vede il nome, la razza e il numero di luci accese nel paese. Il comune si può ruotare per confrontare il rilievo reale con dove vivono gli animali.",
+    "perche_porta_follower": "Ogni persona che vede la propria casa o il proprio quartiere in 3D con il proprio animale tende a cercarlo, condividerlo e chiedere ai vicini di comparire; il click sulla cornice porta a cercare il proprio comune e a iscriversi per averne una.",
+    "perche_e_bella": "Unisce il rilievo vero del territorio con le persone reali, quindi il gioco sembra un vero plastico dell'Italia dove ogni animale ha una casa precisa e non un puntino generico.",
+    "cosa_serve": "Dati di altitudine già usati per il rilievo, coordinate dei comuni già presenti, foto e video dei follower con SÌ, il modulo three.js della vista 3D e le SVG delle razze già disegnate.",
+    "come_misurarla": "Dopo 7 giorni contare i click sulle cornici in 3D e i follower arrivati dalla vista del paese, confrontandoli con i giorni senza la funzione."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:23+00:00",
+   "da": "grafica3d-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in Tasca 3D: Nel sito, quando si apre un comune, una piccola scena three.js mostra il paese vero sul rilievo reale, con le case disegnate in SVG che si alzano leggermente e l'animale del comune che gira lentamente su una base illuminata. Nei reel la stessa scena viene ripresa con una rotazione lenta di 5-6 secondi, senza musica sopra il suono ambientale. Il follower vede il proprio paese ",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in Tasca 3D",
+    "come_funziona": "Nel sito, quando si apre un comune, una piccola scena three.js mostra il paese vero sul rilievo reale, con le case disegnate in SVG che si alzano leggermente e l'animale del comune che gira lentamente su una base illuminata. Nei reel la stessa scena viene ripresa con una rotazione lenta di 5-6 secondi, senza musica sopra il suono ambientale. Il follower vede il proprio paese in rilievo e può ruotarlo col dito.",
+    "perche_porta_follower": "Chi cerca il proprio paese lo trova in 3D e tende a condividerlo o a scrivere la propria città nei commenti, che è il gancio già usato dal formato questa_luce, il più stabile con 13-18 follower ogni 1.000 account.",
+    "perche_e_bella": "Il rilievo reale e la rotazione lenta danno un effetto di plastico vero, diverso da tutte le mappe piatte con luci, e sul telefono si vede bene a schermo intero.",
+    "cosa_serve": "dati di altitudine già usati per la mappa con rilievo, i disegni SVG degli animali e delle case per razza, la libreria three.js già presente nel sito per la vista 3D del paese, e i video dei follower con il SÌ per eventuali riprese di riferimento.",
+    "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti dei reel con la scena 3D, con obiettivo sopra 15 (la soglia del formato questa_luce), e contare quante visite alla pagina del comune arrivano dal link del sito rispetto alla settimana precedente."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:24+00:00",
+   "da": "grafica3d-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in Tasca 3D: Sul sito, toccando un comune della mappa si apre una piccola scena three.js che mostra il paese su rilievo reale, con i tetti in 3D e l'animale che si accende in una piazza, ruotabile col dito. Nei reel la stessa scena compare come ripresa lenta a 360 gradi del paese prima che la luce si accenda sulla mappa.",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in Tasca 3D",
+    "come_funziona": "Sul sito, toccando un comune della mappa si apre una piccola scena three.js che mostra il paese su rilievo reale, con i tetti in 3D e l'animale che si accende in una piazza, ruotabile col dito. Nei reel la stessa scena compare come ripresa lenta a 360 gradi del paese prima che la luce si accenda sulla mappa.",
+    "perche_porta_follower": "Ogni comune diventa un oggetto da esplorare e condividere: chi vede la propria città in 3D la manda ai conterranei, e chi non ci conosce ancora cerca il proprio paese, portando nuovi visitatori al sito e nuove visualizzazioni ai reel.",
+    "perche_e_bella": "Passare dalla mappa piatta a un paese che gira sul telefono, con il rilievo vero e l'animale che brilla in piazza, fa sentire la città come un luogo reale e non come un punto su una cartina.",
+    "cosa_serve": "Dati di altitudine e coste già usati per la mappa con rilievo, i disegni SVG degli animali per razza, le foto e i video dei follower con il SÌ per i comuni pilota (Livorno, Cecina, Verona, Vicenza), la libreria three.js già prevista nel sito e le coordinate dei comuni nel progetto.",
+    "come_misurarla": "Dopo 7 giorni contare le aperture delle scene 3D sul sito (obiettivo oltre 100) e i follower ogni 1.000 account raggiunti dei reel che contengono la ripresa 3D, confrontandoli con i 13-18 di 'questa_luce'."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:25+00:00",
+   "da": "grafica3d-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in Tasca 3D: Sul sito, al tocco di un comune sulla mappa, si apre una piccola scena three.js che mostra il paese su un rilievo 3D reale costruito dai dati di altitudine, con l'animale segnalato come un punto luminoso nel suo quartiere e una leggera rotazione che si muove col dito. Nei reel la stessa scena compare in 5 secondi, girando lentamente sul comune prima che la luce si accenda.",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in Tasca 3D",
+    "come_funziona": "Sul sito, al tocco di un comune sulla mappa, si apre una piccola scena three.js che mostra il paese su un rilievo 3D reale costruito dai dati di altitudine, con l'animale segnalato come un punto luminoso nel suo quartiere e una leggera rotazione che si muove col dito. Nei reel la stessa scena compare in 5 secondi, girando lentamente sul comune prima che la luce si accenda.",
+    "perche_porta_follower": "Chi cerca il proprio paese vuole vederlo in rilievo e trovarci il suo animale; il gesto di ruotare la scena invita a condividerla e a invitare chi è della stessa zona, portando nuovi follower dal paese stesso.",
+    "perche_e_bella": "Sul telefono un paese che si alza dal terreno vero, con la luce dell'animale che pulsa sulla sua via, dà un effetto di profondità che la mappa piatta non ha.",
+    "cosa_serve": "I dati di altitudine già usati per la mappa con rilievo e coste vere, le coordinate dei comuni del progetto, i disegni SVG degli animali per razza come sprite, la libreria three.js già prevista nel sito e i video/foto dei follower con il SÌ per la texture.",
+    "come_misurarla": "Dopo 7 giorni guardare i tocchi sui comuni che aprono la scena 3D e il tempo medio di permanenza sulla pagina, più i follower arrivati da chi ha condiviso la scena, confrontati con i 13-18 ogni 1.000 di 'questa_luce'."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:26+00:00",
+   "da": "grafica3d-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in 3D: volo sul tuo comune: Sul sito, toccando un comune sulla mappa, la mappa a rilievo si trasforma in una vista 3D (three.js) del paese: la camera scende dal rilievo reale delle colline o della costa fino alle case disegnate, e l'animale con la sua luce appare nel punto esatto della sua città. Per i reel, la stessa scena viene ripresa con una camera che fa un volo lento di 5 secondi ve",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in 3D: volo sul tuo comune",
+    "come_funziona": "Sul sito, toccando un comune sulla mappa, la mappa a rilievo si trasforma in una vista 3D (three.js) del paese: la camera scende dal rilievo reale delle colline o della costa fino alle case disegnate, e l'animale con la sua luce appare nel punto esatto della sua città. Per i reel, la stessa scena viene ripresa con una camera che fa un volo lento di 5 secondi verso la luce che si accende, sostituendo la solita dissolvenza sulla mappa.",
+    "perche_porta_follower": "Ognuno cerca la propria città per vedere se stessa in 3D: chi vede il proprio paese condivide la scena e chiede nei commenti dove sta il suo animale, portando persone nuove che non conoscono la pagina.",
+    "perche_e_bella": "Passare dalla mappa piatta al volo sul rilievo vero, con le colline e le coste reali, fa sembrare ogni luce un posto preciso e vivo, e sul telefono il movimento della camera dura il tempo di un reel senza bisogno di spiegazioni.",
+    "cosa_serve": "I dati di altitudine già usati per la mappa con rilievo e coste vere; i disegni SVG degli animali per razza; le coordinate dei comuni del progetto; la libreria three.js già prevista per la vista 3D del paese; i video e le foto dei follower con il SÌ per la sequenza reel.",
+    "come_misurarla": "Dopo 7 giorni guardare il numero di follower ogni 1.000 account raggiunti nei reel con il volo 3D rispetto alla media dei reel precedenti (riferimento stabile per 'questa_luce' tra 13 e 18), e contare quanti visitatori del sito aprono la vista 3D di un comune diverso dal proprio."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:26+00:00",
+   "da": "grafica3d-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in Scena 3D: Sul sito, toccando un comune sulla mappa, si apre una piccola scena three.js che mostra il paese in 3D sul rilievo reale, con le case disegnate in SVG e l'animale in primo piano che si muove e risponde al tocco. Nei reel la stessa scena compare come ripresa lenta che sale dal rilievo verso il comune prima che la luce si accenda.",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in Scena 3D",
+    "come_funziona": "Sul sito, toccando un comune sulla mappa, si apre una piccola scena three.js che mostra il paese in 3D sul rilievo reale, con le case disegnate in SVG e l'animale in primo piano che si muove e risponde al tocco. Nei reel la stessa scena compare come ripresa lenta che sale dal rilievo verso il comune prima che la luce si accenda.",
+    "perche_porta_follower": "Chi cerca il proprio paese o il proprio animale può esplorarlo in 3D e condividerlo, e il reel con la scena 3D dà una ragione concreta per seguire la pagina e vedere la prossima luce.",
+    "perche_e_bella": "Sul telefono il rilievo reale e la scena che ruota danno profondità a una mappa che oggi è piatta, senza richiedere video girati a mano.",
+    "cosa_serve": "I file SVG delle case e degli animali già disegnati per razza, i dati di altitudine della mappa reale, e la libreria three.js già usata per la vista 3D del paese in docs/; si parte da un solo comune di prova (Livorno) per non appesantire il sito.",
+    "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti dei reel con la scena 3D rispetto alla media di 'questa_luce' (tra 13 e 18), e contare quante persone aprono la scena dal sito."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:28+00:00",
+   "da": "grafica3d-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in Tasca 3D: Sul sito, ogni comune si apre come una piccola scena three.js: il rilievo reale del paese con le sue quote e il punto dell'animale che acceso una luce, ruotabile col dito sul telefono. Nei reel, la stessa scena 3D ruota lentamente per 5 secondi prima che la luce del comune si accenda sulla mappa, così il reel ha un'inquadratura diversa dalla mappa piatta di oggi. La vista usa",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in Tasca 3D",
+    "come_funziona": "Sul sito, ogni comune si apre come una piccola scena three.js: il rilievo reale del paese con le sue quote e il punto dell'animale che acceso una luce, ruotabile col dito sul telefono. Nei reel, la stessa scena 3D ruota lentamente per 5 secondi prima che la luce del comune si accenda sulla mappa, così il reel ha un'inquadratura diversa dalla mappa piatta di oggi. La vista usa la stessa altitudine già presente nella mappa, quindi il 3D resta fedele ai dati reali.",
+    "perche_porta_follower": "Chi non conosce la pagina si ferma su una scena che si muove e si riconosce nel proprio paese: il tocco per ruotarla invita a restare sul sito e a condividere la vista del proprio comune, portando nuovi visitatori dalla città e dal proprio animale.",
+    "perche_e_bella": "Vedere il proprio paese in tre dimensioni, con le colline vere e la luce che si accende sopra il tetto dell'animale, dà un senso di realismo che la mappa piatta non ha, e sul telefono la rotazione lenta è morbida e leggibile.",
+    "cosa_serve": "Il dato di altitudine già usato per il rilievo della mappa, le coordinate dei comuni nel progetto, la libreria three.js già prevista per la vista 3D del paese, e per i reel le foto e i video dei follower con il SÌ dei comuni pilota (Livorno, Cecina, Verona, Vicenza).",
+    "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti dei reel che usano la scena 3D rispetto ai reel di mappa piatta (oggi tra 10 e 18 per 'questa_luce'), e contare quanti visitatori del sito aprono la vista 3D di un comune."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:28+00:00",
+   "da": "grafica3d-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in Scena 3D: Nel sito, il comune di ogni animale si apre in una piccola scena three.js che usa il rilievo reale e i dati di altitudine già in mappa, con le case del paese disegnate in 3D e la luce dell'animale che si accende sul tetto del suo comune. Nei reel, la stessa scena fa una breve panoramica di 5 secondi, ruotando lentamente sul paese prima che la luce si accenda. Il giocatore può",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in Scena 3D",
+    "come_funziona": "Nel sito, il comune di ogni animale si apre in una piccola scena three.js che usa il rilievo reale e i dati di altitudine già in mappa, con le case del paese disegnate in 3D e la luce dell'animale che si accende sul tetto del suo comune. Nei reel, la stessa scena fa una breve panoramica di 5 secondi, ruotando lentamente sul paese prima che la luce si accenda. Il giocatore può trascinare per girare la vista e toccare una casa per vedere quale animale ci vive.",
+    "perche_porta_follower": "Chi vede il proprio paese in 3D sul telefono tende a condividerlo e a cercare il proprio animale, che è il gancio naturale per seguire la pagina e per il prossimo testa_a_testa tra città vicine.",
+    "perche_e_bella": "Passare dalla mappa piatta a un paese che si gira e si illumina dà un senso di luogo vero, con rilievo, colline e case, che la pagina non ha ancora.",
+    "cosa_serve": "Il rilievo e le coste già usati nella mappa (dati di altitudine), le coordinate dei comuni del progetto, le forme SVG delle case per paese già disegnate, la libreria three.js già presente nel sito, e i video dei follower con il SÌ per la panoramica nei reel.",
+    "come_misurarla": "Dopo 7 giorni contare le visite alla scena 3D dal sito (obiettivo oltre 200) e confrontare i follower ogni 1.000 account raggiunti dei reel con la panoramica rispetto a quelli senza, con la soglia di 13-18 come riferimento stabile per questa_luce."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:30+00:00",
+   "da": "grafica3d-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in Tasca, 3D a scorrimento: Sul sito, quando si apre un comune con un animale, la vista del paese passa dalla mappa piatta a una scena three.js in 3D: il rilievo reale del comune si alza e ruota lentamente, con l'animale disegnato in SVG che sta sulla sua casa e una luce che pulsa dove vive. Nel reel la stessa scena compare per 4-5 secondi come transizione tra la mappa dell'Italia e la lu",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in Tasca, 3D a scorrimento",
+    "come_funziona": "Sul sito, quando si apre un comune con un animale, la vista del paese passa dalla mappa piatta a una scena three.js in 3D: il rilievo reale del comune si alza e ruota lentamente, con l'animale disegnato in SVG che sta sulla sua casa e una luce che pulsa dove vive. Nel reel la stessa scena compare per 4-5 secondi come transizione tra la mappa dell'Italia e la luce che si accende, cosi' il reel non e' piu' solo una mappa con una luce.",
+    "perche_porta_follower": "Chi vede il proprio paese sollevarsi in 3D sul telefono lo condivide e lo mostra ai compaesani, e chi vive in un comune vicino vuole vedere il suo. Il gancio e' il paese stesso: ogni comune ha un motivo per essere guardato e taggato.",
+    "perche_e_bella": "Il rilievo e' quello reale dei dati di altitudine e la luce segue la geografia vera del posto, quindi la scena sembra una cartolina viva invece che un disegno. Su uno schermo verticale ruota in modo fluido e pulito, senza testo sopra.",
+    "cosa_serve": "I dati di altitudine gia' usati per la mappa con rilievo, i disegni SVG degli animali per razza, le coordinate dei comuni del progetto, la libreria three.js gia' presente nel sito per la vista 3D dei paesi, e un video di prova registrato dalla scena con la luce di un animale.",
+    "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti per i reel con la scena 3D rispetto alla media dei 'questa_luce' (oggi tra 13 e 18 ogni 1.000), e contare quante condivisioni e quanti commenti con il nome di un comune compaiono sotto."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:30+00:00",
+   "da": "grafica3d-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il Paese in Scena 3D: Nel sito, un pulsante sotto ogni comune apre una piccola scena three.js che mostra il paese sul rilievo reale, con i tetti in 3D e l'animale del comune come figura SVG che si anima sul prato davanti alla sua casa, ruotabile col dito. Nei reel la stessa scena compare per 3-4 secondi con la camera che sale dal rilievo fino alla luce che si accende.",
+   "dati": {
+    "traccia": "realismo",
+    "idea": "Il Paese in Scena 3D",
+    "come_funziona": "Nel sito, un pulsante sotto ogni comune apre una piccola scena three.js che mostra il paese sul rilievo reale, con i tetti in 3D e l'animale del comune come figura SVG che si anima sul prato davanti alla sua casa, ruotabile col dito. Nei reel la stessa scena compare per 3-4 secondi con la camera che sale dal rilievo fino alla luce che si accende.",
+    "perche_porta_follower": "Chi vede il proprio paese in 3D sul telefono lo condivide e invita chi ci abita a cercarlo, e la scena si può aprire da un link d'invito della Coppa delle Zampe, quindi porta gente nuova dai comuni vicini.",
+    "perche_e_bella": "Ruotare con il dito un paese vero sopra le colline reali e vedere il proprio animale che si muove sul prato è un'esperienza che sul telefono non si trova da nessun'altra parte.",
+    "cosa_serve": "Il rilievo e le coste già presenti nella mappa (dati di altitudine), le coordinate dei comuni, i disegni SVG degli animali per razza, la libreria three.js già usata nella vista 3D del paese, e i video dei follower col consenso per eventuali texture.",
+    "come_misurarla": "Dopo 7 giorni contare quante volte si apre la scena 3D dal sito (obiettivo sopra 200 aperture) e i follower ogni 1.000 account raggiunti dei reel che la contengono, confrontandoli con i 13-18 di 'questa_luce'."
+   }
+  },
+  {
+   "t": "2026-11-13T10:26:36+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "GIOCO: «» (primo passo: ) · REEL: «» (primo passo: ) · REALISMO: «Ombra del Paese: la luce che proietta il vero profilo del comune» (primo passo: Nella vista 3D esistente in docs/ aggiungere una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo (che già usa i dati di altitudine). Calcolare l'angolo del sole con la data, l'ora locale e la latitudine/longitudine del comune (libreria SunCalc o formula semplice di azimut ed elevazione). Provare prima su un solo comune pilota, ad esempio Livorno, con shadowMap a 1024 per restare leggeri sul telefono.)",
+   "dati": {
+    "gioco": null,
+    "reel": null,
+    "realismo": {
+     "idea": "Ombra del Paese: la luce che proietta il vero profilo del comune",
+     "come_funziona": "Quando si accende la luce di un animale, nella vista 3D three.js del suo paese compare un'ombra proiettata dal rilievo reale del comune, orientata con l'ora locale della sera. Ogni comune mostra le proprie colline e coste vere, e l'animale appare come un punto luminoso che si posa sul paese illuminato dal tramonto. Chi cerca la propria città vede il suo paese con la sua ombra e può condividerlo.",
+     "primo_passo": "Nella vista 3D esistente in docs/ aggiungere una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo (che già usa i dati di altitudine). Calcolare l'angolo del sole con la data, l'ora locale e la latitudine/longitudine del comune (libreria SunCalc o formula semplice di azimut ed elevazione). Provare prima su un solo comune pilota, ad esempio Livorno, con shadowMap a 1024 per restare leggeri sul telefono.",
+     "come_misurarla": "Dopo 7 giorni confrontare i follower ogni 1.000 account raggiunti dei reel che rimandano alla vista 3D con la soglia di 13-18 del formato 'questa_luce'. Contare inoltre le visite alla pagina 3D rispetto alla media delle altre pagine del sito e quanti commenti riportano il nome di un comune."
+    },
+    "perche": "È l'unica idea che usa i dati reali già presenti (altitudine, coordinate, ora locale) per aggiungere un effetto nuovo e visibile con una sola luce in più nella scena three.js esistente, senza nuovi asset, e dà a ogni comune un aspetto riconoscibile e condivisibile."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 176680,
+ "fine": "2026-11-13T10:26:36+00:00"
+}

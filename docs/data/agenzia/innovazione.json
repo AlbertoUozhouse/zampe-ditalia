@@ -62,5 +62,17 @@
   },
   "realismo": null,
   "perche": "Unisce le tre proposte nella versione più concreta: sfrutta il testa_a_testa, il formato con più follower per 1.000 account raggiunti (51,4 contro 4,5 di coppa_apertura), e lo rende diverso con il video vero e il suono del paese, usando solo materiale con il SÌ già disponibile."
+ },
+ {
+  "giorno": "2026-11-13",
+  "gioco": null,
+  "reel": null,
+  "realismo": {
+   "idea": "Ombra del Paese: la luce che proietta il vero profilo del comune",
+   "come_funziona": "Quando si accende la luce di un animale, nella vista 3D three.js del suo paese compare un'ombra proiettata dal rilievo reale del comune, orientata con l'ora locale della sera. Ogni comune mostra le proprie colline e coste vere, e l'animale appare come un punto luminoso che si posa sul paese illuminato dal tramonto. Chi cerca la propria città vede il suo paese con la sua ombra e può condividerlo.",
+   "primo_passo": "Nella vista 3D esistente in docs/ aggiungere una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo (che già usa i dati di altitudine). Calcolare l'angolo del sole con la data, l'ora locale e la latitudine/longitudine del comune (libreria SunCalc o formula semplice di azimut ed elevazione). Provare prima su un solo comune pilota, ad esempio Livorno, con shadowMap a 1024 per restare leggeri sul telefono.",
+   "come_misurarla": "Dopo 7 giorni confrontare i follower ogni 1.000 account raggiunti dei reel che rimandano alla vista 3D con la soglia di 13-18 del formato 'questa_luce'. Contare inoltre le visite alla pagina 3D rispetto alla media delle altre pagine del sito e quanti commenti riportano il nome di un comune."
+  },
+  "perche": "È l'unica idea che usa i dati reali già presenti (altitudine, coordinate, ora locale) per aggiungere un effetto nuovo e visibile con una sola luce in più nella scena three.js esistente, senza nuovi asset, e dà a ogni comune un aspetto riconoscibile e condivisibile."
  }
 ]
