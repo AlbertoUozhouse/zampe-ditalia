@@ -577,6 +577,7 @@
 "17905154964605669",
 "17905196040669153",
 "17905264647670170",
+"17905271352372200",
 "17905308897601043",
 "17905413102668847",
 "17905636620670795",
@@ -10602,7 +10603,8 @@
 ],
 "risposte": [
 1794570582.2176435,
-1794571446.6496918
+1794571446.6496918,
+1794573345.7227023
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12769,7 +12771,7 @@
 "satorougoj476": "2026-11-12",
 "pao_lobartucci": "2026-11-12",
 "patrickmtb2026": "2026-11-12",
-"matteo_bruscobike": "2026-11-12",
+"matteo_bruscobike": "2026-11-13",
 "delprinodavide": "2026-11-12",
 "deby_gs81": "2026-11-12",
 "filannino_giorgio7": "2026-11-12",
@@ -14966,7 +14968,7 @@
 "_ele.na_7": 10,
 "_letiziasabato_": 10,
 "patrickmtb2026": 10,
-"matteo_bruscobike": 10,
+"matteo_bruscobike": 20,
 "passionfruit.exe_": 6,
 "minaudamartina": 10,
 "teslathequeenofbards": 10,
@@ -21992,7 +21994,7 @@
 "Bisceglie|BT": 2,
 "Canale|CN": 1,
 "Chiavenna|SO": 1,
-"Cavaion Veronese|VR": 1,
+"Cavaion Veronese|VR": 2,
 "Barletta|BT": 1,
 "Savona|SV": 4,
 "Pesaro|PU": 1,
@@ -22008,12 +22010,16 @@
 ],
 "Savona|SV": [
 "teslathequeenofbards"
+],
+"Cavaion Veronese|VR": [
+"matteo_bruscobike"
 ]
 },
 "squadra": {
 "phantom20_13": "Crotone|KR",
 "stella_zenna": "Piombino|LI",
-"teslathequeenofbards": "Savona|SV"
+"teslathequeenofbards": "Savona|SV",
+"matteo_bruscobike": "Cavaion Veronese|VR"
 },
 "giorni": {
 "phantom20_13": [
@@ -22024,6 +22030,9 @@
 "2026-11-09"
 ],
 "teslathequeenofbards": [
+"2026-11-13"
+],
+"matteo_bruscobike": [
 "2026-11-13"
 ]
 },
