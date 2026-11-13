@@ -376,5 +376,14 @@
   "stato": "senza direttore",
   "fine": "2026-11-13T19:59:36+00:00",
   "scambi": 126
+ },
+ {
+  "id": "2026-11-13-2101-gara_follower",
+  "formato": "gara_follower",
+  "modalita": "operativa",
+  "inizio": "2026-11-13T20:01:11+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-13T20:04:45+00:00",
+  "scambi": 126
  }
 ]

@@ -1,0 +1,2160 @@
+{
+ "id": "2026-11-13-2101-gara_follower",
+ "formato": "gara_follower",
+ "modalita": "operativa",
+ "inizio": "2026-11-13T20:01:11+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-13T20:01:11+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "gara_follower",
+     "id": "2026-11-13-2101-gara_follower",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Quale città ci segue di più?",
+       "scena": "gancio"
+      },
+      {
+       "i": 1,
+       "testo": "Napoli, la città di Partenope, è prima con 28. Poi Roma con 26 e Cagliari con 12.",
+       "scena": "barre"
+      },
+      {
+       "i": 2,
+       "testo": "Siamo 1869: a duemila facciamo i fuochi su tutta l'Italia.",
+       "scena": "numero"
+      },
+      {
+       "i": 3,
+       "testo": "Seguici e scrivi SEGUO con la tua città: due punti al tuo paese.",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": null,
+     "fascia": "🏁 Scrivi SEGUO e la tua città 👇",
+     "didascalia": "🏁 La gara dei follower: quale città ci segue di più?\n👑 Napoli 28 · 🥈 Roma 26 · 🥉 Cagliari 12\nNapoli, la città di Partenope: chi la batte?\n\n👇 Seguici e scrivi SEGUO qui sotto, con la tua città e il nome del tuo cane o gatto (es. «SEGUO, Treviso, Luna, cane»): +2 punti al tuo paese nella Coppa delle Zampe.\n👥 Tagga gli amici del tuo paese: ogni amico che ci segue fa salire la tua città.\n🎆 Siamo 1869: a 2000 accendiamo i fuochi su tutta la mappa!\n\nVoce generata con IA.\n\n#cani #gatti #italia #campanilismo #animalidomestici ",
+     "voce": true,
+     "copertina": null
+    }
+   }
+  },
+  {
+   "t": "2026-11-13T20:01:16+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Chi ha un cane o un gatto e vive in una città o in un paese italiano, anche piccolo (Napoli, Roma, Cagliari, ma anche Treviso o Atri), e non conosce ancora Zampe d'Italia. Gli piace difendere la propria città e mostrare il proprio animale. · Gancio: Quale città italiana ama di più cani e gatti? Napoli è prima, ma la tua dov'è? · Primo fotogramma: Sfondo scuro con la mappa dell'Italia di notte e tre luci che brillano su Napoli, Roma e Cagliari. Testo grande in alto: «QUALE CITTÀ CI SEGUE DI PIÙ?». Sotto, in piccolo: «Napoli 28 · Roma 26 · Cagliari 12». Il gancio si capisce anche a volume zero. · Motivo per seguire: Zampe d'Italia accende una luce sulla mappa per ogni animale vero, con il suo nome e la sua città, e fa sfidare le città tra loro: seguirla significa vedere accendersi la luce della tua e capire se batte le altre. · Chiusura: Scrivi SEGUO con la tua città: la sfida continua. Segui Zampe d'Italia.",
+   "dati": {
+    "pubblico": "Chi ha un cane o un gatto e vive in una città o in un paese italiano, anche piccolo (Napoli, Roma, Cagliari, ma anche Treviso o Atri), e non conosce ancora Zampe d'Italia. Gli piace difendere la propria città e mostrare il proprio animale.",
+    "gancio": "Quale città italiana ama di più cani e gatti? Napoli è prima, ma la tua dov'è?",
+    "primo_fotogramma": "Sfondo scuro con la mappa dell'Italia di notte e tre luci che brillano su Napoli, Roma e Cagliari. Testo grande in alto: «QUALE CITTÀ CI SEGUE DI PIÙ?». Sotto, in piccolo: «Napoli 28 · Roma 26 · Cagliari 12». Il gancio si capisce anche a volume zero.",
+    "motivo_per_seguire": "Zampe d'Italia accende una luce sulla mappa per ogni animale vero, con il suo nome e la sua città, e fa sfidare le città tra loro: seguirla significa vedere accendersi la luce della tua e capire se batte le altre.",
+    "chiusura": "Scrivi SEGUO con la tua città: la sfida continua. Segui Zampe d'Italia.",
+    "perche": "Chi non ci conosce è spinto dal campanilismo (la sua città contro Napoli) e ha un gesto semplice da fare, scrivere SEGUO con città e animale, senza promettere nulla che non sia nel brief."
+   }
+  },
+  {
+   "t": "2026-11-13T20:01:16+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "gara_follower",
+     "id": "2026-11-13-2101-gara_follower",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Quale città ci segue di più?",
+       "scena": "gancio"
+      },
+      {
+       "i": 1,
+       "testo": "Napoli, la città di Partenope, è prima con 28. Poi Roma con 26 e Cagliari con 12.",
+       "scena": "barre"
+      },
+      {
+       "i": 2,
+       "testo": "Siamo 1869: a duemila facciamo i fuochi su tutta l'Italia.",
+       "scena": "numero"
+      },
+      {
+       "i": 3,
+       "testo": "Seguici e scrivi SEGUO con la tua città: due punti al tuo paese.",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": null,
+     "fascia": "🏁 Scrivi SEGUO e la tua città 👇",
+     "didascalia": "🏁 La gara dei follower: quale città ci segue di più?\n👑 Napoli 28 · 🥈 Roma 26 · 🥉 Cagliari 12\nNapoli, la città di Partenope: chi la batte?\n\n👇 Seguici e scrivi SEGUO qui sotto, con la tua città e il nome del tuo cane o gatto (es. «SEGUO, Treviso, Luna, cane»): +2 punti al tuo paese nella Coppa delle Zampe.\n👥 Tagga gli amici del tuo paese: ogni amico che ci segue fa salire la tua città.\n🎆 Siamo 1869: a 2000 accendiamo i fuochi su tutta la mappa!\n\nVoce generata con IA.\n\n#cani #gatti #italia #campanilismo #animalidomestici ",
+     "voce": true,
+     "copertina": null
+    },
+    "mappa": []
+   }
+  },
+  {
+   "t": "2026-11-13T20:01:17+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-13T20:02:36+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.3 LUFS, picco -0.8 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.3,
+    "picco_dbfs": -0.8,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.8,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:36+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (18.3 s): ti mando 19 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 18.3,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ]
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:41+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 5 la barra di Roma (26) e la sua etichetta sono già a schermo mentre la voce dice ancora 'Roma con 26'; al secondo 7 compare il testo 'Cagliari 12' a schermo nel fotogramma 7-8 con 'Cagliari' già nominato. Nel fotogramma al secondo 4 compare 'È PRIMA' e nel fotogramma 7 '26 E CAGLIARI' (t",
+   "dati": {
+    "controllato": "Apertura nei primi 5 secondi: gancio, barre e tempi della gara dei follower, coerenza tra voce, testo a schermo e dati verificati.",
+    "esito": "segnalo",
+    "secondo": 5,
+    "problema": "Al secondo 5 la barra di Roma (26) e la sua etichetta sono già a schermo mentre la voce dice ancora 'Roma con 26'; al secondo 7 compare il testo 'Cagliari 12' a schermo nel fotogramma 7-8 con 'Cagliari' già nominato. Nel fotogramma al secondo 4 compare 'È PRIMA' e nel fotogramma 7 '26 E CAGLIARI' (testo di transizione che si sovrappone alla barra). Inoltre nella trascrizione manca la parola 'Napoli' nel gancio iniziale: il testo a schermo 'Quale città ci segue di più?' è corretto, ma il frame 0.5 mostra solo il titolo, quindi l'apertura non anticipa il risultato. Il fotogramma al secondo 14 e 18 ripete 'A DUEMILA' e 'SEGUICI E SCRIVI' con la stessa fascia, senza bisogno di ripetere due volte la stessa call to action in pochi secondi.",
+    "correzione": "Nei primi 5 secondi mantenere un solo elemento per volta: titolo + barra Napoli in evidenza, senza sovrapporre testi di transizione. Allineare i tempi testo/voce (le scritte 'È PRIMA' e '26 E CAGLIARI' sono un effetto di transizione che va sincronizzato con 'Poi Roma con 26'). Ridurre la ripetizione della fascia di chiusura.",
+    "idea": "Per i prossimi reel della gara, aprire direttamente con il nome della città in testa e la barra in evidenza, e chiudere con il conteggio dei follower mancanti alla soglia dei 2000, per un finale che spinge al follow."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:41+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la scritta «È PRIMA» compare sopra la barra di Napoli, ma nel frame successivo (7s) la barra di Roma è ancora piena e il testo «26 e Cagliari» appare già sovrapposto a «26 e CAGLIARI» in modo illeggibile: nel fotogramma a 7s si vede «26 ECAGLIARI» con la parola incollata. Inoltre la did",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, le barre (Napoli 28, Roma 26, Cagliari 12), il conteggio 1.869 e la soglia dei 2.000, la didascalia e l'audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la scritta «È PRIMA» compare sopra la barra di Napoli, ma nel frame successivo (7s) la barra di Roma è ancora piena e il testo «26 e Cagliari» appare già sovrapposto a «26 e CAGLIARI» in modo illeggibile: nel fotogramma a 7s si vede «26 ECAGLIARI» con la parola incollata. Inoltre la didascalia dice «Napoli 28 · Roma 26 · Cagliari 12» ma il video mostra Napoli con la corona e Roma in seconda posizione senza il numero 2 evidenziato: il titolo «Quale città ci segue di più?» viene risposto subito al secondo 4, il che riduce la suspense.",
+    "correzione": "Separare la scritta «26 e CAGLIARI» con uno spazio o una pausa di 0,3 s, e ritardare la rivelazione di Napoli di mezzo secondo dopo la domanda. Verificare che la barra di Roma non superi quella di Napoli graficamente.",
+    "idea": "Per i prossimi reel: far scegliere allo spettatore la sua città in un sondaggio prima della rivelazione, per aumentare commenti e condivisioni."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:41+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 14 la scritta «SEGUO + la tua città» e il testo «TUO PAESE.» si sovrappongono alla didascalia dell'animazione cani/gatti, e il testo «Seguici e scrivi» in alto è difficile da leggere sopra il fondo scuro. Inoltre la trascrizione riporta «a duemila facciamo i fuochi» mentre nel fotogramma ",
+   "dati": {
+    "controllato": "Leggibilità dei 6 fotogrammi sul telefono, sincronia testo/scene con la trascrizione e i secondi, coerenza dei numeri (28, 26, 12, 1869, 2000) con i dati di progetto.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Al secondo 14 la scritta «SEGUO + la tua città» e il testo «TUO PAESE.» si sovrappongono alla didascalia dell'animazione cani/gatti, e il testo «Seguici e scrivi» in alto è difficile da leggere sopra il fondo scuro. Inoltre la trascrizione riporta «a duemila facciamo i fuochi» mentre nel fotogramma al secondo 11 appare «A DUEMILA» e il numero 1.869 è già a schermo, quindi il ritmo tra numero e spiegazione è un po' affollato. Nella trascrizione, la frase «due punti al tuo paese» arriva a 16.5s mentre il fotogramma al secondo 18 mostra ancora la scena di chiusura: ok, ma il testo finale è troppo piccolo rispetto alla scena.",
+    "correzione": "Aumentare la dimensione del testo di chiusura «TUO PAESE.» e lasciare più respiro (almeno 0,5s) tra il numero 1.869 e la frase «a duemila». Spostare la fascia «Scrivi SEGUO» più in basso per non coprire l'animazione.",
+    "idea": "Per i prossimi reel, mostrare in apertura la città in testa con un'animazione della barra che si allunga, così il gancio è visivo prima del testo."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:41+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 9 la scritta 'A DUEMILA' compare a fine frase, mentre la trascrizione dice 'a duemila facciamo i fuochi' a 10.5s e il numero 1.869 è visibile prima (fotogramma 7s): la sequenza visiva anticipa il dato. Inoltre la didascalia dice 'Napoli 28 · Roma 26 · Cagliari 12' e il reel",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, grafiche dei fotogrammi, dati della mappa e misure audio del reel.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Nel fotogramma al secondo 9 la scritta 'A DUEMILA' compare a fine frase, mentre la trascrizione dice 'a duemila facciamo i fuochi' a 10.5s e il numero 1.869 è visibile prima (fotogramma 7s): la sequenza visiva anticipa il dato. Inoltre la didascalia dice 'Napoli 28 · Roma 26 · Cagliari 12' e il reel mostra correttamente questi valori, quindi quello è a posto. Il problema reale: nel fotogramma 'testa a testa' Cagliari appare con '26 e CAGLIARI' sovrapposto (scritta al secondo 4 'È PRIMA' e poi '26 E CAGLIARI' con la 'E' che sembra un refuso del testo a schermo: 'è prima' seguito da '26 e Cagliari' genera una frase incoerente).",
+    "correzione": "Correggere la scritta a schermo 'ECAGLIARI' in 'E CAGLIARI' (o spezzare in due righe) e allineare il testo a schermo alla voce, che dice 'Napoli è prima con 28'.",
+    "idea": "Nel prossimo reel della gara, animare le barre che crescono in sequenza invece di mostrarle ferme, e chiudere con il nome della città che sale in prima posizione."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:44+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel primo fotogramma (0.5s) il titolo grande «Quale città ci segue di più?» è già visibile, ma la domanda nel parlato arriva solo a 1.3s e il gancio resta fermo su sfondo vuoto con il solo banner in basso; l'apertura è statica e senza elemento visivo forte (come la bandierina a scacchi) nei primi is",
+   "dati": {
+    "controllato": "Apertura del reel: gancio sul frame iniziale, secondo 0.5, testo e ritmo delle prime frasi rispetto alla trascrizione e ai fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nel primo fotogramma (0.5s) il titolo grande «Quale città ci segue di più?» è già visibile, ma la domanda nel parlato arriva solo a 1.3s e il gancio resta fermo su sfondo vuoto con il solo banner in basso; l'apertura è statica e senza elemento visivo forte (come la bandierina a scacchi) nei primi istanti.",
+    "correzione": "Far comparire il titolo con un'animazione rapida (zoom o slide) entro 0.3s, sincronizzato con «Quale città» pronunciato, e anticipare la bandierina a scacchi con un colpo sonoro per dare un ritmo più energico.",
+    "idea": "Per i prossimi reel della gara, aprire con la barra della città in testa già al secondo 0 e far partire il conteggio dei follower dal numero attuale, così l'apertura ha subito un dato da seguire."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:45+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 la scena delle barre è ancora in corso (Cagliari 12 visibile, Napoli e Roma in evidenza), ma il testo «26 e Cagliari» nel fotogramma a 7s è in pieno cambio: il fotogramma intermedio mostra il titolo 'È PRIMA' ancora presente e la scritta 'Cagliari' sovrapposta al numero 26 non è leggibi",
+   "dati": {
+    "controllato": "Inquadrature dei sei fotogrammi rispetto alla trascrizione e alle scene del brief (gancio, barre, numero, chiusura), con sincronia del testo a schermo e leggibilità.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 la scena delle barre è ancora in corso (Cagliari 12 visibile, Napoli e Roma in evidenza), ma il testo «26 e Cagliari» nel fotogramma a 7s è in pieno cambio: il fotogramma intermedio mostra il titolo 'È PRIMA' ancora presente e la scritta 'Cagliari' sovrapposta al numero 26 non è leggibile; la barra di Roma (26) è già al massimo e l'inquadratura resta statica troppo a lungo, circa 6 secondi senza movimento di camera o zoom sulla barra vincente.",
+    "correzione": "Far entrare la barra di Napoli con uno zoom o un'evidenziazione animata al secondo 2-3, e mostrare il numero 28 in grande prima di passare a Roma e Cagliari, con un taglio netto invece della sovrapposizione del testo.",
+    "idea": "Per il prossimo reel della gara, inserire un contatore animato che mostri in tempo reale il punteggio della tua città e un'inquadratura finale con il conto alla rovescia verso i 2000 follower."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:45+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione Cagliari compare a 12 ma nel fotogramma 4s/7s il valore sul grafico è coerente; il problema è nel testo parlato a 5.3s-7.0s: «Poi Roma con 26» è corretto, ma nel fotogramma 7s la barra di Roma mostra 26 mentre il titolo a 3s dice «È PRIMA» con Napoli, quindi l'ordine parlato è coe",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, le cifre delle barre (Napoli 28, Roma 26, Cagliari 12) e il numero 1.869 rispetto ai materiali, più le misure audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 13.7,
+    "problema": "Nella trascrizione Cagliari compare a 12 ma nel fotogramma 4s/7s il valore sul grafico è coerente; il problema è nel testo parlato a 5.3s-7.0s: «Poi Roma con 26» è corretto, ma nel fotogramma 7s la barra di Roma mostra 26 mentre il titolo a 3s dice «È PRIMA» con Napoli, quindi l'ordine parlato è coerente. Il vero punto debole è il sottotitolo: al secondo 14 la didascalia «SEGUO + la tua città» con il logo dell'avvio resta sovrapposta alla chiusura «due punti al tuo paese» senza una scena dedicata, e la frase «Siamo 1869» viene detta a 10.5s ma il numero compare solo come schermata statica. Inoltre la didascalia promette «+2 punti al tuo paese nella Coppa delle Zampe» e «fuochi a 2000», cose non verificabili dai materiali forniti.",
+    "correzione": "Allineare la scena «numero» (1.869) alla frase parlata a 10.5s e tenere la scritta SEGUO per almeno 2 secondi nella chiusura; nella didascalia togliere o verificare la promessa dei punti in Coppa e la soglia dei fuochi se non confermate.",
+    "idea": "Un reel dove una città sorpassa Napoli in diretta, con la barra che si aggiorna e il conto alla rovescia dei follower verso i 2000."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:46+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 11 il testo dice «a duemila facciamo i fuochi» ma il fotogramma mostra il numero 1.869 con la scritta «a duemila i fuochi». Il dato è coerente, però nella didascalia e nel copione il tono «siamo 1869» è poco chiaro: il pubblico non capisce subito che 1.869 è il totale attuale. Inoltre la ",
+   "dati": {
+    "controllato": "Ho verificato i numeri delle barre (Napoli 28, Roma 26, Cagliari 12), il totale di 1.869 follower e il tempo dei fuochi a 2.000, confrontandoli con trascrizione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Al secondo 11 il testo dice «a duemila facciamo i fuochi» ma il fotogramma mostra il numero 1.869 con la scritta «a duemila i fuochi». Il dato è coerente, però nella didascalia e nel copione il tono «siamo 1869» è poco chiaro: il pubblico non capisce subito che 1.869 è il totale attuale. Inoltre la didascalia dice «Napoli la città di Partenope: chi la batte?», il che è corretto solo se Partenope è davvero il soprannome della città (dato non presente nei materiali, lo lascio come da copione). Segnalo anche che al secondo 4 la barra di Roma mostra 26 ma nella trascrizione Roma è citata solo a 5.3s: nessun errore, solo sfasamento tra voce e grafica.",
+    "correzione": "Al secondo 11 rendere esplicito: «1.869 follower veri: a duemila facciamo i fuochi». Verificare che il soprannome «Partenope» sia confermato prima della pubblicazione.",
+    "idea": "Ripetere il formato con un traguardo visivo (barra di avanzamento verso 2.000) aggiornato ogni reel, così il pubblico vede quanto manca ai fuochi."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:49+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 3 compare la scritta «26 E CAGLIARI» invece del valore corretto: nel testo parlato e nei dati Roma è 26 e Cagliari 12, quindi la scena sovrappone un numero sbagliato (e un «E» spuria) alla barra di Cagliari. Inoltre nella didascalia la dicitura «Napoli, la città di Partenope: chi la batte",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, le classifiche dei fotogrammi (Napoli 28, Roma 26, Cagliari 12), il numero 1.869 e la soglia dei 2.000 fuochi, le misure audio e la coerenza tra didascalia e copione.",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "Al secondo 3 compare la scritta «26 E CAGLIARI» invece del valore corretto: nel testo parlato e nei dati Roma è 26 e Cagliari 12, quindi la scena sovrappone un numero sbagliato (e un «E» spuria) alla barra di Cagliari. Inoltre nella didascalia la dicitura «Napoli, la città di Partenope: chi la batte?» è un invito utile, ma il copione dice «è prima con 28» senza tono di sfida, quindi il testo non è allineato tra voce e didascalia.",
+    "correzione": "Sostituire la scritta del fotogramma al secondo 3 con «12» (Cagliari) o con la scritta corretta della fase, eliminando «26 E». Allineare la frase parlata e la didascalia sul tono (sfida o celebrazione). Il resto è a posto: audio a -14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo.",
+    "idea": "Un reel di sorpasso in diretta: mostrare la barra che cambia quando una città supera un'altra, con l'ultima città che entra nella top 6 celebrata con un fuoco animato."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:49+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Napoli 28, Roma 26, Cagliari 12' non è verificabile: l'array dati_mappa è vuoto, quindi non posso confermare le cifre né la classifica mostrata. Inoltre la trascrizione dice 'due punti al tuo paese' mentre la didascalia parla di +2 punti nella Coppa: va bene, ma il reel non spiega cos'è la ",
+   "dati": {
+    "controllato": "Ho verificato trascrizione, secondi delle frasi, dati mappa, audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e coerenza tra copione, scene e didascalia.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Il dato 'Napoli 28, Roma 26, Cagliari 12' non è verificabile: l'array dati_mappa è vuoto, quindi non posso confermare le cifre né la classifica mostrata. Inoltre la trascrizione dice 'due punti al tuo paese' mentre la didascalia parla di +2 punti nella Coppa: va bene, ma il reel non spiega cos'è la Coppa delle Zampe. Infine il picco a -0.8 dBFS è molto vicino al limite e il volume iniziale (-16.8 dB nei primi 5 s) è basso per un gancio.",
+    "correzione": "Prima della pubblicazione verificare i conteggi per città con i dati reali e, se non sono aggiornati, usare il dato mappa effettivo. Abbassare leggermente il picco (es. -2 dBFS) e alzare il volume dei primi secondi. Aggiungere in una scena o in fascia la dicitura 'Coppa delle Zampe' con una spiegazione di 3 parole.",
+    "idea": "Mostrare nel reel la mappa con le luci delle città vincitrici che si accendono a mano a mano, così la classifica è visibile e concreta."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:49+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione e nel brief la voce dice 'due punti al tuo paese', ma la didascalia dice '+2 punti al tuo paese nella Coppa delle Zampe': è coerente. Il vero problema è il picco di -0.8 dBFS, sopra l'obiettivo di -1 dBFS indicato per l'audio. Inoltre i dati 'dati_mappa' sono vuoti, quindi non pos",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa (Napoli 28, Roma 26, Cagliari 12), la trascrizione coi secondi, l'audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e la didascalia rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Nella trascrizione e nel brief la voce dice 'due punti al tuo paese', ma la didascalia dice '+2 punti al tuo paese nella Coppa delle Zampe': è coerente. Il vero problema è il picco di -0.8 dBFS, sopra l'obiettivo di -1 dBFS indicato per l'audio. Inoltre i dati 'dati_mappa' sono vuoti, quindi non posso verificare i numeri della mappa visiva sui fotogrammi. Non ho invece verificato i fotogrammi stessi, che non vedo.",
+    "correzione": "Abbassare il picco sotto -1 dBFS (es. limiter o riduzione di 0.3-0.5 dB), mantenendo i -14 LUFS. Confermare i valori di Napoli, Roma e Cagliari con i dati della mappa prima della pubblicazione.",
+    "idea": "Per il prossimo reel, mostrare nella scena finale la città che ha appena superato un'altra in classifica, così il pubblico vede il sorpasso e vuole partecipare."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:49+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La mappa dati_mappa è vuota, quindi i numeri 28, 26, 12 e 1869 non risultano verificati dai materiali; inoltre la trascrizione dice 'Quale città ci segue di più?' ma il copione è 'Quale città ci segue di più?' senza problemi, mentre la frase 'Napoli, la città di Partenope' è coerente con la didascal",
+   "dati": {
+    "controllato": "Sottotitoli vs trascrizione con secondi, audio (LUFS, picco, silenzi), coerenza del copione con il brief e con i dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La mappa dati_mappa è vuota, quindi i numeri 28, 26, 12 e 1869 non risultano verificati dai materiali; inoltre la trascrizione dice 'Quale città ci segue di più?' ma il copione è 'Quale città ci segue di più?' senza problemi, mentre la frase 'Napoli, la città di Partenope' è coerente con la didascalia. Il secondo 0 mostra la frase d'apertura senza l'apertura audio prevista.",
+    "correzione": "Verificare i conteggi di Napoli, Roma e Cagliari contro la mappa prima della pubblicazione e aggiungere i dati a dati_mappa; ripulire la didascalia dal 'Voce generata con IA' se non richiesto dal brief.",
+    "idea": "Mostrare in apertura la città in testa con la sua luce accesa sulla mappa, per legare subito numero e immagine."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:53+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Nella fascia in basso la didascalia è accompagnata da un dato che non compare nei materiali: 'dati_mappa' è vuoto, quindi i numeri 28, 26 e 12 per Napoli, Roma e Cagliari non risultano verificati dalla mappa. Inoltre la didascalia dice 'Voce generata con IA' ma nel brief 'voce' è true, quindi va ben",
+   "dati": {
+    "controllato": "Trascrizione con secondi, dati mappa, misure audio, brief, didascalia e fotogrammi della fascia in basso sul reel della gara follower.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella fascia in basso la didascalia è accompagnata da un dato che non compare nei materiali: 'dati_mappa' è vuoto, quindi i numeri 28, 26 e 12 per Napoli, Roma e Cagliari non risultano verificati dalla mappa. Inoltre la didascalia dice 'Voce generata con IA' ma nel brief 'voce' è true, quindi va bene, mentre 'apertura' è null: la prima frase parte senza un elemento visivo dichiarato. Il secondo 1 è segnato perché la frase 'Napoli, la città di Partenope' cade tra 1.3s e 3.0s, mentre la fascia dovrebbe reggere il messaggio di chiusura.",
+    "correzione": "Verificare i conteggi di Napoli, Roma e Cagliari sulla mappa prima di pubblicare e riportarli nei dati_mappa; allineare la fascia di chiusura (SEGUO) ai secondi 13.7-16.5 dove compare il copione.",
+    "idea": "Ripetere il formato questa_luce con una città diversa in apertura, perché nei dati ha il miglior rapporto follower/visualizzazioni."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:53+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice 'Siamo 1869' ma il progetto riporta follower 1869 e luci 2899: il numero è corretto solo come follower. Inoltre 'dati_mappa' è vuoto, quindi i conteggi di Napoli (28), Roma (26) e Cagliari (12) non sono verificabili dai materiali. La didascalia promette due punti per chi scrive SEGUO, m",
+   "dati": {
+    "controllato": "Durata, trascrizione coi secondi, audio (LUFS, picco, silenzi), coerenza della voce con i dati della mappa e della didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il reel dice 'Siamo 1869' ma il progetto riporta follower 1869 e luci 2899: il numero è corretto solo come follower. Inoltre 'dati_mappa' è vuoto, quindi i conteggi di Napoli (28), Roma (26) e Cagliari (12) non sono verificabili dai materiali. La didascalia promette due punti per chi scrive SEGUO, ma il copione dice 'due punti al tuo paese' senza specificare: va allineato.",
+    "correzione": "Verificare i conteggi città contro la mappa prima di pubblicare e confermare che '1869' indica i follower; chiarire nel copione che i punti valgono per la Coppa delle Zampe.",
+    "idea": "Ripetere il formato 'questa_luce' che ha dato più follower ogni 1000 views e aggiungere un invito a taggare un amico della stessa città."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:53+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La mappa dati è vuota (dati_mappa: []), quindi i numeri 28, 26, 12 e 'Napoli prima' non sono verificabili dai materiali. Inoltre il brief dichiara apertura: null e copertina: null, mentre la trascrizione apre con il gancio a 0.0s senza un'apertura visiva dichiarata.",
+   "dati": {
+    "controllato": "Ho verificato trascrizione coi secondi, copione, didascalia, dati mappa, audio (LUFS, picco, silenzi) e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La mappa dati è vuota (dati_mappa: []), quindi i numeri 28, 26, 12 e 'Napoli prima' non sono verificabili dai materiali. Inoltre il brief dichiara apertura: null e copertina: null, mentre la trascrizione apre con il gancio a 0.0s senza un'apertura visiva dichiarata.",
+    "correzione": "Prima della pubblicazione, confermare i conteggi per città con i dati della mappa e aggiungere a brief.apertura la descrizione del primo fotogramma (0.5s) con il gancio visivo.",
+    "idea": "Per i prossimi reel della gara, mostrare la barra di ogni città che cresce al momento del numero e dichiarare sempre l'apertura visiva nel brief."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:53+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice 'Quale città ci segue di più?' ma la scena 'barre' non è nei dati mappa (dati_mappa è vuoto), quindi i numeri 28, 26, 12 non sono verificabili dai materiali. Inoltre 'Siamo 1869' è riferito a 'siamo' ma dovrebbe essere 'siamo a 1869 follower'; la frase è ambigua. Nel copione la frase '",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, numeri della gara e didascalia rispetto ai dati di progetto.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il testo dice 'Quale città ci segue di più?' ma la scena 'barre' non è nei dati mappa (dati_mappa è vuoto), quindi i numeri 28, 26, 12 non sono verificabili dai materiali. Inoltre 'Siamo 1869' è riferito a 'siamo' ma dovrebbe essere 'siamo a 1869 follower'; la frase è ambigua. Nel copione la frase 'Napoli... prima con 28' è a 1.3s-5.3s, ma la trascrizione la mette a 3.0s e il gancio parte prima, quindi c'è un leggero disallineamento tra copione e secondi.",
+    "correzione": "Verificare i numeri 28/26/12 con i dati della mappa prima di pubblicare e riportare nei dati_mappa; chiarire la frase 'Siamo 1869' in 'Siamo già in 1869 a seguirci'; allineare i secondi della trascrizione al copione.",
+    "idea": "Nei prossimi reel mostrare un frame con la mappa reale della città vincente e far comparire la città che sale in tempo reale, così il numero è visibile e verificabile."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:56+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Siamo 1869' e la soglia '2000' non sono coerenti con i numeri del progetto (follower 1869, luci 2899): il reel parla di follower ma il conteggio della mappa è diverso. Inoltre 'dati_mappa' è vuoto, quindi i numeri di Napoli 28, Roma 26 e Cagliari 12 non sono verificabili dai materiali. Il v",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, coerenza tra testo, brief e didascalia, e dati di mappa e progetto.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il dato 'Siamo 1869' e la soglia '2000' non sono coerenti con i numeri del progetto (follower 1869, luci 2899): il reel parla di follower ma il conteggio della mappa è diverso. Inoltre 'dati_mappa' è vuoto, quindi i numeri di Napoli 28, Roma 26 e Cagliari 12 non sono verificabili dai materiali. Il volume medio dei primi 5 secondi (-16,8 dB) è più basso dell'obiettivo implicito di apertura.",
+    "correzione": "Verificare i conteggi per città su dati reali prima della pubblicazione e allineare 'Siamo 1869' al follower attuale. Alzare leggermente il volume dei primi 5 secondi, senza toccare il resto dell'audio che rispetta -14 LUFS e picco sotto -1 dBFS.",
+    "idea": "Per i prossimi reel, mostrare la classifica con un aggiornamento in diretta della città che sale dopo ogni commento SEGUO, e aggiungere una copertina con il nome della città in primo piano."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:56+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Nei materiali manca la scena 'barre' e 'numero' non ha dati mappa verificati (dati_mappa è vuoto): i numeri 28, 26, 12 e 1869 non risultano verificati nei dati della mappa. Inoltre la trascrizione dice 'Quale città ci segue di più?' ma poi cita 'Napoli, la città di Partenope', che regge, mentre il f",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (LUFS, picco, silenzi), dati della mappa e numeri del progetto per il reel gara_follower.",
+    "esito": "segnalo",
+    "secondo": 18,
+    "problema": "Nei materiali manca la scena 'barre' e 'numero' non ha dati mappa verificati (dati_mappa è vuoto): i numeri 28, 26, 12 e 1869 non risultano verificati nei dati della mappa. Inoltre la trascrizione dice 'Quale città ci segue di più?' ma poi cita 'Napoli, la città di Partenope', che regge, mentre il fotogramma inviato a 18 s coincide con la chiusura senza verificare che il testo 'due punti al tuo paese' sia leggibile. La didascalia promette 'nome del tuo cane o gatto' e 'Coppa delle Zampe' non documentati nel brief come meccanica confermata.",
+    "correzione": "Verificare i conteggi per città su dati_mappa prima della pubblicazione e allineare la didascalia alla meccanica reale della coppa; confermare che la chiusura a 18 s sia leggibile e tenuta almeno 2 s.",
+    "idea": "Ridurre i numeri a un solo dato forte per reel (es. solo Napoli in testa) e mostrare la mappa con una luce che si accende su ogni città citata."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:56+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Gancio dei primi 2 secondi: domanda chiara sulla scritta, sincronizzata con la prima scena e con il copione.",
+   "dati": {
+    "controllato": "Gancio dei primi 2 secondi: domanda chiara sulla scritta, sincronizzata con la prima scena e con il copione.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel finale mostrare la città che sale di più nella giornata, per dare un nome e una soddisfazione a chi ha scritto SEGUO."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:57+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La voce dice «due punti al tuo paese», ma nella didascalia il bonus è «+2 punti al tuo paese nella Coppa delle Zampe»: il riferimento alla Coppa manca nel parlato. Inoltre la scena 0 del copione («gancio») e il titolo sono gli stessi a 0.5s e 4s, quindi il gancio resta a schermo per circa 4 secondi ",
+   "dati": {
+    "controllato": "Ho confrontato la trascrizione coi secondi, le frasi del copione, i numeri 28/26/12 e 1869 sui fotogrammi, e le misure audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "La voce dice «due punti al tuo paese», ma nella didascalia il bonus è «+2 punti al tuo paese nella Coppa delle Zampe»: il riferimento alla Coppa manca nel parlato. Inoltre la scena 0 del copione («gancio») e il titolo sono gli stessi a 0.5s e 4s, quindi il gancio resta a schermo per circa 4 secondi senza evoluzione, mentre il numero 1869 compare a 10.5s e il finale con il CTA arriva già a 13.7s: il ritmo è buono, ma l'apertura è lenta.",
+    "correzione": "Al secondo 16.5 dire «due punti al tuo paese nella Coppa delle Zampe», oppure aggiungere il nome della Coppa nella scritta di chiusura; accorciare il gancio iniziale di un secondo circa.",
+    "idea": "Per i prossimi reel della gara, chiudere con la città del follower più recente (es. «benvenuto a Treviso») per aumentare il senso di comunità."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:59+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella didascalia c'è scritto «Napoli, la città di Partenope» e nel copione la stessa frase, ma la barra e la voce dicono solo «Napoli»; più grave: la didascalia dice «a 2000 accendiamo i fuochi» mentre nel reel la voce dice «a duemila facciamo i fuochi», quindi coerente, però la didascalia promette ",
+   "dati": {
+    "controllato": "Ho confrontato copione, trascrizione coi secondi, barre e numeri del reel (Napoli 28, Roma 26, Cagliari 12, 1869 follower, fuochi a 2000) e la didascalia con i dati del brief.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Nella didascalia c'è scritto «Napoli, la città di Partenope» e nel copione la stessa frase, ma la barra e la voce dicono solo «Napoli»; più grave: la didascalia dice «a 2000 accendiamo i fuochi» mentre nel reel la voce dice «a duemila facciamo i fuochi», quindi coerente, però la didascalia promette «due punti al tuo paese» senza che il dato sia verificato nella mappa (dati_mappa è vuoto) e la voce al secondo 14 dice «due punti al tuo paese» con il numero 2 non confermato dai materiali. Inoltre la trascrizione legge «ci segue di più?» senza il punto interrogativo sul suono, e la scena 'barre' finisce con «26 e Cagliari» mentre la barra mostra Cagliari 12 a fotogramma 4 e 26 ECAGLIARI al 7: il testo a schermo «26 ECAGLIARI» è un refuso di animazione da correggere in «26 · CAGLIARI» o simile.",
+    "correzione": "Correggere il refuso «26 ECAGLIARI» nella scena barre; verificare la regola «+2 punti» nella Coppa prima di pubblicarla o toglierla dalla voce e dalla didascalia; allineare la didascalia alla voce sul nome di Napoli.",
+    "idea": "Chiudere con la mappa reale che si accende nella città del commento più recente, così il follow diventa visibile sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-13T20:02:59+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la classifica mostra Cagliari con 26 e il riquadro 'Roma' sembra 26: nel fotogramma a 4s la barra di Roma è 26 e il testo sovrapposto 'Cagliari' compare con '26 E CAGLIARI' accanto a una scritta incompleta, quindi l'animazione mostra un numero di Roma/Cagliari che non corrisponde ai dat",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati di classifica (28/26/12), numero 1869 e didascalia rispetto alla mappa e ai fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la classifica mostra Cagliari con 26 e il riquadro 'Roma' sembra 26: nel fotogramma a 4s la barra di Roma è 26 e il testo sovrapposto 'Cagliari' compare con '26 E CAGLIARI' accanto a una scritta incompleta, quindi l'animazione mostra un numero di Roma/Cagliari che non corrisponde ai dati (Cagliari è 12). Inoltre il testo 'è prima' e 'Napoli' appare con la sovrapposizione '26 E CAGLIARI' che confonde il numero.",
+    "correzione": "Correggere l'animazione del secondo 4-5 in modo che mostri solo la frase corretta ('Poi Roma con 26 e Cagliari con 12') e verificare che i numeri in sovrimpressione coincidano con le barre.",
+    "idea": "Per il prossimo reel, usare un unico testo per scena invece di sovrapporre frasi, e chiudere con il conteggio verso i 2000 come gancio di follow."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:00+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Siamo 1869» ma il dato del progetto è 1869 follower; nella didascalia il paese viene indicato come «Treviso» nell'esempio, ma nessun dato di mappa è presente per verificarlo. Inoltre la trascrizione cita «Partenope» come città di Napoli, ma la didascalia dice «chi la batte?» mentre la ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, numeri della gara (Napoli 28, Roma 26, Cagliari 12, 1869 follower), frame e misure audio.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il reel dice «Siamo 1869» ma il dato del progetto è 1869 follower; nella didascalia il paese viene indicato come «Treviso» nell'esempio, ma nessun dato di mappa è presente per verificarlo. Inoltre la trascrizione cita «Partenope» come città di Napoli, ma la didascalia dice «chi la batte?» mentre la voce non lo chiede: incoerenza minore. Più grave: la frase «a duemila facciamo i fuochi» è un obiettivo, non un fatto, e nel frame centrale resta a schermo 1.869 senza indicazione che sia il totale attuale.",
+    "correzione": "Mostrare sul numero «1.869 follower veri» e poi la scritta «a 2.000 i fuochi» in due passaggi distinti; allineare la didascalia alla voce (una sola domanda finale). Verificare che «Cagliari 12» e gli altri dati coincidano con il conteggio reale prima della pubblicazione.",
+    "idea": "Un reel con la classifica aggiornata ogni settimana e la città che ha appena superato la precedente in primo piano, così ogni follower nuovo diventa una notizia."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:00+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nel copione e nella didascalia si dice «due punti al tuo paese» e «+2 punti» nella Coppa delle Zampe, ma i dati del progetto non contengono una regola verificata sui punti della Coppa; il reel promette un premio che non è documentato nei materiali. Inoltre la trascrizione dice «Seguici e scrivi SEGU",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi e fotogrammi: la sequenza Napoli 28, Roma 26, Cagliari 12, 1869 follower e soglia dei fuochi a 2000 corrisponde ai dati forniti; la voce e il ritmo delle scene sono coerenti.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Nel copione e nella didascalia si dice «due punti al tuo paese» e «+2 punti» nella Coppa delle Zampe, ma i dati del progetto non contengono una regola verificata sui punti della Coppa; il reel promette un premio che non è documentato nei materiali. Inoltre la trascrizione dice «Seguici e scrivi SEGUO con la tua città» senza il nome dell'animale, che invece compare solo in didascalia (incoerenza minore).",
+    "correzione": "Togliere «due punti al tuo paese» dal copione e «+2 punti» dalla didascalia, oppure confermare la regola della Coppa prima di pubblicare; allineare l'invito con la didascalia (città e animale o solo città).",
+    "idea": "Per i prossimi reel della gara, mostrare la città che sorpassa in diretta con un'animazione dedicata e una regola della Coppa scritta una sola volta in modo verificabile."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:04+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «due punti al tuo paese» e la didascalia «+2 punti al tuo paese nella Coppa delle Zampe», ma nella trascrizione il numero di follower e di città non torna con quanto mostrato: a schermo compaiono 28/26/12 e 1.869, coerenti con i dati, però la didascalia cita «Napoli 28 · Roma 26 · Ca",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati di gara (Napoli 28, Roma 26, Cagliari 12, 1869 follower), audio e didascalia rispetto ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Il copione dice «due punti al tuo paese» e la didascalia «+2 punti al tuo paese nella Coppa delle Zampe», ma nella trascrizione il numero di follower e di città non torna con quanto mostrato: a schermo compaiono 28/26/12 e 1.869, coerenti con i dati, però la didascalia cita «Napoli 28 · Roma 26 · Cagliari 12» senza tener conto del sesto posto Torino/Bari non visibile nel reel. Inoltre la voce dice «a duemila facciamo i fuochi», mentre il progetto è a 1869: corretto, ma la frase «Siamo 1869» nella didascalia e nella voce andrebbe resa più chiara visivamente. Segnalo soprattutto il punto dei +2 punti: nel brief non risulta verificata la regola della Coppa, quindi andrebbe confermata prima della pubblicazione.",
+    "correzione": "Confermare la regola «+2 punti» della Coppa delle Zampe prima di pubblicare, oppure toglierla dalla didascalia e dal copione. Nella didascalia specificare che la classifica è aggiornata a oggi. Mantenere 1.869 e la soglia dei 2.000 come nel progetto.",
+    "idea": "Un reel con una città diversa in ogni puntata, mostrando la barra del paese che sale dopo ogni commento SEGUO."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:04+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 16.5 la voce dice «due punti al tuo paese», ma nella didascalia il bonus è di +2 punti nella Coppa delle Zampe: il punteggio non è spiegato nel video. Inoltre il video dice «a duemila facciamo i fuochi» mentre la didascalia dice «a 2000 accendiamo i fuochi»: coerente, ma la frase è ripetu",
+   "dati": {
+    "controllato": "Trascrizione, secondi dei fotogrammi, dati dichiarati (Napoli 28, Roma 26, Cagliari 12, 1869 follower), audio e didascalia del reel della gara dei follower.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Al secondo 16.5 la voce dice «due punti al tuo paese», ma nella didascalia il bonus è di +2 punti nella Coppa delle Zampe: il punteggio non è spiegato nel video. Inoltre il video dice «a duemila facciamo i fuochi» mentre la didascalia dice «a 2000 accendiamo i fuochi»: coerente, ma la frase è ripetuta in più punti senza una resa visiva chiara. Il fotogramma al secondo 11 mostra «A DUEMILA» senza un'immagine dei fuochi, quindi il promesso effetto non si vede.",
+    "correzione": "Al secondo 16.5 aggiungere sullo schermo la scritta «+2 punti alla tua città» e, al secondo 11, mostrare una piccola animazione di fuochi d'artificio sopra il numero 2.000 per rendere visibile la promessa.",
+    "idea": "Per i prossimi reel della gara, mostrare la città che sale in classifica con un'animazione della barra in movimento e un suono di traguardo, e far comparire il nome di una città commentata dagli utenti."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:04+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella scena finale il copione dice «due punti al tuo paese», ma la didascalia e la fascia dicono «+2 punti al tuo paese». Il numero è coerente, ma nel video la frase viene detta in modo diverso dalla fascia scritta. Inoltre, nel fotogramma a 14s il testo «SEGUICI E SCRIVI» resta a schermo mentre la ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati della mappa (Napoli 28, Roma 26, Cagliari 12, 1869 follower, soglia 2000), audio (-14.3 LUFS, picco -0.8 dBFS) e coerenza tra copione, scene e didascalia.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Nella scena finale il copione dice «due punti al tuo paese», ma la didascalia e la fascia dicono «+2 punti al tuo paese». Il numero è coerente, ma nel video la frase viene detta in modo diverso dalla fascia scritta. Inoltre, nel fotogramma a 14s il testo «SEGUICI E SCRIVI» resta a schermo mentre la voce parla di «scrivi SEGUO con la tua città», quindi l'indicazione precisa non è leggibile subito. Non è un errore di dati, ma un'incoerenza tra voce e grafica.",
+    "correzione": "Allineare la frase finale: mostrare a schermo «Scrivi SEGUO + la tua città = +2 punti» nello stesso istante in cui la voce pronuncia «due punti al tuo paese», così il messaggio d'azione è chiaro.",
+    "idea": "Per i prossimi reel, far comparire il conteggio in tempo reale (es. «mancano 131 per i fuochi») e usare la città che sta per superare Roma come protagonista dell'ultima scena, così il pubblico ha un motivo concreto per commentare."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:04+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 il frame mostra «26 e CAGLIARI» con la barra di Cagliari a 12: nel copione Roma è 26, quindi il testo sovrapposto è un errore di montaggio (sembra un «26» incollato su «Cagliari»). Inoltre la trascrizione dice «Poi Roma con 26», ma nella grafica il frame del secondo 7 è poco leggibile e",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa e i numeri della gara (Napoli 28, Roma 26, Cagliari 12, 1869 follower) rispetto alla trascrizione, al progetto e alla didascalia.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 il frame mostra «26 e CAGLIARI» con la barra di Cagliari a 12: nel copione Roma è 26, quindi il testo sovrapposto è un errore di montaggio (sembra un «26» incollato su «Cagliari»). Inoltre la trascrizione dice «Poi Roma con 26», ma nella grafica il frame del secondo 7 è poco leggibile e rischia di far confondere Roma con Cagliari.",
+    "correzione": "Correggere il testo a schermo in «26 ROMA» (o rimuovere il numero dalla didascalia animata), verificando che ogni etichetta corrisponda alla barra giusta; ricontrollare anche la didascalia, che riporta Napoli 28 · Roma 26 · Cagliari 12, già corretta.",
+    "idea": "Per i prossimi reel: una scena finale con la mappa che si accende città per città, così il numero 2000 diventa un momento visivo forte."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:08+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 14 e nella trascrizione «due punti al tuo paese» compare anche la fascia «Scrivi SEGUO e la tua città», ma il dato dice che la Coppa assegna +2 punti solo a chi scrive SEGUO con la città e il nome dell'animale: la promessa è più semplice della regola reale e può generare co",
+   "dati": {
+    "controllato": "Ho verificato le cifre del reel (Napoli 28, Roma 26, Cagliari 12, 1869 follower) rispetto ai dati di progetto e la trascrizione con i secondi.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Nel fotogramma al secondo 14 e nella trascrizione «due punti al tuo paese» compare anche la fascia «Scrivi SEGUO e la tua città», ma il dato dice che la Coppa assegna +2 punti solo a chi scrive SEGUO con la città e il nome dell'animale: la promessa è più semplice della regola reale e può generare confusione. Inoltre la didascalia dice «a 2000 accendiamo i fuochi» mentre nel parlato è «a duemila facciamo i fuochi»: coerenti, ma nel fotogramma 1869 e 2000 non sono evidenziati come nel parlato. Il dato Cagliari 12 è corretto; il numero 26 nel fotogramma 7 è letto correttamente come Roma. Nessun dato mancante nei materiali della mappa (dati_mappa vuoto, quindi non posso confermare le luci sulla mappa).",
+    "correzione": "Nella scena di chiusura scrivere «+2 punti alla tua città nella Coppa» invece di «due punti al tuo paese», e allineare il termine «paese»/«città» in tutto il reel e nella didascalia. Aggiungere in trascrizione il dettaglio «con la città e il nome del tuo animale» se resta nel copione.",
+    "idea": "Un reel di sorpasso in tempo reale: mostrare la città che passa in testa dopo ogni nuovo commento SEGUO, con una cifra in grande e un suono di fuochi al momento del sorpasso."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:08+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 la scena mostra «26 e Cagliari» con un testo che si sovrappone e si legge male («26 E CAGLIARI»), mentre nella trascrizione il numero 26 è riferito a Roma: la scena dei fotogrammi sembra mostrare Roma e Cagliari in un'unica frase senza separazione chiara. Inoltre la frase «Napoli, la ci",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa (Napoli 28, Roma 26, Cagliari 12, totale 1869), la coerenza tra trascrizione, scene e fotogrammi, e le misure audio.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 la scena mostra «26 e Cagliari» con un testo che si sovrappone e si legge male («26 E CAGLIARI»), mentre nella trascrizione il numero 26 è riferito a Roma: la scena dei fotogrammi sembra mostrare Roma e Cagliari in un'unica frase senza separazione chiara. Inoltre la frase «Napoli, la città di Partenope» compare solo nel testo parlato e nella didascalia, mentre la barra dice «la città di Partenope» in piccolo: va bene, ma la didascalia chiede «chi la batte?» senza dati coerenti con il numero 2.000 dei fuochi.",
+    "correzione": "Separare visivamente «2. Roma 26» da «3. Cagliari 12» con una pausa più lunga tra i due numeri, e verificare che il testo a schermo al secondo 7 sia leggibile e non sovrapposto.",
+    "idea": "Aggiungere un mini-countdown visivo verso i 2000 follower, mostrando a ogni reel quanti mancano, per creare attesa e continuità tra i contenuti."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:08+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma a 4s la classifica mostra Roma a 26 e Cagliari a 12 ma nell'audio, al secondo 5.3s, la voce dice «Cagliari con 12»; il fotogramma a 7s mostra la scritta «26 e Cagliari» in sovrapposizione sulla barra di Roma, quindi il testo «È PRIMA» e «26 e Cagliari» compaiono mentre la voce pronunc",
+   "dati": {
+    "controllato": "Ho verificato i numeri della classifica (Napoli 28, Roma 26, Cagliari 12), il totale di 1869 follower, la soglia dei 2000 e la sincronia tra trascrizione e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Nel fotogramma a 4s la classifica mostra Roma a 26 e Cagliari a 12 ma nell'audio, al secondo 5.3s, la voce dice «Cagliari con 12»; il fotogramma a 7s mostra la scritta «26 e Cagliari» in sovrapposizione sulla barra di Roma, quindi il testo «È PRIMA» e «26 e Cagliari» compaiono mentre la voce pronuncia già i numeri: c'è un testo di scena a 7s («26 E CAGLIARI») che si legge come errore di montaggio, con «E» e «CAGLIARI» che non corrispondono al copione («Poi Roma con 26 e Cagliari con 12»). Inoltre la voce dice «Napoli è prima con 28» mentre il fotogramma a 4s mostra «È PRIMA» senza Napoli ben allineato al titolo di scena.",
+    "correzione": "Ricontrollare il testo a schermo del fotogramma a 7s e allinearlo al copione: «Poi Roma con 26 e Cagliari con 12»; far comparire «È PRIMA» e il nome Napoli nello stesso istante in cui la voce pronuncia «Napoli è prima».",
+    "idea": "Dopo la classifica, mostrare per due secondi la mappa con le luci delle prime tre città accese, così il numero di follower diventa anche immagine."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:08+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 14 la voce dice «Seguici e scrivi SEGUO con la tua città», ma sullo schermo resta la scena chiusura senza che il testo sia leggibile sopra la fascia; inoltre nella scena barre al secondo 4 la voce parla di Napoli mentre a schermo compare già la barra Roma/Cagliari confusa in sovrimpressio",
+   "dati": {
+    "controllato": "Ho verificato che i numeri della voce (Napoli 28, Roma 26, Cagliari 12, 1869 follower, soglia 2000) corrispondano alle barre e ai dati del brief, e che il ritmo delle scene segua la trascrizione.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Al secondo 14 la voce dice «Seguici e scrivi SEGUO con la tua città», ma sullo schermo resta la scena chiusura senza che il testo sia leggibile sopra la fascia; inoltre nella scena barre al secondo 4 la voce parla di Napoli mentre a schermo compare già la barra Roma/Cagliari confusa in sovrimpressione («26 E CAGLIARI» nel fotogramma intermedio, con la scritta che si sovrappone). La voce nel brief dice 'Napoli... è prima con 28' ma il fotogramma al 4s mostra 'È PRIMA' e al 7s '26 E CAGLIARI': il testo animato si spezza e il terzo numero non viene letto con chiarezza.",
+    "correzione": "Far apparire la scritta 'E CAGLIARI' solo dopo la frase su Roma (circa 5.3s) e lasciarla ferma almeno 1.5 secondi; allineare il testo a schermo alla trascrizione; sulla scena di chiusura mostrare per tutta la frase finale la scritta 'SEGUO + la tua città' in grande.",
+    "idea": "Fare un reel di 'sorpasso' in cui la barra della città si muove in tempo reale verso il primo posto, con un suono di traguardo al momento del sorpasso."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:12+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella scena delle barre il fotogramma a 7s mostra Cagliari a 26 e la trascrizione dice 'Cagliari con 12' al 5-7s, ma il dato reale è 12: è un errore visivo nel reel (le barre rendono Cagliari a 26 e il testo finale in 'Poi Roma con 26', con la scritta '26 e Cagliari' a schermo). Inoltre la trascrizi",
+   "dati": {
+    "controllato": "Dati della mappa (Napoli 28, Roma 26, Cagliari 12, 1869 follower) confrontati con i numeri del copione, trascrizione e fotogrammi a sincronia con le scene.",
+    "esito": "segnalo",
+    "secondo": 13.7,
+    "problema": "Nella scena delle barre il fotogramma a 7s mostra Cagliari a 26 e la trascrizione dice 'Cagliari con 12' al 5-7s, ma il dato reale è 12: è un errore visivo nel reel (le barre rendono Cagliari a 26 e il testo finale in 'Poi Roma con 26', con la scritta '26 e Cagliari' a schermo). Inoltre la trascrizione riporta al 13.7s 'Seguici e scrivi' mentre la scena di chiusura dice 'SEGUO' in maiuscolo come da fascia: coerente. Il problema principale è la sovrapposizione 'È PRIMA' / '26 E CAGLIARI' che nei fotogrammi appare come testo spezzato ('26 ECAGLIARI' senza spazio, illeggibile per un attimo).",
+    "correzione": "Correggere il testo a schermo 'ECAGLIARI' in 'E CAGLIARI' con spazio e verificare che nella scena barre le lunghezze corrispondano ai valori 28/26/12 (la barra di Cagliari va allineata a 12, non a 26). Per l'audio nessuna correzione: -14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo.",
+    "idea": "Ripetere la gara ogni settimana con la città in testa come sorpresa finale, e a 2000 follower far comparire una mappa con i fuochi reali."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:12+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel copione Cagliari è al terzo posto con 12, ma nella trascrizione e nel fotogramma a 7s compare 'Cagliari' come '26 E CAGLIARI': il frame a 4s mostra la barra di Roma (26) e una scritta 'È PRIMA' ancora in sovrapposizione, mentre a 7s il testo 'Cagliari 12' non è mostrato correttamente. Inoltre la",
+   "dati": {
+    "controllato": "Ho confrontato la trascrizione e i secondi dei fotogrammi con il copione e con i dati della mappa (Napoli 28, Roma 26, Cagliari 12, 1869 follower).",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Nel copione Cagliari è al terzo posto con 12, ma nella trascrizione e nel fotogramma a 7s compare 'Cagliari' come '26 E CAGLIARI': il frame a 4s mostra la barra di Roma (26) e una scritta 'È PRIMA' ancora in sovrapposizione, mentre a 7s il testo 'Cagliari 12' non è mostrato correttamente. Inoltre la didascalia non è coerente col resto: 'Napoli 28 · Roma 26 · Cagliari 12' è corretto, ma la classifica della barra mostra Cagliari a 12 e Catania e Torino a 9, quindi nessun errore numerico, però il fotogramma a 14s ('1.869 follower veri') non è compatibile col testo 'A DUEMILA' che appare a 11s.",
+    "correzione": "Verificare che le scritte a schermo seguano esattamente la trascrizione (Napoli 28, Roma 26, Cagliari 12, '1.869 follower' a 10–12s) e che 'È PRIMA' e '26 E CAGLIARI' non si sovrappongano alla barra di Roma. Correggere il secondo fotogramma non coerente.",
+    "idea": "Per il prossimo reel mostrare la città che sorpassa in diretta con un'animazione dedicata, e far comparire il numero dei follower con un contatore che sale."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:14+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 10.5 la voce dice «1869» mentre la scena mostra già il numero: ok. Ma nel fotogramma al secondo 7 la barra di Roma (26) appare più lunga del 28 di Napoli, cioè la scala grafica non rispetta i valori; in più le didascalie dicono «Napoli, la città di Partenope» e la scritta della gara è rip",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, barre e numeri nei fotogrammi rispetto ai dati verificati della mappa (Napoli 28, Roma 26, Cagliari 12, 1869 follower) e audio.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Al secondo 10.5 la voce dice «1869» mentre la scena mostra già il numero: ok. Ma nel fotogramma al secondo 7 la barra di Roma (26) appare più lunga del 28 di Napoli, cioè la scala grafica non rispetta i valori; in più le didascalie dicono «Napoli, la città di Partenope» e la scritta della gara è ripetuta sui fotogrammi senza problemi. Il vero dubbio è la didascalia che dichiara «Voce generata con IA»: va bene, ma il testo promette «+2 punti al tuo paese nella Coppa delle Zampe» che non compare nel reel.",
+    "correzione": "Allineare la lunghezza delle barre ai valori reali (Napoli 28 più lunga di Roma 26) e verificare la coerenza del punteggio promesso nella didascalia con la Coppa delle Zampe.",
+    "idea": "Per il prossimo reel, far comparire il nome della città che sorpassa come finale a sorpresa, con una luce sulla mappa che si accende in quel punto."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:14+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 14 la scritta 'A DUEMILA' compare su schermo mentre la voce dice 'a duemila facciamo i fuochi' al secondo 10-12, quindi il numero compare dopo; più importante: nella trascrizione Napoli è detta 'con 28' ma nei fotogrammi il conteggio delle barre è coerente. Il problema real",
+   "dati": {
+    "controllato": "Ho verificato trascrizione, tempi delle scene, dati della gara (Napoli 28, Roma 26, Cagliari 12, 1869 follower), corrispondenza con la didascalia e misure audio.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Nel fotogramma al secondo 14 la scritta 'A DUEMILA' compare su schermo mentre la voce dice 'a duemila facciamo i fuochi' al secondo 10-12, quindi il numero compare dopo; più importante: nella trascrizione Napoli è detta 'con 28' ma nei fotogrammi il conteggio delle barre è coerente. Il problema reale è la voce: la didascalia dichiara 'Voce generata con IA', mentre il copione e la trascrizione hanno la stessa frase 'due punti al tuo paese' che non compare sullo schermo: lo schermo alla chiusura dice solo 'SEGUICI E SCRIVI' e 'TUO PAESE.' senza il '+2 punti' citato nella didascalia. Inoltre la didascalia promette la Coppa delle Zampe con '+2 punti', meccanica non visibile nel reel.",
+    "correzione": "Aggiungere in chiusura (secondi 14-18) la scritta 'SEGUO + città = +2 punti' per allineare voce, schermo e didascalia; oppure togliere il '+2 punti' dalla didascalia. Tenere la dichiarazione IA in didascalia, che è corretta.",
+    "idea": "Mostrare per un secondo il punteggio di 'SEGUO + città' come effetto concreto (es. '+2 a Treviso') per dare una ragione immediata a seguire."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:14+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Volume e audio del reel: LUFS, picco, silenzi e volume dei primi 5 secondi rispetto all'obiettivo.",
+   "dati": {
+    "controllato": "Volume e audio del reel: LUFS, picco, silenzi e volume dei primi 5 secondi rispetto all'obiettivo.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, valutare un leggero stacco sonoro (un tono o un fuoco d'artificio) al numero 1869 per dare più enfasi al traguardo."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:14+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Loudness, picco, silenzi e apertura audio rispetto all'obiettivo di -14 LUFS, picco sotto -1 dBFS e nessun silenzio lungo; la trascrizione coi secondi.",
+   "dati": {
+    "controllato": "Loudness, picco, silenzi e apertura audio rispetto all'obiettivo di -14 LUFS, picco sotto -1 dBFS e nessun silenzio lungo; la trascrizione coi secondi.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nei prossimi reel potremmo mostrare un fotogramma con la città che sorpassa in classifica, così il cambio di posizione diventa visibile anche senza audio."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:16+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Siamo 1869' va verificato rispetto al progetto (follower: 1869), ok; ma la voce dice 'a duemila facciamo i fuochi' mentre la didascalia dice '2000': coerente. Il problema è la mappa: dati_mappa è vuoto, quindi le barre e i numeri per città non sono verificabili sul reel. Inoltre la frase 'S",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi e coerenza tra brief, didascalia e dati di Napoli, Roma e Cagliari.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il dato 'Siamo 1869' va verificato rispetto al progetto (follower: 1869), ok; ma la voce dice 'a duemila facciamo i fuochi' mentre la didascalia dice '2000': coerente. Il problema è la mappa: dati_mappa è vuoto, quindi le barre e i numeri per città non sono verificabili sul reel. Inoltre la frase 'Siamo 1869' ha la pausa al secondo 10.5 con picco di volume medio basso (-16.8 dB nei primi 5 s), più debole come apertura.",
+    "correzione": "Allineare i dati di Napoli, Roma e Cagliari con dati_mappa prima della pubblicazione e alzare il volume dei primi 5 secondi di circa 2 dB per arrivare a -14 LUFS anche all'apertura.",
+    "idea": "Usare un gancio sonoro più forte nei primi 2 secondi e mostrare la città vincente con un confronto diretto tra due barre."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:18+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "L'audio è nei limiti, ma il picco a -0.8 dBFS è vicinissimo al limite di -1 dBFS e il volume medio dei primi 5 secondi (-16.8 dB) è più basso del resto: l'apertura rischia di sembrare debole. Inoltre il campo 'apertura' è vuoto e la voce IA non è in copertina: la prima impressione dipende solo dalla",
+   "dati": {
+    "controllato": "Audio (LUFS -14.3, picco -0.8 dBFS, nessun silenzio lungo), trascrizione coi secondi e coerenza tra copione, didascalia e numeri della mappa.",
+    "esito": "segnalo",
+    "secondo": 0.0,
+    "problema": "L'audio è nei limiti, ma il picco a -0.8 dBFS è vicinissimo al limite di -1 dBFS e il volume medio dei primi 5 secondi (-16.8 dB) è più basso del resto: l'apertura rischia di sembrare debole. Inoltre il campo 'apertura' è vuoto e la voce IA non è in copertina: la prima impressione dipende solo dalla frase 'Quale città ci segue di più?' senza una grafica di aggancio.",
+    "correzione": "Abbassare il picco a circa -2 dBFS e alzare di 1-2 dB i primi 5 secondi; aggiungere una copertina con la scritta 'Chi vince?' e la classifica Napoli 28 · Roma 26 · Cagliari 12 nei primi 0,5 secondi.",
+    "idea": "Per i prossimi reel della gara, usare una barra animata che cresce a ogni numero citato e chiudere con il conteggio dei punti della città che sta vincendo in quel momento, così la sfida diventa visibile e si rinnova ogni volta."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:18+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Nel brief l'apertura è null e manca la fascia di apertura audio: il primo secondo (0.0s, 'Quale città ci segue di più?') parte senza un suono dedicato, e il volume medio dei primi 5s è -16.8 dB, più basso dell'obiettivo implicito di -14 LUFS.",
+   "dati": {
+    "controllato": "Apertura audio, misure LUFS/picco/silenzi, coerenza di trascrizione e brief con il copione, call to action nella didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nel brief l'apertura è null e manca la fascia di apertura audio: il primo secondo (0.0s, 'Quale città ci segue di più?') parte senza un suono dedicato, e il volume medio dei primi 5s è -16.8 dB, più basso dell'obiettivo implicito di -14 LUFS.",
+    "correzione": "Aggiungere un suono d'apertura breve e marcato nei primi 0.5s (es. un colpo di fuoco o una nota di campanella) e portare il volume dei primi 5s intorno a -14 LUFS, senza superare il picco di -1 dBFS.",
+    "idea": "Per i prossimi reel della gara, aprire con un suono di conteggio alla rovescia o di campanile e mostrare la città in testa con una nota sonora distintiva, così il gancio resta in mente già dal primo secondo."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:18+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'dati_mappa' è vuoto, quindi i numeri 28/26/12 e 1869 non sono verificabili dai materiali. Inoltre la trascrizione dice 'Napoli... è prima con 28' e la didascalia ripete gli stessi numeri: vanno confermati prima di pubblicare. Il timecode 7.0s in trascrizione include anche 'Cagliari con 12' ",
+   "dati": {
+    "controllato": "Audio (LUFS -14.3, picco -0.8 dBFS, nessun silenzio lungo), coerenza trascrizione coi dati di mappa e didascalia (Napoli 28, Roma 26, Cagliari 12, 1869 follower).",
+    "esito": "segnalo",
+    "secondo": 7.0,
+    "problema": "Il dato 'dati_mappa' è vuoto, quindi i numeri 28/26/12 e 1869 non sono verificabili dai materiali. Inoltre la trascrizione dice 'Napoli... è prima con 28' e la didascalia ripete gli stessi numeri: vanno confermati prima di pubblicare. Il timecode 7.0s in trascrizione include anche 'Cagliari con 12' e 'Siamo 1869' cade a 10.5s: la scena 'barre' non ha dati di supporto.",
+    "correzione": "Riempire 'dati_mappa' con i conteggi verificati per città e controllare che 28, 26, 12 e 1869 coincidano con la mappa prima della pubblicazione. Se non verificabili, togliere i numeri specifici o usare formule generiche.",
+    "idea": "Per i prossimi reel: mostrare la classifica animata città per città con i dati reali, così il pubblico vede la gara e può riconoscere la propria città."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:18+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS -14.3, picco -0.8 dBFS, nessun silenzio, volume iniziale -16.8 dB), durata 18.3s e sincronia della trascrizione coi secondi della voce.",
+   "dati": {
+    "controllato": "Audio (LUFS -14.3, picco -0.8 dBFS, nessun silenzio, volume iniziale -16.8 dB), durata 18.3s e sincronia della trascrizione coi secondi della voce.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo reel, far sentire un suono ambientale della città in testa (campane, mare, traffico) per rendere la voce ancora più riconoscibile e coinvolgente."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:21+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il numero 1869 viene detto a 10.5s ma nella didascalia è presentato come dato di follower; inoltre la voce dice 'Siamo 1869' e 'a duemila' senza che il pubblico capisca che sono follower. Nei materiali manca anche il dato verificato per la mappa (dati_mappa è vuoto) quindi non posso confermare che i",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume primi 5s), trascrizione coi secondi e coerenza di voce, numeri e didascalia con i dati di mappa e progetto.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il numero 1869 viene detto a 10.5s ma nella didascalia è presentato come dato di follower; inoltre la voce dice 'Siamo 1869' e 'a duemila' senza che il pubblico capisca che sono follower. Nei materiali manca anche il dato verificato per la mappa (dati_mappa è vuoto) quindi non posso confermare che i punti città siano reali. Il picco -0.8 dBFS è sopra l'obiettivo di -1 dBFS e il volume medio dei primi 5s (-16.8 dB) è più basso del resto del parlato, quindi l'apertura è un po' debole.",
+    "correzione": "Al 10.5s dire 'Siamo 1869 follower' (o mostrare il numero a schermo). Abbassare il picco sotto -1 dBFS con un leggero limiter e alzare di 1-2 dB il volume dei primi 5 secondi. Verificare i dati delle tre città prima della pubblicazione.",
+    "idea": "Usare i reel 'questa_luce' (il formato con più follower ogni 1000 views) con un numero grande a schermo nei primi 2 secondi e la città che tagga gli amici in chiusura."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:21+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il picco di -0.8 dBFS è sopra l'obiettivo di -1 dBFS, e la didascalia dice che Napoli è 'la città di Partenope' mentre il copione lo ripete nella stessa frase senza bisogno; inoltre la didascalia promette 'nome del cane o gatto' ma il copione chiede solo SEGUO e città. Nei dati 'dati_mappa' è vuoto,",
+   "dati": {
+    "controllato": "Livello audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio, volume iniziale -16.8 dB) e coerenza tra trascrizione, copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il picco di -0.8 dBFS è sopra l'obiettivo di -1 dBFS, e la didascalia dice che Napoli è 'la città di Partenope' mentre il copione lo ripete nella stessa frase senza bisogno; inoltre la didascalia promette 'nome del cane o gatto' ma il copione chiede solo SEGUO e città. Nei dati 'dati_mappa' è vuoto, quindi i numeri delle città non sono verificabili qui.",
+    "correzione": "Abbassare il limitatore di circa 0.3 dB per portare il picco sotto -1 dBFS mantenendo -14 LUFS; allineare la call to action tra copione e didascalia (città oppure città e animale).",
+    "idea": "Mostrare sulla mappa la città che sale in tempo reale a ogni SEGUO, così il commento diventa visivo e il campanilismo si vede subito."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:22+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 9 il valore di Cagliari appare come '26 ECAGLIARI': il numero di Roma (26) e il nome Cagliari si sovrappongono o si fondono in una scritta illeggibile. Inoltre la scena barre ripete le stesse tre cifre per più secondi senza un cambio visivo, e la scritta 'È PRIMA' compare i",
+   "dati": {
+    "controllato": "Ho verificato i dati delle barre (Napoli 28, Roma 26, Cagliari 12), il conteggio 1.869 follower e la coerenza tra copione, scene e fotogrammi della grafica.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Nel fotogramma al secondo 9 il valore di Cagliari appare come '26 ECAGLIARI': il numero di Roma (26) e il nome Cagliari si sovrappongono o si fondono in una scritta illeggibile. Inoltre la scena barre ripete le stesse tre cifre per più secondi senza un cambio visivo, e la scritta 'È PRIMA' compare in una scena con le barre ferme.",
+    "correzione": "Separare nettamente il testo della scena dal valore delle barre (es. 'CAGLIARI' ben distanziato dal numero, o far comparire il nome solo dopo la pausa), e far evidenziare Napoli con un'animazione di crescita della barra così da dare ritmo alla scena barre.",
+    "idea": "Per i prossimi reel: una scena finale con la città che sale in classifica in tempo reale e un invito a taggare un amico del paese, che moltiplica le condivisioni."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:23+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione e nei frame la frase 'Napoli, la città di Partenope' è citata, ma la didascalia dice 'Napoli, la città di Partenope: chi la batte?' senza dati di Roma incoerenti; il vero problema è al secondo 11: la scena 'numero' dice 'a duemila facciamo i fuochi' mentre nel frame al secondo 11 ",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione, frame, didascalia e numeri della gara (Napoli 28, Roma 26, Cagliari 12, 1869 follower, soglia 2000).",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Nella trascrizione e nei frame la frase 'Napoli, la città di Partenope' è citata, ma la didascalia dice 'Napoli, la città di Partenope: chi la batte?' senza dati di Roma incoerenti; il vero problema è al secondo 11: la scena 'numero' dice 'a duemila facciamo i fuochi' mentre nel frame al secondo 11 il testo è già 'A DUEMILA' ma il copione dice 'a duemila facciamo i fuochi su tutta l'Italia' e il frame del secondo 14 mostra ancora 'SEGUICI E SCRIVI' in una scena che nel copione dovrebbe essere la chiusura. Inoltre la didascalia cita 'Coppa delle Zampe' e '+2 punti', informazioni non verificabili dai materiali.",
+    "correzione": "Allineare la sequenza visiva alla trascrizione (chiusura 'Seguici e scrivi' dal secondo 13.7), verificare che la promessa '+2 punti' e la Coppa delle Zampe siano reali prima di pubblicare, e togliere 'Voce generata con IA' se la voce è davvero IA solo se corretto dichiararlo.",
+    "idea": "Ripetere il formato con una città in risalita a ogni reel, mostrando il sorpasso in tempo reale per creare attesa."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:24+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la schermata mostra «26 E CAGLIARI» con la «E» attaccata al numero, mentre il parlato dice «Roma con 26 e Cagliari con 12»: il testo grafico è un errore di composizione e il numero di Cagliari (12) non compare coerentemente. Inoltre la barra di Cagliari (12) è corretta, ma la didascalia",
+   "dati": {
+    "controllato": "Grafica e copertina del reel: coerenza delle schermate con la trascrizione, leggibilità dei testi e numeri, resa visiva del ritmo.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la schermata mostra «26 E CAGLIARI» con la «E» attaccata al numero, mentre il parlato dice «Roma con 26 e Cagliari con 12»: il testo grafico è un errore di composizione e il numero di Cagliari (12) non compare coerentemente. Inoltre la barra di Cagliari (12) è corretta, ma la didascalia sovrapposta non è pulita.",
+    "correzione": "Sostituire il testo al secondo 4 con «26 · ROMA e 12 · CAGLIARI» (spazi corretti, numeri allineati ai dati), verificando che ogni etichetta combaci con la barra corrispondente.",
+    "idea": "Per i prossimi reel: evidenziare in colore la città che sale di più nella giornata, così la gara resta viva e il follower si riconosce subito nella mappa."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:25+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 la schermata mostra «26 e CAGLIARI» con un refuso: il testo «e» è attaccato al numero e il nome della città è sovrapposto al valore, quindi il dato Roma/Cagliari non si legge bene. Inoltre il frame centrale alle 5-6s mostra ancora la barra di Roma con scritta «È PRIMA» che può confonder",
+   "dati": {
+    "controllato": "Ho controllato i testi grandi e leggibili dei fotogrammi, la coerenza tra copione, trascrizione e schermate, e la correttezza dei numeri (28, 26, 12, 1869, 2000).",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 la schermata mostra «26 e CAGLIARI» con un refuso: il testo «e» è attaccato al numero e il nome della città è sovrapposto al valore, quindi il dato Roma/Cagliari non si legge bene. Inoltre il frame centrale alle 5-6s mostra ancora la barra di Roma con scritta «È PRIMA» che può confondere sul primo posto.",
+    "correzione": "Sistemare la scritta «26 e CAGLIARI» con uno spazio e separare il numero dal nome (es. «Roma 26 · Cagliari 12» in due righe), e far comparire «È PRIMA» solo accanto a Napoli nel frame in cui la sua barra è evidenziata.",
+    "idea": "Per i prossimi reel, aggiungere un frame finale con la città vincente in evidenza e la coppa, così da chiudere con una piccola ricompensa visiva che invogli a commentare."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:26+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 il fotogramma mostra la barra e il numero di Cagliari come '26 E CAGLIARI': il numero 26 sovrascrive la scritta, mentre il testo parlato dice 'Roma 26'. Nel fotogramma successivo il testo è corretto. Il secondo 7 è in realtà una parte del passaggio con il grafico, dove il numero di Roma",
+   "dati": {
+    "controllato": "Ho verificato i dati delle barre sui fotogrammi (Napoli 28, Roma 26, Cagliari 12) e la coerenza del testo in voce con la trascrizione e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 il fotogramma mostra la barra e il numero di Cagliari come '26 E CAGLIARI': il numero 26 sovrascrive la scritta, mentre il testo parlato dice 'Roma 26'. Nel fotogramma successivo il testo è corretto. Il secondo 7 è in realtà una parte del passaggio con il grafico, dove il numero di Roma è trascritto come '26' ma la barra mostra Cagliari: incoerenza visiva momentanea.",
+    "correzione": "Allineare la comparsa della frase 'E CAGLIARI' e del numero 12 in modo che non si sovrapponga al 26 di Roma durante la transizione, oppure allungare di mezzo secondo la scena con la barra di Roma.",
+    "idea": "Ripetere il formato mostrando in chiusura la città che ha guadagnato più punti dal reel precedente, per creare attesa e un motivo per tornare."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:27+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 7 compare la scritta «26 ECAGLIARI»: refuso evidente, il nome giusto è Cagliari. Il testo della trascrizione dice «Cagliari» e il copione è corretto, quindi l'errore è solo nella grafica. Inoltre la barra di Roma (26) è quasi piena e quella di Napoli (28) è solo un po' più ",
+   "dati": {
+    "controllato": "Scene e fotogrammi della tua mansione (grafica e copertine) rispetto al copione e alla trascrizione, più coerenza visiva delle barre e dei numeri.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Nel fotogramma al secondo 7 compare la scritta «26 ECAGLIARI»: refuso evidente, il nome giusto è Cagliari. Il testo della trascrizione dice «Cagliari» e il copione è corretto, quindi l'errore è solo nella grafica. Inoltre la barra di Roma (26) è quasi piena e quella di Napoli (28) è solo un po' più lunga: differenza visiva poco leggibile, ma i numeri sono corretti.",
+    "correzione": "Sostituire «26 ECAGLIARI» con «26 · CAGLIARI» (o «CAGLIARI» con il numero 12 accanto, se la scena parla di Cagliari come terza) e verificare che la scena del secondo 7 sia allineata alla voce; se la voce dice Roma 26, mostrare chiaramente «Roma 26».",
+    "idea": "Nel prossimo reel della gara, aggiungere un fotogramma finale con la città che sale di posizione in tempo reale, per dare il senso di movimento e spingere a scrivere il proprio paese."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:28+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 9 la scena barre mostra \"26 ECAGLIARI\": testo sovrapposto/errore di battitura, il numero di Roma si fonde con il nome di Cagliari e la frase diventa illeggibile. Nei fotogrammi successivi le scritte di chiusura sono corrette, ma il fotogramma 9s è un difetto visibile.",
+   "dati": {
+    "controllato": "Copertine e fotogrammi della gara follower: classifica, numeri (28/26/12, 1869, soglia 2000) e coerenza con trascrizione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Al secondo 9 la scena barre mostra \"26 ECAGLIARI\": testo sovrapposto/errore di battitura, il numero di Roma si fonde con il nome di Cagliari e la frase diventa illeggibile. Nei fotogrammi successivi le scritte di chiusura sono corrette, ma il fotogramma 9s è un difetto visibile.",
+    "correzione": "Correggere il testo del fotogramma: separare \"26\" e \"Cagliari\" (es. \"3. Cagliari 12\" come riga della classifica, senza ripetere il numero dentro la scritta centrale) e verificare che i valori coincidano con la barra e con la voce al 5°-7° secondo.",
+    "idea": "Aggiungere in chiusura una barra o contatore che mostri quanti follower mancano a 2000 con la città più vicina, così il pubblico può vedere il traguardo avvicinarsi."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:29+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Quale città ci segue di più?» ma la trascrizione e i fotogrammi mostrano anche il cartello «26 e Cagliari» al secondo ~7-8 (il numero 26 appare prima di Cagliari nella scena barre, con il testo «26 E CAGLIARI» che sovrappone e confonde la frase), mentre nella scena di chiusura il te",
+   "dati": {
+    "controllato": "Etichette e numeri in sovrimpressione sulla mappa/barre rispetto a copione e dati di progetto (Napoli 28, Roma 26, Cagliari 12, 1.869 follower).",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Il copione dice «Quale città ci segue di più?» ma la trascrizione e i fotogrammi mostrano anche il cartello «26 e Cagliari» al secondo ~7-8 (il numero 26 appare prima di Cagliari nella scena barre, con il testo «26 E CAGLIARI» che sovrappone e confonde la frase), mentre nella scena di chiusura il testo «TUO PAESE.» compare dopo «SEGUICI E SCRIVI» senza che la frase del copione «due punti al tuo paese» sia leggibile per intero. Inoltre la didascalia cita «Coppa delle Zampe» e «+2 punti» che non compaiono nel reel.",
+    "correzione": "Separare chiaramente i tre elementi in sovrimpressione («Napoli è prima» / «Roma 26» / «Cagliari 12») con un ritmo di scena stabile; far comparire la frase «due punti al tuo paese» come testo unico leggibile; allineare la didascalia solo con ciò che è nel reel.",
+    "idea": "Mostrare la mappa con le luci accese delle prime tre città nello stesso fotogramma delle barre, così il campanilismo si vede subito sul territorio."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:31+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 11 la scritta 'A DUEMILA' compare già mentre la voce dice ancora 'a duemila facciamo i fuochi' nel momento in cui il numero 1.869 è a schermo: il testo a video anticipa la frase parlata di circa un secondo. Inoltre al secondo 7 la barra di Cagliari (26 ECAGLIARI) mostra un ",
+   "dati": {
+    "controllato": "Ho verificato i fotogrammi della grafica 9:16 (titoli, barre, numero, scritte di chiusura) rispetto al copione, alla trascrizione con i secondi e ai dati della gara.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Nel fotogramma al secondo 11 la scritta 'A DUEMILA' compare già mentre la voce dice ancora 'a duemila facciamo i fuochi' nel momento in cui il numero 1.869 è a schermo: il testo a video anticipa la frase parlata di circa un secondo. Inoltre al secondo 7 la barra di Cagliari (26 ECAGLIARI) mostra un refuso: il numero 26 è attaccato a 'ECAGLIARI', manca lo spazio e il 26 è il dato di Roma, non di Cagliari, che nei dati vale 12. Il fotogramma al secondo 7 mostra la scritta '26 E CAGLIARI' cioè il ritmo del testo è confuso.",
+    "correzione": "Allineare il cambio di scena 'A DUEMILA' alla parola 'duemila' della voce (circa 10.5-11.9s) e correggere la scritta della barra in '12 · CAGLIARI' oppure separare chiaramente i due elementi con spazio e pausa, in modo che il numero 12 corrisponda a Cagliari come nei dati.",
+    "idea": "Aggiungere nell'ultima scena il nome della città che ha vinto il turno con una piccola bandiera o icona del campanile, così il reel diventa una gara con un vincitore da nominare nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:31+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'dati_mappa' è vuoto, quindi non posso confermare che Napoli 28, Roma 26 e Cagliari 12 corrispondano alla mappa reale; inoltre la didascalia dice 'Tagga gli amici del tuo paese' ma non c'è un'indicazione chiara su come si assegnano i punti, e il picco audio è vicino al limite (-0.8 dBFS) con",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione con i secondi, l'audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo), la coerenza delle cifre con la didascalia e i dati di progetto.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il dato 'dati_mappa' è vuoto, quindi non posso confermare che Napoli 28, Roma 26 e Cagliari 12 corrispondano alla mappa reale; inoltre la didascalia dice 'Tagga gli amici del tuo paese' ma non c'è un'indicazione chiara su come si assegnano i punti, e il picco audio è vicino al limite (-0.8 dBFS) con rischio di clipping.",
+    "correzione": "Verificare e allegare i dati della mappa prima della pubblicazione, abbassare il picco sotto -1 dBFS e chiarire nella didascalia come vengono assegnati i punti dei tag.",
+    "idea": "Per i prossimi reel, inserire un'immagine concreta di un animale per ogni città in classifica, così il contenuto è più bello e riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:31+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio è -0.8 dBFS, sopra l'obiettivo di -1 dBFS. Inoltre la mappa è vuota (dati_mappa: []) e il brief non ha un'apertura definita: non posso verificare che i numeri delle città corrispondano alla mappa.",
+   "dati": {
+    "controllato": "Audio (LUFS -14.3, picco -0.8 dBFS, nessun silenzio), trascrizione coi secondi, didascalia e coerenza dei dati Napoli 28 / Roma 26 / Cagliari 12 con il brief.",
+    "esito": "segnalo",
+    "secondo": 13.7,
+    "problema": "Il picco audio è -0.8 dBFS, sopra l'obiettivo di -1 dBFS. Inoltre la mappa è vuota (dati_mappa: []) e il brief non ha un'apertura definita: non posso verificare che i numeri delle città corrispondano alla mappa.",
+    "correzione": "Abbassare il picco sotto -1 dBFS (es. limiter a -1.5) senza alterare il LUFS; verificare i conteggi per città sulla mappa prima della pubblicazione; definire l'apertura.",
+    "idea": "Per i prossimi reel, un reel con la città in testa in tempo reale aggiornato a ogni 100 follower, con una chiusura che ringrazia la città che ha appena superato la soglia."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:33+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La didascalia promette \"+2 punti al tuo paese nella Coppa delle Zampe\" e la frase parlata dice \"due punti al tuo paese\", ma nei materiali non c'è nessuna regola verificata sui punti: il dato sull'assegnazione dei punti non è verificabile. Inoltre \"Quale città ci segue di più?\" più \"Napoli, la città ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati di classifica (Napoli 28, Roma 26, Cagliari 12), audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo), didascalia, fascia e hashtag del reel.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "La didascalia promette \"+2 punti al tuo paese nella Coppa delle Zampe\" e la frase parlata dice \"due punti al tuo paese\", ma nei materiali non c'è nessuna regola verificata sui punti: il dato sull'assegnazione dei punti non è verificabile. Inoltre \"Quale città ci segue di più?\" più \"Napoli, la città di Partenope\" è un dato mappa vuoto (dati_mappa è []) quindi i conteggi per città non risultano confermati dai materiali. Il conteggio di \"1869\" follower e \"2899\" luci non è incoerente, ma \"a duemila facciamo i fuochi\" usa una soglia che va bene solo se confermata. Infine \"Voce generata con IA\" è dichiarato, ok.",
+    "correzione": "Togliere o confermare la regola dei +2 punti (es. dire solo \"scrivi SEGUO con la tua città\" senza promettere punti non documentati) e verificare i conteggi per città prima di pubblicare, dato che dati_mappa è vuoto. Allineare la frase parlata alla didascalia.",
+    "idea": "Mostrare la classifica con la città evidenziata sulla mappa, e usare un solo numero di punti verificato per ogni città nelle barre per dare credibilità alla gara."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:33+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il campo dati_mappa è vuoto, quindi i numeri Napoli 28, Roma 26, Cagliari 12 non risultano verificati dai materiali; il testo parla di barre e i fotogrammi inviati (4s) mostrano la scena da controllare. Inoltre la CTA chiede di scrivere SEGUO con la città e il nome dell'animale nella didascalia, ma ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (LUFS, picco, silenzi), dati mappa e numeri del progetto: audio nei limiti e nessun silenzio lungo, ma il dato sulle città è vuoto e non verificabile.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il campo dati_mappa è vuoto, quindi i numeri Napoli 28, Roma 26, Cagliari 12 non risultano verificati dai materiali; il testo parla di barre e i fotogrammi inviati (4s) mostrano la scena da controllare. Inoltre la CTA chiede di scrivere SEGUO con la città e il nome dell'animale nella didascalia, ma nel parlato dice solo 'con la tua città': vale la pena allineare i due messaggi.",
+    "correzione": "Verificare i conteggi per città con i dati reali della mappa prima di pubblicare, oppure togliere i numeri specifici; allineare la CTA parlata alla didascalia.",
+    "idea": "Per i prossimi reel, mostrare la classifica aggiornata in tempo reale con una barra che si riempie, così il dato visivo e quello parlato coincidono sempre."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:35+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Napoli 28, Roma 26, Cagliari 12' non è verificabile: 'dati_mappa' è vuoto, quindi non ho nessuna fonte che confermi le cifre. Inoltre la didascalia dice 'Napoli, la città di Partenope: chi la batte?' e 'Voce generata con IA' senza che sia richiesto dal brief. Audio: LUFS -14.3 e picco -0.8 ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, dati mappa (vuoti), misure audio e numeri del progetto rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il dato 'Napoli 28, Roma 26, Cagliari 12' non è verificabile: 'dati_mappa' è vuoto, quindi non ho nessuna fonte che confermi le cifre. Inoltre la didascalia dice 'Napoli, la città di Partenope: chi la batte?' e 'Voce generata con IA' senza che sia richiesto dal brief. Audio: LUFS -14.3 e picco -0.8 dBFS sono nei limiti, ma il volume medio dei primi 5 s (-16.8 dB) è più basso dell'obiettivo implicito di apertura piena. Il copione a 1,3 s e 3,0 s resta fermo su 'più' e 'Napoli' senza cambio di scena.",
+    "correzione": "Prima di pubblicare, confermare le cifre delle città con il conteggio reale della mappa e aggiungere la fonte o la data di rilevazione. Valutare di alzare il volume dei primi secondi o di aggiungere un suono d'apertura più forte. Tenere la nota IA solo se richiesta dalle regole dell'agenzia.",
+    "idea": "Per i prossimi reel aggiungere una copertina con la mappa d'Italia e la città in testa, e mostrare il conteggio reale con una schermata dei dati verificati."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:35+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nel copione e nella didascalia Napoli è 'prima con 28' e Roma '26', ma la mappa (dati_mappa) è vuota: non posso verificare questi numeri. Inoltre la didascalia dice 'Napoli la città di Partenope', ma nel parlato 'la città di Partenope' cade in una frase lunga che regge poco a 1.3s-3.0s. Il dettaglio",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo), numeri del progetto e corrispondenza con i dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 5.3,
+    "problema": "Nel copione e nella didascalia Napoli è 'prima con 28' e Roma '26', ma la mappa (dati_mappa) è vuota: non posso verificare questi numeri. Inoltre la didascalia dice 'Napoli la città di Partenope', ma nel parlato 'la città di Partenope' cade in una frase lunga che regge poco a 1.3s-3.0s. Il dettaglio 'a 2000 accendiamo i fuochi' contrasta con 'Siamo 1869' nel reel: va bene come obiettivo, ma è da chiarire. Audio e durata sono a posto.",
+    "correzione": "Verificare i conteggi di Napoli, Roma e Cagliari contro la mappa prima di pubblicare, altrimenti togliere le cifre precise. Chiarire nella didascalia che 2000 è l'obiettivo. Valutare di spezzare la frase su Partenope in due.",
+    "idea": "Un reel con la classifica aggiornata in tempo reale e un confronto diretto tra due città, sfruttando il formato testa_a_testa che ha già dato buone reach."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:37+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nel copione la frase 'Siamo 1869' non è verificabile contro il dato di progetto (follower 1869, luci 2899) sul numero del progetto, ma il vero problema è la frase 'a duemila facciamo i fuochi' detta sul secondo 10.5-11.9: la soglia dichiarata è 2000 e il progetto è a 1869, va bene come obiettivo. In",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati mappa (Napoli 28, Roma 26, Cagliari 12), misure audio e didascalia del reel gara_follower.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Nel copione la frase 'Siamo 1869' non è verificabile contro il dato di progetto (follower 1869, luci 2899) sul numero del progetto, ma il vero problema è la frase 'a duemila facciamo i fuochi' detta sul secondo 10.5-11.9: la soglia dichiarata è 2000 e il progetto è a 1869, va bene come obiettivo. In più, dati_mappa è vuoto: i numeri 28/26/12 nel parlato e nella didascalia non hanno riscontro nei dati inviati, quindi non posso confermarli. Audio: LUFS -14.3 e picco -0.8 dBFS superano il limite di -1 dBFS, e il volume dei primi 5 secondi (-16.8 dB) è basso rispetto al resto.",
+    "correzione": "Verificare e riportare in dati_mappa i conteggi Napoli/Roma/Cagliari prima della pubblicazione; abbassare il picco sotto -1 dBFS (es. limitatore o -1.5 dB di guadagno) e alzare leggermente l'apertura; nella didascalia, sostituire 'Voce generata con IA' con una dicitura coerente con la policy della pagina se richiesta.",
+    "idea": "Per i prossimi reel, mostrare la città vincente con una scena dedicata (luci della mappa che si accendono in quella città) e una sfida settimanale tra due città con risultato in chiusura."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:37+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "dati_mappa è vuoto, quindi i numeri 28, 26 e 12 della gara non sono verificabili nei materiali; inoltre la didascalia dice '2000 fuochi' mentre il copione dice 'a duemila' (coerente), ma la trascrizione al secondo 1.3 riporta 'più?' senza il gancio completo e il picco audio è a -0.8 dBFS, vicino al ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e dati della mappa per la gara città.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "dati_mappa è vuoto, quindi i numeri 28, 26 e 12 della gara non sono verificabili nei materiali; inoltre la didascalia dice '2000 fuochi' mentre il copione dice 'a duemila' (coerente), ma la trascrizione al secondo 1.3 riporta 'più?' senza il gancio completo e il picco audio è a -0.8 dBFS, vicino al limite -1.",
+    "correzione": "Allegare i dati_mappa verificati prima della pubblicazione e abbassare leggermente il picco audio sotto -1 dBFS.",
+    "idea": "Per i prossimi reel, mostrare un aggiornamento in tempo reale della classifica città con un confronto diretto tra due città vicine, così da stimolare tag e commenti localizzati."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:38+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Siamo 1869' è coerente con il progetto, ma nel copione i numeri delle città (28, 26, 12) non sono nei dati_mappa, che è vuoto: non posso verificarli. Inoltre la didascalia dice 'Napoli 28 · Roma 26 · Cagliari 12' senza la fonte. Tutti i dati di città vanno verificati prima di pubblicare.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, dati di Napoli/Roma/Cagliari, audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e numeri del progetto (1869 follower, 2899 luci).",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il dato 'Siamo 1869' è coerente con il progetto, ma nel copione i numeri delle città (28, 26, 12) non sono nei dati_mappa, che è vuoto: non posso verificarli. Inoltre la didascalia dice 'Napoli 28 · Roma 26 · Cagliari 12' senza la fonte. Tutti i dati di città vanno verificati prima di pubblicare.",
+    "correzione": "Verificare i conteggi di Napoli, Roma e Cagliari sulla mappa e riempire dati_mappa; se non confermati, togliere i numeri dalla voce e dalla didascalia e dire solo la classifica verificata.",
+    "idea": "Per i prossimi reel, far comparire il nome reale di un animale e la sua città sulla mappa in apertura, così la sfida diventa più personale e memorabile."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:38+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «due punti al tuo paese», ma la didascalia dice «+2 punti al tuo paese nella Coppa delle Zampe»: il regolamento non è spiegato nel reel. Inoltre la trascrizione non riporta la parola «Napoli» come voce separata sulle barre, ma il testo è coerente. Il dato 1869 follower e 2899 luci no",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati mappa (Napoli 28, Roma 26, Cagliari 12), audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e didascalia.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Il copione dice «due punti al tuo paese», ma la didascalia dice «+2 punti al tuo paese nella Coppa delle Zampe»: il regolamento non è spiegato nel reel. Inoltre la trascrizione non riporta la parola «Napoli» come voce separata sulle barre, ma il testo è coerente. Il dato 1869 follower e 2899 luci non è verificabile dai materiali come «fuochi a 2000»: resta un obiettivo, va detto chiaramente.",
+    "correzione": "Nella scena di chiusura (dal secondo 13.7) aggiungere in sovrimpressione «+2 punti alla tua città nella Coppa delle Zampe» e allineare il testo parlato alla didascalia; scrivere in didascalia «a 2000 follower» come obiettivo, non come evento.",
+    "idea": "Per i prossimi reel, mostrare la classifica con barre animate che crescono e un frame finale con la città che sale, così il comando diventa anche visivo."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:42+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il reel è in gara_follower ma dati_mappa è vuoto: le cifre 28, 26 e 12 non sono verificabili dai materiali. Inoltre la frase 'Siamo 1869' è pronunciata senza un chiaro riferimento visivo, e la chiusura (18.3s) arriva dopo l'ultimo fotogramma inviato (18s) senza copertina. La didascalia cita 'Coppa d",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (LUFS, picco, silenzi), didascalia e numeri del progetto confrontati con la mappa e gli ultimi reel.",
+    "esito": "segnalo",
+    "secondo": 18,
+    "problema": "Il reel è in gara_follower ma dati_mappa è vuoto: le cifre 28, 26 e 12 non sono verificabili dai materiali. Inoltre la frase 'Siamo 1869' è pronunciata senza un chiaro riferimento visivo, e la chiusura (18.3s) arriva dopo l'ultimo fotogramma inviato (18s) senza copertina. La didascalia cita 'Coppa delle Zampe' e '+2 punti' che non risultano dai dati verificati.",
+    "correzione": "Verificare Napoli 28, Roma 26 e Cagliari 12 con la mappa prima della pubblicazione e confermare la regola dei +2 punti; far comparire 1869 sullo schermo quando viene detto; aggiungere un fotogramma finale (18.3s) con il tag SEGUO.",
+    "idea": "Ripetere il formato 'questa_luce', che ha ottenuto il miglior rapporto follower/reach, mostrando una singola città illuminata con il nome del cane o gatto in primo piano."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:42+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La mappa non ha dati per questo reel (dati_mappa è vuoto), eppure il copione e la didascalia citano Napoli 28, Roma 26 e Cagliari 12 come cifre precise: non sono verificabili dai materiali. Inoltre la didascalia dice «Napoli: chi la batte?» ma il reel non mostra la classifica, quindi il numero non s",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo), didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 3.0,
+    "problema": "La mappa non ha dati per questo reel (dati_mappa è vuoto), eppure il copione e la didascalia citano Napoli 28, Roma 26 e Cagliari 12 come cifre precise: non sono verificabili dai materiali. Inoltre la didascalia dice «Napoli: chi la batte?» ma il reel non mostra la classifica, quindi il numero non si vede mentre viene detto. Anche la parola 'Siamo 1869' è coerente coi dati di progetto, ma la frase al secondo 2.0 ('a duemila facciamo i fuochi') arriva senza un visual che la sostenga.",
+    "correzione": "Confermare i conteggi per città dalla mappa reale e inserirli nei dati prima della pubblicazione; mostrare a schermo la classifica (barre o podio) mentre il voice-over legge i numeri, e far comparire il contatore 1869/2000 al secondo 11-12.",
+    "idea": "Per i prossimi reel della gara, usare una barra che si riempie in tempo reale per ogni città, così il confronto si vede e non solo si sente."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:43+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La mappa dati_mappa è vuota, quindi le cifre 28, 26 e 12 non risultano verificate nei materiali. Inoltre la trascrizione dice 'Napoli... con 28' mentre il copione dice 'Napoli, la città di Partenope, è prima con 28', coerente, ma il testo 'Siamo 1869' va confrontato con follower 1869 (ok). Il reel è",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, misure audio, didascalia e numeri del progetto del reel gara_follower.",
+    "esito": "segnalo",
+    "secondo": 3.0,
+    "problema": "La mappa dati_mappa è vuota, quindi le cifre 28, 26 e 12 non risultano verificate nei materiali. Inoltre la trascrizione dice 'Napoli... con 28' mentre il copione dice 'Napoli, la città di Partenope, è prima con 28', coerente, ma il testo 'Siamo 1869' va confrontato con follower 1869 (ok). Il reel è inoltre tra i formati con follower_ogni_1000 molto bassi (1.2 su 'coppa_sorpasso'), quindi il formato di gara non sembra convertire bene in nuovi follower.",
+    "correzione": "Verificare e riportare in dati_mappa le cifre per città prima di pubblicare; con dati mancanti non si dovrebbero citare punteggi precisi. Per la conversione, valutare il formato 'questa_luce' che nei dati ha il miglior follower_ogni_1000 (16.2).",
+    "idea": "Un prossimo reel 'questa_luce' con la città più vicina alla soglia dei 2000 follower, mostrando la luce che si accende sulla mappa e chiudendo con SEGUO."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:43+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Napoli 28, Roma 26, Cagliari 12' non ha riscontro nei dati_mappa, che sono vuoti: non è verificabile. Inoltre la trascrizione e la didascalia non coincidono sul conteggio: la voce dice 'siamo 1869' e la didascalia 'a 2000 accendiamo', coerente, ma il reel promette classifiche che i material",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (LUFS, picco, silenzi), didascalia, numeri del progetto e dati verificati della mappa.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Il dato 'Napoli 28, Roma 26, Cagliari 12' non ha riscontro nei dati_mappa, che sono vuoti: non è verificabile. Inoltre la trascrizione e la didascalia non coincidono sul conteggio: la voce dice 'siamo 1869' e la didascalia 'a 2000 accendiamo', coerente, ma il reel promette classifiche che i materiali non confermano. Il volume medio dei primi 5 secondi (-16.8 dB) è più basso dell'obiettivo implicito di apertura.",
+    "correzione": "Prima di pubblicare, verificare la classifica città contro la mappa reale e inserire i valori in dati_mappa; se non confermati, usare formulazioni senza numeri precisi. Valutare un'apertura più incisiva a volume leggermente più alto nei primi secondi.",
+    "idea": "Un reel con la classifica verificata aggiornata in tempo reale e il nome della città di chi ha appena seguito, così ogni follower nuovo diventa protagonista del video."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:45+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Napoli 28, Roma 26, Cagliari 12' non è verificabile: dati_mappa è vuoto, quindi i numeri della gara non sono confermati dai materiali. Inoltre la didascalia dice 'a 2000 accendiamo i fuochi' mentre il parlato dice 'a duemila facciamo i fuochi': coerente, ma il numero 2000 non è ancora raggi",
+   "dati": {
+    "controllato": "Trascrizione, secondi, dati della mappa, audio, didascalia e numeri del progetto del reel gara_follower, verificando coerenza tra copione e dati.",
+    "esito": "segnalo",
+    "secondo": 18,
+    "problema": "Il dato 'Napoli 28, Roma 26, Cagliari 12' non è verificabile: dati_mappa è vuoto, quindi i numeri della gara non sono confermati dai materiali. Inoltre la didascalia dice 'a 2000 accendiamo i fuochi' mentre il parlato dice 'a duemila facciamo i fuochi': coerente, ma il numero 2000 non è ancora raggiunto (siamo a 1869), quindi va detto come obiettivo. Infine la didascalia promette 'il nome del tuo cane o gatto' e 'Coppa delle Zampe' senza che nel parlato compaia il concetto di Coppa: meglio allineare.",
+    "correzione": "Verificare i conteggi per città con i dati reali prima di pubblicare; nella didascalia scrivere 'a 2000 accendiamo i fuochi' come obiettivo futuro; chiarire nel parlato o nel testo a schermo cosa succede con la Coppa delle Zampe.",
+    "idea": "Un reel con una sola città per volta che si illumina sulla mappa mentre il commento di un follower viene letto a voce, per dare un volto alla gara."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:45+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La mappa di questo reel non ha dati verificati (dati_mappa è vuoto), eppure il testo cita cifre precise per città, mentre i numeri del progetto (1869 follower) non sono confrontabili con quelli delle città senza un riferimento. Inoltre al secondo 10.5 il copione dice 'Siamo 1869' ma la didascalia di",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (LUFS, picco, silenzi), coerenza tra copione, didascalia e numeri della mappa (Napoli 28, Roma 26, Cagliari 12, 1869 follower).",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "La mappa di questo reel non ha dati verificati (dati_mappa è vuoto), eppure il testo cita cifre precise per città, mentre i numeri del progetto (1869 follower) non sono confrontabili con quelli delle città senza un riferimento. Inoltre al secondo 10.5 il copione dice 'Siamo 1869' ma la didascalia dice 'Siamo 1869' e 'a 2000 accendiamo i fuochi': coerente, ma serve verificare che Napoli 28 e Roma 26 corrispondano ai dati reali prima della pubblicazione.",
+    "correzione": "Riempire dati_mappa con i conteggi verificati per città e controllare che la somma e i ranking corrispondano prima di pubblicare; verificare anche le misure audio contro l'obiettivo, perché il volume medio dei primi 5 secondi (-16.8 dB) è sotto il target di apertura.",
+    "idea": "Mostrare la classifica con una mappa animata che si accende città per città, e aggiungere un finale visivo con il numero 2000 per creare attesa."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:45+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio di -0.8 dBFS è vicino al limite (obiettivo sotto -1 dBFS). Inoltre la trascrizione dice 'due punti al tuo paese' mentre la didascalia dice '+2 punti'; sono coerenti ma il reel non spiega cosa siano i punti. Infine il campo 'dati_mappa' è vuoto e non posso verificare i conteggi di citt",
+   "dati": {
+    "controllato": "Ho verificato audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio), trascrizione coi secondi, coerenza tra testo, didascalia e numeri del progetto (1869 follower, Napoli 28, Roma 26, Cagliari 12).",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Il picco audio di -0.8 dBFS è vicino al limite (obiettivo sotto -1 dBFS). Inoltre la trascrizione dice 'due punti al tuo paese' mentre la didascalia dice '+2 punti'; sono coerenti ma il reel non spiega cosa siano i punti. Infine il campo 'dati_mappa' è vuoto e non posso verificare i conteggi di città dalla mappa, solo dai dati forniti.",
+    "correzione": "Abbassare il picco a circa -1.5 dBFS mantenendo -14 LUFS; aggiungere in chiusura o a schermo 'Coppa delle Zampe' per chiarire i punti; verificare i conteggi città sulla mappa prima di pubblicare.",
+    "idea": "Ripetere il formato 'questa_luce' e 'testa_a_testa', che nei dati hanno più commenti e follower ogni 1000 views, mostrando una città sfidante a schermo con i numeri in tempo reale."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:46+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice 'Napoli, la città di Partenope, è prima con 28' ma l'array dati_mappa è vuoto, quindi i numeri 28, 26 e 12 non sono verificabili dai materiali. Inoltre la didascalia dice 'Seguici e scrivi SEGUO con la tua città e il nome del tuo cane o gatto' mentre la voce dice solo città: il nome del",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati mappa, audio, didascalia e numeri del progetto del reel gara_follower.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il reel dice 'Napoli, la città di Partenope, è prima con 28' ma l'array dati_mappa è vuoto, quindi i numeri 28, 26 e 12 non sono verificabili dai materiali. Inoltre la didascalia dice 'Seguici e scrivi SEGUO con la tua città e il nome del tuo cane o gatto' mentre la voce dice solo città: il nome dell'animale nella didascalia non è nel copione.",
+    "correzione": "Verificare i conteggi per città sulla mappa prima di pubblicare e allinearli nel parlato. Allineare la didascalia al copione (città, senza obbligo del nome dell'animale, oppure aggiungerlo anche nel parlato).",
+    "idea": "Mostrare sulla mappa, nel secondo 1.3-3, la città di Napoli che si accende con il numero, così il dato visivo rinforza quello detto e la gara si capisce anche senza audio."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:48+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Siamo 1869: a duemila facciamo i fuochi' al secondo 10.5 usa un numero che non compare nei dati della mappa per il conteggio dei follower, e il fotogramma inviato più vicino (11s) mostra solo un'immagine statica; inoltre 'dati_mappa' è vuoto, quindi le barre Napoli/Roma/Cagliari non sono v",
+   "dati": {
+    "controllato": "Trascrizione, timing, audio, didascalia e dati della mappa del reel gara_follower (2026-11-13).",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "La frase 'Siamo 1869: a duemila facciamo i fuochi' al secondo 10.5 usa un numero che non compare nei dati della mappa per il conteggio dei follower, e il fotogramma inviato più vicino (11s) mostra solo un'immagine statica; inoltre 'dati_mappa' è vuoto, quindi le barre Napoli/Roma/Cagliari non sono verificabili dai materiali. Il problema reale è anche che il reel promette una 'gara' con cifre (28, 26, 12) che non risultano dai dati forniti.",
+    "correzione": "Verificare i conteggi per città con i dati reali prima di pubblicare e allineare la cifra 1869 ai follower effettivi; se il dato non è confermato, sostituire con formulazione generica ('quasi duemila' solo se vero).",
+    "idea": "Inserire il nome della città del commento più recente come chiusura dinamica, e testare un gancio visivo più forte nei primi 2 secondi."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:48+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "I dati della mappa (dati_mappa) sono vuoti, quindi Napoli 28, Roma 26 e Cagliari 12 non sono verificabili dai materiali. Inoltre il conteggio dei follower ogni 1000 in alcuni reel non torna con i dati di reach, e la didascalia promette +2 punti per città senza che sia documentato nel progetto.",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, misure audio, didascalia e numeri del progetto del reel gara_follower.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "I dati della mappa (dati_mappa) sono vuoti, quindi Napoli 28, Roma 26 e Cagliari 12 non sono verificabili dai materiali. Inoltre il conteggio dei follower ogni 1000 in alcuni reel non torna con i dati di reach, e la didascalia promette +2 punti per città senza che sia documentato nel progetto.",
+    "correzione": "Verificare i conteggi di Napoli, Roma e Cagliari contro la mappa reale prima di pubblicare, riempire dati_mappa e chiarire nella didascalia la regola dei punti o toglierla se non è ancora attiva.",
+    "idea": "Aggiungere per ogni città una piccola immagine della mappa con la luce accesa, così le barre dei numeri diventano visive e verificabili."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:49+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Siamo 1869' è incoerente con la didascalia e con il brief ('a duemila facciamo i fuochi'), mentre i numeri della mappa (dati_mappa vuoto) non permettono di verificare Napoli 28, Roma 26, Cagliari 12. Inoltre il volume medio dei primi 5s (-16,8 dB) è più basso dell'obiettivo di -14 LUFS e la",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia e misure audio (LUFS, picco, silenzi, volume primi 5s) rispetto agli obiettivi della mia mansione.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il dato 'Siamo 1869' è incoerente con la didascalia e con il brief ('a duemila facciamo i fuochi'), mentre i numeri della mappa (dati_mappa vuoto) non permettono di verificare Napoli 28, Roma 26, Cagliari 12. Inoltre il volume medio dei primi 5s (-16,8 dB) è più basso dell'obiettivo di -14 LUFS e la trascrizione non segnala alcun silenzio dopo l'apertura.",
+    "correzione": "Verificare il conteggio follower con i dati ufficiali prima della pubblicazione e controllare che le città citate corrispondano alla mappa; alzare leggermente il volume iniziale per avvicinarsi a -14 LUFS senza superare -1 dBFS.",
+    "idea": "Un reel con la mappa che si accende città per città mentre il nome della città che scrive SEGUO compare in sovrimpressione, così ogni commento diventa visibile sul video."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:49+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Quale città ci segue di più?' è in apertura, ma nel brief 'apertura' è null e i dati_mappa sono vuoti: non posso verificare da qui i numeri 28/26/12 né il totale 1869. Inoltre la didascalia dice 'Voce generata con IA' senza che il reel lo dichiari a schermo, e l'esempio 'Treviso, Luna, can",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e dati di Napoli/Roma/Cagliari: coerenti con i materiali.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "La frase 'Quale città ci segue di più?' è in apertura, ma nel brief 'apertura' è null e i dati_mappa sono vuoti: non posso verificare da qui i numeri 28/26/12 né il totale 1869. Inoltre la didascalia dice 'Voce generata con IA' senza che il reel lo dichiari a schermo, e l'esempio 'Treviso, Luna, cane' nella didascalia è un dettaglio da confermare.",
+    "correzione": "Verificare i conteggi di Napoli, Roma e Cagliari contro la mappa prima di pubblicare; aggiungere nel reel o nella fascia una dicitura breve sulla voce IA; togliere o confermare l'esempio con nome di animale.",
+    "idea": "Per i prossimi reel, mostrare la mappa con la luce di Napoli che si accende mentre viene detto il numero, e far comparire la città del commento in tempo reale."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:52+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'dati_mappa' è vuoto, quindi i numeri 28, 26 e 12 non sono verificabili dai materiali; inoltre la trascrizione dice 'Siamo 1869' mentre il progetto riporta follower 1869 (coerente), ma la frase 'a duemila facciamo i fuochi' non corrisponde a 'luci 2899' e il brief non ha apertura (null) né c",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa, misure audio, brief, didascalia e numeri del progetto del reel gara_follower.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il dato 'dati_mappa' è vuoto, quindi i numeri 28, 26 e 12 non sono verificabili dai materiali; inoltre la trascrizione dice 'Siamo 1869' mentre il progetto riporta follower 1869 (coerente), ma la frase 'a duemila facciamo i fuochi' non corrisponde a 'luci 2899' e il brief non ha apertura (null) né copertina.",
+    "correzione": "Verificare i conteggi città con la fonte prima della pubblicazione e allineare la soglia dei fuochi ai dati reali; valutare una copertina definita.",
+    "idea": "Per i prossimi reel, mostrare sulla mappa la città che sale in tempo reale con un numero animato, così il dato verificabile è visibile nel video stesso."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:52+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il gancio dice «ci segue di più» ma il reel mostra una classifica per città senza dati di mappa nel materiale (dati_mappa è vuoto): non posso verificare 28, 26 e 12. Inoltre la didascalia dice «a 2000 accendiamo i fuochi» mentre la trascrizione dice «a duemila facciamo i fuochi»: coerente, ma il «Si",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (LUFS, picco, silenzi), didascalia e dati di Napoli/Roma/Cagliari rispetto ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il gancio dice «ci segue di più» ma il reel mostra una classifica per città senza dati di mappa nel materiale (dati_mappa è vuoto): non posso verificare 28, 26 e 12. Inoltre la didascalia dice «a 2000 accendiamo i fuochi» mentre la trascrizione dice «a duemila facciamo i fuochi»: coerente, ma il «Siamo 1869» va verificato con il progetto (follower 1869, ok). Il secondo 11.9 e 13.7 sono ravvicinati e il numero 2000 non compare come dato visivo.",
+    "correzione": "Allegare o confermare i conteggi per città (dati_mappa) prima della pubblicazione; se non verificabili, riformulare senza cifre precise. Aggiungere una schermata o un elemento visivo che mostri 2000 e la mappa al secondo 11.9.",
+    "idea": "Per i prossimi reel, mostrare la classifica con barre animate e il numero 2000 come traguardo visivo a fine video."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:52+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "I dati di Napoli (28), Roma (26) e Cagliari (12) non compaiono in dati_mappa, che è vuoto: non è verificabile che siano i valori reali. Inoltre il conteggio 'Siamo 1869' e 'a duemila' non coincide con il dato 'luci': 2899 nel progetto, e la didascalia dice 'a 2000 accendiamo i fuochi' quando la sogl",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio e numeri della mappa/progetto per il reparto Trofei e albo.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "I dati di Napoli (28), Roma (26) e Cagliari (12) non compaiono in dati_mappa, che è vuoto: non è verificabile che siano i valori reali. Inoltre il conteggio 'Siamo 1869' e 'a duemila' non coincide con il dato 'luci': 2899 nel progetto, e la didascalia dice 'a 2000 accendiamo i fuochi' quando la soglia è già superata nei materiali.",
+    "correzione": "Verificare i conteggi per città dalla mappa e riportare i valori reali in dati_mappa prima della pubblicazione; allineare il testo alla soglia corretta o chiarire cosa conta come follower.",
+    "idea": "Ripetere il formato con i dati mappa verificati mostrati in una barra grafica animata, e un invito a taggare la città rivale per stimolare la sfida tra paesi."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:53+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "I dati della mappa (dati_mappa) sono vuoti, quindi i numeri 28, 26 e 12 e la classifica non sono verificabili dai materiali. Inoltre la didascalia dice 'Voce generata con IA' ma il brief non lo richiede: è una scelta da confermare. Il reel dice 'Siamo 1869' mentre il progetto segna 1869 follower, co",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati di Napoli/Roma/Cagliari e numeri del progetto (1869 follower, 2899 luci), audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "I dati della mappa (dati_mappa) sono vuoti, quindi i numeri 28, 26 e 12 e la classifica non sono verificabili dai materiali. Inoltre la didascalia dice 'Voce generata con IA' ma il brief non lo richiede: è una scelta da confermare. Il reel dice 'Siamo 1869' mentre il progetto segna 1869 follower, coerente, ma il gancio 'a duemila' è una soglia non ancora raggiunta.",
+    "correzione": "Prima della pubblicazione verificare i conteggi Napoli 28, Roma 26, Cagliari 12 contro la mappa reale e inserire i dati_mappa; decidere se mantenere la dicitura sulla voce IA; verificare che 'fuochi a duemila' sia coerente con la promessa in pagina.",
+    "idea": "Usare in apertura un fotogramma di una mappa con le luci reali accese e mostrare il numero di follower in crescita, così il dato verificabile diventa anche immagine."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:55+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Quale città ci segue di più?' ma le ultime 'Napoli... prima con 28' sono verificabili solo come dati della mappa vuoti: il campo dati_mappa è vuoto, quindi i numeri 28, 26, 12 non risultano confermati dai materiali. Inoltre la didascalia dice '+2 punti al tuo paese' e 'a 2000 accend",
+   "dati": {
+    "controllato": "Audio, trascrizione coi secondi, copione e didascalia rispetto ai dati della mappa (Napoli 28, Roma 26, Cagliari 12, 1869 follower).",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il copione dice 'Quale città ci segue di più?' ma le ultime 'Napoli... prima con 28' sono verificabili solo come dati della mappa vuoti: il campo dati_mappa è vuoto, quindi i numeri 28, 26, 12 non risultano confermati dai materiali. Inoltre la didascalia dice '+2 punti al tuo paese' e 'a 2000 accendiamo i fuochi', ma non c'è un dato che confermi la regola. Il problema tecnico più concreto: la voce è dichiarata generata con IA, ma la trascrizione del tempo 1.3s-3.0s ('Napoli, la città di Partenope') non è verificabile con il campo mappa vuoto.",
+    "correzione": "Verificare i conteggi per città su dati_mappa prima di pubblicare e allineare i numeri del copione e della didascalia; confermare la regola dei +2 punti e la soglia dei 2000 follower.",
+    "idea": "Aggiungere in chiusura un dato verificabile della città vincente aggiornato in tempo reale, e una barra animata che cresce sulle città."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:56+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il numero 1869 compare a 10.5s ma nel reel il numero 1.869 è a schermo intero già nel fotogramma a 11s. Il testo detto dice «Siamo 1869» senza il punto delle migliaia, mentre a schermo c'è 1.869 con 'follower veri'. Inoltre la didascalia dice «il nome del tuo cane o gatto» e «+2 p",
+   "dati": {
+    "controllato": "Testo, numeri e secondi dei fotogrammi rispetto alla trascrizione, più la coerenza della didascalia coi dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "Nella trascrizione il numero 1869 compare a 10.5s ma nel reel il numero 1.869 è a schermo intero già nel fotogramma a 11s. Il testo detto dice «Siamo 1869» senza il punto delle migliaia, mentre a schermo c'è 1.869 con 'follower veri'. Inoltre la didascalia dice «il nome del tuo cane o gatto» e «+2 punti» per la Coppa, cose non verificabili dai materiali. La didascalia nomina anche Partenope, che nel reel non compare come dato. Il nome Napoli e la chiusura 'due punti al tuo paese' vanno bene.",
+    "correzione": "Nella voce dire «Siamo mille-ottocento-sessantanove» oppure «Siamo a 1.869», coerente con lo schermo; verificare che i 2 punti per città e il nome dell'animale siano regole reali prima di pubblicare.",
+    "idea": "Fare un reel di sorpasso in tempo reale quando una città cambia posizione in classifica, con la scritta «sorpasso» in apertura per creare attesa."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:57+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Napoli 28, Roma 26' è corretto nei materiali, ma nel fotogramma a 1.3s la scena barre compare già in apertura come 'È PRIMA' e poi 'Cagliari 26' appare in modo confuso ('26 ECAGLIARI'): nella trascrizione la frase 'Cagliari con 12' non torna con la scritta sul fotogramma, che mostra 26 acca",
+   "dati": {
+    "controllato": "Copione, trascrizione con secondi, dati della gara (Napoli 28, Roma 26, Cagliari 12, 1869 follower), audio e didascalia del reel.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il dato 'Napoli 28, Roma 26' è corretto nei materiali, ma nel fotogramma a 1.3s la scena barre compare già in apertura come 'È PRIMA' e poi 'Cagliari 26' appare in modo confuso ('26 ECAGLIARI'): nella trascrizione la frase 'Cagliari con 12' non torna con la scritta sul fotogramma, che mostra 26 accanto a Cagliari. Il testo a schermo a ~5s ('26 E CAGLIARI' / 'Cagliari 12' nella barra) è incoerente con i dati e con la voce.",
+    "correzione": "Correggere la scritta a schermo perché riporti 'Cagliari 12' in modo leggibile, senza il '26' accanto, e separare meglio la scritta 'È PRIMA' dalla barra di Roma. Verificare che la voce dica 'Roma 26' e 'Cagliari 12' in linea con la grafica.",
+    "idea": "Per i prossimi reel, usare una frase di chiusura che nomini la città in classifica e chieda di 'battere Napoli' in modo esplicito, e aggiungere una barra animata che si muove invece di più scritte sovrapposte."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:57+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 7 compare 'Cagliari 26' e in quello al secondo 11 'Roma 26 e Cagliari 12', ma la trascrizione dice 'Roma con 26' e 'Cagliari con 12' a 7 secondi. Il problema reale è al secondo 14: la scena 'SEGUICI E SCRIVI' con la scritta 'TUO PAESE.' è coerente con il copione, però la di",
+   "dati": {
+    "controllato": "Testo, dati della classifica, durata e misure audio del reel gara dei follower rispetto al copione e alla trascrizione.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Nel fotogramma al secondo 7 compare 'Cagliari 26' e in quello al secondo 11 'Roma 26 e Cagliari 12', ma la trascrizione dice 'Roma con 26' e 'Cagliari con 12' a 7 secondi. Il problema reale è al secondo 14: la scena 'SEGUICI E SCRIVI' con la scritta 'TUO PAESE.' è coerente con il copione, però la didascalia promette '+2 punti al tuo paese nella Coppa delle Zampe' mentre nel voiceover si dice 'due punti al tuo paese' senza spiegare cosa siano. Inoltre la barra di Roma nel fotogramma è visivamente la più lunga della barra di Napoli nonostante 26 contro 28: la scala grafica sembra sbagliata.",
+    "correzione": "Verificare che le barre siano proporzionali ai valori (Napoli 28 deve essere la più lunga) e chiarire nel voiceover cosa significano i 'due punti'.",
+    "idea": "Un reel di sorpasso in tempo reale quando una città scavalca un'altra, con la barra animata che si riordina."
+   }
+  },
+  {
+   "t": "2026-11-13T20:03:58+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 compare la scritta «26 E CAGLIARI» mentre la trascrizione dice «Roma con 26 e Cagliari con 12»: la frase sovrapposta non corrisponde al dato della barra (Cagliari è 12, non 26) e il testo risulta confuso e poco chiaro.",
+   "dati": {
+    "controllato": "Ho verificato i numeri del reel (Napoli 28, Roma 26, Cagliari 12, 1869 follower) e il ritmo dei fotogrammi con la trascrizione ai secondi.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 compare la scritta «26 E CAGLIARI» mentre la trascrizione dice «Roma con 26 e Cagliari con 12»: la frase sovrapposta non corrisponde al dato della barra (Cagliari è 12, non 26) e il testo risulta confuso e poco chiaro.",
+    "correzione": "Sostituire la scritta al secondo 7 con «E ROMA 26» oppure «ROMA 26 · CAGLIARI 12», in modo che il testo a schermo coincida con la barra e con il parlato.",
+    "idea": "Dopo il numero finale, mostrare per un attimo la mappa con la città vincente accesa, così il reel chiude con un'immagine concreta della sfida."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:00+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Seguici e scrivi SEGUO con la tua città' e 'due punti al tuo paese', ma il brief dice 'Seguici e scrivi SEGUO con la tua città: due punti al tuo paese' senza la pausa; più importante, la didascalia parla di 'Coppa delle Zampe' e '+2 punti' che non risultano nei dati verificati ",
+   "dati": {
+    "controllato": "Ho verificato il copione e la trascrizione coi secondi, i numeri delle città e del totale follower (1869) rispetto ai dati della mappa e del progetto, la coerenza tra fotogrammi e scene, e le misure audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 13.7,
+    "problema": "La trascrizione dice 'Seguici e scrivi SEGUO con la tua città' e 'due punti al tuo paese', ma il brief dice 'Seguici e scrivi SEGUO con la tua città: due punti al tuo paese' senza la pausa; più importante, la didascalia parla di 'Coppa delle Zampe' e '+2 punti' che non risultano nei dati verificati della mappa, e il reel mostra 'Napoli 28, Roma 26' mentre il frame a 4s mostra 'È PRIMA' con la barra che sta per essere sovrascritta: il testo 'è prima' compare prima della frase 'Napoli è prima con 28' detta a 3.0s, quindi il sincronismo è leggermente sfasato. Inoltre il fotogramma a 7s mostra '26 e CAGLIARI' (testo sovrapposto malformato, 'ECAGLIARI'), un errore grafico visibile.",
+    "correzione": "Correggere il testo sovrapposto a 7s in '26 e Cagliari' con spazio corretto, allineare 'È PRIMA' alla frase 'Napoli è prima con 28' e verificare che '+2 punti' e 'Coppa delle Zampe' corrispondano a regole reali prima di pubblicare.",
+    "idea": "Per i prossimi reel, mostrare il conteggio dei follower che cresce in tempo reale fino a 2000 con un'animazione dei fuochi, per dare più tensione alla gara."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:01+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi la classifica mostra Napoli 28, Roma 26, Cagliari 12, Catania 9, Torino 9, Bari 7, ma il numero 1869 e la soglia 2000 compaiono solo nel testo, senza una verifica visiva. Inoltre il reel dice «Quale città ci segue di più?» e la didascalia promette «due punti al tuo paese» e «+2 punti ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, numeri della classifica (Napoli 28, Roma 26, Cagliari 12), totale 1869, soglia 2000 e didascalia rispetto ai dati e ai fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Nei fotogrammi la classifica mostra Napoli 28, Roma 26, Cagliari 12, Catania 9, Torino 9, Bari 7, ma il numero 1869 e la soglia 2000 compaiono solo nel testo, senza una verifica visiva. Inoltre il reel dice «Quale città ci segue di più?» e la didascalia promette «due punti al tuo paese» e «+2 punti nella Coppa delle Zampe», che non risultano nei dati forniti: la meccanica della coppa non è verificata nei materiali. Anche «Siamo 1869» e «a 2000 accendiamo i fuochi» sono coerenti col progetto (follower 1869) ma la promessa dei fuochi è un impegno non documentato. Nei fotogrammi 0.5s e 18s il testo «SEGUO» è leggibile, ma al secondo 4 la scritta «26 ECAGLIARI» (fotogramma 4) è un errore di montaggio: sovrapposizione di testo che rende il numero poco leggibile.",
+    "correzione": "Verificare il numero 1869 e la regola dei +2 punti prima di pubblicare; sistemare il frame di transizione «26 E CAGLIARI» (sostituire con «26 · CAGLIARI» o un fade pulito) e rendere la scritta «SEGUO» più grande e fissa in basso per tutto il reel.",
+    "idea": "Un secondo reel che mostri la classifica aggiornata a 2000 follower con una mappa che si accende città per città, così il traguardo diventa visivo e memorabile."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:01+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 compare 'A DUEMILA' ma la voce dice 'a duemila facciamo i fuochi' solo a 10.5s: la scena anticipa la frase di circa 3,5 secondi. Inoltre il fotogramma al secondo 7 mostra la scena con 26 ecagliari (la barra di Cagliari è già tra le scene 'barre'), quindi la sequenza visiva non segue il ",
+   "dati": {
+    "controllato": "Ho verificato i numeri del reel (Napoli 28, Roma 26, Cagliari 12, 1869 follower) rispetto a trascrizione, didascalia e fotogrammi, e i tempi della voce rispetto alle scene.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 compare 'A DUEMILA' ma la voce dice 'a duemila facciamo i fuochi' solo a 10.5s: la scena anticipa la frase di circa 3,5 secondi. Inoltre il fotogramma al secondo 7 mostra la scena con 26 ecagliari (la barra di Cagliari è già tra le scene 'barre'), quindi la sequenza visiva non segue il copione. Nella didascalia la voce è dichiarata generata con IA, mentre il copione non lo specifica nelle scene: va bene, ma il testo 'Napoli 28 · Roma 26 · Cagliari 12' è coerente con i dati.",
+    "correzione": "Allineare le scene alla trascrizione: 'A DUEMILA' dal secondo 10,5 e le barre con Napoli e Roma e Cagliari entro 3-5 secondi; verificare che i fotogrammi mostrino la scena corretta a ogni secondo (es. secondo 7 dovrebbe mostrare le barre, non il numero), e sistemare l'overlap 'ECAGLIARI' che nel fotogramma appare come '26 ECAGLIARI' (testo da separare meglio).",
+    "idea": "Per i prossimi reel della gara, chiudere con la città che ha appena fatto sorpasso e mostrare il conteggio in tempo reale, così da creare attesa e un motivo per tornare a seguire."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:03+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «due punti al tuo paese», ma nella didascalia il punteggio è «+2 punti al tuo paese nella Coppa delle Zampe», e nei materiali non risulta un dato che confermi l'assegnazione dei punti per città: la promessa va verificata prima di pubblicare. Inoltre la didascalia cita «il nome del tuo c",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i numeri delle barre (Napoli 28, Roma 26, Cagliari 12), il totale 1869 e la soglia dei fuochi a 2000, oltre alle misure audio.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Il reel dice «due punti al tuo paese», ma nella didascalia il punteggio è «+2 punti al tuo paese nella Coppa delle Zampe», e nei materiali non risulta un dato che confermi l'assegnazione dei punti per città: la promessa va verificata prima di pubblicare. Inoltre la didascalia cita «il nome del tuo cane o gatto», che non compare nel parlato. Il reel chiude con un invito a scrivere SEGUO, ma la frase finale viene detta in 16.5 secondi, mentre la fascia in basso resta visibile per tutta la durata: va bene. Sul piano audio: picco -0.8 dBFS è sopra la soglia obiettivo di -1 dBFS, quindi rischio di clipping.",
+    "correzione": "Confermare che la Coppa delle Zampe assegni davvero +2 punti per ogni follower/SEGUO della città, oppure togliere «due punti al tuo paese» dal parlato e dalla didascalia. Abbassare il picco sotto -1 dBFS (es. limitatore o -1.5 dB di guadagno). Allineare la didascalia al parlato eliminando il riferimento al nome dell'animale se non è un passo richiesto.",
+    "idea": "Un reel di fine gara con la classifica finale e la città vincitrice annunciata con i fuochi reali, o una versione con la città che ha appena superato la soglia."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:05+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nel reel la barra e il conteggio di Cagliari compaiono (fotogramma 9s) mentre il testo dice ancora «Napoli è prima con 28», ma il vero problema è il fotogramma a 10.5s: sovrappone «1.869» e «a duemila» con il tempo del testo in cui si dice «Siamo 1869» che è corretto; invece la sequenza «26 e Caglia",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e fotogrammi del reel rispetto ai dati verificati (Napoli 28, Roma 26, Cagliari 12, 1869 follower, soglia 2000) e alle misure audio.",
+    "esito": "segnalo",
+    "secondo": 9.0,
+    "problema": "Nel reel la barra e il conteggio di Cagliari compaiono (fotogramma 9s) mentre il testo dice ancora «Napoli è prima con 28», ma il vero problema è il fotogramma a 10.5s: sovrappone «1.869» e «a duemila» con il tempo del testo in cui si dice «Siamo 1869» che è corretto; invece la sequenza «26 e Cagliari» (fotogramma 9s, «26 ECAGLIARI») mostra un errore di scrittura evidente sul cartello: «26 E CAGLIARI» con la «E» attaccata, quindi testo non leggibile. Nei fotogrammi i numeri coincidono con i dati, la didascalia ha la stessa cifra (Roma 26, Cagliari 12), e l'audio è a -14.3 LUFS con picco -0.8 dBFS, quindi sopra la soglia di -1 dBFS indicata nei parametri.",
+    "correzione": "Portare il picco audio sotto -1 dBFS (es. limiter a -1.5) e correggere la scritta «26 ECAGLIARI» con spazio o a capo; verificare che la voce non superi la soglia.",
+    "idea": "Un reel «Sorpasso in diretta» quando una città raggiunge la successiva in classifica, con barre che si muovono e fuochi al raggiungimento dei 2000 follower."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:05+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il campo dati_mappa è vuoto, quindi i numeri 28, 26 e 12 del copione non trovano riscontro nei dati verificati. Inoltre la didascalia dice 'la città di Partenope' e 'Napoli 28', ma il copione dice 'Napoli, la città di Partenope, è prima con 28': coerente, però senza dati mappa non è verificabile. Il",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati della mappa, misure audio, didascalia e numeri del progetto per il reel gara_follower.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il campo dati_mappa è vuoto, quindi i numeri 28, 26 e 12 del copione non trovano riscontro nei dati verificati. Inoltre la didascalia dice 'la città di Partenope' e 'Napoli 28', ma il copione dice 'Napoli, la città di Partenope, è prima con 28': coerente, però senza dati mappa non è verificabile. Il volume medio dei primi 5 secondi (-16,8 dB) è più basso del resto (LUFS -14,3), quindi l'apertura è più debole. La didascalia riporta 'Voce generata con IA' senza che il brief lo richieda nei dati.",
+    "correzione": "Verificare e inserire in dati_mappa i conteggi reali di Napoli, Roma e Cagliari prima della pubblicazione; alzare leggermente il volume dell'apertura (primi 5 s) per allinearlo al resto; confermare se la dicitura IA è voluta.",
+    "idea": "Per i prossimi reel della gara, mostrare in apertura la barra della città in testa con il numero reale, così il gancio è visivo oltre che verbale."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:06+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La mappa dei dati è vuota (dati_mappa: []), quindi i numeri Napoli 28, Roma 26, Cagliari 12 e il totale 1869 non risultano verificati dai materiali. Inoltre il conteggio nel parlato («Siamo 1869») e la didascalia dicono che i fuochi partono a 2000, mentre il progetto indica luci 2899: il numero dell",
+   "dati": {
+    "controllato": "Trascrizione, tempi, dati della mappa, audio, brief, didascalia e numeri del progetto del reel gara_follower.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La mappa dei dati è vuota (dati_mappa: []), quindi i numeri Napoli 28, Roma 26, Cagliari 12 e il totale 1869 non risultano verificati dai materiali. Inoltre il conteggio nel parlato («Siamo 1869») e la didascalia dicono che i fuochi partono a 2000, mentre il progetto indica luci 2899: il numero delle luci non compare nel reel. Il parlato anticipa 'Napoli' come prima città, ma nei dati di progetto non c'è la classifica per città da confrontare.",
+    "correzione": "Prima di pubblicare, verificare i conteggi per città sulla mappa reale e allineare il numero dei follower e delle luci; se non verificabili, togliere le cifre per città dal parlato e dalla didascalia o presentarle come classifica aggiornata alla data del video. Sostituire 'Siamo 1869' con il dato verificato del giorno di pubblicazione.",
+    "idea": "Ripetere il formato questa_luce, che ha il miglior rapporto follower ogni 1000 views (16.2), mostrando sulla mappa la città che accende la sua luce mentre viene detta, così il dato visivo rinforza quello vocale."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:07+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "I dati della mappa (dati_mappa) sono vuoti, quindi non posso verificare i numeri 28, 26, 12 e 1869 contro la mappa reale. Inoltre la trascrizione dice 'Seguici e scrivi SEGUO con la tua città' ma la didascalia chiede anche il nome del cane o gatto: il reel non lo dice, va bene solo se è voluto. Aper",
+   "dati": {
+    "controllato": "Audio (LUFS -14.3, picco -0.8 dBFS, nessun silenzio), trascrizione coi secondi e coerenza con brief, didascalia e dati della mappa (Napoli 28, Roma 26, Cagliari 12).",
+    "esito": "segnalo",
+    "secondo": 18,
+    "problema": "I dati della mappa (dati_mappa) sono vuoti, quindi non posso verificare i numeri 28, 26, 12 e 1869 contro la mappa reale. Inoltre la trascrizione dice 'Seguici e scrivi SEGUO con la tua città' ma la didascalia chiede anche il nome del cane o gatto: il reel non lo dice, va bene solo se è voluto. Apertura null: il gancio parte a 0.0s senza respiro, ok. Copertina null e fotogrammi inviati solo 6 su 19: non posso valutare l'immagine.",
+    "correzione": "Verificare i conteggi della mappa al momento della pubblicazione e riempire dati_mappa; allineare la richiesta della didascalia (città + animale) con la frase parlata o semplificare la didascalia; scegliere una copertina esplicita con Napoli in primo piano.",
+    "idea": "Ripetere il formato con una città in sorpasso al centro del reel, mostrando il cambio di posizione in classifica come punto emotivo finale."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:08+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La mappa non ha dati verificati (dati_mappa è vuoto), quindi le cifre 28, 26, 12 e il totale 1869 non sono confermabili dai materiali; inoltre la didascalia dice 'Napoli, la città di Partenope: chi la batte?' e 'Voce generata con IA' senza che sia un problema per me, ma il dato di Napoli va verifica",
+   "dati": {
+    "controllato": "Dati mappa (Napoli 28, Roma 26, Cagliari 12), trascrizione coi secondi, audio e didascalia rispetto al copione e ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La mappa non ha dati verificati (dati_mappa è vuoto), quindi le cifre 28, 26, 12 e il totale 1869 non sono confermabili dai materiali; inoltre la didascalia dice 'Napoli, la città di Partenope: chi la batte?' e 'Voce generata con IA' senza che sia un problema per me, ma il dato di Napoli va verificato prima della pubblicazione.",
+    "correzione": "Verificare sulla mappa reale i conteggi per città (Napoli, Roma, Cagliari) e il totale 1869 prima di pubblicare; se non confermabili, sostituire con cifre verificate o formulare il testo senza numeri precisi.",
+    "idea": "Mostrare sulla mappa 3D la città che sale in classifica in tempo reale, con una luce che si accende nel momento in cui viene citata, così il numero diventa visibile e memorabile."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:09+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Napoli... è prima con 28» e nella didascalia «Napoli 28 · Roma 26 · Cagliari 12», ma i dati_mappa sono vuoti: i conteggi per città non risultano verificati nei materiali. Inoltre «Siamo 1869» e «a duemila» sono presentati come fatti, mentre il progetto indica follower 1869 e luci 2899:",
+   "dati": {
+    "controllato": "Mansione Innovazione: trascrizione coi secondi, audio, fotogrammi, dati mappa e coerenza tra copione, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 3.0,
+    "problema": "Il reel dice «Napoli... è prima con 28» e nella didascalia «Napoli 28 · Roma 26 · Cagliari 12», ma i dati_mappa sono vuoti: i conteggi per città non risultano verificati nei materiali. Inoltre «Siamo 1869» e «a duemila» sono presentati come fatti, mentre il progetto indica follower 1869 e luci 2899: le due cifre vanno chiarite (1869 follower, non luci). Infine la frase «Napoli, la città di Partenope» è ripetuta in voce e didascalia senza un dato a sostegno.",
+    "correzione": "Prima di pubblicare, verificare i conteggi per città con i dati reali della mappa e inserirli in dati_mappa; riscrivere la frase come «Siamo a 1869 follower» e tenere «a 2000 fuochi» come obiettivo futuro; togliere o motivare il riferimento alla città di Partenope.",
+    "idea": "Usare nei reel il conteggio reale e aggiornato delle città (con data) e mostrare a schermo il sorpasso in tempo reale, così il dato diventa verificabile e più coinvolgente."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:10+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Nei materiali la mappa non fornisce dati verificati (dati_mappa è vuoto), eppure il reel e la didascalia riportano classifiche precise (Napoli 28, Roma 26, Cagliari 12) e il conteggio 1869 follower: queste cifre non sono confermate dai dati della mappa. Inoltre il copione ha 'apertura: null' e 'cope",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, scene del copione, dati mappa (Napoli 28, Roma 26, Cagliari 12), audio (-14.3 LUFS, picco -0.8 dBFS, nessun silenzio) e didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nei materiali la mappa non fornisce dati verificati (dati_mappa è vuoto), eppure il reel e la didascalia riportano classifiche precise (Napoli 28, Roma 26, Cagliari 12) e il conteggio 1869 follower: queste cifre non sono confermate dai dati della mappa. Inoltre il copione ha 'apertura: null' e 'copertina: null', quindi il primo frame non ha un gancio visivo definito, e la chiusura 'due punti al tuo paese' dipende da una regola (+2 punti) che non risulta nei dati.",
+    "correzione": "Prima di pubblicare, verificare le classifiche per città sui dati reali della mappa e inserire nel reel e nella didascalia solo cifre confermate; definire un'apertura e una copertina concrete per il primo secondo; confermare la regola dei +2 punti con chi gestisce la Coppa.",
+    "idea": "Un reel con la classifica aggiornata in tempo reale della mappa, mostrando la città in testa con la sua luce accesa sul territorio, così il gancio è visivo e verificabile."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:10+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il volume dei primi 5 secondi (-16.8 dB) è più basso del resto, e il gancio «Quale città ci segue di più?» parte al secondo 0.0 senza margine, quindi rischia di non essere percepito; inoltre la voce IA è dichiarata nella didascalia ma non c'è segnalazione nel reel.",
+   "dati": {
+    "controllato": "Audio (LUFS -14.3, picco -0.8 dBFS, volume primi 5s -16.8 dB, nessun silenzio) e trascrizione coi secondi rispetto al copione e alla didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il volume dei primi 5 secondi (-16.8 dB) è più basso del resto, e il gancio «Quale città ci segue di più?» parte al secondo 0.0 senza margine, quindi rischia di non essere percepito; inoltre la voce IA è dichiarata nella didascalia ma non c'è segnalazione nel reel.",
+    "correzione": "Alzare di circa 2-3 dB il volume dell'apertura (primi 3-4 secondi) portandolo verso -14 LUFS, far partire il gancio dopo 0.3-0.5s di respiro, e valutare una breve didascalia visiva «voce generata con IA» nei primi secondi per trasparenza.",
+    "idea": "Ripetere la sfida con una mappa che si accende città per città a ogni «SEGUO» ricevuto, con un suono di scintilla su ogni luce, così il conteggio diventa visibile e coinvolgente."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:11+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "I dati della mappa (dati_mappa) sono vuoti, quindi i numeri 28, 26 e 12 nel parlato e nella didascalia non risultano verificati dai materiali. Inoltre la trascrizione dice 'Seguici e scrivi SEGUO con la tua città', mentre la didascalia aggiunge 'il nome del tuo cane o gatto', dettaglio che nel parla",
+   "dati": {
+    "controllato": "Coerenza tra trascrizione, dati della mappa, misure audio, didascalia e durata del reel per la parte di fattibilità tecnica.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "I dati della mappa (dati_mappa) sono vuoti, quindi i numeri 28, 26 e 12 nel parlato e nella didascalia non risultano verificati dai materiali. Inoltre la trascrizione dice 'Seguici e scrivi SEGUO con la tua città', mentre la didascalia aggiunge 'il nome del tuo cane o gatto', dettaglio che nel parlato manca. Anche il numero 1869 e l'obiettivo di 2000 non trovano riscontro nei dati di mappa, anche se il campo 'progetto' li riporta.",
+    "correzione": "Verificare e compilare i dati della mappa prima della pubblicazione, oppure confermare i numeri con il progetto; allineare il parlato alla didascalia (o viceversa) sul dettaglio del nome dell'animale. Audio a posto: -14.3 LUFS e picco -0.8 dBFS rientrano nell'obiettivo; il volume iniziale di -16.8 dB è accettabile per l'apertura.",
+    "idea": "Mostrare la classifica con una grafica animata che sale barra per barra e far comparire la città dell'utente nel finale, così il commento SEGUO diventa visivamente parte del gioco."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:13+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "I dati della mappa sono vuoti (dati_mappa: []), quindi le cifre 28, 26, 12 e 1869 non sono verificabili dai materiali. Inoltre la didascalia dice «Napoli 28 · Roma 26 · Cagliari 12» ma nel copione la frase è detta con «con 28» senza fonte. Il fotogramma inviato più vicino al numero 1869 (10.5s) non ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati mappa, misure audio, didascalia e numeri del progetto del reel gara_follower.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "I dati della mappa sono vuoti (dati_mappa: []), quindi le cifre 28, 26, 12 e 1869 non sono verificabili dai materiali. Inoltre la didascalia dice «Napoli 28 · Roma 26 · Cagliari 12» ma nel copione la frase è detta con «con 28» senza fonte. Il fotogramma inviato più vicino al numero 1869 (10.5s) non coincide con la frase in cui compare, quindi il controllo visivo non è possibile.",
+    "correzione": "Verificare i conteggi per città sulla mappa reale prima di pubblicare e confermare il dato 1869; se non verificabili, togliere o sostituire le cifre con formulazioni qualitative (es. «Napoli è in testa»). Aggiungere un fotogramma a 10.5s per controllare la scena dei numeri.",
+    "idea": "Dopo ogni sorpasso in classifica, un reel con la città che ha superato l'altra e la scritta della nuova posizione, usando dati verificati dalla mappa."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:14+00:00",
+   "da": "grafica3d-2",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 la scena passa dalla classifica a '26 ECAGLIARI': nel fotogramma il numero di Roma è accanto a un testo che fonde 'E' e 'CAGLIARI' (refuso visivo, la trascrizione dice 'Cagliari con 12', quindi il numero 26 è riferito a Roma ma appare vicino a Cagliari). Inoltre la didascalia dice 'Siam",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, dati della classifica (Napoli 28, Roma 26, Cagliari 12), il numero 1869 e la sequenza delle scene nei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 la scena passa dalla classifica a '26 ECAGLIARI': nel fotogramma il numero di Roma è accanto a un testo che fonde 'E' e 'CAGLIARI' (refuso visivo, la trascrizione dice 'Cagliari con 12', quindi il numero 26 è riferito a Roma ma appare vicino a Cagliari). Inoltre la didascalia dice 'Siamo 1869' mentre il progetto ha 1869 follower e 2899 luci: coerente. Il fotogramma a 7s mostra 'È PRIMA' sovrapposto alla barra di Napoli, ma la frase audio dice solo 'Napoli è prima con 28': lieve scarto di testo.",
+    "correzione": "Nella scena barre a 5-7s evidenziare Roma e Cagliari separatamente, con il numero 26 accanto a Roma e 12 accanto a Cagliari, e togliere la dicitura 'ECAGLIARI' fusa; allineare la frase 'È PRIMA' al momento in cui si nomina Napoli.",
+    "idea": "Ripetere la gara con una città diversa in vetta ogni settimana e una barra 'tu sei qui' per chi commenta, per dare un motivo concreto di ritorno."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:15+00:00",
+   "da": "grafica3d-3",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'due punti al tuo paese' è detto a 16.5s ma nel fotogramma 14s la fascia 'Scrivi SEGUO e la tua città' compare già; il testo è coerente, però nel fotogramma 18s la scritta 'TUO PAESE.' è ancora visibile senza il 'Seguici e scrivi' sopra, quindi la chiusura è poco leggibile. Inoltre la didasc",
+   "dati": {
+    "controllato": "Trascrizione, secondi della voce e fotogrammi rispetto alla scena 'barre' e al numero 1.869, con i dati della mappa e del progetto.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Il dato 'due punti al tuo paese' è detto a 16.5s ma nel fotogramma 14s la fascia 'Scrivi SEGUO e la tua città' compare già; il testo è coerente, però nel fotogramma 18s la scritta 'TUO PAESE.' è ancora visibile senza il 'Seguici e scrivi' sopra, quindi la chiusura è poco leggibile. Inoltre la didascalia indica 'Napoli 28 · Roma 26 · Cagliari 12' mentre i fotogrammi mostrano la classifica completa: coerente, ma la parola 'PRIMA' compare a 1.3s, prima che la barra di Napoli sia visibile per più di un istante.",
+    "correzione": "Allungare di 0.5s la schermata finale con 'TUO PAESE.' e far apparire la fascia SEGUO solo dopo la frase; mantenere la classifica per almeno 2s prima di 'È PRIMA'.",
+    "idea": "Un reel con la città che sorpassa in diretta ('Roma supera Napoli a 27 follower') per creare suspense sul prossimo turno della Coppa."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:16+00:00",
+   "da": "grafica3d-4",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 11 il numero della barra Roma/Cagliari non corrisponde alla trascrizione e al dato: il fotogramma mostra Cagliari a 26 (\"26 E CAGLIARI\"), mentre Cagliari è 12 e Roma è 26. Il testo a schermo è inoltre corrotto (\"26 ECAGLIARI\", con la \"E\" di \"È PRIMA\" che si attacca). Nel fotogramma del se",
+   "dati": {
+    "controllato": "Ho verificato il rilievo grafico dei fotogrammi (barre, numeri, testo a schermo) e la coerenza con i dati verificati della mappa e la trascrizione coi secondi.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Al secondo 11 il numero della barra Roma/Cagliari non corrisponde alla trascrizione e al dato: il fotogramma mostra Cagliari a 26 (\"26 E CAGLIARI\"), mentre Cagliari è 12 e Roma è 26. Il testo a schermo è inoltre corrotto (\"26 ECAGLIARI\", con la \"E\" di \"È PRIMA\" che si attacca). Nel fotogramma del secondo 4 la barra di Roma è già a 26, quindi il refuso è solo nel testo sovrapposto al secondo 7-11.",
+    "correzione": "Sostituire il testo al secondo 7-11 con \"ROMA 26\" o \"CAGLIARI 12\" in base alla scena, correggere la spaziatura (\"26 E CAGLIARI\"), e verificare che ogni etichetta combaci con la barra mostrata.",
+    "idea": "Per i prossimi reel, generare le etichette delle barre direttamente dai dati verificati per evitare refusi manuali, e aggiungere una scena finale con la mappa che si accende."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:17+00:00",
+   "da": "grafica3d-5",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'due punti al tuo paese', mentre la didascalia dice '+2 punti al tuo paese nella Coppa delle Zampe': la frase parlata non indica la coppa, quindi il messaggio è meno chiaro. Inoltre la trascrizione riporta 'Siamo 1869' e non è chiaro dai dati se il numero sia già verificato in tempo ",
+   "dati": {
+    "controllato": "Trascrizione, secondi delle scene e dati della gara (Napoli 28, Roma 26, Cagliari 12, 1869 follower) confrontati con copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 16.5,
+    "problema": "Il copione dice 'due punti al tuo paese', mentre la didascalia dice '+2 punti al tuo paese nella Coppa delle Zampe': la frase parlata non indica la coppa, quindi il messaggio è meno chiaro. Inoltre la trascrizione riporta 'Siamo 1869' e non è chiaro dai dati se il numero sia già verificato in tempo reale.",
+    "correzione": "Nella voce dire 'due punti al tuo paese nella Coppa delle Zampe' oppure allineare il testo a schermo; verificare che 1869 sia il dato aggiornato al momento della pubblicazione.",
+    "idea": "Mostrare in apertura la città in testa con una piccola animazione di 'sorpasso' e far comparire il nome del paese del commentatore più recente per creare attesa."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:18+00:00",
+   "da": "grafica3d-6",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 10 la voce dice «1.869 follower» ma la scena a schermo mostra già «a duemila» nel testo di sottotitolo e la cifra è sovrapposta ai fuochi; più importante, nel fotogramma del secondo 7 la classifica a schermo mostra Roma con 26 e Cagliari con 12 con la barra di Cagliari più corta di quella",
+   "dati": {
+    "controllato": "Ho verificato trascrizione, tempi delle scene, dati della classifica (Napoli 28, Roma 26, Cagliari 12) e il conteggio di 1.869 follower con l'obiettivo a 2.000, oltre a loudness, picco e silenzi audio.",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "Al secondo 10 la voce dice «1.869 follower» ma la scena a schermo mostra già «a duemila» nel testo di sottotitolo e la cifra è sovrapposta ai fuochi; più importante, nel fotogramma del secondo 7 la classifica a schermo mostra Roma con 26 e Cagliari con 12 con la barra di Cagliari più corta di quella di Catania (9): i valori sono coerenti, quindi il problema reale è solo che il titolo dice «quale città ci segue di più» senza indicare che il conteggio è di oggi, cosa non verificabile dai materiali.",
+    "correzione": "Aggiungere in sovrimpressione la data del conteggio (es. «aggiornato al 13/11») e far comparire il numero 1.869 in modo leggibile per almeno un secondo prima che parta la voce con «a duemila».",
+    "idea": "Dare un nome alla gara con una foto del vincitore (Napoli) e alternare la CTA con una domanda aperta per generare più commenti nelle città piccole."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:19+00:00",
+   "da": "grafica3d-7",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 la scena 'barre' mostra ancora la barra di Roma con 26 e il testo 'A DUEMILA' compare solo al secondo 10.5 con la cifra 1.869: il numero Cagliari 26 appare sovrapposto nel fotogramma successivo, quindi la sequenza delle barre (Napoli 28, Roma 26, Cagliari 12) non corrisponde ai dati ver",
+   "dati": {
+    "controllato": "Scena 3D e inquadrature dei sei fotogrammi: barre, numero e chiusura, con la sincronia tra schermata e trascrizione ai secondi indicati.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 la scena 'barre' mostra ancora la barra di Roma con 26 e il testo 'A DUEMILA' compare solo al secondo 10.5 con la cifra 1.869: il numero Cagliari 26 appare sovrapposto nel fotogramma successivo, quindi la sequenza delle barre (Napoli 28, Roma 26, Cagliari 12) non corrisponde ai dati verificati. Nella schermata 'Chi ci segue di più' Cagliari risulta 12 ma il fotogramma al secondo 7 mostra il testo '26 E CAGLIARI' al posto di '12', un errore di rendering del testo. Inoltre la barra di Cagliari è visivamente più lunga di quella di Catania (9) e Torino (9) ma coerente con 12, mentre la scritta è sbagliata.",
+    "correzione": "Correggere il testo animato in '12' per Cagliari (o rimuovere la scritta 'E CAGLIARI' sovrapposta) e verificare che la barra di Roma sia 26 e Napoli 28 in ogni fotogramma.",
+    "idea": "Aggiungere una piccola animazione di conteggio sulle barre per far crescere i numeri in tempo reale, rendendo la gara più visiva."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:19+00:00",
+   "da": "grafica3d-8",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 la schermata mostra «26 ECAGLIARI» con un errore di battitura: manca lo spazio tra il numero e il nome della città, e il testo sovrapposto alla barra risulta poco leggibile. Nel fotogramma al secondo 4 la scritta «È PRIMA» appare sopra la barra animata senza la città di riferimento, qui",
+   "dati": {
+    "controllato": "Ho verificato il reel Animazioni 3D: sincronia delle barre e dei numeri con la trascrizione, leggibilità dei testi nei fotogrammi, coerenza dei dati (Napoli 28, Roma 26, Cagliari 12, 1869 follower) con il progetto.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 la schermata mostra «26 ECAGLIARI» con un errore di battitura: manca lo spazio tra il numero e il nome della città, e il testo sovrapposto alla barra risulta poco leggibile. Nel fotogramma al secondo 4 la scritta «È PRIMA» appare sopra la barra animata senza la città di riferimento, quindi il ritmo di rivelazione è un po' confuso.",
+    "correzione": "Sostituire «26 ECAGLIARI» con «26 · CAGLIARI» (o separare su due righe), allineare il testo fuori dall'area della barra e far comparire «È PRIMA» insieme a «Napoli» per dare subito il contesto.",
+    "idea": "Nei prossimi reel della gara, mostrare la città che sorpassa in diretta con un'animazione di barra che cresce, e chiudere con un fotogramma che evidenzia la città dell'utente che commenta SEGUO."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:23+00:00",
+   "da": "grafica3d-9",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la barra di Cagliari mostra «26 E CAGLIARI» (il 2 sovrapposto a una parte del testo) e nel fotogramma 7 il titolo «È PRIMA» è ancora visibile sopra al grafico, con il testo in parte coperto: è un glitch di sovrapposizione tra le scene 'barre' e 'gancio'. Inoltre al secondo 4 il grafico ",
+   "dati": {
+    "controllato": "Ho verificato la scena 3D sui fotogrammi e sulla trascrizione: conteggi delle barre (Napoli 28, Roma 26, Cagliari 12), numero 1.869 e soglia dei fuochi a 2.000, con i secondi della voce.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la barra di Cagliari mostra «26 E CAGLIARI» (il 2 sovrapposto a una parte del testo) e nel fotogramma 7 il titolo «È PRIMA» è ancora visibile sopra al grafico, con il testo in parte coperto: è un glitch di sovrapposizione tra le scene 'barre' e 'gancio'. Inoltre al secondo 4 il grafico mostra Roma a 26 mentre la voce dice Napoli prima: corretto, ma il testo a schermo 'È PRIMA' appare prima che la barra di Napoli sia dichiarata chiaramente.",
+    "correzione": "Separare le scene con una transizione pulita (dissolvenza di 0,3 s) e far apparire il testo 'È PRIMA' solo dopo che la barra di Napoli è completa; eliminare il residuo di testo sotto il titolo; correggere la didascalia 'Napoli 28 · Roma 26' già coerente, ma verificare che il cognome 'Partenope' sia citato in modo uniforme con la voce.",
+    "idea": "Per i prossimi reel della gara, far comparire la città del follower più recente nel finale, come 'benvenuta' animata, per premiare la partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:24+00:00",
+   "da": "grafica3d-10",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 5.3 la trascrizione riporta «Poi Roma con 26 e Cagliari con 12» mentre il fotogramma al secondo 7 mostra Cagliari a 12 e nel fotogramma successivo il testo a schermo dice «26 e Cagliari»: in realtà la voce dice «Roma con 26» e nello schermo finale Cagliari compare sotto Roma con 12 corret",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, le cifre delle barre (28, 26, 12, 1869, 2000) e la coerenza tra copione, didascalia e fotogrammi, oltre alle misure audio.",
+    "esito": "segnalo",
+    "secondo": 5.3,
+    "problema": "Al secondo 5.3 la trascrizione riporta «Poi Roma con 26 e Cagliari con 12» mentre il fotogramma al secondo 7 mostra Cagliari a 12 e nel fotogramma successivo il testo a schermo dice «26 e Cagliari»: in realtà la voce dice «Roma con 26» e nello schermo finale Cagliari compare sotto Roma con 12 correttamente, ma nei fotogrammi 7-11 il numero Roma 26 è coperto dalla barra animata e la scritta «26 e Cagliari» compare come testo a schermo sovrapposto, che legge come «26 E CAGLIARI» e confonde la lettura. Inoltre l'audio è -16.8 dB nei primi 5 secondi, sotto l'obiettivo di -14 LUFS per l'apertura.",
+    "correzione": "Separare visivamente la scritta «È PRIMA» e «26 E CAGLIARI» dalle barre con più spazio, scrivere «Roma 26» a schermo al momento in cui la voce lo dice, e alzare il volume dei primi 5 secondi di circa 2-3 dB senza superare -1 dBFS di picco.",
+    "idea": "Aggiungere una mappa con la città vincitrice illuminata a fine reel e una variante con le sfide tra cani e gatti per variare il formato."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:31+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è solido e i dati (28/26/12, 1869, soglia 2000) tornano: prima di pubblicare correggo il refuso a schermo nella scena delle barre, allineo la voce sul bonus «+2 punti» alla Coppa delle Zampe (da confermare come regola) e accorcio il gancio iniziale.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4,
+      "problema": "Nella scena delle barre compare il refuso «26 ECAGLIARI» (testi sovrapposti) che confonde i numeri: Roma è 26 e Cagliari 12.",
+      "correzione": "Sistemare l'animazione dei secondi 4-7 con un solo testo per scena e numeri allineati alle barre: «Roma 26 · Cagliari 12»."
+     },
+     {
+      "secondo": 16.5,
+      "problema": "La voce dice «due punti al tuo paese», la didascalia «+2 punti al tuo paese nella Coppa delle Zampe»: manca il nome della Coppa nel parlato e la regola dei +2 punti non risulta verificata nei materiali del progetto.",
+      "correzione": "Confermare la regola dei +2 punti prima di pubblicare (altrimenti toglierla da voce, scritta e didascalia). Se confermata, dire «due punti al tuo paese nella Coppa delle Zampe» e mostrare la stessa frase a schermo in contemporanea."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Il gancio resta a schermo circa 4 secondi quasi senza evoluzione (scena gancio e titolo uguali a 0.5s e 4s): l'apertura è lenta.",
+      "correzione": "Accorciare il gancio di circa un secondo e far comparire la prima barra o il nome Napoli già dentro quel tempo."
+     },
+     {
+      "secondo": 10.5,
+      "problema": "Il numero 1.869 non dice a schermo che è il totale attuale e l'obiettivo 2.000 è un traguardo, non un fatto.",
+      "correzione": "Mostrare prima «1.869 follower» e poi, in un passaggio distinto, «a 2.000 i fuochi»."
+     }
+    ],
+    "idea": "Nel finale far salire in evidenza la città che ha appena commentato SEGUO (barra o mappa che si accende) con il conteggio «mancano X ai fuochi», così ogni nuovo follower diventa una notizia visibile."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:31+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggiamo il testo a schermo al secondo 7 (\"26 E CAGLIARI\" scritto male e sovrapposto) e rendiamo visibile in chiusura la regola dei +2 punti; il resto delle segnalazioni non è affidabile e non lo trattiamo come errore.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 7,
+      "problema": "Il testo a schermo \"26 E CAGLIARI\" è sovrapposto e poco leggibile, e non separa chiaramente Roma 26 da Cagliari 12. Le relazioni lo indicano in modo concorde, anche se alcuni dettagli sono contraddittori (per esempio Cagliari a 26 o Roma più lunga di Napoli, che nessun altro conferma).",
+      "correzione": "Mostrare due etichette distinte, \"ROMA 26\" e poi \"CAGLIARI 12\", senza sovrapposizioni e con spazi corretti. Ognuna deve restare ferma almeno 1,5 secondi, in sincrono con la voce. Controllare anche che la lunghezza delle barre rispetti 28/26/12."
+     },
+     {
+      "secondo": 14,
+      "problema": "Nella chiusura la voce e la didascalia promettono \"+2 punti al tuo paese\", ma la regola non è chiara a schermo. Inoltre si alternano \"paese\" e \"città\", e manca il dettaglio che servono la città e il nome dell'animale.",
+      "correzione": "In chiusura mostrare in grande per tutta la frase \"SEGUO + la tua città = +2 punti nella Coppa\". Usare lo stesso termine, \"città\", in voce, schermo e didascalia, e allineare la regola alla didascalia."
+     }
+    ],
+    "idea": "Un finale in cui la mappa si accende città per città, con il contatore verso i 2000 follower, e un effetto concreto come \"+2 a [città]\" quando qualcuno scrive SEGUO: unisce bellezza visiva e motivo immediato per seguire."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:32+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è pronto sul piano tecnico: va ritoccato solo l'audio (picco a -0.8 dBFS e primi 5 secondi a -16.8 dB) e va allineata la call to action tra voce e didascalia; i dati delle città vanno confermati con la mappa prima della pubblicazione.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "Il picco è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS (fonte: misure audio). I primi 5 secondi sono a circa -16.8 dB, più bassi del resto, quindi l'apertura risulta debole.",
+      "correzione": "Applicare un limiter con ceiling a -1.5/-2 dBFS e alzare di 1-2 dB i primi 5 secondi, mantenendo il reel intorno a -14 LUFS."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia chiede anche il nome del cane o gatto, mentre la voce chiede solo di scrivere SEGUO con la città: la call to action è diversa tra voce e testo e può confondere. (Segnalato da un solo collega, ma è verificabile.)",
+      "correzione": "Usare la stessa call to action in voce e didascalia: «scrivi SEGUO con la tua città», togliendo dalla didascalia il nome dell'animale."
+     },
+     {
+      "secondo": 7.0,
+      "problema": "I numeri citati (Napoli 28, Roma 26, Cagliari 12) non sono verificabili perché dati_mappa risulta vuoto nei materiali che ho ricevuto.",
+      "correzione": "Prima di pubblicare, confrontare 28, 26 e 12 con i conteggi reali; se non coincidono o non si possono verificare, correggerli o usare formule generiche."
+     },
+     {
+      "secondo": 10.5,
+      "problema": "«Siamo 1869» non dice di cosa si parla: chi guarda potrebbe non capire che sono follower.",
+      "correzione": "Dire «Siamo 1869 follower» oppure mostrare a schermo la scritta «1869 follower» in quel momento."
+     }
+    ],
+    "idea": "Barra animata che cresce a ogni numero citato, con la città in testa evidenziata e un breve suono d'apertura marcato nei primi 0,5 secondi, così la sfida si vede e si sente dal primo secondo."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:32+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare va corretta la scritta «26 E CAGLIARI» (fusa tra il numero di Roma e il nome Cagliari) intorno ai secondi 7-9, poi vanno verificati '+2 punti' e 'Coppa delle Zampe' in didascalia; il resto della grafica regge.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 7,
+      "problema": "La scritta «26 E CAGLIARI» è fusa o sovrapposta: il 26 di Roma si attacca a «E CAGLIARI», il testo è illeggibile e il 12 di Cagliari non si legge. Sei colleghi lo segnalano in secondi diversi (4, 7, 9), quindi la scritta resta a video per più secondi, circa dal 4 al 9.",
+      "correzione": "Separare chiaramente le due etichette, «ROMA 26» e «CAGLIARI 12», in due righe o con spazio e pausa. Ogni numero deve stare accanto alla sua barra e combaciare con la voce. Poi ricontrollare i fotogrammi dal secondo 4 al 9."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia cita «Coppa delle Zampe» e «+2 punti», che nel reel non compaiono e non sono verificabili dai materiali.",
+      "correzione": "Tenere in didascalia solo ciò che è nel reel o confermato dal progetto. Se la promessa dei due punti al paese è reale, mostrarla come testo leggibile per intero nella chiusura, altrimenti toglierla."
+     },
+     {
+      "secondo": 11,
+      "problema": "Il testo «A DUEMILA» sembra anticipare la voce di circa un secondo, e la chiusura «SEGUICI E SCRIVI» pare comparire in ritardo o fuori sincrono rispetto al copione. Il dato è segnalato da pochi colleghi e va ricontrollato.",
+      "correzione": "Controllare il sincrono sul montaggio e allineare «A DUEMILA» alla parola parlata (circa 10,5-11,9 s) e la chiusura «SEGUICI E SCRIVI» a circa 13,7 s."
+     }
+    ],
+    "idea": "Una serie «gara delle città»: a ogni reel la stessa grafica a barre con la città in risalita evidenziata e un contatore dei follower mancanti a 2.000 (ora 1.869), così il pubblico segue la corsa verso i fuochi e ha un motivo per tornare."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:32+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché non sono verificati i conteggi delle città (dati_mappa è vuoto), non è confermata o tolta la promessa dei +2 punti e il picco audio non è sotto -1 dBFS; il resto del reel funziona e va tenuto.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1.3,
+      "problema": "dati_mappa è vuoto: Napoli 28, Roma 26 e Cagliari 12 non sono verificabili. Segnalato da tutti i colleghi, e in una gara tra città i numeri falsi danneggiano la credibilità.",
+      "correzione": "Allegare il conteggio reale della mappa e confrontarlo con voce, barre e didascalia. Se non è confermabile, togliere le cifre precise e dire solo ciò che è verificato."
+     },
+     {
+      "secondo": 16.5,
+      "problema": "La voce e la didascalia promettono '+2 punti al tuo paese' ma non c'è nessuna regola documentata sull'assegnazione dei punti. Promessa non verificabile ai follower.",
+      "correzione": "Confermare la regola dei punti con il progetto Coppa delle Zampe e scriverla chiaramente nella didascalia. Altrimenti togliere la promessa e tenere solo 'scrivi SEGUO con la tua città', allineando voce e didascalia."
+     },
+     {
+      "secondo": 13.7,
+      "problema": "Il picco audio è -0.8 dBFS, sopra l'obiettivo di -1 dBFS, con rischio di clipping. Il LUFS di -14.3 è invece corretto.",
+      "correzione": "Mettere un limiter a circa -1.5 dBFS sul master senza cambiare il LUFS, poi riascoltare."
+     },
+     {
+      "secondo": 11.9,
+      "problema": "'A duemila facciamo i fuochi' con 1869 follower non è un errore, ma può sembrare un traguardo già raggiunto.",
+      "correzione": "Nella didascalia precisare che 2000 è l'obiettivo, ad esempio 'ci mancano 131 per i fuochi'."
+     }
+    ],
+    "idea": "Una classifica delle città con la mappa evidenziata e un testa a testa Napoli contro Roma, basata solo su dati verificati dalla mappa, con una chiusura che mostra la città in testa."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:32+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché i conteggi per città (Napoli 28, Roma 26, Cagliari 12) non sono verificati sulla mappa reale; poi correggere il regolamento a schermo e rendere visivi i numeri.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 3.0,
+      "problema": "Le cifre Napoli 28, Roma 26, Cagliari 12 non sono verificabili: dati_mappa è vuoto. Lo segnalano quasi tutti i colleghi. Citare punteggi non confermati mette a rischio la fiducia.",
+      "correzione": "Verificare i conteggi sulla mappa reale e inserirli in dati_mappa prima della pubblicazione. Se non sono confermati, usare formulazioni senza numeri precisi."
+     },
+     {
+      "secondo": 3.0,
+      "problema": "Il parlato legge i numeri della classifica, ma sullo schermo non c'è una classifica leggibile che li mostri. Il reel è più raccontato che mostrato.",
+      "correzione": "Mostrare barre o podio animati in sincrono con la voce mentre vengono detti i numeri per città."
+     },
+     {
+      "secondo": 10.5,
+      "problema": "«Siamo 1869» viene detto senza un riferimento visivo e «a duemila facciamo i fuochi» è solo un obiettivo, non un evento già raggiunto.",
+      "correzione": "Far comparire a schermo il contatore 1869/2000 mentre viene detto. In didascalia scrivere «a 2000 follower» come obiettivo."
+     },
+     {
+      "secondo": 16.5,
+      "problema": "«Due punti al tuo paese» e «+2 punti nella Coppa delle Zampe» in didascalia: il reel non spiega il regolamento. Il nome dell'animale compare in didascalia ma non nel parlato.",
+      "correzione": "Dal secondo 13.7 aggiungere in sovrimpressione «+2 punti alla tua città nella Coppa delle Zampe». Allineare parlato e didascalia (città e, se richiesto, nome dell'animale). Confermare la regola dei +2 punti prima della pubblicazione."
+     },
+     {
+      "secondo": 18,
+      "problema": "La chiusura (18.3 s) arriva dopo l'ultimo fotogramma analizzato (18 s) e non ha un fotogramma finale chiaro con il comando.",
+      "correzione": "Aggiungere un fotogramma finale con «SEGUO + la tua città»."
+     }
+    ],
+    "idea": "Classifica con barre animate che crescono in sincrono con la voce, contatore 1869/2000 a schermo e frame finale con la città che sale e il comando SEGUO; per i reel successivi, una città alla volta che si illumina sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:32+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché non si verificano i conteggi per città (Napoli 28, Roma 26, Cagliari 12) e la soglia dei duemila, poi pubblicare con il formato gara e il richiamo «scrivi SEGUO con la tua città».",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1.3,
+      "problema": "I numeri Napoli 28, Roma 26 e Cagliari 12 non sono verificabili: dati_mappa è vuoto in tutte le relazioni. Una gara con cifre non confermate danneggia la fiducia.",
+      "correzione": "Confrontare i conteggi con la mappa reale, compilare dati_mappa e correggere voce, barre e didascalia se i valori differiscono."
+     },
+     {
+      "secondo": 10.5,
+      "problema": "La frase «Siamo 1869: a duemila facciamo i fuochi» è coerente con i follower del progetto (1869), ma qualche relazione la segnala come incoerente con la soglia o con il dato 'luci 2899'. Va chiarito quale numero conta per i fuochi.",
+      "correzione": "Controllare che 1869 sia il dato aggiornato alla pubblicazione e che la soglia dei 2000 sia quella davvero promessa. Se non è chiaro, usare «quasi duemila» solo se vero."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia promette «+2 punti al tuo paese» senza una regola documentata nel progetto; la dicitura «Voce generata con IA» non è dichiarata nel video, ed è incerto se sia richiesta.",
+      "correzione": "Confermare che la regola dei punti sia attiva, altrimenti toglierla. Mantenere la dicitura sulla voce IA nella didascalia e valutare una breve nota a schermo."
+     },
+     {
+      "secondo": 0,
+      "problema": "L'apertura è più debole della media (-16.8 dB nei primi 5 secondi contro -14 LUFS di riferimento) e l'apertura nel brief è nulla.",
+      "correzione": "Alzare leggermente il volume dei primi secondi senza superare il picco di -1 dBFS (ora -0.8) e rafforzare il gancio iniziale."
+     }
+    ],
+    "idea": "Mappa che si accende città per città con barre animate verificabili e, in chiusura, il nome della città dell'ultimo commento SEGUO in sovrimpressione; traguardo visivo dei 2000 follower."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:32+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare correggiamo la scritta sovrapposta «26 ECAGLIARI», verifichiamo la scala delle barre e la regola dei +2 punti, e allineiamo la scena «A DUEMILA» alla voce. Poi portiamo avanti l'idea del reel «sorpasso in diretta».",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 7,
+      "problema": "La scritta a schermo «26 ECAGLIARI» è malformata e contraddice i dati: Cagliari ha 12 e la voce dice «Roma con 26 e Cagliari con 12». Cinque relazioni su nove la segnalano e il testo è illeggibile.",
+      "correzione": "Sostituirla con «ROMA 26 · CAGLIARI 12», con spazi corretti e senza sovrapporla alla barra né alla scritta «È PRIMA»."
+     },
+     {
+      "secondo": 4,
+      "problema": "La barra di Roma sembra più lunga di quella di Napoli, anche se Napoli ha 28 e Roma 26. Il dato perde credibilità proprio in una gara tra città. Una sola relazione lo nota, quindi da controllare nel montaggio.",
+      "correzione": "Controllare che le barre siano proporzionali ai valori, con Napoli la più lunga, e far coincidere «È PRIMA» con la frase «Napoli è prima con 28»."
+     },
+     {
+      "secondo": 10.5,
+      "problema": "La scena «A DUEMILA» compare a schermo prima della voce «a duemila facciamo i fuochi» (10.5s). Inoltre la voce dice «1869» mentre lo schermo mostra «1.869».",
+      "correzione": "Far partire «A DUEMILA» insieme alla voce. Dire «Siamo a 1.869» o «milleottocentosessantanove», coerente con lo schermo."
+     },
+     {
+      "secondo": 16.5,
+      "problema": "La didascalia promette «+2 punti nella Coppa delle Zampe» e cita «il nome del tuo cane o gatto», ma nei materiali non c'è conferma di queste regole. Il parlato dice solo «due punti al tuo paese», senza spiegare cosa siano.",
+      "correzione": "Verificare che i +2 punti e la richiesta del nome dell'animale siano regole reali; altrimenti toglierli da didascalia e voce. Se restano, spiegare in una frase cosa sono i punti."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è a -0.8 dBFS, sopra la soglia di -1 dBFS, con rischio di clipping.",
+      "correzione": "Applicare un limiter o abbassare il guadagno di circa 1.5 dB, portando il picco sotto -1 dBFS."
+     }
+    ],
+    "idea": "Reel «Sorpasso in diretta»: quando una città scavalca un'altra in classifica, si apre con la scritta «SORPASSO» e le barre si riordinano in animazione, con la chiusura sul traguardo dei 2000 follower e i fuochi."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:40+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare, verifichiamo i numeri per città sulla mappa reale e correggiamo il volume dell'apertura; il resto del reel (ritmo, struttura, invito a scrivere SEGUO con la città) funziona e resta com'è.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 3,
+      "problema": "I numeri per città (Napoli 28, Roma 26, Cagliari 12) non sono verificati: dati_mappa è vuoto, quindi nei materiali non c'è nulla che li confermi. Una cifra sbagliata in una gara tra città fa perdere fiducia e follower.",
+      "correzione": "Compilare dati_mappa con i conteggi reali del giorno di pubblicazione e confrontarli con parlato e didascalia. Se non sono verificabili, usare formulazioni senza cifre (es. «Napoli è in testa»)."
+     },
+     {
+      "secondo": 10.5,
+      "problema": "Il parlato dice «Siamo 1869» e «a duemila». Il progetto riporta follower 1869 e luci 2899: le due cifre rischiano di essere confuse e il numero va aggiornato alla data di uscita.",
+      "correzione": "Dire chiaramente «Siamo a 1869 follower», con il dato verificato il giorno di pubblicazione, e presentare i 2000 fuochi come obiettivo futuro."
+     },
+     {
+      "secondo": 0,
+      "problema": "I primi 5 secondi hanno un volume più basso (-16,8 dB) del resto (-14,3 LUFS) e il gancio parte a 0.0 s senza respiro, quindi l'apertura è la parte più debole proprio dove si decide se restare.",
+      "correzione": "Alzare l'apertura di circa 2-3 dB per portarla verso -14 LUFS e far partire la voce dopo 0,3-0,5 s di respiro. Il picco deve restare sotto -1 dBFS."
+     },
+     {
+      "secondo": 18,
+      "problema": "La didascalia chiede anche il nome del cane o gatto, ma il parlato dice solo «scrivi SEGUO con la tua città»: richiesta incoerente.",
+      "correzione": "Allineare le due cose: o aggiungere il nome dell'animale nel parlato, o togliere la richiesta dalla didascalia."
+     }
+    ],
+    "idea": "Mappa che si accende città per città: ogni città citata o in sorpasso accende la sua luce mentre viene detta, con la barra della città in testa e il numero reale con data in apertura, così il dato è visibile, verificabile e il commento SEGUO diventa parte del gioco."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:40+00:00",
+   "da": "grafica3d-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggere subito il testo a schermo corrotto '26 ECAGLIARI' (secondi 7-11) e sistemare i tempi di 'È PRIMA' e della chiusura, poi pubblicare; il resto è marginale.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 7,
+      "problema": "Nella scena barre il testo a schermo appare come '26 ECAGLIARI': la 'E' si fonde con il nome e il 26 (Roma) risulta accanto a Cagliari (che è 12). Segnalato da quasi tutto il reparto e dà un'informazione sbagliata proprio sul dato della sfida.",
+      "correzione": "Etichettare ogni barra separatamente: 'ROMA 26' accanto a Roma e 'CAGLIARI 12' accanto a Cagliari, eliminando la dicitura fusa. Generare le etichette direttamente dai dati verificati (Napoli 28, Roma 26, Cagliari 12) ed evitare sovrapposizioni con la barra."
+     },
+     {
+      "secondo": 4,
+      "problema": "La scritta 'È PRIMA' compare sulla barra di Napoli prima che la voce la nomini e prima che la barra sia ben visibile, creando confusione sulla rivelazione.",
+      "correzione": "Far comparire 'NAPOLI È PRIMA' solo quando la voce dice 'Napoli è prima con 28' e la barra è completa, con la classifica visibile per almeno 2 secondi."
+     },
+     {
+      "secondo": 18,
+      "problema": "Nella chiusura 'TUO PAESE.' resta visibile senza la fascia 'Scrivi SEGUO e la tua città' e la schermata finale dura poco, quindi il call to action si legge male.",
+      "correzione": "Allungare la schermata finale di circa 0,5 s e tenere la fascia SEGUO sempre leggibile insieme a 'TUO PAESE.'."
+     }
+    ],
+    "idea": "Gara a barre ricorrente con etichette generate dai dati verificati e un finale personalizzato: la città del commentatore più recente che compare come 'benvenuta', per dare un motivo di ritorno e premiare chi partecipa."
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:45+00:00",
+   "da": "montaggio-1",
+   "a": "pubblicazione-1",
+   "tipo": "decisione",
+   "testo": "La squadra non ha trovato difetti segnalati da almeno 3 reparti: nessuna correzione.",
+   "dati": {
+    "perche": [
+     {
+      "difetto": "Scritta a schermo fusa e sovrapposta «26 ECAGLIARI» nella scena delle barre: il 26 di Roma si attacca a Cagliari, che è 12. Contraddice la voce e i numeri del brief.",
+      "reparti": [
+       "Copione",
+       "Mappa e dati",
+       "Grafica e copertine",
+       "Crescita (follower)",
+       "Grafica 3D",
+       "Direzione video"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-13T20:04:45+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce con la revisione della sola squadra."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 18.3,
+   "fotogrammi": [
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s000.5.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s001.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s002.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s003.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s004.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s005.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s006.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s007.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s008.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s009.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s010.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s011.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s012.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s013.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s014.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s015.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s016.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s017.0.jpg",
+    "fotogrammi/2026-11-13-2101-gara_follower/v1/s018.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.3,
+    "picco_dbfs": -0.8,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.8,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "crescita": {
+  "pubblico": "Chi ha un cane o un gatto e vive in una città o in un paese italiano, anche piccolo (Napoli, Roma, Cagliari, ma anche Treviso o Atri), e non conosce ancora Zampe d'Italia. Gli piace difendere la propria città e mostrare il proprio animale.",
+  "gancio": "Quale città italiana ama di più cani e gatti? Napoli è prima, ma la tua dov'è?",
+  "primo_fotogramma": "Sfondo scuro con la mappa dell'Italia di notte e tre luci che brillano su Napoli, Roma e Cagliari. Testo grande in alto: «QUALE CITTÀ CI SEGUE DI PIÙ?». Sotto, in piccolo: «Napoli 28 · Roma 26 · Cagliari 12». Il gancio si capisce anche a volume zero.",
+  "motivo_per_seguire": "Zampe d'Italia accende una luce sulla mappa per ogni animale vero, con il suo nome e la sua città, e fa sfidare le città tra loro: seguirla significa vedere accendersi la luce della tua e capire se batte le altre.",
+  "chiusura": "Scrivi SEGUO con la tua città: la sfida continua. Segui Zampe d'Italia.",
+  "perche": "Chi non ci conosce è spinto dal campanilismo (la sua città contro Napoli) e ha un gesto semplice da fare, scrivere SEGUO con città e animale, senza promettere nulla che non sia nel brief."
+ },
+ "token_persone": 450892,
+ "fine": "2026-11-13T20:04:45+00:00"
+}
