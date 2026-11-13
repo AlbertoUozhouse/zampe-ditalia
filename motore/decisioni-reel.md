@@ -353,3 +353,11 @@ Nessun cambiamento oggi.
 
 - 2026-11-05-1806-star: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
 - 2026-11-05-2111-ospiti_sera: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+## 2026-11-13 — controllo del giorno
+
+- Sito ok (docs 187 MB), motore vivo (mappa 11:18). 20 luci nuove in 24 ore, follower 1.836 → 1.857 in due giorni.
+- Reel del 12/11: 3 su 3 pubblicati, tutti corretti dalla squadra. GitHub ha dato 503 al primo pull (temporaneo).
+- Rendimento: il testa a testa del 12/11, il primo col DUELLO 3D, ha la reach più alta degli ultimi giorni (992 views, 764 raggiunti; i testa a testa prima: 234–287) ma 6,5 follower ogni 1.000 (5 follower). questa_luce 11/11 885 views (16,6), questa_luce 12/11 18,1, coppa_sorpasso 12/11 3,5 (il più debole: 4 commenti). Media testa a testa su 4 episodi: 26,9.
+- Coppa: 30 punti; Staffetta di quartiere a 2/3 per Darfo, Napoli, Venezia, Bisceglie e Barletta. Gara dei follower partita ieri alle 21: ancora nessun SEGUO nuovo da conteggiare.
+- Nessun cambiamento oggi: escono per la prima volta il testa a testa con città raccontate e padroni taggati (13), il quiz (18) e la gara dei follower (21). Da guardare domani: il giovedì il sorpasso della Coppa rende poco (3,5).
