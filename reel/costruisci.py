@@ -50,6 +50,29 @@ def muto(testo, uscita):
                     "-c:a", "libmp3lame", "-b:a", "128k", str(uscita)], check=True)
     return parole
 
+def pause_voce(parole, mp3, tagli):
+    """La voce «respira» (13/11, il conto alla rovescia del rompicapo): un silenzio prima di alcune parole. tagli: [(indice_parola, secondi)].
+    Il silenzio entra nell'audio a metà tra le due parole e i tempi delle parole dopo si spostano."""
+    tagli = sorted((i, p) for i, p in tagli if p > 0.02 and 0 < i < len(parole))
+    if not tagli: return parole
+    fmt = "aformat=sample_rates=44100:channel_layouts=mono"
+    filt, seg, prima = [], [], 0.0
+    for k, (i, p) in enumerate(tagli):
+        t = (parole[i - 1]["e"] + parole[i]["s"]) / 2
+        filt.append(f"[0:a]atrim={prima:.3f}:{t:.3f},asetpts=N/SR/TB,{fmt}[a{k}];aevalsrc=0:d={p:.3f}:s=44100,{fmt}[s{k}]")
+        seg += [f"[a{k}]", f"[s{k}]"]; prima = t
+    filt.append(f"[0:a]atrim={prima:.3f},asetpts=N/SR/TB,{fmt}[az]"); seg.append("[az]")
+    filt.append("".join(seg) + f"concat=n={len(seg)}:v=0:a=1[out]")
+    tmp = Path(str(mp3) + ".pause.mp3")
+    subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(mp3), "-filter_complex", ";".join(filt), "-map", "[out]",
+                    "-c:a", "libmp3lame", "-b:a", "128k", str(tmp)], check=True)
+    tmp.replace(mp3)
+    out, agg, k = [], 0.0, 0
+    for i, w in enumerate(parole):
+        while k < len(tagli) and tagli[k][0] <= i: agg += tagli[k][1]; k += 1
+        out.append({**w, "s": round(w["s"] + agg, 3), "e": round(w["e"] + agg, 3)})
+    return out
+
 # ---------- mappa: proiezione dell'Italia nel fotogramma (come nei reel di lancio) ----------
 BOX, LON, LAT = (90, 330, 990, 1190), (6.6, 18.6), (36.6, 47.1)
 _mx = lambda l: math.radians(l)
@@ -175,6 +198,17 @@ def main():
     except Exception as e:  # crediti finiti o servizio giù: il reel esce lo stesso, con musica e sottotitoli
         print(f"voce non disponibile ({e}): reel senza voce")
         parole = muto(" ".join(frasi), prog / "assets/audio/voce.mp3")
+    # il rompicapo: tra un numero e l'altro del conto alla rovescia passa un secondo vero, e mezzo secondo prima della soluzione
+    tagli, pi = [], 0
+    for n_, f_ in enumerate(copione["frasi"]):
+        nw = len(frasi[n_].split())
+        if f_["scena"]["tipo"] == "intruso" and nw >= 5:
+            ult = list(range(pi + nw - 5, pi + nw))
+            tagli += [(ult[m], 1.0 - (parole[ult[m]]["s"] - parole[ult[m - 1]]["s"])) for m in range(1, 5)]
+            if pi + nw < len(parole): tagli.append((pi + nw, 0.5))
+        pi += nw
+    try: parole = pause_voce(parole, prog / "assets/audio/voce.mp3", tagli)
+    except Exception as e: print(f"pause della voce non applicate ({e})")
     (out / "parole.json").write_text(json.dumps({"parole": parole}, ensure_ascii=False))
 
     # inizio di ogni frase = prima parola della frase nella voce
