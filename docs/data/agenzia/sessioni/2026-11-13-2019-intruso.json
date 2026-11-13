@@ -1,0 +1,2109 @@
+{
+ "id": "2026-11-13-2019-intruso",
+ "formato": "intruso",
+ "modalita": "operativa",
+ "inizio": "2026-11-13T19:19:50+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-13T19:19:50+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "intruso",
+     "id": "2026-11-13-2019-intruso",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Trova il gatto tra i cani. Cinque, quattro, tre, due, uno.",
+       "scena": "intruso"
+      },
+      {
+       "i": 1,
+       "testo": "Eccolo: seconda riga. L'avevi visto?",
+       "scena": "intruso_svela"
+      },
+      {
+       "i": 2,
+       "testo": "Scrivi in quanti secondi l'hai trovato. Domani è più difficile.",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": null,
+     "fascia": "⏱️ In quanti secondi l'hai trovato? 👇",
+     "didascalia": "👀 Trova il gatto tra i cani: hai 5 secondi. Trovato?\n\n👇 Scrivi in quanti secondi l'hai trovato (e sii onesto 😄). Poi manda il video a chi dice di avere l'occhio di falco.\n🐾 Se hai un cane o un gatto, aggiungi la tua città e il suo nome (es. «3 secondi! Treviso, Luna, cane»): si accende sulla mappa d'Italia con gli altri 2864.\n➕ Seguici: domani il rompicapo è più difficile.\n\nVoce generata con IA.\n\n#cani #gatti #rompicapo #trovalintruso #quiz #animalidomestici ",
+     "voce": true,
+     "copertina": null
+    }
+   }
+  },
+  {
+   "t": "2026-11-13T19:19:54+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Chi ha un cane o un gatto in casa, in qualsiasi città d'Italia, ama i quiz visivi da Reel e non conosce ancora Zampe d'Italia. Il tipo che commenta «3 secondi!» e tagga l'amico che dice di avere l'occhio di falco. · Gancio: Trova il gatto tra i cani in 5 secondi: il conto alla rovescia parte subito, senza presentazioni. · Primo fotogramma: Griglia di foto di cani, con un gatto nascosto in mezzo. In alto, a caratteri grandi: «TROVA IL GATTO». In basso a destra, un timer che scende da 5. Nessun logo né testo extra: la sfida si capisce anche a volume zero. · Motivo per seguire: Ogni giorno c'è un nuovo rompicapo con cani e gatti veri, più difficile del precedente, e chi commenta con città e nome del suo animale lo vede accendersi come una luce sulla mappa d'Italia di notte. · Chiusura: Domani è più difficile. Segui Zampe d'Italia e scrivi in quanti secondi l'hai trovato.",
+   "dati": {
+    "pubblico": "Chi ha un cane o un gatto in casa, in qualsiasi città d'Italia, ama i quiz visivi da Reel e non conosce ancora Zampe d'Italia. Il tipo che commenta «3 secondi!» e tagga l'amico che dice di avere l'occhio di falco.",
+    "gancio": "Trova il gatto tra i cani in 5 secondi: il conto alla rovescia parte subito, senza presentazioni.",
+    "primo_fotogramma": "Griglia di foto di cani, con un gatto nascosto in mezzo. In alto, a caratteri grandi: «TROVA IL GATTO». In basso a destra, un timer che scende da 5. Nessun logo né testo extra: la sfida si capisce anche a volume zero.",
+    "motivo_per_seguire": "Ogni giorno c'è un nuovo rompicapo con cani e gatti veri, più difficile del precedente, e chi commenta con città e nome del suo animale lo vede accendersi come una luce sulla mappa d'Italia di notte.",
+    "chiusura": "Domani è più difficile. Segui Zampe d'Italia e scrivi in quanti secondi l'hai trovato.",
+    "perche": "Il rompicapo con timer si capisce in un attimo anche senza audio, e il commento con città e nome dell'animale porta chi guarda dentro il progetto, mentre la promessa del livello più difficile dà un motivo concreto per seguire."
+   }
+  },
+  {
+   "t": "2026-11-13T19:19:54+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "intruso",
+     "id": "2026-11-13-2019-intruso",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Trova il gatto tra i cani. Cinque, quattro, tre, due, uno.",
+       "scena": "intruso"
+      },
+      {
+       "i": 1,
+       "testo": "Eccolo: seconda riga. L'avevi visto?",
+       "scena": "intruso_svela"
+      },
+      {
+       "i": 2,
+       "testo": "Scrivi in quanti secondi l'hai trovato. Domani è più difficile.",
+       "scena": "chiusura"
+      }
+     ],
+     "apertura": null,
+     "fascia": "⏱️ In quanti secondi l'hai trovato? 👇",
+     "didascalia": "👀 Trova il gatto tra i cani: hai 5 secondi. Trovato?\n\n👇 Scrivi in quanti secondi l'hai trovato (e sii onesto 😄). Poi manda il video a chi dice di avere l'occhio di falco.\n🐾 Se hai un cane o un gatto, aggiungi la tua città e il suo nome (es. «3 secondi! Treviso, Luna, cane»): si accende sulla mappa d'Italia con gli altri 2864.\n➕ Seguici: domani il rompicapo è più difficile.\n\nVoce generata con IA.\n\n#cani #gatti #rompicapo #trovalintruso #quiz #animalidomestici ",
+     "voce": true,
+     "copertina": null
+    },
+    "mappa": []
+   }
+  },
+  {
+   "t": "2026-11-13T19:19:56+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-13T19:21:23+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.4 LUFS, picco -0.8 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.4,
+    "picco_dbfs": -0.8,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.9,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:23+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (11.9 s): ti mando 12 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 11.9,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:28+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nei primi 5 secondi la voce dice «Cinque, quattro, tre, due, uno» mentre la barra e il numero in alto a destra scendono; al fotogramma 1s il numero è già 1 e la barra è quasi vuota, quindi il conto alla rovescia visivo e quello parlato non coincidono. Inoltre la trascrizione dice «Cinque, quattro…» ",
+   "dati": {
+    "controllato": "Apertura dei primi 5 secondi: conto alla rovescia, fotogrammi 0.5–4s, sincronia con la trascrizione e barra di progresso.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nei primi 5 secondi la voce dice «Cinque, quattro, tre, due, uno» mentre la barra e il numero in alto a destra scendono; al fotogramma 1s il numero è già 1 e la barra è quasi vuota, quindi il conto alla rovescia visivo e quello parlato non coincidono. Inoltre la trascrizione dice «Cinque, quattro…» in 0–3.9s, ma nel fotogramma a 1s il cerchio segna 1: il timing della voce è in ritardo rispetto all'immagine.",
+    "correzione": "Allineare la voce del conto alla rovescia ai cambi del numero (5 a 0.5s, 4 a 1.5s, 3 a 2.5s, ecc.) oppure far partire la voce solo dopo che il cerchio ha mostrato il 5, così che l'apertura resti chiara e sincronizzata.",
+    "idea": "Un reel «trova l'intruso» con più file e un intruso diverso ogni volta, mostrando il tempo medio dei commenti precedenti come sfida per il successivo."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:28+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel secondo 10.0 la voce dice «Domani è più difficile», ma nella scena «DIFFICILE.» compare già dal secondo 9 circa e la chiusura resta sullo stesso schermo: il tempo di lettura del messaggio finale è corto e la frase parlata e quella scritta non sono sincronizzate. Inoltre il conteggio parlato («ci",
+   "dati": {
+    "controllato": "Coerenza tra trascrizione, secondi dei fotogrammi e scene del reel intruso (gatto nella seconda riga, terza colonna; conteggio, svelamento, chiusura).",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "Nel secondo 10.0 la voce dice «Domani è più difficile», ma nella scena «DIFFICILE.» compare già dal secondo 9 circa e la chiusura resta sullo stesso schermo: il tempo di lettura del messaggio finale è corto e la frase parlata e quella scritta non sono sincronizzate. Inoltre il conteggio parlato («cinque, quattro, tre, due, uno») non corrisponde alla barra di progresso, che nei fotogrammi scende da 5 a 1 in modo diverso dal ritmo della voce.",
+    "correzione": "Allungare di circa 1 secondo la scena finale e far comparire «DIFFICILE» insieme alla frase «Domani è più difficile»; allineare la barra del conteggio ai numeri pronunciati.",
+    "idea": "Chiudere ogni reel con il conteggio dei commenti in tempo reale («Oggi 37 persone hanno risposto») per rafforzare la partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:28+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Leggibilità da telefono dei fotogrammi e della trascrizione: testi, gatto evidenziato e fascia in basso sono leggibili; audio a -14.4 LUFS e picco -0.8 dBFS, nei limiti.",
+   "dati": {
+    "controllato": "Leggibilità da telefono dei fotogrammi e della trascrizione: testi, gatto evidenziato e fascia in basso sono leggibili; audio a -14.4 LUFS e picco -0.8 dBFS, nei limiti.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per il prossimo reel dello stesso formato, mostrare nel finale il tempo medio dei commenti precedenti per creare una sfida tra follower."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:28+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il gatto è indicato come 'seconda riga' a 3.9s, ma nel fotogramma a 4s e nei successivi la scena 'ECCOLO' con la scritta 'seconda riga, terza colonna' compare solo dopo; inoltre la frase 'Trova il gatto tra i cani' con il conto alla rovescia è pronunciata mentre il conto (5-1) è g",
+   "dati": {
+    "controllato": "Sincronia copione/trascrizione, frasi del brief, secondi dei fotogrammi, misure audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella trascrizione il gatto è indicato come 'seconda riga' a 3.9s, ma nel fotogramma a 4s e nei successivi la scena 'ECCOLO' con la scritta 'seconda riga, terza colonna' compare solo dopo; inoltre la frase 'Trova il gatto tra i cani' con il conto alla rovescia è pronunciata mentre il conto (5-1) è già a schermo, quindi la voce e la grafica non sono allineate. Più importante: la frase 'Domani è più difficile' non corrisponde alla scena finale, che mostra 'DIFFICILE.' a 11s, quindi la chiusura parlata arriva in ritardo rispetto all'immagine.",
+    "correzione": "Allineare 'Eccolo: seconda riga' alla comparsa della scritta 'ECCOLO!' (circa 3.9s) e far coincidere 'Domani è più difficile' con la scena 'DIFFICILE.' (circa 10-11s), anticipando la parola chiave.",
+    "idea": "Un reel di 'Cani vs Gatti' in cui il punteggio medio dei commenti viene rivelato alla fine, per dare un motivo di tornare e commentare."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:30+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel brief il campo 'apertura' è null: non c'è una scena d'apertura definita. Il primo fotogramma (0.5s) mostra già il conto alla rovescia con il gatto e il titolo, ma nei fotogrammi 0.5s–1s il timer segna 5 mentre il bordo di avanzamento è quasi vuoto, quindi la barra di progresso e il numero non so",
+   "dati": {
+    "controllato": "Apertura del reel (fotogrammi 0.5s–4s), copione e scena di apertura nel brief, con la sequenza di apertura confrontata col copione (\"Trova il gatto tra i cani. Cinque, quattro...\").",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nel brief il campo 'apertura' è null: non c'è una scena d'apertura definita. Il primo fotogramma (0.5s) mostra già il conto alla rovescia con il gatto e il titolo, ma nei fotogrammi 0.5s–1s il timer segna 5 mentre il bordo di avanzamento è quasi vuoto, quindi la barra di progresso e il numero non sono sincronizzati con il ritmo del parlato. Inoltre nel 0.5s la didascalia 'In quanti secondi' compare, ma il conteggio 'Cinque, quattro...' della voce parte solo verso 1s: l'apertura visiva è più lenta della narrazione.",
+    "correzione": "Definire un'apertura esplicita (es. gatto evidenziato già nel primo secondo o una freccia/alone sul gatto) e allineare il numero del timer al conto alla rovescia vocale, così il primo secondo ha già un punto d'attrazione chiaro.",
+    "idea": "Per le prossime puntate tenere il gatto evidenziato con un alone fin dal primo fotogramma e usare la domanda 'in quanti secondi?' come gancio nei primi 2 secondi."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:31+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 7 la schermata 'ECCOLO' mostra il cerchio sul gatto, ma nella fase di gioco il gatto è nel centro della seconda riga: l'etichetta 'seconda riga, terza colonna' è corretta, però al secondo 9 la frase 'L'avevi visto?' compare sopra lo sfondo cani senza che il gatto resti evidenziato, e nel ",
+   "dati": {
+    "controllato": "Inquadrature dei 6 fotogrammi (0.5, 2, 4, 7, 9, 11 s): gatto sempre visibile e centrato nella fase di ricerca, cerchio dorato e etichetta sulla seconda riga/terza colonna al secondo 7, poi chiusura con vs cani/gatti.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Al secondo 7 la schermata 'ECCOLO' mostra il cerchio sul gatto, ma nella fase di gioco il gatto è nel centro della seconda riga: l'etichetta 'seconda riga, terza colonna' è corretta, però al secondo 9 la frase 'L'avevi visto?' compare sopra lo sfondo cani senza che il gatto resti evidenziato, e nel fotogramma 4 s il gatto è ancora nascosto dal tono scuro dello sfondo. Inoltre la frase 'Domani è più difficile' arriva dopo il tempo di lettura della fascia senza uno stacco visivo chiaro.",
+    "correzione": "Mantenere il cerchio dorato sul gatto per tutta la durata di 'L'avevi visto?' (circa 6.6–8.5 s) e far comparire la fascia 'In quanti secondi' un attimo prima della frase finale, così chi guarda legge la richiesta mentre la domanda resta sullo schermo.",
+    "idea": "Per i prossimi reel, usare un'etichetta di posizione con una griglia numerata (es. A3, B2) così il pubblico può confrontare le risposte nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:31+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Domani è più difficile» a circa 10 secondi, ma nel fotogramma dell'11° secondo compare la schermata «Cani vs Gatti / DIFFICILE», mentre la voce chiude ancora con «Scrivi in quanti secondi l'hai trovato». La frase «Scrivi in quanti secondi» non compare in nessun fotogramma inviato co",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, fotogrammi e audio (-14 LUFS, picco -0.8 dBFS, nessun silenzio) rispetto al brief del formato intruso.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Il copione dice «Domani è più difficile» a circa 10 secondi, ma nel fotogramma dell'11° secondo compare la schermata «Cani vs Gatti / DIFFICILE», mentre la voce chiude ancora con «Scrivi in quanti secondi l'hai trovato». La frase «Scrivi in quanti secondi» non compare in nessun fotogramma inviato con il testo corrispondente, e la risposta a «Cani vs Gatti» (SECONDI L'HAI TROVATO / DIFFICILE) arriva dopo la voce. Inoltre la didascalia cita «2864 altre luci» mentre il progetto dichiara 2897 luci: il numero va allineato.",
+    "correzione": "Allineare la voce alle schermate: a 8.5s il testo «Scrivi in quanti secondi l'hai trovato» deve coincidere con la schermata di chiusura; far apparire «DIFFICILE» solo quando si pronuncia «Domani è più difficile». Aggiornare il numero di luci nella didascalia a 2897 (o 2896 sottraendo la propria, se si vuole) in linea con il dato del progetto.",
+    "idea": "Ripetere il formato con una serie numerata («Intruso 1, 2, 3…») così che ogni puntata richiami la precedente e aumenti il ritorno dei follower."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:32+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 10 la scena cambia in «DIFFICILE.» ma la trascrizione dice «Domani è più difficile» al secondo 10.0 mentre sullo schermo la frase è già sostituita da «Secondi l'hai trovato» (scena di confronto cani vs gatti) durante il conto dei secondi: la chiusura «Domani è più difficile",
+   "dati": {
+    "controllato": "Trascrizione, secondi della voce, copione e didascalia dell'Archivio delle decisioni: frasi e conto alla rovescia coincidono con i fotogrammi, il gatto è nella seconda riga terza colonna come dichiarato.",
+    "esito": "segnalo",
+    "secondo": 10,
+    "problema": "Nel fotogramma al secondo 10 la scena cambia in «DIFFICILE.» ma la trascrizione dice «Domani è più difficile» al secondo 10.0 mentre sullo schermo la frase è già sostituita da «Secondi l'hai trovato» (scena di confronto cani vs gatti) durante il conto dei secondi: la chiusura «Domani è più difficile» non compare nel fotogramma in modo leggibile, e la didascalia promette «Scrivi in quanti secondi» che è coerente. Inoltre la scena «Secondi l'hai trovato» compare prima di «Difficile», quindi il ritmo di chiusura è un po' confuso. Il video dura 11.9 s ma il copione finale è al secondo 8.5-10.0: la fascia in basso «In quanti secondi l'hai trovato?» e il testo centrale sovrapposto competono.",
+    "correzione": "Allineare la chiusura: far comparire «Domani è più difficile» in grande al posto di «Difficile.» e togliere la sovrapposizione con la fascia in basso negli ultimi 2 secondi.",
+    "idea": "Un reel con un intruso più difficile a fine serie, con il tempo medio dei commenti come sfida per il giorno dopo."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:33+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Domani è più difficile», ma nel fotogramma al secondo 9 e 11 la scena «Cani vs Gatti» mostra già «DIFFICILE.» e «SECONDI L'HAI TROVATO.» in chiusura: la frase della voce e il testo a schermo non coincidono con il ritmo, e il 10.0s della trascrizione cade su una scena già passata. In",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, audio e coerenza dei fotogrammi con la sequenza del quiz (apertura, svelamento, chiusura).",
+    "esito": "segnalo",
+    "secondo": 10.0,
+    "problema": "Il copione dice «Domani è più difficile», ma nel fotogramma al secondo 9 e 11 la scena «Cani vs Gatti» mostra già «DIFFICILE.» e «SECONDI L'HAI TROVATO.» in chiusura: la frase della voce e il testo a schermo non coincidono con il ritmo, e il 10.0s della trascrizione cade su una scena già passata. Inoltre la didascalia chiede «Scrivi in quanti secondi» e il promemoria in basso dice lo stesso: ridondante ma non errato.",
+    "correzione": "Allineare la frase «Domani è più difficile» al fotogramma in cui compare «DIFFICILE.» (circa 9-10s) e far comparire «SECONDI L'HAI TROVATO» in sincrono con la voce; verificare che il conto alla rovescia (5-1) corrisponda alla barra di avanzamento che nel fotogramma di 2s è ancora piena.",
+    "idea": "Un reel con il livello «domani più difficile» già mostrato come anteprima (es. 3 gatti nascosti) per creare attesa di serie e motivare il follow."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:34+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il brief dice 'Eccolo: seconda riga' ma i fotogrammi inviati non includono il momento in cui il gatto viene mostrato (circa 3.9-6.6 s); così chi monta non può verificare che la svelatura sia visibile. Inoltre il volume medio dei primi 5 secondi è -16.9 dB, più basso del resto dell'audio, quindi l'ap",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la coerenza tra copione e frasi del brief, l'audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e i fotogrammi inviati a 0.5/2/4/7/9/11 s, che coprono l'apertura e la chiusura.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief dice 'Eccolo: seconda riga' ma i fotogrammi inviati non includono il momento in cui il gatto viene mostrato (circa 3.9-6.6 s); così chi monta non può verificare che la svelatura sia visibile. Inoltre il volume medio dei primi 5 secondi è -16.9 dB, più basso del resto dell'audio, quindi l'apertura rischia di sembrare debole.",
+    "correzione": "Aggiungere un fotogramma intorno a 5 s (durante 'Eccolo: seconda riga') e alzare leggermente il volume dei primi 5 secondi per allinearlo al resto.",
+    "idea": "Per i prossimi intruso, mostrare nella copertina o in un fotogramma iniziale il gatto cerchiato in piccolo, così chi guarda ha una sfida visibile fin dall'inizio."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:34+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio è a -0.8 dBFS, oltre la soglia di -1 dBFS fissata come obiettivo. La mappa dati è vuota, quindi nessun numero della città compare sul reel: non posso verificare che la luce della mappa si accenda correttamente.",
+   "dati": {
+    "controllato": "Ho verificato la mappa animata, i dati della mappa (vuoti, quindi nessun dato da usare), l'audio (-14.4 LUFS, picco -0.8 dBFS sopra l'obiettivo di -1, nessun silenzio lungo), la corrispondenza tra copione, trascrizione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il picco audio è a -0.8 dBFS, oltre la soglia di -1 dBFS fissata come obiettivo. La mappa dati è vuota, quindi nessun numero della città compare sul reel: non posso verificare che la luce della mappa si accenda correttamente.",
+    "correzione": "Abbassare il picco sotto -1 dBFS (es. limiter a -1.5) senza alterare il LUFS, poi ricontrollare; verificare che la mappa mostri i dati attesi prima della pubblicazione.",
+    "idea": "Mostrare sulla mappa il segno di ogni risposta commentata (es. una luce per città) per legare visivamente l'interazione al progetto."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:36+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il sottotitolo 'L'avevi visto?' non è nel brief come frase di quel punto: la frase 'Eccolo: seconda riga. L'avevi visto?' è ancora in corso a 6.6s e la trascrizione mostra 'L'avevi [6.6s] visto?', quindi la parola 'visto' compare dopo lo stacco a 6.6s, con il sottotitolo che rischia di spezzarsi mal",
+   "dati": {
+    "controllato": "Sincronia dei sottotitoli con la trascrizione, testi rispetto al brief, audio rispetto all'obiettivo (-14 LUFS, picco sotto -1 dBFS, nessun silenzio lungo), didascalia e fascia.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "Il sottotitolo 'L'avevi visto?' non è nel brief come frase di quel punto: la frase 'Eccolo: seconda riga. L'avevi visto?' è ancora in corso a 6.6s e la trascrizione mostra 'L'avevi [6.6s] visto?', quindi la parola 'visto' compare dopo lo stacco a 6.6s, con il sottotitolo che rischia di spezzarsi male. Inoltre la trascrizione dice 'Trova il gatto tra i [1.0s] cani' ma la frase del brief è 'Trova il gatto tra i cani. Cinque, quattro, tre, due, uno.' e il conto alla rovescia è scandito a 1.0-3.9s, quindi il sottotitolo 'Cinque, quattro...' va tenuto allineato al ritmo del conto. Il dato 'volume_medio_primi_5s_db' (-16.9) è più basso del resto della traccia: l'apertura è più silenziosa, da verificare.",
+    "correzione": "Spostare il cambio di sottotitolo 'L'avevi visto?' in modo che la parola 'visto' non venga tagliata dal cambio scena a 6.6s, e allineare ogni frase del conto alla rispettiva voce (1.0, 1.5, 2.2, 3.0, 3.9s). Alzare leggermente il volume dei primi 5 secondi per avvicinarlo alla media.",
+    "idea": "Ripetere il formato 'intruso' con un numero di secondi mostrato a schermo e una risposta svelata con il contatore di quanti hanno trovato l'intruso, così il pubblico confronta il proprio tempo."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:38+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "L'apertura parla da subito ('Trova il gatto tra i cani') ma nel brief l'apertura risulta null e il primo fotogramma inviato è a 0.5s: non è chiaro se nei primi istanti si veda già l'immagine del gatto nascosto, e la voce parte col conteggio prima che lo spettatore abbia tempo di guardare. Inoltre la",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la sincronia delle frasi del brief, l'audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e la didascalia con l'invito a scrivere la città e il nome dell'animale.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "L'apertura parla da subito ('Trova il gatto tra i cani') ma nel brief l'apertura risulta null e il primo fotogramma inviato è a 0.5s: non è chiaro se nei primi istanti si veda già l'immagine del gatto nascosto, e la voce parte col conteggio prima che lo spettatore abbia tempo di guardare. Inoltre la trascrizione dice 'Cinque, quattro, tre, due, uno' a 3.9s-ish mentre la frase 1 del brief copre lo stesso conteggio: va bene, ma il conteggio dura circa 3 secondi, quindi la sfida è di soli 5 secondi reali e non è chiaro se il video mostri il gatto per tutto il tempo del conteggio.",
+    "correzione": "Mostrare la griglia di cani con il gatto nascosto già dal primo fotogramma (0s) e tenere la voce di apertura breve, lasciando il conteggio sopra l'immagine; verificare che l'eventuale 'Eccolo' coincida con l'evidenziazione visiva del gatto a circa 6.6s.",
+    "idea": "Per i prossimi reel, aggiungere una frase finale con il tempo medio dei commenti precedenti per creare un obiettivo condiviso, e usare una copertina col gatto cerchiato per aumentare la curiosità."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:39+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio «Cinque, quattro, tre, due, uno» (0.0–3.9s) va bene, ma l'apertura non ha un'immagine di aggancio evidente nei dati: il volume medio dei primi 5s è -16.9 dB, più basso dell'obiettivo, quindi l'inizio rischia di sembrare sommesso. Inoltre la frase «Eccolo: seconda riga» arriva a 3.9s e l",
+   "dati": {
+    "controllato": "Ritmo, durata e audio del reel intruso: copione coi secondi, loudness e picco, silenzi, coerenza con la trascrizione e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il conteggio «Cinque, quattro, tre, due, uno» (0.0–3.9s) va bene, ma l'apertura non ha un'immagine di aggancio evidente nei dati: il volume medio dei primi 5s è -16.9 dB, più basso dell'obiettivo, quindi l'inizio rischia di sembrare sommesso. Inoltre la frase «Eccolo: seconda riga» arriva a 3.9s e la domanda «L'avevi visto?» a 6.6s, con una pausa di circa 2s prima della chiusura: il ritmo centrale è un po' lento. Il video dura 11.9s, adatto al formato.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 2 dB (portandoli verso -14/-15 dB) e accorciare la pausa tra «seconda riga» e «L'avevi visto?», sintetizzando il conteggio o tagliando un secondo dal frame 6–8s per tenere il ritmo serrato.",
+    "idea": "Ripetere il formato questa_luce con un conteggio più corto (3 secondi) e chiudere con il numero di città o di animali che hanno già risposto, per legare la sfida alla mappa."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:40+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "L'apertura non è un video vero: il brief indica apertura null e la trascrizione parte subito con il conto alla rovescia. Il campo 'copertina' è null e i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non coprono un'apertura visiva dedicata. Inoltre la pagina dice che il follower gain è basso nei reel form",
+   "dati": {
+    "controllato": "Ho verificato l'apertura del video (trascrizione, tempi, audio, didascalia e sincronia con il brief) rispetto alla mia mansione di montaggio.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "L'apertura non è un video vero: il brief indica apertura null e la trascrizione parte subito con il conto alla rovescia. Il campo 'copertina' è null e i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non coprono un'apertura visiva dedicata. Inoltre la pagina dice che il follower gain è basso nei reel formato 'coppa_sorpasso' e 'testa_a_testa'. Audio: LUFS -14.4 e picco -0.8 dBFS superano l'obiettivo di picco sotto -1 dBFS, e il volume dei primi 5 secondi (-16.9 dB) è più basso del resto.",
+    "correzione": "Abbassare il picco sotto -1 dBFS con un limitatore, portare il volume dei primi 5 secondi vicino al livello del resto, e definire un'apertura visiva con il gatto evidenziato nel primo fotogramma (o una copertina) prima del conto alla rovescia.",
+    "idea": "Per i prossimi reel di questo tipo, aprire con il gatto già cerchiato per un istante e far partire il conto alla rovescia dopo, così il primo fotogramma funziona anche come copertina e l'audio resta sotto controllo."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:40+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio a -0.8 dBFS supera la soglia di sicurezza di -1 dBFS, e il volume medio dei primi 5 secondi (-16.9 dB) è più basso dell'obiettivo implicito, quindi l'apertura rischia di sembrare debole rispetto al resto. Inoltre nella trascrizione il 'Trova il gatto' è al secondo 0 ma il conto alla r",
+   "dati": {
+    "controllato": "Audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo), trascrizione coi secondi, coerenza tra copione, frasi, didascalia e fascia; nessun dato mappa richiesto dal formato.",
+    "esito": "segnalo",
+    "secondo": 8.5,
+    "problema": "Il picco audio a -0.8 dBFS supera la soglia di sicurezza di -1 dBFS, e il volume medio dei primi 5 secondi (-16.9 dB) è più basso dell'obiettivo implicito, quindi l'apertura rischia di sembrare debole rispetto al resto. Inoltre nella trascrizione il 'Trova il gatto' è al secondo 0 ma il conto alla rovescia 'Cinque, quattro, tre, due, uno' finisce a 3.9s e 'Eccolo' arriva a 6.6s: va bene, ma il frase 'Scrivi in quanti secondi' (8.5s) si sovrappone alla fine della frase precedente nel brief, quindi il ritmo di chiusura va verificato.",
+    "correzione": "Abbassare il picco sotto -1 dBFS (es. limitatore o -2 dB di guadagno) e alzare leggermente il volume dei primi 5 secondi, per portare l'apertura al livello del resto del reel.",
+    "idea": "Mettere il 'Seguici: domani è più difficile' anche come frase finale parlata o come testo a schermo negli ultimi 2 secondi, e usare la coppia di fotogrammi con il gatto evidenziato come copertina."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:42+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato di 'Eccolo: seconda riga' arriva a 6.6s ma la trascrizione dice che la frase 'L'avevi visto?' termina dopo; il volume medio dei primi 5s è -16.9 dB, sotto il resto del mix, quindi l'apertura è più debole. Inoltre la trascrizione dice 'Trova il gatto tra i cani' mentre la didascalia promette ",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume iniziale), trascrizione coi secondi e coerenza con copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "Il dato di 'Eccolo: seconda riga' arriva a 6.6s ma la trascrizione dice che la frase 'L'avevi visto?' termina dopo; il volume medio dei primi 5s è -16.9 dB, sotto il resto del mix, quindi l'apertura è più debole. Inoltre la trascrizione dice 'Trova il gatto tra i cani' mentre la didascalia promette 5 secondi, senza che il conto alla rovescia sia visibile nei fotogrammi campionati.",
+    "correzione": "Alzare di 2-3 dB il volume dei primi 5 secondi, portando la voce d'apertura vicina al livello del resto; verificare sui fotogrammi 0.5-2s che il conto alla rovescia 'cinque, quattro...' sia leggibile o sovrapposto come testo.",
+    "idea": "Un reel 'intruso' con il conto alla rovescia già scritto a schermo e la richiesta di seguire nella prima frase, così che chi arriva dal feed capisca subito il gioco."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:43+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Nel copione la frase 'Scrivi in quanti secondi l'hai trovato' cade a 8.5s, ma la chiusura non è coerente con la didascalia: il brief non prevede 'Domani è più difficile' come frase finale parlata alla stessa maniera della didascalia, e il fotogramma 11s non è campionato nei fotogrammi inviati (manca",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, coerenza tra copione, didascalia e brief, e campionamento dei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 8.5,
+    "problema": "Nel copione la frase 'Scrivi in quanti secondi l'hai trovato' cade a 8.5s, ma la chiusura non è coerente con la didascalia: il brief non prevede 'Domani è più difficile' come frase finale parlata alla stessa maniera della didascalia, e il fotogramma 11s non è campionato nei fotogrammi inviati (manca 10s). Inoltre l'apertura 'apertura: null' lascia il primo secondo senza un aggancio visivo esplicito, e i dati della mappa sono vuoti, quindi non verifico la luce sulla città.",
+    "correzione": "Allineare il fotogramma di controllo a 10s e verificare che la frase finale del voice-over coincida con la chiusura della didascalia; definire un'apertura esplicita (es. 'Trova il gatto' sul fotogramma 0.5s) e, se si vuole citare la mappa, popolare i dati mappa prima della pubblicazione.",
+    "idea": "Per i prossimi reel tenere lo stesso formato del conto alla rovescia, ma mostrare il gatto evidenziato con un cerchio nel fotogramma finale, così chi commenta vede subito la risposta e si ricorda di tornare."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:44+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione apre con 'Trova il gatto tra i cani. Cinque, quattro, tre, due, uno.' ma nei primi 2 secondi lo spettatore vede solo la griglia e il conto alla rovescia (5, poi 1 già a 0.5-1s) senza un gancio emotivo o una domanda diretta; il timer 'Cinque, quattro...' compare a schermo con '5' e il temp",
+   "dati": {
+    "controllato": "Ganci dei primi 2 secondi: apertura, testo a schermo, ritmo del primo fotogramma e trascrizione del copione nei primi secondi.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il copione apre con 'Trova il gatto tra i cani. Cinque, quattro, tre, due, uno.' ma nei primi 2 secondi lo spettatore vede solo la griglia e il conto alla rovescia (5, poi 1 già a 0.5-1s) senza un gancio emotivo o una domanda diretta; il timer 'Cinque, quattro...' compare a schermo con '5' e il tempo sembra correre troppo in fretta per leggere la richiesta.",
+    "correzione": "Partire con una frase che crei tensione subito, ad esempio 'Hai 5 secondi. Sei abbastanza veloce?' con il gatto già evidenziato in un angolo per 0.5s, oppure rallentare il conto alla rovescia di mezzo secondo per dare tempo di leggere il titolo.",
+    "idea": "Creare un'apertura con il gatto che 'ammicca' o si illumina per un attimo nella griglia nei primi secondi, per dare un indizio visivo immediato e spingere a guardare fino alla fine."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:44+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 11 la voce dice \"Domani è più difficile\", ma nel brief la frase è \"Scrivi in quanti secondi l'hai trovato. Domani è più difficile.\" e la trascrizione non riporta la prima parte: la frase di chiusura non corrisponde al copione. Inoltre il frame al secondo 11 mostra la scena \"Cani vs Gatti\"",
+   "dati": {
+    "controllato": "Copione e trascrizione coi secondi: la voce segue le frasi del brief e i tempi della scena; audio a -14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Al secondo 11 la voce dice \"Domani è più difficile\", ma nel brief la frase è \"Scrivi in quanti secondi l'hai trovato. Domani è più difficile.\" e la trascrizione non riporta la prima parte: la frase di chiusura non corrisponde al copione. Inoltre il frame al secondo 11 mostra la scena \"Cani vs Gatti\" con la scritta \"DIFFICILE.\", mentre la voce è ancora sul messaggio di chiusura: sfasamento leggero tra audio e testo a schermo.",
+    "correzione": "Allineare la voce di chiusura al copione completo (\"Scrivi in quanti secondi l'hai trovato. Domani è più difficile.\") e far coincidere il cambio di scena \"DIFFICILE\" con la frase \"Domani è più difficile\".",
+    "idea": "Chiudere sempre con un \"segui per la sfida di domani\" a schermo, così il invito al follow arriva anche senza leggere la didascalia."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:46+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Eccolo: seconda riga» e il fotogramma al secondo 6 mostra il gatto cerchiato con l'etichetta «seconda riga, terza colonna»: coerente. Ma nella didascalia manca l'indicazione della posizione e la frase «Trovato?» chiede una risposta senza dare la soluzione, il che va bene. Il problem",
+   "dati": {
+    "controllato": "Didascalie: testo, fascia, coerenza con copione e fotogrammi, hashtag, numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 6,
+    "problema": "Il copione dice «Eccolo: seconda riga» e il fotogramma al secondo 6 mostra il gatto cerchiato con l'etichetta «seconda riga, terza colonna»: coerente. Ma nella didascalia manca l'indicazione della posizione e la frase «Trovato?» chiede una risposta senza dare la soluzione, il che va bene. Il problema reale è che la didascalia dice «hai 5 secondi», mentre nel reel il timer parte da 5 e scende: coerente. Il vero errore è nella chiusura del copione: «Domani è più difficile» non corrisponde ai fotogrammi finali (scena «DIFFICILE») ma la didascalia promette «domani il rompicapo è più difficile» come invito a seguire: va bene. Segnalo quindi solo un dettaglio: l'hashtag finale ha uno spazio di troppo e la didascalia non cita la posizione della soluzione per chi legge senza audio.",
+    "correzione": "Togliere lo spazio finale negli hashtag e aggiungere in didascalia «(soluzione: seconda riga, terza colonna)» per chi guarda senza audio o non vuole sentirla subito.",
+    "idea": "Fare uscire ogni giorno lo stesso intruso con un'etichetta numerata «Puntata 1, 2, 3», per creare una serie che invoglia a seguire."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:47+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'L'avevi visto?' cade a 6.6s, ma nel fotogramma al secondo 7 la scena 'ECCOLO!' con la scritta 'seconda riga, terza colonna' è già presente e il conto alla rovescia è sparito; la scena di chiusura 'Secondi l'hai trovato' compare al secondo 9, mentre la trascrizione dice '",
+   "dati": {
+    "controllato": "Copione del formato intruso: frasi, secondi della trascrizione, didascalia, numeri del progetto e coerenza dei fotogrammi con il conto alla rovescia.",
+    "esito": "segnalo",
+    "secondo": 8,
+    "problema": "Nella trascrizione la frase 'L'avevi visto?' cade a 6.6s, ma nel fotogramma al secondo 7 la scena 'ECCOLO!' con la scritta 'seconda riga, terza colonna' è già presente e il conto alla rovescia è sparito; la scena di chiusura 'Secondi l'hai trovato' compare al secondo 9, mentre la trascrizione dice 'Scrivi in quanti secondi' a 8.5s: lo sfasamento è di circa mezzo secondo e la domanda in sovrimpressione resta visibile in ogni fotogramma. Inoltre il testo 'Domani è più difficile' arriva a 10.0s, mentre nel fotogramma 11 compare già la scena 'DIFFICILE.' e non c'è più il 'Trova il gatto' iniziale: il sincronismo voce-immagine non è preciso.",
+    "correzione": "Allineare i cambi di scena ai secondi della trascrizione: 'Eccolo' al momento in cui si dice 'Eccolo: seconda riga', e la scena 'Cani vs Gatti' solo quando parte 'Scrivi in quanti secondi'; far coincidere 'DIFFICILE.' con 'Domani è più difficile'. Verificare il frame reale a 8 e 10 secondi prima di pubblicare.",
+    "idea": "Trasformare il numero di secondi in una piccola classifica della community nel commento fissato, e far comparire la 'luce' del commentatore sulla mappa come chiusura del reel successivo."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:49+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il conto alla rovescia («cinque, quattro, tre, due, uno») è indicato a partire da 1.0s, mentre nei fotogrammi il timer da 5 a 1 compare già da 0.5s, quindi la voce e l'immagine non combaciano. Inoltre la scena «Eccolo» con il cerchio dorato compare nei fotogrammi intorno al second",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e numeri del progetto del reel «Trova l'intruso» (cane/gatto), più i 6 fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 5.0,
+    "problema": "Nella trascrizione il conto alla rovescia («cinque, quattro, tre, due, uno») è indicato a partire da 1.0s, mentre nei fotogrammi il timer da 5 a 1 compare già da 0.5s, quindi la voce e l'immagine non combaciano. Inoltre la scena «Eccolo» con il cerchio dorato compare nei fotogrammi intorno al secondo 6-7, e la voce «L'avevi visto?» cade a 6.6s, da verificare che coincida. La frase finale «Domani è più difficile» è a 10.0s, ma il fotogramma a 9s mostra ancora la scena di chiusura con cani vs gatti: tempi da allineare.",
+    "correzione": "Far partire il conto alla rovescia insieme al timer visivo (dal primo fotogramma), far cadere «Eccolo» esattamente sul cerchio dorato e far coincidere «L'avevi visto?» con la comparsa della scritta. Accorciare la scena cani vs gatti per lasciare più respiro alla frase finale.",
+    "idea": "Chiudere con un teaser esplicito del prossimo rompicapo (es. «domani: 3 gatti nascosti») per dare un motivo concreto di follow, e usare nel brief un timer visivo sincronizzato con il conto alla rovescia parlato."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:49+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il conto alla rovescia dice «Cinque, quattro, tre, due, uno» ma il testo al secondo 3.9 è ancora «uno», mentre la frase «Eccolo: seconda riga» parte a 3.9s: il passaggio è troppo stretto e non lascia respiro prima della rivelazione. Inoltre la frase «Domani è più difficile» nel co",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, frasi del brief e didascalia: il testo parlato corrisponde al brief e la frase sul secondo tempo è coerente con la scena finale.",
+    "esito": "segnalo",
+    "secondo": 3.9,
+    "problema": "Nella trascrizione il conto alla rovescia dice «Cinque, quattro, tre, due, uno» ma il testo al secondo 3.9 è ancora «uno», mentre la frase «Eccolo: seconda riga» parte a 3.9s: il passaggio è troppo stretto e non lascia respiro prima della rivelazione. Inoltre la frase «Domani è più difficile» nel copione è una promessa che il reel non può mantenere da solo, e nella didascalia compare «Trovato?» come domanda ma la fascia dice «In quanti secondi l'hai trovato?»: due domande diverse che si fanno concorrenza.",
+    "correzione": "Lasciare una pausa di mezzo secondo tra «uno» e «Eccolo», e unificare la domanda: usare la stessa formulazione in didascalia e fascia (es. «In quanti secondi l'hai trovato?»), eliminando «Trovato?» in apertura della didascalia.",
+    "idea": "Mostrare sulla mappa la luce della città dell'ultimo commentatore come chiusura, per collegare il gioco al progetto e spingere a seguire per vedere le luci crescere."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:50+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Domani è più difficile» ma nel video, al secondo 10-11, la scena «DIFFICILE.» compare solo dopo che la voce ha già chiuso; inoltre nella trascrizione manca la frase finale sulla scena chiusura («Scrivi in quanti secondi l'hai trovato») come battuta distinta e la parola «difficile» a",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e misure audio (-14.4 LUFS, picco -0.8 dBFS) contro il brief: il testo parlato corrisponde al copione e l'audio rientra nell'obiettivo.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Il copione dice «Domani è più difficile» ma nel video, al secondo 10-11, la scena «DIFFICILE.» compare solo dopo che la voce ha già chiuso; inoltre nella trascrizione manca la frase finale sulla scena chiusura («Scrivi in quanti secondi l'hai trovato») come battuta distinta e la parola «difficile» appare sia nel copione che nel fotogramma senza sincronia precisa. Il dato più delicato: la didascalia dice «hai 5 secondi», ma il timer sul fotogramma iniziale parte da 5 e il copione dice «cinque, quattro...» mentre a 1 secondo il contatore segna 1: la sincronia tra conto alla rovescia e voce va verificata.",
+    "correzione": "Allineare il conto alla rovescia della voce (5→1) con il timer grafico frame per frame e far comparire «DIFFICILE.» insieme a «Domani è più difficile» (circa 10 s), non dopo.",
+    "idea": "Per i prossimi reel aggiungere una versione con difficoltà crescente numerata (Livello 1, 2, 3) per dare un motivo di tornare alla pagina ogni giorno."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:51+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il conto alla rovescia dice 'cinque, quattro, tre, due, uno' ma il timer sul fotogramma passa da 5 a 1 e il testo 'Eccolo: seconda riga' arriva al secondo 3.9, mentre nel fotogramma al secondo 4 il gatto appare già evidenziato. Inoltre la frase di chiusura 'Domani è più difficile'",
+   "dati": {
+    "controllato": "Copione e trascrizione del reel intruso: frasi, tempi, didascalia e fascia rispetto al brief e ai fotogrammi inviati.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Nella trascrizione il conto alla rovescia dice 'cinque, quattro, tre, due, uno' ma il timer sul fotogramma passa da 5 a 1 e il testo 'Eccolo: seconda riga' arriva al secondo 3.9, mentre nel fotogramma al secondo 4 il gatto appare già evidenziato. Inoltre la frase di chiusura 'Domani è più difficile' non compare nel brief come scena separata sul fotogramma 9 (che mostra 'Cani vs Gatti' con 'Difficile.'), quindi il testo parlato e il testo a schermo non sono allineati: a schermo al secondo 9 si legge 'DIFFICILE.' mentre l'audio dice ancora 'Scrivi in quanti secondi'.",
+    "correzione": "Allineare il conto alla rovescia ai fotogrammi (5→1 su 0.5–2 s), far comparire 'Eccolo' e l'evidenziazione insieme, e sincronizzare 'Difficile.' sulla voce 'Domani è più difficile' (circa 10 s) anziché al secondo 9.",
+    "idea": "Ripetere il formato con una griglia più grande e un tempo limite visibile, e lasciare a fine video il numero di follower/luci aggiornato per legare il gioco alla mappa."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:52+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Domani è più difficile» a 10.0s, ma il copione prevede la chiusura «Scrivi in quanti secondi l'hai trovato» e nel fotogramma a 11s compare la schermata «Cani vs Gatti: DIFFICILE», non la scritta sulla risposta. Nel fotogramma a 9s compare «SECONDI L'HAI TROVATO» con la scena «C",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e brief del reel intruso: frasi e tempi coincidono con i fotogrammi, la fascia e la didascalia sono coerenti.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "La trascrizione dice «Domani è più difficile» a 10.0s, ma il copione prevede la chiusura «Scrivi in quanti secondi l'hai trovato» e nel fotogramma a 11s compare la schermata «Cani vs Gatti: DIFFICILE», non la scritta sulla risposta. Nel fotogramma a 9s compare «SECONDI L'HAI TROVATO» con la scena «Cani vs Gatti», quindi la scena di chiusura parte prima del testo «Domani è più difficile». Inoltre la didascalia dice «hai 5 secondi», ma la sfida è cronometrata con un conto alla rovescia di 5 secondi nel reel, coerente; invece la voce dice «Cinque, quattro, tre, due, uno» mentre il contatore a schermo al primo fotogramma segna 5 e al secondo 2 scende, quindi il ritmo è accettabile.",
+    "correzione": "Allineare il testo «Domani è più difficile» alla schermata «DIFFICILE» (intorno a 9–11s) e far comparire la scritta «Scrivi in quanti secondi» in sincro con la fascia già presente.",
+    "idea": "Un reel con la città del commentatore più veloce del giorno illuminata sulla mappa, per trasformare i commenti in follower."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:53+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 e nella trascrizione il conto alla rovescia 'cinque, quattro, tre, due, uno' non è sincronizzato: la trascrizione lo mette a 0-3.9s ma nel fotogramma 0.5s la barra è al 75% e al 4s il timer segna ancora 5 mentre la barra cala; inoltre la didascalia promette '5 secondi' ma",
+   "dati": {
+    "controllato": "Mappa e dati: nessun dato di mappa nel reel (dati_mappa vuoto); verificati coerenza di trascrizione, didascalia e numeri del progetto (1866 follower, 2897 luci) con i fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 e nella trascrizione il conto alla rovescia 'cinque, quattro, tre, due, uno' non è sincronizzato: la trascrizione lo mette a 0-3.9s ma nel fotogramma 0.5s la barra è al 75% e al 4s il timer segna ancora 5 mentre la barra cala; inoltre la didascalia promette '5 secondi' ma il conto non coincide con la barra. Nel fotogramma 7s la scena 'Eccolo' compare e il titolo 'Trova il gatto' sparisce senza una transizione dichiarata nel copione. La frase finale 'Domani è più difficile' appare a 10s mentre il fotogramma 11s mostra 'DIFFICILE' in una scena separata: tempi coerenti ma la chiusura è spezzata in due scene con testo ripetuto.",
+    "correzione": "Allineare la barra di avanzamento e il timer al conto alla rovescia parlato (5→1 in 4 secondi esatti), e far coincidere la didascalia '5 secondi' con il tempo reale; unire o distinguere meglio le due scene finali per evitare il doppio messaggio 'secondi l'hai trovato / difficile'.",
+    "idea": "Aggiungere una mini-classifica di 'tempi record' mostrata alla fine, collegata alla mappa, per dare un motivo di ritorno a ogni reel."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:55+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione «Domani è più difficile» arriva a 10.0s, ma nel brief e nella didascalia la frase è in chiusura e il fotogramma a 10s mostra ancora la scena di svelamento: la frase di chiusura e la scena «DIFFICILE» non sono sincronizzate con la voce. Inoltre nel fotogramma a 9s compare la scena ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, fotogrammi e misure audio (-14.4 LUFS, picco -0.8 dBFS): corrispondono al brief e rientrano negli obiettivi.",
+    "esito": "segnalo",
+    "secondo": 10.0,
+    "problema": "Nella trascrizione «Domani è più difficile» arriva a 10.0s, ma nel brief e nella didascalia la frase è in chiusura e il fotogramma a 10s mostra ancora la scena di svelamento: la frase di chiusura e la scena «DIFFICILE» non sono sincronizzate con la voce. Inoltre nel fotogramma a 9s compare la scena di svelamento mentre la voce dice ancora il conto alla rovescia: la schermata «ECCOLO» con l'alone arriva prima che la voce dica «Eccolo», quindi il montaggio anticipa di circa 1-2 secondi. Anche il conto alla rovescia 5-4-3-2-1 è coperto da una barra di progresso che si svuota in modo non coerente (a 1s è quasi vuota, a 5s quasi piena), il che non corrisponde al tempo reale.",
+    "correzione": "Allineare la comparsa della schermata «ECCOLO» al momento in cui la voce dice «Eccolo» (circa 4s), e far comparire «DIFFICILE» in sincronia con «Domani è più difficile» (circa 10s). Verificare che la barra di progresso segua il conto alla rovescia.",
+    "idea": "Ripetere la formula con un intruso diverso ogni giorno e collegare il risultato alla mappa (es. «la città con più occhi di falco»), così la sfida si accumula nel tempo."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:55+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il conto alla rovescia è 'Cinque, quattro, tre, due, uno' a 1-4s, ma nei fotogrammi la barra e il timer non corrispondono a una durata di 5 secondi chiara; inoltre a 9s la voce dice 'Domani è più difficile' mentre la scena mostra già la chiusura, quindi il messaggio può sembrare s",
+   "dati": {
+    "controllato": "Dati di mappa, audio e trascrizione: il reel non include dati mappa (lista vuota) e la voce dice 'hai 5 secondi' e 'seconda riga, terza colonna' coerenti con i fotogrammi; l'audio è in target (-14.4 LUFS, picco -0.8 dBFS).",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Nella trascrizione il conto alla rovescia è 'Cinque, quattro, tre, due, uno' a 1-4s, ma nei fotogrammi la barra e il timer non corrispondono a una durata di 5 secondi chiara; inoltre a 9s la voce dice 'Domani è più difficile' mentre la scena mostra già la chiusura, quindi il messaggio può sembrare slegato dal rompicapo. Da verificare: la didascalia promette '5 secondi' ma la fascia dice solo 'In quanti secondi?', senza indicare la soglia.",
+    "correzione": "Allineare il conto alla rovescia alla barra del timer (5 s esatti) e aggiungere in sovrimpressione 'hai 5 secondi' già al primo fotogramma; rendere esplicito a 9-11 s il collegamento tra il quiz e 'domani più difficile'.",
+    "idea": "Creare una serie 'Trova l'intruso' con livelli crescenti numerati (1, 2, 3...) per dare continuità e motivo di tornare a seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:57+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 6.6 la voce dice «L'avevi visto?», ma la scena «ECCOLO» con il cerchio dorato compare già intorno al secondo 4 (fotogramma 4s/7s). In più la voce dice «Domani è più difficile» mentre nella scena di chiusura il testo a schermo dice «DIFFICILE.» solo dopo il «SECONDI L'HAI TROVATO» (sfasame",
+   "dati": {
+    "controllato": "Trascrizione coi secondi vs copione e didascalia, e coerenza dei fotogrammi con la scena del gatto nella seconda riga, terza colonna.",
+    "esito": "segnalo",
+    "secondo": 6,
+    "problema": "Al secondo 6.6 la voce dice «L'avevi visto?», ma la scena «ECCOLO» con il cerchio dorato compare già intorno al secondo 4 (fotogramma 4s/7s). In più la voce dice «Domani è più difficile» mentre nella scena di chiusura il testo a schermo dice «DIFFICILE.» solo dopo il «SECONDI L'HAI TROVATO» (sfasamento sul secondo 9-11). Inoltre la didascalia promette una mappa con «2864» luci, ma i dati del progetto dicono 2897: il numero è vecchio.",
+    "correzione": "Allineare «Eccolo: seconda riga» e «L'avevi visto?» alla comparsa del cerchio dorato (circa 4-6 s) e far apparire «DIFFICILE.» in sincrono con «Domani è più difficile». Aggiornare il numero nella didascalia da 2864 a 2897 (o formularlo come «quasi 2900»).",
+    "idea": "Ripetere la serie con un conto alla rovescia visibile nel frame e un finale a sorpresa (es. «il gatto più difficile di sempre») per legare i reel del giorno dopo."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:57+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il sottotitolo e la voce dicono \"Domani è più difficile\", ma nei fotogrammi la scritta è \"DIFFICILE.\" e il copione chiude con quella frase; la didascalia dice \"Domani il rompicapo è più difficile\": il tempo indicato (\"domani\") non compare nel fotogramma e la chiusura visiva al secondo 9 resta generi",
+   "dati": {
+    "controllato": "Dati mappa e didascalia: il reel non cita dati di mappa (lista vuota), quindi non ci sono numeri da verificare; ho controllato anche la coerenza tra copione, sottotitoli e didascalia.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Il sottotitolo e la voce dicono \"Domani è più difficile\", ma nei fotogrammi la scritta è \"DIFFICILE.\" e il copione chiude con quella frase; la didascalia dice \"Domani il rompicapo è più difficile\": il tempo indicato (\"domani\") non compare nel fotogramma e la chiusura visiva al secondo 9 resta generica. Inoltre al secondo 1 il timer parte da 5 mentre la trascrizione dice \"Cinque, quattro, tre, due, uno\" a 1.0s-3.9s, quindi il conto alla rovescia visivo e quello parlato non combaciano del tutto.",
+    "correzione": "Allineare il conto alla rovescia visivo alla voce (timer da 5 a 1 nello stesso intervallo 1.0s-3.9s) e rendere la frase finale coerente con la scritta a schermo, ad esempio \"Domani sarà più difficile\" anche sul fotogramma.",
+    "idea": "Pubblicare una serie con una sola riga di difficoltà crescente e un contatore dei tentativi della community, da ripetere ogni giorno."
+   }
+  },
+  {
+   "t": "2026-11-13T19:21:59+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 8 la voce dice «Scrivi in quanti secondi l'hai trovato», ma il fotogramma mostra la schermata «Cani vs Gatti» con «Secondi l'hai trovato», quindi la scena di chiusura non è ancora sincronizzata. Inoltre nel copione la frase «Domani è più difficile» è al secondo 10 e nel fotogramma 11 comp",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, fascia e didascalia, e coerenza visiva dei 6 fotogrammi con la frase detta.",
+    "esito": "segnalo",
+    "secondo": 8,
+    "problema": "Al secondo 8 la voce dice «Scrivi in quanti secondi l'hai trovato», ma il fotogramma mostra la schermata «Cani vs Gatti» con «Secondi l'hai trovato», quindi la scena di chiusura non è ancora sincronizzata. Inoltre nel copione la frase «Domani è più difficile» è al secondo 10 e nel fotogramma 11 compare «Difficile», quindi l'audio è in ritardo rispetto alle immagini. Non ci sono dati mappa da verificare in questo reel.",
+    "correzione": "Spostare la battuta «Scrivi in quanti secondi l'hai trovato» sulla scena di chiusura (circa 8-9 s) e far coincidere «Domani è più difficile» con la scritta «Difficile» (circa 10-11 s), oppure allungare le scene per allinearle all'audio.",
+    "idea": "Per i prossimi reel, far comparire la città e il nome dell'animale come piccolo esempio sulla mappa, così il pubblico vede subito il meccanismo della luce."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:00+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il conto alla rovescia è detto al secondo 1.0 mentre la frase dell'intruso è sovrapposta, e la frase 'Scrivi in quanti secondi l'hai trovato' cade al 6.6-8.5s: sul fotogramma al secondo 7 la fascia 'In quanti secondi?' è presente ma la scritta 'L'AVEVI VISTO?' resta ferma troppo a",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia e numeri del progetto del reel 'Trova il gatto tra i cani', confrontati con i fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 8.5,
+    "problema": "Nella trascrizione il conto alla rovescia è detto al secondo 1.0 mentre la frase dell'intruso è sovrapposta, e la frase 'Scrivi in quanti secondi l'hai trovato' cade al 6.6-8.5s: sul fotogramma al secondo 7 la fascia 'In quanti secondi?' è presente ma la scritta 'L'AVEVI VISTO?' resta ferma troppo a lungo rispetto all'audio. Inoltre la scena 'Cani vs Gatti' (fotogrammi 9-11) mostra 'DIFFICILE' mentre il parlato dice 'Domani è più difficile': la frase non corrisponde al testo a schermo ('Secondi l'hai trovato' / 'Difficile'), e nel fotogramma 9 manca il testo 'SECONDI L'HAI TROVATO' che l'audio non menziona.",
+    "correzione": "Allineare il testo a schermo 'DIFFICILE.' alla frase parlata 'Domani è più difficile' e far comparire 'L'AVEVI VISTO?' in sincronia con la battuta a 6.6s; verificare che la scena di chiusura copra la frase finale.",
+    "idea": "Aggiungere un'ultima scena con il numero dei commenti più veloci o un gatto 'più difficile' da trovare, così il follow arriva come sfida di continuità."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:03+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il timer sul fotogramma iniziale parte da 5 ma la voce dice «cinque, quattro, tre, due, uno» e la barra si svuota solo in parte; inoltre la voce al secondo 6.6 dice «L'avevi visto?» mentre la scena è già sulla rivelazione, quindi la domanda arriva dopo la risposta. Nella didascalia il conteggio dice",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, fotogrammi e didascalia del reel intruso: il conteggio parlato corrisponde al timer visivo e la scena rivelazione è coerente.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "Il timer sul fotogramma iniziale parte da 5 ma la voce dice «cinque, quattro, tre, due, uno» e la barra si svuota solo in parte; inoltre la voce al secondo 6.6 dice «L'avevi visto?» mentre la scena è già sulla rivelazione, quindi la domanda arriva dopo la risposta. Nella didascalia il conteggio dice «hai 5 secondi», ma il reel non lo rende chiaro (la voce conta alla rovescia durante il gioco, non prima). Non ci sono dati mappa da verificare in questo reel.",
+    "correzione": "Spostare «L'avevi visto?» prima della rivelazione (o dividerla in due momenti) e far combaciare la barra del timer con il conto alla rovescia parlato.",
+    "idea": "Una versione «trova l'intruso» con più righe o un intruso meno evidente, e un'ultima scena che mostri la luce accesa sulla mappa per l'utente che ha commentato."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:03+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il conto alla rovescia ('Cinque, quattro, tre, due, uno') è sincronizzato coi fotogrammi (il timer scende da 5 a 1 tra 0.5s e 4s), ma la frase 'Scrivi in quanti secondi l'hai trovato' cade intorno a 8.5s, mentre la scritta 'In quanti secondi l'hai trovato?' compare già sulle scher",
+   "dati": {
+    "controllato": "Trascrizione, secondi dei fotogrammi, didascalia e numeri del progetto rispetto al copione del reel intruso.",
+    "esito": "segnalo",
+    "secondo": 8,
+    "problema": "Nella trascrizione il conto alla rovescia ('Cinque, quattro, tre, due, uno') è sincronizzato coi fotogrammi (il timer scende da 5 a 1 tra 0.5s e 4s), ma la frase 'Scrivi in quanti secondi l'hai trovato' cade intorno a 8.5s, mentre la scritta 'In quanti secondi l'hai trovato?' compare già sulle schermate precedenti: il sottotitolo parlato coincide col testo a schermo, quindi ok. Il vero problema è la didascalia: 'hai 5 secondi' e 'Domani è più difficile' sono coerenti col brief, ma la didascalia promette 'aggiungi la tua città e il suo nome' senza che il reel lo mostri, e il dato 'altri 2864' è verificato solo parzialmente (progetto: 2897 luci). Inoltre il picco audio è -0.8 dBFS, sopra l'obiettivo di -1 dBFS.",
+    "correzione": "Portare il picco audio sotto -1 dBFS e aggiornare nella didascalia il numero delle altre luci con quello verificato (2896 altre luci, non 2864).",
+    "idea": "Mostrare nel reel finale un esempio di commento con città e nome dell'animale, così la call to action è visibile e concreta."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:03+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Volume, picco, silenzi e trascrizione audio rispetto agli obiettivi della mappa e al copione del reel intruso.",
+   "dati": {
+    "controllato": "Volume, picco, silenzi e trascrizione audio rispetto agli obiettivi della mappa e al copione del reel intruso.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi intruso, mostrare nell'ultimo secondo la mappa con la luce appena accesa dal commento più veloce, così il premio visivo lega il gioco alla pagina."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:03+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio è -0.8 dBFS, oltre la soglia di sicurezza di -1 dBFS fissata come obiettivo: rischio di clipping o distorsione in compressione su alcune piattaforme. Il resto è in linea: -14.4 LUFS è corretto e non ci sono silenzi lunghi.",
+   "dati": {
+    "controllato": "Volume e audio: LUFS -14.4, picco -0.8 dBFS (sotto -1 dBFS, quindi fuori dall'obiettivo), nessun silenzio lungo, volume iniziale -16.9 dB.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Il picco audio è -0.8 dBFS, oltre la soglia di sicurezza di -1 dBFS fissata come obiettivo: rischio di clipping o distorsione in compressione su alcune piattaforme. Il resto è in linea: -14.4 LUFS è corretto e non ci sono silenzi lunghi.",
+    "correzione": "Abbassare il livello di circa 0.5 dB o applicare un limiter a -1 dBFS mantenendo i -14 LUFS, poi ricontrollare il picco.",
+    "idea": "Dopo il conto alla rovescia, inserire una pausa di mezzo secondo prima di svelare il gatto: aumenta la suspense e il tempo per guardare il video."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:05+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Scrivi in quanti secondi [8.5s] l'hai trovato», ma il copione ha la frase «Scrivi in quanti secondi l'hai trovato. Domani è più difficile.» come chiusura, senza differenze di testo. Il problema è che la voce dice «Eccolo: seconda riga» e «L'avevi visto?» mentre il copione dice ",
+   "dati": {
+    "controllato": "Ho verificato audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e trascrizione con i secondi, confrontandoli con copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 8.5,
+    "problema": "La trascrizione dice «Scrivi in quanti secondi [8.5s] l'hai trovato», ma il copione ha la frase «Scrivi in quanti secondi l'hai trovato. Domani è più difficile.» come chiusura, senza differenze di testo. Il problema è che la voce dice «Eccolo: seconda riga» e «L'avevi visto?» mentre il copione dice «Eccolo: seconda riga. L'avevi visto?» (ok). Il vero punto critico: i fotogrammi inviati sono 6 su 12 proposti e i dati mappa sono vuoti, quindi non posso verificare che la luce e la città siano coerenti con il gatto trovato.",
+    "correzione": "Verificare che i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) coprano il momento in cui il gatto viene evidenziato (circa 3.9s-6.6s) e allegare i dati mappa prima della pubblicazione.",
+    "idea": "Aggiungere un frame finale con il numero di secondi del record attuale per stimolare il confronto nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:05+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Picchi di volume e saturazione dell'audio (LUFS, picco, silenzi) confrontati con l'obiettivo, più la coerenza tra voce e trascrizione.",
+   "dati": {
+    "controllato": "Picchi di volume e saturazione dell'audio (LUFS, picco, silenzi) confrontati con l'obiettivo, più la coerenza tra voce e trascrizione.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Abbassare il picco a circa -1.5 dBFS con un limiter, così da rispettare la soglia; e per i prossimi reel valutare un secondo intruso con un colore diverso per aumentare la sfida."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:05+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Volume, picco, silenzi, trascrizione coi secondi e coerenza tra copione e voce del reel.",
+   "dati": {
+    "controllato": "Volume, picco, silenzi, trascrizione coi secondi e coerenza tra copione e voce del reel.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per il prossimo reel valuta di aggiungere una piccola scritta a schermo con il numero di secondi (5, 4, 3…) così chi guarda senza audio può giocare lo stesso."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:05+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Trascrizione, secondi, loudness e picco audio, didascalia e coerenza col copione dell'intruso.",
+   "dati": {
+    "controllato": "Trascrizione, secondi, loudness e picco audio, didascalia e coerenza col copione dell'intruso.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nei prossimi intrusi, mostrare il gatto già evidenziato con un cerchio per un attimo nel fotogramma finale, così chi non l'ha trovato ha la risposta sotto gli occhi e il commento diventa ancora più naturale."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:07+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Livelli audio (LUFS, picco, volume iniziale, silenzi), durata e allineamento della trascrizione al copione.",
+   "dati": {
+    "controllato": "Livelli audio (LUFS, picco, volume iniziale, silenzi), durata e allineamento della trascrizione al copione.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per il prossimo intruso valuta un leggero sottofondo che salga sul «uno» e un suono breve sull'«Eccolo», così il momento della rivelazione diventa più forte."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:10+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il brief indica apertura null, ma il reel parte subito con 'Trova il gatto tra i cani' a 0.0s senza un vero gancio visivo nei dati; inoltre la trascrizione ha 'Cinque, quattro, tre, due, uno' a 1.0-3.9s, quindi il conto alla rovescia inizia dopo la prima frase. Il dato più chiaro è che manca un'indi",
+   "dati": {
+    "controllato": "Audio (LUFS -14.4, picco -0.8 dBFS, nessun silenzio, volume iniziale -16.9 dB), trascrizione coi secondi e corrispondenza con il copione e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief indica apertura null, ma il reel parte subito con 'Trova il gatto tra i cani' a 0.0s senza un vero gancio visivo nei dati; inoltre la trascrizione ha 'Cinque, quattro, tre, due, uno' a 1.0-3.9s, quindi il conto alla rovescia inizia dopo la prima frase. Il dato più chiaro è che manca un'indicazione visiva di cosa cercare nei fotogrammi inviati (0.5, 2, 4, 7, 9, 11), e i dati mappa sono vuoti, quindi non posso verificare la promessa 'si accende sulla mappa'.",
+    "correzione": "Confermare nel montaggio che al secondo 0 l'immagine mostri già la griglia di cani con il gatto ben visibile, e che il conto alla rovescia sia sincronizzato sulle immagini; verificare che la mappa con la luce sia effettivamente presente nel video finale.",
+    "idea": "Ripetere il formato con una serie numerata ('Rompicapo 1, 2, 3...') per creare abitudine, e aggiungere nei primi 0.5s un'immagine della griglia con freccia o cerchio sul gatto per rendere immediato il gioco."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:10+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -16.9 dB, quindi l'apertura è più bassa del resto del reel e la frase d'avvio 'Trova il gatto tra i cani' rischia di passare inosservata proprio quando serve agganciare chi scorre.",
+   "dati": {
+    "controllato": "Livelli audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e coerenza tra trascrizione, copione e tempi del parlato.",
+    "esito": "segnalo",
+    "secondo": 0.0,
+    "problema": "Il volume medio dei primi 5 secondi è -16.9 dB, quindi l'apertura è più bassa del resto del reel e la frase d'avvio 'Trova il gatto tra i cani' rischia di passare inosservata proprio quando serve agganciare chi scorre.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 2-3 dB (portandolo vicino a -14 LUFS) senza toccare il resto, così l'apertura è pari al corpo del reel.",
+    "idea": "Tenere il conto alla rovescia con una prima battuta più forte e aggiungere sul video un marcatore dei secondi, così lo spettatore capisce subito il gioco."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:10+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase «Domani è più difficile» è a 10.0s, ma la scena finale «DIFFICILE.» è inquadrata già dal fotogramma 9s; la voce dice «Scrivi in quanti secondi l'hai trovato» a 8.5s mentre la fascia on-screen compare già dall'inizio, quindi il testo parlato e quello a schermo sono sfasati",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e fotogrammi della scena intruso: il gatto è nella seconda riga, terza colonna, come dichiarato.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Nella trascrizione la frase «Domani è più difficile» è a 10.0s, ma la scena finale «DIFFICILE.» è inquadrata già dal fotogramma 9s; la voce dice «Scrivi in quanti secondi l'hai trovato» a 8.5s mentre la fascia on-screen compare già dall'inizio, quindi il testo parlato e quello a schermo sono sfasati di pochi decimi. Inoltre la trascrizione dice «Domani è più difficile» ma il brief dice «Domani è più difficile» senza coerenza con la scena «DIFFICILE.» che sembra riferirsi al confronto cani/gatti, non alla frase parlata.",
+    "correzione": "Allineare la battuta «Domani è più difficile» alla comparsa di «DIFFICILE.» (intorno a 9-10s) e far comparire la fascia «In quanti secondi l'hai trovato?» in sincronia con la domanda vocale.",
+    "idea": "Aggiungere in chiusura un'anteprima visiva del rompicapo di domani (un'icona o un'ombra del gatto) per rinforzare il motivo di seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:10+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la scena 'ECCOLO!' mostra il gatto ma l'etichetta dice 'seconda riga, terza colonna' ed è corretta; il problema è nel fotogramma successivo: al secondo 7 compare 'L'AVEVI VISTO?' mentre la trascrizione lo colloca a 6.6s, quindi il cambio scena è leggermente in ritardo rispetto al parlat",
+   "dati": {
+    "controllato": "Grafica e copertine: sequenza dei 6 fotogrammi, coerenza del conteggio intruso (gatto in seconda riga, terza colonna), leggibilità del testo e della fascia, coerenza con copione e trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la scena 'ECCOLO!' mostra il gatto ma l'etichetta dice 'seconda riga, terza colonna' ed è corretta; il problema è nel fotogramma successivo: al secondo 7 compare 'L'AVEVI VISTO?' mentre la trascrizione lo colloca a 6.6s, quindi il cambio scena è leggermente in ritardo rispetto al parlato. Inoltre la scena finale 'DIFFICILE.' appare al secondo 9-11 mentre il copione dice 'Domani è più difficile' (la frase 'Domani' manca a schermo), e la fascia 'In quanti secondi' resta invariata su tutti i fotogrammi senza variazioni.",
+    "correzione": "Anticipare di circa 0.5s la comparsa di 'L'AVEVI VISTO?' per allinearla a 6.6s e aggiungere la parola 'Domani' nella scena finale, sincronizzandola con la voce.",
+    "idea": "Aggiungere un contatore visivo dei secondi nei fotogrammi finali e una versione 'difficile' con gatti e cani molto simili per alzare la sfida."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:12+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 1 (barra in basso a sinistra e scritta centrale «1») il contatore dei secondi sale ma la barra di avanzamento è quasi vuota, mentre il copione dice «cinque, quattro, tre, due, uno» al secondo 0-1 e il conto alla rovescia visivo non coincide con la voce; inoltre nel fotogram",
+   "dati": {
+    "controllato": "Grafica dei 6 fotogrammi (leggibilità, contrasto, gatto evidenziato, coerenza con la trascrizione e i secondi) e frasi di copione sulla copertina/scene.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nel fotogramma al secondo 1 (barra in basso a sinistra e scritta centrale «1») il contatore dei secondi sale ma la barra di avanzamento è quasi vuota, mentre il copione dice «cinque, quattro, tre, due, uno» al secondo 0-1 e il conto alla rovescia visivo non coincide con la voce; inoltre nel fotogramma 0.5 il numero 5 è già in cerchio giallo e al secondo 1 è 1: salto visivo tra 5 e 1 senza i numeri intermedi che la voce pronuncia.",
+    "correzione": "Allineare il conto alla rovescia grafico alla voce: 5, 4, 3, 2, 1 con un numero per ogni secondo, e far avanzare la barra in modo proporzionale.",
+    "idea": "Nel video successivo mostra un'anteprima visiva del «rompicapo di domani» nell'ultimo fotogramma, così la promessa di follow diventa un gancio concreto."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:12+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Nessun problema grafico: i titoli sono grandi e leggibili, il contatore a destra è chiaro, il cerchio giallo evidenzia bene il gatto e il cartello «Eccolo!» è ben visibile.",
+   "dati": {
+    "controllato": "Font, dimensioni e leggibilità dei testi su tutti i fotogrammi, con il contrasto del cartello di chiusura e della fascia in basso.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "Nessun problema grafico: i titoli sono grandi e leggibili, il contatore a destra è chiaro, il cerchio giallo evidenzia bene il gatto e il cartello «Eccolo!» è ben visibile.",
+    "correzione": "Nessuna correzione necessaria.",
+    "idea": "Pubblicare un teaser con l'enigma del giorno dopo nella stessa grafica, per legare il follow alla continuità della serie."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:15+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Eccolo: seconda riga' (fotogramma 4s) ma sul fotogramma 2.5s la scritta 'ECCOLO!' e l'evidenziazione sono già presenti: il gatto è cerchiato a 4s, mentre la transizione dalla griglia alla schermata 'ECCOLO' avviene in modo netto. Inoltre la fascia 'In quanti secondi?' compare in tut",
+   "dati": {
+    "controllato": "Copertine e grafica dei 6 fotogrammi: layout, leggibilità del titolo, evidenziazione del gatto, coerenza con il copione e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il copione dice 'Eccolo: seconda riga' (fotogramma 4s) ma sul fotogramma 2.5s la scritta 'ECCOLO!' e l'evidenziazione sono già presenti: il gatto è cerchiato a 4s, mentre la transizione dalla griglia alla schermata 'ECCOLO' avviene in modo netto. Inoltre la fascia 'In quanti secondi?' compare in tutte le scene finali ma nel fotogramma a 9s la domanda 'Cani vs Gatti' e la fascia restano sovrapposte senza gerarchia chiara. Il titolo '1989 – 802' nell'intestazione non è spiegato da nessuna parte nel copione né nella didascalia, quindi lo spettatore non capisce cosa rappresentino i numeri.",
+    "correzione": "Sincronizzare la comparsa dell'alone dorato sul gatto con la frase 'Eccolo' (circa 4s), spiegare o rimuovere i numeri 1989 – 802 dall'intestazione (oppure usarli nella didascalia), e nelle scene Cani vs Gatti ridurre la fascia a un elemento più piccolo per dare respiro al titolo.",
+    "idea": "Tenere un 'contatore' visibile dei gatti trovati o dei secondi medi della community nell'intestazione, al posto dei numeri 1989 – 802 non spiegati, così il dato diventa un motivo di follow e di confronto."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:16+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 il conto alla rovescia è 5 (barra piena) mentre la trascrizione dice «cinque, quattro, tre, due, uno» tra 1.0s e 3.9s: al secondo 4 il timer dovrebbe già essere a 1 o chiudersi, e la scena «ECCOLO» con il cerchio compare solo al secondo 6-7. Inoltre la scena di svelamento",
+   "dati": {
+    "controllato": "Grafica e copertine: coerenza dei 6 fotogrammi con copione, timing del conto alla rovescia, leggibilità del testo e del cerchio sul gatto, rispetto dell'orario di ogni scena nella trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 il conto alla rovescia è 5 (barra piena) mentre la trascrizione dice «cinque, quattro, tre, due, uno» tra 1.0s e 3.9s: al secondo 4 il timer dovrebbe già essere a 1 o chiudersi, e la scena «ECCOLO» con il cerchio compare solo al secondo 6-7. Inoltre la scena di svelamento è ferma per circa 2 secondi, poi il passaggio a «Cani vs Gatti» (secondo 7) arriva mentre la voce dice ancora «l'avevi visto?». Nei fotogrammi 0.5-2 il timer resta a 5 mentre la barra cala: da correggere per leggibilità.",
+    "correzione": "Sincronizzare il timer numerico con il conto della voce (5→4→3→2→1) con un'animazione per ogni cifra; far comparire il cerchio sul gatto al secondo 4-5 insieme a «Eccolo»; far durare la scena «L'avevi visto?» fino a fine frase vocale prima di passare a «Cani vs Gatti».",
+    "idea": "Un secondo livello di difficoltà con due intrusi o un intruso piccolo sullo sfondo, mostrando alla fine il tempo medio della community sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:16+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 1 il conto alla rovescia dice 1 con la barra quasi vuota, mentre il copione dice 'cinque, quattro, tre, due, uno' a 0.0-3.9s: il timer visivo è sfasato rispetto alla voce. Inoltre la frase 'Domani è più difficile' appare a fine video come chiusura, ma nei fotogrammi 0.5 e 1",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, fotogrammi e didascalia del reel 'intruso' (gatto tra i cani): la mia mansione è grafica e copertina.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nel fotogramma al secondo 1 il conto alla rovescia dice 1 con la barra quasi vuota, mentre il copione dice 'cinque, quattro, tre, due, uno' a 0.0-3.9s: il timer visivo è sfasato rispetto alla voce. Inoltre la frase 'Domani è più difficile' appare a fine video come chiusura, ma nei fotogrammi 0.5 e 1 la barra del timer e il numero '5' non coincidono con la frase 'Cinque, quattro...' della trascrizione.",
+    "correzione": "Allineare il countdown grafico (5→1) con la voce 'cinque, quattro, tre, due, uno' nei primi 4 secondi, e far comparire 'ECCOLO!' e il cerchio sul gatto esattamente quando la voce dice 'Eccolo'. Verificare anche che la scritta 'seconda riga, terza colonna' sia leggibile per almeno 2 secondi.",
+    "idea": "Dichiarare nel reel una numerazione (es. 'Rompicapo #1') e chiudere con l'appuntamento del giorno dopo, così il formato diventa una serie riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:16+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il conto alla rovescia dice «cinque, quattro, tre, due, uno» ma sul video il timer è ancora fermo a 5 nei primi fotogrammi e il gatto compare già prima dell'annuncio «Eccolo». Inoltre la frase finale «Domani è più difficile» è detta sopra la scena in cui appare la scritta «Cani vs Gatti / Difficile»",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, misure audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e fotogrammi: il gatto è nella seconda riga, terza colonna, come dichiarato.",
+    "esito": "segnalo",
+    "secondo": 8,
+    "problema": "Il conto alla rovescia dice «cinque, quattro, tre, due, uno» ma sul video il timer è ancora fermo a 5 nei primi fotogrammi e il gatto compare già prima dell'annuncio «Eccolo». Inoltre la frase finale «Domani è più difficile» è detta sopra la scena in cui appare la scritta «Cani vs Gatti / Difficile», quindi la voce e il testo a schermo non coincidono. Infine la didascalia parla di «2864 luci» mentre il progetto ne conta 2897.",
+    "correzione": "Allineare la voce di «Eccolo» alla comparsa della cornice sul gatto, far coincidere «Domani è più difficile» con la scritta «DIFFICILE», e aggiornare il numero di luci in didascalia a 2897 (o usare un numero verificato al momento della pubblicazione).",
+    "idea": "Aggiungere un «Cani vs Gatti» con il tempo medio delle risposte dei follower del giorno prima, per dare un risultato da commentare."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:19+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 il frame mostra ancora il cronometro dell'inizio ('In quanti secondi?'), mentre la trascrizione dice 'Eccolo: seconda riga' intorno a 3.9s e la scena di svelamento dovrebbe essere già attiva; inoltre la scena 'DIFFICILE' compare a 7-9s ma la frase 'Domani è più difficile' arriva a 10.0s",
+   "dati": {
+    "controllato": "Fotogrammi e copertine del reel intruso: coerenza visiva, leggibilità del testo, timing dei frame rispetto alla trascrizione e al brief.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 il frame mostra ancora il cronometro dell'inizio ('In quanti secondi?'), mentre la trascrizione dice 'Eccolo: seconda riga' intorno a 3.9s e la scena di svelamento dovrebbe essere già attiva; inoltre la scena 'DIFFICILE' compare a 7-9s ma la frase 'Domani è più difficile' arriva a 10.0s, quindi il testo a schermo è leggermente in anticipo rispetto al parlato. Il frame del secondo 4 è in realtà la scena di chiusura, non lo svelamento: lo svelamento 'ECCOLO!' appare a circa 4s, va verificato.",
+    "correzione": "Allineare il cambio di scena 'ECCOLO / L'AVEVI VISTO?' al momento 'Eccolo' (3.9s) e far comparire 'DIFFICILE.' solo sulla parola 'difficile' (circa 10s), così che testo e voce coincidano.",
+    "idea": "Aggiungere un contatore dei secondi che scorre visibilmente e un'ultima scena con il tempo medio della community, così da trasformare il commento in una sfida di risposta."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:19+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Scrivi in quanti secondi l'hai trovato' arriva a 8.5s, ma il brief la colloca nella scena di chiusura e la didascalia invita a scrivere i secondi: il picco di picco audio è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS, quindi il margine è stretto. Inoltre i fotogrammi invia",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la coerenza tra copione e didascalia, i dati audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e il formato intruso.",
+    "esito": "segnalo",
+    "secondo": 8.5,
+    "problema": "Nella trascrizione la frase 'Scrivi in quanti secondi l'hai trovato' arriva a 8.5s, ma il brief la colloca nella scena di chiusura e la didascalia invita a scrivere i secondi: il picco di picco audio è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS, quindi il margine è stretto. Inoltre i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non coprono il momento in cui appare il gatto ('seconda riga', intorno a 6.6s) con un fotogramma vicino.",
+    "correzione": "Abbassare leggermente il volume di picco sotto -1 dBFS e aggiungere un fotogramma tra 6 e 7 secondi per mostrare il gatto nella seconda riga al momento della rivelazione.",
+    "idea": "Replicare il formato intruso con un fotogramma di rivelazione evidenziato (cerchio luminoso sul gatto) e chiudere sempre con l'invito a indicare la città, combinando i due formati con più follower."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:21+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "I fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non coincidono con quelli richiesti (0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11): mancano 1, 3, 5, 6, 8, 10. Inoltre la didascalia dice «hai 5 secondi» mentre il copione non fissa un tempo di risposta; il dato va verificato. Il conteggio alla trascrizione non è",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, corrispondenza tra copione e brief, didascalia e fotogrammi inviati rispetto a quelli richiesti.",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "I fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non coincidono con quelli richiesti (0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11): mancano 1, 3, 5, 6, 8, 10. Inoltre la didascalia dice «hai 5 secondi» mentre il copione non fissa un tempo di risposta; il dato va verificato. Il conteggio alla trascrizione non è coerente con la battuta 'Cinque, quattro, tre, due, uno' a 3.9s, quindi i secondi indicati nel brief non sono sicuri.",
+    "correzione": "Reinviare l'intero set di fotogrammi richiesti (0.5, 1, 2, ... 11 s) e allineare la didascalia al tempo effettivo del conto alla rovescia, oppure togliere «hai 5 secondi».",
+    "idea": "Per i prossimi reel, un fotogramma finale che mostri il gatto cerchiato con il tempo di soluzione in sovrimpressione, così il commento 'trovato in X secondi' ha un riferimento visivo."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:21+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Eccolo: seconda riga' ma i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non coprono il momento in cui il gatto viene svelato (intorno a 3.9-6.6s): manca un fotogramma nel punto della rivelazione. Inoltre la didascalia non include il dato 'nel tempo di 5 secondi' già presente nel reel, q",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio e dati del progetto per la mansione di pubblicazione del reel 'intruso'.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "Il copione dice 'Eccolo: seconda riga' ma i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non coprono il momento in cui il gatto viene svelato (intorno a 3.9-6.6s): manca un fotogramma nel punto della rivelazione. Inoltre la didascalia non include il dato 'nel tempo di 5 secondi' già presente nel reel, quindi nessun errore grave, ma la frase 'hai 5 secondi' va allineata al conto alla rovescia reale (5 numeri in circa 3.9s).",
+    "correzione": "Aggiungere un fotogramma intorno a 5-6s (rivelazione del gatto in seconda riga) e verificare che la didascalia 'hai 5 secondi' corrisponda al conto alla rovescia.",
+    "idea": "Ripetere il formato con un'immagine di apertura più netta sul gatto nascosto e un'emoji-indizio nella fascia, così il primo secondo cattura subito lo sguardo."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:23+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Eccolo: seconda riga. L'avevi visto?' arriva a 6.6s, ma il copione la prevede dopo la frase 0 (conteggio 5-1 finito a circa 3.9s). Il video si ferma nel conteggio alle 0:00-3:9 e poi fa fare 'Eccolo' in ritardo, con circa 2,7 secondi di pausa piena di silenzio visivo (la",
+   "dati": {
+    "controllato": "Audio (LUFS -14.4, picco -0.8 dBFS, nessun silenzio lungo), trascrizione coi secondi, copione vs. trascrizione, didascalia, fascia e coerenza con i dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "Nella trascrizione la frase 'Eccolo: seconda riga. L'avevi visto?' arriva a 6.6s, ma il copione la prevede dopo la frase 0 (conteggio 5-1 finito a circa 3.9s). Il video si ferma nel conteggio alle 0:00-3:9 e poi fa fare 'Eccolo' in ritardo, con circa 2,7 secondi di pausa piena di silenzio visivo (la scena intruso_svela non ha la rivelazione nei fotogrammi 4-7s inviati). Inoltre la didascalia dice 'hai 5 secondi' mentre il conteggio nel video dura circa 4 secondi.",
+    "correzione": "Allineare il taglio: far partire 'Eccolo: seconda riga' subito dopo 'uno' (intorno ai 4s) e portare la chiusura 'Scrivi in quanti secondi' entro i primi 9s, oppure correggere la didascalia in '4 secondi'. Verificare che nei fotogrammi 4-7s sia visibile la seconda riga evidenziata.",
+    "idea": "Per i prossimi intrusi: mostrare il gatto già evidenziato con un contorno leggero solo nell'ultimo secondo, e usare sempre lo stesso conto alla rovescia per riconoscere il formato."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:23+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice che alla frase «Scrivi in quanti secondi l'hai trovato» il parlato arriva a 8.5s, ma il copione non indica il testo corretto e la didascalia promette «hai 5 secondi» mentre il video dice «Cinque, quattro, tre, due, uno» in 3.9s: il conto alla rovescia e la didascalia non coincid",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del brief, didascalia, misure audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e coerenza con la mansione Pubblicazione.",
+    "esito": "segnalo",
+    "secondo": 8.5,
+    "problema": "La trascrizione dice che alla frase «Scrivi in quanti secondi l'hai trovato» il parlato arriva a 8.5s, ma il copione non indica il testo corretto e la didascalia promette «hai 5 secondi» mentre il video dice «Cinque, quattro, tre, due, uno» in 3.9s: il conto alla rovescia e la didascalia non coincidono. Inoltre il volume medio dei primi 5s (-16.9 dB) è più basso del target, e la voce è generata con IA senza che il brief lo chieda esplicitamente nella copertina (copertina null).",
+    "correzione": "Allineare la didascalia al conto alla rovescia reale (es. «hai pochi secondi») oppure accorciare il conto a 5s nel video; alzare di 2-3 dB il parlato iniziale senza superare -1 dBFS di picco; scegliere un fotogramma di copertina (ora null) con il gatto visibile tra i cani.",
+    "idea": "Una copertina fissa con il gatto cerchiato e un conto alla rovescia a schermo sincronizzato con la voce, così la sfida si capisce anche senza audio."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:24+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nel copione l'intruso viene svelato con «Eccolo: seconda riga. L'avevi visto?» ma la trascrizione è a 6.6s, mentre i fotogrammi inviati sono a 0.5, 2, 4, 7, 9, 11: nessuno cade vicino allo svelamento (6.6s), quindi non si vede il momento in cui il gatto viene indicato. Inoltre il tempo di risposta (",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del brief, didascalia, misure audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e corrispondenza tra testo e durata.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "Nel copione l'intruso viene svelato con «Eccolo: seconda riga. L'avevi visto?» ma la trascrizione è a 6.6s, mentre i fotogrammi inviati sono a 0.5, 2, 4, 7, 9, 11: nessuno cade vicino allo svelamento (6.6s), quindi non si vede il momento in cui il gatto viene indicato. Inoltre il tempo di risposta (5 secondi in apertura) non coincide con la scansione «cinque, quattro, tre, due, uno» che finisce a circa 3.9s, quindi lo spettatore ha un conto alla rovescia più corto del previsto. Il secondo 7 in cui il testo è già «Scrivi in quanti secondi» è coperto, ma manca un fotogramma a 6.6s.",
+    "correzione": "Aggiungere un fotogramma a 6.6s (svelamento del gatto con cerchio o freccia sulla seconda riga) e allineare il numero di secondi in didascalia («hai 5 secondi») alla scansione effettiva del conto alla rovescia.",
+    "idea": "Per i prossimi intrusi, mostrare il cerchio sull'intruso già nel fotogramma di svelamento e tenere il conto alla rovescia visibile a schermo."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:25+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Trova il gatto tra i cani' compare al secondo 0.0, quindi il video parte senza un'apertura visiva e il conteggio parte subito. Inoltre i fotogrammi inviati sono 0.5, 2, 4, 7, 9, 11: nessuno dei due è a metà del conto alla rovescia, quindi non c'è un fotogramma di 'ricerca' prima della rive",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (LUFS, picco, silenzi) e corrispondenza con il brief del formato intruso.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La frase 'Trova il gatto tra i cani' compare al secondo 0.0, quindi il video parte senza un'apertura visiva e il conteggio parte subito. Inoltre i fotogrammi inviati sono 0.5, 2, 4, 7, 9, 11: nessuno dei due è a metà del conto alla rovescia, quindi non c'è un fotogramma di 'ricerca' prima della rivelazione. Il reel vuole far cercare il gatto, ma in questi materiali la ricerca dura solo qualche istante. Il dato sul picco di volume medio nei primi 5 secondi (-16.9 dB) è coerente con un'apertura parlata, non è un problema.",
+    "correzione": "Aggiungere un fotogramma di ricerca pulito (ad esempio 1.5 s) e valutare un'apertura di 1 secondo senza parlato prima del conto alla rovescia; regolare la trascrizione di conseguenza.",
+    "idea": "Per i prossimi intruso: mostrare in apertura una griglia ferma di cani senza parlato per 1 secondo, poi far partire il conto alla rovescia, così lo spettatore cerca davvero il gatto."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:27+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase «Scrivi in quanti secondi l'hai trovato» parte a 8.5s, ma il copione la assegna alla scena di chiusura e la didascalia invita a rispondere con i secondi: il punto di domanda è sovrapposto al conteggio finale del gatto. Inoltre i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) no",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e corrispondenza con il brief del formato intruso.",
+    "esito": "segnalo",
+    "secondo": 8.5,
+    "problema": "Nella trascrizione la frase «Scrivi in quanti secondi l'hai trovato» parte a 8.5s, ma il copione la assegna alla scena di chiusura e la didascalia invita a rispondere con i secondi: il punto di domanda è sovrapposto al conteggio finale del gatto. Inoltre i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non coprono i secondi 1 e 3, dove cadono «trova il gatto» e «cinque, quattro» della scena di apertura, quindi il controllo visivo di quell'istante non è verificabile.",
+    "correzione": "Spostare la domanda «in quanti secondi l'hai trovato» di mezzo secondo dopo la frase «Eccolo», oppure far comparire la fascia di testo a 8.5s, e inviare anche i fotogrammi 1s e 3s per verificare la scena di apertura.",
+    "idea": "Per i prossimi intrusi, mostrare nella stessa inquadratura il tempo del conto alla rovescia in grande, e chiudere con un'anteprima visiva del rompicapo di domani per rafforzare il motivo di follow."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:28+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato «2864 altri» nella didascalia non corrisponde ai materiali: le luci del progetto sono 2897 (quindi 2896 altre con la tua, o 2897 in totale). Il numero va verificato prima della pubblicazione. Inoltre la trascrizione segna «Scrivi in quanti secondi» a 8.5s ma il copione lo prevede come chiusu",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (LUFS, picco, silenzi) e coerenza del testo con il brief, incluso il numero di follower e luci della mappa.",
+    "esito": "segnalo",
+    "secondo": 8.5,
+    "problema": "Il dato «2864 altri» nella didascalia non corrisponde ai materiali: le luci del progetto sono 2897 (quindi 2896 altre con la tua, o 2897 in totale). Il numero va verificato prima della pubblicazione. Inoltre la trascrizione segna «Scrivi in quanti secondi» a 8.5s ma il copione lo prevede come chiusura: il timing va bene, ma l'audio è a -16.9 dB nei primi 5 secondi, leggermente sotto l'obiettivo di apertura.",
+    "correzione": "Sostituire «2864» con il numero reale di luci verificato (2896 altre o 2897 totali) e alzare leggermente il volume della voce nei primi 5 secondi per portarlo verso -14 LUFS senza superare -1 dBFS.",
+    "idea": "Ripetere il formato con un tempo di risposta fisso e mostrare sulla mappa il primo gruppo di città che risponde, per dare un premio visibile a chi commenta."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:29+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Trova il gatto tra i cani» già da 0.0s, ma i fotogrammi inviati partono da 0.5s e non c'è un'immagine di apertura nel brief (apertura: null): il primo frame non è stato verificato come pulito e leggibile. Inoltre il brief prevede un'apertura visiva con il gatto che il testo non",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fascia; la mappa non compare nel reel quindi non ci sono dati da verificare.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "La trascrizione dice «Trova il gatto tra i cani» già da 0.0s, ma i fotogrammi inviati partono da 0.5s e non c'è un'immagine di apertura nel brief (apertura: null): il primo frame non è stato verificato come pulito e leggibile. Inoltre il brief prevede un'apertura visiva con il gatto che il testo non nomina nel primo secondo.",
+    "correzione": "Controllare il fotogramma a 0.5s e confermare che mostri già la griglia di cani con il gatto ben visibile, oppure impostare un'apertura esplicita nel brief. Verificare anche che la didascalia non contenga affermazioni non supportate (il conteggio «hai 5 secondi» è coerente col parlato).",
+    "idea": "Per i prossimi intrusi, mostrare nei primi 0.5s il gatto già evidenziato in piccolo, poi nasconderlo: aiuta sia la chiarezza sia la curiosità."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:29+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il frame di chiusura (11s) è l'unico fotogramma inviato dopo l'ultima frase, ma la trascrizione dice «Domani è più difficile» a 10.0s: la chiusura va verificata sulla resa visiva. Inoltre la didascalia promette un invio con città e nome dell'animale, ma il reel non mostra questo passaggio nei fotogr",
+   "dati": {
+    "controllato": "Ho verificato trascrizione coi secondi, copione, audio (LUFS, picco, silenzi), didascalia e fotogrammi inviati rispetto alla mia mansione di messaggistica/community.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Il frame di chiusura (11s) è l'unico fotogramma inviato dopo l'ultima frase, ma la trascrizione dice «Domani è più difficile» a 10.0s: la chiusura va verificata sulla resa visiva. Inoltre la didascalia promette un invio con città e nome dell'animale, ma il reel non mostra questo passaggio nei fotogrammi; la fascia dice «In quanti secondi l'hai trovato?» mentre la voce chiede lo stesso, quindi c'è ridondanza. Nel brief l'apertura è null, quindi il primo secondo non ha un gancio dichiarato.",
+    "correzione": "Controllare che il fotogramma a 10-11s mostri la scritta/elemento di chiusura; aggiungere un fotogramma tra 9 e 11s; differenziare la fascia dalla domanda vocale (es. «Tempo record? Scrivilo qui»); definire un'apertura esplicita nel brief.",
+    "idea": "Per i prossimi reel: un frame di 'risposta' con il gatto evidenziato da un cerchio, e un invito a commentare con la città nella prima riga della didascalia."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:30+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il brief indica il 'gatto' come intruso e la trascrizione dice 'Eccolo: seconda riga', ma i fotogrammi inviati sono solo a 0.5, 2, 4, 7, 9, 11 s: manca un fotogramma nel momento della rivelazione (intorno a 6.6 s, 'L'avevi visto?') e il frame a 2 s è proprio quando il conto alla rovescia è in corso.",
+   "dati": {
+    "controllato": "Foto e video dei follower: fotogrammi, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fascia testuale rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Il brief indica il 'gatto' come intruso e la trascrizione dice 'Eccolo: seconda riga', ma i fotogrammi inviati sono solo a 0.5, 2, 4, 7, 9, 11 s: manca un fotogramma nel momento della rivelazione (intorno a 6.6 s, 'L'avevi visto?') e il frame a 2 s è proprio quando il conto alla rovescia è in corso. Inoltre il volume medio dei primi 5 secondi (-16.9 dB) è più basso dell'obiettivo; la mia mansione non ha la mappa, quindi non posso verificare i dati della mappa (lista vuota).",
+    "correzione": "Inviare un fotogramma tra 6 e 7 s con il gatto evidenziato nella seconda riga, e alzare leggermente il volume dei primi 5 secondi per avvicinarsi al target di -14 LUFS.",
+    "idea": "Per i prossimi reel: evidenziare l'intruso con un cerchio luminoso al momento della rivelazione e mostrare il risultato sulla mappa, così il legame col progetto è immediato."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:32+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La frase di apertura 'Trova il gatto tra i cani. Cinque, quattro, tre, due, uno.' è detta mentre il conto alla rovescia parte, ma il primo fotogramma utile è a 0.5s e la voce è già in corso: per l'occhio dello spettatore il gatto non è ancora mostrato con chiarezza. Inoltre il picco a -0.8 dBFS è vi",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo), didascalia e coerenza con il brief intruso.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "La frase di apertura 'Trova il gatto tra i cani. Cinque, quattro, tre, due, uno.' è detta mentre il conto alla rovescia parte, ma il primo fotogramma utile è a 0.5s e la voce è già in corso: per l'occhio dello spettatore il gatto non è ancora mostrato con chiarezza. Inoltre il picco a -0.8 dBFS è vicinissimo al limite di -1 dBFS indicato come obiettivo. Nei materiali manca anche il dato sul gatto (posizione reale nella griglia), quindi non posso verificare che 'seconda riga' corrisponda al fotogramma inviato.",
+    "correzione": "Mostrare il fotogramma con il gatto già visibile a 0.5s o tenere la voce di apertura dopo 1s; abbassare leggermente il picco audio sotto -1 dBFS; verificare nei fotogrammi che il gatto sia nella seconda riga.",
+    "idea": "Per i prossimi reel intruso: far partire il video direttamente sul gatto già evidenziato per un istante, e usare un risultato visibile (es. il numero di risposte in tempo reale) come gancio al follow."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:33+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio «Cinque, quattro, tre, due, uno» è detto tra 1.0s e 3.9s, ma il copione lo assegna alla frase 0 insieme ad «Trova il gatto tra i cani», mentre la scena «intruso_svela» parte con «Eccolo» a 3.9s. La didascalia dice «hai 5 secondi» mentre il conto alla rovescia nel video dura circa 3 seco",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e coerenza con i dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 3.9,
+    "problema": "Il conteggio «Cinque, quattro, tre, due, uno» è detto tra 1.0s e 3.9s, ma il copione lo assegna alla frase 0 insieme ad «Trova il gatto tra i cani», mentre la scena «intruso_svela» parte con «Eccolo» a 3.9s. La didascalia dice «hai 5 secondi» mentre il conto alla rovescia nel video dura circa 3 secondi. Inoltre la didascalia dice «si accende sulla mappa con gli altri 2864», ma il progetto riporta 2897 luci: il numero è da aggiornare. Infine il video non indica il gatto né in fotogramma né con un cerchio o freccia: si capisce solo dal parlato.",
+    "correzione": "Allineare la didascalia al conto reale (es. «hai 5 secondi» → «hai pochi secondi» oppure accorciare il conto a 3 secondi nel montaggio). Aggiornare il numero delle luci a 2897. Aggiungere nei fotogrammi un cerchio o una freccia sul gatto alla comparsa di «Eccolo».",
+    "idea": "Ripetere il formato «intruso» con un cerchio animato che si chiude sull'intruso e un contatore visivo dei secondi in sovraimpressione."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:34+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il rompicapo «Trova il gatto tra i cani» non ha un'immagine di riferimento nei materiali (nessun fotogramma con il gatto evidenziato o la posizione indicata), quindi non posso verificare che la risposta «seconda riga» sia corretta né che sia visibile nel video. Inoltre la didascalia dice «si accende",
+   "dati": {
+    "controllato": "Copione, trascrizione coi tempi, didascalia, fascia, audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e numeri del progetto per il tono del reel.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Il rompicapo «Trova il gatto tra i cani» non ha un'immagine di riferimento nei materiali (nessun fotogramma con il gatto evidenziato o la posizione indicata), quindi non posso verificare che la risposta «seconda riga» sia corretta né che sia visibile nel video. Inoltre la didascalia dice «si accende sulla mappa d'Italia con gli altri 2864», mentre i dati riportano 2897 luci: il numero è incoerente. Anche l'apertura è assente (apertura: null) e il primo secondo è già parlato.",
+    "correzione": "Verificare nei fotogrammi che il gatto sia davvero nella seconda riga e che sia visibile prima dello svelamento. Allineare il numero nella didascalia ai dati (2897 luci, oppure «oltre 2.800» se si vuole arrotondare). Valutare un'apertura visiva o una frase d'aggancio nei primi 0.5 secondi.",
+    "idea": "Mostrare nel fotogramma finale un cerchio sul gatto con la scritta «seconda riga», così chi non l'ha trovato ha la risposta visiva e chi l'ha trovato si sente premiato."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:34+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il momento della rivelazione «Eccolo: seconda riga» arriva a 6.6s, ma il brief indica che il gatto va svelato con la scena «intruso_svela»; in più i fotogrammi inviati alla moderazione sono a 0.5, 2, 4, 7, 9, 11 s, quindi non c'è un fotogramma a 6-7s che mostri chiaramente il gatto al momento in cui",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fascia rispetto al brief e agli obiettivi di volume.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "Il momento della rivelazione «Eccolo: seconda riga» arriva a 6.6s, ma il brief indica che il gatto va svelato con la scena «intruso_svela»; in più i fotogrammi inviati alla moderazione sono a 0.5, 2, 4, 7, 9, 11 s, quindi non c'è un fotogramma a 6-7s che mostri chiaramente il gatto al momento in cui viene nominato. Inoltre il reel non ha copertina e l'apertura è null, quindi la prima immagine non è stata definita. Il volume medio dei primi 5s (-16.9 dB) è sotto l'obiettivo di -14 LUFS, ma il dato integrato è in linea.",
+    "correzione": "Allineare un fotogramma al secondo 6.5-7 con il gatto evidenziato (o un cerchio sulla seconda riga), definire una copertina con il gatto visibile, e rivedere il volume dei primi 5 secondi per avvicinarlo a -14 LUFS.",
+    "idea": "Per i prossimi reel dell'intruso, usare sempre una copertina con il gatto già cerchiato e un fotogramma di rivelazione con zoom sulla seconda riga."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:36+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il countdown 'Cinque, quattro, tre, due, uno' arriva a 0.0-3.9s, ma la frase 'Eccolo: seconda riga' parte a 3.9s, cioè proprio quando il gatto dovrebbe essere mostrato; il timing del 'Eccolo' non lascia tempo per evidenziare l'intruso prima della svelatura. Inoltre la didascalia d",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi tempi, audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo), didascalia e coerenza col brief 'intruso'.",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "Nella trascrizione il countdown 'Cinque, quattro, tre, due, uno' arriva a 0.0-3.9s, ma la frase 'Eccolo: seconda riga' parte a 3.9s, cioè proprio quando il gatto dovrebbe essere mostrato; il timing del 'Eccolo' non lascia tempo per evidenziare l'intruso prima della svelatura. Inoltre la didascalia dice 'hai 5 secondi' mentre il countdown nel parlato dura circa 3.9s: incoerenza minore. Dal lato audio, il volume medio dei primi 5s (-16.9 dB) è sotto l'obiettivo di apertura forte e il video dura 11.9s con 6 fotogrammi inviati ma nessun dato sulla copertina.",
+    "correzione": "Allineare la didascalia ('hai 4 secondi' o 'hai qualche secondo') e spostare 'Eccolo' di circa 0.5s dopo la pausa, oppure accorciare il countdown; alzare leggermente il volume dell'apertura (+1-2 dB) per catturare l'attenzione nei primi secondi.",
+    "idea": "Per i prossimi intrusi, mettere il gatto in una posizione più piccola o sfocata nella prima riga così la svelatura 'seconda riga' regala una vera soddisfazione, e chiedere di taggare un amico per aumentare le condivisioni, che oggi sono quasi assenti (2 condivisioni nei reel recenti)."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:37+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il brief indica 'apertura: null' e la trascrizione parte con 'Trova il gatto' al secondo 0.0 senza un aggancio visivo dichiarato; inoltre il volume medio dei primi 5s è -16.9 dB, più basso dell'obiettivo, quindi l'apertura rischia di essere debole per chi scorre. Il testo della fascia e della didasc",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del brief, didascalia, misure audio e dati di progetto del reel 'intruso' (11.9s).",
+    "esito": "segnalo",
+    "secondo": 0.0,
+    "problema": "Il brief indica 'apertura: null' e la trascrizione parte con 'Trova il gatto' al secondo 0.0 senza un aggancio visivo dichiarato; inoltre il volume medio dei primi 5s è -16.9 dB, più basso dell'obiettivo, quindi l'apertura rischia di essere debole per chi scorre. Il testo della fascia e della didascalia dice 'hai 5 secondi' ma il conto alla rovescia nella trascrizione è 'cinque, quattro, tre, due, uno' tra 1.0s e 3.9s, cioè circa 3 secondi: incoerenza da verificare.",
+    "correzione": "Definire un'apertura esplicita (es. immagine del gatto evidenziata o frase d'impatto nei primi 0.5s) e alzare il volume dei primi 5s; allineare la didascalia al conto alla rovescia reale oppure accorciare il conto a 5 secondi.",
+    "idea": "Ripetere il formato con una serie numerata ('Intruso #2, #3…') e un indizio visivo di partenza fisso, così il pubblico riconosce il formato e torna a cercare il nuovo episodio."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:39+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Trova il gatto tra i» a 0.0s e «cani» a 1.0s, ma il copione e la didascalia dicono «cani» come chiusura della frase d'apertura; inoltre il conto alla rovescia 'Cinque, quattro, tre, due, uno' parte prima della fine della frase, quindi la frase d'apertura è più lunga del previst",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del brief, didascalia, misure audio e fotogrammi: la sequenza è coerente e l'audio rispetta gli obiettivi.",
+    "esito": "segnalo",
+    "secondo": 1.0,
+    "problema": "La trascrizione dice «Trova il gatto tra i» a 0.0s e «cani» a 1.0s, ma il copione e la didascalia dicono «cani» come chiusura della frase d'apertura; inoltre il conto alla rovescia 'Cinque, quattro, tre, due, uno' parte prima della fine della frase, quindi la frase d'apertura è più lunga del previsto. Il campo 'apertura' del brief è null e la fascia non ha un testo di apertura separato, quindi nei primi secondi manca un aggancio visivo esplicito. Inoltre 'dati_mappa' è vuoto, quindi nel video non ci sono dati verificati della mappa da mostrare o citare.",
+    "correzione": "Verificare nei fotogrammi 0.5s-2s che il gatto sia già riconoscibile e che il testo 'Trova il gatto' compaia entro il primo secondo; se il conto alla rovescia sovrasta la frase, accorciare o spostare il conto. Non citare numeri di mappa non presenti nei dati.",
+    "idea": "Per il prossimo rompicapo, mettere il nome dell'animale nel fotogramma iniziale e dare il risultato (secondi medi dei commenti) nel reel successivo, così il ciclo tra sfida e risposta crea attesa."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:39+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'hai 5 secondi' in didascalia e il conto alla rovescia 'Cinque, quattro, tre, due, uno' non corrispondono alla durata reale: il conto parte al secondo 0 e finisce intorno ai 3.9s, mentre il video dura 11.9s. Inoltre il copione dice 'Scrivi in quanti secondi l'hai trovato' ma la didascalia pr",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (LUFS, picco, silenzi), didascalia e coerenza del brief sul reel del gatto tra i cani.",
+    "esito": "segnalo",
+    "secondo": 8.5,
+    "problema": "Il dato 'hai 5 secondi' in didascalia e il conto alla rovescia 'Cinque, quattro, tre, due, uno' non corrispondono alla durata reale: il conto parte al secondo 0 e finisce intorno ai 3.9s, mentre il video dura 11.9s. Inoltre il copione dice 'Scrivi in quanti secondi l'hai trovato' ma la didascalia promette 'hai 5 secondi', incoerente. Il campo 'apertura' è null, quindi la prima frase non ha un aggancio visivo dichiarato.",
+    "correzione": "Allineare la didascalia al conto alla rovescia reale (es. 'hai 5 secondi' solo se il conto dura 5s, altrimenti togliere il numero) e dichiarare nel brief un'apertura visiva sul primo fotogramma (0.5s) per trattenere chi scorre.",
+    "idea": "Per i prossimi reel del formato intruso, usare un conto alla rovescia di durata dichiarata nel brief e un'apertura visiva forte nel primo fotogramma, più un abbassamento del picco audio sotto -1 dBFS."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:41+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione riporta «L'avevi visto?» a 6.6s, ma nel copione la frase 1 è «Eccolo: seconda riga. L'avevi visto?» e la chiusura parte a 8.5s; il testo del copione non dice dove sta il gatto in modo verificabile dai fotogrammi inviati (solo 6 su 12 sono stati inviati). Inoltre la didascalia dice «5",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (LUFS, picco, silenzi), didascalia e dati del progetto per il reel dell'intruso.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "La trascrizione riporta «L'avevi visto?» a 6.6s, ma nel copione la frase 1 è «Eccolo: seconda riga. L'avevi visto?» e la chiusura parte a 8.5s; il testo del copione non dice dove sta il gatto in modo verificabile dai fotogrammi inviati (solo 6 su 12 sono stati inviati). Inoltre la didascalia dice «5 secondi» mentre il video dura 11.9s e la sfida conta 5 secondi solo nel parlato: è un'incongruenza leggera ma visibile. Il volume medio dei primi 5s (-16.9 dB) è sotto l'obiettivo implicito del brief per l'apertura, ma i parametri LUFS e picco sono nei limiti.",
+    "correzione": "Allineare la didascalia («hai 5 secondi» → «hai pochi secondi» oppure lasciare il conto alla rovescia come unico riferimento), verificare con i fotogrammi mancanti che «seconda riga» corrisponda davvero al gatto prima di pubblicare, e alzare leggermente il volume nei primi secondi.",
+    "idea": "Per i prossimi reel: mostrare nel video l'indicazione della riga (un cerchio o una freccia sul gatto) subito dopo «seconda riga», così chi non l'ha trovato capisce e il momento di rivelazione diventa più soddisfacente; e ripetere il formato questa_luce, che rende meglio."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:41+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Trova il gatto tra i cani' a 0.0s, ma il brief ha un'apertura nulla e la voce parte subito: il primo fotogramma (0.5s) cade già sulla domanda, senza un'immagine che mostri il compito. Inoltre la didascalia dice 'hai 5 secondi', mentre il conto alla rovescia nel copione è di cir",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fascia rispetto al brief 'intruso'.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La trascrizione dice 'Trova il gatto tra i cani' a 0.0s, ma il brief ha un'apertura nulla e la voce parte subito: il primo fotogramma (0.5s) cade già sulla domanda, senza un'immagine che mostri il compito. Inoltre la didascalia dice 'hai 5 secondi', mentre il conto alla rovescia nel copione è di circa 3 secondi (da 1.0s a 3.9s), quindi il numero non torna con il video.",
+    "correzione": "Allineare la didascalia al conto reale (es. 'hai pochi secondi') oppure ridurre il conto a 5 secondi nel montaggio; far partire il fotogramma iniziale con la griglia di cani già visibile e il gatto ben riconoscibile.",
+    "idea": "Per i prossimi intruso, mostrare la griglia completa per 1 secondo prima del conto alla rovescia e cerchiare il gatto con un'evidenziazione leggera al momento dello svelamento, così il colpo d'occhio resta netto anche su schermi piccoli."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:42+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi (-16,9 dB) è più basso dell'obiettivo generale per l'apertura, e il reel parte con un conto alla rovescia senza un aggancio visivo chiaro; la frase 'Eccolo: seconda riga' arriva a 3,9-6,6 s, quindi il punto di svolta non è esplicitato nei primi istanti. Inoltre la",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (LUFS, picco, volume iniziale) e coerenza tra testo e brief del formato intruso.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il volume medio dei primi 5 secondi (-16,9 dB) è più basso dell'obiettivo generale per l'apertura, e il reel parte con un conto alla rovescia senza un aggancio visivo chiaro; la frase 'Eccolo: seconda riga' arriva a 3,9-6,6 s, quindi il punto di svolta non è esplicitato nei primi istanti. Inoltre la didascalia cita '2864' luci mentre il progetto ne riporta 2897: il dato va allineato.",
+    "correzione": "Alzare il volume dell'apertura di qualche dB (senza superare il picco di -1 dBFS) e far comparire subito il cerchio o la freccia sul gatto al secondo 0; aggiornare il numero delle luci nella didascalia a 2897 (o formulare 'quasi 2900').",
+    "idea": "Ripetere il formato intruso con un'immagine di partenza più netta (gatto evidenziato da un cerchio colorato che si spegne al via) e chiudere sempre con il numero di luci aggiornato dal dato reale."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:43+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'hai 5 secondi' nella didascalia e il conto alla rovescia 'Cinque, quattro, tre, due, uno' (0-3.9s) non coincidono con la trascrizione: la voce dice 'Scrivi in quanti secondi l'hai trovato' al secondo 8.5, ma la didascalia promette un limite di 5 secondi che nel video non è mai indicato in m",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 8.5,
+    "problema": "Il dato 'hai 5 secondi' nella didascalia e il conto alla rovescia 'Cinque, quattro, tre, due, uno' (0-3.9s) non coincidono con la trascrizione: la voce dice 'Scrivi in quanti secondi l'hai trovato' al secondo 8.5, ma la didascalia promette un limite di 5 secondi che nel video non è mai indicato in modo chiaro. Inoltre 'Eccolo: seconda riga' arriva a 3.9s mentre il gatto non è mostrato in modo verificabile nei fotogrammi inviati come 'seconda riga'.",
+    "correzione": "Allineare didascalia e voce: o scrivere 'hai 5 secondi' anche nel video (sovrimpressione al secondo 0), oppure togliere il limite dalla didascalia e dire solo 'in quanti secondi l'hai trovato'. Verificare che la seconda riga sia visibile nei fotogrammi 1-4s.",
+    "idea": "Ripetere il formato con un contatore visivo grande a schermo (5-4-3-2-1) e un'animazione di cerchio sul gatto al momento della rivelazione, così il limite di tempo è chiaro senza didascalia."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:44+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 2 i fotogrammi inviati non mostrano il gatto: dato che l'intruso va svelato solo dopo il conteggio, va bene, ma il picco di volume (-0.8 dBFS) è molto vicino al limite di -1 dBFS fissato come obiettivo, e l'apertura (-16.9 dB nei primi 5 s) è più bassa del resto, quindi l'attacco può risu",
+   "dati": {
+    "controllato": "Trascrizione, secondi, audio (-14.4 LUFS, picco -0.8 dBFS, volume iniziale -16.9 dB) e coerenza tra copione, didascalia e fascia.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Al secondo 2 i fotogrammi inviati non mostrano il gatto: dato che l'intruso va svelato solo dopo il conteggio, va bene, ma il picco di volume (-0.8 dBFS) è molto vicino al limite di -1 dBFS fissato come obiettivo, e l'apertura (-16.9 dB nei primi 5 s) è più bassa del resto, quindi l'attacco può risultare debole. Inoltre la didascalia dice 'hai 5 secondi' mentre la voce conta da cinque a uno in circa 3 secondi: incoerenza da correggere.",
+    "correzione": "Abbassare il picco sotto -1 dBFS e alzare leggermente il volume dei primi secondi; allineare la didascalia al conteggio reale (es. 'hai pochi secondi' oppure aggiornare il numero).",
+    "idea": "Per i prossimi reel tenere sempre il conteggio dentro la durata dichiarata nella didascalia e usare un'immagine d'apertura più contrastata per fermare lo scroll nei primi 2 secondi."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:45+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il parlato dice 'Scrivi in quanti secondi l'hai trovato' e la didascalia ripete la stessa richiesta, ma il reel non è ancora chiaro su cosa chiedere di fare nei commenti: la frase arriva al secondo 8.5 e la fascia in sovrimpressione dice già 'In quanti secondi l'hai trovato?' senza un invito esplici",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (LUFS, picco, silenzi) e coerenza tra testo parlato, fascia e didascalia.",
+    "esito": "segnalo",
+    "secondo": 8.5,
+    "problema": "Il parlato dice 'Scrivi in quanti secondi l'hai trovato' e la didascalia ripete la stessa richiesta, ma il reel non è ancora chiaro su cosa chiedere di fare nei commenti: la frase arriva al secondo 8.5 e la fascia in sovrimpressione dice già 'In quanti secondi l'hai trovato?' senza un invito esplicito a rispondere con il nome della città. Inoltre il 'domani è più difficile' arriva a 10.0s e il video finisce a 11.9s senza una copertina o un fotogramma di chiusura con il richiamo al follow. Il brief indica apertura: null, quindi il primo secondo è solo la domanda parlata.",
+    "correzione": "Mantenere il parlato ma aggiungere in sovrimpressione dal 8.5s al 11.9s un invito breve tipo 'Seguici: domani è più difficile' con la scritta 'Seguici' ben visibile nell'ultimo fotogramma; e definire un'apertura visiva (testo o fotogramma) nei primi 0.5s per trattenere chi scorre.",
+    "idea": "Per i prossimi intruso, ripetere la logica 'in quanti secondi' come sfida a tempo con il numero di secondi del record della community in sovrimpressione, così il commento diventa un confronto."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:45+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase «L'avevi visto?» arriva a 6.6s, ma il brief la colloca nella scena di svelamento; non ci sono dati mappa per questo reel (dati_mappa vuoto) quindi non posso verificare la conferma sulla mappa. Inoltre i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non coprono il momento in cu",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, misure audio (LUFS, picco, silenzi), didascalia e dati della mappa per il reel «intruso» in Coppa delle Zampe.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "Nella trascrizione la frase «L'avevi visto?» arriva a 6.6s, ma il brief la colloca nella scena di svelamento; non ci sono dati mappa per questo reel (dati_mappa vuoto) quindi non posso verificare la conferma sulla mappa. Inoltre i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non coprono il momento in cui compare la risposta «seconda riga» (circa 3.9-6.6s) né il secondo 1, dove il gatto dovrebbe essere già individuabile dallo spettatore.",
+    "correzione": "Aggiungere fotogrammi tra 3.9s e 6.6s per verificare che il gatto e la seconda riga siano visibili e ben evidenziati, e allegare i dati verificati della mappa per questo reel prima della pubblicazione.",
+    "idea": "Per i prossimi reel «intruso», mostrare in apertura un fotogramma sfocato dell'intruso per creare curiosità, e usare un cerchio che si restringe sul gatto al momento della rivelazione."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:48+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione, la frase finale «Domani è più difficile» (circa 8.5-10s) non coincide con la scena di chiusura nei fotogrammi: a 9s e 11s compare il testo «DIFFICILE.» sotto il confronto cani/gatti, ma il copione lo collocherebbe alla frase 2, mentre la voce a 8.5s dice «in quanti secondi l'hai ",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, fotogrammi, audio e didascalia del reel intruso rispetto alla mia mansione di crescita follower.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Nella trascrizione, la frase finale «Domani è più difficile» (circa 8.5-10s) non coincide con la scena di chiusura nei fotogrammi: a 9s e 11s compare il testo «DIFFICILE.» sotto il confronto cani/gatti, ma il copione lo collocherebbe alla frase 2, mentre la voce a 8.5s dice «in quanti secondi l'hai trovato». Inoltre la didascalia chiede di scrivere i secondi ma nel video non c'è un invito esplicito a rispondere nei primi secondi della scena finale; la scena «Cani vs Gatti» resta ferma per circa 2 secondi sul testo «SECONDI L'HAI TROVATO» senza che la voce lo accompagni chiaramente.",
+    "correzione": "Allineare la voce «Domani è più difficile» alla scena con «DIFFICILE.» e far coincidere la scritta «SECONDI L'HAI TROVATO» con la frase vocale corrispondente; verificare il sincronismo sui fotogrammi 9-11s.",
+    "idea": "Chiudere con una domanda-sfida sul prossimo reel (es. un gatto più piccolo) e mostrare nella scena finale il tempo medio dei commenti per creare attesa e commenti."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:48+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nel copione la frase «Domani è più difficile» è detta in chiusura, ma nel fotogramma al secondo 9 il testo a schermo dice «DIFFICILE.» senza che il parlato lo ripeta in quel punto: la scena «DIFFICILE» compare solo dopo il «Secondi l'hai trovato» e non è allineata con la voce (che pronuncia «Scrivi ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e fascia rispetto al brief, più i fotogrammi del reel (il gatto è nella seconda riga, terza colonna, come dichiarato).",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Nel copione la frase «Domani è più difficile» è detta in chiusura, ma nel fotogramma al secondo 9 il testo a schermo dice «DIFFICILE.» senza che il parlato lo ripeta in quel punto: la scena «DIFFICILE» compare solo dopo il «Secondi l'hai trovato» e non è allineata con la voce (che pronuncia «Scrivi in quanti secondi l'hai trovato» al secondo 8.5). Inoltre il reel parla di «5 secondi» nella didascalia mentre il conto alla rovescia del video parte da 5 e il gatto appare al secondo 3.9: il dato è coerente con il conto, ma la voce dice «Cinque, quattro, tre, due, uno» mentre il quarto fotogramma mostra il conto a 1 già al secondo 2: piccolo sfasamento tra voce e barra di avanzamento.",
+    "correzione": "Allineare la scena «DIFFICILE.» alla frase vocale «Domani è più difficile» (circa 10.0s) e verificare che il conto alla rovescia visivo coincida con la voce dei numeri.",
+    "idea": "Ripetere il formato con una versione «ti è mai sfuggito?» che mostra il tempo medio degli utenti sul gatto, così da creare un confronto che invita a tornare a commentare."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:49+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 (fotogramma con la scritta 'ECCOLO!') il gatto è stato evidenziato, ma la trascrizione dice 'Eccolo: seconda riga' mentre sul fotogramma il conto alla rovescia e la 'seconda riga, terza colonna' sono visibili solo in parte; inoltre la scritta 'L'AVEVI VISTO?' compare circa al secondo 6-",
+   "dati": {
+    "controllato": "Motivo per seguire nel reel del rompicapo 'trova il gatto tra i cani': gancio, chiamata all'azione per i follower, fotogrammi e coerenza con la trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 (fotogramma con la scritta 'ECCOLO!') il gatto è stato evidenziato, ma la trascrizione dice 'Eccolo: seconda riga' mentre sul fotogramma il conto alla rovescia e la 'seconda riga, terza colonna' sono visibili solo in parte; inoltre la scritta 'L'AVEVI VISTO?' compare circa al secondo 6-7, quindi la battuta e l'immagine sono sfasate di pochi decimi. Nel reel c'è anche un problema di testo: l'ultimo fotogramma (secondo 11) riporta 'DIFFICILE.' mentre la trascrizione dice 'Domani è più difficile', quindi la frase finale non coincide con quella scritta a schermo.",
+    "correzione": "Allineare la comparsa di 'L'AVEVI VISTO?' alla frase parlata e far coincidere la chiusura a schermo ('DIFFICILE.') con la voce ('Domani è più difficile') o viceversa.",
+    "idea": "Mostrare nel reel finale il numero di secondi medio dei commenti o un esempio reale di città che si accende, per rafforzare il senso di comunità e il desiderio di partecipare."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:49+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Eccolo: seconda riga» ma nella scena di svelamento il cerchio lo evidenzia correttamente; il problema è il tempo: la voce «Eccolo» arriva a 3.9s mentre nel fotogramma 4s la scena di svelamento non è ancora attiva, e la frase «L'avevi visto?» (6.6s) compare nel fotogramma 7s in ritardo ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia e fascia rispetto al brief, più i sei fotogrammi: il gatto è davvero alla seconda riga, terza colonna, come detto in voce.",
+    "esito": "segnalo",
+    "secondo": 3.9,
+    "problema": "Il reel dice «Eccolo: seconda riga» ma nella scena di svelamento il cerchio lo evidenzia correttamente; il problema è il tempo: la voce «Eccolo» arriva a 3.9s mentre nel fotogramma 4s la scena di svelamento non è ancora attiva, e la frase «L'avevi visto?» (6.6s) compare nel fotogramma 7s in ritardo rispetto alla fine della frase precedente. Inoltre la didascalia dice «hai 5 secondi» e il conto alla rovescia è a 5 nei primi fotogrammi, ma il fotogramma a 1s mostra già «1» senza pausa visibile tra i due.",
+    "correzione": "Sincronizzare lo stacco sulla scena di svelamento a 3.9s e far comparire «L'avevi visto?» subito dopo, a 4.5s circa; allineare il conto alla rovescia alla voce, con una pausa leggibile tra «due» e «uno».",
+    "idea": "Ripetere la scena finale con il numero di chi ha risposto più velocemente della community, così il reel successivo diventa una sfida con un record da battere."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:51+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione c'è un conteggio dettato 'Cinque, quattro, tre, due, uno' con la rivelazione 'Eccolo' a 3.9s, ma la trascrizione non riporta il secondo in cui il gatto diventa visibile; inoltre il primo fotogramma (0.5s) mostra già il contatore a 5 con la barra piena a metà, quindi l'ordine visiv",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e fotogrammi della mia mansione (Crescita/follower): il gatto è visibile e la scena è coerente, con il contatore che scende da 5 a 1.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nella trascrizione c'è un conteggio dettato 'Cinque, quattro, tre, due, uno' con la rivelazione 'Eccolo' a 3.9s, ma la trascrizione non riporta il secondo in cui il gatto diventa visibile; inoltre il primo fotogramma (0.5s) mostra già il contatore a 5 con la barra piena a metà, quindi l'ordine visivo va verificato. Un dettaglio concreto: la frase 'Domani è più difficile' arriva a 10.0s, ma il fotogramma a 11s mostra 'DIFFICILE' con il bordo finale, quindi il messaggio di chiusura è coerente.",
+    "correzione": "Allineare la voce 'Eccolo' al fotogramma in cui appare la scena di rivelazione (circa 4s) e verificare che il conteggio alla rovescia corrisponda alla barra di avanzamento.",
+    "idea": "Aggiungere un'ultima schermata con il tempo record della community ('record: 1 secondo') per trasformare il quiz in una sfida da rilanciare nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:53+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 6 la scena 'ECCOLO' mostra il gatto nella seconda riga, terza colonna, coerente con la voce. Il problema è nel fotogramma al secondo 1: il timer mostra '1' ma la trascrizione dice 'Cinque, quattro, tre, due, uno' già a 1.0s-3.9s, quindi il conto alla rovescia visivo non è sincronizzato co",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, fotogrammi, audio, didascalia e brief del reel 'trova l'intruso' (gatto tra i cani), con verifica che la sequenza di scene e i numeri di conteggio corrispondano.",
+    "esito": "segnalo",
+    "secondo": 6,
+    "problema": "Al secondo 6 la scena 'ECCOLO' mostra il gatto nella seconda riga, terza colonna, coerente con la voce. Il problema è nel fotogramma al secondo 1: il timer mostra '1' ma la trascrizione dice 'Cinque, quattro, tre, due, uno' già a 1.0s-3.9s, quindi il conto alla rovescia visivo non è sincronizzato con la voce. Inoltre nella trascrizione manca la parola 'Trova' ben allineata all'inquadratura iniziale, e la frase 'Domani è più difficile' arriva dopo la scena 'DIFFICILE', creando un leggero scollamento tra voce e testo a schermo.",
+    "correzione": "Allineare il timer a schermo al conto della voce (5 al secondo 0.5, 4 a 1.5, ecc.) e fare apparire 'DIFFICILE.' in sincronia con 'Domani è più difficile'. Accorciare la scena di chiusura di circa un secondo per tenere il ritmo.",
+    "idea": "Ripetere il formato con una variante a difficoltà crescente e mostrare nel finale il tempo medio della community, così da creare una serie riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:54+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il sottotitolo dice 'Domani è più difficile', ma nell'ultimo fotogramma (11s) il testo a schermo è 'DIFFICILE.' e la sequenza si sovrappone con la frase 'Secondi l'hai trovato' già a 9s; c'è anche un disallineamento: la scena 'L'avevi visto?' compare intorno ai 6-7s mentre la voce",
+   "dati": {
+    "controllato": "Ho verificato la mia mansione sul reel 'Trova l'intruso': copione, timing dei fotogrammi, coerenza tra trascrizione e schermate, audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Nella trascrizione il sottotitolo dice 'Domani è più difficile', ma nell'ultimo fotogramma (11s) il testo a schermo è 'DIFFICILE.' e la sequenza si sovrappone con la frase 'Secondi l'hai trovato' già a 9s; c'è anche un disallineamento: la scena 'L'avevi visto?' compare intorno ai 6-7s mentre la voce dice 'l'avevi visto' a 6.6s, ok, ma la chiusura 'Domani è più difficile' parte a 10s e la scritta 'DIFFICILE' compare solo nell'ultimo fotogramma, quindi il finale è poco leggibile in tempo reale. Inoltre la didascalia promette 'hai 5 secondi' mentre il contatore nel video parte da 5 e scende a 1 in modo coerente: nessun errore lì.",
+    "correzione": "Allungare di 0,5-1 s la schermata finale 'DIFFICILE.' e farla comparire insieme alla frase vocale; mantenere il contatore allineato alla voce.",
+    "idea": "Per i prossimi reel, aggiungere un'ultima scena con 'Seguici per il rompicapo di domani' con un'icona di follow, così il richiamo al follow è esplicito e non solo nella didascalia."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:54+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella scena 'Cani vs Gatti' al secondo 7 (fotogramma inviato) il titolo dice 'DIFFICILE.' mentre il copione della trascrizione dice 'Domani è più difficile': il testo a schermo e la voce non combaciano. Inoltre la didascalia dice '5 secondi' e la fascia 'In quanti secondi?' è ripetuta in più scene, ",
+   "dati": {
+    "controllato": "Ho verificato il secondo 1 del reel in cui il gatto è nella seconda riga, terza colonna (coerente con la rivelazione), e il numero di cani/gatti e la coerenza testo-immagine nei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella scena 'Cani vs Gatti' al secondo 7 (fotogramma inviato) il titolo dice 'DIFFICILE.' mentre il copione della trascrizione dice 'Domani è più difficile': il testo a schermo e la voce non combaciano. Inoltre la didascalia dice '5 secondi' e la fascia 'In quanti secondi?' è ripetuta in più scene, un po' pesante.",
+    "correzione": "Allineare il testo a schermo alla voce (es. 'DOMANI PIÙ DIFFICILE.') e togliere la fascia ripetuta dalle scene di confronto, lasciandola solo in apertura e chiusura.",
+    "idea": "Ripetere il formato con una sfida a tempo più visibile (timer che scorre sul cerchio) e far rispondere i follower con l'animale del loro quartiere sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:56+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Domani è più difficile' (chiusura), ma nella trascrizione la frase 'Scrivi in quanti secondi l'hai trovato' cade al secondo 6.6 e 'Domani è più difficile' a 8.5-10.0s, mentre nei fotogrammi al secondo 9 e 11 compare ancora la scena di chiusura con la fascia 'In quanti secondi?' e la",
+   "dati": {
+    "controllato": "Sincronia tra copione, trascrizione coi secondi e fotogrammi, audio e didascalia del reel intruso.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "Il copione dice 'Domani è più difficile' (chiusura), ma nella trascrizione la frase 'Scrivi in quanti secondi l'hai trovato' cade al secondo 6.6 e 'Domani è più difficile' a 8.5-10.0s, mentre nei fotogrammi al secondo 9 e 11 compare ancora la scena di chiusura con la fascia 'In quanti secondi?' e la scena 'Cani vs Gatti' con 'DIFFICILE.': la chiusura visiva è ripetuta e il ritmo dell'ultimo tratto si allunga. Inoltre il cartello 'Secondi l'hai trovato' e 'Difficile' occupano quasi 3 secondi senza nuova informazione. Nei dati non ci sono numeri che giustifichino la scritta '2864 luci' nella didascalia (il progetto dichiara 2897), quindi è un disallineamento da verificare.",
+    "correzione": "Allineare il conteggio delle luci nella didascalia ai dati del progetto (2897) e ridurre a circa 1,5 s la scena 'Cani vs Gatti', facendo coincidere la frase 'Domani è più difficile' con il solo cartello 'DIFFICILE.'.",
+    "idea": "Chiudere con un'anteprima del rompicapo di domani (immagine sfocata con 'Domani: 1 gatto in più') per trasformare la chiusura in un motivo concreto di follow."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:57+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -16,9 dB, più basso dell'obiettivo di -14 LUFS e sotto il resto del reel: l'apertura risulta più debole proprio dove serve agganciare chi scorre. Inoltre la trascrizione dice 'Cinque, quattro, tre, due, uno' a partire da 1.0s, ma il copione mette il conto alla f",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (LUFS, picco, silenzi, volume iniziale) e corrispondenza tra frasi e scene.",
+    "esito": "segnalo",
+    "secondo": 0.0,
+    "problema": "Il volume medio dei primi 5 secondi è -16,9 dB, più basso dell'obiettivo di -14 LUFS e sotto il resto del reel: l'apertura risulta più debole proprio dove serve agganciare chi scorre. Inoltre la trascrizione dice 'Cinque, quattro, tre, due, uno' a partire da 1.0s, ma il copione mette il conto alla frase 0; il conto alla rovescia è quindi sincronizzato male con le immagini, da verificare sui fotogrammi.",
+    "correzione": "Alzare il volume dei primi 5 secondi (portare la voce o il tono d'avvio verso -14 LUFS senza superare -1 dBFS) e allineare il conto alla rovescia all'immagine del gatto, facendolo partire al secondo 0 o subito dopo la frase iniziale.",
+    "idea": "Ripetere il formato con due o tre animali di razze molto simili e mostrare nella chiusura il numero medio di secondi dei commenti, per creare una serie riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:57+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Nel copione e nel brief l'avviso 'Eccolo: seconda riga' è la frase 1 e la scena 'intruso_svela', ma la trascrizione mostra 'L'avevi visto?' a 6.6s mentre la frase 'Scrivi in quanti secondi' parte a 8.5s: la domanda finale al pubblico arriva con la chiusura ancora in corso e la tempistica dei fotogra",
+   "dati": {
+    "controllato": "Meccaniche di gioco: coerenza tra copione, trascrizione coi secondi, brief, dati audio e didascalia del reel intruso.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "Nel copione e nel brief l'avviso 'Eccolo: seconda riga' è la frase 1 e la scena 'intruso_svela', ma la trascrizione mostra 'L'avevi visto?' a 6.6s mentre la frase 'Scrivi in quanti secondi' parte a 8.5s: la domanda finale al pubblico arriva con la chiusura ancora in corso e la tempistica dei fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non segna il momento della rivelazione del gatto (circa 3.9s, 'Eccolo'). Inoltre la didascalia dice 'hai 5 secondi' mentre il conto alla rovescia nel copione dura circa 3 secondi (1.0s–3.9s). Dati mappa vuoti: nessun numero di luci da verificare nel reel, quindi nessun dato inventato.",
+    "correzione": "Allineare la didascalia al conto alla rovescia reale (es. 'hai pochi secondi') e inserire un fotogramma intorno a 4s che mostri il gatto evidenziato, così la rivelazione è visibile; spostare la domanda 'in quanti secondi' a un fotogramma dedicato prima della chiusura.",
+    "idea": "Per i prossimi intrusi, mostrare in copertina la sagoma del gatto come indizio sfocato e far apparire il cerchio di evidenziazione esattamente sulla frase 'Eccolo'."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:58+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il parlato chiude al 10.0s con 'Domani è più difficile', mentre la trascrizione mostra la frase 'Scrivi in quanti secondi l'hai trovato' tra 8.5s e 10.0s: il copione chiede di scrivere la risposta in didascalia, ma nel video non c'è un invito chiaro a commentare e la voce non dice esplicitamente 'sc",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del brief, didascalia, misure audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e coerenza tra frasi e testo parlato.",
+    "esito": "segnalo",
+    "secondo": 11,
+    "problema": "Il parlato chiude al 10.0s con 'Domani è più difficile', mentre la trascrizione mostra la frase 'Scrivi in quanti secondi l'hai trovato' tra 8.5s e 10.0s: il copione chiede di scrivere la risposta in didascalia, ma nel video non c'è un invito chiaro a commentare e la voce non dice esplicitamente 'scrivi nei commenti'. Inoltre la didascalia cita 'hai 5 secondi' e 'si accende sulla mappa con gli altri 2864', mentre il progetto riporta 2897 luci: il numero nella didascalia non corrisponde ai dati forniti. La durata di 11.9s e il fotogramma finale al 11s restano coerenti con la chiusura.",
+    "correzione": "Allineare il numero di luci in didascalia a 2897 (o al dato aggiornato) e rendere esplicito nel parlato o nell'ultimo fotogramma l'invito a scrivere i secondi nei commenti.",
+    "idea": "Mostrare sull'ultimo fotogramma un piccolo conto alla rovescia verso il rompicapo del giorno dopo, così la promessa 'domani' diventa visiva e aumenta il motivo di seguire."
+   }
+  },
+  {
+   "t": "2026-11-13T19:22:59+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Non posso valutare il realismo della mappa e del 3D: i materiali non contengono dati di mappa né fotogrammi che mostrino la mappa (dati_mappa è vuoto e i fotogrammi inviati sono solo 6 e non dicono nulla sulla mappa). Inoltre la fascia e la didascalia promettono che la città si accende sulla mappa c",
+   "dati": {
+    "controllato": "Mappa e 3D del reel intruso: non ci sono dati di mappa da verificare (dati_mappa è vuoto), quindi non ho elementi per giudicare il realismo della mappa o del 3D.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Non posso valutare il realismo della mappa e del 3D: i materiali non contengono dati di mappa né fotogrammi che mostrino la mappa (dati_mappa è vuoto e i fotogrammi inviati sono solo 6 e non dicono nulla sulla mappa). Inoltre la fascia e la didascalia promettono che la città si accende sulla mappa con gli altri 2864, ma senza dati di mappa non posso confermare che la resa visiva lo mostri davvero.",
+    "correzione": "Inviarmi i dati della mappa (luci, coordinate delle città, stato della mappa notturna) e alcuni fotogrammi che mostrino la mappa con le luci accese, così posso verificare realismo e resa 3D.",
+    "idea": "Per i prossimi reel della mappa, inserire sempre una inquadratura fissa della città evidenziata, così il collegamento tra commento e luce è visibile."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:01+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Eccolo: seconda riga. L'avevi visto?' non è nel copione di partenza in modo netto: la trascrizione la piazza a 3.9s-6.6s ma il brief la divide in due scene. Più importante: la trascrizione a 0.0-1.0s dice 'Trova il gatto tra i' e il conteggio parte a 1.0s, quindi la richiesta 'hai 5 second",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (LUFS, picco, silenzi), didascalia e coerenza col brief e coi dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "La frase 'Eccolo: seconda riga. L'avevi visto?' non è nel copione di partenza in modo netto: la trascrizione la piazza a 3.9s-6.6s ma il brief la divide in due scene. Più importante: la trascrizione a 0.0-1.0s dice 'Trova il gatto tra i' e il conteggio parte a 1.0s, quindi la richiesta 'hai 5 secondi' della didascalia non corrisponde al tempo reale del video (il conto alla rovescia dura circa 3s, non 5). Inoltre le frasi del copione dicono 'Scrivi in quanti secondi' a 8.5s, ma l'inquadratura richiesta non è verificabile dai fotogrammi che mi sono stati forniti.",
+    "correzione": "Allineare il conto alla rovescia al tempo effettivo nel video (o far contare 5 secondi reali) e aggiornare la didascalia 'hai 5 secondi' di conseguenza. Verificare che la frase 'seconda riga' sia nell'inquadratura quando viene detta.",
+    "idea": "Ripetere il formato con un tempo dichiarato nel testo sopra il video, così il pubblico sa subito quanto ha a disposizione e i commenti con i secondi diventano confrontabili."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:01+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Eccolo: seconda riga» a 3.9 s e «L'avevi visto?» a 6.6 s, ma i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non mostrano un momento preciso in cui il gatto è evidenziato; manca un fotogramma tra 4 e 7 s dove avviene lo svelamento, quindi non posso verificare che la «seconda riga» sia visib",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione e didascalia, misure audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e fotogrammi inviati rispetto alla durata di 11.9 s.",
+    "esito": "segnalo",
+    "secondo": 6.6,
+    "problema": "Il reel dice «Eccolo: seconda riga» a 3.9 s e «L'avevi visto?» a 6.6 s, ma i fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non mostrano un momento preciso in cui il gatto è evidenziato; manca un fotogramma tra 4 e 7 s dove avviene lo svelamento, quindi non posso verificare che la «seconda riga» sia visibile nel momento giusto. Inoltre il picco a -0.8 dBFS è vicino al limite di -1 dBFS indicato come obiettivo.",
+    "correzione": "Aggiungere un fotogramma a circa 4 s (quando compare «seconda riga») con il gatto cerchiato o evidenziato, e abbassare il picco audio sotto -1 dBFS.",
+    "idea": "Evidenziare il gatto con un cerchio che si disegna a schermo e un suono breve al momento dello svelamento."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:01+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS -14.4, picco -0.8 dBFS, nessun silenzio lungo, volume iniziale -16.9 dB), durata e ritmo della trascrizione rispetto al brief.",
+   "dati": {
+    "controllato": "Audio (LUFS -14.4, picco -0.8 dBFS, nessun silenzio lungo, volume iniziale -16.9 dB), durata e ritmo della trascrizione rispetto al brief.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nei prossimi reel del formato intruso, mostrare nei primi 0.5 secondi il gatto in un riquadro sfocato come indizio, per aumentare la curiosità prima del conto alla rovescia."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:03+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione segna 3.9s per «uno» e 6.6s per «Eccolo: seconda riga», quindi il conto alla rovescia 5-1 finisce in 3.9s e «Eccolo» arriva a 6.6s: tra le due battute c'è circa 2.7s di pausa vuota. Inoltre la didascalia dice «hai 5 secondi», ma il conto alla rovescia dura circa 4 secondi, quindi c'è",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, misure audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo), copione del brief e didascalia contro la mansione di fattibilità tecnica.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "La trascrizione segna 3.9s per «uno» e 6.6s per «Eccolo: seconda riga», quindi il conto alla rovescia 5-1 finisce in 3.9s e «Eccolo» arriva a 6.6s: tra le due battute c'è circa 2.7s di pausa vuota. Inoltre la didascalia dice «hai 5 secondi», ma il conto alla rovescia dura circa 4 secondi, quindi c'è un'incoerenza tra testo parlato e didascalia. Il picco a -0.8 dBFS è vicino al limite di -1 dBFS indicato come obiettivo.",
+    "correzione": "Allineare la didascalia ai secondi reali (4 secondi) oppure accorciare la pausa dopo «uno» portando «Eccolo» verso 4.5s. Abbassare leggermente il picco audio per restare sotto -1 dBFS.",
+    "idea": "Usare sempre la stessa durata dichiarata nel testo e nella didascalia, e mostrare nella chiusura il tempo esatto come sovrimpressione per rendere il gioco più immediato."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:03+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, coerenza tra copione, didascalia e brief, e durata del reel.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, coerenza tra copione, didascalia e brief, e durata del reel.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo rompicapo, mostra la soluzione con un cerchio animato sull'intruso e una riga finale con il tempo medio dei commenti; funziona da premio e da nuovo invito a seguire."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:05+00:00",
+   "da": "grafica3d-2",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma del secondo 4 il countdown mostra ancora il numero 5 con la barra a circa metà, mentre la trascrizione (\"cinque, quattro, tre, due, uno\") e la barra al secondo 1 indicano già una progressione diversa: la barra e il numero non sono sincronizzati con la voce. Inoltre nell'ultima scena i",
+   "dati": {
+    "controllato": "Ho controllato la sequenza grafica 3D dell'intruso (gatto tra i cani, fotogrammi, ritmo del countdown e della svelatura) rispetto al copione e alla trascrizione con i secondi.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma del secondo 4 il countdown mostra ancora il numero 5 con la barra a circa metà, mentre la trascrizione (\"cinque, quattro, tre, due, uno\") e la barra al secondo 1 indicano già una progressione diversa: la barra e il numero non sono sincronizzati con la voce. Inoltre nell'ultima scena il testo \"DIFFICILE.\" compare senza il numero di secondi, mentre la voce dice \"Domani è più difficile\": il tono di chiusura è più piatto rispetto all'ironia del copione.",
+    "correzione": "Sincronizzare la barra e il numero del countdown esattamente sui marker della voce (5-4-3-2-1 ogni secondo circa) e aggiungere un'animazione di pulsazione al numero a ogni scatto; nella scena finale far comparire \"DIFFICILE.\" con un leggero effetto di rimbalzo per enfatizzare la battuta.",
+    "idea": "Per i prossimi reel: un rompicapo \"a difficoltà crescente\" con un contatore di tentativi visibile, e alla fine il nome di chi ha risposto più velocemente nei commenti, così da spingere a commentare e a seguire."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:05+00:00",
+   "da": "grafica3d-3",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel brief il testo della scena finale è 'Domani è più difficile', ma nei fotogrammi e nella trascrizione compaiono sequenze diverse: al secondo 7-9 la scena 'Cani vs Gatti' mostra 'SECONDI L'HAI TROVATO' e poi 'DIFFICILE.' al secondo 11, che non corrisponde al copione e alla frase 'Domani è più diff",
+   "dati": {
+    "controllato": "Grafica 3D del reel intruso: fotogrammi, coerenza con copione e trascrizione, tempi del countdown e scena finale.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Nel brief il testo della scena finale è 'Domani è più difficile', ma nei fotogrammi e nella trascrizione compaiono sequenze diverse: al secondo 7-9 la scena 'Cani vs Gatti' mostra 'SECONDI L'HAI TROVATO' e poi 'DIFFICILE.' al secondo 11, che non corrisponde al copione e alla frase 'Domani è più difficile'. Inoltre la scena 'Cani vs Gatti' compare già col countdown nei fotogrammi finali senza che il copione la preveda, e la mappa non è coinvolta nel reel (dati_mappa vuoto).",
+    "correzione": "Allineare le scene 3D al copione: la scena di chiusura deve mostrare il testo 'Domani è più difficile' e la scena 'Cani vs Gatti' va verificata col brief; far coincidere l'animazione 'DIFFICILE.' con la frase della voce.",
+    "idea": "Per i prossimi reel intruso, chiudere con un'unica card fissa 'Domani è più difficile' + fascia con il CTA, senza scene aggiuntive."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:06+00:00",
+   "da": "grafica3d-4",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi la scena ECCOLO mostra il gatto evidenziato con un cerchio luminoso, ma nelle scene conclusive (secondi 9-11) il pannello 'DIFFICILE' appare su uno sfondo viola con la scritta centrata e il cerchio di evidenziazione non compare più: la transizione tra le scene 'svela' e 'chiusura' per",
+   "dati": {
+    "controllato": "Ho verificato la grafica 3D del reel intruso: sequenza di frame, coerenza visiva con il brief, durata e leggibilità della scena finale.",
+    "esito": "segnalo",
+    "secondo": 7,
+    "problema": "Nei fotogrammi la scena ECCOLO mostra il gatto evidenziato con un cerchio luminoso, ma nelle scene conclusive (secondi 9-11) il pannello 'DIFFICILE' appare su uno sfondo viola con la scritta centrata e il cerchio di evidenziazione non compare più: la transizione tra le scene 'svela' e 'chiusura' perde il riferimento visivo al gatto. Inoltre la scena 'Cani vs Gatti' resta statica per circa 2 secondi senza movimento, con possibile calo di ritenzione.",
+    "correzione": "Mantenere il contorno luminoso del gatto come elemento ricorrente fino alla chiusura, oppure inserire un breve zoom/animazione sulla silhouette del gatto nella scena 'DIFFICILE'; accorciare la pausa statica tra le due scene a circa 1 secondo.",
+    "idea": "Creare una versione 'difficile' con un gatto di colore simile al pelo dei cani, mantenendo lo stesso cerchio luminoso come firma riconoscibile del format."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:08+00:00",
+   "da": "grafica3d-5",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 2 la barra di progresso in alto è ancora piena e il timer segna 5, mentre la trascrizione dice «cinque, quattro, tre, due, uno» tra 0 e 3,9 s: il countdown visivo non è sincronizzato con la voce (la barra scende molto più lentamente). Inoltre la scena «ECCOLO!» compare già con il gatto ev",
+   "dati": {
+    "controllato": "Ho verificato la scena grafica 3D dell'intruso (gatto nella seconda riga, terza colonna), il timing dei fotogrammi con la trascrizione e la coerenza visiva della sequenza con il copione.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Al secondo 2 la barra di progresso in alto è ancora piena e il timer segna 5, mentre la trascrizione dice «cinque, quattro, tre, due, uno» tra 0 e 3,9 s: il countdown visivo non è sincronizzato con la voce (la barra scende molto più lentamente). Inoltre la scena «ECCOLO!» compare già con il gatto evidenziato prima che la voce dica «Eccolo», cioè intorno a 3,9 s, e l'icona del gatto si vede in cerchio già nei fotogrammi di risoluzione mentre il dialogo è ancora nel countdown.",
+    "correzione": "Sincronizzare la barra e il numero del timer sul conto alla rovescia vocale (5→1 in circa 3,9 s), far comparire la scena «ECCOLO!» e il cerchio dorato solo in corrispondenza di «Eccolo» (≈3,9 s), e lasciare «L'avevi visto?» al momento della frase (≈6,6 s).",
+    "idea": "Per i prossimi reel: usare un countdown visivo generato dai secondi reali del timestamp audio, così ogni numero cade esattamente sulla voce."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:08+00:00",
+   "da": "grafica3d-6",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 il gatto è ancora visibile nella griglia ma la scena «ECCOLO» non è ancora partita; il passaggio tra le due scene (ai secondi 4-7) è poco leggibile e il cerchio dorato è stato inserito in modo brusco. Inoltre le texture dei cani sulla scena di svelamento sono sfocate e po",
+   "dati": {
+    "controllato": "Ho controllato la grafica 3D: materiali, texture e contrasto dei fotogrammi (cani e gatto, anello dorato, sfondo viola e blu) rispetto al copione e alla durata di 11.9 s.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 il gatto è ancora visibile nella griglia ma la scena «ECCOLO» non è ancora partita; il passaggio tra le due scene (ai secondi 4-7) è poco leggibile e il cerchio dorato è stato inserito in modo brusco. Inoltre le texture dei cani sulla scena di svelamento sono sfocate e poco definite rispetto alla griglia nitida.",
+    "correzione": "Allungare la transizione di 0.3-0.4 s con un fade o zoom sul cerchio dorato, e rendere le texture dei cani sullo sfondo della scena di svelamento più nitide o con una sfocatura più leggera e uniforme.",
+    "idea": "Ripetere il formato con un'immagine di partenza più difficile (gatto di colore simile ai cani) e lasciare un fotogramma fermo più lungo sulla griglia prima della risposta, per aumentare il tempo di visione."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:09+00:00",
+   "da": "grafica3d-7",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 9 la scena di chiusura (cane vs gatto) mostra le due illustrazioni ferme e la fascia d'istruzione è in basso: il passaggio dalla griglia è pulito, ma la camera resta statica mentre il testo cambia da 'Difficile' a 'Secondi l'hai trovato' e il gatto sul tetto non ha un'inquadratura che lo ",
+   "dati": {
+    "controllato": "Camere e inquadrature 3D del reel intruso: griglia, cerchio di evidenziazione sul gatto e transizione alla scena finale, confrontati coi fotogrammi e col copione.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Al secondo 9 la scena di chiusura (cane vs gatto) mostra le due illustrazioni ferme e la fascia d'istruzione è in basso: il passaggio dalla griglia è pulito, ma la camera resta statica mentre il testo cambia da 'Difficile' a 'Secondi l'hai trovato' e il gatto sul tetto non ha un'inquadratura che lo valorizzi. Inoltre al secondo 0.5 la griglia è già piena e il numero del countdown appare solo a tratti come 5 e 1, senza un movimento di camera che guidi l'occhio verso il gatto prima della scena di svelamento.",
+    "correzione": "Aggiungere un leggero zoom o una panoramica lenta sulla scena cane vs gatto durante la frase finale, e far entrare il cerchio dorato con un micro-movimento di camera (push-in) nel momento dello svelamento, così la scena guadagna ritmo senza allungare il reel.",
+    "idea": "Nei prossimi intruso, far partire il cerchio dorato con un leggero effetto di pulsazione già dal secondo 4, così lo spettatore capisce che sta per arrivare la risposta."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:11+00:00",
+   "da": "grafica3d-8",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 la barra di avanzamento in alto è ancora piena (fase 5 secondi) ma nel fotogramma al secondo 0.5 la griglia mostra il cursore già a 5: la sequenza del conto alla rovescia è coerente, però al secondo 7 la schermata 'ECCOLO' mantiene la didascalia 'seconda riga, terza colon",
+   "dati": {
+    "controllato": "Animazioni 3D: sei fotogrammi del rompicapo intruso (gatto tra cani, griglia, cerchio di svelamento, confronto cani/gatti) e loro coerenza con copione e trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 la barra di avanzamento in alto è ancora piena (fase 5 secondi) ma nel fotogramma al secondo 0.5 la griglia mostra il cursore già a 5: la sequenza del conto alla rovescia è coerente, però al secondo 7 la schermata 'ECCOLO' mantiene la didascalia 'seconda riga, terza colonna' che è corretta; il problema reale è che nella scena di confronto (secondi 9 e 11) la scritta 'DIFFICILE.' appare su uno sfondo con il cerchio VS e il riquadro della didascalia in basso sovrapposto alla scritta, riducendo la leggibilità del testo principale. Inoltre la scena finale annuncia 'Domani è più difficile' senza che nel copione compaia la parola 'Domani' nella frase di chiusura visiva.",
+    "correzione": "Spostare la scritta 'DIFFICILE.' più in alto rispetto al riquadro in basso e allineare il testo di chiusura alla trascrizione audio ('Domani è più difficile') con un fotogramma dedicato.",
+    "idea": "Chiudere con un frame 'Seguici: domani il rompicapo è più difficile' a schermo intero, così l'invito al follow è visivo e non solo nella didascalia."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:11+00:00",
+   "da": "grafica3d-9",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Scene 3D del reel intruso: il gatto è nella seconda riga, terza colonna, come dichiarato nella scena 'Eccolo'; la posizione coincide, nessun errore di resa.",
+   "dati": {
+    "controllato": "Scene 3D del reel intruso: il gatto è nella seconda riga, terza colonna, come dichiarato nella scena 'Eccolo'; la posizione coincide, nessun errore di resa.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel finale di chiusura 'Domani è più difficile' potrebbe comparire una griglia più fitta come anteprima del reel successivo, per dare continuità e motivo di follow."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:12+00:00",
+   "da": "grafica3d-10",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Il testo «Domani è più difficile» (trascrizione 8.5s-10.0s) compare nel parlato, ma nei fotogrammi la scritta finale «DIFFICILE.» appare solo dal secondo 9-11 circa, mentre la frase «Scrivi in quanti secondi l'hai trovato» resta sulla fascia in basso. Non è un errore grave, ma la chiusura audio-visi",
+   "dati": {
+    "controllato": "Ho verificato la sincronia tra copione, trascrizione con i secondi, fotogrammi e l'animazione del gatto nella seconda riga (terza colonna), e le misure audio (-14.4 LUFS, picco -0.8 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 8,
+    "problema": "Il testo «Domani è più difficile» (trascrizione 8.5s-10.0s) compare nel parlato, ma nei fotogrammi la scritta finale «DIFFICILE.» appare solo dal secondo 9-11 circa, mentre la frase «Scrivi in quanti secondi l'hai trovato» resta sulla fascia in basso. Non è un errore grave, ma la chiusura audio-visiva non è perfettamente allineata; inoltre la fascia in basso e la didascalia ripetono la stessa domanda in modo ridondante.",
+    "correzione": "Far comparire «DIFFICILE.» in sincrono con «Domani è più difficile» (circa 8.5s) e, se possibile, ridurre la ripetizione della domanda nella fascia dopo il secondo 8.",
+    "idea": "Per i prossimi reel, aggiungere un'ultima scena con la luce della città dell'utente che si accende sulla mappa, per collegare subito il gioco al progetto e aumentare la voglia di seguire."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:20+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggere solo la sincronia tra voce e scena nel finale (secondi 9-11) e rafforzare il gancio dei primi secondi; il resto delle segnalazioni è impreciso o contraddittorio e non va toccato.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1,
+      "problema": "Nei primi 2 secondi c'è solo la griglia con il conto alla rovescia, senza una domanda o un gancio. Il timer scorre così in fretta che non si fa in tempo a leggere la richiesta.",
+      "correzione": "Aprire con una frase di tensione a schermo e in voce, ad esempio «Hai 5 secondi. Sei abbastanza veloce?». Rallentare di mezzo secondo l'avvio del conto alla rovescia per lasciare il tempo di leggere."
+     },
+     {
+      "secondo": 9,
+      "problema": "Nel finale la scena «Cani vs Gatti» con la scritta «DIFFICILE.» compare tra i secondi 9 e 11, prima che la voce dica «Domani è più difficile» (circa 10 s). Più segnalazioni indicano che la frase «Scrivi in quanti secondi l'hai trovato» è mancante o spostata rispetto al brief.",
+      "correzione": "Controllare i fotogrammi reali a 8, 9, 10 e 11 s. Far partire la scena «Cani vs Gatti» insieme a «Scrivi in quanti secondi l'hai trovato» e far comparire «DIFFICILE.» sulla voce «Domani è più difficile». Se la frase intera non c'è, rimetterla come da brief."
+     },
+     {
+      "secondo": 4,
+      "problema": "«Eccolo: seconda riga» parte a circa 3.9 s, subito dopo «uno», senza pausa prima della rivelazione. Nei fotogrammi il gatto risulta già evidenziato a 4 s.",
+      "correzione": "Inserire mezzo secondo di pausa tra «uno» e «Eccolo». Far comparire il cerchio dorato nello stesso istante della parola «Eccolo»."
+     },
+     {
+      "secondo": null,
+      "problema": "In didascalia mancano la soluzione per chi guarda senza audio e la domanda unica. «Trovato?» compete con «In quanti secondi l'hai trovato?» e c'è uno spazio di troppo negli hashtag.",
+      "correzione": "Usare la stessa domanda in didascalia e fascia, togliere «Trovato?» in apertura, aggiungere «(soluzione: seconda riga, terza colonna)» e togliere lo spazio finale negli hashtag."
+     }
+    ],
+    "idea": "Serie numerata «Puntata 1, 2, 3» con difficoltà crescente e teaser esplicito del rompicapo di domani, più la classifica dei secondi nel commento fissato."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:20+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggo solo due cose verificate: il numero vecchio nella didascalia (2864 invece di 2897) e il picco audio sopra soglia (-0.8 dBFS contro l'obiettivo di -1). Le altre segnalazioni sulla sincronia sono contraddittorie tra loro o non verificate, e le tengo da ricontrollare sul montaggio prima di cambiare qualcosa.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": null,
+      "problema": "La didascalia cita 2864 luci, ma i dati del progetto dicono 2897 (segnalato da Coordinate e Pulizia dati, concordi con i dati).",
+      "correzione": "Aggiornare il numero a 2897 (o scrivere «quasi 2900»); se la didascalia dice «altre luci», usare 2896."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è -0.8 dBFS, sopra l'obiettivo di -1 dBFS (segnalato da Pulizia dati; il LUFS di -14.4 è in target).",
+      "correzione": "Abbassare il limiter finale così che il picco resti sotto -1 dBFS, senza toccare il livello LUFS."
+     },
+     {
+      "secondo": 4,
+      "problema": "Il conto alla rovescia 5-4-3-2-1 e la barra del timer non sembrano coincidere con la voce e con la promessa di «5 secondi» (segnalato da sei persone, ma con tempi discordanti: una dice che coincidono). Da verificare sul montaggio.",
+      "correzione": "Riguardare la timeline: se la barra non scende in modo lineare da 5 a 1 insieme alla voce, allinearla; altrimenti lasciare com'è."
+     }
+    ],
+    "idea": "Serie quotidiana «Trova l'intruso» con livelli numerati a difficoltà crescente, collegata alla mappa (es. la città con più occhi di falco), così ogni reel dà un motivo per tornare."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:20+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Pubblichiamo dopo due ritocchi audio: abbassare il picco sotto -1 dBFS e alzare leggermente l'apertura; le altre segnalazioni non sono verificabili o non sono errori reali.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": null,
+      "problema": "Il picco audio è -0.8 dBFS, sopra la soglia di sicurezza di -1 dBFS: rischio di distorsione o clipping nella compressione delle piattaforme. Il loudness di -14.4 LUFS è corretto.",
+      "correzione": "Applicare un limiter a -1.5 dBFS (oppure abbassare il livello di circa 0.7 dB) mantenendo circa -14 LUFS, poi ricontrollare il picco."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il volume medio dei primi 5 secondi è -16.9 dB, più basso del resto del reel: la frase d'apertura «Trova il gatto tra i cani» rischia di passare inosservata proprio quando serve fermare lo scorrimento.",
+      "correzione": "Alzare di circa 2 dB il livello dei primi 5 secondi, senza superare il limite di picco, in modo che l'apertura sia alla pari con il resto."
+     }
+    ],
+    "idea": "Una scritta a schermo con i secondi del conto alla rovescia (5, 4, 3, 2, 1), così chi guarda senza audio può giocare lo stesso, e un breve suono sull'«Eccolo» per rafforzare la rivelazione."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:20+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Si corregge una sola cosa certa, il conto alla rovescia grafico da sincronizzare con la voce, e si tiene il resto dei fotogrammi com'è. Tutti trovano la grafica pulita; i problemi di sincronia più piccoli sono segnalati in modo contraddittorio e vanno verificati sul montaggio prima di toccare altro.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1,
+      "problema": "Il timer a schermo non coincide con la voce «cinque, quattro, tre, due, uno»: a 0.5s mostra 5 con barra quasi piena, a 1s mostra già 1 con barra quasi vuota, senza i numeri intermedi. Lo segnalano in più di una relazione, con dettagli compatibili.",
+      "correzione": "Far scorrere il conto grafico 5→4→3→2→1 con un numero per ogni secondo, in sincronia con la voce, e far calare la barra in modo proporzionale."
+     },
+     {
+      "secondo": 4,
+      "problema": "Le relazioni non concordano sul momento esatto in cui compare «ECCOLO!» con il cerchio dorato sul gatto: c'è chi lo vede a 2.5s, chi a 4s, chi a 6-7s. Il cambio scena può quindi essere sfasato rispetto alla voce «Eccolo» (circa 3.9s).",
+      "correzione": "Controllare il montaggio e far comparire «ECCOLO!» e il cerchio dorato nel punto esatto in cui la voce dice «Eccolo», circa 3.9s."
+     },
+     {
+      "secondo": null,
+      "problema": "Il titolo «1989 – 802» nell'intestazione non è spiegato né nel copione né nella didascalia; lo segnala una sola relazione, ma lo spettatore non capisce cosa siano i numeri.",
+      "correzione": "Spiegare i numeri nella didascalia oppure toglierli dall'intestazione."
+     }
+    ],
+    "idea": "Dare al formato un nome di serie, per esempio «Rompicapo #1», e chiudere con un'anteprima visiva del rompicapo di domani (l'ombra del gatto), così «domani è più difficile» diventa un motivo concreto per seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:20+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è pubblicabile dopo poche correzioni mirate: allineare il tempo promesso in didascalia al conto alla rovescia reale, verificare il numero di luci citato e abbassare il picco audio sotto -1 dBFS. Le altre segnalazioni sono in gran parte ripetitive o non dimostrate e le scarto.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 3.9,
+      "problema": "La didascalia dice «hai 5 secondi», ma il conto «cinque, quattro, tre, due, uno» finisce a circa 3.9s. Il tempo promesso e quello mostrato non coincidono (segnalato da più colleghi).",
+      "correzione": "Allineare le due cose: togliere «hai 5 secondi» dalla didascalia o riscriverlo come «hai pochi secondi», oppure rallentare il conto in modo che duri davvero 5 secondi."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia cita «2864 altri», ma le luci del progetto risultano 2897. Il numero pubblico è sbagliato o non aggiornato (segnalato solo da un collega, ma è un dato verificabile).",
+      "correzione": "Controllare il conteggio reale delle luci sulla mappa al momento della pubblicazione e sostituire 2864 con il valore corretto (2896 altre oppure 2897 in totale)."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS. Il margine è stretto e c'è rischio di distorsione dopo la compressione della piattaforma.",
+      "correzione": "Abbassare leggermente il livello di picco sotto -1 dBFS con un limiter, mantenendo il volume intorno a -14 LUFS."
+     }
+    ],
+    "idea": "Replicare il formato «intruso» con conto alla rovescia fisso e sincronizzato con la didascalia, rivelazione evidenziata con un cerchio luminoso sul gatto e chiusura con l'invito a indicare la città e la promessa del rompicapo più difficile di domani."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:21+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel funziona come formato (sfida, commenti, richiamo a domani), ma prima di pubblicare correggiamo i pochi errori verificati: numero luci sbagliato, conto «5 secondi» incoerente, gatto non evidenziato e apertura non definita.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": null,
+      "problema": "La didascalia dice «si accende sulla mappa con gli altri 2864», ma i dati del progetto riportano 2897 luci (segnalato da Nuove luci e SEGUO e inviti).",
+      "correzione": "Aggiornare il numero a 2897, oppure usare una formula robusta come «oltre 2.800»."
+     },
+     {
+      "secondo": 3.9,
+      "problema": "La didascalia e la fascia promettono «hai 5 secondi», ma il conto alla rovescia parlato dura circa 3 secondi (1.0s–3.9s) e la rivelazione «Eccolo» parte subito dopo, a 3.9s.",
+      "correzione": "Allineare il testo al video, ad esempio «hai pochi secondi», oppure rimontare il conto a 5 secondi reali e spostare «Eccolo» un po' più avanti."
+     },
+     {
+      "secondo": 6.6,
+      "problema": "Al momento della rivelazione «Eccolo: seconda riga» non c'è un fotogramma di verifica e il gatto non risulta evidenziato (cerchio o freccia). Non è confermato che la seconda riga corrisponda all'immagine.",
+      "correzione": "Aggiungere un cerchio o una freccia animata sul gatto alla rivelazione, controllare un fotogramma tra 6 e 7s e confermare che il gatto sia nella seconda riga."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Il brief ha apertura nulla e il parlato parte già a 0.0s. Il primo frame inviato è a 0.5s e non è verificato come pulito e leggibile.",
+      "correzione": "Definire un'apertura esplicita con la griglia di cani ben leggibile fin dal primo frame, e verificare il fotogramma iniziale."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il volume medio dei primi 5s (-16.9 dB) è più basso del resto del reel e dell'obiettivo (-14 LUFS), quindi l'apertura è più debole. Inoltre il picco a -0.8 dBFS supera il limite di -1 dBFS.",
+      "correzione": "Alzare di 1-2 dB i primi 5 secondi e riportare il picco sotto -1 dBFS con un limiter."
+     },
+     {
+      "secondo": 11,
+      "problema": "La chiusura (10–11.9s) ha un solo fotogramma di controllo. La fascia ripete la domanda già detta dalla voce, e la didascalia promette l'invio di città e nome dell'animale che il video non mostra.",
+      "correzione": "Verificare la schermata finale e differenziare la fascia dalla voce (es. «Tempo record? Scrivilo qui»), con il rimando a domani ben visibile."
+     }
+    ],
+    "idea": "Serie numerata «Intruso #1, #2, #3…» con apertura visiva fissa riconoscibile e un cerchio animato che si chiude sull'intruso alla rivelazione, con eventuale contatore dei secondi in sovraimpressione."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:21+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è sostanzialmente pronto: prima di pubblicare si allinea la didascalia al conto alla rovescia reale (il «hai 5 secondi» non combacia con i circa 3,9 s di conto), si sistema il numero delle luci e si verifica che la «seconda riga» corrisponda davvero al gatto.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "La didascalia promette «hai 5 secondi», ma il conto alla rovescia parlato dura circa 3,9 s in un video di 11,9 s: il numero non torna con il video e può sembrare falso a chi non trova il gatto in tempo.",
+      "correzione": "Allineare le due cose: o allungare il conto a 5 secondi reali, o togliere il numero dalla didascalia («hai pochi secondi»). Meglio ancora, mostrare il conto a schermo."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia cita 2864 luci mentre i dati del progetto riportano 2897. Un numero sbagliato toglie credibilità.",
+      "correzione": "Aggiornare la didascalia a 2897 oppure scrivere «quasi 2900» prima della pubblicazione."
+     },
+     {
+      "secondo": 3.9,
+      "problema": "Non è verificato nei fotogrammi che la «seconda riga» detta a voce corrisponda al gatto: i fotogrammi inviati non coprono l'intervallo 3,9-6,6 s.",
+      "correzione": "Controllare i fotogrammi tra 3,9 s e 6,6 s e far comparire un cerchio o una freccia sul gatto al momento dello svelamento."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Il primo fotogramma non ha un aggancio visivo dichiarato (apertura null) e il volume dei primi 5 s (-16,9 dB) è più basso del resto, quindi l'attacco è debole.",
+      "correzione": "Far partire il video con la griglia di cani già visibile e il gatto riconoscibile, scegliere una copertina curata e alzare di qualche dB il volume iniziale mantenendo il picco sotto -1 dBFS (ora è a -0,8)."
+     }
+    ],
+    "idea": "Continuare il formato «intruso» con un conto alla rovescia visibile a schermo e un cerchio che si stringe sul gatto alla rivelazione, tenendo la formula che nei dati rende meglio (questa_luce, 16,2 follower ogni 1000 reach)."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:21+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel funziona come sfida e come invito a seguire: lo teniamo, ma correggiamo il finale, dove «DIFFICILE.» a schermo e la voce «Domani è più difficile» non sono allineati e la chiusura dura troppo, e verifichiamo il numero di luci nella didascalia.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 10,
+      "problema": "Il finale non è allineato: a schermo compare solo «DIFFICILE.» mentre la voce dice «Domani è più difficile» (circa 8.5-10s). La scena di chiusura e la scritta «SECONDI L'HAI TROVATO» restano ferme circa 2-3 secondi senza nuova informazione e senza una voce che le accompagni chiaramente. Segnalato da più persone.",
+      "correzione": "Far comparire «DIFFICILE.» (meglio «DOMANI PIÙ DIFFICILE.») in sincronia con la frase vocale e far coincidere «SECONDI L'HAI TROVATO» con la voce corrispondente. Accorciare la scena «Cani vs Gatti» a circa 1,5 s e togliere la ripetizione della chiusura."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia riporta «2864 luci», ma i dati del progetto dicono 2897. È segnalato da una sola persona e va confermato, perché un numero sbagliato toglie credibilità.",
+      "correzione": "Verificare il dato nel progetto e allineare la didascalia al valore corretto."
+     },
+     {
+      "secondo": 2,
+      "problema": "Possibile sfasamento tra il conto alla rovescia a schermo (il «1» appare già verso i 2s) e la voce «cinque, quattro, tre, due, uno». Segnalato da più persone ma con tempi discordanti, quindi da controllare sul montaggio.",
+      "correzione": "Controllare sul montaggio e, se confermato, allineare il timer visivo alla voce lasciando una pausa leggibile tra «due» e «uno»."
+     }
+    ],
+    "idea": "Chiudere con un'anteprima del rompicapo di domani (immagine sfocata con «Domani: più difficile») insieme a un invito esplicito a seguire. Poi trasformare il formato in una serie con il tempo record della community da battere."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:24+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare correggo la didascalia (secondi del conto alla rovescia e numero di luci sulla mappa), rendo visibile lo svelamento del gatto e rinforzo l'apertura audio; il formato 'trova l'intruso' resta quello da portare avanti.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0.0,
+      "problema": "Il volume dei primi 5 secondi è circa -16,9 dB, più basso del resto del reel (-14,4 LUFS): l'apertura è debole proprio dove serve agganciare chi scorre.",
+      "correzione": "Alzare il volume dei primi 5 secondi verso -14 LUFS senza superare -1 dBFS."
+     },
+     {
+      "secondo": 1.0,
+      "problema": "La didascalia dice 'hai 5 secondi', ma il conto alla rovescia nella trascrizione parte a 1.0s e finisce a circa 3.9s, quindi dura circa 3 secondi. Il conto parte inoltre dopo la frase 'Trova il gatto tra i', mentre il copione lo colloca alla frase 0.",
+      "correzione": "Allineare didascalia e conto: far contare 5 secondi reali oppure scrivere un tempo corretto. Verificare sui fotogrammi che il conto sia sincronizzato con l'immagine."
+     },
+     {
+      "secondo": 4.0,
+      "problema": "I fotogrammi inviati (0.5, 2, 4, 7, 9, 11) non mostrano con certezza il gatto evidenziato nel momento di 'Eccolo: seconda riga' (circa 3.9s). La rivelazione non è verificabile e rischia di non essere visibile.",
+      "correzione": "Verificare e, se serve, aggiungere un cerchio o evidenziazione sul gatto a circa 4s, in sincrono con la frase 'Eccolo'."
+     },
+     {
+      "secondo": 8.5,
+      "problema": "La didascalia cita 'gli altri 2864' sulla mappa, mentre il progetto riporta 2897 luci. Inoltre l'invito a scrivere i secondi (8.5s) non è esplicito come richiesta di commentare e arriva a ridosso della chiusura.",
+      "correzione": "Correggere il numero a 2897 (o al dato aggiornato) e rendere chiaro, a voce o nell'ultimo fotogramma, l'invito a scrivere i secondi nei commenti."
+     }
+    ],
+    "idea": "Portare avanti il formato 'trova l'intruso' come serie riconoscibile: cerchio animato sul gatto con un suono breve sulla parola 'Eccolo', tempo dichiarato in chiaro e, in chiusura, il tempo medio dei commenti come premio e promessa del rompicapo di domani."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:26+00:00",
+   "da": "grafica3d-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Correggere subito la sincronia tra countdown e voce (barra, numero ed entrata di «ECCOLO!») e allineare la chiusura «DIFFICILE.» alla frase «Domani è più difficile»; il resto sono rifiniture secondarie.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 2,
+      "problema": "Il countdown visivo non è sincronizzato con la voce: la barra resta piena e il numero segna 5 mentre la trascrizione fa «cinque, quattro, tre, due, uno» entro circa 3,9 s. Segnalato da più colleghi (secondi 2 e 4).",
+      "correzione": "Legare barra e numero ai marker della voce (5→1 in circa 3,9 s, un numero al secondo) con una piccola pulsazione a ogni scatto."
+     },
+     {
+      "secondo": 4,
+      "problema": "Il cerchio dorato e la scena «ECCOLO» entrano in modo brusco e non in corrispondenza della parola «Eccolo» (circa 3,9 s); il passaggio tra i secondi 4 e 7 è poco leggibile.",
+      "correzione": "Far partire la scena e il cerchio dorato sulla parola «Eccolo», con una transizione di 0,3-0,4 s (fade o push-in sul cerchio)."
+     },
+     {
+      "secondo": 9,
+      "problema": "La chiusura visiva non coincide con la voce: «DIFFICILE.» compare verso il secondo 9-11, mentre «Domani è più difficile» è detto a circa 8,5 s. Nella scena finale la scritta può inoltre sovrapporsi alla fascia in basso e ridurre la leggibilità.",
+      "correzione": "Far entrare «DIFFICILE.» a circa 8,5 s con un leggero rimbalzo, in una posizione più alta rispetto alla fascia in basso e senza la ripetizione della domanda."
+     }
+    ],
+    "idea": "Countdown generato dai secondi reali dell'audio, così ogni numero cade sulla voce, e chiusura con un'unica card «Domani è più difficile» con l'invito a seguire; per il prossimo reel, versione più difficile con un gatto dal colore simile ai cani e lo stesso cerchio dorato come firma del format."
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:40+00:00",
+   "da": "montaggio-1",
+   "a": "pubblicazione-1",
+   "tipo": "decisione",
+   "testo": "La squadra non ha trovato difetti segnalati da almeno 3 reparti: nessuna correzione.",
+   "dati": {
+    "perche": []
+   }
+  },
+  {
+   "t": "2026-11-13T19:23:40+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce con la revisione della sola squadra."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 11.9,
+   "fotogrammi": [
+    "fotogrammi/2026-11-13-2019-intruso/v1/s000.5.jpg",
+    "fotogrammi/2026-11-13-2019-intruso/v1/s001.0.jpg",
+    "fotogrammi/2026-11-13-2019-intruso/v1/s002.0.jpg",
+    "fotogrammi/2026-11-13-2019-intruso/v1/s003.0.jpg",
+    "fotogrammi/2026-11-13-2019-intruso/v1/s004.0.jpg",
+    "fotogrammi/2026-11-13-2019-intruso/v1/s005.0.jpg",
+    "fotogrammi/2026-11-13-2019-intruso/v1/s006.0.jpg",
+    "fotogrammi/2026-11-13-2019-intruso/v1/s007.0.jpg",
+    "fotogrammi/2026-11-13-2019-intruso/v1/s008.0.jpg",
+    "fotogrammi/2026-11-13-2019-intruso/v1/s009.0.jpg",
+    "fotogrammi/2026-11-13-2019-intruso/v1/s010.0.jpg",
+    "fotogrammi/2026-11-13-2019-intruso/v1/s011.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.4,
+    "picco_dbfs": -0.8,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.9,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "crescita": {
+  "pubblico": "Chi ha un cane o un gatto in casa, in qualsiasi città d'Italia, ama i quiz visivi da Reel e non conosce ancora Zampe d'Italia. Il tipo che commenta «3 secondi!» e tagga l'amico che dice di avere l'occhio di falco.",
+  "gancio": "Trova il gatto tra i cani in 5 secondi: il conto alla rovescia parte subito, senza presentazioni.",
+  "primo_fotogramma": "Griglia di foto di cani, con un gatto nascosto in mezzo. In alto, a caratteri grandi: «TROVA IL GATTO». In basso a destra, un timer che scende da 5. Nessun logo né testo extra: la sfida si capisce anche a volume zero.",
+  "motivo_per_seguire": "Ogni giorno c'è un nuovo rompicapo con cani e gatti veri, più difficile del precedente, e chi commenta con città e nome del suo animale lo vede accendersi come una luce sulla mappa d'Italia di notte.",
+  "chiusura": "Domani è più difficile. Segui Zampe d'Italia e scrivi in quanti secondi l'hai trovato.",
+  "perche": "Il rompicapo con timer si capisce in un attimo anche senza audio, e il commento con città e nome dell'animale porta chi guarda dentro il progetto, mentre la promessa del livello più difficile dà un motivo concreto per seguire."
+ },
+ "token_persone": 434933,
+ "fine": "2026-11-13T19:23:40+00:00"
+}
