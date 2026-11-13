@@ -1,0 +1,70 @@
+{
+ "voce": true,
+ "variante": "voce-fissa-45",
+ "tema": "tramonto",
+ "id": "2026-11-13-2026-intruso",
+ "formato": "intruso",
+ "testata": {
+  "titolo": "👀 TROVA L'INTRUSO"
+ },
+ "conteggio": {
+  "cani": 1989,
+  "gatti": 802
+ },
+ "frasi": [
+  {
+   "testo": "Trova il gatto tra i cani. Cinque. Quattro. Tre. Due. Uno.",
+   "scena": {
+    "tipo": "intruso",
+    "base": [
+     "cane",
+     "golden",
+     77
+    ],
+    "altro": [
+     "gatto",
+     "rosso",
+     78
+    ],
+    "dove": [
+     1,
+     2
+    ],
+    "titolo": "Trova il *gatto* tra i cani"
+   }
+  },
+  {
+   "testo": "Eccolo: seconda riga. L'avevi visto?",
+   "scena": {
+    "tipo": "intruso_svela",
+    "base": [
+     "cane",
+     "golden",
+     77
+    ],
+    "altro": [
+     "gatto",
+     "rosso",
+     78
+    ],
+    "dove": [
+     1,
+     2
+    ],
+    "titolo": "ECCOLO!",
+    "riga_testo": "seconda riga, terza colonna"
+   }
+  },
+  {
+   "testo": "Scrivi in quanti secondi l'hai trovato. Domani è più difficile.",
+   "scena": {
+    "tipo": "chiusura",
+    "testo": "⏱️ In quanti secondi? 👇"
+   }
+  }
+ ],
+ "banner": "⏱️ In quanti secondi l'hai trovato? 👇",
+ "didascalia": "👀 Trova il gatto tra i cani: hai 5 secondi. Trovato?\n\n👇 Scrivi in quanti secondi l'hai trovato (e sii onesto 😄). Poi manda il video a chi dice di avere l'occhio di falco.\n🐾 Se hai un cane o un gatto, aggiungi la tua città e il suo nome (es. «3 secondi! Treviso, Luna, cane»): si accende sulla mappa d'Italia con gli altri 2864.\n➕ Seguici: domani il rompicapo è più difficile.\n\nVoce generata con IA.\n\n#cani #gatti #rompicapo #trovalintruso #quiz #animalidomestici ",
+ "tag": [],
+ "copertina": null
+}
