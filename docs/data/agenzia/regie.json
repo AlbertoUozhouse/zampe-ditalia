@@ -126,5 +126,21 @@
   "secondi": 3.6,
   "perche": "Dopo tanti duelli con cieli rossi o petrolio, qui il pari 6 a 6 diventa un cielo diviso tra l'argento freddo di Barletta",
   "reel": "2026-11-12-2153-testa_a_testa"
+ },
+ {
+  "nome_stile": "Disfida di Bronzo",
+  "cielo_basso": "#7A5A3C",
+  "cielo_alto": "#0A1228",
+  "nebbia_colore": "#423E48",
+  "lampioni_colore": "#FFD79A",
+  "lucciole_colore": "#A8D8FF",
+  "lucciole": 110.0,
+  "bloom": 0.68,
+  "esposizione": 1.5,
+  "effetto": "stelle_cadenti",
+  "volo": "orbita",
+  "secondi": 4.3,
+  "perche": "Dopo tanti duelli con cieli rossi, petrolio o argento, qui il pari 6 a 6 diventa un crepuscolo di bronzo e ardesia con u",
+  "reel": "2026-11-13-1307-testa_a_testa"
  }
 ]
