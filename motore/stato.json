@@ -7915,6 +7915,7 @@
 "18135582898597289",
 "18135605632738638",
 "18135606958782550",
+"18135623629686444",
 "18135634132729738",
 "18135643652506105",
 "18135654718707791",
@@ -10587,7 +10588,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794565753.4509203
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-10-26",
@@ -12756,7 +12759,8 @@
 "matteo_bruscobike": "2026-11-12",
 "delprinodavide": "2026-11-12",
 "deby_gs81": "2026-11-12",
-"filannino_giorgio7": "2026-11-12"
+"filannino_giorgio7": "2026-11-12",
+"teslathequeenofbards": "2026-11-13"
 },
 "media_letti": {},
 "pezzi": {
@@ -19238,12 +19242,11 @@
 "399994a652c976b4",
 "d3d8c33da92df902",
 "84c8ef8094e3071d",
-"de7635459f173c50"
+"de7635459f173c50",
+"87e98d98779b2227"
 ],
 "privati_ora": [
-1794517047.1107717,
-1794517054.1603932,
-1794520179.3985505
+1794565753.450946
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19290,7 +19293,7 @@
 "2026-11-10": 1814,
 "2026-11-11": 1836,
 "2026-11-12": 1854,
-"2026-11-13": 1857
+"2026-11-13": 1859
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19910,6 +19913,10 @@
 [
 "2026-11-13T08:28+00:00",
 1857
+],
+[
+"2026-11-13T10:29+00:00",
+1859
 ]
 ],
 "coppa": {
@@ -21953,7 +21960,8 @@
 "Canale|CN": 1,
 "Chiavenna|SO": 1,
 "Cavaion Veronese|VR": 1,
-"Barletta|BT": 1
+"Barletta|BT": 1,
+"Savona|SV": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22197,6 +22205,15 @@
 "t": "2026-11-12T21:49+00:00",
 "sorpasso": "Barletta|BT",
 "su": "Carrara|MS",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-13T10:29+00:00",
+"sorpasso": "Savona|SV",
+"su": "Sepino|CB",
 "punti": [
 1,
 0
@@ -22465,6 +22482,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Savona|SV": {
+"u": [
+"teslathequeenofbards"
+],
+"c": [
+"18135623629686444"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22494,7 +22521,8 @@
 "patrickmtb2026|animale|jack",
 "matteo_bruscobike|animale|hero",
 "deby_gs81|animale|tia",
-"filannino_giorgio7|animale|gigino"
+"filannino_giorgio7|animale|gigino",
+"teslathequeenofbards|animale|meredith"
 ]
 }
 }
