@@ -362,3 +362,8 @@ Nessun cambiamento oggi.
 - Coppa: 30 punti; Staffetta di quartiere a 2/3 per Darfo, Napoli, Venezia, Bisceglie e Barletta. Gara dei follower partita ieri alle 21: ancora nessun SEGUO nuovo da conteggiare.
 - Nessun cambiamento oggi: escono per la prima volta il testa a testa con città raccontate e padroni taggati (13), il quiz (18) e la gara dei follower (21). Da guardare domani: il giovedì il sorpasso della Coppa rende poco (3,5).
 - 13/11 Officina (giorno «la gara»): il tabellone della Coppa in piazza nel paese 3D, sul sito e nell'apertura dei reel: la sfida vera della città (es. Barletta 1 – 0 Carrara), la Staffetta di quartiere, il posto tra le città che ci seguono e «SEGUO = +2 punti». Nei reel il tabellone si gira verso la telecamera.
+
+
+## 2026-11-13 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-06-1306-re: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
