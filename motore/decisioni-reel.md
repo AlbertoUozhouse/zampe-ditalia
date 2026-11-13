@@ -3,6 +3,28 @@
 Registro delle scelte sui reel automatici: cosa si cambia, perché (numeri da motore/rendimento.json), e cosa si guarda dopo.
 Lo aggiorna ogni mattina il controllo delle 10:30. Solo numeri e formati, nessun nome utente (il repository è pubblico).
 
+## STUDIO DEL 13/11/2026 — perché i reel non escono, e i reel d'impatto (67 reel organici, numeri di Instagram)
+
+**Cosa dicono i numeri**
+- Mediana delle views per settimana: 1.819 (27/10–2/11) → 763 (3–7/11) → 479 (8–13/11). I 12 reel più visti sono tutti del 27/10–2/11.
+- Quella settimana arrivavano 200–700 animali nuovi al giorno e +150 follower al giorno: era l'onda del reel sponsorizzato del 26/10 (45.836 views). Dal 3/11 (sponsorizzata finita): 12–34 animali nuovi e +20 follower al giorno.
+- Le views vanno insieme ai commenti (correlazione 0,83) e ai secondi guardati (0,62). I reel da 3.000+ views avevano 150–350 commenti; quelli di adesso 15–25. La reach di adesso (250–800) è meno della metà dei follower: Instagram non li mostra a chi non ci segue.
+- Conclusione: i nostri reel parlano a chi conosce già il gioco. Un estraneo non capisce, non resta, non commenta, non lo manda a nessuno. Cambiare grafica non basta: serve un motivo per fermarsi, restare fino in fondo, commentare e inoltrare, valido per chiunque abbia un cane o un gatto.
+
+**Le regole dei reel d'impatto**
+1. Si capisce da zero: il primo fotogramma dice cosa fare o cosa si scopre, senza conoscere la pagina.
+2. C'è un motivo per arrivare in fondo (un conto alla rovescia, una rivelazione) o per riguardare (un rompicapo).
+3. Il commento è una risposta, non un'iscrizione: «in quanti secondi?», «come si chiama il tuo?». La città e il nome si chiedono dopo, nella risposta del bot.
+4. Il bot risponde con un dato vero e personale (quanti si chiamano come il tuo animale, o che il nome è unico): è il motivo per scrivere e per far vedere la risposta.
+5. Corti: 10–12 secondi.
+
+**Costruiti il 13/11**
+- «Trova l'intruso» (formato `intruso`): 25 animali uguali e uno diverso, la voce conta da cinque a uno, poi l'anello d'oro sulla soluzione. Sei livelli a rotazione (gatto tra i golden, cane tra i gatti neri, golden tra i labrador…).
+- «I nomi più usati» (formato `nomi_top`): conto alla rovescia dal quinto al primo, a rotazione tutti / cani / gatti; chiusura «scrivi il nome del tuo: ti rispondiamo con quanti ce ne sono».
+- Il bot (commenti.py): a chi scrive solo il nome risponde col numero vero («Sulla mappa ci sono già 62 Luna, in 52 città», oppure «sarebbe il primo in tutta Italia») e chiede la città; a ogni animale nuovo dice se il nome è unico o in quanti sono.
+- Alle 18 rotazione di cinque video: quiz della razza, intruso, nomi, figurine, luce nuova.
+- Come si misura: views e reach contro la mediana di 479, commenti per reel (oggi 15–25), follower ogni 1.000 raggiunti. Si tiene quello che supera il doppio della mediana in due uscite.
+
 ## TEST DI CRESCITA (Alberto, 8/11/2026) — quali reel portano più follower
 
 - Config: `test_crescita` in motore/config.json. «anteprima» = nessuna uscita (si guardano le anteprime); «attivo» dal giorno «dal» per 7 giorni; «spento» = tutto come prima.

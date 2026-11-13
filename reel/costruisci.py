@@ -190,6 +190,12 @@ def main():
     for n, f in enumerate(copione["frasi"]):
         sc = dict(f["scena"]); tipo = sc.pop("tipo"); cid = f"s{n}"
         a = round(inizi[n], 2); b = round(inizi[n + 1], 2) if n + 1 < len(inizi) else durata; d = round(b - a, 2)
+        if tipo == "intruso":  # il conto alla rovescia segue la voce: i secondi (dall'inizio della scena) delle ultime cinque parole, «cinque, quattro, tre, due, uno»
+            pi = sum(len(x.split()) for x in frasi[:n]); ultime = parole[pi:pi + len(frasi[n].split())][-5:]
+            if len(ultime) == 5: sc["tempi"] = [round(max(0.0, w["s"] - a), 2) for w in ultime]
+        if tipo in ("intruso", "intruso_svela"):  # 13/11, il rompicapo: due disegni, quello di tutti e quello dell'intruso
+            for campo in ("base", "altro"):
+                t_, k_, s_ = sc[campo]; svg_di(t_, k_, s_, serve); soli.append((t_, k_, s_)); sc[campo] = f"{k_}-{s_}-solo.svg"
         if tipo in ("sagoma", "svela", "figurina"):  # 12/11: il quiz e le figurine, col disegno della razza vera
             t_, k_, s_ = sc.pop("t", "cane"), sc.pop("razza_k"), sc.pop("seme", n + 3)
             svg_di(t_, k_, s_, serve); soli.append((t_, k_, s_)); sc["svg"] = f"{k_}-{s_}-solo.svg"  # solo l'animale (si estrae dopo i disegni)
@@ -236,7 +242,7 @@ def main():
          bg0=S.T["bg"][0], bg1=S.T["bg"][1], bg2=S.T["bg"][2], host="\n".join(host), titolo=S.ESC(copione["testata"]["titolo"]),
         cani=c["cani"], gatti=c["gatti"], b0=b0, bd=round(durata - b0, 2), banner=S.ESC(copione.get("banner", "📍 Scrivi città, nome e razza 👇")),
         dvoce=round(fine_voce + 0.1, 2)))
-    subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *([f"--salta={len(frasi[0].split())}"] if copione["frasi"][0]["scena"]["tipo"] == "gancio" else []), *gruppi_sottotitoli(frasi)], check=True)
+    subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *([f"--salta={len(frasi[0].split())}"] if copione["frasi"][0]["scena"]["tipo"] in ("gancio", "intruso") else []), *gruppi_sottotitoli(frasi)], check=True)
     (out / "effetti.json").write_text(json.dumps(effetti))
     subprocess.run([sys.executable, str(ROOT / "reel/musica.py"), str(out / "effetti.json"), str(prog / "assets/audio/musica.wav")], check=True)
 

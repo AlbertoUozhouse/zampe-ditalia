@@ -318,6 +318,10 @@ FRASI = {
     "sogno": ["Il sogno di {n} è in cielo sopra {c} ☁️", "Una nuvoletta in più su {c}: {n} ti aspetta nei sogni ☁️"],
     "stella": ["Una stella per {n} brilla sopra {c}. ✦", "{n} ora è una stella nel cielo di {c}. Sempre con te. ✦"],
     "manca_comune_nome": ["In quale comune vive {n}? Scrivilo qui sotto e si accende la sua luce 🗺️", "Che bello {n}! Dove vive? Scrivi il comune e accendo la sua luce ✨"],
+    # 13/11, i reel dei nomi: chi scrive solo il nome riceve il numero vero di quanti si chiamano così sulla mappa
+    "nome_quanti": ["Sulla mappa ci sono già {k} {n}, in {citta} città! 🐾 Dove vive? Scrivi il comune (es. «Treviso, {n}, cane») e accendo anche la sua luce ✨"],
+    "nome_uno": ["Sulla mappa c'è un solo {n} in tutta Italia, a {dove}! 🐾 Dove vive il tuo? Scrivi il comune (es. «Treviso, {n}, cane») e saranno in due ✨"],
+    "nome_unico": ["Nessun {n} sulla mappa: sarebbe il primo in tutta Italia! 🏅 Dove vive? Scrivi il comune (es. «Treviso, {n}, cane») e accendo la sua luce ✨"],
     "manca_comune": ["Quasi! In quale comune vive? Scrivi per esempio «Treviso, {n}, cane» 🐾", "Non ho trovato il comune 🙈 Riscrivilo con città, nome e cane o gatto!"],
     "manca_provincia": ["Ci sono più comuni con quel nome: aggiungi la provincia, per esempio «Calliano TN» 🗺️"],
     "manca_nome": ["Come si chiama? Riscrivi «{c}, nome, cane» e si accende la sua luce ✨"],
@@ -974,7 +978,10 @@ def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
         return "aggiornato", {"n": a["n"], "c": a["c"]}
     for x in letto["senza_comune"]:
         if x.get("id") in ids:
-            return "manca_comune_nome", {"n": x["n"]}
+            uguali = stesso_nome(gioco, x["n"])
+            if not uguali: return "nome_unico", {"n": x["n"]}
+            if len(uguali) == 1: return "nome_uno", {"n": x["n"], "dove": uguali[0]["c"]}
+            return "nome_quanti", {"n": x["n"], "k": len(uguali), "citta": len({a["c"] for a in uguali})}
     for x in letto["senza_nome"]:
         if x.get("id") in ids:
             return ("manca_nome", {"c": x["luogo"]["c"]}) if x.get("luogo") else ("base", {})
@@ -983,6 +990,17 @@ def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
     if letto["domanda"] and any("?" in c.get("text", "") for c in nuovi_c):
         return "altri", {}
     return None, {}
+
+def stesso_nome(gioco, nome, tranne=None):
+    """Gli animali sulla mappa che si chiamano così (stesso nome senza accenti e maiuscole)."""
+    k = norm(nome)
+    return [a for a in gioco.animali if a["k"] == "animale" and a is not tranne and norm(a["n"]) == k and a["u"].lower() not in ESCLUSI]
+
+def riga_nome(gioco, a):
+    """Per un animale appena acceso: quanti si chiamano come lui, o che il suo nome è unico (13/11)."""
+    altri = stesso_nome(gioco, a["n"], tranne=a)
+    if not altri: return f"🏅 Nessun altro sulla mappa si chiama {a['n']}: nome unico in Italia!"
+    return f"🔎 Con {a['n']} sulla mappa siete in {len(altri) + 1}, in {len({x['c'] for x in altri} | {a['c']})} città."
 
 def gara_luci():
     """Ogni luce nuova è un punto nella Coppa (config.json «coppa_punto_per_luce», 10/11): si spegne mettendolo a false."""
@@ -1153,6 +1171,8 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
                 extra.append("🏁 La Coppa di questa settimana è chiusa: lunedì a mezzanotte riparte, ti aspettiamo!")
             else:
                 extra.append("🐾 Per giocare per la tua città serve il tuo animale sulla mappa: scrivi qui città e nome (es. «Treviso, Luna, cane») e poi ricommenta il codice.")
+        if nuovi_a and chiave not in ("stella", "sogno", "multi") and nuovi_a[0].get("k") == "animale":
+            extra.append(riga_nome(gioco, nuovi_a[0]))  # 13/11: il nome unico (o quanti si chiamano come lui): una riga personale, da far vedere agli amici
         # 10/11 Alberto: «la gara ho bisogno di molto di più». Ogni animale nuovo è un punto per la sua città nella Coppa (motore/coppa.py, una volta per animale)
         if nuovi_a and chiave not in ("stella", "sogno") and u.lower() not in ESCLUSI and gara_luci():
             for a_n in nuovi_a:

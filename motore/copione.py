@@ -873,7 +873,7 @@ def testa_a_testa(D, rng, st):
     sx, sy = squadra(x["c"]), squadra(y["c"])
     righe = [{"nome": f"{a['n']} · {x['c']}", "valore": "@" + a["u"]} for a in sx[:3]] + [{"nome": f"{a['n']} · {y['c']}", "valore": "@" + a["u"]} for a in sy[:2]]
     nomi = lambda l: " e ".join([", ".join(a["n"] for a in l[:-1]), l[-1]["n"]] if len(l) > 1 else [l[0]["n"]]) if l else ""
-    st["tag_extra"] = list(dict.fromkeys(a["u"] for a in (sx[:10] + sy[:10])))[:20]
+    st["tag_extra"] = list(dict.fromkeys(a["u"] for a in (sx[:5] + sy[:5])))[:10]  # 13/11: al massimo 10 (20 sembrava spam)
     if st.get("intro_3d") and (fx or fy): st["intro_3d"]["fatti"] = [fx, fy]
     frasi = [
         (f"{x['c']}{', ' + fx + ',' if fx else ''} contro {y['c']}{', ' + fy if fy else ''}: {round(km)} chilometri, e la sfida è aperta.", {"tipo": "luce", "centro": [mezzo["lng"], mezzo["lat"]], "s1": 1.5, "intorno": _intorno(D, mezzo, 50),
@@ -1196,7 +1196,7 @@ def verifica(cop):
 
 
 # ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
-FRASI_FISSE = {"indovina": 45, "figurina": 40, "testa_a_testa": 58, "gara_follower": 50}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
+FRASI_FISSE = {"indovina": 45, "figurina": 40, "testa_a_testa": 58, "gara_follower": 50, "intruso": 40, "nomi_top": 45}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
 
 MANTELLI = {"europeo", "grigio", "nero", "rosso", "bianco", "bicolore", "bicolore_rosso", "calico", "tartarugato", "meticcio"}  # colori, non razze: fuori dal quiz
 
@@ -1304,15 +1304,86 @@ def gara_follower(D, rng, st):
     st["senza_bonus"] = True
     return "🏁 LA GARA DEI FOLLOWER", frasi, did
 
+# ================================================================ i reel d'impatto (13/11, studio dei numeri: vedi «STUDIO 13/11» in decisioni-reel.md)
+# Dallo studio: i nostri reel li vede solo una parte di chi ci segue; per uscire servono video che un estraneo capisce subito,
+# guarda fino in fondo (o riguarda) e commenta anche senza conoscere il gioco. Due format: il rompicapo e la classifica dei nomi.
+INTRUSI = [  # (tutti, intruso, titolo): colori simili, così bisogna cercare davvero
+    (("cane", "golden"), ("gatto", "rosso"), "Trova il *gatto* tra i cani", "il gatto"),
+    (("gatto", "nero"), ("cane", "labrador_nero"), "Trova il *cane* tra i gatti", "il cane"),
+    (("cane", "labrador_miele"), ("cane", "golden"), "Trova il *golden* tra i labrador", "il golden"),
+    (("gatto", "grigio"), ("gatto", "certosino"), "Trova il *certosino* tra i gatti grigi", "il certosino"),
+    (("cane", "husky"), ("cane", "border_collie"), "Trova il *border collie* tra gli husky", "il border collie"),
+    (("cane", "maltese"), ("gatto", "bianco"), "Trova il *gatto* tra i maltesi", "il gatto"),
+]
+ORDINALI = ["prima", "seconda", "terza", "quarta", "quinta"]
+
+def intruso(D, rng, st):
+    """Trova l'intruso: 25 animali uguali e uno diverso, cinque secondi. Si capisce senza conoscere la pagina, e chi non lo trova riguarda."""
+    n = st.get("intruso_n", 0); st["intruso_n"] = n + 1
+    base, altro, titolo, cosa = INTRUSI[n % len(INTRUSI)]
+    dove = [rng.randrange(1, 5), rng.randrange(0, 5)]  # mai nella prima riga: troppo facile
+    seme = rng.randrange(1, 99)
+    sc = {"base": [base[0], base[1], seme], "altro": [altro[0], altro[1], seme + 1], "dove": dove}
+    tot = sum(1 for a in D["animali"] if a.get("k") == "animale")
+    frasi = [
+        (f"{titolo.replace('*', '')}. Cinque, quattro, tre, due, uno.", {"tipo": "intruso", **sc, "titolo": titolo}),
+        (f"Eccolo: {ORDINALI[dove[0]]} riga. L'avevi visto?", {"tipo": "intruso_svela", **sc, "titolo": "ECCOLO!", "riga_testo": f"{ORDINALI[dove[0]]} riga, {ORDINALI[dove[1]]} colonna"}),
+        ("Scrivi in quanti secondi l'hai trovato. Domani è più difficile.", {"tipo": "chiusura", "testo": "⏱️ In quanti secondi? 👇"}),
+    ]
+    did = (f"👀 {titolo.replace('*', '')}: hai 5 secondi. Trovato?\n\n"
+           "👇 Scrivi in quanti secondi l'hai trovato (e sii onesto 😄). Poi manda il video a chi dice di avere l'occhio di falco.\n"
+           f"🐾 Se hai un cane o un gatto, aggiungi la tua città e il suo nome (es. «3 secondi! Treviso, Luna, cane»): si accende sulla mappa d'Italia con gli altri {tot}.\n"
+           "➕ Seguici: domani il rompicapo è più difficile.")
+    st["copertina"] = None
+    st["banner_reel"] = "⏱️ In quanti secondi l'hai trovato? 👇"
+    st["hashtag"] = "#cani #gatti #rompicapo #trovalintruso #quiz #animalidomestici "
+    st["senza_bonus"] = True
+    return "👀 TROVA L'INTRUSO", frasi, did
+
+def _conta_nomi(D, tipo=None):
+    conta, citta, forma = {}, {}, {}
+    for a in D["animali"]:
+        if a.get("k") != "animale" or (tipo and a.get("t") != tipo): continue
+        k = unicodedata.normalize("NFD", a["n"].lower()); k = "".join(ch for ch in k if ch.isalpha())
+        if len(k) < 2: continue
+        conta[k] = conta.get(k, 0) + 1; citta.setdefault(k, set()).add(a["c"]); forma.setdefault(k, a["n"].strip().title())
+    return sorted(((forma[k], n, len(citta[k])) for k, n in conta.items()), key=lambda x: (-x[1], x[0]))
+
+def nomi_top(D, rng, st):
+    """I nomi più usati: conto alla rovescia dal quinto al primo, poi «scrivi il nome del tuo: ti rispondiamo con quanti ce ne sono»
+    (commenti.py risponde davvero col numero). A rotazione: tutti, solo cani, solo gatti."""
+    n = st.get("nomi_n", 0); st["nomi_n"] = n + 1
+    tipo, di, emoji = [(None, "di cani e gatti", "🐾"), ("cane", "di cane", "🐶"), ("gatto", "di gatto", "🐱")][n % 3]
+    top = _conta_nomi(D, tipo)[:5]
+    if len(top) < 5: raise Salta("troppo pochi nomi")
+    (n1, k1, c1) = top[0]
+    righe = [{"nome": nm, "valore": (None if i == 0 else k)} for i, (nm, k, _) in enumerate(top)]
+    diversi = len(_conta_nomi(D, tipo))
+    frasi = [
+        (f"Il nome {di} più usato in Italia?", {"tipo": "gancio", "testo": f"Il nome {di} *più usato* in Italia?", "sotto": f"{emoji} Il tuo c'è?", "icona": emoji}),
+        (f"Quinto {top[4][0]}, quarto {top[3][0]}, terzo {top[2][0]}, secondo {top[1][0]}.", {"tipo": "barre", "titolo": f"{emoji} I nomi più usati", "righe": righe, "conto": True}),
+        (f"E al primo posto: {n1}! Sono {k1}, in {c1} città.", {"tipo": "gancio", "testo": f"*{n1}*", "sotto": f"👑 {k1} sulla mappa · in {c1} città", "icona": "👑"}),
+        ("Scrivi il nome del tuo: ti rispondiamo con quanti ce ne sono.", {"tipo": "commento", "testo": "Il mio si chiama…"}),
+    ]
+    did = (f"{emoji} Il nome {di} più usato in Italia? 5° {top[4][0]} · 4° {top[3][0]} · 3° {top[2][0]} · 2° {top[1][0]} · 👑 {n1} ({k1}).\n"
+           f"Sulla mappa di Zampe d'Italia ci sono {diversi} nomi diversi.\n\n"
+           "👇 Scrivi qui sotto il nome del tuo animale: ti rispondiamo con quanti si chiamano come lui in Italia (e se è l'unico!).\n"
+           "🗺️ Aggiungi anche la città (es. «Treviso, Luna, cane») e accendiamo la sua luce.\n➕ Seguici: ogni settimana una classifica nuova.")
+    st["copertina"] = None
+    st["banner_reel"] = "✍️ Scrivi il nome del tuo: quanti ce ne sono? 👇"
+    st["hashtag"] = "#cani #gatti #nomi #nomicani #nomigatti #animalidomestici "
+    st["senza_bonus"] = True
+    return f"{emoji} I NOMI PIÙ USATI", frasi, did
+
 def scelta_18():
     """Le 18 a rotazione (12/11): il quiz, le figurine, la luce nuova: tre idee diverse, mai lo stesso video due giorni di fila (dal 13/11)."""
-    return ["indovina", "figurina", "questa_luce"][(ORA.date() - date(2026, 11, 13)).days % 3]
+    return ["indovina", "intruso", "nomi_top", "figurina", "questa_luce"][(ORA.date() - date(2026, 11, 13)).days % 5]
 
 def sera_18(D, rng, st):
     return FORMATI[scelta_18()](D, rng, st)
 
 
-FORMATI = {"gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide

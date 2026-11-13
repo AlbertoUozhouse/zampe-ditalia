@@ -441,27 +441,85 @@ def figurina(cid, dur, svg, nome, comune, razza, numero, totale, rarita="comune"
     return _pagina(cid, f"Figurina Nº {numero}: {nome}.", css, corpo, js)
 
 
-def barre(cid, dur, titolo, righe, evidenzia=None):
+def barre(cid, dur, titolo, righe, evidenzia=None, conto=False):
     """La gara a barre (12/11, la gara dei follower): le città in fila, le barre crescono una dopo l'altra, la prima ha la corona.
     righe: [{"nome": "Napoli", "valore": 28, "nota": "la città del Vesuvio"}] in ordine; evidenzia: il nome da accendere."""
-    righe = righe[:8]; mx = max([r["valore"] for r in righe] + [1])
+    righe = [dict(r) for r in righe[:8]]; mx = max([r["valore"] or 0 for r in righe] + [1])
+    for r in righe:  # conto alla rovescia (13/11): il primo resta nascosto, lo svela la scena dopo
+        if r["valore"] is None: r["_n"] = True; r["valore"] = mx; r["nome"] = "? ? ?"
     css = SPOT.format(a="#16365F", b="#08142E") + """
     #root .tit { position: absolute; left: 50px; right: 50px; top: 300px; text-align: center; font: 800 76px/1 "Bricolage Grotesque", sans-serif; color: #FFC55C; text-shadow: 0 6px 0 #05030F; }
     #root .lista { position: absolute; left: 60px; right: 60px; top: 420px; display: flex; flex-direction: column; gap: 14px; }
     #root .r { position: relative; height: 76px; border-radius: 18px; background: rgba(255,255,255,.07); overflow: hidden; }
     #root .r i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 18px; background: linear-gradient(90deg, #2E5AA8, #5AA9F5); }
-    #root .r.p i { background: linear-gradient(90deg, #E8A93A, #FFD27A); } #root .r.ev i { background: linear-gradient(90deg, #C2185B, #FF5FA2); }
+    #root .r.p i { background: linear-gradient(90deg, #E8A93A, #FFD27A); } #root .r.na i { background: repeating-linear-gradient(45deg, #3A2E12 0 18px, #5A4618 18px 36px); width: 100% !important; }
+    #root .r.na { outline: 4px dashed #FFC55C; outline-offset: -4px; } #root .r.ev i { background: linear-gradient(90deg, #C2185B, #FF5FA2); }
     #root .r b { position: absolute; left: 22px; top: 50%; transform: translateY(-50%); font: 900 38px var(--font-body); color: #FFF4DE; text-shadow: 0 2px 6px rgba(0,0,0,.6); white-space: nowrap; }
     #root .r b small { font-size: 26px; opacity: .85; font-weight: 800; }
     #root .r span { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font: 800 44px "Bricolage Grotesque", sans-serif; color: #FFF4DE; }"""
-    li = "".join(f'<div class="r{" p" if i == 0 else ""}{" ev" if evidenzia and r["nome"] == evidenzia else ""}" id="{cid}-r{i}"><i id="{cid}-b{i}" style="width:{max(18, round(100 * r["valore"] / mx))}%"></i>'
-                 f'<b>{"👑 " if i == 0 else f"{i + 1}. "}{ESC(r["nome"])}{f" <small>· {ESC(r["nota"])}</small>" if r.get("nota") else ""}</b><span>{r["valore"]}</span></div>' for i, r in enumerate(righe))
+    li = "".join(f'<div class="r{" p" if i == 0 else ""}{" na" if r.get("_n") else ""}{" ev" if evidenzia and r["nome"] == evidenzia else ""}" id="{cid}-r{i}"><i id="{cid}-b{i}" style="width:{max(18, round(100 * r["valore"] / mx))}%"></i>'
+                 f'<b>{"👑 " if i == 0 else f"{i + 1}. "}{ESC(r["nome"])}{f" <small>· {ESC(r["nota"])}</small>" if r.get("nota") else ""}</b><span>{"?" if r.get("_n") else r["valore"]}</span></div>' for i, r in enumerate(righe))
     corpo = f'<div class="spot"></div><div class="raggi" id="{cid}-x"></div><div class="tit">{ESC(titolo)}</div><div class="lista">{li}</div>'
     js = f'    tl.to("#{cid}-x", {{ rotation: 20, duration: {dur:.2f}, ease: "none" }}, 0);'
     for i in range(len(righe)):
-        t0 = 0.15 + (len(righe) - 1 - i) * 0.22  # dall'ultima alla prima: la corona arriva per ultima
+        t0 = 0.15 + (len(righe) - 1 - i) * (max(0.3, (dur - 0.9) / len(righe)) if conto else 0.22)  # dall'ultima alla prima; nel conto alla rovescia una alla volta, con la voce
+        if conto: js += f'\n    tl.set("#{cid}-r{i}", {{ opacity: 0, x: 80 }}, 0); tl.to("#{cid}-r{i}", {{ opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }}, {t0:.2f});'
         js += f'\n    tl.set("#{cid}-b{i}", {{ scaleX: 0, transformOrigin: "0 50%" }}, 0); tl.to("#{cid}-b{i}", {{ scaleX: 1, duration: 0.5, ease: "power3.out" }}, {t0:.2f});'
     return _pagina(cid, f"Gara a barre: {titolo}", css, corpo, js)
 
-TIPI = {"barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+def _griglia(cid, base, altro, dove, righe, colonne, lato):
+    """Le celle del rompicapo: tutte uguali tranne una (dove = (riga, colonna) da 0). Piccole rotazioni fisse, così l'occhio deve cercare."""
+    x0 = (1080 - colonne * lato) / 2; out = []
+    for r in range(righe):
+        for c in range(colonne):
+            k = r * colonne + c; rot = ((k * 37) % 13) - 6; sc = 1.16 + ((k * 53) % 9) / 100  # i disegni hanno margine: ingranditi riempiono la cella
+            qui = (r, c) == tuple(dove)
+            ident = f'id="{cid}-x" ' if qui else ""
+            out.append(f'<img {ident}src="assets/svg/{altro if qui else base}" alt="" '
+                       f'style="left:{x0 + c * lato:.0f}px;top:{r * lato:.0f}px;width:{lato}px;height:{lato}px;transform:rotate({rot}deg) scale({sc:.2f})">')
+    return "".join(out)
+
+INTRUSO_CSS = """#root .tit {{ position: absolute; left: 40px; right: 220px; top: 296px; text-align: left; padding-left: 50px; font: 800 {fs}px/1.02 "Bricolage Grotesque", sans-serif; color: #FFF4DE; text-shadow: 0 6px 0 #05030F; }}
+    #root .tit b {{ color: #FFC55C; }}
+    #root .gr {{ position: absolute; left: 0; top: 452px; width: 1080px; height: {h}px; }}
+    #root .gr img {{ position: absolute; object-fit: contain; filter: drop-shadow(0 6px 8px rgba(0,0,0,.45)); }}
+    #root .tempo {{ position: absolute; left: 70px; right: 70px; top: 418px; height: 16px; border-radius: 999px; background: rgba(255,255,255,.14); overflow: hidden; }}
+    #root .tempo i {{ display: block; height: 100%; width: 100%; background: linear-gradient(90deg, #FF5F5F, #FFC55C); border-radius: 999px; transform-origin: 0 50%; }}
+    #root .num {{ position: absolute; right: 70px; top: 284px; width: 120px; height: 120px; border-radius: 50%; background: #FFC55C; color: #2A1606; font: 800 84px/120px "Bricolage Grotesque", sans-serif; text-align: center; box-shadow: 0 0 40px rgba(255,197,92,.7); }}"""
+
+def intruso(cid, dur, base, altro, dove, titolo, righe=5, colonne=5, conta=5, tempi=None):
+    """Il rompicapo (13/11, i reel d'impatto: chi guarda si ferma, cerca e riguarda): tanti animali uguali e un intruso, il tempo che scorre.
+    Si capisce senza conoscere la pagina. titolo con *asterischi* per la parola in oro."""
+    lato = 188; parti = re.split(r"(\*[^*]+\*)", titolo)
+    tit = "".join(f"<b>{ESC(x[1:-1])}</b>" if x.startswith("*") else ESC(x) for x in parti if x)
+    css = SPOT.format(a="#243B7A", b="#0A1230") + "\n    " + INTRUSO_CSS.format(fs=70 if len(titolo) <= 26 else 56, h=righe * lato)
+    corpo = f"""<div class="spot"></div><div class="tit">{tit}</div><div class="num" id="{cid}-n">{conta}</div>
+    <div class="tempo"><i id="{cid}-t"></i></div><div class="gr" id="{cid}-g">{_griglia(cid, base, altro, dove, righe, colonne, lato)}</div>"""
+    t0 = dur * 0.38  # il conto alla rovescia occupa l'ultimo 62% della scena (la voce conta «cinque, quattro…»)
+    passo = (dur - t0) / conta
+    js = [f'    tl.to("#{cid}-t", {{ scaleX: 0, duration: {dur - 0.1:.2f}, ease: "none" }}, 0.05);',
+          f'    tl.to("#{cid}-g", {{ scale: 1.03, transformOrigin: "540px {righe * lato / 2:.0f}px", duration: {dur:.2f}, ease: "none" }}, 0);']
+    for i in range(1, conta):
+        t = tempi[i] if tempi and len(tempi) == conta else t0 + i * passo  # il numero cambia quando la voce lo dice (costruisci.py passa i tempi delle parole)
+        js.append(f'    tl.set("#{cid}-n", {{ textContent: "{conta - i}" }}, {t:.2f}); tl.to("#{cid}-n", {{ keyframes: [{{ scale: 1.3, duration: 0.08 }}, {{ scale: 1, duration: 0.12 }}] }}, {t:.2f});')
+    return _pagina(cid, f"Rompicapo: {titolo.replace('*', '')}", css, corpo, "\n".join(js))
+
+def intruso_svela(cid, dur, base, altro, dove, titolo, riga_testo="", righe=5, colonne=5):
+    """La soluzione del rompicapo: gli altri si spengono, un anello d'oro sull'intruso e si va vicino."""
+    lato = 188; x0 = (1080 - colonne * lato) / 2
+    cx, cy = x0 + dove[1] * lato + lato / 2, dove[0] * lato + lato / 2
+    css = SPOT.format(a="#5A3A0E", b="#1A0F04") + "\n    " + INTRUSO_CSS.format(fs=76, h=righe * lato) + f"""
+    #root .gr img {{ opacity: .22; }} #root .gr img#{cid}-x {{ opacity: 1; filter: drop-shadow(0 0 30px rgba(255,197,92,.95)); }}
+    #root .an {{ position: absolute; left: {cx - lato * 0.62:.0f}px; top: {cy - lato * 0.62:.0f}px; width: {lato * 1.24:.0f}px; height: {lato * 1.24:.0f}px; border-radius: 50%; border: 10px solid #FFC55C; box-shadow: 0 0 50px rgba(255,197,92,.9); }}
+    #root .dove {{ position: absolute; left: 470px; right: 50px; top: 306px; text-align: right; }}
+    #root .dove span {{ font: 900 34px var(--font-body); color: #2A1606; background: #FFC55C; border-radius: 999px; padding: 10px 24px; white-space: nowrap; }}"""
+    corpo = f"""<div class="spot"></div><div class="tit"><b>{ESC(titolo)}</b></div>
+    <div class="gr" id="{cid}-g">{_griglia(cid, base, altro, dove, righe, colonne, lato)}<div class="an" id="{cid}-a"></div></div>
+    {f'<div class="dove"><span id="{cid}-d">{ESC(riga_testo)}</span></div>' if riga_testo else ""}"""
+    js = f"""    tl.set("#{cid}-a", {{ scale: 2.4, opacity: 0 }}, 0); tl.to("#{cid}-a", {{ scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.4)" }}, 0.05);
+    tl.to("#{cid}-a", {{ keyframes: [{{ scale: 1.12, duration: 0.35 }}, {{ scale: 1, duration: 0.35 }}], repeat: 3 }}, 0.5);
+    tl.to("#{cid}-g", {{ scale: 1.3, transformOrigin: "{cx:.0f}px {cy:.0f}px", duration: {max(0.8, dur - 0.3):.2f}, ease: "power2.out" }}, 0.25);"""
+    return _pagina(cid, "Rompicapo: la soluzione.", css, corpo, js)
+
+TIPI = {"intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}
