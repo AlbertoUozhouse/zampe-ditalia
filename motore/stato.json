@@ -7543,6 +7543,7 @@
 "18131138221860606",
 "18131152180851399",
 "18131158963694888",
+"18131159872851206",
 "18131161078837721",
 "18131177215801140",
 "18131192068885745",
@@ -10676,7 +10677,8 @@
 1794601411.1493795,
 1794601417.389438,
 1794602192.3465881,
-1794602193.4435282
+1794602193.4435282,
+1794604596.9266121
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12858,7 +12860,8 @@
 "francesco45344": "2026-11-13",
 "nik0_109": "2026-11-13",
 "francesco.pio.salerno___": "2026-11-13",
-"maxito104_": "2026-11-13"
+"maxito104_": "2026-11-13",
+"m.viesti": "2026-11-13"
 },
 "media_letti": {},
 "pezzi": {
@@ -19389,11 +19392,12 @@
 "57604e0d0e3f31b0",
 "7701cd4a20f1e8a0",
 "242f376c3077aeed",
-"890dbe5cab4c6de9"
+"890dbe5cab4c6de9",
+"a97de6e9786a94b3"
 ],
 "privati_ora": [
-1794598123.3506613,
-1794601411.1494038
+1794601411.1494038,
+1794604596.9266376
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -22166,7 +22170,7 @@
 "Rezzato|BS": 1,
 "Casavatore|NA": 1,
 "Fucecchio|FI": 1,
-"Bisceglie|BT": 17,
+"Bisceglie|BT": 18,
 "Canale|CN": 1,
 "Chiavenna|SO": 1,
 "Cavaion Veronese|VR": 2,
@@ -22704,7 +22708,8 @@
 "francesco45344",
 "nik0_109",
 "francesco.pio.salerno___",
-"leonardopellegrini5"
+"leonardopellegrini5",
+"m.viesti"
 ],
 "c": [
 "18090801728275406",
@@ -22715,7 +22720,8 @@
 "18472281829191357",
 "17959051011290549",
 "18027783866925446",
-"18652014724043269"
+"18652014724043269",
+"18131159872851206"
 ],
 "chiuse": 3,
 "log": [
@@ -22897,7 +22903,8 @@
 "nik0_109|animale|rio",
 "massimobassi906|animale|tito",
 "francesco.pio.salerno___|animale|spyro",
-"maxito104_|animale|lady"
+"maxito104_|animale|lady",
+"m.viesti|animale|desy"
 ]
 },
 "gara_follower": [
