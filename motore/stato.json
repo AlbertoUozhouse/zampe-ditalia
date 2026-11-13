@@ -5672,6 +5672,7 @@
 "18110943419624151",
 "18110957321629112",
 "18110961767237827",
+"18110974439193302",
 "18110992925234032",
 "18110993342186341",
 "18110998163179451",
@@ -6653,6 +6654,7 @@
 "18119949524088109",
 "18119953958517247",
 "18119954606287565",
+"18119957281801344",
 "18119961460943437",
 "18119964443092600",
 "18119971487076660",
@@ -10671,7 +10673,9 @@
 1794598963.128841,
 1794598964.3753548,
 1794599844.7724023,
-1794599850.4726782
+1794599850.4726782,
+1794601411.1493795,
+1794601417.389438
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -11565,7 +11569,7 @@
 "lorenzo_dessi_2317": "2026-10-29",
 "dav________ide0612": "2026-10-29",
 "kedj_derba_15": "2026-10-29",
-"leonardopellegrini5": "2026-10-29",
+"leonardopellegrini5": "2026-11-13",
 "mathilde_orsini": "2026-10-29",
 "reby_cuccu09": "2026-10-31",
 "gretabalzanoo": "2026-10-29",
@@ -12852,7 +12856,8 @@
 "losapio_fra_010": "2026-11-13",
 "francesco45344": "2026-11-13",
 "nik0_109": "2026-11-13",
-"francesco.pio.salerno___": "2026-11-13"
+"francesco.pio.salerno___": "2026-11-13",
+"maxito104_": "2026-11-13"
 },
 "media_letti": {},
 "pezzi": {
@@ -14432,7 +14437,7 @@
 "doro_sacco": 30,
 "antonio.mormile__": 30,
 "gridellivalentina": 30,
-"leonardopellegrini5": 66,
+"leonardopellegrini5": 86,
 "lorenzo_dessi_2317": 30,
 "bea_savo": 30,
 "diegofavale28": 30,
@@ -19381,11 +19386,12 @@
 "7871d7e1ee4ff8a7",
 "57604e0d0e3f31b0",
 "7701cd4a20f1e8a0",
-"242f376c3077aeed"
+"242f376c3077aeed",
+"890dbe5cab4c6de9"
 ],
 "privati_ora": [
-1794595706.0410023,
-1794598123.3506613
+1794598123.3506613,
+1794601411.1494038
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19400,7 +19406,8 @@
 ]
 },
 "missioni_fatte": {
-"francesco.papagni": "2026-11-13"
+"francesco.papagni": "2026-11-13",
+"leonardopellegrini5": "2026-11-13"
 },
 "boost": {},
 "negozio_fatti": [
@@ -22157,7 +22164,7 @@
 "Canale|CN": 1,
 "Chiavenna|SO": 1,
 "Cavaion Veronese|VR": 2,
-"Barletta|BT": 4,
+"Barletta|BT": 5,
 "Savona|SV": 4,
 "Pesaro|PU": 1,
 "Catania|CT": 3,
@@ -22748,12 +22755,14 @@
 "u": [
 "filannino_giorgio7",
 "dimastrogiovannivalentina",
-"simo_caputo14"
+"simo_caputo14",
+"maxito104_"
 ],
 "c": [
 "17919107940525393",
 "18075833270504078",
-"18029401745870548"
+"18029401745870548",
+"18119957281801344"
 ],
 "chiuse": 1,
 "log": [
@@ -22875,7 +22884,8 @@
 "francesco45344|animale|simba",
 "nik0_109|animale|rio",
 "massimobassi906|animale|tito",
-"francesco.pio.salerno___|animale|spyro"
+"francesco.pio.salerno___|animale|spyro",
+"maxito104_|animale|lady"
 ]
 },
 "gara_follower": [
