@@ -1326,7 +1326,8 @@ def intruso(D, rng, st):
     sc = {"base": [base[0], base[1], seme], "altro": [altro[0], altro[1], seme + 1], "dove": dove}
     tot = sum(1 for a in D["animali"] if a.get("k") == "animale")
     frasi = [
-        (f"{titolo.replace('*', '')}. Cinque, quattro, tre, due, uno.", {"tipo": "intruso", **sc, "titolo": titolo}),
+        # coi punti la voce fa una pausa a ogni numero: il conto dura quasi cinque secondi veri (con le virgole durava due secondi: troppo poco per cercare)
+        (f"{titolo.replace('*', '')}. Cinque. Quattro. Tre. Due. Uno.", {"tipo": "intruso", **sc, "titolo": titolo}),
         (f"Eccolo: {ORDINALI[dove[0]]} riga. L'avevi visto?", {"tipo": "intruso_svela", **sc, "titolo": "ECCOLO!", "riga_testo": f"{ORDINALI[dove[0]]} riga, {ORDINALI[dove[1]]} colonna"}),
         ("Scrivi in quanti secondi l'hai trovato. Domani è più difficile.", {"tipo": "chiusura", "testo": "⏱️ In quanti secondi? 👇"}),
     ]
