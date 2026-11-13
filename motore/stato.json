@@ -6032,6 +6032,7 @@
 "18115151567166365",
 "18115164086025802",
 "18115167605600538",
+"18115176317139693",
 "18115187408136374",
 "18115188680037324",
 "18115189889138592",
@@ -6249,6 +6250,7 @@
 "18117290999117670",
 "18117293552036888",
 "18117297569105094",
+"18117325088028225",
 "18117331091034904",
 "18117345674029862",
 "18117358250102589",
@@ -7167,6 +7169,7 @@
 "18127107550924375",
 "18127138295311202",
 "18127143671492524",
+"18127143808938086",
 "18127152899315277",
 "18127181180313091",
 "18127184084512804",
@@ -10614,7 +10617,9 @@
 "18798213136033257"
 ],
 "risposte": [
-1794578697.3331037
+1794578697.3331037,
+1794580257.1780488,
+1794580262.9727352
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -10773,7 +10778,7 @@
 "_6misa6misa6_": "2026-10-28",
 "_quintosegno_": "2026-10-27",
 "_vickycappe_": "2026-10-27",
-"annaagriggio": "2026-11-11",
+"annaagriggio": "2026-11-13",
 "yooo_mattt": "2026-10-29",
 "andreairon_wolf": "2026-10-27",
 "_engyannuu_": "2026-10-27",
@@ -12788,7 +12793,8 @@
 "teslathequeenofbards": "2026-11-13",
 "nadiacavallari4549nadia": "2026-11-13",
 "giusy_stivala": "2026-11-13",
-"francesco.papagni": "2026-11-13"
+"francesco.papagni": "2026-11-13",
+"andre_privvvvv_espo": "2026-11-13"
 },
 "media_letti": {},
 "pezzi": {
@@ -13987,7 +13993,8 @@
 "_la.nnoeee__": "2026-11-02",
 "ristic2013": "2026-11-02",
 "jhash.swiss": "2026-11-04",
-"gabbo_u_sospit": "2026-11-13"
+"gabbo_u_sospit": "2026-11-13",
+"alessandro61934": "2026-11-13"
 },
 "extra": {
 "albertomarchesin": 6,
@@ -14159,7 +14166,7 @@
 "dimastrogiovannivalentina": 35,
 "gas.33_": 30,
 "fra.schi_": 30,
-"annaagriggio": 60,
+"annaagriggio": 70,
 "yannis_raz": 60,
 "priva.tissimo.o_della.lodi.i": 3,
 "samu.mi16": 30,
@@ -19288,11 +19295,11 @@
 "40bd5d1c9f97337d",
 "f026d5f9d7cfe8e3",
 "9296be344726cdd4",
-"5fb7d662978dd2f5"
+"5fb7d662978dd2f5",
+"52744cd8355e452a"
 ],
 "privati_ora": [
-1794574216.268168,
-1794574629.0737321
+1794580257.1780758
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -21997,9 +22004,13 @@
 [
 "San Ferdinando di Puglia|BT",
 "Chiavenna|SO"
+],
+[
+"Bubbio|AT",
+"San Marco Argentano|CS"
 ]
 ],
-"attesa": "Bubbio|AT",
+"attesa": null,
 "punti": {
 "Crotone|KR": 2,
 "Piombino|LI": 1,
@@ -22031,7 +22042,8 @@
 "Pesaro|PU": 1,
 "Catania|CT": 3,
 "Foggia|FG": 2,
-"Lugo|RA": 1
+"Lugo|RA": 1,
+"San Marco Argentano|CS": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22325,6 +22337,15 @@
 "t": "2026-11-13T12:57+00:00",
 "sorpasso": "Lugo|RA",
 "su": "Macerata|MC",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-13T14:30+00:00",
+"sorpasso": "San Marco Argentano|CS",
+"su": "Bubbio|AT",
 "punti": [
 1,
 0
@@ -22640,6 +22661,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"San Marco Argentano|CS": {
+"u": [
+"andre_privvvvv_espo"
+],
+"c": [
+"18115176317139693"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22674,7 +22705,8 @@
 "nadiacavallari4549nadia|animale|pepe",
 "giusy_stivala|animale|linus",
 "francesco.papagni|animale|sharon",
-"stefanotazzarii|animale|jagermeister"
+"stefanotazzarii|animale|jagermeister",
+"andre_privvvvv_espo|animale|andrea"
 ]
 },
 "gara_follower": [
