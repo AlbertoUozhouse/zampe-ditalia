@@ -166,6 +166,7 @@
 "17879375904562313",
 "17879450517566354",
 "17879620509563403",
+"17879625813634640",
 "17879674623634224",
 "17879778603567191",
 "17879801889565265",
@@ -1175,6 +1176,7 @@
 "17921713665448534",
 "17921724291464785",
 "17921830728242134",
+"17921897670452122",
 "17921969391244430",
 "17922073797450526",
 "17922091656454183",
@@ -4869,6 +4871,7 @@
 "18100571183096020",
 "18100582505426854",
 "18100592633388657",
+"18100601528430802",
 "18100648808425561",
 "18100651205547707",
 "18100664447560699",
@@ -5463,6 +5466,7 @@
 "18109452845347615",
 "18109466159108638",
 "18109467737264055",
+"18109481036618776",
 "18109500749355171",
 "18109505215942595",
 "18109518437248078",
@@ -10593,7 +10597,9 @@
 "risposte": [
 1794565753.4509203,
 1794566567.3414824,
-1794566572.1142766
+1794566572.1142766,
+1794567442.1192575,
+1794567443.3177006
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -14958,7 +14964,8 @@
 "patrickmtb2026": 10,
 "matteo_bruscobike": 10,
 "passionfruit.exe_": 6,
-"minaudamartina": 10
+"minaudamartina": 10,
+"teslathequeenofbards": 10
 },
 "inviti_giorno": {
 "2026-11-06": {
@@ -15827,7 +15834,8 @@
 "_ele.na_7": "premiato",
 "_letiziasabato_": "premiato",
 "patrickmtb2026": "premiato",
-"matteo_bruscobike": "premiato"
+"matteo_bruscobike": "premiato",
+"teslathequeenofbards": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -17747,7 +17755,8 @@
 "deby_gs81": "2026-11-12",
 "delprinodavide": "2026-11-12",
 "filannino_giorgio7": "2026-11-12",
-"teslathequeenofbards": "2026-11-13"
+"teslathequeenofbards": "2026-11-13",
+"nadiacavallari4549nadia": "2026-11-13"
 },
 "boost_follow": true,
 "privati": [
@@ -21969,7 +21978,7 @@
 "Chiavenna|SO": 1,
 "Cavaion Veronese|VR": 1,
 "Barletta|BT": 1,
-"Savona|SV": 1,
+"Savona|SV": 4,
 "Pesaro|PU": 1
 },
 "giocatori": {
@@ -21978,11 +21987,15 @@
 ],
 "Piombino|LI": [
 "stella_zenna"
+],
+"Savona|SV": [
+"teslathequeenofbards"
 ]
 },
 "squadra": {
 "phantom20_13": "Crotone|KR",
-"stella_zenna": "Piombino|LI"
+"stella_zenna": "Piombino|LI",
+"teslathequeenofbards": "Savona|SV"
 },
 "giorni": {
 "phantom20_13": [
@@ -21991,6 +22004,9 @@
 ],
 "stella_zenna": [
 "2026-11-09"
+],
+"teslathequeenofbards": [
+"2026-11-13"
 ]
 },
 "storia": [
@@ -22544,5 +22560,11 @@
 "teslathequeenofbards|animale|meredith",
 "nadiacavallari4549nadia|animale|pepe"
 ]
+},
+"gara_follower": [
+{
+"k": "Savona|SV",
+"t": "2026-11-13T10:57+00:00"
 }
+]
 }
