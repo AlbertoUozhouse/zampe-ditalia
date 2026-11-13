@@ -93,6 +93,13 @@
     legaRisultato(s);
   }
   window.apriCoppa = apri;
+  // 13/11: il tabellone nella piazza del paese 3D (mondo3d.js) legge da qui la sfida della città, la staffetta e il posto nella gara dei follower
+  window.coppaPronta = () => !!C;
+  window.coppaDi = k => {
+    if (!C || !k) return null;
+    const p = partita(k), q = C.quartiere?.[k], i = (C.follower?.sempre || []).findIndex(([x]) => x === k);
+    return { ...p, nome: nome(k), rivaleNome: nome(p.rivale), staffetta: q ? q.n : 0, staffette: q ? q.chiuse : 0, posto: i >= 0 ? i + 1 : null, seguono: i >= 0 ? C.follower.sempre[i][1] : 0, fine: C.fine, turno: C.turno };
+  };
   window.coppaProva = nome => PROVE[nome].gioca(squadra().k); // per le prove automatiche da telefono
 
   // ---------- fine prova: codice, Instagram, cartolina ----------

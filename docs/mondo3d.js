@@ -390,6 +390,35 @@ async function apri(v, opz = {}) {
     new THREE.PointsMaterial({ color: new THREE.Color("#FFF3A0").multiplyScalar(3), size: 0.22, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false }));
   scene.add(lucc);
 
+  const stileGira = [];  // animazioni delle novità (tabellone, effetti della regia): girano in passo()
+  // ---------- il tabellone della Coppa in piazza (13/11, la gara): la sfida vera della città, la staffetta, il posto tra le città che ci seguono ----------
+  const cp = opz.coppa || window.coppaDi?.(v.key);  // se chi apre non l'ha passato, lo legge da coppa.js
+  if (cp && cp.rivale) {
+    const W = 1024, H = 600, tab = tela(W, H, (x) => {
+      const g = x.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#14244F"); g.addColorStop(1, "#070D24");
+      x.fillStyle = g; x.strokeStyle = "#FFC55C"; x.lineWidth = 16; x.beginPath(); x.roundRect(8, 8, W - 16, H - 16, 44); x.fill(); x.stroke();
+      x.textAlign = "center"; x.textBaseline = "middle"; const F = (px, w = 800) => `${w} ${px}px "Bricolage Grotesque", system-ui, sans-serif`;
+      x.fillStyle = "#FFC55C"; x.font = F(52); x.fillText("🏆 COPPA DELLE ZAMPE", W / 2, 70);
+      const nomi = [cp.nome, cp.rivaleNome].map(n => n.length > 14 ? n.slice(0, 13) + "…" : n);
+      x.fillStyle = "#FFF4DE"; x.font = F(nomi.some(n => n.length > 10) ? 54 : 66); x.fillText(nomi[0].toUpperCase(), W * 0.27, 190); x.fillText(nomi[1].toUpperCase(), W * 0.73, 190);
+      x.font = F(190); x.fillStyle = cp.noi >= cp.loro ? "#FFC55C" : "#FFF4DE"; x.fillText(String(cp.noi), W * 0.27, 330);
+      x.fillStyle = cp.loro > cp.noi ? "#FFC55C" : "#FFF4DE"; x.fillText(String(cp.loro), W * 0.73, 330);
+      x.fillStyle = "rgba(255,244,222,.6)"; x.font = F(120); x.fillText("–", W / 2, 320);
+      x.font = F(34, 700); x.fillStyle = "#CFE3FF";
+      x.fillText(`🔁 Staffetta ${cp.staffetta || 0}/3` + (cp.posto ? ` · 🏁 ${cp.posto}ª città che ci segue` : " · 🏁 SEGUO = +2 punti"), W / 2, 468, W - 80);
+      x.fillStyle = "#FFB862"; x.font = F(30, 700); x.fillText("ogni animale nuovo è un punto · domenica il trofeo", W / 2, 534, W - 80);
+    });
+    const tex = new THREE.CanvasTexture(tab); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8;
+    const cartello = new THREE.Group();
+    const pannello = new THREE.Mesh(new THREE.PlaneGeometry(10.2, 6), new THREE.MeshBasicMaterial({ map: tex, toneMapped: false, side: THREE.DoubleSide }));
+    pannello.position.y = 6.4; cartello.add(pannello);
+    for (const sx of [-4.2, 4.2]) { const palo = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.2, 3.5, 10), new THREE.MeshStandardMaterial({ color: "#2A2F45", metalness: 0.6, roughness: 0.4 }));
+      palo.position.set(sx, 1.75, -0.08); palo.castShadow = true; cartello.add(palo); }  // i pali reggono il cartello da sotto
+    cartello.position.set(0, 0, -7.5); scene.add(cartello);  // dietro la fontana, rivolto verso chi entra in piazza
+    if (opz.cattura) cartello.userData.guarda = true;
+    stileGira.push(() => { if (cartello.userData.guarda) cartello.lookAt(camera.position.x, cartello.position.y, camera.position.z); });  // nel reel il tabellone si gira verso la telecamera
+  }
+
   // ---------- il paese all'ora vera (12/11, realismo): di giorno è giorno, al tramonto luce d'oro, al crepuscolo si accendono i lampioni ----------
   const quando = opz.quando ? new Date(opz.quando) : new Date(), sol = sole(v.ll.lat, v.ll.lng, quando);
   const ora = sol.alt > 8 ? "giorno" : sol.alt > -1 ? "oro" : sol.alt > -7 ? "crepuscolo" : "notte";
@@ -422,7 +451,7 @@ async function apri(v, opz = {}) {
   if (top) top.textContent = `${oraTesto} · ${top.textContent}`;
 
   // ---------- la regia del reparto Innovazione (10/11): ogni reel ha il suo stile (motore/agenzia.py regia → reel/volo3d.js → opz.stile) ----------
-  const stileGira = [], st = opz.stile || null;
+  const st = opz.stile || null;
   if (st) {
     const col = (c, d) => { try { return new THREE.Color(c); } catch (e) { return new THREE.Color(d); } };
     if (st.cielo_basso && !diurno) cielo.material.uniforms.basso.value = col(st.cielo_basso, "#21336B");

@@ -370,7 +370,7 @@ function entra3d(v) {
   if (!v || !window.Mondo3D) return;
   map.closePopup(); $("#sheet").hidden = true;
   let mio = SCELTO; if (!mio) try { const id = localStorage.getItem("mio"); mio = id && DATA.find(d => d.id === id); } catch (e) {}
-  window.Mondo3D.apri(v, { svg: petSvg, bello: BELLO?.id, mio: mio && mio.villa === v ? mio : null, scheda: d => {
+  window.Mondo3D.apri(v, { svg: petSvg, bello: BELLO?.id, mio: mio && mio.villa === v ? mio : null, coppa: window.coppaDi?.(v.key), scheda: d => {
     const manca = ARTICOLI.filter(a => !d.acc?.includes(a[0]));
     return popup(d).replace('<div class="pop">', '<div class="pop">') + (manca.length ? `<div class="m3-vetrina">${manca.map(([k, nome, prezzo]) =>
       `<button type="button" class="m3-art regala" data-id="${esc(d.id)}" data-k="${k}"><span>${ICONE[k]}</span><b>${nome}</b><small>${prezzo}${QUANTI(v, k) ? ` · ${QUANTI(v, k)} in ${esc(v.nome)}` : ""}</small></button>`).join("")}</div>` : `<div class="m3-tutto">✨ Ha già tutti gli accessori!</div>`);

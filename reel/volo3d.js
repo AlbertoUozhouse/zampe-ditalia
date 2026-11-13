@@ -38,11 +38,12 @@ const server = http.createServer((req, res) => {
   page.on("pageerror", e => console.error("pagina:", e.message));
   await page.goto(`http://localhost:${porta}/index.html`, { waitUntil: "domcontentloaded" });
   await page.waitForFunction(() => typeof VILLE !== "undefined" && VILLE.size > 0 && window.Mondo3D, null, { timeout: 90000 });
+  await page.waitForFunction(() => window.coppaPronta && window.coppaPronta(), null, { timeout: 20000 }).catch(() => console.error("Coppa non caricata: niente tabellone"));
   const ok = await page.evaluate(async ([comune, nome, meteo, regia, opz]) => {
     const v = [...VILLE.values()].find(v => v.nome.toLowerCase() === comune.toLowerCase());
     if (!v) return "comune non trovato";
     const mio = nome ? v.lista.find(d => (d.n || "").toLowerCase() === nome.toLowerCase()) : null;
-    await window.Mondo3D.apri(v, { svg: petSvg, mio, cattura: { nome: mio ? mio.n : "" }, scheda: () => "", stile: regia, ...(meteo ? { meteo } : {}), ...(opz.quando ? { quando: opz.quando } : {}) });
+    await window.Mondo3D.apri(v, { svg: petSvg, mio, cattura: { nome: mio ? mio.n : "" }, scheda: () => "", stile: regia, coppa: window.coppaDi?.(v.key), ...(meteo ? { meteo } : {}), ...(opz.quando ? { quando: opz.quando } : {}) });
     const cielo = window.Mondo3D.mondo.cieloBreve;  // su una riga: «⛅ 10° · 🌑 luna nuova»  // il tempo vero di adesso nel comune e la luna di stanotte (mondo3d.js)
     const t = document.createElement("div");
     if (opz.titolo) {  // il duello: nome della città, le sue luci, e il VS in fondo alla metà di sopra

@@ -7,9 +7,9 @@
   "traccia": "gioco",
   "aperto": "2026-11-08",
   "scadenza": "2026-11-10",
-  "stato": "in costruzione",
-  "aggiornato": "2026-11-08",
-  "nota": "Staffetta di quartiere costruita nel motore (coppa.py, commenti.py, coppa.js) per il test di crescita; si accende con il test (config test_crescita). Reel e realismo in pausa durante il test.",
+  "stato": "online",
+  "aggiornato": "2026-11-13",
+  "nota": "13/11: il tabellone della Coppa nella piazza del paese 3D (sito e apertura dei reel): la sfida vera della città col punteggio, la Staffetta di quartiere, il posto nella gara dei follower e come fare punti.",
   "passi_proposti": [
    {
     "giorno": "2026-11-10",
@@ -148,7 +148,8 @@
     "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice sul sito."
    }
   ],
-  "in_ritardo": true
+  "in_ritardo": true,
+  "online_dal": "2026-11-13"
  },
  "reel": {
   "idea": "Sfida di Campanile: il reel dal vivo (derby tra comuni vicini con video vero)",
