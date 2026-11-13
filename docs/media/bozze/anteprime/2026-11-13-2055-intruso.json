@@ -1,0 +1,78 @@
+{
+ "voce": true,
+ "variante": "voce-fissa-45",
+ "tema": "giorno",
+ "id": "2026-11-13-2055-intruso",
+ "formato": "intruso",
+ "testata": {
+  "titolo": "👀 TROVA L'INTRUSO"
+ },
+ "conteggio": {
+  "cani": 1990,
+  "gatti": 803
+ },
+ "frasi": [
+  {
+   "testo": "Trova il cane che fa l'occhiolino. Cinque. Quattro. Tre. Due. Uno.",
+   "scena": {
+    "tipo": "intruso",
+    "base": [
+     "cane",
+     "bassotto",
+     60,
+     "base"
+    ],
+    "altro": [
+     "cane",
+     "bassotto",
+     60,
+     "occhiolino"
+    ],
+    "dove": [
+     3,
+     4
+    ],
+    "nr": 6,
+    "nc": 6,
+    "titolo": "Trova il cane che fa l'*occhiolino*"
+   }
+  },
+  {
+   "testo": "Eccolo: quarta riga. L'avevi visto?",
+   "scena": {
+    "tipo": "intruso_svela",
+    "base": [
+     "cane",
+     "bassotto",
+     60,
+     "base"
+    ],
+    "altro": [
+     "cane",
+     "bassotto",
+     60,
+     "occhiolino"
+    ],
+    "dove": [
+     3,
+     4
+    ],
+    "nr": 6,
+    "nc": 6,
+    "titolo": "ECCOLO!",
+    "riga_testo": "quarta riga, quinta colonna"
+   }
+  },
+  {
+   "testo": "Scrivi in quanti secondi l'hai trovato. Domani è più difficile.",
+   "scena": {
+    "tipo": "chiusura",
+    "testo": "⏱️ In quanti secondi? 👇"
+   }
+  }
+ ],
+ "banner": "⏱️ In quanti secondi l'hai trovato? 👇",
+ "didascalia": "👀 Trova il cane che fa l'occhiolino: sono 36 e hai 5 secondi. Trovato al primo colpo?\n\n👇 Scrivi in quanti secondi l'hai trovato (e sii onesto 😄). Poi mandalo a chi dice di avere l'occhio di falco.\n🐾 Se hai un cane o un gatto, aggiungi la tua città e il suo nome (es. «3 secondi! Treviso, Luna, cane»): si accende sulla mappa d'Italia con gli altri 2866.\n➕ Seguici: domani il rompicapo è più difficile.\n\nVoce generata con IA.\n\n#cani #gatti #rompicapo #trovalintruso #quiz #animalidomestici ",
+ "tag": [],
+ "copertina": null
+}
