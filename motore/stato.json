@@ -10207,6 +10207,7 @@
 "18471839758185153",
 "18471972409186249",
 "18472192090141550",
+"18472281829191357",
 "18472340065140691",
 "18472905892138349",
 "18473134270143143",
@@ -10638,11 +10639,10 @@
 "18798213136033257"
 ],
 "risposte": [
-1794584273.8339133,
-1794584279.9199767,
 1794585052.4405537,
 1794585053.936183,
-1794585826.0777671
+1794585826.0777671,
+1794588224.6596203
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12820,7 +12820,8 @@
 "andre_privvvvv_espo": "2026-11-13",
 "simo_caputo14": "2026-11-13",
 "ema.pir": "2026-11-13",
-"losapio_fra_010": "2026-11-13"
+"losapio_fra_010": "2026-11-13",
+"francesco45344": "2026-11-13"
 },
 "media_letti": {},
 "pezzi": {
@@ -13293,9 +13294,6 @@
 ],
 "gioele7230": [
 "spina_rys"
-],
-"francesco45344": [
-"leonardopellegrini5"
 ],
 "g.patruno_": [
 "leonardopellegrini5"
@@ -13990,7 +13988,8 @@
 "orientalangel>elena_gamiddo",
 "orientalangel>>elena_gamiddo",
 "nuvolele05>andrea_piazza94",
-"passionfruit.exe_>deby_gs81"
+"passionfruit.exe_>deby_gs81",
+"leonardopellegrini5>francesco45344"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14399,7 +14398,7 @@
 "doro_sacco": 30,
 "antonio.mormile__": 30,
 "gridellivalentina": 30,
-"leonardopellegrini5": 30,
+"leonardopellegrini5": 36,
 "lorenzo_dessi_2317": 30,
 "bea_savo": 30,
 "diegofavale28": 30,
@@ -15048,6 +15047,9 @@
 "2026-11-12": {
 "nuvolele05": 1,
 "passionfruit.exe_": 1
+},
+"2026-11-13": {
+"leonardopellegrini5": 1
 }
 },
 "seguono": {
@@ -19329,12 +19331,11 @@
 "52744cd8355e452a",
 "595a390294d24453",
 "645f3df8b8c7e27c",
-"7871d7e1ee4ff8a7"
+"7871d7e1ee4ff8a7",
+"57604e0d0e3f31b0"
 ],
 "privati_ora": [
-1794581050.51797,
-1794584273.8339403,
-1794584279.9199984
+1794588224.6596484
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -22084,7 +22085,7 @@
 "Rezzato|BS": 1,
 "Casavatore|NA": 1,
 "Fucecchio|FI": 1,
-"Bisceglie|BT": 6,
+"Bisceglie|BT": 8,
 "Canale|CN": 1,
 "Chiavenna|SO": 1,
 "Cavaion Veronese|VR": 2,
@@ -22608,20 +22609,26 @@
 "giu.se100",
 "francesco.papagni",
 "ema.pir",
-"losapio_fra_010"
+"losapio_fra_010",
+"francesco45344"
 ],
 "c": [
 "18090801728275406",
 "18104177585379189",
 "18220690045348139",
 "18100355087417616",
-"17914890042471912"
+"17914890042471912",
+"18472281829191357"
 ],
-"chiuse": 1,
+"chiuse": 2,
 "log": [
 {
 "t": "2026-11-13T12:50+00:00",
 "prova": 1
+},
+{
+"t": "2026-11-13T16:43+00:00",
+"prova": 2
 }
 ]
 },
@@ -22772,7 +22779,8 @@
 "simo_caputo14|animale|nalaa",
 "ema.pir|animale|peggy",
 "losapio_fra_010|animale|alex",
-"simo_caputo14|animale|nala"
+"simo_caputo14|animale|nala",
+"francesco45344|animale|simba"
 ]
 },
 "gara_follower": [
@@ -22798,6 +22806,11 @@
 {
 "k": "Barletta|BT",
 "t": "2026-11-13T14:44+00:00",
+"turno": 1
+},
+{
+"k": "Bisceglie|BT",
+"t": "2026-11-13T16:43+00:00",
 "turno": 1
 }
 ]
