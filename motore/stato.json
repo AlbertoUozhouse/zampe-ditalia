@@ -5093,6 +5093,7 @@
 "18104002061380110",
 "18104025422373871",
 "18104039333058589",
+"18104046272634739",
 "18104060783361141",
 "18104064590148553",
 "18104090966562669",
@@ -14969,7 +14970,8 @@
 "passionfruit.exe_": 6,
 "minaudamartina": 10,
 "teslathequeenofbards": 10,
-"giusy_stivala": 10
+"giusy_stivala": 10,
+"s.nenna08": 10
 },
 "inviti_giorno": {
 "2026-11-06": {
@@ -15840,7 +15842,8 @@
 "patrickmtb2026": "premiato",
 "matteo_bruscobike": "premiato",
 "teslathequeenofbards": "premiato",
-"giusy_stivala": "premiato"
+"giusy_stivala": "premiato",
+"s.nenna08": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -21993,7 +21996,8 @@
 "Barletta|BT": 1,
 "Savona|SV": 4,
 "Pesaro|PU": 1,
-"Catania|CT": 3
+"Catania|CT": 3,
+"Foggia|FG": 2
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22264,6 +22268,15 @@
 "su": "Genova|GE",
 "punti": [
 1,
+0
+]
+},
+{
+"t": "2026-11-13T12:20+00:00",
+"sorpasso": "Foggia|FG",
+"su": "Pisa|PI",
+"punti": [
+2,
 0
 ]
 }
@@ -22603,6 +22616,10 @@
 {
 "k": "Catania|CT",
 "t": "2026-11-13T12:04+00:00"
+},
+{
+"k": "Foggia|FG",
+"t": "2026-11-13T12:20+00:00"
 }
 ]
 }
