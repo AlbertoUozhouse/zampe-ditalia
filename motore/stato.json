@@ -6917,6 +6917,7 @@
 "18122667206080759",
 "18122695000994125",
 "18122696546293554",
+"18122708734971529",
 "18122714698908956",
 "18122717842938050",
 "18122727002587610",
@@ -8468,6 +8469,7 @@
 "18149584852558062",
 "18149691382562345",
 "18149720881605681",
+"18149941285600929",
 "18149955163605421",
 "18149998543568833",
 "18150114673568061",
@@ -10589,7 +10591,9 @@
 "18798213136033257"
 ],
 "risposte": [
-1794565753.4509203
+1794565753.4509203,
+1794566567.3414824,
+1794566572.1142766
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12760,7 +12764,8 @@
 "delprinodavide": "2026-11-12",
 "deby_gs81": "2026-11-12",
 "filannino_giorgio7": "2026-11-12",
-"teslathequeenofbards": "2026-11-13"
+"teslathequeenofbards": "2026-11-13",
+"nadiacavallari4549nadia": "2026-11-13"
 },
 "media_letti": {},
 "pezzi": {
@@ -17741,7 +17746,8 @@
 "matteo_bruscobike": "2026-11-12",
 "deby_gs81": "2026-11-12",
 "delprinodavide": "2026-11-12",
-"filannino_giorgio7": "2026-11-12"
+"filannino_giorgio7": "2026-11-12",
+"teslathequeenofbards": "2026-11-13"
 },
 "boost_follow": true,
 "privati": [
@@ -19243,10 +19249,12 @@
 "d3d8c33da92df902",
 "84c8ef8094e3071d",
 "de7635459f173c50",
-"87e98d98779b2227"
+"87e98d98779b2227",
+"40bd5d1c9f97337d"
 ],
 "privati_ora": [
-1794565753.450946
+1794565753.450946,
+1794566567.3415082
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -21961,7 +21969,8 @@
 "Chiavenna|SO": 1,
 "Cavaion Veronese|VR": 1,
 "Barletta|BT": 1,
-"Savona|SV": 1
+"Savona|SV": 1,
+"Pesaro|PU": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22492,6 +22501,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Pesaro|PU": {
+"u": [
+"nadiacavallari4549nadia"
+],
+"c": [
+"18122708734971529"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22522,7 +22541,8 @@
 "matteo_bruscobike|animale|hero",
 "deby_gs81|animale|tia",
 "filannino_giorgio7|animale|gigino",
-"teslathequeenofbards|animale|meredith"
+"teslathequeenofbards|animale|meredith",
+"nadiacavallari4549nadia|animale|pepe"
 ]
 }
 }
