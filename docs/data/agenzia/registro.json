@@ -331,5 +331,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-13T12:16:52+00:00",
   "scambi": 130
+ },
+ {
+  "id": "2026-11-13-1813-indovina",
+  "formato": "indovina",
+  "modalita": "operativa",
+  "inizio": "2026-11-13T17:13:19+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-13T17:18:30+00:00",
+  "scambi": 128
  }
 ]
