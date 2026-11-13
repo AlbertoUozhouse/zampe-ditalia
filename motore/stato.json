@@ -3808,6 +3808,7 @@
 "18073012478787031",
 "18073018487726981",
 "18073029167773304",
+"18073081475786391",
 "18073174547592852",
 "18073179971490250",
 "18073214282786166",
@@ -5848,6 +5849,7 @@
 "18113557529463098",
 "18113571458144072",
 "18113586722275142",
+"18113590391591030",
 "18113599475164023",
 "18113642981178402",
 "18113650523609246",
@@ -6698,6 +6700,7 @@
 "18120410519102915",
 "18120414913765592",
 "18120419593967184",
+"18120419642005822",
 "18120425413749279",
 "18120428596971868",
 "18120428792051607",
@@ -10608,7 +10611,9 @@
 1794571446.6496918,
 1794573345.7227023,
 1794574212.758006,
-1794574216.2681174
+1794574216.2681174,
+1794574629.0737028,
+1794574632.0748065
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -11113,7 +11118,7 @@
 "carols_priv14": "2026-10-27",
 "massimo.agostinelli_": "2026-10-27",
 "carlottasarri__": "2026-10-27",
-"stefanotazzarii": "2026-10-27",
+"stefanotazzarii": "2026-11-13",
 "christian_spivakin": "2026-10-27",
 "ricky_crippa": "2026-10-27",
 "pizz_012": "2026-10-27",
@@ -17774,7 +17779,8 @@
 "delprinodavide": "2026-11-12",
 "filannino_giorgio7": "2026-11-12",
 "teslathequeenofbards": "2026-11-13",
-"nadiacavallari4549nadia": "2026-11-13"
+"nadiacavallari4549nadia": "2026-11-13",
+"francesco.papagni": "2026-11-13"
 },
 "boost_follow": true,
 "privati": [
@@ -19279,10 +19285,12 @@
 "87e98d98779b2227",
 "40bd5d1c9f97337d",
 "f026d5f9d7cfe8e3",
-"9296be344726cdd4"
+"9296be344726cdd4",
+"5fb7d662978dd2f5"
 ],
 "privati_ora": [
-1794574216.268168
+1794574216.268168,
+1794574629.0737321
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -22012,7 +22020,8 @@
 "Savona|SV": 4,
 "Pesaro|PU": 1,
 "Catania|CT": 3,
-"Foggia|FG": 2
+"Foggia|FG": 2,
+"Lugo|RA": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22299,6 +22308,15 @@
 "su": "Pisa|PI",
 "punti": [
 2,
+0
+]
+},
+{
+"t": "2026-11-13T12:57+00:00",
+"sorpasso": "Lugo|RA",
+"su": "Macerata|MC",
+"punti": [
+1,
 0
 ]
 }
@@ -22602,6 +22620,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Lugo|RA": {
+"u": [
+"stefanotazzarii"
+],
+"c": [
+"18073081475786391"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22635,7 +22663,8 @@
 "teslathequeenofbards|animale|meredith",
 "nadiacavallari4549nadia|animale|pepe",
 "giusy_stivala|animale|linus",
-"francesco.papagni|animale|sharon"
+"francesco.papagni|animale|sharon",
+"stefanotazzarii|animale|jagermeister"
 ]
 },
 "gara_follower": [
