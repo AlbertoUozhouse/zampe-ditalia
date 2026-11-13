@@ -19,7 +19,7 @@ Lo aggiorna ogni mattina il controllo delle 10:30. Solo numeri e formati, nessun
 5. Corti: 10–12 secondi.
 
 **Costruiti il 13/11**
-- «Trova l'intruso» (formato `intruso`): 25 animali uguali e uno diverso, la voce conta da cinque a uno, poi l'anello d'oro sulla soluzione. Sei livelli a rotazione (gatto tra i golden, cane tra i gatti neri, golden tra i labrador…).
+- «Trova l'intruso» (formato `intruso`): 36 cani identici, uno ha un solo dettaglio diverso (fa l'occhiolino, è triste, ha la lingua fuori, è senza collare); la voce conta un numero al secondo, poi l'intruso va al centro nell'anello d'oro. Prima versione (un gatto tra 25 cani) bocciata da Alberto la sera stessa: «si vede subito». Regola: il rompicapo deve essere difficile, chi non lo trova riguarda.
 - «I nomi più usati» (formato `nomi_top`): conto alla rovescia dal quinto al primo, a rotazione tutti / cani / gatti; chiusura «scrivi il nome del tuo: ti rispondiamo con quanti ce ne sono».
 - Il bot (commenti.py): a chi scrive solo il nome risponde col numero vero («Sulla mappa ci sono già 62 Luna, in 52 città», oppure «sarebbe il primo in tutta Italia») e chiede la città; a ogni animale nuovo dice se il nome è unico o in quanti sono.
 - Alle 18 rotazione di cinque video: quiz della razza, intruso, nomi, figurine, luce nuova.

@@ -487,38 +487,38 @@ INTRUSO_CSS = """#root .tit {{ position: absolute; left: 40px; right: 220px; top
     #root .tempo i {{ display: block; height: 100%; width: 100%; background: linear-gradient(90deg, #FF5F5F, #FFC55C); border-radius: 999px; transform-origin: 0 50%; }}
     #root .num {{ position: absolute; right: 70px; top: 284px; width: 120px; height: 120px; border-radius: 50%; background: #FFC55C; color: #2A1606; font: 800 84px/120px "Bricolage Grotesque", sans-serif; text-align: center; box-shadow: 0 0 40px rgba(255,197,92,.7); }}"""
 
-def intruso(cid, dur, base, altro, dove, titolo, righe=5, colonne=5, conta=5, tempi=None):
+def intruso(cid, dur, base, altro, dove, titolo, nr=5, nc=5, conta=5, tempi=None):
     """Il rompicapo (13/11, i reel d'impatto: chi guarda si ferma, cerca e riguarda): tanti animali uguali e un intruso, il tempo che scorre.
     Si capisce senza conoscere la pagina. titolo con *asterischi* per la parola in oro."""
-    lato = 188; parti = re.split(r"(\*[^*]+\*)", titolo)
+    lato = 940 // nc; parti = re.split(r"(\*[^*]+\*)", titolo)
     tit = "".join(f"<b>{ESC(x[1:-1])}</b>" if x.startswith("*") else ESC(x) for x in parti if x)
-    css = SPOT.format(a="#243B7A", b="#0A1230") + "\n    " + INTRUSO_CSS.format(fs=70 if len(titolo) <= 26 else 56, h=righe * lato)
+    css = SPOT.format(a="#243B7A", b="#0A1230") + "\n    " + INTRUSO_CSS.format(fs=70 if len(titolo) <= 26 else 56, h=nr * lato)
     corpo = f"""<div class="spot"></div><div class="tit">{tit}</div><div class="num" id="{cid}-n">{conta}</div>
-    <div class="tempo"><i id="{cid}-t"></i></div><div class="gr" id="{cid}-g">{_griglia(cid, base, altro, dove, righe, colonne, lato)}</div>"""
+    <div class="tempo"><i id="{cid}-t"></i></div><div class="gr" id="{cid}-g">{_griglia(cid, base, altro, dove, nr, nc, lato)}</div>"""
     t0 = dur * 0.38  # il conto alla rovescia occupa l'ultimo 62% della scena (la voce conta «cinque, quattro…»)
     passo = (dur - t0) / conta
     js = [f'    tl.to("#{cid}-t", {{ scaleX: 0, duration: {dur - 0.1:.2f}, ease: "none" }}, 0.05);',
-          f'    tl.to("#{cid}-g", {{ scale: 1.03, transformOrigin: "540px {righe * lato / 2:.0f}px", duration: {dur:.2f}, ease: "none" }}, 0);']
+          f'    tl.to("#{cid}-g", {{ scale: 1.03, transformOrigin: "540px {nr * lato / 2:.0f}px", duration: {dur:.2f}, ease: "none" }}, 0);']
     for i in range(1, conta):
         t = tempi[i] if tempi and len(tempi) == conta else t0 + i * passo  # il numero cambia quando la voce lo dice (costruisci.py passa i tempi delle parole)
         js.append(f'    tl.set("#{cid}-n", {{ textContent: "{conta - i}" }}, {t:.2f}); tl.to("#{cid}-n", {{ keyframes: [{{ scale: 1.3, duration: 0.08 }}, {{ scale: 1, duration: 0.12 }}] }}, {t:.2f});')
     return _pagina(cid, f"Rompicapo: {titolo.replace('*', '')}", css, corpo, "\n".join(js))
 
-def intruso_svela(cid, dur, base, altro, dove, titolo, riga_testo="", righe=5, colonne=5):
+def intruso_svela(cid, dur, base, altro, dove, titolo, riga_testo="", nr=5, nc=5):
     """La soluzione del rompicapo: gli altri si spengono, un anello d'oro sull'intruso e si va vicino."""
-    lato = 188; x0 = (1080 - colonne * lato) / 2
+    lato = 940 // nc; x0 = (1080 - nc * lato) / 2
     cx, cy = x0 + dove[1] * lato + lato / 2, dove[0] * lato + lato / 2
-    css = SPOT.format(a="#5A3A0E", b="#1A0F04") + "\n    " + INTRUSO_CSS.format(fs=76, h=righe * lato) + f"""
+    css = SPOT.format(a="#5A3A0E", b="#1A0F04") + "\n    " + INTRUSO_CSS.format(fs=76, h=nr * lato) + f"""
     #root .gr img {{ opacity: .22; }} #root .gr img#{cid}-x {{ opacity: 1; filter: drop-shadow(0 0 30px rgba(255,197,92,.95)); }}
     #root .an {{ position: absolute; left: {cx - lato * 0.62:.0f}px; top: {cy - lato * 0.62:.0f}px; width: {lato * 1.24:.0f}px; height: {lato * 1.24:.0f}px; border-radius: 50%; border: 10px solid #FFC55C; box-shadow: 0 0 50px rgba(255,197,92,.9); }}
     #root .dove {{ position: absolute; left: 470px; right: 50px; top: 306px; text-align: right; }}
     #root .dove span {{ font: 900 34px var(--font-body); color: #2A1606; background: #FFC55C; border-radius: 999px; padding: 10px 24px; white-space: nowrap; }}"""
     corpo = f"""<div class="spot"></div><div class="tit"><b>{ESC(titolo)}</b></div>
-    <div class="gr" id="{cid}-g">{_griglia(cid, base, altro, dove, righe, colonne, lato)}<div class="an" id="{cid}-a"></div></div>
+    <div class="gr" id="{cid}-g">{_griglia(cid, base, altro, dove, nr, nc, lato)}<div class="an" id="{cid}-a"></div></div>
     {f'<div class="dove"><span id="{cid}-d">{ESC(riga_testo)}</span></div>' if riga_testo else ""}"""
     js = f"""    tl.set("#{cid}-a", {{ scale: 2.4, opacity: 0 }}, 0); tl.to("#{cid}-a", {{ scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.4)" }}, 0.05);
     tl.to("#{cid}-a", {{ keyframes: [{{ scale: 1.12, duration: 0.35 }}, {{ scale: 1, duration: 0.35 }}], repeat: 3 }}, 0.5);
-    tl.to("#{cid}-g", {{ scale: 1.3, transformOrigin: "{cx:.0f}px {cy:.0f}px", duration: {max(0.8, dur - 0.3):.2f}, ease: "power2.out" }}, 0.25);"""
+    tl.to("#{cid}-g", {{ scale: {2.3 if nc >= 6 else 1.3}, x: {540 - cx:.0f}, y: {330 - cy:.0f}, transformOrigin: "{cx:.0f}px {cy:.0f}px", duration: {max(0.8, dur - 0.3):.2f}, ease: "power2.out" }}, 0.25);"""  # l'intruso va al centro, sopra le scritte
     return _pagina(cid, "Rompicapo: la soluzione.", css, corpo, js)
 
 TIPI = {"intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,

@@ -1307,32 +1307,33 @@ def gara_follower(D, rng, st):
 # ================================================================ i reel d'impatto (13/11, studio dei numeri: vedi «STUDIO 13/11» in decisioni-reel.md)
 # Dallo studio: i nostri reel li vede solo una parte di chi ci segue; per uscire servono video che un estraneo capisce subito,
 # guarda fino in fondo (o riguarda) e commenta anche senza conoscere il gioco. Due format: il rompicapo e la classifica dei nomi.
-INTRUSI = [  # (tutti, intruso, titolo): colori simili, così bisogna cercare davvero
-    (("cane", "golden"), ("gatto", "rosso"), "Trova il *gatto* tra i cani", "il gatto"),
-    (("gatto", "nero"), ("cane", "labrador_nero"), "Trova il *cane* tra i gatti", "il cane"),
-    (("cane", "labrador_miele"), ("cane", "golden"), "Trova il *golden* tra i labrador", "il golden"),
-    (("gatto", "grigio"), ("gatto", "certosino"), "Trova il *certosino* tra i gatti grigi", "il certosino"),
-    (("cane", "husky"), ("cane", "border_collie"), "Trova il *border collie* tra gli husky", "il border collie"),
-    (("cane", "maltese"), ("gatto", "bianco"), "Trova il *gatto* tra i maltesi", "il gatto"),
+# 13/11 sera, Alberto: «si vede subito che c'era il gatto». Il rompicapo deve essere difficile davvero: 36 cani identici,
+# l'intruso ha un solo dettaglio diverso (reel/costruisci.py varia_muso). Chi non lo trova riguarda il video: sono views.
+INTRUSI = [  # (dettaglio, titolo, come lo dice la voce)
+    ("occhiolino", "Trova il cane che fa l'*occhiolino*", "Trova il cane che fa l'occhiolino"),
+    ("triste", "Trova il cane *triste*", "Trova il cane triste"),
+    ("lingua", "Trova il cane con la *lingua fuori*", "Trova il cane con la lingua fuori"),
+    ("senza_collare", "Trova il cane *senza collare*", "Trova il cane senza collare"),
 ]
-ORDINALI = ["prima", "seconda", "terza", "quarta", "quinta"]
+RAZZE_INTRUSO = ["golden", "bassotto", "husky", "labrador_miele", "jack_russell", "pastore_tedesco", "barboncino", "maltese", "chihuahua", "border_collie"]
+ORDINALI = ["prima", "seconda", "terza", "quarta", "quinta", "sesta"]
 
 def intruso(D, rng, st):
-    """Trova l'intruso: 25 animali uguali e uno diverso, cinque secondi. Si capisce senza conoscere la pagina, e chi non lo trova riguarda."""
+    """Trova l'intruso: 36 cani uguali, uno ha un dettaglio diverso, cinque secondi veri. Si capisce senza conoscere la pagina; chi non lo trova riguarda."""
     n = st.get("intruso_n", 0); st["intruso_n"] = n + 1
-    base, altro, titolo, cosa = INTRUSI[n % len(INTRUSI)]
-    dove = [rng.randrange(1, 5), rng.randrange(0, 5)]  # mai nella prima riga: troppo facile
+    dettaglio, titolo, detto = INTRUSI[n % len(INTRUSI)]
+    razza = RAZZE_INTRUSO[(n * 3 + rng.randrange(len(RAZZE_INTRUSO))) % len(RAZZE_INTRUSO)]
+    dove = [rng.randrange(1, 6), rng.randrange(0, 6)]  # mai nella prima riga: troppo facile
     seme = rng.randrange(1, 99)
-    sc = {"base": [base[0], base[1], seme], "altro": [altro[0], altro[1], seme + 1], "dove": dove}
+    sc = {"base": ["cane", razza, seme, "base"], "altro": ["cane", razza, seme, dettaglio], "dove": dove, "nr": 6, "nc": 6}
     tot = sum(1 for a in D["animali"] if a.get("k") == "animale")
     frasi = [
-        # coi punti la voce fa una pausa a ogni numero: il conto dura quasi cinque secondi veri (con le virgole durava due secondi: troppo poco per cercare)
-        (f"{titolo.replace('*', '')}. Cinque. Quattro. Tre. Due. Uno.", {"tipo": "intruso", **sc, "titolo": titolo}),
+        (f"{detto}. Cinque. Quattro. Tre. Due. Uno.", {"tipo": "intruso", **sc, "titolo": titolo}),
         (f"Eccolo: {ORDINALI[dove[0]]} riga. L'avevi visto?", {"tipo": "intruso_svela", **sc, "titolo": "ECCOLO!", "riga_testo": f"{ORDINALI[dove[0]]} riga, {ORDINALI[dove[1]]} colonna"}),
         ("Scrivi in quanti secondi l'hai trovato. Domani è più difficile.", {"tipo": "chiusura", "testo": "⏱️ In quanti secondi? 👇"}),
     ]
-    did = (f"👀 {titolo.replace('*', '')}: hai 5 secondi. Trovato?\n\n"
-           "👇 Scrivi in quanti secondi l'hai trovato (e sii onesto 😄). Poi manda il video a chi dice di avere l'occhio di falco.\n"
+    did = (f"👀 {detto}: sono 36 e hai 5 secondi. Trovato al primo colpo?\n\n"
+           "👇 Scrivi in quanti secondi l'hai trovato (e sii onesto 😄). Poi mandalo a chi dice di avere l'occhio di falco.\n"
            f"🐾 Se hai un cane o un gatto, aggiungi la tua città e il suo nome (es. «3 secondi! Treviso, Luna, cane»): si accende sulla mappa d'Italia con gli altri {tot}.\n"
            "➕ Seguici: domani il rompicapo è più difficile.")
     st["copertina"] = None

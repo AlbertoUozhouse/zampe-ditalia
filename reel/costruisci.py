@@ -102,7 +102,47 @@ for (const [t,k,s] of {json.dumps(chiavi)}) {{ const svg=(t==="gatto"?D.gatto(k,
   fs.writeFileSync({json.dumps(str(cartella))}+"/"+k+"-"+s+".svg", svg); }}"""
     subprocess.run(["node", "-e", js], check=True)
 
-def solo_animale(cartella, t, razza, seme):
+def varia_muso(g, variante, ns):
+    """Il rompicapo difficile (13/11, Alberto: «si vede subito che c'era il gatto»): tutti lo stesso cane, l'intruso ha un solo dettaglio diverso.
+    «base» = il muso normale (sorriso, niente lingua); poi occhiolino, lingua, triste, senza_collare, collare (di un altro colore)."""
+    import xml.etree.ElementTree as ET
+    q = lambda tag: f"{{{ns}}}{tag}"
+    num = lambda e, k: float(e.get(k, "0"))
+    nums = lambda d: [float(x) for x in re.findall(r"-?\d+\.?\d*", d)]
+    BOCCA = {"stroke": "#1A100A", "stroke-width": ".7", "fill": "none", "stroke-linecap": "round"}
+    # il muso normale: se il disegno ha la lingua fuori (docs/disegni.js, a seconda del seme) torna il sorriso, così tutta la griglia è uguale
+    lingua = next((e for e in list(g) if e.tag == q("path") and e.get("fill", "").upper() == "#E8707E"), None)
+    if lingua is not None:
+        n = nums(lingua.get("d")); i = list(g).index(lingua); g.remove(lingua)
+        g.insert(i, ET.Element(q("path"), {"d": f"M{n[2] - 2:.1f} {n[1] - .4:.1f} Q{n[2]:.1f} {n[1] + .8:.1f} {n[2] + 2:.1f} {n[1] - .4:.1f}", **BOCCA}))
+    figli = list(g)
+    bocca = next((e for e in figli if e.tag == q("path") and e.get("fill") == "none" and num(e, "stroke-width") < 1.0 and " Q" in e.get("d", "")), None)
+    collare = next((e for e in figli if e.tag == q("path") and e.get("fill") == "none" and num(e, "stroke-width") >= 1.4), None)
+    if variante == "base": return
+    if variante == "occhiolino":
+        occhi = [e for e in figli if e.tag == q("circle") and 1.0 <= num(e, "r") <= 1.7 and e.get("fill", "").lower() not in ("#fff", "#ffffff")]
+        if len(occhi) < 2: raise ValueError("occhi non trovati")
+        o = max(occhi, key=lambda e: num(e, "cx")); cx, cy, r = num(o, "cx"), num(o, "cy"), num(o, "r")
+        for e in figli:  # via l'occhio e il suo riflesso
+            if e is o or (e.tag == q("circle") and e.get("fill", "").lower() in ("#fff", "#ffffff") and abs(num(e, "cx") - cx) < 1.2 and abs(num(e, "cy") - cy) < 1.2): g.remove(e)
+        g.append(ET.Element(q("path"), {"d": f"M{cx - r * 1.05:.2f} {cy + .25:.2f} Q{cx:.2f} {cy - r * .95:.2f} {cx + r * 1.05:.2f} {cy + .25:.2f}", **{**BOCCA, "stroke": o.get("fill"), "stroke-width": ".62"}}))
+        return
+    if variante in ("senza_collare", "collare"):
+        if collare is None: raise ValueError("collare non trovato")
+        if variante == "senza_collare": g.remove(collare)
+        else: collare.set("stroke", "#5BC27A" if collare.get("stroke", "").upper() != "#5BC27A" else "#E2553F")
+        return
+    if bocca is None: raise ValueError("bocca non trovata")
+    n = nums(bocca.get("d"))  # M x0 y0 Q cx cy x1 y1
+    if len(n) != 6: raise ValueError("bocca non riconosciuta")
+    if variante == "triste":
+        bocca.set("d", f"M{n[0]} {n[1] + .9:.2f} Q{n[2]} {n[1] - .5:.2f} {n[4]} {n[5] + .9:.2f}"); return
+    if variante == "lingua":  # la lingua fuori, come la disegna docs/disegni.js
+        i = list(g).index(bocca); g.remove(bocca)
+        g.insert(i, ET.Element(q("path"), {"d": f"M{n[2] - 1.2:.1f} {n[1] + .4:.1f} Q{n[2]:.1f} {n[1] + 4:.1f} {n[2] + 1.2:.1f} {n[1] + .4:.1f}Z", "fill": "#E8707E"})); return
+    raise ValueError(f"variante sconosciuta: {variante}")
+
+def solo_animale(cartella, t, razza, seme, variante=None):
     """Dal disegno con la cuccia (o il tetto per i gatti) tiene solo l'animale, come mondo3d.js soloAnimale: per il quiz della sagoma e le figurine."""
     import xml.etree.ElementTree as ET
     ns = "http://www.w3.org/2000/svg"; ET.register_namespace("", ns)
@@ -113,8 +153,9 @@ def solo_animale(cartella, t, razza, seme):
     box = [6, -2, 52, 46] if t == "gatto" else [12, 18, 40, 40]
     out = ET.Element(f"{{{ns}}}svg", {"width": str(box[2] * 10), "height": str(box[3] * 10), "viewBox": " ".join(map(str, box))})
     for d in root.iter(f"{{{ns}}}defs"): out.append(d)
+    if variante: varia_muso(g, variante, ns)
     out.append(g)
-    dst = Path(cartella) / f"{razza}-{seme}-solo.svg"; dst.write_text(ET.tostring(out, encoding="unicode")); return dst.name
+    dst = Path(cartella) / f"{razza}-{seme}-solo{'-' + variante if variante else ''}.svg"; dst.write_text(ET.tostring(out, encoding="unicode")); return dst.name
 
 def svg_di(t, razza, seme, serve):
     serve.add((t, razza, seme)); return f"{razza}-{seme}.svg"
@@ -229,10 +270,11 @@ def main():
             if len(ultime) == 5: sc["tempi"] = [round(max(0.0, w["s"] - a), 2) for w in ultime]
         if tipo in ("intruso", "intruso_svela"):  # 13/11, il rompicapo: due disegni, quello di tutti e quello dell'intruso
             for campo in ("base", "altro"):
-                t_, k_, s_ = sc[campo]; svg_di(t_, k_, s_, serve); soli.append((t_, k_, s_)); sc[campo] = f"{k_}-{s_}-solo.svg"
+                t_, k_, s_, *v_ = sc[campo]; v_ = v_[0] if v_ else None  # il quarto valore è il dettaglio diverso dell'intruso (occhiolino, lingua…)
+                svg_di(t_, k_, s_, serve); soli.append((t_, k_, s_, v_)); sc[campo] = f"{k_}-{s_}-solo{'-' + v_ if v_ else ''}.svg"
         if tipo in ("sagoma", "svela", "figurina"):  # 12/11: il quiz e le figurine, col disegno della razza vera
             t_, k_, s_ = sc.pop("t", "cane"), sc.pop("razza_k"), sc.pop("seme", n + 3)
-            svg_di(t_, k_, s_, serve); soli.append((t_, k_, s_)); sc["svg"] = f"{k_}-{s_}-solo.svg"  # solo l'animale (si estrae dopo i disegni)
+            svg_di(t_, k_, s_, serve); soli.append((t_, k_, s_, None)); sc["svg"] = f"{k_}-{s_}-solo.svg"  # solo l'animale (si estrae dopo i disegni)
         if tipo in ("cuccia", "gatto"):
             sc["svg"] = svg_di("gatto" if tipo == "gatto" else "cane", sc.pop("razza"), sc.pop("seme", n + 3), serve)
         if tipo == "foto":  # la foto vera della star (docs/media/ugc)
@@ -268,7 +310,7 @@ def main():
         effetti["pop"].append(round(a + 0.45, 2))
     effetti["riser"] = round(inizi[-1], 2)
     disegni(sorted(serve), prog / "assets/svg")
-    for t_, k_, s_ in soli: solo_animale(prog / "assets/svg", t_, k_, s_)
+    for t_, k_, s_, v_ in soli: solo_animale(prog / "assets/svg", t_, k_, s_, v_)
 
     c = copione.get("conteggio", {"cani": 0, "gatti": 0})
     b0 = 0.3  # 2/11: la richiesta di commentare sta in basso per tutto il video, come una fascia fissa
