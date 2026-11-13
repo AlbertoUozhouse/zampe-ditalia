@@ -2018,6 +2018,7 @@
 "17966183949209820",
 "17966354370195582",
 "17966357417981854",
+"17966405292209905",
 "17966429658241391",
 "17966444220211405",
 "17966449392211480",
@@ -3315,6 +3316,7 @@
 "18029136902879280",
 "18029170964863881",
 "18029208002872802",
+"18029221070878595",
 "18029246519860780",
 "18029275481698657",
 "18029278811864327",
@@ -3669,6 +3671,7 @@
 "18058026920595037",
 "18058112120652738",
 "18058131776595076",
+"18058167380581357",
 "18058230053800828",
 "18058241651572125",
 "18058246925804598",
@@ -10656,11 +10659,13 @@
 "18798213136033257"
 ],
 "risposte": [
-1794595306.3158104,
 1794595706.0409765,
 1794596525.455552,
 1794596526.8996723,
-1794598123.350636
+1794598123.350636,
+1794598959.1446738,
+1794598963.128841,
+1794598964.3753548
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -13833,9 +13838,6 @@
 ],
 "laurettabianco": [
 "giusy_stivala"
-],
-"ema.pir": [
-"francesco.papagni"
 ]
 },
 "premiati": [
@@ -14012,7 +14014,10 @@
 "orientalangel>>elena_gamiddo",
 "nuvolele05>andrea_piazza94",
 "passionfruit.exe_>deby_gs81",
-"leonardopellegrini5>francesco45344"
+"leonardopellegrini5>francesco45344",
+"francesco.papagni>>ema.pir",
+"francesco.papagni>ema.pir",
+"leonardopellegrini5>>francesco45344"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14421,7 +14426,7 @@
 "doro_sacco": 30,
 "antonio.mormile__": 30,
 "gridellivalentina": 30,
-"leonardopellegrini5": 36,
+"leonardopellegrini5": 66,
 "lorenzo_dessi_2317": 30,
 "bea_savo": 30,
 "diegofavale28": 30,
@@ -15044,7 +15049,10 @@
 "teslathequeenofbards": 10,
 "giusy_stivala": 10,
 "s.nenna08": 10,
-"giu.se100": 10
+"giu.se100": 10,
+"ema.pir": 10,
+"francesco.papagni": 46,
+"francesco45344": 10
 },
 "inviti_giorno": {
 "2026-11-06": {
@@ -15073,7 +15081,8 @@
 "passionfruit.exe_": 1
 },
 "2026-11-13": {
-"leonardopellegrini5": 1
+"leonardopellegrini5": 1,
+"francesco.papagni": 1
 }
 },
 "seguono": {
@@ -15920,7 +15929,9 @@
 "teslathequeenofbards": "premiato",
 "giusy_stivala": "premiato",
 "s.nenna08": "premiato",
-"claudiarex80": "in_attesa"
+"claudiarex80": "in_attesa",
+"ema.pir": "premiato",
+"francesco45344": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -17848,7 +17859,8 @@
 "losapio_fra_010": "2026-11-13",
 "ema.pir": "2026-11-13",
 "francesco45344": "2026-11-13",
-"nik0_109": "2026-11-13"
+"nik0_109": "2026-11-13",
+"francesco.pio.salerno___": "2026-11-13"
 },
 "boost_follow": true,
 "privati": [
@@ -19379,7 +19391,9 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {},
+"missioni_fatte": {
+"francesco.papagni": "2026-11-13"
+},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
@@ -19412,7 +19426,7 @@
 "2026-11-10": 1814,
 "2026-11-11": 1836,
 "2026-11-12": 1854,
-"2026-11-13": 1867
+"2026-11-13": 1869
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -20084,6 +20098,10 @@
 [
 "2026-11-13T19:28+00:00",
 1867
+],
+[
+"2026-11-13T19:42+00:00",
+1869
 ]
 ],
 "coppa": {
@@ -22127,7 +22145,7 @@
 "Rezzato|BS": 1,
 "Casavatore|NA": 1,
 "Fucecchio|FI": 1,
-"Bisceglie|BT": 10,
+"Bisceglie|BT": 14,
 "Canale|CN": 1,
 "Chiavenna|SO": 1,
 "Cavaion Veronese|VR": 2,
@@ -22864,6 +22882,14 @@
 {
 "k": "Foggia|FG",
 "t": "2026-11-13T12:20+00:00"
+},
+{
+"k": "Bisceglie|BT",
+"t": "2026-11-13T19:42+00:00"
+},
+{
+"k": "Bisceglie|BT",
+"t": "2026-11-13T19:42+00:00"
 }
 ],
 "staffette_log": [
