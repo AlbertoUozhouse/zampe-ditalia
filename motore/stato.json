@@ -5099,6 +5099,7 @@
 "18104149283381716",
 "18104177585379189",
 "18104178494040653",
+"18104185322401796",
 "18104203253552320",
 "18104209469641191",
 "18104216393039978",
@@ -10597,10 +10598,9 @@
 "18798213136033257"
 ],
 "risposte": [
-1794566567.3414824,
-1794566572.1142766,
 1794567442.1192575,
-1794567443.3177006
+1794567443.3177006,
+1794570582.2176435
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12772,7 +12772,8 @@
 "deby_gs81": "2026-11-12",
 "filannino_giorgio7": "2026-11-12",
 "teslathequeenofbards": "2026-11-13",
-"nadiacavallari4549nadia": "2026-11-13"
+"nadiacavallari4549nadia": "2026-11-13",
+"giusy_stivala": "2026-11-13"
 },
 "media_letti": {},
 "pezzi": {
@@ -19260,11 +19261,11 @@
 "84c8ef8094e3071d",
 "de7635459f173c50",
 "87e98d98779b2227",
-"40bd5d1c9f97337d"
+"40bd5d1c9f97337d",
+"f026d5f9d7cfe8e3"
 ],
 "privati_ora": [
-1794565753.450946,
-1794566567.3415082
+1794570582.2176702
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19311,7 +19312,7 @@
 "2026-11-10": 1814,
 "2026-11-11": 1836,
 "2026-11-12": 1854,
-"2026-11-13": 1859
+"2026-11-13": 1860
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19935,6 +19936,10 @@
 [
 "2026-11-13T10:29+00:00",
 1859
+],
+[
+"2026-11-13T11:49+00:00",
+1860
 ]
 ],
 "coppa": {
@@ -21980,7 +21985,8 @@
 "Cavaion Veronese|VR": 1,
 "Barletta|BT": 1,
 "Savona|SV": 4,
-"Pesaro|PU": 1
+"Pesaro|PU": 1,
+"Catania|CT": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22240,6 +22246,15 @@
 "t": "2026-11-13T10:29+00:00",
 "sorpasso": "Savona|SV",
 "su": "Sepino|CB",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-13T11:49+00:00",
+"sorpasso": "Catania|CT",
+"su": "Genova|GE",
 "punti": [
 1,
 0
@@ -22528,6 +22543,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Catania|CT": {
+"u": [
+"giusy_stivala"
+],
+"c": [
+"18104185322401796"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22559,7 +22584,8 @@
 "deby_gs81|animale|tia",
 "filannino_giorgio7|animale|gigino",
 "teslathequeenofbards|animale|meredith",
-"nadiacavallari4549nadia|animale|pepe"
+"nadiacavallari4549nadia|animale|pepe",
+"giusy_stivala|animale|linus"
 ]
 },
 "gara_follower": [
