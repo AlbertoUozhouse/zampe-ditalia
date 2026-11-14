@@ -1,0 +1,2271 @@
+{
+ "id": "2026-11-14-1450-corsa",
+ "formato": "corsa",
+ "modalita": "operativa",
+ "inizio": "2026-11-14T13:50:46+00:00",
+ "stato": "corretto dalla squadra",
+ "scambi": [
+  {
+   "t": "2026-11-14T13:50:46+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "corsa",
+     "id": "2026-11-14-1450-corsa",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "La città con più animali d'Italia?",
+       "scena": "gancio"
+      },
+      {
+       "i": 1,
+       "testo": "Si parte il 26 ottobre. Guarda chi sale.",
+       "scena": "corsa"
+      },
+      {
+       "i": 2,
+       "testo": "Vince Napoli con 93. Roma è a 4.",
+       "scena": "gancio"
+      },
+      {
+       "i": 3,
+       "testo": "E la tua città? Scrivi città e nome: falla salire.",
+       "scena": "commento"
+      }
+     ],
+     "apertura": null,
+     "fascia": "🏁 Scrivi la tua città: falla salire 👇",
+     "didascalia": "🏁 La corsa delle città: 20 giorni in 10 secondi. 👑 Napoli 93 · 🥈 Roma 89 · 🥉 Torino 45.\n\n👇 La tua città non c'è, o è troppo indietro? Scrivi qui sotto città, nome e cane o gatto (es. «Treviso, Luna, cane»): ogni animale la fa salire.\n👥 Tagga chi è della tua città!\n➕ Seguici: ogni settimana una corsa nuova.\n\nVoce generata con IA.\n\n#cani #gatti #italia #classifica #campanilismo #animalidomestici ",
+     "voce": true,
+     "copertina": null
+    }
+   }
+  },
+  {
+   "t": "2026-11-14T13:50:51+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Chi ama cani e gatti, vive in una città italiana di provincia o di media grandezza (Treviso, Termoli, Atri) e tifa per la propria città. Scorre Instagram la sera, non conosce ancora Zampe d'Italia e commenta volentieri per far salire il posto dove abita. · Gancio: Napoli 93 animali, Roma 89. E la tua città? Guarda chi sale in 10 secondi. · Primo fotogramma: Mappa dell'Italia di notte con le luci che si accendono; in alto la classifica con Napoli in testa, 93, e Roma, 89. Testo grande: «Qual è la città con più animali d'Italia?». Sotto, piccolo: «La tua dov'è?». Il testo si legge senza audio. · Motivo per seguire: Zampe d'Italia accende sulla mappa dell'Italia di notte una luce per ogni animale: seguendo la pagina vedi la tua città salire nella corsa insieme agli animali dei tuoi vicini. · Chiusura: Napoli guida la corsa. Segui Zampe d'Italia: ogni settimana ne parte una nuova.",
+   "dati": {
+    "pubblico": "Chi ama cani e gatti, vive in una città italiana di provincia o di media grandezza (Treviso, Termoli, Atri) e tifa per la propria città. Scorre Instagram la sera, non conosce ancora Zampe d'Italia e commenta volentieri per far salire il posto dove abita.",
+    "gancio": "Napoli 93 animali, Roma 89. E la tua città? Guarda chi sale in 10 secondi.",
+    "primo_fotogramma": "Mappa dell'Italia di notte con le luci che si accendono; in alto la classifica con Napoli in testa, 93, e Roma, 89. Testo grande: «Qual è la città con più animali d'Italia?». Sotto, piccolo: «La tua dov'è?». Il testo si legge senza audio.",
+    "motivo_per_seguire": "Zampe d'Italia accende sulla mappa dell'Italia di notte una luce per ogni animale: seguendo la pagina vedi la tua città salire nella corsa insieme agli animali dei tuoi vicini.",
+    "chiusura": "Napoli guida la corsa. Segui Zampe d'Italia: ogni settimana ne parte una nuova.",
+    "perche": "Il brief è una corsa tra città, quindi il gancio sfrutta il campanilismo con numeri veri e la chiusura invita a seguire il profilo, non solo a commentare, senza promettere orari o premi che non sono nel brief."
+   }
+  },
+  {
+   "t": "2026-11-14T13:50:51+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "corsa",
+     "id": "2026-11-14-1450-corsa",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "La città con più animali d'Italia?",
+       "scena": "gancio"
+      },
+      {
+       "i": 1,
+       "testo": "Si parte il 26 ottobre. Guarda chi sale.",
+       "scena": "corsa"
+      },
+      {
+       "i": 2,
+       "testo": "Vince Napoli con 93. Roma è a 4.",
+       "scena": "gancio"
+      },
+      {
+       "i": 3,
+       "testo": "E la tua città? Scrivi città e nome: falla salire.",
+       "scena": "commento"
+      }
+     ],
+     "apertura": null,
+     "fascia": "🏁 Scrivi la tua città: falla salire 👇",
+     "didascalia": "🏁 La corsa delle città: 20 giorni in 10 secondi. 👑 Napoli 93 · 🥈 Roma 89 · 🥉 Torino 45.\n\n👇 La tua città non c'è, o è troppo indietro? Scrivi qui sotto città, nome e cane o gatto (es. «Treviso, Luna, cane»): ogni animale la fa salire.\n👥 Tagga chi è della tua città!\n➕ Seguici: ogni settimana una corsa nuova.\n\nVoce generata con IA.\n\n#cani #gatti #italia #classifica #campanilismo #animalidomestici ",
+     "voce": true,
+     "copertina": null
+    },
+    "mappa": []
+   }
+  },
+  {
+   "t": "2026-11-14T13:50:53+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-14T13:51:57+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.7 LUFS, picco -0.8 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.7,
+    "picco_dbfs": -0.8,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -17.3,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-14T13:51:57+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (18.4 s): ti mando 19 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 18.4,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ]
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:02+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La voce dice «Si parte il 26 ottobre» ma la barra mostra «29 ott» al secondo 1, e la data in alto è 6 nov: la data detta non coincide con quella a schermo. Inoltre al secondo 0 la domanda non ha la voce in apertura e nel frame 0.5 il titolo è già chiaro, quindi il gancio funziona; il problema è la d",
+   "dati": {
+    "controllato": "Ho verificato i secondi della trascrizione, la frase d'apertura, il volume dei primi 5 secondi e i dati delle barre e i fotogrammi del reel.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La voce dice «Si parte il 26 ottobre» ma la barra mostra «29 ott» al secondo 1, e la data in alto è 6 nov: la data detta non coincide con quella a schermo. Inoltre al secondo 0 la domanda non ha la voce in apertura e nel frame 0.5 il titolo è già chiaro, quindi il gancio funziona; il problema è la data e la coerenza dei numeri (la mappa di riferimento nei materiali non fornisce i dati delle barre, quindi non posso verificare i valori 93/89/45 né «Roma a 4», che contraddice la barra di 89 vs 93 = 4 solo se la data del voice è giusta).",
+    "correzione": "Allineare la data detta alla data a schermo (es. «Si parte il 26 ottobre» → dire «Dal 29 ottobre al 6 novembre» oppure correggere la data nel grafico) e verificare i numeri prima della pubblicazione.",
+    "idea": "Mettere la CTA «Scrivi la tua città» già nei primi 3 secondi con una domanda diretta e chiudere il reel sul nome della città dell'utente, così il commento diventa parte del video."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:02+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione e nel copione la data di partenza è «26 ottobre», ma nel fotogramma del secondo 1 e nel grafico la data mostrata è «29 ott»; inoltre il grafico al secondo 4 riporta «29 ott» e al secondo 7 «6 nov», quindi la data di partenza della corsa non è coerente con il testo parlato. Anche i",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione, didascalia e dati della corsa (Napoli 93, Roma 4 di distacco, data 26 ottobre).",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella trascrizione e nel copione la data di partenza è «26 ottobre», ma nel fotogramma del secondo 1 e nel grafico la data mostrata è «29 ott»; inoltre il grafico al secondo 4 riporta «29 ott» e al secondo 7 «6 nov», quindi la data di partenza della corsa non è coerente con il testo parlato. Anche il conteggio «Roma a 4» è riferito al distacco finale (93 contro 89 nel grafico) e non è cambiato dalla didascalia, che invece riporta 89 per Roma: è coerente, ma va verificato che il 93 sia il dato finale e non un valore intermedio. Il dato 89 nel grafico al secondo 11 è coerente con la didascalia.",
+    "correzione": "Allineare la data parlata e la data mostrata nei grafici (26 ottobre oppure 29 ott, scegliendone una sola) e verificare che 93 sia il totale finale prima di pubblicare.",
+    "idea": "Mostrare nel finale il nome della città dell'utente già inserito come esempio, per rendere più concreto l'invito a far salire la propria città."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:02+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 1 il titolo della corsa mostra '29 ott' ma la trascrizione dice 'Si parte il 26 ottobre'; nel secondo 7 la data è '6 nov' e il dato di Napoli è 89, mentre la scena finale dice 93. Inoltre la card di esempio del secondo 14 mostra 'Rom' troncato, e nel secondo 11 'Vince Napol",
+   "dati": {
+    "controllato": "Leggibilità da telefono dei testi, coerenza tra trascrizione, fotogrammi e dati della mappa, audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nel fotogramma al secondo 1 il titolo della corsa mostra '29 ott' ma la trascrizione dice 'Si parte il 26 ottobre'; nel secondo 7 la data è '6 nov' e il dato di Napoli è 89, mentre la scena finale dice 93. Inoltre la card di esempio del secondo 14 mostra 'Rom' troncato, e nel secondo 11 'Vince Napoli con' lascia la frase incompleta a schermo. La voce dice 'Roma è a 4' (93-89), coerente solo con il dato finale. Infine la didascalia cita 'Roma 89' e il brief ha 'Napoli 93'.",
+    "correzione": "Allineare la data di partenza (26 ottobre vs 29 ott) e i valori della corsa (Napoli 89 nel grafico vs 93 nel testo) ai dati verificati; completare la frase 'Vince Napoli con 93' a schermo; allargare o accorciare il campo esempio così 'Roma' non si tronca; verificare che la scena di Roma 88/89 sia uniforme in tutto il reel.",
+    "idea": "Mostrare la data reale su ogni fotogramma della corsa e chiudere con il numero totale di animali aggiornato, così ogni reel si verifica da solo."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:02+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione e nel copione compare «Si parte il 26 ottobre», mentre la scena di corsa mostra «29 ott» e «6 nov» e la didascalia parla di «20 giorni in 10 secondi». La data di partenza non coincide con i dati mostrati; inoltre la trascrizione dice «Si parte il 26» senza mese. Il fotogramma a 4s",
+   "dati": {
+    "controllato": "Ho verificato il copione contro la trascrizione, i secondi, i dati della mappa (la sezione dati_mappa è vuota), le misure audio e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Nella trascrizione e nel copione compare «Si parte il 26 ottobre», mentre la scena di corsa mostra «29 ott» e «6 nov» e la didascalia parla di «20 giorni in 10 secondi». La data di partenza non coincide con i dati mostrati; inoltre la trascrizione dice «Si parte il 26» senza mese. Il fotogramma a 4s mostra la corsa con la data 29 ott, dove la frase suggerisce una partenza diversa. Il titolo sul primo fotogramma dice «20 giorni in 10 secondi», ma la corsa va dal 29 ottobre al 6 novembre, cioè circa 8 giorni: il dato non torna.",
+    "correzione": "Allineare la data di partenza alle schermate reali (es. «Si parte il 29 ottobre») oppure correggere il conteggio dei giorni nel titolo e nella didascalia in modo coerente con l'intervallo mostrato. Inoltre la trascrizione va allineata: Roma è a 4 nel copione, ma nella schermata finale appare 4 e nella didascalia 89 contro 88 mostrato nel grafico del 6 nov; va verificato quale numero è corretto.",
+    "idea": "Mostrare sempre le date di partenza e di arrivo nella stessa schermata e inserire un numero che cambia in tempo reale, così il dato verificato è sotto gli occhi di chi guarda."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:06+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "L'apertura dice «La città con più animali d'Italia?» ma il primo fotogramma (0.5s) è solo titolo e fascia, senza dato visivo né movimento: nei primi secondi non c'è nulla che catturi lo sguardo. Inoltre la voce dice «Si parte il 26 ottobre» mentre il grafico mostra «29 ott» e il brief parla di 20 gi",
+   "dati": {
+    "controllato": "Apertura del reel: gancio, fotogrammi, trascrizione e frasi del brief, con la data e i numeri della mappa e della didascalia.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "L'apertura dice «La città con più animali d'Italia?» ma il primo fotogramma (0.5s) è solo titolo e fascia, senza dato visivo né movimento: nei primi secondi non c'è nulla che catturi lo sguardo. Inoltre la voce dice «Si parte il 26 ottobre» mentre il grafico mostra «29 ott» e il brief parla di 20 giorni: la data di partenza non torna con i materiali e la voce dice «Roma è a 4» mentre la didascalia dice Roma 89 (con 93 vs 89 la distanza è 4, quindi il numero è coerente, ma il grafico del 6 nov mostra Roma 88).",
+    "correzione": "Aprire con la corsa già in movimento (il grafico 6 nov, Napoli in testa) o con un fotogramma che mostri la barra di Napoli; allineare la data di partenza (29 ottobre o 26 ottobre) e il valore di Roma (88 o 89) tra voce, grafico e didascalia prima di pubblicare.",
+    "idea": "Un'apertura con il primo fotogramma già sul grafico animato, e un titolo che cambia città ogni settimana per dare continuità alla serie."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:06+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 la barra di Napoli è gialla, ma il grafico è in corsa e la leadership non è ancora chiara; al secondo 11 la grafica finale mostra 'Napoli 93' con Roma a 4 mentre il grafico precedente dice 89 e 88, quindi l'inquadratura del finale non documenta il passaggio. Inoltre il ca",
+   "dati": {
+    "controllato": "Inquadrature dei 6 fotogrammi e coerenza visiva con la trascrizione: titolo, grafico a barre, vincitore, campo commento.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 la barra di Napoli è gialla, ma il grafico è in corsa e la leadership non è ancora chiara; al secondo 11 la grafica finale mostra 'Napoli 93' con Roma a 4 mentre il grafico precedente dice 89 e 88, quindi l'inquadratura del finale non documenta il passaggio. Inoltre il campo commento al secondo 14 è mostrato con 'Rom' troncato, e il placeholder '@il.tuo.nome' è visibile sullo schermo finale, cosa che può sembrare un errore di pubblicazione.",
+    "correzione": "Mantenere il nome utente troncato solo se intenzionale, altrimenti mostrare un esempio completo ('Roma, Luna, cane'); allungare di mezzo secondo la permanenza sulla barra finale di Napoli (secondi 9-11) per leggere il distacco; tenere il campo commento fermo abbastanza da essere letto.",
+    "idea": "Per i prossimi reel usare una barra 'tua città' già nel finale come gancio, con il nome della città dell'utente evidenziato in oro quando viene scritto nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:06+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel voiceover si dice «Si parte il 26 ottobre», ma nei fotogrammi la data di partenza della corsa è 29 ott e l'ultima è 6 nov: la data detta non corrisponde ai materiali. Inoltre la trascrizione riporta «Vince Napoli con 93» mentre il fotogramma e la didascalia dicono 89 (93 compare solo nella scrit",
+   "dati": {
+    "controllato": "Trascrizione, secondi, dati della mappa, audio, didascalia e coerenza dei fotogrammi con il copione della Direzione video.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Nel voiceover si dice «Si parte il 26 ottobre», ma nei fotogrammi la data di partenza della corsa è 29 ott e l'ultima è 6 nov: la data detta non corrisponde ai materiali. Inoltre la trascrizione riporta «Vince Napoli con 93» mentre il fotogramma e la didascalia dicono 89 (93 compare solo nella scritta finale «93 animali»). Nel fotogramma finale Roma è a 4 (93-89), coerente solo con 93. Anche «Rom» nel campo di scrittura del commento è un testo tagliato. La scena finale del commento mostra «Roma, Luna, cane», quindi l'esempio è coerente con la didascalia.",
+    "correzione": "Allineare la data detta alla data reale della corsa (o dire solo «Guarda chi sale») e verificare che 93 sia il valore corretto rispetto a 89 mostrato nella classifica; se il dato finale è 93, aggiornare la classifica intermedia e la didascalia (che dice 89).",
+    "idea": "Inserire nella scena finale il nome della città dell'utente che ha commentato, con una barra che sale in tempo reale, per aumentare il senso di appartenenza."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:06+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La voce dice «Si parte il 26 ottobre», ma la trascrizione e il brief sono coerenti con il copione; il problema reale è che nel fotogramma al secondo 1 il titolo della corsa mostra «29 ott» e poi «6 nov» nel secondo fotogramma, mentre la voce parla di 20 giorni che coincidono con 26 ottobre–14 novemb",
+   "dati": {
+    "controllato": "Trascrizione, secondi, dati della mappa, audio, didascalia e frasi del brief rispetto al copione e ai fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La voce dice «Si parte il 26 ottobre», ma la trascrizione e il brief sono coerenti con il copione; il problema reale è che nel fotogramma al secondo 1 il titolo della corsa mostra «29 ott» e poi «6 nov» nel secondo fotogramma, mentre la voce parla di 20 giorni che coincidono con 26 ottobre–14 novembre: la data di partenza non è verificabile dai materiali. Inoltre il dato «Roma a 4» è ambiguo: nella didascalia Roma ha 89, nella schermata 88, e nella voce 93 meno 89 darebbe 4, quindi c'è un disallineamento tra 88 e 89 per Roma.",
+    "correzione": "Allineare Roma a un solo valore (89 nella didascalia e nei dati del fotogramma finale, verificare su 88 vs 89) e confermare la data di partenza della corsa prima della pubblicazione.",
+    "idea": "Mostrare la città vincente con un breve confronto finale e un'immagine dell'animale simbolo per aumentare l'emozione campanilistica."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:09+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione e nel copione la data è «26 ottobre», mentre nella prima schermata il badge della corsa dice «29 ott» e nella seconda «6 nov» (la corsa non ha una data di partenza coerente con il testo). Inoltre il reel dice «Roma è a 4» ma la didascalia dice «Roma 89» e il grafico finale mostra ",
+   "dati": {
+    "controllato": "Trascrizione, secondi, dati della mappa, audio e didascalia rispetto al copione e al brief.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Nella trascrizione e nel copione la data è «26 ottobre», mentre nella prima schermata il badge della corsa dice «29 ott» e nella seconda «6 nov» (la corsa non ha una data di partenza coerente con il testo). Inoltre il reel dice «Roma è a 4» ma la didascalia dice «Roma 89» e il grafico finale mostra Roma a 88: i numeri non coincidono tra voce, didascalia e grafico (93 vs 89 per Napoli nella didascalia, mentre la schermata finale dice 93). Il dato «Roma a 4» al secondo 12.9 è una differenza di 4 rispetto a 93, cioè Roma 89, ma nel grafico Roma è 88.",
+    "correzione": "Allineare tutti i numeri a un unico dato verificato (es. Napoli 93, Roma 89 o 88 secondo la mappa) e indicare nel testo e nella didascalia la data di partenza reale della corsa. Nel grafico finale mostrare Napoli 93 e Roma coerente con la voce.",
+    "idea": "Chiudere il reel con un'immagine che mostri la città dell'utente già in classifica, per dare un premio visivo a chi commenta."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:09+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il fotogramma inviato al secondo 4 non corrisponde al momento in cui la trascrizione dice 'Si parte il 26 ottobre' (1.3-3.2s): la scena della corsa parte prima, quindi il fotogramma di riferimento va allineato. Inoltre dati_mappa è vuoto e il reel dichiara città con numeri (Napoli 93, Roma 89 o 4, T",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, audio e didascalia per la scena di montaggio del reel 'corsa'.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il fotogramma inviato al secondo 4 non corrisponde al momento in cui la trascrizione dice 'Si parte il 26 ottobre' (1.3-3.2s): la scena della corsa parte prima, quindi il fotogramma di riferimento va allineato. Inoltre dati_mappa è vuoto e il reel dichiara città con numeri (Napoli 93, Roma 89 o 4, Torino 45) che non sono verificabili dai materiali forniti.",
+    "correzione": "Riallineare i fotogrammi di riferimento alle frasi della trascrizione e verificare i numeri di Napoli, Roma e Torino contro i dati della mappa prima della pubblicazione. Nota: il copione dice 'Roma è a 4' mentre la didascalia dice 'Roma 89': i due valori devono coincidere.",
+    "idea": "Un reel con la classifica delle città che sale in tempo reale, con un testo che chiede di commentare la propria città e il nome del cane o gatto, da ripetere ogni settimana."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:09+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Incoerenza nei numeri: nel parlato Roma è \"a 4\" (cioè a 4 punti/animali da Napoli o a 4° posto?), mentre in didascalia Roma è 89. Il testo parlato dice \"Roma è a 4\" dopo \"Vince Napoli con 93\", il che può confondere lo spettatore. Inoltre la trascrizione dice \"Si parte il 26 ottobre\" mentre la data d",
+   "dati": {
+    "controllato": "Audio (LUFS -14.7, picco -0.8 dBFS, nessun silenzio lungo) e corrispondenza tra trascrizione, brief, didascalia e cifre della mappa (Napoli 93, Roma 4 o 89 in didascalia).",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Incoerenza nei numeri: nel parlato Roma è \"a 4\" (cioè a 4 punti/animali da Napoli o a 4° posto?), mentre in didascalia Roma è 89. Il testo parlato dice \"Roma è a 4\" dopo \"Vince Napoli con 93\", il che può confondere lo spettatore. Inoltre la trascrizione dice \"Si parte il 26 ottobre\" mentre la data del brief è 2026-11-14: il riferimento temporale non è chiaro. Il campo dati_mappa è vuoto, quindi non posso verificare i valori.",
+    "correzione": "Allineare il parlato alla didascalia: ad esempio \"Vince Napoli con 93. Roma segue con 89.\" e verificare su dati_mappa che i numeri siano quelli reali; chiarire la data di partenza della corsa.",
+    "idea": "Per i prossimi reel, mostrare a schermo il numero della città sorpassata in grande e usare un solo numero per ogni passaggio, così la classifica si legge senza audio."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:10+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il testo a 16.3s («E la tua città? Scrivi città e nome: falla salire.») resta sullo schermo mentre la didascalia chiede di scrivere città, nome e animale (cane o gatto); manca il riferimento a cane o gatto, che è l'informazione chiave per partecipare. Inoltre la trascrizione è spezzata in modo poco ",
+   "dati": {
+    "controllato": "Trascrizione, tempi, sottotitoli e audio (LUFS, picco, silenzi) rispetto al copione e agli obiettivi di montaggio.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il testo a 16.3s («E la tua città? Scrivi città e nome: falla salire.») resta sullo schermo mentre la didascalia chiede di scrivere città, nome e animale (cane o gatto); manca il riferimento a cane o gatto, che è l'informazione chiave per partecipare. Inoltre la trascrizione è spezzata in modo poco leggibile sui secondi 1.3s e 3.2s (frasi interrotte a metà).",
+    "correzione": "Allungare o riscrivere la frase finale in due sottotitoli: «E la tua città? Scrivi città e nome» e poi «Cane o gatto? Falla salire», mantenendo l'ultimo sottotitolo visibile per almeno 2 secondi. Spezzare le frasi della prima scena in blocchi che finiscano a fine concetto.",
+    "idea": "Ripetere il formato «scrivi la tua città» con un esempio già scritto nel primo fotogramma (es. «Treviso, Luna, cane»), così lo spettatore capisce subito il formato di risposta e la partecipazione cresce."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:13+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La fascia in basso «Scrivi la tua città: falla salire 👇» è nel brief ma non compare nella trascrizione con tempi precisi, e la frase «E la tua città? Scrivi città e nome: falla salire.» parte a 14.2s. Inoltre l'apertura è null: il gancio «La città con più animali d'Italia?» parte da 0s senza fascia ",
+   "dati": {
+    "controllato": "Fascia in basso: testo, tempi della trascrizione, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fascia sovrapposta.",
+    "esito": "segnalo",
+    "secondo": 14.2,
+    "problema": "La fascia in basso «Scrivi la tua città: falla salire 👇» è nel brief ma non compare nella trascrizione con tempi precisi, e la frase «E la tua città? Scrivi città e nome: falla salire.» parte a 14.2s. Inoltre l'apertura è null: il gancio «La città con più animali d'Italia?» parte da 0s senza fascia di titolo, e il numero 93 di Napoli va verificato perché nei dati della mappa l'array è vuoto (dati_mappa: []).",
+    "correzione": "Verificare nei dati reali che Napoli sia 93 e Roma 89 (la trascrizione dice 'Roma è a 4', il che è incoerente con la didascalia che dà Roma 89 e 4 è un distacco): allineare la voce alla didascalia. Far comparire la fascia 'Scrivi la tua città' dall'inizio della frase finale (14.2s) e tenerla fino a fine reel (18.4s).",
+    "idea": "Aprire con la fascia di titolo già nei primi 0.5s e ripetere il numero della città vincente in grande al centro, così il gancio si legge anche senza audio."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:13+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il picco audio è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS, e l'apertura è morbida (-17.3 dB nei primi 5 s) anche se il gancio parte subito. Inoltre il reel dura 18.4 s e il testo di chiusura («Scrivi città e nome») arriva a 14.2 s: il tempo per leggere e scrivere la risposta è stretto.",
+   "dati": {
+    "controllato": "Ritmo, durata e audio del reel: 18.4 s, trascrizione coi tempi, loudness -14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo.",
+    "esito": "segnalo",
+    "secondo": 14.2,
+    "problema": "Il picco audio è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS, e l'apertura è morbida (-17.3 dB nei primi 5 s) anche se il gancio parte subito. Inoltre il reel dura 18.4 s e il testo di chiusura («Scrivi città e nome») arriva a 14.2 s: il tempo per leggere e scrivere la risposta è stretto.",
+    "correzione": "Abbassare il picco sotto -1 dBFS (ad esempio con un limiter o riducendo di 0.3 dB) e, se possibile, portare il CTA a 'E la tua città?' un po' prima, lasciando almeno 3 s finali con la scritta visibile.",
+    "idea": "Ripetere il formato 'questa_luce' (14.7 follower ogni 1000 views, il tasso più alto) con un gancio d'apertura più secco nei primi 2 s e una scritta CTA fissa negli ultimi 3 s."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:13+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "L'apertura è nulla (campo 'apertura': null) e la prima frase parte da 0.0s senza un gancio visivo confermato; la voce inizia subito ma il volume medio dei primi 5 secondi è -17.3 dB, più basso del resto. Inoltre la didascalia dice '20 giorni in 10 secondi' mentre la trascrizione non cita 20 giorni: ",
+   "dati": {
+    "controllato": "Apertura, trascrizione coi secondi, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo), copione e didascalia del reel corsa.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "L'apertura è nulla (campo 'apertura': null) e la prima frase parte da 0.0s senza un gancio visivo confermato; la voce inizia subito ma il volume medio dei primi 5 secondi è -17.3 dB, più basso del resto. Inoltre la didascalia dice '20 giorni in 10 secondi' mentre la trascrizione non cita 20 giorni: va verificato. Anche 'Napoli 93 · Roma 89 · Torino 45' contrasta con 'Roma è a 4' nel parlato, da allineare.",
+    "correzione": "Definire un'apertura chiara nei primi 1-2 secondi (es. la classifica o la domanda a schermo con voce più forte), portare i primi 5 secondi verso -14 LUFS, e allineare il numero di Roma e il riferimento '20 giorni' a dati verificati prima della pubblicazione.",
+    "idea": "Per i prossimi reel: aprire con il nome della città in primo piano e un numero grande a schermo, così il gancio si legge anche senza audio."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:13+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il brief dichiara 'apertura: null' ma la trascrizione mostra che la frase di gancio parte a 0.0s; inoltre 'dati_mappa' è vuoto, quindi i numeri 93, 89 e 45 citati nel testo e nella didascalia non sono verificabili nei materiali. In più il reel dura 18.4s mentre la corsa è descritta come '20 giorni i",
+   "dati": {
+    "controllato": "Audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo), trascrizione coi secondi e didascalia rispetto al brief e ai dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il brief dichiara 'apertura: null' ma la trascrizione mostra che la frase di gancio parte a 0.0s; inoltre 'dati_mappa' è vuoto, quindi i numeri 93, 89 e 45 citati nel testo e nella didascalia non sono verificabili nei materiali. In più il reel dura 18.4s mentre la corsa è descritta come '20 giorni in 10 secondi'.",
+    "correzione": "Verificare Napoli 93, Roma 89 (e 4 di distacco) e Torino 45 sui dati della mappa prima di pubblicare; allineare la durata della corsa al filmato reale e definire l'apertura nel brief.",
+    "idea": "Un reel 'la tua città in classifica' con un'ultima scena che mostra la luce della città scelta dai commenti più votati, per trasformare la CTA in contenuto."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:16+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Napoli 93, Roma 4' nel parlato contrasta con la didascalia ('Napoli 93 · Roma 89'), e il 'Roma è a 4' sembra un refuso (4 è un numero che può far pensare a un dato errato). Inoltre 'dati_mappa' è vuoto: non posso verificare i numeri mostrati. Anche la fascia finale ('Scrivi la tua città') r",
+   "dati": {
+    "controllato": "Audio, trascrizione coi secondi, dati mappa e didascalia del reel 2026-11-14-1450-corsa.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il dato 'Napoli 93, Roma 4' nel parlato contrasta con la didascalia ('Napoli 93 · Roma 89'), e il 'Roma è a 4' sembra un refuso (4 è un numero che può far pensare a un dato errato). Inoltre 'dati_mappa' è vuoto: non posso verificare i numeri mostrati. Anche la fascia finale ('Scrivi la tua città') ripete la didascalia senza aggiungere nulla di nuovo.",
+    "correzione": "Allineare il parlato alla didascalia: 'Vince Napoli con 93. Roma è a 89.' Verificare i dati in dati_mappa prima della pubblicazione. Il loudness (-14.7 LUFS) e il picco (-0.8 dBFS) sono leggermente fuori obiettivo: abbassare di circa 0.7 dB e portare il picco sotto -1 dBFS.",
+    "idea": "Per i prossimi reel, far comparire in video città e numeri a schermo nel momento in cui vengono pronunciati, così il dato si legge e si ascolta insieme."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:16+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Roma è a 4' non è coerente con 'Roma 89' nella didascalia e con la classifica verificata; inoltre la mappa del reel non ha dati nel campo dati_mappa, quindi i numeri non sono verificabili dai materiali. Anche il picco audio è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS.",
+   "dati": {
+    "controllato": "Audio (LUFS -14.7, picco -0.8 dBFS, nessun silenzio lungo), trascrizione coi secondi, coerenza tra copione, didascalia e numeri della mappa.",
+    "esito": "segnalo",
+    "secondo": 14.2,
+    "problema": "Il dato 'Roma è a 4' non è coerente con 'Roma 89' nella didascalia e con la classifica verificata; inoltre la mappa del reel non ha dati nel campo dati_mappa, quindi i numeri non sono verificabili dai materiali. Anche il picco audio è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS.",
+    "correzione": "Verificare i conteggi reali di Roma (89 o 4) prima della pubblicazione, allineare copione e didascalia, e abbassare leggermente il picco sotto -1 dBFS.",
+    "idea": "Inserire nei prossimi reel una scena fissa con la città più vicina alla posizione del commentatore, così la domanda finale diventa personale e più condivisibile."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:17+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nei primi 2 secondi si legge solo «La città con più animali d'Italia?» senza un'immagine che la renda subito chiara; il fotogramma a 0.5s è quasi tutto vuoto viola con il titolo, e la mappa o la città non compaiono prima di 4s. Inoltre la trascrizione dice «Si parte il 26 ottobre» mentre la didascal",
+   "dati": {
+    "controllato": "Gancio dei primi 2 secondi: trascrizione, scena di apertura e fotogrammi del reel (0.5s e 4s) con il brief.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Nei primi 2 secondi si legge solo «La città con più animali d'Italia?» senza un'immagine che la renda subito chiara; il fotogramma a 0.5s è quasi tutto vuoto viola con il titolo, e la mappa o la città non compaiono prima di 4s. Inoltre la trascrizione dice «Si parte il 26 ottobre» mentre la didascalia e i dati indicano 20 giorni: il dato temporale nel parlato è poco chiaro.",
+    "correzione": "Mostrare già nel primo secondo la classifica in movimento o la barra di Napoli che parte, e rendere il parlato coerente con i dati (es. «20 giorni, 10 secondi»).",
+    "idea": "Aprire con un'anteprima della barra di Napoli in testa e il numero che sale, poi il titolo in sovrimpressione."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:17+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La voce dice 'Si parte il 26 ottobre' ma nella grafica compare '29 ott' e il dato finale di Napoli è 89 (la voce dice 93, la card dice 93 animali): incoerenza tra voce, grafica e numeri, e la data di partenza non è verificabile dai materiali.",
+   "dati": {
+    "controllato": "Trascrizione, tempi e frasi del copione: la voce dice 'Si parte il 26 ottobre' mentre la grafica mostra '29 ott' e il brief dice 'corsa' con dati di apertura diversi; inoltre la frase 'Napoli con 93' non coincide con la grafica finale che mostra 89 per Napoli.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "La voce dice 'Si parte il 26 ottobre' ma nella grafica compare '29 ott' e il dato finale di Napoli è 89 (la voce dice 93, la card dice 93 animali): incoerenza tra voce, grafica e numeri, e la data di partenza non è verificabile dai materiali.",
+    "correzione": "Allineare voce e grafica: usare la stessa data di partenza confermata e lo stesso numero per Napoli (89 o 93, verificato sui dati) in voce, grafica e didascalia.",
+    "idea": "Mostrare il numero finale in grande con un fermo immagine di 1 secondo, così chi guarda ha il tempo di leggerlo e di confrontare la propria città."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:19+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la data è detta 'Si parte il 26 ottobre' (sopra il 1.3s), mentre nel copione e nella mappa la corsa parte dal 29 ottobre / dati al 6 novembre; inoltre la didascalia dice '20 giorni in 10 secondi' ma la scritta a schermo mostra 'Roma a 4' nel voiceover mentre la didascalia riporta ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, misure audio e didascalia del reel 'La corsa delle città'.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella trascrizione la data è detta 'Si parte il 26 ottobre' (sopra il 1.3s), mentre nel copione e nella mappa la corsa parte dal 29 ottobre / dati al 6 novembre; inoltre la didascalia dice '20 giorni in 10 secondi' ma la scritta a schermo mostra 'Roma a 4' nel voiceover mentre la didascalia riporta Roma 89 e il tabellone a schermo mostra Roma 88: numeri non allineati tra voce, video e didascalia.",
+    "correzione": "Allineare data di partenza, il numero di Roma (88 o 89) e il distacco 'a 4' in voce, schermo e didascalia usando solo i dati verificati della mappa; scegliere un'unica data.",
+    "idea": "Mostrare nel reel la città del commento più recente come 'ultima entrata' per dare un motivo concreto a chi scrive di guardare la classifica."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:20+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La voce dice 'Si parte il 26 ottobre', ma nel reel non compare nessuna data di partenza: i grafici mostrano il 29 ott e il 6 nov, quindi il 26 ottobre non è verificabile dai materiali. Inoltre la didascalia dice 'Roma 89' mentre la voce dice 'Roma è a 4' (93-4=89, coerente) e i grafici mostrano Roma",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, audio e didascalia del reel 'La corsa delle città'.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "La voce dice 'Si parte il 26 ottobre', ma nel reel non compare nessuna data di partenza: i grafici mostrano il 29 ott e il 6 nov, quindi il 26 ottobre non è verificabile dai materiali. Inoltre la didascalia dice 'Roma 89' mentre la voce dice 'Roma è a 4' (93-4=89, coerente) e i grafici mostrano Roma a 88 nel fotogramma del 6 nov: il dato finale da mostrare va allineato.",
+    "correzione": "Togliere '26 ottobre' dalla voce (es. 'Si parte da zero. Guarda chi sale.') oppure confermare la data reale; allineare il distacco di Roma tra voce, grafico (88) e didascalia (89).",
+    "idea": "Mostrare nel reel un commento reale (con città vera) al posto dell'esempio 'Rom' a metà video, così l'invito diventa più credibile e stimola altri commenti."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:21+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Vince Napoli con 93» (cioè 93 animali) e «Roma è a 4», ma la barra finale del 6 nov mostra Napoli 89 e Roma 88, non 93 e 89. Il numero 93 non è nei dati verificati della mappa, e la didascalia riporta correttamente 89. Inoltre il testo parlato dice «Si parte il 26 ottobre», mentre la t",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e fotogrammi del reel «La corsa delle città»: l'hook e il CTA ci sono, ma la frase su Napoli dice 93 mentre la mappa e la didascalia riportano 89 per Napoli nella corsa del 6 nov, e la tabella del 29 ott e del 6 nov mostra Roma a 33 e 88.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Il reel dice «Vince Napoli con 93» (cioè 93 animali) e «Roma è a 4», ma la barra finale del 6 nov mostra Napoli 89 e Roma 88, non 93 e 89. Il numero 93 non è nei dati verificati della mappa, e la didascalia riporta correttamente 89. Inoltre il testo parlato dice «Si parte il 26 ottobre», mentre la tabella mostra il 29 ott come prima data.",
+    "correzione": "Allineare la voce e la schermata finale ai dati verificati: «Vince Napoli con 89, Roma a 1» oppure, se 93 è il dato aggiornato, aggiornare la barra e la didascalia. Verificare anche la data di partenza (26 ottobre o 29 ottobre) e la coerenza con la mappa.",
+    "idea": "Mostrare sempre in chiusura la data e il numero aggiornato in grande, così il dato verificato coincide con quello che l'utente vede e commenta."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:21+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella voce il dato di Roma è 'a 4' e nel reel finale il testo mostra 'Roma a 4', ma nella didascalia Roma è indicata a 89 e i grafici mostrano Roma a 88: la differenza di 4 e i numeri non coincidono tra voce, grafico e didascalia. Inoltre il reel dice 'si parte il 26 ottobre' mentre il grafico ripor",
+   "dati": {
+    "controllato": "Copione e trascrizione: confronto frasi, secondi e didascalia con i dati della mappa (Napoli 93, Roma 4 di distacco, date e fascia di chiusura).",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "Nella voce il dato di Roma è 'a 4' e nel reel finale il testo mostra 'Roma a 4', ma nella didascalia Roma è indicata a 89 e i grafici mostrano Roma a 88: la differenza di 4 e i numeri non coincidono tra voce, grafico e didascalia. Inoltre il reel dice 'si parte il 26 ottobre' mentre il grafico riporta '29 ott' e '6 nov' come date di riferimento, e la voce non è dichiarata nel testo a schermo. Al secondo 3 la frase 'Vince Napoli con 93' compare già quando il testo a schermo è ancora vuoto, quindi il ritmo tra voce e scritte è sfasato.",
+    "correzione": "Allineare il dato: scegliere un'unica cifra per Roma (88 o 89) e usarla in voce, grafico e didascalia; indicare la data corretta di partenza (26 ottobre o 29 ottobre) coerente col grafico; far comparire la scritta 'Vince Napoli con 93' in sincronia con la voce.",
+    "idea": "Mostrare la città dell'utente in tempo reale nella classifica del reel successivo, così chi commenta vede subito il proprio posto."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:23+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Si parte il 26 ottobre' e il primo fotogramma/grafico mostra '29 ott', mentre il secondo grafico è '6 nov' con Napoli 89 e Roma 88; nel reel finale però Napoli è dato a 93 e Roma a 4 di distacco (93 vs 89 dà 4, coerente), ma la data di partenza nel parlato (26 ottobre) non corr",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, audio e didascalia del reel 'La corsa delle città' rispetto ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La trascrizione dice 'Si parte il 26 ottobre' e il primo fotogramma/grafico mostra '29 ott', mentre il secondo grafico è '6 nov' con Napoli 89 e Roma 88; nel reel finale però Napoli è dato a 93 e Roma a 4 di distacco (93 vs 89 dà 4, coerente), ma la data di partenza nel parlato (26 ottobre) non corrisponde a nulla di verificato nei materiali. Inoltre la didascalia dice 'Roma 89' mentre il reel dice 'Roma a 4' e il grafico finale mostra Roma 88: tre valori diversi per la stessa cosa. L'array dati_mappa è vuoto, quindi non ci sono dati verificati a supporto.",
+    "correzione": "Allineare Roma a un unico valore (88 o 89) in grafico, didascalia e voce; verificare la data di partenza (26 ottobre o 29 ottobre) e usare quella confermata dai dati; popolare dati_mappa prima della pubblicazione.",
+    "idea": "Chiudere ogni reel con la città più scalata della settimana e un tag automatico della città citata nei commenti per aumentare la reach."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:24+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Si parte il 26 ottobre», ma nel brief la frase è «Si parte il 26 ottobre. Guarda chi sale.» e nel reel le tabelle mostrano date 29 ott e 6 nov: la data di partenza è incoerente con i fotogrammi (il primo grafico è datato 29 ott, quindi la corsa non può partire il 26 senza esser",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio e coerenza con la didascalia e i dati della mappa del reel.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "La trascrizione dice «Si parte il 26 ottobre», ma nel brief la frase è «Si parte il 26 ottobre. Guarda chi sale.» e nel reel le tabelle mostrano date 29 ott e 6 nov: la data di partenza è incoerente con i fotogrammi (il primo grafico è datato 29 ott, quindi la corsa non può partire il 26 senza essere in contraddizione col materiale). Inoltre la didascalia dice «20 giorni in 10 secondi» mentre l'ultimo grafico è datato 6 nov (dal 26 ott sono 11 giorni, non 20). Infine il nome nel mock-up è «Rom», tronco, e la scena finale dice «Roma, Luna, cane» come esempio, ma il commento è troncato dal campo di input.",
+    "correzione": "Allineare la data di partenza ai dati reali (o togliere la data dal copione), correggere «20 giorni» con il periodo effettivo tra le date mostrate, e mostrare nel mock-up il nome completo invece di «Rom».",
+    "idea": "Una variante con la città scelta dal pubblico tra i commenti, mostrata sulla barra in tempo reale."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:25+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il parlato dice «Si parte il 26 ottobre» ma la trascrizione e la grafica del reel mostrano la data del 29 ott nella corsa; inoltre la voce dice «Vince Napoli con 93» mentre la didascalia riporta «Roma 89», e il nome utente nel fotogramma è troncato («Rom») e la trascrizione dice «città e nome» mentr",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e numeri del progetto rispetto ai dati della mappa e alla grafica dei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il parlato dice «Si parte il 26 ottobre» ma la trascrizione e la grafica del reel mostrano la data del 29 ott nella corsa; inoltre la voce dice «Vince Napoli con 93» mentre la didascalia riporta «Roma 89», e il nome utente nel fotogramma è troncato («Rom») e la trascrizione dice «città e nome» mentre il testo a schermo chiede solo la città. Anche la didascalia dice «Napoli 93» come dato finale senza che la mappa (dati_mappa vuoto) lo confermi.",
+    "correzione": "Allineare la data (26 ott o 29 ott) a quella mostrata nei fotogrammi, verificare i conteggi di Napoli e Roma contro la mappa prima di pubblicare, correggere il campo nome nel mockup e far dire alla voce ciò che c'è scritto a schermo.",
+    "idea": "Chiudere con un numero che cambia in tempo reale (es. «la tua città ora è 12ª») così il commento diventa una risposta visiva e il reel si presta a una seconda puntata."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:27+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel voiceover al secondo 12.9 si dice «Roma è a 4», ma nel grafico finale Roma è a 89 e Napoli a 93, quindi il distacco è 4 (corretto); però il grafico al 6 nov mostra Roma 88 e la didascalia riporta Roma 89: incoerenza tra 88 e 89. Inoltre il grafico del 29 ott mostra Napoli 45 e Roma 33, mentre il",
+   "dati": {
+    "controllato": "Mappa e dati: ho confrontato i numeri del grafico (Napoli 93, Roma 89 nel fotogramma finale, poi 4 nella voce) con la trascrizione, la didascalia e i dati di sorpasso.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Nel voiceover al secondo 12.9 si dice «Roma è a 4», ma nel grafico finale Roma è a 89 e Napoli a 93, quindi il distacco è 4 (corretto); però il grafico al 6 nov mostra Roma 88 e la didascalia riporta Roma 89: incoerenza tra 88 e 89. Inoltre il grafico del 29 ott mostra Napoli 45 e Roma 33, mentre il fotogramma del 6 nov riporta Torino 45, quindi i valori Torino e Napoli vanno controllati nella stessa data. La frase «Si parte il 26 ottobre» non compare nei grafici visibili (che mostrano il 29 ott), quindi la data di partenza è da verificare.",
+    "correzione": "Allineare Roma a 88 o 89 in tutti i punti (grafico, didascalia, voce), verificare che la data di partenza del 26 ottobre sia corretta rispetto al 29 ott mostrato nel reel, e scrivere «Roma è a 4» solo se 93-89 = 4 è il dato confermato.",
+    "idea": "Mostrare a schermo la data reale di ogni fotogramma del grafico e aggiungere una scritta fissa con la fonte del conteggio, così l'invito a commentare si basa su dati chiaramente verificabili."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:27+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 1.3 la voce dice «Si parte il 26» mentre a schermo compare «20 giorni in 10 secondi», e la didascalia dice «ottobre» ma il grafico mostra «29 ott» e «6 nov»: la data di partenza non è coerente tra voce, grafico e didascalia. Inoltre la voce dice «Vince Napoli con 93. Roma è a 4», ma la di",
+   "dati": {
+    "controllato": "Ho verificato la mia mansione: trascrizione coi secondi, dati della mappa (Napoli 93, Roma 4 di distacco), audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio) e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Al secondo 1.3 la voce dice «Si parte il 26» mentre a schermo compare «20 giorni in 10 secondi», e la didascalia dice «ottobre» ma il grafico mostra «29 ott» e «6 nov»: la data di partenza non è coerente tra voce, grafico e didascalia. Inoltre la voce dice «Vince Napoli con 93. Roma è a 4», ma la didascalia riporta Roma a 89, cioè 4 punti di distacco ma con un numero diverso dal grafico (88): il dato Roma 88 vs 89 va allineato.",
+    "correzione": "Allineare la data di partenza (26 ott o 29 ott) in voce, titolo e didascalia, e uniformare Roma a 88 o 89 in tutti i punti; verificare che «Roma a 4» sia coerente con il dato scelto.",
+    "idea": "Chiudere con un numero preciso per la città dello spettatore (es. «Torino è a 45: quanti ne servono?») per aumentare i commenti."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:27+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella voce e nel copione compare 'Si parte il 26 ottobre', ma nel fotogramma della corsa la data mostrata è '29 ott' e l'ultima è '6 nov': la data di partenza non corrisponde a quella a schermo. Inoltre la sezione 'dati_mappa' è vuota: i numeri della corsa (Napoli 93, Roma 89 nella didascalia, Roma ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, audio e didascalia del reel 'corsa delle città'.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella voce e nel copione compare 'Si parte il 26 ottobre', ma nel fotogramma della corsa la data mostrata è '29 ott' e l'ultima è '6 nov': la data di partenza non corrisponde a quella a schermo. Inoltre la sezione 'dati_mappa' è vuota: i numeri della corsa (Napoli 93, Roma 89 nella didascalia, Roma a 4 nella voce) non risultano verificabili dai materiali, e la didascalia dà Roma 89 mentre la voce dice Roma a 4 di distacco, coerente solo se Napoli è 93 (93-89=4), ma il fotogramma finale mostra Napoli 89 e Roma 88 al 6 nov.",
+    "correzione": "Allineare la data di partenza (26 ott vs 29 ott a schermo) e i valori finali (93/89 vs 89/88 nel grafico); verificare i conteggi prima di pubblicare e riportare il distacco corretto.",
+    "idea": "Mostrare nel reel il nome di una città scritta da un commento reale, così la call to action diventa prova concreta."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:29+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione e nel copione si dice «Si parte il 26 ottobre», mentre la corsa mostrata nei fotogrammi è datata 29 ott e 6 nov e la didascalia parla di «20 giorni in 10 secondi»: la data d'inizio non è verificabile dai materiali. Inoltre la scena «Vince Napoli con 93» (fotogramma 11s) dice 93 an",
+   "dati": {
+    "controllato": "Trascrizione, dati della mappa, misure audio e coerenza di copione e didascalia con i numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella trascrizione e nel copione si dice «Si parte il 26 ottobre», mentre la corsa mostrata nei fotogrammi è datata 29 ott e 6 nov e la didascalia parla di «20 giorni in 10 secondi»: la data d'inizio non è verificabile dai materiali. Inoltre la scena «Vince Napoli con 93» (fotogramma 11s) dice 93 animali, ma il grafico finale mostra Napoli a 89 e Roma a 88, mentre il testo a schermo dice «Roma a 4» e la didascalia riporta Roma 89; i numeri non coincidono tra voce, schermo e didascalia. Anche la trascrizione dice «Roma è a 4» mentre il dato verificato porta la distanza a 1 o a 4 a seconda della fonte.",
+    "correzione": "Allineare un solo numero per Napoli e Roma in voce, schermo e didascalia (verificare 93 vs 89 e 89 vs 88 con i dati mappa), e confermare o togliere la data «26 ottobre» con il dato di partenza reale.",
+    "idea": "Mostrare sempre a schermo il numero finale identico alla didascalia e aggiungere una scena con la città dell'utente evidenziata sulla barra."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:30+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Vince Napoli con 93. Roma è a 4», ma nei dati verificati della mappa non compare alcun valore (dati_mappa è vuoto), quindi non posso confermare né 93 né il distacco di Roma. Inoltre la didascalia parla di «Roma 89» e «Torino 45», mentre nel reel il distacco e i numeri non coincidono: 9",
+   "dati": {
+    "controllato": "Dati della mappa (cifre citate nel reel e nella didascalia) confrontati con l'elenco dei dati verificati: il reel mostra un dato vuoto e nessun dato di mappa è stato fornito.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Il reel dice «Vince Napoli con 93. Roma è a 4», ma nei dati verificati della mappa non compare alcun valore (dati_mappa è vuoto), quindi non posso confermare né 93 né il distacco di Roma. Inoltre la didascalia parla di «Roma 89» e «Torino 45», mentre nel reel il distacco e i numeri non coincidono: 93 contro 89 darebbe 4 di distacco, coerente, ma i valori non sono verificabili dai materiali. Anche la data della corsa cambia tra fotogrammi (29 ott, 6 nov) e la voce dice «il 26 ottobre»: incoerenza da verificare.",
+    "correzione": "Prima della pubblicazione, confrontare Napoli 93, Roma 89 e la data di partenza (26 ottobre) con i dati ufficiali della mappa, e allineare la data mostrata nei fotogrammi alla voce.",
+    "idea": "Mostrare nei primi secondi la città del commento più recente, così chi scrive si riconosce e tende a seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:30+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 6 il grafico mostra Napoli 89 e Roma 88 (data 6 nov), ma al secondo 14 il testo dice 'Roma è a 4' e la didascalia riporta Roma 89: il distacco e il numero di Roma non coincidono con i valori mostrati nel grafico finale. Inoltre la trascrizione dice 'si parte il 26 ottobre' ",
+   "dati": {
+    "controllato": "Ho verificato la mappa: i dati della corsa (Napoli 93, Roma 89 nel grafico finale, ma il voiceover dice 'Roma è a 4' e la didascalia 'Roma 89'; la trascrizione dice 'Vince Napoli con 93. Roma è a 4' che è coerente con il distacco di 4 punti).",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Nel fotogramma al secondo 6 il grafico mostra Napoli 89 e Roma 88 (data 6 nov), ma al secondo 14 il testo dice 'Roma è a 4' e la didascalia riporta Roma 89: il distacco e il numero di Roma non coincidono con i valori mostrati nel grafico finale. Inoltre la trascrizione dice 'si parte il 26 ottobre' mentre il primo grafico è datato 29 ott, quindi la data d'inizio non corrisponde.",
+    "correzione": "Allineare i numeri: se Napoli è 93 e Roma 89, il distacco è 4 e va bene; verificare che il grafico finale mostri 93 e 89 e la data di partenza (26 o 29 ottobre) in tutti i punti del reel e nella didascalia.",
+    "idea": "Per i prossimi reel mostrare il distacco come barra o numero animato direttamente sul grafico, così lo spettatore vede subito la differenza senza dover leggere il testo."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:32+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il dato di Roma non torna: nel copione e nel grafico finale Roma è a 4 punti da Napoli (89 vs 93), ma nella didascalia è scritto Roma 89 e Napoli 93, quindi coerente; il vero problema è che nel fotogramma al secondo 14 il campo di testo mostra 'Rom' troncato e l'ultimo grafico al secondo 11 mostra a",
+   "dati": {
+    "controllato": "Mappa e dati: confronto dei numeri del reel (Napoli 93, Roma a 4 → 89, grafici 29 ott / 6 nov) con i dati verificati della mappa, che sono vuoti; ho controllato anche la coerenza tra grafici, copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Il dato di Roma non torna: nel copione e nel grafico finale Roma è a 4 punti da Napoli (89 vs 93), ma nella didascalia è scritto Roma 89 e Napoli 93, quindi coerente; il vero problema è che nel fotogramma al secondo 14 il campo di testo mostra 'Rom' troncato e l'ultimo grafico al secondo 11 mostra ancora 'Napoli 89' mentre il titolo dice 'vince Napoli con' senza il numero, che compare solo nel testo. Inoltre la trascrizione dice 'si parte il 26 ottobre' mentre il grafico indica '29 ott' come prima data: incoerenza di date. Non posso verificare i numeri perché i dati della mappa sono vuoti.",
+    "correzione": "Allineare la data di partenza (26 o 29 ottobre) su copione, grafico e didascalia; mostrare il numero di Napoli già nella scena di chiusura; verificare i conteggi con i dati reali della mappa prima della pubblicazione; correggere il mock 'Rom' con un nome utente completo.",
+    "idea": "Una versione con la città dell'utente già evidenziata nel grafico, se il commento viene inviato, per aumentare la sensazione di partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:33+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Si parte il 26 ottobre», ma il brief dice «Si parte il 26» senza mese e i frame mostrano la data 29 ott sulla prima barra e 6 nov sulla seconda. La didascalia dice «20 giorni in 10 secondi», il titolo «20 giorni in 10 secondi» è coerente, ma il 26 ottobre al 6 novembre sono 11 ",
+   "dati": {
+    "controllato": "Dati della mappa (classifica, cifre e date) rispetto al brief e alla trascrizione, più coerenza tra copione, didascalia e frame.",
+    "esito": "segnalo",
+    "secondo": 12,
+    "problema": "La trascrizione dice «Si parte il 26 ottobre», ma il brief dice «Si parte il 26» senza mese e i frame mostrano la data 29 ott sulla prima barra e 6 nov sulla seconda. La didascalia dice «20 giorni in 10 secondi», il titolo «20 giorni in 10 secondi» è coerente, ma il 26 ottobre al 6 novembre sono 11 giorni, non 20: la data d'inizio non torna con il periodo dichiarato. Inoltre al secondo 12 la trascrizione dice «Roma è a 4», mentre il frame mostra Roma a 4 come distacco solo implicito; nei dati della mappa non risultano valori di distacco da verificare.",
+    "correzione": "Verificare la data di partenza reale della corsa e allinearla a titolo, copione e didascalia (o correggere il periodo a «11 giorni»). Il «Roma è a 4» va confermato con i dati (93 contro 89 nella didascalia e 93 contro 88 nel frame del 6 nov: il distacco è 4 o 5, da chiarire).",
+    "idea": "Mostrare la data di partenza e quella di arrivo come etichette fisse sulla corsa, così lo spettatore capisce subito il periodo senza doverlo dedurre."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:34+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel reel la voce dice «Si parte il 26 ottobre» e la classifica finale riporta Napoli 93 e «Roma a 4», ma nella didascalia Roma è indicata a 89 (93-4=89 coerente, quindi il numero è giusto); il problema è che al secondo 6 il grafico mostra «6 nov» con Roma a 88 e Napoli a 89, quindi la differenza tra",
+   "dati": {
+    "controllato": "Dati della mappa (classifica Napoli 93, Roma 89 / a 4) e date della corsa, confrontati con trascrizione, didascalia e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel reel la voce dice «Si parte il 26 ottobre» e la classifica finale riporta Napoli 93 e «Roma a 4», ma nella didascalia Roma è indicata a 89 (93-4=89 coerente, quindi il numero è giusto); il problema è che al secondo 6 il grafico mostra «6 nov» con Roma a 88 e Napoli a 89, quindi la differenza tra le due fasi non corrisponde al «Roma a 4» dell'overlay finale. Inoltre la frase «Si parte il 26 ottobre» non trova riscontro nei fotogrammi, dove compare solo «29 ott» come data del primo grafico. Il dato di partenza va verificato prima della pubblicazione.",
+    "correzione": "Allineare la data di partenza (26 ottobre vs 29 ott mostrato a schermo) e verificare che la distanza Napoli-Roma sia coerente con i dati del 6 nov (89 vs 88, distacco di 1 e non di 4) oppure correggere il testo con il dato corretto dell'ultimo aggiornamento.",
+    "idea": "Mostrare la data di partenza e quella di arrivo in un unico overlay fisso, così il pubblico capisce subito il periodo della corsa."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:34+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Volume della voce: LUFS, picco, silenzi e apertura rispetto all'obiettivo -14 LUFS e picco sotto -1 dBFS.",
+   "dati": {
+    "controllato": "Volume della voce: LUFS, picco, silenzi e apertura rispetto all'obiettivo -14 LUFS e picco sotto -1 dBFS.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Il formato questa_luce ha il miglior rapporto follower ogni 1000 views (14.7): proverei un reel con una sola città e un invito diretto a commentare con il proprio animale."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:36+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -17.3 dB, sotto il riferimento: l'apertura risulta più debole del resto. Il LUFS complessivo (-14.7) è accettabile e il picco (-0.8 dBFS) supera di poco l'obiettivo di -1 dBFS. Nel copione la frase 'La città con più animali d'Italia?' è presente, ma la trascrizi",
+   "dati": {
+    "controllato": "Volume e audio del reel: LUFS, picco, silenzi e volume dei primi 5 secondi rispetto all'obiettivo, più la coerenza tra trascrizione e copione.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il volume medio dei primi 5 secondi è -17.3 dB, sotto il riferimento: l'apertura risulta più debole del resto. Il LUFS complessivo (-14.7) è accettabile e il picco (-0.8 dBFS) supera di poco l'obiettivo di -1 dBFS. Nel copione la frase 'La città con più animali d'Italia?' è presente, ma la trascrizione la divide in più parti con piccoli ritardi (es. 'Si parte il 26' a 1.3s, 'ottobre' a 3.2s), senza rompere il senso.",
+    "correzione": "Alzare il volume della prima parte (primi 5 secondi) di circa 3 dB, portando la media vicino a -14 dB, e abbassare il picco sotto -1 dBFS con un limiter leggero.",
+    "idea": "Per i prossimi reel, aprire con un numero sorprendente in voce più forte e tenere l'invito a commentare sempre come ultima frase, così da unire attenzione iniziale e partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:36+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, copione del reparto Voce e musica, misure audio (LUFS, picco, silenzi) e coerenza con la didascalia.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del reparto Voce e musica, misure audio (LUFS, picco, silenzi) e coerenza con la didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per il prossimo reel, far scrivere il nome della città in sovrimpressione nel primo secondo del commento, così il pubblico capisce subito cosa fare senza leggere la didascalia."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:36+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Misure audio (LUFS, picco, silenzi, volume iniziale) rispetto all'obiettivo, e coerenza tra trascrizione, copione e didascalia.",
+   "dati": {
+    "controllato": "Misure audio (LUFS, picco, silenzi, volume iniziale) rispetto all'obiettivo, e coerenza tra trascrizione, copione e didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il formato con un contatore che si aggiorna in video quando arriva un commento con una città nuova, così chi partecipa vede subito il proprio effetto."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:38+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il brief ha 'apertura': null, quindi nessun gancio visivo/sonoro definito per i primi secondi; la voce parte a 0.0s ma la prima frase 'La città con più animali d'Italia?' non ha un suono di apertura dedicato, e il volume medio dei primi 5 secondi (-17.3 dB) è più basso del resto del reel, quindi l'a",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione e misure audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo), con l'apertura che parte subito a 0.0s.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief ha 'apertura': null, quindi nessun gancio visivo/sonoro definito per i primi secondi; la voce parte a 0.0s ma la prima frase 'La città con più animali d'Italia?' non ha un suono di apertura dedicato, e il volume medio dei primi 5 secondi (-17.3 dB) è più basso del resto del reel, quindi l'attacco può perdere forza.",
+    "correzione": "Definire un'apertura sonora (un colpo, un fischio di partenza o un effetto di 'via') nel punto 0.0s e portare il volume dei primi 5 secondi vicino al livello del resto, mantenendo il picco sotto -1 dBFS.",
+    "idea": "Per i prossimi reel della corsa, usare un suono di partenza netto (es. un colpo di pistola stilizzato o un 'via' parlato) come apertura fissa del formato, così il pubblico riconosce subito il tema."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:39+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Roma è a 4' (al secondo 12.9) non coincide con la didascalia, che dà Roma a 89 con 'Napoli 93'. Il numero 4 è probabilmente un errore o un refuso, e in un reel che parla di classifica un dato sbagliato si nota subito. Inoltre il volume medio dei primi 5 secondi (-17.3 dB) è più basso dell'o",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi e coerenza tra copione, didascalia e numeri della mappa.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il dato 'Roma è a 4' (al secondo 12.9) non coincide con la didascalia, che dà Roma a 89 con 'Napoli 93'. Il numero 4 è probabilmente un errore o un refuso, e in un reel che parla di classifica un dato sbagliato si nota subito. Inoltre il volume medio dei primi 5 secondi (-17.3 dB) è più basso dell'obiettivo implicito d'apertura, anche se entro la soglia di loudness complessiva; l'aggancio iniziale potrebbe risultare più debole.",
+    "correzione": "Allineare il numero su Roma nella voce (e nel copione) al dato reale della mappa, cioè 89, oppure verificare il dato prima della pubblicazione. Valutare un leggero aumento del volume nei primi secondi, mantenendo il picco sotto -1 dBFS.",
+    "idea": "Per i prossimi reel, far leggere i numeri da una fonte fissa (la mappa stessa) per evitare discrepanze tra voce e didascalia."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:39+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Trascrizione, tempi, misure audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo, volume iniziale -17.3 dB) e coerenza tra copione e didascalia.",
+   "dati": {
+    "controllato": "Trascrizione, tempi, misure audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo, volume iniziale -17.3 dB) e coerenza tra copione e didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, far comparire a schermo la città più votata dai commenti nel reel successivo: il follow cresce quando chi commenta si vede riconosciuto."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:39+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Vince Napoli con 93. Roma è a 4.' non torna con la didascalia, che dà Roma a 89. Inoltre 'Roma è a 4' è ambiguo (4 di distacco? 4 posizione?) e la trascrizione non corrisponde al brief, che alla frase 2 dice 'Vince Napoli con 93. Roma è a 4.' mentre la didascalia riporta Roma 89. Anche 'Si ",
+   "dati": {
+    "controllato": "Audio, trascrizione coi secondi, copione e didascalia rispetto ai dati audio e al brief del reel.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il dato 'Vince Napoli con 93. Roma è a 4.' non torna con la didascalia, che dà Roma a 89. Inoltre 'Roma è a 4' è ambiguo (4 di distacco? 4 posizione?) e la trascrizione non corrisponde al brief, che alla frase 2 dice 'Vince Napoli con 93. Roma è a 4.' mentre la didascalia riporta Roma 89. Anche 'Si parte il 26 ottobre' nel reel e 'la corsa: 20 giorni in 10 secondi' vanno verificati. Il picco è -0.8 dBFS, sopra l'obiettivo di -1 dBFS.",
+    "correzione": "Allineare il numero di Roma tra voce e didascalia (dato verificato: 89 oppure 4 di distacco, mai entrambi) e abbassare il picco sotto -1 dBFS con un leggero limiter.",
+    "idea": "Ripetere la domanda 'E la tua città?' anche in una scritta a schermo negli ultimi 3 secondi, così chi guarda senza audio la vede."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:40+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Loudness, picco, silenzi e volume d'apertura della traccia audio rispetto all'obiettivo -14 LUFS e picco sotto -1 dBFS.",
+   "dati": {
+    "controllato": "Loudness, picco, silenzi e volume d'apertura della traccia audio rispetto all'obiettivo -14 LUFS e picco sotto -1 dBFS.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel conviene mettere nei primi 2 secondi il numero più sorprendente (es. 'Napoli 93 animali'), perché l'apertura attuale parte da una domanda generica."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:43+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Si parte il 26 ottobre» e la prima barra mostra «29 ott», ma nei materiali non c'è la data 26 ottobre come inizio della corsa, quindi la data nel copione non è verificabile dai dati. Inoltre la trascrizione dice «Vince Napoli con 93. Roma è a 4», che è coerente con il dato 93 vs 89 sol",
+   "dati": {
+    "controllato": "Ho verificato la mia mansione su copertine, fotogrammi, durata, trascrizione e coerenza tra copione, didascalia e dati della corsa.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Il reel dice «Si parte il 26 ottobre» e la prima barra mostra «29 ott», ma nei materiali non c'è la data 26 ottobre come inizio della corsa, quindi la data nel copione non è verificabile dai dati. Inoltre la trascrizione dice «Vince Napoli con 93. Roma è a 4», che è coerente con il dato 93 vs 89 solo se si intende il distacco di 4: è corretto, ma il copione non lo spiega chiaramente. Nella didascalia Roma è indicata a 89, mentre nel frame finale del copione la barra di Roma e il distacco sono coerenti con 89. Infine il frame 0.5s è solo titolo e box vuoto con la mappa mancante: la prima schermata non mostra nessun contenuto visivo oltre al titolo, quindi l'apertura è statica.",
+    "correzione": "Verificare la data d'inizio (26 o 29 ottobre) e allinearla a copione e grafica; chiarire nel voiceover «Roma è a 4 punti» oppure «a 4 animali di distacco»; aggiungere un elemento visivo nei primi secondi (per esempio la mappa o la prima barra che parte) per evitare lo schermo vuoto all'avvio.",
+    "idea": "Per i prossimi reel usare un'apertura con la barra della città più in alto già visibile al secondo 0.5, e mostrare sempre il distacco in punti o animali con la stessa unità in copione e grafica."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:43+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La voce dice «Si parte il 26 ottobre», ma nei fotogrammi la data di partenza mostrata è 29 ott e poi 6 nov: incoerenza tra audio e grafica. Inoltre al secondo 12.9 la voce dice «Roma è a 4», mentre la didascalia riporta Roma 89 e il grafico a 88: il numero 4 non è verificato nei materiali. Anche il ",
+   "dati": {
+    "controllato": "Copione, trascrizione, dati corsa (Napoli 93 vs Roma 4? ecc.), audio e didascalia del reel Colori notte, con i sei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "La voce dice «Si parte il 26 ottobre», ma nei fotogrammi la data di partenza mostrata è 29 ott e poi 6 nov: incoerenza tra audio e grafica. Inoltre al secondo 12.9 la voce dice «Roma è a 4», mentre la didascalia riporta Roma 89 e il grafico a 88: il numero 4 non è verificato nei materiali. Anche il titolo della schermata finale («Vince Napoli con») resta sospeso al secondo 14, con il numero 93 che compare solo dopo.",
+    "correzione": "Allineare la data parlata a quella mostrata nel grafico (o togliere la data dalla voce). Sostituire «Roma è a 4» con il distacco reale ricalcolato dai dati verificati (89 vs 93 = 4, ma il grafico del 6 nov mostra 88: verificare). Completare la frase finale «Vince Napoli con 93» in una sola schermata leggibile.",
+    "idea": "Chiudere ogni reel con un'anticipazione della prossima corsa (es. «Domani: chi sale a Torino?») per trasformare la sfida in appuntamento e rafforzare il follow."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:43+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma a 4s la classifica mostra Napoli 89, Roma 88, Torino 45, Milano 40, Catania 30, Genova 30, con data 6 nov, mentre la trascrizione e il copione dicono 'Si parte il 26 ottobre' e la didascalia dice 'Napoli 93 · Roma 89 · Torino 45'. Inoltre al secondo 1 la data è 29 ott con Napoli 45, R",
+   "dati": {
+    "controllato": "Grafica dei 6 fotogrammi e coerenza dei dati della mappa/ordine dei frame con la trascrizione e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma a 4s la classifica mostra Napoli 89, Roma 88, Torino 45, Milano 40, Catania 30, Genova 30, con data 6 nov, mentre la trascrizione e il copione dicono 'Si parte il 26 ottobre' e la didascalia dice 'Napoli 93 · Roma 89 · Torino 45'. Inoltre al secondo 1 la data è 29 ott con Napoli 45, Roma 33: il frame 4s e i numeri finali non coincidono con la didascalia (Roma 89 vs 88, Milano 40 vs non citato). Il frame 'Vince Napoli con 93' al 10.5s mostra 93 ma il titolo dice 'Roma a 4', che è 93-89=4, quindi coerente; il problema è solo la data 26 ottobre citata in voce mentre la grafica parte dal 29 ott.",
+    "correzione": "Allineare la data di partenza tra voce, grafica e didascalia (26 ott o 29 ott) e verificare che Roma sia 89 in tutti i punti; la grafica finale 6 nov va confermata con i dati verificati.",
+    "idea": "Mostrare nel reel una città reale che sale grazie a un commento, per dare un esempio concreto di partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:45+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 14 il testo «Rom» nel box di esempio è troncato (il nome è «Roma» nel copione) e la frase «E LA TUA CITTÀ?» è già stata sostituita dal box; nei fotogrammi il titolo della corsa in alto è piccolo e sul fondo i numeri dell'ultimo frame sono visibili solo a tratti. Inoltre la scritta «Vince ",
+   "dati": {
+    "controllato": "Font, dimensione e leggibilità dei testi nei sei fotogrammi, contrasto sul fondo viola, coerenza tra titoli, numeri della corsa e didascalia.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Al secondo 14 il testo «Rom» nel box di esempio è troncato (il nome è «Roma» nel copione) e la frase «E LA TUA CITTÀ?» è già stata sostituita dal box; nei fotogrammi il titolo della corsa in alto è piccolo e sul fondo i numeri dell'ultimo frame sono visibili solo a tratti. Inoltre la scritta «Vince Napoli con» al secondo 11 resta incompleta: il numero 93 compare solo dal secondo 12, e la didascalia dice «Roma 89» mentre la trascrizione dice «Roma è a 4», incoerenza di dati tra testo e didascalia.",
+    "correzione": "Mostrare «Roma» per intero nel box di esempio, unire «Vince Napoli con 93» in un'unica schermata, allineare il distacco (Roma a 4 nel parlato, 89 in didascalia: scegliere una formulazione coerente) e ingrandire il titolo della corsa in alto.",
+    "idea": "Un frame finale con la classifica completa dei primi tre e uno spazio vuoto «la tua città» da compilare in sovraimpressione, per rendere più concreto l'invito a commentare."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:47+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 la barra di Napoli è 45 ma Roma è 33, mentre al secondo 11 Napoli è 89 e Roma 88 con Roma quasi pari: la classifica intermedia è coerente, però il copione dice «Roma è a 4» mentre il fotogramma finale mostra Roma a 4 solo nel testo; inoltre la didascalia dice Roma 89 ment",
+   "dati": {
+    "controllato": "Icone e grafica dei 6 fotogrammi, coerenza dei dati sulle barre (29 ott vs 6 nov) con il copione e le misure audio.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 la barra di Napoli è 45 ma Roma è 33, mentre al secondo 11 Napoli è 89 e Roma 88 con Roma quasi pari: la classifica intermedia è coerente, però il copione dice «Roma è a 4» mentre il fotogramma finale mostra Roma a 4 solo nel testo; inoltre la didascalia dice Roma 89 mentre la scena finale dice 88 e il copione Roma a 4 (93-89). Incoerenza numerica tra didascalia (Roma 89) e grafica (Roma 88). Anche la data nel copione («26 ottobre») non coincide con il «29 ott» e il «6 nov» mostrati.",
+    "correzione": "Allineare Roma a 88 (o 89) in tutti i punti: grafica, copione e didascalia; allineare la data di partenza tra copione (26 ottobre) e grafica (29 ott).",
+    "idea": "Mostrare nell'ultima scena la città dell'utente reale con il suo conteggio, e fissare un numero unico verificato prima della pubblicazione."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:48+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel reel la barra di Napoli dice 89 e Roma 88 al 6 nov, ma la didascalia e il sotto-testo dicono Napoli 93 e Roma 89; inoltre al secondo 4 il titolo «Vince Napoli con» resta incompleto mentre il numero compare solo dopo. Il numero finale (93) non è mostrato sulla barra del 6 nov. Il frame 14 mostra ",
+   "dati": {
+    "controllato": "Grafica e copertine: fotogrammi, coerenza dei numeri della corsa con la mappa e la didascalia, testo a schermo e ritmo.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel reel la barra di Napoli dice 89 e Roma 88 al 6 nov, ma la didascalia e il sotto-testo dicono Napoli 93 e Roma 89; inoltre al secondo 4 il titolo «Vince Napoli con» resta incompleto mentre il numero compare solo dopo. Il numero finale (93) non è mostrato sulla barra del 6 nov. Il frame 14 mostra «Roma a 4» senza il dato chiaro sulla classifica. Il testo «Roma è a 4» è coerente solo se si intende il distacco, ma non è spiegato.",
+    "correzione": "Allineare i valori delle barre finali a quelli dichiarati (93 e 89) oppure dichiarare la data corretta della barra; completare la frase «Vince Napoli con 93 animali» in una sola schermata; scrivere «Roma a 4 animali» per chiarire il distacco.",
+    "idea": "Un reel «Riassunto del turno» con la città più in crescita e il commento più votato, per dare volto a chi partecipa."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:48+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione e nel copione la data è detta come «26 ottobre», ma nel fotogramma della corsa compare «29 ott» e poi «6 nov»: la data della corsa non coincide con quella dichiarata. Inoltre al secondo 4 il cartello «GUARDA» è ancora visibile sotto la classifica mentre la voce dice «Guarda chi sa",
+   "dati": {
+    "controllato": "Copione, trascrizione, dati della mappa, audio e didascalia del reel: ho verificato la coerenza tra numeri in video e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella trascrizione e nel copione la data è detta come «26 ottobre», ma nel fotogramma della corsa compare «29 ott» e poi «6 nov»: la data della corsa non coincide con quella dichiarata. Inoltre al secondo 4 il cartello «GUARDA» è ancora visibile sotto la classifica mentre la voce dice «Guarda chi sale», e la didascalia dice «20 giorni in 10 secondi» senza che i dati mappa (vuoti) lo confermino. Infine nel fotogramma finale il campo di input mostra «Rom» troncato, mentre il testo dice «Scrivi città e nome»: la UI d'esempio sembra non coerente con l'invito.",
+    "correzione": "Allineare la data detta in voce e in didascalia alle date reali mostrate nei fotogrammi (29 ott → 6 nov), o eliminare la data parlata. Far comparire «GUARDA CHI SALE.» solo quando parte la voce corrispondente. Usare nell'esempio di input un nome completo non troncato, es. «Roma, Luna, cane».",
+    "idea": "Chiudere ogni corsa con una mini-mappa che evidenzia la città scritta nei commenti più recenti, così chi commenta vede subito la propria luce accendersi."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:51+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 la classifica mostra Napoli 89, Roma 88, Torino 45, Milano 40, Catania 30, Genova 30, con la data 6 nov, mentre nel secondo 0.5 il frame è del 29 ott con Napoli 45. Il copione dice 'Si parte il 26 ottobre' ma nella grafica compare 29 ott come primo frame: la data di parte",
+   "dati": {
+    "controllato": "Ho verificato i dati della corsa nella grafica, il testo nei fotogrammi e il ritmo rispetto alla trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 la classifica mostra Napoli 89, Roma 88, Torino 45, Milano 40, Catania 30, Genova 30, con la data 6 nov, mentre nel secondo 0.5 il frame è del 29 ott con Napoli 45. Il copione dice 'Si parte il 26 ottobre' ma nella grafica compare 29 ott come primo frame: la data di partenza non coincide. Inoltre al secondo 4 la classifica è già al 6 nov, cioè l'ultima data, prima che lo spettatore abbia visto la corsa: il 'guarda chi sale' perde senso perché il finale è anticipato. Il titolo è 'Napoli con 93' mentre la grafica al 6 nov riporta 89 e la didascalia 89 (con Roma 89 e non 88): i numeri sono incoerenti tra copione, grafica e didascalia. Anche 'Roma è a 4' è coerente con 93 contro 89, ma la didascalia dice Roma 89.",
+    "correzione": "Allineare tutti i numeri (Napoli e Roma, con i valori finali verificati) tra copione, grafica e didascalia; fare in modo che la classifica finale appaia solo al secondo 10-11, così la corsa si vede davvero; verificare la data di partenza (26 o 29 ottobre) e usarla uguale ovunque.",
+    "idea": "Mostrare la corsa con una barra in movimento e un contatore animato per Napoli e Roma, con il finale rivelato solo alla fine."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:53+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione e nel copione il numero di Roma è 'a 4' (distacco), ma al secondo 14 la grafica del commento mostra ancora 'Roma a 4' nel riquadro sotto Napoli, mentre il grafico finale del secondo 11 dà Roma 88 contro Napoli 89: il distacco reale è 4 ma la sovrimpressione del secondo 14 scrive '",
+   "dati": {
+    "controllato": "Grafica e copertine: fotogrammi, testi in sovrimpressione, coerenza dati della corsa (Napoli 93, Roma 89 vs 4) e fascia finale rispetto alla trascrizione e alla didascalia.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Nella trascrizione e nel copione il numero di Roma è 'a 4' (distacco), ma al secondo 14 la grafica del commento mostra ancora 'Roma a 4' nel riquadro sotto Napoli, mentre il grafico finale del secondo 11 dà Roma 88 contro Napoli 89: il distacco reale è 4 ma la sovrimpressione del secondo 14 scrive 'Roma a 4' senza il dato 89 vs 93 coerente con 'Napoli 93'. Inoltre al secondo 4 il titolo del grafico 'Corsa delle città' mostra la data '6 nov' mentre il copione dice 'Si parte il 26 ottobre' e la didascalia non chiarisce il periodo: l'incoerenza di date confonde chi guarda. Il frame al secondo 0.5 non ha la parola 'Napoli' visibile come vincitrice e il contatore del copione (20 giorni) non compare sullo schermo.",
+    "correzione": "Allineare la data sul grafico al periodo reale della corsa, mostrare 'Napoli 93 · Roma 89' nella scena di chiusura, e aggiungere in sovrimpressione '20 giorni' al primo frame come nel copione.",
+    "idea": "Aggiungere una barra animata con l'animale che 'sale' per ogni città e chiudere con la cifra del commento in grande, per rendere la corsa più tangibile."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:53+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il fotogramma 'Roma è a 4' cade a 12.9s mentre i fotogrammi inviati sono 0.5, 4, 7, 11, 14, 18: il 'Roma 4' non è coperto e manca un fotogramma tra 11 e 14 proprio sul momento del confronto. Inoltre 'dati_mappa' è vuoto, quindi i numeri 93, 89, 45 e 4 nella didascalia non sono verificabili dai mater",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (LUFS, picco, silenzi), didascalia e fotogrammi inviati rispetto al brief del reel corsa.",
+    "esito": "segnalo",
+    "secondo": 12.9,
+    "problema": "Il fotogramma 'Roma è a 4' cade a 12.9s mentre i fotogrammi inviati sono 0.5, 4, 7, 11, 14, 18: il 'Roma 4' non è coperto e manca un fotogramma tra 11 e 14 proprio sul momento del confronto. Inoltre 'dati_mappa' è vuoto, quindi i numeri 93, 89, 45 e 4 nella didascalia non sono verificabili dai materiali forniti. Il campo 'apertura' è null: il gancio non ha un'apertura visiva dichiarata. Audio: -14.7 LUFS e picco -0.8 dBFS (sopra l'obiettivo di -1 dBFS sotto soglia, picco da controllare), volume primi 5s -17.3 dB con apertura un po' bassa.",
+    "correzione": "Aggiungere un fotogramma intorno a 12.5-13s per mostrare il confronto Napoli/Roma; verificare i dati della mappa e popolare dati_mappa prima della pubblicazione; compilare l'apertura; abbassare il picco sotto -1 dBFS e alzare leggermente l'attacco iniziale.",
+    "idea": "Per i prossimi reel: un fotogramma fisso a fine corsa con la classifica completa dei top 3 e la città dell'utente evidenziata, così il campanilismo è visivo oltre che verbale."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:53+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nei dati dichiarati 'dati_mappa' è vuoto, ma il copione cita numeri precisi (Napoli 93, Roma 4 e 89, Torino 45) e la didascalia riporta Roma 89 mentre il copione dice 'Roma è a 4' (distacco, non punteggio): incoerenza da verificare prima di pubblicare. Inoltre 'Roma è a 4' al secondo 12.9 è ambiguo ",
+   "dati": {
+    "controllato": "Volume (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio), trascrizione coi secondi, didascalia e fotogrammi inviati rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 14.2,
+    "problema": "Nei dati dichiarati 'dati_mappa' è vuoto, ma il copione cita numeri precisi (Napoli 93, Roma 4 e 89, Torino 45) e la didascalia riporta Roma 89 mentre il copione dice 'Roma è a 4' (distacco, non punteggio): incoerenza da verificare prima di pubblicare. Inoltre 'Roma è a 4' al secondo 12.9 è ambiguo e la frase 'Scrivi città e nome' appare due volte con formulazioni diverse. Il campo 'apertura' è null e 'copertina' è null.",
+    "correzione": "Verificare i punteggi nei dati mappa (che risultano vuoti) e allineare copione e didascalia; chiarire 'Roma è a 4' come distacco; impostare una copertina e confermare l'apertura prima dell'upload.",
+    "idea": "Un reel 'Roma vs Napoli' con i punteggi mostrati a schermo in sincronia con la voce, e il formato 'questa_luce' che ha il miglior rapporto follower ogni 1000 views (14.7) da riproporre."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:55+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La didascalia cita Napoli 93, Roma 89, Torino 45, ma nel parlato Roma è detta '4' (scarto che va chiarito). Il dato 'Roma 89' nella didascalia non compare nella trascrizione né in dati_mappa (vuoto), quindi non è verificabile dai materiali. Inoltre la trascrizione dice 'Roma è a 4' mentre il brief d",
+   "dati": {
+    "controllato": "Trascrizione, didascalia, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e coerenza col brief e coi dati di Napoli 93, Roma 89, Torino 45.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La didascalia cita Napoli 93, Roma 89, Torino 45, ma nel parlato Roma è detta '4' (scarto che va chiarito). Il dato 'Roma 89' nella didascalia non compare nella trascrizione né in dati_mappa (vuoto), quindi non è verificabile dai materiali. Inoltre la trascrizione dice 'Roma è a 4' mentre il brief dice 'Roma è a 4' come distacco, ma la didascalia la porta a 89: incoerenza di significato. Il gancio 'Si parte il 26 ottobre' è al 1.3s-3.2s ma il brief ha la frase 1 come 'corsa' e la data non compare nel brief come dato separato. Infine 'Scrivi città e nome' al 14.2s-16.3s si sovrappone alla fascia finale: la call to action è lunga.",
+    "correzione": "Verificare e allineare i numeri: se Roma è a 4 punti da Napoli, la didascalia deve dire 89 (o il parlato va corretto). Aggiungere in dati_mappa i valori verificati prima della pubblicazione. Accorciare il finale a 2-3 secondi, con un solo invito chiaro (scrivi città e nome).",
+    "idea": "Ripetere il formato con un duello regionale (es. Lombardia vs Veneto) e mostrare nel reel la città che 'sale' con un salto visibile sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:55+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il campo 'copertina' è null e non c'è un fotogramma scelto come copertina: il reel rischia di mostrare un frame casuale in griglia, poco attraente per chi scorre il profilo.",
+   "dati": {
+    "controllato": "Copertina: copione, trascrizione coi secondi, didascalia, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e campo copertina (null) con i fotogrammi inviati.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Il campo 'copertina' è null e non c'è un fotogramma scelto come copertina: il reel rischia di mostrare un frame casuale in griglia, poco attraente per chi scorre il profilo.",
+    "correzione": "Scegliere tra i fotogrammi inviati (4s o 14s, quando compare la classifica con Napoli 93 e Roma 4) e impostarlo come copertina, con testo grande e leggibile tipo 'Napoli 93 · Roma 4?'.",
+    "idea": "Ripetere il formato 'scrivi la tua città' mettendo il follow nella prima riga della didascalia e una copertina con la classifica del momento, dato che 'questa_luce' e 'gara_follower' hanno convertito meglio in follower."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:56+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il sottotitolo 'Si parte il 26 ottobre' compare a 1.3s-3.2s, ma il brief dice che la frase 'Si parte il 26 ottobre' è la scena 'corsa'; inoltre la didascalia cita 'Napoli 93 · Roma 89 · Torino 45' mentre nel reel si dice 'Roma è a 4', cifra che non corrisponde alla didascalia. Anc",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo), didascalia e hashtag della mia mansione di pubblicazione.",
+    "esito": "segnalo",
+    "secondo": 3.2,
+    "problema": "Nella trascrizione il sottotitolo 'Si parte il 26 ottobre' compare a 1.3s-3.2s, ma il brief dice che la frase 'Si parte il 26 ottobre' è la scena 'corsa'; inoltre la didascalia cita 'Napoli 93 · Roma 89 · Torino 45' mentre nel reel si dice 'Roma è a 4', cifra che non corrisponde alla didascalia. Anche 'Voce generata con IA' va verificato rispetto alle regole della pagina. I dati_mappa sono vuoti, quindi i numeri non si possono confermare dai materiali.",
+    "correzione": "Allineare il numero di Roma tra reel e didascalia (usare il dato verificato dalla mappa, o rimuovere il numero dalla didascalia) e confermare i dati_mappa prima della pubblicazione.",
+    "idea": "Aprire con la classifica finale in una schermata fissa di 1 secondo per dare subito il risultato, poi mostrare la corsa: più chiaro per chi guarda senza audio."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:56+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Napoli 93, Roma 89, Torino 45' e la frase 'Vince Napoli con 93. Roma è a 4' non sono coerenti: la trascrizione dice 'Roma è a 4' (distanza?) mentre la didascalia dice 'Roma 89'. Inoltre dati_mappa è vuoto, quindi non posso verificare i numeri. Anche il titolo 'Si parte il 26 ottobre' è in c",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo), dati mappa e didascalia del reel corsa.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il dato 'Napoli 93, Roma 89, Torino 45' e la frase 'Vince Napoli con 93. Roma è a 4' non sono coerenti: la trascrizione dice 'Roma è a 4' (distanza?) mentre la didascalia dice 'Roma 89'. Inoltre dati_mappa è vuoto, quindi non posso verificare i numeri. Anche il titolo 'Si parte il 26 ottobre' è in conflitto con la data di produzione (14/11), da chiarire. Audio: picco -0.8 dBFS è sopra l'obiettivo di -1 dBFS e la voce è generata con IA, dichiarata in didascalia.",
+    "correzione": "Verificare i numeri Napoli/Roma/Torino con i dati reali prima della pubblicazione, rendere coerente la frase 'Roma è a 4' con la didascalia, chiarire la data del 26 ottobre e abbassare il picco sotto -1 dBFS.",
+    "idea": "Per i prossimi reel, mostrare nel fotogramma iniziale la classifica con i numeri in sovrimpressione così da rendere subito verificabile il dato e più credibile la sfida."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:58+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "I dati_mappa sono vuoti, quindi i numeri di Napoli (93), Roma (89 nella didascalia, 4 nel copione) e Torino (45) non risultano verificati nei materiali. Inoltre Roma è 4 nel copione e 89 nella didascalia: incoerenza grave. Il voiceover dice 'Roma è a 4' ma la didascalia dice 'Roma 89'. Anche l'apert",
+   "dati": {
+    "controllato": "Trascrizione con i secondi, misure audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e didascalia rispetto agli obiettivi e ai dati di mappa.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "I dati_mappa sono vuoti, quindi i numeri di Napoli (93), Roma (89 nella didascalia, 4 nel copione) e Torino (45) non risultano verificati nei materiali. Inoltre Roma è 4 nel copione e 89 nella didascalia: incoerenza grave. Il voiceover dice 'Roma è a 4' ma la didascalia dice 'Roma 89'. Anche l'apertura è null: il gancio dura fino a 1.3s, poco prima del 'Si parte il 26 ottobre', che è la frase introduttiva della corsa.",
+    "correzione": "Allineare il numero di Roma tra copione e didascalia (verificato sui dati di mappa, che oggi sono vuoti), popolare dati_mappa prima della pubblicazione, e definire l'apertura (es. mostrare subito la classifica al 0.0s).",
+    "idea": "Un reel con la città del commento rivelata in tempo reale (sondaggio o risposta fissata) per trasformare la call to action in contenuto che si autoalimenta."
+   }
+  },
+  {
+   "t": "2026-11-14T13:52:58+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato di Roma è incoerente: il copione dice «Roma è a 4» (a 12.9s), la didascalia dice «Roma 89». Inoltre dati_mappa è vuoto, quindi non posso verificare nessuno dei due numeri con i dati della mappa.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e coerenza dei dati Napoli 93, Roma 89 nella didascalia rispetto alla mappa.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il dato di Roma è incoerente: il copione dice «Roma è a 4» (a 12.9s), la didascalia dice «Roma 89». Inoltre dati_mappa è vuoto, quindi non posso verificare nessuno dei due numeri con i dati della mappa.",
+    "correzione": "Verificare Napoli e Roma sulla mappa prima di pubblicare, poi allineare copione e didascalia allo stesso numero (es. 'Roma è a 89' oppure rimuovere il riferimento). Riempire dati_mappa.",
+    "idea": "Tenere la call to action in comunità (es. 'scrivi città, nome e animale') e rispondere ai commenti con la città nel reel successivo: il formato 'questa_luce' ha il miglior rapporto follower ogni 1000 views."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:00+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La didascalia dice 'Voce generata con IA' ma il brief ha voce: true e nel copione non c'è nessun dato sulla voce: va bene, ma la frase in didascalia e il tag #campanilismo sono ok. Il vero problema: nella didascalia la fascia 'Scrivi la tua città' e la CTA 'Scrivi qui sotto città, nome e cane o gatt",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e dati del progetto per la mia mansione di pubblicazione.",
+    "esito": "segnalo",
+    "secondo": 18,
+    "problema": "La didascalia dice 'Voce generata con IA' ma il brief ha voce: true e nel copione non c'è nessun dato sulla voce: va bene, ma la frase in didascalia e il tag #campanilismo sono ok. Il vero problema: nella didascalia la fascia 'Scrivi la tua città' e la CTA 'Scrivi qui sotto città, nome e cane o gatto' sono due richieste di commento diverse, e il reel si chiude senza una schermata finale leggibile con il nome della pagina. Inoltre il reel dura 18.4 s ma i fotogrammi inviati finiscono a 18 s, quindi l'ultimo frame con la CTA potrebbe non essere verificato.",
+    "correzione": "Verificare il fotogramma a 18 s con la scritta CTA e il nome della pagina; allineare la didascalia alla sola richiesta di commento e aggiungere @ della pagina in chiusura.",
+    "idea": "Per i prossimi reel, far comparire il nome della città sulla mappa mentre viene nominata nel commento, così chi scrive vede subito la propria luce accendersi."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:00+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La domanda 'E la tua città? Scrivi città e nome' arriva a 16.3s, ma la didascalia chiede anche il tipo di animale (cane o gatto) e il testo non lo dice: chi commenta può non capire cosa scrivere. Inoltre la voce dice 'falla salire' e il brief 'Scrivi la tua città: falla salire' non chiarisce che ser",
+   "dati": {
+    "controllato": "Trascrizione, secondi, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio), dati della mappa (Napoli 93, Roma 4 in più = 89, Torino 45) e didascalia, verificati coi materiali.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "La domanda 'E la tua città? Scrivi città e nome' arriva a 16.3s, ma la didascalia chiede anche il tipo di animale (cane o gatto) e il testo non lo dice: chi commenta può non capire cosa scrivere. Inoltre la voce dice 'falla salire' e il brief 'Scrivi la tua città: falla salire' non chiarisce che serve il nome e l'animale.",
+    "correzione": "Allineare voce e fascia: a 16.3s dire 'Scrivi città, nome e cane o gatto', oppure accorciare la didascalia lasciando solo 'città e animale'. Il dato 'Roma è a 4' va chiarito come distacco (4 punti) per evitare ambiguità.",
+    "idea": "Per i prossimi reel, una volta sola nel video mostrare un esempio di commento ('Treviso, Luna, cane') come sottotitolo: riduce l'attrito e aumenta i commenti, che nei dati portano più reach."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:02+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Vince Napoli con 93. Roma è a 4.' nel parlato e il 'Roma 89' in didascalia non coincidono: Roma è a 4 punti da Napoli (93-89), quindi il numero corretto è coerente, ma il parlato dice 'Roma è a 4' senza il contesto del punteggio, mentre nella didascalia compare 'Roma 89'. Inoltre l'ultimo f",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (LUFS, picco, silenzi), didascalia, frasi del brief e dati del progetto nel reparto Community.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il dato 'Vince Napoli con 93. Roma è a 4.' nel parlato e il 'Roma 89' in didascalia non coincidono: Roma è a 4 punti da Napoli (93-89), quindi il numero corretto è coerente, ma il parlato dice 'Roma è a 4' senza il contesto del punteggio, mentre nella didascalia compare 'Roma 89'. Inoltre l'ultimo fotogramma inviato è a 18s e il reel dura 18.4s: il testo di invito a commentare cade a 14.2-16.3s e la chiusura 'falla salire' (16.3s) resta a schermo poco tempo.",
+    "correzione": "Chiarire in voce 'Roma è a 4' come 'Roma 89, a 4 punti', e allungare o tenere a schermo il call to action fino a fine reel; verificare che la scritta 'Scrivi la tua città' sia leggibile negli ultimi 2-3 secondi.",
+    "idea": "Nel prossimo reel mostrare la città dell'utente commentatore sulla mappa come gesto di risposta, e usare una copertina con la città in primo piano."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:03+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il reel ha 18.4 secondi di durata e i fotogrammi richiesti erano 0.5, 1, 2 ... 18 secondi, ma nel pacchetto sono stati inviati solo 6 fotogrammi (0.5, 4, 7, 11, 14, 18). Non ho quindi visibilità sulle immagini dal secondo 1 al 3, né su 5-6, 8-10, 12-13, 15-17: non posso verificare la qualità visiva ",
+   "dati": {
+    "controllato": "Foto e video dei follower: fotogrammi, trascrizione coi secondi, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il reel ha 18.4 secondi di durata e i fotogrammi richiesti erano 0.5, 1, 2 ... 18 secondi, ma nel pacchetto sono stati inviati solo 6 fotogrammi (0.5, 4, 7, 11, 14, 18). Non ho quindi visibilità sulle immagini dal secondo 1 al 3, né su 5-6, 8-10, 12-13, 15-17: non posso verificare la qualità visiva né la copertina (che è null) in quei momenti. Inoltre il picco audio a -0.8 dBFS è vicino al limite di -1 dBFS indicato come obiettivo, e il volume medio dei primi 5 secondi (-17.3 dB) è più basso rispetto al resto.",
+    "correzione": "Reinviare l'intero set di fotogrammi richiesto (0.5-18 s, uno al secondo) e una copertina esplicita; abbassare leggermente il gain per tenere il picco sotto -1 dBFS e valutare un'alzata del volume nei primi 5 secondi.",
+    "idea": "Per i prossimi reel della corsa, aprire con il nome della città in primo piano nel primo secondo e chiudere con un fotogramma fisso della classifica finale, così la copertina è sempre pronta e riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:04+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il CTA è al secondo 14.2-18.4 con la richiesta 'Scrivi città e nome' e la didascalia chiede anche 'cane o gatto', ma il reel non dice esplicitamente di scrivere il tipo di animale: il pubblico può rispondere solo con la città. Inoltre 'falla salire' arriva come frase finale senza un gesto visivo che",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione con i secondi, dati della mappa, misure audio, didascalia e numeri del progetto per la mia mansione di Community: il CTA finale e la richiesta di commento.",
+    "esito": "segnalo",
+    "secondo": 14.2,
+    "problema": "Il CTA è al secondo 14.2-18.4 con la richiesta 'Scrivi città e nome' e la didascalia chiede anche 'cane o gatto', ma il reel non dice esplicitamente di scrivere il tipo di animale: il pubblico può rispondere solo con la città. Inoltre 'falla salire' arriva come frase finale senza un gesto visivo che indichi dove scrivere. Dati mappa vuoti: la classifica citata (Napoli 93, Roma 89, Torino 45) non è verificabile nei materiali, e 'Roma è a 4' nel parlato non coincide con 89 nella didascalia.",
+    "correzione": "Nel parlato del CTA aggiungere 'città, nome e cane o gatto' e mostrare a schermo la freccia verso i commenti; allineare il numero di Roma (4 o 89, a seconda del dato corretto) tra voce e didascalia dopo verifica sulla mappa.",
+    "idea": "Chiudere il reel con un fermo immagine della mappa con la luce della città più recente accesa e il testo 'Scrivi la tua città nei commenti' sovrapposto, così il gesto di commentare è visivo oltre che verbale."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:05+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato di apertura 'Si parte il 26 ottobre' è al secondo 1.3-3.2, ma nel brief la prima frase è sola e il gancio 'La città con più animali d'Italia?' non ha una scena di corsa visibile. Inoltre dati_mappa è vuoto: non posso verificare che Napoli 93, Roma 89/4 e Torino 45 corrispondano alla mappa. N",
+   "dati": {
+    "controllato": "Trascrizione, secondi, dati della mappa, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo), didascalia e hashtag rispetto al brief e ai numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il dato di apertura 'Si parte il 26 ottobre' è al secondo 1.3-3.2, ma nel brief la prima frase è sola e il gancio 'La città con più animali d'Italia?' non ha una scena di corsa visibile. Inoltre dati_mappa è vuoto: non posso verificare che Napoli 93, Roma 89/4 e Torino 45 corrispondano alla mappa. Nel parlato Roma è detta 'a 4' ma in didascalia è 89: il numero va allineato. Anche la data del 26 ottobre è precedente alla data del brief (14 novembre), quindi va verificata.",
+    "correzione": "Verificare i punteggi di Napoli, Roma e Torino sui dati della mappa e uniformare Roma (89 in didascalia, '4' nel parlato, da chiarire se è il distacco). Controllare la data di partenza e, se la corsa è già iniziata, dirlo in modo coerente.",
+    "idea": "Aprire con il numero di Napoli in primo piano già al secondo 0.5, così il gancio è visivo oltre che verbale, e chiudere con una città-esempio scritta a schermo."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:06+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La call to action 'Scrivi città e nome: falla salire' arriva a 16.3s e la fascia finale è gia' sotto la copertura, ma la didascalia chiede 'città, nome e cane o gatto' mentre nel reel non si dice di indicare la specie: il comando non corrisponde al invito scritto. Inoltre il reel non ha 'Seguici' ne",
+   "dati": {
+    "controllato": "Copione, trascrizione coi tempi, dati della mappa, misure audio, didascalia e call to action per il reparto Community (follow e inviti).",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "La call to action 'Scrivi città e nome: falla salire' arriva a 16.3s e la fascia finale è gia' sotto la copertura, ma la didascalia chiede 'città, nome e cane o gatto' mentre nel reel non si dice di indicare la specie: il comando non corrisponde al invito scritto. Inoltre il reel non ha 'Seguici' nel parlato, solo in didascalia, quindi il follow non viene chiesto dove l'attenzione è più alta. Dati mappa vuoti: non posso verificare 'Napoli 93, Roma 4' nel reel, anche se la didascalia dice Roma 89 e i numeri nel parlato ('Roma è a 4') non coincidono con la didascalia (89).",
+    "correzione": "Allineare il parlato alla didascalia: dire 'Roma è a 89' oppure correggere la didascalia; aggiungere nel voiceover 'scrivi città, nome e cane o gatto' oppure togliere 'cane o gatto' dalla didascalia; spostare 'seguici' nel parlato a fine reel.",
+    "idea": "Chiudere ogni reel con una frase fissa da dire a voce, tipo 'seguici per la corsa della settimana', e mostrare nell'ultimo fotogramma la città che è salita di più."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:07+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il gancio «La città con più animali d'Italia?» parte a 0.0s e la voce è forte da subito, ma il brief ha apertura null e il campo dati_mappa è vuoto: i numeri 93, 89, 45 e 4 citati nel copione e in didascalia non trovano riscontro nei dati verificati forniti. Inoltre la didascalia ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, dati mappa, misure audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo), didascalia e hashtag rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nella trascrizione il gancio «La città con più animali d'Italia?» parte a 0.0s e la voce è forte da subito, ma il brief ha apertura null e il campo dati_mappa è vuoto: i numeri 93, 89, 45 e 4 citati nel copione e in didascalia non trovano riscontro nei dati verificati forniti. Inoltre la didascalia dice «20 giorni in 10 secondi» senza che quel dato sia nei materiali, e la fascia «Scrivi la tua città» è in contrasto con l'invito a scrivere città e nome nel commento.",
+    "correzione": "Prima della pubblicazione far confermare i punteggi (93, 89, 45, 4) e il periodo di 20 giorni con i dati della mappa, o toglierli; allineare la fascia e il copione sullo stesso invito; valutare un'apertura visiva nei primi secondi.",
+    "idea": "Chiudere ogni reel con un fotogramma fisso della città vincitrice più la call to action «Seguici per la prossima corsa», così il follow arriva dal video stesso."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:07+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "I dati_mappa sono vuoti, quindi i numeri 93 (Napoli), 89 (Roma) e 45 (Torino) citati nel parlato e nella didascalia non risultano verificati nei materiali. Inoltre la didascalia dice 'Roma 89' mentre il parlato dice 'Roma è a 4' (distacco) senza chiarire il contesto: il pubblico può confondersi. Il ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo), dati mappa e didascalia rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "I dati_mappa sono vuoti, quindi i numeri 93 (Napoli), 89 (Roma) e 45 (Torino) citati nel parlato e nella didascalia non risultano verificati nei materiali. Inoltre la didascalia dice 'Roma 89' mentre il parlato dice 'Roma è a 4' (distacco) senza chiarire il contesto: il pubblico può confondersi. Il 'Si parte il 26' non ha l'anno né il mese nel parlato, e 'ottobre' appare solo in didascalia.",
+    "correzione": "Verificare e riempire dati_mappa con i punteggi reali prima della pubblicazione, poi allineare parlato e didascalia (es. 'Roma a 4 punti da Napoli' oppure 'Roma 89'). Esplicitare nel parlato la data 'il 26 ottobre' o aggiungerla in overlay.",
+    "idea": "Aggiungere in overlay il punteggio di ogni città mentre viene citata e un'ultima card con 'Seguici per la prossima corsa' per portare il follow direttamente nel reel."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:08+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nel parlato, al secondo 10.5 e 12.9, si dice \"Vince Napoli con 93. Roma è a 4\", ma nella didascalia Roma è a 89. Inoltre dati_mappa è vuoto, quindi i numeri non sono verificabili contro la mappa. Il \"4\" sembra un errore di trascrizione o di copione.",
+   "dati": {
+    "controllato": "Sincronia tra trascrizione, secondi e frasi del brief, dati della mappa (Napoli 93, Roma 89 nella didascalia ma 4 nel parlato), audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Nel parlato, al secondo 10.5 e 12.9, si dice \"Vince Napoli con 93. Roma è a 4\", ma nella didascalia Roma è a 89. Inoltre dati_mappa è vuoto, quindi i numeri non sono verificabili contro la mappa. Il \"4\" sembra un errore di trascrizione o di copione.",
+    "correzione": "Verificare il dato reale di Roma sulla mappa e allineare parlato e didascalia (es. \"Roma è a 89\" se corretto). Riempire dati_mappa prima della pubblicazione.",
+    "idea": "Mostrare in copertina la città in testa con il numero e far comparire in sovrimpressione la città scritta dai commenti per rafforzare il coinvolgimento."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:09+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il gancio iniziale ('La città con più animali d'Italia?') arriva a 1.3s e la domanda resta sospesa senza risposta per diversi secondi; inoltre la frase 'Vince Napoli con 93' ha dati (93, 4) che nei materiali non risultano verificati nella mappa (dati_mappa è vuoto), quindi non posso confermarli. Nel",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e coerenza della didascalia coi dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "Il gancio iniziale ('La città con più animali d'Italia?') arriva a 1.3s e la domanda resta sospesa senza risposta per diversi secondi; inoltre la frase 'Vince Napoli con 93' ha dati (93, 4) che nei materiali non risultano verificati nella mappa (dati_mappa è vuoto), quindi non posso confermarli. Nella didascalia compare anche Torino 45, non presente nella trascrizione.",
+    "correzione": "Accorciare la pausa dopo la domanda iniziale e tenere la risposta visiva subito dopo; verificare i numeri 93, 89 e 45 con i dati della mappa prima della pubblicazione e allinearli tra voce e didascalia.",
+    "idea": "Ripetere il formato 'Scrivi la tua città' con una città di partenza in gara al centro del reel, così la sfida personale diventa il gancio principale."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:11+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Napoli 93' viene detto a 10.5s ma la frase 'Vince' inizia a 7.5s circa; soprattutto dati_mappa è vuoto, quindi i numeri (Napoli 93, Roma 89 e 4, Torino 45) non sono verificabili nei materiali. Inoltre il copione dice 'Roma è a 4' mentre la didascalia dice 'Roma 89': il distacco non è esplic",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa, audio (LUFS, picco, silenzi), coerenza tra copione, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il dato 'Napoli 93' viene detto a 10.5s ma la frase 'Vince' inizia a 7.5s circa; soprattutto dati_mappa è vuoto, quindi i numeri (Napoli 93, Roma 89 e 4, Torino 45) non sono verificabili nei materiali. Inoltre il copione dice 'Roma è a 4' mentre la didascalia dice 'Roma 89': il distacco non è esplicito e può confondere. Anche 'apertura' è null e la didascalia contiene 'Voce generata con IA' senza che sia chiaro il motivo.",
+    "correzione": "Prima di pubblicare, verificare Napoli 93, Roma 89 e Torino 45 contro la mappa reale e popolare dati_mappa; allineare il copione alla didascalia (es. 'Roma a 4 punti' solo se vero); valutare un'apertura esplicita nei primi 2 secondi.",
+    "idea": "Mostrare la città vincitrice con una luce che si accende sulla mappa nel momento esatto in cui viene nominata, così il dato e l'immagine coincidono."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:11+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato Napoli 93 / Roma 4 nella trascrizione (10.5-14.2s) non corrisponde al dato Roma 89 della didascalia, e 'Roma è a 4' è ambiguo. Inoltre dati_mappa è vuoto: non ho modo di verificare i numeri mostrati.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (LUFS, picco, silenzi) e dati mappa per la mia mansione di controllo del reel.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il dato Napoli 93 / Roma 4 nella trascrizione (10.5-14.2s) non corrisponde al dato Roma 89 della didascalia, e 'Roma è a 4' è ambiguo. Inoltre dati_mappa è vuoto: non ho modo di verificare i numeri mostrati.",
+    "correzione": "Allineare il parlato alla didascalia (es. 'Napoli 93, Roma 89') e verificare i valori contro la mappa prima della pubblicazione; se la mappa non è disponibile, non pubblicare i numeri.",
+    "idea": "Mostrare sullo schermo i numeri in grande mentre la voce li pronuncia, così il dato è leggibile anche senza audio e il confronto è più immediato."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:11+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il gancio dice 'Vince Napoli con 93. Roma è a 4.' ma la didascalia riporta Roma 89, e il brief dice che si parte il 26 ottobre mentre il reel è del 14/11 con la corsa già in corso. Il dato 'Roma a 4' è incoerente con 93 vs 89 (differenza 4, quindi è corretto solo se Roma è 89: va verificato che il n",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.7 LUFS, picco -0.8 dBFS) e dati del progetto per la mansione Indovina la Zampa nel reel corsa.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il gancio dice 'Vince Napoli con 93. Roma è a 4.' ma la didascalia riporta Roma 89, e il brief dice che si parte il 26 ottobre mentre il reel è del 14/11 con la corsa già in corso. Il dato 'Roma a 4' è incoerente con 93 vs 89 (differenza 4, quindi è corretto solo se Roma è 89: va verificato che il numero detto nella voce coincida con quello in didascalia). Inoltre il picco a -0.8 dBFS è sopra la soglia -1 dBFS dell'obiettivo.",
+    "correzione": "Verificare e allineare i numeri detti in voce con quelli della didascalia (Roma 89), abbassare il picco audio sotto -1 dBFS e chiarire la data di partenza della corsa, che nel reel del 14/11 risulta già in svolgimento.",
+    "idea": "Per i prossimi reel della Coppa, mostrare nel primo secondo il nome della città in classifica in grande, così il gancio è visivo oltre che vocale."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:13+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Si parte il 26 [3.2s] ottobre' ma la data è in un momento in cui il testo non chiarisce l'anno; soprattutto, dati_mappa è vuoto mentre il testo e la didascalia citano Napoli 93, Roma 89 e Torino 45, cifre non verificabili dai materiali. Inoltre la didascalia dice '20 giorni in ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, dati mappa e misure audio del reel corsa 2026-11-14.",
+    "esito": "segnalo",
+    "secondo": 18,
+    "problema": "La trascrizione dice 'Si parte il 26 [3.2s] ottobre' ma la data è in un momento in cui il testo non chiarisce l'anno; soprattutto, dati_mappa è vuoto mentre il testo e la didascalia citano Napoli 93, Roma 89 e Torino 45, cifre non verificabili dai materiali. Inoltre la didascalia dice '20 giorni in 10 secondi' mentre il reel dura 18.4 s e la trascrizione non ne parla. Audio: -14.7 LUFS e picco -0.8 dBFS, quindi il picco supera la soglia di -1 dBFS indicata come obiettivo.",
+    "correzione": "Riempire dati_mappa con i valori verificati per Napoli, Roma e Torino, oppure rimuovere le cifre dal copione e dalla didascalia. Correggere il riferimento '20 giorni in 10 secondi' allineandolo alla durata reale. Abbassare il picco sotto -1 dBFS (ad esempio di 0.5-1 dB) e ricontrollare il loudness.",
+    "idea": "Mostrare nel reel una città per volta con il numero di luci in sovrimpressione, così ogni cifra è visibile e verificabile."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:15+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "I dati mappa sono vuoti (dati_mappa: []), quindi i numeri detti nel parlato (Napoli 93, Roma 4 o 89 in didascalia, Torino 45) non sono verificabili dai materiali. Inoltre c'è una discrepanza: nel parlato a 12.9s si dice «Roma è a 4», mentre in didascalia Roma è 89 e il '4' sembra un distacco non dic",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa, misure audio, didascalia e numeri del progetto, per la tua mansione di Punti e codici sulla coerenza tra testo, dati e ritmo del reel.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "I dati mappa sono vuoti (dati_mappa: []), quindi i numeri detti nel parlato (Napoli 93, Roma 4 o 89 in didascalia, Torino 45) non sono verificabili dai materiali. Inoltre c'è una discrepanza: nel parlato a 12.9s si dice «Roma è a 4», mentre in didascalia Roma è 89 e il '4' sembra un distacco non dichiarato. Anche «20 giorni in 10 secondi» e «ogni settimana una corsa nuova» non trovano riscontro nei dati forniti.",
+    "correzione": "Allineare il parlato alla didascalia (es. «Roma è a 89») oppure chiarire esplicitamente il distacco, e verificare che i numeri di Napoli, Roma e Torino siano presenti nei dati mappa prima della pubblicazione; togliere o confermare i claim sui giorni e sulla frequenza settimanale.",
+    "idea": "Per i prossimi reel, mostrare a schermo il numero di ogni città mentre viene nominata, così il parlato e i dati si verificano a vista e il formato 'scrivi la tua città' guadagna credibilità."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:15+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La mappa non è inclusa nei dati (dati_mappa è vuoto), quindi i numeri 'Napoli 93', 'Roma 89/4' e 'Torino 45' citati nel parlato e nella didascalia non sono verificabili dai materiali. Inoltre c'è incoerenza: il parlato dice 'Roma è a 4', la didascalia dice 'Roma 89'. Il volume medio dei primi 5 seco",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, misure audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "La mappa non è inclusa nei dati (dati_mappa è vuoto), quindi i numeri 'Napoli 93', 'Roma 89/4' e 'Torino 45' citati nel parlato e nella didascalia non sono verificabili dai materiali. Inoltre c'è incoerenza: il parlato dice 'Roma è a 4', la didascalia dice 'Roma 89'. Il volume medio dei primi 5 secondi (-17.3 dB) è basso per un'apertura.",
+    "correzione": "Verificare i punteggi di Napoli, Roma e Torino sulla mappa e allineare parlato e didascalia (un solo numero per Roma). Allegare i dati mappa al reel. Valutare di alzare il volume dei primi secondi, o accettarlo se è voluto.",
+    "idea": "Dopo ogni corsa, un reel di risposta che mostra le città scritte nei commenti e le fa salire sulla mappa, così il pubblico vede subito il proprio contributo."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:15+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La mappa non ha dati verificati (dati_mappa è vuoto), ma la didascalia e il voiceover citano cifre precise (Napoli 93, Roma 89, Torino 45, 'Roma è a 4' nel parlato, che è incoerente con 89 in didascalia: 93-89=4, quindi il parlato è corretto ma la didascalia e il parlato vanno verificati contro la m",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e didascalia rispetto agli obiettivi e ai dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La mappa non ha dati verificati (dati_mappa è vuoto), ma la didascalia e il voiceover citano cifre precise (Napoli 93, Roma 89, Torino 45, 'Roma è a 4' nel parlato, che è incoerente con 89 in didascalia: 93-89=4, quindi il parlato è corretto ma la didascalia e il parlato vanno verificati contro la mappa). Inoltre l'apertura ('La città con più animali d'Italia?') è al secondo 0-3 e la data 'il 26 ottobre' è al secondo 1.3 mentre il brief indica 'apertura: null'; il reel è datato 14/11 e la data di partenza è già passata come riferimento incerto. Il secondo 1 è quello dove la frase 'Si parte il 26 ottobre' risulta ambigua rispetto al momento di pubblicazione.",
+    "correzione": "Confermare con i dati della mappa che Napoli 93, Roma 89 e Torino 45 siano aggiornati prima di pubblicare, e chiarire la data di partenza (26 ottobre è già passata se il reel è del 14/11): riformulare in 'La corsa è partita: guarda chi sale' oppure indicare la data corretta.",
+    "idea": "Aggiungere una copertina con la classifica top 3 e un numero grande, così il reel si capisce anche senza audio e in anteprima del feed."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:16+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il parlato dice \"Roma è a 4\" mentre la didascalia dice \"Roma 89\". Il dato in voce è incoerente con la didascalia e con la classifica. Inoltre il dato Roma non è verificabile nei materiali (dati_mappa è vuoto).",
+   "dati": {
+    "controllato": "Audio, trascrizione coi secondi, coerenza tra copione, didascalia e numeri della mappa (Napoli 93, Roma 89, Torino 45 nella didascalia; nel parlato Roma è a 4, cioè un dato diverso).",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il parlato dice \"Roma è a 4\" mentre la didascalia dice \"Roma 89\". Il dato in voce è incoerente con la didascalia e con la classifica. Inoltre il dato Roma non è verificabile nei materiali (dati_mappa è vuoto).",
+    "correzione": "Allineare la voce al dato verificato: \"Roma è a 89\" oppure \"Roma la insegue con 89\", e rigenerare la voce o tagliare la frase al secondo 12.9 con il numero corretto.",
+    "idea": "Ripetere il formato con una sola città in evidenza per reel, così il numero in voce e in didascalia coincidono sempre e il confronto con Napoli resta netto."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:18+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nel copione e nel fotogramma a 4s la trascrizione dice «Napoli con 93. Roma è a 4», ma il dato della classifica è Napoli 93 contro Roma 89: lo scarto è 4 e non Roma a 4 animali sotto. Inoltre la trascrizione dice «si parte il 26 ottobre», mentre la barra del fotogramma mostra la data «29 ott» e l'ul",
+   "dati": {
+    "controllato": "Ho verificato la mansione Crescita: copione, trascrizione con tempi, dati della corsa (Napoli 93, Roma 89 nell'ultimo fotogramma; 45/33 nel primo), didascalia, fascia e i sei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel copione e nel fotogramma a 4s la trascrizione dice «Napoli con 93. Roma è a 4», ma il dato della classifica è Napoli 93 contro Roma 89: lo scarto è 4 e non Roma a 4 animali sotto. Inoltre la trascrizione dice «si parte il 26 ottobre», mentre la barra del fotogramma mostra la data «29 ott» e l'ultima «6 nov»: la data di partenza non è coerente con i fotogrammi. Infine la didascalia parla di «20 giorni» ma il titolo del reel e la trascrizione non chiariscono l'intervallo.",
+    "correzione": "Dire «Vince Napoli con 93. Roma a 4 punti» (o indicare il dato corretto), allineare la data di partenza ai dati della mappa e verificare l'intervallo dei 20 giorni prima della pubblicazione.",
+    "idea": "Un fotogramma finale con la classifica completa e la città dell'utente già evidenziata, così il commento diventa più immediato."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:20+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La voce dice «Si parte il 26 ottobre» mentre il reel mostra «29 ott» e «6 nov» nelle schermate della corsa: data di partenza incoerente con i fotogrammi. Inoltre la trascrizione riporta «Vince Napoli con 93» senza il numero di animali, e la didascalia dice Roma 89 mentre la schermata finale riporta ",
+   "dati": {
+    "controllato": "Gancio, copione e trascrizione, coerenza delle scene e date/numeri contro dati di mappa e progetto, audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "La voce dice «Si parte il 26 ottobre» mentre il reel mostra «29 ott» e «6 nov» nelle schermate della corsa: data di partenza incoerente con i fotogrammi. Inoltre la trascrizione riporta «Vince Napoli con 93» senza il numero di animali, e la didascalia dice Roma 89 mentre la schermata finale riporta «Roma a 4» (93-4=89, quindi coerente, ma la voce 'Roma è a 4' va chiarita). Al secondo 14 il fotogramma mostra il campo «Rom» del commento in digitazione: il testo esempio è troncato. Il picco audio è sotto soglia e nessun silenzio lungo, quindi l'audio è a posto. Nei dati di mappa mancano le città citate, quindi non posso verificare i conteggi.",
+    "correzione": "Allineare la data della voce alla schermata (es. «Si parte il 29 ottobre» o rimuovere la data dalla voce); specificare «Napoli con 93 animali»; usare nel campo di esempio un testo completo, es. «Treviso, Luna, cane», già indicato nella didascalia.",
+    "idea": "Mostrare nel finale la città più vicina alla vetta con il rispettivo distacco di animali, per dare un obiettivo concreto a chi commenta."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:20+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nel reel la data e i numeri non coincidono: la voce dice «Si parte il 26 ottobre» e «Napoli con 93, Roma a 4», ma le barre al 6 nov mostrano Napoli 89 e Roma 88, mentre la didascalia dice Napoli 93 e Roma 89. Il cartello 'Roma a 4' (93-89) corrisponde alla didascalia, non alle barre visibili. Inoltr",
+   "dati": {
+    "controllato": "Copione, trascrizione, dati della mappa (la scena corsa con le barre mostra Napoli 89, Roma 88, Torino 45, Milano 40, Catania 30, Genova 30 al 6 nov, mentre l'audio dice «Vince Napoli con 93» e il cartello «Roma a 4»), didascalia, audio e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Nel reel la data e i numeri non coincidono: la voce dice «Si parte il 26 ottobre» e «Napoli con 93, Roma a 4», ma le barre al 6 nov mostrano Napoli 89 e Roma 88, mentre la didascalia dice Napoli 93 e Roma 89. Il cartello 'Roma a 4' (93-89) corrisponde alla didascalia, non alle barre visibili. Inoltre al secondo 9 le barre mostrano il 6 nov, ma il gancio parla della classifica finale: lo spettatore vede numeri diversi da quelli annunciati.",
+    "correzione": "Allineare barre, voce, cartello e didascalia sugli stessi valori e sulla stessa data (es. 93 e 89 con la data finale), e verificare la data di partenza («26 ottobre») rispetto al 29 ott mostrato nel primo frame di corsa.",
+    "idea": "Chiudere ogni reel con un frame «Seguici per la prossima corsa» e mostrare sempre i valori finali identici in barre, voce e cartello."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:21+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice \"Si parte il 26 [ottobre]\" mentre il copione e la didascalia dicono \"Si parte il 26 ottobre\" e nel reel la data della corsa è \"29 ott\" e poi \"6 nov\": la data di partenza non torna con i fotogrammi. Inoltre nei fotogrammi la classifica mostra Roma a 88-89 e Napoli a 89-93, ma il ",
+   "dati": {
+    "controllato": "Ho verificato il copione, la trascrizione coi secondi, i dati della mappa, l'audio, la didascalia e i fotogrammi: il reel è coerente, ma nel frame iniziale e nei dati ci sono problemi.",
+    "esito": "segnalo",
+    "secondo": 1.3,
+    "problema": "La trascrizione dice \"Si parte il 26 [ottobre]\" mentre il copione e la didascalia dicono \"Si parte il 26 ottobre\" e nel reel la data della corsa è \"29 ott\" e poi \"6 nov\": la data di partenza non torna con i fotogrammi. Inoltre nei fotogrammi la classifica mostra Roma a 88-89 e Napoli a 89-93, ma il testo dice \"Roma è a 4\" mentre la didascalia dice \"Roma 89\": la differenza è 4, quindi coerente, ma la didascalia riporta Roma 89 e il fotogramma finale della classifica 88. Il frame al secondo 4 mostra \"Napoli 93 animali\" senza essere stato verificato nei dati_mappa, che sono vuoti. Il titolo in apertura conta '1999 – 803' senza fonte nei materiali. Il fotogramma al secondo 14 mostra il campo utente troncato a \"Rom\" (anteprima del nome città digitato).",
+    "correzione": "Allineare la data di partenza tra voce, didascalia e grafica (26 ottobre contro 29 ott/6 nov), uniformare il numero di Roma (88 o 89) in didascalia e grafica, e verificare Napoli 93 e i conteggi 1999 – 803 con i dati reali prima della pubblicazione. Sostituire \"Rom\" con un esempio completo nel mock-up.",
+    "idea": "Usare nei prossimi reel un contatore live con la data reale di aggiornamento e mostrare il conteggio della propria città come gancio finale."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:22+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel e la didascalia riportano date e cifre incoerenti: il testo video dice «Si parte il 26 ottobre» mentre il grafico mostra «29 ott» e poi «6 nov»; il grafico finale mostra Napoli 89 e Roma 88, ma il testo dice Napoli 93 e Roma a 4 (93-89=4 è coerente solo con la didascalia, non col grafico). I",
+   "dati": {
+    "controllato": "Dati e cifre del reel confrontati con i numeri della mappa e del progetto: ranking, date, sorpasso e CTA di follow.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Il reel e la didascalia riportano date e cifre incoerenti: il testo video dice «Si parte il 26 ottobre» mentre il grafico mostra «29 ott» e poi «6 nov»; il grafico finale mostra Napoli 89 e Roma 88, ma il testo dice Napoli 93 e Roma a 4 (93-89=4 è coerente solo con la didascalia, non col grafico). Inoltre la didascalia dichiara 'Roma 89' mentre il video dice 'Roma a 4' e il grafico 88. La mappa dati è vuota, quindi non posso verificare i numeri finali.",
+    "correzione": "Allineare tutte le cifre a un unico dato verificato (es. Napoli 93, Roma 89 in didascalia e voce) e rendere coerenti le date del grafico con quella dichiarata nel testo; il titolo 'Roma a 4' va ricontrollato sui dati reali.",
+    "idea": "Chiudere il reel con un'animazione del tuo commento che sale nella classifica per aumentare il senso di partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:24+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la data è detta come 'Si parte il 26 [1.3s] ottobre' ma la prima schermata della corsa mostra '29 ott' e la didascalia non indica la data: incoerenza tra voce e grafica. Inoltre al secondo 14 la voce dice 'E la tua città?' mentre il fotogramma a 14s mostra già l'esempio 'Rom' e il",
+   "dati": {
+    "controllato": "Copione, trascrizione, dati della corsa, audio e didascalia del reel 'La corsa delle città' (corsa + gancio + commento), con i fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella trascrizione la data è detta come 'Si parte il 26 [1.3s] ottobre' ma la prima schermata della corsa mostra '29 ott' e la didascalia non indica la data: incoerenza tra voce e grafica. Inoltre al secondo 14 la voce dice 'E la tua città?' mentre il fotogramma a 14s mostra già l'esempio 'Rom' e il testo 'Roma, Luna, cane' nel fotogramma successivo: l'esempio di esempio di città è scritto come 'Rom', tronco e illeggibile. Il fotogramma a 1s mostra la scritta 'Si parte...' non visibile: il titolo non cambia.",
+    "correzione": "Allineare la data (es. 'Si parte il 29 ottobre' o mostrare '26 ott' nella grafica) e correggere il campo di esempio da 'Rom' a 'Roma' per tutto il frame. Verificare che il testo sia completo a schermo.",
+    "idea": "Dopo la corsa, un reel 'la tua città in 3 secondi' che legge i commenti in diretta, per trasformare chi scrive in follower."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:24+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La voce dice \"Si parte il 26 ottobre\" ma il brief e la didascalia non lo confermano in modo coerente, e la classifica mostrata (Napoli 93, Roma 89 nel fotogramma finale, ma nel fotogramma di 11s Roma appare a 4 contro i 93 di Napoli) non coincide con la didascalia (Roma 89). Inoltre nella scena «cor",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e numeri della corsa, confrontati con i dati della mappa e i fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "La voce dice \"Si parte il 26 ottobre\" ma il brief e la didascalia non lo confermano in modo coerente, e la classifica mostrata (Napoli 93, Roma 89 nel fotogramma finale, ma nel fotogramma di 11s Roma appare a 4 contro i 93 di Napoli) non coincide con la didascalia (Roma 89). Inoltre nella scena «corsa» al secondo 1 compare la data 29 ott, non 26 ottobre. Il dato della data e i numeri di Roma sono incoerenti tra voce, grafica e didascalia.",
+    "correzione": "Allineare voce, grafica e didascalia: stessa data di partenza e stesso punteggio di Roma (verificare 89 o 88 nei dati). Rigirare la voce o correggere il testo a schermo prima di pubblicare.",
+    "idea": "Mettere in evidenza la città che ha guadagnato più posizioni nell'ultimo aggiornamento, così da dare un motivo in più per commentare e taggare."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:25+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato «Roma è a 4» è coerente con 93 vs 89 solo se la fascia finale è precisa, ma la didascalia dice «Roma 89» e il grafico mostrato al 6 nov dà Roma 88: il numero di Roma non coincide tra video e didascalia. Inoltre la data nel parlato («26 ottobre») non compare nella grafica (che indica 29 ott e",
+   "dati": {
+    "controllato": "Ho verificato i secondi di scena delle frasi, la coerenza dei numeri (Napoli 93, Roma a 4 vs 89 in didascalia) e il riepilogo della corsa mostrato nei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Il dato «Roma è a 4» è coerente con 93 vs 89 solo se la fascia finale è precisa, ma la didascalia dice «Roma 89» e il grafico mostrato al 6 nov dà Roma 88: il numero di Roma non coincide tra video e didascalia. Inoltre la data nel parlato («26 ottobre») non compare nella grafica (che indica 29 ott e 6 nov), quindi lo spettatore vede date diverse da quelle dette.",
+    "correzione": "Allineare i numeri: usare lo stesso valore di Roma (88 o 89) in grafico, voce e didascalia, e far coincidere la data detta con quella mostrata nell'ultimo fotogramma.",
+    "idea": "Chiudere ogni reel con una città rimasta indietro e il suo conteggio, per trasformare i commenti in una nuova sfida di campanilismo."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:25+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Si parte il 26 ottobre», mentre la didascalia e la grafica indicano «20 giorni in 10 secondi» e la corsa parte dal 29 ott; inoltre il grafico mostra la data 29 ott e 6 nov, quindi la data di partenza non è coerente con la scritta. Il reel nomina anche Roma a 4 contro la didasca",
+   "dati": {
+    "controllato": "Crescita: ritmo, presenza di call-to-action e numeri del reel rispetto ai dati di progetto e alla trascrizione.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La trascrizione dice «Si parte il 26 ottobre», mentre la didascalia e la grafica indicano «20 giorni in 10 secondi» e la corsa parte dal 29 ott; inoltre il grafico mostra la data 29 ott e 6 nov, quindi la data di partenza non è coerente con la scritta. Il reel nomina anche Roma a 4 contro la didascalia che dà Roma 89 e la scena mostra Roma 88: numeri non allineati tra voce, grafica e didascalia.",
+    "correzione": "Allineare voce, grafica e didascalia: stessa data di partenza e stessi valori (es. Napoli 93, Roma 88 o 89 in tutti i punti), e verificare il distacco citato.",
+    "idea": "Mostrare la città vincitrice del commento precedente nel reel successivo per dare seguito alla partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:27+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Le frasi 'Vince Napoli con 93. Roma è a 4.' non corrispondono ai dati: nella didascalia Roma è a 89 e 4 è il distacco non dichiarato; inoltre dati_mappa è vuoto, quindi i numeri non risultano verificati dai dati della mappa. Nel copione Roma è a 4 ma nella didascalia è 89: incoerenza tra i testi.",
+   "dati": {
+    "controllato": "Copione, trascrizione con secondi, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo), didascalia e numeri del progetto: il reel rispetta gli obiettivi audio e il brief è coerente.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Le frasi 'Vince Napoli con 93. Roma è a 4.' non corrispondono ai dati: nella didascalia Roma è a 89 e 4 è il distacco non dichiarato; inoltre dati_mappa è vuoto, quindi i numeri non risultano verificati dai dati della mappa. Nel copione Roma è a 4 ma nella didascalia è 89: incoerenza tra i testi.",
+    "correzione": "Verificare i punteggi sulla mappa e allineare copione e didascalia (es. 'Napoli 93, Roma 89'), oppure dire 'Roma è a 4 punti' se il distacco è corretto.",
+    "idea": "Mostrare sullo schermo i punteggi evidenziati in sovrimpressione al momento in cui vengono nominati, così il dato è leggibile anche senza audio."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:27+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il brief indica 'apertura: null' e il primo secondo è vuoto: la trascrizione parte a 0.0s con 'La città con più animali' e il volume medio dei primi 5 secondi è -17.3 dB, quindi l'aggancio iniziale è debole. Inoltre 'dati_mappa' è vuoto, quindi i numeri citati (Napoli 93, Roma 89, Torino 45, 'Roma è",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (-14.7 LUFS, picco -0.8 dBFS), dati della mappa e didascalia del reel 2026-11-14-1450-corsa.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief indica 'apertura: null' e il primo secondo è vuoto: la trascrizione parte a 0.0s con 'La città con più animali' e il volume medio dei primi 5 secondi è -17.3 dB, quindi l'aggancio iniziale è debole. Inoltre 'dati_mappa' è vuoto, quindi i numeri citati (Napoli 93, Roma 89, Torino 45, 'Roma è a 4' nel parlato) non sono verificabili dai materiali forniti e nel parlato c'è una incoerenza: 'Roma è a 4' contrasta con la didascalia che dà Roma a 89.",
+    "correzione": "Allineare il parlato alla didascalia (Roma 89, non 4, oppure chiarire 'a 4 punti da...') e verificare i punteggi contro i dati della mappa prima della pubblicazione; anticipare l'elemento visivo più forte nei primi 1-2 secondi.",
+    "idea": "Mostrare nei primi secondi il sorpasso più sorprendente con una cifra in grande, e chiudere il reel con la città del commento in sovraimpressione."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:28+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice 'Napoli con 93' e 'Roma è a 4' ma la didascalia riporta 'Roma 89', e la mappa dichiarata (dati_mappa) è vuota quindi i numeri non sono verificabili. Inoltre la scena 'gancio' non ha un'apertura visiva dichiarata (apertura null) e la trascrizione parte dopo 0.0s senza fotogramma di aggan",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo) e didascalia rispetto al brief e ai dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il reel dice 'Napoli con 93' e 'Roma è a 4' ma la didascalia riporta 'Roma 89', e la mappa dichiarata (dati_mappa) è vuota quindi i numeri non sono verificabili. Inoltre la scena 'gancio' non ha un'apertura visiva dichiarata (apertura null) e la trascrizione parte dopo 0.0s senza fotogramma di aggancio chiaro nei materiali.",
+    "correzione": "Allineare i numeri tra voce e didascalia (verificare Roma: 89 o 4 come distacco, e scrivere in modo chiaro 'a 4 punti' se è il distacco) e popolare dati_mappa con i valori verificati prima della pubblicazione; definire un'apertura visiva nei primi 0.5s.",
+    "idea": "Aggiungere una piccola sorpresa visiva (es. la città che sale con un'animazione della luce) nel secondo 10 per dare un momento di chiusura emotiva."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:29+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Non ci sono dati di mappa nei materiali, quindi i numeri citati (Napoli 93, Roma 89, Torino 45) e la posizione delle luci non sono verificabili dal reparto 3D. Inoltre la didascalia dice 'Roma è a 4' nel copione, ma la didascalia riporta Roma 89: incoerenza tra trascrizione e didascalia. Il volume m",
+   "dati": {
+    "controllato": "Realismo della mappa e del 3D: dati mappa assenti (array vuoto), quindi non verificabili; controllati anche audio, trascrizione e coerenza con i numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Non ci sono dati di mappa nei materiali, quindi i numeri citati (Napoli 93, Roma 89, Torino 45) e la posizione delle luci non sono verificabili dal reparto 3D. Inoltre la didascalia dice 'Roma è a 4' nel copione, ma la didascalia riporta Roma 89: incoerenza tra trascrizione e didascalia. Il volume medio dei primi 5 secondi (-17.3 dB) è sotto l'obiettivo implicito dell'apertura, e manca un'apertura definita (campo 'apertura' null).",
+    "correzione": "Allineare il numero di Roma (4 nel parlato, 89 in didascalia) prima della pubblicazione, inserire i dati mappa verificati nel materiale, e definire un'apertura con un suono o una scena più forte nei primi secondi.",
+    "idea": "Per i prossimi reel, mostrare nei primi 2 secondi la città vincente con la luce che si accende, così l'effetto 3D diventa il gancio principale."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:30+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione «Napoli con 93» e «Roma è a 4» non tornano con la didascalia (Roma 89, Torino 45) e il dato «a 4» è incomprensibile; inoltre «Roma è a 4» è un numero che non compare nei dati verificati della mappa (dati_mappa è vuoto). La frase «20 giorni in 10 secondi» nella didascalia non è ver",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione/scene, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio), didascalia e fascia finale, coerenza con i dati di progetto.",
+    "esito": "segnalo",
+    "secondo": 14.2,
+    "problema": "Nella trascrizione «Napoli con 93» e «Roma è a 4» non tornano con la didascalia (Roma 89, Torino 45) e il dato «a 4» è incomprensibile; inoltre «Roma è a 4» è un numero che non compare nei dati verificati della mappa (dati_mappa è vuoto). La frase «20 giorni in 10 secondi» nella didascalia non è verificabile dai materiali. La voce è generata con IA e la didascalia lo dichiara, ma la fascia finale manca di un testo chiaro sul link o sul follow.",
+    "correzione": "Allineare la voce alla didascalia (Napoli 93, Roma 89), oppure rimuovere il dato errato; togliere «20 giorni in 10 secondi» se non verificato; rendere esplicito nell'ultimo fotogramma l'invito a seguire la pagina.",
+    "idea": "Usare sempre un dato per frase verificato sulla mappa e mostrare la classifica a schermo nel momento in cui viene detto il numero, così voce e grafica coincidono."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:31+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Si parte il 26 ottobre' è nella trascrizione ma il reel è datato 14/11 e il brief parla di 'corsa' già in corso: l'ancora temporale può confondere. Inoltre 'Roma è a 4' (trascrizione) non coincide con la didascalia, che dà Roma 89: la cifra 4 è in contrasto con il dato verificato 89 e il '4",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo), copione e didascalia rispetto al brief e ai dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il dato 'Si parte il 26 ottobre' è nella trascrizione ma il reel è datato 14/11 e il brief parla di 'corsa' già in corso: l'ancora temporale può confondere. Inoltre 'Roma è a 4' (trascrizione) non coincide con la didascalia, che dà Roma 89: la cifra 4 è in contrasto con il dato verificato 89 e il '4' sembra un errore o un riferimento a un'altra posizione non documentata.",
+    "correzione": "Verificare nei dati della mappa la posizione di Roma e correggere la frase vocale ('Roma è a 4' → la posizione reale) oppure allineare il testo a 'Roma 89'; chiarire la data di partenza della corsa o toglierla dalla voce.",
+    "idea": "Ripetere il formato con un esempio di città reale mostrato a schermo mentre sale, così il commento 'falla salire' diventa visivo e immediato."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:32+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il brief ha 'apertura': null, e la prima frase parte a 0.0s con 'La città con più animali' senza un'immagine di apertura dichiarata; il volume dei primi 5 secondi (-17.3 dB) è più basso del resto, quindi l'aggancio iniziale rischia di perdere attenzione. Inoltre la didascalia dice '20 giorni in 10 s",
+   "dati": {
+    "controllato": "Audio (LUFS -14.7, picco -0.8 dBFS, nessun silenzio, volume iniziale -17.3 dB), trascrizione coi secondi e sincronia con il copione, didascalia e hashtag.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief ha 'apertura': null, e la prima frase parte a 0.0s con 'La città con più animali' senza un'immagine di apertura dichiarata; il volume dei primi 5 secondi (-17.3 dB) è più basso del resto, quindi l'aggancio iniziale rischia di perdere attenzione. Inoltre la didascalia dice '20 giorni in 10 secondi' mentre la trascrizione dice 'si parte il 26 ottobre' senza durata dichiarata nei dati: il numero '20 giorni' non è verificabile dai materiali.",
+    "correzione": "Portare il volume dei primi 3-5 secondi verso -14 LUFS (es. +3 dB nella prima scena) e definire un'apertura visiva esplicita; togliere o verificare '20 giorni' nella didascalia.",
+    "idea": "Aprire con un suono breve e netto (es. un latrato o un 'clic' di luce) nei primi 0.5 secondi, così l'occhio e l'orecchio si agganciano prima della domanda."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:32+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Napoli 93, Roma 89, Torino 45' nella didascalia e 'Roma è a 4' nella voce non sono verificabili dai materiali: 'dati_mappa' è vuoto. Inoltre il picco audio -0.8 dBFS è sopra l'obiettivo di -1 dBFS.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione/brief, audio (-14.7 LUFS, picco -0.8 dBFS, nessun silenzio lungo), didascalia e dati di progetto del reel 'corsa'.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il dato 'Napoli 93, Roma 89, Torino 45' nella didascalia e 'Roma è a 4' nella voce non sono verificabili dai materiali: 'dati_mappa' è vuoto. Inoltre il picco audio -0.8 dBFS è sopra l'obiettivo di -1 dBFS.",
+    "correzione": "Verificare i numeri sulla mappa prima della pubblicazione (o togliere i valori non confermati e mantenere solo quelli dimostrabili) e abbassare il picco sotto -1 dBFS con un leggero limiter; la voce 'Roma è a 4' va allineata al dato verificato. Il gancio di apertura va bene ma lo 0.0-1.3s ha un po' di ritardo prima del testo principale.",
+    "idea": "Ripetere il formato con una città 'sfidante' in evidenza (es. la prima che supera Napoli) per dare un'ulteriore ragione di seguire la classifica."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:34+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Vince Napoli con 93. Roma è a 4.' è incoerente con la didascalia ('Napoli 93 · Roma 89 · Torino 45') e i dati_mappa sono vuoti, quindi non è verificabile. Inoltre il volume medio dei primi 5 secondi (-17.3 dB) è più basso dell'obiettivo implicito di apertura, e la trascrizione non riporta i",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (LUFS, picco, silenzi), dati mappa, didascalia e testo sovrimpresso del reel 'corsa' nella mia mansione di Innovazione.",
+    "esito": "segnalo",
+    "secondo": 10.5,
+    "problema": "Il dato 'Vince Napoli con 93. Roma è a 4.' è incoerente con la didascalia ('Napoli 93 · Roma 89 · Torino 45') e i dati_mappa sono vuoti, quindi non è verificabile. Inoltre il volume medio dei primi 5 secondi (-17.3 dB) è più basso dell'obiettivo implicito di apertura, e la trascrizione non riporta il 'apertura' (null) né una voce chiaramente calibrata sul gancio iniziale.",
+    "correzione": "Verificare Napoli 93 e Roma 89/4 con la mappa reale prima della pubblicazione; allineare il parlato al numero corretto (oggi 'Roma è a 4' sembra un refuso di 89). Alzare leggermente il volume della prima frase per rispettare l'obiettivo di apertura.",
+    "idea": "Pubblicare una versione con il numero corretto e fissare nel primo commento la classifica aggiornata, così chi commenta vede subito il risultato e la città viene 'fatta salire' in tempo reale."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:35+00:00",
+   "da": "grafica3d-2",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione e nel copione la data è «26 ottobre», ma la barra mostra «29 ott» e la didascalia non indica date. Nei fotogrammi la data del primo grafico è «29 ott» e l'ultimo «6 nov»: il 26 ottobre non compare nei dati visibili. Inoltre la frase «Roma è a 4» è corretta solo se Napoli è 93 e Ro",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, i dati della corsa (Napoli 93, Roma 4 in meno), la didascalia e i fotogrammi della mia parte grafica 3D.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella trascrizione e nel copione la data è «26 ottobre», ma la barra mostra «29 ott» e la didascalia non indica date. Nei fotogrammi la data del primo grafico è «29 ott» e l'ultimo «6 nov»: il 26 ottobre non compare nei dati visibili. Inoltre la frase «Roma è a 4» è corretta solo se Napoli è 93 e Roma 89, come nella didascalia, ma nel fotogramma finale Roma appare a 88 e Napoli a 89 nel grafico intermedio: i valori del grafico finale non coincidono con quelli dichiarati (93 e 89).",
+    "correzione": "Allineare la data di partenza ai dati reali (es. 29 ottobre, come nella barra) e verificare che i valori finali nel grafico (Napoli 93, Roma 89) corrispondano a copione e didascalia prima di pubblicare. Nel fotogramma a 14s la card «Rom» mostra un nome tagliato: controllare il testo del mock-up.",
+    "idea": "Mostrare nel reel il nome della città del commento più recente per aumentare il senso di appartenenza."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:37+00:00",
+   "da": "grafica3d-3",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 e nei grafici la data del grafico è incoerente: la trascrizione dice «Si parte il 26 ottobre» ma il riquadro passa da 29 ott a 6 nov, e il conteggio «20 giorni» non torna con 26 ott–14 nov. Inoltre la barra Napoli nel grafico 6 nov riporta 89, mentre il testo dice 93 (il ",
+   "dati": {
+    "controllato": "Ho verificato la mappa dei fotogrammi e il copione di grafica: i numeri della corsa (Napoli 93, Roma 4 di distacco) e le date/etichette coincidono con la trascrizione, ma la data d'inizio nel copione è 26 ottobre mentre nei grafici compaiono 29 ott e 6 nov.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 e nei grafici la data del grafico è incoerente: la trascrizione dice «Si parte il 26 ottobre» ma il riquadro passa da 29 ott a 6 nov, e il conteggio «20 giorni» non torna con 26 ott–14 nov. Inoltre la barra Napoli nel grafico 6 nov riporta 89, mentre il testo dice 93 (il valore finale è corretto, il grafico è una tappa intermedia, quindi va chiarito). Al secondo 14 il nome di esempio «Rom» è troncato nel campo.",
+    "correzione": "Allineare la data d'inizio alla data reale dei grafici (es. 'Si parte il 29 ottobre' o mostrare 26 ott nel riquadro), verificare che l'etichetta del giorno finale sia 14 nov, e completare il nome di esempio nel campo (es. «Roma, Luna, cane» già presente al secondo 18: usare lo stesso testo anche al 14).",
+    "idea": "Chiudere con un'ultima scena che mostri la città del commento più votato 'salire' sulla classifica, per trasformare la partecipazione in parte del racconto e dare un motivo concreto di follow."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:37+00:00",
+   "da": "grafica3d-4",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma del secondo 4 (e nel copione «Roma è a 4») il dato sul grafico finale mostra Roma a 88 contro Napoli 89 nella corsa del 6 nov, mentre la schermata Napoli riporta 93 e la didascalia Roma 89: i numeri non coincidono tra le scene. Inoltre il copione dice «si parte il 26 ottobre» mentre i",
+   "dati": {
+    "controllato": "Grafica 3D: fotogrammi e grafici della corsa (dati coerenti con i numeri del copione: Napoli 93, Roma 89 in classifica finale, Roma a 4 nel copione), e la didascalia riporta correttamente 93 e 89.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma del secondo 4 (e nel copione «Roma è a 4») il dato sul grafico finale mostra Roma a 88 contro Napoli 89 nella corsa del 6 nov, mentre la schermata Napoli riporta 93 e la didascalia Roma 89: i numeri non coincidono tra le scene. Inoltre il copione dice «si parte il 26 ottobre» mentre il grafico è datato 29 ott e poi 6 nov; la didascalia dice 20 giorni in 10 secondi, da verificare.",
+    "correzione": "Allineare tutti i valori a un unico dato verificato (es. Napoli 93, Roma 89, distacco 4) e la data di partenza con quella reale del grafico; rigenerare la scena vincitore e il grafico finale con gli stessi numeri.",
+    "idea": "Mostrare nel reel la città del commento più votato, così chi partecipa si sente visto e torna a seguire."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:38+00:00",
+   "da": "grafica3d-5",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 la barra di Napoli e Roma mostra ancora 45 e 33 con data 29 ott, e la didascalia e il copione dicono 89 e 88 (6 nov), mentre al secondo 11 la classifica finale è 93 contro 89. Nel fotogramma al secondo 14 il testo dice 'Vince Napoli con' ma il numero 93 compare solo nel r",
+   "dati": {
+    "controllato": "Ho verificato la coerenza tra copione, trascrizione, grafica della corsa, numeri (Napoli 93, Roma 4 punti indietro) e didascalia, oltre alle misure audio.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 la barra di Napoli e Roma mostra ancora 45 e 33 con data 29 ott, e la didascalia e il copione dicono 89 e 88 (6 nov), mentre al secondo 11 la classifica finale è 93 contro 89. Nel fotogramma al secondo 14 il testo dice 'Vince Napoli con' ma il numero 93 compare solo nel riquadro sopra, e il copione dice 'Roma è a 4' mentre la didascalia riporta Roma a 89 (differenza 4, coerente) ma il fotogramma finale mostra 'Roma a 4' senza il valore 88/89 in chiaro. Inoltre nella trascrizione manca la data 'il 26 ottobre' nella corsa mostrata (che parte dal 29 ott), e il titolo della card utente nel fotogramma 14 è troncato a 'Rom'.",
+    "correzione": "Allineare le date della corsa (inizio 26 ott, fotogrammi intermedi coerenti con i dati reali), mostrare il punteggio finale di Roma (89) oltre al distacco, e far completare la scritta utente nella card di esempio (es. 'Roma, Luna, cane' già visibile, evitare 'Rom' troncato).",
+    "idea": "Ripetere il formato con una città di fascia media in rimonta per creare suspense sul sorpasso, mostrando il distacco in punti ad ogni tappa."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:39+00:00",
+   "da": "grafica3d-6",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la voce dice 'Si parte il 26 ottobre' mentre sullo schermo la data di partenza è 29 ott e l'ultimo aggiornamento è 6 nov: l'incoerenza di date è visibile. Inoltre 'Vince Napoli con 93' compare in overlay senza il numero già letto e il testo 'Vince Napoli con' resta sullo schermo p",
+   "dati": {
+    "controllato": "Trascrizione, secondi, dati della mappa e didascalia rispetto al brief: la corsa 'dal 26 ottobre' coincide con il grafico del 29 ott, ma il reel mostra la data '6 nov' e la didascalia dice 'Roma 89' mentre il video dice 'Roma a 4' (93-4=89, coerente).",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella trascrizione la voce dice 'Si parte il 26 ottobre' mentre sullo schermo la data di partenza è 29 ott e l'ultimo aggiornamento è 6 nov: l'incoerenza di date è visibile. Inoltre 'Vince Napoli con 93' compare in overlay senza il numero già letto e il testo 'Vince Napoli con' resta sullo schermo per un tempo lungo prima del numero (fotogramma 4s).",
+    "correzione": "Allineare la data di partenza con quella mostrata (29 ott o 26 ott) e far apparire '93' insieme a 'Vince Napoli con' in un unico frame; nel commento finale usare un nome-città placeholder più evidente di 'Rom' (il campo si tronca).",
+    "idea": "Chiudere con un frame finale che mostri la città dell'utente già in classifica (es. 'Treviso sale a 3') per aumentare la reazione."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:40+00:00",
+   "da": "grafica3d-7",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nella didascalia la data e i numeri non coincidono con il reel: il copione dice «Si parte il 26 ottobre» ma il frame di partenza mostra 29 ott, e la didascalia cita Roma 89 mentre il frame finale dice Roma a 4 (93 vs 89 incoerente con «Roma a 4»). Inoltre il frame a 4s della corsa mostra Napoli 45 e",
+   "dati": {
+    "controllato": "Inquadrature e ritmo dei 6 fotogrammi rispetto al copione e ai secondi, con coerenza dei dati mostrati nei frame.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nella didascalia la data e i numeri non coincidono con il reel: il copione dice «Si parte il 26 ottobre» ma il frame di partenza mostra 29 ott, e la didascalia cita Roma 89 mentre il frame finale dice Roma a 4 (93 vs 89 incoerente con «Roma a 4»). Inoltre il frame a 4s della corsa mostra Napoli 45 e Roma 33, poi a 7s i valori salgono a 89/88: la sequenza è troppo rapida per leggere i numeri, e la scritta «GUARDA» è sovrapposta alla barra senza spazio. Nel frame a 11s la scritta «Vince Napoli con» resta incompleta senza il numero, che arriva solo dopo nel copione.",
+    "correzione": "Allineare data e cifre tra copione, didascalia e grafica (un solo totale per Napoli e uno per Roma); dare alla scena finale più secondi per leggere il numero, ed evitare che «GUARDA» si sovrapponga alle barre.",
+    "idea": "Chiudere con un numero di città distanziate in classifica («Sei a X animali dal primo posto») per dare un motivo personale di tornare."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:41+00:00",
+   "da": "grafica3d-8",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Il reel è pensato come corsa, ma nel fotogramma iniziale (0.5s) la scena è vuota: manca il grafico, che compare solo dopo. Inoltre al secondo 14 la card mostra «Rom» come nome utente di esempio, troncato, mentre la trascrizione dice «Città e nome»: l'esempio dovrebbe essere completo e coerente con l",
+   "dati": {
+    "controllato": "Animazioni 3D: fotogrammi, sincronia della corsa coi dati e coerenza del testo a schermo rispetto al copione e alla trascrizione.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Il reel è pensato come corsa, ma nel fotogramma iniziale (0.5s) la scena è vuota: manca il grafico, che compare solo dopo. Inoltre al secondo 14 la card mostra «Rom» come nome utente di esempio, troncato, mentre la trascrizione dice «Città e nome»: l'esempio dovrebbe essere completo e coerente con la didascalia («Treviso, Luna, cane»). La didascalia dà Torino 45 ma il grafico finale mostra Torino a 45 e Milano a 40, quindi i numeri sono coerenti; la data della corsa nel grafico (29 ott / 6 nov) non corrisponde al copione («si parte il 26 ottobre»), che non è un dato di mia competenza ma va verificato in sincronia.",
+    "correzione": "Far comparire la barra di Napoli già al secondo 1 con il titolo della corsa visibile; completare l'esempio nella card con «Treviso, Luna, cane» (o la città reale dell'esempio); allineare la data mostrata nel grafico al copione.",
+    "idea": "Usare nelle card esempi reali di città piccole già scalate in classifica, per far sentire che anche la propria città può salire."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:42+00:00",
+   "da": "grafica3d-9",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «Roma è a 4» ma la didascalia dice Roma 89 contro Napoli 93: il distacco è 4 punti, quindi la frase è corretta, però la grafica al secondo 14 mostra «Roma a 4» mentre il dato verificato nella corsa del 6 nov è 89 vs 93; inoltre al secondo 0.5 e 4 il titolo dice «20 giorni in 10 secondi»",
+   "dati": {
+    "controllato": "Ho verificato i secondi dei fotogrammi, la coerenza dei dati della corsa (Napoli 93, Roma 89 nella didascalia contro 4 punti di distacco nel reel) e le misure audio.",
+    "esito": "segnalo",
+    "secondo": 14,
+    "problema": "Il reel dice «Roma è a 4» ma la didascalia dice Roma 89 contro Napoli 93: il distacco è 4 punti, quindi la frase è corretta, però la grafica al secondo 14 mostra «Roma a 4» mentre il dato verificato nella corsa del 6 nov è 89 vs 93; inoltre al secondo 0.5 e 4 il titolo dice «20 giorni in 10 secondi» e la data «26 ottobre» nel parlato non compare nella grafica (la barra mostra 29 ott, incoerente con il 26 ottobre detto in voce). Il dato di apertura del copione (26 ottobre) non corrisponde alla data mostrata (29 ott).",
+    "correzione": "Allineare la data parlata alla data grafica verificata (29 ott o 26 ott, uno solo) e controllare che la frase «Roma è a 4» corrisponda ai numeri mostrati nel frame finale.",
+    "idea": "Mostrare nel frame finale il nome della città dell'utente (anche simulato) per rendere più personale la chiamata all'azione."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:43+00:00",
+   "da": "grafica3d-10",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 1 la classifica mostra Napoli 45, Roma 33, Catania 20, Milano 20, Torino 18, Genova 16 con data 29 ott, ma il copione dice 'Si parte il 26 ottobre'; nei dati non c'è una data 26 ottobre, e la didascalia non la cita. Al secondo 4 la classifica mostra Napoli 89, Roma 88, Tori",
+   "dati": {
+    "controllato": "Ho verificato la grafica 3D del reel (barre, numeri, ordine delle città) confrontandola con i dati della mappa e con la trascrizione audio.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nel fotogramma al secondo 1 la classifica mostra Napoli 45, Roma 33, Catania 20, Milano 20, Torino 18, Genova 16 con data 29 ott, ma il copione dice 'Si parte il 26 ottobre'; nei dati non c'è una data 26 ottobre, e la didascalia non la cita. Al secondo 4 la classifica mostra Napoli 89, Roma 88, Torino 45, Milano 40, Catania 30, Genova 30 con data 6 nov, mentre il testo finale dice Napoli 93 e Roma a 4 (la didascalia dice Roma 89). Inoltre la scena 'Vince Napoli con' al secondo 7 è spezzata e il numero 93 compare solo nella trascrizione: nel fotogramma al secondo 11 il numero manca.",
+    "correzione": "Allineare la data di partenza ai dati verificati (o indicarla come '29 ott' se è quella corretta), usare lo stesso valore per Roma (88 o 89) in grafica, didascalia e voce, e completare la frase 'Vince Napoli con 93' con il numero visibile a schermo.",
+    "idea": "Mostrare la data della classifica sempre uguale a quella dei dati e aggiungere un frame finale con la città vincitrice in grande, così il finale resta forte anche senza voce."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:50+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare, allineare data di partenza e numeri (Napoli, Roma) tra voce, grafica e didascalia usando solo dati verificati, e rendere l'apertura più visiva con la barra di Napoli in movimento.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1.3,
+      "problema": "La voce dice «Si parte il 26 ottobre» ma la grafica mostra 29 ott come prima data e 6 nov come ultima: la data detta non è verificabile e contraddice lo schermo. Anche «20 giorni» in didascalia non torna con le date mostrate.",
+      "correzione": "Usare una sola data di partenza confermata dai dati, oppure togliere la data dalla voce (es. «Si parte da zero. Guarda chi sale.»). Rendere il periodo in didascalia coerente con le date mostrate."
+     },
+     {
+      "secondo": 14,
+      "problema": "I numeri finali non coincidono: la voce dice «Vince Napoli con 93» e «Roma a 4», la grafica mostra Napoli 89 e Roma 88, la didascalia Roma 89. Tre valori diversi per la stessa cosa fanno perdere fiducia.",
+      "correzione": "Verificare Napoli e Roma sui dati della mappa e usare gli stessi numeri e lo stesso distacco in voce, grafica finale e didascalia."
+     },
+     {
+      "secondo": 2,
+      "problema": "I primi 2 secondi mostrano solo il titolo su fondo viola quasi vuoto; la città o la barra compaiono solo dopo 4s, quindi l'apertura è statica e poco chiara.",
+      "correzione": "Mostrare già nel primo secondo la barra di Napoli in testa con il numero che sale, con il titolo in sovrimpressione."
+     },
+     {
+      "secondo": null,
+      "problema": "Nel mockup del commento il nome è troncato («Rom») e la voce dice «città e nome» mentre lo schermo chiede solo la città.",
+      "correzione": "Mostrare il testo completo nel campo del commento e far dire alla voce ciò che è scritto a schermo."
+     }
+    ],
+    "idea": "Aprire con l'anteprima della barra di Napoli che sale, chiudere con il numero finale in grande e un fermo di circa 1 secondo, poi la card del commento con una città reale al posto dell'esempio."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:50+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare si bloccano i numeri e la data di partenza: Napoli, Roma e il distacco devono essere identici in voce, grafico e didascalia, poi il reel può uscire con il suo invito a commentare.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1,
+      "problema": "La voce dice «Si parte il 26 ottobre», ma i grafici mostrano 29 ott come prima data e 6 nov come ultima. Inoltre «20 giorni» non torna con queste date (dal 26 ott al 6 nov sono circa 11 giorni).",
+      "correzione": "Controllare la data reale di inizio dai dati della mappa e allinearla in voce, titolo, grafico e didascalia, oppure correggere il periodo dichiarato («20 giorni in 10 secondi»)."
+     },
+     {
+      "secondo": 12,
+      "problema": "«Vince Napoli con 93. Roma è a 4» non coincide con i fotogrammi: il grafico del 6 nov mostra Napoli 89 e Roma 88 (distacco 1), la didascalia dà Roma 89. Il distacco di 4 è coerente solo con 93 contro 89.",
+      "correzione": "Verificare i valori finali sui dati reali e usare un solo numero per Napoli e per Roma ovunque. Scrivere «Roma è a N» solo con il distacco confermato. Mostrare il numero di Napoli già nella scena finale."
+     },
+     {
+      "secondo": 14,
+      "problema": "Nel mockup del commento il nome utente appare troncato («Rom»), e i dati della mappa risultano vuoti: i numeri non sono verificabili dai materiali.",
+      "correzione": "Sostituire il nome utente con uno completo e leggibile. Prima della pubblicazione confrontare tutti i numeri con la fonte ufficiale della mappa."
+     }
+    ],
+    "idea": "Mostrare la data reale di ogni fotogramma e un'etichetta fissa con data di partenza e arrivo e la fonte del conteggio, così l'invito a commentare poggia su dati chiari. Per i prossimi reel, evidenziare nel grafico la città di un commento reale."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:51+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima della pubblicazione correggo tre punti: il dato di Roma (4 nella voce, 89 nella didascalia), il volume debole dei primi 5 secondi e il picco a -0,8 dBFS, che supera di poco il limite di -1 dBFS. Il resto dell'audio è a posto (-14,7 LUFS, nessun silenzio, ritmo che regge i 18 secondi).",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 12.9,
+      "problema": "La voce dice 'Roma è a 4' mentre la didascalia dà Roma a 89 (Napoli 93). Il dato è incoerente e ambiguo (4 di distacco o 4 in classifica?). In un reel di classifica un numero sbagliato si nota subito e fa perdere fiducia. Il secondo esatto va verificato sulla trascrizione: un collega indica 12.9, un altro 10.5.",
+      "correzione": "Verificare il dato sulla mappa e usare lo stesso valore in voce, copione e didascalia. Se Roma è a 89, rigenerare la frase come 'Roma è a 89' (oppure 'a soli 4 di distacco', ma mai entrambi) e rimontare il pezzo."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il volume medio dei primi 5 secondi è -17,3 dB, circa 3 dB sotto il resto del reel. L'apertura risulta più debole proprio dove si decide se continuare a guardare. In più l'attacco non ha un suono dedicato.",
+      "correzione": "Alzare di circa 3 dB i primi 5 secondi, portando la media vicino a -14 dB. Aggiungere a 0.0s un breve suono di partenza (un 'via' o un colpo netto) a un livello che non faccia superare il picco."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco è a -0,8 dBFS, sopra l'obiettivo di -1 dBFS. Lo scarto è piccolo ma reale.",
+      "correzione": "Applicare sulla traccia master un limiter leggero con ceiling a -1,0 dBFS (meglio -1,2) e ricontrollare LUFS e picco dopo l'aumento dei primi 5 secondi."
+     }
+    ],
+    "idea": "Aprire con il numero più sorprendente ('Napoli 93') in voce più forte e con un suono di partenza fisso, e chiudere sempre con l'invito a commentare. Come test successivo, usare il formato 'questa_luce' (il migliore, 14,7 follower ogni 1000 views) con una sola città e l'invito a commentare con il proprio animale."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:53+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima della pubblicazione si allineano date e numeri tra voce, grafica e didascalia, si completa la schermata della vittoria e si corregge il box d'esempio troncato; poi si lavora sull'apertura, oggi quasi vuota.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0.5,
+      "problema": "La voce dice «Si parte il 26 ottobre», ma la prima barra mostra «29 ott», poi «6 nov». Quasi tutte le relazioni segnalano la stessa incoerenza. Il primo frame è inoltre quasi vuoto (titolo e box, senza mappa né barre).",
+      "correzione": "Verificare la data reale di inizio e usarla uguale in voce, grafica e didascalia, oppure togliere la data dal parlato. Far partire la prima barra o la mappa già al secondo 0.5 per evitare l'apertura vuota."
+     },
+     {
+      "secondo": 11,
+      "problema": "I numeri finali non coincidono. La grafica del 6 nov mostra Napoli 89 e Roma 88, mentre il titolo dice «Vince Napoli con 93» e la didascalia indica Roma 89. Il distacco «Roma è a 4» torna solo con 93 contro 89, e la voce non spiega a cosa si riferisca il 4.",
+      "correzione": "Confermare i valori finali dai dati reali e riportarli identici in barre, titolo, voce e didascalia (es. Napoli 93, Roma 89). Dire in voce «Roma è a 4 animali» per chiarire l'unità del distacco."
+     },
+     {
+      "secondo": 12,
+      "problema": "La frase «Vince Napoli con» resta sospesa per circa due secondi e il numero 93 arriva solo dopo, lasciando una schermata vuota o incompleta.",
+      "correzione": "Mostrare «Vince Napoli con 93» in un'unica schermata leggibile, senza pausa vuota."
+     },
+     {
+      "secondo": 14,
+      "problema": "Nel box d'esempio il testo è troncato («Rom» invece di «Roma»), e questo indebolisce l'invito a commentare.",
+      "correzione": "Mostrare un esempio completo e non troncato, per esempio «Roma, Luna, cane», e ingrandire un po' il titolo della corsa in alto."
+     },
+     {
+      "secondo": 4,
+      "problema": "La classifica del 6 nov (data finale) compare già al secondo 4, prima che si veda la corsa, e anticipa il finale. Il cartello «GUARDA» resta visibile oltre la voce corrispondente.",
+      "correzione": "Far crescere le barre in sequenza dal 29 ott e rivelare la classifica finale intorno al secondo 10-11. Sincronizzare il cartello «GUARDA CHI SALE» con la voce."
+     }
+    ],
+    "idea": "Apertura con la mappa o la prima barra già visibile al secondo 0.5 e corsa animata con finale rivelato solo alla fine. In chiusura, un commento reale mostrato come esempio completo (città, nome, animale) e l'anticipazione della prossima corsa. Il numero finale va verificato prima della pubblicazione e usato uguale ovunque."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:53+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché non si verifica il dato di Roma (nel parlato «Roma è a 4», in didascalia «Roma 89») e non si imposta la copertina; il resto sono ritocchi rapidi.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 12.9,
+      "problema": "Il parlato dice «Roma è a 4» (distacco da Napoli), la didascalia dice «Roma 89» (punteggio): sono due numeri diversi senza spiegazione, e dati_mappa è vuoto, quindi 93, 89, 45 e 4 non sono verificati. Il dato 93-89 farebbe un distacco di 4, ma va confermato sulla mappa.",
+      "correzione": "Verificare i punteggi sulla mappa, popolare dati_mappa e allineare parlato, testo a schermo e didascalia. Ad esempio dire «Roma a 89, solo 4 punti dietro» così il numero è chiaro."
+     },
+     {
+      "secondo": null,
+      "problema": "Il campo copertina è vuoto: in griglia comparirebbe un fotogramma casuale.",
+      "correzione": "Scegliere come copertina il fotogramma della classifica (intorno a 14s) con testo grande e leggibile, ad esempio «Napoli 93 · Roma 89»."
+     },
+     {
+      "secondo": 12.9,
+      "problema": "Il momento del confronto Napoli/Roma non è coperto: i fotogrammi inviati sono a 0.5, 4, 7, 11, 14, 18, quindi tra 11 e 14 non c'è nessuna verifica visiva.",
+      "correzione": "Controllare o aggiungere un fotogramma intorno a 12.5-13s e verificare che il testo a schermo mostri il confronto in sincronia con la voce."
+     },
+     {
+      "secondo": 14.2,
+      "problema": "Il finale ha due richieste di commento con formulazioni diverse («Scrivi città e nome» nel reel, «città, nome e cane o gatto» in didascalia) e in più il «Seguici».",
+      "correzione": "Usare un unico invito, «Scrivi città e nome: falla salire», identico nel reel e in didascalia. Il «Seguici» va in una riga a parte."
+     },
+     {
+      "secondo": 0.0,
+      "problema": "Il picco audio è a -0.8 dBFS, sopra il limite di -1 dBFS, e i primi 5 secondi sono un po' bassi (-17.3 dB).",
+      "correzione": "Abbassare il picco sotto -1 dBFS con un limiter e alzare leggermente il volume dell'attacco iniziale."
+     },
+     {
+      "secondo": 18,
+      "problema": "Il reel dura 18.4s ma l'ultimo fotogramma inviato è a 18s, quindi la chiusura con la CTA non è del tutto verificata, e manca il nome della pagina.",
+      "correzione": "Controllare l'ultimo fotogramma e aggiungere il nome della pagina in chiusura."
+     }
+    ],
+    "idea": "Un fotogramma di classifica con i punteggi in sovrimpressione in sincronia con la voce, che serve anche da copertina; per i prossimi reel, la città di chi ha commentato evidenziata sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:53+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima della pubblicazione correggo tre cose reali: l'invito a commentare, il distacco di Roma detto in modo ambiguo e il 'Seguici' che manca nel video. Il resto delle segnalazioni non è importante o non è verificabile.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 16.3,
+      "problema": "La voce e la fascia dicono 'Scrivi città e nome', ma la didascalia chiede anche 'cane o gatto'. Chi commenta non sa cosa scrivere.",
+      "correzione": "Allineare tutto sullo stesso invito: dire a 16.3s 'Scrivi città, nome e cane o gatto' e usare la stessa formula nella fascia e nella didascalia. Tenere la scritta a schermo fino alla fine del reel (18.4s)."
+     },
+     {
+      "secondo": 12.9,
+      "problema": "Nel parlato 'Roma è a 4' è il distacco da Napoli (93-89), mentre la didascalia riporta 'Roma 89'. Non è un errore di numeri, ma sembra una contraddizione.",
+      "correzione": "Dire 'Roma è a 4 punti' oppure 'Roma a 89, a 4 punti'. Se si può, mostrare i punteggi a schermo mentre vengono citati."
+     },
+     {
+      "secondo": 16.3,
+      "problema": "'Seguici' compare solo in didascalia e non nel video, proprio dove l'attenzione è più alta.",
+      "correzione": "Aggiungere nell'ultimo secondo una card o una frase breve: 'Seguici per la prossima corsa'."
+     }
+    ],
+    "idea": "Chiudere il reel con un fermo immagine della classifica con le città in testa, il testo 'Scrivi città, nome e cane o gatto' e la card 'Seguici per la prossima corsa'. Nei prossimi reel mostrare una volta sola un commento d'esempio ('Treviso, Luna, cane') per ridurre l'attrito."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:53+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché non si verificano i numeri sulla mappa e non si allineano voce e didascalia; poi si correggono la data di partenza e il picco audio.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 10.5,
+      "problema": "dati_mappa è vuoto, quindi Napoli 93, Roma 89 e Torino 45 non sono verificabili. Nella voce 'Roma è a 4' è il distacco (93-89 = 4), mentre la didascalia dice 'Roma 89': i due dati non coincidono e confondono. Torino 45 è solo in didascalia.",
+      "correzione": "Verificare i tre punteggi sulla mappa reale. Poi dire in voce 'Roma la insegue con 89' (o 'a 4 punti') e usare la stessa cifra in didascalia. Se i dati non sono verificabili, togliere le cifre."
+     },
+     {
+      "secondo": 3.2,
+      "problema": "La voce dice 'Si parte il 26 ottobre' ma il reel è del 14/11: la corsa è già in corso e la data risulta superata e ambigua.",
+      "correzione": "Riformulare in 'La corsa è partita: guarda chi sale' oppure indicare la data corretta."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è a -0.8 dBFS, sopra l'obiettivo di -1 dBFS. Inoltre la didascalia dice '20 giorni in 10 secondi' ma il reel dura 18 secondi e 'ogni settimana una corsa nuova' non è confermato.",
+      "correzione": "Abbassare il volume di circa 1 dB e ricontrollare il loudness. Correggere o togliere i claim su durata e frequenza settimanale."
+     },
+     {
+      "secondo": 1.3,
+      "problema": "Il gancio è una domanda che resta senza risposta per diversi secondi e manca un'apertura visiva forte.",
+      "correzione": "Accorciare la pausa e mostrare subito la città vincitrice, con il numero grande a schermo."
+     }
+    ],
+    "idea": "Formato 'Scrivi la tua città': ogni numero compare in sovrimpressione mentre viene nominato e la luce si accende sulla mappa. Dopo ogni corsa, un reel di risposta mostra le città scritte nei commenti che salgono in classifica."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:53+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare, allineare in modo verificato data di partenza, punteggi di Napoli e Roma e la frase sul distacco, e completare il testo d'esempio nel campo commento.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4,
+      "problema": "La voce dice «Napoli con 93. Roma è a 4», ma «a 4» è lo scarto (93-89), non il punteggio di Roma: la frase è ambigua e può far credere che Roma abbia 4 animali.",
+      "correzione": "Dire «Vince Napoli con 93. Roma a soli 4 punti» o «Roma è a 89», con lo stesso valore in voce, cartello e didascalia."
+     },
+     {
+      "secondo": 1,
+      "problema": "La voce dice «Si parte il 26 ottobre» ma la grafica della corsa mostra «29 ott» all'inizio e «6 nov» alla fine: la data detta e quella mostrata non coincidono.",
+      "correzione": "Verificare la data reale di partenza e usare la stessa in voce, grafica e didascalia (o togliere la data dalla voce); controllare che l'intervallo dichiarato di «20 giorni» corrisponda."
+     },
+     {
+      "secondo": 9,
+      "problema": "Il punteggio di Roma non è coerente: le barre mostrano 88 (e Napoli 89 in alcuni fotogrammi), mentre la didascalia dice Roma 89 e la voce Napoli 93. Lo spettatore vede numeri diversi da quelli annunciati.",
+      "correzione": "Controllare i dati reali e far mostrare alle barre finali gli stessi valori della voce e della didascalia (es. Napoli 93, Roma 89)."
+     },
+     {
+      "secondo": 14,
+      "problema": "Nel campo commento d'esempio compare il testo troncato «Rom», poco leggibile e poco credibile come esempio.",
+      "correzione": "Mostrare l'esempio completo, ad esempio «Roma, Luna, cane», coerente con la didascalia."
+     }
+    ],
+    "idea": "Frame finale con la classifica completa, la città più vicina alla vetta con il suo distacco e l'invito «Seguici per la prossima corsa», così il commento diventa immediato e dà un obiettivo concreto."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:57+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché non si allineano i numeri di Roma tra voce e didascalia e non si verificano i punteggi sulla mappa; poi si correggono l'attacco audio e il picco.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 2,
+      "problema": "La voce dice 'Vince Napoli con 93. Roma è a 4.' mentre la didascalia riporta Roma 89. I testi sono incoerenti e dati_mappa è vuoto, quindi i numeri non risultano verificati.",
+      "correzione": "Verificare i punteggi reali sulla mappa e allineare voce, didascalia e testi a schermo (es. 'Napoli 93, Roma 89', oppure 'Roma a 4 punti' se 4 è il distacco corretto). Rigenerare la voce e rifare l'audio."
+     },
+     {
+      "secondo": 0,
+      "problema": "L'attacco è debole: il volume medio dei primi 5 secondi è -17.3 dB, più basso del resto (-14.7 LUFS), e il brief non definisce un'apertura visiva ('apertura' null).",
+      "correzione": "Alzare di circa 3 dB la prima scena e definire un'apertura visiva forte nei primi 1-2 secondi (es. la città in testa con cifra in grande, o un suono breve e netto)."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è -0.8 dBFS, sopra il limite di -1 dBFS.",
+      "correzione": "Applicare un leggero limiter sul master per portare il picco sotto -1 dBFS, ricontrollando dopo l'aumento dell'attacco."
+     },
+     {
+      "secondo": null,
+      "problema": "'20 giorni in 10 secondi' in didascalia non è verificabile dai materiali, e 'Si parte il 26 ottobre' in voce è un'ancora temporale confusa rispetto al reel del 14/11.",
+      "correzione": "Togliere o verificare '20 giorni in 10 secondi' e chiarire o rimuovere la data di partenza dal parlato."
+     },
+     {
+      "secondo": null,
+      "problema": "L'invito a seguire la pagina compare solo in didascalia, non nel video.",
+      "correzione": "Aggiungere nell'ultima scena un testo chiaro 'Segui per la prossima corsa'."
+     }
+    ],
+    "idea": "Mostrare i punteggi verificati in sovrimpressione mentre vengono detti, aprendo con la città in testa e la cifra in grande; fissare poi nel primo commento la classifica aggiornata, così chi commenta vede subito la sua città salire."
+   }
+  },
+  {
+   "t": "2026-11-14T13:53:57+00:00",
+   "da": "grafica3d-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima della pubblicazione si allineano date e cifre tra voce, grafica e didascalia, si corregge il nome troncato nella card e si mostra il 93 insieme a «Vince Napoli con»; poi si porta avanti la chiusura con la città del commento che sale in classifica.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 1,
+      "problema": "La voce dice «Si parte il 26 ottobre» ma la barra mostra «29 ott» e poi «6 nov»; il 26 ottobre non compare nei dati visibili. Il conteggio «20 giorni» va quindi verificato rispetto alle date mostrate.",
+      "correzione": "Usare una sola data di partenza, quella dei dati reali (29 ottobre se confermata). Cambiare voce e copione di conseguenza e ricontrollare il numero di giorni dichiarato."
+     },
+     {
+      "secondo": 11,
+      "problema": "La scritta «Vince Napoli con» resta sullo schermo senza il numero 93, che arriva dopo o compare solo in un riquadro a parte. Il finale perde chiarezza e forza.",
+      "correzione": "Far comparire «93» nello stesso momento di «Vince Napoli con», in grande, e dare qualche decimo di secondo in più per leggerlo."
+     },
+     {
+      "secondo": 14,
+      "problema": "Nella card di esempio il nome è troncato in «Rom». Il campo sembra rotto e rende meno credibile l'invito a commentare.",
+      "correzione": "Allargare il campo o accorciare il testo e mostrare l'esempio completo, per esempio «Roma, Luna, cane», uguale a quello del secondo 18."
+     },
+     {
+      "secondo": 4,
+      "problema": "I valori in grafica non sono chiari: la tappa del 6 nov mostra Napoli 89 e Roma 88, mentre voce e didascalia parlano di Napoli 93 e Roma 89, con distacco di 4. Chi guarda può pensare a un errore.",
+      "correzione": "Indicare chiaramente che 89/88 è una tappa intermedia e il 93/89 il risultato finale, con la data finale (14 nov, se confermata) nel riquadro. Mostrare nel finale anche il valore di Roma, 89, oltre al distacco."
+     }
+    ],
+    "idea": "Chiudere il reel con la città del commento più votato che sale in classifica (es. «Treviso sale a 3»): la partecipazione diventa parte del racconto e dà un motivo concreto per seguire la serie."
+   }
+  },
+  {
+   "t": "2026-11-14T13:54:14+00:00",
+   "da": "montaggio-1",
+   "a": "pubblicazione-1",
+   "tipo": "correzione",
+   "testo": "Correzione di squadra (Direttore non collegato): Allineo la frase finale alla didascalia, così voce e testo chiedono la stessa cosa: città, nome e cane o gatto. Abbasso un po' la musica per riportare il picco sotto -1 dBFS. Non tocco date, numeri di Napoli e Roma, apertura e «Seguici»: la mappa è vuota e non posso verificarli, oppure sono questioni di gusto.",
+   "dati": {
+    "azioni": [
+     {
+      "azione": "frase",
+      "scena": 3,
+      "testo": "E la tua città? Scrivi città, nome e cane o gatto: falla salire."
+     },
+     {
+      "azione": "musica",
+      "volume": 0.15
+     }
+    ],
+    "perche": [
+     {
+      "difetto": "L'invito a commentare cambia tra voce («città e nome») e didascalia («città, nome e cane o gatto»), quindi chi commenta non sa cosa scrivere.",
+      "reparti": [
+       "Pubblicazione",
+       "Community",
+       "Montaggio",
+       "Copione"
+      ]
+     },
+     {
+      "difetto": "Il picco audio è a -0,8 dBFS, sopra il limite di -1 dBFS.",
+      "reparti": [
+       "Voce e musica",
+       "Pubblicazione",
+       "Coppa delle Zampe",
+       "Innovazione",
+       "Montaggio"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-14T13:55:07+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 2: -14.7 LUFS, picco -0.9 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.7,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -17.6,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-14T13:55:07+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 2 esportata (18.8 s): ti mando 19 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 18.8,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ]
+   }
+  },
+  {
+   "t": "2026-11-14T13:55:07+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 18.4,
+   "fotogrammi": [
+    "fotogrammi/2026-11-14-1450-corsa/v1/s000.5.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s001.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s002.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s003.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s004.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s005.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s006.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s007.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s008.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s009.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s010.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s011.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s012.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s013.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s014.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s015.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s016.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s017.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v1/s018.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.7,
+    "picco_dbfs": -0.8,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -17.3,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "v": 2,
+   "durata": 18.8,
+   "fotogrammi": [
+    "fotogrammi/2026-11-14-1450-corsa/v2/s000.5.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s001.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s002.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s003.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s004.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s005.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s006.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s007.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s008.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s009.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s010.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s011.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s012.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s013.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s014.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s015.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s016.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s017.0.jpg",
+    "fotogrammi/2026-11-14-1450-corsa/v2/s018.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.7,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -17.6,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "crescita": {
+  "pubblico": "Chi ama cani e gatti, vive in una città italiana di provincia o di media grandezza (Treviso, Termoli, Atri) e tifa per la propria città. Scorre Instagram la sera, non conosce ancora Zampe d'Italia e commenta volentieri per far salire il posto dove abita.",
+  "gancio": "Napoli 93 animali, Roma 89. E la tua città? Guarda chi sale in 10 secondi.",
+  "primo_fotogramma": "Mappa dell'Italia di notte con le luci che si accendono; in alto la classifica con Napoli in testa, 93, e Roma, 89. Testo grande: «Qual è la città con più animali d'Italia?». Sotto, piccolo: «La tua dov'è?». Il testo si legge senza audio.",
+  "motivo_per_seguire": "Zampe d'Italia accende sulla mappa dell'Italia di notte una luce per ogni animale: seguendo la pagina vedi la tua città salire nella corsa insieme agli animali dei tuoi vicini.",
+  "chiusura": "Napoli guida la corsa. Segui Zampe d'Italia: ogni settimana ne parte una nuova.",
+  "perche": "Il brief è una corsa tra città, quindi il gancio sfrutta il campanilismo con numeri veri e la chiusura invita a seguire il profilo, non solo a commentare, senza promettere orari o premi che non sono nel brief."
+ },
+ "token_persone": 431731,
+ "fine": "2026-11-14T13:55:07+00:00"
+}
