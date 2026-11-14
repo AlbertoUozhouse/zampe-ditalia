@@ -884,12 +884,14 @@ def testa_a_testa(D, rng, st):
     ]
     if sx and sy:
         frasi.append((f"In campo {nomi(sx[:2])} per {x['c']}, {nomi(sy[:2])} per {y['c']}.", {"tipo": "classifica", "titolo": "⚔️ Le squadre in campo", "righe": righe}))
-    frasi.append((f"Sei di {y['c']} o di {x['c']}? Commenta città e nome del tuo animale!", {"tipo": "chiusura", "testo": f"💬 {y['c']} o {x['c']}? 👇"}))
+    # 14/11, confronto dei 7 giorni: col duello 3D e i padroni taggati le views sono salite (2.023) ma i follower no (3,1 ogni 1.000):
+    # la chiusura dà un motivo per seguire, vero: domani alle 13 c'è un'altra sfida tra due città
+    frasi.append((f"Sei di {y['c']} o di {x['c']}? Commenta città e nome. Seguici: domani un'altra sfida.", {"tipo": "chiusura", "testo": "➕ Segui: domani un'altra sfida"}))
     did = (f"⚔️ {x['c']} {x['n']} – {y['n']} {y['c']}: due comuni a {round(km)} km, e la sfida è aperta!\n"
            + (f"🏰 {x['c']}, {fx}" + (f" · {y['c']}, {fy}" if fy else "") + "\n" if fx else (f"🏰 {y['c']}, {fy}\n" if fy else "")) + "\n"
            "Ogni animale accende una luce nella sua città sulla mappa dell'Italia di notte (link in bio).\n"
            f"👇 Commenta la tua città e il nome del tuo cane o gatto (per esempio «{y['c']}, Luna, cane»): si accende col tuo @ e conta per la tua città.\n"
-           "👥 Tagga chi è di lì!")
+           "👥 Tagga chi è di lì!\n➕ Seguici: ogni giorno alle 13 una sfida nuova tra due città vicine. La prossima può essere la tua.")
     st["copertina"] = {"luce": [mezzo["lng"], mezzo["lat"]], "sopra": "TESTA A TESTA", "grande": f"{x['n']} – {y['n']}", "sotto": f"{x['c']} vs {y['c']}"}
     st["senza_bonus"] = True
     return "⚔️ TESTA A TESTA", frasi, did

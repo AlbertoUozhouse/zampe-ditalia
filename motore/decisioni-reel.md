@@ -403,3 +403,25 @@ Nessun cambiamento oggi.
 - Quiz «Indovina la razza» (13/11 alle 18): 865 views, 628 raggiunti, 5 condivisioni ma solo 5 commenti. Gara dei follower (alle 21): 353 views dopo 13 ore, debole.
 - Coppa: da 30 a 74 punti in un giorno. Staffetta di quartiere chiusa 3 volte a Bisceglie (11 persone), 2 a Barletta (7), 1 a Napoli: nessun doppio (persone e commenti tutti unici, punti = staffette). Gara dei follower: 6 SEGUO nuovi contati (Bisceglie 3).
 - Nessun cambiamento oggi: il testa a testa coi padroni taggati resta alle 13; stasera alle 18 esce il primo «Trova l'intruso».
+
+## 2026-11-14 — confronto dei 7 giorni (chiesto da Alberto il 7/11): follower ogni 1.000 account raggiunti, reel dal 7/11
+
+21 reel organici maturi da almeno 12 ore; nessun reel sponsorizzato nel periodo (quello del 26/10 resta a parte). Follower attribuiti: quelli arrivati dopo l'uscita fino al reel successivo (max 6 ore).
+
+| Format | Reel | Views (mediana) | Views (max) | Commenti (mediana) | Follower attribuiti | Raggiunti | Follower ogni 1.000 |
+|---|---|---|---|---|---|---|---|
+| puntata (21) | 2 | 531 | 571 | 32 | 13 | 686 | 19,0 |
+| ospiti_sera | 1 | 822 | 822 | 68 | 7 | 431 | 16,2 |
+| questa_luce (18) | 5 | 485 | 924 | 15 | 26 | 1.944 | 13,4 |
+| testa_a_testa (13) | 5 | 464 | 2.023 | 18 | 33 | 3.280 | 10,1 |
+| prima_luce | 2 | 656 | 807 | 33 | 9 | 947 | 9,5 |
+| gara_follower | 1 | 353 | 353 | 11 | 2 | 233 | 8,6 |
+| indovina (quiz) | 1 | 865 | 865 | 5 | 3 | 628 | 4,8 |
+| coppa_apertura | 1 | 1.814 | 1.814 | 33 | 6 | 1.347 | 4,5 |
+| coppa_sorpasso | 1 | 1.273 | 1.273 | 27 | 1 | 950 | 1,1 |
+
+Senza dato sui follower: incoronazione e amici (usciti prima che partisse il conteggio ora per ora). Totale: 100 follower attribuiti su 10.446 raggiunti (9,6 ogni 1.000); i follower veri della settimana sono +162 (1.723 → 1.885).
+
+**Lettura.** Per follower ogni 1.000 vincono i reel con persone e animali veri nominati (puntata, ospiti_sera, questa_luce). Per follower in totale e per views vince il testa a testa (33 follower, 2.023 views il 13/11). Ma nel testa a testa più sale la reach più scende la resa: 29,8 e 44,4 ogni 1.000 con 250–300 raggiunti, 6,1 e 3,1 con 820 e 1.595: il pubblico in più commenta per il suo paese e non segue (5 follower a reel, sempre). I reel della Coppa fanno views (1.273–1.814) ma quasi nessun follower.
+
+**Decisione (un cambiamento, coi numeri).** Il testa a testa resta alle 13: è l'unico che porta gente nuova. Da oggi chiude con un motivo vero per seguire («Seguici: domani un'altra sfida», anche in didascalia). Da rivedere tra una settimana: se il sorpasso della Coppa del giovedì resta sotto 5 ogni 1.000, al suo posto torna la puntata.
