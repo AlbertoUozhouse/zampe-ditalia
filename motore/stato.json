@@ -1543,6 +1543,7 @@
 "17944726251091250",
 "17944762947379958",
 "17944919535094448",
+"17945012172369603",
 "17945080854090370",
 "17945108517087757",
 "17945116374360739",
@@ -10697,7 +10698,8 @@
 "risposte": [
 1794643291.542937,
 1794644066.0258064,
-1794644954.9265678
+1794644954.9265678,
+1794646540.4942846
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12884,7 +12886,8 @@
 "goatcr7raffa": "2026-11-13",
 "ale_espo7": "2026-11-13",
 "angix511": "2026-11-13",
-"francy._._013": "2026-11-14"
+"francy._._013": "2026-11-14",
+"non_sochemmettere": "2026-11-14"
 },
 "media_letti": {},
 "pezzi": {
@@ -19424,10 +19427,12 @@
 "14ea61e2806112ab",
 "166cb34c86e6ba7f",
 "d4ba7e5e5671a549",
-"74a02fd493be0e90"
+"74a02fd493be0e90",
+"bb7ef40541df62dd"
 ],
 "privati_ora": [
-1794643291.542962
+1794643291.542962,
+1794646540.4943087
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -22242,7 +22247,8 @@
 "Lugo|RA": 1,
 "San Marco Argentano|CS": 1,
 "Trento|TN": 1,
-"Cosenza|CS": 1
+"Cosenza|CS": 1,
+"Palermo|PA": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22563,6 +22569,15 @@
 "t": "2026-11-14T08:01+00:00",
 "sorpasso": "Cosenza|CS",
 "su": "Cesena|FC",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-14T08:55+00:00",
+"sorpasso": "Palermo|PA",
+"su": "Firenze|FI",
 "punti": [
 1,
 0
@@ -22949,6 +22964,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Palermo|PA": {
+"u": [
+"non_sochemmettere"
+],
+"c": [
+"17945012172369603"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22998,7 +23023,8 @@
 "goatcr7raffa|animale|milo",
 "ale_espo7|animale|maya",
 "angix511|animale|nala",
-"francy._._013|animale|kira"
+"francy._._013|animale|kira",
+"non_sochemmettere|animale|simba"
 ]
 },
 "gara_follower": [
