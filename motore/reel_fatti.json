@@ -89,7 +89,6 @@
   "Napoli"
  ],
  "temi": [
-  "aurora",
   "giorno",
   "notte",
   "tramonto",
@@ -98,9 +97,10 @@
   "notte",
   "aurora",
   "neon",
-  "tramonto"
+  "tramonto",
+  "aurora"
  ],
- "variante_n": 41,
+ "variante_n": 42,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -142,7 +142,8 @@
   "2026-11-12-2109-coppa_sorpasso": "voce-solita-32",
   "2026-11-13-1307-testa_a_testa": "voce-fissa-45",
   "2026-11-13-1813-indovina": "voce-fissa-45",
-  "2026-11-13-2101-gara_follower": "voce-fissa-45"
+  "2026-11-13-2101-gara_follower": "voce-fissa-45",
+  "2026-11-14-1307-testa_a_testa": "voce-fissa-45"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -940,16 +941,18 @@
   "_ele.na_7|animale|kira"
  ],
  "derby_vicini": [
-  "Giugliano in Campania|Castellammare di Stabia",
+  "Bisceglie|Barletta",
   "Verona|Vicenza",
-  "Castellammare di Stabia|Giugliano in Campania",
-  "Cecina|Livorno",
-  "Molfetta|Barletta",
   "Barletta|Molfetta",
-  "Vicenza|Verona",
-  "Livorno|Cecina",
+  "Giugliano in Campania|Castellammare di Stabia",
   "Barletta|Bisceglie",
-  "Bisceglie|Barletta"
+  "Vicenza|Verona",
+  "Molfetta|Barletta",
+  "Cecina|Livorno",
+  "Livorno|Cecina",
+  "Castellammare di Stabia|Giugliano in Campania",
+  "Agliana|Castelfranco di Sotto",
+  "Castelfranco di Sotto|Agliana"
  ],
  "thor_giorno": "2026-11-10",
  "thor_ultimo_reel": true,

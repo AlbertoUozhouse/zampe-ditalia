@@ -82,5 +82,19 @@
   "fonte": "https://it.wikipedia.org/wiki/Pisa",
   "giorno": "2026-11-12",
   "v": 2
+ },
+ "Agliana|PT": {
+  "fatto": "la città della via Cassia",
+  "abitanti": 17957,
+  "fonte": "https://it.wikipedia.org/wiki/Agliana",
+  "giorno": "2026-11-14",
+  "v": 2
+ },
+ "Castelfranco di Sotto|PI": {
+  "fatto": "il borgo cinto di mura nel Valdarno di Sotto",
+  "abitanti": 13844,
+  "fonte": "https://it.wikipedia.org/wiki/Castelfranco_di_Sotto",
+  "giorno": "2026-11-14",
+  "v": 2
  }
 }

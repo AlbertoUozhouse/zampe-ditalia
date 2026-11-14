@@ -142,5 +142,21 @@
   "secondi": 4.3,
   "perche": "Dopo tanti duelli con cieli rossi, petrolio o argento, qui il pari 6 a 6 diventa un crepuscolo di bronzo e ardesia con u",
   "reel": "2026-11-13-1307-testa_a_testa"
+ },
+ {
+  "nome_stile": "Mura di Cassia",
+  "cielo_basso": "#5E4658",
+  "cielo_alto": "#0A1230",
+  "nebbia_colore": "#3A3848",
+  "lampioni_colore": "#FFC06E",
+  "lucciole_colore": "#D4F0B0",
+  "lucciole": 150.0,
+  "bloom": 0.78,
+  "esposizione": 1.58,
+  "effetto": "foglie",
+  "volo": "rivelazione",
+  "secondi": 4.1,
+  "perche": "Dopo tanti duelli con bronzo, brace e petrolio, il pari 6 a 6 diventa un cielo di nebbia d'Arno color ruggine spenta che",
+  "reel": "2026-11-14-1307-testa_a_testa"
  }
 ]
