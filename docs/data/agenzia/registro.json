@@ -421,5 +421,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-14T13:55:07+00:00",
   "scambi": 128
+ },
+ {
+  "id": "2026-11-14-1809-intruso",
+  "formato": "intruso",
+  "modalita": "operativa",
+  "inizio": "2026-11-14T17:09:50+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-14T17:14:14+00:00",
+  "scambi": 128
  }
 ]

@@ -90,7 +90,6 @@
   "Napoli"
  ],
  "temi": [
-  "giorno",
   "notte",
   "tramonto",
   "aurora",
@@ -99,9 +98,10 @@
   "aurora",
   "neon",
   "tramonto",
-  "aurora"
+  "aurora",
+  "giorno"
  ],
- "variante_n": 42,
+ "variante_n": 43,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -144,7 +144,8 @@
   "2026-11-13-1307-testa_a_testa": "voce-fissa-45",
   "2026-11-13-1813-indovina": "voce-fissa-45",
   "2026-11-13-2101-gara_follower": "voce-fissa-45",
-  "2026-11-14-1307-testa_a_testa": "voce-fissa-45"
+  "2026-11-14-1307-testa_a_testa": "voce-fissa-45",
+  "2026-11-14-1809-intruso": "voce-fissa-45"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -960,5 +961,6 @@
  "quiz_razze": [
   "cane|shiba",
   "gatto|certosino"
- ]
+ ],
+ "intruso_n": 1
 }
