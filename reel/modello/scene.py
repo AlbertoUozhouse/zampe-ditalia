@@ -521,5 +521,54 @@ def intruso_svela(cid, dur, base, altro, dove, titolo, riga_testo="", nr=5, nc=5
     tl.to("#{cid}-g", {{ scale: {2.3 if nc >= 6 else 1.3}, x: {540 - cx:.0f}, y: {330 - cy:.0f}, transformOrigin: "{cx:.0f}px {cy:.0f}px", duration: {max(0.8, dur - 0.3):.2f}, ease: "power2.out" }}, 0.25);"""  # l'intruso va al centro, sopra le scritte
     return _pagina(cid, "Rompicapo: la soluzione.", css, corpo, js)
 
-TIPI = {"intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+def corsa(cid, dur, titolo, giorni, serie, n=6):
+    """La corsa a barre (14/11, i reel d'impatto): le barre crescono giorno per giorno e si sorpassano, con la data che scorre.
+    Dati veri: serie = [{"nome": "Napoli", "valori": [cumulato per ogni giorno]}], giorni = le etichette («26 ott»). Si resta per vedere chi vince.
+    Nome a sinistra, barra al centro, numero subito dopo la barra (chiaro sul fondo scuro: sempre leggibile). Le posizioni sono «top», non transform."""
+    K = len(giorni); H = 108; COL = 310; MAXW = 520
+    colori = ["#FFC55C", "#5AA9F5", "#FF7AA8", "#6FE3B0", "#B99BFF", "#FF9F5A", "#7FD3FF", "#E8E06A", "#F28C8C", "#9BE08A", "#C9A0FF", "#FFD27A"]
+    def stato(k):
+        vivi = sorted(((s["valori"][k], s["nome"], i) for i, s in enumerate(serie) if s["valori"][k] > 0), key=lambda x: (-x[0], x[1]))
+        return max([v for v, _, _ in vivi] + [1]), {i: r for r, (_, _, i) in enumerate(vivi)}
+    larg = lambda v, mx: round((0.06 + 0.94 * v / mx) * MAXW)
+    # il tempo non è uguale per tutti i giorni: quelli con più arrivi durano di più, quelli fermi scorrono veloci (la corsa resta viva fino in fondo)
+    t0 = 0.3; incr = [sum(max(0, s["valori"][k] - s["valori"][k - 1]) for s in serie) for k in range(1, K)]
+    pesi = [0.3 + 0.7 * (x / max(incr + [1])) ** 0.5 for x in incr]
+    durate = [p / sum(pesi) * (dur - 1.4) for p in pesi]; tempi = [t0]
+    for d_ in durate: tempi.append(tempi[-1] + d_)
+    mx, pos = stato(0); righe, js = [], []
+    # il posto e la larghezza di partenza stanno nel CSS (fermi); GSAP sposta solo con y e x rispetto a quelli. Chi è fuori dai primi è «hidden», non solo trasparente.
+    casa = {i: min(pos.get(i, 99), n) for i in range(len(serie))}; l0 = {i: larg(s["valori"][0], mx) for i, s in enumerate(serie)}
+    for i, s in enumerate(serie):
+        vis = casa[i] < n; fs = 40 if len(s["nome"]) <= 13 else max(24, int(40 * 13 / len(s["nome"])))
+        righe.append(f'<div class="b" id="{cid}-b{i}" style="top:{casa[i] * H}px;opacity:{1 if vis else 0};visibility:{"visible" if vis else "hidden"}"><b style="font-size:{fs}px">{ESC(s["nome"])}</b>'
+                     f'<i id="{cid}-i{i}" style="width:{l0[i]}px;background:{colori[i % len(colori)]}"></i><span id="{cid}-v{i}" style="left:{COL + l0[i] + 14}px">{s["valori"][0]}</span></div>')
+    for k in range(1, K):
+        t, passo = tempi[k - 1], durate[k - 1]; mx_p, pos_p = mx, pos; mx, pos = stato(k)
+        js.append(f'    tl.set("#{cid}-g", {{ textContent: "{giorni[k]}" }}, {t + passo / 2:.2f});')
+        for i, s in enumerate(serie):
+            r, rp = pos.get(i, 99), pos_p.get(i, 99); v, vp = s["valori"][k], s["valori"][k - 1]
+            if min(r, n) != min(rp, n):
+                if r < n and rp >= n: js.append(f'    tl.set("#{cid}-b{i}", {{ visibility: "visible" }}, {t:.2f});')
+                js.append(f'    tl.to("#{cid}-b{i}", {{ y: {(min(r, n) - casa[i]) * H}, opacity: {1 if r < n else 0}, duration: {passo:.2f}, ease: "power1.inOut" }}, {t:.2f});')
+                if r >= n and rp < n: js.append(f'    tl.set("#{cid}-b{i}", {{ visibility: "hidden" }}, {t + passo:.2f});')
+            if r < n and (v != vp or mx != mx_p or rp >= n):
+                js.append(f'    tl.to("#{cid}-i{i}", {{ width: {larg(v, mx)}, duration: {passo:.2f}, ease: "none" }}, {t:.2f});')
+                js.append(f'    tl.to("#{cid}-v{i}", {{ x: {larg(v, mx) - l0[i]}, duration: {passo:.2f}, ease: "none" }}, {t:.2f});')
+            if v != vp:
+                js.append(f'    tl.set("#{cid}-v{i}", {{ textContent: "{v}" }}, {t + passo / 2:.2f});')
+    primo = min(pos, key=pos.get)  # chi è in testa all'ultimo giorno: la sua barra lampeggia alla fine
+    js.append(f'    tl.to("#{cid}-i{primo}", {{ keyframes: [{{ scaleY: 1.25, duration: 0.18 }}, {{ scaleY: 1, duration: 0.18 }}], repeat: 2 }}, {tempi[-1]:.2f});')
+    css = SPOT.format(a="#16365F", b="#08142E") + f"""
+    #root .tit {{ position: absolute; left: 60px; right: 330px; top: 300px; font: 800 60px/1 "Bricolage Grotesque", sans-serif; color: #FFF4DE; text-shadow: 0 6px 0 #05030F; }}
+    #root .gio {{ position: absolute; right: 60px; top: 286px; min-width: 250px; text-align: center; font: 800 58px/1 "Bricolage Grotesque", sans-serif; color: #2A1606; background: #FFC55C; border-radius: 22px; padding: 16px 20px; box-shadow: 0 0 40px rgba(255,197,92,.6); }}
+    #root .pista {{ position: absolute; left: 40px; right: 40px; top: 430px; height: {n * H}px; }}
+    #root .b {{ position: absolute; left: 0; right: 0; height: {H - 18}px; }}
+    #root .b b {{ position: absolute; left: 0; width: {COL - 20}px; top: 0; bottom: 0; display: flex; align-items: center; justify-content: flex-end; text-align: right; font: 900 40px/1.05 var(--font-body); color: #FFF4DE; }}
+    #root .b i {{ position: absolute; left: {COL}px; top: 0; bottom: 0; border-radius: 16px; box-shadow: inset 0 -10px 0 rgba(0,0,0,.18); }}
+    #root .b span {{ position: absolute; top: 0; bottom: 0; display: flex; align-items: center; font: 800 50px "Bricolage Grotesque", sans-serif; color: #FFF4DE; white-space: nowrap; }}"""
+    corpo = f'<div class="spot"></div><div class="tit">{ESC(titolo)}</div><div class="gio" id="{cid}-g">{ESC(giorni[0])}</div><div class="pista">{"".join(righe)}</div>'
+    return _pagina(cid, f"Corsa a barre: {titolo}", css, corpo, "\n".join(js))
+
+TIPI = {"corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}

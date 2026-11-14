@@ -18,7 +18,7 @@
   "traccia": "reel",
   "aperto": "2026-11-12",
   "scadenza": "2026-11-14",
-  "stato": "da costruire",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-13",
@@ -91,7 +91,10 @@
     ],
     "fatto_quando": "Esiste in reel/ un MP4 di prova Livorno-Cecina in cui il video reale con audio originale apre il reel, seguito dall'accensione in sequenza delle due luci sulla mappa, pronto per la pubblicazione entro il 14 novembre."
    }
-  ]
+  ],
+  "aggiornato": "2026-11-14",
+  "nota": "14/11: «La corsa delle città» (formato corsa): 20 giorni in 10 secondi, le barre delle città crescono e si sorpassano coi dati veri, la data scorre, poi il vincitore. A rotazione città, razze, regioni. Prima uscita lunedì 16/11 alle 21.",
+  "online_dal": "2026-11-14"
  },
  "realismo": {
   "idea": "Ombra del Paese: la luce che proietta il vero profilo del comune",

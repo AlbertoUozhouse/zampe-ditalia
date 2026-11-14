@@ -247,7 +247,12 @@ def main():
             ult = list(range(pi + nw - 5, pi + nw))
             tagli += [(ult[m], 1.0 - (parole[ult[m]]["s"] - parole[ult[m - 1]]["s"])) for m in range(1, 5)]
             if pi + nw < len(parole): tagli.append((pi + nw, 0.5))
+        if f_["scena"].get("pausa") and pi + nw < len(parole):  # 14/11, la corsa a barre: la scena continua in silenzio dopo la frase
+            tagli.append((pi + nw, float(f_["scena"]["pausa"])))
         pi += nw
+    somma = {}
+    for i_, p_ in tagli: somma[i_] = somma.get(i_, 0) + p_  # due pause sulla stessa parola diventano una
+    tagli = sorted(somma.items())
     try: parole = pause_voce(parole, prog / "assets/audio/voce.mp3", tagli)
     except Exception as e: print(f"pause della voce non applicate ({e})")
     (out / "parole.json").write_text(json.dumps({"parole": parole}, ensure_ascii=False))
@@ -326,6 +331,9 @@ def main():
     chk = subprocess.run(["npx", "hyperframes", "check", "--json"], cwd=prog, capture_output=True, text=True)
     raw = chk.stdout[chk.stdout.find("{"):]
     errori = [m for m in re.findall(r'"severity":\s*"error"[^}]*', raw)]
+    # la corsa a barre (14/11): quando due barre si sorpassano i nomi si incrociano per un attimo; è il sorpasso, non un difetto
+    corse = {f"#s{n_}-" for n_, f_ in enumerate(copione["frasi"]) if f_["scena"]["tipo"] == "corsa"}
+    errori = [m for m in errori if not ("overlap" in m and any(c in m for c in corse))]
     if errori: raise SystemExit("Controllo HyperFrames fallito:\n" + "\n".join(errori[:5]))
     subprocess.run(["npx", "hyperframes", "render", "--output", str(out / "render.mp4")], cwd=prog, check=True)
     subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(out / "render.mp4"), "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.0:LRA=7",

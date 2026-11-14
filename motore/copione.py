@@ -1198,7 +1198,7 @@ def verifica(cop):
 
 
 # ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
-FRASI_FISSE = {"indovina": 45, "figurina": 40, "testa_a_testa": 58, "gara_follower": 50, "intruso": 40, "nomi_top": 45}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
+FRASI_FISSE = {"indovina": 45, "figurina": 40, "testa_a_testa": 58, "gara_follower": 50, "intruso": 40, "nomi_top": 45, "corsa": 50}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
 
 MANTELLI = {"europeo", "grigio", "nero", "rosso", "bianco", "bicolore", "bicolore_rosso", "calico", "tartarugato", "meticcio"}  # colori, non razze: fuori dal quiz
 
@@ -1379,6 +1379,54 @@ def nomi_top(D, rng, st):
     st["senza_bonus"] = True
     return f"{emoji} I NOMI PIÙ USATI", frasi, did
 
+MESI = ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"]
+
+def corsa(D, rng, st):
+    """La corsa a barre (14/11): 20 giorni in 10 secondi, le barre crescono e si sorpassano, coi dati veri della mappa.
+    A rotazione: le città, le razze di cane, le regioni. Chi guarda resta per vedere chi vince e tifa per il suo."""
+    n = st.get("corsa_n", 0); st["corsa_n"] = n + 1
+    an = [a for a in D["animali"] if a.get("k") == "animale" and _ts(a)]
+    sogg = n % 3
+    if sogg == 0: chiave, gancio, sotto, titolo, unita, emoji = (lambda a: a["c"]), "La città con *più animali* d'Italia?", "giorni in 10 secondi", "🏁 La corsa delle città", "animali", "🏙️"
+    elif sogg == 1:
+        an = [a for a in an if a.get("t") == "cane" and a.get("razza")]
+        chiave, gancio, sotto, titolo, unita, emoji = (lambda a: _nome_razza(D, "cane", a["razza"])), "Il cane *più amato* d'Italia?", "giorni in 10 secondi", "🏁 La corsa delle razze", "cani", "🐶"
+    else: chiave, gancio, sotto, titolo, unita, emoji = (lambda a: a.get("r") or ""), "La regione con *più animali*?", "giorni in 10 secondi", "🏁 La corsa delle regioni", "animali", "🗺️"
+    giorni = sorted({str(a["ts"])[:10] for a in an})
+    if len(giorni) < 6: raise Salta("troppo pochi giorni di dati per una corsa")
+    per = {}
+    for a in an:
+        k = chiave(a)
+        if k: per.setdefault(k, {}); per[k][str(a["ts"])[:10]] = per[k].get(str(a["ts"])[:10], 0) + 1
+    cum = {k: [] for k in per}
+    for k, d in per.items():
+        t = 0
+        for g in giorni: t += d.get(g, 0); cum[k].append(t)
+    dentro = set()  # chi è stato tra i primi sei in almeno un giorno (dal secondo in poi), al massimo dodici
+    for i in range(1, len(giorni)):
+        dentro |= set(sorted(cum, key=lambda k: (-cum[k][i], k))[:6])
+    finale = sorted(dentro, key=lambda k: (-cum[k][-1], k))[:12]
+    serie = [{"nome": k, "valori": cum[k]} for k in finale]
+    (p1, v1), (p2, v2), (p3, v3) = [(k, cum[k][-1]) for k in finale[:3]]
+    etichette = [f"{int(g[8:])} {MESI[int(g[5:7]) - 1]}" for g in giorni]
+    art = "il " if sogg == 1 else ""
+    frasi = [
+        (gancio.replace("*", ""), {"tipo": "gancio", "testo": gancio, "sotto": f"🏁 {len(giorni)} {sotto}", "icona": emoji}),
+        (f"Si parte il {int(giorni[0][8:])} {['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'][int(giorni[0][5:7]) - 1]}. Guarda chi sale.",
+         {"tipo": "corsa", "titolo": titolo, "giorni": etichette, "serie": serie, "pausa": 5.0}),
+        (f"Vince {art}{p1} con {v1}. {p2[:1].upper() + p2[1:]} è a {v1 - v2}.", {"tipo": "gancio", "testo": f"*{p1}*", "sotto": f"👑 {v1} {unita} · {p2} a {v1 - v2}", "icona": "👑"}),
+        (("E la tua città? Scrivi città e nome: falla salire." if sogg != 1 else "E il tuo? Scrivi città, nome e razza: fallo salire."), {"tipo": "commento", "testo": f"{p2 if sogg == 0 else rng.choice(CITTA)}, Luna, cane"}),
+    ]
+    did = (f"🏁 {titolo[2:]}: {len(giorni)} giorni in 10 secondi. 👑 {p1} {v1} · 🥈 {p2} {v2} · 🥉 {p3} {v3}.\n\n"
+           + ("👇 La tua città non c'è, o è troppo indietro? Scrivi qui sotto città, nome e cane o gatto (es. «Treviso, Luna, cane»): ogni animale la fa salire.\n👥 Tagga chi è della tua città!\n"
+              if sogg != 1 else "👇 Che cane hai? Scrivi città, nome e razza (es. «Treviso, Luna, golden»): ogni cane fa salire la sua razza.\n")
+           + "➕ Seguici: ogni settimana una corsa nuova.")
+    st["copertina"] = None
+    st["banner_reel"] = "🏁 Scrivi la tua città: falla salire 👇" if sogg != 1 else "🏁 Scrivi città, nome e razza 👇"
+    st["hashtag"] = "#cani #gatti #italia #classifica #campanilismo #animalidomestici "
+    st["senza_bonus"] = True
+    return titolo.upper(), frasi, did
+
 def scelta_18():
     """Le 18 a rotazione (12/11): il quiz, le figurine, la luce nuova: tre idee diverse, mai lo stesso video due giorni di fila (dal 13/11)."""
     return ["indovina", "intruso", "nomi_top", "figurina", "questa_luce"][(ORA.date() - date(2026, 11, 13)).days % 5]
@@ -1387,7 +1435,7 @@ def sera_18(D, rng, st):
     return FORMATI[scelta_18()](D, rng, st)
 
 
-FORMATI = {"intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
