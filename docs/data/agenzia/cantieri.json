@@ -1,155 +1,14 @@
 {
  "gioco": {
-  "idea": "Staffetta di quartiere nella Coppa delle Zampe (con 'Pappa al volo' a turni)",
-  "come_funziona": "Ogni comune ha una squadra di 3 follower e un animale. Ogni giorno il sito propone una staffetta a tempo: ogni giocatore porta il cibo giusto all'animale con 'Pappa al volo' e passa il testimone al successivo. Il tempo totale della squadra va in classifica e a ogni passaggio si accende una zampa sulla mappa. Per giocare bisogna invitare due persone del proprio paese, quindi il gioco porta nuovi follower per costruzione. Chi chiude per primo ottiene un reel dedicato al suo comune.",
-  "primo_passo": "Nel codice esistente della Coppa delle Zampe attivare la modalità Staffetta (oggi 0 staffette) e collegarla al minigioco 'Pappa al volo'. Creare nel database due tabelle: 'squadre' (comune, 3 slot giocatore, link d'invito) e 'staffette' (squadra, tempo di ogni tappa, tempo totale, data). Poi generare un link d'invito per squadra e mostrare la classifica del giorno sulla mappa.",
-  "come_misurarla": "Dopo 7 giorni contare le staffette completate (obiettivo oltre 50, oggi 0) e i nuovi follower arrivati da link d'invito di squadra. Registrare il conteggio follower ogni sera alle 21 prima e dopo l'uscita della staffetta e confrontarlo con i giorni senza gioco.",
+  "idea": "Zampa Sveglia: il quiz del campanile",
+  "come_funziona": "Ogni sera il sito mostra la foto parzialmente nascosta di un animale reale di un follower e il giocatore indovina il suo comune tra 4 opzioni, scelte tra i comuni vicini sulla mappa reale. Ogni risposta giusta accende la luce del comune nella tabella per regione. Chi indovina 5 giorni di fila sblocca una storia dell'animale, pronta da condividere.",
+  "primo_passo": "Partire dal codice di 'Indovina la Zampa' e aggiungere una scelta giornaliera deterministica: l'animale del giorno si sceglie con un seed basato sulla data (AAAA-MM-GG) tra le foto in archivio dei follower con SÌ esplicito. Le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto, calcolati con le coordinate di motore/config.json. La serie di giorni consecutivi si salva in localStorage. Poi si inserisce la schermata in docs/index.html.",
+  "come_misurarla": "Dopo 7 giorni: ritorno a 24 ore (giocatori del giorno N che rigiocano il giorno N+1), numero di serie da 5 raggiunte e storie sbloccate condivise, e follower guadagnati ogni 1.000 account raggiunti dai reel che rimandano al quiz. Il tutto va confrontato con i giochi attuali del sito.",
   "traccia": "gioco",
-  "aperto": "2026-11-08",
-  "scadenza": "2026-11-10",
-  "stato": "online",
-  "aggiornato": "2026-11-13",
-  "nota": "13/11: il tabellone della Coppa nella piazza del paese 3D (sito e apertura dei reel): la sfida vera della città col punteggio, la Staffetta di quartiere, il posto nella gara dei follower e come fare punti.",
-  "passi_proposti": [
-   {
-    "giorno": "2026-11-10",
-    "ruolo": "Giochi nuovi",
-    "passo": "Nel motore, attivare la modalità Staffetta in motore/coppa.py collegandola al minigioco 'Pappa al volo' con config test_crescita attiva, e creare le tabelle 'squadre' e 'staffette' con generazione del link d'invito per squadra. Per uscire domani, ridurre a una sola squadra di prova per comune (3 slot), una tappa al giorno, e mostrare la classifica come lista semplice in docs/coppa.js invece che sulla mappa animata.",
-    "file": [
-     "motore/coppa.py",
-     "motore/commenti.py",
-     "docs/coppa.js",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Una squadra di prova completa una staffetta di una tappa dal link d'invito, il tempo viene salvato nella tabella 'staffette' e compare nella classifica del giorno come lista semplice sul sito."
-   },
-   {
-    "giorno": "2026-11-10",
-    "ruolo": "Meccaniche di gioco",
-    "passo": "Nel motore, attivare la modalità Staffetta in motore/coppa.py collegandola al minigioco 'Pappa al volo' con config test_crescita attiva, e creare le tabelle 'squadre' e 'staffette' con generazione del link d'invito per squadra; per uscire domani tagliare a una sola squadra di prova per comune (3 slot), una tappa al giorno, classifica del giorno come lista semplice in docs/coppa.js invece che sulla mappa animata.",
-    "file": [
-     "motore/coppa.py",
-     "motore/commenti.py",
-     "docs/coppa.js",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Una squadra di prova completa una staffetta di una tappa dal link d'invito, il tempo viene salvato nella riga della tabella 'staffette' e compare nella classifica del giorno come lista semplice sul sito."
-   },
-   {
-    "giorno": "2026-11-10",
-    "ruolo": "Fattibilità tecnica",
-    "passo": "Nel motore, attiva la modalità Staffetta in motore/coppa.py collegandola al minigioco 'Pappa al volo' con config test_crescita attiva, e crea le tabelle 'squadre' e 'staffette' con la generazione del link d'invito per squadra. Per uscire domani (entro il 2026-11-10), taglia a una sola squadra di prova per comune (3 slot), una tappa al giorno, e mostra la classifica come lista semplice in docs/coppa.js invece che sulla mappa animata.",
-    "file": [
-     "motore/coppa.py",
-     "motore/commenti.py",
-     "docs/coppa.js",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Una squadra di prova completa una staffetta di una tappa dal link d'invito, il tempo viene salvato nella tabella 'staffette' e compare nella classifica del giorno come lista semplice sul sito."
-   },
-   {
-    "giorno": "2026-11-11",
-    "ruolo": "Giochi nuovi",
-    "passo": "Oggi, prima di tutto, chiudi il minimo indispensabile per uscire il 10 novembre: in motore/coppa.py attiva la modalità Staffetta collegandola a 'Pappa al volo' (con config test_crescita attiva) e crea le due tabelle 'squadre' e 'staffette' con un link d'invito per squadra. Niente mappa animata: la classifica del giorno va come lista semplice in docs/coppa.js. Il cantiere è in ritardo, quindi la versione di domani è una sola squadra di prova per comune (3 slot) con una tappa al giorno.",
-    "file": [
-     "motore/coppa.py",
-     "motore/commenti.py",
-     "docs/coppa.js",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Una squadra di prova completa una staffetta di una tappa dal link d'invito, il tempo compare in una riga della tabella 'staffette' e appare nella lista della classifica del giorno sul sito."
-   },
-   {
-    "giorno": "2026-11-11",
-    "ruolo": "Meccaniche di gioco",
-    "passo": "Oggi, come Meccaniche di gioco, non chiudere tutta la staffetta: attiva la modalità Staffetta in motore/coppa.py collegandola a 'Pappa al volo' e crea solo la tabella 'staffette' (squadra, tappa, tempo, data) nel database, con una squadra di prova fissa per un solo comune. Il link d'invito e la mappa li rimandi a dopo l'uscita di domani.",
-    "file": [
-     "motore/coppa.py",
-     "motore/config.json",
-     "docs/coppa.js"
-    ],
-    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' da docs/coppa.js e nel database compare una riga in 'staffette' con tempo e data, visibile come lista semplice nel sito."
-   },
-   {
-    "giorno": "2026-11-11",
-    "ruolo": "Fattibilità tecnica",
-    "passo": "Oggi, come Fattibilità tecnica, chiudi solo il collegamento minimo: in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva e crea le due tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa. Il cantiere è in ritardo e la scadenza è il 10 novembre, quindi per uscire domani la versione è una sola squadra di prova per comune (3 slot), una tappa al giorno, con la classifica del giorno come lista semplice in docs/coppa.js.",
-    "file": [
-     "motore/coppa.py",
-     "motore/config.json",
-     "docs/coppa.js"
-    ],
-    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice."
-   },
-   {
-    "giorno": "2026-11-12",
-    "ruolo": "Giochi nuovi",
-    "passo": "Oggi, come Giochi nuovi, chiudi solo il collegamento minimo della Staffetta: in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva e crea le due tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa. Per uscire domani (scadenza 2026-11-10, cantiere in ritardo) la versione è una sola squadra di prova per comune (3 slot) con una tappa al giorno, e la classifica del giorno va come lista semplice in docs/coppa.js.",
-    "file": [
-     "motore/coppa.py",
-     "motore/config.json",
-     "docs/coppa.js"
-    ],
-    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice."
-   },
-   {
-    "giorno": "2026-11-12",
-    "ruolo": "Meccaniche di gioco",
-    "passo": "Oggi chiudi solo il collegamento minimo della Staffetta: in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva e crea le tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa. Per uscire domani (scadenza 2026-11-10) mostra la classifica del giorno come lista semplice in docs/coppa.js, con una sola squadra di prova per comune (3 slot) e una tappa al giorno.",
-    "file": [
-     "motore/coppa.py",
-     "motore/config.json",
-     "docs/coppa.js"
-    ],
-    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice."
-   },
-   {
-    "giorno": "2026-11-12",
-    "ruolo": "Fattibilità tecnica",
-    "passo": "Dal file motore/coppa.py attiva la modalità Staffetta nella config test_crescita e collegala a 'Pappa al volo', poi crea le due tabelle 'squadre' e 'staffette' nel database senza link d'invito né mappa. Per uscire entro il 10 novembre, la versione è una sola squadra di prova per comune (3 slot) con una tappa al giorno, classifica del giorno come lista semplice in docs/coppa.js.",
-    "file": [
-     "motore/coppa.py",
-     "motore/config.json",
-     "docs/coppa.js"
-    ],
-    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice sul sito."
-   },
-   {
-    "giorno": "2026-11-13",
-    "ruolo": "Giochi nuovi",
-    "passo": "Chiudi la Staffetta al minimo per uscire entro il 10 novembre (scadenza già superata, quindi la prossima uscita utile): in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva, collegala a 'Pappa al volo' e crea le tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa; mostra la classifica del giorno come lista semplice in docs/coppa.js con una sola squadra di prova per comune (3 slot) e una tappa al giorno.",
-    "file": [
-     "motore/coppa.py",
-     "motore/config.json",
-     "docs/coppa.js"
-    ],
-    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice sul sito."
-   },
-   {
-    "giorno": "2026-11-13",
-    "ruolo": "Meccaniche di gioco",
-    "passo": "Oggi, come Meccaniche di gioco, chiudi solo il collegamento minimo della Staffetta: in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva e crea le tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa. Per uscire entro la scadenza del 10 novembre, la versione di domani è una sola squadra di prova per comune (3 slot), una tappa al giorno, con la classifica del giorno come lista semplice in docs/coppa.js.",
-    "file": [
-     "motore/coppa.py",
-     "motore/config.json",
-     "docs/coppa.js"
-    ],
-    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice sul sito."
-   },
-   {
-    "giorno": "2026-11-13",
-    "ruolo": "Fattibilità tecnica",
-    "passo": "Chiudi la Staffetta al minimo per uscire appena possibile: in motore/coppa.py attiva la modalità Staffetta con config test_crescita attiva, collegala a 'Pappa al volo' e crea le tabelle 'squadre' e 'staffette' nel database, senza link d'invito né mappa. Per tagliarlo, mostra la classifica del giorno come lista semplice in docs/coppa.js con una sola squadra di prova per comune (3 slot) e una tappa al giorno.",
-    "file": [
-     "motore/coppa.py",
-     "motore/config.json",
-     "docs/coppa.js"
-    ],
-    "fatto_quando": "Una squadra di prova completa una tappa di 'Pappa al volo' dal sito, nel database compare una riga in 'staffette' con tempo e data, e la classifica del giorno la mostra come lista semplice sul sito."
-   }
-  ],
-  "in_ritardo": true,
-  "online_dal": "2026-11-13"
+  "aperto": "2026-11-14",
+  "scadenza": "2026-11-16",
+  "stato": "da costruire",
+  "passi_proposti": []
  },
  "reel": {
   "idea": "Sfida di Campanile: il reel dal vivo (derby tra comuni vicini con video vero)",
@@ -196,6 +55,41 @@
      "motore/config.json"
     ],
     "fatto_quando": "Esiste un reel di prova Livorno-Cecina in cui il clip vero apre con audio originale, seguito dalle due luci che si accendono in sequenza sulla mappa, pubblicato entro il 14 novembre."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Nuovi stili di reel",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight con castShadow attivo sulla mesh del rilievo già caricata con i dati di altitudine, calcolando l'angolo del sole con SunCalc per la data, l'ora locale e le coordinate di Livorno come comune pilota (shadowMap 1024). Il cantiere «realismo» è ancora senza passi, quindi questo è il primo, da fare prima della scadenza del 15 novembre.",
+    "file": [
+     "docs/index.html",
+     "docs/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser, il rilievo proietta un'ombra visibile coerente con l'ora locale della sera, senza rallentare la pagina su telefono."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Riprese e montaggio diversi",
+    "passo": "Dall'archivio dei follower prendi i video con consenso SÌ per Livorno e Cecina (4-6 secondi ciascuno, consenso anche per l'audio ambientale), poi duplica il template testa_a_testa in reel/ aggiungendo uno slot iniziale per il video reale con audio originale e collega le coordinate di Livorno e Cecina già presenti nel progetto per accendere le due luci in sequenza. Genera un solo reel di prova Livorno-Cecina; Verona-Vicenza resta fuori per uscire entro il 14 novembre.",
+    "file": [
+     "reel/template_testa_a_testa.py",
+     "reel/",
+     "motore/config.json",
+     "docs/index.html"
+    ],
+    "fatto_quando": "Esiste un MP4 di prova Livorno-Cecina in reel/ in cui il video reale con audio originale apre il reel, seguito dall'accensione in sequenza delle due luci sulla mappa, pronto per la pubblicazione entro il 14 novembre."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Suono e musica nuovi",
+    "passo": "Nel cantiere reel, dalla coppia Livorno-Cecina: prendi dall'archivio due video con consenso SÌ (4-6 secondi, consenso anche per l'audio ambientale), duplica template_testa_a_testa.py aggiungendo uno slot iniziale per il video reale con audio originale, collega le coordinate di Livorno e Cecina già presenti in motore/config.json per accendere le due luci in sequenza, e genera un solo reel di prova. Se il tempo stringe, rinvia Verona-Vicenza.",
+    "file": [
+     "reel/template_testa_a_testa.py",
+     "motore/config.json",
+     "reel/archivio_video/",
+     "docs/index.html"
+    ],
+    "fatto_quando": "Esiste in reel/ un MP4 di prova Livorno-Cecina in cui il video reale con audio originale apre il reel, seguito dall'accensione in sequenza delle due luci sulla mappa, pronto per la pubblicazione entro il 14 novembre."
    }
   ]
  },
@@ -208,6 +102,139 @@
   "aperto": "2026-11-13",
   "scadenza": "2026-11-15",
   "stato": "da costruire",
-  "passi_proposti": []
+  "passi_proposti": [
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Realismo degli animali",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola la posizione del sole con SunCalc (o azimut ed elevazione) usando data, ora locale e coordinate del comune pilota Livorno, e prova l'ombra solo su quel comune; se non regge entro domani, esci con una luce fissa orientata a sera senza calcolo astronomico.",
+    "file": [
+     "docs/index.html",
+     "docs/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno sul sito compare sulla mesh del rilievo un'ombra visibile che cambia direzione quando si cambia l'ora di prova, senza errori in console e con caricamento fluido su telefono."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Realismo della mappa e del 3D",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno, e prova il tutto solo su quel comune pilota.",
+    "file": [
+     "docs/index.html",
+     "docs/3d/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser, il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, e lo stesso file funziona su un telefono senza rallentamenti evidenti."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Esperimenti misurabili",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola azimut ed elevazione del sole con SunCalc (o una formula semplice) usando data, ora locale e coordinate di Livorno, e prova l'ombra solo su quel comune pilota. Se entro domani non regge, esci con una luce fissa orientata a sera senza calcolo astronomico.",
+    "file": [
+     "docs/index.html",
+     "docs/3d/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser, il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Animali in 3D",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno, e prova l'ombra solo su questo comune pilota; se non regge entro domani, esci con una luce fissa orientata a sera senza calcolo astronomico.",
+    "file": [
+     "docs/index.html",
+     "docs/3d/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser, il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Paesi e piazze in 3D",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno, e verifica l'ombra solo su quel comune pilota; se non regge entro domani, esci con una luce fissa orientata a sera senza calcolo astronomico.",
+    "file": [
+     "docs/index.html",
+     "docs/3d/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Rilievo e terreno veri",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024, e calcola la posizione del sole con SunCalc (o azimut ed elevazione) usando data, ora locale e coordinate di Livorno. Se entro domani l'ombra astronomica non regge, esci con una luce fissa orientata a sera senza calcolo, così la scadenza del 15 novembre è rispettata.",
+    "file": [
+     "docs/index.html",
+     "docs/3d/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Luci della notte in 3D",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno, e prova l'ombra solo su quel comune pilota; se entro domani non regge, esci con una luce fissa orientata a sera senza calcolo astronomico.",
+    "file": [
+     "docs/index.html",
+     "docs/3d/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser, il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console, e lo stesso file carica senza rallentamenti evidenti su un telefono."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Materiali e texture",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola la posizione del sole con SunCalc (o azimut ed elevazione) usando data, ora locale e coordinate di Livorno, e prova l'ombra solo su quel comune pilota; se entro domani non regge, esci con una luce fissa orientata a sera senza calcolo astronomico.",
+    "file": [
+     "docs/index.html",
+     "docs/3d/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Camere e inquadrature 3D",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno, e prova l'ombra solo su quel comune pilota; se entro domani non regge, esci con una luce fissa orientata a sera senza calcolo astronomico.",
+    "file": [
+     "docs/index.html",
+     "docs/3d/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Animazioni 3D",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno, e verifica l'ombra solo su quel comune pilota; se entro domani non regge, esci con una luce fissa orientata a sera senza calcolo astronomico.",
+    "file": [
+     "docs/index.html",
+     "docs/3d/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "Scene 3D per i reel",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno, e verifica l'ombra solo su quel comune pilota; se non regge entro domani, esci con una luce fissa orientata a sera senza calcolo astronomico.",
+    "file": [
+     "docs/index.html",
+     "docs/3d/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
+   },
+   {
+    "giorno": "2026-11-14",
+    "ruolo": "3D leggero sul telefono",
+    "passo": "Nella vista 3D in docs/ aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno, e verifica l'ombra solo su quel comune pilota; se entro domani non regge, esci con una luce fissa orientata a sera senza calcolo astronomico.",
+    "file": [
+     "docs/index.html",
+     "docs/3d/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
+   }
+  ]
  }
 }

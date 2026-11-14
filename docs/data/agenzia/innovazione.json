@@ -74,5 +74,17 @@
    "come_misurarla": "Dopo 7 giorni confrontare i follower ogni 1.000 account raggiunti dei reel che rimandano alla vista 3D con la soglia di 13-18 del formato 'questa_luce'. Contare inoltre le visite alla pagina 3D rispetto alla media delle altre pagine del sito e quanti commenti riportano il nome di un comune."
   },
   "perche": "È l'unica idea che usa i dati reali già presenti (altitudine, coordinate, ora locale) per aggiungere un effetto nuovo e visibile con una sola luce in più nella scena three.js esistente, senza nuovi asset, e dà a ogni comune un aspetto riconoscibile e condivisibile."
+ },
+ {
+  "giorno": "2026-11-14",
+  "gioco": {
+   "idea": "Zampa Sveglia: il quiz del campanile",
+   "come_funziona": "Ogni sera il sito mostra la foto parzialmente nascosta di un animale reale di un follower e il giocatore indovina il suo comune tra 4 opzioni, scelte tra i comuni vicini sulla mappa reale. Ogni risposta giusta accende la luce del comune nella tabella per regione. Chi indovina 5 giorni di fila sblocca una storia dell'animale, pronta da condividere.",
+   "primo_passo": "Partire dal codice di 'Indovina la Zampa' e aggiungere una scelta giornaliera deterministica: l'animale del giorno si sceglie con un seed basato sulla data (AAAA-MM-GG) tra le foto in archivio dei follower con SÌ esplicito. Le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto, calcolati con le coordinate di motore/config.json. La serie di giorni consecutivi si salva in localStorage. Poi si inserisce la schermata in docs/index.html.",
+   "come_misurarla": "Dopo 7 giorni: ritorno a 24 ore (giocatori del giorno N che rigiocano il giorno N+1), numero di serie da 5 raggiunte e storie sbloccate condivise, e follower guadagnati ogni 1.000 account raggiunti dai reel che rimandano al quiz. Il tutto va confrontato con i giochi attuali del sito."
+  },
+  "reel": null,
+  "realismo": null,
+  "perche": "È l'idea più fattibile subito, perché riusa un gioco, i dati e le foto già esistenti. Inoltre porta follower perché ognuno vuole rivedere e condividere il proprio animale, e la serie giornaliera dà un motivo per tornare."
  }
 ]
