@@ -13,5 +13,20 @@
    "--copertina",
    "media/auto/2026-11-14-1809-intruso.jpg"
   ]
+ },
+ {
+  "ts": "2026-11-14T20:06:47+00:00",
+  "args": [
+   "--tipo",
+   "REELS",
+   "--media",
+   "media/auto/2026-11-14-2101-gara_follower.mp4",
+   "--didascalia",
+   "contenuti/auto/2026-11-14-2101-gara_follower.txt",
+   "--tag",
+   "",
+   "--copertina",
+   "media/auto/2026-11-14-2101-gara_follower.jpg"
+  ]
  }
 ]
