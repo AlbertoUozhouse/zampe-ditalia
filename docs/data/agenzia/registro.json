@@ -430,5 +430,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-14T17:14:14+00:00",
   "scambi": 128
+ },
+ {
+  "id": "2026-11-14-2101-gara_follower",
+  "formato": "gara_follower",
+  "modalita": "operativa",
+  "inizio": "2026-11-14T20:01:20+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-14T20:04:59+00:00",
+  "scambi": 126
  }
 ]

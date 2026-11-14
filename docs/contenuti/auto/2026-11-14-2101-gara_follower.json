@@ -1,0 +1,78 @@
+{
+ "voce": true,
+ "variante": "voce-fissa-45",
+ "tema": "tramonto",
+ "id": "2026-11-14-2101-gara_follower",
+ "formato": "gara_follower",
+ "testata": {
+  "titolo": "🏁 LA GARA DEI FOLLOWER"
+ },
+ "conteggio": {
+  "cani": 1999,
+  "gatti": 803
+ },
+ "frasi": [
+  {
+   "testo": "Quale città ci segue di più?",
+   "scena": {
+    "tipo": "gancio",
+    "testo": "Quale città ci segue *di più*?",
+    "sotto": "🏁 La gara dei follower",
+    "icona": "🏁"
+   }
+  },
+  {
+   "testo": "Napoli, la città di Partenope, è prima con 28. Poi Roma con 26 e Cagliari con 12.",
+   "scena": {
+    "tipo": "barre",
+    "titolo": "🏁 Chi ci segue di più",
+    "righe": [
+     {
+      "nome": "Napoli",
+      "valore": 28,
+      "nota": "la città di Partenope"
+     },
+     {
+      "nome": "Roma",
+      "valore": 26
+     },
+     {
+      "nome": "Cagliari",
+      "valore": 12
+     },
+     {
+      "nome": "Catania",
+      "valore": 9
+     },
+     {
+      "nome": "Torino",
+      "valore": 9
+     },
+     {
+      "nome": "Bari",
+      "valore": 7
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Siamo 1888: a duemila facciamo i fuochi su tutta l'Italia.",
+   "scena": {
+    "tipo": "numero",
+    "grande": "1.888",
+    "sotto": "follower veri · a 2.000 i fuochi 🎆"
+   }
+  },
+  {
+   "testo": "Seguici e scrivi SEGUO con la tua città: due punti al tuo paese.",
+   "scena": {
+    "tipo": "chiusura",
+    "testo": "🏁 SEGUO + la tua città 👇"
+   }
+  }
+ ],
+ "banner": "🏁 Scrivi SEGUO e la tua città 👇",
+ "didascalia": "🏁 La gara dei follower: quale città ci segue di più?\n👑 Napoli 28 · 🥈 Roma 26 · 🥉 Cagliari 12\nNapoli, la città di Partenope: chi la batte?\n\n👇 Seguici e scrivi SEGUO qui sotto, con la tua città e il nome del tuo cane o gatto (es. «SEGUO, Treviso, Luna, cane»): +2 punti al tuo paese nella Coppa delle Zampe.\n👥 Tagga gli amici del tuo paese: ogni amico che ci segue fa salire la tua città.\n🎆 Siamo 1888: a 2000 accendiamo i fuochi su tutta la mappa!\n\nVoce generata con IA.\n\n#cani #gatti #italia #campanilismo #animalidomestici ",
+ "tag": [],
+ "copertina": null
+}
