@@ -394,3 +394,12 @@ Nessun cambiamento oggi.
 ## 2026-11-14 — verbale dei 7 giorni (automatico, motore/verbale.py)
 
 - 2026-11-06-2123-fondatore: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+## 2026-11-14 — controllo del giorno
+
+- Sito ok (docs 217 MB), motore vivo (mappa 11:06). 28 luci nuove in 24 ore, follower 1.871 → 1.885.
+- Reel del 13/11: 3 su 3 pubblicati.
+- **Il testa a testa del 13/11 (Barletta–Bisceglie: duello 3D, città raccontate, squadre in campo e 8 padroni taggati) ha fatto 2.023 views in meno di 24 ore, 1.595 raggiunti, 73 commenti, 11 condivisioni**: il migliore dal 2/11, quattro volte la mediana (479). I testa a testa prima dei tag: 329–464 views; col solo duello 3D (12/11): 1.085. I follower però sono pochi: 5 (3,1 ogni 1.000): chi arriva commenta per il suo paese ma non segue.
+- Quiz «Indovina la razza» (13/11 alle 18): 865 views, 628 raggiunti, 5 condivisioni ma solo 5 commenti. Gara dei follower (alle 21): 353 views dopo 13 ore, debole.
+- Coppa: da 30 a 74 punti in un giorno. Staffetta di quartiere chiusa 3 volte a Bisceglie (11 persone), 2 a Barletta (7), 1 a Napoli: nessun doppio (persone e commenti tutti unici, punti = staffette). Gara dei follower: 6 SEGUO nuovi contati (Bisceglie 3).
+- Nessun cambiamento oggi: il testa a testa coi padroni taggati resta alle 13; stasera alle 18 esce il primo «Trova l'intruso».
