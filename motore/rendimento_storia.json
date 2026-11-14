@@ -1017,6 +1017,13 @@
 "comments": 41,
 "shares": 1,
 "follower_dopo": null
+},
+"g14": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": null
 }
 },
 "18122598526971629": {
@@ -1068,6 +1075,13 @@
 "comments": 31,
 "shares": 0,
 "follower_dopo": null
+},
+"g14": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": null
 }
 },
 "18003003930040477": {
@@ -1118,6 +1132,13 @@
 "reach": 1505,
 "comments": 33,
 "shares": 1,
+"follower_dopo": null
+},
+"g14": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
 "follower_dopo": null
 }
 },
@@ -1221,6 +1242,13 @@
 "comments": 76,
 "shares": 1,
 "follower_dopo": null
+},
+"g13": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": null
 }
 },
 "18130709189510971": {
@@ -1271,6 +1299,13 @@
 "reach": 1641,
 "comments": 39,
 "shares": 0,
+"follower_dopo": null
+},
+"g13": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
 "follower_dopo": null
 }
 },
@@ -1527,6 +1562,13 @@
 "comments": 94,
 "shares": 0,
 "follower_dopo": null
+},
+"g12": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": null
 }
 },
 "18132077146693364": {
@@ -1573,6 +1615,13 @@
 "follower_dopo": null
 },
 "g11": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": null
+},
+"g12": {
 "views": null,
 "reach": null,
 "comments": null,
@@ -1680,6 +1729,13 @@
 "comments": 48,
 "shares": 2,
 "follower_dopo": null
+},
+"g11": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": null
 }
 },
 "18122165692994401": {
@@ -1781,6 +1837,13 @@
 "reach": 1229,
 "comments": 52,
 "shares": 0,
+"follower_dopo": null
+},
+"g10": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
 "follower_dopo": null
 }
 },
@@ -1986,6 +2049,13 @@
 "comments": 81,
 "shares": 1,
 "follower_dopo": null
+},
+"g9": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": null
 }
 },
 "18028422407867698": {
@@ -2139,6 +2209,13 @@
 "comments": 45,
 "shares": 0,
 "follower_dopo": null
+},
+"g8": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": null
 }
 },
 "18400635064202193": {
@@ -2234,6 +2311,13 @@
 "comments": 23,
 "shares": 2,
 "follower_dopo": null
+},
+"g7": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": null
 }
 },
 "18113754056580276": {
@@ -2284,6 +2368,13 @@
 "reach": 338,
 "comments": 20,
 "shares": 0,
+"follower_dopo": null
+},
+"g7": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
 "follower_dopo": null
 }
 },
@@ -2431,6 +2522,13 @@
 "comments": 17,
 "shares": 1,
 "follower_dopo": 9
+},
+"g6": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": 9
 }
 },
 "18113852452890527": {
@@ -2556,6 +2654,13 @@
 "comments": 41,
 "shares": 1,
 "follower_dopo": 9
+},
+"g5": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": 9
 }
 },
 "18117695918103770": {
@@ -2660,6 +2765,13 @@
 "comments": 12,
 "shares": 0,
 "follower_dopo": 11
+},
+"g4": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": 11
 }
 },
 "18182682418431660": {
@@ -2743,6 +2855,13 @@
 "comments": 18,
 "shares": 0,
 "follower_dopo": 3
+},
+"g3": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": 3
 }
 },
 "18110164211339805": {
@@ -2781,6 +2900,13 @@
 "reach": 792,
 "comments": 25,
 "shares": 2,
+"follower_dopo": 5
+},
+"g2": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
 "follower_dopo": 5
 }
 },
@@ -2823,6 +2949,13 @@
 "comments": 24,
 "shares": 2,
 "follower_dopo": null
+},
+"g1": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": 5
 }
 },
 "18037769600664590": {
@@ -2841,6 +2974,15 @@
 "comments": 11,
 "shares": 0,
 "follower_dopo": 2
+}
+},
+"17911190835664898": {
+"g0": {
+"views": null,
+"reach": null,
+"comments": null,
+"shares": null,
+"follower_dopo": null
 }
 }
 }

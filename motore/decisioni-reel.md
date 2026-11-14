@@ -426,3 +426,9 @@ Senza dato sui follower: incoronazione e amici (usciti prima che partisse il con
 
 **Decisione (un cambiamento, coi numeri).** Il testa a testa resta alle 13: è l'unico che porta gente nuova. Da oggi chiude con un motivo vero per seguire («Seguici: domani un'altra sfida», anche in didascalia). Da rivedere tra una settimana: se il sorpasso della Coppa del giovedì resta sotto 5 ogni 1.000, al suo posto torna la puntata.
 - 14/11 Officina (giorno «aspetto dei reel», dallo studio del 13/11): «La corsa delle città» (formato `corsa`, scena `corsa`): le barre delle città crescono giorno per giorno dal 26/10 e si sorpassano, con la data che scorre (i giorni con più arrivi durano di più), poi «Vince Napoli con 93. Roma è a 4» e «E la tua città? Falla salire». Dati veri della mappa; a rotazione città, razze di cane, regioni. Prima uscita lunedì 16/11 alle 21 (una tantum): si confronta con la mediana di 479 views.
+
+
+## 2026-11-14 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-06-2110-incoronazione: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+- 2026-11-07-1303-amici: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
