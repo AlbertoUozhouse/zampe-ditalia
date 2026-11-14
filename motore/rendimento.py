@@ -11,14 +11,27 @@ from pubblica import chiama  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 METRICHE = ["views", "reach", "likes", "comments", "shares", "saved", "total_interactions", "ig_reels_avg_watch_time", "follows", "profile_visits"]
 
+ERRORI = []  # i messaggi d'errore di Instagram (non contengono il token): si stampano alla fine
+
+class Limite(Exception):
+    """Instagram ha detto basta chiamate per ora: si smette subito, così non si peggiora."""
+
+def _chiama(mid, token, metriche):
+    try:
+        return chiama("GET", f"{mid}/insights", token, metric=metriche)["data"]
+    except SystemExit as e:  # chiama() esce con SystemExit sugli errori di Instagram
+        ERRORI.append(str(e))
+        if re.search(r"limit|too many|troppe", str(e), re.I): raise Limite(str(e))
+        raise
+
 def numeri(mid, token):
     out = {}
     try:  # prima tutte insieme; se Instagram ne rifiuta una, una alla volta
-        dati = chiama("GET", f"{mid}/insights", token, metric=",".join(METRICHE))["data"]
-    except SystemExit:  # chiama() esce con SystemExit sugli errori di Instagram
+        dati = _chiama(mid, token, ",".join(METRICHE))
+    except SystemExit:
         dati = []
         for m in METRICHE:
-            try: dati += chiama("GET", f"{mid}/insights", token, metric=m)["data"]
+            try: dati += _chiama(mid, token, m)
             except SystemExit: pass
     for d in dati:
         v = d.get("values", [{}])[0].get("value", d.get("total_value", {}).get("value"))
@@ -55,18 +68,32 @@ def fotografa(righe):
     ora = datetime.now(timezone.utc)
     for r in righe:
         d = int((ora - datetime.fromisoformat(r["ts"])).total_seconds() // 86400)
-        if d > 14: continue
-        st.setdefault(r["id"], {}).setdefault(f"g{d}", {k: r.get(k) for k in ("views", "reach", "comments", "shares", "follower_dopo")})
+        if d > 14 or r.get("views") is None or r.get("numeri_vecchi"): continue  # 14/11: mai una fotografia vuota o di numeri non riletti
+        g = st.setdefault(r["id"], {})
+        if g.get(f"g{d}", {}).get("views") is None: g[f"g{d}"] = {k: r.get(k) for k in ("views", "reach", "comments", "shares", "follower_dopo")}
     p.write_text(json.dumps(st, ensure_ascii=False, indent=0) + "\n")
 
 def main():
     token = os.environ.get("IG_TOKEN") or sys.exit("Manca IG_TOKEN.")
     reel = [x for x in json.loads((ROOT / "motore/pubblicati.json").read_text()) if x["tipo"] == "REELS"]
-    righe = []
+    # 14/11: il giro delle 14:30 ha avuto errore da Instagram su tutti i reel e ha scritto righe vuote sopra i numeri buoni.
+    # Ora un reel senza numeri nuovi tiene gli ultimi letti (numeri_vecchi), e se nessun reel ha numeri nuovi non si salva niente.
+    vecchi = {r["id"]: r for r in json.loads((ROOT / "motore/rendimento.json").read_text())} if (ROOT / "motore/rendimento.json").exists() else {}
+    righe, nuovi, fermo = [], 0, None
     for x in reel:
         m = re.search(r"(\d{4}-\d\d-\d\d)-(\d{4})-(\w+)\.mp4", x["media"])
         formato, quando = (m.group(3), f"{m.group(1)} {m.group(2)[:2]}:{m.group(2)[2:]}") if m else ("lancio", x["ts"][:16])
-        righe.append({"quando": quando, "formato": formato, "ts": x["ts"], "id": x["id"], "file": Path(x["media"]).stem, **numeri(x["id"], token)})
+        n = {}
+        if not fermo:
+            try: n = numeri(x["id"], token)
+            except Limite as e: fermo = str(e)
+        if n: nuovi += 1
+        elif not nuovi and len(righe) >= 2 and not fermo: fermo = "tre reel di fila senza numeri: errore di Instagram, non dei reel"
+        else: n = {**{k: v for k, v in vecchi.get(x["id"], {}).items() if k in METRICHE}, "numeri_vecchi": True} if vecchi.get(x["id"], {}).get("views") is not None else {}
+        righe.append({"quando": quando, "formato": formato, "ts": x["ts"], "id": x["id"], "file": Path(x["media"]).stem, **n})
+    print(f"numeri nuovi da Instagram: {nuovi} reel su {len(reel)}" + (f" (fermato: {fermo})" if fermo else ""))
+    for e in sorted(set(ERRORI))[:5]: print("  errore:", e, f"(×{ERRORI.count(e)})")
+    if not nuovi: sys.exit("Nessun numero nuovo da Instagram: rendimento.json resta com'era.")
     attribuisci(righe, reel)
     fotografa(righe)
     (ROOT / "motore/rendimento.json").write_text(json.dumps(righe, ensure_ascii=False, indent=1) + "\n")
