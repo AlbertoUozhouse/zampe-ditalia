@@ -10689,7 +10689,6 @@
 "18798213136033257"
 ],
 "risposte": [
-1794611345.2394693,
 1794612223.5201304,
 1794613153.7276947
 ],
@@ -15088,9 +15087,6 @@
 "francesco.pio.salerno___": 10
 },
 "inviti_giorno": {
-"2026-11-06": {
-"_.mari.stu._": 1
-},
 "2026-11-08": {
 "lary_013_4": 1,
 "michael_wolf_98": 1,
@@ -19434,10 +19430,7 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {
-"francesco.papagni": "2026-11-13",
-"leonardopellegrini5": "2026-11-13"
-},
+"missioni_fatte": {},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
