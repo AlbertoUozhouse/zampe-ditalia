@@ -6568,6 +6568,7 @@
 "18119317022114516",
 "18119318855278138",
 "18119320573960708",
+"18119324104814121",
 "18119324281950845",
 "18119324413784816",
 "18119328356012955",
@@ -8799,6 +8800,7 @@
 "18163807057496007",
 "18163961677498687",
 "18164073061494688",
+"18164225746498338",
 "18164543002499331",
 "18164685748498977",
 "18165069637493281",
@@ -10716,7 +10718,8 @@
 ],
 "risposte": [
 1794651387.3624468,
-1794653799.122859
+1794653799.122859,
+1794654559.5297437
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -13899,8 +13902,8 @@
 "laurettabianco": [
 "giusy_stivala"
 ],
-"filippodimolfetta__": [
-"cicc.iomodugno"
+"cicc.iomodugno": [
+"filippodimolfetta__"
 ]
 },
 "premiati": [
@@ -14080,7 +14083,8 @@
 "leonardopellegrini5>francesco45344",
 "francesco.papagni>>ema.pir",
 "francesco.papagni>ema.pir",
-"leonardopellegrini5>>francesco45344"
+"leonardopellegrini5>>francesco45344",
+"cicc.iomodugno>filippodimolfetta__"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14947,7 +14951,7 @@
 "giannikarol": 50,
 "dilettaaa_f": 30,
 "milomusesti": 40,
-"cicc.iomodugno": 35,
+"cicc.iomodugno": 54,
 "dosse_13": 55,
 "cri_sibo": 10,
 "just_matew_": 50,
@@ -15119,7 +15123,8 @@
 "ema.pir": 10,
 "francesco.papagni": 46,
 "francesco45344": 10,
-"francesco.pio.salerno___": 10
+"francesco.pio.salerno___": 10,
+"non_sochemmettere": 10
 },
 "inviti_giorno": {
 "2026-11-08": {
@@ -15147,6 +15152,9 @@
 "2026-11-13": {
 "leonardopellegrini5": 1,
 "francesco.papagni": 1
+},
+"2026-11-14": {
+"cicc.iomodugno": 1
 }
 },
 "seguono": {
@@ -16088,7 +16096,8 @@
 "a927eeaabd0f76bb",
 "b5de6c2900df5862",
 "d03f465567e9db6a",
-"e36e51c37cfb31fe"
+"e36e51c37cfb31fe",
+"d195d4a1bcfc4e45"
 ],
 "solleciti": {
 "chri.marini": "2026-10-27",
@@ -19475,7 +19484,9 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {},
+"missioni_fatte": {
+"cicc.iomodugno": "2026-11-14"
+},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
@@ -19509,7 +19520,7 @@
 "2026-11-11": 1836,
 "2026-11-12": 1854,
 "2026-11-13": 1871,
-"2026-11-14": 1885
+"2026-11-14": 1886
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -20233,6 +20244,10 @@
 [
 "2026-11-14T09:49+00:00",
 1885
+],
+[
+"2026-11-14T11:09+00:00",
+1886
 ]
 ],
 "coppa": {
