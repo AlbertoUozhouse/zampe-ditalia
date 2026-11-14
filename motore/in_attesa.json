@@ -1,1 +1,17 @@
-[]
+[
+ {
+  "ts": "2026-11-14T17:15:22+00:00",
+  "args": [
+   "--tipo",
+   "REELS",
+   "--media",
+   "media/auto/2026-11-14-1809-intruso.mp4",
+   "--didascalia",
+   "contenuti/auto/2026-11-14-1809-intruso.txt",
+   "--tag",
+   "",
+   "--copertina",
+   "media/auto/2026-11-14-1809-intruso.jpg"
+  ]
+ }
+]
