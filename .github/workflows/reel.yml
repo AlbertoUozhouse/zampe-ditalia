@@ -163,9 +163,20 @@ jobs:
         if: ${{ inputs.pubblica && steps.copione.outputs.salta != '1' && steps.verifica.outputs.salta != '1' }}
         run: |
           TAG=$(python3 -c "import json;print(','.join(json.load(open('/tmp/copione.json')).get('tag', [])))")
-          python3 -I motore/pubblica.py --tipo REELS --media "media/auto/${{ steps.carica.outputs.id }}.mp4" --didascalia "contenuti/auto/${{ steps.carica.outputs.id }}.txt" --tag "$TAG" \
-            $( [ -f "docs/media/auto/${{ steps.carica.outputs.id }}.jpg" ] && echo --copertina "media/auto/${{ steps.carica.outputs.id }}.jpg" ) \
-            ${{ inputs.prova && '--trial' || '' }}
+          ID="${{ steps.carica.outputs.id }}"
+          ARGS=(--tipo REELS --media "media/auto/$ID.mp4" --didascalia "contenuti/auto/$ID.txt" --tag "$TAG")
+          [ -f "docs/media/auto/$ID.jpg" ] && ARGS+=(--copertina "media/auto/$ID.jpg")
+          ${{ inputs.prova && 'ARGS+=(--trial)' || 'true' }}
+          if ! python3 -I motore/attesa.py controlla; then
+            # 14/11: token invalidato da Instagram. Il reel non si butta e non parte la riserva: resta in coda
+            # e lo pubblica la veglia appena il token torna valido (entro 3 ore, motore/attesa.py)
+            python3 -I motore/attesa.py aggiungi -- "${ARGS[@]}"
+            git add motore/in_attesa.json; git commit -q -m "Reel in attesa del token: $ID"
+            for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && git push -q && break; sleep 15; done
+            echo "::warning::Token di Instagram non valido: il reel $ID è in coda e parte appena Alberto rinnova IG_TOKEN"
+            exit 0
+          fi
+          python3 -I motore/pubblica.py "${ARGS[@]}"
       - name: Salva il registro
         if: ${{ inputs.pubblica && steps.copione.outputs.salta != '1' && steps.verifica.outputs.salta != '1' }}
         run: |

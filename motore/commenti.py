@@ -1323,6 +1323,10 @@ def main():
     token = os.environ.get("IG_TOKEN")
     if not token:
         sys.exit("Manca IG_TOKEN: va messo nei Secrets del repository.")
+    try:  # 14/11: i reel rimasti in coda quando il token non andava partono appena torna valido (motore/attesa.py)
+        import attesa; attesa.pubblica()
+    except Exception as e:
+        print(f"attesa: coda non provata ({e})")
     ig = Instagram(token)
     me = ig.io()
     global FOLLOWER
