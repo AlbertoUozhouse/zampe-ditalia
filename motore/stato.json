@@ -6354,6 +6354,7 @@
 "18117409103327480",
 "18117411572010881",
 "18117414023045606",
+"18117436163163166",
 "18117443969021202",
 "18117452951324180",
 "18117462842121459",
@@ -10795,7 +10796,8 @@
 ],
 "risposte": [
 1794778159.6304576,
-1794778969.2624655
+1794778969.2624655,
+1794780104.5768228
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12998,7 +13000,8 @@
 "elena.alina.589": "2026-11-15",
 "celia.isaja": "2026-11-15",
 "danio_l13": "2026-11-15",
-"emmanuel.premto4": "2026-11-15"
+"emmanuel.premto4": "2026-11-15",
+"alice.graziano7": "2026-11-15"
 },
 "media_letti": {},
 "pezzi": {
@@ -15226,7 +15229,8 @@
 "celia.isaja": 10,
 "yungestquaglie": 20,
 "emmanuel.premto4": 10,
-"danio_l13": 10
+"danio_l13": 10,
+"alice.graziano7": 10
 },
 "inviti_giorno": {
 "2026-11-08": {
@@ -16119,7 +16123,8 @@
 "elena.alina.589": "premiato",
 "celia.isaja": "premiato",
 "emmanuel.premto4": "premiato",
-"danio_l13": "premiato"
+"danio_l13": "premiato",
+"alice.graziano7": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -19607,11 +19612,11 @@
 "fde06cec3937ee6b",
 "5526b71b946b6d93",
 "e2ec45fc3faa650e",
-"ccf5fec000d8fd4d"
+"ccf5fec000d8fd4d",
+"75ba2de02b300435"
 ],
 "privati_ora": [
-1794773645.4762523,
-1794775339.702271
+1794780104.5768466
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -23529,6 +23534,10 @@
 {
 "k": "Belluno|BL",
 "t": "2026-11-15T21:42+00:00"
+},
+{
+"k": "Enna|EN",
+"t": "2026-11-15T22:01+00:00"
 }
 ],
 "staffette_log": [
