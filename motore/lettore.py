@@ -19,6 +19,7 @@ Regole:
 - "tipo": "stella" se l'animale non c'è più (il commento inizia con "Stella:", oppure dice "in cielo", "non c'è più"; "Bergamo, stella, cane" invece è un cane di nome Stella), "sogno" se è un animale che la persona sogna di avere ("Sogno:"), altrimenti "animale".
 - Più animali nello stesso commento sono voci separate. Massimo 5 animali per persona.
 - "dal_commento": l'id del commento in cui compare quell'animale (l'ultimo che lo descrive).
+- "squadra": la squadra di calcio per cui tifa (lui o il suo padrone), SOLO se è detta in modo esplicito: «tifa Juve», «forza Napoli», «interista», «⚽ Roma», «tifosi del Bari». Scrivi il nome della squadra come nel commento. Mai dedurla dalla città: «Napoli, Luna, cane» non dice nessuna squadra. Se vale per tutti i suoi animali («tifiamo Inter»), mettila su ognuno. Altrimenti "".
 - "voti": i commenti che sono solo un voto nella sfida, cioè solo emoji o parole di cane, di gatto o di un altro animale (🐰🐢🦎🐹🦜…), senza un nome: {"id": ..., "squadra": "cani"|"gatti"|"altri"}.
 - "segue": true se la persona dice di seguire la pagina ("seguo", "ti seguo", "follow fatto").
 - "rimuovi": true se chiede di togliere i suoi animali.
@@ -26,7 +27,7 @@ Regole:
 - I tag ad altri account (@nome) non sono animali e non sono nomi.
 
 Rispondi SOLO con questo JSON, senza testo prima o dopo:
-{"animali":[{"nome":"","specie":"","razza":"","comune":"","comune_scritto":"","provincia":"","tipo":"animale","dal_commento":""}],
+{"animali":[{"nome":"","specie":"","razza":"","comune":"","comune_scritto":"","provincia":"","tipo":"animale","dal_commento":"","squadra":""}],
  "senza_comune":[{"nome":"","specie":"","dal_commento":""}],
  "senza_nome":[{"specie":"","comune":"","comune_scritto":"","dal_commento":""}],
  "estero":false,"voti":[],"segue":false,"rimuovi":false,"domanda":null}"""
@@ -163,7 +164,10 @@ def leggi(utente, commenti, comuni, norm, nome_proprio, razza, riservato=False):
         testo_razza = (x.get("razza") or "").strip()
         rz = razza(testo_razza, t) if t != "altro" else None
         k = x.get("tipo") if x.get("tipo") in ("stella", "sogno") else "animale"
-        animali.append({"k": k, "t": t, "specie": specie, "n": nome_proprio(nome), "luogo": L,
+        sq = None
+        if x.get("squadra") and k == "animale":  # 15/11, il tifo: la squadra deve essere scritta davvero, e «Napoli» da solo è la città (motore/squadre.py)
+            import squadre; sq = squadre.trova(x["squadra"], " ".join(c.get("text", "") for c in commenti))
+        animali.append({"k": k, "t": t, "specie": specie, "n": nome_proprio(nome), "luogo": L, **({"sq": sq} if sq else {}),
                         "razza": rz or ("europeo" if t == "gatto" else "meticcio" if t == "cane" else None),
                         "razza_testo": testo_razza[:40] or specie, "id_commento": x.get("dal_commento")})
     for x in g.get("senza_comune", []) or []:

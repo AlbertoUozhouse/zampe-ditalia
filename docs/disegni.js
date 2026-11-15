@@ -313,7 +313,16 @@ ${st ? `<path d="M30 15 l.6 2.6 M32 14.6 v2.8 M34 15 l-.6 2.6" stroke="${st}" st
     if (lista.includes("fuochi")) svg = svg.replace(/<\/svg>\s*$/, FUOCHI(w, seed) + "</svg>");
     return svg;
   }
+  // 15/11, il tifo: la sciarpa a righe coi due colori della squadra (motore/squadre.py), al collo come quella di Natale
+  const TIFO = (x, y, k, c1, c2) => `<g transform="translate(${x} ${y + 13.4 * k}) scale(${k * 1.05})"><path d="M-6.8 -1.2 Q0 3 6.8 -1.2" stroke="${c1}" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M-6.8 -1.2 Q0 3 6.8 -1.2" stroke="${c2}" stroke-width="2.6" fill="none" stroke-dasharray="1.6 1.6"/><g transform="rotate(-10 3.4 .6)"><rect x="2" y=".4" width="2.8" height="6.6" rx=".5" fill="${c1}" stroke="rgba(0,0,0,.35)" stroke-width=".3"/>
+<rect x="2" y="2.2" width="2.8" height="1.4" fill="${c2}"/><rect x="2" y="4.8" width="2.8" height="1.4" fill="${c2}"/><path d="M2.3 7 v1 M3.4 7 v1 M4.5 7 v1" stroke="${c1}" stroke-width=".5"/></g></g>`;
+  function tifo(svg, colori, tipo) {
+    if (!colori || !colori.c || tipo === "altro" || tipo === "sogno") return svg;
+    const [x, y, k] = TESTA[tipo] || TESTA.cane, sc = `<g class="tifo">${TIFO(x, y, k, colori.c[0], colori.c[1])}</g>`;
+    return svg.includes("<!--testa-->") ? svg.replace("<!--testa-->", sc + "<!--testa-->") : svg.replace(/<\/svg>\s*$/, sc + "</svg>");
+  }
   const vesti = (svg, d, tipo, seed) => d === "halloween" ? costume(svg, tipo, seed) : d === "lucine" ? lucine(svg, tipo === "sogno" ? "cane" : tipo, seed) : svg;
 
-  window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, altro, emoji, hash, carica, cerca, costume, lucine, vesti, accessori };
+  window.Disegni = { CANI, GATTI, razza: razzaNuova, cane, gatto, sogno, stella, altro, emoji, hash, carica, cerca, costume, lucine, vesti, accessori, tifo };
 })();

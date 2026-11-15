@@ -74,12 +74,13 @@ fetch("data/regioni.json").then(r => r.json()).then(REG => {
 let PRENOTATE = {}; // posti prenotati dalle attività, per comune: {"Treviso|TV": {"veterinario": 1}}
 let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 let DERBY = null; // il Derby della settimana: {ora: {a, b, na, nb, fine, partito}, albo: [...]} (motore/derby.py)
+let SQUADRE = {}; // il tifo (15/11): i colori delle squadre dei tifosi a quattro zampe, da animali.json (motore/squadre.py)
 let NEGOZIO = {}, SFILATA = [], BELLO = null, BOOST = null; // la Sfilata degli accessori e «Il più bello d'Italia» della settimana (motore/commenti.py)
 let _x = 0; // i link di pagamento degli accessori (motore/config.json → animali.json): {collare: "https://buy.stripe.com/…"}
 let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: il prossimo, fatti: [...]}; 1.000 = neve, 2.000 = fuochi d'artificio
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; return j.animali || []; } } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; SQUADRE = j.squadre || {}; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -137,6 +138,7 @@ function paeseIcon(v) {
 const posto = (d, z, s) => d.villa ? map.unproject(map.project(d.villa.ll, z).add([d.off[0] * s, d.off[1] * s]), z) : d.ll;
 function petSvg(d) {
   let svg = d.k === "stella" ? D.stella() : d.k === "sogno" ? D.sogno(d.rk, d.seed) : d.t === "altro" ? D.altro(d.specie, d.seed) : d.t === "gatto" ? D.gatto(d.rk, d.seed) : D.cane(d.rk, d.seed);
+  if (d.sq && d.k === "animale" && !(d.acc || []).some(a => a === "sciarpa" || a === "collare")) svg = D.tifo(svg, SQUADRE[d.sq], d.t); // 15/11: la sciarpa della sua squadra
   if (d.acc && d.k !== "stella") svg = D.accessori(svg, d.acc, d.k === "sogno" ? "sogno" : d.t, d.seed); // prima del costume: il costume si prende il segnaposto della testa
   if (d.vestito && d.k !== "stella") svg = D.vesti(svg, d.vestito, d.k === "sogno" ? "sogno" : d.t, d.seed);
   return svg;
@@ -195,7 +197,7 @@ function popup(d) {
   const ruolo = d.ruolo || (d.fondatore ? "Fondatore di " + d.c : "");
   const tipo = d.k === "stella" ? "Una stella nel cielo" : d.k === "sogno" ? "Il sogno di @" + esc(d.u) : d.t === "altro" ? esc((d.razza_testo || d.specie || "Amico speciale").replace(/^./, c => c.toUpperCase())) : d.t === "gatto" ? (D.GATTI[d.rk]?.n || "Gatto") : (d.rk === "meticcio" && d.razza_testo && !/meticc|incrocio|mix/i.test(d.razza_testo) ? esc(d.razza_testo.replace(/^./, c => c.toUpperCase())) : D.CANI[d.rk]?.n || "Cane");
   return `<div class="pop"><h3>${d.k === "stella" ? "✦" : icona(d)} ${esc(d.n)}</h3><div class="k">${tipo}</div>
-    <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>
+    <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>${d.sq && SQUADRE[d.sq] ? `<div class="k">⚽ Tifa ${esc(SQUADRE[d.sq].n)}</div>` : ""}
     ${d.k === "stella" ? "" : `<div>${d.pt} ${d.pt === 1 ? "punto" : "punti"}${d.rank ? ` · ${d.rank}° in Italia` : ""}</div>${barra(d.pt)}`}
     ${d.pres ? `<span class="role">🇮🇹 ${esc(d.pres)}</span>` : ""}
     ${d.capo ? `<span class="role">🐺 ${esc(d.capo)}</span>` : d.testa ? `<span class="role">🐺 In testa a ${esc(d.c)}: domenica alle 21 il Capobranco</span>` : ""}
