@@ -18,8 +18,8 @@ CARTELLA = ROOT / "reel/assets/zampa"
 MODELLO = "gpt-image-1"
 STILE = ("Photorealistic, high-quality smartphone photo, natural soft light, shallow depth of field, warm colors, vertical 2:3 framing "
          "with the dog in the middle and empty space at the top and bottom for captions. No text, no letters, no watermark, no logos.")
-ZAMPA = ("Zampa: an adorable, slightly scruffy medium-size mixed-breed shelter dog, about 4 years old, tan and light-brown fur with a white chest "
-         "and white paws, one ear standing up and one floppy ear, big expressive brown eyes, a worn red collar. Always the same dog.")
+ZAMPA = ("Zampa: a beautiful golden-retriever-like dog with long golden fur, floppy ears, warm brown eyes, a happy face and a worn red leather collar "
+         "with a brass buckle, exactly like the reference photo. Always the same dog.")  # 15/11: il ritratto l'ha scelto Alberto con ChatGPT (reel/assets/zampa/riferimento.png)
 
 # per ogni puntata (motore/copione.py SERIE_PUNTATE): la foto di ogni scena, e l'ultima per la scelta di domani
 SCENE = {
