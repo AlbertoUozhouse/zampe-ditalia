@@ -325,6 +325,8 @@ FRASI = {
     "manca_comune": ["Quasi! In quale comune vive? Scrivi per esempio «Treviso, {n}, cane» 🐾", "Non ho trovato il comune 🙈 Riscrivilo con città, nome e cane o gatto!"],
     "manca_provincia": ["Ci sono più comuni con quel nome: aggiungi la provincia, per esempio «Calliano TN» 🗺️"],
     "manca_nome": ["Come si chiama? Riscrivi «{c}, nome, cane» e si accende la sua luce ✨"],
+    "citta_dato": ["📍 {dato} E il tuo come si chiama? Scrivi «{c}, nome, cane» e si accende la sua luce ✨",
+                   "📍 {dato} Manca il tuo! Scrivi «{c}, nome e cane o gatto» e lo mettiamo sulla mappa ✨"],
     "manca_razza": ["{n} è un cane o un gatto? Riscrivi «{c}, {n}, cane» oppure «{c}, {n}, gatto» e si accende 🐶🐱"],
     "manca_formato": ["Scrivi per esempio «Sogno: Padova, Bruno, bassotto» oppure «Stella: Treviso, Max» ✨"],
     "multi": ["Si accendono {quanti} luci a {c}: {nomi}! ✨ Benvenuti sulla mappa 🐾", "{c} si illumina: {nomi} sono sulla mappa! 🔥"],
@@ -989,12 +991,39 @@ def scegli_frase(gioco, u, letto, nuovi_a, aggiornati, nuovi_c):
             return "nome_quanti", {"n": x["n"], "k": len(uguali), "citta": len({a["c"] for a in uguali})}
     for x in letto["senza_nome"]:
         if x.get("id") in ids:
-            return ("manca_nome", {"c": x["luogo"]["c"]}) if x.get("luogo") else ("base", {})
+            if not x.get("luogo"): return "base", {}
+            dato = riga_citta(gioco, x["luogo"])  # 15/11: «scrivi la tua città, ti diciamo…»: una risposta vera anche a chi scrive solo la città
+            return ("citta_dato", {"c": x["luogo"]["c"], "dato": dato}) if dato else ("manca_nome", {"c": x["luogo"]["c"]})
     if letto["estero"] and not gioco.ha_luce(u):
         return "estero", {}
     if letto["domanda"] and any("?" in c.get("text", "") for c in nuovi_c):
         return "altri", {}
     return None, {}
+
+def riga_citta(gioco, L):
+    """15/11: il dato vero della città di chi commenta, anche se non ha (ancora) scritto il suo animale:
+    quanti animali ci sono, il nome più diffuso, la razza più amata. Se nel comune ce ne sono pochi, la provincia."""
+    an = [a for a in gioco.animali if a.get("k") == "animale"]
+    qui = [a for a in an if a["c"] == L["c"] and a.get("p") == L.get("p")]
+    dove = L["c"]
+    if len(qui) < 4:
+        qui = [a for a in an if a.get("p") == L.get("p")]; dove = f"provincia di {L['c']}" if L.get("p") else dove
+        if len(qui) < 4: return None
+    conta = {}
+    for a in qui:
+        k = norm(a["n"]); conta.setdefault(k, [a["n"], 0])[1] += 1
+    nome, k = max(conta.values(), key=lambda x: (x[1], x[0]))
+    cani = [a for a in qui if a.get("t") == "cane"]; gatti = [a for a in qui if a.get("t") == "gatto"]
+    rz = {}
+    for a in cani:
+        if a.get("razza") and a["razza"] != "meticcio": rz[a["razza"]] = rz.get(a["razza"], 0) + 1
+    nomi_r = {r[0]: r[1] for r in json.loads((ROOT / "docs/data/razze.json").read_text()).get("cani", [])}
+    razza_top = nomi_r.get(max(rz.items(), key=lambda x: x[1])[0]) if rz else None
+    a_ = "Ad" if dove[:1].lower() in "aeiou" and not dove.startswith("provincia") else "A" if not dove.startswith("provincia") else "In"
+    parti = [f"{len(x)} {u if len(x) == 1 else v}" for x, u, v in ((cani, "cane", "cani"), (gatti, "gatto", "gatti")) if x]
+    testo = f"{a_} {dove} ci sono già {len(qui)} animali sulla mappa: {' e '.join(parti)}. "
+    testo += f"Il nome più diffuso è {nome} ({k} volte)" if k > 1 else "Lì nessun nome si ripete"
+    return testo + (f" e la razza più amata è il {razza_top}." if razza_top else ".")
 
 def stesso_nome(gioco, nome, tranne=None):
     """Gli animali sulla mappa che si chiamano così (stesso nome senza accenti e maiuscole)."""
