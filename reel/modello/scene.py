@@ -686,7 +686,7 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
     sc = ""
     if scelta:
         sc = "".join(f'<div class="op op{k}" id="{cid}-op{k}"><span class="em">{ESC(v[0])}</span><b>{ESC(v[1])}</b><i>scrivi {ESC(v[2])}</i></div>' for k, v in (("a", scelta["a"]), ("b", scelta["b"])))
-        sc = f'<div class="scelta"><div class="dom">Domani cosa fa Zampa?</div>{sc}<div class="o">oppure</div></div>'
+        sc = f'<div class="scelta"><div class="dom">Domani cosa fa Paolino?</div>{sc}<div class="o">oppure</div></div>'
     css = f"""
     #root .muro {{ position: absolute; inset: 0; background: {muro}; }}
     #root .pav {{ position: absolute; left: 0; right: 0; bottom: 0; height: 560px; background: {pavimento}; }}

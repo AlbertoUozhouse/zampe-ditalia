@@ -1172,8 +1172,8 @@ def serie_commento(stato, u, testi, ultima):
     if voto and u.lower() not in gia:
         gia.append(u.lower()); v = S.setdefault("voti", {}).setdefault(str(g), {}); v[voto] = v.get(voto, 0) + 1
         a, b = list(parole) + [None] * (2 - len(parole))
-        return f"🗳️ Voto per {parole[voto]} contato! Per ora {parole.get(a, '')} {v.get(a, 0)} – {v.get(b, 0)} {parole.get(b, '')}. Domani alle 21 Zampa fa quello che vince. 🏠 FAMIGLIA {fam}%: ogni commento lo avvicina a casa!"
-    return f"🏠 Grazie! Ogni commento avvicina Zampa a casa: FAMIGLIA {fam}%. Domani cosa fa? Scrivi {' o '.join(parole.values())} 👇" if parole else None
+        return f"🗳️ Voto per {parole[voto]} contato! Per ora {parole.get(a, '')} {v.get(a, 0)} – {v.get(b, 0)} {parole.get(b, '')}. Domani alle 21 Paolino fa quello che vince. 🏠 FAMIGLIA {fam}%: ogni commento lo avvicina a casa!"
+    return f"🏠 Grazie! Ogni commento avvicina Paolino a casa: FAMIGLIA {fam}%. Domani cosa fa? Scrivi {' o '.join(parole.values())} 👇" if parole else None
 
 # ---------- adottati e segni (15/11, Alberto: «inventa cose nuove, cose come la tifoseria») ----------
 # Il segno si ricava dal mese (il segno che copre la maggior parte del mese): niente date precise, niente dati personali.
