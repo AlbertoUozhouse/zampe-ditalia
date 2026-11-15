@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-08-1807-questa_luce",
-  "formato": "questa_luce",
-  "modalita": "operativa",
-  "inizio": "2026-11-08T17:07:08+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-08T17:10:57+00:00",
-  "scambi": 118
- },
- {
   "id": "2026-11-08-2110-coppa_apertura",
   "formato": "coppa_apertura",
   "modalita": "operativa",
@@ -537,6 +528,15 @@
   "inizio": "2026-11-15T23:11:34+00:00",
   "stato": "senza direttore",
   "fine": "2026-11-15T23:16:03+00:00",
+  "scambi": 126
+ },
+ {
+  "id": "2026-11-16-0021-serie",
+  "formato": "serie",
+  "modalita": "operativa",
+  "inizio": "2026-11-15T23:21:24+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-15T23:25:47+00:00",
   "scambi": 126
  }
 ]
