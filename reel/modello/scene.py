@@ -670,7 +670,7 @@ SFONDI_30 = {  # le stanze della serie (colori piatti, come un cartone)
     "toelettatura": ("#E9B7C9", "#B98A9C", False), "parco": ("#8CC9E8", "#4F9A4A", False), "strada": ("#9BB4D0", "#5D5D66", False),
     "casa": ("#F2C98A", "#A86B3C", False), "notte": ("#18223F", "#2B2433", False)}
 
-def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo="canile", sporco=True, oggetti=(), scelta=None, famiglia_prima=None, foto=""):
+def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo="canile", sporco=True, oggetti=(), scelta=None, famiglia_prima=None, foto="", etichette=(), sfx=None):
     """La serie «Zampa ha 30 giorni per trovare casa» (15/11, Alberto: «facciamo il cane»): Zampa grande, i contatori in alto
     (GIORNI che mancano, FAMIGLIA in percentuale), il nastro giallo con la posta in gioco, la frase grande della puntata,
     e alla fine la scelta per domani (scelta = {"a": ["🛁", "IL BAGNO", "BAGNO"], "b": [...]}): decide chi commenta."""
@@ -704,12 +704,21 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
     #root .foto {{ position: absolute; left: -100px; top: 170px; width: 1280px; height: 1920px; object-fit: cover; }}
     #root .velo {{ position: absolute; left: 0; right: 0; top: 0; height: 560px; background: linear-gradient(180deg, rgba(0,0,0,.6) 0, rgba(0,0,0,.35) 60%, rgba(0,0,0,0) 100%); }}
     #root .velo ~ .hud {{ top: 196px; left: 30px; gap: 10px; }}
+    #root .barra {{ position: absolute; left: 30px; top: 296px; width: 314px; height: 14px; border-radius: 8px; background: rgba(255,255,255,.25); border: 2px solid #F3E6C8; }}
+    #root .barra i {{ position: absolute; left: 0; top: 0; bottom: 0; border-radius: 8px; background: linear-gradient(90deg, #6FE38F, #FFD23F); }}
+    #root .et {{ position: absolute; max-width: 330px; }}
+    #root .et.s {{ left: 22px; }} #root .et.d {{ right: 22px; text-align: right; }}
+    #root .et span {{ display: inline-block; font: 900 34px/1.15 var(--font-body); color: #1A1206; background: #FFF8EA; border: 4px solid #1A1206; border-radius: 16px; padding: 8px 14px; box-shadow: 0 7px 0 rgba(0,0,0,.35); }}
+    #root .et.s span {{ transform: rotate(-4deg); border-right-width: 10px; border-right-color: #FFD23F; }}
+    #root .et.d span {{ transform: rotate(4deg); border-left-width: 10px; border-left-color: #FFD23F; }}
+    #root .sfx {{ position: absolute; }} #root .sfx.s {{ left: 14px; }} #root .sfx.d {{ right: 14px; }}
+    #root .sfx span {{ display: inline-block; transform: rotate(-9deg); font: 800 72px/1 "Bricolage Grotesque", sans-serif; color: #FFD23F; background: #E2394B; border: 6px solid #1A1206; border-radius: 22px; padding: 6px 20px; box-shadow: 0 10px 0 rgba(0,0,0,.4); }}
     #root .velo ~ .hud div {{ min-width: 150px; padding: 6px 14px; border-width: 3px; border-radius: 14px; }}
     #root .velo ~ .hud small {{ font-size: 20px; }} #root .velo ~ .hud b {{ font-size: 54px; }}
     #root .velo ~ .nastro {{ top: 214px; left: 360px; right: 26px; text-align: right; }}
     #root .velo ~ .nastro span {{ font-size: 30px; padding: 8px 14px; border-width: 4px; }}
-    #root .velo ~ .frase {{ top: 318px; left: 24px; right: 24px; text-shadow: 0 5px 0 #0A0A0A, 4px 0 0 #0A0A0A, -4px 0 0 #0A0A0A, 0 -4px 0 #0A0A0A, 0 0 24px rgba(0,0,0,.8); }}
-    #root .velo ~ .scelta {{ top: 300px; height: 200px; left: 24px; right: 24px; }}
+    #root .velo ~ .frase {{ top: 336px; left: 24px; right: 24px; text-shadow: 0 5px 0 #0A0A0A, 4px 0 0 #0A0A0A, -4px 0 0 #0A0A0A, 0 -4px 0 #0A0A0A, 0 0 24px rgba(0,0,0,.8); }}
+    #root .velo ~ .scelta {{ top: 326px; height: 200px; left: 24px; right: 24px; }}
     #root .velo ~ .scelta .dom {{ top: 0; font-size: 56px; }}
     #root .velo ~ .scelta .op {{ top: 84px; width: 470px; height: 112px; flex-direction: row; gap: 12px; border-width: 5px; border-radius: 22px; }}
     #root .velo ~ .scelta .op .em {{ font-size: 60px; }} #root .velo ~ .scelta .op b {{ font-size: 40px; }} #root .velo ~ .scelta .op i {{ display: none; }}
@@ -734,7 +743,10 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
     intero = svg.endswith(".png")  # Zampa intero in 3D (reel/zampa3d.js): sta in piedi sul pavimento, la frase sotto i piedi
     fondo = (f'<img class="sfoca" src="assets/img/{foto}" alt=""><img class="foto" id="{cid}-z" src="assets/img/{foto}" alt=""><div class="velo"></div>' if foto else
              f'<div class="muro"></div><div class="pav"{" style=\'height:760px\'" if intero else ""}></div>{sb}<img class="zampa{" intero" if intero else ""}" id="{cid}-z" src="assets/svg/{svg}" alt="">')
-    corpo = (f'{fondo}{st}{ogg}'
+    et = "".join(f'<div class="et {x.get("lato", "s")}" id="{cid}-e{i}" style="top:{x.get("y", 800)}px"><span>{ESC(x.get("e", ""))} {ESC(x["t"])}</span></div>' for i, x in enumerate(etichette))
+    if sfx: et += f'<div class="sfx {sfx.get("lato", "d")}" id="{cid}-x" style="top:{sfx.get("y", 760)}px"><span>{ESC(sfx["t"])}</span></div>'
+    barra = f'<div class="barra"><i id="{cid}-bf" style="width:{max(2, fp)}%"></i></div>' if foto else ""
+    corpo = (f'{fondo}{st}{ogg}{et}{barra}'
              f'<div class="hud"><div><small>GIORNI</small><b id="{cid}-g">{giorni}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>'
              + (f'<div class="nastro"><span id="{cid}-n">{ESC(banner)}</span></div>' if banner else "")
              + (f'<div class="frase" id="{cid}-t">{ESC(testo)}</div>' if testo and not scelta else "") + sc)
@@ -748,12 +760,21 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
             js.append(f'    tl.to("#{cid}-m{k + 1}", {{ keyframes: [{{ x: {dx}, y: {dy}, duration: 0.5 }}, {{ x: {-dx // 2}, y: {-dy}, duration: 0.5 }}, {{ x: 0, y: 0, duration: 0.5 }}], repeat: {max(1, int(dur / 1.5))} }}, {0.1 + k * 0.2:.2f});')
     for i in range(len(oggetti)):
         js.append(f'    tl.fromTo("#{cid}-o{i}", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.6)" }}, {0.6 + i * 0.3:.2f});')
+    for i, x in enumerate(etichette):
+        dx = -260 if x.get("lato", "s") == "s" else 260
+        js.append(f'    tl.fromTo("#{cid}-e{i}", {{ x: {dx}, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }}, {0.5 + i * 0.6:.2f});')
+        js.append(f'    tl.to("#{cid}-e{i}", {{ keyframes: [{{ scale: 1.06, duration: 0.3 }}, {{ scale: 1, duration: 0.3 }}], repeat: {max(1, int(dur / 1.4))} }}, {1.0 + i * 0.6:.2f});')
+    if sfx:
+        t0 = sfx.get("t0", 0.4)
+        js.append(f'    tl.fromTo("#{cid}-x", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(3)" }}, {t0:.2f});')
+        js.append(f'    tl.to("#{cid}-x", {{ keyframes: [{{ x: -10, duration: 0.05 }}, {{ x: 10, duration: 0.05 }}, {{ x: -6, duration: 0.05 }}, {{ x: 0, duration: 0.05 }}], repeat: 3 }}, {t0 + 0.3:.2f});')
     if scelta:
         js.append(f'    tl.fromTo("#{cid}-opa", {{ x: -300, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.3);')
         js.append(f'    tl.fromTo("#{cid}-opb", {{ x: 300, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.5);')
         js.append(f'    tl.to(["#{cid}-opa", "#{cid}-opb"], {{ keyframes: [{{ scale: 1.06, duration: 0.3 }}, {{ scale: 1, duration: 0.3 }}], repeat: {max(1, int(dur / 1.2))}, stagger: 0.3 }}, 1.0);')
     if famiglia_prima is not None and famiglia_prima != famiglia:
         js.append(f'    tl.set("#{cid}-f", {{ textContent: "{famiglia}%" }}, {max(0.8, dur * 0.5):.2f}); tl.to("#{cid}-f", {{ keyframes: [{{ scale: 1.4, duration: 0.15 }}, {{ scale: 1, duration: 0.2 }}] }}, {max(0.8, dur * 0.5):.2f});')
+        if foto: js.append(f'    tl.to("#{cid}-bf", {{ width: "{max(2, famiglia)}%", duration: 0.6, ease: "power2.out" }}, {max(0.8, dur * 0.5):.2f});')
     return _pagina(cid, f"Zampa ha 30 giorni: {testo or banner}", css, corpo, "\n".join(js))
 
 TIPI = {"zampa30": zampa30, "avvento": avvento, "tappa": tappa, "tifosi": tifosi, "padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,

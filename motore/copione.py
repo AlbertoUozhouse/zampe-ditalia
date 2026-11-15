@@ -1743,6 +1743,26 @@ SERIE_PUNTATE = {  # titolo, sfondo, muso, sporco dopo, frasi (voce, testo grand
         ("e si è nascosto sotto il furgone. Era timido. Torneranno, forse.", "NASCOSTO SOTTO IL FURGONE", [("🚐", 520, 1060, 140), ("❓", 820, 700, 90)])]),
 }
 SERIE_INIZIO = date(2026, 11, 16)
+# 15/11, Alberto: «più grafiche, più scritte dentro il video, sembra troppo piatto». Ai lati di Paolino (mai sopra): etichette con la freccia
+# verso di lui, e la scritta da fumetto del momento comico. Per scena: (etichette, scritta da fumetto o None)
+E = lambda t, e, lato="d", y=820: {"t": t, "e": e, "lato": lato, "y": y}
+X = lambda t, lato="d", y=700, t0=0.4: {"t": t, "lato": lato, "y": y, "t0": t0}
+SERIE_GRAFICHE = {
+    "inizio": [([E("PULCI: 37", "🪳", "s", 760), E("ALITO: 10/10", "☠️", "d", 1010)], None),
+               ([E("FOTO PER L'ADOZIONE", "📸", "d", 760), E("POSA DA STAR", "⭐", "d", 1000)], None),
+               ([E("MACCHINA FOTOGRAFICA: 0", "📷", "s", 1080), E("PAOLINO: 1", "🐶", "d", 1180)], X("CRUNCH!", "d", 560, 0.2)),
+               ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "bagno": [([E("ULTIMO BAGNO: MAI", "🛁", "s", 760), E("VOGLIA: 0%", "😾", "d", 1000)], None),
+              ([E("VOLONTARI BAGNATI: 3", "💦", "s", 800), E("OMBRELLI: 2", "☂️", "d", 1040)], X("SPLASH!", "d", 560)),
+              ([E("PROFUMO: LAVANDA", "🌸", "s", 800), E("GLOW-UP", "✨", "d", 1040)], None),
+              ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "veterinario": [([E("CAMICE BIANCO", "🥼", "s", 760), E("PAURA: 100%", "😱", "d", 1000)], X("FUGA!", "d", 560)),
+                    ([E("NASCONDIGLIO: ARMADIO", "🗄️", "s", 820), E("TROVATO DOPO: 40 MIN", "⏱️", "d", 1060)], None),
+                    ([E("DIAGNOSI: SANO", "🩺", "s", 820), E("BILANCIA: BAGNATA", "💦", "d", 1060)], X("OPS!", "d", 560)),
+                    ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+}
+SERIE_GRAFICHE_SOLITE = [([E("GIORNO DIFFICILE", "😅", "s", 820)], None), ([E("COLPO DI SCENA", "🎬", "d", 900)], None), ([], X("NOOO!", "d", 560)),
+                         ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)]
 
 def serie(D, rng, st):
     """Una puntata al giorno. Quale puntata: il giorno 1 è l'inizio; poi vince l'opzione più votata sotto la puntata di ieri."""
@@ -1774,13 +1794,16 @@ def serie(D, rng, st):
         sc = {"tipo": "zampa30", "giorni": giorni, "famiglia": famiglia, "testo": testo, "sfondo": sfondo, "sporco": sporco_ora if ep != "bagno" or i == 0 else False,
               "muso": muso if i == len(scene) - 1 else ("triste" if ep == "inizio" else None), "oggetti": [list(o) for o in ogg]}
         if (ROOT / f"reel/assets/zampa/{ep}-{i}.png").exists(): sc["foto"] = f"{ep}-{i}.png"  # 15/11 sera: Paolino vero (motore/zampa.py)
+        et_, sfx_ = SERIE_GRAFICHE.get(ep, SERIE_GRAFICHE_SOLITE)[min(i, 3)]
+        sc["etichette"] = et_; sc["sfx"] = sfx_
         if i == 0: sc["banner"] = f"GIORNO {n} · {titolo}" if n > 1 else "30 GIORNI PER TROVARE CASA"
         if i == 1 and famiglia_ieri != famiglia: sc["famiglia_prima"] = famiglia_ieri
         frasi.append((voce, sc))
     a, b = (SERIE_OPZIONI[k] for k in opzioni)
     frasi.append((f"Domani: {a[1].lower()} o {b[1].lower()}? Decidi tu nei commenti. Ogni commento lo avvicina a casa.",
                   {"tipo": "zampa30", "giorni": giorni, "famiglia": famiglia, "sfondo": sfondo, "sporco": sporco_ora, "muso": "occhiolino",
-                   "scelta": {"a": list(a), "b": list(b)}, **({"foto": f"{ep}-3.png"} if (ROOT / f"reel/assets/zampa/{ep}-3.png").exists() else {})}))
+                   "scelta": {"a": list(a), "b": list(b)}, "etichette": SERIE_GRAFICHE.get(ep, SERIE_GRAFICHE_SOLITE)[3][0],
+                   **({"foto": f"{ep}-3.png"} if (ROOT / f"reel/assets/zampa/{ep}-3.png").exists() else {})}))
     st["serie_storia"] = storia + [{"ep": ep, "giorno": n, "opzioni": opzioni, "famiglia": famiglia, "data": ORA.date().isoformat()}]
     st["serie_info"] = {"giorno": n, "ep": ep, "opzioni": opzioni, "parole": {k: SERIE_OPZIONI[k][2] for k in opzioni}}
     did = (f"Giorno {n} di 30 🐶 " + (f"Paolino vive in un canile, ha le pulci e un alito terribile. Ha 30 giorni per trovare una famiglia prima di Natale. Oggi la foto per l'adozione… è andata così." if n == 1 else
