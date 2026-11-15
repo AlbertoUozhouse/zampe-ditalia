@@ -502,5 +502,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-15T12:17:13+00:00",
   "scambi": 130
+ },
+ {
+  "id": "2026-11-15-1809-citta",
+  "formato": "citta",
+  "modalita": "operativa",
+  "inizio": "2026-11-15T17:09:29+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-15T17:12:50+00:00",
+  "scambi": 128
  }
 ]
