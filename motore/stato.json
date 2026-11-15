@@ -19632,7 +19632,7 @@
 "2026-11-12": 1854,
 "2026-11-13": 1871,
 "2026-11-14": 1888,
-"2026-11-15": 1907
+"2026-11-15": 1908
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -20424,6 +20424,10 @@
 [
 "2026-11-15T17:18+00:00",
 1907
+],
+[
+"2026-11-15T19:05+00:00",
+1908
 ]
 ],
 "coppa": {
@@ -22888,7 +22892,7 @@
 ]
 }
 ],
-"chiuso": false,
+"chiuso": true,
 "prima": [],
 "quartiere": {
 "Darfo Boario Terme|BS": {
@@ -23529,5 +23533,269 @@
 }
 ],
 "gara_amici_albo": {},
-"avvento_fatti": []
+"avvento_fatti": [],
+"coppa_albo": [
+{
+"turno": 1,
+"fine": "2026-11-15",
+"vincitori": [
+{
+"c": "Bisceglie|BT",
+"p": 21,
+"contro": "Bomarzo|VT",
+"pc": 0
+},
+{
+"c": "Barletta|BT",
+"p": 9,
+"contro": "Carrara|MS",
+"pc": 0
+},
+{
+"c": "Belmonte del Sannio|IS",
+"p": 7,
+"contro": "Ghilarza|OR",
+"pc": 0
+},
+{
+"c": "Catania|CT",
+"p": 6,
+"contro": "Genova|GE",
+"pc": 3
+},
+{
+"c": "Napoli|NA",
+"p": 4,
+"contro": "Roma|RM",
+"pc": 0
+},
+{
+"c": "Savona|SV",
+"p": 4,
+"contro": "Sepino|CB",
+"pc": 0
+},
+{
+"c": "Molfetta|BA",
+"p": 3,
+"contro": "Mirandola|MO",
+"pc": 0
+},
+{
+"c": "Palermo|PA",
+"p": 2,
+"contro": "Firenze|FI",
+"pc": 0
+},
+{
+"c": "Venezia|VE",
+"p": 2,
+"contro": "Bari|BA",
+"pc": 0
+},
+{
+"c": "Foggia|FG",
+"p": 2,
+"contro": "Pisa|PI",
+"pc": 0
+},
+{
+"c": "Crotone|KR",
+"p": 2,
+"contro": "Ercolano|NA",
+"pc": 0
+},
+{
+"c": "Cavaion Veronese|VR",
+"p": 2,
+"contro": "Castrovillari|CS",
+"pc": 0
+},
+{
+"c": "Brescia|BS",
+"p": 1,
+"contro": "Cagliari|CA",
+"pc": 0
+},
+{
+"c": "Cosenza|CS",
+"p": 1,
+"contro": "Cesena|FC",
+"pc": 0
+},
+{
+"c": "Trento|TN",
+"p": 1,
+"contro": "Lecce|LE",
+"pc": 0
+},
+{
+"c": "Giugliano in Campania|NA",
+"p": 1,
+"contro": "Ferrara|FE",
+"pc": 0
+},
+{
+"c": "Mussolente|VI",
+"p": 1,
+"contro": "Marsala|TP",
+"pc": 0
+},
+{
+"c": "Cervia|RA",
+"p": 1,
+"contro": "Chioggia|VE",
+"pc": 0
+},
+{
+"c": "Piombino|LI",
+"p": 1,
+"contro": "Pesaro|PU",
+"pc": 1
+},
+{
+"c": "Arzano|NA",
+"p": 1,
+"contro": "Atri|TE",
+"pc": 0
+},
+{
+"c": "Darfo Boario Terme|BS",
+"p": 1,
+"contro": "Curtatone|MN",
+"pc": 0
+},
+{
+"c": "Lugo|RA",
+"p": 1,
+"contro": "Macerata|MC",
+"pc": 0
+},
+{
+"c": "Massa|MS",
+"p": 1,
+"contro": "Marsciano|PG",
+"pc": 0
+},
+{
+"c": "Terni|TR",
+"p": 1,
+"contro": "Stroppiana|VC",
+"pc": 0
+},
+{
+"c": "Carosino|TA",
+"p": 1,
+"contro": "Carugate|MI",
+"pc": 0
+},
+{
+"c": "Francavilla Fontana|BR",
+"p": 1,
+"contro": "Fragagnano|TA",
+"pc": 0
+},
+{
+"c": "Fucecchio|FI",
+"p": 1,
+"contro": "Frignano|CE",
+"pc": 0
+},
+{
+"c": "Termini Imerese|PA",
+"p": 1,
+"contro": "Termoli|CB",
+"pc": 0
+},
+{
+"c": "Torretta|PA",
+"p": 1,
+"contro": "Torrile|PR",
+"pc": 0
+},
+{
+"c": "Vallo della Lucania|SA",
+"p": 1,
+"contro": "Valva|SA",
+"pc": 0
+},
+{
+"c": "Casalmaggiore|CR",
+"p": 1,
+"contro": "Burcei|SU",
+"pc": 0
+},
+{
+"c": "Notaresco|TE",
+"p": 1,
+"contro": "Calvi|BN",
+"pc": 0
+},
+{
+"c": "Carovigno|BR",
+"p": 1,
+"contro": "Reggello|FI",
+"pc": 0
+},
+{
+"c": "Bisignano|CS",
+"p": 1,
+"contro": "Salzano|VE",
+"pc": 0
+},
+{
+"c": "Rezzato|BS",
+"p": 1,
+"contro": "Cascina|PI",
+"pc": 1
+},
+{
+"c": "Cascina|PI",
+"p": 1,
+"contro": "Rezzato|BS",
+"pc": 1
+},
+{
+"c": "Casavatore|NA",
+"p": 1,
+"contro": "Pontremoli|MS",
+"pc": 0
+},
+{
+"c": "Canale|CN",
+"p": 1,
+"contro": "Gallipoli|LE",
+"pc": 0
+},
+{
+"c": "Chiavenna|SO",
+"p": 1,
+"contro": "San Ferdinando di Puglia|BT",
+"pc": 0
+},
+{
+"c": "San Marco Argentano|CS",
+"p": 1,
+"contro": "Bubbio|AT",
+"pc": 0
+}
+]
+}
+],
+"coppa_misure": [
+{
+"turno": 1,
+"inizio": "2026-11-07",
+"fine": "2026-11-15",
+"giocatori": 5,
+"tornano": 0,
+"piu_giorni": 1,
+"nuovi_da_instagram": 4,
+"punti": 96,
+"comuni": 42,
+"staffette": 3,
+"staffette_quartiere": 7,
+"partecipanti_quartiere": 63
+}
+]
 }
