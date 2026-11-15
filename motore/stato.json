@@ -4921,6 +4921,7 @@
 "18100176290545228",
 "18100219538452129",
 "18100222820643924",
+"18100248413398851",
 "18100248518378700",
 "18100251158555700",
 "18100251467424770",
@@ -10439,6 +10440,7 @@
 "18507712291103045",
 "18508085563098240",
 "18508464133103996",
+"18508709566102289",
 "18508937236098209",
 "18509598337099954",
 "18560859625076736",
@@ -10767,7 +10769,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794750108.0396843
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-15",
@@ -10882,7 +10886,7 @@
 "chiaretta_vir": "2026-10-27",
 "sabrisorre30": "2026-10-27",
 "tommymx_213": "2026-10-27",
-"bordignonalexa": "2026-11-04",
+"bordignonalexa": "2026-11-15",
 "ema_gira09": "2026-10-28",
 "vittoria_perelli": "2026-10-27",
 "fattaemanuele": "2026-10-27",
@@ -13957,9 +13961,6 @@
 ],
 "cicc.iomodugno": [
 "maurodileo_"
-],
-"bordignonalexa": [
-"albertomarchesin"
 ]
 },
 "premiati": [
@@ -14143,7 +14144,8 @@
 "cicc.iomodugno>filippodimolfetta__",
 "cicc.iomodugno>maurodileo_",
 "_.enzo.privv>lorenzo_.bertelli",
-"thor_golden_life>albertomarchesin"
+"thor_golden_life>albertomarchesin",
+"albertomarchesin>bordignonalexa"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14179,7 +14181,7 @@
 "mattycore06": "2026-11-14"
 },
 "extra": {
-"albertomarchesin": 16,
+"albertomarchesin": 32,
 "_bularosa_": 59,
 "rosiannuu": 33,
 "_.andreaacampaagnolo._": 45,
@@ -15221,7 +15223,8 @@
 },
 "2026-11-15": {
 "_.enzo.privv": 1,
-"thor_golden_life": 1
+"thor_golden_life": 1,
+"albertomarchesin": 1
 }
 },
 "seguono": {
@@ -19555,18 +19558,11 @@
 "a5f8922871c25cbd",
 "80f2f354528f1396",
 "8d8d8995734f8c96",
-"125e5917315613b3"
+"125e5917315613b3",
+"4a5a37e82e2c17bd"
 ],
 "privati_ora": [
-1794738036.3727357,
-1794738042.6479077,
-1794738047.3310661,
-1794738051.4918773,
-1794738061.6572442,
-1794738067.7163262,
-1794738072.5245194,
-1794738078.223952,
-1794739200.045755
+1794750108.0397139
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19581,7 +19577,8 @@
 ]
 },
 "missioni_fatte": {
-"_.enzo.privv": "2026-11-15"
+"_.enzo.privv": "2026-11-15",
+"albertomarchesin": "2026-11-15"
 },
 "boost": {},
 "negozio_fatti": [
@@ -19617,7 +19614,7 @@
 "2026-11-12": 1854,
 "2026-11-13": 1871,
 "2026-11-14": 1888,
-"2026-11-15": 1898
+"2026-11-15": 1899
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -20377,6 +20374,10 @@
 [
 "2026-11-15T12:56+00:00",
 1898
+],
+[
+"2026-11-15T13:41+00:00",
+1899
 ]
 ],
 "coppa": {
@@ -22442,7 +22443,8 @@
 "Torretta|PA": 1,
 "Molfetta|BA": 3,
 "Francavilla Fontana|BR": 1,
-"Belmonte del Sannio|IS": 3
+"Belmonte del Sannio|IS": 4,
+"Mussolente|VI": 1
 },
 "giocatori": {
 "Crotone|KR": [
@@ -22824,6 +22826,15 @@
 "t": "2026-11-15T10:21+00:00",
 "sorpasso": "Belmonte del Sannio|IS",
 "su": "Ghilarza|OR",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-15T13:41+00:00",
+"sorpasso": "Mussolente|VI",
+"su": "Marsala|TP",
 "punti": [
 1,
 0
@@ -23279,6 +23290,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Mussolente|VI": {
+"u": [
+"bordignonalexa"
+],
+"c": [
+"18508709566102289"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -23338,7 +23359,9 @@
 "_.enzo.privv|animale|athena",
 "vittoriaa.marinoo|animale|luna",
 "_xxboston_|animale|lilly",
-"pannunzioparide__|animale|winky"
+"pannunzioparide__|animale|winky",
+"pannunzioparide__|animale|lampo",
+"bordignonalexa|animale|kuramaaaaaa"
 ]
 },
 "gara_follower": [
@@ -23428,6 +23451,12 @@
 "amico": "albertomarchesin",
 "p": 1,
 "t": "2026-11-15T12:30+00:00"
+},
+{
+"chi": "albertomarchesin",
+"amico": "bordignonalexa",
+"p": 1,
+"t": "2026-11-15T13:41+00:00"
 }
 ],
 "gara_amici_albo": {},
