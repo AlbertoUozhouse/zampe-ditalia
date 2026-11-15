@@ -3,7 +3,7 @@
  "reel_automatici": true,
  "orari": {
   "13:00": "giorno_13",
-  "21:00": "giro"
+  "21:00": "serie"
  },
  "negozio": {
   "osso": "https://buy.stripe.com/6oU14n8GY9giaNM1tpenS03",
@@ -40,7 +40,7 @@
   "2026-11-14 13:00": "testa_a_testa",
   "2026-11-09 13:00": "prima_luce",
   "2026-11-13 21:00": "gara_follower",
-  "2026-11-16 21:00": "giro",
+  "2026-11-16 21:00": "serie",
   "2026-11-15 18:00": "citta",
   "2026-11-16 13:00": "coppa_verdetto",
   "2026-11-22 13:00": "tifo",
@@ -77,8 +77,7 @@
   "18121405274055603"
  ],
  "settimanali": {
-  "lun 13:00": "coppa_apertura",
-  "dom 21:00": "coppa_verdetto"
+  "lun 13:00": "coppa_verdetto"
  },
  "test_crescita": {
   "nota": "Test di crescita (Alberto, 8/11): quali reel portano più follower. stato: «anteprima» = nessuna uscita, solo anteprime; «attivo» = dal giorno «dal» il piano sostituisce gli orari delle 13, 18 e 21 per 7 giorni; «spento» = tutto come prima. Per tornare indietro basta «spento».",
@@ -119,5 +118,5 @@
   "cantieri_in_pausa": false
  },
  "coppa_punto_per_luce": true,
- "nota_piano_15_11": "15/11 sera (Alberto: «reel diversi ogni giorno, un'idea tua»): alle 21 ogni sera il Giro d'Italia di Zampa, una serie: Zampa arriva in un paese vero (3D, fatto vero, animali e padroni veri) e la tappa dopo la scelgono i commenti. Alle 13 ogni giorno un formato diverso (copione.py scelta_13): testa a testa, intruso, città, rari, nomi, corsa. Lunedì 13 Coppa, domenica 21 verdetto. Un formato sotto le 2.000 views dopo due uscite si toglie."
+ "nota_piano_15_11": "15/11 sera, Alberto: «facciamo il cane». Ogni sera alle 21 «Zampa ha 30 giorni per trovare casa» (copione.py serie): una puntata al giorno dal 16/11 al 15/12, il pubblico sceglie nei commenti cosa fa Zampa il giorno dopo, ogni commento alza la FAMIGLIA. Alle 13 un formato diverso ogni giorno (scelta_13); lunedì 13 verdetto della Coppa; 1–24/12 alle 13 il Calendario dell'Avvento."
 }

@@ -1145,6 +1145,36 @@ def giro_voto(stato, u, L):
     ordine = sorted(conta, key=lambda x: -conta[x])
     return conta[k], ordine.index(k) + 1
 
+# ---------- «Zampa ha 30 giorni per trovare casa» (15/11) ----------
+# Sotto l'ultima puntata: ogni commento fa salire la FAMIGLIA di Zampa (stato «serie».commenti, 20 commenti = 1%), e chi scrive
+# una delle due parole della scelta (BAGNO, VETERINARIO…) vota la puntata di domani (un voto a persona per puntata).
+def serie_ultima():
+    """(id Instagram, giorno, parole della scelta) dell'ultima puntata pubblicata, oppure None."""
+    try: P = json.loads((ROOT / "motore/pubblicati.json").read_text())
+    except (FileNotFoundError, json.JSONDecodeError): return None
+    ult = [x for x in P if x.get("tipo") == "REELS" and "-serie." in x.get("media", "")]
+    if not ult: return None
+    try: info = json.loads((ROOT / "docs" / ult[-1]["media"].replace("media/auto/", "contenuti/auto/").replace(".mp4", ".json")).read_text()).get("serie") or {}
+    except (OSError, json.JSONDecodeError): info = {}
+    return ult[-1]["id"], info.get("giorno", len(ult)), info.get("parole", {})
+
+def serie_commento(stato, u, testi, ultima):
+    """Conta il commento (famiglia) e il voto. Restituisce la riga per la risposta."""
+    mid, g, parole = ultima
+    S = stato.setdefault("serie", {}); S["commenti"] = S.get("commenti", 0) + len(testi)
+    voto = None
+    for t in testi:
+        tt = norm(t)
+        trovate = [k for k, w in parole.items() if norm(w) in tt.split() or norm(w) in tt]
+        if len(trovate) == 1: voto = trovate[0]
+    gia = S.setdefault("votanti", {}).setdefault(str(g), [])
+    fam = min(99, round(S["commenti"] / 20))
+    if voto and u.lower() not in gia:
+        gia.append(u.lower()); v = S.setdefault("voti", {}).setdefault(str(g), {}); v[voto] = v.get(voto, 0) + 1
+        a, b = list(parole) + [None] * (2 - len(parole))
+        return f"🗳️ Voto per {parole[voto]} contato! Per ora {parole.get(a, '')} {v.get(a, 0)} – {v.get(b, 0)} {parole.get(b, '')}. Domani alle 21 Zampa fa quello che vince. 🏠 FAMIGLIA {fam}%: ogni commento lo avvicina a casa!"
+    return f"🏠 Grazie! Ogni commento avvicina Zampa a casa: FAMIGLIA {fam}%. Domani cosa fa? Scrivi {' o '.join(parole.values())} 👇" if parole else None
+
 # ---------- adottati e segni (15/11, Alberto: «inventa cose nuove, cose come la tifoseria») ----------
 # Il segno si ricava dal mese (il segno che copre la maggior parte del mese): niente date precise, niente dati personali.
 SEGNI = [None, ("♑", "Capricorno", "testardo ma fedelissimo"), ("♒", "Acquario", "originale e un po' ribelle"), ("♓", "Pesci", "dolce e sognatore"),
@@ -1355,6 +1385,12 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
         for tipo_i, n_i, v_i in gioco.identita_nuove[-2:]:  # 15/11: adottato, segno
             extra.insert(0, riga_identita(gioco, tipo_i, n_i, v_i))
         gioco.identita_nuove.clear()
+        su = serie_ultima()  # 15/11: la serie di Zampa (famiglia e voti sotto l'ultima puntata)
+        if su and u.lower() not in ESCLUSI:
+            suoi_s = [c.get("text", "") for c in nuovi_c if c.get("_media") == su[0]]
+            if suoi_s:
+                r_s = serie_commento(gioco.stato, u, suoi_s, su); gioco.cambiato = True
+                if r_s: extra.insert(0, r_s)
         gm = giro_media()[:1]  # 15/11: il Giro d'Italia di Zampa: chi scrive la sua città sotto la tappa vota per la tappa di domani
         if gm and u.lower() not in ESCLUSI and any(c.get("_media") == gm[0] for c in nuovi_c):
             L_v = next((x["luogo"] for x in letto["animali"] if x.get("luogo")), None) or next((x["luogo"] for x in letto["senza_nome"] if x.get("luogo")), None)

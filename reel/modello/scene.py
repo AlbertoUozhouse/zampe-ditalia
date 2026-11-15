@@ -665,5 +665,74 @@ def avvento(cid, dur, giorno, aperte, nuova):
     tl.to("#{cid}-c{giorno}", {{ scale: 1.25, zIndex: 5, duration: 0.4, ease: "back.out(2)" }}, {max(1.8, dur * 0.45 + 0.6):.2f});"""
     return _pagina(cid, f"Il Calendario dell'Avvento delle Zampe: casella {giorno}.", css, corpo, js)
 
-TIPI = {"avvento": avvento, "tappa": tappa, "tifosi": tifosi, "padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+SFONDI_30 = {  # le stanze della serie (colori piatti, come un cartone)
+    "canile": ("#33405F", "#4A3B2E", True), "bagno": ("#7FB7C9", "#D9E4EA", False), "veterinario": ("#CFE3DA", "#9DB8AD", False),
+    "toelettatura": ("#E9B7C9", "#B98A9C", False), "parco": ("#8CC9E8", "#4F9A4A", False), "strada": ("#9BB4D0", "#5D5D66", False),
+    "casa": ("#F2C98A", "#A86B3C", False), "notte": ("#18223F", "#2B2433", False)}
+
+def zampa30(cid, dur, svg, giorni, famiglia, testo="", banner="", sfondo="canile", sporco=True, oggetti=(), scelta=None, famiglia_prima=None):
+    """La serie «Zampa ha 30 giorni per trovare casa» (15/11, Alberto: «facciamo il cane»): Zampa grande, i contatori in alto
+    (GIORNI che mancano, FAMIGLIA in percentuale), il nastro giallo con la posta in gioco, la frase grande della puntata,
+    e alla fine la scelta per domani (scelta = {"a": ["🛁", "IL BAGNO", "BAGNO"], "b": [...]}): decide chi commenta."""
+    muro, pavimento, sbarre = SFONDI_30.get(sfondo, SFONDI_30["canile"])
+    fp = famiglia if famiglia_prima is None else famiglia_prima
+    sb = "".join(f'<i class="sb" style="left:{60 + k * 140}px"></i>' for k in range(7)) if sbarre else ""
+    st = ""
+    if sporco:  # la puzza (righe verdi che ondeggiano), le mosche, le macchie di fango
+        st += ('<svg class="puzza" viewBox="0 0 1080 900"><path d="M300 520 q-30 -50 0 -100 q30 -50 0 -100" /><path d="M780 520 q-30 -50 0 -100 q30 -50 0 -100" />'
+               '<path d="M250 700 q-25 -40 0 -80 q25 -40 0 -80" /><path d="M840 700 q-25 -40 0 -80 q25 -40 0 -80" /></svg>'
+               f'<i class="mosca" id="{cid}-m1"></i><i class="mosca" id="{cid}-m2"></i>')
+    ogg = "".join(f'<span class="ogg" style="left:{x}px;top:{y}px;font-size:{z}px" id="{cid}-o{i}">{ESC(e)}</span>' for i, (e, x, y, z) in enumerate(oggetti))
+    sc = ""
+    if scelta:
+        sc = "".join(f'<div class="op op{k}" id="{cid}-op{k}"><span class="em">{ESC(v[0])}</span><b>{ESC(v[1])}</b><i>scrivi {ESC(v[2])}</i></div>' for k, v in (("a", scelta["a"]), ("b", scelta["b"])))
+        sc = f'<div class="scelta"><div class="dom">Domani cosa fa Zampa?</div>{sc}<div class="o">oppure</div></div>'
+    css = f"""
+    #root .muro {{ position: absolute; inset: 0; background: {muro}; }}
+    #root .pav {{ position: absolute; left: 0; right: 0; bottom: 0; height: 560px; background: {pavimento}; }}
+    #root .sb {{ position: absolute; top: 0; height: 1360px; width: 26px; background: #1C2335; border-radius: 0 0 8px 8px; box-shadow: 6px 0 0 rgba(0,0,0,.25); }}
+    #root .hud {{ position: absolute; left: 40px; top: 290px; display: flex; gap: 16px; }}
+    #root .hud div {{ min-width: 200px; padding: 10px 20px; border-radius: 18px; background: rgba(12,10,14,.9); border: 4px solid #F3E6C8; text-align: center; }}
+    #root .hud small {{ display: block; font: 900 26px/1.2 var(--font-body); color: #E9E2D2; letter-spacing: 1px; }}
+    #root .hud b {{ display: block; font: 800 76px/1 "Bricolage Grotesque", sans-serif; color: #FFC55C; }}
+    #root .hud .f b {{ color: #6FE38F; }}
+    #root .nastro {{ position: absolute; left: 50px; right: 50px; top: 470px; text-align: center; }}
+    #root .nastro span {{ display: inline-block; transform: rotate(-3deg); font: 800 54px/1.1 "Bricolage Grotesque", sans-serif; color: #1A1206; background: #FFD23F; border: 5px solid #1A1206; border-radius: 14px; padding: 10px 26px; box-shadow: 0 8px 0 rgba(0,0,0,.35); }}
+    #root .zampa {{ position: absolute; left: -80px; top: 360px; width: 1240px; height: 1080px; object-fit: contain; filter: drop-shadow(0 22px 26px rgba(0,0,0,.45)); }}
+    #root .puzza {{ position: absolute; left: -60px; top: 420px; width: 1200px; height: 1000px; }}
+    #root .puzza path {{ fill: none; stroke: #8DB255; stroke-width: 14; stroke-linecap: round; opacity: .85; }}
+    #root .mosca {{ position: absolute; left: 470px; top: 560px; width: 22px; height: 22px; border-radius: 50%; background: #151515; box-shadow: -12px -12px 0 -4px rgba(230,240,255,.85), 12px -12px 0 -4px rgba(230,240,255,.85); }}
+    #root .ogg {{ position: absolute; line-height: 1.15; color: #1A1206; background: #FFF8EA; border: 5px solid #1A1206; border-radius: 50%; padding: 10px 14px; box-shadow: 0 8px 0 rgba(0,0,0,.3); }}
+    #root .frase {{ position: absolute; left: 40px; right: 40px; top: 1300px; text-align: center; font: 800 {78 if len(testo) <= 22 else 62 if len(testo) <= 34 else 50}px/1.08 "Bricolage Grotesque", sans-serif; color: #FFFFFF;
+      text-shadow: 0 6px 0 #0A0A0A, 4px 0 0 #0A0A0A, -4px 0 0 #0A0A0A, 0 -4px 0 #0A0A0A; }}
+    #root .scelta {{ position: absolute; left: 40px; right: 40px; top: 1060px; height: 400px; }}
+    #root .dom {{ position: absolute; left: 0; right: 0; top: 0; text-align: center; font: 800 58px/1.1 "Bricolage Grotesque", sans-serif; color: #FFF; text-shadow: 0 5px 0 #0A0A0A; }}
+    #root .op {{ position: absolute; top: 100px; width: 430px; height: 290px; border-radius: 30px; background: #FFF8EA; border: 6px solid #1A1206; box-shadow: 0 12px 0 rgba(0,0,0,.35); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }}
+    #root .opa {{ left: 0; }} #root .opb {{ right: 0; }}
+    #root .op .em {{ font-size: 110px; line-height: 1.1; color: #1A1206; }}
+    #root .op b {{ font: 800 48px/1.1 "Bricolage Grotesque", sans-serif; color: #1A1206; }}
+    #root .op i {{ font: 900 30px/1.2 var(--font-body); font-style: normal; color: #9A5A00; }}
+    #root .o {{ position: absolute; left: 50%; top: 210px; width: 120px; margin-left: -60px; text-align: center; font: 900 30px/60px var(--font-body); color: #1A1206; background: #FFD23F; border-radius: 30px; border: 4px solid #1A1206; }}"""
+    corpo = (f'<div class="muro"></div><div class="pav"></div>{sb}<img class="zampa" id="{cid}-z" src="assets/svg/{svg}" alt="">{st}{ogg}'
+             f'<div class="hud"><div><small>GIORNI</small><b id="{cid}-g">{giorni}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>'
+             + (f'<div class="nastro"><span id="{cid}-n">{ESC(banner)}</span></div>' if banner else "")
+             + (f'<div class="frase" id="{cid}-t">{ESC(testo)}</div>' if testo and not scelta else "") + sc)
+    js = [f'    tl.fromTo("#{cid}-z", {{ scale: 0.85, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, 0.05);',
+          f'    tl.to("#{cid}-z", {{ keyframes: [{{ rotation: -3, duration: 0.25 }}, {{ rotation: 3, duration: 0.25 }}, {{ rotation: 0, duration: 0.25 }}], repeat: {max(1, int(dur / 1.5))} }}, 0.4);']
+    if banner: js.append(f'    tl.fromTo("#{cid}-n", {{ scale: 0.3, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.4)" }}, 0.25);')
+    if testo and not scelta: js.append(f'    tl.fromTo("#{cid}-t", {{ scale: 0.4, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }}, 0.5);')
+    if sporco:
+        for k, (dx, dy) in enumerate([(160, -60), (-140, 90)]):
+            js.append(f'    tl.to("#{cid}-m{k + 1}", {{ keyframes: [{{ x: {dx}, y: {dy}, duration: 0.5 }}, {{ x: {-dx // 2}, y: {-dy}, duration: 0.5 }}, {{ x: 0, y: 0, duration: 0.5 }}], repeat: {max(1, int(dur / 1.5))} }}, {0.1 + k * 0.2:.2f});')
+    for i in range(len(oggetti)):
+        js.append(f'    tl.fromTo("#{cid}-o{i}", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.6)" }}, {0.6 + i * 0.3:.2f});')
+    if scelta:
+        js.append(f'    tl.fromTo("#{cid}-opa", {{ x: -300, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.3);')
+        js.append(f'    tl.fromTo("#{cid}-opb", {{ x: 300, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.5);')
+        js.append(f'    tl.to(["#{cid}-opa", "#{cid}-opb"], {{ keyframes: [{{ scale: 1.06, duration: 0.3 }}, {{ scale: 1, duration: 0.3 }}], repeat: {max(1, int(dur / 1.2))}, stagger: 0.3 }}, 1.0);')
+    if famiglia_prima is not None and famiglia_prima != famiglia:
+        js.append(f'    tl.set("#{cid}-f", {{ textContent: "{famiglia}%" }}, {max(0.8, dur * 0.5):.2f}); tl.to("#{cid}-f", {{ keyframes: [{{ scale: 1.4, duration: 0.15 }}, {{ scale: 1, duration: 0.2 }}] }}, {max(0.8, dur * 0.5):.2f});')
+    return _pagina(cid, f"Zampa ha 30 giorni: {testo or banner}", css, corpo, "\n".join(js))
+
+TIPI = {"zampa30": zampa30, "avvento": avvento, "tappa": tappa, "tifosi": tifosi, "padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}

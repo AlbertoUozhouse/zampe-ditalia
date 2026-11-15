@@ -1228,7 +1228,7 @@ def verifica(cop):
 
 
 # ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
-FRASI_FISSE = {"avvento": 45, "giro": 60, "rari": 45, "citta": 45, "tifo": 50, "indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
+FRASI_FISSE = {"serie": 70, "avvento": 45, "giro": 60, "rari": 45, "citta": 45, "tifo": 50, "indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
 
 MANTELLI = {"europeo", "grigio", "nero", "rosso", "bianco", "bicolore", "bicolore_rosso", "calico", "tartarugato", "meticcio"}  # colori, non razze: fuori dal quiz
 
@@ -1678,6 +1678,117 @@ def avvento(D, rng, st):
     st["senza_bonus"] = True
     return f"🎄 CASELLA {g}", frasi, did
 
+# ================================================================ «Zampa ha 30 giorni per trovare casa» (15/11, Alberto: «facciamo il cane, fai già un reel»)
+# Una serie a puntate con un protagonista: Zampa, cane di canile buffo e disastroso, ha 30 giorni per trovare una famiglia prima di Natale.
+# In alto i contatori (GIORNI che mancano, FAMIGLIA in %): la famiglia sale con i commenti veri della serie (ogni commento lo avvicina a casa).
+# Ogni puntata: cosa fa oggi, la sorpresa comica, e la scelta per domani (due strade): decide chi commenta (commenti.py serie_voto).
+SERIE_OPZIONI = {  # chiave: (emoji, come si scrive sulla carta, parola da commentare)
+    "bagno": ("🛁", "IL BAGNO", "BAGNO"), "veterinario": ("🩺", "IL VETERINARIO", "VETERINARIO"), "toelettatura": ("✂️", "LA TOELETTATURA", "TOELETTATURA"),
+    "zampa": ("🐾", "DARE LA ZAMPA", "ZAMPA"), "guinzaglio": ("🦮", "IL GUINZAGLIO", "GUINZAGLIO"), "dieta": ("🥦", "LA DIETA", "DIETA"),
+    "gatta": ("🐱", "LA GATTA DEL CANILE", "GATTA"), "foto": ("📸", "LA FOTO", "FOTO"), "denti": ("🪥", "LAVARE I DENTI", "DENTI"),
+    "cappottino": ("🧥", "IL CAPPOTTINO", "CAPPOTTINO"), "seduto": ("🎂", "IMPARARE «SEDUTO»", "SEDUTO"), "visita": ("🏡", "UNA FAMIGLIA IN VISITA", "FAMIGLIA"),
+}
+SERIE_PUNTATE = {  # titolo, sfondo, muso, sporco dopo, frasi (voce, testo grande, oggetti)
+    "inizio": ("30 GIORNI PER TROVARE CASA", "canile", "triste", True, [
+        ("Questo è Zampa. Vive in un canile, ha le pulci e un alito terribile.", "ZAMPA, 4 ANNI, PULCI", [("🪳", 170, 980, 70), ("🦴", 820, 1060, 90)]),
+        ("Ha trenta giorni per trovare una famiglia prima di Natale. Oggi ha provato a farsi bello per la foto…", "LA FOTO PER L'ADOZIONE", [("📸", 780, 720, 120)]),
+        ("e ha mangiato la macchina fotografica.", "HA MANGIATO LA MACCHINA FOTOGRAFICA", [("📸", 470, 1040, 80), ("💥", 600, 900, 110)])]),
+    "bagno": ("IL BAGNO", "bagno", "lingua", False, [
+        ("Avete scelto il bagno. Zampa non fa il bagno da quattro anni.", "4 ANNI SENZA BAGNO", [("🛁", 760, 1040, 140), ("🧼", 200, 1080, 90)]),
+        ("Sono serviti tre volontari, due ombrelli e una scopa.", "TRE VOLONTARI FRADICI", [("☂️", 150, 760, 110), ("☂️", 820, 760, 110), ("🧹", 860, 1060, 100)]),
+        ("Adesso profuma di lavanda. E ha fatto il bagno anche al direttore.", "ANCHE IL DIRETTORE È BAGNATO", [("💧", 300, 700, 80), ("💧", 760, 680, 80), ("🌸", 520, 640, 90)])]),
+    "veterinario": ("IL VETERINARIO", "veterinario", "triste", True, [
+        ("Avete scelto il veterinario. Zampa ha visto il camice bianco ed è scappato.", "È SCAPPATO DAL CAMICE", [("🩺", 780, 760, 120), ("🥼", 180, 980, 110)]),
+        ("L'hanno ritrovato dentro l'armadio delle garze.", "NELL'ARMADIO DELLE GARZE", [("🗄️", 820, 1000, 130)]),
+        ("Diagnosi: sta benissimo. Solo che ha fatto la pipì sulla bilancia.", "PIPÌ SULLA BILANCIA", [("⚖️", 780, 1050, 120), ("💦", 650, 1100, 70)])]),
+    "toelettatura": ("LA TOELETTATURA", "toelettatura", "occhiolino", False, [
+        ("Avete scelto la toelettatura. Il parrucchiere ha detto: ci penso io.", "«CI PENSO IO»", [("✂️", 780, 760, 120), ("💇", 170, 1000, 100)]),
+        ("Dopo tre ore di lavoro, Zampa sembra un'altra razza.", "SEMBRA UN BARBONCINO", [("🎀", 640, 640, 90), ("✨", 260, 720, 80)]),
+        ("Il parrucchiere invece si è licenziato.", "IL PARRUCCHIERE SI È LICENZIATO", [("📦", 800, 1060, 110)])]),
+    "zampa": ("DARE LA ZAMPA", "canile", "lingua", True, [
+        ("Avete scelto: imparare a dare la zampa. Il volontario dice: zampa!", "«ZAMPA!»", [("🍪", 800, 760, 110)]),
+        ("Zampa ha dato la zampa. Poi l'altra. Poi si è sdraiato sul volontario.", "SDRAIATO SUL VOLONTARIO", [("🧑", 760, 1060, 110)]),
+        ("E si è mangiato tutti i biscotti del premio. Anche quelli di domani.", "ANCHE I BISCOTTI DI DOMANI", [("🍪", 220, 1000, 90), ("🍪", 820, 1020, 90), ("🍪", 520, 1100, 90)])]),
+    "guinzaglio": ("IL GUINZAGLIO", "strada", "lingua", True, [
+        ("Avete scelto il guinzaglio. Prima passeggiata fuori dal canile.", "PRIMA PASSEGGIATA", [("🦮", 800, 760, 120)]),
+        ("Ha visto un piccione. Il volontario no.", "HA VISTO UN PICCIONE", [("🐦", 820, 640, 110), ("💨", 200, 1000, 110)]),
+        ("Hanno fatto due chilometri di corsa. Ha portato lui a spasso il volontario.", "HA PORTATO A SPASSO IL VOLONTARIO", [("🏃", 200, 980, 110)])]),
+    "dieta": ("LA DIETA", "canile", "triste", True, [
+        ("Avete scelto la dieta. Oggi a pranzo: carote.", "A PRANZO: CAROTE", [("🥕", 790, 760, 120), ("🥣", 220, 1060, 110)]),
+        ("Zampa le ha guardate. Ha guardato il volontario. Ha guardato le carote.", "LO SGUARDO", [("👀", 520, 640, 100)]),
+        ("Stasera nella sua cuccia hanno trovato diciassette carote nascoste.", "17 CAROTE NELLA CUCCIA", [("🥕", 200, 1020, 80), ("🥕", 300, 1080, 80), ("🥕", 820, 1040, 80)])]),
+    "gatta": ("LA GATTA DEL CANILE", "canile", "occhiolino", True, [
+        ("Avete scelto la gatta. Nel canile vive Micia, che comanda su tutti.", "MICIA COMANDA", [("🐈", 800, 1000, 140)]),
+        ("Zampa ha provato ad abbaiare. Micia l'ha guardato.", "L'HA GUARDATO", [("😾", 820, 720, 110)]),
+        ("Adesso Micia dorme sopra di lui, e lui non si muove da sei ore.", "NON SI MUOVE DA 6 ORE", [("🐈", 520, 600, 130), ("💤", 820, 700, 90)])]),
+    "foto": ("LA FOTO", "casa", "occhiolino", True, [
+        ("Avete scelto la foto per l'annuncio di adozione. Fotografo pronto.", "SERVIZIO FOTOGRAFICO", [("📸", 800, 760, 120), ("💡", 200, 760, 100)]),
+        ("Duecento scatti.", "200 SCATTI", [("📷", 820, 1040, 100)]),
+        ("In tutti e duecento ha gli occhi chiusi. Tranne uno: lì sta starnutendo.", "OCCHI CHIUSI IN TUTTE", [("🤧", 780, 700, 110)])]),
+    "denti": ("LAVARE I DENTI", "bagno", "lingua", True, [
+        ("Avete scelto i denti. L'alito di Zampa ha fatto svenire un postino.", "HA FATTO SVENIRE UN POSTINO", [("🪥", 800, 760, 120), ("📮", 200, 1040, 100)]),
+        ("Spazzolino pronto, dentifricio alla menta.", "DENTIFRICIO ALLA MENTA", [("🪥", 790, 760, 110)]),
+        ("Si è mangiato tutto il tubetto. Adesso fa le bolle.", "ADESSO FA LE BOLLE", [("🫧", 640, 700, 100), ("🫧", 300, 760, 80), ("🫧", 820, 900, 70)])]),
+    "cappottino": ("IL CAPPOTTINO", "notte", "triste", True, [
+        ("Avete scelto il cappottino di Natale. Fuori fa freddo.", "FUORI FA FREDDO", [("🧥", 800, 760, 120), ("❄️", 200, 700, 90)]),
+        ("Dopo quaranta minuti di lotta…", "40 MINUTI DI LOTTA", [("⏱️", 820, 1040, 100)]),
+        ("ha infilato tre zampe su quattro. La quarta ce l'ha in testa.", "TRE ZAMPE SU QUATTRO", [("🧥", 520, 600, 120), ("🎄", 820, 1040, 100)])]),
+    "seduto": ("IMPARARE «SEDUTO»", "casa", "occhiolino", True, [
+        ("Avete scelto: imparare seduto. Oggi è il compleanno del direttore del canile.", "COMPLEANNO DEL DIRETTORE", [("🎂", 800, 1000, 130), ("🎈", 200, 700, 100)]),
+        ("Il volontario dice: seduto!", "«SEDUTO!»", [("☝️", 800, 720, 100)]),
+        ("Zampa si è seduto. Sulla torta.", "SI È SEDUTO SULLA TORTA", [("🎂", 520, 1060, 130), ("💥", 760, 960, 100)])]),
+    "visita": ("UNA FAMIGLIA IN VISITA", "casa", "triste", True, [
+        ("Avete scelto la visita. Oggi una famiglia viene a conoscere Zampa.", "UNA FAMIGLIA PER ZAMPA?", [("👨‍👩‍👧", 800, 1000, 130)]),
+        ("Zampa li ha visti arrivare dal cancello…", "LI HA VISTI ARRIVARE", [("🚪", 820, 720, 110)]),
+        ("e si è nascosto sotto il furgone. Era timido. Torneranno, forse.", "NASCOSTO SOTTO IL FURGONE", [("🚐", 520, 1060, 140), ("❓", 820, 700, 90)])]),
+}
+SERIE_INIZIO = date(2026, 11, 16)
+
+def serie(D, rng, st):
+    """Una puntata al giorno. Quale puntata: il giorno 1 è l'inizio; poi vince l'opzione più votata sotto la puntata di ieri."""
+    P = carica(ROOT / "motore/pubblicati.json", [])
+    uscite = sum(1 for x in P if x.get("tipo") == "REELS" and "-serie." in x.get("media", ""))
+    n = uscite + 1
+    if n > 30: raise Salta("la serie è finita")
+    S = carica(ROOT / "motore/stato.json", {}).get("serie", {})
+    storia = st.get("serie_storia", [])[:uscite]  # solo le puntate uscite davvero
+    fatte = {x["ep"] for x in storia}
+    if n == 1: ep = "inizio"
+    else:
+        ieri = storia[-1] if storia else {"opzioni": ["bagno", "veterinario"]}
+        voti = S.get("voti", {}).get(str(n - 1), {})
+        ep = max(ieri["opzioni"], key=lambda k: (voti.get(k, 0), -ieri["opzioni"].index(k)))
+        if ep in fatte: ep = next((k for k in SERIE_PUNTATE if k not in fatte and k != "inizio"), ep)
+    restanti = [k for k in SERIE_PUNTATE if k not in fatte | {ep, "inizio"}]
+    rng.shuffle(restanti)
+    opzioni = (["bagno", "veterinario"] if n == 1 else restanti[:2]) or ["visita", "foto"]
+    tot = int(S.get("commenti", 0)); famiglia = min(99, round(tot / 20)); famiglia_ieri = storia[-1].get("famiglia", famiglia) if storia else famiglia
+    titolo, sfondo, muso, sporco, scene = SERIE_PUNTATE[ep]
+    sporco_ora = sporco and not any(x["ep"] in ("bagno", "toelettatura") for x in storia)  # dopo il bagno niente più puzza
+    giorni = 31 - n
+    frasi = []
+    for i, (voce, testo, ogg) in enumerate(scene):
+        sc = {"tipo": "zampa30", "giorni": giorni, "famiglia": famiglia, "testo": testo, "sfondo": sfondo, "sporco": sporco_ora if ep != "bagno" or i == 0 else False,
+              "muso": muso if i == len(scene) - 1 else ("triste" if ep == "inizio" else None), "oggetti": [list(o) for o in ogg]}
+        if i == 0: sc["banner"] = f"GIORNO {n} · {titolo}" if n > 1 else "30 GIORNI PER TROVARE CASA"
+        if i == 1 and famiglia_ieri != famiglia: sc["famiglia_prima"] = famiglia_ieri
+        frasi.append((voce, sc))
+    a, b = (SERIE_OPZIONI[k] for k in opzioni)
+    frasi.append((f"Domani: {a[1].lower()} o {b[1].lower()}? Decidi tu nei commenti. Ogni commento lo avvicina a casa.",
+                  {"tipo": "zampa30", "giorni": giorni, "famiglia": famiglia, "sfondo": sfondo, "sporco": sporco_ora, "muso": "occhiolino",
+                   "scelta": {"a": list(a), "b": list(b)}}))
+    st["serie_storia"] = storia + [{"ep": ep, "giorno": n, "opzioni": opzioni, "famiglia": famiglia, "data": ORA.date().isoformat()}]
+    st["serie_info"] = {"giorno": n, "ep": ep, "opzioni": opzioni, "parole": {k: SERIE_OPZIONI[k][2] for k in opzioni}}
+    did = (f"Giorno {n} di 30 🐶 " + (f"Zampa vive in un canile, ha le pulci e un alito terribile. Ha 30 giorni per trovare una famiglia prima di Natale. Oggi la foto per l'adozione… è andata così." if n == 1 else
+           f"Avete scelto {titolo.lower()}. È andata così…") + "\n\n"
+           f"👇 Domani cosa fa Zampa? Scrivi {a[2]} oppure {b[2]} nei commenti: vince il più commentato.\n"
+           f"🏠 Ogni commento lo avvicina a casa: FAMIGLIA {famiglia}%.\n➕ Seguici per vedere se ce la fa entro Natale.")
+    st["copertina"] = None
+    st["banner_reel"] = f"👇 Scrivi {a[2]} o {b[2]}"
+    st["hashtag"] = "#cani #canile #adozione #adottanonComprare #natale #animalidomestici "
+    st["senza_bonus"] = True
+    return f"🐶 ZAMPA · GIORNO {n} DI 30", frasi, did
+
 def scelta_21():
     """15/11, piano nuovo: alle 21 a rotazione i reel che promettono qualcosa a chi commenta (la squadra, il tempo dell'intruso, il nome, la città)."""
     return ["intruso", "citta", "tifo", "rari", "nomi_top", "corsa"][(ORA.date() - date(2026, 11, 17)).days % 6]
@@ -1690,7 +1801,7 @@ def sera_18(D, rng, st):
     return FORMATI[scelta_18()](D, rng, st)
 
 
-FORMATI = {"avvento": avvento, "giro": giro, "rari": rari, "citta": citta_reel, "tifo": tifo, "corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "sera_21": lambda D, rng, st: FORMATI[scelta_21()](D, rng, st), "giorno_13": lambda D, rng, st: FORMATI[scelta_13()](D, rng, st), "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"serie": serie, "avvento": avvento, "giro": giro, "rari": rari, "citta": citta_reel, "tifo": tifo, "corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "sera_21": lambda D, rng, st: FORMATI[scelta_21()](D, rng, st), "giorno_13": lambda D, rng, st: FORMATI[scelta_13()](D, rng, st), "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -1830,6 +1941,7 @@ def main():
     intro_3d = st.pop("intro_3d", None)
     giro_info = st.pop("giro_info", None)
     avvento_info = st.pop("avvento_info", None)
+    serie_info = st.pop("serie_info", None)
     # l'aspetto grafico a rotazione: mai uguale ai due reel prima (reel/modello/scene.py, TEMI)
     temi = ["notte", "tramonto", "aurora", "giorno", "neon"]  # colori resi abbastanza scuri da passare il controllo di contrasto (reel/modello/scene.py)
     gia = st.get("temi", [])[-2:]
@@ -1842,7 +1954,7 @@ def main():
                "banner": st.pop("banner_reel", "💬 Commenta città e nome del tuo animale 👇"), "didascalia": did,
                "tag": [u for u in mostrati if u.lower() not in ESCLUSI],
                # 15/11: fino a 3 padroni in vista che ci seguono già ricevono l'invito a collaborare: se accettano, il reel va anche sul loro profilo
-               "collab": [x["utente"] for _, sc in frasi if sc.get("tipo") == "padroni" for x in sc["persone"] if x["utente"].lower() in D["seguono"]][:3], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}), **({"giro": giro_info} if giro_info else {}), **({"avvento": avvento_info} if avvento_info else {}),
+               "collab": [x["utente"] for _, sc in frasi if sc.get("tipo") == "padroni" for x in sc["persone"] if x["utente"].lower() in D["seguono"]][:3], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}), **({"giro": giro_info} if giro_info else {}), **({"avvento": avvento_info} if avvento_info else {}), **({"serie": serie_info} if serie_info else {}),
                **({"test": {"nome": "crescita-1", "formato": formato, "variante": voce_v, "slot": ORA.strftime("%H:%M"), "caso": caso}} if test else {})}
     if test: copione.pop("intro", None); copione.pop("intro_3d", None)  # nel test il primo fotogramma è il gancio: niente video prima
     oggi = ORA.date()  # 15/11: chi è stato taggato e quando (motore/copione.py padroni: riposo di 3 giorni tra un tag e l'altro)
