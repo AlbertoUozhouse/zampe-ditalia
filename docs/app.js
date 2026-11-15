@@ -92,7 +92,7 @@ function prepare(list) {
   list.forEach(d => { const key = d.c + "|" + d.p; perCity.set(key, (perCity.get(key) || 0) + 1); });
   list.forEach((d, i) => {
     d.k = d.k || "animale"; d.t = d.t || "cane"; d.pt = d.pt || 0; d.id = d.id || d.u + "|" + d.n + "|" + i;
-    d.seed = D.hash(d.id); d.rk = d.t === "altro" ? null : D.razza(d.razza_testo || d.razza, d.t); // il testo scritto vince: le razze nuove si disegnano anche per chi è già sulla mappa
+    d.seed = D.hash(d.id); d.rk = d.t === "altro" ? null : D.razza(d.razza_testo || d.razza, d.t); if (d.sq && SQUADRE[d.sq]) d.sqc = SQUADRE[d.sq].c; // i colori della sciarpa, anche per il paese 3D (mondo3d.js) // il testo scritto vince: le razze nuove si disegnano anche per chi è già sulla mappa
     d.recent = d.ts && now - Date.parse(d.ts) < 3600e3;
     // sparso su un disco attorno al centro del comune, più largo dove ci sono più animali; sempre uguale per lo stesso animale
     const spread = Math.min(0.09, 0.006 + 0.0028 * Math.sqrt(perCity.get(d.c + "|" + d.p)));

@@ -63,7 +63,7 @@
   "traccia": "realismo",
   "aperto": "2026-11-13",
   "scadenza": "2026-11-15",
-  "stato": "da costruire",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-15",
@@ -193,6 +193,9 @@
     ],
     "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile, senza errori in console e con caricamento fluido su telefono; il commit è online entro il 15 novembre."
    }
-  ]
+  ],
+  "aggiornato": "2026-11-15",
+  "nota": "La sciarpa della squadra: sulla mappa (disegno), nel paese 3D (sciarpa a righe coi due colori al collo dei tifosi) e nella scheda («⚽ Tifa Juventus», «💛 Adottato»)",
+  "online_dal": "2026-11-15"
  }
 }

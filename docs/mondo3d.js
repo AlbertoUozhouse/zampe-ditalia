@@ -112,8 +112,26 @@ function micio3d(THREE, d) {
   const coda = new THREE.Group(); coda.position.set(0, 0.16, -0.26); const cm = new THREE.Mesh(new THREE.TubeGeometry(curva, 20, b.fluffy ? 0.06 : 0.04, 8), Pp); cm.castShadow = true; coda.add(cm); g.add(coda); g.userData.coda = coda;
   return g;
 }
+// il tifo (15/11): la sciarpa a righe coi due colori della squadra al collo, con le due code che pendono
+function sciarpa3d(THREE, g, d) {
+  if (!d.sqc || (d.acc || []).includes("collare") || (d.acc || []).includes("sciarpa")) return;
+  const gatto = d.t === "gatto", cv = document.createElement("canvas"); cv.width = 128; cv.height = 16;
+  const x = cv.getContext("2d"); for (let i = 0; i < 8; i++) { x.fillStyle = d.sqc[i % 2]; x.fillRect(i * 16, 0, 16, 16); }
+  const tx = new THREE.CanvasTexture(cv); tx.wrapS = THREE.RepeatWrapping; tx.repeat.set(3, 1); if (THREE.SRGBColorSpace) tx.colorSpace = THREE.SRGBColorSpace;
+  const m = new THREE.MeshStandardMaterial({ map: tx, roughness: 0.85 }), sc = new THREE.Group();
+  const anello = new THREE.Mesh(new THREE.TorusGeometry(gatto ? 0.15 : 0.19, gatto ? 0.05 : 0.065, 10, 32), m); anello.castShadow = true; sc.add(anello);
+  for (const s of [-1, 1]) { const tv = document.createElement("canvas"); tv.width = 16; tv.height = 64; const y = tv.getContext("2d");
+    for (let i = 0; i < 4; i++) { y.fillStyle = d.sqc[i % 2]; y.fillRect(0, i * 16, 16, 16); }
+    const tt = new THREE.CanvasTexture(tv); if (THREE.SRGBColorSpace) tt.colorSpace = THREE.SRGBColorSpace;
+    const coda = new THREE.Mesh(new THREE.BoxGeometry(gatto ? 0.07 : 0.09, gatto ? 0.2 : 0.26, 0.025), new THREE.MeshStandardMaterial({ map: tt, roughness: 0.85 }));
+    coda.position.set(s * (gatto ? 0.05 : 0.06), gatto ? 0.15 : 0.19, gatto ? -0.1 : -0.13); coda.rotation.set(Math.PI / 2, 0, s * 0.18); coda.castShadow = true; sc.add(coda); }
+  if (gatto) { sc.position.set(0, 0.6, 0.08); sc.rotation.x = Math.PI / 2 - 0.25; }
+  else { sc.position.set(0, 0.82, 0.07); sc.rotation.x = Math.PI / 2 - 0.35; if (g.userData.collare) g.userData.collare.visible = false; }
+  g.add(sc);
+}
 // gli accessori del negozio e il costume, in 3D sulla testa e davanti alla cuccia
 function accessori3d(THREE, g, d) {
+  sciarpa3d(THREE, g, d);
   const testa = g.userData.testa, gatto = d.t === "gatto", top = gatto ? 0.2 : 0.24, a = d.acc || [];
   if (a.includes("corona")) { const c = new THREE.Group(), O = oro(THREE), base = new THREE.Mesh(new THREE.CylinderGeometry(0.13, 0.14, 0.08, 18, 1, true), O); base.material.side = THREE.DoubleSide; c.add(base);
     for (let i = 0; i < 6; i++) { const p = new THREE.Mesh(new THREE.ConeGeometry(0.03, 0.09, 6), O), an = (i / 6) * Math.PI * 2; p.position.set(Math.cos(an) * 0.13, 0.08, Math.sin(an) * 0.13); c.add(p); }
