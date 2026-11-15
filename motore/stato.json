@@ -9623,6 +9623,7 @@
 "18317050858304288",
 "18317357161303584",
 "18318336742304364",
+"18318883249304837",
 "18320166874303613",
 "18320363728303062",
 "18330069520263813",
@@ -10766,12 +10767,12 @@
 "18798213136033257"
 ],
 "risposte": [
-1794741676.6084304,
-1794742476.5770855
+1794742476.5770855,
+1794745804.6757433
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
-"albertomarchesin": "2026-10-26",
+"albertomarchesin": "2026-11-15",
 "fishing_fil": "2026-10-27",
 "alebomba08": "2026-10-28",
 "vincenzo_bascer": "2026-10-26",
@@ -13116,9 +13117,6 @@
 "theming78": [
 "albertomarchesin"
 ],
-"albertomarchesin": [
-"thor_golden_life"
-],
 "xleandri": [
 "james.leandri"
 ],
@@ -13961,6 +13959,9 @@
 ],
 "cicc.iomodugno": [
 "maurodileo_"
+],
+"bordignonalexa": [
+"albertomarchesin"
 ]
 },
 "premiati": [
@@ -14143,7 +14144,8 @@
 "leonardopellegrini5>>francesco45344",
 "cicc.iomodugno>filippodimolfetta__",
 "cicc.iomodugno>maurodileo_",
-"_.enzo.privv>lorenzo_.bertelli"
+"_.enzo.privv>lorenzo_.bertelli",
+"thor_golden_life>albertomarchesin"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -14179,7 +14181,7 @@
 "mattycore06": "2026-11-14"
 },
 "extra": {
-"albertomarchesin": 6,
+"albertomarchesin": 16,
 "_bularosa_": 59,
 "rosiannuu": 33,
 "_.andreaacampaagnolo._": 45,
@@ -15186,7 +15188,8 @@
 "non_sochemmettere": 10,
 "_.enzo.privv": 26,
 "pannunzioparide__": 10,
-"mauro_mas21": 10
+"mauro_mas21": 10,
+"thor_golden_life": 6
 },
 "inviti_giorno": {
 "2026-11-08": {
@@ -15219,7 +15222,8 @@
 "cicc.iomodugno": 2
 },
 "2026-11-15": {
-"_.enzo.privv": 1
+"_.enzo.privv": 1,
+"thor_golden_life": 1
 }
 },
 "seguono": {
@@ -23415,6 +23419,12 @@
 "amico": "lorenzo_.bertelli",
 "p": 1,
 "t": "2026-11-15T10:53+00:00"
+},
+{
+"chi": "thor_golden_life",
+"amico": "albertomarchesin",
+"p": 1,
+"t": "2026-11-15T12:30+00:00"
 }
 ],
 "gara_amici_albo": {},
