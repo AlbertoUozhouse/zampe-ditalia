@@ -51,6 +51,7 @@ def main():
     a.add_argument("--prova", action="store_true", help="prepara il contenitore senza pubblicare")
     a.add_argument("--copertina", default="", help="immagine di copertina del reel (percorso sul sito): sul profilo i reel non sembrano tutti uguali")
     a.add_argument("--tag", default="", help="account da taggare nel reel, separati da virgola: ricevono la notifica e il reel va nel loro profilo")
+    a.add_argument("--collab", default="", help="fino a 3 account invitati a collaborare (15/11): se accettano, il reel compare anche sul loro profilo e ai loro follower")
     a.add_argument("--trial", action="store_true", help="Trial Reel: mostrato prima solo a chi non segue; se Instagram lo rifiuta si pubblica normale")
     o = a.parse_args()
     token = os.environ.get("IG_TOKEN") or sys.exit("Manca IG_TOKEN.")
@@ -102,6 +103,15 @@ def main():
                 pass
         print(f"tag validi: {len(validi)} su {len(tag)}")
         tag = validi
+    collab = [c.strip().lstrip("@") for c in o.collab.split(",") if c.strip()][:3]
+    if not cont and collab and o.tipo == "REELS":
+        tagg = {"user_tags": json.dumps([{"username": t} for t in tag])} if tag else {}
+        for prova in (collab, collab[:1]):  # tutti insieme; se Instagram ne rifiuta uno, almeno il primo
+            try:
+                cont = chiama("POST", "me/media", token, collaborators=json.dumps(prova), **tagg, **params)["id"]
+                print(f"reel con {len(prova)} inviti a collaborare" + (f" e {len(tag)} persone taggate" if tag else "")); break
+            except SystemExit as e:
+                print(f"inviti a collaborare rifiutati ({e})")
     if not cont and tag and o.tipo == "REELS":
         try:
             cont = chiama("POST", "me/media", token, user_tags=json.dumps([{"username": t} for t in tag]), **params)["id"]

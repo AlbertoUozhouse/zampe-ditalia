@@ -66,6 +66,33 @@ def veri(D, tipo):
     """Animali veri della mappa, da mostrare nei reel col loro @ (mai gli account di Alberto)."""
     return [a for a in D["animali"] if a.get("k") == "animale" and a.get("t", "cane") == tipo and a["u"].lower() not in ESCLUSI]
 
+def padroni(D, st, animali, n=10, riposo=3):
+    """I padroni in campo (15/11, Alberto: «inseriamo anche i proprietari, spingiamo i follower»). Dai numeri: il testa a testa del 13/11
+    con 8 padroni in vista e taggati ha fatto 2.452 views e 16 condivisioni; gli altri reel al massimo 6 condivisioni.
+    Sceglie fino a n animali veri (cani e gatti) con padroni diversi: prima chi ci segue, poi i più recenti. Lo stesso @ non viene
+    taggato più di una volta ogni `riposo` giorni (st["taggati"]): un tag ogni tanto fa piacere, tutti i giorni è spam."""
+    import zlib
+    oggi = ORA.date()
+    fermi = {u for u, g in st.get("taggati", {}).items() if (oggi - date.fromisoformat(g)).days < riposo}
+    cand = [a for a in animali if a.get("k") == "animale" and a.get("t") in ("cane", "gatto") and a.get("u")
+            and a["u"].lower() not in ESCLUSI and a["u"].lower() not in fermi]
+    cand.sort(key=lambda a: str(a.get("ts", "")), reverse=True)  # i più recenti prima
+    cand.sort(key=lambda a: a["u"].lower() not in D["seguono"])  # (ordinamento stabile) e prima ancora chi ci segue
+    visti, out = set(), []
+    for a in cand:
+        if a["u"].lower() in visti: continue
+        visti.add(a["u"].lower()); out.append(a)
+        if len(out) == n: break
+    return [{"nome": (a["n"].strip()[:1].upper() + a["n"].strip()[1:])[:16], "utente": a["u"], "citta": a["c"], "t": a["t"],
+             "razza": a.get("razza") or ("meticcio" if a["t"] == "cane" else "europeo"), "seme": zlib.crc32(a.get("id", a["u"] + a["n"]).encode()) % 997 + 1} for a in out[:n]]
+
+def scena_padroni(D, st, animali, titolo, n=10):
+    """La scena coi padroni e i loro tag; None se ce ne sono meno di 4 (una scena vuota sembra un gioco morto)."""
+    pp = padroni(D, st, animali, n)
+    if len(pp) < 4: return None
+    st["tag_extra"] = list(dict.fromkeys(st.get("tag_extra", []) + [x["utente"] for x in pp]))
+    return {"tipo": "padroni", "titolo": titolo, "persone": pp, "pausa": 1.5}  # un secondo e mezzo per cercare il proprio nome
+
 def scena_vera(D, rng, tipo, gia=()):
     """Una scena cuccia/gatto con un animale vero: nome, @ e comune. None se non ce ne sono."""
     # chi ci segue va nei reel per primo: è la ricompensa promessa a chi scrive SEGUO
@@ -1198,7 +1225,7 @@ def verifica(cop):
 
 
 # ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
-FRASI_FISSE = {"indovina": 45, "figurina": 40, "testa_a_testa": 58, "gara_follower": 50, "intruso": 40, "nomi_top": 45, "corsa": 50}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
+FRASI_FISSE = {"indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
 
 MANTELLI = {"europeo", "grigio", "nero", "rosso", "bianco", "bicolore", "bicolore_rosso", "calico", "tartarugato", "meticcio"}  # colori, non razze: fuori dal quiz
 
@@ -1293,6 +1320,9 @@ def gara_follower(D, rng, st):
         ("Quale città ci segue di più?", {"tipo": "gancio", "testo": "Quale città ci segue *di più*?", "sotto": "🏁 La gara dei follower", "icona": "🏁"}),
         (f"{a}{', ' + f1 + ',' if f1 else ''} è prima con {na}. Poi {b} con {nb} e {c} con {nc}.", {"tipo": "barre", "titolo": "🏁 Chi ci segue di più", "righe": righe}),
     ]
+    # 15/11: chi ci segue davvero dalle prime città, coi loro animali e il loro @ (taggati: lo ricondividono e la loro città sale)
+    sp = scena_padroni(D, st, [x for x in D["animali"] if coppa.chiave(x) in {k for k, _ in top[:3]} and x.get("u", "").lower() in D["seguono"]], f"💛 Grazie a *chi ci segue*")
+    if sp: frasi.append((f"Grazie a chi ci segue da {a}, {b} e {c}!", sp))
     if tot and tot < coppa.OBIETTIVO:
         frasi.append((f"Siamo {tot}: a duemila facciamo i fuochi su tutta l'Italia.", {"tipo": "numero", "grande": f"{tot:,}".replace(",", "."), "sotto": f"follower veri · a {coppa.OBIETTIVO:,} i fuochi 🎆".replace(",", ".")}))
     frasi.append(("Seguici e scrivi SEGUO con la tua città: due punti al tuo paese.", {"tipo": "chiusura", "testo": "🏁 SEGUO + la tua città 👇"}))
@@ -1325,6 +1355,9 @@ def intruso(D, rng, st):
     n = st.get("intruso_n", 0); st["intruso_n"] = n + 1
     dettaglio, titolo, detto = INTRUSI[n % len(INTRUSI)]
     razza = RAZZE_INTRUSO[(n * 3 + rng.randrange(len(RAZZE_INTRUSO))) % len(RAZZE_INTRUSO)]
+    di_razza = lambda r: [a for a in D["animali"] if a.get("t") == "cane" and a.get("razza") == r]
+    if len(padroni(D, st, di_razza(razza))) < 6:  # 15/11: la razza deve avere padroni veri sulla mappa, da mostrare alla fine
+        razza = max(RAZZE_INTRUSO, key=lambda r: (len(padroni(D, st, di_razza(r))), rng.random()))
     dove = [rng.randrange(1, 6), rng.randrange(0, 6)]  # mai nella prima riga: troppo facile
     seme = rng.randrange(1, 99)
     sc = {"base": ["cane", razza, seme, "base"], "altro": ["cane", razza, seme, dettaglio], "dove": dove, "nr": 6, "nc": 6}
@@ -1332,8 +1365,10 @@ def intruso(D, rng, st):
     frasi = [
         (f"{detto}. Cinque. Quattro. Tre. Due. Uno.", {"tipo": "intruso", **sc, "titolo": titolo}),
         (f"Eccolo: {ORDINALI[dove[0]]} riga. L'avevi visto?", {"tipo": "intruso_svela", **sc, "titolo": "ECCOLO!", "riga_testo": f"{ORDINALI[dove[0]]} riga, {ORDINALI[dove[1]]} colonna"}),
-        ("Scrivi in quanti secondi l'hai trovato. Domani è più difficile.", {"tipo": "chiusura", "testo": "⏱️ In quanti secondi? 👇"}),
     ]
+    sp = scena_padroni(D, st, di_razza(razza), f"🐾 {_nome_razza(D, 'cane', razza)}: *quelli veri*")
+    frasi.append(("E questi sono quelli veri della nostra mappa. In quanti secondi l'hai trovato?", sp) if sp else
+                 ("Scrivi in quanti secondi l'hai trovato. Domani è più difficile.", {"tipo": "chiusura", "testo": "⏱️ In quanti secondi? 👇"}))
     did = (f"👀 {detto}: sono 36 e hai 5 secondi. Trovato al primo colpo?\n\n"
            "👇 Scrivi in quanti secondi l'hai trovato (e sii onesto 😄). Poi mandalo a chi dice di avere l'occhio di falco.\n"
            f"🐾 Se hai un cane o un gatto, aggiungi la tua città e il suo nome (es. «3 secondi! Treviso, Luna, cane»): si accende sulla mappa d'Italia con gli altri {tot}.\n"
@@ -1367,8 +1402,12 @@ def nomi_top(D, rng, st):
         (f"Il nome {di} più usato in Italia?", {"tipo": "gancio", "testo": f"Il nome {di} *più usato* in Italia?", "sotto": f"{emoji} Il tuo c'è?", "icona": emoji}),
         (f"Quinto {top[4][0]}, quarto {top[3][0]}, terzo {top[2][0]}, secondo {top[1][0]}.", {"tipo": "barre", "titolo": f"{emoji} I nomi più usati", "righe": righe, "conto": True}),
         (f"E al primo posto: {n1}! Sono {k1}, in {c1} città.", {"tipo": "gancio", "testo": f"*{n1}*", "sotto": f"👑 {k1} sulla mappa · in {c1} città", "icona": "👑"}),
-        ("Scrivi il nome del tuo: ti rispondiamo con quanti ce ne sono.", {"tipo": "commento", "testo": "Il mio si chiama…"}),
     ]
+    # 15/11: i {n1} veri, coi loro padroni taggati (chi si vede nel reel lo guarda e lo ricondivide)
+    norm = lambda x: "".join(ch for ch in unicodedata.normalize("NFD", x.lower()) if ch.isalpha())
+    sp = scena_padroni(D, st, [a for a in D["animali"] if norm(a["n"]) == norm(n1) and (not tipo or a.get("t") == tipo)], f"👑 *{n1}* sulla mappa")
+    if sp: frasi.append((f"Eccone alcuni, da {sp['persone'][0]['citta']} a {sp['persone'][-1]['citta']}.", sp))
+    frasi.append(("Scrivi il nome del tuo: ti rispondiamo con quanti ce ne sono.", {"tipo": "commento", "testo": "Il mio si chiama…"}))
     did = (f"{emoji} Il nome {di} più usato in Italia? 5° {top[4][0]} · 4° {top[3][0]} · 3° {top[2][0]} · 2° {top[1][0]} · 👑 {n1} ({k1}).\n"
            f"Sulla mappa di Zampe d'Italia ci sono {diversi} nomi diversi.\n\n"
            "👇 Scrivi qui sotto il nome del tuo animale: ti rispondiamo con quanti si chiamano come lui in Italia (e se è l'unico!).\n"
@@ -1415,6 +1454,10 @@ def corsa(D, rng, st):
         (f"Si parte il {int(giorni[0][8:])} {['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'][int(giorni[0][5:7]) - 1]}. Guarda chi sale.",
          {"tipo": "corsa", "titolo": titolo, "giorni": etichette, "serie": serie, "pausa": 5.0}),
         (f"Vince {art}{p1} con {v1}. {p2[:1].upper() + p2[1:]} è a {v1 - v2}.", {"tipo": "gancio", "testo": f"*{p1}*", "sotto": f"👑 {v1} {unita} · {p2} a {v1 - v2}", "icona": "👑"}),
+    ]
+    sp = scena_padroni(D, st, [a for a in an if chiave(a) == p1], f"🏁 Chi ha fatto vincere *{p1}*")  # 15/11: i padroni veri, taggati
+    if sp: frasi.append(("Ecco chi l'ha fatta vincere." if sogg != 1 else "Ecco chi l'ha fatto vincere.", sp))
+    frasi += [
         (("E la tua città? Scrivi città e nome: falla salire." if sogg != 1 else "E il tuo? Scrivi città, nome e razza: fallo salire."), {"tipo": "commento", "testo": f"{p2 if sogg == 0 else rng.choice(CITTA)}, Luna, cane"}),
     ]
     did = (f"🏁 {titolo[2:]}: {len(giorni)} giorni in 10 secondi. 👑 {p1} {v1} · 🥈 {p2} {v2} · 🥉 {p3} {v3}.\n\n"
@@ -1525,7 +1568,7 @@ def main():
     nv = st.get("variante_n", 0); st["variante_n"] = nv + 1
     voce_v, apertura, max_parole = VARIANTI[nv % len(VARIANTI)]
     if FRASI_FISSE.get(formato):  # quiz e figurine: testi scritti apposta
-        voce_v, apertura, max_parole = (variante_test or "voce"), "fissa", 45
+        voce_v, apertura, max_parole = (variante_test or "voce"), "fissa", FRASI_FISSE[formato]  # 15/11: prima valeva 45 per tutti
         test_like = True
     else: test_like = False
     if test:  # test di crescita: frasi fisse (niente riscrittura, il gancio è quello del test), voce o solo testo come da piano
@@ -1579,9 +1622,14 @@ def main():
     copione = {"voce": voce_ia, "variante": f"{voce_v}-{apertura}-{max_parole}", "tema": tema, "id": id_reel, "formato": formato, "testata": {"titolo": titolo},
                "conteggio": {"cani": D["cani"], "gatti": D["gatti"]}, "frasi": [{"testo": t, "scena": sc} for t, sc in frasi],
                "banner": st.pop("banner_reel", "💬 Commenta città e nome del tuo animale 👇"), "didascalia": did,
-               "tag": [u for u in mostrati if u.lower() not in ESCLUSI], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}),
+               "tag": [u for u in mostrati if u.lower() not in ESCLUSI],
+               # 15/11: fino a 3 padroni in vista che ci seguono già ricevono l'invito a collaborare: se accettano, il reel va anche sul loro profilo
+               "collab": [x["utente"] for _, sc in frasi if sc.get("tipo") == "padroni" for x in sc["persone"] if x["utente"].lower() in D["seguono"]][:3], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}),
                **({"test": {"nome": "crescita-1", "formato": formato, "variante": voce_v, "slot": ORA.strftime("%H:%M"), "caso": caso}} if test else {})}
     if test: copione.pop("intro", None); copione.pop("intro_3d", None)  # nel test il primo fotogramma è il gancio: niente video prima
+    oggi = ORA.date()  # 15/11: chi è stato taggato e quando (motore/copione.py padroni: riposo di 3 giorni tra un tag e l'altro)
+    st["taggati"] = {u: g for u, g in {**st.get("taggati", {}), **{u.lower(): oggi.isoformat() for u in copione["tag"]}}.items()
+                     if (oggi - date.fromisoformat(g)).days < 15}
     Path(uscita).write_text(json.dumps(copione, ensure_ascii=False, indent=1))
     STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
     print(f"copione {copione['id']}: " + " / ".join(t for t, _ in frasi))

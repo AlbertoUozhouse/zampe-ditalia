@@ -13,7 +13,11 @@ VERDE = {"gatti", "gatto", "tetti"}
 def main():
     parole_json, progetto, durata, *frasi = sys.argv[1:]
     salta = 0  # «--salta=N»: le prime N parole non hanno sottotitoli (il gancio è già scritto grande nella prima scena)
-    if frasi and frasi[0].startswith("--salta="): salta = int(frasi.pop(0)[8:])
+    nascondi = []  # «--nascondi=12-20,31-36»: parole senza sottotitoli (15/11: la scena dei padroni ha i suoi biglietti proprio dove stanno i sottotitoli)
+    while frasi and frasi[0].startswith("--"):
+        x = frasi.pop(0)
+        if x.startswith("--salta="): salta = int(x[8:])
+        elif x.startswith("--nascondi="): nascondi += [tuple(map(int, r.split("-"))) for r in x[11:].split(",") if r]
     P = json.loads(Path(parole_json).read_text())["parole"]
     durata = float(durata)
     gruppi, i = [], 0
@@ -28,7 +32,7 @@ def main():
 
     html, js = [], []
     for gi, (a, b) in enumerate(gruppi):
-        if b < salta: continue
+        if b < salta or any(x0 <= a and b <= x1 for x0, x1 in nascondi): continue
         ws = P[a:b + 1]
         s = max(0.1, ws[0]["s"] - 0.05)
         e = (P[b + 1]["s"] - 0.03) if b + 1 < len(P) else durata - 0.05

@@ -570,5 +570,39 @@ def corsa(cid, dur, titolo, giorni, serie, n=6):
     corpo = f'<div class="spot"></div><div class="tit">{ESC(titolo)}</div><div class="gio" id="{cid}-g">{ESC(giorni[0])}</div><div class="pista">{"".join(righe)}</div>'
     return _pagina(cid, f"Corsa a barre: {titolo}", css, corpo, "\n".join(js))
 
-TIPI = {"corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+def padroni(cid, dur, titolo, persone):
+    """I padroni in campo (15/11, Alberto: «inseriamo anche i proprietari!»): fino a 10 animali veri della mappa, ognuno disegnato,
+    col suo nome, il @ di chi lo ha e la città. Chi è nel reel viene taggato: riceve la notifica, lo guarda, lo ricondivide.
+    Dai numeri: il testa a testa del 13/11 con 8 padroni in vista ha fatto 2.452 views e 16 condivisioni (gli altri reel al massimo 6).
+    persone = [{"svg": "golden-4-solo.svg", "nome": "Luna", "utente": "mario", "citta": "Treviso", "t": "cane"}]"""
+    def fs(testo, base, em):  # la misura che entra nei 280 px del biglietto (em = larghezza media di una lettera): niente testo tagliato
+        return max(18, min(base, int(280 / (max(1, len(str(testo))) * em))))
+    pp = persone[:10]
+    celle = "".join(f'<div class="pc {"c" if x.get("t") == "gatto" else "d"}" id="{cid}-p{i}"><img src="assets/svg/{x["svg"]}" alt="">'
+                    f'<div class="tx"><b style="font-size:{fs(x["nome"], 50, 0.62)}px">{ESC(x["nome"])}</b>'
+                    f'<i style="font-size:{fs("@" + x["utente"], 32, 0.62)}px">@{ESC(x["utente"])}</i>'
+                    f'<span style="font-size:{fs(x.get("citta", ""), 28, 0.6)}px">{ESC(x.get("citta", ""))}</span></div></div>' for i, x in enumerate(pp))
+    css = SPOT.format(a="#1D3A73", b="#08142E") + """
+    #root .tit { position: absolute; left: 60px; right: 60px; top: 290px; text-align: center; font: 800 62px/1.05 "Bricolage Grotesque", sans-serif; color: #FFF4DE; text-shadow: 0 6px 0 #05030F; }
+    #root .tit b { color: #FFC55C; }
+    #root .gr { position: absolute; left: 50px; right: 50px; top: 430px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; }
+    #root .pc { position: relative; height: 186px; border-radius: 26px; background: rgba(20,36,77,.94); border: 3px solid rgba(85,119,201,.65); overflow: hidden; }
+    #root .pc.c { border-color: rgba(207,227,107,.55); }
+    #root .pc img { position: absolute; left: 6px; top: 12px; width: 160px; height: 160px; object-fit: contain; filter: drop-shadow(0 6px 10px rgba(0,0,0,.5)); }
+    #root .pc .tx { position: absolute; left: 172px; right: 10px; top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; gap: 0; }
+    #root .pc b, #root .pc i, #root .pc span { display: block; white-space: nowrap; }
+    #root .pc b { font: 800 50px/1.25 "Bricolage Grotesque", sans-serif; color: #FFF4DE; }
+    #root .pc i { font: 900 32px/1.25 var(--font-body); font-style: normal; color: #FFC55C; }
+    #root .pc span { font: 800 28px/1.25 var(--font-body); color: #B9C8F0; }"""
+    parti = re.split(r"(\*[^*]+\*)", titolo)
+    tit = "".join(f"<b>{ESC(x[1:-1])}</b>" if x.startswith("*") else ESC(x) for x in parti if x)
+    corpo = f'<div class="spot"></div><div class="tit" id="{cid}-t">{tit}</div><div class="gr">{celle}</div>'
+    js = [f'    tl.fromTo("#{cid}-t", {{ y: -30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0);']
+    js += [f'    tl.fromTo("#{cid}-p{i}", {{ scale: 0.5, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }}, {0.2 + i * 0.12:.2f});' for i in range(len(pp))]
+    giro = 0.2 + len(pp) * 0.12 + 0.4  # poi una luce d'oro passa su ogni padrone, uno dopo l'altro
+    passo = max(0.15, min(0.4, (dur - giro - 0.3) / max(1, len(pp))))
+    js += [f'    tl.to("#{cid}-p{i}", {{ keyframes: [{{ scale: 1.05, borderColor: "#FFC55C", duration: 0.15 }}, {{ scale: 1, borderColor: "rgba(85,119,201,.65)", duration: 0.25 }}] }}, {giro + i * passo:.2f});' for i in range(len(pp))]
+    return _pagina(cid, f"I padroni in campo: {titolo.replace('*', '')}", css, corpo, "\n".join(js))
+
+TIPI = {"padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}

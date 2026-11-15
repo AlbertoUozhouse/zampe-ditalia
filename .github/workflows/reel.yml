@@ -166,6 +166,8 @@ jobs:
           ID="${{ steps.carica.outputs.id }}"
           ARGS=(--tipo REELS --media "media/auto/$ID.mp4" --didascalia "contenuti/auto/$ID.txt" --tag "$TAG")
           [ -f "docs/media/auto/$ID.jpg" ] && ARGS+=(--copertina "media/auto/$ID.jpg")
+          COLLAB=$(python3 -c "import json;print(','.join(json.load(open('/tmp/copione.json')).get('collab', [])))")
+          [ -n "$COLLAB" ] && ARGS+=(--collab "$COLLAB")
           ${{ inputs.prova && 'ARGS+=(--trial)' || 'true' }}
           if ! python3 -I motore/attesa.py controlla; then
             # 14/11: token invalidato da Instagram. Il reel non si butta e non parte la riserva: resta in coda

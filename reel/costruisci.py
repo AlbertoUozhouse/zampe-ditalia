@@ -280,6 +280,12 @@ def main():
         if tipo in ("sagoma", "svela", "figurina"):  # 12/11: il quiz e le figurine, col disegno della razza vera
             t_, k_, s_ = sc.pop("t", "cane"), sc.pop("razza_k"), sc.pop("seme", n + 3)
             svg_di(t_, k_, s_, serve); soli.append((t_, k_, s_, None)); sc["svg"] = f"{k_}-{s_}-solo.svg"  # solo l'animale (si estrae dopo i disegni)
+        if tipo == "padroni":  # 15/11: gli animali veri coi padroni, ognuno col suo disegno (solo l'animale, senza cuccia)
+            pp = []
+            for x in sc["persone"]:
+                svg_di(x["t"], x["razza"], x["seme"], serve); soli.append((x["t"], x["razza"], x["seme"], None))
+                pp.append({**x, "svg": f"{x['razza']}-{x['seme']}-solo.svg"})
+            sc["persone"] = pp
         if tipo in ("cuccia", "gatto"):
             sc["svg"] = svg_di("gatto" if tipo == "gatto" else "cane", sc.pop("razza"), sc.pop("seme", n + 3), serve)
         if tipo == "foto":  # la foto vera della star (docs/media/ugc)
@@ -323,7 +329,10 @@ def main():
          bg0=S.T["bg"][0], bg1=S.T["bg"][1], bg2=S.T["bg"][2], host="\n".join(host), titolo=S.ESC(copione["testata"]["titolo"]),
         cani=c["cani"], gatti=c["gatti"], b0=b0, bd=round(durata - b0, 2), banner=S.ESC(copione.get("banner", "📍 Scrivi città, nome e razza 👇")),
         dvoce=round(fine_voce + 0.1, 2)))
-    subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *([f"--salta={len(frasi[0].split())}"] if copione["frasi"][0]["scena"]["tipo"] in ("gancio", "intruso") else []), *gruppi_sottotitoli(frasi)], check=True)
+    inizio_parole = [sum(len(x.split()) for x in frasi[:k]) for k in range(len(frasi))]
+    nascoste = ",".join(f"{inizio_parole[k]}-{inizio_parole[k] + len(frasi[k].split()) - 1}" for k, f in enumerate(copione["frasi"]) if f["scena"]["tipo"] == "padroni")
+    subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *([f"--salta={len(frasi[0].split())}"] if copione["frasi"][0]["scena"]["tipo"] in ("gancio", "intruso") else []),
+                    *([f"--nascondi={nascoste}"] if nascoste else []), *gruppi_sottotitoli(frasi)], check=True)
     (out / "effetti.json").write_text(json.dumps(effetti))
     subprocess.run([sys.executable, str(ROOT / "reel/musica.py"), str(out / "effetti.json"), str(prog / "assets/audio/musica.wav")], check=True)
 
