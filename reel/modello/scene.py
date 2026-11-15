@@ -604,5 +604,20 @@ def padroni(cid, dur, titolo, persone):
     js += [f'    tl.to("#{cid}-p{i}", {{ keyframes: [{{ scale: 1.05, borderColor: "#FFC55C", duration: 0.15 }}, {{ scale: 1, borderColor: "rgba(85,119,201,.65)", duration: 0.25 }}] }}, {giro + i * passo:.2f});' for i in range(len(pp))]
     return _pagina(cid, f"I padroni in campo: {titolo.replace('*', '')}", css, corpo, "\n".join(js))
 
-TIPI = {"padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+def tifosi(cid, dur, animali):
+    """Il tifo (15/11): sei cani grandi, ognuno con la sciarpa della sua squadra, il nome della squadra sotto e i suoi due colori.
+    animali = [{"svg": "golden-21-juventus-solo.svg", "nome": "Juventus", "c": ["#F4F4F4", "#111111"]}]"""
+    celle = "".join(f'<div class="tc" id="{cid}-a{i}"><img src="assets/svg/{a["svg"]}" alt=""><span>{ESC(a["nome"])}</span>'
+                    f'<i style="background:linear-gradient(90deg,{a["c"][0]} 0 50%,{a["c"][1]} 50% 100%)"></i></div>' for i, a in enumerate(animali[:6]))
+    css = SPOT.format(a="#1E5A3A", b="#071A12") + """
+    #root .gr { position: absolute; left: 40px; right: 40px; top: 290px; display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+    #root .tc { position: relative; height: 385px; display: flex; flex-direction: column; align-items: center; }
+    #root .tc img { width: 330px; height: 300px; object-fit: cover; object-position: 50% 30%; filter: drop-shadow(0 10px 16px rgba(0,0,0,.55)); }
+    #root .tc span { margin-top: -4px; font: 800 40px/1.2 "Bricolage Grotesque", sans-serif; color: #FFC55C; background: rgba(6,11,26,.88); border-radius: 16px; padding: 2px 22px; }
+    #root .tc i { display: block; width: 150px; height: 10px; margin-top: 6px; border-radius: 5px; border: 2px solid rgba(255,255,255,.35); }"""
+    js = "\n".join(f'    tl.fromTo("#{cid}-a{i}", {{ scale: 0.4, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }}, {0.05 + i * 0.2:.2f});' for i in range(len(animali[:6])))
+    js += "\n" + "\n".join(f'    tl.to("#{cid}-a{i}", {{ keyframes: [{{ scale: 1.08, duration: 0.14 }}, {{ scale: 1, duration: 0.2 }}] }}, {0.05 + len(animali[:6]) * 0.2 + 0.3 + i * 0.25:.2f});' for i in range(len(animali[:6])))
+    return _pagina(cid, "Le tifoserie a quattro zampe.", css, f'<div class="spot"></div><div class="gr">{celle}</div>', js)
+
+TIPI = {"tifosi": tifosi, "padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}

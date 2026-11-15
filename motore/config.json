@@ -3,8 +3,7 @@
  "reel_automatici": true,
  "orari": {
   "13:00": "testa_a_testa",
-  "18:00": "sera_18",
-  "21:00": "puntata"
+  "21:00": "sera_21"
  },
  "negozio": {
   "osso": "https://buy.stripe.com/6oU14n8GY9giaNM1tpenS03",
@@ -41,7 +40,9 @@
   "2026-11-14 13:00": "testa_a_testa",
   "2026-11-09 13:00": "prima_luce",
   "2026-11-13 21:00": "gara_follower",
-  "2026-11-16 21:00": "corsa"
+  "2026-11-16 21:00": "corsa",
+  "2026-11-15 18:00": "nomi_top",
+  "2026-11-16 13:00": "tifo"
  },
  "voce_ia": false,
  "feste_reel": false,
@@ -50,10 +51,7 @@
  ],
  "settimanali": {
   "lun 13:00": "coppa_apertura",
-  "gio 21:00": "coppa_sorpasso",
-  "dom 21:00": "coppa_verdetto",
-  "mer 21:00": "gara_follower",
-  "sab 21:00": "gara_follower"
+  "dom 21:00": "coppa_verdetto"
  },
  "test_crescita": {
   "nota": "Test di crescita (Alberto, 8/11): quali reel portano più follower. stato: «anteprima» = nessuna uscita, solo anteprime; «attivo» = dal giorno «dal» il piano sostituisce gli orari delle 13, 18 e 21 per 7 giorni; «spento» = tutto come prima. Per tornare indietro basta «spento».",
@@ -93,5 +91,6 @@
   "staffetta_quartiere": true,
   "cantieri_in_pausa": false
  },
- "coppa_punto_per_luce": true
+ "coppa_punto_per_luce": true,
+ "nota_piano_15_11": "Piano nuovo del 15/11 (Alberto: «facciamo tanti reel ma portano 0»): 2 reel al giorno, ognuno una promessa a chi guarda (commenta e ricevi subito qualcosa di tuo). 13:00 testa a testa (città contro città, padroni taggati); 21:00 a rotazione tifo, intruso, nomi, corsa (copione.py scelta_21). Tolti dai reel: sorpasso del giovedì e gara dei follower (restano sul sito e nelle risposte). Un formato sotto le 2.000 views si toglie."
 }

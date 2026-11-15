@@ -83,7 +83,7 @@ def padroni(D, st, animali, n=10, riposo=3):
         if a["u"].lower() in visti: continue
         visti.add(a["u"].lower()); out.append(a)
         if len(out) == n: break
-    return [{"nome": (a["n"].strip()[:1].upper() + a["n"].strip()[1:])[:16], "utente": a["u"], "citta": a["c"], "t": a["t"],
+    return [{"nome": (a["n"].strip()[:1].upper() + a["n"].strip()[1:])[:16], "utente": a["u"], "citta": a["c"], "t": a["t"], **({"sq": a["sq"]} if a.get("sq") else {}),
              "razza": a.get("razza") or ("meticcio" if a["t"] == "cane" else "europeo"), "seme": zlib.crc32(a.get("id", a["u"] + a["n"]).encode()) % 997 + 1} for a in out[:n]]
 
 def scena_padroni(D, st, animali, titolo, n=10):
@@ -1225,7 +1225,7 @@ def verifica(cop):
 
 
 # ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
-FRASI_FISSE = {"indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
+FRASI_FISSE = {"tifo": 50, "indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
 
 MANTELLI = {"europeo", "grigio", "nero", "rosso", "bianco", "bicolore", "bicolore_rosso", "calico", "tartarugato", "meticcio"}  # colori, non razze: fuori dal quiz
 
@@ -1470,6 +1470,49 @@ def corsa(D, rng, st):
     st["senza_bonus"] = True
     return titolo.upper(), frasi, did
 
+# ================================================================ il tifo (15/11, piano nuovo: ogni reel è una promessa a chi guarda)
+# Dalla pagina rivale col nostro stesso gioco: «la tua casa coi colori della tua squadra» = 179.000 views. Chi guarda commenta la sua squadra
+# e il suo cane mette la sciarpa sulla mappa (motore/squadre.py, commenti.py). Finché i tifosi sono pochi è il lancio; poi il Campionato delle Zampe.
+TIFO_LANCIO = [("juventus", "golden", 21), ("inter", "labrador_miele", 8), ("milan", "jack_russell", 33), ("napoli", "meticcio", 12), ("roma", "bassotto", 5), ("lazio", "volpino", 17)]
+
+def tifo(D, rng, st):
+    """Il tuo cane per chi tifa? Lancio: sei cani con la sciarpa delle squadre più tifate; poi la classifica delle tifoserie a quattro zampe."""
+    import squadre
+    tifosi = [a for a in D["animali"] if a.get("k") == "animale" and a.get("sq") and a["u"].lower() not in ESCLUSI]
+    per = {}
+    for a in tifosi: per[a["sq"]] = per.get(a["sq"], 0) + 1
+    top = sorted(per.items(), key=lambda kv: (-kv[1], kv[0]))
+    frasi = [("Il tuo cane per chi tifa?", {"tipo": "gancio", "testo": "Il tuo cane *per chi tifa*?", "sotto": "⚽ Scrivilo qui sotto", "icona": "⚽"})]
+    if len(tifosi) < 15 or len(top) < 4:  # il lancio
+        an = [{"t": "cane", "razza": r, "seme": sm, "nome": squadre.nome(k), "sq": k, "c": squadre.colori(k)["c"]} for k, r, sm in TIFO_LANCIO]
+        frasi += [
+            ("Juve, Inter, Milan, Napoli, Roma o Lazio?", {"tipo": "tifosi", "animali": an}),
+            ("Scrivi città, nome e squadra: sulla mappa d'Italia mette la sciarpa coi suoi colori.", {"tipo": "commento", "testo": "Napoli, Luna, forza Napoli ⚽"}),
+            ("E domenica il campionato: quale tifoseria ha più cani?", {"tipo": "gancio", "testo": "Il Campionato *delle Zampe*", "sotto": "quale tifoseria ha più cani e gatti?", "icona": "🏆"}),
+        ]
+        did = ("⚽ Il tuo cane per chi tifa? Juve, Inter, Milan, Napoli, Roma, Lazio… o la squadra della tua città?\n\n"
+               "👇 Scrivi qui sotto città, nome e squadra (es. «Napoli, Luna, cane, forza Napoli»): sulla mappa d'Italia il tuo cane o gatto mette la sciarpa coi colori della sua squadra.\n"
+               "🏆 Domenica il Campionato delle Zampe: quale tifoseria ha più cani e gatti? Tagga un amico tifoso e fate salire la vostra squadra!")
+    else:  # il campionato
+        righe = [{"nome": squadre.nome(k), "valore": n} for k, n in top[:6]]
+        (k1, n1), (k2, n2) = top[0], top[1]
+        frasi.append((f"{squadre.nome(k1)} in testa con {n1} tifosi a quattro zampe. {squadre.nome(k2)} a {n1 - n2}.", {"tipo": "barre", "titolo": "🏆 Il Campionato delle Zampe", "righe": righe}))
+        sp = scena_padroni(D, st, [a for a in tifosi if a["sq"] == k1], f"⚽ I tifosi *{squadre.nome(k1)}*")
+        if sp: frasi.append((f"Ecco chi porta in alto la {squadre.nome(k1)}.", sp))
+        frasi.append(("La tua squadra non c'è? Scrivi città, nome e squadra: il tuo cane mette la sciarpa.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, Luna, cane, forza {squadre.nome(top[2][0] if len(top) > 2 else k2)} ⚽"}))
+        did = (f"🏆 Il Campionato delle Zampe: quale tifoseria ha più cani e gatti?\n" + " · ".join(f"{i + 1}° {squadre.nome(k)} {n}" for i, (k, n) in enumerate(top[:5])) + "\n\n"
+               "👇 La tua squadra è indietro? Scrivi qui sotto città, nome e squadra (es. «Napoli, Luna, cane, forza Napoli»): il tuo cane mette la sciarpa sulla mappa e la tua squadra sale.\n"
+               "👥 Tagga un amico tifoso!")
+    st["copertina"] = None
+    st["banner_reel"] = "⚽ Scrivi città, nome e squadra 👇"
+    st["hashtag"] = "#cani #gatti #calcio #seriea #tifosi #juve #inter #milan #napoli #roma #lazio #animalidomestici "
+    st["senza_bonus"] = True
+    return "⚽ IL TUO CANE TIFA", frasi, did
+
+def scelta_21():
+    """15/11, piano nuovo: alle 21 a rotazione i reel che promettono qualcosa a chi commenta (la squadra, il tempo dell'intruso, il nome, la città)."""
+    return ["intruso", "nomi_top", "tifo", "corsa"][(ORA.date() - date(2026, 11, 17)).days % 4]
+
 def scelta_18():
     """Le 18 a rotazione (12/11): il quiz, le figurine, la luce nuova: tre idee diverse, mai lo stesso video due giorni di fila (dal 13/11)."""
     return ["indovina", "intruso", "nomi_top", "figurina", "questa_luce"][(ORA.date() - date(2026, 11, 13)).days % 5]
@@ -1478,7 +1521,7 @@ def sera_18(D, rng, st):
     return FORMATI[scelta_18()](D, rng, st)
 
 
-FORMATI = {"corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"tifo": tifo, "corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "sera_21": lambda D, rng, st: FORMATI[scelta_21()](D, rng, st), "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -1544,6 +1587,7 @@ def main():
     formato, uscita = parti[0], sys.argv[2]  # «fondatore:prova» è un Trial Reel: il copione è lo stesso; «paese_al_buio:testo» è la versione solo testo del test
     variante_test = next((x for x in parti[1:] if x in ("voce", "testo")), None)
     if formato == "sera_18": formato = scelta_18()  # il copione e il rendimento portano il nome vero del format
+    if formato == "sera_21": formato = scelta_21()
     if formato == "auto":
         formato = min(ORARI, key=lambda o: abs(o[0] - ORA.hour))[1]
     st = carica(STORICO, {})
