@@ -9902,6 +9902,7 @@
 "18376687213241462",
 "18376730803241361",
 "18377044663208938",
+"18377100244213300",
 "18377128153241344",
 "18377128546210456",
 "18377146330240831",
@@ -10778,7 +10779,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794772835.6663666
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-15",
@@ -13970,6 +13973,9 @@
 ],
 "cicc.iomodugno": [
 "maurodileo_"
+],
+"giada_di_matteo6": [
+"elena.alina.589"
 ]
 },
 "premiati": [
@@ -15005,7 +15011,7 @@
 "tnbr.fabri": 30,
 "raffaele_fia": 40,
 "ma_de_.marco_": 40,
-"stella_zenna": 71,
+"stella_zenna": 91,
 "carlino_junior": 30,
 "easy758": 20,
 "fabri_chad": 20,
@@ -15200,7 +15206,8 @@
 "mauro_mas21": 20,
 "thor_golden_life": 6,
 "elena.alina.589": 10,
-"celia.isaja": 10
+"celia.isaja": 10,
+"yungestquaglie": 20
 },
 "inviti_giorno": {
 "2026-11-08": {
@@ -19582,7 +19589,8 @@
 ],
 "derby_premiati": [
 "2026-10-28NARM",
-"2026-11-01MITO"
+"2026-11-01MITO",
+"2026-11-08LIPI"
 ],
 "acquisti": {
 "nicolassctt|animale|artur": [
@@ -19630,7 +19638,7 @@
 "2026-11-12": 1854,
 "2026-11-13": 1871,
 "2026-11-14": 1888,
-"2026-11-15": 1909
+"2026-11-15": 1910
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -19653,10 +19661,10 @@
 }
 },
 "elezione": "2026-11-15",
-"bello_sett": "2026-45",
+"bello_sett": "2026-46",
 "piu_bello": {
 "id": "jacopo.cavadini|animale|yuki",
-"giorno": "2026-11-08"
+"giorno": "2026-11-15"
 },
 "follower_ore": [
 [
@@ -20430,6 +20438,10 @@
 [
 "2026-11-15T19:46+00:00",
 1909
+],
+[
+"2026-11-15T20:00+00:00",
+1910
 ]
 ],
 "coppa": {
