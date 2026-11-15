@@ -477,6 +477,15 @@
   "scambi": 126
  },
  {
+  "id": "2026-11-15-1209-giro",
+  "formato": "giro",
+  "modalita": "operativa",
+  "inizio": "2026-11-15T11:09:21+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-15T11:19:43+00:00",
+  "scambi": 130
+ },
+ {
   "id": "2026-11-15-1220-citta",
   "formato": "citta",
   "modalita": "operativa",
