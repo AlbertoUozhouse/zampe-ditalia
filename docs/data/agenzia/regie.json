@@ -174,5 +174,21 @@
   "secondi": 4.2,
   "perche": "Dopo tanti cieli ambra, petrolio e bronzo, il Giro parte da Napoli con un crepuscolo di golfo blu cobalto che sfuma in m",
   "reel": "2026-11-15-1209-giro"
+ },
+ {
+  "nome_stile": "Brenta Gemella",
+  "cielo_basso": "#4F7A78",
+  "cielo_alto": "#0A0F26",
+  "nebbia_colore": "#304448",
+  "lampioni_colore": "#FFCF8F",
+  "lucciole_colore": "#E8B8D0",
+  "lucciole": 170.0,
+  "bloom": 0.74,
+  "esposizione": 1.52,
+  "effetto": "stelle_cadenti",
+  "volo": "radente",
+  "secondi": 3.9,
+  "perche": "Dopo tanti cieli ambra, bronzo e cobalto, il pari 5 a 5 diventa un cielo diviso tra il verde-acqua freddo del Brenta e i",
+  "reel": "2026-11-15-1305-testa_a_testa"
  }
 ]
