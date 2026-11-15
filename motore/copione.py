@@ -1225,7 +1225,7 @@ def verifica(cop):
 
 
 # ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
-FRASI_FISSE = {"tifo": 50, "indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
+FRASI_FISSE = {"rari": 45, "citta": 45, "tifo": 50, "indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
 
 MANTELLI = {"europeo", "grigio", "nero", "rosso", "bianco", "bicolore", "bicolore_rosso", "calico", "tartarugato", "meticcio"}  # colori, non razze: fuori dal quiz
 
@@ -1509,9 +1509,72 @@ def tifo(D, rng, st):
     st["senza_bonus"] = True
     return "⚽ IL TUO CANE TIFA", frasi, did
 
+def rari(D, rng, st):
+    """«Solo 2 in tutta Italia: il tuo sarà il 3°?» (15/11, piano nuovo; la pagina rivale: «Solo 3 case così: la tua sarà la 4ª?» 67.600 views).
+    Una razza vera con 1–3 cani sulla mappa: chi ne ha uno commenta per diventare il prossimo, i padroni di quelli che ci sono vengono taggati."""
+    conta = {}
+    for a in D["animali"]:
+        if a.get("k") == "animale" and a.get("t") == "cane" and a.get("razza") and not a["razza"].endswith("_mix") and a["razza"] not in ("meticcio",):
+            conta.setdefault(a["razza"], []).append(a)
+    nomi_r = {r[0]: r[1].split(" (")[0] for r in D["razze"]["cani"]}
+    fatti = st.get("rari_fatti", [])
+    cand = [(k, v) for k, v in conta.items() if 1 <= len(v) <= 3 and k in nomi_r and k not in fatti]
+    if not cand: st["rari_fatti"] = []; cand = [(k, v) for k, v in conta.items() if 1 <= len(v) <= 3 and k in nomi_r]
+    if not cand: raise Salta("nessuna razza rara")
+    cand.sort(key=lambda kv: (abs(len(kv[1]) - 2), rng.random()))  # meglio «solo 2»
+    k, v = cand[0]; st["rari_fatti"] = (fatti + [k])[-60:]
+    n = len(v); nome_r = nomi_r[k]; dopo = ["primo", "secondo", "terzo", "quarto"][n]
+    chi = " e ".join(f"{a['n']} a {a['c']}" for a in v[:3])
+    frasi = [
+        (f"Solo {n} in tutta Italia.", {"tipo": "gancio", "testo": f"Solo *{n}* in tutta Italia", "sotto": f"🐾 {nome_r}: il tuo sarà il {dopo}?", "icona": "🐾"}),
+        (f"{nome_r}: {'solo ' if n > 1 else 'solo uno, '}{chi}.", {"tipo": "svela", "t": "cane", "razza_k": k, "seme": rng.randrange(1, 99), "razza": nome_r, "riga": f"{n} sulla mappa d'Italia"}),
+        (f"Hai un {nome_r}? Scrivi città, nome e razza: diventa il {dopo}.", {"tipo": "commento", "testo": next(t for t in (f"{rng.choice(['Bari', 'Roma', 'Pisa', 'Como', 'Lecce'])}, Rocky, {nome_r.lower()}", f"Rocky, {nome_r.lower()}", f"Rocky, {nome_r.lower().split()[0]}") if len(t) <= 22 or t.count(",") == 1 and " " not in t.split(", ")[1])}),
+    ]
+    st["tag_extra"] = [a["u"] for a in v if a["u"].lower() not in ESCLUSI]
+    did = (f"🐾 Solo {n} {nome_r} in tutta Italia sulla mappa di Zampe d'Italia: {chi}. Il tuo sarà il {dopo}?\n\n"
+           f"👇 Hai un {nome_r}? Scrivi qui sotto città, nome e razza (es. «Treviso, Rocky, {nome_r.lower()}»): si accende sulla mappa ed entra nella storia della sua razza.\n"
+           f"👥 Tagga chi ha un {nome_r}!")
+    st["copertina"] = None
+    st["banner_reel"] = f"🐾 Hai un {nome_r}? Scrivi città e nome 👇"
+    st["hashtag"] = f"#cani #{re.sub(r'[^a-z]', '', unicodedata.normalize('NFD', nome_r.lower()).encode('ascii', 'ignore').decode())} #razzecanine #animalidomestici "
+    st["senza_bonus"] = True
+    return f"🐾 SOLO {n} IN ITALIA", frasi, did
+
+def citta_reel(D, rng, st):
+    """«Scrivi la tua città: ti diciamo il nome più diffuso lì» (15/11, piano nuovo). Chi guarda commenta anche se non ha mai giocato:
+    il bot risponde col dato vero della sua città (commenti.py riga_citta). Qui gli esempi veri delle città più grandi della mappa."""
+    norm_ = lambda x: "".join(ch for ch in unicodedata.normalize("NFD", x.lower()) if ch.isalpha())
+    per = {}
+    for a in D["animali"]:
+        if a.get("k") == "animale": per.setdefault((a["c"], a["p"]), []).append(a)
+    righe = []
+    for (c, p), L in per.items():
+        if len(L) < 15: continue
+        cn = {}
+        for a in L: cn.setdefault(norm_(a["n"]), [a["n"].strip().title(), 0])[1] += 1
+        nm, k = max(cn.values(), key=lambda x: (x[1], x[0]))
+        if k >= 2: righe.append((len(L), c, nm, k))
+    righe.sort(reverse=True)
+    if len(righe) < 4: raise Salta("troppo poche città con un nome che si ripete")
+    righe = righe[:5]
+    frasi = [
+        ("Il nome di cane più diffuso nella tua città?", {"tipo": "gancio", "testo": "Il nome più diffuso *nella tua città*?", "sotto": "📍 Scrivi la città: ti rispondiamo", "icona": "📍"}),
+        (f"A {righe[0][1]} vince {righe[0][2]}. A {righe[1][1]}, {righe[1][2]}. A {righe[2][1]}, {righe[2][2]}.",
+         {"tipo": "classifica", "titolo": "📍 Il nome più diffuso", "righe": [{"nome": c, "valore": f"{nm} ({k})"} for _, c, nm, k in righe]}),
+        ("Scrivi la tua città: ti rispondiamo noi, coi numeri veri.", {"tipo": "commento", "testo": rng.choice([c for c in CITTA if c not in {r[1] for r in righe}] or CITTA)}),
+    ]
+    did = ("📍 Qual è il nome di cane più diffuso nella tua città? " + " · ".join(f"{c}: {nm}" for _, c, nm, _ in righe) + "\n\n"
+           "👇 Scrivi qui sotto la tua città: ti rispondiamo con il nome più diffuso lì, quanti animali ci sono e la razza più amata (dati veri della mappa).\n"
+           "🐾 Se il tuo non c'è ancora, aggiungi nome e cane o gatto (es. «Treviso, Luna, cane»): si accende!")
+    st["copertina"] = None
+    st["banner_reel"] = "📍 Scrivi la tua città 👇"
+    st["hashtag"] = "#cani #gatti #italia #nomicani #campanilismo #animalidomestici "
+    st["senza_bonus"] = True
+    return "📍 LA TUA CITTÀ", frasi, did
+
 def scelta_21():
     """15/11, piano nuovo: alle 21 a rotazione i reel che promettono qualcosa a chi commenta (la squadra, il tempo dell'intruso, il nome, la città)."""
-    return ["intruso", "nomi_top", "tifo", "corsa"][(ORA.date() - date(2026, 11, 17)).days % 4]
+    return ["intruso", "citta", "tifo", "rari", "nomi_top", "corsa"][(ORA.date() - date(2026, 11, 17)).days % 6]
 
 def scelta_18():
     """Le 18 a rotazione (12/11): il quiz, le figurine, la luce nuova: tre idee diverse, mai lo stesso video due giorni di fila (dal 13/11)."""
@@ -1521,7 +1584,7 @@ def sera_18(D, rng, st):
     return FORMATI[scelta_18()](D, rng, st)
 
 
-FORMATI = {"tifo": tifo, "corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "sera_21": lambda D, rng, st: FORMATI[scelta_21()](D, rng, st), "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"rari": rari, "citta": citta_reel, "tifo": tifo, "corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "sera_21": lambda D, rng, st: FORMATI[scelta_21()](D, rng, st), "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
