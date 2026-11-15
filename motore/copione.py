@@ -1738,7 +1738,7 @@ SERIE_PUNTATE = {  # titolo, sfondo, muso, sporco dopo, frasi (voce, testo grand
         ("Il volontario dice: seduto!", "«SEDUTO!»", [("☝️", 800, 720, 100)]),
         ("Paolino si è seduto. Sulla torta.", "SI È SEDUTO SULLA TORTA", [("🎂", 520, 1060, 130), ("💥", 760, 960, 100)])]),
     "visita": ("UNA FAMIGLIA IN VISITA", "casa", "triste", True, [
-        ("Avete scelto la visita. Oggi una famiglia viene a conoscere Paolino.", "UNA FAMIGLIA PER ZAMPA?", [("👨‍👩‍👧", 800, 1000, 130)]),
+        ("Avete scelto la visita. Oggi una famiglia viene a conoscere Paolino.", "UNA FAMIGLIA PER PAOLINO?", [("👨‍👩‍👧", 800, 1000, 130)]),
         ("Paolino li ha visti arrivare dal cancello…", "LI HA VISTI ARRIVARE", [("🚪", 820, 720, 110)]),
         ("e si è nascosto sotto il furgone. Era timido. Torneranno, forse.", "NASCOSTO SOTTO IL FURGONE", [("🚐", 520, 1060, 140), ("❓", 820, 700, 90)])]),
 }
