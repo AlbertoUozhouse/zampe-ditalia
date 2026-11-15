@@ -700,10 +700,17 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
     #root .nastro span {{ display: inline-block; transform: rotate(-3deg); font: 800 54px/1.1 "Bricolage Grotesque", sans-serif; color: #1A1206; background: #FFD23F; border: 5px solid #1A1206; border-radius: 14px; padding: 10px 26px; box-shadow: 0 8px 0 rgba(0,0,0,.35); }}
     #root .zampa {{ position: absolute; left: -80px; top: 360px; width: 1240px; height: 1080px; object-fit: contain; filter: drop-shadow(0 22px 26px rgba(0,0,0,.45)); }}
     #root .zampa.intero {{ left: 185px; top: 470px; width: 710px; height: 780px; }}
-    #root .foto {{ position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }}
-    #root .velo {{ position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55) 0, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 58%, rgba(0,0,0,.6) 82%); }}
-    #root .foto ~ .frase {{ top: 1250px; background: rgba(10,10,10,.6); border-radius: 22px; padding: 10px 18px; }}
-    #root .foto ~ .scelta .dom {{ background: rgba(10,10,10,.6); border-radius: 18px; padding: 6px 10px; }}
+    #root .sfoca {{ position: absolute; inset: -60px; width: 1200px; height: 2040px; object-fit: cover; filter: blur(34px) brightness(.55); }}
+    #root .velo {{ position: absolute; inset: 0; background: rgba(8,10,20,.25); }}
+    #root .foto {{ position: absolute; left: 230px; top: 568px; width: 620px; height: 885px; object-fit: cover; border-radius: 30px; border: 8px solid #FFF8EA; box-shadow: 0 24px 50px rgba(0,0,0,.55); }}
+    #root .foto.piccola {{ left: 335px; top: 568px; width: 410px; height: 575px; }}
+    #root .foto ~ .frase {{ top: 428px; left: 30px; right: 30px; }}
+    #root .foto ~ .nastro {{ top: 296px; left: 470px; right: 30px; text-align: right; }}
+    #root .foto ~ .nastro span {{ font-size: 34px; padding: 8px 16px; }}
+    #root .foto ~ .scelta {{ top: 1150px; height: 310px; }}
+    #root .foto ~ .scelta .dom {{ top: -722px; font-size: 64px; }}
+    #root .foto ~ .scelta .op {{ top: 20px; height: 280px; }}
+    #root .foto ~ .scelta .o {{ top: 130px; }}
     #root .zampa.intero ~ .frase {{ top: 1262px; }}
     #root .puzza {{ position: absolute; left: -60px; top: 420px; width: 1200px; height: 1000px; }}
     #root .puzza path {{ fill: none; stroke: #8DB255; stroke-width: 14; stroke-linecap: round; opacity: .85; }}
@@ -722,13 +729,13 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
     if foto:  # 15/11 sera: Zampa vero (foto IA realistica, motore/zampa.py) a tutto schermo, che si avvicina piano; sopra contatori e scritte
         sb, st, ogg = "", "", ""
     intero = svg.endswith(".png")  # Zampa intero in 3D (reel/zampa3d.js): sta in piedi sul pavimento, la frase sotto i piedi
-    fondo = (f'<img class="foto" id="{cid}-z" src="assets/img/{foto}" alt=""><div class="velo"></div>' if foto else
+    fondo = (f'<img class="sfoca" src="assets/img/{foto}" alt=""><div class="velo"></div><img class="foto{" piccola" if scelta else ""}" id="{cid}-z" src="assets/img/{foto}" alt="">' if foto else
              f'<div class="muro"></div><div class="pav"{" style=\'height:760px\'" if intero else ""}></div>{sb}<img class="zampa{" intero" if intero else ""}" id="{cid}-z" src="assets/svg/{svg}" alt="">')
     corpo = (f'{fondo}{st}{ogg}'
              f'<div class="hud"><div><small>GIORNI</small><b id="{cid}-g">{giorni}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>'
              + (f'<div class="nastro"><span id="{cid}-n">{ESC(banner)}</span></div>' if banner else "")
              + (f'<div class="frase" id="{cid}-t">{ESC(testo)}</div>' if testo and not scelta else "") + sc)
-    js = ([f'    tl.fromTo("#{cid}-z", {{ scale: 1.0 }}, {{ scale: 1.1, duration: {dur:.2f}, ease: "none" }}, 0);'] if foto else
+    js = ([f'    tl.fromTo("#{cid}-z", {{ scale: 0.96 }}, {{ scale: 1.03, duration: {dur:.2f}, ease: "none" }}, 0);'] if foto else
           [f'    tl.fromTo("#{cid}-z", {{ scale: 0.85, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, 0.05);',
            f'    tl.to("#{cid}-z", {{ keyframes: [{{ rotation: -3, duration: 0.25 }}, {{ rotation: 3, duration: 0.25 }}, {{ rotation: 0, duration: 0.25 }}], repeat: {max(1, int(dur / 1.5))} }}, 0.4);'])
     if banner: js.append(f'    tl.fromTo("#{cid}-n", {{ scale: 0.3, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.4)" }}, 0.25);')
