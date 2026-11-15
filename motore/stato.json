@@ -8552,6 +8552,7 @@
 "18147993253528229",
 "18148009162603077",
 "18148069618569632",
+"18148096765592277",
 "18148098643580517",
 "18148120315529385",
 "18148129951573823",
@@ -9251,6 +9252,7 @@
 "18197137111394395",
 "18197298880396770",
 "18197442940385461",
+"18197899834398515",
 "18197977393396319",
 "18198208624390508",
 "18198664672388128",
@@ -10770,7 +10772,8 @@
 "18798213136033257"
 ],
 "risposte": [
-1794750108.0396843
+1794750108.0396843,
+1794751109.324654
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12969,7 +12972,8 @@
 "vittoriaa.marinoo": "2026-11-15",
 "_xxboston_": "2026-11-15",
 "pannunzioparide__": "2026-11-15",
-"parodia_annunci_trenitalia": "2026-11-15"
+"parodia_annunci_trenitalia": "2026-11-15",
+"elena.alina.589": "2026-11-15"
 },
 "media_letti": {},
 "pezzi": {
@@ -15189,7 +15193,8 @@
 "_.enzo.privv": 26,
 "pannunzioparide__": 10,
 "mauro_mas21": 20,
-"thor_golden_life": 6
+"thor_golden_life": 6,
+"elena.alina.589": 10
 },
 "inviti_giorno": {
 "2026-11-08": {
@@ -16078,7 +16083,8 @@
 "_.enzo.privv": "premiato",
 "pannunzioparide__": "premiato",
 "lorenzo_.bertelli": "in_attesa",
-"mauro_mas21": "premiato"
+"mauro_mas21": "premiato",
+"elena.alina.589": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -19559,10 +19565,12 @@
 "80f2f354528f1396",
 "8d8d8995734f8c96",
 "125e5917315613b3",
-"4a5a37e82e2c17bd"
+"4a5a37e82e2c17bd",
+"fde06cec3937ee6b"
 ],
 "privati_ora": [
-1794750108.0397139
+1794750108.0397139,
+1794751109.324683
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19614,7 +19622,7 @@
 "2026-11-12": 1854,
 "2026-11-13": 1871,
 "2026-11-14": 1888,
-"2026-11-15": 1899
+"2026-11-15": 1900
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -20378,6 +20386,10 @@
 [
 "2026-11-15T13:41+00:00",
 1899
+],
+[
+"2026-11-15T13:58+00:00",
+1900
 ]
 ],
 "coppa": {
@@ -22443,7 +22455,7 @@
 "Torretta|PA": 1,
 "Molfetta|BA": 3,
 "Francavilla Fontana|BR": 1,
-"Belmonte del Sannio|IS": 4,
+"Belmonte del Sannio|IS": 7,
 "Mussolente|VI": 1
 },
 "giocatori": {
@@ -23283,10 +23295,12 @@
 },
 "Belmonte del Sannio|IS": {
 "u": [
-"pannunzioparide__"
+"pannunzioparide__",
+"elena.alina.589"
 ],
 "c": [
-"17877644247595001"
+"17877644247595001",
+"18148096765592277"
 ],
 "chiuse": 0,
 "log": []
@@ -23361,7 +23375,8 @@
 "_xxboston_|animale|lilly",
 "pannunzioparide__|animale|winky",
 "pannunzioparide__|animale|lampo",
-"bordignonalexa|animale|kuramaaaaaa"
+"bordignonalexa|animale|kuramaaaaaa",
+"elena.alina.589|animale|lolita"
 ]
 },
 "gara_follower": [
@@ -23400,6 +23415,10 @@
 {
 "k": "Molfetta|BA",
 "t": "2026-11-15T11:21+00:00"
+},
+{
+"k": "Belmonte del Sannio|IS",
+"t": "2026-11-15T13:58+00:00"
 }
 ],
 "staffette_log": [
