@@ -158,5 +158,21 @@
   "secondi": 4.1,
   "perche": "Dopo tanti duelli con bronzo, brace e petrolio, il pari 6 a 6 diventa un cielo di nebbia d'Arno color ruggine spenta che",
   "reel": "2026-11-14-1307-testa_a_testa"
+ },
+ {
+  "nome_stile": "Partenope Vesuviana",
+  "cielo_basso": "#2F5C8E",
+  "cielo_alto": "#060A24",
+  "nebbia_colore": "#203048",
+  "lampioni_colore": "#FFE0A3",
+  "lucciole_colore": "#FFB3D1",
+  "lucciole": 140.0,
+  "bloom": 0.8,
+  "esposizione": 1.6,
+  "effetto": "lanterne",
+  "volo": "orbita",
+  "secondi": 4.2,
+  "perche": "Dopo tanti cieli ambra, petrolio e bronzo, il Giro parte da Napoli con un crepuscolo di golfo blu cobalto che sfuma in m",
+  "reel": "2026-11-15-1209-giro"
  }
 ]
