@@ -270,6 +270,19 @@ def main():
 
     serve, host, effetti, soli = set(), [], {"durata": durata, "whoosh": [], "pop": [], "chime": []}, []
     ita = italia() if any(f["scena"]["tipo"] == "mappa" for f in copione["frasi"]) else ""
+    zampa_ok = False  # 15/11: Zampa intero in 3D per la serie (Alberto: «deve essere un cane che si vede»)
+    pose = []
+    for n, f in enumerate(copione["frasi"]):
+        if f["scena"]["tipo"] != "zampa30": continue
+        v_ = f["scena"].get("muso"); posa = "triste" if v_ == "triste" else "felice" if v_ in ("lingua", "occhiolino") else "sorpreso" if v_ == "sorpreso" else "base"
+        lato = ["davanti", "sinistra", "destra"][n % 3]; sp = f["scena"].get("sporco", True)
+        pose.append({"posa": posa, "lato": lato, "sporco": bool(sp), "file": f"zampa-{posa}-{lato}-{'s' if sp else 'p'}.png"})
+    if pose:
+        (prog / "assets/svg").mkdir(parents=True, exist_ok=True)
+        env = {**os.environ, **({"NODE_PATH": "/tmp/pw/node_modules"} if Path("/tmp/pw/node_modules").exists() else {})}
+        uscita = subprocess.run(["node", str(ROOT / "reel/zampa3d.js"), str(prog / "assets/svg"), json.dumps(pose)], env=env, capture_output=True, text=True, timeout=300)
+        zampa_ok = uscita.returncode == 0 and all((prog / "assets/svg" / x["file"]).exists() for x in pose)
+        print("Zampa in 3D:", "sì" if zampa_ok else f"no ({uscita.stderr.strip()[-200:]})")
     for n, f in enumerate(copione["frasi"]):
         sc = dict(f["scena"]); tipo = sc.pop("tipo"); cid = f"s{n}"
         a = round(inizi[n], 2); b = round(inizi[n + 1], 2) if n + 1 < len(inizi) else durata; d = round(b - a, 2)
@@ -304,8 +317,13 @@ def main():
             sc["centro"] = px(*sc["centro"]); sc["italia_c"] = px(12.6, 41.9)
             sc["punti"] = [{**q, **dict(zip(("x", "y"), px(q["lng"], q["lat"])))} for q in sc["punti"]]
             sc["intorno"] = [px(lng, lat) for lng, lat in sc.get("intorno", [])]
-        if tipo == "zampa30":  # 15/11, la serie di Zampa: lo stesso cane ogni giorno (meticcio, seme 23), con l'espressione della puntata
-            v_ = sc.pop("muso", None); svg_di("cane", "meticcio", 23, serve); soli.append(("cane", "meticcio", 23, v_)); sc["svg"] = f"meticcio-23-solo{'-' + v_ if v_ else ''}.svg"
+        if tipo == "zampa30":  # 15/11, la serie di Zampa: lo stesso cane ogni giorno, intero e in 3D (reel/zampa3d.js), nella posa della puntata
+            v_ = sc.pop("muso", None)
+            if zampa_ok:
+                posa = "triste" if v_ == "triste" else "felice" if v_ in ("lingua", "occhiolino") else "sorpreso" if v_ == "sorpreso" else "base"
+                sc["svg"] = f"zampa-{posa}-{['davanti', 'sinistra', 'destra'][n % 3]}-{'s' if sc.get('sporco', True) else 'p'}.png"
+            else:  # senza 3D (Playwright non c'è): il muso disegnato
+                svg_di("cane", "meticcio", 23, serve); soli.append(("cane", "meticcio", 23, v_)); sc["svg"] = f"meticcio-23-solo{'-' + v_ if v_ else ''}.svg"
         if tipo == "avvento":  # 15/11, il Calendario dell'Avvento: gli animali delle caselle già aperte e quello di oggi, da soli
             def _solo(x):
                 svg_di(x["t"], x["razza"], x["seme"], serve); soli.append((x["t"], x["razza"], x["seme"], None)); return f"{x['razza']}-{x['seme']}-solo.svg"

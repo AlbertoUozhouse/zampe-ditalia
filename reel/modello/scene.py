@@ -699,6 +699,8 @@ def zampa30(cid, dur, svg, giorni, famiglia, testo="", banner="", sfondo="canile
     #root .nastro {{ position: absolute; left: 50px; right: 50px; top: 470px; text-align: center; }}
     #root .nastro span {{ display: inline-block; transform: rotate(-3deg); font: 800 54px/1.1 "Bricolage Grotesque", sans-serif; color: #1A1206; background: #FFD23F; border: 5px solid #1A1206; border-radius: 14px; padding: 10px 26px; box-shadow: 0 8px 0 rgba(0,0,0,.35); }}
     #root .zampa {{ position: absolute; left: -80px; top: 360px; width: 1240px; height: 1080px; object-fit: contain; filter: drop-shadow(0 22px 26px rgba(0,0,0,.45)); }}
+    #root .zampa.intero {{ left: 185px; top: 470px; width: 710px; height: 780px; }}
+    #root .zampa.intero ~ .frase {{ top: 1262px; }}
     #root .puzza {{ position: absolute; left: -60px; top: 420px; width: 1200px; height: 1000px; }}
     #root .puzza path {{ fill: none; stroke: #8DB255; stroke-width: 14; stroke-linecap: round; opacity: .85; }}
     #root .mosca {{ position: absolute; left: 470px; top: 560px; width: 22px; height: 22px; border-radius: 50%; background: #151515; box-shadow: -12px -12px 0 -4px rgba(230,240,255,.85), 12px -12px 0 -4px rgba(230,240,255,.85); }}
@@ -713,7 +715,8 @@ def zampa30(cid, dur, svg, giorni, famiglia, testo="", banner="", sfondo="canile
     #root .op b {{ font: 800 48px/1.1 "Bricolage Grotesque", sans-serif; color: #1A1206; }}
     #root .op i {{ font: 900 30px/1.2 var(--font-body); font-style: normal; color: #9A5A00; }}
     #root .o {{ position: absolute; left: 50%; top: 210px; width: 120px; margin-left: -60px; text-align: center; font: 900 30px/60px var(--font-body); color: #1A1206; background: #FFD23F; border-radius: 30px; border: 4px solid #1A1206; }}"""
-    corpo = (f'<div class="muro"></div><div class="pav"></div>{sb}<img class="zampa" id="{cid}-z" src="assets/svg/{svg}" alt="">{st}{ogg}'
+    intero = svg.endswith(".png")  # Zampa intero in 3D (reel/zampa3d.js): sta in piedi sul pavimento, la frase sotto i piedi
+    corpo = (f'<div class="muro"></div><div class="pav"{" style=\'height:760px\'" if intero else ""}></div>{sb}<img class="zampa{" intero" if intero else ""}" id="{cid}-z" src="assets/svg/{svg}" alt="">{st}{ogg}'
              f'<div class="hud"><div><small>GIORNI</small><b id="{cid}-g">{giorni}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>'
              + (f'<div class="nastro"><span id="{cid}-n">{ESC(banner)}</span></div>' if banner else "")
              + (f'<div class="frase" id="{cid}-t">{ESC(testo)}</div>' if testo and not scelta else "") + sc)

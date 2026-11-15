@@ -70,8 +70,10 @@ jobs:
         timeout-minutes: 12
         run: |
           A=$(python3 -c "import json;c=json.load(open('/tmp/copione.json'));i=c.get('intro_3d');print((i['comune']+'|'+i.get('nome','')) if i and not c.get('intro') else '')")
+          # 15/11: la serie di Zampa usa Zampa intero in 3D (reel/zampa3d.js, lo lancia costruisci.py): serve Playwright anche senza apertura
+          Z=$(python3 -c "import json;c=json.load(open('/tmp/copione.json'));print(1 if any(f['scena']['tipo']=='zampa30' for f in c['frasi']) else '')")
+          if [ -n "$A$Z" ]; then npm install --prefix /tmp/pw playwright@1.49.1 --silent && /tmp/pw/node_modules/.bin/playwright install --with-deps chromium >/dev/null; fi
           [ -n "$A" ] || { echo "nessuna apertura 3D per questo reel"; exit 0; }
-          npm install --prefix /tmp/pw playwright@1.49.1 --silent && /tmp/pw/node_modules/.bin/playwright install --with-deps chromium >/dev/null
           mkdir -p reel/assets/tmp
           # la regia la inventa il reparto Innovazione con la Grafica 3D: stile del paese ed effetto e volo della telecamera, diversi a ogni reel
           python3 -I motore/agenzia.py regia /tmp/copione.json /tmp/regia.json || echo '{}' > /tmp/regia.json

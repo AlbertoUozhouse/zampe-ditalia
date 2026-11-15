@@ -583,4 +583,4 @@ function chiudi() {
   M.stop(); M.renderer.dispose(); M.renderer.forceContextLoss?.(); M.box.remove(); M = null;
 }
 
-window.Mondo3D = { apri, chiudi, get mondo() { return M; } };
+window.Mondo3D = { apri, chiudi, get mondo() { return M; }, cane3d, micio3d }; // cane3d: anche per Zampa, il protagonista della serie (reel/zampa3d.js)
