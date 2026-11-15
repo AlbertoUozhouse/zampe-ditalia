@@ -1704,6 +1704,8 @@ def main():
         frasi, did = varia(frasi, did, D)
     frasi = taglia(frasi, max_parole)
     mostrati = sorted({sc.get("utente") for _, sc in frasi if sc.get("utente")} | set(st.pop("tag_extra", [])))
+    if not per_attivita and not test:  # 15/11: la gara degli amici (commenti.py): chi porta più amici entro domenica vince un accessorio vero sulla mappa
+        did = did.strip() + "\n👑 Gara degli amici: tagga chi ha un cane o un gatto. Chi porta più amici entro domenica alle 20 vince la Corona sulla mappa!"
     if mostrati:
         did = did.strip() + "\n\n🐾 In questo reel: " + " ".join("@" + u for u in mostrati)
     # gli hashtag delle città nel reel: chi cerca la propria città lo trova

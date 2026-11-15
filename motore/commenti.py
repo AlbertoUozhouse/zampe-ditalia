@@ -490,6 +490,10 @@ class Gioco:
             if x["k"] in ("animale", "sogno") and x["u"].lower() in seguono: x["vestito"] = vestito
             else: x.pop("vestito", None)
         import negozio
+        gara_amici_premia(self)  # 15/11: i regali della gara degli amici entrano negli accessori prima che il negozio li applichi
+        lun = datetime.fromisoformat(_sett_amici() + "T00:00:00+01:00")
+        self.dati["gara_amici"] = {"settimana": [{"u": u, "p": pt} for u, pt in gara_amici_classifica(self.stato)[:10]], "premi": PREMI_AMICI,
+                                   "fine": (lun + timedelta(days=6, hours=20)).isoformat(), "albo": dict(sorted(self.stato.get("gara_amici_albo", {}).items())[-4:])}
         self.dati["negozio"] = negozio.leggi(self.stato, self.animali)  # gli accessori pagati e i link del negozio per il sito
         self.sfilata()
         self.presidenti()
@@ -690,6 +694,7 @@ class Gioco:
             if f"{chi}>>{u}" in fatti or not self.ha_luce(chi): continue
             self.punti_extra(chi, PUNTI["amico_segue"], "tag"); fatti.append(f"{chi}>>{u}")
             self.amici_che_seguono.append(chi); self.cambiato = True
+            gara_amici_punto(self.stato, chi, u, 2)  # 15/11: la gara degli amici (ci segue: +2)
 
     def premia_inviti(self, utente):
         """L'amico taggato ha commentato: +3 a chi l'ha invitato, una volta sola per coppia. Restituisce chi è stato premiato."""
@@ -703,6 +708,7 @@ class Gioco:
                 self.stato["premiati"].append(coppia); premiati.append(chi)
                 giorno = self.stato.setdefault("inviti_giorno", {}).setdefault(datetime.now(timezone.utc).date().isoformat(), {})
                 giorno[chi] = giorno.get(chi, 0) + 1  # Sfida degli inviti: chi porta più amici oggi
+                gara_amici_punto(self.stato, chi, utente.lower(), 1)  # 15/11: la gara degli amici (è arrivato: +1)
         return premiati
 
     def corsa(self, utente, punti, quando=None, g="corsa"):
@@ -1095,6 +1101,58 @@ def sollecita(gioco, per, rispondi, appena):
         n += 1
     return n
 
+# ---------- la gara degli amici (15/11, Alberto: «la gara chi porta più follower, in regalo un accessorio di quelli a pagamento») ----------
+# Ogni amico taggato che arriva e commenta = 1 punto a chi l'ha portato; se poi scrive SEGUO = altri 2. La settimana chiude la domenica alle 20
+# (come la Coppa): al primo la Corona, al secondo il Collare d'oro, al terzo il Fiocco, regalati sul suo animale (gli stessi del negozio).
+PREMI_AMICI = ["corona", "collare", "fiocco"]
+NOMI_PREMI = {"corona": "la Corona 👑", "collare": "il Collare d'oro 📿", "fiocco": "il Fiocco 🎀"}
+
+def _sett_amici(t=None):
+    """L'inizio (lunedì 00:00, ora italiana) della settimana della gara a cui appartiene l'istante t; dopo domenica alle 20 conta la settimana dopo."""
+    ita = timezone(timedelta(hours=1))
+    t = (t or datetime.now(timezone.utc)).astimezone(ita)
+    lun = (t - timedelta(days=t.weekday())).replace(hour=0, minute=0, second=0, microsecond=0)
+    if t.weekday() == 6 and t.hour >= 20: lun += timedelta(days=7)
+    return lun.date().isoformat()
+
+def gara_amici_punto(stato, chi, amico, punti):
+    stato.setdefault("gara_amici", []).append({"chi": chi.lower(), "amico": amico.lower(), "p": punti, "t": datetime.now(timezone.utc).isoformat(timespec="minutes")})
+    stato["gara_amici"] = stato["gara_amici"][-5000:]
+
+def gara_amici_classifica(stato, sett=None):
+    sett = sett or _sett_amici(); tot = {}
+    for x in stato.get("gara_amici", []):
+        if _sett_amici(datetime.fromisoformat(x["t"])) == sett and x["chi"] not in ESCLUSI: tot[x["chi"]] = tot.get(x["chi"], 0) + x["p"]
+    return sorted(tot.items(), key=lambda kv: (-kv[1], kv[0]))
+
+def gara_amici_posto(stato, u):
+    cl = gara_amici_classifica(stato); pos = next((i for i, (x, _) in enumerate(cl) if x == u.lower()), None)
+    return (pos + 1, cl[pos][1], cl) if pos is not None else (None, 0, cl)
+
+def gara_amici_premia(gioco):
+    """Chiusa la settimana: i regali ai primi tre (una volta sola per settimana), sul loro animale con più punti. La storia la fa messaggi.py."""
+    oggi = _sett_amici(); albo = gioco.stato.setdefault("gara_amici_albo", {})
+    passate = sorted(w for w in {_sett_amici(datetime.fromisoformat(x["t"])) for x in gioco.stato.get("gara_amici", [])} - {oggi} - set(albo) if w >= "2026-11-16")  # la prima settimana vera parte lunedì 16/11
+    for sett in passate:
+        cl = gara_amici_classifica(gioco.stato, sett); vinti = []
+        for (u, pt), premio in zip(cl, PREMI_AMICI):
+            suoi = sorted((a for a in gioco.animali if a["u"].lower() == u and a.get("k") == "animale"), key=lambda a: -a.get("pt", 0))
+            if not suoi: continue
+            acq = gioco.stato.setdefault("acquisti", {}).setdefault(suoi[0]["id"], [])
+            if premio not in acq: acq.append(premio)
+            gioco.stato.setdefault("negozio_storie", []).append({"id": suoi[0]["id"], "k": premio})
+            vinti.append({"u": u, "p": pt, "premio": premio, "n": suoi[0]["n"], "c": suoi[0]["c"]})
+        albo[sett] = vinti; gioco.cambiato = True
+        print(f"gara degli amici {sett}: premiati {len(vinti)}")
+
+def riga_gara_amici(gioco, u, inviti_nuovi=False):
+    """La riga nella risposta: la gara e il posto di chi ha portato amici, o la spiegazione a chi ne ha appena taggati."""
+    pos, pt, cl = gara_amici_posto(gioco.stato, u)
+    if pos and pos <= 3: return f"👑 Gara degli amici: sei {pos}° questa settimana con {pt} {'punto' if pt == 1 else 'punti'}! Domenica alle 20 il primo vince la Corona, il secondo il Collare d'oro, il terzo il Fiocco."
+    if pos: return f"👑 Gara degli amici: sei {pos}° con {pt} {'punto' if pt == 1 else 'punti'}, il primo ne ha {cl[0][1]}. Ogni amico che arriva vale 1 punto, se ci segue 3. Domenica in palio la Corona!"
+    if inviti_nuovi: return "👑 Gara degli amici: ogni amico che arriva e commenta vale 1 punto, se ci segue 3. Domenica alle 20 chi ne ha di più vince la Corona sulla mappa!"
+    return None
+
 # ---------- la cartolina in privato a chi accende una luce nuova ----------
 LUCI_NUOVE = ("fondatore", "animale", "vicini", "multi", "sfida_fondatore", "sfida_vicini", "sfida_testa", "animale_altro")
 MAX_PRIVATI_ORA = 40
@@ -1238,8 +1296,11 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
                             else f"È il primo tifoso {squadre.nome(sq_t)} a quattro zampe: tagga un amico tifoso, il Campionato delle Zampe è appena iniziato 🏆"))
         if taggati:
             extra.append(frase("tag" if gioco.ha_luce(u) else "tag_senza_luce", amici=", ".join("@" + a for a in taggati[:5])))
+            if gioco.ha_luce(u): extra.append(riga_gara_amici(gioco, u, True))
         if premiati:
             extra.append(frase("premio", chi=", ".join("@" + a for a in premiati[:3])))
+            r_g = riga_gara_amici(gioco, premiati[0])
+            if r_g: extra.append(r_g.replace("sei ", f"@{premiati[0]} è ", 1).replace("Gara degli amici: @", "Gara degli amici: @"))
         if frase_segue:
             extra.append(frase(frase_segue) + (COSTUME_ORA if frase_segue == "segue" else ""))
             esito_f, df = getattr(gioco, "gara_follower", None) or (None, {})
