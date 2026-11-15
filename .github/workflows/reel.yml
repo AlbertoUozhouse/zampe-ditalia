@@ -193,7 +193,7 @@ jobs:
           python3 -I motore/orari.py --poco-fa 120 && { echo "è uscito un reel da poco: niente riserva"; exit 0; }
           for t in 1 2 3; do gh workflow run reel.yml -f formato=fondatore -f riserva=true && break; sleep 20; done
       - name: Avvisa Alberto se qualcosa va storto
-        if: failure()
+        if: failure() && inputs.pubblica
         run: |
           gh issue create --title "🔴 Reel automatico non pubblicato (${{ inputs.formato }})" \
             --body "Cosa è successo: il reel automatico si è fermato prima della pubblicazione.

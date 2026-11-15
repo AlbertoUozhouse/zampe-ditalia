@@ -1487,7 +1487,7 @@ def tifo(D, rng, st):
         an = [{"t": "cane", "razza": r, "seme": sm, "nome": squadre.nome(k), "sq": k, "c": squadre.colori(k)["c"]} for k, r, sm in TIFO_LANCIO]
         frasi += [
             ("Juve, Inter, Milan, Napoli, Roma o Lazio?", {"tipo": "tifosi", "animali": an}),
-            ("Scrivi città, nome e squadra: sulla mappa d'Italia mette la sciarpa coi suoi colori.", {"tipo": "commento", "testo": "Napoli, Luna, forza Napoli ⚽"}),
+            ("Scrivi città, nome e squadra: sulla mappa d'Italia mette la sciarpa coi suoi colori.", {"tipo": "commento", "testo": "Luna, forza Napoli ⚽"}),
             ("E domenica il campionato: quale tifoseria ha più cani?", {"tipo": "gancio", "testo": "Il Campionato *delle Zampe*", "sotto": "quale tifoseria ha più cani e gatti?", "icona": "🏆"}),
         ]
         did = ("⚽ Il tuo cane per chi tifa? Juve, Inter, Milan, Napoli, Roma, Lazio… o la squadra della tua città?\n\n"
@@ -1499,7 +1499,7 @@ def tifo(D, rng, st):
         frasi.append((f"{squadre.nome(k1)} in testa con {n1} tifosi a quattro zampe. {squadre.nome(k2)} a {n1 - n2}.", {"tipo": "barre", "titolo": "🏆 Il Campionato delle Zampe", "righe": righe}))
         sp = scena_padroni(D, st, [a for a in tifosi if a["sq"] == k1], f"⚽ I tifosi *{squadre.nome(k1)}*")
         if sp: frasi.append((f"Ecco chi porta in alto la {squadre.nome(k1)}.", sp))
-        frasi.append(("La tua squadra non c'è? Scrivi città, nome e squadra: il tuo cane mette la sciarpa.", {"tipo": "commento", "testo": f"{rng.choice(CITTA)}, Luna, cane, forza {squadre.nome(top[2][0] if len(top) > 2 else k2)} ⚽"}))
+        frasi.append(("La tua squadra non c'è? Scrivi città, nome e squadra: il tuo cane mette la sciarpa.", {"tipo": "commento", "testo": f"Luna, forza {squadre.nome(top[2][0] if len(top) > 2 else k2)}"[:21]}))
         did = (f"🏆 Il Campionato delle Zampe: quale tifoseria ha più cani e gatti?\n" + " · ".join(f"{i + 1}° {squadre.nome(k)} {n}" for i, (k, n) in enumerate(top[:5])) + "\n\n"
                "👇 La tua squadra è indietro? Scrivi qui sotto città, nome e squadra (es. «Napoli, Luna, cane, forza Napoli»): il tuo cane mette la sciarpa sulla mappa e la tua squadra sale.\n"
                "👥 Tagga un amico tifoso!")
@@ -1528,7 +1528,7 @@ def rari(D, rng, st):
     frasi = [
         (f"Solo {n} in tutta Italia.", {"tipo": "gancio", "testo": f"Solo *{n}* in tutta Italia", "sotto": f"🐾 {nome_r}: il tuo sarà il {dopo}?", "icona": "🐾"}),
         (f"{nome_r}: {'solo ' if n > 1 else 'solo uno, '}{chi}.", {"tipo": "svela", "t": "cane", "razza_k": k, "seme": rng.randrange(1, 99), "razza": nome_r, "riga": f"{n} sulla mappa d'Italia"}),
-        (f"Hai un {nome_r}? Scrivi città, nome e razza: diventa il {dopo}.", {"tipo": "commento", "testo": next(t for t in (f"{rng.choice(['Bari', 'Roma', 'Pisa', 'Como', 'Lecce'])}, Rocky, {nome_r.lower()}", f"Rocky, {nome_r.lower()}", f"Rocky, {nome_r.lower().split()[0]}") if len(t) <= 22 or t.count(",") == 1 and " " not in t.split(", ")[1])}),
+        (f"Hai un {nome_r}? Scrivi città, nome e razza: diventa il {dopo}.", {"tipo": "commento", "testo": next(t for t in (f"{rng.choice(['Bari', 'Roma', 'Pisa', 'Como', 'Lecce'])}, Rocky, {nome_r.lower()}", f"Rocky, {nome_r.lower()}", f"Rocky, {nome_r.lower().split()[0]}") if len(t) <= 21 or t.count(",") == 1 and " " not in t.split(", ")[1])}),
     ]
     st["tag_extra"] = [a["u"] for a in v if a["u"].lower() not in ESCLUSI]
     did = (f"🐾 Solo {n} {nome_r} in tutta Italia sulla mappa di Zampe d'Italia: {chi}. Il tuo sarà il {dopo}?\n\n"
@@ -1561,7 +1561,7 @@ def citta_reel(D, rng, st):
         ("Il nome di cane più diffuso nella tua città?", {"tipo": "gancio", "testo": "Il nome più diffuso *nella tua città*?", "sotto": "📍 Scrivi la città: ti rispondiamo", "icona": "📍"}),
         (f"A {righe[0][1]} vince {righe[0][2]}. A {righe[1][1]}, {righe[1][2]}. A {righe[2][1]}, {righe[2][2]}.",
          {"tipo": "classifica", "titolo": "📍 Il nome più diffuso", "righe": [{"nome": c, "valore": f"{nm} ({k})"} for _, c, nm, k in righe]}),
-        ("Scrivi la tua città: ti rispondiamo noi, coi numeri veri.", {"tipo": "commento", "testo": rng.choice([c for c in CITTA if c not in {r[1] for r in righe}] or CITTA)}),
+        ("Scrivi la tua città: ti rispondiamo noi, coi numeri veri.", {"tipo": "commento", "testo": rng.choice([c for c in CITTA if c not in {r[1] for r in righe} and len(c) <= 14] or ["Bari"])}),
     ]
     did = ("📍 Qual è il nome di cane più diffuso nella tua città? " + " · ".join(f"{c}: {nm}" for _, c, nm, _ in righe) + "\n\n"
            "👇 Scrivi qui sotto la tua città: ti rispondiamo con il nome più diffuso lì, quanti animali ci sono e la razza più amata (dati veri della mappa).\n"
