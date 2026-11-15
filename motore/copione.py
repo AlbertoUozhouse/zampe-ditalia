@@ -1228,7 +1228,7 @@ def verifica(cop):
 
 
 # ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
-FRASI_FISSE = {"giro": 60, "rari": 45, "citta": 45, "tifo": 50, "indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
+FRASI_FISSE = {"avvento": 45, "giro": 60, "rari": 45, "citta": 45, "tifo": 50, "indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
 
 MANTELLI = {"europeo", "grigio", "nero", "rosso", "bianco", "bicolore", "bicolore_rosso", "calico", "tartarugato", "meticcio"}  # colori, non razze: fuori dal quiz
 
@@ -1635,6 +1635,49 @@ def scelta_13():
     """15/11 sera: alle 13 ogni giorno un formato diverso (la sera c'è il Giro d'Italia di Zampa)."""
     return ["testa_a_testa", "intruso", "citta", "rari", "nomi_top", "corsa"][(ORA.date() - date(2026, 11, 17)).days % 6]
 
+# ================================================================ il Calendario dell'Avvento delle Zampe (15/11, approvato da Alberto; 1–24 dicembre)
+# Ogni giorno si apre una casella: dentro c'è un animale vero, estratto tra chi ha commentato il giorno prima (commenti.py: stato «bonus»),
+# che vince un regalo di Natale del negozio sulla mappa (cappello, sciarpa, alberello). Un motivo per commentare ogni giorno di dicembre.
+PREMI_AVVENTO = [("cappello", "il cappello di Babbo Natale 🎅"), ("sciarpa", "la sciarpa di Natale 🧣"), ("albero", "l'alberello con le lucine 🎄")]
+
+def avvento(D, rng, st):
+    cal = st.get("avvento", {})
+    g = ORA.day if ORA.month == 12 and 1 <= ORA.day <= 24 else min(24, len(cal) + 1)  # fuori da dicembre (prove): la casella dopo
+    gia = {x["u"].lower() for x in cal.values()}
+    stato = carica(ROOT / "motore/stato.json", {})
+    ieri = {(ORA.date() - timedelta(days=d)).isoformat() for d in (0, 1)}
+    chi = sorted(u for u, d in stato.get("bonus", {}).items() if d in ieri and u not in ESCLUSI and u not in gia)
+    an = [a for a in D["animali"] if a.get("k") == "animale" and a.get("t") in ("cane", "gatto") and a["u"].lower() not in ESCLUSI and a["u"].lower() not in gia]
+    per = {}
+    for a in sorted(an, key=lambda a: -a.get("pt", 0)): per.setdefault(a["u"].lower(), a)
+    cand = [per[u] for u in chi if u in per] or sorted(an, key=lambda a: str(a.get("ts", "")), reverse=True)[:50]
+    if not cand: raise Salta("nessuno da estrarre per il calendario")
+    a = random.Random(f"avvento-{ORA.date().isoformat()}").choice(cand)  # estrazione del giorno: sempre la stessa per la stessa data
+    premio, premio_n = PREMI_AVVENTO[(g - 1) % 3]
+    seme = rng.randrange(1, 99); rz = a.get("razza") or ("europeo" if a["t"] == "gatto" else "meticcio")
+    cal[str(g)] = {"u": a["u"], "id": a["id"], "t": a["t"], "razza": rz, "seme": seme, "n": a["n"], "c": a["c"], "premio": premio}
+    st["avvento"] = cal
+    st["avvento_info"] = {"giorno": g, "id": a["id"], "premio": premio}
+    aperte = {k: {"t": x["t"], "razza": x["razza"], "seme": x["seme"]} for k, x in cal.items() if int(k) < g}
+    nomi_r = {r[0]: r[1].split(" (")[0] for r in D["razze"]["cani"] + D["razze"]["gatti"]}
+    frasi = [
+        (f"Casella {g} del Calendario delle Zampe: chi c'è dentro?", {"tipo": "avvento", "giorno": g, "aperte": aperte, "nuova": {"t": a["t"], "razza": rz, "seme": seme}}),
+        (f"C'è {a['n']}, di {a['c']}! In regalo {premio_n.rsplit(' ', 1)[0]}, sulla mappa.",
+         {"tipo": "figurina", "t": a["t"], "razza_k": rz, "seme": seme, "nome": a["n"], "comune": a["c"], "razza": nomi_r.get(rz, a["t"]), "numero": g, "totale": 24,
+          "rarita": "leggendaria", "motivo": {"cappello": "🎁 Cappello", "sciarpa": "🎁 Sciarpa", "albero": "🎁 Alberello"}[premio], "busta": True}),
+        (f"Domani si apre la casella {g + 1}: commenta oggi città e nome per esserci dentro." if g < 24 else "Buon Natale da tutti gli animali d'Italia!",
+         {"tipo": "commento", "testo": "Treviso, Luna, cane"}),
+    ]
+    st["tag_extra"] = [a["u"]]
+    did = (f"🎄 Il Calendario dell'Avvento delle Zampe · Casella {g}: c'è {a['n']} di {a['c']} (@{a['u']})! In regalo {premio_n}, sulla mappa d'Italia.\n\n"
+           + (f"👇 Domani si apre la casella {g + 1}: dentro c'è uno di voi. Commenta oggi qui sotto città e nome del tuo cane o gatto (es. «Treviso, Luna, cane»): chi commenta entra nell'estrazione.\n"
+              "👥 Tagga gli amici: più siete, più caselle per la vostra città!" if g < 24 else "🎅 Buon Natale da tutti gli animali di Zampe d'Italia!"))
+    st["copertina"] = None
+    st["banner_reel"] = "🎄 Commenta oggi: domani tocca a te? 👇"
+    st["hashtag"] = "#cani #gatti #natale #calendariodellavvento #avvento #animalidomestici "
+    st["senza_bonus"] = True
+    return f"🎄 CASELLA {g}", frasi, did
+
 def scelta_21():
     """15/11, piano nuovo: alle 21 a rotazione i reel che promettono qualcosa a chi commenta (la squadra, il tempo dell'intruso, il nome, la città)."""
     return ["intruso", "citta", "tifo", "rari", "nomi_top", "corsa"][(ORA.date() - date(2026, 11, 17)).days % 6]
@@ -1647,7 +1690,7 @@ def sera_18(D, rng, st):
     return FORMATI[scelta_18()](D, rng, st)
 
 
-FORMATI = {"giro": giro, "rari": rari, "citta": citta_reel, "tifo": tifo, "corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "sera_21": lambda D, rng, st: FORMATI[scelta_21()](D, rng, st), "giorno_13": lambda D, rng, st: FORMATI[scelta_13()](D, rng, st), "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"avvento": avvento, "giro": giro, "rari": rari, "citta": citta_reel, "tifo": tifo, "corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "sera_21": lambda D, rng, st: FORMATI[scelta_21()](D, rng, st), "giorno_13": lambda D, rng, st: FORMATI[scelta_13()](D, rng, st), "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -1786,6 +1829,7 @@ def main():
     intro = st.pop("intro", None)
     intro_3d = st.pop("intro_3d", None)
     giro_info = st.pop("giro_info", None)
+    avvento_info = st.pop("avvento_info", None)
     # l'aspetto grafico a rotazione: mai uguale ai due reel prima (reel/modello/scene.py, TEMI)
     temi = ["notte", "tramonto", "aurora", "giorno", "neon"]  # colori resi abbastanza scuri da passare il controllo di contrasto (reel/modello/scene.py)
     gia = st.get("temi", [])[-2:]
@@ -1798,7 +1842,7 @@ def main():
                "banner": st.pop("banner_reel", "💬 Commenta città e nome del tuo animale 👇"), "didascalia": did,
                "tag": [u for u in mostrati if u.lower() not in ESCLUSI],
                # 15/11: fino a 3 padroni in vista che ci seguono già ricevono l'invito a collaborare: se accettano, il reel va anche sul loro profilo
-               "collab": [x["utente"] for _, sc in frasi if sc.get("tipo") == "padroni" for x in sc["persone"] if x["utente"].lower() in D["seguono"]][:3], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}), **({"giro": giro_info} if giro_info else {}),
+               "collab": [x["utente"] for _, sc in frasi if sc.get("tipo") == "padroni" for x in sc["persone"] if x["utente"].lower() in D["seguono"]][:3], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}), **({"giro": giro_info} if giro_info else {}), **({"avvento": avvento_info} if avvento_info else {}),
                **({"test": {"nome": "crescita-1", "formato": formato, "variante": voce_v, "slot": ORA.strftime("%H:%M"), "caso": caso}} if test else {})}
     if test: copione.pop("intro", None); copione.pop("intro_3d", None)  # nel test il primo fotogramma è il gancio: niente video prima
     oggi = ORA.date()  # 15/11: chi è stato taggato e quando (motore/copione.py padroni: riposo di 3 giorni tra un tag e l'altro)

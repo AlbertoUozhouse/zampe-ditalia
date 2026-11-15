@@ -642,5 +642,28 @@ def tappa(cid, dur, svg, tappa, comune, riga=""):
         f'\n    tl.fromTo("#{cid}-r", {{ y: 30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 1.1);' if riga else "")
     return _pagina(cid, f"Il Giro d'Italia di Zampa: tappa {tappa}, {comune}.", css, corpo, js)
 
-TIPI = {"tappa": tappa, "tifosi": tifosi, "padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+def avvento(cid, dur, giorno, aperte, nuova):
+    """Il Calendario dell'Avvento delle Zampe (1–24 dicembre): 24 caselle, quelle già aperte mostrano l'animale che c'era dentro,
+    oggi si apre la casella del giorno. aperte = {"3": "golden-12-solo.svg", ...}; nuova = svg dell'animale di oggi."""
+    celle = []
+    for i in range(1, 25):
+        dentro = f'<img src="assets/svg/{nuova if i == giorno else aperte.get(str(i), "")}" alt="">' if (i == giorno or str(i) in aperte) else ""
+        porta = "" if (str(i) in aperte and i != giorno) else f'<b class="porta" id="{cid}-p{i}">{i}</b>'
+        celle.append(f'<div class="cas{" oggi" if i == giorno else ""}" id="{cid}-c{i}">{dentro}{porta}</div>')
+    css = SPOT.format(a="#7A1F2B", b="#1A0508") + """
+    #root .tit { position: absolute; left: 40px; right: 40px; top: 285px; text-align: center; font: 800 54px/1.1 "Bricolage Grotesque", sans-serif; color: #FFF4DE; text-shadow: 0 5px 0 #05030F; }
+    #root .tit b { color: #FFC55C; }
+    #root .gr { position: absolute; left: 60px; right: 60px; top: 420px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    #root .cas { position: relative; height: 160px; border-radius: 18px; background: #0E2A1B; border: 3px solid #C9A24A; overflow: hidden; }
+    #root .cas img { position: absolute; left: 10%; top: 6%; width: 80%; height: 88%; object-fit: contain; }
+    #root .porta { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 800 64px/1 "Bricolage Grotesque", sans-serif; color: #FFE7A8;
+      background: repeating-linear-gradient(45deg, #B3202E 0 18px, #C8303E 18px 36px); transform-origin: 0 50%; }
+    #root .cas.oggi { border-color: #FFC55C; box-shadow: 0 0 40px rgba(255,197,92,.9); }"""
+    corpo = f'<div class="spot"></div><div class="tit">🎄 Il Calendario <b>delle Zampe</b></div><div class="gr">{"".join(celle)}</div>'
+    js = f"""    tl.to("#{cid}-c{giorno}", {{ keyframes: [{{ scale: 1.12, duration: 0.25 }}, {{ scale: 1, duration: 0.25 }}], repeat: 1 }}, 0.3);
+    tl.to("#{cid}-p{giorno}", {{ scaleX: 0, duration: 0.6, ease: "power2.inOut" }}, {max(1.2, dur * 0.45):.2f});
+    tl.to("#{cid}-c{giorno}", {{ scale: 1.25, zIndex: 5, duration: 0.4, ease: "back.out(2)" }}, {max(1.8, dur * 0.45 + 0.6):.2f});"""
+    return _pagina(cid, f"Il Calendario dell'Avvento delle Zampe: casella {giorno}.", css, corpo, js)
+
+TIPI = {"avvento": avvento, "tappa": tappa, "tifosi": tifosi, "padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}

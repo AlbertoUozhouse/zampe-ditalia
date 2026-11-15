@@ -304,6 +304,10 @@ def main():
             sc["centro"] = px(*sc["centro"]); sc["italia_c"] = px(12.6, 41.9)
             sc["punti"] = [{**q, **dict(zip(("x", "y"), px(q["lng"], q["lat"])))} for q in sc["punti"]]
             sc["intorno"] = [px(lng, lat) for lng, lat in sc.get("intorno", [])]
+        if tipo == "avvento":  # 15/11, il Calendario dell'Avvento: gli animali delle caselle già aperte e quello di oggi, da soli
+            def _solo(x):
+                svg_di(x["t"], x["razza"], x["seme"], serve); soli.append((x["t"], x["razza"], x["seme"], None)); return f"{x['razza']}-{x['seme']}-solo.svg"
+            sc["aperte"] = {g: _solo(x) for g, x in sc["aperte"].items()}; sc["nuova"] = _solo(sc["nuova"])
         if tipo == "tappa":  # 15/11, il Giro d'Italia di Zampa: Zampa da solo, grande, con la sciarpa tricolore
             serve.add(("cane", "golden", 7, "tricolore")); soli.append(("cane", "golden", "7-tricolore", None)); sc["svg"] = "golden-7-tricolore-solo.svg"
         if tipo == "tifosi":  # 15/11, il tifo: i cani da soli, grandi, con la sciarpa della squadra
@@ -346,7 +350,7 @@ def main():
         cani=c["cani"], gatti=c["gatti"], b0=b0, bd=round(durata - b0, 2), banner=S.ESC(copione.get("banner", "📍 Scrivi città, nome e razza 👇")),
         dvoce=round(fine_voce + 0.1, 2)))
     inizio_parole = [sum(len(x.split()) for x in frasi[:k]) for k in range(len(frasi))]
-    nascoste = ",".join(f"{inizio_parole[k]}-{inizio_parole[k] + len(frasi[k].split()) - 1}" for k, f in enumerate(copione["frasi"]) if f["scena"]["tipo"] in ("padroni", "tifosi", "svela", "tappa"))
+    nascoste = ",".join(f"{inizio_parole[k]}-{inizio_parole[k] + len(frasi[k].split()) - 1}" for k, f in enumerate(copione["frasi"]) if f["scena"]["tipo"] in ("padroni", "tifosi", "svela", "tappa", "avvento"))
     subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *([f"--salta={len(frasi[0].split())}"] if copione["frasi"][0]["scena"]["tipo"] in ("gancio", "intruso") else []),
                     *([f"--nascondi={nascoste}"] if nascoste else []), *gruppi_sottotitoli(frasi)], check=True)
     (out / "effetti.json").write_text(json.dumps(effetti))

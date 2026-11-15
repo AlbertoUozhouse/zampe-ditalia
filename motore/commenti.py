@@ -495,6 +495,17 @@ class Gioco:
             ultimo = sorted((ROOT / "docs/contenuti/auto").glob("*-giro.json"))[-1:]
             if ultimo and json.loads(ultimo[0].read_text()).get("giro"): self.dati["giro"] = json.loads(ultimo[0].read_text())["giro"]
         except (OSError, json.JSONDecodeError): pass
+        try:  # 15/11, il Calendario dell'Avvento: il regalo all'animale della casella uscita (il copione del reel pubblicato resta in docs/contenuti/auto)
+            fatti_av = self.stato.setdefault("avvento_fatti", [])
+            for f_av in sorted((ROOT / "docs/contenuti/auto").glob("*-avvento.json")):
+                av = json.loads(f_av.read_text()).get("avvento")
+                if not av or f_av.stem in fatti_av: continue
+                if any(a.get("id") == av["id"] for a in self.animali):
+                    acq = self.stato.setdefault("acquisti", {}).setdefault(av["id"], [])
+                    if av["premio"] not in acq: acq.append(av["premio"])
+                    self.stato.setdefault("negozio_storie", []).append({"id": av["id"], "k": av["premio"]})
+                fatti_av.append(f_av.stem); self.cambiato = True
+        except (OSError, json.JSONDecodeError, KeyError): pass
         gara_amici_premia(self)  # 15/11: i regali della gara degli amici entrano negli accessori prima che il negozio li applichi
         lun = datetime.fromisoformat(_sett_amici() + "T00:00:00+01:00")
         self.dati["gara_amici"] = {"settimana": [{"u": u, "p": pt} for u, pt in gara_amici_classifica(self.stato)[:10]], "premi": PREMI_AMICI,
