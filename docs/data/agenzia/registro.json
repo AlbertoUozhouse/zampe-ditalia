@@ -1,14 +1,5 @@
 [
  {
-  "id": "innovazione-2026-11-08",
-  "formato": "innovazione del giorno",
-  "modalita": "operativa",
-  "inizio": "2026-11-08T14:29:56+00:00",
-  "stato": "fatto",
-  "fine": "2026-11-08T14:30:20+00:00",
-  "scambi": 10
- },
- {
   "id": "2026-11-08-1807-questa_luce",
   "formato": "questa_luce",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-15T23:02:40+00:00",
   "scambi": 128
+ },
+ {
+  "id": "2026-11-16-0011-serie",
+  "formato": "serie",
+  "modalita": "operativa",
+  "inizio": "2026-11-15T23:11:34+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-15T23:16:03+00:00",
+  "scambi": 126
  }
 ]
