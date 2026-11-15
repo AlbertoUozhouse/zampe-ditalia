@@ -103,6 +103,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce senza revisione, come prima."
+  },
+  {
+   "t": "2026-11-15T10:07:40+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 7 follower in totale, 16.0 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.",
+   "dati": {
+    "id": "18348954133285067",
+    "file": "2026-11-07-2103-ospiti_sera",
+    "formato": "ospiti_sera",
+    "uscita": "2026-11-07T20:11:37+00:00",
+    "follower": 7,
+    "reach_7g": 438,
+    "follower_ogni_1000": 16.0,
+    "mediana_simili": null,
+    "simili": 0,
+    "scelte": {
+     "formato": "ospiti_sera",
+     "apertura": "mappa",
+     "voce": true,
+     "gancio": "Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!",
+     "chiusura": "Il prossimo è il tuo? Seguici e scrivi SEGUO!"
+    },
+    "esito": "7 follower in totale, 16.0 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.",
+    "riprovare": null,
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [

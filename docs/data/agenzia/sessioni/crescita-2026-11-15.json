@@ -1,0 +1,143 @@
+{
+ "id": "crescita-2026-11-15",
+ "formato": "crescita del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-15T10:07:41+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-15T10:07:41+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Si parte dai numeri veri degli ultimi 12 reel organici e dai verbali dei 7 giorni."
+  },
+  {
+   "t": "2026-11-15T10:07:45+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato più forte è la distanza tra reach e follower: i reel con reach più alto hanno convertito meno. Il testa_a_testa del 13/11 ha raggiunto 1.959 account (il massimo) e 86 commenti, ma ha portato solo 5 follower (2,6 ogni 1.000). Il questa_luce del 10/11 alle 18:12 ha convertito di più (13,9 ogni 1.000 sull'ultimo questa_luce; 11,9 sul primo). Il formato con conversione più alta tra quelli con ",
+   "dati": {
+    "osservazione": "Il dato più forte è la distanza tra reach e follower: i reel con reach più alto hanno convertito meno. Il testa_a_testa del 13/11 ha raggiunto 1.959 account (il massimo) e 86 commenti, ma ha portato solo 5 follower (2,6 ogni 1.000). Il questa_luce del 10/11 alle 18:12 ha convertito di più (13,9 ogni 1.000 sull'ultimo questa_luce; 11,9 sul primo). Il formato con conversione più alta tra quelli con dato è gara_follower (6,6), ma su reach basso (303) e con un solo reel. L'ospiti_sera del 7/11 ha 16,0 ogni 1.000 su 438 reach (7 follower), ma non c'è un campione per confrontarlo. Il prima_luce del 7/11 ha 0 follower su 354 reach, sotto la mediana di 16,0 del suo unico simile, quindi non va ripetuto così com'è. I follower per i verbali 7 giorni spesso non sono disponibili, quindi le conclusioni sui formati restano fragili.",
+    "proposta": "Provare domani un questa_luce con la chiusura che chiede di seguire per ritrovare la propria luce, mantenendo il formato che ha convertito meglio sugli ultimi reel con dato. In parallelo, testare un ospiti_sera con gancio di benvenuto ai nuovi amici, perché ha la conversione più alta registrata (16,0) anche se su un solo reel. Evitare di puntare solo sul testa_a_testa per la reach: il 13/11 ha portato molte visualizzazioni e pochissimi follower. Misurare follower a 6 ore per ogni uscita.",
+    "gancio": "Questa luce è di chi? Seguici e scopri la prossima alle 18."
+   }
+  },
+  {
+   "t": "2026-11-15T10:07:45+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa con apertura video vero ha il reach più alto (1959 account il 13/11, il più alto del periodo), ma i follower per 1.000 account calano al crescere della portata: 41.8 con 263 account (10/11), 8.8 con 340 (11/11), 5.8 con 857 (12/11), 2.6 con 1959 (13/11). Il gancio con la sfida tra due città vicine ha generato molti commenti (86 il 13/11) ma pochi follower. Il formato quest",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa con apertura video vero ha il reach più alto (1959 account il 13/11, il più alto del periodo), ma i follower per 1.000 account calano al crescere della portata: 41.8 con 263 account (10/11), 8.8 con 340 (11/11), 5.8 con 857 (12/11), 2.6 con 1959 (13/11). Il gancio con la sfida tra due città vicine ha generato molti commenti (86 il 13/11) ma pochi follower. Il formato questa_luce ha fatto 13.9 ogni 1.000 con 361 account (12/11) e 15.3 con 653 (11/11). Nei verbali di 7 giorni, prima_luce ha 0 follower su 354 account (mediana dei simili 16.0) e ospiti_sera 16.0 ogni 1.000 con 438 account. I dati follower per i verbali degli altri formati sono indisponibili.",
+    "proposta": "Domani provare un reel questa_luce con apertura video vero e chiusura che chiede di seguire per vedere la propria luce, mantenendo il formato che nei dati converte meglio in rapporto alla portata. Evitare di ripetere il testa_a_testa con lo stesso schema di gancio: nei dati aumenta le visualizzazioni ma non i follower. Confrontare a 7 giorni reach e follower_ogni_1000 con il reel di oggi.",
+    "gancio": "Questa luce è di chi, e da quale città?"
+   }
+  },
+  {
+   "t": "2026-11-15T10:07:45+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato più forte è il formato testa_a_testa del 13/11 (reach 1959, 86 commenti, 16 condivisioni), ma ha portato solo 5 follower (2.6 ogni 1.000 account raggiunti). Il formato questa_luce del 12/11 ha convertito meglio in proporzione (13.9 ogni 1.000 con reach 361). Il formato ospiti_sera del 07/11 ha dato 16.0 ogni 1.000 a 7 giorni (7 follower su reach 438), mentre il prima_luce dello stesso gior",
+   "dati": {
+    "osservazione": "Il dato più forte è il formato testa_a_testa del 13/11 (reach 1959, 86 commenti, 16 condivisioni), ma ha portato solo 5 follower (2.6 ogni 1.000 account raggiunti). Il formato questa_luce del 12/11 ha convertito meglio in proporzione (13.9 ogni 1.000 con reach 361). Il formato ospiti_sera del 07/11 ha dato 16.0 ogni 1.000 a 7 giorni (7 follower su reach 438), mentre il prima_luce dello stesso giorno ha dato 0 follower ed è sotto la mediana dei simili (16.0). In generale la reach alta non si traduce in follower: la conversione è più alta sui reel con reach bassa, quindi il problema è il passaggio da spettatore a follower, non la visibilità.",
+    "proposta": "Domani provare un ospiti_sera o un questa_luce con chiusura esplicita e unica call to action (seguire per vedere la propria luce), mantenendo la voce e l'apertura con video vero o mappa, che hanno performato meglio. Evitare di ripetere prima_luce così com'è.",
+    "gancio": "Questa luce è di Nina, a Luino: il prossimo animale sei tu?"
+   }
+  },
+  {
+   "t": "2026-11-15T10:07:45+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato più forte è il reel 'ospiti_sera' del 2026-11-07 (16,0 follower ogni 1.000 account a 7 giorni, 7 follower, con scelta creativa 'mappa' e gancio 'Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!'). Il 'prima_luce' dello stesso giorno è invece a 0 follower su 354 account raggiunti, sotto la mediana di 16,0 del suo formato. Tra i reel 'testa_a_testa' il rendimento scende molto: 41,8 (",
+   "dati": {
+    "osservazione": "Il dato più forte è il reel 'ospiti_sera' del 2026-11-07 (16,0 follower ogni 1.000 account a 7 giorni, 7 follower, con scelta creativa 'mappa' e gancio 'Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!'). Il 'prima_luce' dello stesso giorno è invece a 0 follower su 354 account raggiunti, sotto la mediana di 16,0 del suo formato. Tra i reel 'testa_a_testa' il rendimento scende molto: 41,8 (402 views) il primo giorno, poi 2,6 con 1.959 account raggiunti il 13/11 e 'null' il 14/11. Il reel più visto (2.452 views) ha dato solo 5 follower, quindi la portata da sola non porta follower. Il formato 'questa_luce' ha dato 11,9 e 15,3 nei due casi con dato disponibile, mentre 'indovina' ha 3,1 con 5 commenti: molta condivisione (5) ma poca conversione. Mancano i follower per gran parte dei verbali a 7 giorni, quindi i confronti restano parziali.",
+    "proposta": "Domani ripetere la logica di 'ospiti_sera' (mappa + ringraziamento esplicito a chi è arrivato, con invito a seguire), non il 'prima_luce' così com'è. Evitare di spingere i 'testa_a_testa' per la portata: usarli come contenitore di commenti, con una chiusura che chieda di seguire per partecipare. Tenere 'questa_luce' come formato stabile, perché è coerente nel dato.",
+    "gancio": "Promessa mantenuta: ecco chi si è acceso oggi nella mappa!"
+   }
+  },
+  {
+   "t": "2026-11-15T10:07:49+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa è quello con più reach (1959 sul reel del 13/11) e più commenti (86), ma il dato follower è basso: 2,6 ogni 1.000 account, e 5 follower. Il reel con più follower per 1.000 account è quello del 10/11 (testa_a_testa, Livorno-Cecina) con 41,8, ma su reach di soli 263. Il reel 'questa_luce' del 12/11 ha 13,9 ogni 1.000 su reach 361. Le aperture 'video vero' sono presenti in qu",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa è quello con più reach (1959 sul reel del 13/11) e più commenti (86), ma il dato follower è basso: 2,6 ogni 1.000 account, e 5 follower. Il reel con più follower per 1.000 account è quello del 10/11 (testa_a_testa, Livorno-Cecina) con 41,8, ma su reach di soli 263. Il reel 'questa_luce' del 12/11 ha 13,9 ogni 1.000 su reach 361. Le aperture 'video vero' sono presenti in quasi tutti i reel, quindi non spiegano da sole la differenza. Il formato 'indovina' ha 5 condivisioni ma 5 commenti e 3,1 ogni 1.000. Nei verbali, 'prima_luce' (0 follower, sotto la mediana di 16,0) e 'ospiti_sera' del 7/11 (7 follower, 16,0 ogni 1.000) mostrano che il formato da solo non basta. Molti follower per 1.000 si basano su reach piccole, quindi il dato è rumoroso.",
+    "proposta": "Domani ripetere il testa_a_testa con la stessa struttura del 10/11 (città vicine, sfida breve, invito a commentare città e animale), ma pubblicando in un orario diverso dalle 13 per distinguere l'effetto dell'orario da quello del formato. Mantenere la chiusura che chiede di seguire per la sfida successiva, perché nei reel con questa chiusura il numero di follower è stato più stabile. Non riproporre 'prima_luce' nella forma attuale.",
+    "gancio": "Barletta contro Molfetta: 30 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-15T10:07:49+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato 'testa_a_testa' con gancio 'video vero' è quello con più reach (1959 sul reel del 13/11, il migliore del periodo), ma i follower per 1.000 account calano man mano che la reach cresce: da 41.8 (402 views) a 2.6 (2452 views) e 1.0 nel 'coppa_sorpasso' (1305 views). Il picco di follower/1.000 appartiene ai reel piccoli e specifici, come 'questa_luce' del 10/11 (11.9 con 361 reach, ma già 1",
+   "dati": {
+    "osservazione": "Il formato 'testa_a_testa' con gancio 'video vero' è quello con più reach (1959 sul reel del 13/11, il migliore del periodo), ma i follower per 1.000 account calano man mano che la reach cresce: da 41.8 (402 views) a 2.6 (2452 views) e 1.0 nel 'coppa_sorpasso' (1305 views). Il picco di follower/1.000 appartiene ai reel piccoli e specifici, come 'questa_luce' del 10/11 (11.9 con 361 reach, ma già 13.9 nel reel del 12/11), mentre i verbali confermano che 'prima_luce' è sotto la mediana (0 follower contro 16.0 dei simili) e 'ospiti_sera' ha ottenuto 16.0 ogni 1.000. Il dato del 14/11 non ha follower disponibili, quindi non lo uso per conclusioni.",
+    "proposta": "Provare domani un 'questa_luce' con una sola storia personale e chiusura che invita a seguire per la luce successiva, mantenendo voce e video vero; in parallelo conviene evitare di ripetere 'testa_a_testa' con lo stesso schema di gancio finché non si capisce perché la reach alta non porta follower. Confrontare poi follower/1.000 e non solo le views.",
+    "gancio": "Questa luce è accesa da una famiglia di Luino: ecco com'è rimasta la sua finestra stanotte."
+   }
+  },
+  {
+   "t": "2026-11-15T10:07:49+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa del 13/11 ha il reach più alto della settimana (1959 account, 86 commenti, 16 condivisioni) ma solo 5 follower, cioè 2.6 ogni 1.000 account raggiunti; la luce del 11/11 (653 reach, 60 commenti, 5 condivisioni) ne ha portati 10, cioè 15.3 ogni 1.000. Il reel più efficace per follower resta questa_luce (13.9 il 12/11, 15.3 l'11/11), mentre coppa_sorpasso (1.0) e testa_a_test",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa del 13/11 ha il reach più alto della settimana (1959 account, 86 commenti, 16 condivisioni) ma solo 5 follower, cioè 2.6 ogni 1.000 account raggiunti; la luce del 11/11 (653 reach, 60 commenti, 5 condivisioni) ne ha portati 10, cioè 15.3 ogni 1.000. Il reel più efficace per follower resta questa_luce (13.9 il 12/11, 15.3 l'11/11), mentre coppa_sorpasso (1.0) e testa_a_testa del 13/11 (2.6) convertono poco nonostante la portata. Nei verbali il formato ospiti_sera del 7/11 ha raggiunto 16.0 follower ogni 1.000 account, ma non ha confronti simili; prima_luce del 7/11 ha portato 0 follower (mediana dei simili 16.0). Il dato sui follower manca per il reel del 14/11 e per quasi tutti i verbali precedenti.",
+    "proposta": "Domani puntare su questa_luce, il formato che converte meglio: un'apertura con video vero e il nome dell'animale, e una chiusura che promette la luce successiva per invitare a seguire. Mantenere il gancio con l'animale specifico, che ha prodotto i commenti più utili, e proporre un'unica call to action per il follow invece di più richieste insieme.",
+    "gancio": "Questa luce è di Kira, labrador, a Vallo della Lucania."
+   }
+  },
+  {
+   "t": "2026-11-15T10:07:49+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa è il più visto (2452 views, 1959 reach il 13/11) ma converte pochissimo: 5 follower ogni 1.000 account, con follower_ogni_1000 in calo nel tempo (41.8 il 10/11, 2.6 il 13/11). Il dato più forte in termini di conversione è questa_luce del 10/11 (13.9 ogni 1.000 sul reel del 12/11 e 11.9 sul 10/11); il re-check dei verbali mostra che 'prima_luce' ha convertito 0 follower e v",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa è il più visto (2452 views, 1959 reach il 13/11) ma converte pochissimo: 5 follower ogni 1.000 account, con follower_ogni_1000 in calo nel tempo (41.8 il 10/11, 2.6 il 13/11). Il dato più forte in termini di conversione è questa_luce del 10/11 (13.9 ogni 1.000 sul reel del 12/11 e 11.9 sul 10/11); il re-check dei verbali mostra che 'prima_luce' ha convertito 0 follower e va evitato così com'è, mentre 'ospiti_sera' ha convertito 16.0 ogni 1.000 con gancio e chiusura legati alla richiesta di seguire (SEGUO). Il formato indovina ha 1315 views ma solo 5 commenti e 3.1 ogni 1.000: tanta visibilità, poca azione.",
+    "proposta": "Domani provare un questa_luce con chiusura che chiede esplicitamente di seguire per vedere la propria luce, mantenendo la scheda dell'animale e l'orario fisso delle 18. Affiancare un solo testa_a_testa, ma cambiando la chiusura in una richiesta di seguire con la città (come nei reel che convertono), senza ripetere lo schema attuale. Evitare il formato prima_luce così com'è.",
+    "gancio": "Questa luce è di [nome animale], a [città]."
+   }
+  },
+  {
+   "t": "2026-11-15T10:07:51+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa è quello con più reach (1959 sul reel del 13/11, il migliore del periodo) ma i follower per 1.000 account calano: 41.8 il 10/11, 2.6 il 13/11. Il formato questa_luce ha la conversione più alta degli ultimi reel (13.9 ogni 1.000 sul reel del 12/11), mentre coppa_sorpasso (1.0) e indovina (3.1) convertono poco nonostante reach alto. Nei verbali, ospiti_sera ha 16.0 follower ",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa è quello con più reach (1959 sul reel del 13/11, il migliore del periodo) ma i follower per 1.000 account calano: 41.8 il 10/11, 2.6 il 13/11. Il formato questa_luce ha la conversione più alta degli ultimi reel (13.9 ogni 1.000 sul reel del 12/11), mentre coppa_sorpasso (1.0) e indovina (3.1) convertono poco nonostante reach alto. Nei verbali, ospiti_sera ha 16.0 follower ogni 1.000 (7 follower su 438 reach) contro una mediana simile non disponibile, e prima_luce è a 0 follower sotto la mediana di 16.0; i verbali con follower null non permettono confronti affidabili.",
+    "proposta": "Tenere questa_luce e ospiti_sera come formati di conversione, perché chiudono con un invito diretto a seguire legato a un animale specifico. Per testa_a_testa, mantenere il formato ma spostare la chiusura su un invito a seguire esplicito e non solo a commentare, così il reach alto si trasforma in follower. Evitare di ripetere prima_luce nella forma attuale.",
+    "gancio": "Questa luce è di Kira, a Vallo della Lucania: la vedi accendersi adesso?"
+   }
+  },
+  {
+   "t": "2026-11-15T10:07:56+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Per domani: gancio «Questa luce è di Kira, labrador, a Vallo della Lucania: di chi sarà la prossima?», chiusura «Segui Zampe d'Italia: domani alle 18 si accende la prossima luce.». Dato: Il testa_a_testa del 13/11 ha raggiunto 1.959 account e 86 commenti ma ha portato 5 follower (2,6 ogni 1.000). Il questa_luce ha reso 13,9 ogni 1.000 su 361 account (12/11) e 15,3 su 653 (11/11). Le reach piccole rendono i confronti fragili e i follower dei verbali a 7 giorni sono spesso mancanti.",
+   "dati": {
+    "pubblico": "Persone che non ci conoscono ancora e amano cani e gatti, da convertire in follower: l'obiettivo di domani è trasformare chi guarda in chi segue, non aumentare la portata.",
+    "gancio": "Questa luce è di Kira, labrador, a Vallo della Lucania: di chi sarà la prossima?",
+    "motivo_per_seguire": "Seguire per vedere ogni sera la luce di un animale reale e scoprire se la prossima è nella tua città. Una sola promessa chiara, legata a un animale specifico.",
+    "chiusura": "Segui Zampe d'Italia: domani alle 18 si accende la prossima luce.",
+    "da_riprovare": "Il formato questa_luce, con apertura in video vero, animale e città specifici e un'unica richiesta di seguire. In parallelo un solo ospiti_sera con mappa e ringraziamento ai nuovi arrivati, da trattare come test perché ha un solo reel. Misurare i follower per 1.000 account a 6 ore e a 7 giorni.",
+    "da_evitare": "Il prima_luce così com'è (0 follower su 354 account, sotto la mediana di 16,0 dei simili). Il testa_a_testa usato per la portata, con chiusura che chiede solo di commentare: il 13/11 ha fatto molta reach ma poca conversione. Più richieste di azione nella stessa chiusura.",
+    "dato": "Il testa_a_testa del 13/11 ha raggiunto 1.959 account e 86 commenti ma ha portato 5 follower (2,6 ogni 1.000). Il questa_luce ha reso 13,9 ogni 1.000 su 361 account (12/11) e 15,3 su 653 (11/11). Le reach piccole rendono i confronti fragili e i follower dei verbali a 7 giorni sono spesso mancanti."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 60053,
+ "fine": "2026-11-15T10:07:56+00:00"
+}

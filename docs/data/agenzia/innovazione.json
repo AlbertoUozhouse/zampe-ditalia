@@ -86,5 +86,15 @@
   "reel": null,
   "realismo": null,
   "perche": "È l'idea più fattibile subito, perché riusa un gioco, i dati e le foto già esistenti. Inoltre porta follower perché ognuno vuole rivedere e condividere il proprio animale, e la serie giornaliera dà un motivo per tornare."
+ },
+ {
+  "giorno": "2026-11-15",
+  "reel": {
+   "idea": "Il Reel del Campanile Vero",
+   "come_funziona": "Il reel si apre con un video reale di un animale di un follower girato nel suo comune. Poi la mappa dell'Italia si stringe su quel paese e la sua luce si accende. Chiude con una domanda sul comune vicino, da citare nei commenti, così ogni reel racconta il territorio e non è solo una luce sulla mappa.",
+   "primo_passo": "Scegliere dall'archivio un video di un follower con SÌ esplicito, leggere in motore/config.json le coordinate del suo comune e montarlo come apertura sul formato questa_luce, collegandolo alla discesa finale sulla mappa SVG già esistente. Pubblicare questo come reel di test.",
+   "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti per i reel di questo formato, confrontandoli con il 13,9 di questa_luce (361 account) e il 2,6 di testa_a_testa. Contare anche quanti commenti nominano un comune diverso da quello del reel."
+  },
+  "perche": "Ho scelto il Reel del Campanile Vero perché è fattibile subito con video con SÌ esplicito, coordinate e mappa SVG già disponibili, senza dover creare disegni di campanili o audio nuovi come il Campanile Vivo, né dipendere dalla vista 3D presente solo per Livorno come il Campanile in Scena. Inoltre la domanda sul comune vicino dà un invito concreto a commentare e tornare."
  }
 ]

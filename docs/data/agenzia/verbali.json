@@ -643,5 +643,47 @@
   "esito": "Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).",
   "riprovare": null,
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18017907896966556",
+  "file": "2026-11-07-1802-prima_luce",
+  "formato": "prima_luce",
+  "uscita": "2026-11-07T17:07:26+00:00",
+  "follower": 0,
+  "reach_7g": 354,
+  "follower_ogni_1000": 0.0,
+  "mediana_simili": 16.0,
+  "simili": 1,
+  "scelte": {
+   "formato": "prima_luce",
+   "apertura": "video vero",
+   "voce": true,
+   "gancio": "Questa è l'Italia di notte. Ad Atri era tutto spento.",
+   "chiusura": "Atri si è accesa. Segui Zampe d'Italia per vedere la prossima luce."
+  },
+  "esito": "0 follower in totale, 0.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 16.0.",
+  "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18348954133285067",
+  "file": "2026-11-07-2103-ospiti_sera",
+  "formato": "ospiti_sera",
+  "uscita": "2026-11-07T20:11:37+00:00",
+  "follower": 7,
+  "reach_7g": 438,
+  "follower_ogni_1000": 16.0,
+  "mediana_simili": null,
+  "simili": 0,
+  "scelte": {
+   "formato": "ospiti_sera",
+   "apertura": "mappa",
+   "voce": true,
+   "gancio": "Promessa mantenuta: benvenuti ai 15 nuovi amici di oggi!",
+   "chiusura": "Il prossimo è il tuo? Seguici e scrivi SEGUO!"
+  },
+  "esito": "7 follower in totale, 16.0 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.",
+  "riprovare": null,
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]

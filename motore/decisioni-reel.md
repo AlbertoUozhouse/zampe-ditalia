@@ -432,3 +432,9 @@ Senza dato sui follower: incoronazione e amici (usciti prima che partisse il con
 
 - 2026-11-06-2110-incoronazione: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
 - 2026-11-07-1303-amici: Follower attribuiti: indisponibile (il conteggio dei follower ora per ora non copre l'uscita di questo reel).
+
+
+## 2026-11-15 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-07-1802-prima_luce: 0 follower in totale, 0.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 16.0. Non riprovare così com'è: è sotto la mediana dei reel simili.
+- 2026-11-07-2103-ospiti_sera: 7 follower in totale, 16.0 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.

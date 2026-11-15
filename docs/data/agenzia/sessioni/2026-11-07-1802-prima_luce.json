@@ -1802,6 +1802,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce senza revisione, come prima."
+  },
+  {
+   "t": "2026-11-15T10:07:40+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 0 follower in totale, 0.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 16.0. Non riprovare così com'è: è sotto la mediana dei reel simili.",
+   "dati": {
+    "id": "18017907896966556",
+    "file": "2026-11-07-1802-prima_luce",
+    "formato": "prima_luce",
+    "uscita": "2026-11-07T17:07:26+00:00",
+    "follower": 0,
+    "reach_7g": 354,
+    "follower_ogni_1000": 0.0,
+    "mediana_simili": 16.0,
+    "simili": 1,
+    "scelte": {
+     "formato": "prima_luce",
+     "apertura": "video vero",
+     "voce": true,
+     "gancio": "Questa è l'Italia di notte. Ad Atri era tutto spento.",
+     "chiusura": "Atri si è accesa. Segui Zampe d'Italia per vedere la prossima luce."
+    },
+    "esito": "0 follower in totale, 0.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 16.0.",
+    "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [
