@@ -700,9 +700,10 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
     #root .nastro span {{ display: inline-block; transform: rotate(-3deg); font: 800 54px/1.1 "Bricolage Grotesque", sans-serif; color: #1A1206; background: #FFD23F; border: 5px solid #1A1206; border-radius: 14px; padding: 10px 26px; box-shadow: 0 8px 0 rgba(0,0,0,.35); }}
     #root .zampa {{ position: absolute; left: -80px; top: 360px; width: 1240px; height: 1080px; object-fit: contain; filter: drop-shadow(0 22px 26px rgba(0,0,0,.45)); }}
     #root .zampa.intero {{ left: 185px; top: 470px; width: 710px; height: 780px; }}
-    #root .sfoca {{ position: absolute; inset: -60px; width: 1200px; height: 2040px; object-fit: cover; filter: blur(30px) brightness(.7); }}
+    #root .quadro {{ position: absolute; inset: 0; overflow: hidden; }}
     #root .foto {{ position: absolute; left: -100px; top: 170px; width: 1280px; height: 1920px; object-fit: cover; }}
-    #root .velo {{ position: absolute; left: 0; right: 0; top: 0; height: 560px; background: linear-gradient(180deg, rgba(0,0,0,.6) 0, rgba(0,0,0,.35) 60%, rgba(0,0,0,0) 100%); }}
+    #root .specchio {{ position: absolute; left: -100px; top: -1750px; width: 1280px; height: 1920px; object-fit: cover; transform: scaleY(-1); }}
+    #root .velo {{ position: absolute; left: 0; right: 0; top: 0; height: 520px; background: linear-gradient(180deg, rgba(0,0,0,.58) 0, rgba(0,0,0,.32) 60%, rgba(0,0,0,0) 100%); }}
     #root .velo ~ .hud {{ top: 196px; left: 30px; gap: 10px; }}
     #root .barra {{ position: absolute; left: 30px; top: 296px; width: 314px; height: 14px; border-radius: 8px; background: rgba(255,255,255,.25); border: 2px solid #F3E6C8; }}
     #root .barra i {{ position: absolute; left: 0; top: 0; bottom: 0; border-radius: 8px; background: linear-gradient(90deg, #6FE38F, #FFD23F); }}
@@ -719,7 +720,7 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
     #root .velo ~ .nastro span {{ font-size: 30px; padding: 8px 14px; border-width: 4px; }}
     #root .velo ~ .frase {{ top: 336px; left: 24px; right: 24px; text-shadow: 0 5px 0 #0A0A0A, 4px 0 0 #0A0A0A, -4px 0 0 #0A0A0A, 0 -4px 0 #0A0A0A, 0 0 24px rgba(0,0,0,.8); }}
     #root .velo ~ .scelta {{ top: 326px; height: 200px; left: 24px; right: 24px; }}
-    #root .velo ~ .scelta .dom {{ top: 0; font-size: 56px; }}
+    #root .velo ~ .scelta .dom {{ top: 0; left: 120px; right: 120px; font-size: 52px; background: rgba(10,10,10,.6); border-radius: 18px; padding: 4px 10px; }}
     #root .velo ~ .scelta .op {{ top: 84px; width: 470px; height: 112px; flex-direction: row; gap: 12px; border-width: 5px; border-radius: 22px; }}
     #root .velo ~ .scelta .op .em {{ font-size: 60px; }} #root .velo ~ .scelta .op b {{ font-size: 40px; }} #root .velo ~ .scelta .op i {{ display: none; }}
     #root .velo ~ .scelta .o {{ top: 112px; width: 90px; margin-left: -45px; font-size: 24px; line-height: 50px; }}
@@ -741,7 +742,7 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
     if foto:  # 15/11 sera: Zampa vero (foto IA realistica, motore/zampa.py) a tutto schermo, che si avvicina piano; sopra contatori e scritte
         sb, st, ogg = "", "", ""
     intero = svg.endswith(".png")  # Zampa intero in 3D (reel/zampa3d.js): sta in piedi sul pavimento, la frase sotto i piedi
-    fondo = (f'<img class="sfoca" src="assets/img/{foto}" alt=""><img class="foto" id="{cid}-z" src="assets/img/{foto}" alt=""><div class="velo"></div>' if foto else
+    fondo = (f'<div class="quadro" id="{cid}-z"><img class="specchio" src="assets/img/{foto}" alt=""><img class="foto" src="assets/img/{foto}" alt=""></div><div class="velo"></div>' if foto else
              f'<div class="muro"></div><div class="pav"{" style=\'height:760px\'" if intero else ""}></div>{sb}<img class="zampa{" intero" if intero else ""}" id="{cid}-z" src="assets/svg/{svg}" alt="">')
     et = "".join(f'<div class="et {x.get("lato", "s")}" id="{cid}-e{i}" style="top:{x.get("y", 800)}px"><span>{ESC(x.get("e", ""))} {ESC(x["t"])}</span></div>' for i, x in enumerate(etichette))
     if sfx: et += f'<div class="sfx {sfx.get("lato", "d")}" id="{cid}-x" style="top:{sfx.get("y", 760)}px"><span>{ESC(sfx["t"])}</span></div>'
@@ -750,7 +751,7 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
              f'<div class="hud"><div><small>GIORNI</small><b id="{cid}-g">{giorni}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>'
              + (f'<div class="nastro"><span id="{cid}-n">{ESC(banner)}</span></div>' if banner else "")
              + (f'<div class="frase" id="{cid}-t">{ESC(testo)}</div>' if testo and not scelta else "") + sc)
-    js = ([f'    tl.fromTo("#{cid}-z", {{ scale: 0.96 }}, {{ scale: 1.03, duration: {dur:.2f}, ease: "none" }}, 0);'] if foto else
+    js = ([f'    tl.fromTo("#{cid}-z", {{ scale: 1.0 }}, {{ scale: 1.05, transformOrigin: "50% 60%", duration: {dur:.2f}, ease: "none" }}, 0);'] if foto else
           [f'    tl.fromTo("#{cid}-z", {{ scale: 0.85, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, 0.05);',
            f'    tl.to("#{cid}-z", {{ keyframes: [{{ rotation: -3, duration: 0.25 }}, {{ rotation: 3, duration: 0.25 }}, {{ rotation: 0, duration: 0.25 }}], repeat: {max(1, int(dur / 1.5))} }}, 0.4);'])
     if banner: js.append(f'    tl.fromTo("#{cid}-n", {{ scale: 0.3, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.4)" }}, 0.25);')
