@@ -448,3 +448,8 @@ Esame: follower al giorno +156/+148/+136 (31/10–2/11) poi +43 e +17–25 dal 3
 
 Piano nuovo (da oggi): 2 reel al giorno, ognuno una promessa. 13:00 testa a testa (città contro città, padroni taggati); 21:00 a rotazione dal 17/11: intruso, città («il nome più diffuso nella tua città?», il bot risponde col dato vero), tifo («il tuo cane per chi tifa?», sciarpa sulla mappa), rari («solo 2 in tutta Italia: il tuo sarà il terzo?»), nomi, corsa. Lunedì 13:00 Coppa (domani il lancio del tifo al suo posto), domenica 21:00 verdetto. Tolti sorpasso del giovedì e gara dei follower. Misura: views e follower ogni 1.000 per formato; sotto 2.000 views dopo due uscite il formato esce dalla rotazione.
 - 15/11 Officina (giorno «realismo di sito e grafica»): la sciarpa della squadra in 3D. Chi scrive la sua squadra («forza Napoli») ha la sciarpa a righe coi due colori al collo nel paese 3D (docs/mondo3d.js sciarpa3d), sulla mappa (docs/disegni.js tifo) e nella scheda («⚽ Tifa Juventus»); nella scheda anche «💛 Adottato» e il segno. Provato da telefono (390×844) con tifosi di prova, senza toccare i dati veri.
+
+
+## 2026-11-15 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-08-1306-testa_a_testa: 9 follower in totale, 29.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (2) hanno una mediana di 8.0. Riprovare: apertura «video vero», gancio «Verona contro Vicenza: 45 chilometri, e la sfida è aperta.», chiusura «Sei di Vicenza o di Verona? Commenta città e nome del tuo animale!» (formato testa_a_testa).

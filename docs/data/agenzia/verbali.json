@@ -685,5 +685,26 @@
   "esito": "7 follower in totale, 16.0 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.",
   "riprovare": null,
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18183927874428428",
+  "file": "2026-11-08-1306-testa_a_testa",
+  "formato": "testa_a_testa",
+  "uscita": "2026-11-08T12:11:04+00:00",
+  "follower": 9,
+  "reach_7g": 310,
+  "follower_ogni_1000": 29.0,
+  "mediana_simili": 8.0,
+  "simili": 2,
+  "scelte": {
+   "formato": "testa_a_testa",
+   "apertura": "video vero",
+   "voce": true,
+   "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta.",
+   "chiusura": "Sei di Vicenza o di Verona? Commenta città e nome del tuo animale!"
+  },
+  "esito": "9 follower in totale, 29.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (2) hanno una mediana di 8.0.",
+  "riprovare": "Riprovare: apertura «video vero», gancio «Verona contro Vicenza: 45 chilometri, e la sfida è aperta.», chiusura «Sei di Vicenza o di Verona? Commenta città e nome del tuo animale!» (formato testa_a_testa).",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]
