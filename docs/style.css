@@ -277,3 +277,4 @@ body:has(#sheet:not([hidden])) .gioca-citta,body:has(#gioco) .gioca-citta{displa
 /* la gara dei follower (12/11) */
 .obiettivo{margin:6px 0 10px}.barra-ob{height:14px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden;border:1px solid rgba(255,197,92,.5)}
 .barra-ob i{display:block;height:100%;background:linear-gradient(90deg,#FFB347,#FFC55C,#FFE08A);border-radius:999px}
+.zampa-giro .name{background:#FFC55C;color:#2A1606;border-color:#2A1606;font-weight:800} .zampa-giro svg{filter:drop-shadow(0 0 14px rgba(255,197,92,.9))} /* il Giro d'Italia di Zampa (15/11) */

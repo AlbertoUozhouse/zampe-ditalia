@@ -619,5 +619,28 @@ def tifosi(cid, dur, animali):
     js += "\n" + "\n".join(f'    tl.to("#{cid}-a{i}", {{ keyframes: [{{ scale: 1.08, duration: 0.14 }}, {{ scale: 1, duration: 0.2 }}] }}, {0.05 + len(animali[:6]) * 0.2 + 0.3 + i * 0.25:.2f});' for i in range(len(animali[:6])))
     return _pagina(cid, "Le tifoserie a quattro zampe.", css, f'<div class="spot"></div><div class="gr">{celle}</div>', js)
 
-TIPI = {"tifosi": tifosi, "padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+def tappa(cid, dur, svg, tappa, comune, riga=""):
+    """Il Giro d'Italia di Zampa (15/11): Zampa, il cagnolino della mappa con la sciarpa tricolore, arriva nel paese della tappa.
+    riga: il fatto vero della città (motore/citta.py) o i voti che l'hanno scelta."""
+    fs = 112 if len(comune) <= 10 else 88 if len(comune) <= 15 else 64
+    css = SPOT.format(a="#2A6B4A", b="#0A1F14") + f"""
+    #root .giro {{ position: absolute; left: 0; right: 0; top: 300px; text-align: center; font: 900 34px/1.2 var(--font-body); color: #FFC55C; letter-spacing: 1px; }}
+    #root .num {{ position: absolute; left: 50%; top: 356px; width: 360px; margin-left: -180px; text-align: center; font: 800 64px/1.2 "Bricolage Grotesque", sans-serif; color: #2A1606; background: #FFC55C; border-radius: 26px; box-shadow: 0 0 50px rgba(255,197,92,.6); }}
+    #root .zampa {{ position: absolute; left: 220px; top: 450px; width: 640px; height: 560px; object-fit: contain; filter: drop-shadow(0 18px 24px rgba(0,0,0,.55)); }}
+    #root .arr {{ position: absolute; left: 40px; right: 40px; top: 1010px; text-align: center; font: 900 46px/1.2 var(--font-body); color: #FFF4DE; }}
+    #root .citta {{ position: absolute; left: 30px; right: 30px; top: 1070px; text-align: center; font: 800 {fs}px/1.1 "Bricolage Grotesque", sans-serif; color: #FFC55C; text-shadow: 0 6px 0 #05030F, 0 0 60px rgba(255,197,92,.45); }}
+    #root .riga {{ position: absolute; left: 70px; right: 70px; top: 1260px; text-align: center; }}
+    #root .riga span {{ display: inline-block; font: 900 36px/1.3 var(--font-body); color: #FFF4DE; background: rgba(6,11,26,.85); border: 3px solid rgba(255,197,92,.7); border-radius: 22px; padding: 8px 26px; }}"""
+    corpo = (f'<div class="spot"></div><div class="giro">🗺️ IL GIRO D\'ITALIA DI ZAMPA</div><div class="num" id="{cid}-n">TAPPA {tappa}</div>'
+             f'<img class="zampa" id="{cid}-z" src="assets/svg/{svg}" alt=""><div class="arr" id="{cid}-a">Zampa arriva a</div><div class="citta" id="{cid}-c">{ESC(comune)}</div>'
+             + (f'<div class="riga"><span id="{cid}-r">{ESC(riga)}</span></div>' if riga else ""))
+    js = f"""    tl.fromTo("#{cid}-n", {{ scale: 0.4, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.4)" }}, 0.05);
+    tl.fromTo("#{cid}-z", {{ x: -700, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.6, ease: "back.out(1.4)" }}, 0.1);
+    tl.to("#{cid}-z", {{ keyframes: [{{ y: -30, duration: 0.18 }}, {{ y: 0, duration: 0.18 }}], repeat: 2 }}, 0.75);
+    tl.fromTo("#{cid}-a", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.25 }}, 0.5);
+    tl.fromTo("#{cid}-c", {{ scale: 0.3, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2.2)" }}, 0.7);""" + (
+        f'\n    tl.fromTo("#{cid}-r", {{ y: 30, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 1.1);' if riga else "")
+    return _pagina(cid, f"Il Giro d'Italia di Zampa: tappa {tappa}, {comune}.", css, corpo, js)
+
+TIPI = {"tappa": tappa, "tifosi": tifosi, "padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}

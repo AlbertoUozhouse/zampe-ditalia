@@ -1225,7 +1225,7 @@ def verifica(cop):
 
 
 # ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
-FRASI_FISSE = {"rari": 45, "citta": 45, "tifo": 50, "indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
+FRASI_FISSE = {"giro": 60, "rari": 45, "citta": 45, "tifo": 50, "indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
 
 MANTELLI = {"europeo", "grigio", "nero", "rosso", "bianco", "bicolore", "bicolore_rosso", "calico", "tartarugato", "meticcio"}  # colori, non razze: fuori dal quiz
 
@@ -1572,6 +1572,66 @@ def citta_reel(D, rng, st):
     st["senza_bonus"] = True
     return "📍 LA TUA CITTÀ", frasi, did
 
+# ================================================================ il Giro d'Italia di Zampa (15/11, Alberto: «reel diversi ogni giorno, un'idea tua»)
+# Zampa, il cagnolino della mappa con la sciarpa tricolore, fa una tappa al giorno in un paese vero. Ogni episodio è diverso:
+# il paese 3D con il tempo e la luce di quel giorno, il suo fatto vero, gli animali veri che lo accolgono (padroni taggati).
+# La tappa dopo la scelgono i commenti sotto la tappa (commenti.py giro_voto): un motivo per commentare e per seguire la serie.
+def giro(D, rng, st):
+    import citta
+    P = carica(ROOT / "motore/pubblicati.json", [])
+    fatte = sum(1 for x in P if x.get("tipo") == "REELS" and "-giro." in x.get("media", ""))
+    n = fatte + 1
+    storia = st.get("giro_storia", [])[:fatte]  # solo le tappe uscite davvero (le anteprime non contano)
+    visti = {x["k"] for x in storia}
+    an = [a for a in D["animali"] if a.get("k") == "animale" and "lat" in a]
+    per = {}
+    for a in an: per.setdefault(f"{a['c']}|{a.get('p', '')}", []).append(a)
+    voti = {}
+    for v in carica(ROOT / "motore/stato.json", {}).get("giro", {}).get("voti", []):
+        if v.get("tappa") == fatte and v["k"] in per: voti[v["k"]] = voti.get(v["k"], 0) + 1
+    scelta = next((k for k in sorted(voti, key=lambda k: -voti[k]) if k not in visti), None)
+    if not scelta:  # la prima tappa, o nessun voto valido: il paese più vivo degli ultimi giorni che Zampa non ha ancora visto
+        recenti = {}
+        for k, L in per.items():
+            if k in visti or len(L) < 5: continue
+            recenti[k] = sum(1 for a in L if str(a.get("ts", ""))[:10] >= (ORA.date() - timedelta(days=7)).isoformat()) * 3 + len(L)
+        if not recenti: raise Salta("nessun paese per la tappa")
+        scelta = max(recenti, key=lambda k: (recenti[k], rng.random()))
+    L = per[scelta]; c, pv = L[0]["c"], L[0].get("p", "")
+    lat, lng = sum(a["lat"] for a in L) / len(L), sum(a["lng"] for a in L) / len(L)
+    nv = voti.get(scelta, 0)
+    fatto = (citta.fatto(c, pv) or {}).get("fatto")
+    st["giro_storia"] = storia + [{"k": scelta, "c": c, "lat": lat, "lng": lng, "data": ORA.date().isoformat()}]
+    st["giro_info"] = {"tappa": n, "c": c, "p": pv, "lat": lat, "lng": lng, "storia": st["giro_storia"][-30:]}
+    st["intro_3d"] = {"comune": c, "nome": ""}
+    apri = (f"Parte il Giro d'Italia di Zampa! Prima tappa: {c}." if n == 1 else
+            f"Tappa {n} del Giro d'Italia di Zampa: avete votato in {nv}, oggi arriva a {c}!" if nv else f"Tappa {n} del Giro d'Italia di Zampa: oggi arriva a {c}!")
+    riga = fatto if fatto and len(fatto) <= 40 else (f"scelta da {nv} voti" if nv else f"{len(L)} animali sulla mappa")
+    frasi = [(apri, {"tipo": "tappa", "tappa": n, "comune": c, "riga": riga})]
+    giro_punti = [{"lng": x["lng"], "lat": x["lat"], "testo": f"Tappa {i + 1} · {x['c']}"} for i, x in enumerate(storia[-4:], start=max(0, len(storia) - 4))]
+    frasi.append(((f"{c}, {fatto}." if fatto else f"A {c} ci sono già {len(L)} animali.") + (" Ecco la strada fatta finora." if storia else ""),
+                  {"tipo": "luce", "centro": [lng, lat], "intorno": _intorno(D, {"lat": lat, "lng": lng}), "punti": giro_punti + [{"lng": lng, "lat": lat, "acceso": False, "testo": f"Tappa {n} · {c}"}]}))
+    sp = scena_padroni(D, st, L, f"🐾 Accolgono Zampa a *{c}*")
+    if sp:
+        nomi = [x["nome"] for x in sp["persone"][:3]]
+        frasi.append((f"Ad accoglierlo: {nomi[0]}, {nomi[1]} e {nomi[2]}.", sp))
+    altri = sorted((k for k in per if k not in visti and k != scelta and len(per[k]) >= 5), key=lambda k: -len(per[k]))[:20]
+    es = rng.choice([per[k][0]["c"] for k in altri if len(per[k][0]["c"]) <= 14] or ["Lecce"])
+    frasi.append(("Dove va domani? Scrivi la tua città: vince la più commentata.", {"tipo": "commento", "testo": es}))
+    did = (f"🗺️ Il Giro d'Italia di Zampa · Tappa {n}: {c}" + (f", {fatto}" if fatto else "") + "!\n"
+           + (f"Scelta da voi con {nv} voti. " if nv else "") + (f"🐾 Ad accoglierlo: " + ", ".join(f"{x['nome']} (@{x['utente']})" for x in sp["persone"][:5]) + ".\n" if sp else "")
+           + "\n👇 Dove va domani? Scrivi qui sotto la tua città: Zampa arriva in quella più commentata. Fai votare gli amici della tua città 👥\n"
+           "➕ Seguici per non perdere la prossima tappa.")
+    st["copertina"] = None
+    st["banner_reel"] = "🗺️ Dove va domani? Scrivi la tua città 👇"
+    st["hashtag"] = "#cani #gatti #italia #viaggio #borghi #animalidomestici "
+    st["senza_bonus"] = True
+    return f"🗺️ GIRO DI ZAMPA · TAPPA {n}", frasi, did
+
+def scelta_13():
+    """15/11 sera: alle 13 ogni giorno un formato diverso (la sera c'è il Giro d'Italia di Zampa)."""
+    return ["testa_a_testa", "intruso", "citta", "rari", "nomi_top", "corsa"][(ORA.date() - date(2026, 11, 17)).days % 6]
+
 def scelta_21():
     """15/11, piano nuovo: alle 21 a rotazione i reel che promettono qualcosa a chi commenta (la squadra, il tempo dell'intruso, il nome, la città)."""
     return ["intruso", "citta", "tifo", "rari", "nomi_top", "corsa"][(ORA.date() - date(2026, 11, 17)).days % 6]
@@ -1584,7 +1644,7 @@ def sera_18(D, rng, st):
     return FORMATI[scelta_18()](D, rng, st)
 
 
-FORMATI = {"rari": rari, "citta": citta_reel, "tifo": tifo, "corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "sera_21": lambda D, rng, st: FORMATI[scelta_21()](D, rng, st), "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"giro": giro, "rari": rari, "citta": citta_reel, "tifo": tifo, "corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "sera_21": lambda D, rng, st: FORMATI[scelta_21()](D, rng, st), "giorno_13": lambda D, rng, st: FORMATI[scelta_13()](D, rng, st), "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -1651,6 +1711,7 @@ def main():
     variante_test = next((x for x in parti[1:] if x in ("voce", "testo")), None)
     if formato == "sera_18": formato = scelta_18()  # il copione e il rendimento portano il nome vero del format
     if formato == "sera_21": formato = scelta_21()
+    if formato == "giorno_13": formato = scelta_13()
     if formato == "auto":
         formato = min(ORARI, key=lambda o: abs(o[0] - ORA.hour))[1]
     st = carica(STORICO, {})
@@ -1721,6 +1782,7 @@ def main():
     did = did.strip() + ("\n\nVoce generata con IA.\n\n" if voce_ia else "\n\n") + ("#veterinario #toelettatura #petshop #pensioneperanimali #animalidomestici " if per_attivita else st.pop("hashtag", "#cani #gatti #italia #canicontrogatti #animalidomestici ")) + tag_citta
     intro = st.pop("intro", None)
     intro_3d = st.pop("intro_3d", None)
+    giro_info = st.pop("giro_info", None)
     # l'aspetto grafico a rotazione: mai uguale ai due reel prima (reel/modello/scene.py, TEMI)
     temi = ["notte", "tramonto", "aurora", "giorno", "neon"]  # colori resi abbastanza scuri da passare il controllo di contrasto (reel/modello/scene.py)
     gia = st.get("temi", [])[-2:]
@@ -1733,7 +1795,7 @@ def main():
                "banner": st.pop("banner_reel", "💬 Commenta città e nome del tuo animale 👇"), "didascalia": did,
                "tag": [u for u in mostrati if u.lower() not in ESCLUSI],
                # 15/11: fino a 3 padroni in vista che ci seguono già ricevono l'invito a collaborare: se accettano, il reel va anche sul loro profilo
-               "collab": [x["utente"] for _, sc in frasi if sc.get("tipo") == "padroni" for x in sc["persone"] if x["utente"].lower() in D["seguono"]][:3], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}),
+               "collab": [x["utente"] for _, sc in frasi if sc.get("tipo") == "padroni" for x in sc["persone"] if x["utente"].lower() in D["seguono"]][:3], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}), **({"giro": giro_info} if giro_info else {}),
                **({"test": {"nome": "crescita-1", "formato": formato, "variante": voce_v, "slot": ORA.strftime("%H:%M"), "caso": caso}} if test else {})}
     if test: copione.pop("intro", None); copione.pop("intro_3d", None)  # nel test il primo fotogramma è il gancio: niente video prima
     oggi = ORA.date()  # 15/11: chi è stato taggato e quando (motore/copione.py padroni: riposo di 3 giorni tra un tag e l'altro)

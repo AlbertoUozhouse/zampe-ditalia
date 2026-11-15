@@ -75,6 +75,7 @@ let PRENOTATE = {}; // posti prenotati dalle attività, per comune: {"Treviso|TV
 let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 let DERBY = null; // il Derby della settimana: {ora: {a, b, na, nb, fine, partito}, albo: [...]} (motore/derby.py)
 const SEGNI = ["", "♑ Capricorno", "♒ Acquario", "♓ Pesci", "♈ Ariete", "♉ Toro", "♊ Gemelli", "♋ Cancro", "♌ Leone", "♍ Vergine", "♎ Bilancia", "♏ Scorpione", "♐ Sagittario"]; // dal mese di nascita (motore/commenti.py SEGNI)
+let GIRO = null; // il Giro d'Italia di Zampa (15/11): la tappa di oggi e la strada fatta (motore/copione.py giro)
 let AMICI = null; // la gara degli amici (15/11): chi porta più amici entro domenica vince un accessorio in regalo (motore/commenti.py)
 let SQUADRE = {}; // il tifo (15/11): i colori delle squadre dei tifosi a quattro zampe, da animali.json (motore/squadre.py)
 let NEGOZIO = {}, SFILATA = [], BELLO = null, BOOST = null; // la Sfilata degli accessori e «Il più bello d'Italia» della settimana (motore/commenti.py)
@@ -82,7 +83,7 @@ let _x = 0; // i link di pagamento degli accessori (motore/config.json → anima
 let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: il prossimo, fatti: [...]}; 1.000 = neve, 2.000 = fuochi d'artificio
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; SQUADRE = j.squadre || {}; AMICI = j.gara_amici || null; return j.animali || []; } } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; SQUADRE = j.squadre || {}; AMICI = j.gara_amici || null; GIRO = j.giro || null; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -459,7 +460,18 @@ map.on("move zoom resize", redraw);
 map.on("moveend zoomend", () => { syncPets(); syncCities(STATS.city || []); redraw(); });
 $("#igLink").href = CONFIG.ig;
 // prima l'elenco completo delle razze, poi gli animali
-fetch("data/razze.json").then(r => r.json()).then(D.carica).catch(() => {}).finally(() => loadData().then(refresh));
+// il Giro d'Italia di Zampa sulla mappa: Zampa con la sciarpa tricolore nel paese della tappa, e la strada fatta finora
+const giroLayer = L.layerGroup().addTo(map);
+function disegnaGiro() {
+  giroLayer.clearLayers();
+  if (!GIRO || !GIRO.lat) return;
+  const strada = (GIRO.storia || []).map(x => [x.lat, x.lng]);
+  if (strada.length > 1) L.polyline(strada, { color: "#FFC55C", weight: 3, opacity: .8, dashArray: "6 8", interactive: false }).addTo(giroLayer);
+  const svg = D.tifo(D.cane("golden", 7), { c: ["#009246", "#CE2B37"] }, "cane");
+  L.marker([GIRO.lat, GIRO.lng], { zIndexOffset: 2000, icon: L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet zampa-giro">${svg}<span class="name">🗺️ Zampa · tappa ${GIRO.tappa}</span></div>` }) })
+    .bindPopup(`<div class="pop"><h3>🗺️ Il Giro d'Italia di Zampa</h3><div class="k">Tappa ${GIRO.tappa}: ${esc(GIRO.c)}</div><div>Dove va domani? Scrivi la tua città sotto il reel della tappa su Instagram: vince la più commentata!</div></div>`).addTo(giroLayer);
+}
+fetch("data/razze.json").then(r => r.json()).then(D.carica).catch(() => {}).finally(() => loadData().then(refresh).then(disegnaGiro));
 // Il motore dei commenti aggiorna i dati ogni 10-15 minuti: la pagina li ricarica da sola.
 if (!ANTEPRIMA) setInterval(() => loadData().then(refresh), 5 * 60e3);
 

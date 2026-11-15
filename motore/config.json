@@ -2,8 +2,8 @@
  "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana, almeno 90 minuti tra un reel e l'altro (orari.py salta un reel se ne è uscito uno da meno di 75 minuti). Niente «:prova» (i Trial Reel di ottobre: 235 views). Dal 31/10: 6 reel al giorno, voluti da Alberto, e il controllo delle 11:13 li cambia in base a follower e numeri (motore/decisioni-reel.md). «una_tantum» vale per un giorno solo e sostituisce l'orario uguale.",
  "reel_automatici": true,
  "orari": {
-  "13:00": "testa_a_testa",
-  "21:00": "sera_21"
+  "13:00": "giorno_13",
+  "21:00": "giro"
  },
  "negozio": {
   "osso": "https://buy.stripe.com/6oU14n8GY9giaNM1tpenS03",
@@ -40,7 +40,7 @@
   "2026-11-14 13:00": "testa_a_testa",
   "2026-11-09 13:00": "prima_luce",
   "2026-11-13 21:00": "gara_follower",
-  "2026-11-16 21:00": "corsa",
+  "2026-11-16 21:00": "giro",
   "2026-11-15 18:00": "nomi_top",
   "2026-11-16 13:00": "tifo",
   "2026-11-22 13:00": "tifo"
@@ -93,5 +93,5 @@
   "cantieri_in_pausa": false
  },
  "coppa_punto_per_luce": true,
- "nota_piano_15_11": "Piano nuovo del 15/11 (Alberto: «facciamo tanti reel ma portano 0»): 2 reel al giorno, ognuno una promessa a chi guarda (commenta e ricevi subito qualcosa di tuo). 13:00 testa a testa (città contro città, padroni taggati); 21:00 a rotazione tifo, intruso, nomi, corsa (copione.py scelta_21). Tolti dai reel: sorpasso del giovedì e gara dei follower (restano sul sito e nelle risposte). Un formato sotto le 2.000 views si toglie."
+ "nota_piano_15_11": "15/11 sera (Alberto: «reel diversi ogni giorno, un'idea tua»): alle 21 ogni sera il Giro d'Italia di Zampa, una serie: Zampa arriva in un paese vero (3D, fatto vero, animali e padroni veri) e la tappa dopo la scelgono i commenti. Alle 13 ogni giorno un formato diverso (copione.py scelta_13): testa a testa, intruso, città, rari, nomi, corsa. Lunedì 13 Coppa, domenica 21 verdetto. Un formato sotto le 2.000 views dopo due uscite si toglie."
 }

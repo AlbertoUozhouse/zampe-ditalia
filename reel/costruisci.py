@@ -97,7 +97,7 @@ def comune(nome):
 def disegni(chiavi, cartella):
     """chiavi: [("cane"|"gatto", razza, seme)] → assets/svg/<razza>-<seme>.svg"""
     sys.path.insert(0, str(ROOT / "motore")); import squadre
-    col = {c[3]: squadre.colori(c[3]) for c in chiavi if len(c) > 3}  # 15/11, il tifo: la sciarpa della squadra (motore/squadre.py)
+    col = {c[3]: squadre.colori(c[3]) or {"c": ["#009246", "#CE2B37"]} for c in chiavi if len(c) > 3}  # 15/11, il tifo: la sciarpa della squadra (motore/squadre.py); «tricolore» per Zampa
     js = f"""const fs=require("fs"); global.window={{}}; eval(fs.readFileSync({json.dumps(str(ROOT / "docs/disegni.js"))},"utf8"));
 const D=window.Disegni; D.carica(JSON.parse(fs.readFileSync({json.dumps(str(ROOT / "docs/data/razze.json"))},"utf8"))); const COL={json.dumps(col)};
 for (const [t,k,s,sq] of {json.dumps(chiavi)}) {{ let svg=(t==="gatto"?D.gatto(k,s):t==="altro"?D.altro(k,s):D.cane(k,s)).replace("<svg ","<svg xmlns=\\"http://www.w3.org/2000/svg\\" ");
@@ -304,6 +304,8 @@ def main():
             sc["centro"] = px(*sc["centro"]); sc["italia_c"] = px(12.6, 41.9)
             sc["punti"] = [{**q, **dict(zip(("x", "y"), px(q["lng"], q["lat"])))} for q in sc["punti"]]
             sc["intorno"] = [px(lng, lat) for lng, lat in sc.get("intorno", [])]
+        if tipo == "tappa":  # 15/11, il Giro d'Italia di Zampa: Zampa da solo, grande, con la sciarpa tricolore
+            serve.add(("cane", "golden", 7, "tricolore")); soli.append(("cane", "golden", "7-tricolore", None)); sc["svg"] = "golden-7-tricolore-solo.svg"
         if tipo == "tifosi":  # 15/11, il tifo: i cani da soli, grandi, con la sciarpa della squadra
             for k, x in enumerate(sc["animali"]):
                 s_ = x.get("seme", k + 1); serve.add((x["t"], x["razza"], s_, x["sq"])); soli.append((x["t"], x["razza"], f"{s_}-{x['sq']}", None))
@@ -344,7 +346,7 @@ def main():
         cani=c["cani"], gatti=c["gatti"], b0=b0, bd=round(durata - b0, 2), banner=S.ESC(copione.get("banner", "📍 Scrivi città, nome e razza 👇")),
         dvoce=round(fine_voce + 0.1, 2)))
     inizio_parole = [sum(len(x.split()) for x in frasi[:k]) for k in range(len(frasi))]
-    nascoste = ",".join(f"{inizio_parole[k]}-{inizio_parole[k] + len(frasi[k].split()) - 1}" for k, f in enumerate(copione["frasi"]) if f["scena"]["tipo"] in ("padroni", "tifosi", "svela"))
+    nascoste = ",".join(f"{inizio_parole[k]}-{inizio_parole[k] + len(frasi[k].split()) - 1}" for k, f in enumerate(copione["frasi"]) if f["scena"]["tipo"] in ("padroni", "tifosi", "svela", "tappa"))
     subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *([f"--salta={len(frasi[0].split())}"] if copione["frasi"][0]["scena"]["tipo"] in ("gancio", "intruso") else []),
                     *([f"--nascondi={nascoste}"] if nascoste else []), *gruppi_sottotitoli(frasi)], check=True)
     (out / "effetti.json").write_text(json.dumps(effetti))

@@ -491,6 +491,10 @@ class Gioco:
             if x["k"] in ("animale", "sogno") and x["u"].lower() in seguono: x["vestito"] = vestito
             else: x.pop("vestito", None)
         import negozio
+        try:  # 15/11: il Giro d'Italia di Zampa, la tappa dell'ultimo reel del Giro (il copione resta in docs/contenuti/auto)
+            ultimo = sorted((ROOT / "docs/contenuti/auto").glob("*-giro.json"))[-1:]
+            if ultimo and json.loads(ultimo[0].read_text()).get("giro"): self.dati["giro"] = json.loads(ultimo[0].read_text())["giro"]
+        except (OSError, json.JSONDecodeError): pass
         gara_amici_premia(self)  # 15/11: i regali della gara degli amici entrano negli accessori prima che il negozio li applichi
         lun = datetime.fromisoformat(_sett_amici() + "T00:00:00+01:00")
         self.dati["gara_amici"] = {"settimana": [{"u": u, "p": pt} for u, pt in gara_amici_classifica(self.stato)[:10]], "premi": PREMI_AMICI,
@@ -1068,6 +1072,7 @@ def per_persona(commenti, mio_username, visti=None):
         if not u or (mio_username and u.lower() == mio_username.lower()):
             if visti is not None: visti.add(c["id"])
             continue
+        c.setdefault("_media", media_id)  # 15/11: sotto quale reel (il Giro d'Italia di Zampa conta i voti solo sotto la sua tappa)
         per.setdefault(u, []).append(c)
     for v in per.values():
         v.sort(key=lambda c: c.get("timestamp", ""))
@@ -1105,6 +1110,29 @@ def sollecita(gioco, per, rispondi, appena):
         fatti[k] = datetime.now(timezone.utc).date().isoformat()  # anche se fallisce: mai due volte alla stessa persona
         n += 1
     return n
+
+# ---------- il Giro d'Italia di Zampa (15/11) ----------
+# Zampa, il cagnolino della mappa, fa una tappa al giorno in un paese vero (reel delle 21, copione.py giro). La tappa dopo la scelgono
+# i commenti sotto il reel della tappa: chi scrive la sua città vota per lei (un voto a persona per tappa).
+def giro_media():
+    """Gli id Instagram dei reel del Giro, dal più recente."""
+    try: P = json.loads((ROOT / "motore/pubblicati.json").read_text())
+    except (FileNotFoundError, json.JSONDecodeError): return []
+    return [x["id"] for x in reversed(P) if x.get("tipo") == "REELS" and "-giro." in x.get("media", "")]
+
+def giro_voto(stato, u, L):
+    """Un voto per la tappa di domani; restituisce (voti della città, posto) oppure None se ha già votato per questa tappa."""
+    g = stato.setdefault("giro", {}); t = g.get("tappa", 0)
+    voti = g.setdefault("voti", [])
+    if any(v["u"] == u.lower() and v["tappa"] == t for v in voti): return None
+    k = f"{L['c']}|{L.get('p', '')}"
+    voti.append({"u": u.lower(), "k": k, "tappa": t, "t": datetime.now(timezone.utc).isoformat(timespec="minutes")})
+    g["voti"] = voti[-5000:]
+    conta = {}
+    for v in voti:
+        if v["tappa"] == t: conta[v["k"]] = conta.get(v["k"], 0) + 1
+    ordine = sorted(conta, key=lambda x: -conta[x])
+    return conta[k], ordine.index(k) + 1
 
 # ---------- adottati e segni (15/11, Alberto: «inventa cose nuove, cose come la tifoseria») ----------
 # Il segno si ricava dal mese (il segno che copre la maggior parte del mese): niente date precise, niente dati personali.
@@ -1316,6 +1344,13 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
         for tipo_i, n_i, v_i in gioco.identita_nuove[-2:]:  # 15/11: adottato, segno
             extra.insert(0, riga_identita(gioco, tipo_i, n_i, v_i))
         gioco.identita_nuove.clear()
+        gm = giro_media()[:1]  # 15/11: il Giro d'Italia di Zampa: chi scrive la sua città sotto la tappa vota per la tappa di domani
+        if gm and u.lower() not in ESCLUSI and any(c.get("_media") == gm[0] for c in nuovi_c):
+            L_v = next((x["luogo"] for x in letto["animali"] if x.get("luogo")), None) or next((x["luogo"] for x in letto["senza_nome"] if x.get("luogo")), None)
+            esito_v = giro_voto(gioco.stato, u, L_v) if L_v else None
+            if esito_v:
+                gioco.cambiato = True; nv, pv = esito_v
+                extra.insert(0, f"🗺️ Voto per {L_v['c']} contato! {L_v['c']} ha {nv} {'voto' if nv == 1 else 'voti'} ed è {pv}ª per la tappa di domani di Zampa. Fai votare gli amici: tagga chi è di {L_v['c']} 👥")
         if gioco.tifo_nuovo:  # 15/11: la sciarpa della squadra, e chi tifa come lui
             import squadre
             n_t, sq_t = gioco.tifo_nuovo[-1]; gioco.tifo_nuovo.clear()
