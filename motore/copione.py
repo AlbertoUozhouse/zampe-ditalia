@@ -1764,6 +1764,8 @@ def serie(D, rng, st):
     rng.shuffle(restanti)
     opzioni = (["bagno", "veterinario"] if n == 1 else restanti[:2]) or ["visita", "foto"]
     tot = int(S.get("commenti", 0)); famiglia = min(99, round(tot / 20)); famiglia_ieri = storia[-1].get("famiglia", famiglia) if storia else famiglia
+    if not all((ROOT / f"reel/assets/zampa/{ep}-{i}.png").exists() for i in range(4)):  # Zampa vero in ogni scena, o la puntata non esce
+        raise Salta(f"mancano le foto di Zampa per la puntata «{ep}» (reel/assets/zampa/{ep}-0…3.png)")
     titolo, sfondo, muso, sporco, scene = SERIE_PUNTATE[ep]
     sporco_ora = sporco and not any(x["ep"] in ("bagno", "toelettatura") for x in storia)  # dopo il bagno niente più puzza
     giorni = 31 - n
