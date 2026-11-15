@@ -1,0 +1,66 @@
+{
+ "voce": true,
+ "variante": "voce-fissa-45",
+ "tema": "aurora",
+ "id": "2026-11-15-1220-citta",
+ "formato": "citta",
+ "testata": {
+  "titolo": "📍 LA TUA CITTÀ"
+ },
+ "conteggio": {
+  "cani": 2005,
+  "gatti": 808
+ },
+ "frasi": [
+  {
+   "testo": "Il nome di cane più diffuso nella tua città?",
+   "scena": {
+    "tipo": "gancio",
+    "testo": "Il nome più diffuso *nella tua città*?",
+    "sotto": "📍 Scrivi la città: ti rispondiamo",
+    "icona": "📍"
+   }
+  },
+  {
+   "testo": "A Napoli vince Leo. A Roma, Leo. A Torino, Luna.",
+   "scena": {
+    "tipo": "classifica",
+    "titolo": "📍 Il nome più diffuso",
+    "righe": [
+     {
+      "nome": "Napoli",
+      "valore": "Leo (5)"
+     },
+     {
+      "nome": "Roma",
+      "valore": "Leo (4)"
+     },
+     {
+      "nome": "Torino",
+      "valore": "Luna (2)"
+     },
+     {
+      "nome": "Milano",
+      "valore": "Zoe (2)"
+     },
+     {
+      "nome": "Catania",
+      "valore": "Luna (2)"
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Scrivi la tua città: ti rispondiamo noi, coi numeri veri.",
+   "scena": {
+    "tipo": "commento",
+    "testo": "Trento"
+   }
+  }
+ ],
+ "banner": "📍 Scrivi la tua città 👇",
+ "didascalia": "📍 Qual è il nome di cane più diffuso nella tua città? Napoli: Leo · Roma: Leo · Torino: Luna · Milano: Zoe · Catania: Luna\n\n👇 Scrivi qui sotto la tua città: ti rispondiamo con il nome più diffuso lì, quanti animali ci sono e la razza più amata (dati veri della mappa).\n🐾 Se il tuo non c'è ancora, aggiungi nome e cane o gatto (es. «Treviso, Luna, cane»): si accende!\n👑 Gara degli amici: tagga chi ha un cane o un gatto. Chi porta più amici entro domenica alle 20 vince la Corona sulla mappa!\n\nVoce generata con IA.\n\n#cani #gatti #italia #nomicani #campanilismo #animalidomestici ",
+ "tag": [],
+ "collab": [],
+ "copertina": null
+}
