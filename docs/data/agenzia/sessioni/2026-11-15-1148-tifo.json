@@ -1,0 +1,2191 @@
+{
+ "id": "2026-11-15-1148-tifo",
+ "formato": "tifo",
+ "modalita": "operativa",
+ "inizio": "2026-11-15T10:48:34+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-15T10:48:34+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "tifo",
+     "id": "2026-11-15-1148-tifo",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Il tuo cane per chi tifa?",
+       "scena": "gancio"
+      },
+      {
+       "i": 1,
+       "testo": "Juve, Inter, Milan, Napoli, Roma o Lazio?",
+       "scena": "tifosi"
+      },
+      {
+       "i": 2,
+       "testo": "Scrivi città, nome e squadra: sulla mappa d'Italia mette la sciarpa coi suoi colori.",
+       "scena": "commento"
+      },
+      {
+       "i": 3,
+       "testo": "E domenica il campionato: quale tifoseria ha più cani?",
+       "scena": "gancio"
+      }
+     ],
+     "apertura": null,
+     "fascia": "⚽ Scrivi città, nome e squadra 👇",
+     "didascalia": "⚽ Il tuo cane per chi tifa? Juve, Inter, Milan, Napoli, Roma, Lazio… o la squadra della tua città?\n\n👇 Scrivi qui sotto città, nome e squadra (es. «Napoli, Luna, cane, forza Napoli»): sulla mappa d'Italia il tuo cane o gatto mette la sciarpa coi colori della sua squadra.\n🏆 Domenica il Campionato delle Zampe: quale tifoseria ha più cani e gatti? Tagga un amico tifoso e fate salire la vostra squadra!\n\nVoce generata con IA.\n\n#cani #gatti #calcio #seriea #tifosi #juve #inter #milan #napoli #roma #lazio #animalidomestici ",
+     "voce": true,
+     "copertina": null
+    }
+   }
+  },
+  {
+   "t": "2026-11-15T10:48:39+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Tifosi italiani che amano cani e gatti e non conoscono ancora la pagina: chi ha un cane o un gatto in casa e domenica guarda la partita con la sciarpa della sua squadra (Juve, Inter, Milan, Napoli, Roma, Lazio o la squadra della propria città). · Gancio: Il tuo cane per chi tifa? Juve, Inter, Milan, Napoli, Roma o Lazio? Rispondi nei commenti e lui si accende sulla mappa. · Primo fotogramma: Un cane vero con una sciarpa da tifoso al collo, in primo piano, e sopra la scritta grande «IL TUO CANE PER CHI TIFA?». In basso i sei colori delle squadre in fila (Juve, Inter, Milan, Napoli, Roma, Lazio), così si capisce anche a volume zero. · Motivo per seguire: Zampe d'Italia accende ogni giorno sulla mappa d'Italia la luce di un cane o di un gatto vero, con il suo nome e la sua città: seguendo la pagina vedi se la prossima luce è la tua. · Chiusura: La sciarpa è sulla mappa. Segui Zampe d'Italia per vedere la prossima luce.",
+   "dati": {
+    "pubblico": "Tifosi italiani che amano cani e gatti e non conoscono ancora la pagina: chi ha un cane o un gatto in casa e domenica guarda la partita con la sciarpa della sua squadra (Juve, Inter, Milan, Napoli, Roma, Lazio o la squadra della propria città).",
+    "gancio": "Il tuo cane per chi tifa? Juve, Inter, Milan, Napoli, Roma o Lazio? Rispondi nei commenti e lui si accende sulla mappa.",
+    "primo_fotogramma": "Un cane vero con una sciarpa da tifoso al collo, in primo piano, e sopra la scritta grande «IL TUO CANE PER CHI TIFA?». In basso i sei colori delle squadre in fila (Juve, Inter, Milan, Napoli, Roma, Lazio), così si capisce anche a volume zero.",
+    "motivo_per_seguire": "Zampe d'Italia accende ogni giorno sulla mappa d'Italia la luce di un cane o di un gatto vero, con il suo nome e la sua città: seguendo la pagina vedi se la prossima luce è la tua.",
+    "chiusura": "La sciarpa è sulla mappa. Segui Zampe d'Italia per vedere la prossima luce.",
+    "perche": "Il brief tifo punta sul commento, ma dai dati i reel che portano follower sono quelli con un animale e una città precisi e una sola richiesta, quindi il gancio apre sul tifo e la chiusura chiede solo di seguire."
+   }
+  },
+  {
+   "t": "2026-11-15T10:48:39+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "tifo",
+     "id": "2026-11-15-1148-tifo",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Il tuo cane per chi tifa?",
+       "scena": "gancio"
+      },
+      {
+       "i": 1,
+       "testo": "Juve, Inter, Milan, Napoli, Roma o Lazio?",
+       "scena": "tifosi"
+      },
+      {
+       "i": 2,
+       "testo": "Scrivi città, nome e squadra: sulla mappa d'Italia mette la sciarpa coi suoi colori.",
+       "scena": "commento"
+      },
+      {
+       "i": 3,
+       "testo": "E domenica il campionato: quale tifoseria ha più cani?",
+       "scena": "gancio"
+      }
+     ],
+     "apertura": null,
+     "fascia": "⚽ Scrivi città, nome e squadra 👇",
+     "didascalia": "⚽ Il tuo cane per chi tifa? Juve, Inter, Milan, Napoli, Roma, Lazio… o la squadra della tua città?\n\n👇 Scrivi qui sotto città, nome e squadra (es. «Napoli, Luna, cane, forza Napoli»): sulla mappa d'Italia il tuo cane o gatto mette la sciarpa coi colori della sua squadra.\n🏆 Domenica il Campionato delle Zampe: quale tifoseria ha più cani e gatti? Tagga un amico tifoso e fate salire la vostra squadra!\n\nVoce generata con IA.\n\n#cani #gatti #calcio #seriea #tifosi #juve #inter #milan #napoli #roma #lazio #animalidomestici ",
+     "voce": true,
+     "copertina": null
+    },
+    "mappa": []
+   }
+  },
+  {
+   "t": "2026-11-15T10:48:40+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-15T10:49:33+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.4 LUFS, picco -0.9 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.4,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.7,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:33+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (15.9 s): ti mando 16 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 15.9,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15
+    ]
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:37+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il gancio è chiaro, ma il volume medio dei primi 5 secondi è -16.7 dB, sotto l'obiettivo di -14 LUFS; inoltre al secondo 0 la schermata è quasi vuota (solo pallone e titolo), quindi l'attenzione dipende tutta dal testo. Il secondo 1 e il 3 appaiono ripetitivi con il titolo ripetuto.",
+   "dati": {
+    "controllato": "Primi 5 secondi del reel: gancio visivo, testo d'apertura, volume medio e rispetto del formato tifo sulla trascrizione e sui fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il gancio è chiaro, ma il volume medio dei primi 5 secondi è -16.7 dB, sotto l'obiettivo di -14 LUFS; inoltre al secondo 0 la schermata è quasi vuota (solo pallone e titolo), quindi l'attenzione dipende tutta dal testo. Il secondo 1 e il 3 appaiono ripetitivi con il titolo ripetuto.",
+    "correzione": "Portare l'audio dell'apertura a circa -14 LUFS e mostrare già nel primo fotogramma un cane con sciarpa o la mappa con qualche luce, per dare subito un'immagine forte.",
+    "idea": "Chiudere con la mappa che si illumina con le sciarpe già accese e un numero reale di tifosi, così il finale mostra il risultato e invita a unirsi."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:37+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il testo parlato dice «mette la sciarpa coi suoi colori» e il copione promette una mappa d'Italia, ma nei fotogrammi la mappa non compare mai: le scene sono solo testo su sfondo viola e la lista delle squadre. Inoltre la scena «commento» (scritta «SCRIVI» e il finto post) dura molto e il reel non mo",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e coerenza tra voce, scene e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il testo parlato dice «mette la sciarpa coi suoi colori» e il copione promette una mappa d'Italia, ma nei fotogrammi la mappa non compare mai: le scene sono solo testo su sfondo viola e la lista delle squadre. Inoltre la scena «commento» (scritta «SCRIVI» e il finto post) dura molto e il reel non mostra mai una mappa con una luce o una sciarpa, quindi l'idea centrale non si vede. Nel fotogramma a 12s la frase «E domenica il campionato» è spezzata e la domanda finale compare solo in parte.",
+    "correzione": "Inserire 1-2 secondi con la mappa d'Italia reale che si illumina e una sciarpa colorata sulla città di esempio (es. Napoli); accorciare la scena del finto post e far comparire la domanda «quale tifoseria ha più cani?» per intero prima della fine.",
+    "idea": "Fare la mappa il protagonista: una mappa scura dell'Italia che si accende città per città con le sciarpe, e chiudere con il conteggio tifoserie aggiornato in tempo reale."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:38+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 0.5 il titolo «Il tuo cane per chi tifa?» è leggibile, ma la fascia «Scrivi città, nome e squadra» in basso e il badge in alto sono piccoli; inoltre il titolo sta sul frame iniziale senza che nei fotogrammi successivi si veda la mappa promessa nel testo (la mappa compare solo nella trascr",
+   "dati": {
+    "controllato": "Leggibilità da telefono di testi, fascia e scene dei 6 fotogrammi, più audio (LUFS, picco, silenzi) e coerenza tra trascrizione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Al secondo 0.5 il titolo «Il tuo cane per chi tifa?» è leggibile, ma la fascia «Scrivi città, nome e squadra» in basso e il badge in alto sono piccoli; inoltre il titolo sta sul frame iniziale senza che nei fotogrammi successivi si veda la mappa promessa nel testo (la mappa compare solo nella trascrizione, non in un fotogramma inviato). Nei fotogrammi 3-9 la scena «Scrivilo qui sotto» con il campo di input è visibile ma il testo del post di esempio «Luna, forza Napoli» è piccolo. Nel fotogramma 9 e 12 la scritta «SCRIVI» e «SULLA MAPPA D'ITALIA» sono grandi e leggibili; la mappa non compare nei fotogrammi campionati.",
+    "correzione": "Ingrandire la fascia inferiore e il badge superiore di circa il 20% e far comparire la mappa d'Italia con almeno un animale illuminato entro i primi 3 secondi, così il promesso «sulla mappa» si vede subito.",
+    "idea": "Mostrare nei primi 2 secondi la mappa con le luci accese e una sciarpa che si colora, e chiudere con il conteggio cani/gatti per squadra come anteprima della domenica."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:38+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La frase «sulla mappa d'Italia mette la sciarpa coi suoi colori» è riprodotta nel fotogramma a 9s con il testo «SULLA MAPPA D'ITALIA» alla stessa altezza in cui la voce dice «sulla mappa», mentre la trascrizione segna la frase lunga tra 4.4s e 10.4s: il gancio «Scrivi città, nome e squadra» resta vi",
+   "dati": {
+    "controllato": "Audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio), trascrizione coi secondi, didascalia e coerenza con la scena dei fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 8.9,
+    "problema": "La frase «sulla mappa d'Italia mette la sciarpa coi suoi colori» è riprodotta nel fotogramma a 9s con il testo «SULLA MAPPA D'ITALIA» alla stessa altezza in cui la voce dice «sulla mappa», mentre la trascrizione segna la frase lunga tra 4.4s e 10.4s: il gancio «Scrivi città, nome e squadra» resta visibile ma la sua spiegazione arriva con ritardo. Inoltre la voce dice «mette la sciarpa» mentre la scena mostra solo il testo, senza nessuna mappa visibile nei fotogrammi: la promessa visiva della mappa non è mai mostrata nel reel. Il fotogramma a 0.5s è vuoto, con solo titolo e pallone.",
+    "correzione": "Inserire tra 8 e 10s una breve inquadratura della mappa d'Italia con una sciarpa che compare nella città di esempio, così la voce e l'immagine coincidono; anticipare la fascia «Scrivi città, nome e squadra» già al secondo 4 invece che restare ferma per tutto il reel.",
+    "idea": "Un reel con il cane reale che indossa la sciarpa mentre la sua città si accende sulla mappa, con il conteggio cani/gatti che sale in tempo reale."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:41+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "L'apertura non ha un'immagine chiara al secondo 0.5: il primo fotogramma mostra solo il titolo e il pallone, senza cani o mappa, quindi chi scorre non capisce subito il tema. Inoltre la fascia «Scrivi città, nome e squadra» compare già sul primo frame e resta ferma per tutto il reel, togliendo spazi",
+   "dati": {
+    "controllato": "Apertura del reel: gancio, durata, audio (-14 LUFS, picco -0.9 dBFS, nessun silenzio), coerenza tra copione, didascalia e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "L'apertura non ha un'immagine chiara al secondo 0.5: il primo fotogramma mostra solo il titolo e il pallone, senza cani o mappa, quindi chi scorre non capisce subito il tema. Inoltre la fascia «Scrivi città, nome e squadra» compare già sul primo frame e resta ferma per tutto il reel, togliendo spazio all'animazione. Il campo 'apertura' del brief è vuoto.",
+    "correzione": "Mettere nei primi 0.5 secondi un'immagine forte: la mappa d'Italia con due o tre cani che accendono la luce in squadra (o la sciarpa di Luna su Napoli), e scrivere il gancio come domanda di apertura sopra. Spostare la fascia solo dal secondo 3 in poi.",
+    "idea": "Un reel di 6 secondi in cui un cane reale o illustrato scrive 'Napoli' e la sua luce si accende sulla mappa, con la domanda 'e il tuo?' come gancio finale; riusare il formato gara_follower, che ha il miglior rapporto follower ogni 1000 view tra i recenti dopo questa_luce."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:42+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi della scena 'tifosi' (3s e 6s) i cani sono bene visibili, ma nella scena 'commento' (9s) il testo della mappa e la sciarpa non sono mostrati: la promessa 'sulla mappa d'Italia mette la sciarpa' non è visualizzata, c'è solo il card di esempio. Inoltre a 12s e 15s la schermata resta sul",
+   "dati": {
+    "controllato": "Inquadrature dei 6 fotogrammi (0.5, 3, 6, 9, 12, 15s) rispetto a copione, scene e ritmo del reel.",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "Nei fotogrammi della scena 'tifosi' (3s e 6s) i cani sono bene visibili, ma nella scena 'commento' (9s) il testo della mappa e la sciarpa non sono mostrati: la promessa 'sulla mappa d'Italia mette la sciarpa' non è visualizzata, c'è solo il card di esempio. Inoltre a 12s e 15s la schermata resta sul testo 'Campionato delle Zampe' senza elemento visivo forte di chiusura.",
+    "correzione": "Inserire al secondo 9-10 una breve animazione della mappa con una luce che si accende e la sciarpa del colore della squadra; a 15s chiudere con un frame che mostri il conteggio o la mappa piena, non solo il testo.",
+    "idea": "Per i prossimi reel tifo: mostrare nel frame finale un piccolo contatore live delle squadre con più cani, così il pubblico vuole controllare il risultato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:43+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma iniziale (0,5s) il titolo Il tuo cane tifa c'è, ma la frase del gancio dice «Il tuo cane per chi tifa?» mentre la scritta visiva è «IL TUO CANE PER CHI TIFA?» senza problemi; il vero problema è la scena «SCRIVI» (fotogramma a 3s) che resta sullo schermo con un campo vuoto e nessun ese",
+   "dati": {
+    "controllato": "Copione, trascrizione con secondi, audio (-14 LUFS, picco -0,9 dBFS, nessun silenzio lungo), didascalia e coerenza dei fotogrammi con le frasi del brief.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nel fotogramma iniziale (0,5s) il titolo Il tuo cane tifa c'è, ma la frase del gancio dice «Il tuo cane per chi tifa?» mentre la scritta visiva è «IL TUO CANE PER CHI TIFA?» senza problemi; il vero problema è la scena «SCRIVI» (fotogramma a 3s) che resta sullo schermo con un campo vuoto e nessun esempio: la mappa d'Italia (scena di chiusura a 9s) arriva senza che lo spettatore veda mai la sciarpa sulla mappa, cioè il premio visivo promesso dal testo non compare nel reel. Inoltre la frase 'E domenica il campionato' compare in un fotogramma con testo tagliato ('E DOMENICA IL' a 12s) senza la parola successiva sullo schermo per tutto il tempo.",
+    "correzione": "Mostrare nella scena 'sulla mappa d'Italia' una mappa con una sciarpa colorata accesa su una città (anche un'anteprima di 1-2 secondi) e completare sullo schermo la frase 'E domenica il Campionato delle Zampe' con il dato domenicale, così la promessa visiva corrisponde al parlato.",
+    "idea": "Nel prossimo reel della serie tifo, chiudere con la mappa reale che si accende colorata sulla città dell'animale, più il conteggio aggiornato della tifoseria con più cani, per trasformare il commento in follow."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:43+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 12 il testo «E domenica il campionato: quale tifoseria ha più cani?» è sostituito dall'interfaccia «Scrivi città, nome e squadra» in fascia bassa, mentre il copione chiede di chiudere con la domanda; nel fotogramma a 12s la frase è troncata sulla scena «E DOMENICA IL» e la domanda finale ",
+   "dati": {
+    "controllato": "Trascrizione, secondi, audio (-14 LUFS, picco -0.9 dBFS, nessun silenzio), didascalia e fotogrammi del reel tifo: nei materiali non ci sono dati della mappa (dati_mappa vuoto), quindi non posso verificare che la mappa mostri davvero la sciarpa della squadra.",
+    "esito": "segnalo",
+    "secondo": 12,
+    "problema": "Al secondo 12 il testo «E domenica il campionato: quale tifoseria ha più cani?» è sostituito dall'interfaccia «Scrivi città, nome e squadra» in fascia bassa, mentre il copione chiede di chiudere con la domanda; nel fotogramma a 12s la frase è troncata sulla scena «E DOMENICA IL» e la domanda finale («Più cani?») compare solo dal secondo 13-15. Inoltre la scena «mappa» (sulla mappa d'Italia mette la sciarpa) non è mostrata nei fotogrammi: manca la prova visiva della promessa centrale del reel.",
+    "correzione": "Mostrare nei secondi 8-10 una mappa reale con una sciarpa che compare nella città (anche solo una schermata di esempio), e far apparire la frase «E domenica il campionato» per intero senza troncamenti prima della domanda finale.",
+    "idea": "Un reel con la mappa in movimento: una sciarpa che si accende città per città, con il nome del cane del commentatore in primo piano, da usare come risposta ai commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:47+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 12 la voce dice «E domenica il campionato», ma nel fotogramma a 12s la scritta è «E DOMENICA IL» e il testo completo («Campionato delle Zampe») compare solo dopo; la fascia in basso «Scrivi città, nome e squadra» resta fissa per tutto il reel, quindi il messaggio di call to action è ripet",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio), didascalia e fotogrammi: la mansione di Segreteria di direzione è coerente con il brief.",
+    "esito": "segnalo",
+    "secondo": 12,
+    "problema": "Al secondo 12 la voce dice «E domenica il campionato», ma nel fotogramma a 12s la scritta è «E DOMENICA IL» e il testo completo («Campionato delle Zampe») compare solo dopo; la fascia in basso «Scrivi città, nome e squadra» resta fissa per tutto il reel, quindi il messaggio di call to action è ripetuto ma non cambia mai, e la mappa d'Italia promessa dalla voce (8.9s) non compare in nessun fotogramma inviato. Nella trascrizione manca anche il riferimento alla mappa visibile.",
+    "correzione": "Allineare la scena del campionato alla voce (mostrare il titolo completo al secondo 12) e inserire nel reel la schermata della mappa con la sciarpa al secondo 9, così la promessa vocale è visibile. Far variare la fascia finale (es. 'Scrivi nel primo commento') nell'ultima scena.",
+    "idea": "Ripetere il formato con un reel che mostri la mappa animata con le luci delle prime sciarpe colorate e un conteggio live dei partecipanti, per legare il gioco alla crescita della pagina."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:47+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La mappa non ha dati nel reel (dati_mappa vuoto) e la scena 'commento' del brief descrive la sciarpa sulla mappa, ma nei materiali non risulta un fotogramma verificato di quella mappa; inoltre il reel non dichiara in apertura che la voce è generata con IA (lo fa solo in didascalia). Anche la fascia ",
+   "dati": {
+    "controllato": "Scene, trascrizione coi secondi, audio (LUFS, picco, silenzi), didascalia e coerenza col brief tifo.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La mappa non ha dati nel reel (dati_mappa vuoto) e la scena 'commento' del brief descrive la sciarpa sulla mappa, ma nei materiali non risulta un fotogramma verificato di quella mappa; inoltre il reel non dichiara in apertura che la voce è generata con IA (lo fa solo in didascalia). Anche la fascia 'Scrivi città, nome e squadra' compare sopra la trascrizione senza un frame di supporto dichiarato.",
+    "correzione": "Verificare con i fotogrammi che la scena della mappa con sciarpa esista davvero e mostri i colori della squadra; se manca, aggiungere uno stacco reale. Rendere visibile in video la nota 'voce IA' oppure tenerla in didascalia come già fatto.",
+    "idea": "Chiudere con un frame finale che mostra la mappa piena di sciarpe e un invito esplicito a seguire la pagina per la classifica del Campionato delle Zampe."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:47+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Animazioni della mappa: dati mappa vuoti, audio a -14.4 LUFS con picco -0.9 dBFS e nessun silenzio lungo, quindi nessun problema tecnico sulla mappa.",
+   "dati": {
+    "controllato": "Animazioni della mappa: dati mappa vuoti, audio a -14.4 LUFS con picco -0.9 dBFS e nessun silenzio lungo, quindi nessun problema tecnico sulla mappa.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel tifo, potrebbe funzionare una versione che mostra in anteprima una sciarpa di una squadra già accesa sulla mappa, così chi guarda capisce subito il meccanismo."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:47+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il brief ha 'apertura: null' e la trascrizione parte da 0.0s senza una vera apertura visiva; inoltre la fascia di testo 'Scrivi città, nome e squadra 👇' non compare nella trascrizione e la frase 'Scrivi città, nome e squadra' arriva solo a 7.1s, quindi il CTA è in ritardo rispetto alla fascia. Nella",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione vs sottotitoli, fascia, didascalia e audio (LUFS, picco, silenzi) nella mia mansione.",
+    "esito": "segnalo",
+    "secondo": 0.0,
+    "problema": "Il brief ha 'apertura: null' e la trascrizione parte da 0.0s senza una vera apertura visiva; inoltre la fascia di testo 'Scrivi città, nome e squadra 👇' non compare nella trascrizione e la frase 'Scrivi città, nome e squadra' arriva solo a 7.1s, quindi il CTA è in ritardo rispetto alla fascia. Nella didascalia la frase 'Juve, Inter, Milan, Napoli, Roma, Lazio…' ripete la trascrizione, e 'Tagga un amico tifoso' e 'Voce generata con IA' sono presenti correttamente.",
+    "correzione": "Allineare la fascia CTA alla frase a 7.1s (o anticiparla a 0s con il gancio) e segnare in didascalia la voce IA in modo ben visibile; fissare un'apertura visiva nei primi 0.5s.",
+    "idea": "Per i prossimi reel tifo, partire con la mappa già accesa e una frase-gancio di 1 secondo con la fascia CTA visibile subito."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:48+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Nel brief la fascia 'apertura' è null e la scritta 'Scrivi città, nome e squadra' compare solo in fondo; il gancio 'Il tuo cane per chi tifa?' arriva a 0.0s senza una fascia che lo regga nei primi secondi, e la trascrizione mostra la frase 'Scrivi città, nome e squadra' a 7.1s, mentre la fascia nel ",
+   "dati": {
+    "controllato": "Fascia in basso: testo, tempi della trascrizione, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio) e coerenza con brief e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1,
+    "problema": "Nel brief la fascia 'apertura' è null e la scritta 'Scrivi città, nome e squadra' compare solo in fondo; il gancio 'Il tuo cane per chi tifa?' arriva a 0.0s senza una fascia che lo regga nei primi secondi, e la trascrizione mostra la frase 'Scrivi città, nome e squadra' a 7.1s, mentre la fascia nel brief è pensata come invito. Inoltre i dati_mappa sono vuoti, quindi non è verificabile che la mappa mostri davvero la sciarpa nei colori giusti.",
+    "correzione": "Inserire in fascia nei primi 1-2 secondi il gancio breve (es. 'Il tuo cane per chi tifa?') e tenere 'Scrivi città, nome e squadra 👇' come fascia finale; verificare con la mappa che la sciarpa sia resa correttamente prima della pubblicazione.",
+    "idea": "Per i prossimi reel tifo, aprire con una fascia visiva forte nei primi 2 secondi e mostrare nel reel uno o due esempi di sciarpe già accese sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:49+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il reel dura 15.9 s con una frase finale 'E domenica il campionato: quale tifoseria ha più cani?' che arriva a 14.3 s e resta poco tempo per leggerla; inoltre 'dati_mappa' è vuoto, quindi la promessa di una mappa con le sciarpe non è verificabile dai materiali e il campo 'fotogrammi_secondi_inviati'",
+   "dati": {
+    "controllato": "Ritmo, durata, trascrizione coi secondi, audio (LUFS, picco, silenzi) e coerenza tra copione e didascalia del reel tifo.",
+    "esito": "segnalo",
+    "secondo": 15,
+    "problema": "Il reel dura 15.9 s con una frase finale 'E domenica il campionato: quale tifoseria ha più cani?' che arriva a 14.3 s e resta poco tempo per leggerla; inoltre 'dati_mappa' è vuoto, quindi la promessa di una mappa con le sciarpe non è verificabile dai materiali e il campo 'fotogrammi_secondi_inviati' (0.5, 3, 6, 9, 12, 15) non coincide con quelli generati (0.5-15 ogni secondo).",
+    "correzione": "Accorciare l'ultima frase o allungare la chiusura a circa 2 s con il testo a schermo fermo; verificare che la mappa con le sciarpe sia realmente generata prima di pubblicare; allineare i fotogrammi inviati a quelli previsti.",
+    "idea": "Un reel di 'sciarpa in arrivo' con due o tre città in sequenza, ciascuna con il nome dell'animale e la squadra, per rendere la mappa il centro visivo del formato tifo."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:50+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il brief ha apertura null e la trascrizione parte da 'Il tuo cane per chi' a 0.0s, con 'tifa?' a 1.2s: la domanda-gancio arriva senza un'immagine o un suono d'apertura dichiarato. Inoltre la didascalia dice 'Scrivi qui sotto città, nome e squadra' e la fascia dice lo stesso, ma nei dati non c'è ness",
+   "dati": {
+    "controllato": "Apertura, trascrizione coi secondi, audio (LUFS e picco), didascalia e coerenza con il brief e i dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief ha apertura null e la trascrizione parte da 'Il tuo cane per chi' a 0.0s, con 'tifa?' a 1.2s: la domanda-gancio arriva senza un'immagine o un suono d'apertura dichiarato. Inoltre la didascalia dice 'Scrivi qui sotto città, nome e squadra' e la fascia dice lo stesso, ma nei dati non c'è nessun fotogramma o dato di mappa per verificare che l'esempio 'Napoli, Luna' sia coerente con la mappa reale.",
+    "correzione": "Definire un'apertura visiva nei primi 0.5s (es. sciarpa o mappa già accesa) e verificare con un fotogramma che la mappa mostri davvero la sciarpa dopo 'scrivi città, nome e squadra'. Confermare che l'audio resti sotto -1 dBFS e in target -14 LUFS (oggi -14.4, accettabile).",
+    "idea": "Usare il formato 'testa a testa' (il più coinvolgente per commenti e condivisioni) con due sciarpe che si accendono sulla mappa nei primi secondi."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:51+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'dati_mappa' è vuoto: la frase 'sulla mappa d'Italia mette la sciarpa coi suoi colori' non è supportata da dati verificati nei materiali. Inoltre la voce dichiara 'Campionato delle Zampe' e 'domenica' come fatti, ma il progetto non riporta date o risultati di un campionato reale; la didascal",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, fascia, didascalia, misure audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e coerenza con i dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'dati_mappa' è vuoto: la frase 'sulla mappa d'Italia mette la sciarpa coi suoi colori' non è supportata da dati verificati nei materiali. Inoltre la voce dichiara 'Campionato delle Zampe' e 'domenica' come fatti, ma il progetto non riporta date o risultati di un campionato reale; la didascalia promette anche che la squadra 'salirà', cosa non documentata. Infine il brief non ha 'apertura' né copertina, quindi il gancio visivo iniziale non è definito.",
+    "correzione": "Verificare con l'ufficio dati che la mappa mostri davvero la sciarpa per ogni città e aggiungere i dati nel campo dati_mappa; confermare il formato e la data del Campionato delle Zampe prima di pubblicare; definire un'apertura e una copertina con il primo fotogramma a 0.5s, così il reel parte con un'immagine forte.",
+    "idea": "Replicare il formato 'testa_a_testa' (già il più visto, 2452 visualizzazioni) con due squadre e il pubblico che sceglie in commento, mostrando sulla mappa la scelta vincente."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:51+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il brief indica apertura: null, quindi nel reel non c'è un'apertura dichiarata. L'audio parte con 'Il tuo cane per chi' al secondo 0, senza pausa né ritmo iniziale; il volume medio dei primi 5 secondi è -16,7 dB, un po' basso rispetto al resto. Inoltre la frase 'Juve, Inter, Milan, Napoli, Roma o La",
+   "dati": {
+    "controllato": "Audio, trascrizione coi secondi, didascalia e allineamento tra copione e testo del reel, con le misure audio verificate.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief indica apertura: null, quindi nel reel non c'è un'apertura dichiarata. L'audio parte con 'Il tuo cane per chi' al secondo 0, senza pausa né ritmo iniziale; il volume medio dei primi 5 secondi è -16,7 dB, un po' basso rispetto al resto. Inoltre la frase 'Juve, Inter, Milan, Napoli, Roma o Lazio?' compare nella trascrizione come elenco senza pausa tra squadre, rendendo meno leggibile il gancio.",
+    "correzione": "Aggiungere una breve pausa o un suono di apertura di 0,3-0,5 s prima di 'Il tuo cane per chi tifa?' e alzare leggermente il volume iniziale di circa 1-2 dB, mantenendo il picco sotto -1 dBFS.",
+    "idea": "Ripetere il formato 'testa_a_testa' che ha ottenuto più commenti (86) e condivisioni (16), proponendo un duello tra due tifoserie con le luci sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:53+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'dati_mappa' è vuoto: non c'è modo di verificare che la mappa mostri davvero le sciarpe coi colori delle squadre, che il copione promette. Inoltre il sottotitolo/fascia 'Scrivi città, nome e squadra' compare nel brief ma non è sincronizzato alla trascrizione, e la didascalia dice 'il tuo can",
+   "dati": {
+    "controllato": "Audio, trascrizione coi secondi, copione del brief, didascalia e dati della mappa (vuoti) nel reparto Montaggio.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'dati_mappa' è vuoto: non c'è modo di verificare che la mappa mostri davvero le sciarpe coi colori delle squadre, che il copione promette. Inoltre il sottotitolo/fascia 'Scrivi città, nome e squadra' compare nel brief ma non è sincronizzato alla trascrizione, e la didascalia dice 'il tuo cane o gatto' mentre il copione parla solo di cane. Infine la scena 'tifosi' (Juve, Inter, Milan, Napoli, Roma, Lazio) non ha un secondo preciso nei fotogrammi inviati per verificare l'elenco.",
+    "correzione": "Verificare con i dati reali che la mappa mostri le sciarpe prima della pubblicazione; allineare la fascia alla frase 'Scrivi città...' (circa 4.4-8.9s); uniformare 'cane' / 'cane o gatto' tra copione e didascalia; controllare a 4.4s che l'elenco squadre sia leggibile nei fotogrammi.",
+    "idea": "Un reel di 'sciarpa in arrivo' con la mappa che si illumina città per città sul ritmo del ritornello, con i colori delle squadre in primo piano."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:55+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il gancio d'apertura (0-1.2s) è un testo di domanda piccolo e in alto, con grande spazio vuoto sotto; al secondo 0.5 non c'è ancora nessuna immagine forte né movimento visibile che catturi lo scroll. Inoltre la frase d'apertura del copione ('Il tuo cane per chi tifa?') arriva dopo una pausa visiva d",
+   "dati": {
+    "controllato": "Ganci dei primi 2 secondi: frase d'apertura, primo fotogramma, ritmo e coerenza con il copione e la trascrizione.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il gancio d'apertura (0-1.2s) è un testo di domanda piccolo e in alto, con grande spazio vuoto sotto; al secondo 0.5 non c'è ancora nessuna immagine forte né movimento visibile che catturi lo scroll. Inoltre la frase d'apertura del copione ('Il tuo cane per chi tifa?') arriva dopo una pausa visiva di circa 0.5s, ritardando il gancio.",
+    "correzione": "Far comparire il pallone e il titolo già al frame 0 con una animazione d'ingresso rapida (scala o rimbalzo nei primi 0.3s) e aggiungere una mini-scena di cani con sciarpe già visibile nei primi 2 secondi; in alternativa anticipare la domanda con un suono di fischio o di tifoso.",
+    "idea": "Nei prossimi reel aprire con un cane reale o illustrato che 'si gira' verso la camera con la sciarpa della propria squadra, e chiudere con il risultato del campionato delle zampe come promessa esplicita di follow."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:55+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «sulla mappa d'Italia mette la sciarpa coi suoi colori» al secondo 8.9, ma nei fotogrammi la scritta «SULLA MAPPA D'ITALIA» compare già a 8–9s senza che la mappa si veda; la mappa con le luci non compare mai nel reel. Inoltre la frase «Scrivi città, nome e squadra» è detta a voce ma la",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e coerenza tra frasi, scene e didascalia.",
+    "esito": "segnalo",
+    "secondo": 8.9,
+    "problema": "Il testo dice «sulla mappa d'Italia mette la sciarpa coi suoi colori» al secondo 8.9, ma nei fotogrammi la scritta «SULLA MAPPA D'ITALIA» compare già a 8–9s senza che la mappa si veda; la mappa con le luci non compare mai nel reel. Inoltre la frase «Scrivi città, nome e squadra» è detta a voce ma la scena «SCRIVI» dura poco e il mockup di commento non mostra un esempio chiaro della mappa.",
+    "correzione": "Aggiungere una scena di 1–2 secondi con la mappa d'Italia e una luce colorata accesa al posto della scritta statica, sincronizzata sulla frase «mette la sciarpa coi suoi colori» (intorno a 8.9–10.4s).",
+    "idea": "Aprire con la mappa che si accende città per città a ritmo di tifo, così la promessa visiva arriva prima della parola «mappa»."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:55+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 12 il testo a schermo dice «E domenica il» mentre la voce dice «E domenica il campionato»: il finale in pagina è troncato e la domanda «quale tifoseria ha più cani?» compare solo a 14 secondi, quindi c'è una frase incompleta per circa 2 secondi. Inoltre la didascalia contiene «Voce genera",
+   "dati": {
+    "controllato": "Trascrizione, secondi, copione, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS) e fotogrammi: coerenza tra voce, testo a schermo e scene.",
+    "esito": "segnalo",
+    "secondo": 12,
+    "problema": "Al secondo 12 il testo a schermo dice «E domenica il» mentre la voce dice «E domenica il campionato»: il finale in pagina è troncato e la domanda «quale tifoseria ha più cani?» compare solo a 14 secondi, quindi c'è una frase incompleta per circa 2 secondi. Inoltre la didascalia contiene «Voce generata con IA» (dato utile e trasparente) ma nel reel non si vede nulla di simile.",
+    "correzione": "Far apparire l'intera frase «E domenica il campionato» a 12 secondi, e tenere la scena finale con la domanda completa fino a fine reel; valutare una piccola etichetta «voce IA» nella scena finale.",
+    "idea": "Chiudere ogni reel della serie con una scena «Campionato delle Zampe» che mostra la classifica aggiornata e invita a seguire la pagina per il risultato di domenica."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:57+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «sulla mappa d'Italia mette la sciarpa», ma nei fotogrammi la mappa non compare mai: restano solo titoli su sfondo viola, la frase «Scrivi città, nome e squadra» e la finta comparsa di un commento. Inoltre il gancio finale «quale tifoseria ha più cani?» viene ripetuto a schermo senza r",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, audio e fotogrammi del reel tifo: frasi, fascia e call to action coerenti.",
+    "esito": "segnalo",
+    "secondo": 8.9,
+    "problema": "Il testo dice «sulla mappa d'Italia mette la sciarpa», ma nei fotogrammi la mappa non compare mai: restano solo titoli su sfondo viola, la frase «Scrivi città, nome e squadra» e la finta comparsa di un commento. Inoltre il gancio finale «quale tifoseria ha più cani?» viene ripetuto a schermo senza risposta, quindi lo spettatore non ha un motivo chiaro per restare fino alla fine.",
+    "correzione": "Mostrare nei secondi 8-10 una breve animazione della mappa con una sciarpa che si colora, e chiudere con il risultato o con un teaser visivo della classifica; in didascalia aggiungere il link alla pagina o la data del campionato.",
+    "idea": "Un reel «mappa in tempo reale» in cui ogni commento aggiunge una luce sulla mappa, così il pubblico vede subito il proprio contributo."
+   }
+  },
+  {
+   "t": "2026-11-15T10:49:59+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La frase «E domenica il campionato» sta sul fotogramma a 12s ma la voce passa a «quale tifoseria ha più cani?» solo dopo; la domanda finale compare in testo solo al secondo 14-15 e il CTA «Scrivi città, nome e squadra» resta fisso su tutto il reel, quindi lo spettatore riceve due inviti diversi (scr",
+   "dati": {
+    "controllato": "Copione, trascrizione con secondi, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio) e fotogrammi: il reel è coerente col brief e tecnicamente nei parametri.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "La frase «E domenica il campionato» sta sul fotogramma a 12s ma la voce passa a «quale tifoseria ha più cani?» solo dopo; la domanda finale compare in testo solo al secondo 14-15 e il CTA «Scrivi città, nome e squadra» resta fisso su tutto il reel, quindi lo spettatore riceve due inviti diversi (scrivere e commentare il campionato) senza un chiaro gancio al commento. Inoltre la trascrizione dice «mette la sciarpa», mentre il testo a schermo dice «sulla mappa d'Italia» e poi nulla di esplicito sulla sciarpa.",
+    "correzione": "Allineare la domanda finale del campionato alla scritta a schermo (es. «Quale tifoseria ha più cani? Scrivilo sotto») e far comparire la sciarpa come immagine nella scena della mappa, così voce e schermo dicono la stessa cosa.",
+    "idea": "Aggiungere in chiusura una frase tipo «Segui la pagina per la classifica del campionato delle zampe» e mostrare nell'ultimo secondo la mappa con una luce accesa, così il follow ha un motivo esplicito e il visual premia la fine del reel."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:01+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il testo «E domenica il campionato» compare a 12.1s, ma nel copione la frase è divisa tra scena «gancio» e la domanda «quale tifoseria ha più cani?»: sullo schermo la frase resta incompleta («E DOMENICA IL») e la domanda appare solo dopo, con «PIÙ CANI?» come risposta isolata. Inoltre la didascalia ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e audio (LUFS -14.4, picco -0.9 dBFS, nessun silenzio lungo) rispetto alla mappa e alla fascia di testo.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il testo «E domenica il campionato» compare a 12.1s, ma nel copione la frase è divisa tra scena «gancio» e la domanda «quale tifoseria ha più cani?»: sullo schermo la frase resta incompleta («E DOMENICA IL») e la domanda appare solo dopo, con «PIÙ CANI?» come risposta isolata. Inoltre la didascalia dice «Tagga un amico tifoso» ma il reel non invita mai a taggare. Nella scena «commento» la fascia «Scrivi città, nome e squadra» è già presente, quindi il messaggio di invito è ripetuto ma non c'è un momento in cui il pubblico vede l'esempio di risposta completo con città.",
+    "correzione": "Mostrare la frase completa «E domenica il campionato: quale tifoseria ha più cani?» in un unico blocco (o senza spezzarla), e allineare la didascalia al reel aggiungendo nel video o rimuovendo il «tagga un amico».",
+    "idea": "Mostrare nel reel una risposta reale di esempio sulla mappa (es. «Napoli, Luna, forza Napoli» con la sciarpa azzurra che si accende) per spiegare il meccanismo senza bisogno di parole in più."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:01+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 12.1 la voce dice «E domenica il campionato», ma nel fotogramma a 12s compare «E DOMENICA IL» come testo incompleto, mentre la frase chiave «quale tifoseria ha più cani?» arriva solo al secondo 14.3, quando lo schermo mostra ancora «PIÙ CANI?» senza il resto della domanda. Il testo a sche",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, audio e coerenza con la frase di chiusura del reel.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Al secondo 12.1 la voce dice «E domenica il campionato», ma nel fotogramma a 12s compare «E DOMENICA IL» come testo incompleto, mentre la frase chiave «quale tifoseria ha più cani?» arriva solo al secondo 14.3, quando lo schermo mostra ancora «PIÙ CANI?» senza il resto della domanda. Il testo a schermo e la voce non sono allineati: il dettaglio «quale tifoseria» è letto ma non sempre visibile nello stesso momento. Inoltre il reel non mostra la mappa con la sciarpa in azione: il promesso «mette la sciarpa coi suoi colori» resta solo parlato e nelle didascalie.",
+    "correzione": "Far apparire «quale tifoseria ha più cani e gatti?» insieme a «E DOMENICA IL CAMPIONATO» (tra 12 e 14s), e inserire 1-2 secondi con una mappa che mostri una sciarpa colorata sul puntino del cane.",
+    "idea": "Chiudere con la classifica parziale delle tifoserie (es. «Napoli 412 zampe, Juve 388…») e un CTA «commenta la tua squadra» per trasformare la sfida in conversazione."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:01+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «E domenica il campionato: quale tifoseria ha più cani?» ma la didascalia e il finale parlano di «cani e gatti»: la domanda cambia rispetto al testo finale. Inoltre la voce dice «Scrivi città, nome e squadra» mentre nei fotogrammi la fascia è «Scrivi città, nome e squadra» solo in pa",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e sequenza dei fotogrammi del reel tifo.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il copione dice «E domenica il campionato: quale tifoseria ha più cani?» ma la didascalia e il finale parlano di «cani e gatti»: la domanda cambia rispetto al testo finale. Inoltre la voce dice «Scrivi città, nome e squadra» mentre nei fotogrammi la fascia è «Scrivi città, nome e squadra» solo in parte coerente con l'esempio della didascalia; le squadre mostrate nelle schermate (Juve, Inter, Milan, Napoli, Roma, Lazio) corrispondono al copione, quindi questo è a posto. Il vero punto è il gancio finale: nel copione manca «e gatti» che è nella domanda del progetto.",
+    "correzione": "Allineare la voce al 12.1s su «quale tifoseria ha più cani e gatti?», così coincide con la didascalia e col titolo del campionato.",
+    "idea": "Chiudere con una schermata che mostra in tempo reale la tifoseria in testa al campionato, così il commento diventa anche un motivo per tornare a vedere il risultato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:04+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il testo parlato dice «sulla mappa d'Italia mette la sciarpa coi suoi colori» (scena commento), ma nei fotogrammi la frase «Sulla mappa d'Italia» compare solo intorno a 8-9s e il passaggio «Luna, forza Napoli» è un esempio statico che non mostra la mappa animata; inoltre la sequenza del campionato è",
+   "dati": {
+    "controllato": "Trascrizione, copione, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS) e fotogrammi: il testo parlato coincide con il copione e la didascalia è coerente.",
+    "esito": "segnalo",
+    "secondo": 8.9,
+    "problema": "Il testo parlato dice «sulla mappa d'Italia mette la sciarpa coi suoi colori» (scena commento), ma nei fotogrammi la frase «Sulla mappa d'Italia» compare solo intorno a 8-9s e il passaggio «Luna, forza Napoli» è un esempio statico che non mostra la mappa animata; inoltre la sequenza del campionato è ripetuta quasi identica (due fotogrammi uguali per la domanda finale), con il «Più cani?» che appare dopo la domanda, rendendo il ritmo finale un po' lento. Nel copione 'Juve, Inter, Milan...' non compare un'animazione chiara della mappa: il reel non mostra mai la luce accendersi, cioè il beneficio principale del formato.",
+    "correzione": "Inserire tra 9s e 12s un'inquadratura della mappa d'Italia con una luce che si accende nella città dell'esempio, e accorciare la ripetizione della domanda finale (es. unire 'E domenica il campionato' e 'Più cani?' in un unico stacco di circa 2 secondi).",
+    "idea": "Un reel di 'risultati del campionato' con la classifica aggiornata, da pubblicare domenica sera per dare un motivo concreto di follow e ritorno."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:05+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il testo 'E domenica il campionato' (12.1s) resta sullo schermo mentre la frase successiva non ha una scena chiara; nella didascalia manca la frase 'Juve, Inter...' ma il copione è coerente. In più il gancio finale 'quale tifoseria ha più cani?' è ripetuto a 14s-15s con 'PIÙ CANI?' ma senza una risp",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo), copione e didascalia rispetto al brief; nessun dato mappa da verificare nel reel.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il testo 'E domenica il campionato' (12.1s) resta sullo schermo mentre la frase successiva non ha una scena chiara; nella didascalia manca la frase 'Juve, Inter...' ma il copione è coerente. In più il gancio finale 'quale tifoseria ha più cani?' è ripetuto a 14s-15s con 'PIÙ CANI?' ma senza una risposta o un invito chiaro a commentare nello stesso frame.",
+    "correzione": "Allungare di circa un secondo la scena finale e far comparire la domanda 'Quale tifoseria ha più cani?' con la fascia 'Scrivi città, nome e squadra' già visibile, così il CTA resta leggibile fino all'ultimo fotogramma. Verificare anche che il testo 'PIÙ CANI?' non si sovrapponga alla fascia.",
+    "idea": "Per i prossimi reel della serie tifo, mostrare nel frame finale un esempio reale di sciarpa sulla mappa (con una città riconoscibile) per aumentare il desiderio di partecipare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:05+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Trascrizione, copione, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio) e fotogrammi: la mia mansione sulla mappa e sui dati è coerente, e non ci sono dati di mappa nei materiali da verificare.",
+   "dati": {
+    "controllato": "Trascrizione, copione, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio) e fotogrammi: la mia mansione sulla mappa e sui dati è coerente, e non ci sono dati di mappa nei materiali da verificare.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo reel si potrebbe mostrare sulla mappa un esempio reale di luce già accesa (con città e squadra anonime) per rendere più tangibile il risultato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:06+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il testo a schermo dice «quale tifoseria ha più cani e gatti?» ma la voce al 12.1s chiude su «ha più cani?» e il fotogramma finale mostra «PIÙ CANI?»: la domanda cambia rispetto alla didascalia («cani e gatti»). Inoltre la trascrizione lascia «E domenica il» sospeso e «il campionato» arriva in ritar",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio), copione, fascia e didascalia rispetto al brief del reel tifo; nella mappa non ci sono dati da verificare.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il testo a schermo dice «quale tifoseria ha più cani e gatti?» ma la voce al 12.1s chiude su «ha più cani?» e il fotogramma finale mostra «PIÙ CANI?»: la domanda cambia rispetto alla didascalia («cani e gatti»). Inoltre la trascrizione lascia «E domenica il» sospeso e «il campionato» arriva in ritardo rispetto allo schermo. Il fotogramma al 9s mostra ancora la scena «Sulla mappa d'Italia» mentre la voce dice «mette la sciarpa», quindi il sincrono è sfasato.",
+    "correzione": "Allineare la voce alla scena: «E domenica il campionato delle zampe: quale tifoseria ha più cani e gatti?» e far comparire il titolo subito dopo «E domenica», con la domanda finale coerente a schermo e didascalia.",
+    "idea": "Nel prossimo reel tifo mostrare un cane reale con la sciarpa della squadra della città del follower, così l'effetto «sulla mappa» si vede subito."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:07+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il reel tiene il testo di invito «Scrivi città, nome e squadra» in basso per tutta la durata, ma la mappa d'Italia (promessa al secondo 8.9) non compare nei fotogrammi: la mappa non si vede mai, quindi la promessa visiva resta sulla parola.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo), copione e didascalia rispetto al brief e ai fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Il reel tiene il testo di invito «Scrivi città, nome e squadra» in basso per tutta la durata, ma la mappa d'Italia (promessa al secondo 8.9) non compare nei fotogrammi: la mappa non si vede mai, quindi la promessa visiva resta sulla parola.",
+    "correzione": "Inserire tra 8 e 10 secondi una breve inquadratura della mappa con una luce che si accende nella città di esempio (es. Napoli) e la sciarpa coi colori della squadra, così la frase «sulla mappa d'Italia» è mostrata e non solo detta.",
+    "idea": "Per il prossimo reel del campionato, mostrare la classifica parziale delle tifoserie con le zampe che salgono, e chiudere con il nome della città più attiva per attirare commenti localizzati."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:08+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, copione, didascalia e misure audio (-14 LUFS, picco -0.9 dBFS, nessun silenzio): la mia mansione è Rilievo e coste su mappa e dati, e per questo reel non ci sono dati di mappa da verificare.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia e misure audio (-14 LUFS, picco -0.9 dBFS, nessun silenzio): la mia mansione è Rilievo e coste su mappa e dati, e per questo reel non ci sono dati di mappa da verificare.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo reel della mappa, mostrare per qualche secondo una luce reale accesa su una città con la sciarpa della squadra, così la promessa visiva è verificabile dal pubblico."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:11+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il copione chiede «quale tifoseria ha più cani?» ma l'ultima schermata a 15s resta su «PIÙ CANI?» senza risposta né invito chiaro, e nella slide precedente «E DOMENICA IL» resta sospeso (la frase finisce a 12.1s con «campionato» mostrato come blocco separato). Inoltre la fascia «Scrivi città, nome e",
+   "dati": {
+    "controllato": "Dati mappa (vuoti, nessun numero da verificare nel reel), trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo), fotogrammi e coerenza tra copione e testo a schermo.",
+    "esito": "segnalo",
+    "secondo": 15,
+    "problema": "Il copione chiede «quale tifoseria ha più cani?» ma l'ultima schermata a 15s resta su «PIÙ CANI?» senza risposta né invito chiaro, e nella slide precedente «E DOMENICA IL» resta sospeso (la frase finisce a 12.1s con «campionato» mostrato come blocco separato). Inoltre la fascia «Scrivi città, nome e squadra» compare in tutti i fotogrammi ma la call to action principale (commentare) non ha un'azione chiusa nel finale.",
+    "correzione": "Chiudere il reel con una schermata finale tipo «Domenica scopriamo chi vince: commenta la tua squadra» e far comparire la domanda completa in un unico frame leggibile; aggiungere un'ultima schermata con il CTA di commento.",
+    "idea": "Pubblicare la classifica parziale del Campionato delle Zampe in un reel di domenica sera con i cani di ogni squadra animati sulla mappa, così il follow nasce dalla promessa di scoprire il risultato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:11+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il testo «sulla mappa d'Italia mette la sciarpa coi suoi colori» compare a 8.9s, ma nei fotogrammi la frase «Sulla mappa d'Italia» resta a schermo intero a ~9s e la sciarpa non è ancora mostrata; il gancio «Il tuo cane per chi tifa?» resta invariato per quasi tutto il primo tempo. Inoltre nella tras",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e coerenza tra fotogrammi, testo e didascalia del reel Testa a testa.",
+    "esito": "segnalo",
+    "secondo": 8.9,
+    "problema": "Il testo «sulla mappa d'Italia mette la sciarpa coi suoi colori» compare a 8.9s, ma nei fotogrammi la frase «Sulla mappa d'Italia» resta a schermo intero a ~9s e la sciarpa non è ancora mostrata; il gancio «Il tuo cane per chi tifa?» resta invariato per quasi tutto il primo tempo. Inoltre nella trascrizione la frase «Scrivi città, nome e squadra» è detta due volte di seguito nella fascia senza un vero cambio di scena, e nel fotogramma a 12s compare la domanda «più cani?» mentre la voce dice ancora «quale tifoseria ha più cani?». Il fotogramma a 15s mostra «PIÙ CANI?» ma il CTA del campionato non è chiaro.",
+    "correzione": "Allineare la comparsa della sciarpa sulla mappa al momento in cui la voce dice «mette la sciarpa» (circa 9-10s) e sincronizzare il cambio testo «PIÙ CANI?» con la frase finale; oppure chiudere con una scena di risposta più netta.",
+    "idea": "Chiudere il reel con uno screenshot reale della mappa in cui una sciarpa si accende in una città, così chi guarda capisce subito il premio di partecipare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:11+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La frase «E domenica il campionato» (12.1s) e «quale tifoseria ha più cani?» restano troppo a lungo sullo schermo senza che il pubblico capisca subito l'azione; nei fotogrammi, dopo il 9s, il testo «Il campionato delle zampe» compare con la domanda e poi «PIÙ CANI?» dopo 12s, quindi la chiusura è af",
+   "dati": {
+    "controllato": "Trascrizione, secondi delle frasi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio) e i fotogrammi con le sei squadre e la scritta di fascia.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "La frase «E domenica il campionato» (12.1s) e «quale tifoseria ha più cani?» restano troppo a lungo sullo schermo senza che il pubblico capisca subito l'azione; nei fotogrammi, dopo il 9s, il testo «Il campionato delle zampe» compare con la domanda e poi «PIÙ CANI?» dopo 12s, quindi la chiusura è affollata. Inoltre la didascalia dice «Scrivi qui sotto città, nome e squadra» mentre la fascia usa lo stesso invito: va bene, ma il reel non mostra mai un esempio di commento completo oltre alla card 'Luna, forza Napoli' (che è visibile solo per pochi secondi).",
+    "correzione": "Allungare di circa 1 secondo la card 'Luna, forza Napoli' e far comparire la domanda finale ('Quale tifoseria ha più cani?') in un unico fotogramma pulito, senza sovrapposizioni con la scritta 'PIÙ CANI?'.",
+    "idea": "Pubblicare in coda al reel il conteggio aggiornato di cani e gatti per squadra, così chi ha commentato torna a vedere il risultato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:13+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «mette la sciarpa coi suoi colori» e la didascalia promette che la mappa mostri il cane/gatto con la sciarpa, ma nei fotogrammi la mappa non compare mai: non c'è nessuna scena con la mappa d'Italia né con luci o sciarpe. Inoltre il reel finisce su «quale tifoseria ha più cani?» senza",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (vuoti, niente da verificare), audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e coerenza didascalia/fascia/frasi con il copione.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il copione dice «mette la sciarpa coi suoi colori» e la didascalia promette che la mappa mostri il cane/gatto con la sciarpa, ma nei fotogrammi la mappa non compare mai: non c'è nessuna scena con la mappa d'Italia né con luci o sciarpe. Inoltre il reel finisce su «quale tifoseria ha più cani?» senza mostrare la risposta né un invito chiaro, e il testo a schermo resta uguale per 4 fotogrammi di fila (6–15 s), quindi la scena 'commento' e la mappa non hanno immagini proprie. La didascalia chiede di scrivere «città, nome e squadra» ma l'esempio è «Napoli, Luna, cane, forza Napoli», che non segue l'ordine indicato.",
+    "correzione": "Inserire una scena con la mappa d'Italia e una luce/sciarpa che si accende (anche solo 2 s) tra 8 e 11 s; sistemare l'esempio in didascalia nell'ordine «città, nome, squadra»; aggiungere un'ultima scena che mostri la classifica o la domanda con un invito a taggare, invece di chiudere sulla frase sospesa.",
+    "idea": "Un reel dove una sciarpa colorata compare sulla mappa della città di chi commenta, con la scritta 'Ecco la tua squadra sulla mappa' come chiusura."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:14+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La mappa d'Italia non ha dati nel reel (dati_mappa è vuoto), quindi non si può verificare che la sciarpa compaia davvero per il tifoso indicato. Inoltre la trascrizione mostra il gancio 'Il tuo cane per chi tifa?' al secondo 0, senza apertura definita, e la didascalia e il copione dicono 'cane o gat",
+   "dati": {
+    "controllato": "Volume e audio del reel (LUFS, picco, silenzi), oltre alla coerenza tra copione, trascrizione e tempi.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "La mappa d'Italia non ha dati nel reel (dati_mappa è vuoto), quindi non si può verificare che la sciarpa compaia davvero per il tifoso indicato. Inoltre la trascrizione mostra il gancio 'Il tuo cane per chi tifa?' al secondo 0, senza apertura definita, e la didascalia e il copione dicono 'cane o gatto' mentre il gancio parla solo di cani. Audio a posto: -14.4 LUFS, picco -0.9 dBFS (sopra l'obiettivo di -1 dBFS, ma di poco), nessun silenzio lungo.",
+    "correzione": "Verificare che la mappa mostri effettivamente la sciarpa per la città/squadra indicata prima di pubblicare; riportare il picco sotto -1 dBFS abbassando leggermente il guadagno finale; allineare il gancio 'cane' con 'cane o gatto' oppure lasciare solo 'cane' ovunque.",
+    "idea": "Aggiungere un richiamo esplicito 'segui per il Campionato delle Zampe' in fascia o in chiusura, e inquadrare la mappa per almeno 2 secondi quando appare la sciarpa."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:14+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Volume e loudness del reel: -14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo, volume iniziale -16.7 dB; rientra nell'obiettivo.",
+   "dati": {
+    "controllato": "Volume e loudness del reel: -14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo, volume iniziale -16.7 dB; rientra nell'obiettivo.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Usare la stessa domanda di apertura in un reel 'Indovina la tifoseria' con la mappa in dissolvenza, per trasformare il commento in gioco e replicare il successo dei formati più commentati."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:14+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi), trascrizione con secondi, didascalia e coerenza col copione del reel tifo.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione con secondi, didascalia e coerenza col copione del reel tifo.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Dopo la domanda finale, mostrare in 2 secondi il conteggio dei cani per tifoseria come anteprima del prossimo reel, per dare un motivo concreto di tornare domenica."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:15+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS -14.4, picco -0.9 dBFS, nessun silenzio, volume iniziale -16.7 dB) e coerenza tra trascrizione, brief, fascia e didascalia.",
+   "dati": {
+    "controllato": "Audio (LUFS -14.4, picco -0.9 dBFS, nessun silenzio, volume iniziale -16.7 dB) e coerenza tra trascrizione, brief, fascia e didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel tifo, mostrare nella stessa inquadratura un esempio reale di sciarpa sulla mappa, così chi guarda capisce subito cosa ottiene scrivendo."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:17+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il brief non ha un'apertura definita (campo 'apertura' null) e il primo secondo di parlato parte dopo un attacco morbido; il volume medio dei primi 5 secondi (-16,7 dB) è sotto il resto del reel, quindi il gancio iniziale rischia di perdersi a scorrimento veloce.",
+   "dati": {
+    "controllato": "Apertura audio: livello medio dei primi 5 secondi (-16,7 dB), LUFS (-14,4) e picco (-0,9 dBFS) rispetto agli obiettivi, e assenza di silenzi dopo l'apertura.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief non ha un'apertura definita (campo 'apertura' null) e il primo secondo di parlato parte dopo un attacco morbido; il volume medio dei primi 5 secondi (-16,7 dB) è sotto il resto del reel, quindi il gancio iniziale rischia di perdersi a scorrimento veloce.",
+    "correzione": "Portare il gancio 'Il tuo cane per chi tifa?' a un volume più alto nei primi 0,5-1 secondi (senza superare -1 dBFS) e definire un'apertura sonora breve (un colpo di fischietto o un sample di tifoseria) nel campo apertura.",
+    "idea": "Per i prossimi reel tifo, usare un'apertura sonora fissa di 1 secondo (fischietto o cori di stadio sfumati) prima del gancio, così il formato resta riconoscibile e il volume iniziale è coerente."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:18+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La mappa non è documentata: dati_mappa è vuoto, quindi non ci sono prove che il reel mostri davvero la sciarpa coi colori della squadra. Inoltre il copione promette 'il tuo cane mette la sciarpa' e la fascia dice 'Scrivi città, nome e squadra', ma nei materiali non c'è nessuna verifica di questi ele",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume iniziale), trascrizione con secondi e corrispondenza col copione, didascalia e disclosure IA.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La mappa non è documentata: dati_mappa è vuoto, quindi non ci sono prove che il reel mostri davvero la sciarpa coi colori della squadra. Inoltre il copione promette 'il tuo cane mette la sciarpa' e la fascia dice 'Scrivi città, nome e squadra', ma nei materiali non c'è nessuna verifica di questi elementi visivi. Il volume iniziale a -16.7 dB è basso rispetto all'obiettivo di -14 LUFS, ma il dato integrato è in linea.",
+    "correzione": "Verificare nei fotogrammi (0.5, 3, 6, 9, 12, 15 s) che la mappa e la sciarpa siano visibili e corrette prima della pubblicazione; alzare leggermente il volume della voce nei primi secondi.",
+    "idea": "Per i prossimi reel tifo, mostrare nel primo secondo una sciarpa reale su una mappa e chiudere con un numero concreto di cani per squadra, così il valore del gioco è subito chiaro."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:18+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il brief ha 'apertura': null, quindi non è chiaro se nei primi secondi ci sia musica di sottofondo. Il volume medio dei primi 5 secondi è -16,7 dB, più basso del resto (-14 LUFS complessivi): l'apertura rischia di essere debole proprio nel momento del gancio 'Il tuo cane per chi tifa?'. Inoltre nell",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume iniziale), trascrizione coi secondi e coerenza tra copione, brief e didascalia per la mia parte di musica e voce.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief ha 'apertura': null, quindi non è chiaro se nei primi secondi ci sia musica di sottofondo. Il volume medio dei primi 5 secondi è -16,7 dB, più basso del resto (-14 LUFS complessivi): l'apertura rischia di essere debole proprio nel momento del gancio 'Il tuo cane per chi tifa?'. Inoltre nella didascalia la parola 'Juve' è scritta con la sciarpa come emoji, ma la fascia dice 'Scrivi città, nome e squadra' senza il riferimento al cane: piccola incoerenza di testo, non mia.",
+    "correzione": "Alzare di 2-3 dB la musica nei primi 3 secondi (sotto la voce, senza superare -1 dBFS) per dare più energia al gancio. Verificare che il brief abbia un'apertura definita.",
+    "idea": "Per i prossimi reel da tifo, usare un leggero crescendo musicale che accompagni la scritta della squadra, così la sciarpa sulla mappa arriva con più impatto."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:18+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi), trascrizione con secondi, didascalia e frasi del copione rispetto agli obiettivi della mia mansione.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione con secondi, didascalia e frasi del copione rispetto agli obiettivi della mia mansione.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per il prossimo reel del campionato, far comparire per due secondi il nome del cane nella sciarpa sulla mappa, così la voce accompagna un dettaglio visivo riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:19+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Loudness, picco, silenzi e volume d'apertura del reel rispetto all'obiettivo -14 LUFS e picco sotto -1 dBFS.",
+   "dati": {
+    "controllato": "Loudness, picco, silenzi e volume d'apertura del reel rispetto all'obiettivo -14 LUFS e picco sotto -1 dBFS.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel tifo, potrebbe valere la pena mostrare nel primo secondo una mappa con qualche luce già accesa, così il gancio visivo arriva insieme a quello vocale."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:21+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il reel non ha una copertina definita (copertina: null) e il primo fotogramma (0.5s) mostra solo il titolo e la scritta della fascia gialla in basso, senza un'immagine forte che catturi lo scroll. Inoltre la fascia 'Scrivi città, nome e squadra' compare in quasi tutte le scene e nei fotogrammi ai se",
+   "dati": {
+    "controllato": "Copertine: copertina assente (null), fotogrammi e grafica delle scene, leggibilità dei testi e coerenza con la didascalia e la trascrizione.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Il reel non ha una copertina definita (copertina: null) e il primo fotogramma (0.5s) mostra solo il titolo e la scritta della fascia gialla in basso, senza un'immagine forte che catturi lo scroll. Inoltre la fascia 'Scrivi città, nome e squadra' compare in quasi tutte le scene e nei fotogrammi ai secondi 6 e 9 la scena 'SCRIVI' e il mockup del commento restano vuoti per alcuni secondi.",
+    "correzione": "Impostare come copertina il fotogramma con le sei icone-cane con sciarpa (circa 3s), con il testo 'Il tuo cane per chi tifa?' in evidenza, e accorciare la scena vuota del mockup commento a circa 1 secondo.",
+    "idea": "Chiudere il reel con un fotogramma finale 'Segui la pagina per il Campionato delle Zampe' e usare la sciarpa del cane come elemento ricorrente per collegare i formati tifo e coppa."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:22+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione «sulla mappa d'Italia mette la sciarpa» arriva a 8.9s, ma nei fotogrammi la frase «Sulla mappa d'Italia» compare già a 6s (scena commento) e la mappa con le sciarpe non si vede mai: i fotogrammi mostrano solo testo su sfondo viola, nessuna mappa. Il dato 'dati_mappa' è vuoto, quin",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, scene dei fotogrammi, misure audio e coerenza della didascalia con la mappa e i dati del reel.",
+    "esito": "segnalo",
+    "secondo": 8.9,
+    "problema": "Nella trascrizione «sulla mappa d'Italia mette la sciarpa» arriva a 8.9s, ma nei fotogrammi la frase «Sulla mappa d'Italia» compare già a 6s (scena commento) e la mappa con le sciarpe non si vede mai: i fotogrammi mostrano solo testo su sfondo viola, nessuna mappa. Il dato 'dati_mappa' è vuoto, quindi non posso confermare che la mappa esista nel reel. Inoltre la scena 'tifosi' a 1-3s mostra i cani con sciarpe, ma la frase 'per chi tifa' resta solo testo e la scena 'gancio' finale ('E domenica il campionato') va in loop con 'Più cani?' senza risposta visibile.",
+    "correzione": "Inserire nel reel un frame reale della mappa con le luci e le sciarpe (anche 1-2 secondi) prima del CTA, e allineare la scena 'commento' a quando la mappa è visibile. Chiudere il loop con la risposta o con l'invito a scoprirla domenica, evitando il 'Più cani?' sospeso.",
+    "idea": "Fare un reel dove la mappa si accende in tempo reale quando viene scritta una città di esempio (es. Napoli), mostrando il passaggio dalla didascalia alla luce sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:23+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi la scritta 'Scrivi città, nome e squadra' è presente già al secondo 0.5 e resta fissa in basso su tutto il reel, mentre la scena 'sulla mappa d'Italia' (9s) mostra solo il testo dell'esempio, senza la mappa né la sciarpa colorata promessa dal copione. Inoltre al secondo 12 e 15 la sch",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, copertina e sequenza dei 6 fotogrammi nella mia mansione di grafica e copertine.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Nei fotogrammi la scritta 'Scrivi città, nome e squadra' è presente già al secondo 0.5 e resta fissa in basso su tutto il reel, mentre la scena 'sulla mappa d'Italia' (9s) mostra solo il testo dell'esempio, senza la mappa né la sciarpa colorata promessa dal copione. Inoltre al secondo 12 e 15 la schermata finale 'E domenica il campionato' e 'Più cani?' non è accompagnata da alcuna grafica che mostri il risultato, quindi il finale resta una domanda senza visual. La scena della mappa non è mostrata nei fotogrammi campionati, quindi non posso verificare la grafica promessa.",
+    "correzione": "Mostrare già dal secondo 9 la mappa d'Italia con il cane che indossa la sciarpa della squadra scelta, e nel finale inserire una mini-classifica grafica (es. barre o icone cane/gatto per squadra) così la domanda 'più cani?' ha una risposta visiva. Ridurre la fascia fissa in basso a una sola apparizione per liberare lo spazio visivo.",
+    "idea": "Serie 'Campionato delle Zampe' con classifica aggiornata ogni domenica come grafica di copertina, da chiudere sempre con la squadra in testa e il numero di cani/gatti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:26+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 12 (e nel fotogramma successivo, 15s) la frase finale «E domenica il campionato: quale tifoseria ha più cani?» resta sullo schermo come «E DOMENICA IL» troncato: la scritta si ferma a metà e la domanda («quale tifoseria ha più cani?») appare solo nei fotogrammi successivi in forma diversa",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio) e i 6 fotogrammi: la sequenza di scene e i testi sono coerenti tra loro.",
+    "esito": "segnalo",
+    "secondo": 12,
+    "problema": "Al secondo 12 (e nel fotogramma successivo, 15s) la frase finale «E domenica il campionato: quale tifoseria ha più cani?» resta sullo schermo come «E DOMENICA IL» troncato: la scritta si ferma a metà e la domanda («quale tifoseria ha più cani?») appare solo nei fotogrammi successivi in forma diversa. Il messaggio finale non chiude in modo leggibile.",
+    "correzione": "Mostrare la frase completa «E DOMENICA IL CAMPIONATO» in un unico fotogramma prima di passare a «PIÙ CANI?», oppure allungare di mezzo secondo la scena finale così che la domanda resti leggibile fino alla fine. Aggiungere anche la fascia con il nome del campionato in modo che il gancio sia chiaro.",
+    "idea": "Per i prossimi reel tifo: far comparire le sciarpe sulla mappa in sequenza (una per città) come mini-anteprima dei risultati, così il pubblico vede subito l'effetto della partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:26+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 9 la scena «Sulla mappa d'Italia» è ancora un frame con il testo grande ma senza nessuna mappa visibile, e la frase del copione dice che la sciarpa compare sulla mappa; inoltre al secondo 15 la frase finale «quale tifoseria ha più cani?» coincide con una schermata con la sola domanda «PIÙ",
+   "dati": {
+    "controllato": "Copione, scene e fotogrammi della grafica: testi leggibili, sciarpe e loghi delle sei squadre presenti, coerenza tra frasi e schermate, didascalia e dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Al secondo 9 la scena «Sulla mappa d'Italia» è ancora un frame con il testo grande ma senza nessuna mappa visibile, e la frase del copione dice che la sciarpa compare sulla mappa; inoltre al secondo 15 la frase finale «quale tifoseria ha più cani?» coincide con una schermata con la sola domanda «PIÙ CANI?» senza risposta visibile, quindi il gancio resta aperto. Anche la fascia «Scrivi città, nome e squadra» è ripetuta su tutti i frame, risultando pesante.",
+    "correzione": "Mostrare la mappa con la sciarpa che si colora (es. Napoli) nel frame del secondo 9, e chiudere il reel con la risposta o con una freccia verso il commento, alleggerendo la fascia che compare su ogni schermata.",
+    "idea": "Un reel con il risultato del Campionato delle Zampe in tempo reale, con la classifica animata delle tifoserie che cambia man mano che arrivano i commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:27+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 12 il testo «E domenica il campionato» è spezzato: la frase del copione è ancora incompleta (il «quale tifoseria ha più cani?» arriva al 14,3s), quindi lo spettatore vede una frase tronca per circa due secondi. Inoltre al 9s la scena «Sulla mappa d'Italia» resta sola sullo ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, copertina e fotogrammi della scena per la mia mansione (Grafica e copertine): testi leggibili, colori coerenti, ritmo delle scene.",
+    "esito": "segnalo",
+    "secondo": 12,
+    "problema": "Nel fotogramma al secondo 12 il testo «E domenica il campionato» è spezzato: la frase del copione è ancora incompleta (il «quale tifoseria ha più cani?» arriva al 14,3s), quindi lo spettatore vede una frase tronca per circa due secondi. Inoltre al 9s la scena «Sulla mappa d'Italia» resta sola sullo schermo mentre il testo parlato continua, con il riquadro del commento in alto che mostra ancora la sciarpa-esempio «Luna, forza Napoli» senza una mappa visibile nei fotogrammi inviati.",
+    "correzione": "Allineare il testo a schermo alla voce: far comparire «E domenica il campionato» insieme alla frase completa, e aggiungere nella scena 9-12s un'anteprima della mappa con la sciarpa che si accende, così il gesto promesso dal copione si vede davvero.",
+    "idea": "Pubblicare ogni domenica il tabellone aggiornato del Campionato delle Zampe come reel finale, con le sciarpe delle squadre che 'vincono' la mappa, così il formato diventa un appuntamento fisso."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:27+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Dal secondo 8.9 al 10.4 il testo sulla mappa d'Italia compare ma la mappa non è mostrata nei fotogrammi: la scena di commento resta su sfondo viola vuoto con la sola fascia, quindi la promessa visiva («mette la sciarpa») non si vede. Inoltre al secondo 9 la scena «SULLA MAPPA D'ITALIA» dura poco e i",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia e fotogrammi di copertura: ho verificato che la frase sulla mappa e la fascia di istruzione siano coerenti e leggibili.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Dal secondo 8.9 al 10.4 il testo sulla mappa d'Italia compare ma la mappa non è mostrata nei fotogrammi: la scena di commento resta su sfondo viola vuoto con la sola fascia, quindi la promessa visiva («mette la sciarpa») non si vede. Inoltre al secondo 9 la scena «SULLA MAPPA D'ITALIA» dura poco e il testo «SCRIVI» (secondo 6) è sostituito da un esempio di commento già scritto, con un'altra fascia in basso: la scena del «commento» appare ripetuta e poco chiara.",
+    "correzione": "Inserire per 2-3 secondi un'immagine della mappa con una sciarpa colorata che appare sulla città, e chiudere la scena «SCRIVI» con una freccia verso il box di commento, così che la call-to-action sia visivamente collegata alla mappa.",
+    "idea": "Nel prossimo reel mostrare una mappa reale con tre cani già accesi e poi aggiungere il tuo, così il risultato è visibile prima della call-to-action."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:29+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La mappa d'Italia è citata nel testo ('sulla mappa d'Italia mette la sciarpa'), ma nei fotogrammi sotto la scritta 'SULLA MAPPA D'ITALIA' non compare alcuna mappa: lo schermo resta viola uniforme. Il reel promette una mappa che non mostra, e la sciarpa sulla mappa, che è la parte più visiva del conc",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio) e fotogrammi della scena 'Scrivi' e della mappa: nella mia mansione (grafica e copertine) il reel è in ordine.",
+    "esito": "segnalo",
+    "secondo": 8.9,
+    "problema": "La mappa d'Italia è citata nel testo ('sulla mappa d'Italia mette la sciarpa'), ma nei fotogrammi sotto la scritta 'SULLA MAPPA D'ITALIA' non compare alcuna mappa: lo schermo resta viola uniforme. Il reel promette una mappa che non mostra, e la sciarpa sulla mappa, che è la parte più visiva del concept, non si vede mai.",
+    "correzione": "Inserire tra 8.9s e 12s una breve animazione della mappa d'Italia con una luce/sciarpa che si accende in una città (es. Napoli), oppure un frame della mappa reale già usata nel progetto.",
+    "idea": "Per i prossimi reel tifo, usare sempre un elemento visivo reale (mappa animata o foto dell'animale con sciarpa) nella scena del commento, e ridurre i momenti di solo testo."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:31+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 9 (scena «sulla mappa d'Italia») il testo centrale «SULLA MAPPA D'ITALIA» occupa il centro mentre la trascrizione dice «sulla mappa d'Italia mette la sciarpa coi suoi colori», ma la mappa vera non compare mai nel reel: la promessa visiva principale (vedere il cane sulla mappa) è solo desc",
+   "dati": {
+    "controllato": "Copione, scene, fascia, didascalia, audio (-14 LUFS, picco -0.9 dBFS, nessun silenzio) e i 6 fotogrammi: nel reel la fascia «Scrivi città, nome e squadra» compare in basso ma nel fotogramma 0.5s e nelle scene successive resta coerente; la frase «Luna, forza Napoli» e la scheda mostrano il meccanismo.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Al secondo 9 (scena «sulla mappa d'Italia») il testo centrale «SULLA MAPPA D'ITALIA» occupa il centro mentre la trascrizione dice «sulla mappa d'Italia mette la sciarpa coi suoi colori», ma la mappa vera non compare mai nel reel: la promessa visiva principale (vedere il cane sulla mappa) è solo descritta a parole. Inoltre le scene 0.5s–12s sono quasi tutte schermate di testo statiche con poco movimento.",
+    "correzione": "Inserire nella scena del secondo 8–10 un frammento reale della mappa con una luce/sciarpa che si accende (anche 1–2 secondi), e aggiungere una leggera animazione (zoom o pulsazione) sul titolo per dare ritmo.",
+    "idea": "Un reel «Ecco la mappa di ieri sera»: la mappa piena di sciarpe accese, con il conteggio delle squadre che si aggiorna in tempo reale."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:31+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «Il tuo cane per chi [1.2s] tifa?» ma la frase del brief è «Il tuo cane per chi tifa?»: il testo parlato al secondo 0 risulta spezzato e mancano i riferimenti visivi. Inoltre la didascalia dice «tuo cane o gatto» mentre il gancio parla solo di cane, e i dati mappa sono vuoti (ne",
+   "dati": {
+    "controllato": "Copione, trascrizione con secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo), didascalia e fascia testuale, per verificare coerenza e pulizia del reel.",
+    "esito": "segnalo",
+    "secondo": 1.2,
+    "problema": "La trascrizione dice «Il tuo cane per chi [1.2s] tifa?» ma la frase del brief è «Il tuo cane per chi tifa?»: il testo parlato al secondo 0 risulta spezzato e mancano i riferimenti visivi. Inoltre la didascalia dice «tuo cane o gatto» mentre il gancio parla solo di cane, e i dati mappa sono vuoti (nessuna luce verificata da mostrare). La voce è dichiarata generata con IA, ma la trascrizione non riporta il disclaimer nel parlato.",
+    "correzione": "Allineare la trascrizione al copione (un'unica frase senza pausa a 1.2s), uniformare cane/gatto tra voce e didascalia, e aggiungere in copertina o in fascia la scritta 'voce IA' già presente in didascalia.",
+    "idea": "Mostrare nel reel una città reale già illuminata con la sua sciarpa, così lo spettatore vede subito il risultato promesso dal commento."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:32+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella didascalia la frase d'esempio «Napoli, Luna, cane, forza Napoli» e il testo sulla mappa non compaiono nei dati di copione, ma il problema concreto è un altro: 'dati_mappa' è vuoto, quindi non posso verificare che la sciarpa della città sia davvero visibile sulla mappa nei fotogrammi. Inoltre '",
+   "dati": {
+    "controllato": "Upload sul sito: audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo), trascrizione coi secondi, didascalia e hashtag, coerenza tra copione e brief.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Nella didascalia la frase d'esempio «Napoli, Luna, cane, forza Napoli» e il testo sulla mappa non compaiono nei dati di copione, ma il problema concreto è un altro: 'dati_mappa' è vuoto, quindi non posso verificare che la sciarpa della città sia davvero visibile sulla mappa nei fotogrammi. Inoltre 'apertura' e 'copertina' sono null: il primo fotogramma non è stato definito come gancio visivo. Il primo secondo ha un volume medio di -16.7 dB, più basso dell'obiettivo, quindi l'apertura rischia di sembrare debole.",
+    "correzione": "Caricare i dati della mappa per confermare la resa visiva della sciarpa, definire un'apertura e una copertina esplicite (es. cane con sciarpa juventina al secondo 0.5) e alzare leggermente il volume dei primi 5 secondi prima della pubblicazione.",
+    "idea": "Un reel con la classifica delle squadre per numero di cani registrati sulla mappa, con i colori delle sciarpe in sovrimpressione, da pubblicare il giorno della giornata di campionato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:33+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione manca la fascia di apertura (apertura: null) e la mappa non ha dati (dati_mappa vuoto), quindi non posso verificare cosa compare sullo schermo nei primi secondi. Inoltre la frase 'Juve, Inter, Milan, Napoli, Roma o Lazio?' viene detta a 1.2s-7.1s e la scena 'tifosi' non è document",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e confronto con i reel precedenti.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione manca la fascia di apertura (apertura: null) e la mappa non ha dati (dati_mappa vuoto), quindi non posso verificare cosa compare sullo schermo nei primi secondi. Inoltre la frase 'Juve, Inter, Milan, Napoli, Roma o Lazio?' viene detta a 1.2s-7.1s e la scena 'tifosi' non è documentata nei fotogrammi inviati solo a 0.5, 3, 6, 9, 12, 15 secondi. La didascalia contiene 'Voce generata con IA' e la voce è segnata come true: va verificato che sia dichiarato in modo coerente.",
+    "correzione": "Confermare con il reparto Video cosa appare nei secondi 1-7 e popolare dati_mappa per poter validare la promessa 'la sciarpa coi colori'. Aggiungere al brief un'apertura esplicita e allineare i fotogrammi richiesti alle scene dichiarate.",
+    "idea": "Per i prossimi reel tifo, mostrare subito una sciarpa o una mappa con una luce già accesa nei primi 2 secondi e dichiarare sempre il dato di partecipazione (es. quante luci per squadra) per dare un risultato concreto."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:35+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Il tuo cane per chi tifa?' è detta come 'Il tuo cane per chi [1.2s] tifa?' ma nel brief la scena 'gancio' è la stessa del finale; in più la voce dice 'Il tuo cane' mentre la didascalia e la fascia parlano anche di gatti: il reel promette solo cani, rischiando di perdere ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del brief, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo), didascalia e fascia testo: tutto coerente e nei limiti.",
+    "esito": "segnalo",
+    "secondo": 14.3,
+    "problema": "Nella trascrizione la frase 'Il tuo cane per chi tifa?' è detta come 'Il tuo cane per chi [1.2s] tifa?' ma nel brief la scena 'gancio' è la stessa del finale; in più la voce dice 'Il tuo cane' mentre la didascalia e la fascia parlano anche di gatti: il reel promette solo cani, rischiando di perdere una parte del pubblico. Inoltre 'Juve, Inter, Milan...' nel copione è detto, ma nella didascalia la squadra della città non viene richiamata nel parlato.",
+    "correzione": "Nel parlato del gancio dire 'Il tuo cane o gatto per chi tifa?' oppure allineare la fascia e la didascalia al solo cane; nel finale (14.3s) esplicitare 'cani e gatti' per coerenza con la domanda sulla tifoseria.",
+    "idea": "Per i prossimi reel tifo, mostrare nel fotogramma a 9s una mappa con una città già colorata come esempio, così chi guarda capisce subito cosa scrivere nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:35+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La didascalia dice 'Campionato delle Zampe' e 'Domenica' come se fosse un evento in corso, ma nel brief non c'è nessun dato che lo confermi. Inoltre la trascrizione chiude a 15.9s con 'quale tifoseria ha più cani?' senza risposta né invito chiaro, e la fascia 'Scrivi città, nome e squadra' compare i",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione vs brief, didascalia, misure audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio) e coerenza con i dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 15.9,
+    "problema": "La didascalia dice 'Campionato delle Zampe' e 'Domenica' come se fosse un evento in corso, ma nel brief non c'è nessun dato che lo confermi. Inoltre la trascrizione chiude a 15.9s con 'quale tifoseria ha più cani?' senza risposta né invito chiaro, e la fascia 'Scrivi città, nome e squadra' compare in un testo che il video non pronuncia per intero; la frase 'mette la sciarpa coi suoi colori' è detta, ma la mappa (dati_mappa) è vuota, quindi non posso verificare che l'effetto sulla mappa sia reale nel video. Il brief dichiara 'voce: true' e la didascalia dice 'Voce generata con IA', coerente, ma la fascia d'apertura è null.",
+    "correzione": "Verificare con il reparto Dati se il 'Campionato delle Zampe' e la domenica sono confermati, altrimenti togliere la scadenza dalla didascalia; aggiungere alla fine del video un invito esplicito (es. 'scrivi la tua squadra qui sotto') e controllare che la mappa mostri davvero le sciarpe prima della pubblicazione.",
+    "idea": "Nei prossimi reel di tifo, chiudere con una mini-classifica di città che si aggiorna ogni giorno: dà un motivo concreto per tornare e per commentare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:35+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, audio (LUFS, picco, silenzi), didascalia e coerenza col brief: tutto nei parametri.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (LUFS, picco, silenzi), didascalia e coerenza col brief: tutto nei parametri.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Dopo la domenica del campionato, mostrare sulla mappa la classifica delle sciarpe per città, così il reel successivo riprende la stessa conversazione."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:37+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La mappa dati è vuota (dati_mappa: []) e la trascrizione dice che sulla mappa il cane 'mette la sciarpa coi suoi colori', ma nei materiali non c'è nessuna prova verificata che la mappa lo mostri. Inoltre i fotogrammi inviati arrivano solo a 15 s, mentre la durata è 15.9 s: l'ultimo fotogramma non co",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (LUFS, picco, silenzi), didascalia e hashtag del reel 'tifo' contro gli obiettivi di volume e il brief.",
+    "esito": "segnalo",
+    "secondo": 15,
+    "problema": "La mappa dati è vuota (dati_mappa: []) e la trascrizione dice che sulla mappa il cane 'mette la sciarpa coi suoi colori', ma nei materiali non c'è nessuna prova verificata che la mappa lo mostri. Inoltre i fotogrammi inviati arrivano solo a 15 s, mentre la durata è 15.9 s: l'ultimo fotogramma non copre la chiusura. Il volume medio dei primi 5 s (-16.7 dB) è sotto l'obiettivo di -14 LUFS e il campo 'apertura' del brief è null.",
+    "correzione": "Confermare con i dati reali della mappa che la sciarpa compaia davvero dopo l'invio di città, nome e squadra, oppure riformulare la frase in modo più generico. Aggiungere un fotogramma a 15.9 s. Alzare leggermente il volume dei primi secondi senza superare -1 dBFS di picco.",
+    "idea": "Un reel con il conteggio in diretta dei cani per squadra, aggiornato nei giorni prima della domenica, così il tifo diventa una gara da seguire."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:39+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il brief ha 'apertura': null, quindi il primo secondo non ha una scena d'apertura definita; la trascrizione inizia con 'Il tuo cane per chi' a 0.0s mentre il copione dice 'Il tuo cane per chi tifa?' con un'attesa a 1.2s, cioè il gancio arriva un po' frammentato. Inoltre la didascalia fa riferimento ",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, coerenza tra copione, didascalia e fascia testo, e durata rispetto ai dati del reel.",
+    "esito": "segnalo",
+    "secondo": 0.0,
+    "problema": "Il brief ha 'apertura': null, quindi il primo secondo non ha una scena d'apertura definita; la trascrizione inizia con 'Il tuo cane per chi' a 0.0s mentre il copione dice 'Il tuo cane per chi tifa?' con un'attesa a 1.2s, cioè il gancio arriva un po' frammentato. Inoltre la didascalia fa riferimento a 'Campionato delle Zampe' e a 'domenica', ma nei dati non c'è nessun evento verificato a conferma. Il volume medio dei primi 5 secondi (-16.7 dB) è un po' basso rispetto all'obiettivo di apertura, anche se entro la soglia generale.",
+    "correzione": "Definire un'apertura esplicita nel brief (es. frase gancio con 'tifa?' scandito a 0.0-1.0s) e verificare la data del 'campionato' prima di pubblicare; alzare leggermente il livello dei primi 5 secondi.",
+    "idea": "Replicare il formato 'testa a testa' (2452 views, 86 commenti, il migliore dei dati) con una sfida tra due città e un conteggio live di cani per squadra."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:39+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'dati_mappa' è vuoto: nei materiali non risulta la mappa con le luci dei cani per le squadre citate, quindi il reel promette una sciarpa sulla mappa senza che lo si possa verificare. Inoltre 'apertura' è null e la prima frase parte senza un'immagine di gancio chiara nel brief.",
+   "dati": {
+    "controllato": "Trascrizione, copione, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e dati della mappa nel reel 2026-11-15-1148-tifo.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il dato 'dati_mappa' è vuoto: nei materiali non risulta la mappa con le luci dei cani per le squadre citate, quindi il reel promette una sciarpa sulla mappa senza che lo si possa verificare. Inoltre 'apertura' è null e la prima frase parte senza un'immagine di gancio chiara nel brief.",
+    "correzione": "Verificare che la mappa mostri davvero le luci con i colori delle squadre prima della pubblicazione, oppure correggere la didascalia; compilare il campo apertura con una frase forte nei primi 2 secondi.",
+    "idea": "Ripetere il formato 'testa a testa' (2452 views, 86 commenti) mostrando in apertura due città reali sulla mappa, così il pubblico vede subito il risultato che promette."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:39+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice 'Il tuo cane per chi tifa?' ma la didascalia e il brief parlano di cane o gatto; inoltre la didascalia non è verificabile sulla mappa perché dati_mappa è vuoto, quindi la promessa 'il tuo cane mette la sciarpa' non è supportata dai materiali. Anche la fascia 'Scrivi città, nome e squad",
+   "dati": {
+    "controllato": "Trascrizione, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e coerenza col brief tifo; la mappa non ha dati da verificare.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il testo dice 'Il tuo cane per chi tifa?' ma la didascalia e il brief parlano di cane o gatto; inoltre la didascalia non è verificabile sulla mappa perché dati_mappa è vuoto, quindi la promessa 'il tuo cane mette la sciarpa' non è supportata dai materiali. Anche la fascia 'Scrivi città, nome e squadra' è lunga e il frame al secondo 12 coincide con il gancio finale senza un chiaro invito a commentare.",
+    "correzione": "Allineare il gancio a 'cane o gatto' e verificare che la mappa mostri davvero le sciarpe prima di promettere l'effetto; accorciare la fascia e ripetere l'invito a commentare nei secondi finali.",
+    "idea": "Un reel con una città reale che si accende con la sciarpa in tempo reale, mostrato a inizio video, così la promessa è visibile subito."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:40+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il reel dichiara 'Voce generata con IA' ma la trascrizione e il brief non indicano nessun dato sulla mappa (dati_mappa vuoto): il gancio 'quale tifoseria ha più cani?' non ha ancora una risposta verificata, e la didascalia chiede agli utenti di 'fare salire la squadra' senza una classifica reale da ",
+   "dati": {
+    "controllato": "Trascrizione, timing, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo), didascalia e dati del progetto rispetto all'obiettivo del formato tifo.",
+    "esito": "segnalo",
+    "secondo": 15,
+    "problema": "Il reel dichiara 'Voce generata con IA' ma la trascrizione e il brief non indicano nessun dato sulla mappa (dati_mappa vuoto): il gancio 'quale tifoseria ha più cani?' non ha ancora una risposta verificata, e la didascalia chiede agli utenti di 'fare salire la squadra' senza una classifica reale da mostrare. Inoltre la chiusura al secondo 15 non ha un invito chiaro a seguire.",
+    "correzione": "Prima di pubblicare, verificare il conteggio reale per squadra sulla mappa e aggiungere in coda (o nella fascia finale) un frame con la classifica attuale; nel copy finale aggiungere 'Seguici per la classifica' per legare il reel al follow.",
+    "idea": "Per i prossimi reel tifo: mostrare la sciarpa che compare sulla mappa come immagine d'apertura e chiudere con la classifica parziale aggiornata."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:41+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La mappa è assente nei dati (dati_mappa vuoto) e l'apertura è null: non ci sono prove che la sciarpa compaia davvero sulla mappa nei fotogrammi, e il gancio iniziale (0-1.2s) è solo una frase, senza immagine di supporto dichiarata. Inoltre la didascalia dice 'Voce generata con IA' e la trascrizione ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione e didascalia, misure audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e fotogrammi inviati, verificando che il testo e il ritmo corrispondano al brief.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La mappa è assente nei dati (dati_mappa vuoto) e l'apertura è null: non ci sono prove che la sciarpa compaia davvero sulla mappa nei fotogrammi, e il gancio iniziale (0-1.2s) è solo una frase, senza immagine di supporto dichiarata. Inoltre la didascalia dice 'Voce generata con IA' e la trascrizione ha la prima frase 'Il tuo cane per chi tifa?' ma il brief scena 'gancio' è ripetuto anche al finale senza un'azione visiva chiara.",
+    "correzione": "Verificare che i fotogrammi 0.5s e 3s mostrino la mappa con il primo cane/sciarpa e aggiungere al primo secondo un'immagine forte (cane con sciarpa) abbinata al gancio; completare il dato mappa nei materiali.",
+    "idea": "Chiudere ogni reel con un'immagine della mappa che si illumina nella città scritta dal follower, così il commento diventa visibile e spinge a seguire per vedere la propria luce."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:43+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il brief ha 'apertura': null e la trascrizione parte con 'Il tuo cane per chi' a 0.0s, quindi la frase di gancio si sente già dal primo fotogramma senza un'apertura dedicata; in più il titolo a schermo non è verificabile dai dati, mentre la didascalia dice 'Voce generata con IA' senza che sia chiaro",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (LUFS, picco, silenzi) e coerenza della fascia con il brief del reel sul tifo.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il brief ha 'apertura': null e la trascrizione parte con 'Il tuo cane per chi' a 0.0s, quindi la frase di gancio si sente già dal primo fotogramma senza un'apertura dedicata; in più il titolo a schermo non è verificabile dai dati, mentre la didascalia dice 'Voce generata con IA' senza che sia chiaro se la voce del copione corrisponda a quella registrata. Inoltre la didascalia cita 'Napoli, Luna, cane, forza Napoli' come esempio di formato, ma il testo sulla mappa dice 'mette la sciarpa coi suoi colori' e non è chiaro se il sistema mappa realmente la squadra scritta dall'utente (dati_mappa è vuoto, quindi non verifico).",
+    "correzione": "Confermare nel brief un'apertura esplicita (o usare la frase 0 come apertura chiaramente marcata) e verificare con i dati che la mappa registri davvero città e squadra prima di promettere l'effetto sciarpa nella didascalia.",
+    "idea": "Per i prossimi reel sul tifo, mostrare nei primi 2 secondi una sciarpa colorata con un cane sopra, così il gancio visivo regge anche con l'audio disattivato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:43+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato della mappa è vuoto (dati_mappa: []) e il brief dice che la sciarpa si mette sulla mappa, ma nei materiali non c'è nessuna prova che la mappa mostri davvero le sciarpe; inoltre la didascalia promette un'azione che il reel non dimostra. Il gancio 'Juve, Inter, Milan, Napoli, Roma o Lazio?' ar",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio), didascalia e dati del progetto nel mio reparto Community.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato della mappa è vuoto (dati_mappa: []) e il brief dice che la sciarpa si mette sulla mappa, ma nei materiali non c'è nessuna prova che la mappa mostri davvero le sciarpe; inoltre la didascalia promette un'azione che il reel non dimostra. Il gancio 'Juve, Inter, Milan, Napoli, Roma o Lazio?' arriva a 4.4s, quindi la sequenza dei nomi dura parecchio prima che si veda l'azione concreta.",
+    "correzione": "Confermare con il reparto Mappa che l'animazione delle sciarpe sia nel video e mostrarla nei fotogrammi a 8-10s; altrimenti togliere la promessa dalla didascalia. Accorciare l'elenco delle squadre o spostare la mappa più in alto nel reel.",
+    "idea": "Un reel con la mappa che si colora città per città man mano che arrivano i commenti, così il pubblico vede subito il risultato della propria partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:44+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il reel chiede di scrivere città, nome e squadra, ma non c'è alcun dato di mappa (dati_mappa vuoto) né prova visiva che la sciarpa compaia davvero sulla mappa; inoltre la fascia finale resta a schermo mentre la frase sul campionato parte al secondo 12.1, cioè la domanda 'quale tifoseria ha più cani?",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, audio (LUFS, picco, silenzi) e dati del progetto per il reparto Community, verificando che la call-to-action di commento sia chiara e coerente.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il reel chiede di scrivere città, nome e squadra, ma non c'è alcun dato di mappa (dati_mappa vuoto) né prova visiva che la sciarpa compaia davvero sulla mappa; inoltre la fascia finale resta a schermo mentre la frase sul campionato parte al secondo 12.1, cioè la domanda 'quale tifoseria ha più cani?' non ha risposta né invito chiaro a commentare con la squadra. La didascalia promette 'Campionato delle Zampe' ma nel parlato non viene spiegato cosa sia.",
+    "correzione": "Aggiungere nell'ultimo secondo (14-15,9s) un invito esplicito tipo 'Scrivi la tua squadra nei commenti' con la fascia, e chiarire in una frase cos'è il Campionato delle Zampe; verificare che le sciarpe sulla mappa siano visibili nei fotogrammi 9-12s.",
+    "idea": "Un reel con la classifica aggiornata del Campionato delle Zampe a fine settimana, con l'invito 'seguici per il risultato di domenica'."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:46+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'dati_mappa' è vuoto, quindi il testo 'sulla mappa mette la sciarpa coi suoi colori' non è verificabile nei materiali. Inoltre l'apertura è null: nel brief manca un gancio visivo/sonoro esplicito per i primi secondi, e la voce IA va dichiarata chiaramente (la didascalia lo fa, ma va verifica",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, copione/brief, didascalia e fascia testo rispetto agli obiettivi di moderazione.",
+    "esito": "segnalo",
+    "secondo": 15,
+    "problema": "Il dato 'dati_mappa' è vuoto, quindi il testo 'sulla mappa mette la sciarpa coi suoi colori' non è verificabile nei materiali. Inoltre l'apertura è null: nel brief manca un gancio visivo/sonoro esplicito per i primi secondi, e la voce IA va dichiarata chiaramente (la didascalia lo fa, ma va verificato che sia anche nel reel). Il copione chiude con una domanda senza risposta ('quale tifoseria ha più cani?'): va bene per il commento, ma la didascalia dice 'domenica' senza data precisa.",
+    "correzione": "Verificare che la mappa mostri davvero le sciarpe colorate nel reel (aggiungere i dati della mappa al brief o rimuovere la frase). Definire un'apertura con movimento/suono nei primi 1-2 secondi. Specificare la data del 'Campionato delle Zampe' o usare una formula più generica. Mantenere l'avviso 'voce generata con IA' anche nella fascia video.",
+    "idea": "Ripetere il formato 'Scrivi città, nome e squadra' mostrando nel reel una luce reale che si accende con la sciarpa della squadra, con la città in sovraimpressione: unisce il gancio al prodotto visibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:46+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La mappa non ha dati (dati_mappa è vuoto) e i fotogrammi inviati sono solo 6 su 16 previsti: non posso verificare visivamente che la sciarpa compaia davvero né la qualità delle immagini. Inoltre il frame del gancio è a 4.4s ma la frase 'tifosi' copre la lista squadre: la trascrizione dice 'Roma o La",
+   "dati": {
+    "controllato": "Trascrizione, timing, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio), didascalia e dati del progetto nel mio reparto Community.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La mappa non ha dati (dati_mappa è vuoto) e i fotogrammi inviati sono solo 6 su 16 previsti: non posso verificare visivamente che la sciarpa compaia davvero né la qualità delle immagini. Inoltre il frame del gancio è a 4.4s ma la frase 'tifosi' copre la lista squadre: la trascrizione dice 'Roma o Lazio' a 4.4s mentre il brief la mette nella scena tifosi, quindi il timing del testo va allineato.",
+    "correzione": "Verificare i fotogrammi mancanti (1-2, 4-5, 7-8, 10-11, 13-14) e confermare che la mappa mostri la sciarpa colorata; allineare la scritta 'Juve, Inter...' al segmento 1.2-4.4s e lasciare la sintesi della squadra sulla mappa per almeno 2 secondi.",
+    "idea": "Ripetere il formato con una mappa che mostri il conteggio reale delle sciarpe per squadra, aggiornato ogni domenica, così il follow nasce dal risultato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:46+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La didascalia dice «Voce generata con IA» ma non è indicato in modo chiaro sul reel; inoltre la fascia è al secondo 0 mentre la trascrizione inizia a 0.0s senza apertura, e la domanda «quale tifoseria ha più cani?» arriva al secondo 12 senza una call to action già chiara nel parlato prima della dida",
+   "dati": {
+    "controllato": "Trascrizione, tempi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio), didascalia e coerenza col brief per la mia parte Community.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La didascalia dice «Voce generata con IA» ma non è indicato in modo chiaro sul reel; inoltre la fascia è al secondo 0 mentre la trascrizione inizia a 0.0s senza apertura, e la domanda «quale tifoseria ha più cani?» arriva al secondo 12 senza una call to action già chiara nel parlato prima della didascalia.",
+    "correzione": "Mantenere la dicitura IA e renderla visibile anche nel video (fascia finale o sottotitolo breve); valutare di anticipare l'invito a scrivere città, nome e squadra intorno al secondo 4-5.",
+    "idea": "Aggiungere un finale che mostri la mappa con le sciarpe già accese e un invito a seguire la pagina per scoprire il risultato del Campionato delle Zampe."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:47+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'dati_mappa' è vuoto, quindi non si può verificare che la mappa mostri davvero le sciarpe delle squadre citate; inoltre la domanda finale 'quale tifoseria ha più cani?' non ha ancora una risposta né un modo per vederla nel reel, e la didascalia promette un confronto che il video non chiude.",
+   "dati": {
+    "controllato": "Trascrizione, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e coerenza col brief tifo.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il dato 'dati_mappa' è vuoto, quindi non si può verificare che la mappa mostri davvero le sciarpe delle squadre citate; inoltre la domanda finale 'quale tifoseria ha più cani?' non ha ancora una risposta né un modo per vederla nel reel, e la didascalia promette un confronto che il video non chiude.",
+    "correzione": "Confermare con i dati della mappa che le sciarpe appaiano per tutte e sei le squadre citate; aggiungere in chiusura (o in fascia) un riferimento visivo al conteggio o al 'domenica si vede'.",
+    "idea": "Chiudere ogni reel tifo con un mini-conteggio finale a schermo (es. 'Juve 312 · Napoli 287') per dare un motivo concreto di tornare la domenica."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:50+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La mappa non ha dati (dati_mappa vuoto) e il reel promette che sulla mappa il cane mette la sciarpa coi colori della squadra: nei materiali non c'è nulla che lo mostri. Inoltre la trascrizione dice 'Il tuo cane per chi' (0.0s) ma il copione dice 'Il tuo cane per chi tifa?': coerente, ma la frase 'qu",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, fascia, didascalia, audio (LUFS, picco, silenzi) e dati mappa rispetto al brief del reel tifo.",
+    "esito": "segnalo",
+    "secondo": 14.3,
+    "problema": "La mappa non ha dati (dati_mappa vuoto) e il reel promette che sulla mappa il cane mette la sciarpa coi colori della squadra: nei materiali non c'è nulla che lo mostri. Inoltre la trascrizione dice 'Il tuo cane per chi' (0.0s) ma il copione dice 'Il tuo cane per chi tifa?': coerente, ma la frase 'quale tifoseria ha più cani?' è un gancio senza un dato di risposta. Audio ok: -14.4 LUFS, picco -0.9 dBFS (sopra l'obiettivo di -1 dBFS per poco, da verificare), nessun silenzio lungo.",
+    "correzione": "Mostrare nel reel una schermata reale della mappa con almeno una sciarpa visibile, oppure riformulare la promessa in 'puoi mettere la sciarpa'. Abbassare il picco sotto -1 dBFS. Non promettere un confronto tra tifoserie finché non c'è un conteggio reale.",
+    "idea": "Un reel 'Sciarpa in mappa': mostra una luce che si accende nella città di un tifoso e la sciarpa che compare, con un conteggio aggiornato per squadra."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:50+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La mappa non ha dati verificati nel file (dati_mappa vuoto), quindi il testo 'sulla mappa mette la sciarpa coi suoi colori' e 'quale tifoseria ha più cani' promettono un risultato che non possiamo ancora mostrare. Inoltre la didascalia cita squadre specifiche mentre la fascia testuale è generica; la",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e dati mappa per il reel di tifo.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La mappa non ha dati verificati nel file (dati_mappa vuoto), quindi il testo 'sulla mappa mette la sciarpa coi suoi colori' e 'quale tifoseria ha più cani' promettono un risultato che non possiamo ancora mostrare. Inoltre la didascalia cita squadre specifiche mentre la fascia testuale è generica; la frase al secondo 4.4 'Roma o Lazio?' arriva dopo un elenco molto lungo e rischia di essere letta in fretta.",
+    "correzione": "Verificare che la mappa mostri davvero le sciarpe con i colori delle squadre prima di pubblicare, e allineare la promessa della fascia e della didascalia a ciò che il reel mostra; valutare di spezzare l'elenco delle squadre in due battute con una pausa visiva.",
+    "idea": "Un reel di 'classifica delle tifoserie' con la mappa aggiornata giorno per giorno, dove ogni squadra accende più luci, da chiudere con la domanda al pubblico."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:50+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La mappa non ha dati (dati_mappa vuoto) ma il copione dice che il cane 'mette la sciarpa coi suoi colori' sulla mappa: non c'è alcuna prova nei materiali che la sciarpa compaia, quindi l'affermazione non è verificabile. Anche la didascalia ripete 'il tuo cane o gatto mette la sciarpa'. Inoltre 'Voce",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, fascia, didascalia, audio (LUFS e picco) e dati della mappa rispetto al formato 'tifo' del reparto Indovina la Zampa.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "La mappa non ha dati (dati_mappa vuoto) ma il copione dice che il cane 'mette la sciarpa coi suoi colori' sulla mappa: non c'è alcuna prova nei materiali che la sciarpa compaia, quindi l'affermazione non è verificabile. Anche la didascalia ripete 'il tuo cane o gatto mette la sciarpa'. Inoltre 'Voce generata con IA' è dichiarato, ok, ma la frase 'Il tuo cane per chi tifa?' al secondo 0 è un gancio ottimo; il problema è solo la promessa visiva non documentata.",
+    "correzione": "Tenere nel copione e nella didascalia solo ciò che la mappa mostra davvero (verificare nei fotogrammi che la sciarpa compaia), oppure formulare: 'Scrivi città, nome e squadra e ti diciamo di che colore sarà la tua luce' se la funzione non è ancora confermata. Non citare 'quale tifoseria ha più cani' come dato se non esistono ancora conteggi per squadra.",
+    "idea": "Un reel con il conteggio reale della prima tifoseria animale dopo il primo turno della Coppa delle Zampe, usando i numeri veri del progetto."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:51+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Juve, Inter, Milan, Napoli, Roma o Lazio?' è parzialmente incoerente col copione: la didascalia elenca anche 'la squadra della tua città' ma il parlato no; inoltre la fascia cita 'Scrivi città, nome e squadra' senza indicare dove. Nei dati mappa non ci sono dati, quindi non posso verificar",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e didascalia rispetto al copione.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La frase 'Juve, Inter, Milan, Napoli, Roma o Lazio?' è parzialmente incoerente col copione: la didascalia elenca anche 'la squadra della tua città' ma il parlato no; inoltre la fascia cita 'Scrivi città, nome e squadra' senza indicare dove. Nei dati mappa non ci sono dati, quindi non posso verificare la resa visiva. Il reel mostra 6 fotogrammi inviati e non ho le immagini: la parte visiva non è verificabile da me.",
+    "correzione": "Allineare parlato e didascalia (es. aggiungere in voce 'o la squadra della tua città') e verificare nei fotogrammi che la sciarpa sulla mappa sia leggibile.",
+    "idea": "Per i prossimi reel: mostrare un commento reale di un follower in sovraimpressione a metà video, per dare prova sociale e spingere altri a scrivere."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:54+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Nei dati della mappa non risulta alcun dato (dati_mappa è vuoto), quindi il reel promette che la mappa mostra la sciarpa dei tifosi, ma non c'è verifica che il dispositivo funzioni. Inoltre la trascrizione dice 'Il tuo cane per chi tifa?' mentre il copione dice 'Il tuo cane per chi tifa?': coerenti.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, fascia, didascalia, audio (LUFS e picco) e confronto dei dati dei reel recenti nel mio reparto Coppa delle Zampe.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Nei dati della mappa non risulta alcun dato (dati_mappa è vuoto), quindi il reel promette che la mappa mostra la sciarpa dei tifosi, ma non c'è verifica che il dispositivo funzioni. Inoltre la trascrizione dice 'Il tuo cane per chi tifa?' mentre il copione dice 'Il tuo cane per chi tifa?': coerenti. Il problema più concreto è che la didascalia dichiara 'Voce generata con IA' ma il brief non contiene nessuna nota su questo, quindi va bene solo se è la scelta voluta. Il picco audio è sotto -1 dBFS e il volume iniziale rientra, quindi lato audio è a posto.",
+    "correzione": "Verificare con un test che la mappa mostri davvero la sciarpa per una città di prova prima di pubblicare, e confermare che la dicitura sull'IA sia intenzionale.",
+    "idea": "Mostrare nel reel una sciarpa reale che compare sulla mappa, così la promessa visiva è immediata e non solo detta."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:54+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Il tuo cane per chi tifa?' ma il copione e la didascalia dicono 'cane o gatto': per i gatti il gancio non regge. Inoltre l'apertura al secondo 0.0 è 'Il tuo cane', e manca un gancio visivo esplicito nei primi secondi; il campo 'apertura' del brief è null e il dato 'dati_mappa' ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e coerenza col brief tifo.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La trascrizione dice 'Il tuo cane per chi tifa?' ma il copione e la didascalia dicono 'cane o gatto': per i gatti il gancio non regge. Inoltre l'apertura al secondo 0.0 è 'Il tuo cane', e manca un gancio visivo esplicito nei primi secondi; il campo 'apertura' del brief è null e il dato 'dati_mappa' è vuoto, quindi non posso verificare cosa mostri la mappa in quel momento.",
+    "correzione": "Rendere il gancio inclusivo (es. 'Il tuo animale per chi tifa?') e verificare sui fotogrammi 0.5-3 s che la mappa e la sciarpa siano già visibili; compilare 'apertura' e 'dati_mappa' prima della pubblicazione.",
+    "idea": "Creare una versione con due protagonisti (cane e gatto) che 'tifano' per squadre diverse, così il formato parla a tutto il pubblico e alimenta il confronto nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:56+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato dei fotogrammi mostra che il reel non ha 'dati_mappa' (lista vuota), quindi non c'è la mappa con le città da mostrare nei tempi indicati; la frase 'mette la sciarpa coi suoi colori' al secondo 8.9 non è supportata da nessun dato visivo verificato. Inoltre nel brief 'apertura' è null e la did",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del brief, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e didascalia rispetto agli obiettivi.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il dato dei fotogrammi mostra che il reel non ha 'dati_mappa' (lista vuota), quindi non c'è la mappa con le città da mostrare nei tempi indicati; la frase 'mette la sciarpa coi suoi colori' al secondo 8.9 non è supportata da nessun dato visivo verificato. Inoltre nel brief 'apertura' è null e la didascalia dice 'Voce generata con IA' senza che il brief lo richieda esplicitamente; il secondo 0 è una scena senza contenuto dichiarato.",
+    "correzione": "Verificare che la mappa con le sciarpe sia effettivamente presente nei fotogrammi (3, 6, 9 s) prima di pubblicare; se non c'è, mostrare una schermata reale della mappa o riformulare la frase in modo generico. Definire un'apertura esplicita nel brief.",
+    "idea": "Un reel con due o tre sciarpe reali accese sulla mappa (una per squadra) e il conteggio dei cani per tifoseria come chiusura, così il verdetto diventa visibile e commentabile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:56+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La mappa non ha dati verificati (dati_mappa è vuoto) e il copione al secondo 4.4 elenca le squadre come se tutti i cani le seguissero, senza nessun numero che lo confermi. Inoltre la voce è dichiarata generata con IA, ma la pagina non ha ancora una scena con la mappa che mostri un animale reale che ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, misure audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e dati della mappa: il reel è nei parametri tecnici.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "La mappa non ha dati verificati (dati_mappa è vuoto) e il copione al secondo 4.4 elenca le squadre come se tutti i cani le seguissero, senza nessun numero che lo confermi. Inoltre la voce è dichiarata generata con IA, ma la pagina non ha ancora una scena con la mappa che mostri un animale reale che accende la luce.",
+    "correzione": "Aggiungere in scena, prima della domanda sul campionato, un'immagine reale della mappa con almeno una luce accesa e la città scritta, e tenere il conteggio tifoserie fuori dal video finché non c'è un dato verificato da mostrare.",
+    "idea": "Un reel sulla luce più vicina a chi commenta: mostra la città di un follower reale che si accende sulla mappa, con il suo nome e la sua squadra, e chiudi con il conteggio aggiornato delle luci."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:57+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «E domenica il campionato: quale tifoseria ha più cani?» ma nei fotogrammi la frase centrale dice «E domenica il» e poi «Più cani?»: la domanda è spezzata in due schermate e la chiusura («Più cani?») arriva senza il resto della frase. Inoltre la didascalia parla di «cani e gatti» men",
+   "dati": {
+    "controllato": "Trascrizione, secondi delle frasi, audio (-14 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e coerenza tra copione, fotogrammi e didascalia.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il copione dice «E domenica il campionato: quale tifoseria ha più cani?» ma nei fotogrammi la frase centrale dice «E domenica il» e poi «Più cani?»: la domanda è spezzata in due schermate e la chiusura («Più cani?») arriva senza il resto della frase. Inoltre la didascalia parla di «cani e gatti» mentre il copione dice solo «cani»: incoerenza di messaggio.",
+    "correzione": "Allineare il testo a schermo: «E domenica il campionato: quale tifoseria ha più cani e gatti?» in un'unica schermata, e usare la stessa formula in didascalia e nel reel.",
+    "idea": "Mostrare nel reel un esempio reale di cane sulla mappa con la sua sciarpa (anche solo 2 secondi) e chiudere con il numero aggiornato dei cani per squadra, per dare prova sociale e voglia di entrare nella classifica."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:59+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il gancio finale «E domenica il campionato: quale tifoseria ha più cani?» arriva a 12.1s, mentre il fotogramma a 12s mostra ancora la scritta incompleta «E DOMENICA IL», e la domanda vera compare solo dopo, per cui chi guarda non capisce subito cosa succede domenica. Inoltre la fascia «Scrivi città,",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14 LUFS, picco -0.9 dBFS, nessun silenzio lungo), didascalia e fotogrammi: testo e scene coerenti con il formato tifo.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il gancio finale «E domenica il campionato: quale tifoseria ha più cani?» arriva a 12.1s, mentre il fotogramma a 12s mostra ancora la scritta incompleta «E DOMENICA IL», e la domanda vera compare solo dopo, per cui chi guarda non capisce subito cosa succede domenica. Inoltre la fascia «Scrivi città, nome e squadra» resta fissa per tutto il reel e in alcuni fotogrammi (es. 0.5s e 3s) il riquadro di esempio «Scrivilo qui sotto» e la tendina della mappa non sono ancora chiari come invito.",
+    "correzione": "Anticipare la frase «Quale tifoseria ha più cani?» prima di «E domenica», oppure mostrare insieme 'Domenica: il Campionato delle Zampe' in un unico frame, e nell'ultimo secondo far comparire un CTA visivo più forte (es. 'Scrivi ora sotto ⬇').",
+    "idea": "Per i prossimi reel: mostrare in chiusura una mappa con 2-3 animali già accesi (con nomi reali) per trasformare il CTA in prova sociale, e tenere sempre la domanda finale completa in un unico frame."
+   }
+  },
+  {
+   "t": "2026-11-15T10:50:59+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «sulla mappa d'Italia mette la sciarpa» e la didascalia promette che la luce appare sulla mappa, ma nei fotogrammi la mappa non compare mai: l'animazione mostra solo la sciarpa dei club e la fascia di istruzioni. Inoltre la scena «Il campionato delle Zampe» con la domanda «Più cani?» re",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio) e i 6 fotogrammi del reel.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il reel dice «sulla mappa d'Italia mette la sciarpa» e la didascalia promette che la luce appare sulla mappa, ma nei fotogrammi la mappa non compare mai: l'animazione mostra solo la sciarpa dei club e la fascia di istruzioni. Inoltre la scena «Il campionato delle Zampe» con la domanda «Più cani?» resta ferma su testi senza risposta, quindi il gancio finale non si chiude. Anche la didascalia (Luna, cane, forza Napoli) non corrisponde a nessuna immagine vista.",
+    "correzione": "Inserire nel reel un fotogramma della mappa con una luce accesa al momento della frase «sulla mappa d'Italia» (circa 8.9s), e aggiungere in chiusura la risposta o un invito chiaro (es. «Scopri domenica chi vince») con il numero di cani/gatti per squadra.",
+    "idea": "Un reel con un cane reale che «si accende» sulla mappa della propria città accanto alla sua sciarpa, con classifica parziale del campionato delle zampe nell'ultimo secondo."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:01+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Dal secondo 8.9 al 12.1 il testo sulla mappa (\"sulla mappa d'Italia mette la sciarpa\") resta in primo piano mentre la mappa reale non compare in nessun fotogramma: la promessa visiva non è mostrata. Inoltre il frame a 9s è ancora la scritta \"Sulla mappa d'Italia\" su sfondo vuoto, quindi lo spettator",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14 LUFS, picco -0.9 dBFS, nessun silenzio), didascalia e fotogrammi: il reel è coerente con il brief e i tempi della voce corrispondono alle scene.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Dal secondo 8.9 al 12.1 il testo sulla mappa (\"sulla mappa d'Italia mette la sciarpa\") resta in primo piano mentre la mappa reale non compare in nessun fotogramma: la promessa visiva non è mostrata. Inoltre il frame a 9s è ancora la scritta \"Sulla mappa d'Italia\" su sfondo vuoto, quindi lo spettatore non vede il risultato. Infine la fascia in basso è identica dall'inizio alla fine e copre la stessa zona della CTA.",
+    "correzione": "Aggiungere tra 8.9s e 12s un fotogramma della mappa con una sciarpa colorata accesa (anche un esempio mock-up, dichiarato come tale se non sono dati reali), e cambiare la fascia in un testo che varia (es. 'Scrivi ora: la tua città si accende') per tenere l'attenzione fino alla fine.",
+    "idea": "Per i prossimi reel tifo, chiudere con un fotogramma reale della mappa che si accende nella città del commento più recente, così la promessa del reel viene mostrata e il commento diventa il protagonista."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:01+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il gancio finale «E domenica il campionato: quale tifoseria ha più cani?» si interrompe a metà (fotogrammi 12–15 mostrano «E DOMENICA IL» poi «PIÙ CANI?»): il testo non è completo fino a 14,3s e la domanda resta sospesa senza risposta né invito chiaro a commentare; inoltre la fascia «Scrivi città, n",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, fascia testuale e fotogrammi del reel; i dati mappa sono vuoti e non ci sono dati di performance per questo formato.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il gancio finale «E domenica il campionato: quale tifoseria ha più cani?» si interrompe a metà (fotogrammi 12–15 mostrano «E DOMENICA IL» poi «PIÙ CANI?»): il testo non è completo fino a 14,3s e la domanda resta sospesa senza risposta né invito chiaro a commentare; inoltre la fascia «Scrivi città, nome e squadra» è ripetuta su quasi tutti i fotogrammi, appesantendo la scena.",
+    "correzione": "Chiudere il gancio con una frase compiuta (es. «Domenica il Campionato delle Zampe: quale tifoseria ha più cani e gatti? Scrivilo qui sotto!») e lasciare la fascia call-to-action solo nelle scene finali, alleggerendo quelle centrali.",
+    "idea": "Per i prossimi reel: mostrare un esempio reale di sciarpa sulla mappa (con un account anonimo) come prova sociale, e chiudere sempre con un unico CTA finale ben leggibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:04+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 12 la frase «E domenica il campionato» resta in primo piano con la parola «domenica» già detta ma la frase finale «quale tifoseria ha più cani?» compare solo a 14.3s; nel fotogramma del secondo 12 il testo sullo schermo è ancora incompleto («E DOMENICA IL»), quindi il gancio sul campionat",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14 LUFS, picco -0.9 dBFS, nessun silenzio), didascalia e fotogrammi: la mansione è coerente e tecnicamente a posto.",
+    "esito": "segnalo",
+    "secondo": 12,
+    "problema": "Al secondo 12 la frase «E domenica il campionato» resta in primo piano con la parola «domenica» già detta ma la frase finale «quale tifoseria ha più cani?» compare solo a 14.3s; nel fotogramma del secondo 12 il testo sullo schermo è ancora incompleto («E DOMENICA IL»), quindi il gancio sul campionato arriva con la scritta troncata per circa 2 secondi. Inoltre la fascia «Scrivi città, nome e squadra» è presente in quasi tutti i fotogrammi ma non varia, e nel reel la parte in cui si spiega cosa fare per partecipare (scrivere nel commento) è solo nel fondo, non nel corpo del video.",
+    "correzione": "Far comparire la scritta completa «E DOMENICA IL CAMPIONATO» e la domanda finale insieme, portando la frase sullo schermo entro il secondo 12; aggiungere una freccia o una scritta animata che indichi il commento nella fascia finale.",
+    "idea": "Mostrare sulla mappa una luce reale che si accende con una sciarpa colorata nei primi 3 secondi, così il risultato del gioco è visibile prima della richiesta di scrivere."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:04+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 12 la frase 'E domenica il campionato' compare su schermo come 'E DOMENICA IL' e il finale 'quale tifoseria ha più cani?' sembra spezzato: la domanda resta a metà con la scena che cambia, mentre il pubblico deve ancora capire cosa succede domenica. Inoltre la domanda finale ('più cani?') ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, scene dei fotogrammi, audio, fascia e didascalia del reel tifo: nessun dato di mappa presente, quindi nessun numero da verificare sulla mappa.",
+    "esito": "segnalo",
+    "secondo": 12,
+    "problema": "Al secondo 12 la frase 'E domenica il campionato' compare su schermo come 'E DOMENICA IL' e il finale 'quale tifoseria ha più cani?' sembra spezzato: la domanda resta a metà con la scena che cambia, mentre il pubblico deve ancora capire cosa succede domenica. Inoltre la domanda finale ('più cani?') non ha una risposta o un invito chiaro su schermo, e la fascia in basso ripete lo stesso testo per tutto il reel, senza variare.",
+    "correzione": "Chiudere la frase in un unico blocco leggibile tipo 'Domenica: quale tifoseria ha più cani e gatti?' tenuto fermo almeno 2 secondi, e aggiungere nell'ultimo fotogramma un invito diretto come 'Tagga il tuo amico tifoso' o 'Scrivi la tua squadra adesso'.",
+    "idea": "Per i prossimi reel tifo, mostrare un esempio reale di cane con sciarpa sulla mappa nell'ultimo secondo, così il premio visivo arriva prima della richiesta di partecipare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:07+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il testo «E domenica il campionato: quale tifoseria ha più cani?» compare a schermo in due fotogrammi separati (12.1s circa) con la frase tagliata: «E DOMENICA IL» e poi «IL CAMPIONATO… PIÙ CANI?». La domanda finale «Più cani?» viene mostrata solo come titolo e non è chiaramente collegata al resto. ",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione con secondi, audio, testi a schermo nei fotogrammi e coerenza con didascalia e brief del reel sulle squadre.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il testo «E domenica il campionato: quale tifoseria ha più cani?» compare a schermo in due fotogrammi separati (12.1s circa) con la frase tagliata: «E DOMENICA IL» e poi «IL CAMPIONATO… PIÙ CANI?». La domanda finale «Più cani?» viene mostrata solo come titolo e non è chiaramente collegata al resto. Inoltre, nel fotogramma a 12s la frase «E DOMENICA IL» resta sospesa, e la parola «campionato» non ha un momento di lettura pulito. Dal copione non si capisce a quale squadra o a quali dati si riferisca la sfida di domenica, e nessun dato numerico della mappa è incluso per supportarla.",
+    "correzione": "Mostrare la frase completa «E domenica il Campionato delle Zampe» in un unico fotogramma leggibile per almeno 1,5 s, poi la domanda «Quale tifoseria ha più cani e gatti?» e solo dopo «Più cani?» come chiusura. Aggiungere un invito chiaro (es. «Tagga un amico tifoso») nell'ultimo fotogramma.",
+    "idea": "Per i prossimi reel, aggiungere un contatore vivo («Sono già X cani per il Napoli») per dare un risultato concreto alla sfida domenicale e motivare il follow."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:07+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il gancio finale «E domenica il campionato» arriva a 12.1s, ma la scritta «E DOMENICA IL» resta a schermo senza completare la frase per circa 3 secondi di fotogrammi: la frase si legge a metà. Inoltre la fascia «Scrivi città, nome e squadra» resta fissa per tutto il video e la mappa non compare mai ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio) e i 6 fotogrammi: ritmo, testi e fascia call-to-action.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il gancio finale «E domenica il campionato» arriva a 12.1s, ma la scritta «E DOMENICA IL» resta a schermo senza completare la frase per circa 3 secondi di fotogrammi: la frase si legge a metà. Inoltre la fascia «Scrivi città, nome e squadra» resta fissa per tutto il video e la mappa non compare mai nei fotogrammi: il reel promette la mappa con la sciarpa ma non la mostra.",
+    "correzione": "Mostrare a 9-12s un'anteprima della mappa con una sciarpa colorata, e completare il testo «E DOMENICA IL CAMPIONATO» nello stesso fotogramma in cui appare la domanda finale, eliminando la scena ripetuta «PIÙ CANI?» che allunga il video senza nuove informazioni.",
+    "idea": "Un reel con la mappa che si accende città per città mentre il commento appare, chiudendo con il conteggio dei cani per tifoseria."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:07+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Juve, Inter, Milan, Napoli, Roma o Lazio?' ma la didascalia e il copione sembrano elencare solo sei squadre mentre la mappa e la promessa del reel parlano di qualsiasi squadra della città; inoltre il dato 'follower_ogni_1000' è null per l'ultimo reel e non ci sono dati mappa (dati_m",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo), didascalia e copione per la mansione Innovazione.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Il copione dice 'Juve, Inter, Milan, Napoli, Roma o Lazio?' ma la didascalia e il copione sembrano elencare solo sei squadre mentre la mappa e la promessa del reel parlano di qualsiasi squadra della città; inoltre il dato 'follower_ogni_1000' è null per l'ultimo reel e non ci sono dati mappa (dati_mappa vuoto), quindi non posso verificare che la sciarpa compaia davvero per tutte le città. Anche la didascalia dice 'Scrivi città, nome e squadra' ma la fascia a schermo dice solo 'Scrivi città, nome e squadra' senza indicare dove scrivere (il commento va specificato).",
+    "correzione": "Aggiungere in fascia o nel parlato 'scrivilo nei commenti' e confermare con dati verificati che la mappa mostri la sciarpa per le squadre citate; se non verificabile, non promettere 'tutte le squadre' o indicare 'le squadre della serie A'.",
+    "idea": "Un formato 'sciarpa in mappa' con una città sola alla volta, mostrando un cane con la sciarpa della squadra locale, più facile da seguire e da condividere."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:07+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il reel inizia con un pezzo parlato (\"Il tuo cane per chi\") che parte da 0.0s con volume medio di apertura di -16.7 dB, sotto il livello target: nei primi secondi l'audio è più debole del resto. Inoltre il campo 'apertura' del brief è vuoto e il 'dati_mappa' non ha alcun dato verificato: la scena de",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (LUFS, picco, silenzi), brief e didascalia del reel tifo, confrontati con gli obiettivi di mix e con i dati di progetto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il reel inizia con un pezzo parlato (\"Il tuo cane per chi\") che parte da 0.0s con volume medio di apertura di -16.7 dB, sotto il livello target: nei primi secondi l'audio è più debole del resto. Inoltre il campo 'apertura' del brief è vuoto e il 'dati_mappa' non ha alcun dato verificato: la scena della mappa non ha quindi dati reali alle spalle.",
+    "correzione": "Alzare il volume dei primi 5 secondi di circa 2-3 dB (senza superare -1 dBFS) e compilare il campo apertura del brief con la frase di gancio; per la mappa usare solo dati verificati o mostrare la sciarpa senza numeri.",
+    "idea": "Per i prossimi reel tifo, legare la sciarpa sulla mappa a un numero verificato (es. città con più sfide) e usare una scena di apertura con audio pieno già dal primo secondo."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:08+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione manca la pausa tra 'Napoli,' e 'Roma' e l'ultima frase è spezzata; i dati_mappa sono vuoti, quindi non posso verificare che la mappa mostri davvero le sciarpe citate. Inoltre la didascalia dice 'Voce generata con IA' senza che il brief lo chieda, e il picco di -0.9 dBFS non rispet",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (LUFS e picco) e formato del reel: testo chiaro e coerente con il brief.",
+    "esito": "segnalo",
+    "secondo": 4.4,
+    "problema": "Nella trascrizione manca la pausa tra 'Napoli,' e 'Roma' e l'ultima frase è spezzata; i dati_mappa sono vuoti, quindi non posso verificare che la mappa mostri davvero le sciarpe citate. Inoltre la didascalia dice 'Voce generata con IA' senza che il brief lo chieda, e il picco di -0.9 dBFS non rispetta l'obiettivo sotto -1 dBFS.",
+    "correzione": "Verificare la mappa con dati reali prima di pubblicare; alzare il limitatore per portare il picco sotto -1 dBFS; valutare se tenere la nota sulla voce IA e allineare il testo della fascia alla didascalia.",
+    "idea": "Replicare il formato 'testa_a_testa' con la sfida tra due città e mostrare il conteggio dei cani per squadra a fine reel, per dare un risultato da commentare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:10+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Nei materiali non ci sono dati della mappa (dati_mappa vuoto) né fotogrammi con la mappa 3D: non è verificabile che la sciarpa/luce compaia realmente nella città indicata né che il 3D sia realistico. Inoltre non ho i fotogrammi visivi allegati, solo i secondi.",
+   "dati": {
+    "controllato": "Realismo della mappa e del 3D: i dati mappa sono vuoti (dati_mappa: []), quindi non posso verificare posizioni, luci o scala della mappa nel reel.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Nei materiali non ci sono dati della mappa (dati_mappa vuoto) né fotogrammi con la mappa 3D: non è verificabile che la sciarpa/luce compaia realmente nella città indicata né che il 3D sia realistico. Inoltre non ho i fotogrammi visivi allegati, solo i secondi.",
+    "correzione": "Inviare i dati della mappa (città, coordinate, colori squadra) e i fotogrammi 3D corrispondenti ai secondi 3, 6, 9, 12 per verificare il realismo prima della pubblicazione.",
+    "idea": "Mostrare in un fotogramma finale una mappa con più sciarpe accese per squadra, così il confronto tra tifoserie diventa visibile e condivisibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:10+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'mappa' è vuoto (dati_mappa: []), quindi la promessa della frase 'sulla mappa mette la sciarpa coi suoi colori' non è verificata dai materiali. Inoltre la didascalia dice 'il tuo cane o gatto', mentre il copione parla solo di cane, e l'apertura è null mentre la fascia è gancio generico. Nei ",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, copione e didascalia del reel tifo, confrontati con i dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il dato 'mappa' è vuoto (dati_mappa: []), quindi la promessa della frase 'sulla mappa mette la sciarpa coi suoi colori' non è verificata dai materiali. Inoltre la didascalia dice 'il tuo cane o gatto', mentre il copione parla solo di cane, e l'apertura è null mentre la fascia è gancio generico. Nei dati ultimi reel la reach e i commenti più alti vengono dai formati 'testa_a_testa' e 'coppa_sorpasso', non da questo.",
+    "correzione": "Verificare che la mappa mostri davvero la sciarpa per la squadra indicata prima di pubblicare; allineare il copione alla didascalia (cane o gatto); definire un'apertura esplicita nei primi 1-2 secondi.",
+    "idea": "Per i prossimi reel tifo, mostrare nei primi 2 secondi una sciarpa già accesa sulla mappa e far partire il testo con il nome della squadra, così il gancio è visibile subito."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:11+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il brief dichiara 'apertura: null', ma i primi 1.2 s sono 'Il tuo cane per chi' e la domanda vera ('tifa?') arriva a 1.2 s: il gancio è lento. Inoltre il fotogramma inviato copre solo 0.5–15 s a passi di 3 s (0.5, 3, 6…), quindi non posso verificare visivamente il frame a 2 s né la scena 'tifosi' (f",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione vs frasi del brief, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio), didascalia e fotogrammi inviati per il mio reparto di riprese e montaggio.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Il brief dichiara 'apertura: null', ma i primi 1.2 s sono 'Il tuo cane per chi' e la domanda vera ('tifa?') arriva a 1.2 s: il gancio è lento. Inoltre il fotogramma inviato copre solo 0.5–15 s a passi di 3 s (0.5, 3, 6…), quindi non posso verificare visivamente il frame a 2 s né la scena 'tifosi' (frase 1, circa 1.2–4.4 s) senza alcun fotogramma intermedio. Il volume medio dei primi 5 s (-16.7 dB) è più basso del resto, quindi l'attacco risulta un po' sottotono.",
+    "correzione": "Anticipare 'Juve, Inter, Milan…' o la domanda 'tifa?' entro il primo secondo, oppure inserire una scritta gancio a 0 s; alzare di 1–2 dB i primi 5 s; inviare fotogrammi ogni 1 s almeno per 0–5 s per la verifica visiva.",
+    "idea": "Un reel 'derby di città' con due città che si sfidano sulla mappa e il conteggio dei cani per squadra, con una scritta gancio fissa in apertura."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:11+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Loudness, picco, silenzi e trascrizione del reel tifo: sincronia audio con le frasi e rispetto degli obiettivi sonori.",
+   "dati": {
+    "controllato": "Loudness, picco, silenzi e trascrizione del reel tifo: sincronia audio con le frasi e rispetto degli obiettivi sonori.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo reel tifo, aggiungere un suono di stadio leggero sotto la frase finale per dare più energia alla chiusura; la didascalia dichiara già che la voce è generata con IA, quindi è coerente."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:15+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La fascia di testo ('⚽ Scrivi città, nome e squadra 👇') compare nel brief ma non è nei fotogrammi inviati, quindi non posso verificarne la resa visiva. Inoltre il campo 'apertura' è null e i 'dati_mappa' sono vuoti: non posso confermare che la mappa mostri davvero la sciarpa nelle città indicate. Il",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (LUFS, picco, silenzi), didascalia e coerenza tra copione, brief e fascia di testo.",
+    "esito": "segnalo",
+    "secondo": 3.0,
+    "problema": "La fascia di testo ('⚽ Scrivi città, nome e squadra 👇') compare nel brief ma non è nei fotogrammi inviati, quindi non posso verificarne la resa visiva. Inoltre il campo 'apertura' è null e i 'dati_mappa' sono vuoti: non posso confermare che la mappa mostri davvero la sciarpa nelle città indicate. Il terzo frame (3s) cade proprio sulla frase 'Juve, Inter, Milan...': la lista delle squadre andrebbe letta con un visual chiaro. Nella didascalia c'è anche 'Campionato delle Zampe' e 'Voce generata con IA' che vanno bene, ma 'domenica' è un riferimento temporale da verificare col calendario reale.",
+    "correzione": "Verificare nei fotogrammi che la fascia di testo sia leggibile e presente al secondo 0-4; confermare con i dati della mappa che la sciarpa compaia per le città e le squadre citate; scrivere un'apertura visiva o una frase più forte nei primi 2 secondi per il gancio.",
+    "idea": "Trasformare il reel in un confronto a due squadre con un conteggio in tempo reale (ad esempio 'Juve vs Napoli') per riprendere il formato 'testa_a_testa', che ha reso meglio in reach e commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:15+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il reel dichiara 'Voce generata con IA' ma nella trascrizione non c'è un'apertura né una copertina, e il campo 'mappa' è vuoto: non posso verificare la mappa con dati reali. Inoltre il campo 'apertura' è null, quindi il primo secondo non ha una scena d'aggancio definita. Il dato 'follower_ogni_1000'",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, didascalia e fascia rispetto agli obiettivi della mia mansione Innovazione.",
+    "esito": "segnalo",
+    "secondo": 15.9,
+    "problema": "Il reel dichiara 'Voce generata con IA' ma nella trascrizione non c'è un'apertura né una copertina, e il campo 'mappa' è vuoto: non posso verificare la mappa con dati reali. Inoltre il campo 'apertura' è null, quindi il primo secondo non ha una scena d'aggancio definita. Il dato 'follower_ogni_1000' del formato 'testa_a_testa' è null in un caso, quindi non è affidabile per confronti.",
+    "correzione": "Confermare che la mappa mostri davvero le sciarpe per ogni città prima di pubblicare, definire un'apertura visiva nel primo secondo (es. una sciarpa che compare) e completare il dato mancante del formato 'testa_a_testa' prima di usarlo come riferimento.",
+    "idea": "Aggiungere una sciarpa animata che si accende in una città a sorpresa a metà reel, per dare un momento di ricompensa visiva e spingere a rivedere il video."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:15+00:00",
+   "da": "grafica3d-2",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 15 il testo «quale tifoseria ha più cani?» resta sullo schermo mentre la frase finale è tagliata: nel fotogramma 0:15 compare «PIÙ CANI?» con la domanda ancora a metà, e la scena non chiude con la mappa né con la fascia di invito. Inoltre tra 12 e 15 secondi lo schermo ripete la stessa sc",
+   "dati": {
+    "controllato": "Ho verificato i secondi della trascrizione, l'audio (-14 LUFS, picco -0.9 dBFS, nessun silenzio), la fascia e la coerenza tra copione, didascalia e fotogrammi della grafica 3D.",
+    "esito": "segnalo",
+    "secondo": 15,
+    "problema": "Al secondo 15 il testo «quale tifoseria ha più cani?» resta sullo schermo mentre la frase finale è tagliata: nel fotogramma 0:15 compare «PIÙ CANI?» con la domanda ancora a metà, e la scena non chiude con la mappa né con la fascia di invito. Inoltre tra 12 e 15 secondi lo schermo ripete la stessa scena (campionato) per circa 3 secondi senza evoluzione visiva.",
+    "correzione": "Allungare o far chiudere la scena finale con un'animazione verso la mappa (es. mini-mappa con sciarpe che si accendono) e ripetere la fascia «Scrivi città, nome e squadra» nell'ultimo secondo, così il reel termina con la call to action visibile.",
+    "idea": "Per il prossimo reel del Campionato delle Zampe, mostrare il conteggio parziale di cani e gatti per squadra durante il video, così il finale diventa un risultato da scoprire e spinge a tornare sulla pagina."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:16+00:00",
+   "da": "grafica3d-3",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi al secondo 1-2 la sciarpa/mappa non è visibile: il testo «Scrivi città, nome e squadra» compare solo come fascia in basso, mentre la voce dice «sulla mappa d'Italia mette la sciarpa» al secondo 8-10, quando sullo schermo non c'è ancora nessuna mappa 3D. La scena della mappa non è most",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e coerenza tra voce, scene e testi sullo schermo per la mia mansione grafica 3D.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Nei fotogrammi al secondo 1-2 la sciarpa/mappa non è visibile: il testo «Scrivi città, nome e squadra» compare solo come fascia in basso, mentre la voce dice «sulla mappa d'Italia mette la sciarpa» al secondo 8-10, quando sullo schermo non c'è ancora nessuna mappa 3D. La scena della mappa non è mostrata nei fotogrammi campionati (3, 6, 9, 12, 15 mostrano ancora testi e grafiche statiche e il frame 6 è una card di commento). Il reel promette una mappa che non si vede.",
+    "correzione": "Inserire tra il secondo 8 e il 10 una breve animazione 3D della mappa d'Italia con una sciarpa che compare sulla città, in sincronia con «mette la sciarpa coi suoi colori». Se la mappa 3D esiste già nel reel, allinearla alla voce e mostrarla in almeno un fotogramma campionato.",
+    "idea": "Per i prossimi reel tifo, mostrare la mappa 3D con la sciarpa che si accende in tempo reale sulla città scritta, così il commento diventa anche visuale e il numero di luci aumenta."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:18+00:00",
+   "da": "grafica3d-4",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nella mappa non compare nessun dato verificato (dati_mappa è vuoto), eppure il copione e il primo fotogramma parlano di una mappa d'Italia dove il cane 'mette la sciarpa' nella città. Al secondo 8 la scena è solo testo su sfondo viola, senza mappa né luci visibili: la promessa visiva non è mostrata.",
+   "dati": {
+    "controllato": "Rilievo e terreno veri: mappa, dati verificati, audio e coerenza con il copione e la didascalia del reel.",
+    "esito": "segnalo",
+    "secondo": 8,
+    "problema": "Nella mappa non compare nessun dato verificato (dati_mappa è vuoto), eppure il copione e il primo fotogramma parlano di una mappa d'Italia dove il cane 'mette la sciarpa' nella città. Al secondo 8 la scena è solo testo su sfondo viola, senza mappa né luci visibili: la promessa visiva non è mostrata. Inoltre l'audio è corretto (-14.4 LUFS, picco -0.9 dBFS), ma la didascalia dichiara 'Voce generata con IA' e il copione non ha alcun dato numerico da verificare, quindi non ci sono numeri inventati da segnalare.",
+    "correzione": "Inserire nei fotogrammi 8-10 uno screenshot reale della mappa con almeno una luce/sciarpa colorata, oppure modificare il copione dicendo solo 'scrivi città, nome e squadra' senza promettere la mappa in quella scena.",
+    "idea": "Mostrare una luce reale che si accende sulla mappa d'Italia nel finale, con il nome della città del primo commento, così il reel diventa una prova concreta e invoglia a partecipare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:19+00:00",
+   "da": "grafica3d-5",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi la frase 'Sulla mappa d'Italia' compare a 8s, ma la voce dice 'sulla mappa d'Italia mette la sciarpa' e la scena della mappa colorata non si vede mai: il reel resta quasi tutto su schermate di testo e la mappa con le sciarpe (il pezzo più bello) non è mostrata. Inoltre la fascia 'Scri",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, misure audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio), fotogrammi e didascalia del reel tifo: formato coerente, nessun dato di mappa da verificare.",
+    "esito": "segnalo",
+    "secondo": 8,
+    "problema": "Nei fotogrammi la frase 'Sulla mappa d'Italia' compare a 8s, ma la voce dice 'sulla mappa d'Italia mette la sciarpa' e la scena della mappa colorata non si vede mai: il reel resta quasi tutto su schermate di testo e la mappa con le sciarpe (il pezzo più bello) non è mostrata. Inoltre la fascia 'Scrivi città, nome e squadra' è ripetuta quasi a ogni fotogramma e la frase finale 'quale tifoseria ha più cani?' arriva a 14s senza una risposta visiva.",
+    "correzione": "Inserire tra 8s e 11s una breve animazione della mappa con sciarpe colorate che si accendono, e far comparire nel fotogramma finale un indizio (es. 'classifica dei cani in arrivo') per dare un motivo di tornare a vedere il seguito.",
+    "idea": "Pubblicare la classifica finale del Campionato delle Zampe come reel di follow-up, con la mappa animata delle sciarpe e il nome della città vincente."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:19+00:00",
+   "da": "grafica3d-6",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 9 la scena mostra il fumetto di commento con 'SULLA MAPPA D'ITALIA' mentre la voce dice 'sulla mappa d'Italia mette la sciarpa'; la mappa non compare mai nel reel, e lo sfondo resta uniforme viola senza texture della mappa, quindi il gancio visivo principale ('la mappa con le sciarpe') è ",
+   "dati": {
+    "controllato": "Materiali e texture del reel: frame a 0.5, 3, 6, 9, 12, 15 s, coerenza con copione e didascalia, sfondo viola/verde, palette delle sciarpe.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Al secondo 9 la scena mostra il fumetto di commento con 'SULLA MAPPA D'ITALIA' mentre la voce dice 'sulla mappa d'Italia mette la sciarpa'; la mappa non compare mai nel reel, e lo sfondo resta uniforme viola senza texture della mappa, quindi il gancio visivo principale ('la mappa con le sciarpe') è assente. Inoltre al secondo 9 il testo 'SULLA MAPPA' è sovrapposto al fumetto e rischia di sembrare un frame vuoto. Nei frame 6 e 15 la scritta 'SCRIVI' e 'E DOMENICA IL' sono isolate, con molto vuoto sotto.",
+    "correzione": "Inserire nei frame 9-12 una texture/mockup della mappa d'Italia con le sciarpe colorate sui punti città, oppure una breve animazione di una luce che si accende sulla mappa; riempire lo spazio vuoto sotto il titolo nelle scene 6 e 15 con il logo della mappa o una sagoma di cane/gatto.",
+    "idea": "Per i prossimi reel usare sempre un visual della mappa come protagonista nelle scene di commento e mostrare una sciarpa reale che si accende su una città."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:20+00:00",
+   "da": "grafica3d-7",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 9 la scena «Sulla mappa d'Italia» è solo testo su sfondo viola: la mappa con la sciarpa non compare. Il copione promette l'immagine della mappa proprio mentre la voce la nomina, e nel reel la mappa non si vede mai. Inoltre i fotogrammi 0.5s e 12s-15s restano quasi identici, con poco movim",
+   "dati": {
+    "controllato": "Camere e inquadrature dei 6 fotogrammi: l'animazione dei cani con sciarpe, il passaggio dal gancio al messaggio nel mockup e la coerenza visiva con i secondi indicati.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Al secondo 9 la scena «Sulla mappa d'Italia» è solo testo su sfondo viola: la mappa con la sciarpa non compare. Il copione promette l'immagine della mappa proprio mentre la voce la nomina, e nel reel la mappa non si vede mai. Inoltre i fotogrammi 0.5s e 12s-15s restano quasi identici, con poco movimento per quasi 4 secondi finali.",
+    "correzione": "Inserire al secondo 8-10 un'inquadratura della mappa d'Italia con un cane che indossa la sciarpa colorata (es. Napoli) e un puntino luminoso che si accende; negli ultimi 3 secondi animare la fascia e i cani con un leggero movimento o un'entrata a scorrimento.",
+    "idea": "Un reel «Ecco la mappa di ieri sera»: mostrare la mappa reale con le luci accese e le sciarpe delle squadre in dissolvenza, così la promessa del gancio viene mantenuta visivamente."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:23+00:00",
+   "da": "grafica3d-8",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 9 la scritta «Sulla mappa d'Italia» compare sopra lo stesso fondo del fotogramma successivo, ma nel brief la frase sulla mappa (sciarpa coi colori) arriva a 8.9s mentre il tutorial «Scrivi» è ancora attivo: la fascia in basso resta invariata per tutto il reel e nel fotogramma finale a 15s",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.4 LUFS, picco -0.9 dBFS, nessun silenzio), fotogrammi e coerenza con la didascalia e la fascia di testo.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Al secondo 9 la scritta «Sulla mappa d'Italia» compare sopra lo stesso fondo del fotogramma successivo, ma nel brief la frase sulla mappa (sciarpa coi colori) arriva a 8.9s mentre il tutorial «Scrivi» è ancora attivo: la fascia in basso resta invariata per tutto il reel e nel fotogramma finale a 15s il testo «E domenica il campionato» è troncato in «E DOMENICA IL» nella scena di apertura, con la domanda «più cani?» che appare solo nell'ultima scena. Inoltre la mappa d'Italia non compare mai nei fotogrammi, quindi la promessa visiva «sulla mappa» non è mostrata.",
+    "correzione": "Mostrare un breve frame della mappa con una luce accesa sulla città (es. a 8.5–10s) e completare la frase «E domenica il campionato» prima del cambio scena, eliminando la battuta spezzata.",
+    "idea": "Un reel con la mappa d'Italia che si accende città per città, con la sciarpa del cane che compare sulla luce, ripetendo il formato «indovina» con meno testo."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:24+00:00",
+   "da": "grafica3d-9",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «sulla mappa d'Italia mette la sciarpa coi suoi colori» ma nella scena «tifosi» e nei fotogrammi non compare alcuna mappa: la mappa appare solo come concetto nelle scene con il testo «SULLA MAPPA D'ITALIA». Inoltre la frase «E domenica il campionato» resta sospesa su «E DOMENICA IL» ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, misure audio (-14 LUFS, picco -0.9 dBFS, nessun silenzio lungo) e fotogrammi: testi e scene coerenti con la didascalia e la fascia in basso.",
+    "esito": "segnalo",
+    "secondo": 12.1,
+    "problema": "Il copione dice «sulla mappa d'Italia mette la sciarpa coi suoi colori» ma nella scena «tifosi» e nei fotogrammi non compare alcuna mappa: la mappa appare solo come concetto nelle scene con il testo «SULLA MAPPA D'ITALIA». Inoltre la frase «E domenica il campionato» resta sospesa su «E DOMENICA IL» per circa 2 secondi prima della chiusura, e la scena finale «PIÙ CANI?» arriva senza una risposta visibile. Nel frame di metà reel la scena di chiusura è incompleta: il campionato non viene mostrato.",
+    "correzione": "Inserire una breve inquadratura della mappa con una sciarpa che compare su una città (anche solo 1 secondo) vicino a 'mette la sciarpa coi suoi colori', e chiudere la scena del campionato con il risultato o con un'immagine di classifica, altrimenti la domanda 'più cani?' resta senza seguito.",
+    "idea": "Per i prossimi reel tifo: mostrare nel finale la classifica aggiornata della tifoseria con più cani in una scena fissa, così la domanda ha una risposta e spinge a tornare la domenica."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:24+00:00",
+   "da": "grafica3d-10",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nei fotogrammi la mappa d'Italia non compare mai: restano solo la fascia di testo e le schermate con i cani. Il copione dice «sulla mappa d'Italia mette la sciarpa coi suoi colori» ma nel reel la mappa non si vede, quindi la promessa visiva non è mostrata. Inoltre al secondo 3 la schermata con i can",
+   "dati": {
+    "controllato": "Ho verificato la scena 3D di mappa, le sciarpe dei personaggi e la coerenza tra copione, trascrizione, fascia e fotogrammi; i dati mappa sono vuoti e non ho numeri da confrontare.",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "Nei fotogrammi la mappa d'Italia non compare mai: restano solo la fascia di testo e le schermate con i cani. Il copione dice «sulla mappa d'Italia mette la sciarpa coi suoi colori» ma nel reel la mappa non si vede, quindi la promessa visiva non è mostrata. Inoltre al secondo 3 la schermata con i cani usa lo stesso fondo e la stessa fascia di altri frame, e il fotogramma del secondo 3 è ancora vuoto con solo il campo di input.",
+    "correzione": "Inserire tra i secondi 8 e 10 una breve inquadratura della mappa d'Italia con una sciarpa che compare in una città, così il gesto descritto nel copione è visibile; allungare o tenere ferma la scena «SCRIVI» per dare tempo di leggere il campo di input.",
+    "idea": "Un reel con la mappa d'Italia animata che si illumina città per città con le sciarpe, e un conteggio in tempo reale delle tifoserie più rappresentate."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:31+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare correggiamo tre cose vere: la mappa promessa ma mai mostrata, la frase finale spezzata e il gancio d'apertura debole; il resto sono rifiniture.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "Il gancio parte lento: domanda piccola e in alto, nessuna immagine forte né movimento al frame 0, circa 0.5s di vuoto prima della frase d'apertura.",
+      "correzione": "Mostrare palla e titolo già al frame 0 con un ingresso rapido (scala o rimbalzo nei primi 0.3s) e far vedere subito i cani con le sciarpe nei primi 2 secondi."
+     },
+     {
+      "secondo": 8.9,
+      "problema": "La voce dice «sulla mappa d'Italia mette la sciarpa coi suoi colori», ma la mappa non compare mai: c'è solo la scritta statica. Il momento più interessante del formato manca.",
+      "correzione": "Inserire 1-2 secondi (circa 8.9-10.4s) con la mappa d'Italia e una luce o sciarpa colorata che si accende sulla città dell'esempio (es. «Napoli, Luna, forza Napoli»), sincronizzata con la frase."
+     },
+     {
+      "secondo": 12,
+      "problema": "Il testo a schermo è troncato («E DOMENICA IL») mentre la voce dice «E domenica il campionato»; la domanda «quale tifoseria ha più cani?» arriva solo verso i 14s, con circa 2 secondi di frase incompleta e fotogrammi quasi ripetuti.",
+      "correzione": "Mostrare la frase completa «E domenica il campionato: quale tifoseria ha più cani?» in un unico blocco sincronizzato con la voce e tenerla fino alla fine, eliminando la ripetizione."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia dice «Tagga un amico tifoso» ma il video non lo chiede mai, e il follow non è mai chiesto esplicitamente.",
+      "correzione": "Aggiungere in chiusura una breve frase tipo «Segui la pagina per la classifica di domenica» oppure togliere il tag dalla didascalia, così video e didascalia dicono la stessa cosa."
+     }
+    ],
+    "idea": "Reel con la mappa d'Italia che si accende città per città a ritmo di tifo, un esempio reale («Napoli, Luna, forza Napoli») che mostra il meccanismo, e chiusura con «Segui per la classifica di domenica»."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:31+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel regge su gancio e CTA, ma va corretto il finale (12-15s) e va mostrata la mappa con la sciarpa che si accende (8-11s), perché oggi la promessa visiva è solo detta.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 9,
+      "problema": "La frase «sulla mappa d'Italia mette la sciarpa coi suoi colori» è detta, ma la mappa con la luce o la sciarpa non compare nei fotogrammi (resta il testo «Sulla mappa d'Italia»). Voce e immagine sono sfasate e chi guarda non vede il premio della partecipazione.",
+      "correzione": "Inserire tra 8 e 11s una breve inquadratura (circa 2s) della mappa d'Italia con una luce che si accende in una città di esempio (es. Napoli) e la sciarpa coi colori della squadra, sincronizzata con la voce «mette la sciarpa»."
+     },
+     {
+      "secondo": 12.1,
+      "problema": "Il finale è affollato e aperto: «E domenica il campionato» resta sospeso, «PIÙ CANI?» compare senza risposta, e la domanda finale e il CTA di commento non sono chiusi in un unico frame leggibile. Possibile sovrapposizione tra «PIÙ CANI?» e la fascia.",
+      "correzione": "Allungare la scena finale di circa 1s e mostrare in un unico frame pulito «Quale tifoseria ha più cani?» con la fascia «Scrivi città, nome e squadra» visibile fino all'ultimo fotogramma, senza sovrapposizioni. Allineare il testo alla voce."
+     },
+     {
+      "secondo": null,
+      "problema": "La domanda finale è incoerente tra le versioni: a schermo e in voce c'è «più cani?», mentre una relazione segnala «cani e gatti». Inoltre l'esempio in didascalia («Napoli, Luna, cane, forza Napoli») non segue l'ordine richiesto «città, nome, squadra».",
+      "correzione": "Scegliere un'unica formulazione per voce, schermo e didascalia e riscrivere l'esempio nell'ordine «Napoli, Luna, forza Napoli»."
+     }
+    ],
+    "idea": "Chiudere il reel con la mappa d'Italia in cui una sciarpa si accende nella città di chi commenta («Ecco la tua squadra sulla mappa»), e riprendere il tema in un reel di domenica sera con la classifica parziale del Campionato delle Zampe."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:31+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è audio-sano (-14,4 LUFS, nessun silenzio lungo) ma prima di pubblicare vanno sistemati l'apertura debole al secondo 0, il picco leggermente sopra soglia e l'incoerenza cane/cane o gatto, oltre alla verifica visiva della mappa con la sciarpa.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "L'apertura è debole: volume medio dei primi 5 secondi a -16,7 dB, più basso del resto del reel, e il campo 'apertura' del brief è vuoto. Il gancio 'Il tuo cane per chi tifa?' rischia di perdersi allo scorrimento.",
+      "correzione": "Alzare di 2-3 dB voce e musica nei primi 3 secondi, senza superare -1 dBFS, e definire un'apertura sonora breve (fischietto o coro da stadio sfumato) di circa 1 secondo prima del gancio."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco è a -0,9 dBFS, sopra l'obiettivo di -1 dBFS (di poco).",
+      "correzione": "Abbassare leggermente il guadagno finale o il limiter per portare il picco sotto -1 dBFS, ricontrollando che i -14 LUFS restino."
+     },
+     {
+      "secondo": null,
+      "problema": "Incoerenza di testo: il gancio parla solo di 'cane', mentre didascalia e copione dicono 'cane o gatto'.",
+      "correzione": "Allineare tutto su una sola formula, 'cane' ovunque oppure 'cane o gatto' ovunque, anche nella voce."
+     },
+     {
+      "secondo": null,
+      "problema": "La mappa non ha dati (dati_mappa vuoto): non è verificato che la sciarpa compaia per la squadra indicata. Non è un problema audio, ma va confermato prima di pubblicare.",
+      "correzione": "Controllare i fotogrammi (circa 0,5, 3, 6, 9, 12, 15 s) per verificare che mappa e sciarpa siano visibili e corrette; inquadrare la mappa almeno 2 secondi quando appare la sciarpa."
+     }
+    ],
+    "idea": "Apertura sonora fissa di 1 secondo (fischietto o coro da stadio sfumato) prima del gancio, con la mappa e la sciarpa ben visibili per 2 secondi e chiusura con 'segui per il Campionato delle Zampe', come base per un formato tifo riconoscibile e replicabile (es. 'Indovina la tifoseria')."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:32+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel non va pubblicato così: va aggiunta la mappa con la sciarpa che si accende, vanno sistemati finale e copertina e alleggerita la fascia CTA ripetuta.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 9,
+      "problema": "La scena «Sulla mappa d'Italia» mostra solo testo su sfondo viola: la mappa con la sciarpa che si accende, cioè la promessa visiva principale, non compare mai. Lo segnalano quasi tutti i colleghi e il dato dati_mappa è vuoto, quindi la mappa potrebbe non essere nel reel.",
+      "correzione": "Inserire tra 8.9s e 12s un frame o una breve animazione reale della mappa d'Italia con la sciarpa che si accende su una città (es. Napoli), sincronizzata con la voce «mette la sciarpa». Se la mappa non esiste, produrla."
+     },
+     {
+      "secondo": 12,
+      "problema": "Il finale «E domenica il campionato» resta troncato per circa due secondi e la domanda arriva solo dopo come «PIÙ CANI?», senza risposta né visual. Il gancio resta sospeso e il messaggio non chiude in modo leggibile.",
+      "correzione": "Allineare il testo a schermo alla voce, con la frase completa leggibile in un unico fotogramma, e allungare la scena finale di circa mezzo secondo. Chiudere con un visual, come una mini-classifica a icone delle squadre, o con l'invito a tornare domenica, oltre a «Segui la pagina per il Campionato delle Zampe»."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Il reel non ha una copertina (null) e il primo fotogramma è solo testo, senza un'immagine forte che catturi lo scroll.",
+      "correzione": "Impostare come copertina il fotogramma con le sei icone-cane con sciarpa (circa 3s), con «Il tuo cane per chi tifa?» ben in evidenza."
+     },
+     {
+      "secondo": 6,
+      "problema": "La fascia «Scrivi città, nome e squadra» è ripetuta su quasi tutte le scene e appesantisce. Tra 6s e 9s la scena «SCRIVI» e il mockup del commento restano vuoti o ripetitivi.",
+      "correzione": "Mostrare la fascia solo in una o due apparizioni, accorciare la scena vuota del commento a circa 1 secondo e aggiungere una freccia dal box commento verso la mappa."
+     }
+    ],
+    "idea": "La mappa che si accende in tempo reale quando si scrive una città (es. Napoli), chiusa da una mini-classifica del Campionato delle Zampe da aggiornare ogni domenica. La sciarpa del cane fa da filo conduttore tra i formati tifo e coppa."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:32+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare ancora: prima si verifica che la mappa mostri davvero la sciarpa con i colori della squadra, si definisce un'apertura visiva chiara e si allinea il testo (cane/gatto, data del campionato) tra voce, fascia e didascalia.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 5,
+      "problema": "I dati della mappa sono vuoti e la promessa 'la sciarpa coi suoi colori' non è verificabile. Quasi tutti i controllori la segnalano come problema principale.",
+      "correzione": "Confermare con i dati reali o con un fotogramma che la sciarpa compare sulla mappa dopo l'invio di città, nome e squadra; altrimenti rendere la frase più generica."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il campo apertura e la copertina sono null: il primo fotogramma non è definito come gancio visivo. Anche i primi 5 secondi hanno un volume medio di -16.7 dB, sotto il resto del reel (-14.4 LUFS).",
+      "correzione": "Definire un'apertura e una copertina esplicite (cane con sciarpa o mappa con una luce già accesa) e alzare un po' il volume dei primi 5 secondi senza superare -1 dBFS di picco."
+     },
+     {
+      "secondo": 1.2,
+      "problema": "La trascrizione spezza il gancio: 'Il tuo cane per chi [1.2s] tifa?'. Le parole vanno rese come un'unica frase, senza pausa evidente.",
+      "correzione": "Allineare la trascrizione al copione e, se la pausa è reale nell'audio, rimuoverla o accorciarla nel montaggio."
+     },
+     {
+      "secondo": null,
+      "problema": "Incoerenza tra voce e testo: il parlato dice solo 'cane', mentre didascalia e fascia citano anche il gatto.",
+      "correzione": "Scegliere una sola versione (solo cane, più coerente col gancio) e uniformare voce, fascia e didascalia."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia cita 'Campionato delle Zampe' e 'domenica' come un evento in corso, ma nei dati non c'è nessuna conferma.",
+      "correzione": "Verificare la data dell'evento; se non è confermata, togliere il riferimento temporale dalla didascalia e dal parlato."
+     },
+     {
+      "secondo": 15.9,
+      "problema": "I fotogrammi controllati arrivano solo a 15 s e la durata è 15.9 s: la chiusura non è stata verificata. Inoltre la voce IA è dichiarata nella didascalia ma non appare nel video.",
+      "correzione": "Controllare il fotogramma finale a 15.9 s e aggiungere la scritta 'voce IA' in copertina o in fascia."
+     }
+    ],
+    "idea": "Mostrare nei primi 2 secondi una città reale già illuminata con la sua sciarpa, così chi guarda vede subito il risultato promesso dal commento, e riprendere poi il formato 'testa a testa', il migliore nei dati (2452 views, 86 commenti), con una sfida tra due città."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:32+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché non si verifica che la mappa mostri davvero le sciarpe e non si allineano gancio, invito a commentare e invito a seguire.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "Manca una prova visiva nei primi secondi: le relazioni segnalano che i dati della mappa sono vuoti e che non è verificato che la sciarpa compaia davvero. Il gancio è solo parlato e regge poco senza audio.",
+      "correzione": "Verificare con il reparto Mappa che le sciarpe compaiano nei fotogrammi. Aprire con un'immagine forte (cane con sciarpa o sciarpa che si accende sulla mappa) abbinata alla prima frase. Se l'effetto non c'è, togliere la promessa dalla didascalia."
+     },
+     {
+      "secondo": 12.1,
+      "problema": "Il testo dice 'Il tuo cane per chi tifa?' mentre didascalia e brief parlano di cane o gatto. In più la fascia 'Scrivi città, nome e squadra' è lunga e il finale non ha un invito netto a commentare.",
+      "correzione": "Allineare il gancio a 'cane o gatto'. Accorciare la fascia e ripetere nei secondi finali un invito unico: 'Scrivi città, nome e squadra'."
+     },
+     {
+      "secondo": 15,
+      "problema": "La chiusura lascia aperta la domanda 'quale tifoseria ha più cani?' senza classifica né invito a seguire. Seguire la pagina non viene mai chiesto, e 'domenica' e 'Campionato delle Zampe' non sono spiegati.",
+      "correzione": "Aggiungere in coda un frame con la classifica parziale reale, se verificata, e la frase 'Seguici per la classifica di domenica'. Spiegare in una frase cos'è il Campionato delle Zampe."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "L'elenco delle sei squadre ritarda l'azione concreta, e il testo a schermo non è allineato al parlato.",
+      "correzione": "Accorciare l'elenco o spostare la mappa più in alto. Allineare la scritta con le squadre al segmento 1.2-4.4 s."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia dice 'Voce generata con IA', ma non è confermato che l'avviso compaia anche nel video.",
+      "correzione": "Tenere la dicitura in didascalia e aggiungerla in modo leggibile anche nella fascia del video."
+     }
+    ],
+    "idea": "Reel tifo con la mappa che si colora città per città con le sciarpe delle squadre, immagine forte in apertura e chiusura con la classifica parziale aggiornata e l'invito 'Seguici per il risultato di domenica'."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:32+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché non si verifica sui fotogrammi che la mappa con le sciarpe sia davvero visibile e non si tolgono le promesse non dimostrabili, cioè il confronto tra tifoserie senza conteggi reali.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 8.9,
+      "problema": "Il parlato e la didascalia dicono che sulla mappa il cane mette la sciarpa coi colori della squadra, ma dati_mappa è vuoto e nessuna relazione ha potuto confermarlo sui fotogrammi.",
+      "correzione": "Controllare i fotogrammi e inserire una schermata reale della mappa con almeno una sciarpa visibile. Se non c'è, riformulare la promessa in modo generico, per esempio 'scrivi città, nome e squadra e accendi la tua luce'."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La domanda 'quale tifoseria ha più cani?' promette un confronto senza alcun conteggio reale. Inoltre l'elenco lungo delle squadre rischia di essere letto in fretta.",
+      "correzione": "Togliere o riformulare la promessa del confronto finché non esistono numeri veri, per esempio 'domenica lo scopriamo'. Spezzare l'elenco delle squadre in due battute con una pausa visiva."
+     },
+     {
+      "secondo": 0,
+      "problema": "Il gancio 'Il tuo cane per chi tifa?' esclude i gatti, mentre la didascalia dice 'cane o gatto'.",
+      "correzione": "Rendere il gancio inclusivo, per esempio 'Il tuo animale per chi tifa?', oppure allineare la didascalia al solo cane."
+     },
+     {
+      "secondo": 14.3,
+      "problema": "Il picco audio è a -0.9 dBFS, appena sopra l'obiettivo di -1 dBFS.",
+      "correzione": "Abbassare il picco sotto -1 dBFS in esportazione."
+     }
+    ],
+    "idea": "Reel 'Sciarpa in mappa': una luce si accende nella città di un tifoso e compare la sciarpa con i colori della squadra, poi in chiusura la domanda al pubblico e il rimando a domenica. Il conteggio per squadra va mostrato solo quando i numeri sono reali."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:32+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare correggiamo il finale spezzato a 12.1s, mostriamo davvero la mappa con la sciarpa che si accende e allineiamo copione e didascalia (cani, o cani e gatti), poi puntiamo sulla prova sociale con un esempio reale.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 12.1,
+      "problema": "La frase finale «E domenica il campionato: quale tifoseria ha più cani?» è spezzata in schermate separate («E DOMENICA IL», poi «PIÙ CANI?»): la domanda arriva incompleta e senza invito chiaro, e la scritta resta sospesa per circa 2-3 secondi.",
+      "correzione": "Mostrare la frase completa in un'unica schermata leggibile per almeno 1,5-2 secondi, sincronizzata con la voce, e chiudere con un invito chiaro all'azione (es. «Scrivi ora sotto»)."
+     },
+     {
+      "secondo": 8.9,
+      "problema": "La voce dice «sulla mappa d'Italia mette la sciarpa» e la didascalia promette la luce sulla mappa, ma in nessun fotogramma si vede la mappa: la promessa visiva non viene mostrata (a 9s c'è solo il testo su sfondo vuoto).",
+      "correzione": "Inserire tra 8.9s e 12s un fotogramma della mappa con una sciarpa colorata che si accende. Se non sono dati reali, usare un esempio e dichiararlo come tale."
+     },
+     {
+      "secondo": null,
+      "problema": "Incoerenza di messaggio: il copione dice «cani», la didascalia parla di «cani e gatti» e cita Luna (cane, forza Napoli), che non corrisponde a nessuna immagine del reel.",
+      "correzione": "Scegliere una sola formula (cani, oppure cani e gatti) e usarla identica in copione, schermo e didascalia. Togliere dalla didascalia l'esempio di Luna oppure mostrarlo nel reel."
+     },
+     {
+      "secondo": null,
+      "problema": "La fascia «Scrivi città, nome e squadra» è identica e fissa su tutti i fotogrammi, appesantisce le scene centrali e non spiega bene che si deve commentare.",
+      "correzione": "Lasciare la fascia solo nelle scene finali, alleggerire quelle centrali e aggiungere nell'ultimo secondo un CTA visivo più forte con indicazione del commento."
+     }
+    ],
+    "idea": "Un cane reale (o un mock-up dichiarato) che si accende sulla mappa della sua città accanto alla sua sciarpa, per circa 2-3 secondi, con in chiusura la domanda completa «Quale tifoseria ha più cani?» e un conteggio per squadra come prova sociale, solo se i dati sono veri."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:39+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare correggo tre cose concrete: l'attacco lento e basso di volume, la promessa 'ogni squadra/città' non verificata sulla mappa e il picco audio sopra il limite; poi puntiamo sul formato testa a testa, che nei dati porta più commenti.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 0,
+      "problema": "L'attacco è lento e debole: 'Il tuo cane per chi' occupa il primo secondo, la domanda vera ('tifa?') arriva solo a 1,2 s, il campo apertura del brief è vuoto e i primi 5 s sono a circa -16,7 dB, più bassi del resto.",
+      "correzione": "Mettere una scritta gancio fissa a 0 s (es. 'Il tuo cane per chi tifa?') con una sciarpa che compare subito, e alzare i primi 5 s di 2-3 dB senza superare -1 dBFS."
+     },
+     {
+      "secondo": 4.4,
+      "problema": "La lista 'Juve, Inter, Milan, Napoli, Roma o Lazio?' elenca solo sei squadre, mentre la promessa del reel è la sciarpa per la squadra di chiunque. I dati della mappa sono vuoti, quindi non è verificato che la sciarpa compaia per tutte le città e squadre.",
+      "correzione": "Verificare la mappa con dati reali (città, squadre, colori) prima di pubblicare. Se non è verificabile, dire 'le squadre della Serie A' o mostrare solo le sciarpe che si vedono davvero, senza promettere 'tutte'."
+     },
+     {
+      "secondo": null,
+      "problema": "Il picco audio è a -0,9 dBFS, appena sopra l'obiettivo di -1 dBFS.",
+      "correzione": "Abbassare il limitatore finale in modo che il picco stia sotto -1 dBFS, poi riascoltare l'attacco dopo l'aumento di volume."
+     },
+     {
+      "secondo": 3.0,
+      "problema": "La fascia 'Scrivi città, nome e squadra' non dice dove scrivere, e non è verificabile nei fotogrammi inviati. Il copione parla di cane, la didascalia di 'cane o gatto'.",
+      "correzione": "Cambiare la fascia in 'Scrivi nei commenti città, nome e squadra 👇', controllarne la leggibilità nei fotogrammi e allineare copione e didascalia (solo cane o cane e gatto)."
+     }
+    ],
+    "idea": "Derby di città: due città a confronto sulla mappa, con la sciarpa della squadra locale su un cane per ciascuna e il conteggio dei cani per squadra a fine reel, con scritta gancio fissa in apertura e invito a commentare per far vincere la propria."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:39+00:00",
+   "da": "grafica3d-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare, inserire nel reel una breve scena con la mappa d'Italia e la sciarpa che si accende sulla città, e chiudere bene il finale con la frase completa e la call to action.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 9,
+      "problema": "La voce dice «sulla mappa d'Italia mette la sciarpa coi suoi colori» ma la mappa non compare mai: restano solo testo su sfondo viola e il fumetto del commento. La promessa visiva principale del reel non viene mostrata (segnalato da 7 persone su 9).",
+      "correzione": "Tra il secondo 8 e il 10 inserire una breve animazione della mappa d'Italia con una sciarpa colorata che compare su una città e una luce che si accende, in sincronia con la voce."
+     },
+     {
+      "secondo": 15,
+      "problema": "Il finale è tagliato: la frase «E domenica il campionato» si ferma a «E DOMENICA IL» e la domanda «quale tifoseria ha più cani?» compare a metà («PIÙ CANI?») senza una chiusura visiva né una risposta.",
+      "correzione": "Completare la frase prima del cambio scena e chiudere con un'animazione verso la mappa o un'immagine di classifica in arrivo, mantenendo visibile la fascia «Scrivi città, nome e squadra» nell'ultimo secondo."
+     },
+     {
+      "secondo": 12,
+      "problema": "Tra il secondo 12 e il 15 la scena resta quasi identica per circa 3 secondi, senza movimento. Il finale risulta statico e povero rispetto al resto.",
+      "correzione": "Animare cani e fascia con un leggero movimento o un'entrata a scorrimento negli ultimi 3 secondi, così il finale ha lo stesso ritmo del resto."
+     }
+    ],
+    "idea": "Un reel con la mappa d'Italia che si accende città per città, con la sciarpa del cane che compare sulla luce della città scritta nei commenti. Come seguito, la classifica del Campionato delle Zampe, con la tifoseria con più cani, da pubblicare domenica."
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:44+00:00",
+   "da": "montaggio-1",
+   "a": "pubblicazione-1",
+   "tipo": "decisione",
+   "testo": "La squadra non ha trovato difetti segnalati da almeno 3 reparti: nessuna correzione.",
+   "dati": {
+    "perche": [
+     {
+      "difetto": "La mappa d'Italia con la sciarpa promessa dalla voce non compare nei fotogrammi",
+      "reparti": [
+       "Copione",
+       "Mappa e dati",
+       "Grafica e copertine",
+       "Grafica 3D",
+       "Direzione video",
+       "Crescita (follower)"
+      ]
+     },
+     {
+      "difetto": "Finale spezzato: «E DOMENICA IL» resta troncato e la domanda arriva solo dopo come «PIÙ CANI?»",
+      "reparti": [
+       "Copione",
+       "Mappa e dati",
+       "Grafica e copertine",
+       "Crescita (follower)",
+       "Grafica 3D",
+       "Direzione video"
+      ]
+     },
+     {
+      "difetto": "Apertura debole: primi 5 secondi a -16,7 dB, campo apertura vuoto, primo fotogramma quasi vuoto",
+      "reparti": [
+       "Copione",
+       "Voce e musica",
+       "Pubblicazione",
+       "Innovazione",
+       "Direzione video",
+       "Montaggio"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-15T10:51:44+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce con la revisione della sola squadra."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 15.9,
+   "fotogrammi": [
+    "fotogrammi/2026-11-15-1148-tifo/v1/s000.5.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s001.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s002.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s003.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s004.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s005.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s006.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s007.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s008.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s009.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s010.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s011.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s012.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s013.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s014.0.jpg",
+    "fotogrammi/2026-11-15-1148-tifo/v1/s015.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.4,
+    "picco_dbfs": -0.9,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.7,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "crescita": {
+  "pubblico": "Tifosi italiani che amano cani e gatti e non conoscono ancora la pagina: chi ha un cane o un gatto in casa e domenica guarda la partita con la sciarpa della sua squadra (Juve, Inter, Milan, Napoli, Roma, Lazio o la squadra della propria città).",
+  "gancio": "Il tuo cane per chi tifa? Juve, Inter, Milan, Napoli, Roma o Lazio? Rispondi nei commenti e lui si accende sulla mappa.",
+  "primo_fotogramma": "Un cane vero con una sciarpa da tifoso al collo, in primo piano, e sopra la scritta grande «IL TUO CANE PER CHI TIFA?». In basso i sei colori delle squadre in fila (Juve, Inter, Milan, Napoli, Roma, Lazio), così si capisce anche a volume zero.",
+  "motivo_per_seguire": "Zampe d'Italia accende ogni giorno sulla mappa d'Italia la luce di un cane o di un gatto vero, con il suo nome e la sua città: seguendo la pagina vedi se la prossima luce è la tua.",
+  "chiusura": "La sciarpa è sulla mappa. Segui Zampe d'Italia per vedere la prossima luce.",
+  "perche": "Il brief tifo punta sul commento, ma dai dati i reel che portano follower sono quelli con un animale e una città precisi e una sola richiesta, quindi il gancio apre sul tifo e la chiusura chiede solo di seguire."
+ },
+ "token_persone": 443266,
+ "fine": "2026-11-15T10:51:44+00:00"
+}

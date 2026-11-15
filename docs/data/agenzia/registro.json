@@ -466,5 +466,14 @@
   "stato": "senza direttore",
   "fine": "2026-11-15T10:22:56+00:00",
   "scambi": 126
+ },
+ {
+  "id": "2026-11-15-1148-tifo",
+  "formato": "tifo",
+  "modalita": "operativa",
+  "inizio": "2026-11-15T10:48:34+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-15T10:51:44+00:00",
+  "scambi": 126
  }
 ]
