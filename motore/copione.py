@@ -1035,14 +1035,17 @@ def coppa_verdetto(D, rng, st):
     frasi = [
         (f"Verdetto della Coppa delle Zampe: vince {_n(t['c'])}, {t['p']} a {t['pc']} contro {_n(t['contro'])}!", {"tipo": "luce", "centro": [dove[t["c"]]["lng"], dove[t["c"]]["lat"]], "intorno": _intorno(D, dove[t["c"]]),
           "punti": [{"lng": dove[t["c"]]["lng"], "lat": dove[t["c"]]["lat"], "acceso": False, "testo": f"🏆 {_n(t['c'])}"}]}),
-        (f"Trofeo anche per {len(v) - 1} altre città" + (f", come {_n(piccolo['c'])}." if piccolo else "."),
+        ((f"Trofeo anche per {_n(piccolo['c'])}." if len(v) == 2 else f"Trofeo anche per altre {len(v) - 1} città" + (f", come {_n(piccolo['c'])}." if piccolo else ".")),
          {"tipo": "classifica", "titolo": "🏆 I vincitori", "righe": [{"nome": _n(x["c"]), "valore": f"{x['p']}–{x['pc']}"} for x in v[:5]]}),
-        ("Domani si riparte. Gioca per la tua città!", {"tipo": "chiusura", "testo": "🏆 Lunedì si riparte"}),
     ]
+    # 15/11: i padroni della città che ha vinto, in vista e taggati (chi vince condivide: è il suo paese)
+    sp = scena_padroni(D, st, [a for a in D["animali"] if a.get("c") == t["c"].split("|")[0]], f"🏆 Hanno vinto: *{_n(t['c'])}*")
+    if sp: frasi.append((f"Grazie a loro, e a tutti quelli di {_n(t['c'])}!", sp))
+    frasi.append(("Da oggi si riparte. La tua città vuole la Coppa? Scrivi città e nome!", {"tipo": "commento", "testo": "Bari, Luna, cane"}))
     elenco = "\n".join(f"🏆 {_n(x['c'])} {x['p']}–{x['pc']} {_n(x['contro'])}" for x in v[:15])
-    did = f"🏆 Il verdetto della Coppa delle Zampe, turno {albo[-1]['turno']}!\n\n{elenco}\n\nI trofei sono sulla mappa di zampeditalia.it. Domani a mezzanotte parte il turno nuovo.\n\n" + INVITO_COPPA.replace("domenica alle 21", "domenica prossima")
+    did = f"🏆 Il verdetto della Coppa delle Zampe, turno {albo[-1]['turno']}!\n\n{elenco}\n\nI trofei sono sulla mappa di zampeditalia.it. Il turno nuovo è già partito: ogni animale nuovo è un punto per la sua città.\n\n" + INVITO_COPPA.replace("domenica alle 21", "domenica prossima")
     st["copertina"] = {"luce": [dove[t["c"]]["lng"], dove[t["c"]]["lat"]], "sopra": "HA VINTO", "grande": _n(t["c"]), "sotto": "Coppa delle Zampe 🏆"}
-    st["banner_reel"] = "🏆 Lunedì si riparte: gioca per la tua città 👇"
+    st["banner_reel"] = "🏆 La tua città vuole la Coppa? Scrivi città e nome 👇"
     st["senza_bonus"] = True
     return "🏆 IL VERDETTO", frasi, did
 
