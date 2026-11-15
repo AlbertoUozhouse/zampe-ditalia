@@ -445,6 +445,7 @@ class Gioco:
         self.cambiato = False
         self.amici_che_seguono = []  # chi ha invitato un amico che ora ci segue: riga nella risposta
         self.tifo_nuovo = []  # 15/11: (nome, squadra) degli animali che hanno appena preso la sciarpa della loro squadra
+        self.identita_nuove = []  # 15/11: ("ad"|"mese", nome, valore): adottato, mese di nascita
         self.gara_follower = None  # 12/11: esito della gara dei follower per la risposta al commento
 
     @property
@@ -799,6 +800,10 @@ class Gioco:
             a = miei.get(norm(x["n"]))
             if x.get("sq") and (not a or a.get("sq") != x["sq"]):  # 15/11, il tifo: la sciarpa della squadra (una volta detta resta, finché non ne dice un'altra)
                 campi["sq"] = x["sq"]; self.tifo_nuovo.append((x["n"], x["sq"])); self.cambiato = True
+            if x.get("ad") and (not a or not a.get("ad")):  # 15/11: adottato o salvato, il cuore dei salvati sulla mappa
+                campi["ad"] = 1; self.identita_nuove.append(("ad", x["n"], 1)); self.cambiato = True
+            if x.get("mese") and (not a or a.get("mese") != x["mese"]):  # 15/11: il mese di nascita, e quindi il segno
+                campi["mese"] = x["mese"]; self.identita_nuove.append(("mese", x["n"], x["mese"])); self.cambiato = True
             if a:
                 if any(a.get(k) != v for k, v in campi.items() if k in ("c", "p", "k", "t", "n", "specie")):
                     aggiornati.append(a)
@@ -1101,6 +1106,22 @@ def sollecita(gioco, per, rispondi, appena):
         n += 1
     return n
 
+# ---------- adottati e segni (15/11, Alberto: «inventa cose nuove, cose come la tifoseria») ----------
+# Il segno si ricava dal mese (il segno che copre la maggior parte del mese): niente date precise, niente dati personali.
+SEGNI = [None, ("♑", "Capricorno", "testardo ma fedelissimo"), ("♒", "Acquario", "originale e un po' ribelle"), ("♓", "Pesci", "dolce e sognatore"),
+         ("♈", "Ariete", "coraggioso e sempre primo alla porta"), ("♉", "Toro", "goloso e amante del divano"), ("♊", "Gemelli", "curioso e chiacchierone"),
+         ("♋", "Cancro", "affettuoso e casalingo"), ("♌", "Leone", "generoso e un po' vanitoso"), ("♍", "Vergine", "ordinato e preciso (anche con la ciotola)"),
+         ("♎", "Bilancia", "diplomatico e amico di tutti"), ("♏", "Scorpione", "misterioso e protettivo"), ("♐", "Sagittario", "avventuroso, sempre pronto a uscire")]
+
+def riga_identita(gioco, tipo, n, v):
+    if tipo == "ad":
+        k = sum(1 for a in gioco.animali if a.get("ad"))
+        return f"🏠 {n} è un salvato: sulla mappa ha il cuore degli adottati 💛 " + (f"Siete già {k} adottati in Italia: tagga chi ha adottato!" if k > 1 else "È il primo adottato della mappa: tagga chi ha adottato!")
+    g, nome_s, tratto = SEGNI[v]
+    k = sum(1 for a in gioco.animali if a.get("mese") == v)
+    di = {"Pesci": "dei", "Gemelli": "dei", "Bilancia": "della", "Vergine": "della", "Scorpione": "dello", "Acquario": "dell'", "Ariete": "dell'"}.get(nome_s, "del")
+    return f"{g} {n} è {di}{'' if di.endswith(chr(39)) else ' '}{nome_s}: {tratto}! Sulla mappa ha il suo segno" + (f" (con altri {k - 1} {nome_s} a quattro zampe)." if k > 1 else ".")
+
 # ---------- la gara degli amici (15/11, Alberto: «la gara chi porta più follower, in regalo un accessorio di quelli a pagamento») ----------
 # Ogni amico taggato che arriva e commenta = 1 punto a chi l'ha portato; se poi scrive SEGUO = altri 2. La settimana chiude la domenica alle 20
 # (come la Coppa): al primo la Corona, al secondo il Collare d'oro, al terzo il Fiocco, regalati sul suo animale (gli stessi del negozio).
@@ -1265,8 +1286,13 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
                 extra.append("🐾 Per giocare per la tua città serve il tuo animale sulla mappa: scrivi qui città e nome (es. «Treviso, Luna, cane») e poi ricommenta il codice.")
         if nuovi_a and chiave not in ("stella", "sogno", "multi") and nuovi_a[0].get("k") == "animale":
             extra.append(riga_nome(gioco, nuovi_a[0]))
-            if not nuovi_a[0].get("sq") and random.random() < 0.5:  # 15/11, il tifo: un motivo per ricommentare (e i commenti portano views)
-                extra.append(f"⚽ Per che squadra tifa {nuovi_a[0]['n']}? Rispondi «tifa» e la squadra: sulla mappa mette la sciarpa coi suoi colori!")  # 13/11: il nome unico (o quanti si chiamano come lui): una riga personale, da far vedere agli amici
+            dom = random.random(); a0 = nuovi_a[0]  # 15/11: una domanda per ricommentare (e i commenti portano views): squadra, adottato o mese
+            if dom < 0.35 and not a0.get("sq"):
+                extra.append(f"⚽ Per che squadra tifa {a0['n']}? Rispondi «tifa» e la squadra: sulla mappa mette la sciarpa coi suoi colori!")
+            elif dom < 0.6 and not a0.get("ad"):
+                extra.append(f"🏠 {a0['n']} è stato adottato? Rispondi «adottato»: sulla mappa riceve il cuore dei salvati 💛")
+            elif dom < 0.85 and not a0.get("mese"):
+                extra.append(f"✨ In che mese è nato {a0['n']}? Rispondi col mese: ti diciamo il suo segno e il suo carattere!")  # 13/11: il nome unico (o quanti si chiamano come lui): una riga personale, da far vedere agli amici
         # 10/11 Alberto: «la gara ho bisogno di molto di più». Ogni animale nuovo è un punto per la sua città nella Coppa (motore/coppa.py, una volta per animale)
         if nuovi_a and chiave not in ("stella", "sogno") and u.lower() not in ESCLUSI and gara_luci():
             for a_n in nuovi_a:
@@ -1287,6 +1313,9 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
                     extra.append(f"🔁 Staffetta di {nome_q}: {dq['n']}/{coppa.STAFFETTA}! " + (f"Prova chiusa: un punto per {nome_q} nella Coppa delle Zampe 🏆" if dq.get("chiusa") else
                                  f"Tagga {coppa.STAFFETTA - dq['n']} {'amico' if coppa.STAFFETTA - dq['n'] == 1 else 'amici'} di {nome_q}: col loro animale chiudete la staffetta e portate un punto alla città."))
                 break
+        for tipo_i, n_i, v_i in gioco.identita_nuove[-2:]:  # 15/11: adottato, segno
+            extra.insert(0, riga_identita(gioco, tipo_i, n_i, v_i))
+        gioco.identita_nuove.clear()
         if gioco.tifo_nuovo:  # 15/11: la sciarpa della squadra, e chi tifa come lui
             import squadre
             n_t, sq_t = gioco.tifo_nuovo[-1]; gioco.tifo_nuovo.clear()

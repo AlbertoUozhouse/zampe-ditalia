@@ -74,6 +74,7 @@ fetch("data/regioni.json").then(r => r.json()).then(REG => {
 let PRENOTATE = {}; // posti prenotati dalle attività, per comune: {"Treviso|TV": {"veterinario": 1}}
 let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 let DERBY = null; // il Derby della settimana: {ora: {a, b, na, nb, fine, partito}, albo: [...]} (motore/derby.py)
+const SEGNI = ["", "♑ Capricorno", "♒ Acquario", "♓ Pesci", "♈ Ariete", "♉ Toro", "♊ Gemelli", "♋ Cancro", "♌ Leone", "♍ Vergine", "♎ Bilancia", "♏ Scorpione", "♐ Sagittario"]; // dal mese di nascita (motore/commenti.py SEGNI)
 let SQUADRE = {}; // il tifo (15/11): i colori delle squadre dei tifosi a quattro zampe, da animali.json (motore/squadre.py)
 let NEGOZIO = {}, SFILATA = [], BELLO = null, BOOST = null; // la Sfilata degli accessori e «Il più bello d'Italia» della settimana (motore/commenti.py)
 let _x = 0; // i link di pagamento degli accessori (motore/config.json → animali.json): {collare: "https://buy.stripe.com/…"}
@@ -145,7 +146,7 @@ function petSvg(d) {
 }
 function petIcon(d) {
   const svg = petSvg(d), cls = d.k === "animale" ? d.t : d.k;
-  return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}${d.recent ? " nuovo" : ""}" data-id="${esc(d.id)}" style="--k:${(d.prof || 1).toFixed(3)};--r:${((d.seed % 90) / 10).toFixed(1)}s">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${d.k !== "stella" && livello(d.pt) ? livello(d.pt)[1] + " " : ""}${esc(d.n)}</span></div>` });
+  return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}${d.recent ? " nuovo" : ""}" data-id="${esc(d.id)}" style="--k:${(d.prof || 1).toFixed(3)};--r:${((d.seed % 90) / 10).toFixed(1)}s">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${d.k !== "stella" && livello(d.pt) ? livello(d.pt)[1] + " " : ""}${esc(d.n)}${d.ad ? " 💛" : ""}</span></div>` });
 }
 const EDIFICI = [[5, "Fontanella", "⛲"], [10, "Parco cani", "🌳"], [25, "Gattile", "🏠"], [50, "Clinica veterinaria", "🏥"], [100, "Piazza dei Fondatori", "🏛️"], [250, "Grande parco", "🎡"]]; // come in motore/commenti.py
 const LIVELLI = [[30, "🌸", "Giardino"], [50, "🏡", "Villa"], [70, "🏰", "Castello"]]; // come in motore/copione.py: più punti, più la cuccia cresce
@@ -197,7 +198,7 @@ function popup(d) {
   const ruolo = d.ruolo || (d.fondatore ? "Fondatore di " + d.c : "");
   const tipo = d.k === "stella" ? "Una stella nel cielo" : d.k === "sogno" ? "Il sogno di @" + esc(d.u) : d.t === "altro" ? esc((d.razza_testo || d.specie || "Amico speciale").replace(/^./, c => c.toUpperCase())) : d.t === "gatto" ? (D.GATTI[d.rk]?.n || "Gatto") : (d.rk === "meticcio" && d.razza_testo && !/meticc|incrocio|mix/i.test(d.razza_testo) ? esc(d.razza_testo.replace(/^./, c => c.toUpperCase())) : D.CANI[d.rk]?.n || "Cane");
   return `<div class="pop"><h3>${d.k === "stella" ? "✦" : icona(d)} ${esc(d.n)}</h3><div class="k">${tipo}</div>
-    <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>${d.sq && SQUADRE[d.sq] ? `<div class="k">⚽ Tifa ${esc(SQUADRE[d.sq].n)}</div>` : ""}
+    <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>${d.sq && SQUADRE[d.sq] ? `<div class="k">⚽ Tifa ${esc(SQUADRE[d.sq].n)}</div>` : ""}${d.ad ? `<div class="k">💛 Adottato: un salvato</div>` : ""}${d.mese ? `<div class="k">${SEGNI[d.mese]}</div>` : ""}
     ${d.k === "stella" ? "" : `<div>${d.pt} ${d.pt === 1 ? "punto" : "punti"}${d.rank ? ` · ${d.rank}° in Italia` : ""}</div>${barra(d.pt)}`}
     ${d.pres ? `<span class="role">🇮🇹 ${esc(d.pres)}</span>` : ""}
     ${d.capo ? `<span class="role">🐺 ${esc(d.capo)}</span>` : d.testa ? `<span class="role">🐺 In testa a ${esc(d.c)}: domenica alle 21 il Capobranco</span>` : ""}
