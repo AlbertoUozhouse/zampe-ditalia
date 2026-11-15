@@ -361,6 +361,9 @@ def main():
                 manda(ig, r["igsid"], {"attachment": {"type": "image", "payload": {"url": u}}})
             manda(ig, r["igsid"], {"text": f"Eccola! 💌 Mettila nella tua storia e tagga @zampeditalia: +{PUNTI_STORIA} punti per te ✨ "
                                            "Vuoi far salire la tua città? Tagga gli amici sotto i reel: +3 punti per ognuno che commenta, e chi ne porta di più oggi è il Re degli inviti 👑"})
+            # 15/11: in tre settimane nessuna foto vera, anche se la chiediamo in ogni didascalia. Qui la conversazione è già aperta:
+            # la chiediamo a chi ha appena ricevuto la cartolina (la foto si usa solo dopo il suo SÌ, più sotto in questo file)
+            manda(ig, r["igsid"], {"text": "📸 E dal vero? Mandaci qui una foto del tuo animale: le più belle diventano «La star di oggi» in un nostro reel, col tuo @ (prima ti chiediamo il SÌ) ⭐"})
             mandate += 1
         except urllib.error.HTTPError as e:
             print(f"cartolina non mandata: errore {e.code}", file=sys.stderr)
