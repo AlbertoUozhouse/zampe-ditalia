@@ -511,5 +511,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-15T17:12:50+00:00",
   "scambi": 128
+ },
+ {
+  "id": "2026-11-15-2032-serie",
+  "formato": "serie",
+  "modalita": "operativa",
+  "inizio": "2026-11-15T19:32:30+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-15T19:37:26+00:00",
+  "scambi": 128
  }
 ]
