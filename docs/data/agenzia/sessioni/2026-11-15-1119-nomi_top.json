@@ -1,0 +1,2202 @@
+{
+ "id": "2026-11-15-1119-nomi_top",
+ "formato": "nomi_top",
+ "modalita": "operativa",
+ "inizio": "2026-11-15T10:19:44+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-15T10:19:44+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "nomi_top",
+     "id": "2026-11-15-1119-nomi_top",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Il nome di cani e gatti più usato in Italia?",
+       "scena": "gancio"
+      },
+      {
+       "i": 1,
+       "testo": "Quinto Mia, quarto Kira, terzo Simba, secondo Leo.",
+       "scena": "barre"
+      },
+      {
+       "i": 2,
+       "testo": "E al primo posto: Luna! Sono 62, in 52 città.",
+       "scena": "gancio"
+      },
+      {
+       "i": 3,
+       "testo": "Eccone alcuni, da Carosino a San Valentino Torio.",
+       "scena": "padroni"
+      },
+      {
+       "i": 4,
+       "testo": "Scrivi il nome del tuo: ti rispondiamo con quanti ce ne sono.",
+       "scena": "commento"
+      }
+     ],
+     "apertura": null,
+     "fascia": "✍️ Scrivi il nome del tuo: quanti ce ne sono? 👇",
+     "didascalia": "🐾 Il nome di cani e gatti più usato in Italia? 5° Mia · 4° Kira · 3° Simba · 2° Leo · 👑 Luna (62).\nSulla mappa di Zampe d'Italia ci sono 1395 nomi diversi.\n\n👇 Scrivi qui sotto il nome del tuo animale: ti rispondiamo con quanti si chiamano come lui in Italia (e se è l'unico!).\n🗺️ Aggiungi anche la città (es. «Treviso, Luna, cane») e accendiamo la sua luce.\n➕ Seguici: ogni settimana una classifica nuova.\n\n🐾 In questo reel: @_luka.bulatovicc @barnabachristel @ernesto_8_7 @fede_sporty_ @giorgia.patra @massimo_c_2015 @mattimiles_ @simo_life_16 @sofia.la.squinternata @speciale_sergio\n\nVoce generata ",
+     "voce": true,
+     "copertina": null
+    }
+   }
+  },
+  {
+   "t": "2026-11-15T10:19:48+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Chi ha un cane o un gatto in casa e si è sempre chiesto se il suo nome sia comune o raro: italiani che scorrono Instagram e non conoscono ancora Zampe d'Italia. · Gancio: Il nome di cani e gatti più usato in Italia? Non è Leo, non è Simba: ti diamo il podio, e l'ultimo posto ti sorprende. · Primo fotogramma: Sfondo mappa d'Italia di notte con le luci accese; al centro, a grandi lettere, «Il nome di cani e gatti più usato in Italia?» e un punto interrogativo gigante al posto del primo posto del podio. Sotto, piccolo: «Il tuo animale c'è?» · Motivo per seguire: Zampe d'Italia accende sulla mappa una luce per ogni animale e ogni settimana porta una classifica nuova, così scopri dove vive chi si chiama come il tuo e se il suo nome è raro. · Chiusura: Luna è prima con 62. Segui Zampe d'Italia per la prossima classifica.",
+   "dati": {
+    "pubblico": "Chi ha un cane o un gatto in casa e si è sempre chiesto se il suo nome sia comune o raro: italiani che scorrono Instagram e non conoscono ancora Zampe d'Italia.",
+    "gancio": "Il nome di cani e gatti più usato in Italia? Non è Leo, non è Simba: ti diamo il podio, e l'ultimo posto ti sorprende.",
+    "primo_fotogramma": "Sfondo mappa d'Italia di notte con le luci accese; al centro, a grandi lettere, «Il nome di cani e gatti più usato in Italia?» e un punto interrogativo gigante al posto del primo posto del podio. Sotto, piccolo: «Il tuo animale c'è?»",
+    "motivo_per_seguire": "Zampe d'Italia accende sulla mappa una luce per ogni animale e ogni settimana porta una classifica nuova, così scopri dove vive chi si chiama come il tuo e se il suo nome è raro.",
+    "chiusura": "Luna è prima con 62. Segui Zampe d'Italia per la prossima classifica.",
+    "perche": "Il nome del proprio animale è una curiosità personale che a volume zero si capisce subito, e la chiusura lega la classifica di oggi a quella della prossima settimana con un'unica richiesta di seguire."
+   }
+  },
+  {
+   "t": "2026-11-15T10:19:48+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "nomi_top",
+     "id": "2026-11-15-1119-nomi_top",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Il nome di cani e gatti più usato in Italia?",
+       "scena": "gancio"
+      },
+      {
+       "i": 1,
+       "testo": "Quinto Mia, quarto Kira, terzo Simba, secondo Leo.",
+       "scena": "barre"
+      },
+      {
+       "i": 2,
+       "testo": "E al primo posto: Luna! Sono 62, in 52 città.",
+       "scena": "gancio"
+      },
+      {
+       "i": 3,
+       "testo": "Eccone alcuni, da Carosino a San Valentino Torio.",
+       "scena": "padroni"
+      },
+      {
+       "i": 4,
+       "testo": "Scrivi il nome del tuo: ti rispondiamo con quanti ce ne sono.",
+       "scena": "commento"
+      }
+     ],
+     "apertura": null,
+     "fascia": "✍️ Scrivi il nome del tuo: quanti ce ne sono? 👇",
+     "didascalia": "🐾 Il nome di cani e gatti più usato in Italia? 5° Mia · 4° Kira · 3° Simba · 2° Leo · 👑 Luna (62).\nSulla mappa di Zampe d'Italia ci sono 1395 nomi diversi.\n\n👇 Scrivi qui sotto il nome del tuo animale: ti rispondiamo con quanti si chiamano come lui in Italia (e se è l'unico!).\n🗺️ Aggiungi anche la città (es. «Treviso, Luna, cane») e accendiamo la sua luce.\n➕ Seguici: ogni settimana una classifica nuova.\n\n🐾 In questo reel: @_luka.bulatovicc @barnabachristel @ernesto_8_7 @fede_sporty_ @giorgia.patra @massimo_c_2015 @mattimiles_ @simo_life_16 @sofia.la.squinternata @speciale_sergio\n\nVoce generata ",
+     "voce": true,
+     "copertina": null
+    },
+    "mappa": []
+   }
+  },
+  {
+   "t": "2026-11-15T10:19:50+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-15T10:20:40+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.3 LUFS, picco -1.0 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.3,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -17.1,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:40+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (20.0 s): ti mando 21 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 20.0,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     19.7
+    ]
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:45+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio della trascrizione dice 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' ma le barre a 5 secondi mostrano solo 3°, 4° e 5° posto, con Leo e Luna non ancora visibili; al secondo 4 il testo 'QUARTO KIRA' appare prima che la classifica sia leggibile. Inoltre l'apertura non anticipa la d",
+   "dati": {
+    "controllato": "Apertura (primi 5 secondi): gancio chiaro sul nome più usato, audio a -17,1 dB medi con picco a -1 dBFS e nessun silenzio lungo; trascrizione e scene coerenti con il copione.",
+    "esito": "segnalo",
+    "secondo": 5,
+    "problema": "Il conteggio della trascrizione dice 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' ma le barre a 5 secondi mostrano solo 3°, 4° e 5° posto, con Leo e Luna non ancora visibili; al secondo 4 il testo 'QUARTO KIRA' appare prima che la classifica sia leggibile. Inoltre l'apertura non anticipa la domanda 'quanti ce ne sono' con un richiamo visivo forte nei primi secondi, e i numeri 62 e 52 città compaiono solo dopo il secondo 6.",
+    "correzione": "Mostrare la barra di Luna (62) o il titolo 'Top 5' già nei primi 3 secondi e far comparire la frase 'Il tuo nome c'è?' come sottotitolo fin dall'inizio, così il primo fotogramma spiega subito il gioco.",
+    "idea": "Serie 'Il tuo nome c'è?' con una sola classifica a settimana e una card finale che invita a seguire per la prossima; testare un hook che mostri direttamente il nome del follower più simile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:45+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' non trova riscontro nei fotogrammi né nei dati mappa forniti: la classifica mostrata a schermo parte da 3. Simba 38, 4. Kira 35, 5. Mia 31, senza Leo; inoltre la trascrizione dice 'Quinto Mia, quarto Kira' mentre a schermo compaiono 'Quarto",
+   "dati": {
+    "controllato": "Sincronia tra copione, trascrizione coi secondi, scene, dati della mappa (62 cani/gatti Luna, 52 città) e didascalia, più misure audio.",
+    "esito": "segnalo",
+    "secondo": 4.8,
+    "problema": "Il dato 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' non trova riscontro nei fotogrammi né nei dati mappa forniti: la classifica mostrata a schermo parte da 3. Simba 38, 4. Kira 35, 5. Mia 31, senza Leo; inoltre la trascrizione dice 'Quinto Mia, quarto Kira' mentre a schermo compaiono 'Quarto Kira' e 'Luna' al primo posto, quindi il secondo posto (Leo) non è verificabile dai materiali. Anche '1395 nomi diversi' in didascalia non è nei dati mappa forniti (lista vuota).",
+    "correzione": "Verificare Leo e il dato 1395 con i dati reali prima di pubblicare; allineare il voiceover alla classifica a schermo o mostrare Leo nella barra; togliere dalla didascalia il numero di nomi se non verificato.",
+    "idea": "Mostrare i profili della mappa con l'animale in foto per aumentare riconoscimento e condivisioni, e chiudere con un numero preciso (es. 'quanti Luna ci sono nella tua città')."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:45+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la scena mostra solo 'QUARTO KIRA,' con le barre già visibili su 3°, 4° e 5°: la barra del 2° (Leo) e del 1° (Luna) non compaiono prima del cambio, e 'Quinto Mia' è detto a 2.6s mentre la barra è ancora sul 3° al secondo 4. Inoltre la classifica salta dal 3° al 5° nella barra visiva, co",
+   "dati": {
+    "controllato": "Leggibilità da telefono di testi, barre e nomi, più coerenza tra fotogrammi, trascrizione, audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la scena mostra solo 'QUARTO KIRA,' con le barre già visibili su 3°, 4° e 5°: la barra del 2° (Leo) e del 1° (Luna) non compaiono prima del cambio, e 'Quinto Mia' è detto a 2.6s mentre la barra è ancora sul 3° al secondo 4. Inoltre la classifica salta dal 3° al 5° nella barra visiva, con il 2° (Leo) assente in tutto il reel. Il testo 'Leo' non ha una schermata dedicata.",
+    "correzione": "Mostrare nella barra anche il 2° posto Leo (con il suo numero) e far comparire ogni posizione in sequenza, in linea con il parlato; sostituire la didascalia 'Sono 62' con il numero esatto dai dati.",
+    "idea": "Un reel 'Scrivi il nome e scopri la tua posizione' con un contatore animato che sale fino al numero del nome inviato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:45+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio dei nomi non torna: nella barra compare Simba 38 ma il conto parla di 'Leo' al secondo posto, e Leo non compare nei fotogrammi né nei dati forniti. Inoltre la mappa mostra 10 profili Luna, ma il brief dice 62 sulla mappa: i dati in mio possesso non permettono di verificarlo. Il dato 'So",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione vs brief, dati della mappa (62 sulla mappa, 52 città, 1395 nomi), audio (-14.3 LUFS, picco -1.0 dBFS) e i fotogrammi inviati.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Il conteggio dei nomi non torna: nella barra compare Simba 38 ma il conto parla di 'Leo' al secondo posto, e Leo non compare nei fotogrammi né nei dati forniti. Inoltre la mappa mostra 10 profili Luna, ma il brief dice 62 sulla mappa: i dati in mio possesso non permettono di verificarlo. Il dato 'Sono 62, in 52 città' va controllato prima della pubblicazione.",
+    "correzione": "Verificare nei dati che Leo sia davvero il secondo posto con il conteggio corretto e che Simba sia 3° con 38; allineare la voce 'secondo Leo' alla barra mostrata, oppure mostrare la barra di Leo. Confermare 62 e 52 con il database prima di pubblicare.",
+    "idea": "Replicare il formato con una risposta personalizzata in un reel successivo, mostrando la mappa con il nome dell'utente che ha commentato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:48+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nei primi 0.5 secondi il fotogramma è vuoto di contenuto: il titolo 'Il nome di cani e gatti più usato in Italia?' appare solo dopo, e l'apertura non ha una risposta visiva forte (né un numero né un'immagine di animale). In più il brief ha 'apertura': null, quindi l'apertura non è stata definita.",
+   "dati": {
+    "controllato": "Apertura del reel: gancio visivo, testo a schermo, secondo 0.5 e ritmo dei primi 3 secondi con il titolo sulla domanda.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nei primi 0.5 secondi il fotogramma è vuoto di contenuto: il titolo 'Il nome di cani e gatti più usato in Italia?' appare solo dopo, e l'apertura non ha una risposta visiva forte (né un numero né un'immagine di animale). In più il brief ha 'apertura': null, quindi l'apertura non è stata definita.",
+    "correzione": "Far comparire il titolo già al frame 0 e aggiungere subito la cifra 'Luna: 62' o il primo nome visibile nei primi 0.5-1 secondi, così chi scorre si ferma.",
+    "idea": "Per i prossimi reel: aprire con il risultato finale in piccolo (es. 'Il più usato? Luna, 62') e poi rivelare la classifica; aggiungere un frame finale con 'Seguici per la classifica della settimana'."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:49+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 8 la scena dei padroni (le card con i profili) compare già, ma nel copione la frase 'Eccone alcuni, da Carosino a San Valentino Torio' inizia a 11.7s; le card restano anche dopo che la voce ha finito e la schermata 'Scrivi il nome' arriva solo nei secondi finali, quindi la ",
+   "dati": {
+    "controllato": "Inquadrature dei 6 fotogrammi (campi e ritmo delle scene barre, gancio, padroni, commento) rispetto al copione e ai secondi della trascrizione.",
+    "esito": "segnalo",
+    "secondo": 8,
+    "problema": "Nel fotogramma al secondo 8 la scena dei padroni (le card con i profili) compare già, ma nel copione la frase 'Eccone alcuni, da Carosino a San Valentino Torio' inizia a 11.7s; le card restano anche dopo che la voce ha finito e la schermata 'Scrivi il nome' arriva solo nei secondi finali, quindi la chiusura è meno nitida. Inoltre il fotogramma a 4s mostra la classifica con 'QUARTO KIRA' già in primo piano sopra le barre, mentre la barra di Kira e Simba sono tagliate in alto e la classifica parte dal 3° posto: il 5° e 4° non sono visibili nel campo, quindi la sequenza 'quinto, quarto, terzo' non si legge come racconto.",
+    "correzione": "Far restare la classifica completa (5°→1°) inquadrata con il conto alla rovescia in ordine, portare la card 'Luna' in primo piano per tutta la frase 'Sono 62, in 52 città', e spostare la lista dei profili sulla frase dei padroni, chiudendo con il campo 'Scrivi il nome' a schermo pieno per gli ultimi 3 secondi.",
+    "idea": "Un reel 'Indovina il tuo nome' con il conteggio a sorpresa del nome più raro in fondo, in cui l'utente commenta prima della rivelazione."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:49+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la barra mostra solo il 3°, 4° e 5° posto (Simba, Kira, Mia) mentre il copione nomina anche il secondo (Leo) e il titolo parla di top 5; inoltre il 2° e il 1° posto (Leo, Luna) non compaiono nelle barre, quindi la classifica visiva è incompleta. Al secondo 19.7 il fotogramma finale most",
+   "dati": {
+    "controllato": "Trascrizione, tempi delle scene, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e coerenza tra copione, didascalia e mappa.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la barra mostra solo il 3°, 4° e 5° posto (Simba, Kira, Mia) mentre il copione nomina anche il secondo (Leo) e il titolo parla di top 5; inoltre il 2° e il 1° posto (Leo, Luna) non compaiono nelle barre, quindi la classifica visiva è incompleta. Al secondo 19.7 il fotogramma finale mostra la fascia di commento, ma la fascia non è dichiarata nel copione. Il numero 1395 nomi nella didascalia non è verificabile dai materiali forniti.",
+    "correzione": "Mostrare nella scena barre tutte e cinque le posizioni (o almeno 2° e 1° in un frame successivo) in linea con il copione, e verificare il dato dei 1395 nomi prima della pubblicazione.",
+    "idea": "Aggiungere a fine reel il nome più raro trovato in mappa con il suo account, così il commento diventa anche una piccola scoperta da condividere."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:49+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel reel compaiono 9 profili (più uno sbiadito) con @handle reali di persone e le loro città, e la didascalia li tagga tutti. Non ho dati che confermino il consenso di questi utenti alla pubblicazione. Inoltre al secondo 6.7 la voce dice «primo posto: Luna!» mentre la barra precedente mostra solo 3°",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione vs frasi del brief, didascalia, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e coerenza dei numeri (Luna 62 sulla mappa, 52 città, 9 nomi in mappa mostrati).",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Nel reel compaiono 9 profili (più uno sbiadito) con @handle reali di persone e le loro città, e la didascalia li tagga tutti. Non ho dati che confermino il consenso di questi utenti alla pubblicazione. Inoltre al secondo 6.7 la voce dice «primo posto: Luna!» mentre la barra precedente mostra solo 3°-5°: va bene, ma le barre 2° e 1° (Leo) non sono mai mostrate, quindi «secondo Leo» resta senza visualizzazione. Il numero 1395 nomi nella didascalia non compare nel reel e non l'ho potuto verificare dai materiali.",
+    "correzione": "Ottenere conferma di consenso dai profili taggati o oscurare handle e città; mostrare anche la barra di Leo (2°) e Luna (1°) con i valori; verificare 1395 nomi prima di pubblicarlo.",
+    "idea": "Un reel «Nomi sulla mappa» con una sola città per volta e il nome del follower che commenta in primo piano, previo consenso esplicito."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:52+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione il primo posto (Luna) arriva a 6.7s, ma nella scena barre i tre gradini precedenti (5°, 4°, 3°) e il 2° (Leo) non sono mostrati visivamente: il fotogramma a 4s mostra solo 3°-5° e Leo non compare. Inoltre i dati_mappa sono vuoti, quindi non posso verificare i numeri 62 e 52 città;",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio) e didascalia rispetto al brief e ai dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Nella trascrizione il primo posto (Luna) arriva a 6.7s, ma nella scena barre i tre gradini precedenti (5°, 4°, 3°) e il 2° (Leo) non sono mostrati visivamente: il fotogramma a 4s mostra solo 3°-5° e Leo non compare. Inoltre i dati_mappa sono vuoti, quindi non posso verificare i numeri 62 e 52 città; la didascalia cita 1395 nomi diversi che non trovo nei materiali verificati. Infine la didascalia elenca tag di 10 profili, ma la mappa nel reel ne mostra 9 con Luna più uno spento (ernesto_8_7 in grigio).",
+    "correzione": "Verificare con la mappa reale i 62 / 52 città / 1395 nomi prima di pubblicare; allineare la barra di Leo (2°) nel fotogramma con il secondo 6.7s; controllare che i tag in didascalia corrispondano ai profili visibili e far aggiornare il profilo spento.",
+    "idea": "Chiudere con un'anteprima di 'Il tuo nome è al ... posto' per chi commenta, e usare un'animazione che fa salire le barre invece di mostrarle già ferme."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:53+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il tag 'Voce generata' nella didascalia è incompleto e il campo 'voce' è true: la voce è generata dall'IA e va dichiarata in modo chiaro. In più, la trascrizione dice '[0.0s] Il nome di cani e [0.9s] gatti' ma il copione dice 'Il nome di cani e gatti più usato in Italia?' senza dati mappa ('dati_map",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (LUFS, picco, silenzi), didascalia e dati di progetto del reel nomi_top.",
+    "esito": "segnalo",
+    "secondo": 0.9,
+    "problema": "Il tag 'Voce generata' nella didascalia è incompleto e il campo 'voce' è true: la voce è generata dall'IA e va dichiarata in modo chiaro. In più, la trascrizione dice '[0.0s] Il nome di cani e [0.9s] gatti' ma il copione dice 'Il nome di cani e gatti più usato in Italia?' senza dati mappa ('dati_mappa' è vuoto): il numero '1395 nomi diversi' nella didascalia non è verificabile dai materiali. Inoltre l'apertura è null e il silenzio iniziale non è misurato (volume primi 5s -17.1 dB, sotto l'obiettivo di -14 LUFS).",
+    "correzione": "Completare la dicitura 'Voce generata con IA' in didascalia; togliere o verificare '1395 nomi diversi' con dati reali; alzare il volume dei primi 5 secondi verso -14 LUFS, mantenendo il picco sotto -1 dBFS.",
+    "idea": "Aprire con il nome 'Luna' e il numero 62 già nel primo secondo, poi la classifica a scalare, così il gancio è visivo oltre che sonoro."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:53+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato sui nomi (62 cani/gatti chiamati Luna, 52 città) e i nomi di città nel copione non risultano nei dati_mappa, che sono vuoti: non posso verificarli. Inoltre la trascrizione dice 'Il nome di cani e gatti', mentre la didascalia dice 'cani e gatti' senza distinzione: coerente, ma va verificato c",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (LUFS -14.3, picco -1.0 dBFS, nessun silenzio lungo) e coerenza tra copione, brief e didascalia della mia mansione di montaggio animazioni.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il dato sui nomi (62 cani/gatti chiamati Luna, 52 città) e i nomi di città nel copione non risultano nei dati_mappa, che sono vuoti: non posso verificarli. Inoltre la trascrizione dice 'Il nome di cani e gatti', mentre la didascalia dice 'cani e gatti' senza distinzione: coerente, ma va verificato che i conteggi siano davvero su cani e gatti insieme.",
+    "correzione": "Prima della pubblicazione, far confermare dai dati della mappa i numeri 62 e 52 città e la classifica 5°-1° (Mia, Kira, Simba, Leo, Luna). Riempire dati_mappa, altrimenti togliere le cifre dal voiceover.",
+    "idea": "Ripetere il formato con una classifica di nomi per regione, così ogni comunità cerca il proprio nome e commenta."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:53+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Simba, secondo Leo' e la trascrizione li separa correttamente, ma la frase 'Quinto Mia, quarto Kira, terzo' viene divisa tra 2.6s e 4.8s: 'terzo' resta da solo a fine riga e 'Simba' arriva a 4.8s, quindi il nome della classifica appare in ritardo rispetto alla voce. Inoltre la didas",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, sincronia dei sottotitoli con il copione, audio (LUFS, picco, silenzi) e coerenza con la didascalia e la fascia finale.",
+    "esito": "segnalo",
+    "secondo": 4.8,
+    "problema": "Il copione dice 'Simba, secondo Leo' e la trascrizione li separa correttamente, ma la frase 'Quinto Mia, quarto Kira, terzo' viene divisa tra 2.6s e 4.8s: 'terzo' resta da solo a fine riga e 'Simba' arriva a 4.8s, quindi il nome della classifica appare in ritardo rispetto alla voce. Inoltre la didascalia cita 1395 nomi diversi, ma questo dato non compare nei materiali del brief né nella mappa (dati_mappa è vuoto), quindi non è verificabile da me.",
+    "correzione": "Spostare l'inizio del sottotitolo 'terzo Simba' a 4.8s e mostrare ogni nome in blocchi di un solo nome per volta, allineati ai secondi della voce; per la didascalia, togliere o verificare il numero 1395 prima della pubblicazione.",
+    "idea": "Per i prossimi reel della classifica, mostrare un solo nome alla volta con il numero di animali grande al centro e la città in piccolo sotto, così il pubblico può seguire la gara e commentare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:55+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, copione, fascia, audio (LUFS, picco, silenzi), didascalia e dati del progetto per il reel nomi_top.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, fascia, audio (LUFS, picco, silenzi), didascalia e dati del progetto per il reel nomi_top.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, chiudere con un nome reale e ben visibile sulla mappa, così chi commenta vede subito la propria città accendersi."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:55+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, misure audio (LUFS, picco, silenzi, volume iniziale) e coerenza tra copione, brief e didascalia del reel nomi_top.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, misure audio (LUFS, picco, silenzi, volume iniziale) e coerenza tra copione, brief e didascalia del reel nomi_top.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, aprire con un'immagine dell'animale primo in classifica (o il suo nome in grande) nei primi 0,5 secondi, così il gancio visivo arriva prima della voce."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:58+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il reel non ha un'apertura con video vero: il campo 'apertura' è null e la prima frase parte solo come gancio testuale al secondo 0.0. Inoltre la didascalia dice 'Voce generata' con il flag voce=true, senza dichiarare chiaramente l'uso di una voce sintetica, e il primo tag elenca nomi di account sen",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e dati del progetto contro gli obiettivi del reparto.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il reel non ha un'apertura con video vero: il campo 'apertura' è null e la prima frase parte solo come gancio testuale al secondo 0.0. Inoltre la didascalia dice 'Voce generata' con il flag voce=true, senza dichiarare chiaramente l'uso di una voce sintetica, e il primo tag elenca nomi di account senza che nei materiali risulti il loro consenso alla menzione. Dai dati mappa risultano 0 città e 0 nomi diversi: la didascalia cita 1395 nomi e 52 città, ma questi numeri non compaiono nei dati verificati del reel, quindi vanno confermati prima della pubblicazione.",
+    "correzione": "Aprire con un video reale nei primi 0.5-1 s (es. una luce che si accende sulla mappa o un animale con il nome in sovrimpressione), confermare o rimuovere i numeri 1395 e 52 dalla didascalia, dichiarare la voce generata in modo esplicito e verificare che i partecipanti taggati abbiano dato il permesso; le misure audio sono a posto.",
+    "idea": "Per i prossimi reel della serie 'nomi_top' partire con un primo piano di un animale che 'risponde' al nome in video, e chiudere con la mappa che si accende nella città del nome più scritto nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:58+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Ho verificato audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo), durata e coerenza tra copione, trascrizione, brief e didascalia.",
+   "dati": {
+    "controllato": "Ho verificato audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo), durata e coerenza tra copione, trascrizione, brief e didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, aggiungere in apertura un animale o una foto di un nome in primo piano sul primo frame, e ripetere il nome vincente in scritta a schermo, così la classifica resta leggibile anche senza audio."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:58+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La didascalia cita '1395 nomi diversi' e la voce è dichiarata generata, ma nel reel e nel copione non compare il dato dei nomi diversi né la mappa, quindi il numero non è verificabile dai materiali. Inoltre la frase finale 'Scrivi il nome del tuo' arriva a 16.3s e resta sullo schermo solo pochi seco",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione e didascalia rispetto al brief, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e coerenza della frase finale con la fascia.",
+    "esito": "segnalo",
+    "secondo": 19.7,
+    "problema": "La didascalia cita '1395 nomi diversi' e la voce è dichiarata generata, ma nel reel e nel copione non compare il dato dei nomi diversi né la mappa, quindi il numero non è verificabile dai materiali. Inoltre la frase finale 'Scrivi il nome del tuo' arriva a 16.3s e resta sullo schermo solo pochi secondi prima della fine (19.7s): il invito all'azione è poco sostenuto.",
+    "correzione": "Verificare il dato '1395 nomi diversi' con la mappa prima di pubblicare, oppure toglierlo. Allungare la fascia 'Scrivi il nome del tuo' di almeno 2 secondi nella parte finale, mantenendola visibile durante l'ultima frase del parlato.",
+    "idea": "Ripetere il formato con una chiusura che mostri il conteggio del nome scelto dal pubblico in un reel successivo, così il commento diventa un ritorno concreto e riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:20:58+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, copione del brief, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e didascalia: tutto coerente e nei limiti.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del brief, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e didascalia: tutto coerente e nei limiti.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il formato con una risposta visiva: nel reel successivo mostrare in video i nomi arrivati nei commenti, così chi ha partecipato si riconosce e segue la pagina per vedere la prossima classifica."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:01+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La domanda è pronunciata a 0.0-0.9s ma il primo fotogramma è statico e il testo a schermo si legge solo dopo; nei primi 2 secondi non c'è ancora un elemento che promette qualcosa di sorprendente (il nome, la classifica), quindi chi scorre rischia di andarsene prima della rivelazione.",
+   "dati": {
+    "controllato": "Ganci dei primi 2 secondi: gancio iniziale, timing della domanda e primo impatto visivo del reel.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "La domanda è pronunciata a 0.0-0.9s ma il primo fotogramma è statico e il testo a schermo si legge solo dopo; nei primi 2 secondi non c'è ancora un elemento che promette qualcosa di sorprendente (il nome, la classifica), quindi chi scorre rischia di andarsene prima della rivelazione.",
+    "correzione": "Anticipare nei primi 2 secondi il dato più forte, ad esempio «Il nome più usato in Italia è… Luna (62)!» con il numero in grande sul fotogramma 0, e spostare la domanda subito dopo.",
+    "idea": "Aprire con il numero-sorpresa in grande (es. «62 cani e gatti si chiamano Luna») e chiudere sempre con una mini-sfida che rimandi alla settimana successiva, così il follow ha un motivo concreto."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:02+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nel copione Leo è detto come secondo, ma nella schermata a 4-8s la barra mostra 3. Simba, 4. Kira, 5. Mia e il secondo posto (Leo) non viene mostrato nelle barre; la voce dice 'secondo Leo' a 6.7s, mentre il fotogramma a 8s non lo conferma. Inoltre la didascalia dice '1395 nomi diversi' che non è ve",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del brief e didascalia: le 5 frasi corrispondono al copione, ma nel reel compaiono anche la classifica completa (5°-3°) e i nomi Leo e Simba non sono tutti letti in voce come nel copione.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Nel copione Leo è detto come secondo, ma nella schermata a 4-8s la barra mostra 3. Simba, 4. Kira, 5. Mia e il secondo posto (Leo) non viene mostrato nelle barre; la voce dice 'secondo Leo' a 6.7s, mentre il fotogramma a 8s non lo conferma. Inoltre la didascalia dice '1395 nomi diversi' che non è verificabile dai materiali forniti, e la didascalia cita 'Voce generata' senza necessità.",
+    "correzione": "Mostrare nella barra anche il 2° posto (Leo) oppure togliere 'secondo Leo' dalla voce; verificare il dato '1395 nomi diversi' prima di pubblicarlo; rimuovere 'Voce generata' dalla didascalia.",
+    "idea": "Per i prossimi reel della serie, chiudere sempre con un numero di risposta visibile (es. 'Luna: 62') e usare un solo colpo di scena per reel."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:03+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice \"Sono 62\" a 9.3s, ma la classifica a schermo non mostra nessun dato ufficiale del quarto e del secondo posto (Kira 35, Leo non compare nei fotogrammi). Inoltre nella didascalia i cinque nomi sono elencati senza il numero dei nomi di Simba e Leo; non è un errore grave, ma la fras",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Luna 62 in 52 città, classifica 5°-2°), audio (-14.3 LUFS, picco -1.0 dBFS) e didascalia.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "La trascrizione dice \"Sono 62\" a 9.3s, ma la classifica a schermo non mostra nessun dato ufficiale del quarto e del secondo posto (Kira 35, Leo non compare nei fotogrammi). Inoltre nella didascalia i cinque nomi sono elencati senza il numero dei nomi di Simba e Leo; non è un errore grave, ma la frase \"Quinto Mia... secondo Leo\" nel parlato non è verificabile dai materiali ricevuti. Nel fotogramma a 4s le barre mostrano Simba 38, Kira 35, Mia 31: i numeri sono coerenti con il parlato solo per 3°-5°.",
+    "correzione": "Verificare che Leo sia davvero 2° con 45+ occorrenze (non visibile nei fotogrammi) prima della pubblicazione; altrimenti togliere Leo dal parlato e dalla didascalia. Aggiungere a schermo il numero 62 e la scritta 'in 52 città' già presenti: ok.",
+    "idea": "Replicare il formato con una variante 'il nome più raro della mappa' e chiudere con una mappa animata che accende la città del commentatore."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:03+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' non trova riscontro nelle barre mostrate: il fotogramma al secondo 4 mostra solo 3°, 4° e 5° (Simba 38, Kira 35, Mia 31), e 'Leo' non compare. Inoltre il titolo promette 1999–803 nomi/animali ma nel testo non c'è il dato 'Luna 62' coerente ",
+   "dati": {
+    "controllato": "Copione del reel 'nomi più usati': trascrizione con secondi, didascalia, audio e coerenza con il brief e la mappa.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Il dato 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' non trova riscontro nelle barre mostrate: il fotogramma al secondo 4 mostra solo 3°, 4° e 5° (Simba 38, Kira 35, Mia 31), e 'Leo' non compare. Inoltre il titolo promette 1999–803 nomi/animali ma nel testo non c'è il dato 'Luna 62' coerente con la barra del 1° posto che non appare nei fotogrammi. Le didascalie citano 'Luna (62)' e '1395 nomi diversi' senza che questi numeri siano presenti nei materiali sulla mappa (dati_mappa è vuoto). Il voiceover parla di 'Quinto Mia... secondo Leo' ma la scena delle barre si ferma al 3°.",
+    "correzione": "Verificare nei dati veri la classifica completa (1°-5°, incluso Leo) e allineare voce, barre e didascalia; far comparire la barra del 1° posto (Luna) con il numero 62 e togliere '1395 nomi' se non è verificato. Aggiungere il riferimento 'dati Zampe d'Italia' o simile per chiarezza.",
+    "idea": "Una serie fissa 'Il nome del mese' con una barra animata che sale fino al primo posto e un finale che risponde ai nomi scritti nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:05+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nel copione la frase 'E al primo posto: Luna!' cade a 6.7s, mentre il fotogramma a 8s mostra già la scena 'Luna 62' e la trascrizione dice 'Luna' a 6.7s: il ritmo è coerente, ma la trascrizione riporta 'Sono 62, in 52 città' a 9.3s mentre la schermata con i numeri compare in ritardo rispetto alla vo",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, brief, didascalia e fotogrammi del reel 'nomi più usati'.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Nel copione la frase 'E al primo posto: Luna!' cade a 6.7s, mentre il fotogramma a 8s mostra già la scena 'Luna 62' e la trascrizione dice 'Luna' a 6.7s: il ritmo è coerente, ma la trascrizione riporta 'Sono 62, in 52 città' a 9.3s mentre la schermata con i numeri compare in ritardo rispetto alla voce. Inoltre la didascalia cita 'Leo' come 2° posto, ma la schermata con le barre mostra solo 3°, 4°, 5° (Simba, Kira, Mia): il secondo e il primo non sono visibili nei materiali, quindi non posso verificarli. Il reel inoltre non ha un titolo di chiusura che riprenda il numero totale di nomi (1395) citato nella didascalia, che nel video non compare.",
+    "correzione": "Mostrare nella scena barre anche 2° Leo e 1° Luna prima del reveal, oppure allineare la voce alle schermate; verificare i dati di Leo e il conteggio 1395 prima di pubblicare, o toglierli dalla didascalia; aggiungere sul video il numero totale dei nomi.",
+    "idea": "Una serie fissa 'classifica della settimana' con la stessa grafica e un numero di commenti come contatore, per creare abitudine a seguire."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:06+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» ma nella scena delle barre compaiono solo 3°, 4° e 5° posto e Leo non è mai mostrato. Inoltre la frase «E al primo posto: Luna!» arriva a 6.7s, mentre nel fotogramma a 8s Luna è già in primo piano: la rivelazione non è sincronizzata",
+   "dati": {
+    "controllato": "Grammatica, preposizioni e corrispondenza tra copione, trascrizione coi secondi e didascalia: frasi chiare e nessun errore di lingua; i nomi e i numeri (62 sulla mappa, 52 città, 1395 nomi) coincidono con i dati forniti.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Il copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» ma nella scena delle barre compaiono solo 3°, 4° e 5° posto e Leo non è mai mostrato. Inoltre la frase «E al primo posto: Luna!» arriva a 6.7s, mentre nel fotogramma a 8s Luna è già in primo piano: la rivelazione non è sincronizzata con la voce. Nella didascalia manca il primo posto nel formato e «Sono 62» nella voce non è preceduto da un soggetto chiaro (c'è «E al primo posto: Luna! Sono 62» ma va bene); l'elenco delle barre non include Leo.",
+    "correzione": "Mostrare nella scena delle barre anche 2° Leo (o cambiare il copione in «Quinto Mia, quarto Kira, terzo Simba») e allineare «Luna!» al momento in cui compare la corona, circa 6.7s. Nella didascalia spostare «Sono 62, in 52 città» in una riga separata per chiarezza.",
+    "idea": "Una serie fissa «Nomi d'Italia» con la rivelazione del primo posto e il commento sulla città più frequente per ogni nome."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:08+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Sono 62, in 52 città» ma sul fotogramma della mappa i nomi elencati sono 9 più il bollino «San Valentino Torio» già in scena: non c'è incongruenza numerica, però la frase «Eccone alcuni» sul fotogramma al secondo 12 mostra solo 9 card di 62 e nessuna indicazione che siano un campion",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del formato nomi_top, didascalia, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio) e i fotogrammi campione.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Il copione dice «Sono 62, in 52 città» ma sul fotogramma della mappa i nomi elencati sono 9 più il bollino «San Valentino Torio» già in scena: non c'è incongruenza numerica, però la frase «Eccone alcuni» sul fotogramma al secondo 12 mostra solo 9 card di 62 e nessuna indicazione che siano un campione. Inoltre la didascalia dichiara «1395 nomi diversi» che non compare nei materiali del copione né nel brief: è un dato non verificabile dal mio reparto. Infine nel fotogramma a 4s le barre mostrano solo 3°, 4°, 5° e Leo (2°) non è mostrato, quindi la scena barre non illustra il secondo posto citato al secondo 4.8.",
+    "correzione": "Nel copione dire «Eccone alcuni (9 su 62)» oppure «Eccone qualcuno» per chiarire che è un campione; togliere dalla didascalia «1395 nomi diversi» se non è confermato dai dati; aggiungere in scena o a schermo il 2° posto (Leo) quando viene nominato.",
+    "idea": "Per il prossimo reel: far comparire il conteggio in tempo reale («sulla mappa: 62») mentre le card si accendono, così il campione diventa un contatore che tiene viva l'attesa."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:08+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 8 la trascrizione e il brief indicano le barre (scena 'barre', frase 1: Quinto Mia, quarto Kira, terzo Simba, secondo Leo), ma nel fotogramma a 8s compare solo la classifica con 3°, 4° e 5° posto, senza Leo (2°) né il titolo del primo posto. Inoltre la scena 'barre' non mostra Leo: il sec",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del reel, didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio) e fotogrammi: sincronia tra voce e scene.",
+    "esito": "segnalo",
+    "secondo": 8,
+    "problema": "Al secondo 8 la trascrizione e il brief indicano le barre (scena 'barre', frase 1: Quinto Mia, quarto Kira, terzo Simba, secondo Leo), ma nel fotogramma a 8s compare solo la classifica con 3°, 4° e 5° posto, senza Leo (2°) né il titolo del primo posto. Inoltre la scena 'barre' non mostra Leo: il secondo posto non è visibile in nessun fotogramma. Nella didascalia la classifica è completa, quindi lo spettatore non trova nel reel il dato promesso.",
+    "correzione": "Aggiungere nella scena barre le barre di 2° (Leo) e 1° (Luna), oppure allungare la sequenza delle barre finché tutti e cinque i posti siano visibili, in sincronia con la voce.",
+    "idea": "Chiudere sempre la classifica con un fotogramma riepilogativo dei primi cinque nomi, così chi arriva a metà reel può comunque salvare il dato; e usare il nome 'Luna' con la mappa come finale, già molto efficace."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:10+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» ma nel materiale non c'è il dato di Leo: la barra mostra solo 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31). Inoltre la trascrizione dice «62, in 52 città» e la scena mostra gli stessi dati, quindi quel numero è confermato; il problem",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, scene e didascalia del reel sui nomi più usati, confrontati con i dati della mappa e l'audio.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Il testo dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» ma nel materiale non c'è il dato di Leo: la barra mostra solo 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31). Inoltre la trascrizione dice «62, in 52 città» e la scena mostra gli stessi dati, quindi quel numero è confermato; il problema è solo il posto di Leo e il conteggio «1395 nomi diversi» nella didascalia, non verificabile dai materiali. Anche la didascalia dice «Voce generata» senza indicare il tool, da chiarire per trasparenza.",
+    "correzione": "Verificare con il dato reale il 2° posto (Leo) e il numero dei nomi diversi prima di pubblicare, altrimenti togliere la riga di Leo e il conteggio. Specificare nella didascalia con quale tool è generata la voce o rimuovere la frase.",
+    "idea": "Ripetere il formato con una classifica per razza o per città, chiudendo sempre con l'invito a scrivere il nome, che nei reel precedenti ha generato più commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:10+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella didascalia e nel reel ci sono 'Leo' al secondo posto e 'Quinto Mia' ecc., ma nei materiali la mappa non contiene il dato 'Leo' (dati_mappa è vuoto), quindi il numero di Leo e il conteggio di Luna non risultano verificabili dai dati forniti. Inoltre la didascalia dice '1395 nomi diversi' senza ",
+   "dati": {
+    "controllato": "Dati della mappa (nomi, conteggi, città) confrontati con la trascrizione, la didascalia, le barre e i fotogrammi; poi audio e timing.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella didascalia e nel reel ci sono 'Leo' al secondo posto e 'Quinto Mia' ecc., ma nei materiali la mappa non contiene il dato 'Leo' (dati_mappa è vuoto), quindi il numero di Leo e il conteggio di Luna non risultano verificabili dai dati forniti. Inoltre la didascalia dice '1395 nomi diversi' senza una fonte nei materiali. Al secondo 4 la barra visibile mostra solo 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31) mentre il copione dice 'Quinto Mia... quarto Kira' in ordine inverso: ok come ritmo, ma il 2° (Leo) non compare mai a schermo. Infine la didascalia indica 'Voce generata' senza un'indicazione chiara della voce.",
+    "correzione": "Verificare Leo e il totale 1395 con i dati della mappa prima di pubblicare, oppure toglierli; aggiungere alla barra o a una scena il 2° posto (Leo) così il conteggio sullo schermo torna; chiarire l'uso della voce generata nella didascalia.",
+    "idea": "Chiudere con un carosello o un reel 'Il nome più raro d'Italia' per riusare la domanda di commento e raccogliere follower da chi cerca il proprio nome."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:12+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» ma nei fotogrammi la classifica mostra solo 3. Simba (38), 4. Kira (35), 5. Mia (31): Leo non compare e non ci sono dati di Leo nei materiali. Inoltre, nel frame 'Luna sulla mappa' la card di @ernesto_8_7 è in grigio, quindi non è u",
+   "dati": {
+    "controllato": "Dati di mappa, trascrizione coi secondi, audio, didascalia e coerenza tra copione e schermate del reel sui nomi più usati.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Il copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» ma nei fotogrammi la classifica mostra solo 3. Simba (38), 4. Kira (35), 5. Mia (31): Leo non compare e non ci sono dati di Leo nei materiali. Inoltre, nel frame 'Luna sulla mappa' la card di @ernesto_8_7 è in grigio, quindi non è un profilo attivo come gli altri.",
+    "correzione": "Verificare il dato di Leo (posizione e conteggio) prima della pubblicazione o rimuoverlo dal copione e dalla schermata; togliere o spiegare la card grigia di @ernesto_8_7 (ad esempio mostrandola come account non più attivo o sostituendola con un profilo attivo). Inoltre le mentions in didascalia includono @ernesto_8_7 come ospite del reel: verificare che sia d'accordo.",
+    "idea": "Chiudere con una card 'Il tuo nome' già compilata da un follower reale e la sua città, così il commento successivo diventa un esempio visibile e aumenta la partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:13+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» ma nelle barre a schermo compaiono solo 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31) e Leo non appare mai. Il numero 2° (Leo) non è verificabile nei materiali forniti, e le barre non mostrano il 2° né il 1° come invece promette il ",
+   "dati": {
+    "controllato": "Dati della mappa (Luna: 62 sulla mappa, 52 città, 1395 nomi diversi), trascrizione coi secondi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio), coerenza tra copione, barre e didascalia.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Il copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» ma nelle barre a schermo compaiono solo 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31) e Leo non appare mai. Il numero 2° (Leo) non è verificabile nei materiali forniti, e le barre non mostrano il 2° né il 1° come invece promette il copione. Inoltre la didascalia cita «2° Leo» senza supporto visivo. Il primo posto (Luna 62) è coerente con i dati.",
+    "correzione": "Verificare il dato di Leo prima della pubblicazione; se confermato, mostrare anche il 2° posto nelle barre (o aggiornare la scena con la classifica completa 5→1), altrimenti togliere Leo da copione e didascalia. Rimuovere il placeholder «Voce generata» dalla didascalia.",
+    "idea": "Chiudere il reel con la risposta già pronta per un nome campione (es. «Luna: 62 cani e gatti, ecco dove vivono») e aggiungere un contatore «Ancora X nomi da scoprire» per aumentare la voglia di tornare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:14+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La mappa mostra 9 profili con 'Luna' (più uno su 10 tiles in totale, con Ernesto in versione più chiara), ma nel copione e nella didascalia non c'è un dato coerente: la didascalia dice 'Eccone alcuni, da Carosino a San Valentino Torio' e l'elenco dei tag include 10 account, mentre la scena 'padroni'",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (62 Luna in 52 città, 1395 nomi), audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio) e coerenza delle scene con i dati.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "La mappa mostra 9 profili con 'Luna' (più uno su 10 tiles in totale, con Ernesto in versione più chiara), ma nel copione e nella didascalia non c'è un dato coerente: la didascalia dice 'Eccone alcuni, da Carosino a San Valentino Torio' e l'elenco dei tag include 10 account, mentre la scena 'padroni' mostra 10 card. Inoltre nel frame a 12-16 s il testo 'Luna!' e la schermata 'Luna sulla mappa' non corrispondono al numero 62 riportato in 'Sono 62, in 52 città' (non verificabile dai materiali). Il dato 'in 52 città' non è verificabile nei materiali forniti, e 'Quinto Mia... 1395 nomi diversi' nella didascalia non compare nei dati mappa inviati (dati_mappa è vuoto).",
+    "correzione": "Verificare e allineare i numeri (62 Luna, 52 città, 1395 nomi) con i dati reali della mappa prima della pubblicazione; se non verificabili, toglierli o dichiararli. Chiarire nella didascalia che l'elenco mostra solo alcuni esempi.",
+    "idea": "Aggiungere un finale con il numero di nomi unici trovati dai commenti ('Il tuo c'è?'), così ogni commento alimenta il reel successivo."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:14+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione, 'quarto Kira' compare a 2.6s, ma nel fotogramma a 4s la barra 'Kira' è mostrata come quarto posto mentre 'Simba' è 3°: coerente. Il problema è nella didascalia: 'Luna (62)' è corretto, ma nel reel 'Leo' (2° posto) non compare mai con dati né fotogrammi, quindi il secondo posto è ",
+   "dati": {
+    "controllato": "Dati della mappa (nomi, conteggi, città), trascrizione coi secondi, didascalia e misure audio contro il brief.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella trascrizione, 'quarto Kira' compare a 2.6s, ma nel fotogramma a 4s la barra 'Kira' è mostrata come quarto posto mentre 'Simba' è 3°: coerente. Il problema è nella didascalia: 'Luna (62)' è corretto, ma nel reel 'Leo' (2° posto) non compare mai con dati né fotogrammi, quindi il secondo posto è affermato senza verifica visiva. Inoltre la barra mostra solo 3°-5° e il numero 1395 nomi non compare nel brief dei dati verificati. Il tag '@_luka.bulatovicc' nella didascalia è da controllare: nel fotogramma del 'Luna sulla mappa' appare come '@_luka.bulatovicc' coerente, quindi ok.",
+    "correzione": "Verificare che Leo sia davvero 2° con i dati della mappa e che 1395 nomi diversi sia un dato confermato; mostrare nel reel la barra del 2° posto se possibile.",
+    "idea": "Chiudere ogni reel con il tuo nome in evidenza sulla mappa per premiare chi commenta."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:16+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Dati della mappa (nomi, conteggi, città, handle), trascrizione coi secondi, audio e fotogrammi: coerenti tra loro.",
+   "dati": {
+    "controllato": "Dati della mappa (nomi, conteggi, città, handle), trascrizione coi secondi, audio e fotogrammi: coerenti tra loro.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo reel della stessa serie, mostrare per 2 secondi il nome più raro della mappa (quello con 1 solo animale) per spingere a cercare e commentare il proprio."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:16+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio nella trascrizione e nella scena finale dice 'Sono 62' ma nei materiali non ci sono i dati di mappa (dati_mappa è vuoto) per verificare i numeri 62, 52 città, 38/35/31 e 1395 nomi; inoltre le barre mostrano il 3°-5° posto ma il secondo (Leo) e il primo non compaiono nei fotogrammi, e il",
+   "dati": {
+    "controllato": "Dati della mappa (nomi, conteggi, città) confrontati con trascrizione, barre e schermate dei padroni; audio e tempi di lettura.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Il conteggio nella trascrizione e nella scena finale dice 'Sono 62' ma nei materiali non ci sono i dati di mappa (dati_mappa è vuoto) per verificare i numeri 62, 52 città, 38/35/31 e 1395 nomi; inoltre le barre mostrano il 3°-5° posto ma il secondo (Leo) e il primo non compaiono nei fotogrammi, e il primo posto è annunciato in voce a 6.7s. Nei fotogrammi a 9s, 'Luna' appare con '62 sulla mappa · in 52 città' senza fonte visibile nei dati ricevuti.",
+    "correzione": "Allegare il dataset verificato con i conteggi di Mia, Kira, Simba, Leo, Luna e il numero di città, confermare 1395 nomi, e verificare che le 10 schede dei padroni corrispondano alla lista Luna della mappa prima della pubblicazione.",
+    "idea": "Chiudere ogni reel con un 'Scrivi il nome' e rispondere in un reel successivo ai commenti più frequenti, per creare una serie riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:18+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel copione manca la voce 'Luna!' come pausa visiva, ma soprattutto nella didascalia compare '1395 nomi diversi' che non è presente né nel brief né nei dati mappa forniti, quindi non è verificabile. Inoltre la trascrizione dice 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' e la classifica a sc",
+   "dati": {
+    "controllato": "Ho verificato i dati della mappa citati nel reel (62 Luna, 52 città, classifica 5°-2°) rispetto al brief e alla trascrizione, più i tempi del copione e l'audio.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Nel copione manca la voce 'Luna!' come pausa visiva, ma soprattutto nella didascalia compare '1395 nomi diversi' che non è presente né nel brief né nei dati mappa forniti, quindi non è verificabile. Inoltre la trascrizione dice 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' e la classifica a schermo mostra solo 3°-5° (Simba 38, Kira 35, Mia 31): il secondo posto Leo non compare visivamente nel fotogramma a 4s, va bene a schermo successivo ma non è verificabile dai dati inviati.",
+    "correzione": "Rimuovere '1395 nomi diversi' dalla didascalia oppure inserire il dato verificato; assicurarsi che Leo appaia a schermo al momento in cui viene nominato.",
+    "idea": "Chiudere sempre con un numero concreto da restituire (es. 'Il tuo nome: X in Italia') e rendere visibile la mappa dei padroni in uno schermo più lungo per aumentare la permanenza."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:18+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Dati mappa (62 Luna, 52 città, 1395 nomi), coerenza trascrizione/copione/didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e sincronia dei secondi.",
+   "dati": {
+    "controllato": "Dati mappa (62 Luna, 52 città, 1395 nomi), coerenza trascrizione/copione/didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e sincronia dei secondi.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo reel della serie, mostrare per 1-2 secondi il numero di nomi diversi (1395) in grande prima della classifica, così la cifra resta impressa e spinge a commentare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:18+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi, volume iniziale), trascrizione coi secondi e coerenza tra copione, brief e didascalia.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume iniziale), trascrizione coi secondi e coerenza tra copione, brief e didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, aprire con la sorpresa (il primo posto) e rivelarlo solo dopo la classifica, oppure mostrare la mappa con le luci accese mentre si dice «52 città» per dare un riscontro visivo al dato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:19+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi, volume iniziale), coerenza trascrizione/copione e tempi, didascalia e fascia finale rispetto al brief.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume iniziale), coerenza trascrizione/copione e tempi, didascalia e fascia finale rispetto al brief.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nei prossimi reel potremmo far comparire il nome più votato nella scritta finale, così la chiamata all'azione diventa anche un piccolo colpo di scena."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:20+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Nel copione la frase 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' e la didascalia coincidono, ma la mappa dichiara 0 dati (dati_mappa vuoto) e la 'fascia' promette risposte a ogni nome: nel reel non c'è nessun dato verificabile sui conteggi per le classifiche mostrate (62 Luna, 52 città, 1395",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e corrispondenza tra frasi e didascalia.",
+    "esito": "segnalo",
+    "secondo": 2.6,
+    "problema": "Nel copione la frase 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' e la didascalia coincidono, ma la mappa dichiara 0 dati (dati_mappa vuoto) e la 'fascia' promette risposte a ogni nome: nel reel non c'è nessun dato verificabile sui conteggi per le classifiche mostrate (62 Luna, 52 città, 1395 nomi) a cui il pubblico può fare riferimento. Inoltre la didascalia dice 'Voce generata' senza che sia indicato nel reel, e i tag di 10 account sono in fondo alla didascalia senza contesto.",
+    "correzione": "Verificare e allineare i numeri (62 Luna, 52 città, 1395 nomi) con i dati della mappa prima di pubblicare, oppure toglierli; chiarire o rimuovere la dicitura 'Voce generata'; spostare i tag in modo più leggibile o ridurli.",
+    "idea": "Un reel di follow-up con la risposta ai nomi più commentati, mostrando la mappa con le luci accese nelle città dei commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:20+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, volume iniziale, silenzi), trascrizione coi secondi, copione, fascia e didascalia del reel nomi_top.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, volume iniziale, silenzi), trascrizione coi secondi, copione, fascia e didascalia del reel nomi_top.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il formato con una classifica per città (es. top nomi a Treviso) per aumentare la rilevanza locale e i commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:20+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi, volume iniziale), trascrizione coi secondi e coerenza con brief e didascalia.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi, volume iniziale), trascrizione coi secondi e coerenza con brief e didascalia.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel prossimo reel della classifica, mostrare la mappa con la luce del nome vincitore accendersi in sincronia con la voce, così il dato visivo rinforza quello sonoro."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:23+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il primo 'Luna!' (6.7s) arriva dopo un 'segnalo' generico, ma il punto critico è la didascalia: cita 1395 nomi diversi, che non compare nei dati verificati della mappa (dati_mappa è vuoto), quindi il numero non è documentato. Inoltre la trascrizione dice 'cani e gatti' mentre nel copione è coerente,",
+   "dati": {
+    "controllato": "Audio (LUFS -14.3, picco -1.0 dBFS, nessun silenzio lungo) e corrispondenza tra trascrizione, copione e didascalia sui nomi e i numeri (62 cani/gatti, 52 città, 1395 nomi).",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Il primo 'Luna!' (6.7s) arriva dopo un 'segnalo' generico, ma il punto critico è la didascalia: cita 1395 nomi diversi, che non compare nei dati verificati della mappa (dati_mappa è vuoto), quindi il numero non è documentato. Inoltre la trascrizione dice 'cani e gatti' mentre nel copione è coerente, ma la didascalia contiene la dicitura 'Voce generata' senza spiegazione chiara e l'elenco di 10 tag può sembrare spam.",
+    "correzione": "Togliere o verificare il numero 1395 prima della pubblicazione (sostituirlo con un dato controllato dalla mappa), e rendere più chiara la dicitura sulla voce sintetica con una formula standard.",
+    "idea": "Un reel in cui si mostra in tempo reale una luce che si accende sulla mappa dopo un commento con nome e città, così il follow è legato a un risultato visibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:24+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' ma la trascrizione e la didascalia riportano gli stessi nomi con il numero di posizione: il parlato è coerente. Il problema è nel brief: 'apertura' è null e la fascia finale 'Scrivi il nome del tuo' compare solo a fine reel, mentre ",
+   "dati": {
+    "controllato": "Audio (LUFS -14.3, picco -1.0 dBFS, nessun silenzio, apertura ok) e allineamento tra trascrizione, copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 2.6,
+    "problema": "Il copione dice 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' ma la trascrizione e la didascalia riportano gli stessi nomi con il numero di posizione: il parlato è coerente. Il problema è nel brief: 'apertura' è null e la fascia finale 'Scrivi il nome del tuo' compare solo a fine reel, mentre le barre del reel non hanno dati di mappa verificati (dati_mappa vuoto). Inoltre la didascalia cita '1395 nomi diversi' e '52 città' senza che questi numeri compaiano nei dati_mappa del reel: li tratto come dati del progetto, ma vanno verificati prima della pubblicazione. Lo spot di 'Voce generata' in didascalia andrebbe chiarito.",
+    "correzione": "Verificare i numeri 62 / 52 città / 1395 nomi con i dati della mappa e inserirli in dati_mappa; valutare un'apertura visiva o sonora più forte nei primi 2 secondi (il gancio è in 0.0-0.9s, adeguato ma senza apertura esplicita).",
+    "idea": "Ripetere il formato con una classifica per razza o per città, con il nome più frequente in evidenza in chiusura."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:24+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, didascalia e corrispondenza tra copione e brief, con i dati del progetto.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, didascalia e corrispondenza tra copione e brief, con i dati del progetto.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, mostrare nel finale un nome reale con la città accesa sulla mappa, così il pubblico vede subito il risultato del commento."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:24+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il picco di -1.0 dBFS è al limite e il valore di loudness (-14.3 LUFS) è leggermente sotto l'obiettivo; soprattutto l'apertura è più bassa di circa 3 dB rispetto al resto, quindi il gancio iniziale parte piano.",
+   "dati": {
+    "controllato": "Loudness integrata (-14.3 LUFS), picco (-1.0 dBFS), silenzi lunghi assenti, volume medio dei primi 5 s (-17.1 dB) confrontati con l'obiettivo di -14 LUFS, picco sotto -1 dBFS e nessun silenzio dopo l'apertura.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "Il picco di -1.0 dBFS è al limite e il valore di loudness (-14.3 LUFS) è leggermente sotto l'obiettivo; soprattutto l'apertura è più bassa di circa 3 dB rispetto al resto, quindi il gancio iniziale parte piano.",
+    "correzione": "Alzare di circa 0.3 dB la traccia complessiva per portarla a -14 LUFS e applicare un limitatore con ceiling a -1.5 dBFS; nei primi 5 secondi aggiungere circa 2-3 dB di guadagno per rendere la domanda d'apertura più presente.",
+    "idea": "Per i prossimi reel tenere lo stesso schema domanda-classifica-invito, con una sigla sonora fissa a volume costante per riconoscibilità."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:26+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la barra di 'Kira' (4°) è mostrata con il testo 'QUARTO KIRA,' ma la lista in alto mostra 3°, 4°, 5° (Simba, Kira, Mia) in una schermata che non è coerente con la voce che in quel momento dice ancora 'Quinto Mia' e poi 'quarto Kira'; inoltre la didascalia dice 1395 nomi diversi mentre l",
+   "dati": {
+    "controllato": "Copertine e grafica dei 6 fotogrammi, sincronia testo/secondi e leggibilità dei testi sullo schermo.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la barra di 'Kira' (4°) è mostrata con il testo 'QUARTO KIRA,' ma la lista in alto mostra 3°, 4°, 5° (Simba, Kira, Mia) in una schermata che non è coerente con la voce che in quel momento dice ancora 'Quinto Mia' e poi 'quarto Kira'; inoltre la didascalia dice 1395 nomi diversi mentre la trascrizione non li cita, quindi il dato va verificato. Il fotogramma mostra anche la barra di Kira con valore 35 e Simba 38 senza il 2° Leo, quindi la classifica visiva è incompleta rispetto alla voce.",
+    "correzione": "Mostrare nella schermata del secondo 4 tutta la sequenza 5°→2° (Mia, Kira, Simba, Leo) o allineare la barra alla frase; verificare il numero 1395 prima di pubblicarlo.",
+    "idea": "Ripetere il formato con una classifica a tendina che si rivela un nome alla volta e chiudere con una domanda aperta che invita a taggare un amico con lo stesso animale."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:29+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la scena mostra solo 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31) con il titolo «QUARTO KIRA,» a metà, mentre il copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» e il secondo posto (Leo) non compare mai nelle barre. Inoltre la barra di Simba è più lunga di quella di Kir",
+   "dati": {
+    "controllato": "Grafica e copertina del reel «nomi_top»: coerenza tra copione, scene, didascalia, audio e i 6 fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la scena mostra solo 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31) con il titolo «QUARTO KIRA,» a metà, mentre il copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» e il secondo posto (Leo) non compare mai nelle barre. Inoltre la barra di Simba è più lunga di quella di Kira pur avendo il numero più alto, quindi la lunghezza è coerente, ma il secondo 6.7 dice «primo posto Luna» mentre nel fotogramma al 19.7 la scena finale è ancora sulla fascia di invito. La scena «barre» del fotogramma 4 è incompleta rispetto al testo. Il 4° (Kira) e il 5° (Mia) compaiono, ma Leo (2°) non ha una schermata dedicata nei fotogrammi inviati.",
+    "correzione": "Mostrare nella scena barre anche il 2° posto (Leo) con il suo numero, oppure dedicare un frame a Leo prima di Luna, così che la sequenza visiva segua il copione completo 5→4→3→2→1.",
+    "idea": "Chiudere con un commento-quiz: «Indovina quanti Luna ci sono» e rivelare la risposta nel reel successivo per generare commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:29+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la barra del 2° posto (Leo) è assente: la schermata mostra solo le posizioni 3-5 (Simba 38, Kira 35, Mia 31) e il testo parla di 'quarto Kira', ma nel copione manca la barra di Leo e il quarto posto non è mostrato in modo chiaro. Inoltre al secondo 4 compare il titolo 'I nomi più usati'",
+   "dati": {
+    "controllato": "Grafica dei 6 fotogrammi, leggibilità dei testi, coerenza tra barre, numeri e copione, e misure audio.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la barra del 2° posto (Leo) è assente: la schermata mostra solo le posizioni 3-5 (Simba 38, Kira 35, Mia 31) e il testo parla di 'quarto Kira', ma nel copione manca la barra di Leo e il quarto posto non è mostrato in modo chiaro. Inoltre al secondo 4 compare il titolo 'I nomi più usati' sopra barre che non coprono i primi due posti. Nel fotogramma finale (19.7s) il testo 'Scrivi il nome del tuo' è sovrapposto alla fascia, ma la fascia in basso resta leggibile. Gli avatar dei proprietari nella schermata 'Luna sulla mappa' hanno nomi utente leggibili solo in parte (es. @ernesto_8_7 in grigio, quasi illeggibile).",
+    "correzione": "Mostrare nella schermata barre anche il 2° e 1° posto (o fare una scena dedicata a Leo), e portare il contrasto del riquadro 'San Valentino Torio' al livello degli altri; ridurre il testo grigio del nome disattivato.",
+    "idea": "Un prossimo reel con 'Scrivi il nome e ti diciamo la posizione' mostrando in tempo reale una classifica di risposte dei follower."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:29+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la scritta «QUARTO KIRA,» è in grande ma la frase è spezzata: la barra dei nomi mostra solo 3°, 4° e 5° e il «Quinto Mia» del copione non compare mai come testo grande. Inoltre al secondo 8 il testo «LUNA!» è piccolo e grigio chiaro su sfondo scuro, poco leggibile da telefono. Nel copio",
+   "dati": {
+    "controllato": "Ho verificato font, dimensione e leggibilità dei testi nei sei fotogrammi, e la coerenza tra copione, didascalia e scritte a schermo.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la scritta «QUARTO KIRA,» è in grande ma la frase è spezzata: la barra dei nomi mostra solo 3°, 4° e 5° e il «Quinto Mia» del copione non compare mai come testo grande. Inoltre al secondo 8 il testo «LUNA!» è piccolo e grigio chiaro su sfondo scuro, poco leggibile da telefono. Nel copione «Leo» (2°) non appare in nessuna scritta a schermo.",
+    "correzione": "Mantenere ogni nome a schermo a dimensione grande per almeno 1,5 secondi, con un solo elemento per volta; aggiungere «2° Leo» e «5° Mia» come testi visibili; portare «LUNA!» a bianco pieno e dimensione simile al titolo.",
+    "idea": "Chiudere con un fotogramma fisso che dica «Seguici per la classifica della prossima settimana» in grande, e replicare il formato con un altro tema (es. i nomi più rari)."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:31+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione, al secondo 6.7 la voce dice «E al primo posto: Luna! Sono 62», ma il brief e i dati confermano 62 sulla mappa in 52 città: tutto coerente. Il problema è nel fotogramma del secondo 9: la scena sembra ancora mostrare 'LUNA!' ma la voce dice già il numero; nessun errore grave, però ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, fotogrammi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio) e didascalia del reel sui nomi più usati, incluso l'uso di mappa e numeri verificati.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Nella trascrizione, al secondo 6.7 la voce dice «E al primo posto: Luna! Sono 62», ma il brief e i dati confermano 62 sulla mappa in 52 città: tutto coerente. Il problema è nel fotogramma del secondo 9: la scena sembra ancora mostrare 'LUNA!' ma la voce dice già il numero; nessun errore grave, però la frase 'Sono 62, in 52 città' compare solo come sottotitolo sul fotogramma successivo, quindi il dato è poco leggibile nei primi secondi. Inoltre il conteggio dichiarato nella didascalia ('1395 nomi diversi') non è verificabile dai materiali forniti.",
+    "correzione": "Far comparire il badge '👑 62 sulla mappa · in 52 città' già al secondo 7 e tenerlo fermo almeno 2 secondi; verificare il dato '1395 nomi diversi' prima di pubblicare.",
+    "idea": "Aggiungere in chiusura un fotogramma con 'Seguici per la classifica della settimana' sopra la fascia di commento, così il follow diventa un invito visivo oltre che testuale."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:32+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 le barre mostrano 3°-5° posto (Simba 38, Kira 35, Mia 31) mentre il testo dice 'Quinto Mia, quarto Kira, terzo Simba' già in questa scena: è coerente, ma la scena 'barre' non mostra ancora Leo (2°) né la sequenza di rivelazione, quindi lo spettatore non vede il 'secondo L",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, scene delle barre e della mappa, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio), didascalia e coerenza dei numeri col progetto.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 le barre mostrano 3°-5° posto (Simba 38, Kira 35, Mia 31) mentre il testo dice 'Quinto Mia, quarto Kira, terzo Simba' già in questa scena: è coerente, ma la scena 'barre' non mostra ancora Leo (2°) né la sequenza di rivelazione, quindi lo spettatore non vede il 'secondo Leo' e il 'primo Luna' arriva su una scena che non l'ha preparato. Inoltre la barra del 4° posto è più corta di quella del 3°, verificare che i valori siano corretti. Nella fascia di chiusura il testo è coperto dalla grafica solo in parte: su 16 secondi la domanda 'Scrivi il nome del tuo' compare in tre schermate diverse senza variare, con rischio di stanchezza visiva.",
+    "correzione": "Mostrare Leo (2°) nel fotogramma tra 3 e 5 secondi, oppure dividere le barre in due schermate. Verificare i valori 38/35/31 rispetto ai dati reali. Variare la fascia finale (es. un esempio di risposta reale) invece di ripetere la stessa scritta.",
+    "idea": "Chiudere ogni reel con un nome reale di un follower che ha commentato, con la sua città accesa sulla mappa: aumenta commenti e senso di comunità."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:33+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella scena delle barre (fotogramma al secondo 4) le barre mostrano solo 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31), mentre il copione dice «quinto Mia, quarto Kira, terzo Simba, secondo Leo» e il primo posto Luna compare solo dopo. Leo (2°) non è mai mostrato in barra, quindi il numero 2 resta s",
+   "dati": {
+    "controllato": "Copertina, fotogrammi e grafica delle barre/ritmo di tutte le scene, con testi e tempi del copione.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella scena delle barre (fotogramma al secondo 4) le barre mostrano solo 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31), mentre il copione dice «quinto Mia, quarto Kira, terzo Simba, secondo Leo» e il primo posto Luna compare solo dopo. Leo (2°) non è mai mostrato in barra, quindi il numero 2 resta senza grafica e il titolo «I nomi più usati» con barre visibili non corrisponde alla classifica completa. Inoltre le barre compaiono mentre il testo parlato dice ancora 'quarto Kira' già al secondo 4, con il sottotitolo 'QUARTO KIRA,' che resta a schermo in un punto in cui la voce è ancora sul quinto posto: l'ordine di lettura è confuso.",
+    "correzione": "Mostrare nella scena delle barre tutti e cinque i posti (5° Mia, 4° Kira, 3° Simba, 2° Leo) in sequenza, con la barra di Leo visibile, e far combaciare il sottotitolo con la frase parlata; aggiungere la voce 'Leo' a schermo prima di Luna.",
+    "idea": "Per i prossimi reel usare una barra per ogni posto in classifica con animazione di crescita, così la sequenza 5→1 è visivamente chiara e più coinvolgente."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:33+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nelle barre compare 'Simba' al terzo posto con 38, 'Kira' quarto con 35 e 'Mia' quinto con 31, ma la trascrizione dice 'Quinto Mia, quarto Kira, terzo Simba' e il 'secondo Leo' non è visibile nei fotogrammi inviati. Inoltre la fascia finale in alto a sinistra dice '1999 - 803' e nella didascalia si ",
+   "dati": {
+    "controllato": "Ho verificato le etichette sulla mappa (62 Luna in 52 città, nomi dei padroni) rispetto ai dati e la trascrizione coi secondi, più i fotogrammi della classifica.",
+    "esito": "segnalo",
+    "secondo": 4.8,
+    "problema": "Nelle barre compare 'Simba' al terzo posto con 38, 'Kira' quarto con 35 e 'Mia' quinto con 31, ma la trascrizione dice 'Quinto Mia, quarto Kira, terzo Simba' e il 'secondo Leo' non è visibile nei fotogrammi inviati. Inoltre la fascia finale in alto a sinistra dice '1999 - 803' e nella didascalia si parla di 1395 nomi diversi: non posso verificare questi numeri dai materiali.",
+    "correzione": "Verificare che 'Leo' sia davvero il secondo posto con il dato corretto prima di pubblicare, e allineare la classifica mostrata a schermo con la voce; controllare la coerenza del '1999 - 803' con il 1395 della didascalia.",
+    "idea": "Ripetere il formato con una classifica per razza o per città, mantenendo la domanda di chiusura che invita a rispondere."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:36+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la scena mostra le barre 3°-5° (Simba 38, Kira 35, Mia 31) ma il titolo 'QUARTO KIRA' compare sopra la scena: mentre si legge la classifica si parla già di Kira, e la tabella non mostra ancora i primi due posti. Inoltre nel fotogramma 'Luna' al secondo 8 la corona e il numero '62' occup",
+   "dati": {
+    "controllato": "Copertine e fotogrammi del reel 9:16: testo leggibile, barre e tabella coerenti coi dati, fascia CTA in basso, audio a -14 LUFS senza silenzi.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la scena mostra le barre 3°-5° (Simba 38, Kira 35, Mia 31) ma il titolo 'QUARTO KIRA' compare sopra la scena: mentre si legge la classifica si parla già di Kira, e la tabella non mostra ancora i primi due posti. Inoltre nel fotogramma 'Luna' al secondo 8 la corona e il numero '62' occupano bene lo spazio, ma la fascia CTA in basso resta la stessa in tutti i frame e copre l'area dove andrebbe la didascalia del nome in evidenza.",
+    "correzione": "Mostrare le barre complete 1°-5° (o almeno la 2ª e 1ª posizione prima di parlarne) e sincronizzare il titolo 'QUARTO KIRA' con la barra corrispondente evidenziata; ridurre o spostare la fascia CTA quando appare il nome finale, per dare respiro alla scena Luna.",
+    "idea": "Per i prossimi reel, chiudere con una scheda che mostra il nome dell'utente già compilato come esempio, così il commento diventa più facile da fare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:36+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato «62 in 52 città» è pronunciato a 9.3s ma nei materiali non c'è alcun riscontro nei dati mappa (dati_mappa è vuoto), quindi il numero non è verificabile. Inoltre la didascalia dice «1395 nomi diversi» senza fonte nei dati. Anche il volume medio delle prime 5 secondi (-17.1 dB) è sotto l'obiet",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, dati audio (LUFS, picco, silenzi, volume iniziale) e corrispondenza tra frasi e fascia finale.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "Il dato «62 in 52 città» è pronunciato a 9.3s ma nei materiali non c'è alcun riscontro nei dati mappa (dati_mappa è vuoto), quindi il numero non è verificabile. Inoltre la didascalia dice «1395 nomi diversi» senza fonte nei dati. Anche il volume medio delle prime 5 secondi (-17.1 dB) è sotto l'obiettivo di apertura, ma è un dettaglio minore.",
+    "correzione": "Verificare 62 e 52 città sui dati reali della mappa prima della pubblicazione, oppure riformulare il parlato in modo verificabile; verificare anche 1395 nomi. Se il dato non è confermato, togliere il numero o sostituirlo con uno certo. Valutare un leggero aumento del volume iniziale.",
+    "idea": "Per i prossimi reel, mostrare nel video la fonte del dato (es. la mappa con la città evidenziata) per rendere il numero credibile e più condivisibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:36+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato '62 nomi, 52 città' è detto a 9.3s ma il copione dice 'Sono 62, in 52 città' dopo 'Luna!' e la didascalia mantiene '(62)' senza il dato città; inoltre la didascalia cita '1395 nomi diversi' che non compare nei materiali verificati della mappa (dati_mappa è vuoto). Il reel non è caricabile co",
+   "dati": {
+    "controllato": "Ho verificato audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo, volume iniziale -17.1 dB), trascrizione coi secondi e coerenza tra copione, didascalia e brief.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "Il dato '62 nomi, 52 città' è detto a 9.3s ma il copione dice 'Sono 62, in 52 città' dopo 'Luna!' e la didascalia mantiene '(62)' senza il dato città; inoltre la didascalia cita '1395 nomi diversi' che non compare nei materiali verificati della mappa (dati_mappa è vuoto). Il reel non è caricabile con un numero non verificabile in didascalia.",
+    "correzione": "Togliere '1395 nomi diversi' dalla didascalia finché non è confermato dalla mappa, oppure aggiungere la fonte verificata; allineare la didascalia al dato '62 · 52 città' del reel.",
+    "idea": "Chiudere sempre con un invito a commentare il nome e una scritta fissa 'Seguici per la classifica della settimana' negli ultimi 2 secondi, e ripetere il formato 'nomi_top' che ha portato più commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:36+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato '62 cani e gatti chiamati Luna in 52 città' non compare nei dati_mappa (la lista è vuota), quindi non è verificabile dai materiali. Inoltre la didascalia dice '1395 nomi diversi' senza una fonte nei dati forniti. Anche la voce generata nella didascalia va dichiarata in modo chiaro.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e corrispondenza tra frasi e fascia finale.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "Il dato '62 cani e gatti chiamati Luna in 52 città' non compare nei dati_mappa (la lista è vuota), quindi non è verificabile dai materiali. Inoltre la didascalia dice '1395 nomi diversi' senza una fonte nei dati forniti. Anche la voce generata nella didascalia va dichiarata in modo chiaro.",
+    "correzione": "Verificare i conteggi (62 Luna, 52 città, 1395 nomi) sulla mappa prima della pubblicazione, oppure riformulare con numeri che siano confermati; aggiungere il dato di verifica nei materiali.",
+    "idea": "Ripetere il formato con una categoria diversa (es. nomi di città o razze) e far votare il pubblico su quale nome vedere in cima alla classifica."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:39+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Eccone alcuni, da Carosino a San Valentino Torio' con scena 'padroni', ma la lista dei dati_mappa è vuota e nei fotogrammi inviati (0.5, 4, 8, 12, 16, 19.7) non posso verificare che ci siano i padroni o le città citate. Inoltre la didascalia cita 1395 nomi diversi e le 10 @ dei prof",
+   "dati": {
+    "controllato": "Copertina: fotogrammi, trascrizione coi secondi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e corrispondenza tra copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il copione dice 'Eccone alcuni, da Carosino a San Valentino Torio' con scena 'padroni', ma la lista dei dati_mappa è vuota e nei fotogrammi inviati (0.5, 4, 8, 12, 16, 19.7) non posso verificare che ci siano i padroni o le città citate. Inoltre la didascalia cita 1395 nomi diversi e le 10 @ dei profili: non ci sono dati nei materiali per verificare questi numeri. Non posso confermare che la copertina mostri il contenuto promesso.",
+    "correzione": "Verificare a mano i fotogrammi tra 4s e 12s (scena padroni) e confermare che Carosino e San Valentino Torio siano nei dati; controllare che 1395 e i tag siano corretti prima di pubblicare.",
+    "idea": "Mettere il numero più forte (Luna, 62 in 52 città) già nei primi 2 secondi come gancio visivo in copertina, così chi scorre capisce subito il tema."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:39+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il testo dice 'Sono 62, in 52 città' ma il dato di 52 città non compare nei materiali verificati della mappa (dati_mappa è vuoto). Anche '1395 nomi diversi' in didascalia non è verificabile dai materiali. Inoltre la trascrizione dice 'da Carosino a San Valentino Torio' senza un dato di mappa che lo ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione del brief, audio (LUFS, picco, silenzi), didascalia e dati del progetto per il reparto Pubblicazione.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "Il testo dice 'Sono 62, in 52 città' ma il dato di 52 città non compare nei materiali verificati della mappa (dati_mappa è vuoto). Anche '1395 nomi diversi' in didascalia non è verificabile dai materiali. Inoltre la trascrizione dice 'da Carosino a San Valentino Torio' senza un dato di mappa che lo confermi.",
+    "correzione": "Verificare sulla mappa il numero di città per Luna (62) e i 1395 nomi diversi prima della pubblicazione; se non confermati, togliere '52 città' dal parlato e '1395 nomi' dalla didascalia, oppure usare solo i dati già verificati.",
+    "idea": "Ripetere il formato con una classifica per regione o per razza, mostrando in apertura una domanda che invita il pubblico a indovinare il primo posto prima della rivelazione."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:40+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'sono 62' e '52 città' non è verificabile dai materiali della mia mansione. Inoltre la frase 'Scrivi il nome del tuo' compare al secondo 16.3 ma la fascia di chiusura non è stata verificata sui fotogrammi inviati: il testo di richiamo è dichiarato dal brief ma non posso confermare che sia le",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e didascalia rispetto al brief del reel nomi_top.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il dato 'sono 62' e '52 città' non è verificabile dai materiali della mia mansione. Inoltre la frase 'Scrivi il nome del tuo' compare al secondo 16.3 ma la fascia di chiusura non è stata verificata sui fotogrammi inviati: il testo di richiamo è dichiarato dal brief ma non posso confermare che sia leggibile a schermo.",
+    "correzione": "Confermare con il dato di mappa i conteggi 62 e 52 prima della pubblicazione, oppure dichiarare nel copione da dove vengono; verificare sui fotogrammi che la fascia 'Scrivi il nome del tuo' sia visibile almeno dal secondo 16 in poi. La mappa dati_mappa è vuota, quindi il conteggio non è riscontrato.",
+    "idea": "Ripetere il formato con una classifica di razze o di città, mantenendo l'invito a commentare: nei dati, i reel con commenti alti (testa_a_testa, 86 commenti) hanno avuto più reach."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:41+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Nella frase 'Scrivi il nome del tuo' (16.3s) la CTA è spezzata sul secondo 16 in modo che la fascia finale 'Scrivi il nome del tuo: quanti ce ne sono?' non è coerente con la trascrizione parlata e nel copione manca la città, che la didascalia invece chiede. Inoltre la didascalia cita '1395 nomi dive",
+   "dati": {
+    "controllato": "Trascrizione, copione, didascalia, dati audio (LUFS, picco, silenzi) e fascia finale rispetto al brief e agli obiettivi di mix; nessun dato mappa presente nel reel.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Nella frase 'Scrivi il nome del tuo' (16.3s) la CTA è spezzata sul secondo 16 in modo che la fascia finale 'Scrivi il nome del tuo: quanti ce ne sono?' non è coerente con la trascrizione parlata e nel copione manca la città, che la didascalia invece chiede. Inoltre la didascalia cita '1395 nomi diversi' e '62 Luna in 52 città' che non compaiono nei dati mappa forniti (dati_mappa è vuoto), quindi non sono verificabili dai materiali. Il volume medio dei primi 5 secondi (-17.1 dB) è sotto l'obiettivo di -14 LUFS, anche se il LUFS integrato è in linea.",
+    "correzione": "Allineare la CTA parlata e la fascia finale alla stessa formula ('Scrivi il nome e la città del tuo'), e verificare i numeri 1395 e 62/52 con i dati mappa prima della pubblicazione. Portare il volume dei primi 5 secondi più vicino a -14 dB.",
+    "idea": "Aprire con il nome numero uno (Luna) in grande sulla mappa e far comparire subito dopo il conteggio città, per dare più tensione alla classifica."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:42+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il testo 'Scrivi il nome del tuo' compare a 16.3s, ma la richiesta di commento nella didascalia (e la fascia) arriva solo nel finale: lo spettatore che vede il reel fino a 20s ha pochi secondi per reagire. Inoltre la didascalia dice 'se è l'unico!' e promette una risposta con il conteggio, ma nel re",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, frasi del brief, didascalia e fascia finale del reel sui nomi più usati.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il testo 'Scrivi il nome del tuo' compare a 16.3s, ma la richiesta di commento nella didascalia (e la fascia) arriva solo nel finale: lo spettatore che vede il reel fino a 20s ha pochi secondi per reagire. Inoltre la didascalia dice 'se è l'unico!' e promette una risposta con il conteggio, ma nel reel non c'è nessun dato che mostri come viene calcolato. I dati di mappa nel JSON sono vuoti, quindi non posso verificare i numeri 62 e 52 città né il totale di 1395 nomi citato nella didascalia.",
+    "correzione": "Verificare i conteggi (62 Luna, 52 città, 1395 nomi) con i dati reali della mappa prima della pubblicazione. Spostare o ripetere l'invito a commentare nelle ultime due frasi, e tenere la fascia visibile almeno 3 secondi a fine video.",
+    "idea": "Un reel di follow-up che mostri in tempo reale la risposta a uno dei nomi commentati, con la luce accesa sulla mappa della città."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:43+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato '62 cani e gatti chiamati Luna in 52 città' compare nel parlato ma non è riscontrabile nei dati_mappa (vuoti): non posso verificarlo dai materiali. Inoltre la didascalia cita '1395 nomi diversi' che non compare nel copione. Nella didascalia la voce è dichiarata generata e ci sono più @ di pe",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, fascia finale, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e coerenza tra copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "Il dato '62 cani e gatti chiamati Luna in 52 città' compare nel parlato ma non è riscontrabile nei dati_mappa (vuoti): non posso verificarlo dai materiali. Inoltre la didascalia cita '1395 nomi diversi' che non compare nel copione. Nella didascalia la voce è dichiarata generata e ci sono più @ di persone taggate senza ruolo chiaro.",
+    "correzione": "Verificare nel database della mappa il conteggio di Luna (62) e delle città (52) e il totale 1395 prima della pubblicazione; se non confermabili, togliere o riformulare il numero. Allineare la didascalia al copione e chiarire la voce generata.",
+    "idea": "Un reel di confronto 'Luna vs Mia' con la città più vicina a chi scrive, così ogni commento riceve una risposta visiva personalizzata."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:43+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Copione, trascrizione coi secondi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo), didascalia e numeri del progetto per il reel nomi_top.",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo), didascalia e numeri del progetto per il reel nomi_top.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per il prossimo reel nomi_top, mostrare in apertura il nome più raro trovato sulla mappa e far votare il pubblico tra due nomi prima di svelare il risultato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:46+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Alla voce 'terzo Simba' la trascrizione arriva a 4.8s mentre nel brief la frase 'Quinto Mia... secondo Leo' è una sola battuta: il ritmo di apertura è lento (gancio fino a 2.6s, poi barre) e il tempo di lettura della fascia finale (16.3s-18.1s) è breve per un invito a commentare. Inoltre la didascal",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, brief e frasi, dati audio (LUFS, picco, silenzi), didascalia e fascia finale del reel sui nomi più usati.",
+    "esito": "segnalo",
+    "secondo": 4.8,
+    "problema": "Alla voce 'terzo Simba' la trascrizione arriva a 4.8s mentre nel brief la frase 'Quinto Mia... secondo Leo' è una sola battuta: il ritmo di apertura è lento (gancio fino a 2.6s, poi barre) e il tempo di lettura della fascia finale (16.3s-18.1s) è breve per un invito a commentare. Inoltre la didascalia dice '1395 nomi diversi' ma non compare nei dati_mappa, quindi non è verificabile dai materiali.",
+    "correzione": "Verificare il dato '1395 nomi diversi' prima della pubblicazione o toglierlo; allungare di circa un secondo la fascia 'Scrivi il nome del tuo' lasciandola a schermo più a lungo; valutare di anticipare 'Luna' per accelerare la prima parte.",
+    "idea": "Ripetere il formato con una classifica per regione o per razza, mostrando sulla mappa le luci accese dai nomi scritti nei commenti dei follower."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:46+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione «Sono 62, in 52 città» e nella didascalia «62» coincidono, ma il brief dice «Luna (62)» mentre la mappa non è riportata (dati_mappa vuoto): i numeri non sono verificabili dai materiali. Inoltre il fotogramma inviato a 4s e 8s non dà prova visiva di nomi e barre; la didascalia cont",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio), didascalia e numeri del progetto, verificando che i dati citati nel parlato corrispondano ai materiali.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Nella trascrizione «Sono 62, in 52 città» e nella didascalia «62» coincidono, ma il brief dice «Luna (62)» mentre la mappa non è riportata (dati_mappa vuoto): i numeri non sono verificabili dai materiali. Inoltre il fotogramma inviato a 4s e 8s non dà prova visiva di nomi e barre; la didascalia contiene il tag «Voce generata» tagliato, e le @ in fondo sono 10 persone citate senza che sia chiaro se siano nel reel.",
+    "correzione": "Verificare i conteggi (62 Luna, 52 città, 1395 nomi) sulla mappa prima della pubblicazione, rifinire la didascalia eliminando «Voce generata» e confermare che i tag corrispondano a chi appare nel video.",
+    "idea": "Chiudere sempre con un'anteprima dei nomi nuovi della settimana, così chi segue ha un motivo concreto per tornare al prossimo reel."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:46+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato sulla mappa dichiarato in didascalia (1395 nomi diversi) non compare nei materiali verificati: dati_mappa è vuoto, quindi non è confermabile. Inoltre la frase 'Scrivi il nome del tuo' arriva a 16.3s e la fascia dice 'quanti ce ne sono?', mentre nel copione la risposta promessa è 'ti rispondi",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo), didascalia e fascia finale rispetto al brief del reel nomi_top.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il dato sulla mappa dichiarato in didascalia (1395 nomi diversi) non compare nei materiali verificati: dati_mappa è vuoto, quindi non è confermabile. Inoltre la frase 'Scrivi il nome del tuo' arriva a 16.3s e la fascia dice 'quanti ce ne sono?', mentre nel copione la risposta promessa è 'ti rispondiamo con quanti ce ne sono': coerente, ma la fascia a schermo andrebbe verificata sui fotogrammi. Nessun dato di mappa verificato, quindi il numero 1395 va tolto o confermato.",
+    "correzione": "Togliere '1395 nomi diversi' dalla didascalia finché non c'è il dato verificato dalla mappa; oppure sostituirlo con una frase senza numeri. Controllare che la fascia finale sia leggibile nei fotogrammi 16 e 19.7.",
+    "idea": "Per il prossimo reel nomi_top, mettere il numero verificato dalla mappa nella prima frase e chiudere con la luce accesa sulla città del commento più recente."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:47+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato «Sono 62» arriva a 9.3s, ma la frase «E al primo posto: Luna! Sono 62, in 52 città» è al secondo 6.7s: nella trascrizione «62» e «52 città» cadono dopo la scena. Inoltre la didascalia dice «1395 nomi diversi» mentre nei dati_mappa non c'è nessun numero verificato a sostegno, quindi non posso",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio) e dati della mappa rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "Il dato «Sono 62» arriva a 9.3s, ma la frase «E al primo posto: Luna! Sono 62, in 52 città» è al secondo 6.7s: nella trascrizione «62» e «52 città» cadono dopo la scena. Inoltre la didascalia dice «1395 nomi diversi» mentre nei dati_mappa non c'è nessun numero verificato a sostegno, quindi non posso confermarlo. La trascrizione dice «52 città» ma nel copione è dichiarato solo come «in 52 città»: coerente. Il problema principale è la mancanza di conferma del totale nomi.",
+    "correzione": "Verificare e tenere solo il totale 1395 se esiste nei dati della mappa; altrimenti toglierlo dalla didascalia. Allineare la voce sul numero 62 all'immagine della classifica (barre o cifra a schermo) entro il secondo 7.",
+    "idea": "Per i prossimi reel tenere sempre un dato verificato a schermo per ogni numero detto a voce, e rispondere ai commenti con nomi reali in un reel dedicato per alimentare la coppa."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:49+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il CTA 'Scrivi il nome del tuo' compare a 16.3s, ma la didascalia dice che ogni nome va 'con quanti ce ne sono' e che in mappa ci sono 1395 nomi: il reel non spiega chiaramente che il pubblico può ottenere la risposta, né perché conviene seguire. Inoltre la didascalia cita 'Voce generata' senza che ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, brief, didascalia e invito al commento nel reparto Community, confrontati con il progetto (1888 follower, reel precedenti).",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il CTA 'Scrivi il nome del tuo' compare a 16.3s, ma la didascalia dice che ogni nome va 'con quanti ce ne sono' e che in mappa ci sono 1395 nomi: il reel non spiega chiaramente che il pubblico può ottenere la risposta, né perché conviene seguire. Inoltre la didascalia cita 'Voce generata' senza che il dato sia verificato in materiale, e la classifica è mostrata senza un chiaro invito a seguire la pagina per la prossima.",
+    "correzione": "Spostare o ripetere il CTA verso la fine (17-19s) con una frase tipo 'Scrivi il nome del tuo e ti diciamo quanti ce ne sono: segui per la classifica della settimana', e nella didascalia rendere esplicito il beneficio del follow (es. 'ogni settimana una classifica nuova' già c'è, va messo in evidenza anche nel parlato).",
+    "idea": "Chiudere ogni reel con un teaser della classifica successiva ('la prossima settimana: il nome più raro d'Italia') per dare un motivo concreto di follow."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:49+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato '62 cani e gatti chiamati Luna in 52 città' è citato come fatto, ma nei materiali non ci sono dati di mappa a supporto (dati_mappa è vuoto), quindi non è verificabile. Inoltre la didascalia dice '1395 nomi diversi' senza una fonte nei dati forniti. Anche la voce è dichiarata generata e la di",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, fascia finale, audio (LUFS e picco) e assenza di dati mappa nel reel, rispetto alla mia mansione di moderazione.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "Il dato '62 cani e gatti chiamati Luna in 52 città' è citato come fatto, ma nei materiali non ci sono dati di mappa a supporto (dati_mappa è vuoto), quindi non è verificabile. Inoltre la didascalia dice '1395 nomi diversi' senza una fonte nei dati forniti. Anche la voce è dichiarata generata e la didascalia lo indica solo in coda, senza una nota chiara.",
+    "correzione": "Prima della pubblicazione verificare i conteggi (62 Luna, 52 città, 1395 nomi, posizioni 2°-5°) sui dati della mappa e allegarne la fonte interna; se non verificabili, riformulare con cifre confermate. Rendere esplicito nella didascalia che la voce è generata.",
+    "idea": "Aggiungere in chiusura un contatore o un'animazione con il nome più richiesto dai commenti, così ogni reel genera un nuovo motivo per tornare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:50+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice 'Sono 62, in 52 città' e 'Eccone alcuni, da Carosino a San Valentino Torio', ma nei materiali non ci sono dati di mappa verificati (dati_mappa è vuoto): il conteggio 62 e le 52 città non sono confermati. Inoltre al secondo 16 il invito 'Scrivi il nome del tuo' arriva mentre la fascia di",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo), copione, fascia e didascalia, e coerenza dei numeri con il progetto.",
+    "esito": "segnalo",
+    "secondo": 16,
+    "problema": "Il reel dice 'Sono 62, in 52 città' e 'Eccone alcuni, da Carosino a San Valentino Torio', ma nei materiali non ci sono dati di mappa verificati (dati_mappa è vuoto): il conteggio 62 e le 52 città non sono confermati. Inoltre al secondo 16 il invito 'Scrivi il nome del tuo' arriva mentre la fascia dice 'quanti ce ne sono' senza che la mappa mostri il dato, quindi la promessa di risposta non è supportata. Anche il tag '@' di dieci account nella didascalia andrebbe verificato.",
+    "correzione": "Confermare 62 e 52 città con i dati della mappa prima della pubblicazione, oppure riformulare con i soli dati verificati; verificare i tag prima di pubblicare.",
+    "idea": "Un reel 'Il tuo nome è nella top 5?' con il conteggio personalizzato in tempo reale dalla mappa, per trasformare la richiesta di commento in un'interazione utile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:50+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il reel chiede di scrivere il nome dell'animale e promette una risposta con quanti ce ne sono, ma la didascalia dice anche 'e se è l'unico!' e 'Aggiungi anche la città', mentre il testo parlato e la fascia non lo dicono: l'invito è frammentato e il follower non sa cosa aspettarsi. Inoltre la didasca",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, fascia finale, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio) e dati del progetto per la mia mansione Community.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il reel chiede di scrivere il nome dell'animale e promette una risposta con quanti ce ne sono, ma la didascalia dice anche 'e se è l'unico!' e 'Aggiungi anche la città', mentre il testo parlato e la fascia non lo dicono: l'invito è frammentato e il follower non sa cosa aspettarsi. Inoltre la didascalia cita 1395 nomi diversi, dato non presente nel copione né nei dati mappa forniti, quindi non verificabile da me.",
+    "correzione": "Allineare il parlato e la fascia alla didascalia, ad esempio: 'Scrivi nome e città del tuo: ti diciamo quanti si chiamano come lui e se è l'unico.' Verificare il numero 1395 prima della pubblicazione o toglierlo.",
+    "idea": "Chiudere il prossimo reel con una risposta-tipo mostrata a schermo (es. 'Luna: 62 in 52 città') e un invito esplicito a seguire per la classifica settimanale, così il follow diventa il passo successivo naturale."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:54+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato '62 cani/gatti chiamati Luna in 52 città' è nel copione ma la mappa (dati_mappa) è vuota, quindi non è verificabile dai materiali. Inoltre la didascalia cita '1395 nomi diversi' che non compare nel copione né nei dati. Il dettaglio dei nomi in classifica (Mia, Kira, Simba, Leo) non ha riscon",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e didascalia del reel nomi_top.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "Il dato '62 cani/gatti chiamati Luna in 52 città' è nel copione ma la mappa (dati_mappa) è vuota, quindi non è verificabile dai materiali. Inoltre la didascalia cita '1395 nomi diversi' che non compare nel copione né nei dati. Il dettaglio dei nomi in classifica (Mia, Kira, Simba, Leo) non ha riscontro nei materiali.",
+    "correzione": "Verificare i numeri (62 Luna, 52 città, 1395 nomi) sui dati della mappa prima della pubblicazione, oppure allinearli a una fonte, e aggiornare il copione e la didascalia di conseguenza.",
+    "idea": "Aggiungere in chiusura un'animazione o un testo a schermo che mostri il 'Seguici' e la prossima classifica, così il follow è visibile anche senza leggere la didascalia."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:54+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo), copione, didascalia e numeri del progetto: tutto nei limiti.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo), copione, didascalia e numeri del progetto: tutto nei limiti.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, mostrare nei primi 2 secondi il numero più sorprendente (es. «62 Luna») come anteprima, e inserire un piccolo fermo immagine sul nome del vincitore per dare più peso al colpo di scena."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:55+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Sono 62, in 52 città' è detto ad alta voce senza la mappa a supporto (dati_mappa è vuoto), e il CTA 'Scrivi il nome del tuo' arriva a 16.3s, con la fascia di testo che invita a scrivere. Nei materiali non ci sono prove che 62 e 52 città siano verificati sulla mappa, né che '1395 nomi divers",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e dati di mappa e progetto per il reel nomi_top.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il dato 'Sono 62, in 52 città' è detto ad alta voce senza la mappa a supporto (dati_mappa è vuoto), e il CTA 'Scrivi il nome del tuo' arriva a 16.3s, con la fascia di testo che invita a scrivere. Nei materiali non ci sono prove che 62 e 52 città siano verificati sulla mappa, né che '1395 nomi diversi' in didascalia sia confermato dai dati. Inoltre la trascrizione dice 'Quinto Mia... Eccone alcuni' ma la didascalia elenca anche 'Simba' e 'Leo' con la stessa posizione: coerente, ma va controllata la lista delle città citate ('Carosino', 'San Valentino Torio') rispetto alla mappa.",
+    "correzione": "Prima di pubblicare, verificare sulla mappa i numeri 62 / 52 città / 1395 nomi e che Carosino e San Valentino Torio abbiano davvero luci con Luna o con i nomi indicati. Se non confermati, ridurre le cifre a quelle verificate. Spostare il CTA 'scrivi il nome' più vicino all'inizio della scena padroni se possibile, o mantenerlo come chiusura chiara.",
+    "idea": "Per il prossimo reel 'nomi_top', mostrare sulla mappa le città citate mentre vengono nominate, così il dato è visibile e rafforza la fiducia; aggiungere una coda di 1-2 secondi per il CTA."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:55+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La mappa dichiarata ha 'dati_mappa' vuoto, quindi non posso verificare i numeri del reel (62 Luna, 52 città, 1395 nomi, ordine della classifica). Inoltre la didascalia dice 'Sulla mappa ci sono 1395 nomi diversi' e il brief non ha 'apertura' né 'copertina' valorizzate. Il copione dice 'Quinto Mia...",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio) e coerenza tra copione e dati della mappa.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "La mappa dichiarata ha 'dati_mappa' vuoto, quindi non posso verificare i numeri del reel (62 Luna, 52 città, 1395 nomi, ordine della classifica). Inoltre la didascalia dice 'Sulla mappa ci sono 1395 nomi diversi' e il brief non ha 'apertura' né 'copertina' valorizzate. Il copione dice 'Quinto Mia... secondo Leo' ma la didascalia elenca 'Mia, Kira, Simba, Leo' senza nessun problema, quindi quello è coerente.",
+    "correzione": "Prima di pubblicare, verificare i conteggi (62 cani/gatti chiamati Luna, 52 città, 1395 nomi) con i dati reali della mappa e allegare la fonte o il riferimento. Valutare di compilare la copertina con il numero 'Luna 62' per il primo fotogramma.",
+    "idea": "Aprire con 'Luna' in grande al secondo 0 e chiudere con un numero che cambia (es. 'Quanti Luna in mappa oggi?') per trasformare la classifica in una serie settimanale riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:55+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il dato «62» (Luna) è detto a 9.3s ma nel copione il numero è nella stessa frase di «52 città», e la mappa non fornisce dati_mappa nel materiale: i numeri non sono verificabili dai materiali. Inoltre la didascalia cita «1395 nomi diversi» che non compare nel copione né nei dati forniti.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e coerenza dei numeri (62 Luna, 52 città, 1395 nomi) rispetto ai dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "Il dato «62» (Luna) è detto a 9.3s ma nel copione il numero è nella stessa frase di «52 città», e la mappa non fornisce dati_mappa nel materiale: i numeri non sono verificabili dai materiali. Inoltre la didascalia cita «1395 nomi diversi» che non compare nel copione né nei dati forniti.",
+    "correzione": "Verificare 62, 52 città e 1395 nomi sui dati reali della mappa prima della pubblicazione, oppure toglierli dalla didascalia e dal parlato finché non sono confermati.",
+    "idea": "Per il prossimo reel, mostrare a schermo il nome e la città dell'utente che ha commentato, con la luce che si accende sulla mappa: rende il follow più personale e il contenuto più bello."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:57+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il reel non ha apertura (brief.apertura è null) e la prima battuta parte subito, mentre la scena 'gancio' non ha un elemento visivo di aggancio documentato. Inoltre la didascalia dichiara '1395 nomi diversi' e '52 città' senza che questi dati compaiano nei dati_mappa, che è vuoto: non posso verifica",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, audio (LUFS, picco, silenzi), brief e dati del progetto (follower, ultimi reel).",
+    "esito": "segnalo",
+    "secondo": 0.0,
+    "problema": "Il reel non ha apertura (brief.apertura è null) e la prima battuta parte subito, mentre la scena 'gancio' non ha un elemento visivo di aggancio documentato. Inoltre la didascalia dichiara '1395 nomi diversi' e '52 città' senza che questi dati compaiano nei dati_mappa, che è vuoto: non posso verificarli. La voce è generata e la didascalia lo dichiara, va bene.",
+    "correzione": "Aggiungere un'apertura visiva o un titolo nei primi 0,5-1 s con 'Luna: 62 cani e gatti' e verificare i numeri 1395 e 52 città con i dati della mappa prima della pubblicazione.",
+    "idea": "Ripetere il formato con una call to action più forte in apertura, tipo 'Il tuo nome è in top 5? Scoprilo', e alternare con il formato 'questa_luce' che ha il miglior rapporto follower/1000 nei dati."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:57+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio) e dati del progetto per la mia mansione sul reel dei nomi più usati.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio) e dati del progetto per la mia mansione sul reel dei nomi più usati.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel conviene mostrare nei primi 2 secondi il numero 62 e il nome Luna in grande, così il gancio si legge anche con l'audio disattivato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:58+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' viene detta a 2.6s, ma nel brief la scena 'barre' non ha un'indicazione visiva di apertura e l'apertura è null: il gancio iniziale ('Il nome... più usato?') si chiude a 2.6s, quindi la classifica parte prima che lo spettatore abbia il temp",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, brief, didascalia, misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e dati del progetto per il reel 'nomi_top'.",
+    "esito": "segnalo",
+    "secondo": 2.6,
+    "problema": "La frase 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' viene detta a 2.6s, ma nel brief la scena 'barre' non ha un'indicazione visiva di apertura e l'apertura è null: il gancio iniziale ('Il nome... più usato?') si chiude a 2.6s, quindi la classifica parte prima che lo spettatore abbia il tempo di capire. Inoltre la didascalia dice '1395 nomi diversi' ma questo dato non compare tra i numeri verificati del progetto e non può essere confermato dai materiali.",
+    "correzione": "Verificare e confermare il dato '1395 nomi diversi' prima di pubblicarlo, oppure toglierlo. Per l'apertura, allungare di mezzo secondo la domanda iniziale o mostrare già a schermo la scritta 'Top 5 nomi' nei primi 1-2 secondi.",
+    "idea": "Ripetere il formato con una classifica per razza o per città, e chiudere con una mini-sfida tipo 'Indovina il nome n.1 prima della fine' per trattenere lo spettatore fino al verdetto."
+   }
+  },
+  {
+   "t": "2026-11-15T10:21:58+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il tag per il follow e la call to action arrivano tardi e in modo poco evidente: la fascia «Scrivi il nome del tuo» compare solo verso il secondo 16, mentre la didascalia promette di rispondere con quanti animali hanno lo stesso nome. Inoltre la didascalia dice «Voce generata» senza che il copione l",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi, copione, didascalia e numeri del progetto, incrociati con il brief del reel.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il tag per il follow e la call to action arrivano tardi e in modo poco evidente: la fascia «Scrivi il nome del tuo» compare solo verso il secondo 16, mentre la didascalia promette di rispondere con quanti animali hanno lo stesso nome. Inoltre la didascalia dice «Voce generata» senza che il copione lo richieda, e nei dati mappa la lista è vuota, quindi i riferimenti a città come Carosino e San Valentino Torio non sono verificabili dai materiali forniti.",
+    "correzione": "Anticipare la fascia di invito a scrivere il nome già a partire dal secondo 12-13, mantenendola visibile fino alla fine. Verificare i dati delle città citate prima della pubblicazione e controllare la dicitura sulla voce generata nella didascalia.",
+    "idea": "Ripetere il formato con una classifica regionale e un finale che mostri la mappa con la luce accesa sulla città di chi commenta, così il commento diventa una partecipazione visibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:01+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il conteggio nel copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo», ma nel reel le barre mostrano 3. Simba 38, 4. Kira 35, 5. Mia 31: Leo (2°) non compare in nessun fotogramma inviato, quindi non è verificabile dai materiali. Inoltre la didascalia dice «1395 nomi diversi» e «Il tuo c'",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (62 Luna, 52 città), audio (-14.3 LUFS, picco -1.0 dBFS) e coerenza tra fotogrammi e frasi del brief.",
+    "esito": "segnalo",
+    "secondo": 2.6,
+    "problema": "Il conteggio nel copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo», ma nel reel le barre mostrano 3. Simba 38, 4. Kira 35, 5. Mia 31: Leo (2°) non compare in nessun fotogramma inviato, quindi non è verificabile dai materiali. Inoltre la didascalia dice «1395 nomi diversi» e «Il tuo c'è?» è nel primo fotogramma ma la trascrizione non lo riporta. Infine il fotogramma a 1 secondo e la scritta «QUARTO KIRA» a 4s sono coerenti, ma al secondo 2.6 la frase dice «Quinto Mia» mentre la barra visibile è 5. Mia: ok.",
+    "correzione": "Mostrare nella scena barre anche il 2° posto (Leo) oppure togliere «secondo Leo» dal voiceover; verificare che il dato di Leo sia nei dati della mappa. Allineare la didascalia al conteggio effettivo.",
+    "idea": "Chiudere con un finale «Quanti Luna ci sono nella tua città?» e una mappa che si accende nel punto dell'utente che commenta, per trasformare il commento in un momento visivo."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:02+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il gancio d'apertura ('Il nome di cani e gatti più usato in Italia?') compare a 0.0s ma la domanda resta in schermo per circa 2.6s senza movimento visibile sulla parola chiave; inoltre il reel non dice mai chiaramente cos'è la pagina (Zampe d'Italia) né la mappa, che è il vero motivo per seguire. La",
+   "dati": {
+    "controllato": "Gancio, trascrizione coi secondi, didascalia e misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) rispetto alla mansione Gancio per chi non ci conosce.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il gancio d'apertura ('Il nome di cani e gatti più usato in Italia?') compare a 0.0s ma la domanda resta in schermo per circa 2.6s senza movimento visibile sulla parola chiave; inoltre il reel non dice mai chiaramente cos'è la pagina (Zampe d'Italia) né la mappa, che è il vero motivo per seguire. La fascia finale è in schermo solo dall'inizio e non è legata a un invito a seguire.",
+    "correzione": "Nel primo secondo mostrare la mappa con una luce accesa e la scritta 'Zampe d'Italia · la mappa dei nostri animali', e aggiungere in chiusura (17-20s) un invito esplicito del tipo 'Seguici per la classifica di ogni settimana' in sovrimpressione.",
+    "idea": "Ripetere il formato con un'etichetta fissa in alto 'Classifica settimanale' e una chiusura con il prossimo nome in anteprima, così il reveal invoglia a tornare."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:03+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Sono 62, in 52 città' è presente nel reel e nei materiali, ma nel reel la scritta 'Luna' appare al secondo 6.7 mentre la frase 'Sono 62, in 52 città' arriva solo dopo; inoltre il fotogramma a 8 secondi mostra ancora la classifica 3°-5° nella scena dei nomi. Il problema principale è che la m",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, fotogrammi e dati del progetto: il reel è un 'nomi_top' con classifica e Luna in testa, più l'invito a scrivere il proprio nome.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Il dato 'Sono 62, in 52 città' è presente nel reel e nei materiali, ma nel reel la scritta 'Luna' appare al secondo 6.7 mentre la frase 'Sono 62, in 52 città' arriva solo dopo; inoltre il fotogramma a 8 secondi mostra ancora la classifica 3°-5° nella scena dei nomi. Il problema principale è che la mappa dei 10 'padroni' (scena 'padroni') compare a circa 11-13 secondi con account non tutti visibili come 'Luna' al 100%: l'account @ernesto_8_7 appare con la card sbiadita (come se fosse inattivo), che rompe la leggibilità dell'elenco. Inoltre la didascalia dichiara 1395 nomi diversi sulla mappa ma nel reel non c'è nessun dato che lo confermi visivamente.",
+    "correzione": "Rendere la card di @ernesto_8_7 coerente con le altre (o toglierla dall'elenco) e far comparire il dato '1395 nomi diversi' o toglierlo dalla didascalia se non è verificato sul reel.",
+    "idea": "Chiudere con un'anteprima del prossimo nome in classifica ('la prossima settimana: chi arriva 2°?') per dare un motivo concreto di follow."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:03+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella frase «Sono 62, in 52 città» la trascrizione non fornisce altri dati, ma nella didascalia il conteggio dei nomi diversi (1395) non compare nel reel. Più importante: nella scena «padroni» (circa 11-13s) le sei card mostrano Luna ma in una (@ernesto_8_7) il nome è sbiadito, e la didascalia tagga",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, didascalia, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e i 6 fotogrammi: tutto coerente con i dati del brief.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "Nella frase «Sono 62, in 52 città» la trascrizione non fornisce altri dati, ma nella didascalia il conteggio dei nomi diversi (1395) non compare nel reel. Più importante: nella scena «padroni» (circa 11-13s) le sei card mostrano Luna ma in una (@ernesto_8_7) il nome è sbiadito, e la didascalia tagga 10 account mentre le card ne mostrano 9 visibili. Inoltre il reel dichiara «Voce generata» nella didascalia senza che questo sia un problema tecnico, ma va verificato con la policy della pagina.",
+    "correzione": "Allineare il numero di card visibili con i tag in didascalia (togliere o aggiungere un account) e rendere leggibile anche la card sbiadita; valutare se mostrare «1395 nomi» nel reel con una scritta a schermo.",
+    "idea": "Per il prossimo episodio, chiudere con una card «il tuo nome» già riempita con un nome di esempio, così il CTA diventa visivo oltre che verbale."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:05+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nella didascalia il numero dei nomi diversi è scritto '1395', ma il progetto non fornisce una fonte verificabile; inoltre al secondo 12 la mappa mostra 9 account con 'Luna' e il testo parla di 62 sulla mappa: il conteggio visivo non è verificabile dai materiali. In più i dati_mappa sono vuoti, quind",
+   "dati": {
+    "controllato": "Ho verificato i follower per 1.000 account sul reel 'nomi più usati' (Luna, 62 in 52 città) e la sua capacità di spingere il follow nel contesto del progetto.",
+    "esito": "segnalo",
+    "secondo": 12,
+    "problema": "Nella didascalia il numero dei nomi diversi è scritto '1395', ma il progetto non fornisce una fonte verificabile; inoltre al secondo 12 la mappa mostra 9 account con 'Luna' e il testo parla di 62 sulla mappa: il conteggio visivo non è verificabile dai materiali. In più i dati_mappa sono vuoti, quindi i numeri 62/52 non risultano confermati dai dati verificati forniti.",
+    "correzione": "Togliere '1395 nomi diversi' dalla didascalia finché non c'è un dato verificato, oppure aggiungere la fonte; allineare il numero '62' ai dati_mappa reali prima della pubblicazione.",
+    "idea": "Chiudere con un invito esplicito a seguire per la prossima classifica settimanale, e mostrare nel fotogramma finale il numero di nomi/città aggiornato in tempo reale."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:07+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato sulla mappa nei materiali è vuoto (dati_mappa è []), quindi non posso verificare i numeri 62 e 52 città mostrati nel reel; la didascalia cita anche 1395 nomi diversi, non verificabile. Inoltre il fotogramma al secondo 9 ha la scritta 'Luna' gigante con '62 sulla mappa' mentre la voce dice 'S",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Luna 62 in 52 città), audio (-14.3 LUFS, picco -1.0 dBFS) e coerenza dei fotogrammi con la scena di ciascuna frase.",
+    "esito": "segnalo",
+    "secondo": 9,
+    "problema": "Il dato sulla mappa nei materiali è vuoto (dati_mappa è []), quindi non posso verificare i numeri 62 e 52 città mostrati nel reel; la didascalia cita anche 1395 nomi diversi, non verificabile. Inoltre il fotogramma al secondo 9 ha la scritta 'Luna' gigante con '62 sulla mappa' mentre la voce dice 'Sono 62' a 9.3s, quindi il numero compare correttamente solo se il dato è vero. Nella didascalia le @ dei padroni sono 10 ma sulla mappa ne compaiono 10 (incluso uno sbiadito di San Valentino Torio, @ernesto_8_7, che sembra un profilo già non attivo/grigio): verificare che il tag sia valido.",
+    "correzione": "Confermare con il reparto dati i numeri 62, 52 città e 1395 nomi prima della pubblicazione; controllare il profilo @ernesto_8_7 (appare sbiadito). Il resto (audio, tempi) è nei parametri.",
+    "idea": "Chiudere con un'anteprima della classifica della settimana successiva per dare un motivo concreto di tornare e seguire."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:07+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nel copione Luna è al primo posto, ma la mappa mostra 'Luna 62 sulla mappa · in 52 città' mentre la didascalia dice 'Sono 62' senza precisare che sono 62 sulla mappa e non in Italia: rischio di sembrare un dato nazionale. Inoltre le barre mostrano 38, 35, 31 per Simba, Kira, Mia, ma i numeri in voce",
+   "dati": {
+    "controllato": "Ho verificato il copione, i secondi della trascrizione, la coerenza tra barre, Luna e mappa, l'audio e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Nel copione Luna è al primo posto, ma la mappa mostra 'Luna 62 sulla mappa · in 52 città' mentre la didascalia dice 'Sono 62' senza precisare che sono 62 sulla mappa e non in Italia: rischio di sembrare un dato nazionale. Inoltre le barre mostrano 38, 35, 31 per Simba, Kira, Mia, ma i numeri in voce e didascalia non corrispondono alle barre (Mia quinto, Kira quarto, Simba terzo: nel reel la barra di Mia ha 31, coerente, ma Leo secondo e i numeri 62 non compaiono nei dati sopra). Il copione dice 'Quinto Mia', la barra visibile a 0-4s mostra solo tre voci: il secondo 4 è poco leggibile per chi guarda.",
+    "correzione": "Precisare in voce e in didascalia 'Luna: 62 sulla mappa' e allungare di mezzo secondo la schermata delle barre (4–6 s) così da mostrare tutte e cinque le posizioni in sequenza.",
+    "idea": "Chiudere ogni reel con il nome più cliccato della settimana e il numero di città, per creare una serie riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:07+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Sono 62, in 52 città» e la mappa riporta 62 sulla mappa e 52 città, quindi i numeri coincidono. Però la trascrizione salta «Leo» come secondo posto: nei fotogrammi la barra mostra solo i posti 3, 4 e 5 (Simba 38, Kira 35, Mia 31), mentre quarto e quinto sono citati a voce ma i dati ",
+   "dati": {
+    "controllato": "Trascrizione, secondi, dati della mappa (nomi e città citati), audio e didascalia del reel sui nomi più usati, confrontati con il copione.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Il copione dice «Sono 62, in 52 città» e la mappa riporta 62 sulla mappa e 52 città, quindi i numeri coincidono. Però la trascrizione salta «Leo» come secondo posto: nei fotogrammi la barra mostra solo i posti 3, 4 e 5 (Simba 38, Kira 35, Mia 31), mentre quarto e quinto sono citati a voce ma i dati dei posti 1 e 2 non compaiono in nessuna schermata. Inoltre al secondo 6.7 la voce dice «E al primo posto: Luna!» ma il numero 62 arriva dopo, senza che il pubblico veda Leo né il dato di Leo: l'ordine delle schermate non corrisponde al racconto. Infine la didascalia cita «Sono 1395 nomi diversi» che non è nei dati forniti, e la lista di elenco dei posti 1 e 2 è incompleta.",
+    "correzione": "Mostrare nella schermata classifica tutti e cinque i posti (incluso Leo) prima di nominare Luna, oppure rimuovere il riferimento a Leo dalla voce. Verificare o togliere il dato «1395 nomi diversi» dalla didascalia, perché non è nei materiali.",
+    "idea": "Chiudere con un frame «Quale nome vince la prossima settimana?» e un reel di confronto con i commenti più divertenti dei follower."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:09+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato «62 sulla mappa · in 52 città» e la classifica (Mia 31, Kira 35, Simba 38) non sono verificabili dai materiali: nei dati mappa non compare alcun conteggio, quindi il numero primo posto resta non confermato. Inoltre la trascrizione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» ma i",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia e misure audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) rispetto al brief e alla mappa.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Il dato «62 sulla mappa · in 52 città» e la classifica (Mia 31, Kira 35, Simba 38) non sono verificabili dai materiali: nei dati mappa non compare alcun conteggio, quindi il numero primo posto resta non confermato. Inoltre la trascrizione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» ma il fotogramma mostra solo le righe 3-5 (Simba 38, Kira 35, Mia 31): Leo non appare né nelle barre né nei dati forniti. Infine la didascalia dice «1395 nomi diversi», numero non presente nei materiali.",
+    "correzione": "Verificare nel database i conteggi (Luna, Leo, Simba, Kira, Mia, nomi unici) prima della pubblicazione; se non confermati, togliere o correggere i numeri non verificati nel parlato, nelle barre e nella didascalia. Allineare le barre al parlato (includere Leo o cambiare la frase).",
+    "idea": "Per i prossimi reel, mostrare nella stessa schermata la fonte del conteggio (es. «su 1.395 nomi sulla mappa») per rafforzare credibilità."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:10+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' compare nel copione ma non ci sono dati di mappa a supporto (dati_mappa è vuoto); i numeri 62 e 52 città non sono verificabili dai materiali. Inoltre la didascalia cita 1395 nomi diversi senza fonte nei dati. Il tag di chiusura 'Voce genera",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (LUFS, picco, silenzi), didascalia e dati del progetto, per verificare coerenza e ritmo del reel.",
+    "esito": "segnalo",
+    "secondo": 2.6,
+    "problema": "Il dato 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' compare nel copione ma non ci sono dati di mappa a supporto (dati_mappa è vuoto); i numeri 62 e 52 città non sono verificabili dai materiali. Inoltre la didascalia cita 1395 nomi diversi senza fonte nei dati. Il tag di chiusura 'Voce generata' sulla didascalia è un residuo che andrebbe tolto.",
+    "correzione": "Verificare classifica, 62 e 52 città e 1395 nomi sui dati della mappa prima della pubblicazione, oppure ridurre le cifre non verificate. Rimuovere 'Voce generata' dalla didascalia.",
+    "idea": "Aggiungere in chiusura un nome concreto da cercare sulla mappa (es. 'Luna, cerca la tua città') per dare un motivo visivo immediato a chi commenta."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:10+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La mappa dichiarata nei dati è vuota (dati_mappa: []), quindi i numeri 62, 52 città e 1395 nomi della didascalia e del parlato non sono verificabili dai materiali. Inoltre la didascalia cita 5 nomi di classifica ma il dato 'top 5' non è nei materiali, e la fascia finale chiede una risposta che la pa",
+   "dati": {
+    "controllato": "Meccaniche di gioco: coerenza tra copione, trascrizione coi secondi, dati mappa (62 Luna, 52 città, 1395 nomi), audio e didascalia.",
+    "esito": "segnalo",
+    "secondo": null,
+    "problema": "La mappa dichiarata nei dati è vuota (dati_mappa: []), quindi i numeri 62, 52 città e 1395 nomi della didascalia e del parlato non sono verificabili dai materiali. Inoltre la didascalia cita 5 nomi di classifica ma il dato 'top 5' non è nei materiali, e la fascia finale chiede una risposta che la pagina dovrà poi dare davvero.",
+    "correzione": "Verificare i conteggi (62 Luna, 52 città, 1395 nomi) contro il database prima della pubblicazione, oppure allegarne la fonte; se non verificabili, togliere o sostituire i numeri nel parlato e nella didascalia.",
+    "idea": "Mostrare sulla mappa, a fine reel, la luce accesa della città del nome più comune, così la promessa 'ti rispondiamo con quanti ce ne sono' diventa visiva e memorabile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:11+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Sono 62, in 52 città' e la classifica (Mia, Kira, Simba, Leo, Luna) non risultano verificati nei materiali: dati_mappa è vuoto, quindi non posso confermare conteggi e città. Inoltre la didascalia dice '1395 nomi diversi' senza una fonte nel materiale. Il copione promette 'ti rispondiamo con",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, didascalia, misure audio (LUFS, picco, silenzi) e dati del progetto nella mia mansione di Realismo degli animali.",
+    "esito": "segnalo",
+    "secondo": 16.3,
+    "problema": "Il dato 'Sono 62, in 52 città' e la classifica (Mia, Kira, Simba, Leo, Luna) non risultano verificati nei materiali: dati_mappa è vuoto, quindi non posso confermare conteggi e città. Inoltre la didascalia dice '1395 nomi diversi' senza una fonte nel materiale. Il copione promette 'ti rispondiamo con quanti ce ne sono' e 'se è l'unico': serve che la risposta sia realmente calcolabile dalla mappa.",
+    "correzione": "Prima di pubblicare, verificare sulla mappa i conteggi (62 Luna, 52 città, 1395 nomi) e allegare la fonte; se non verificabili, togliere i numeri o dire 'nei nostri dati'. Confermare che la risposta automatica ai commenti usi davvero il conteggio della mappa.",
+    "idea": "Inserire nel reel un'immagine della mappa con la luce accesa sulla città del nome più votato, così il numero 62 diventa visibile e verificabile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:12+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Mappa e 3D: i dati mappa sono vuoti (nessun dato da verificare sulla mappa), l'audio rispetta il target (-14 LUFS, picco -1 dBFS, nessun silenzio lungo) e le frasi del copione coincidono con la trascrizione.",
+   "dati": {
+    "controllato": "Mappa e 3D: i dati mappa sono vuoti (nessun dato da verificare sulla mappa), l'audio rispetta il target (-14 LUFS, picco -1 dBFS, nessun silenzio lungo) e le frasi del copione coincidono con la trascrizione.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Nel fotogramma finale mostrare una luce che si accende sulla mappa con il nome del follower, così il ritorno visivo è immediato e rafforza il legame con il progetto."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:14+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' ma il copione ha lo stesso testo: il problema è nella didascalia, che riporta la stessa classifica in forma compatta, quindi ok. Il vero problema è la trascrizione al secondo 9.3: 'Sono 62, in 52 città' è sincronizzato, mentre ",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo), fascia e didascalia del reel sui nomi più usati.",
+    "esito": "segnalo",
+    "secondo": 2.6,
+    "problema": "La trascrizione dice 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' ma il copione ha lo stesso testo: il problema è nella didascalia, che riporta la stessa classifica in forma compatta, quindi ok. Il vero problema è la trascrizione al secondo 9.3: 'Sono 62, in 52 città' è sincronizzato, mentre la fascia finale ('quanti ce ne sono') compare al secondo 16.3 e resta sullo schermo solo fino a 19.7, poco per leggere e rispondere. Inoltre la didascalia dice '1395 nomi diversi' ma nei dati della mappa non c'è nessun dato che lo confermi, quindi non è verificabile dai materiali.",
+    "correzione": "Allungare la fascia del call to action a 4-5 secondi (portarla a inizio 15s) e verificare o togliere il dato '1395 nomi diversi' dalla didascalia prima della pubblicazione.",
+    "idea": "Per i prossimi reel tenere un'unica fascia di invito a tutto schermo a fine video, con un dato di verifica nella didascalia."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:14+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il primo secondo di voce ('Il nome di cani e') arriva a 0.0s senza apertura visiva né pausa, e l'audio medio dei primi 5s è -17.1 dB, più basso dell'obiettivo; inoltre la didascalia dice 'Voce generata' con la voce attiva, mentre la didascalia del brief non segnala l'uso di una voce artificiale in m",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione vs brief, audio (LUFS, picco, silenzi), didascalia e dati della mappa (62 Luna, 52 città, 1395 nomi), coerenza tra voce e testo.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "Il primo secondo di voce ('Il nome di cani e') arriva a 0.0s senza apertura visiva né pausa, e l'audio medio dei primi 5s è -17.1 dB, più basso dell'obiettivo; inoltre la didascalia dice 'Voce generata' con la voce attiva, mentre la didascalia del brief non segnala l'uso di una voce artificiale in modo chiaro al pubblico.",
+    "correzione": "Aggiungere 0,5-1 s di apertura visiva o musica prima della prima parola e alzare il volume dei primi 5 secondi di circa 3 dB per avvicinarsi a -14 LUFS; dichiarare in modo esplicito e leggibile che la voce è generata nella didascalia.",
+    "idea": "Ripetere il formato con una classifica regionale (es. i nomi più usati in Lombardia) e una risposta video ai commenti più frequenti, così da moltiplicare il coinvolgimento."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:14+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS -14.3, picco -1.0 dBFS, nessun silenzio lungo, volume iniziale -17.1 dB) e sincronia trascrizione/secondi rispetto al copione.",
+   "dati": {
+    "controllato": "Audio (LUFS -14.3, picco -1.0 dBFS, nessun silenzio lungo, volume iniziale -17.1 dB) e sincronia trascrizione/secondi rispetto al copione.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Aggiungere in chiusura un richiamo visivo alla luce della città dell'animale sulla mappa, per collegare il commento alla mappa e rendere il finale più memorabile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:15+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato «62 cani e gatti chiamati Luna» è detto a 9.3s, ma nel copione la frase è spezzata: il secondo 2 («E al primo posto: Luna! Sono 62, in 52 città») non compare nei dati mappa forniti (dati_mappa è vuoto), quindi il numero 62 e le 52 città non sono verificabili dai materiali. Inoltre la didasca",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, copione, audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio), dati mappa e didascalia rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 9.3,
+    "problema": "Il dato «62 cani e gatti chiamati Luna» è detto a 9.3s, ma nel copione la frase è spezzata: il secondo 2 («E al primo posto: Luna! Sono 62, in 52 città») non compare nei dati mappa forniti (dati_mappa è vuoto), quindi il numero 62 e le 52 città non sono verificabili dai materiali. Inoltre la didascalia dice «1395 nomi diversi» senza un dato corrispondente nei materiali.",
+    "correzione": "Verificare su mappa/database i valori 62, 52 città e 1395 nomi prima della pubblicazione, oppure rimuoverli dal parlato e dalla didascalia se non confermati.",
+    "idea": "Per i prossimi reel usare una scena fissa per la classifica (un numero grande per posizione) e rendere la risposta ai commenti un piccolo formato ricorrente con i nomi più richiesti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:17+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato '62 cani/gatti chiamati Luna in 52 città' viene detto a 6.7s ma non c'è nessun dato di mappa nei materiali (dati_mappa è vuoto): non posso verificarlo. Inoltre la didascalia riporta '1395 nomi diversi' che non compare nel copione. Il reel finisce a 19.7s con una frase che chiede di scrivere ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, audio (LUFS, picco, silenzi), coerenza tra copione, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Il dato '62 cani/gatti chiamati Luna in 52 città' viene detto a 6.7s ma non c'è nessun dato di mappa nei materiali (dati_mappa è vuoto): non posso verificarlo. Inoltre la didascalia riporta '1395 nomi diversi' che non compare nel copione. Il reel finisce a 19.7s con una frase che chiede di scrivere il nome, ma la call to action sulla fascia non è verificabile sui fotogrammi inviati solo a 0.5, 4, 8, 12, 16, 19.7.",
+    "correzione": "Verificare su mappa e database il conteggio 62 Luna e 52 città prima della pubblicazione; allineare la didascalia (1395 nomi) con il dato effettivamente verificato o togliere la cifra; confermare che la fascia 'Scrivi il nome del tuo' sia leggibile nell'ultimo fotogramma.",
+    "idea": "Mostrare a schermo la mappa con la luce accesa per il nome più popolare (Luna) per dare subito una prova visiva del dato."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:19+00:00",
+   "da": "grafica3d-2",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nei secondi 4-5 la barra di Leo (2°) non compare: il copione dice «secondo Leo» ma il grafico mostra solo le righe 3-5 (Simba, Kira, Mia). Nel fotogramma a 4s si legge «QUARTO KIRA» senza il passaggio su Leo, quindi lo spettatore perde un posto della classifica. Inoltre i nomi dei gatti e dei cani n",
+   "dati": {
+    "controllato": "Ho verificato i numeri della classifica (Mia 5°, Kira 4°, Simba 3°, Luna 1°) e la coerenza tra copione, didascalia, trascrizione e fotogrammi della mia parte di grafica 3D.",
+    "esito": "segnalo",
+    "secondo": 4.0,
+    "problema": "Nei secondi 4-5 la barra di Leo (2°) non compare: il copione dice «secondo Leo» ma il grafico mostra solo le righe 3-5 (Simba, Kira, Mia). Nel fotogramma a 4s si legge «QUARTO KIRA» senza il passaggio su Leo, quindi lo spettatore perde un posto della classifica. Inoltre i nomi dei gatti e dei cani nelle card sono piccoli e in parte poco leggibili su mobile.",
+    "correzione": "Inserire nel grafico anche la riga del 2° posto (Leo) con la sua barra e far scorrere la classifica dal 5° al 1° in modo continuo, con la card di Leo visibile almeno 1 secondo prima di «LUNA!». Ingrandire i testi delle card di 10-15% e aumentare il contrasto del nome utente.",
+    "idea": "Per i prossimi reel, chiudere con una card «Il tuo è in classifica?» che mostri in tempo reale il conteggio dei commenti con i nomi, per trasformare il commento in partecipazione visibile."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:19+00:00",
+   "da": "grafica3d-3",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo», ma nelle barre del grafico (fotogramma al secondo 4) compaiono solo 3°, 4° e 5° posto: Leo (2°) non è mostrato, quindi il pubblico non vede il dato citato. Inoltre la didascalia dice «1395 nomi diversi» mentre nei materiali non ho ",
+   "dati": {
+    "controllato": "Ho verificato le barre del grafico (3°-5° posto con i valori 38, 35, 31), la coerenza tra copione e didascalia, il tempismo delle scene e i dati audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo).",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Il copione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo», ma nelle barre del grafico (fotogramma al secondo 4) compaiono solo 3°, 4° e 5° posto: Leo (2°) non è mostrato, quindi il pubblico non vede il dato citato. Inoltre la didascalia dice «1395 nomi diversi» mentre nei materiali non ho un dato verificabile su questo numero da confrontare, e nella fascia finale il testo cambia rispetto alla didascalia («Scrivi il nome del tuo» vs «quanti ce ne sono»).",
+    "correzione": "Aggiungere nel grafico anche le righe 1° e 2° (Leo e Luna) oppure modificare il copione in modo che citi solo i posti mostrati; verificare il dato «1395 nomi diversi» prima della pubblicazione.",
+    "idea": "Per i prossimi reel, mostrare sempre la classifica completa in un'unica scena (1°-5°) prima di rivelare il primo posto, e usare una foto reale dell'animale più usato al posto del solo emoji corona."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:19+00:00",
+   "da": "grafica3d-4",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 6 la card Luna mostra 8 nomi sulla mappa, ma nel testo ne vengono citati solo 'alcuni'; le card con nomi di città sono leggibili solo in parte e la card 'Luna' di @ernesto_8_7 è sbiadita (appare come non attiva), mentre la didascalia dice 'Eccone alcuni' senza spiegare la d",
+   "dati": {
+    "controllato": "Rilievo e terreno: copertina, grafica della mappa e fotogrammi coerenti con i dati e con il copione del nome più usato.",
+    "esito": "segnalo",
+    "secondo": 6,
+    "problema": "Nel fotogramma al secondo 6 la card Luna mostra 8 nomi sulla mappa, ma nel testo ne vengono citati solo 'alcuni'; le card con nomi di città sono leggibili solo in parte e la card 'Luna' di @ernesto_8_7 è sbiadita (appare come non attiva), mentre la didascalia dice 'Eccone alcuni' senza spiegare la differenza. Inoltre nella didascalia la frase 'Voce generata' è rimasta incompleta.",
+    "correzione": "Rendere uniforme lo stile di tutte le card (anche quella sbiadita) o spiegarne il motivo a schermo; completare la nota 'Voce generata' con il riferimento corretto (es. 'Voce generata con IA'); aggiungere al fotogramma l'indicazione del totale nomi visibili.",
+    "idea": "Ripetere la classifica con un'animazione che accende la luce sulla mappa per ogni nome citato, così la mappa diventa protagonista visiva."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:21+00:00",
+   "da": "grafica3d-5",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel copione al secondo 6.7 il numero di Luna è «Sono 62, in 52 città», ma nel brief compare solo nei dati; la frase «Sono 62» è ambigua e nel reel la scritta sul fotogramma dice «62 sulla mappa · in 52 città», quindi il parlato è meno preciso del video. Inoltre la trascrizione dice «Quinto Mia, quar",
+   "dati": {
+    "controllato": "Ho verificato la mia mansione su copione, secondi della trascrizione, mappa, audio, fotogrammi e didascalia; i nomi e i numeri (5° Mia, 4° Kira, 3° Simba, 2° Leo, 1° Luna con 62 in 52 città) coincidono coi dati del brief.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "Nel copione al secondo 6.7 il numero di Luna è «Sono 62, in 52 città», ma nel brief compare solo nei dati; la frase «Sono 62» è ambigua e nel reel la scritta sul fotogramma dice «62 sulla mappa · in 52 città», quindi il parlato è meno preciso del video. Inoltre la trascrizione dice «Quinto Mia, quarto Kira, terzo Simba, secondo Leo» ma nel fotogramma al secondo 4 le barre mostrano solo 3°, 4°, 5° (Simba, Kira, Mia) e il 2° Leo non appare mai a schermo: la classifica viene raccontata senza vedere Leo. La mappa a 9 secondi mostra 9 profili: il secondo 12 fa vedere solo 8 card reali più una card sbiadita, mentre il parlato dice «eccone alcuni» senza problemi.",
+    "correzione": "Sostituire «Sono 62, in 52 città» con «62 animali, in 52 città» e aggiungere Leo (2°) nella schermata delle barre o nel fotogramma iniziale, oppure togliere il 2° dal parlato.",
+    "idea": "Nel prossimo reel della serie chiudere con una card «Il tuo nome in classifica?» che mostri un esempio di risposta reale, per rendere concreto il gancio al commento."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:23+00:00",
+   "da": "grafica3d-6",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Nel fotogramma al secondo 4 la barra del terzo posto (Simba, 38) e del quarto (Kira, 35) sono visibili, ma la scritta «QUARTO KIRA,» compare solo a metà frase mentre la trascrizione dice «Quinto Mia, quarto Kira, terzo Simba» a 2.6s: la sincronia tra voce e barre è approssimativa. Inoltre il quinto ",
+   "dati": {
+    "controllato": "Ho verificato che la trascrizione, i secondi, il conteggio (62 sulla mappa, 52 città) e l'audio (-14.3 LUFS, picco -1.0 dBFS, nessun silenzio lungo) rispettino il brief e gli obiettivi.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel fotogramma al secondo 4 la barra del terzo posto (Simba, 38) e del quarto (Kira, 35) sono visibili, ma la scritta «QUARTO KIRA,» compare solo a metà frase mentre la trascrizione dice «Quinto Mia, quarto Kira, terzo Simba» a 2.6s: la sincronia tra voce e barre è approssimativa. Inoltre il quinto posto (Mia) e il secondo (Leo) non sono mostrati in modo chiaro nel fotogramma; Leo non compare mai nelle barre. Il titolo dei dati usa «1999 – 803» nell'intestazione, che non è spiegato nel reel.",
+    "correzione": "Allineare le barre del 5°-2° posto con il testo parlato (una barra per frase) e mostrare Leo con il suo numero; spiegare o rimuovere «1999 – 803» dall'intestazione.",
+    "idea": "Per il prossimo reel: chiudere con un teaser della classifica successiva («la prossima settimana: il nome n.1 di gatti») per dare un motivo concreto di follow."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:25+00:00",
+   "da": "grafica3d-7",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la barra della classifica mostra solo i posti 3-5 (Simba, Kira, Mia) mentre la voce dice 'quarto Kira', quindi l'inquadratura è coerente, ma il secondo 6.7 'primo posto: Luna' arriva con la scena ancora sulla barra 'Luna' solo dal secondo 8; c'è uno stacco di circa 1,3 s con la corona m",
+   "dati": {
+    "controllato": "Camere e inquadrature della scena 'nomi_top' (gancio, barre, padroni, commento) su 6 fotogrammi, con allineamento ai secondi del copione e ai numeri verificati.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la barra della classifica mostra solo i posti 3-5 (Simba, Kira, Mia) mentre la voce dice 'quarto Kira', quindi l'inquadratura è coerente, ma il secondo 6.7 'primo posto: Luna' arriva con la scena ancora sulla barra 'Luna' solo dal secondo 8; c'è uno stacco di circa 1,3 s con la corona mostrata solo dopo. Inoltre il fotogramma al secondo 16 mostra la mappa dei padroni con 9 card visibili ma la voce cita 'alcuni' e il conteggio è corretto; la card in basso a destra è volutamente sbiadita (nome non ancora attivo) e può sembrare un errore.",
+    "correzione": "Anticipare la comparsa della corona e del titolo 'LUNA' di circa 1 s, portandoli dentro la frase 'E al primo posto' (circa 6.5 s). Rendere esplicita la card sbiadita (es. piccola etichetta 'in arrivo' o rimuoverla dalla griglia).",
+    "idea": "Ripetere la formula con la domanda rivolta ai commenti (es. 'Quanti Luna avete in casa?') e una seconda puntata che mostra il nome più raro della mappa."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:25+00:00",
+   "da": "grafica3d-8",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 le barre mostrano 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31) mentre la voce dice 'Quinto Mia, quarto Kira, terzo Simba': la grafica è coerente, ma il terzo posto nelle barre sembra in alto e il 2° Leo non compare mai in grafica. Inoltre al secondo 2.6 la voce cita Leo come secondo ma",
+   "dati": {
+    "controllato": "Grafica 3D del reel nomi_top: fotogrammi, leggibilità delle barre e dei nomi, coerenza col copione e coi dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 le barre mostrano 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31) mentre la voce dice 'Quinto Mia, quarto Kira, terzo Simba': la grafica è coerente, ma il terzo posto nelle barre sembra in alto e il 2° Leo non compare mai in grafica. Inoltre al secondo 2.6 la voce cita Leo come secondo ma nessuna barra o numero lo mostra: la classifica resta incompleta visivamente.",
+    "correzione": "Mostrare la barra di Leo (2°) nel frame tra 2.6s e 6.7s, oppure far scorrere la classifica dal 5° al 1° in sequenza, così ogni posto appare con il suo numero.",
+    "idea": "Nel reel successivo aggiungere un contatore animato che sale fino a 62 sulla scena di Luna, così il numero diventa un momento visivo forte."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:25+00:00",
+   "da": "grafica3d-9",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 la barra «4. Kira» è coperta dal testo «QUARTO KIRA,» nella scena barre, e la barra di Kira (35) è ancora visibile ma il primo posto Luna non compare nelle barre: la classifica mostra 3°-5° e il 2° Leo non è mai visualizzato nelle barre, quindi la sequenza 5-4-3-2-1 non è completa sullo",
+   "dati": {
+    "controllato": "Scene 3D: i 6 fotogrammi e la sequenza delle scene (gancio, barre, gancio, padroni, commento) rispetto al copione e ai secondi della trascrizione.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 la barra «4. Kira» è coperta dal testo «QUARTO KIRA,» nella scena barre, e la barra di Kira (35) è ancora visibile ma il primo posto Luna non compare nelle barre: la classifica mostra 3°-5° e il 2° Leo non è mai visualizzato nelle barre, quindi la sequenza 5-4-3-2-1 non è completa sullo schermo.",
+    "correzione": "Mostrare le barre 2° Leo e 1° Luna (con i relativi valori) in sequenza tra il secondo 4 e il 7, oppure spostare il testo «QUARTO KIRA» sotto le barre senza coprirle.",
+    "idea": "Aggiungere nell'ultima scena una call to action visiva «Seguici per la classifica settimanale» insieme alla fascia di commento, così il follow passa anche dal video."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:26+00:00",
+   "da": "grafica3d-10",
+   "a": "grafica3d-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' e poi 'primo posto: Luna' ma nei fotogrammi la barra mostra Simba 38, Kira 35, Mia 31 (e non compare Leo tra le barre visibili); la classifica a schermo non include Leo, quindi il parlato e la grafica non coincidono del tutto. ",
+   "dati": {
+    "controllato": "Timing dei secondi, coerenza tra trascrizione, frasi del brief, didascalia e fotogrammi, e i dati di mappa e audio.",
+    "esito": "segnalo",
+    "secondo": 6.7,
+    "problema": "La trascrizione dice 'Quinto Mia, quarto Kira, terzo Simba, secondo Leo' e poi 'primo posto: Luna' ma nei fotogrammi la barra mostra Simba 38, Kira 35, Mia 31 (e non compare Leo tra le barre visibili); la classifica a schermo non include Leo, quindi il parlato e la grafica non coincidono del tutto. Inoltre 'dati_mappa' è vuoto, quindi non posso verificare i numeri 62 e 52 città sulla mappa. Il frame a 19.7s mostra ancora 'SONO.' senza il numero finale, e la didascalia contiene 'Voce generata' senza dichiarazione chiara.",
+    "correzione": "Allineare le barre a schermo ai nomi pronunciati (includere Leo con il suo valore verificato), verificare 62 e 52 contro i dati della mappa, e aggiungere in didascalia una dicitura chiara sull'uso della voce generata.",
+    "idea": "Chiudere sempre con il conteggio personalizzato in un reel successivo, per trasformare i commenti in una serie che ritorna."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:34+00:00",
+   "da": "copione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima di pubblicare allineo voce, barre e didascalia (2° posto Leo non mostrato, dato '1395 nomi' non verificato) e rinforzo il gancio dei primi 2 secondi con il numero-sorpresa.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 2,
+      "problema": "Il primo fotogramma è statico e nei primi 2 secondi non c'è nulla di sorprendente: il dato forte (Luna, 62) arriva solo alla fine, quindi chi scorre rischia di andarsene.",
+      "correzione": "Mettere in grande sul fotogramma 0 il numero-sorpresa (es. «62 cani e gatti si chiamano Luna») e far seguire subito la domanda."
+     },
+     {
+      "secondo": 6.7,
+      "problema": "La voce dice «secondo Leo» ma nella scena delle barre compaiono solo 3°, 4° e 5° (Simba 38, Kira 35, Mia 31): Leo (2°) non è mai mostrato, e lo spettatore non trova il dato detto in voce. Anche il 1° posto va visto con la barra prima del reveal.",
+      "correzione": "Aggiungere nella scena barre il 2° posto (Leo) con il suo numero, e il 1° (Luna 62) in sincronia con la voce e la corona; se il dato di Leo non è confermato, toglierlo da voce e didascalia."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia dichiara «1395 nomi diversi», dato non presente nei materiali e non verificabile; c'è anche la dicitura «Voce generata», non necessaria.",
+      "correzione": "Verificare il dato sui dati reali di Zampe d'Italia prima di pubblicare, altrimenti toglierlo; rimuovere «Voce generata» dalla didascalia."
+     },
+     {
+      "secondo": 12,
+      "problema": "La scena con le card mostra solo 9 nomi su 62 senza dire che sono un campione.",
+      "correzione": "Dire o scrivere «Eccone alcuni (9 su 62)» così è chiaro che è una selezione."
+     }
+    ],
+    "idea": "Aprire con «62 cani e gatti si chiamano Luna» in grande, mostrare la classifica completa 5°-1° allineata alla voce, e chiudere con un contatore/mini-sfida che porta alla «classifica della settimana» come serie fissa."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:34+00:00",
+   "da": "mappa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare ancora: prima si verifica il dato di Leo (2° posto) e il totale di 1395 nomi, poi si mostra il 2° posto a schermo e si sistema la didascalia.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4,
+      "problema": "Il copione nomina «secondo Leo», ma nelle barre compaiono solo 3°, 4° e 5° posto (Simba 38, Kira 35, Mia 31). Leo non si vede mai e il suo conteggio non è verificabile dai materiali ricevuti. Sulla stessa classifica Luna (62 in 52 città) è l'unico dato coerente.",
+      "correzione": "Controllare il conteggio di Leo sulla mappa. Se è confermato, aggiungere la barra del 2° posto così quello che si sente torna con quello che si vede. Altrimenti togliere Leo da voce, schermata e didascalia."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia riporta «1395 nomi diversi» senza una fonte nei materiali. Anche «52 città» non è stato verificato da chi non aveva il dataset (due colleghi hanno invece dichiarato i dati coerenti, quindi basta una conferma).",
+      "correzione": "Confermare 1395 e 52 con i dati della mappa. Se non si riesce, togliere la cifra dalla didascalia."
+     },
+     {
+      "secondo": 6.7,
+      "problema": "Nella scheda «Luna sulla mappa» la card di @ernesto_8_7 è in grigio, diversa dalle altre. Quel profilo è anche taggato in didascalia.",
+      "correzione": "Spiegare perché è grigia, oppure sostituirla con un profilo attivo. Verificare che chi è taggato sia d'accordo."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia contiene la dicitura «Voce generata», che sembra un segnaposto e non spiega nulla.",
+      "correzione": "Riscrivere la dicitura in modo chiaro (voce sintetica) oppure toglierla."
+     }
+    ],
+    "idea": "Un finale con la risposta già pronta per un nome reale: card «Il tuo nome» con la città di un follower, oppure «Luna: 62 cani e gatti, ecco dove vivono». Rende visibile cosa si ottiene commentando, e ogni commento alimenta il reel successivo, per esempio «Il nome più raro d'Italia»."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:34+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è quasi pronto: l'audio è sostanzialmente a norma, serve solo un piccolo ritocco al volume dell'apertura e al limitatore; i numeri della didascalia vanno confermati con i dati reali prima di pubblicare, oppure tolti.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": null,
+      "problema": "L'apertura (primi 5 s) ha un volume medio di -17.1 dB, circa 3 dB sotto il resto, quindi il gancio parte piano. Inoltre il picco a -1.0 dBFS è al limite e la loudness è -14.3 LUFS, leggermente sotto il target.",
+      "correzione": "Alzare di 2-3 dB la voce nei primi 5 secondi, portare la traccia a -14 LUFS (circa +0.3 dB) e mettere un limitatore con ceiling a -1.5 dBFS."
+     },
+     {
+      "secondo": null,
+      "problema": "I numeri in didascalia e nel parlato (62 Luna, 52 città, 1395 nomi diversi) non risultano confermati dai dati della mappa, che nel brief è vuoto. Se non sono corretti, danneggiano la credibilità della pagina.",
+      "correzione": "Confrontare i numeri con i dati reali del progetto: se coincidono, inserirli nei dati della mappa; altrimenti toglierli o sostituirli con dati verificati."
+     },
+     {
+      "secondo": null,
+      "problema": "La dicitura «Voce generata» in didascalia è poco chiara e la lista di 10 tag a fine testo può sembrare spam.",
+      "correzione": "Usare una formula chiara e standard per dichiarare la voce sintetica (ad es. «Voce sintetica») e ridurre i tag a quelli davvero pertinenti."
+     }
+    ],
+    "idea": "Un reel di follow-up in cui la mappa accende la luce nella città di chi ha commentato il nome del proprio animale, così il commento porta a un risultato visibile e dà un motivo per seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:34+00:00",
+   "da": "grafica-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è graficamente solido ma va corretta la scena delle barre al secondo 4, che non mostra il 2° posto (Leo) e non è allineata alla voce; il dato '1395 nomi diversi' va verificato prima di pubblicare.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4,
+      "problema": "La scena delle barre mostra solo 3°-5° (Simba 38, Kira 35, Mia 31) con il titolo 'QUARTO KIRA,' mentre la voce elenca 5°, 4°, 3° e 2° (Leo): il 2° posto non compare mai in grafica e il testo a schermo non è sincronizzato con la frase parlata.",
+      "correzione": "Mostrare la sequenza completa 5°→2° con la barra di Leo e il suo numero (o dedicargli una scena breve prima di Luna) e far coincidere il titolo con la barra evidenziata nel momento in cui viene detto."
+     },
+     {
+      "secondo": null,
+      "problema": "Il dato '1395 nomi diversi' in didascalia non è verificabile dai materiali forniti (segnalato da più colleghi; anche il '1999 - 803' in alto va controllato).",
+      "correzione": "Verificare i numeri con la fonte dati e correggere o togliere il dato dalla didascalia prima della pubblicazione."
+     },
+     {
+      "secondo": 7,
+      "problema": "Il dato '62 in 52 città' arriva a voce ma compare in grafica solo dopo, quindi è poco leggibile proprio nel momento chiave della rivelazione di Luna.",
+      "correzione": "Far comparire il badge '👑 62 sulla mappa · in 52 città' già al secondo 7 e tenerlo fermo almeno 2 secondi."
+     }
+    ],
+    "idea": "Rifare il formato classifica con rivelazione a barre animate una alla volta (5→1, nessun posto saltato), chiuso da una domanda aperta e dall'invito esplicito a seguire per la classifica settimanale."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:34+00:00",
+   "da": "pubblicazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché i numeri (62 Luna, 52 città, 1395 nomi) non sono confermati sulla mappa reale; il resto del reel è solido e va solo rifinito.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 9.3,
+      "problema": "Il parlato dice «Sono 62, in 52 città», ma dati_mappa è vuoto e il dato non è verificabile. Sette relazioni su nove lo segnalano, quindi il problema è reale.",
+      "correzione": "Controllare sulla mappa reale il conteggio di Luna e il numero di città. Se non è confermato, togliere «in 52 città» dal parlato o sostituirlo con un dato certo, poi riallineare il testo a schermo."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia cita «1395 nomi diversi» senza fonte nei materiali e questo numero non compare nel copione.",
+      "correzione": "Verificare il totale sulla mappa. Se non è confermato, toglierlo dalla didascalia; se è confermato, annotare la fonte nei materiali."
+     },
+     {
+      "secondo": 16.3,
+      "problema": "L'invito «Scrivi il nome del tuo» arriva solo alla fine, la formula parlata e la fascia finale non sono identiche (la didascalia chiede anche la città) e lo spettatore ha pochi secondi per reagire.",
+      "correzione": "Usare la stessa formula nel parlato, nella fascia e nella didascalia (es. «Scrivi il nome e la città del tuo»). Tenere la fascia visibile almeno 3 secondi a fine video."
+     },
+     {
+      "secondo": 0.5,
+      "problema": "Il volume dei primi 5 secondi è -17.1 dB, più basso del resto (-14.3 LUFS integrati). È un dettaglio minore, ma l'apertura conta per trattenere chi scorre.",
+      "correzione": "Alzare leggermente il volume dell'apertura, senza superare il picco di -1.0 dBFS."
+     }
+    ],
+    "idea": "Pubblicare il formato «nomi_top» dopo la verifica dei dati. Come follow-up, un reel che risponda visivamente a un nome commentato, mostrando sulla mappa la città evidenziata, così il numero è credibile e ogni commento riceve una risposta."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:34+00:00",
+   "da": "community-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché il numero 1395 nomi diversi e i conteggi 62 Luna e 52 città non sono confermati sui dati della mappa, poi rendere più chiaro e ripetere l'invito a commentare e a seguire nel finale.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": null,
+      "problema": "La didascalia riporta '1395 nomi diversi' ma nei materiali dati_mappa è vuoto: il numero non è verificabile (segnalato da 7 persone su 9).",
+      "correzione": "Verificare il totale sulla mappa prima di pubblicare; se non confermato, toglierlo o riformulare senza numeri."
+     },
+     {
+      "secondo": 6.7,
+      "problema": "Il primo posto 'Luna! Sono 62, in 52 città' è detto come fatto ma i conteggi non sono confermati dai dati della mappa. Le segnalazioni sul secondo esatto (6.7 o 9.3) non concordano.",
+      "correzione": "Confermare 62 e 52 città sulla mappa e controllare che cifra e barra a schermo compaiano insieme alla voce, entro circa il secondo 7."
+     },
+     {
+      "secondo": 16.3,
+      "problema": "La fascia finale 'Scrivi il nome del tuo' resta a schermo solo da 16.3 a 18.1s, troppo poco. L'invito è frammentato: la didascalia parla anche di città e di 'se è l'unico', il parlato no. Il follow è solo nella didascalia.",
+      "correzione": "Allungare la fascia di circa un secondo e unificare l'invito in parlato, fascia e didascalia: 'Scrivi nome e città del tuo: ti diciamo quanti sono. Segui per la classifica di ogni settimana.'"
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia contiene il tag 'Voce generata' tagliato e ci sono 10 @ senza conferma che quelle persone appaiano nel reel.",
+      "correzione": "Scrivere in modo chiaro e completo che la voce è generata e tenere solo i tag di chi appare nel video."
+     }
+    ],
+    "idea": "Chiudere ogni reel con un teaser del prossimo (es. il nome più raro d'Italia) e con un esempio di risposta a schermo ('Luna: 62 in 52 città'), usando solo numeri verificati sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:34+00:00",
+   "da": "coppa-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché i numeri (62 Luna, 52 città, 1395 nomi, città citate) non sono verificati sui dati reali, poi rendere visibile il follow e anticipare l'invito a commentare.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 9.3,
+      "problema": "Il dato '62 in 52 città' è detto a voce, ma dati_mappa è vuoto e non è verificabile dai materiali. Anche '1395 nomi diversi' in didascalia non compare né nel copione né nei dati.",
+      "correzione": "Controllare 62, 52 città e 1395 nomi sui dati reali della mappa. Se non confermati, togliere o ridurre le cifre nel parlato, nel copione e nella didascalia."
+     },
+     {
+      "secondo": 16.3,
+      "problema": "Le città citate (Carosino, San Valentino Torio) e i nomi in classifica (Mia, Kira, Simba, Leo) non hanno riscontro nei materiali. L'invito 'Scrivi il nome del tuo' arriva tardi e il finale lascia poco respiro.",
+      "correzione": "Verificare che quelle città abbiano davvero le luci indicate. Anticipare la fascia d'invito verso il secondo 12-13 e aggiungere una coda di 1-2 secondi per il CTA."
+     },
+     {
+      "secondo": 0.0,
+      "problema": "Il reel non ha apertura né copertina valorizzate e il gancio non ha un elemento visivo forte: a audio spento non si capisce subito il punto.",
+      "correzione": "Mostrare nei primi 1-2 secondi 'Luna 62' in grande, o 'Top 5 nomi', e impostare la copertina con lo stesso testo."
+     },
+     {
+      "secondo": null,
+      "problema": "L'invito a seguire e la promessa della classifica settimanale sono solo nella didascalia, mentre il follow dei reel recenti è basso (1-3 ogni 1000).",
+      "correzione": "Aggiungere in chiusura un testo a schermo 'Seguici: classifica nuova ogni settimana'."
+     }
+    ],
+    "idea": "Trasformare 'nomi_top' in una serie settimanale riconoscibile: aprire con 'Luna 62' in grande, mostrare sulla mappa le città citate mentre vengono nominate, chiudere con 'Seguici' e la prossima classifica. Poi alternare con 'questa_luce', che ha il miglior rapporto follower/1000, e valutare classifiche regionali con la luce accesa sulla città di chi commenta."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:35+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Il reel è solido nel gancio e nell'estetica, ma prima di pubblicare va corretta la classifica (Leo, 2° posto, non mostrato), vanno verificati i numeri non confermati (1395 nomi, 62, 52 città) e va aggiunto un invito esplicito a seguire la pagina.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 2.6,
+      "problema": "Il voiceover cita «secondo Leo», ma nelle barre compaiono solo i posti 3-5 (Simba 38, Kira 35, Mia 31). Leo non si vede in nessun fotogramma, quindi il conteggio non coincide con quello che si vede.",
+      "correzione": "Mostrare nelle barre anche il 2° posto (Leo) con il suo dato, oppure togliere «secondo Leo» dal voiceover. Controllare che il dato di Leo sia nei dati mappa."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia dice «1395 nomi diversi», ma il numero non compare nel reel e non è confermato dai materiali. Anche 62 e 52 città risultano non verificabili, perché dati_mappa nei materiali è vuoto (le relazioni sono discordi sul punto).",
+      "correzione": "Far confermare dal reparto dati 62, 52 città e 1395 prima della pubblicazione. Se non sono confermati, toglierli da voce, schermate e didascalia. Se lo sono, mostrare «1395 nomi» a schermo oppure toglierlo dalla didascalia."
+     },
+     {
+      "secondo": 12,
+      "problema": "Nella scena dei padroni la card di @ernesto_8_7 appare sbiadita e sembra un profilo inattivo, e rompe la leggibilità dell'elenco. Le relazioni non concordano sul numero di card visibili (9 o 10) rispetto ai tag in didascalia (10).",
+      "correzione": "Rendere la card coerente con le altre oppure toglierla. Verificare che il tag sia valido e allineare il numero di card visibili ai tag in didascalia."
+     },
+     {
+      "secondo": 18,
+      "problema": "Il reel non presenta la pagina né la mappa e non invita a seguire. La promessa della classifica settimanale è solo nella didascalia.",
+      "correzione": "Nel finale (17-20 s) aggiungere in sovrimpressione «Seguici per la classifica di ogni settimana». Nel primo secondo mostrare la mappa con la scritta «Zampe d'Italia · la mappa dei nostri animali»."
+     },
+     {
+      "secondo": 9.3,
+      "problema": "«Sono 62» può sembrare un dato nazionale, mentre sono 62 sulla mappa.",
+      "correzione": "Precisare in voce e in didascalia «62 sulla mappa, in 52 città»."
+     }
+    ],
+    "idea": "Fare del reel il primo episodio di una serie settimanale con etichetta fissa «Classifica settimanale». Chiudere con l'invito a seguire e con l'anteprima del prossimo nome, e rendere il commento un momento visivo con la mappa che si accende nella città di chi scrive il proprio nome."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:39+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Non pubblicare finché i numeri (62 Luna, 52 città, 1395 nomi e la classifica) non sono verificati sul database e il tag 'Voce generata' è stato tolto dalla didascalia; poi si pubblica con un'apertura visiva e un finale più leggibile.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 9.3,
+      "problema": "I dati '62 Luna in 52 città', la classifica Mia/Kira/Simba/Leo e '1395 nomi diversi' in didascalia non sono verificabili: dati_mappa è vuoto e nei materiali non c'è una fonte.",
+      "correzione": "Controllare i conteggi sul database della mappa e allegarne la fonte. Se non sono confermati, togliere le cifre dal parlato e dalla didascalia oppure dire 'nei nostri dati'."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia termina con 'Voce generata', che è un residuo di lavorazione e non una dicitura pensata per il pubblico.",
+      "correzione": "Togliere il tag dalla didascalia."
+     },
+     {
+      "secondo": 0,
+      "problema": "La voce parte a 0.0s senza apertura visiva e i primi 5 secondi sono a -17.1 dB, più bassi del target di -14 LUFS.",
+      "correzione": "Aggiungere 0,5-1 s di apertura visiva o musicale prima della prima parola e alzare i primi 5 secondi di circa 3 dB."
+     },
+     {
+      "secondo": 16.3,
+      "problema": "La fascia finale 'Scrivi il nome del tuo' compare a 16.3s e resta fino a 19.7s: poco tempo per leggerla e rispondere. Il follow è chiesto solo in didascalia.",
+      "correzione": "Far partire la fascia un po' prima, per 4-5 secondi, e aggiungere nella fascia un invito a seguire. Confermare che la risposta ai commenti usi davvero il conteggio della mappa."
+     }
+    ],
+    "idea": "In chiusura mostrare la mappa con la luce accesa sulla città del nome più comune (es. 'Luna, cerca la tua città'), così il commento ha un ritorno visivo immediato. Come formato ricorrente, classifiche regionali con risposta ai commenti."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:41+00:00",
+   "da": "grafica3d-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Prima della pubblicazione correggiamo la classifica a schermo, che non mostra Leo (2°) mentre la voce lo cita, e sistemiamo la card sbiadita, la leggibilità dei testi e la dicitura «Voce generata»; il resto funziona.",
+   "dati": {
+    "difetti": [
+     {
+      "secondo": 4,
+      "problema": "Il grafico mostra solo i posti 3°-5° (Simba, Kira, Mia): Leo (2°) non compare mai, anche se la voce dice «secondo Leo». Lo spettatore perde un posto della classifica e la sequenza 5-4-3-2-1 non è completa. Segnalato da quasi tutto il reparto.",
+      "correzione": "Aggiungere la riga e la barra di Leo con il suo valore e far scorrere la classifica dal 5° al 1° in modo continuo, una barra per frase. La card di Leo resta visibile almeno 1 secondo prima di «LUNA!». Se il valore di Leo non è verificato, non mostrarlo: togliere il 2° dal parlato."
+     },
+     {
+      "secondo": 4,
+      "problema": "Il testo «QUARTO KIRA,» copre in parte la barra di Kira. I nomi nelle card sono piccoli e poco leggibili su mobile.",
+      "correzione": "Spostare il testo sotto le barre, senza coprirle. Ingrandire i testi delle card del 10-15% e aumentare il contrasto del nome utente."
+     },
+     {
+      "secondo": 6.7,
+      "problema": "Il reveal di Luna arriva con circa 1 s di ritardo: la corona e il titolo compaiono dopo la voce «E al primo posto». Il parlato «Sono 62, in 52 città» è inoltre meno preciso della scritta a schermo «62 sulla mappa · in 52 città».",
+      "correzione": "Anticipare corona e titolo «LUNA» di circa 1 s, a circa 6.5 s. Allineare il parlato alla scritta, per esempio «62 animali, in 52 città»."
+     },
+     {
+      "secondo": 12,
+      "problema": "Sulla mappa dei padroni una card (@ernesto_8_7) è sbiadita e sembra un errore o un elemento non attivo.",
+      "correzione": "Rendere uniforme lo stile di tutte le card oppure togliere quella sbiadita dalla griglia. Se resta, spiegarne il motivo con una piccola etichetta."
+     },
+     {
+      "secondo": null,
+      "problema": "La didascalia contiene «Voce generata» incompleta, senza una dichiarazione chiara. L'intestazione dei dati riporta «1999 – 803», che il reel non spiega. Il numero «1395 nomi diversi» non è verificato.",
+      "correzione": "Scrivere «Voce generata con IA». Spiegare o togliere «1999 – 803». Verificare «1395 nomi diversi» sui dati prima di pubblicare, altrimenti toglierlo."
+     }
+    ],
+    "idea": "Aggiungere in chiusura la card «Seguici per la classifica settimanale» con un teaser della puntata successiva (per esempio il nome n.1 dei gatti), insieme alla fascia «Scrivi il nome del tuo». Così il follow passa anche dal video e il commento diventa una serie che ritorna."
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:56+00:00",
+   "da": "montaggio-1",
+   "a": "pubblicazione-1",
+   "tipo": "decisione",
+   "testo": "La squadra non ha trovato difetti segnalati da almeno 3 reparti: nessuna correzione.",
+   "dati": {
+    "perche": [
+     {
+      "difetto": "Leo (2° posto) non compare nelle barre anche se la voce lo nomina",
+      "reparti": [
+       "Copione",
+       "Mappa e dati",
+       "Grafica e copertine",
+       "Crescita (follower)",
+       "Grafica 3D",
+       "Direzione video"
+      ]
+     },
+     {
+      "difetto": "Volume dei primi 5 secondi a -17,1 dB, circa 3 dB sotto il resto",
+      "reparti": [
+       "Voce e musica",
+       "Pubblicazione",
+       "Innovazione",
+       "Montaggio"
+      ]
+     },
+     {
+      "difetto": "Card di @ernesto_8_7 sbiadita nella scena dei padroni",
+      "reparti": [
+       "Mappa e dati",
+       "Crescita (follower)",
+       "Grafica 3D",
+       "Direzione video"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-15T10:22:56+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce con la revisione della sola squadra."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 20.0,
+   "fotogrammi": [
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s000.5.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s001.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s002.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s003.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s004.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s005.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s006.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s007.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s008.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s009.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s010.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s011.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s012.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s013.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s014.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s015.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s016.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s017.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s018.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s019.0.jpg",
+    "fotogrammi/2026-11-15-1119-nomi_top/v1/s019.7.jpg"
+   ],
+   "audio": {
+    "lufs": -14.3,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -17.1,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "crescita": {
+  "pubblico": "Chi ha un cane o un gatto in casa e si è sempre chiesto se il suo nome sia comune o raro: italiani che scorrono Instagram e non conoscono ancora Zampe d'Italia.",
+  "gancio": "Il nome di cani e gatti più usato in Italia? Non è Leo, non è Simba: ti diamo il podio, e l'ultimo posto ti sorprende.",
+  "primo_fotogramma": "Sfondo mappa d'Italia di notte con le luci accese; al centro, a grandi lettere, «Il nome di cani e gatti più usato in Italia?» e un punto interrogativo gigante al posto del primo posto del podio. Sotto, piccolo: «Il tuo animale c'è?»",
+  "motivo_per_seguire": "Zampe d'Italia accende sulla mappa una luce per ogni animale e ogni settimana porta una classifica nuova, così scopri dove vive chi si chiama come il tuo e se il suo nome è raro.",
+  "chiusura": "Luna è prima con 62. Segui Zampe d'Italia per la prossima classifica.",
+  "perche": "Il nome del proprio animale è una curiosità personale che a volume zero si capisce subito, e la chiusura lega la classifica di oggi a quella della prossima settimana con un'unica richiesta di seguire."
+ },
+ "token_persone": 458438,
+ "fine": "2026-11-15T10:22:56+00:00"
+}
