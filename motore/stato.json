@@ -7747,6 +7747,7 @@
 "18132512375507998",
 "18132521773805815",
 "18132528598694192",
+"18132530752841116",
 "18132531745755679",
 "18132551872757684",
 "18132561052782855",
@@ -10775,7 +10776,8 @@
 "18798213136033257"
 ],
 "risposte": [
-1794756530.0555859
+1794756530.0555859,
+1794758399.6394246
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -12975,7 +12977,8 @@
 "_xxboston_": "2026-11-15",
 "pannunzioparide__": "2026-11-15",
 "parodia_annunci_trenitalia": "2026-11-15",
-"elena.alina.589": "2026-11-15"
+"elena.alina.589": "2026-11-15",
+"celia.isaja": "2026-11-15"
 },
 "media_letti": {},
 "pezzi": {
@@ -15196,7 +15199,8 @@
 "pannunzioparide__": 20,
 "mauro_mas21": 20,
 "thor_golden_life": 6,
-"elena.alina.589": 10
+"elena.alina.589": 10,
+"celia.isaja": 10
 },
 "inviti_giorno": {
 "2026-11-08": {
@@ -16086,7 +16090,8 @@
 "pannunzioparide__": "premiato",
 "lorenzo_.bertelli": "in_attesa",
 "mauro_mas21": "premiato",
-"elena.alina.589": "premiato"
+"elena.alina.589": "premiato",
+"celia.isaja": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -19569,11 +19574,11 @@
 "8d8d8995734f8c96",
 "125e5917315613b3",
 "4a5a37e82e2c17bd",
-"fde06cec3937ee6b"
+"fde06cec3937ee6b",
+"5526b71b946b6d93"
 ],
 "privati_ora": [
-1794750108.0397139,
-1794751109.324683
+1794758399.6394515
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19625,7 +19630,7 @@
 "2026-11-12": 1854,
 "2026-11-13": 1871,
 "2026-11-14": 1888,
-"2026-11-15": 1904
+"2026-11-15": 1905
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -20405,6 +20410,10 @@
 [
 "2026-11-15T15:44+00:00",
 1904
+],
+[
+"2026-11-15T16:00+00:00",
+1905
 ]
 ],
 "coppa": {
@@ -22471,7 +22480,8 @@
 "Molfetta|BA": 3,
 "Francavilla Fontana|BR": 1,
 "Belmonte del Sannio|IS": 7,
-"Mussolente|VI": 1
+"Mussolente|VI": 1,
+"Genova|GE": 3
 },
 "giocatori": {
 "Crotone|KR": [
@@ -23329,6 +23339,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Genova|GE": {
+"u": [
+"celia.isaja"
+],
+"c": [
+"18132530752841116"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -23391,7 +23411,8 @@
 "pannunzioparide__|animale|winky",
 "pannunzioparide__|animale|lampo",
 "bordignonalexa|animale|kuramaaaaaa",
-"elena.alina.589|animale|lolita"
+"elena.alina.589|animale|lolita",
+"celia.isaja|animale|tide"
 ]
 },
 "gara_follower": [
@@ -23434,6 +23455,10 @@
 {
 "k": "Belmonte del Sannio|IS",
 "t": "2026-11-15T13:58+00:00"
+},
+{
+"k": "Genova|GE",
+"t": "2026-11-15T15:59+00:00"
 }
 ],
 "staffette_log": [
