@@ -75,13 +75,14 @@ let PRENOTATE = {}; // posti prenotati dalle attività, per comune: {"Treviso|TV
 let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 let DERBY = null; // il Derby della settimana: {ora: {a, b, na, nb, fine, partito}, albo: [...]} (motore/derby.py)
 const SEGNI = ["", "♑ Capricorno", "♒ Acquario", "♓ Pesci", "♈ Ariete", "♉ Toro", "♊ Gemelli", "♋ Cancro", "♌ Leone", "♍ Vergine", "♎ Bilancia", "♏ Scorpione", "♐ Sagittario"]; // dal mese di nascita (motore/commenti.py SEGNI)
+let AMICI = null; // la gara degli amici (15/11): chi porta più amici entro domenica vince un accessorio in regalo (motore/commenti.py)
 let SQUADRE = {}; // il tifo (15/11): i colori delle squadre dei tifosi a quattro zampe, da animali.json (motore/squadre.py)
 let NEGOZIO = {}, SFILATA = [], BELLO = null, BOOST = null; // la Sfilata degli accessori e «Il più bello d'Italia» della settimana (motore/commenti.py)
 let _x = 0; // i link di pagamento degli accessori (motore/config.json → animali.json): {collare: "https://buy.stripe.com/…"}
 let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: il prossimo, fatti: [...]}; 1.000 = neve, 2.000 = fuochi d'artificio
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; SQUADRE = j.squadre || {}; return j.animali || []; } } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; SQUADRE = j.squadre || {}; AMICI = j.gara_amici || null; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -318,7 +319,12 @@ function show(v) {
     const sfida = `<div class="sfida-inviti"><h3>👥 Sfida degli inviti di oggi</h3><p class="sub">Tagga gli amici nei commenti: ogni amico che commenta vale +3. Chi ne porta di più è il <b>Re degli inviti</b> 👑 e finisce nella puntata delle 21.</p>` +
       (oggi.length ? `<ol class="list">` + oggi.slice(0, 5).map(([u, n], i) => `<li class="row"><span class="pos">${i === 0 ? "👑" : i + 1}</span><span class="who">@${esc(u)}</span><span class="pts">${n}<small>${n === 1 ? "amico" : "amici"}</small></span></li>`).join("") + `</ol>`
         : `<p class="empty">Nessun invito ancora oggi: il primo amico che porti ti mette in testa!</p>`) + `</div>`;
-    s.innerHTML = `<h2>Classifica</h2><p class="sub">Più punti fai, più la tua luce cresce: cuccia, lucine, giardino, villa, castello.</p>` + sfida + (STATS.rank.length ? `<ol class="list">` +
+    const sett = (AMICI && AMICI.settimana) || [], PREMI = ["👑 Corona", "📿 Collare d'oro", "🎀 Fiocco"];
+    const fine = AMICI && AMICI.fine ? new Date(AMICI.fine).toLocaleDateString("it-IT", { weekday: "long", day: "numeric", month: "long" }) : "domenica";
+    const amici = `<div class="sfida-inviti"><h3>👑 Gara degli amici</h3><p class="sub">Tagga chi ha un cane o un gatto: ogni amico che arriva e commenta vale <b>1 punto</b>, se poi ci segue e scrive SEGUO <b>3</b>. ${esc(fine)} alle 20: al primo la <b>Corona</b>, al secondo il <b>Collare d'oro</b>, al terzo il <b>Fiocco</b>, in regalo sul suo animale.</p>` +
+      (sett.length ? `<ol class="list">` + sett.slice(0, 10).map((x, i) => `<li class="row"><span class="pos">${i < 3 ? PREMI[i].split(" ")[0] : i + 1}</span><span class="who">@${esc(x.u)}${i < 3 ? `<small>vince ${PREMI[i].split(" ").slice(1).join(" ")}</small>` : ""}</span><span class="pts">${x.p}<small>${x.p === 1 ? "punto" : "punti"}</small></span></li>`).join("") + `</ol>`
+        : `<p class="empty">La gara è appena partita: il primo amico che porti ti mette in testa!</p>`) + `</div>`;
+    s.innerHTML = `<h2>Classifica</h2><p class="sub">Più punti fai, più la tua luce cresce: cuccia, lucine, giardino, villa, castello.</p>` + amici + sfida + (STATS.rank.length ? `<ol class="list">` +
       STATS.rank.slice(0, 50).map(d => `<li class="row" data-id="${esc(d.id)}"><span class="pos">${d.rank}</span><span class="who">${icona(d)} ${esc(d.n)} · @${esc(d.u)}<small>${esc(d.c)} · ${esc(d.r)}</small></span><span class="pts">${fmt(d.pt)}<small>pt</small></span></li>`).join("") + `</ol>` : empty);
     s.querySelectorAll(".row").forEach(r => r.onclick = () => { show("mappa"); focus(DATA.find(d => d.id === r.dataset.id)); });
   }
