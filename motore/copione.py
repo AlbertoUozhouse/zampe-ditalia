@@ -1750,6 +1750,7 @@ def serie(D, rng, st):
     uscite = sum(1 for x in P if x.get("tipo") == "REELS" and "-serie." in x.get("media", ""))
     n = uscite + 1
     if n > 30: raise Salta("la serie è finita")
+    if not (ROOT / "reel/assets/zampa/riferimento.png").exists(): raise Salta("mancano le foto di Zampa (motore/zampa.py, serve la chiave OpenAI)")
     S = carica(ROOT / "motore/stato.json", {}).get("serie", {})
     storia = st.get("serie_storia", [])[:uscite]  # solo le puntate uscite davvero
     fatte = {x["ep"] for x in storia}
@@ -1770,13 +1771,14 @@ def serie(D, rng, st):
     for i, (voce, testo, ogg) in enumerate(scene):
         sc = {"tipo": "zampa30", "giorni": giorni, "famiglia": famiglia, "testo": testo, "sfondo": sfondo, "sporco": sporco_ora if ep != "bagno" or i == 0 else False,
               "muso": muso if i == len(scene) - 1 else ("triste" if ep == "inizio" else None), "oggetti": [list(o) for o in ogg]}
+        if (ROOT / f"reel/assets/zampa/{ep}-{i}.png").exists(): sc["foto"] = f"{ep}-{i}.png"  # 15/11 sera: Zampa vero (motore/zampa.py)
         if i == 0: sc["banner"] = f"GIORNO {n} · {titolo}" if n > 1 else "30 GIORNI PER TROVARE CASA"
         if i == 1 and famiglia_ieri != famiglia: sc["famiglia_prima"] = famiglia_ieri
         frasi.append((voce, sc))
     a, b = (SERIE_OPZIONI[k] for k in opzioni)
     frasi.append((f"Domani: {a[1].lower()} o {b[1].lower()}? Decidi tu nei commenti. Ogni commento lo avvicina a casa.",
                   {"tipo": "zampa30", "giorni": giorni, "famiglia": famiglia, "sfondo": sfondo, "sporco": sporco_ora, "muso": "occhiolino",
-                   "scelta": {"a": list(a), "b": list(b)}}))
+                   "scelta": {"a": list(a), "b": list(b)}, **({"foto": f"{ep}-3.png"} if (ROOT / f"reel/assets/zampa/{ep}-3.png").exists() else {})}))
     st["serie_storia"] = storia + [{"ep": ep, "giorno": n, "opzioni": opzioni, "famiglia": famiglia, "data": ORA.date().isoformat()}]
     st["serie_info"] = {"giorno": n, "ep": ep, "opzioni": opzioni, "parole": {k: SERIE_OPZIONI[k][2] for k in opzioni}}
     did = (f"Giorno {n} di 30 🐶 " + (f"Zampa vive in un canile, ha le pulci e un alito terribile. Ha 30 giorni per trovare una famiglia prima di Natale. Oggi la foto per l'adozione… è andata così." if n == 1 else

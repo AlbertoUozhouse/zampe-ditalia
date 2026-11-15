@@ -273,7 +273,7 @@ def main():
     zampa_ok = False  # 15/11: Zampa intero in 3D per la serie (Alberto: «deve essere un cane che si vede»)
     pose = []
     for n, f in enumerate(copione["frasi"]):
-        if f["scena"]["tipo"] != "zampa30": continue
+        if f["scena"]["tipo"] != "zampa30" or f["scena"].get("foto"): continue
         v_ = f["scena"].get("muso"); posa = "triste" if v_ == "triste" else "felice" if v_ in ("lingua", "occhiolino") else "sorpreso" if v_ == "sorpreso" else "base"
         lato = ["davanti", "sinistra", "destra"][n % 3]; sp = f["scena"].get("sporco", True)
         pose.append({"posa": posa, "lato": lato, "sporco": bool(sp), "file": f"zampa-{posa}-{lato}-{'s' if sp else 'p'}.png"})
@@ -317,7 +317,10 @@ def main():
             sc["centro"] = px(*sc["centro"]); sc["italia_c"] = px(12.6, 41.9)
             sc["punti"] = [{**q, **dict(zip(("x", "y"), px(q["lng"], q["lat"])))} for q in sc["punti"]]
             sc["intorno"] = [px(lng, lat) for lng, lat in sc.get("intorno", [])]
-        if tipo == "zampa30":  # 15/11, la serie di Zampa: lo stesso cane ogni giorno, intero e in 3D (reel/zampa3d.js), nella posa della puntata
+        if tipo == "zampa30" and sc.get("foto"):  # 15/11 sera: la foto IA di Zampa (reel/assets/zampa, motore/zampa.py)
+            sc.pop("muso", None); (prog / "assets/img").mkdir(parents=True, exist_ok=True)
+            shutil.copy(ROOT / "reel/assets/zampa" / sc["foto"], prog / "assets/img" / sc["foto"])
+        elif tipo == "zampa30":  # 15/11, la serie di Zampa: lo stesso cane ogni giorno, intero e in 3D (reel/zampa3d.js), nella posa della puntata
             v_ = sc.pop("muso", None)
             if zampa_ok:
                 posa = "triste" if v_ == "triste" else "felice" if v_ in ("lingua", "occhiolino") else "sorpreso" if v_ == "sorpreso" else "base"

@@ -670,7 +670,7 @@ SFONDI_30 = {  # le stanze della serie (colori piatti, come un cartone)
     "toelettatura": ("#E9B7C9", "#B98A9C", False), "parco": ("#8CC9E8", "#4F9A4A", False), "strada": ("#9BB4D0", "#5D5D66", False),
     "casa": ("#F2C98A", "#A86B3C", False), "notte": ("#18223F", "#2B2433", False)}
 
-def zampa30(cid, dur, svg, giorni, famiglia, testo="", banner="", sfondo="canile", sporco=True, oggetti=(), scelta=None, famiglia_prima=None):
+def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo="canile", sporco=True, oggetti=(), scelta=None, famiglia_prima=None, foto=""):
     """La serie «Zampa ha 30 giorni per trovare casa» (15/11, Alberto: «facciamo il cane»): Zampa grande, i contatori in alto
     (GIORNI che mancano, FAMIGLIA in percentuale), il nastro giallo con la posta in gioco, la frase grande della puntata,
     e alla fine la scelta per domani (scelta = {"a": ["🛁", "IL BAGNO", "BAGNO"], "b": [...]}): decide chi commenta."""
@@ -700,6 +700,10 @@ def zampa30(cid, dur, svg, giorni, famiglia, testo="", banner="", sfondo="canile
     #root .nastro span {{ display: inline-block; transform: rotate(-3deg); font: 800 54px/1.1 "Bricolage Grotesque", sans-serif; color: #1A1206; background: #FFD23F; border: 5px solid #1A1206; border-radius: 14px; padding: 10px 26px; box-shadow: 0 8px 0 rgba(0,0,0,.35); }}
     #root .zampa {{ position: absolute; left: -80px; top: 360px; width: 1240px; height: 1080px; object-fit: contain; filter: drop-shadow(0 22px 26px rgba(0,0,0,.45)); }}
     #root .zampa.intero {{ left: 185px; top: 470px; width: 710px; height: 780px; }}
+    #root .foto {{ position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }}
+    #root .velo {{ position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55) 0, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 58%, rgba(0,0,0,.6) 82%); }}
+    #root .foto ~ .frase {{ top: 1250px; background: rgba(10,10,10,.6); border-radius: 22px; padding: 10px 18px; }}
+    #root .foto ~ .scelta .dom {{ background: rgba(10,10,10,.6); border-radius: 18px; padding: 6px 10px; }}
     #root .zampa.intero ~ .frase {{ top: 1262px; }}
     #root .puzza {{ position: absolute; left: -60px; top: 420px; width: 1200px; height: 1000px; }}
     #root .puzza path {{ fill: none; stroke: #8DB255; stroke-width: 14; stroke-linecap: round; opacity: .85; }}
@@ -715,16 +719,21 @@ def zampa30(cid, dur, svg, giorni, famiglia, testo="", banner="", sfondo="canile
     #root .op b {{ font: 800 48px/1.1 "Bricolage Grotesque", sans-serif; color: #1A1206; }}
     #root .op i {{ font: 900 30px/1.2 var(--font-body); font-style: normal; color: #9A5A00; }}
     #root .o {{ position: absolute; left: 50%; top: 210px; width: 120px; margin-left: -60px; text-align: center; font: 900 30px/60px var(--font-body); color: #1A1206; background: #FFD23F; border-radius: 30px; border: 4px solid #1A1206; }}"""
+    if foto:  # 15/11 sera: Zampa vero (foto IA realistica, motore/zampa.py) a tutto schermo, che si avvicina piano; sopra contatori e scritte
+        sb, st, ogg = "", "", ""
     intero = svg.endswith(".png")  # Zampa intero in 3D (reel/zampa3d.js): sta in piedi sul pavimento, la frase sotto i piedi
-    corpo = (f'<div class="muro"></div><div class="pav"{" style=\'height:760px\'" if intero else ""}></div>{sb}<img class="zampa{" intero" if intero else ""}" id="{cid}-z" src="assets/svg/{svg}" alt="">{st}{ogg}'
+    fondo = (f'<img class="foto" id="{cid}-z" src="assets/img/{foto}" alt=""><div class="velo"></div>' if foto else
+             f'<div class="muro"></div><div class="pav"{" style=\'height:760px\'" if intero else ""}></div>{sb}<img class="zampa{" intero" if intero else ""}" id="{cid}-z" src="assets/svg/{svg}" alt="">')
+    corpo = (f'{fondo}{st}{ogg}'
              f'<div class="hud"><div><small>GIORNI</small><b id="{cid}-g">{giorni}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>'
              + (f'<div class="nastro"><span id="{cid}-n">{ESC(banner)}</span></div>' if banner else "")
              + (f'<div class="frase" id="{cid}-t">{ESC(testo)}</div>' if testo and not scelta else "") + sc)
-    js = [f'    tl.fromTo("#{cid}-z", {{ scale: 0.85, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, 0.05);',
-          f'    tl.to("#{cid}-z", {{ keyframes: [{{ rotation: -3, duration: 0.25 }}, {{ rotation: 3, duration: 0.25 }}, {{ rotation: 0, duration: 0.25 }}], repeat: {max(1, int(dur / 1.5))} }}, 0.4);']
+    js = ([f'    tl.fromTo("#{cid}-z", {{ scale: 1.0 }}, {{ scale: 1.1, duration: {dur:.2f}, ease: "none" }}, 0);'] if foto else
+          [f'    tl.fromTo("#{cid}-z", {{ scale: 0.85, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }}, 0.05);',
+           f'    tl.to("#{cid}-z", {{ keyframes: [{{ rotation: -3, duration: 0.25 }}, {{ rotation: 3, duration: 0.25 }}, {{ rotation: 0, duration: 0.25 }}], repeat: {max(1, int(dur / 1.5))} }}, 0.4);'])
     if banner: js.append(f'    tl.fromTo("#{cid}-n", {{ scale: 0.3, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.4)" }}, 0.25);')
     if testo and not scelta: js.append(f'    tl.fromTo("#{cid}-t", {{ scale: 0.4, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.2)" }}, 0.5);')
-    if sporco:
+    if sporco and not foto:
         for k, (dx, dy) in enumerate([(160, -60), (-140, 90)]):
             js.append(f'    tl.to("#{cid}-m{k + 1}", {{ keyframes: [{{ x: {dx}, y: {dy}, duration: 0.5 }}, {{ x: {-dx // 2}, y: {-dy}, duration: 0.5 }}, {{ x: 0, y: 0, duration: 0.5 }}], repeat: {max(1, int(dur / 1.5))} }}, {0.1 + k * 0.2:.2f});')
     for i in range(len(oggetti)):

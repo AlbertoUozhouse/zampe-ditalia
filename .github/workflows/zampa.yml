@@ -1,0 +1,48 @@
+# Le foto di Zampa (la serie «Zampa ha 30 giorni per trovare casa»): immagini IA realistiche, fatte una volta sola e salvate in reel/assets/zampa.
+# La chiave OpenAI resta nei Secrets. Si lancia a mano: prima «ritratto» (il cane di riferimento), poi «tutte» o «puntata» con la puntata.
+name: zampa
+
+on:
+  workflow_dispatch:
+    inputs:
+      cosa:
+        description: "ritratto, puntata oppure tutte"
+        required: true
+        default: ritratto
+      puntata:
+        description: "la puntata (bagno, veterinario, …) se cosa = puntata"
+        required: false
+      rifai:
+        description: "file da rifare, separati da spazio (es. riferimento.png bagno-1.png)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: zampa
+  cancel-in-progress: false
+
+jobs:
+  zampa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            motore
+            reel/assets/zampa
+      - name: Foto di Zampa
+        run: |
+          for f in ${{ inputs.rifai }}; do rm -f "reel/assets/zampa/$(basename "$f")"; done
+          python3 -I motore/zampa.py ${{ inputs.cosa }} ${{ inputs.puntata }}
+      - name: Salva
+        if: always()
+        run: |
+          git config user.name "zampe-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A reel/assets/zampa; git diff --cached --quiet && exit 0
+          git commit -q -m "Foto di Zampa (${{ inputs.cosa }} ${{ inputs.puntata }})"
+          for i in 1 2 3; do git pull -q --rebase -X theirs && git push -q && break; sleep 15; done
