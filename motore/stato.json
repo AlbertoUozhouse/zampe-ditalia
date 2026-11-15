@@ -1772,6 +1772,7 @@
 "17954936130301955",
 "17954978454318599",
 "17955010329272562",
+"17955038958279627",
 "17955094038284090",
 "17955152505272185",
 "17955154089277468",
@@ -10801,7 +10802,6 @@
 "18798213136033257"
 ],
 "risposte": [
-1794780104.5768228,
 1794780993.7986224,
 1794781885.816114,
 1794782886.9881392
@@ -19688,7 +19688,8 @@
 "2026-11-12": 1854,
 "2026-11-13": 1871,
 "2026-11-14": 1888,
-"2026-11-15": 1909
+"2026-11-15": 1909,
+"2026-11-16": 1909
 },
 "gioco_pappa": {
 "2026-W45": {
@@ -20507,100 +20508,124 @@
 ]
 ],
 "coppa": {
-"turno": 1,
-"inizio": "2026-11-07T16:38:27.792914+01:00",
-"fine": "2026-11-15T20:00:00+01:00",
+"turno": 2,
+"inizio": "2026-11-16T00:00:00+01:00",
+"fine": "2026-11-22T20:00:00+01:00",
 "coppie": [
 [
-"Napoli|NA",
-"Roma|RM"
+"Piombino|LI",
+"Crotone|KR"
 ],
 [
-"Torino|TO",
-"Milano|MI"
+"Savona|SV",
+"Carosino|TA"
 ],
 [
-"Catania|CT",
-"Genova|GE"
+"Cavaion Veronese|VR",
+"Napoli|NA"
 ],
 [
-"Brescia|BS",
-"Cagliari|CA"
+"Roma|RM",
+"Torino|TO"
 ],
 [
-"Firenze|FI",
-"Palermo|PA"
+"Milano|MI",
+"Catania|CT"
 ],
 [
-"Bergamo|BG",
-"Modena|MO"
+"Genova|GE",
+"Brescia|BS"
 ],
 [
-"Bari|BA",
+"Cagliari|CA",
+"Firenze|FI"
+],
+[
+"Palermo|PA",
 "Venezia|VE"
 ],
 [
-"Bologna|BO",
-"Messina|ME"
+"Bari|BA",
+"Bergamo|BG"
 ],
 [
-"Ravenna|RA",
-"Reggio di Calabria|RC"
+"Messina|ME",
+"Bisceglie|BT"
 ],
 [
-"Caserta|CE",
-"Livorno|LI"
+"Modena|MO",
+"Bologna|BO"
+],
+[
+"Livorno|LI",
+"Ravenna|RA"
+],
+[
+"Reggio di Calabria|RC",
+"Caserta|CE"
 ],
 [
 "Mordano|BO",
 "Cecina|LI"
 ],
 [
-"Padova|PD",
-"Avellino|AV"
+"Cosenza|CS",
+"Padova|PD"
 ],
 [
-"Cosenza|CS",
-"Cesena|FC"
+"Avellino|AV",
+"Barletta|BT"
 ],
 [
 "Foggia|FG",
-"Pisa|PI"
+"Trapani|TP"
 ],
 [
-"Trapani|TP",
-"Trieste|TS"
+"Cesena|FC",
+"Latina|LT"
 ],
 [
-"Verona|VR",
-"Vicenza|VI"
+"Pisa|PI",
+"Rezzato|BS"
 ],
 [
-"Como|CO",
-"Salerno|SA"
+"Trieste|TS",
+"Verona|VR"
 ],
 [
-"Brindisi|BR",
-"Grosseto|GR"
+"Vicenza|VI",
+"Como|CO"
 ],
 [
-"Orvieto|TR",
-"Perugia|PG"
+"Salerno|SA",
+"Brindisi|BR"
+],
+[
+"Grosseto|GR",
+"Orvieto|TR"
+],
+[
+"Perugia|PG",
+"Rieti|RI"
 ],
 [
 "San Rufo|SA",
-"Treviso|TV"
+"Trento|TN"
 ],
 [
-"Ancona|AN",
+"Treviso|TV",
+"Ancona|AN"
+],
+[
+"Belluno|BL",
 "Cesenatico|FC"
 ],
 [
-"Latina|LT",
-"Taranto|TA"
+"Taranto|TA",
+"Castellammare di Stabia|NA"
 ],
 [
-"Trento|TN",
+"Giugliano in Campania|NA",
 "Lecce|LE"
 ],
 [
@@ -20613,98 +20638,94 @@
 ],
 [
 "Quartu Sant'Elena|CA",
-"Rieti|RI"
+"Reggio nell'Emilia|RE"
 ],
 [
 "Siracusa|SR",
-"Varese|VA"
+"Tivoli|RM"
 ],
 [
-"Vercelli|VC",
-"Belluno|BL"
+"Varese|VA",
+"Vercelli|VC"
 ],
 [
-"Castellammare di Stabia|NA",
+"Busto Arsizio|VA",
 "Catanzaro|CZ"
 ],
 [
 "Ferrara|FE",
-"Giugliano in Campania|NA"
+"Modica|RG"
 ],
 [
-"Modica|RG",
-"Parma|PR"
+"Molfetta|BA",
+"Mussolente|VI"
 ],
 [
-"Reggio nell'Emilia|RE",
-"Tivoli|RM"
+"Parma|PR",
+"Agliana|PT"
 ],
 [
-"Agliana|PT",
-"Ascoli Piceno|AP"
+"Ascoli Piceno|AP",
+"Assemini|CA"
 ],
 [
-"Assemini|CA",
-"Asti|AT"
-],
-[
-"Barletta|BT",
+"Asti|AT",
 "Carrara|MS"
 ],
 [
 "Castelfranco di Sotto|PI",
-"Formia|LT"
+"Cervia|RA"
 ],
 [
-"Ivrea|TO",
-"L'Aquila|AQ"
+"Formia|LT",
+"Ivrea|TO"
 ],
 [
-"Marsala|TP",
-"Mussolente|VI"
+"L'Aquila|AQ",
+"Marsala|TP"
 ],
 [
 "Paese|TV",
-"Pozzuoli|NA"
+"Pesaro|PU"
 ],
 [
-"Ribera|AG",
-"San Vincenzo|LI"
+"Pozzuoli|NA",
+"Ribera|AG"
 ],
 [
-"Sassari|SS",
-"Ventimiglia|IM"
+"San Vincenzo|LI",
+"Sassari|SS"
 ],
 [
-"Alessandria|AL",
-"Anagni|FR"
+"Ventimiglia|IM",
+"Alessandria|AL"
 ],
 [
-"Anzio|RM",
-"Aosta|AO"
+"Anagni|FR",
+"Anzio|RM"
 ],
 [
-"Aversa|CE",
-"Bassano del Grappa|VI"
+"Aosta|AO",
+"Aversa|CE"
 ],
 [
-"Bolzano|BZ",
-"Bresso|MI"
+"Bassano del Grappa|VI",
+"Bolzano|BZ"
 ],
 [
-"Briosco|MB",
-"Busto Arsizio|VA"
+"Bresso|MI",
+"Briosco|MB"
 ],
 [
-"Campobasso|CB",
-"Casal di Principe|CE"
+"Calvi|BN",
+"Campobasso|CB"
 ],
 [
-"Cassano Magnago|VA",
-"Castrezzato|BS"
+"Casal di Principe|CE",
+"Cassano Magnago|VA"
 ],
 [
-"Cervia|RA",
+"Castrezzato|BS",
 "Chioggia|VE"
 ],
 [
@@ -20733,14 +20754,18 @@
 ],
 [
 "Monza|MB",
-"Orgosolo|NU"
+"Notaresco|TE"
 ],
 [
-"Pedara|CT",
-"Portici|NA"
+"Orgosolo|NU",
+"Pedara|CT"
 ],
 [
-"Portogruaro|VE",
+"Portici|NA",
+"Portogruaro|VE"
+],
+[
+"Prato|PO",
 "Rho|MI"
 ],
 [
@@ -20772,36 +20797,40 @@
 "Argenta|FE"
 ],
 [
-"Bagnacavallo|RA",
-"Baranzate|MI"
+"Arzano|NA",
+"Bagnacavallo|RA"
 ],
 [
-"Barcellona Pozzo di Gotto|ME",
-"Barlassina|MB"
+"Baranzate|MI",
+"Barcellona Pozzo di Gotto|ME"
 ],
 [
-"Battipaglia|SA",
+"Barlassina|MB",
+"Battipaglia|SA"
+],
+[
+"Belmonte del Sannio|IS",
 "Biella|BI"
 ],
 [
-"Bisceglie|BT",
-"Bomarzo|VT"
+"Bomarzo|VT",
+"Caltagirone|CT"
 ],
 [
-"Caltagirone|CT",
-"Capaci|PA"
+"Capaci|PA",
+"Capo d'Orlando|ME"
 ],
 [
-"Capo d'Orlando|ME",
-"Carsoli|AQ"
+"Carsoli|AQ",
+"Castel Volturno|CE"
 ],
 [
-"Castel Volturno|CE",
-"Castelfranco Veneto|TV"
+"Castelfranco Veneto|TV",
+"Cerveteri|RM"
 ],
 [
-"Cerveteri|RM",
-"Codevigo|PD"
+"Codevigo|PD",
+"Darfo Boario Terme|BS"
 ],
 [
 "Domodossola|VB",
@@ -20821,22 +20850,14 @@
 ],
 [
 "Mirandola|MO",
-"Molfetta|BA"
+"Monfumo|TV"
 ],
 [
-"Monfumo|TV",
-"Montegiorgio|FM"
+"Montegiorgio|FM",
+"Morciano di Romagna|RN"
 ],
 [
-"Morciano di Romagna|RN",
-"Paternò|CT"
-],
-[
-"Pesaro|PU",
-"Piombino|LI"
-],
-[
-"Prato|PO",
+"Paternò|CT",
 "San Sebastiano al Vesuvio|NA"
 ],
 [
@@ -20848,19 +20869,19 @@
 "Trepuzzi|LE"
 ],
 [
-"Viareggio|LU",
-"Vittorio Veneto|TV"
+"Udine|UD",
+"Viareggio|LU"
 ],
 [
-"Acireale|CT",
-"Alba|CN"
+"Vittorio Veneto|TV",
+"Acireale|CT"
 ],
 [
-"Alpignano|TO",
-"Alzano Scrivia|AL"
+"Alba|CN",
+"Alpignano|TO"
 ],
 [
-"Arzano|NA",
+"Alzano Scrivia|AL",
 "Atri|TE"
 ],
 [
@@ -20869,34 +20890,34 @@
 ],
 [
 "Basiglio|MI",
-"Bibbiena|AR"
+"Benevento|BN"
 ],
 [
-"Bra|CN",
-"Casoria|NA"
+"Bibbiena|AR",
+"Bra|CN"
 ],
 [
-"Cassino|FR",
-"Castelmauro|CB"
+"Casoria|NA",
+"Cassino|FR"
 ],
 [
-"Castelvetro di Modena|MO",
-"Cattolica|RN"
+"Castelmauro|CB",
+"Castelvetro di Modena|MO"
 ],
 [
-"Cava de' Tirreni|SA",
-"Cogliate|MB"
+"Cattolica|RN",
+"Cava de' Tirreni|SA"
 ],
 [
-"Cogoleto|GE",
-"Colloredo di Monte Albano|UD"
+"Cogliate|MB",
+"Cogoleto|GE"
 ],
 [
-"Cremona|CR",
-"Cressa|NO"
+"Colloredo di Monte Albano|UD",
+"Cremona|CR"
 ],
 [
-"Crotone|KR",
+"Cressa|NO",
 "Ercolano|NA"
 ],
 [
@@ -20933,162 +20954,162 @@
 ],
 [
 "Marano di Napoli|NA",
-"Milazzo|ME"
+"Massa|MS"
 ],
 [
-"Mondragone|CE",
-"Monopoli|BA"
+"Milazzo|ME",
+"Mondragone|CE"
 ],
 [
-"Monte San Giusto|MC",
-"Monteparano|TA"
+"Monopoli|BA",
+"Monte San Giusto|MC"
 ],
 [
-"Montepulciano|SI",
-"Monterosi|VT"
+"Monteparano|TA",
+"Montepulciano|SI"
 ],
 [
-"Montescudaio|PI",
-"Montesilvano|PE"
+"Monterosi|VT",
+"Montescudaio|PI"
 ],
 [
-"Nereto|TE",
-"Nonantola|MO"
+"Montesilvano|PE",
+"Nereto|TE"
 ],
 [
-"Novara|NO",
-"Novi Ligure|AL"
+"Nonantola|MO",
+"Novara|NO"
 ],
 [
-"Nuoro|NU",
-"Oggiono|LC"
+"Novi Ligure|AL",
+"Nuoro|NU"
 ],
 [
-"Olgiate Molgora|LC",
-"Oliena|NU"
+"Oggiono|LC",
+"Olgiate Molgora|LC"
 ],
 [
-"Ome|BS",
-"Pavia|PV"
+"Oliena|NU",
+"Ome|BS"
 ],
 [
-"Peschici|FG",
-"Poggibonsi|SI"
+"Pavia|PV",
+"Peschici|FG"
 ],
 [
-"Poggiomarino|NA",
-"Pompei|NA"
+"Poggibonsi|SI",
+"Poggiomarino|NA"
 ],
 [
-"Pordenone|PN",
-"Recanati|MC"
+"Pompei|NA",
+"Pordenone|PN"
 ],
 [
-"Rignano Flaminio|RM",
-"Rimini|RN"
+"Recanati|MC",
+"Rignano Flaminio|RM"
 ],
 [
-"Rivarolo Canavese|TO",
-"Robbio|PV"
+"Rimini|RN",
+"Rivarolo Canavese|TO"
 ],
 [
-"Salò|BS",
-"San Bonifacio|VR"
+"Robbio|PV",
+"Salò|BS"
 ],
 [
-"San Giovanni Valdarno|AR",
-"San Severo|FG"
+"San Bonifacio|VR",
+"San Giovanni Valdarno|AR"
 ],
 [
-"San Valentino Torio|SA",
-"Sanremo|IM"
+"San Severo|FG",
+"San Valentino Torio|SA"
 ],
 [
-"Santa Maria Capua Vetere|CE",
-"Santa Maria Maggiore|VB"
+"Sanremo|IM",
+"Santa Maria Capua Vetere|CE"
 ],
 [
-"Savona|SV",
-"Sepino|CB"
+"Santa Maria Maggiore|VB",
+"Schio|VI"
 ],
 [
-"Sessa Aurunca|CE",
-"Settimo Torinese|TO"
+"Sepino|CB",
+"Sessa Aurunca|CE"
 ],
 [
-"Siena|SI",
-"Siniscola|NU"
+"Settimo Torinese|TO",
+"Siena|SI"
 ],
 [
-"Soliera|MO",
-"Solopaca|BN"
+"Siniscola|NU",
+"Soliera|MO"
 ],
 [
-"Tarquinia|VT",
+"Solopaca|BN",
+"Tarquinia|VT"
+],
+[
+"Terni|TR",
 "Tezze sul Brenta|VI"
 ],
 [
 "Torre Annunziata|NA",
-"Udine|UD"
+"Venaria Reale|TO"
 ],
 [
-"Venaria Reale|TO",
-"Verbania|VB"
+"Verbania|VB",
+"Vibo Valentia|VV"
 ],
 [
-"Vibo Valentia|VV",
-"Vieste|FG"
+"Vieste|FG",
+"Vigevano|PV"
 ],
 [
-"Vigevano|PV",
-"Vignola|MO"
+"Vignola|MO",
+"Viterbo|VT"
 ],
 [
-"Viterbo|VT",
-"Abbiategrasso|MI"
+"Abbiategrasso|MI",
+"Acate|RG"
 ],
 [
-"Acate|RG",
-"Acquanegra sul Chiese|MN"
+"Acquanegra sul Chiese|MN",
+"Acquaviva delle Fonti|BA"
 ],
 [
-"Acquaviva delle Fonti|BA",
-"Agrigento|AG"
+"Agrigento|AG",
+"Alba Adriatica|TE"
 ],
 [
-"Alba Adriatica|TE",
-"Albaredo d'Adige|VR"
+"Albaredo d'Adige|VR",
+"Albisola Superiore|SV"
 ],
 [
-"Albisola Superiore|SV",
-"Alcara li Fusi|ME"
+"Alcara li Fusi|ME",
+"Alghero|SS"
 ],
 [
-"Alghero|SS",
-"Altivole|TV"
+"Altivole|TV",
+"Amelia|TR"
 ],
 [
-"Amelia|TR",
-"Andalo|TN"
+"Andalo|TN",
+"Ardea|RM"
 ],
 [
-"Ardea|RM",
-"Ariano nel Polesine|RO"
+"Ariano nel Polesine|RO",
+"Assisi|PG"
 ],
 [
-"Assisi|PG",
-"Atessa|CH"
+"Atessa|CH",
+"Avigliana|TO"
 ],
 [
-"Avigliana|TO",
-"Bagno di Romagna|FC"
+"Bagno di Romagna|FC",
+"Baiano|AV"
 ],
 [
-"Baiano|AV",
-"Bellinzago Novarese|NO"
-],
-[
-"Benevento|BN",
+"Bellinzago Novarese|NO",
 "Borgo San Dalmazzo|CN"
 ],
 [
@@ -21101,34 +21122,38 @@
 ],
 [
 "Brusciano|NA",
-"Buja|UD"
+"Bubbio|AT"
 ],
 [
-"Caivano|NA",
-"Calcinaia|PI"
+"Buja|UD",
+"Caivano|NA"
 ],
 [
-"Calderara di Reno|BO",
-"Camponogara|VE"
+"Calcinaia|PI",
+"Calderara di Reno|BO"
 ],
 [
-"Camporosso|IM",
-"Cantù|CO"
+"Camponogara|VE",
+"Camporosso|IM"
 ],
 [
-"Capri Leone|ME",
-"Carate Brianza|MB"
+"Cantù|CO",
+"Capri Leone|ME"
 ],
 [
-"Carini|PA",
-"Carpegna|PU"
+"Carate Brianza|MB",
+"Carini|PA"
 ],
 [
-"Carpi|MO",
-"Casalecchio di Reno|BO"
+"Carpegna|PU",
+"Carpi|MO"
 ],
 [
-"Casarano|LE",
+"Casalecchio di Reno|BO",
+"Casarano|LE"
+],
+[
+"Castelfranco Emilia|MO",
 "Castelnuovo Berardenga|SI"
 ],
 [
@@ -21165,11 +21190,11 @@
 ],
 [
 "Curtatone|MN",
-"Darfo Boario Terme|BS"
+"Desana|VC"
 ],
 [
-"Desana|VC",
-"Desenzano del Garda|BS"
+"Desenzano del Garda|BS",
+"Desio|MB"
 ],
 [
 "Desulo|NU",
@@ -21196,32 +21221,40 @@
 "Fornovo di Taro|PR"
 ],
 [
+"Forte dei Marmi|LU",
+"Francavilla Fontana|BR"
+],
+[
 "Frosinone|FR",
-"Gabicce Mare|PU"
+"Fucecchio|FI"
 ],
 [
-"Gadoni|NU",
-"Galatina|LE"
+"Gabicce Mare|PU",
+"Gadoni|NU"
 ],
 [
-"Galliate|NO",
-"Giardini-Naxos|ME"
+"Galatina|LE",
+"Galliate|NO"
 ],
 [
-"Goro|FE",
-"Gravina di Catania|CT"
+"Giardini-Naxos|ME",
+"Goro|FE"
 ],
 [
-"Imola|BO",
-"Inveruno|MI"
+"Gravina di Catania|CT",
+"Imola|BO"
 ],
 [
-"La Loggia|TO",
-"Lariano|RM"
+"Inveruno|MI",
+"La Loggia|TO"
 ],
 [
-"Lauria|PZ",
-"Lecco|LC"
+"Lariano|RM",
+"Lauria|PZ"
+],
+[
+"Lecco|LC",
+"Lequile|LE"
 ],
 [
 "Lestizza|UD",
@@ -21240,16 +21273,12 @@
 "Lugnano in Teverina|TR"
 ],
 [
-"Lugo|RA",
-"Macerata|MC"
+"Macerata|MC",
+"Maglie|LE"
 ],
 [
-"Maglie|LE",
-"Marigliano|NA"
-],
-[
-"Marsciano|PG",
-"Massa|MS"
+"Marigliano|NA",
+"Marsciano|PG"
 ],
 [
 "Melito di Napoli|NA",
@@ -21285,78 +21314,82 @@
 ],
 [
 "Morolo|FR",
-"Narni|TR"
+"Motta di Livenza|TV"
 ],
 [
-"Nichelino|TO",
-"Noto|SR"
+"Narni|TR",
+"Nichelino|TO"
 ],
 [
-"Noventa di Piave|VE",
-"Oderzo|TV"
+"Noto|SR",
+"Noventa di Piave|VE"
 ],
 [
-"Olbia|SS",
-"Oleggio|NO"
+"Oderzo|TV",
+"Olbia|SS"
 ],
 [
-"Olgiate Olona|VA",
-"Opera|MI"
+"Oleggio|NO",
+"Olgiate Olona|VA"
 ],
 [
-"Oristano|OR",
-"Orta Nova|FG"
+"Opera|MI",
+"Oristano|OR"
 ],
 [
-"Orzivecchi|BS",
-"Osimo|AN"
+"Orta Nova|FG",
+"Orzivecchi|BS"
 ],
 [
-"Ostuni|BR",
-"Pachino|SR"
+"Osimo|AN",
+"Ostuni|BR"
 ],
 [
-"Paglieta|CH",
-"Palazzolo Acreide|SR"
+"Pachino|SR",
+"Paglieta|CH"
 ],
 [
-"Palestrina|RM",
-"Partinico|PA"
+"Palazzolo Acreide|SR",
+"Palestrina|RM"
 ],
 [
-"Petriolo|MC",
-"Pisogne|BS"
+"Partinico|PA",
+"Petriolo|MC"
 ],
 [
-"Pistoia|PT",
-"Pojana Maggiore|VI"
+"Pisogne|BS",
+"Pistoia|PT"
 ],
 [
-"Pomezia|RM",
-"Pomigliano d'Arco|NA"
+"Pojana Maggiore|VI",
+"Pomezia|RM"
 ],
 [
-"Porto San Giorgio|FM",
-"Pozzallo|RG"
+"Pomigliano d'Arco|NA",
+"Porto San Giorgio|FM"
 ],
 [
-"Pradamano|UD",
-"Predazzo|TN"
+"Pozzallo|RG",
+"Pradamano|UD"
 ],
 [
-"Quarto|NA",
-"Rivoli|TO"
+"Predazzo|TN",
+"Quarto|NA"
 ],
 [
-"Ronago|CO",
-"Roncofreddo|FC"
+"Rivoli|TO",
+"Ronago|CO"
 ],
 [
-"Rosta|TO",
-"Rovigo|RO"
+"Roncofreddo|FC",
+"Rosta|TO"
 ],
 [
-"Saint-Vincent|AO",
+"Rovigo|RO",
+"Saint-Vincent|AO"
+],
+[
+"Salzano|VE",
 "San Donà di Piave|VE"
 ],
 [
@@ -21388,7 +21421,11 @@
 "Seriate|BG"
 ],
 [
-"Seveso|MB",
+"Sestri Levante|GE",
+"Seveso|MB"
+],
+[
+"Siziano|PV",
 "Sora|FR"
 ],
 [
@@ -21401,34 +21438,42 @@
 ],
 [
 "Stroppiana|VC",
-"Terni|TR"
+"Termini Imerese|PA"
 ],
 [
 "Tombolo|PD",
-"Trevi nel Lazio|FR"
+"Torretta|PA"
 ],
 [
-"Treviglio|BG",
-"Trezzano sul Naviglio|MI"
+"Trevi nel Lazio|FR",
+"Treviglio|BG"
 ],
 [
-"Vado Ligure|SV",
-"Valvasone Arzene|PN"
+"Trezzano sul Naviglio|MI",
+"Vado Ligure|SV"
 ],
 [
-"Varallo|VC",
-"Varedo|MB"
+"Valenzano|BA",
+"Vallo della Lucania|SA"
 ],
 [
-"Varese Ligure|SP",
-"Varzi|PV"
+"Valvasone Arzene|PN",
+"Varallo|VC"
 ],
 [
-"Veroli|FR",
-"Vezza d'Oglio|BS"
+"Varedo|MB",
+"Varese Ligure|SP"
 ],
 [
-"Vigarano Mainarda|FE",
+"Varzi|PV",
+"Veroli|FR"
+],
+[
+"Vezza d'Oglio|BS",
+"Vigarano Mainarda|FE"
+],
+[
+"Villa di Tirano|SO",
 "Villaricca|NA"
 ],
 [
@@ -21448,116 +21493,124 @@
 "Agnone|IS"
 ],
 [
-"Alatri|FR",
-"Albairate|MI"
+"Aiello del Sabato|AV",
+"Alatri|FR"
 ],
 [
-"Albano Laziale|RM",
-"Albano di Lucania|PZ"
+"Albairate|MI",
+"Albano Laziale|RM"
 ],
 [
-"Albissola Marina|SV",
-"Alcamo|TP"
+"Albano di Lucania|PZ",
+"Albissola Marina|SV"
 ],
 [
-"Alliste|LE",
-"Allumiere|RM"
+"Alcamo|TP",
+"Alliste|LE"
 ],
 [
-"Altamura|BA",
-"Altofonte|PA"
+"Allumiere|RM",
+"Altamura|BA"
 ],
 [
-"Andrano|LE",
-"Andria|BT"
+"Altofonte|PA",
+"Andrano|LE"
 ],
 [
-"Apricena|FG",
-"Aradeo|LE"
+"Andria|BT",
+"Apricena|FG"
 ],
 [
-"Arcevia|AN",
-"Arce|FR"
+"Aradeo|LE",
+"Arcevia|AN"
 ],
 [
-"Ariccia|RM",
-"Arlena di Castro|VT"
+"Arce|FR",
+"Ariccia|RM"
 ],
 [
-"Arzignano|VI",
-"Asiago|VI"
+"Arlena di Castro|VT",
+"Arzignano|VI"
 ],
 [
-"Asola|MN",
-"Aurigo|IM"
+"Asiago|VI",
+"Asola|MN"
 ],
 [
-"Ausonia|FR",
-"Azzano San Paolo|BG"
+"Aurigo|IM",
+"Ausonia|FR"
 ],
 [
-"Bacoli|NA",
-"Badia Polesine|RO"
+"Azzano San Paolo|BG",
+"Bacoli|NA"
 ],
 [
-"Bagheria|PA",
-"Barasso|VA"
+"Badia Polesine|RO",
+"Bagheria|PA"
 ],
 [
-"Barberino Tavarnelle|FI",
-"Bardineto|SV"
+"Barasso|VA",
+"Barberino Tavarnelle|FI"
 ],
 [
-"Bardolino|VR",
-"Baronissi|SA"
+"Bardineto|SV",
+"Bardolino|VR"
 ],
 [
-"Basaluzzo|AL",
-"Baselga di Pinè|TN"
+"Baronissi|SA",
+"Basaluzzo|AL"
 ],
 [
-"Bastia Umbra|PG",
-"Bastiglia|MO"
+"Baselga di Pinè|TN",
+"Bastia Umbra|PG"
 ],
 [
-"Bellaria-Igea Marina|RN",
-"Bellegra|RM"
+"Bastiglia|MO",
+"Bellaria-Igea Marina|RN"
 ],
 [
-"Bellizzi|SA",
-"Bene Vagienna|CN"
+"Bellegra|RM",
+"Bellizzi|SA"
 ],
 [
-"Bentivoglio|BO",
-"Besenello|TN"
+"Bene Vagienna|CN",
+"Bentivoglio|BO"
 ],
 [
-"Bianzone|SO",
-"Bollate|MI"
+"Besenello|TN",
+"Bianzone|SO"
 ],
 [
-"Borgo Ticino|NO",
-"Boscoreale|NA"
+"Bisignano|CS",
+"Bitonto|BA"
 ],
 [
-"Botticino|BS",
-"Boves|CN"
+"Bollate|MI",
+"Borgo Ticino|NO"
 ],
 [
-"Brandizzo|TO",
-"Brendola|VI"
+"Boscoreale|NA",
+"Botticino|BS"
 ],
 [
-"Bressana Bottarone|PV",
-"Brissogne|AO"
+"Boves|CN",
+"Brandizzo|TO"
 ],
 [
-"Brolo|ME",
-"Brugherio|MB"
+"Brendola|VI",
+"Bressana Bottarone|PV"
 ],
 [
-"Buccino|SA",
-"Budrio|BO"
+"Brissogne|AO",
+"Brolo|ME"
+],
+[
+"Brugherio|MB",
+"Buccino|SA"
+],
+[
+"Budrio|BO",
+"Burcei|SU"
 ],
 [
 "Burgos|SS",
@@ -21584,51 +21637,59 @@
 "Campi Bisenzio|FI"
 ],
 [
-"Candelo|BI",
-"Candiolo|TO"
+"Canale|CN",
+"Candelo|BI"
 ],
 [
-"Canegrate|MI",
-"Canicattì|AG"
+"Candiolo|TO",
+"Canegrate|MI"
 ],
 [
-"Capannoli|PI",
-"Capannori|LU"
+"Canicattì|AG",
+"Capannoli|PI"
 ],
 [
-"Capena|RM",
-"Capizzone|BG"
+"Capannori|LU",
+"Capena|RM"
 ],
 [
-"Capurso|BA",
-"Caraglio|CN"
+"Capizzone|BG",
+"Capurso|BA"
 ],
 [
-"Caravaggio|BG",
-"Caravate|VA"
+"Caraglio|CN",
+"Caravaggio|BG"
 ],
 [
-"Carbonera|TV",
-"Carbonia|SU"
+"Caravate|VA",
+"Carbonera|TV"
 ],
 [
-"Cardinale|CZ",
-"Carenno|LC"
+"Carbonia|SU",
+"Cardinale|CZ"
 ],
 [
-"Cariati|CS",
-"Caronno Pertusella|VA"
+"Carenno|LC",
+"Cariati|CS"
 ],
 [
-"Carosino|TA",
-"Carugate|MI"
+"Caronno Pertusella|VA",
+"Carovigno|BR"
 ],
 [
-"Casale Monferrato|AL",
+"Carugate|MI",
+"Casale Monferrato|AL"
+],
+[
+"Casalmaggiore|CR",
 "Casalromano|MN"
 ],
 [
 "Casapesenna|CE",
+"Casavatore|NA"
+],
+[
+"Cascina|PI",
 "Caselette|TO"
 ],
 [
@@ -21641,23 +21702,19 @@
 ],
 [
 "Castel di Sangro|AQ",
-"Castelfranco Emilia|MO"
+"Castelgomberto|VI"
 ],
 [
-"Castelgomberto|VI",
-"Castelguglielmo|RO"
+"Castelguglielmo|RO",
+"Castello di Cisterna|NA"
 ],
 [
-"Castello di Cisterna|NA",
-"Castelvetrano|TP"
+"Castelvetrano|TP",
+"Castiglione delle Stiviere|MN"
 ],
 [
-"Castiglione delle Stiviere|MN",
-"Castro dei Volsci|FR"
-],
-[
-"Castrovillari|CS",
-"Cavaion Veronese|VR"
+"Castro dei Volsci|FR",
+"Castrovillari|CS"
 ],
 [
 "Ceccano|FR",
@@ -21665,23 +21722,27 @@
 ],
 [
 "Celleno|VT",
-"Cepagatti|PE"
+"Cento|FE"
 ],
 [
-"Cerano|NO",
-"Cercemaggiore|CB"
+"Cepagatti|PE",
+"Cerano|NO"
 ],
 [
-"Cercola|NA",
-"Cerignola|FG"
+"Cercemaggiore|CB",
+"Cercola|NA"
 ],
 [
-"Certosa di Pavia|PV",
-"Cervignano del Friuli|UD"
+"Cerignola|FG",
+"Certosa di Pavia|PV"
 ],
 [
-"Cetraro|CS",
-"Chiaravalle|AN"
+"Cervignano del Friuli|UD",
+"Cetraro|CS"
+],
+[
+"Chiaravalle|AN",
+"Chiavenna|SO"
 ],
 [
 "Chieri|TO",
@@ -21748,8 +21809,8 @@
 "Dello|BS"
 ],
 [
-"Desio|MB",
-"Due Carrare|PD"
+"Due Carrare|PD",
+"Enna|EN"
 ],
 [
 "Entratico|BG",
@@ -21785,15 +21846,11 @@
 ],
 [
 "Forio|NA",
-"Forte dei Marmi|LU"
+"Fossano|CN"
 ],
 [
-"Fossano|CN",
-"Frabosa Sottana|CN"
-],
-[
-"Fragagnano|TA",
-"Francavilla Fontana|BR"
+"Frabosa Sottana|CN",
+"Fragagnano|TA"
 ],
 [
 "Francavilla al Mare|CH",
@@ -21801,11 +21858,11 @@
 ],
 [
 "Frignano|CE",
-"Fucecchio|FI"
+"Fuscaldo|CS"
 ],
 [
-"Fuscaldo|CS",
-"Galbiate|LC"
+"Galbiate|LC",
+"Gallipoli|LE"
 ],
 [
 "Garbagnate Milanese|MI",
@@ -21828,144 +21885,156 @@
 "Ghedi|BS"
 ],
 [
-"Giaglione|TO",
-"Giffoni Valle Piana|SA"
+"Ghilarza|OR",
+"Giaglione|TO"
 ],
 [
-"Ginosa|TA",
-"Gioia Sannitica|CE"
+"Giffoni Valle Piana|SA",
+"Ginosa|TA"
 ],
 [
-"Gioiosa Ionica|RC",
-"Giuliana|PA"
+"Gioia Sannitica|CE",
+"Gioiosa Ionica|RC"
 ],
 [
-"Giulianova|TE",
-"Giussano|MB"
+"Giuliana|PA",
+"Giulianova|TE"
 ],
 [
-"Gonars|UD",
-"Gonnosfanadiga|SU"
+"Giussano|MB",
+"Gonars|UD"
 ],
 [
-"Gorizia|GO",
-"Grammichele|CT"
+"Gonnosfanadiga|SU",
+"Gorizia|GO"
 ],
 [
-"Gravedona ed Uniti|CO",
-"Gravellona Lomellina|PV"
+"Grammichele|CT",
+"Gravedona ed Uniti|CO"
 ],
 [
-"Gravina in Puglia|BA",
-"Grizzana Morandi|BO"
+"Gravellona Lomellina|PV",
+"Gravina in Puglia|BA"
 ],
 [
-"Grosio|SO",
-"Grottaminarda|AV"
+"Grizzana Morandi|BO",
+"Grosio|SO"
 ],
 [
-"Guardialfiera|CB",
-"Guastalla|RE"
+"Grottaminarda|AV",
+"Guardialfiera|CB"
 ],
 [
-"Gubbio|PG",
-"Guidonia Montecelio|RM"
+"Guastalla|RE",
+"Gubbio|PG"
 ],
 [
-"Iglesias|SU",
+"Guidonia Montecelio|RM",
+"Iglesias|SU"
+],
+[
+"Illasi|VR",
 "Introbio|LC"
 ],
 [
-"Ischitella|FG",
-"Isola della Scala|VR"
+"Ischia di Castro|VT",
+"Ischitella|FG"
 ],
 [
-"Ispica|RG",
-"Ispra|VA"
+"Isola della Scala|VR",
+"Ispica|RG"
 ],
 [
-"Istrana|TV",
-"La Maddalena|SS"
+"Ispra|VA",
+"Istrana|TV"
 ],
 [
-"Lacco Ameno|NA",
-"Lainate|MI"
+"La Maddalena|SS",
+"Lacco Ameno|NA"
 ],
 [
-"Lanciano|CH",
-"Lanuvio|RM"
+"Lainate|MI",
+"Lanciano|CH"
 ],
 [
-"Lapio|AV",
-"Lavagno|VR"
+"Lanuvio|RM",
+"Lapio|AV"
 ],
 [
-"Lavis|TN",
-"Lazzate|MB"
+"Lavagno|VR",
+"Lavis|TN"
 ],
 [
-"Lentini|SR",
-"Leonessa|RI"
+"Lazzate|MB",
+"Lentini|SR"
 ],
 [
-"Lesina|FG",
-"Lettomanoppello|PE"
+"Leonessa|RI",
+"Lesina|FG"
 ],
 [
-"Leverano|LE",
-"Limana|BL"
+"Lettomanoppello|PE",
+"Leverano|LE"
 ],
 [
-"Limatola|BN",
-"Liveri|NA"
+"Limana|BL",
+"Limatola|BN"
 ],
 [
-"Loano|SV",
-"Locate di Triulzi|MI"
+"Liveri|NA",
+"Loano|SV"
 ],
 [
-"Lodrino|BS",
-"Lograto|BS"
+"Locate di Triulzi|MI",
+"Lodrino|BS"
 ],
 [
-"Lonate Ceppino|VA",
-"Lonigo|VI"
+"Lograto|BS",
+"Lonate Ceppino|VA"
 ],
 [
-"Loria|TV",
-"Lucera|FG"
+"Lonigo|VI",
+"Loria|TV"
 ],
 [
-"Luco dei Marsi|AQ",
-"Lunamatrona|SU"
+"Lucera|FG",
+"Luco dei Marsi|AQ"
 ],
 [
-"Luzzi|CS",
-"Magnago|MI"
+"Lugo|RA",
+"Luino|VA"
 ],
 [
-"Manfredonia|FG",
-"Mansuè|TV"
+"Lunamatrona|SU",
+"Luzzi|CS"
 ],
 [
-"Marano Vicentino|VI",
-"Marano di Valpolicella|VR"
+"Magnago|MI",
+"Manfredonia|FG"
 ],
 [
-"Marcallo con Casone|MI",
-"Marcellina|RM"
+"Mansuè|TV",
+"Marano Vicentino|VI"
 ],
 [
-"Marcianise|CE",
-"Marineo|PA"
+"Marano di Valpolicella|VR",
+"Marcallo con Casone|MI"
 ],
 [
-"Marnate|VA",
-"Martina Franca|TA"
+"Marcellina|RM",
+"Marcianise|CE"
 ],
 [
-"Masate|MI",
-"Mascali|CT"
+"Marineo|PA",
+"Marnate|VA"
+],
+[
+"Martina Franca|TA",
+"Masate|MI"
+],
+[
+"Mascali|CT",
+"Massafra|TA"
 ],
 [
 "Massino Visconti|NO",
@@ -22009,43 +22078,43 @@
 ],
 [
 "Mondovì|CN",
-"Monselice|PD"
+"Monno|BS"
 ],
 [
-"Montaldo Scarampi|AT",
-"Montalto Pavese|PV"
+"Monselice|PD",
+"Montaldo Scarampi|AT"
 ],
 [
-"Monte San Savino|AR",
-"Montecatini-Terme|PT"
+"Montalto Pavese|PV",
+"Monte San Savino|AR"
 ],
 [
-"Montecchio Maggiore|VI",
-"Montereale Valcellina|PN"
+"Montecatini-Terme|PT",
+"Montecchio Maggiore|VI"
 ],
 [
-"Monterubbiano|FM",
-"Montesano sulla Marcellana|SA"
+"Montereale Valcellina|PN",
+"Monterubbiano|FM"
 ],
 [
-"Montescaglioso|MT",
-"Montevarchi|AR"
+"Montesano sulla Marcellana|SA",
+"Montescaglioso|MT"
 ],
 [
-"Montichiari|BS",
-"Montoro|AV"
+"Montevarchi|AR",
+"Montichiari|BS"
 ],
 [
-"Morbegno|SO",
-"Morlupo|RM"
+"Montoro|AV",
+"Morbegno|SO"
 ],
 [
-"Mornago|VA",
-"Mortara|PV"
+"Morlupo|RM",
+"Mornago|VA"
 ],
 [
-"Motta Visconti|MI",
-"Motta di Livenza|TV"
+"Mortara|PV",
+"Motta Visconti|MI"
 ],
 [
 "Mozzanica|BG",
@@ -22068,88 +22137,92 @@
 "Niscemi|CL"
 ],
 [
-"Noceto|PR",
-"Nola|NA"
+"Nocera Inferiore|SA",
+"Noceto|PR"
 ],
 [
-"Nole|TO",
-"Novate Milanese|MI"
+"Nola|NA",
+"Nole|TO"
 ],
 [
-"Novoli|LE",
-"Occhieppo Inferiore|BI"
+"Novate Milanese|MI",
+"Novoli|LE"
 ],
 [
-"Ormelle|TV",
-"Orosei|NU"
+"Occhieppo Inferiore|BI",
+"Ormelle|TV"
 ],
 [
-"Orsogna|CH",
-"Orta di Atella|CE"
+"Orosei|NU",
+"Orsogna|CH"
 ],
 [
-"Ortezzano|FM",
-"Ortovero|SV"
+"Orta di Atella|CE",
+"Ortezzano|FM"
 ],
 [
-"Osnago|LC",
-"Ospedaletti|IM"
+"Ortovero|SV",
+"Osnago|LC"
 ],
 [
-"Otranto|LE",
-"Ovada|AL"
+"Ospedaletti|IM",
+"Otranto|LE"
 ],
 [
-"Paderno Dugnano|MI",
-"Padru|SS"
+"Ovada|AL",
+"Paderno Dugnano|MI"
 ],
 [
-"Pagani|SA",
-"Palmanova|UD"
+"Padru|SS",
+"Pagani|SA"
 ],
 [
-"Palmi|RC",
-"Pantelleria|TP"
+"Palmanova|UD",
+"Palmi|RC"
 ],
 [
-"Paola|CS",
-"Paolisi|BN"
+"Pantelleria|TP",
+"Paola|CS"
 ],
 [
-"Paruzzaro|NO",
-"Pegognaga|MN"
+"Paolisi|BN",
+"Paruzzaro|NO"
 ],
 [
-"Persico Dosimo|CR",
-"Pertica Alta|BS"
+"Pegognaga|MN",
+"Persico Dosimo|CR"
 ],
 [
-"Pescasseroli|AQ",
-"Petrella Tifernina|CB"
+"Pertica Alta|BS",
+"Pescasseroli|AQ"
 ],
 [
-"Pietrapaola|CS",
-"Pinasca|TO"
+"Petrella Tifernina|CB",
+"Pietrapaola|CS"
 ],
 [
-"Pinerolo|TO",
-"Piove di Sacco|PD"
+"Pinasca|TO",
+"Pinerolo|TO"
 ],
 [
-"Piscina|TO",
-"Pisticci|MT"
+"Piove di Sacco|PD",
+"Piscina|TO"
 ],
 [
-"Poggio Catino|RI",
-"Poggio Rusco|MN"
+"Pisticci|MT",
+"Poggio Catino|RI"
 ],
 [
-"Poggio San Vicino|MC",
-"Poggiridenti|SO"
+"Poggio Rusco|MN",
+"Poggio San Vicino|MC"
 ],
 [
-"Polistena|RC",
-"Polpenazze del Garda|BS"
+"Poggiridenti|SO",
+"Polistena|RC"
+],
+[
+"Polpenazze del Garda|BS",
+"Pomarance|PI"
 ],
 [
 "Ponte dell'Olio|PC",
@@ -22161,35 +22234,39 @@
 ],
 [
 "Ponte|BN",
-"Potenza Picena|MC"
+"Pontremoli|MS"
 ],
 [
-"Prata di Pordenone|PN",
-"Predaia|TN"
+"Potenza Picena|MC",
+"Prata di Pordenone|PN"
 ],
 [
-"Pressana|VR",
-"Priero|CN"
+"Predaia|TN",
+"Pressana|VR"
 ],
 [
-"Pula|CA",
-"Pulsano|TA"
+"Priero|CN",
+"Pula|CA"
 ],
 [
-"Pumenengo|BG",
-"Qualiano|NA"
+"Pulsano|TA",
+"Pumenengo|BG"
 ],
 [
-"Quarto d'Altino|VE",
-"Quinto di Treviso|TV"
+"Qualiano|NA",
+"Quarto d'Altino|VE"
 ],
 [
-"Ragalna|CT",
-"Ragusa|RG"
+"Quinto di Treviso|TV",
+"Ragalna|CT"
 ],
 [
-"Raiano|AQ",
-"Rapallo|GE"
+"Ragusa|RG",
+"Raiano|AQ"
+],
+[
+"Rapallo|GE",
+"Reggello|FI"
 ],
 [
 "Resana|TV",
@@ -22209,43 +22286,47 @@
 ],
 [
 "Rizziconi|RC",
-"Rocca Canavese|TO"
+"Robassomero|TO"
 ],
 [
-"Roccamorice|PE",
-"Roccaraso|AQ"
+"Rocca Canavese|TO",
+"Roccamorice|PE"
 ],
 [
-"Roddi|CN",
-"Rodi Garganico|FG"
+"Roccaraso|AQ",
+"Roddi|CN"
 ],
 [
-"Roghudi|RC",
-"Rogliano|CS"
+"Rodi Garganico|FG",
+"Roghudi|RC"
 ],
 [
-"Romano d'Ezzelino|VI",
-"Ronchi dei Legionari|GO"
+"Rogliano|CS",
+"Romano d'Ezzelino|VI"
 ],
 [
-"Ronco Briantino|MB",
-"Rosignano Marittimo|LI"
+"Ronchi dei Legionari|GO",
+"Ronco Briantino|MB"
 ],
 [
-"Rosolini|SR",
-"Rovato|BS"
+"Rosignano Marittimo|LI",
+"Rosolini|SR"
 ],
 [
-"Rovereto|TN",
-"Rozzano|MI"
+"Rovato|BS",
+"Rovereto|TN"
 ],
 [
-"Rubiera|RE",
-"Ruvo di Puglia|BA"
+"Rozzano|MI",
+"Rubiera|RE"
 ],
 [
-"Sagrado|GO",
-"Salsomaggiore Terme|PR"
+"Ruvo di Puglia|BA",
+"Sagrado|GO"
+],
+[
+"Salsomaggiore Terme|PR",
+"Saluzzo|CN"
 ],
 [
 "Samarate|VA",
@@ -22256,19 +22337,23 @@
 "San Benigno Canavese|TO"
 ],
 [
-"San Gennaro Vesuviano|NA",
-"San Giorgio a Cremano|NA"
+"San Ferdinando di Puglia|BT",
+"San Gennaro Vesuviano|NA"
 ],
 [
-"San Giovanni Lupatoto|VR",
-"San Giustino|PG"
+"San Giorgio a Cremano|NA",
+"San Giovanni Lupatoto|VR"
 ],
 [
-"San Lazzaro di Savena|BO",
-"San Lorenzo Dorsino|TN"
+"San Giustino|PG",
+"San Lazzaro di Savena|BO"
 ],
 [
-"San Marcellino|CE",
+"San Lorenzo Dorsino|TN",
+"San Marcellino|CE"
+],
+[
+"San Marco Argentano|CS",
 "San Martino Siccomario|PV"
 ],
 [
@@ -22325,38 +22410,34 @@
 ],
 [
 "Scarperia e San Piero|FI",
-"Schio|VI"
+"Scicli|RG"
 ],
 [
-"Scicli|RG",
-"Segrate|MI"
+"Segrate|MI",
+"Selvazzano Dentro|PD"
 ],
 [
-"Selvazzano Dentro|PD",
-"Serdiana|SU"
+"Serdiana|SU",
+"Serina|BG"
 ],
 [
-"Serina|BG",
-"Serramazzoni|MO"
+"Serramazzoni|MO",
+"Serre|SA"
 ],
 [
-"Serre|SA",
-"Servigliano|FM"
+"Servigliano|FM",
+"Sesta Godano|SP"
 ],
 [
-"Sestri Levante|GE",
-"Sestu|CA"
+"Sestu|CA",
+"Settimo Milanese|MI"
 ],
 [
-"Settimo Milanese|MI",
-"Sezze|LT"
+"Sezze|LT",
+"Sinnai|CA"
 ],
 [
-"Sinnai|CA",
-"Sirmione|BS"
-],
-[
-"Siziano|PV",
+"Sirmione|BS",
 "Sizzano|NO"
 ],
 [
@@ -22408,27 +22489,23 @@
 "Terme Vigliatore|ME"
 ],
 [
-"Termini Imerese|PA",
-"Termoli|CB"
+"Termoli|CB",
+"Terracina|LT"
 ],
 [
-"Terracina|LT",
-"Terrasini|PA"
+"Terrasini|PA",
+"Tolentino|MC"
 ],
 [
-"Tolentino|MC",
-"Toritto|BA"
+"Toritto|BA",
+"Torrazza Piemonte|TO"
 ],
 [
-"Torrazza Piemonte|TO",
-"Torre Pellice|TO"
+"Torre Pellice|TO",
+"Torre del Greco|NA"
 ],
 [
-"Torre del Greco|NA",
-"Torregrotta|ME"
-],
-[
-"Torretta|PA",
+"Torregrotta|ME",
 "Torrile|PR"
 ],
 [
@@ -22452,8 +22529,8 @@
 "Vallefiorita|CZ"
 ],
 [
-"Vallo della Lucania|SA",
-"Valva|SA"
+"Valva|SA",
+"Varallo Pombia|NO"
 ],
 [
 "Verano Brianza|MB",
@@ -22464,1046 +22541,46 @@
 "Verolengo|TO"
 ],
 [
-"Viguzzolo|AL",
-"Villa di Briano|CE"
+"Vignate|MI",
+"Viguzzolo|AL"
 ],
 [
-"Villadose|RO",
-"Villarosa|EN"
+"Villa di Briano|CE",
+"Villadose|RO"
 ],
 [
-"Ville d'Anaunia|TN",
-"Vimodrone|MI"
+"Villarosa|EN",
+"Ville d'Anaunia|TN"
 ],
 [
-"Vinovo|TO",
-"Visciano|NA"
+"Vimodrone|MI",
+"Vinovo|TO"
 ],
 [
-"Voghera|PV",
-"Volturino|FG"
+"Visciano|NA",
+"Voghera|PV"
 ],
 [
-"Zafferana Etnea|CT",
-"Zocca|MO"
-],
-[
-"Burcei|SU",
-"Casalmaggiore|CR"
-],
-[
-"Calvi|BN",
-"Notaresco|TE"
-],
-[
-"Reggello|FI",
-"Carovigno|BR"
-],
-[
-"Salzano|VE",
-"Bisignano|CS"
-],
-[
-"Rezzato|BS",
-"Cascina|PI"
-],
-[
-"Pontremoli|MS",
-"Casavatore|NA"
-],
-[
-"Gallipoli|LE",
-"Canale|CN"
-],
-[
-"San Ferdinando di Puglia|BT",
-"Chiavenna|SO"
-],
-[
-"Bubbio|AT",
-"San Marco Argentano|CS"
-],
-[
-"Ghilarza|OR",
-"Belmonte del Sannio|IS"
+"Volturino|FG",
+"Zafferana Etnea|CT"
 ]
 ],
-"attesa": "Cento|FE",
-"punti": {
-"Crotone|KR": 2,
-"Piombino|LI": 1,
-"Terni|TR": 1,
-"Darfo Boario Terme|BS": 1,
-"Casalmaggiore|CR": 1,
-"Giugliano in Campania|NA": 1,
-"Notaresco|TE": 1,
-"Napoli|NA": 4,
-"Cervia|RA": 1,
-"Massa|MS": 1,
-"Carovigno|BR": 1,
-"Venezia|VE": 2,
-"Bisignano|CS": 1,
-"Termini Imerese|PA": 1,
-"Brescia|BS": 1,
-"Arzano|NA": 1,
-"Vallo della Lucania|SA": 1,
-"Cascina|PI": 1,
-"Rezzato|BS": 1,
-"Casavatore|NA": 1,
-"Fucecchio|FI": 1,
-"Bisceglie|BT": 21,
-"Canale|CN": 1,
-"Chiavenna|SO": 1,
-"Cavaion Veronese|VR": 2,
-"Barletta|BT": 9,
-"Savona|SV": 4,
-"Pesaro|PU": 1,
-"Catania|CT": 6,
-"Foggia|FG": 2,
-"Lugo|RA": 1,
-"San Marco Argentano|CS": 1,
-"Trento|TN": 1,
-"Cosenza|CS": 1,
-"Palermo|PA": 2,
-"Carosino|TA": 1,
-"Torretta|PA": 1,
-"Molfetta|BA": 3,
-"Francavilla Fontana|BR": 1,
-"Belmonte del Sannio|IS": 7,
-"Mussolente|VI": 1,
-"Genova|GE": 3
-},
-"giocatori": {
-"Crotone|KR": [
-"phantom20_13"
-],
-"Piombino|LI": [
-"stella_zenna"
-],
-"Savona|SV": [
+"attesa": "Zocca|MO",
+"punti": {},
+"giocatori": {},
+"squadra": {},
+"giorni": {},
+"storia": [],
+"chiuso": false,
+"prima": [
+"matteo_bruscobike",
+"nicola.sportello",
+"phantom20_13",
+"stella_zenna",
 "teslathequeenofbards"
 ],
-"Cavaion Veronese|VR": [
-"matteo_bruscobike"
-],
-"Carosino|TA": [
-"nicola.sportello"
-]
-},
-"squadra": {
-"phantom20_13": "Crotone|KR",
-"stella_zenna": "Piombino|LI",
-"teslathequeenofbards": "Savona|SV",
-"matteo_bruscobike": "Cavaion Veronese|VR",
-"nicola.sportello": "Carosino|TA"
-},
-"giorni": {
-"phantom20_13": [
-"2026-11-08",
-"2026-11-09"
-],
-"stella_zenna": [
-"2026-11-09"
-],
-"teslathequeenofbards": [
-"2026-11-13"
-],
-"matteo_bruscobike": [
-"2026-11-13"
-],
-"nicola.sportello": [
-"2026-11-14"
-]
-},
-"storia": [
-{
-"t": "2026-11-08T12:43+00:00",
-"sorpasso": "Crotone|KR",
-"su": "Ercolano|NA",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-09T09:47+00:00",
-"sorpasso": "Piombino|LI",
-"su": "Pesaro|PU",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-10T18:41+00:00",
-"sorpasso": "Terni|TR",
-"su": "Stroppiana|VC",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-10T20:12+00:00",
-"sorpasso": "Darfo Boario Terme|BS",
-"su": "Curtatone|MN",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-10T21:03+00:00",
-"sorpasso": "Casalmaggiore|CR",
-"su": "Burcei|SU",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-11T03:14+00:00",
-"sorpasso": "Giugliano in Campania|NA",
-"su": "Ferrara|FE",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-11T07:27+00:00",
-"sorpasso": "Notaresco|TE",
-"su": "Calvi|BN",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-11T11:57+00:00",
-"sorpasso": "Napoli|NA",
-"su": "Roma|RM",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-11T12:24+00:00",
-"sorpasso": "Cervia|RA",
-"su": "Chioggia|VE",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-11T13:57+00:00",
-"sorpasso": "Massa|MS",
-"su": "Marsciano|PG",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-11T14:57+00:00",
-"sorpasso": "Carovigno|BR",
-"su": "Reggello|FI",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-11T16:59+00:00",
-"sorpasso": "Venezia|VE",
-"su": "Bari|BA",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-11T19:18+00:00",
-"sorpasso": "Bisignano|CS",
-"su": "Salzano|VE",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-11T21:13+00:00",
-"sorpasso": "Termini Imerese|PA",
-"su": "Termoli|CB",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-11T21:55+00:00",
-"sorpasso": "Brescia|BS",
-"su": "Cagliari|CA",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-12T07:00+00:00",
-"sorpasso": "Arzano|NA",
-"su": "Atri|TE",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-12T08:52+00:00",
-"sorpasso": "Vallo della Lucania|SA",
-"su": "Valva|SA",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-12T10:11+00:00",
-"sorpasso": "Cascina|PI",
-"su": "Rezzato|BS",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-12T12:24+00:00",
-"sorpasso": "Casavatore|NA",
-"su": "Pontremoli|MS",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-12T13:04+00:00",
-"sorpasso": "Fucecchio|FI",
-"su": "Frignano|CE",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-12T14:49+00:00",
-"sorpasso": "Bisceglie|BT",
-"su": "Bomarzo|VT",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-12T18:01+00:00",
-"sorpasso": "Canale|CN",
-"su": "Gallipoli|LE",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-12T19:26+00:00",
-"sorpasso": "Chiavenna|SO",
-"su": "San Ferdinando di Puglia|BT",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-12T19:39+00:00",
-"sorpasso": "Cavaion Veronese|VR",
-"su": "Castrovillari|CS",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-12T21:49+00:00",
-"sorpasso": "Barletta|BT",
-"su": "Carrara|MS",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-13T10:29+00:00",
-"sorpasso": "Savona|SV",
-"su": "Sepino|CB",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-13T11:49+00:00",
-"sorpasso": "Catania|CT",
-"su": "Genova|GE",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-13T12:20+00:00",
-"sorpasso": "Foggia|FG",
-"su": "Pisa|PI",
-"punti": [
-2,
-0
-]
-},
-{
-"t": "2026-11-13T12:57+00:00",
-"sorpasso": "Lugo|RA",
-"su": "Macerata|MC",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-13T14:30+00:00",
-"sorpasso": "San Marco Argentano|CS",
-"su": "Bubbio|AT",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-13T19:28+00:00",
-"sorpasso": "Trento|TN",
-"su": "Lecce|LE",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-14T08:01+00:00",
-"sorpasso": "Cosenza|CS",
-"su": "Cesena|FC",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-14T08:55+00:00",
-"sorpasso": "Palermo|PA",
-"su": "Firenze|FI",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-14T09:49+00:00",
-"sorpasso": "Carosino|TA",
-"su": "Carugate|MI",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-15T10:20+00:00",
-"sorpasso": "Torretta|PA",
-"su": "Torrile|PR",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-15T10:20+00:00",
-"sorpasso": "Molfetta|BA",
-"su": "Mirandola|MO",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-15T10:21+00:00",
-"sorpasso": "Francavilla Fontana|BR",
-"su": "Fragagnano|TA",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-15T10:21+00:00",
-"sorpasso": "Belmonte del Sannio|IS",
-"su": "Ghilarza|OR",
-"punti": [
-1,
-0
-]
-},
-{
-"t": "2026-11-15T13:41+00:00",
-"sorpasso": "Mussolente|VI",
-"su": "Marsala|TP",
-"punti": [
-1,
-0
-]
-}
-],
-"chiuso": true,
-"prima": [],
-"quartiere": {
-"Darfo Boario Terme|BS": {
-"u": [
-"uli_alfa.fan",
-"giulixx_013"
-],
-"c": [
-"18073884893772181",
-"18115207352165433"
-],
-"chiuse": 0,
-"log": []
-},
-"Terni|TR": {
-"u": [
-"michele.ioni"
-],
-"c": [
-"18135826868504782"
-],
-"chiuse": 0,
-"log": []
-},
-"Casalmaggiore|CR": {
-"u": [
-"kataria_mohit389"
-],
-"c": [
-"18093853277204135"
-],
-"chiuse": 0,
-"log": []
-},
-"Giugliano in Campania|NA": {
-"u": [
-"19amala08"
-],
-"c": [
-"18147125983580166"
-],
-"chiuse": 0,
-"log": []
-},
-"Notaresco|TE": {
-"u": [
-"atena_bengala"
-],
-"c": [
-"18125904901921005"
-],
-"chiuse": 0,
-"log": []
-},
-"Napoli|NA": {
-"u": [
-"_gennaromorra_",
-"maria_dark_queen",
-"anini_sw"
-],
-"c": [
-"18101937854645755",
-"18011382995781267",
-"18145658650611222"
-],
-"chiuse": 1,
-"log": [
-{
-"t": "2026-11-14T09:08+00:00",
-"prova": 1
-}
-]
-},
-"Cervia|RA": {
-"u": [
-"stefano_s_06"
-],
-"c": [
-"18112969715239545"
-],
-"chiuse": 0,
-"log": []
-},
-"Massa|MS": {
-"u": [
-"maty._000"
-],
-"c": [
-"18485464477113462"
-],
-"chiuse": 0,
-"log": []
-},
-"Carovigno|BR": {
-"u": [
-"la.fati.ignorante"
-],
-"c": [
-"18180674131391586"
-],
-"chiuse": 0,
-"log": []
-},
-"Venezia|VE": {
-"u": [
-"passionfruit.exe_",
-"deby_gs81"
-],
-"c": [
-"17993408622113350",
-"18101849792370169"
-],
-"chiuse": 0,
-"log": []
-},
-"Bisignano|CS": {
-"u": [
-"stavv_shaa"
-],
-"c": [
-"18116862608165434"
-],
-"chiuse": 0,
-"log": []
-},
-"Termini Imerese|PA": {
-"u": [
-"giaduccia._"
-],
-"c": [
-"18235603636318553"
-],
-"chiuse": 0,
-"log": []
-},
-"Brescia|BS": {
-"u": [
-"elena_gamiddo"
-],
-"c": [
-"18044097347638295"
-],
-"chiuse": 0,
-"log": []
-},
-"Arzano|NA": {
-"u": [
-"grissinorotondo1234"
-],
-"c": [
-"17986308335897831"
-],
-"chiuse": 0,
-"log": []
-},
-"Vallo della Lucania|SA": {
-"u": [
-"_ele.na_7"
-],
-"c": [
-"18137134759782396"
-],
-"chiuse": 0,
-"log": []
-},
-"Cascina|PI": {
-"u": [
-"gabriel.lai013"
-],
-"c": [
-"18438984100182575"
-],
-"chiuse": 0,
-"log": []
-},
-"Rezzato|BS": {
-"u": [
-"andrea_piazza94"
-],
-"c": [
-"17915166468482498"
-],
-"chiuse": 0,
-"log": []
-},
-"Casavatore|NA": {
-"u": [
-"gabriele_diviccaro"
-],
-"c": [
-"18172248112465271"
-],
-"chiuse": 0,
-"log": []
-},
-"Fucecchio|FI": {
-"u": [
-"itsmasu_._"
-],
-"c": [
-"18101661485552679"
-],
-"chiuse": 0,
-"log": []
-},
-"Bisceglie|BT": {
-"u": [
-"valerio_2015_",
-"giu.se100",
-"francesco.papagni",
-"ema.pir",
-"losapio_fra_010",
-"francesco45344",
-"nik0_109",
-"francesco.pio.salerno___",
-"leonardopellegrini5",
-"m.viesti",
-"ale_espo7",
-"sergiovalente_36"
-],
-"c": [
-"18090801728275406",
-"18104177585379189",
-"18220690045348139",
-"18100355087417616",
-"17914890042471912",
-"18472281829191357",
-"17959051011290549",
-"18027783866925446",
-"18652014724043269",
-"18131159872851206",
-"18343692514279901",
-"18591161974076092"
-],
-"chiuse": 4,
-"log": [
-{
-"t": "2026-11-13T12:50+00:00",
-"prova": 1
-},
-{
-"t": "2026-11-13T16:43+00:00",
-"prova": 2
-},
-{
-"t": "2026-11-13T20:36+00:00",
-"prova": 3
-},
-{
-"t": "2026-11-15T10:20+00:00",
-"prova": 4
-}
-]
-},
-"Canale|CN": {
-"u": [
-"satorougoj476"
-],
-"c": [
-"18004611938800910"
-],
-"chiuse": 0,
-"log": []
-},
-"Chiavenna|SO": {
-"u": [
-"patrickmtb2026"
-],
-"c": [
-"18110720108257663"
-],
-"chiuse": 0,
-"log": []
-},
-"Cavaion Veronese|VR": {
-"u": [
-"matteo_bruscobike"
-],
-"c": [
-"17899357362613889"
-],
-"chiuse": 0,
-"log": []
-},
-"Barletta|BT": {
-"u": [
-"filannino_giorgio7",
-"dimastrogiovannivalentina",
-"simo_caputo14",
-"maxito104_",
-"goatcr7raffa",
-"angix511",
-"mattycore06"
-],
-"c": [
-"17919107940525393",
-"18075833270504078",
-"18029401745870548",
-"18119957281801344",
-"17968896254984887",
-"18652333561040865",
-"18078525977757110"
-],
-"chiuse": 2,
-"log": [
-{
-"t": "2026-11-13T14:44+00:00",
-"prova": 1
-},
-{
-"t": "2026-11-13T23:23+00:00",
-"prova": 2
-}
-]
-},
-"Caserta|CE": {
-"u": [
-"minaudamartina"
-],
-"c": [
-"17889535467491405"
-],
-"chiuse": 0,
-"log": []
-},
-"Savona|SV": {
-"u": [
-"teslathequeenofbards"
-],
-"c": [
-"18135623629686444"
-],
-"chiuse": 0,
-"log": []
-},
-"Pesaro|PU": {
-"u": [
-"nadiacavallari4549nadia"
-],
-"c": [
-"18122708734971529"
-],
-"chiuse": 0,
-"log": []
-},
-"Catania|CT": {
-"u": [
-"giusy_stivala",
-"_.enzo.privv"
-],
-"c": [
-"18104185322401796",
-"18133160875695665"
-],
-"chiuse": 0,
-"log": []
-},
-"Lugo|RA": {
-"u": [
-"stefanotazzarii"
-],
-"c": [
-"18073081475786391"
-],
-"chiuse": 0,
-"log": []
-},
-"San Marco Argentano|CS": {
-"u": [
-"andre_privvvvv_espo"
-],
-"c": [
-"18115176317139693"
-],
-"chiuse": 0,
-"log": []
-},
-"Trento|TN": {
-"u": [
-"massimobassi906"
-],
-"c": [
-"18497784775111756"
-],
-"chiuse": 0,
-"log": []
-},
-"Cosenza|CS": {
-"u": [
-"francy._._013"
-],
-"c": [
-"18138565213635157"
-],
-"chiuse": 0,
-"log": []
-},
-"Palermo|PA": {
-"u": [
-"non_sochemmettere",
-"vittoriaa.marinoo"
-],
-"c": [
-"17945012172369603",
-"18652783069051249"
-],
-"chiuse": 0,
-"log": []
-},
-"Torretta|PA": {
-"u": [
-"jonas.kickboxing"
-],
-"c": [
-"17971774755196870"
-],
-"chiuse": 0,
-"log": []
-},
-"Molfetta|BA": {
-"u": [
-"mauro_mas21"
-],
-"c": [
-"17913489369575531"
-],
-"chiuse": 0,
-"log": []
-},
-"Francavilla Fontana|BR": {
-"u": [
-"_xxboston_"
-],
-"c": [
-"18094689716216470"
-],
-"chiuse": 0,
-"log": []
-},
-"Belmonte del Sannio|IS": {
-"u": [
-"pannunzioparide__",
-"elena.alina.589"
-],
-"c": [
-"17877644247595001",
-"18148096765592277"
-],
-"chiuse": 0,
-"log": []
-},
-"Mussolente|VI": {
-"u": [
-"bordignonalexa"
-],
-"c": [
-"18508709566102289"
-],
-"chiuse": 0,
-"log": []
-},
-"Genova|GE": {
-"u": [
-"celia.isaja"
-],
-"c": [
-"18132530752841116"
-],
-"chiuse": 0,
-"log": []
-}
-},
-"luci": [
-"michele.ioni|animale|miele",
-"giulixx_013|animale|gianpiero",
-"kataria_mohit389|animale|lacky",
-"19amala08|animale|pocho",
-"atena_bengala|animale|atena",
-"_gennaromorra_|animale|margot",
-"stefano_s_06|animale|meghy",
-"maty._000|animale|damon",
-"la.fati.ignorante|animale|pepe",
-"passionfruit.exe_|animale|nigel",
-"stavv_shaa|animale|chicco",
-"giaduccia._|animale|charlie",
-"elena_gamiddo|animale|bella",
-"grissinorotondo1234|animale|fuffi",
-"maria_dark_queen|animale|rocky",
-"_ele.na_7|animale|kira",
-"gabriel.lai013|animale|aris",
-"andrea_piazza94|animale|uga",
-"gabriele_diviccaro|animale|sky",
-"itsmasu_._|animale|diego",
-"valerio_2015_|animale|mia",
-"giu.se100|animale|queen",
-"satorougoj476|animale|royma",
-"patrickmtb2026|animale|jack",
-"matteo_bruscobike|animale|hero",
-"deby_gs81|animale|tia",
-"filannino_giorgio7|animale|gigino",
-"teslathequeenofbards|animale|meredith",
-"nadiacavallari4549nadia|animale|pepe",
-"giusy_stivala|animale|linus",
-"francesco.papagni|animale|sharon",
-"stefanotazzarii|animale|jagermeister",
-"andre_privvvvv_espo|animale|andrea",
-"simo_caputo14|animale|nalaa",
-"ema.pir|animale|peggy",
-"losapio_fra_010|animale|alex",
-"simo_caputo14|animale|nala",
-"francesco45344|animale|simba",
-"nik0_109|animale|rio",
-"massimobassi906|animale|tito",
-"francesco.pio.salerno___|animale|spyro",
-"maxito104_|animale|lady",
-"m.viesti|animale|desy",
-"goatcr7raffa|animale|milo",
-"ale_espo7|animale|maya",
-"angix511|animale|nala",
-"francy._._013|animale|kira",
-"non_sochemmettere|animale|simba",
-"anini_sw|animale|milly",
-"mattycore06|animale|chery",
-"sergiovalente_36|animale|zoe",
-"jonas.kickboxing|animale|lilli",
-"mauro_mas21|animale|zeus",
-"_.enzo.privv|animale|athena",
-"vittoriaa.marinoo|animale|luna",
-"_xxboston_|animale|lilly",
-"pannunzioparide__|animale|winky",
-"pannunzioparide__|animale|lampo",
-"bordignonalexa|animale|kuramaaaaaa",
-"elena.alina.589|animale|lolita",
-"celia.isaja|animale|tide"
-]
+"quartiere": {},
+"luci": []
 },
 "gara_follower": [
 {
