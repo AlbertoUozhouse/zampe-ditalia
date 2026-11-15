@@ -1789,6 +1789,7 @@ def serie(D, rng, st):
            f"🏠 Ogni commento lo avvicina a casa: FAMIGLIA {famiglia}%.\n➕ Seguici per vedere se ce la fa entro Natale.")
     st["copertina"] = None
     st["banner_reel"] = f"👇 Scrivi {a[2]} o {b[2]}"
+    st["schermo_pulito"] = True  # Alberto: «il cane va a tutto schermo»: niente testata né fascia sopra Paolino
     st["hashtag"] = "#cani #canile #adozione #adottanonComprare #natale #animalidomestici "
     st["senza_bonus"] = True
     return f"🐶 PAOLINO · GIORNO {n} DI 30", frasi, did
@@ -1948,6 +1949,7 @@ def main():
     intro = st.pop("intro", None)
     intro_3d = st.pop("intro_3d", None)
     giro_info = st.pop("giro_info", None)
+    schermo_pulito = st.pop("schermo_pulito", False)
     avvento_info = st.pop("avvento_info", None)
     serie_info = st.pop("serie_info", None)
     # l'aspetto grafico a rotazione: mai uguale ai due reel prima (reel/modello/scene.py, TEMI)
@@ -1962,7 +1964,7 @@ def main():
                "banner": st.pop("banner_reel", "💬 Commenta città e nome del tuo animale 👇"), "didascalia": did,
                "tag": [u for u in mostrati if u.lower() not in ESCLUSI],
                # 15/11: fino a 3 padroni in vista che ci seguono già ricevono l'invito a collaborare: se accettano, il reel va anche sul loro profilo
-               "collab": [x["utente"] for _, sc in frasi if sc.get("tipo") == "padroni" for x in sc["persone"] if x["utente"].lower() in D["seguono"]][:3], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}), **({"giro": giro_info} if giro_info else {}), **({"avvento": avvento_info} if avvento_info else {}), **({"serie": serie_info} if serie_info else {}),
+               "collab": [x["utente"] for _, sc in frasi if sc.get("tipo") == "padroni" for x in sc["persone"] if x["utente"].lower() in D["seguono"]][:3], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}), **({"giro": giro_info} if giro_info else {}), **({"avvento": avvento_info} if avvento_info else {}), **({"serie": serie_info} if serie_info else {}), **({"schermo_pulito": True} if schermo_pulito else {}),
                **({"test": {"nome": "crescita-1", "formato": formato, "variante": voce_v, "slot": ORA.strftime("%H:%M"), "caso": caso}} if test else {})}
     if test: copione.pop("intro", None); copione.pop("intro_3d", None)  # nel test il primo fotogramma è il gancio: niente video prima
     oggi = ORA.date()  # 15/11: chi è stato taggato e quando (motore/copione.py padroni: riposo di 3 giorni tra un tag e l'altro)

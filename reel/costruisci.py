@@ -372,6 +372,12 @@ def main():
          bg0=S.T["bg"][0], bg1=S.T["bg"][1], bg2=S.T["bg"][2], host="\n".join(host), titolo=S.ESC(copione["testata"]["titolo"]),
         cani=c["cani"], gatti=c["gatti"], b0=b0, bd=round(durata - b0, 2), banner=S.ESC(copione.get("banner", "📍 Scrivi città, nome e razza 👇")),
         dvoce=round(fine_voce + 0.1, 2)))
+    if copione.get("schermo_pulito"):  # 15/11, Paolino a tutto schermo: niente testata in alto e niente fascia in basso sopra il cane
+        h = (prog / "index.html").read_text()
+        h = re.sub(r'\n      <div id="testata".*?\n      </div>', "", h, count=1, flags=re.S)
+        h = re.sub(r'\n      <div id="banner".*?</div>', "", h, count=1)
+        h = "\n".join(l for l in h.split("\n") if "#testata-pill" not in l and "#banner-t" not in l)
+        (prog / "index.html").write_text(h)
     inizio_parole = [sum(len(x.split()) for x in frasi[:k]) for k in range(len(frasi))]
     nascoste = ",".join(f"{inizio_parole[k]}-{inizio_parole[k] + len(frasi[k].split()) - 1}" for k, f in enumerate(copione["frasi"]) if f["scena"]["tipo"] in ("padroni", "tifosi", "svela", "tappa", "avvento", "zampa30"))
     subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *([f"--salta={len(frasi[0].split())}"] if copione["frasi"][0]["scena"]["tipo"] in ("gancio", "intruso") else []),

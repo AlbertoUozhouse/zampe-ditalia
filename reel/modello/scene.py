@@ -700,17 +700,20 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
     #root .nastro span {{ display: inline-block; transform: rotate(-3deg); font: 800 54px/1.1 "Bricolage Grotesque", sans-serif; color: #1A1206; background: #FFD23F; border: 5px solid #1A1206; border-radius: 14px; padding: 10px 26px; box-shadow: 0 8px 0 rgba(0,0,0,.35); }}
     #root .zampa {{ position: absolute; left: -80px; top: 360px; width: 1240px; height: 1080px; object-fit: contain; filter: drop-shadow(0 22px 26px rgba(0,0,0,.45)); }}
     #root .zampa.intero {{ left: 185px; top: 470px; width: 710px; height: 780px; }}
-    #root .sfoca {{ position: absolute; inset: -60px; width: 1200px; height: 2040px; object-fit: cover; filter: blur(34px) brightness(.55); }}
-    #root .velo {{ position: absolute; inset: 0; background: rgba(8,10,20,.25); }}
-    #root .foto {{ position: absolute; left: 230px; top: 568px; width: 620px; height: 885px; object-fit: cover; border-radius: 30px; border: 8px solid #FFF8EA; box-shadow: 0 24px 50px rgba(0,0,0,.55); }}
-    #root .foto.piccola {{ left: 335px; top: 568px; width: 410px; height: 575px; }}
-    #root .foto ~ .frase {{ top: 428px; left: 30px; right: 30px; }}
-    #root .foto ~ .nastro {{ top: 296px; left: 470px; right: 30px; text-align: right; }}
-    #root .foto ~ .nastro span {{ font-size: 34px; padding: 8px 16px; }}
-    #root .foto ~ .scelta {{ top: 1150px; height: 310px; }}
-    #root .foto ~ .scelta .dom {{ top: -722px; font-size: 64px; }}
-    #root .foto ~ .scelta .op {{ top: 20px; height: 280px; }}
-    #root .foto ~ .scelta .o {{ top: 130px; }}
+    #root .sfoca {{ position: absolute; inset: -60px; width: 1200px; height: 2040px; object-fit: cover; filter: blur(30px) brightness(.7); }}
+    #root .foto {{ position: absolute; left: -100px; top: 170px; width: 1280px; height: 1920px; object-fit: cover; }}
+    #root .velo {{ position: absolute; left: 0; right: 0; top: 0; height: 560px; background: linear-gradient(180deg, rgba(0,0,0,.6) 0, rgba(0,0,0,.35) 60%, rgba(0,0,0,0) 100%); }}
+    #root .velo ~ .hud {{ top: 196px; left: 30px; gap: 10px; }}
+    #root .velo ~ .hud div {{ min-width: 150px; padding: 6px 14px; border-width: 3px; border-radius: 14px; }}
+    #root .velo ~ .hud small {{ font-size: 20px; }} #root .velo ~ .hud b {{ font-size: 54px; }}
+    #root .velo ~ .nastro {{ top: 214px; left: 360px; right: 26px; text-align: right; }}
+    #root .velo ~ .nastro span {{ font-size: 30px; padding: 8px 14px; border-width: 4px; }}
+    #root .velo ~ .frase {{ top: 318px; left: 24px; right: 24px; text-shadow: 0 5px 0 #0A0A0A, 4px 0 0 #0A0A0A, -4px 0 0 #0A0A0A, 0 -4px 0 #0A0A0A, 0 0 24px rgba(0,0,0,.8); }}
+    #root .velo ~ .scelta {{ top: 300px; height: 200px; left: 24px; right: 24px; }}
+    #root .velo ~ .scelta .dom {{ top: 0; font-size: 56px; }}
+    #root .velo ~ .scelta .op {{ top: 84px; width: 470px; height: 112px; flex-direction: row; gap: 12px; border-width: 5px; border-radius: 22px; }}
+    #root .velo ~ .scelta .op .em {{ font-size: 60px; }} #root .velo ~ .scelta .op b {{ font-size: 40px; }} #root .velo ~ .scelta .op i {{ display: none; }}
+    #root .velo ~ .scelta .o {{ top: 112px; width: 90px; margin-left: -45px; font-size: 24px; line-height: 50px; }}
     #root .zampa.intero ~ .frase {{ top: 1262px; }}
     #root .puzza {{ position: absolute; left: -60px; top: 420px; width: 1200px; height: 1000px; }}
     #root .puzza path {{ fill: none; stroke: #8DB255; stroke-width: 14; stroke-linecap: round; opacity: .85; }}
@@ -729,7 +732,7 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
     if foto:  # 15/11 sera: Zampa vero (foto IA realistica, motore/zampa.py) a tutto schermo, che si avvicina piano; sopra contatori e scritte
         sb, st, ogg = "", "", ""
     intero = svg.endswith(".png")  # Zampa intero in 3D (reel/zampa3d.js): sta in piedi sul pavimento, la frase sotto i piedi
-    fondo = (f'<img class="sfoca" src="assets/img/{foto}" alt=""><div class="velo"></div><img class="foto{" piccola" if scelta else ""}" id="{cid}-z" src="assets/img/{foto}" alt="">' if foto else
+    fondo = (f'<img class="sfoca" src="assets/img/{foto}" alt=""><img class="foto" id="{cid}-z" src="assets/img/{foto}" alt=""><div class="velo"></div>' if foto else
              f'<div class="muro"></div><div class="pav"{" style=\'height:760px\'" if intero else ""}></div>{sb}<img class="zampa{" intero" if intero else ""}" id="{cid}-z" src="assets/svg/{svg}" alt="">')
     corpo = (f'{fondo}{st}{ogg}'
              f'<div class="hud"><div><small>GIORNI</small><b id="{cid}-g">{giorni}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>'
