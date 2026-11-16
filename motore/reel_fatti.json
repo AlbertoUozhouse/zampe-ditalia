@@ -94,7 +94,6 @@
   "Napoli"
  ],
  "temi": [
-  "neon",
   "tramonto",
   "aurora",
   "giorno",
@@ -103,9 +102,10 @@
   "giorno",
   "tramonto",
   "neon",
-  "giorno"
+  "giorno",
+  "tramonto"
  ],
- "variante_n": 49,
+ "variante_n": 50,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -155,7 +155,8 @@
   "2026-11-15-1809-citta": "voce-fissa-45",
   "2026-11-15-2104-tifo": "voce-fissa-50",
   "2026-11-15-2112-fondatore": "voce-solita-32",
-  "2026-11-16-1307-coppa_verdetto": "voce-solita-32"
+  "2026-11-16-1307-coppa_verdetto": "voce-solita-32",
+  "2026-11-16-2111-serie": "voce-fissa-70"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -991,5 +992,17 @@
   "m.viesti": "2026-11-16",
   "nik0_109": "2026-11-16",
   "sergiovalente_36": "2026-11-16"
- }
+ },
+ "serie_storia": [
+  {
+   "ep": "inizio",
+   "giorno": 1,
+   "opzioni": [
+    "bagno",
+    "veterinario"
+   ],
+   "famiglia": 0,
+   "data": "2026-11-16"
+  }
+ ]
 }

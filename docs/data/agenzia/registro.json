@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-09-0118-campanile_rivale",
-  "formato": "campanile_rivale",
-  "modalita": "operativa",
-  "inizio": "2026-11-09T00:18:09+00:00",
-  "stato": "senza direttore",
-  "fine": "2026-11-09T00:21:17+00:00",
-  "scambi": 128
- },
- {
   "id": "crescita-2026-11-09",
   "formato": "crescita del giorno",
   "modalita": "operativa",
@@ -537,6 +528,15 @@
   "inizio": "2026-11-16T12:07:38+00:00",
   "stato": "corretto dalla squadra",
   "fine": "2026-11-16T12:12:08+00:00",
+  "scambi": 128
+ },
+ {
+  "id": "2026-11-16-2111-serie",
+  "formato": "serie",
+  "modalita": "operativa",
+  "inizio": "2026-11-16T20:11:18+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-16T20:17:31+00:00",
   "scambi": 128
  }
 ]
