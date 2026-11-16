@@ -1695,9 +1695,9 @@ SERIE_PUNTATE = {  # titolo, sfondo, muso, sporco dopo, frasi (voce, testo grand
         ("Questo è Paolino. Vive in un canile, ha le pulci e un alito terribile.", "PAOLINO, 4 ANNI, PULCI", []),
         ("Ha trenta giorni per trovare una famiglia prima di Natale. Oggi ha provato a farsi bello per la foto…", "LA FOTO PER L'ADOZIONE", []),
         ("e ha mangiato la macchina fotografica.", "HA MANGIATO LA MACCHINA FOTOGRAFICA", [])]),
-    "bagno": ("IL BAGNO", "bagno", "lingua", False, [
-        ("Avete scelto il bagno. Paolino non fa il bagno da quattro anni. Nonna Pina ha preparato la vasca.", "4 ANNI SENZA BAGNO", []),
-        ("Appena ha sentito l'acqua è scappato. Tutto insaponato. Per tutto il paese.", "È SCAPPATO INSAPONATO", []),
+    "bagno": ("IL BAGNO", "bagno", "lingua", False, [  # 16/11: il testo segue le foto vere (Paolino felice nella vasca, poi la fuga)
+        ("Avete scelto il bagno. Nonna Pina ha preparato la vasca, e Paolino sembrava felicissimo…", "SEMBRAVA FELICE…", []),
+        ("finché non ha visto la spugna. È scappato insaponato per tutto il paese!", "È SCAPPATO INSAPONATO", []),
         ("Ha allagato il canile. Sono arrivati i pompieri.", "SONO ARRIVATI I POMPIERI", [])]),
     "veterinario": ("IL VETERINARIO", "veterinario", "triste", True, [
         ("Avete scelto il veterinario. Il direttore Gino l'ha portato in braccio. Quaranta chili.", "40 CHILI IN BRACCIO", []),
@@ -1746,7 +1746,7 @@ SERIE_GRAFICHE = {
     "inizio": [([E("PULCI: 37", "🪳", "s", 760), E("ALITO: 10/10", "☠️", "d", 1010)], None),
                ([E("FOTO PER L'ADOZIONE", "📸", "d", 760), E("POSA DA STAR", "⭐", "d", 1000)], None),
                ([E("MACCHINA FOTOGRAFICA: 0", "📷", "s", 1080), E("PAOLINO: 1", "🐶", "d", 1180)], X("CRUNCH!", "d", 560, 0.2)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
-    "bagno": [([E("ULTIMO BAGNO: MAI", "🛁", "s", 760), E("NONNA PINA: PRONTA", "👵", "d", 1000)], None),
+    "bagno": [([E("ULTIMO BAGNO: 4 ANNI FA", "🛁", "s", 760), E("NONNA PINA: PRONTA", "👵", "d", 1000)], None),
               ([E("SAPONE: TUTTO", "🫧", "s", 820), E("DIREZIONE: IL PAESE", "🏃", "d", 1060)], X("FUGA!", "d", 560)),
               ([E("CANILE: ALLAGATO", "🌊", "s", 820), E("POMPIERI: 2", "🚒", "d", 1060)], X("SPLASH!", "d", 560)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
     "veterinario": [([E("PESO: 40 KG", "⚖️", "s", 820), E("DIRETTORE GINO: K.O.", "😤", "d", 1060)], None),
@@ -1814,7 +1814,7 @@ def serie(D, rng, st):
         et_, sfx_ = SERIE_GRAFICHE.get(ep, SERIE_GRAFICHE_SOLITE)[min(i, 3)]
         sc["etichette"] = et_; sc["sfx"] = sfx_
         if i == 0: sc["banner"] = f"GIORNO {n} · {titolo}" if n > 1 else "30 GIORNI PER TROVARE CASA"
-        if i == 1 and famiglia_ieri != famiglia: sc["famiglia_prima"] = famiglia_ieri
+        if i == 0 and famiglia_ieri != famiglia: sc["famiglia_prima"] = famiglia_ieri  # la puntata parte dalla famiglia di ieri e sale coi commenti
         frasi.append((voce, sc))
     a, b = (SERIE_OPZIONI[k] for k in opzioni)
     frasi.append((f"Domani: {a[1].lower()} o {b[1].lower()}? Decidi tu nei commenti. Ogni commento lo avvicina a casa.",
