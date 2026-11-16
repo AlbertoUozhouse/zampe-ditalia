@@ -510,6 +510,7 @@ class Gioco:
         lun = datetime.fromisoformat(_sett_amici() + "T00:00:00+01:00")
         self.dati["gara_amici"] = {"settimana": [{"u": u, "p": pt} for u, pt in gara_amici_classifica(self.stato)[:10]], "premi": PREMI_AMICI,
                                    "fine": (lun + timedelta(days=6, hours=20)).isoformat(), "albo": dict(sorted(self.stato.get("gara_amici_albo", {}).items())[-4:])}
+        self.dati["paolino"] = paolino_sito(self.stato)  # 16/11 (Officina): il voto di Paolino sul sito, solo numeri (nessun nome di chi vota)
         self.dati["negozio"] = negozio.leggi(self.stato, self.animali)  # gli accessori pagati e i link del negozio per il sito
         self.sfilata()
         self.presidenti()
@@ -1174,6 +1175,22 @@ def serie_commento(stato, u, testi, ultima):
         a, b = list(parole) + [None] * (2 - len(parole))
         return f"🗳️ Voto per {parole[voto]} contato! Per ora {parole.get(a, '')} {v.get(a, 0)} – {v.get(b, 0)} {parole.get(b, '')}. Domani alle 21 Paolino fa quello che vince. 🏠 FAMIGLIA {fam}%: ogni commento lo avvicina a casa!"
     return f"🏠 Grazie! Ogni commento avvicina Paolino a casa: FAMIGLIA {fam}%. Domani cosa fa? Scrivi {' o '.join(parole.values())} 👇" if parole else None
+
+def paolino_sito(stato):
+    """Per il riquadro «Paolino» del sito (docs/app.js): il giorno, la famiglia, il voto per domani e le puntate uscite."""
+    try: P = json.loads((ROOT / "motore/pubblicati.json").read_text())
+    except (FileNotFoundError, json.JSONDecodeError): P = []
+    ult = [x for x in P if x.get("tipo") == "REELS" and "-serie." in x.get("media", "")]
+    S = stato.get("serie", {})
+    out = {"giorno": 0, "famiglia": min(99, round(S.get("commenti", 0) / 20)), "foto": "media/paolino/inizio.jpg",
+           "puntate": [{"g": i + 1, "link": x.get("permalink")} for i, x in enumerate(ult)]}
+    if not ult: return out
+    try: info = json.loads((ROOT / "docs" / ult[-1]["media"].replace("media/auto/", "contenuti/auto/").replace(".mp4", ".json")).read_text()).get("serie") or {}
+    except (OSError, json.JSONDecodeError): info = {}
+    g = info.get("giorno", len(ult)); v = S.get("voti", {}).get(str(g), {}); voci = info.get("voci", {})
+    out.update(giorno=g, link=ult[-1].get("permalink"), ts=ult[-1].get("ts"), foto=info.get("foto") or out["foto"],
+               voti=[{"k": k, "w": w, "e": (voci.get(k) or ["", w])[0], "n": v.get(k, 0)} for k, w in (info.get("parole") or {}).items()])
+    return out
 
 # ---------- adottati e segni (15/11, Alberto: «inventa cose nuove, cose come la tifoseria») ----------
 # Il segno si ricava dal mese (il segno che copre la maggior parte del mese): niente date precise, niente dati personali.

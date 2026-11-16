@@ -142,7 +142,7 @@ jobs:
           LIMITE2=$(date -u -d '14 days ago' +%Y-%m-%d)  # fotogrammi della stanza e bozze: due settimane
           for f in docs/agenzia/fotogrammi/* docs/media/bozze/*; do [ -e "$f" ] || continue; n=$(basename "$f"); if [ "${n:0:10}" \< "$LIMITE2" ]; then rm -rf "$f"; fi; done
           cp /tmp/copione.json "docs/contenuti/auto/$ID.json"  # il copione resta: serve per rivedere e rimontare un reel già uscito
-          git add docs/media/auto docs/contenuti/auto motore/reel_fatti.json; [ -f motore/citta.json ] && git add motore/citta.json
+          git add docs/media/auto docs/contenuti/auto motore/reel_fatti.json; [ -d docs/media/paolino ] && git add docs/media/paolino; [ -f motore/citta.json ] && git add motore/citta.json
           for d in docs/data/agenzia docs/agenzia; do [ -e "$d" ] && git add "$d"; done
           git commit -q -m "Reel automatico $ID"
           for i in 1 2 3; do git pull -q --rebase --autostash -X theirs && { python3 -I motore/agenzia.py registro; git add docs/data/agenzia/registro.json; git diff --cached --quiet || git commit -q -m "Registro dell'agenzia"; } && git push -q && break; sleep 15; done

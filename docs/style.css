@@ -278,3 +278,32 @@ body:has(#sheet:not([hidden])) .gioca-citta,body:has(#gioco) .gioca-citta{displa
 .obiettivo{margin:6px 0 10px}.barra-ob{height:14px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden;border:1px solid rgba(255,197,92,.5)}
 .barra-ob i{display:block;height:100%;background:linear-gradient(90deg,#FFB347,#FFC55C,#FFE08A);border-radius:999px}
 .zampa-giro .name{background:#FFC55C;color:#2A1606;border-color:#2A1606;font-weight:800} .zampa-giro svg{filter:drop-shadow(0 0 14px rgba(255,197,92,.9))} /* il Giro d'Italia di Zampa (15/11) */
+
+/* Paolino (16/11): la serie a puntate, col voto per domani */
+.tab.paolino-tab{color:var(--gold);animation:pao-pulsa 2.4s ease-in-out infinite}
+.tab.paolino-tab[aria-selected="true"]{animation:none;color:var(--night)}
+@keyframes pao-pulsa{0%,100%{box-shadow:0 0 0 0 rgba(255,197,92,0)}50%{box-shadow:0 0 0 4px rgba(255,197,92,.35)}}
+@media (prefers-reduced-motion:reduce){.tab.paolino-tab{animation:none}}
+.pao-foto{position:relative;margin:-4px 0 10px;border-radius:16px;overflow:hidden;aspect-ratio:2/1;background:var(--panel2)}
+.pao-foto img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.pao-giorno{position:absolute;z-index:1;left:10px;top:10px;background:rgba(6,11,26,.82);color:var(--gold);font:800 13px var(--f-display);letter-spacing:.04em;padding:6px 11px;border-radius:999px;border:1.5px solid rgba(255,197,92,.7)}
+.pao-fam{background:var(--panel2);border-radius:14px;padding:10px 12px;margin:0 0 12px}
+.pao-fam .r{display:flex;justify-content:space-between;color:var(--gold);font:800 15px var(--f-display)}
+.pao-fam .bar,.pao-opz .bar{display:block;height:10px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden;margin:6px 0 4px}
+.pao-fam .bar i{display:block;height:100%;background:linear-gradient(90deg,#ff8a5c,var(--gold));border-radius:999px;transition:width .8s}
+.pao-fam small{color:var(--muted);font-size:12px;font-weight:700}
+.pao-voto{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:6px 0 8px}
+.sheet .pao-fam + .sub{margin-top:0}
+.pao-opz{background:var(--panel2);border-radius:14px;padding:10px 12px;display:flex;flex-direction:column;align-items:flex-start;border:1.5px solid transparent}
+.pao-opz.testa{border-color:var(--gold)}
+.pao-opz .e{font-size:26px;line-height:1}
+.pao-opz b{font:800 17px var(--f-display);margin-top:4px}
+.pao-opz .n{color:var(--muted);font-size:12px;font-weight:800}
+.pao-opz .bar{width:100%}
+.pao-opz .bar i{display:block;height:100%;background:var(--gold);border-radius:999px;transition:width .8s}
+.pao-puntate{display:flex;flex-wrap:wrap;gap:6px}
+.pao-puntate a{background:var(--panel2);color:inherit;text-decoration:none;font-weight:800;font-size:13px;padding:6px 10px;border-radius:999px}
+.pao-puntate a:hover{outline:1.5px solid var(--gold)}
+.pao-foto::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(6,11,26,.92))}
+.pao-foto h2{position:absolute;z-index:1;left:12px;right:12px;bottom:8px;margin:0;font:800 21px/1.1 var(--f-display);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.sheet .pao-h{margin:0 0 2px;font-size:16px}

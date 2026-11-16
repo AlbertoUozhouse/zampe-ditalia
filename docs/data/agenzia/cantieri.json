@@ -7,7 +7,7 @@
   "traccia": "gioco",
   "aperto": "2026-11-14",
   "scadenza": "2026-11-16",
-  "stato": "da costruire",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-15",
@@ -74,7 +74,10 @@
     ],
     "fatto_quando": "Aprendo docs/index.html compare l'animale del giorno con 4 opzioni di comune, la stessa domanda appare a parità di data, una risposta giusta accende il comune nella tabella per regione, la serie di giorni consecutivi resta salvata in localStorage dopo il ricaricamento e non ci sono errori in console."
    }
-  ]
+  ],
+  "aggiornato": "2026-11-16",
+  "nota": "Il voto di Paolino sul sito: nuova linguetta «🐶 Paolino» (pulsa) su zampeditalia.it e link zampeditalia.it/#paolino. Foto vera di Paolino col giorno della serie, il voto per la prossima puntata (BAGNO contro VETERINARIO) coi voti e le percentuali che salgono coi commenti, la barra FAMIGLIA, il bottone Vota su Instagram e l'elenco delle puntate. Solo numeri, nessun nome di chi vota.",
+  "online_dal": "2026-11-16"
  },
  "reel": {
   "idea": "Il Reel del Campanile Vero",

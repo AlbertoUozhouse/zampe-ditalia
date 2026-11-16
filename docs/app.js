@@ -76,6 +76,7 @@ let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 let DERBY = null; // il Derby della settimana: {ora: {a, b, na, nb, fine, partito}, albo: [...]} (motore/derby.py)
 const SEGNI = ["", "♑ Capricorno", "♒ Acquario", "♓ Pesci", "♈ Ariete", "♉ Toro", "♊ Gemelli", "♋ Cancro", "♌ Leone", "♍ Vergine", "♎ Bilancia", "♏ Scorpione", "♐ Sagittario"]; // dal mese di nascita (motore/commenti.py SEGNI)
 let GIRO = null; // il Giro d'Italia di Zampa (15/11): la tappa di oggi e la strada fatta (motore/copione.py giro)
+let PAOLINO = null; // «Paolino ha 30 giorni per trovare casa» (16/11): il giorno, la famiglia e il voto di domani, contato dai commenti (motore/commenti.py)
 let AMICI = null; // la gara degli amici (15/11): chi porta più amici entro domenica vince un accessorio in regalo (motore/commenti.py)
 let SQUADRE = {}; // il tifo (15/11): i colori delle squadre dei tifosi a quattro zampe, da animali.json (motore/squadre.py)
 let NEGOZIO = {}, SFILATA = [], BELLO = null, BOOST = null; // la Sfilata degli accessori e «Il più bello d'Italia» della settimana (motore/commenti.py)
@@ -83,7 +84,7 @@ let _x = 0; // i link di pagamento degli accessori (motore/config.json → anima
 let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: il prossimo, fatti: [...]}; 1.000 = neve, 2.000 = fuochi d'artificio
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; SQUADRE = j.squadre || {}; AMICI = j.gara_amici || null; GIRO = j.giro || null; return j.animali || []; } } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; SQUADRE = j.squadre || {}; AMICI = j.gara_amici || null; PAOLINO = j.paolino || null; GIRO = j.giro || null; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -302,6 +303,26 @@ function presidenza(d) {
   return `<p class="presidenza">${testo}</p>`;
 }
 
+// ---------- Paolino (16/11): la serie a puntate, col voto per domani che sale coi commenti ----------
+const SERIE_E = { bagno: "🛁", veterinario: "🩺", colloquio: "📝", tv: "📺", concorso: "🏆", fuga: "🏃", piazza: "🎄", agility: "🚧", micia: "🐱", alexa: "💘" };
+const giornoRoma = t => new Date(t).toLocaleDateString("it-IT", { timeZone: "Europe/Rome" });
+function paolinoHtml() {
+  const P = PAOLINO || { giorno: 0, famiglia: 0, foto: "media/paolino/inizio.jpg", puntate: [] };
+  const g = P.giorno || 0, fam = Math.max(0, Math.min(99, P.famiglia || 0)), voti = P.voti || [], tot = voti.reduce((a, x) => a + (x.n || 0), 0);
+  const max = Math.max(0, ...voti.map(x => x.n || 0)), quando = P.ts && giornoRoma(P.ts) === giornoRoma(Date.now()) ? "Domani alle 21" : "Stasera alle 21";
+  const foto = `<div class="pao-foto"><img src="${esc(P.foto || "media/paolino/inizio.jpg")}" alt="Paolino, il cane della serie, guarda verso di te"><span class="pao-giorno">${g ? `GIORNO ${g} DI 30` : "LA SERIE STA PER INIZIARE"}</span><h2>Paolino ha 30 giorni per trovare casa</h2></div>`;
+  const intro = `<p class="sub">Vive in un canile, ha le pulci e un alito terribile. Deve trovare una famiglia prima di Natale: <b>ogni sera alle 21 una puntata su Instagram</b>, e la storia la decidete voi.</p>`;
+  const famiglia = `<div class="pao-fam"><div class="r"><b>🏠 FAMIGLIA</b><b>${fam}%</b></div><span class="bar"><i style="width:${Math.max(fam, 2)}%"></i></span><small>Ogni commento sotto la puntata lo avvicina a casa: 20 commenti = +1%.</small></div>`;
+  const voto = voti.length ? `<h3 class="pao-h">🗳️ Prossima puntata: decidi tu</h3><div class="pao-voto">` + voti.map(x => {
+      const pc = tot ? Math.round((x.n || 0) / tot * 100) : 0;
+      return `<div class="pao-opz${tot && x.n === max ? " testa" : ""}"><span class="e">${x.e || SERIE_E[x.k] || "🐾"}</span><b>${esc(x.w)}</b><span class="n">${fmt(x.n || 0)} ${x.n === 1 ? "voto" : "voti"}${tot ? ` · ${pc}%` : ""}</span><span class="bar"><i style="width:${pc}%"></i></span></div>`; }).join("") +
+    `</div><p class="sub">Scrivi <b>${voti.map(x => esc(x.w)).join("</b> o <b>")}</b> nei commenti dell'ultima puntata: un voto a persona. ${quando} Paolino fa quello che vince.</p>`
+    : `<p class="sub">Nella prima puntata Paolino prova a farsi bello per la foto dell'adozione… Poi tocca a voi decidere cosa fa il giorno dopo.</p>`;
+  const link = `<p><a class="btn" href="${esc(P.link || CONFIG.ig)}" target="_blank" rel="noopener">${voti.length ? "🗳️ Vota su Instagram" : "➕ Segui la serie su Instagram"}</a></p>`;
+  const puntate = (P.puntate || []).length ? `<h3>📺 Le puntate</h3><div class="pao-puntate">` + P.puntate.map(x => `<a href="${esc(x.link || CONFIG.ig)}" target="_blank" rel="noopener">Giorno ${x.g}</a>`).join("") + `</div>` : "";
+  return foto + voto + link + famiglia + intro + puntate;
+}
+
 // ---------- pannelli ----------
 function show(v) {
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.v === v));
@@ -357,6 +378,7 @@ function show(v) {
     s.querySelectorAll(".compra").forEach(b => b.onclick = () => { if (!scelto || !NEGOZIO[b.dataset.k]) return;
       location.href = NEGOZIO[b.dataset.k] + (NEGOZIO[b.dataset.k].includes("?") ? "&" : "?") + "client_reference_id=" + codice(scelto.id); });
   }
+  if (v === "paolino") s.innerHTML = paolinoHtml();
   if (v === "regole") {
     s.innerHTML = `<h2>Come si gioca</h2><p class="sub">Si gioca nei commenti dei reel di @zampeditalia. La luce si accende.</p><ul class="rules">
       <li><b>🐶🐱 Il tuo animale · +10</b>Scrivi città e nome, e se è un cane o un gatto: <code>Treviso, Luna, cane</code> oppure <code>Milano, Micio, gatto</code>. La razza è facoltativa. Il primo del comune diventa Fondatore (+20).</li><li><small>Rilievo e coste: AWS Terrain Tiles (SRTM, GMTED, ETOPO1).</small></li>
@@ -471,7 +493,7 @@ function disegnaGiro() {
   L.marker([GIRO.lat, GIRO.lng], { zIndexOffset: 2000, icon: L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet zampa-giro">${svg}<span class="name">🗺️ Zampa · tappa ${GIRO.tappa}</span></div>` }) })
     .bindPopup(`<div class="pop"><h3>🗺️ Il Giro d'Italia di Zampa</h3><div class="k">Tappa ${GIRO.tappa}: ${esc(GIRO.c)}</div><div>Dove va domani? Scrivi la tua città sotto il reel della tappa su Instagram: vince la più commentata!</div></div>`).addTo(giroLayer);
 }
-fetch("data/razze.json").then(r => r.json()).then(D.carica).catch(() => {}).finally(() => loadData().then(refresh).then(disegnaGiro));
+fetch("data/razze.json").then(r => r.json()).then(D.carica).catch(() => {}).finally(() => loadData().then(refresh).then(disegnaGiro).then(() => { if (location.hash === "#paolino") show("paolino"); }));
 // Il motore dei commenti aggiorna i dati ogni 10-15 minuti: la pagina li ricarica da sola.
 if (!ANTEPRIMA) setInterval(() => loadData().then(refresh), 5 * 60e3);
 

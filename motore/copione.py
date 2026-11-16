@@ -1780,6 +1780,19 @@ SERIE_GRAFICHE = {
 SERIE_GRAFICHE_SOLITE = [([E("GIORNO DIFFICILE", "😅", "s", 820)], None), ([E("COLPO DI SCENA", "🎬", "d", 900)], None), ([], X("NOOO!", "d", 560)),
                          ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)]
 
+def foto_sito(ep):
+    """16/11 (Officina, «il voto di Paolino» sul sito): la foto della scelta della puntata, leggera, in docs/media/paolino (reel.yml la salva)."""
+    out = ROOT / f"docs/media/paolino/{ep}.jpg"
+    if not out.exists():
+        try:
+            from PIL import Image
+            im = Image.open(ROOT / f"reel/assets/zampa/{ep}-3.png").convert("RGB"); im.thumbnail((540, 810))
+            out.parent.mkdir(parents=True, exist_ok=True); im.save(out, quality=80, optimize=True, progressive=True)
+        except Exception as e:  # senza la foto il sito mostra quella del primo giorno
+            print(f"foto di Paolino per il sito non fatta ({type(e).__name__})"); return "media/paolino/inizio.jpg"
+    return f"media/paolino/{ep}.jpg"
+
+
 def serie(D, rng, st):
     """Una puntata al giorno. Quale puntata: il giorno 1 è l'inizio; poi vince l'opzione più votata sotto la puntata di ieri."""
     P = carica(ROOT / "motore/pubblicati.json", [])
@@ -1822,7 +1835,8 @@ def serie(D, rng, st):
                    "scelta": {"a": list(a), "b": list(b)}, "etichette": SERIE_GRAFICHE.get(ep, SERIE_GRAFICHE_SOLITE)[3][0],
                    **({"foto": f"{ep}-3.png"} if (ROOT / f"reel/assets/zampa/{ep}-3.png").exists() else {})}))
     st["serie_storia"] = storia + [{"ep": ep, "giorno": n, "opzioni": opzioni, "famiglia": famiglia, "data": ORA.date().isoformat()}]
-    st["serie_info"] = {"giorno": n, "ep": ep, "opzioni": opzioni, "parole": {k: SERIE_OPZIONI[k][2] for k in opzioni}}
+    st["serie_info"] = {"giorno": n, "ep": ep, "opzioni": opzioni, "parole": {k: SERIE_OPZIONI[k][2] for k in opzioni},
+                        "voci": {k: list(SERIE_OPZIONI[k][:2]) for k in opzioni}, "foto": foto_sito(ep)}
     did = (f"Giorno {n} di 30 🐶 " + (f"Paolino vive in un canile, ha le pulci e un alito terribile. Ha 30 giorni per trovare una famiglia prima di Natale. Oggi la foto per l'adozione… è andata così." if n == 1 else
            f"Avete scelto {titolo.lower()}. È andata così…") + "\n\n"
            f"👇 Domani cosa fa Paolino? Scrivi {a[2]} oppure {b[2]} nei commenti: vince il più commentato.\n"
