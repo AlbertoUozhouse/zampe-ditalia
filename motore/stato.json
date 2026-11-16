@@ -6838,6 +6838,7 @@
 "18120505973068810",
 "18120509504060682",
 "18120522386065133",
+"18120536207517143",
 "18120539797939682",
 "18120547439066478",
 "18120548479955658",
@@ -10816,7 +10817,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794832988.2236278
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-15",
@@ -13023,7 +13026,8 @@
 "proiettile2.0": "2026-11-15",
 "karol_belotti10": "2026-11-16",
 "robytommy84": "2026-11-16",
-"guenda_23": "2026-11-16"
+"guenda_23": "2026-11-16",
+"abuonocore857": "2026-11-16"
 },
 "media_letti": {},
 "pezzi": {
@@ -19648,10 +19652,11 @@
 "0e48c46bec5ea01e",
 "2077caf380b07081",
 "f658f1af95282303",
-"ff027ffb3a3a1c13"
+"ff027ffb3a3a1c13",
+"6d6b72fffdd43384"
 ],
 "privati_ora": [
-1794827894.186893
+1794832988.2236528
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19702,7 +19707,7 @@
 "2026-11-13": 1871,
 "2026-11-14": 1888,
 "2026-11-15": 1909,
-"2026-11-16": 1915
+"2026-11-16": 1916
 },
 "gioco_pappa": {
 "2026-W46": {
@@ -20541,6 +20546,10 @@
 [
 "2026-11-16T11:18+00:00",
 1915
+],
+[
+"2026-11-16T12:43+00:00",
+1916
 ]
 ],
 "coppa": {
@@ -22599,13 +22608,18 @@
 [
 "Volturino|FG",
 "Zafferana Etnea|CT"
+],
+[
+"Zocca|MO",
+"Agerola|NA"
 ]
 ],
-"attesa": "Zocca|MO",
+"attesa": null,
 "punti": {
 "Brescia|BS": 1,
 "Napoli|NA": 1,
-"Siracusa|SR": 1
+"Siracusa|SR": 1,
+"Agerola|NA": 1
 },
 "giocatori": {},
 "squadra": {},
@@ -22633,6 +22647,15 @@
 "t": "2026-11-16T11:18+00:00",
 "sorpasso": "Siracusa|SR",
 "su": "Tivoli|RM",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-16T12:43+00:00",
+"sorpasso": "Agerola|NA",
+"su": "Zocca|MO",
 "punti": [
 1,
 0
@@ -22677,12 +22700,23 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Agerola|NA": {
+"u": [
+"abuonocore857"
+],
+"c": [
+"18120536207517143"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
 "karol_belotti10|animale|frodo",
 "robytommy84|animale|fulmine",
-"guenda_23|animale|cuore"
+"guenda_23|animale|cuore",
+"abuonocore857|animale|fluffy"
 ]
 },
 "gara_follower": [
