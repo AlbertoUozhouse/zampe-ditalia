@@ -2239,6 +2239,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  },
+  {
+   "t": "2026-11-16T17:29:37+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 9 follower in totale, 14.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 0.0. Riprovare: apertura «video vero», gancio «Questa è l'Italia di notte. A Monno era tutto spento.», chiusura «Monno si è accesa. Segui Zampe d'Italia per vedere la prossima luce.» (formato prima_luce).",
+   "dati": {
+    "id": "18132435838838589",
+    "file": "2026-11-09-1301-prima_luce",
+    "formato": "prima_luce",
+    "uscita": "2026-11-09T12:09:24+00:00",
+    "follower": 9,
+    "reach_7g": 615,
+    "follower_ogni_1000": 14.6,
+    "mediana_simili": 0.0,
+    "simili": 1,
+    "scelte": {
+     "formato": "prima_luce",
+     "apertura": "video vero",
+     "voce": true,
+     "gancio": "Questa è l'Italia di notte. A Monno era tutto spento.",
+     "chiusura": "Monno si è accesa. Segui Zampe d'Italia per vedere la prossima luce."
+    },
+    "esito": "9 follower in totale, 14.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 0.0.",
+    "riprovare": "Riprovare: apertura «video vero», gancio «Questa è l'Italia di notte. A Monno era tutto spento.», chiusura «Monno si è accesa. Segui Zampe d'Italia per vedere la prossima luce.» (formato prima_luce).",
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [

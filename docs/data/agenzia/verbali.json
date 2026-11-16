@@ -748,5 +748,47 @@
   "esito": "6 follower in totale, 4.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (4) hanno una mediana di 11.2.",
   "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18132435838838589",
+  "file": "2026-11-09-1301-prima_luce",
+  "formato": "prima_luce",
+  "uscita": "2026-11-09T12:09:24+00:00",
+  "follower": 9,
+  "reach_7g": 615,
+  "follower_ogni_1000": 14.6,
+  "mediana_simili": 0.0,
+  "simili": 1,
+  "scelte": {
+   "formato": "prima_luce",
+   "apertura": "video vero",
+   "voce": true,
+   "gancio": "Questa è l'Italia di notte. A Monno era tutto spento.",
+   "chiusura": "Monno si è accesa. Segui Zampe d'Italia per vedere la prossima luce."
+  },
+  "esito": "9 follower in totale, 14.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 0.0.",
+  "riprovare": "Riprovare: apertura «video vero», gancio «Questa è l'Italia di notte. A Monno era tutto spento.», chiusura «Monno si è accesa. Segui Zampe d'Italia per vedere la prossima luce.» (formato prima_luce).",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18117695918103770",
+  "file": "2026-11-09-1803-questa_luce",
+  "formato": "questa_luce",
+  "uscita": "2026-11-09T17:11:52+00:00",
+  "follower": 5,
+  "reach_7g": 362,
+  "follower_ogni_1000": 13.8,
+  "mediana_simili": 6.4,
+  "simili": 1,
+  "scelte": {
+   "formato": "questa_luce",
+   "apertura": "mappa",
+   "voce": true,
+   "gancio": "Questa luce è di Zoe, breton, ad Aiello del Sabato.",
+   "chiusura": "Le prossime luci domani alle 18. Seguici per vedere la tua!"
+  },
+  "esito": "5 follower in totale, 13.8 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 6.4.",
+  "riprovare": "Riprovare: apertura «mappa», gancio «Questa luce è di Zoe, breton, ad Aiello del Sabato.», chiusura «Le prossime luci domani alle 18. Seguici per vedere la tua!» (formato questa_luce).",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]
