@@ -2191,6 +2191,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  },
+  {
+   "t": "2026-11-16T20:51:42+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 5 follower in totale, 13.1 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.",
+   "dati": {
+    "id": "18119085059589798",
+    "file": "2026-11-09-2110-puntata",
+    "formato": "puntata",
+    "uscita": "2026-11-09T20:18:07+00:00",
+    "follower": 5,
+    "reach_7g": 383,
+    "follower_ogni_1000": 13.1,
+    "mediana_simili": null,
+    "simili": 0,
+    "scelte": {
+     "formato": "puntata",
+     "apertura": "mappa",
+     "voce": true,
+     "gancio": "Il tuo animale è già su questa mappa? 2776 luci accese in Italia.",
+     "chiusura": "Scrivi qui sotto e accendi la tua luce!"
+    },
+    "esito": "5 follower in totale, 13.1 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.",
+    "riprovare": null,
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [

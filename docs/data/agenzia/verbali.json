@@ -790,5 +790,26 @@
   "esito": "5 follower in totale, 13.8 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 6.4.",
   "riprovare": "Riprovare: apertura «mappa», gancio «Questa luce è di Zoe, breton, ad Aiello del Sabato.», chiusura «Le prossime luci domani alle 18. Seguici per vedere la tua!» (formato questa_luce).",
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18119085059589798",
+  "file": "2026-11-09-2110-puntata",
+  "formato": "puntata",
+  "uscita": "2026-11-09T20:18:07+00:00",
+  "follower": 5,
+  "reach_7g": 383,
+  "follower_ogni_1000": 13.1,
+  "mediana_simili": null,
+  "simili": 0,
+  "scelte": {
+   "formato": "puntata",
+   "apertura": "mappa",
+   "voce": true,
+   "gancio": "Il tuo animale è già su questa mappa? 2776 luci accese in Italia.",
+   "chiusura": "Scrivi qui sotto e accendi la tua luce!"
+  },
+  "esito": "5 follower in totale, 13.1 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.",
+  "riprovare": null,
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]

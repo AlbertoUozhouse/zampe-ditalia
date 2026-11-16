@@ -469,3 +469,8 @@ Piano nuovo (da oggi): 2 reel al giorno, ognuno una promessa. 13:00 testa a test
 
 - 2026-11-09-1301-prima_luce: 9 follower in totale, 14.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 0.0. Riprovare: apertura «video vero», gancio «Questa è l'Italia di notte. A Monno era tutto spento.», chiusura «Monno si è accesa. Segui Zampe d'Italia per vedere la prossima luce.» (formato prima_luce).
 - 2026-11-09-1803-questa_luce: 5 follower in totale, 13.8 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 6.4. Riprovare: apertura «mappa», gancio «Questa luce è di Zoe, breton, ad Aiello del Sabato.», chiusura «Le prossime luci domani alle 18. Seguici per vedere la tua!» (formato questa_luce).
+
+
+## 2026-11-16 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-09-2110-puntata: 5 follower in totale, 13.1 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.
