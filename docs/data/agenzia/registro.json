@@ -1,14 +1,5 @@
 [
  {
-  "id": "crescita-2026-11-09",
-  "formato": "crescita del giorno",
-  "modalita": "operativa",
-  "inizio": "2026-11-09T10:17:33+00:00",
-  "stato": "fatto",
-  "fine": "2026-11-09T10:17:48+00:00",
-  "scambi": 11
- },
- {
   "id": "innovazione-2026-11-09",
   "formato": "innovazione del giorno",
   "modalita": "operativa",
@@ -537,6 +528,15 @@
   "inizio": "2026-11-16T20:11:18+00:00",
   "stato": "corretto dalla squadra",
   "fine": "2026-11-16T20:17:31+00:00",
+  "scambi": 128
+ },
+ {
+  "id": "2026-11-16-2312-serie",
+  "formato": "serie",
+  "modalita": "operativa",
+  "inizio": "2026-11-16T22:12:24+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-16T22:17:22+00:00",
   "scambi": 128
  }
 ]
