@@ -1683,64 +1683,58 @@ def avvento(D, rng, st):
 # In alto i contatori (GIORNI che mancano, FAMIGLIA in %): la famiglia sale con i commenti veri della serie (ogni commento lo avvicina a casa).
 # Ogni puntata: cosa fa oggi, la sorpresa comica, e la scelta per domani (due strade): decide chi commenta (commenti.py serie_voto).
 SERIE_OPZIONI = {  # chiave: (emoji, come si scrive sulla carta, parola da commentare)
-    "bagno": ("🛁", "IL BAGNO", "BAGNO"), "veterinario": ("🩺", "IL VETERINARIO", "VETERINARIO"), "toelettatura": ("✂️", "LA TOELETTATURA", "TOELETTATURA"),
-    "zampa": ("🐾", "DARE LA ZAMPA", "ZAMPA"), "guinzaglio": ("🦮", "IL GUINZAGLIO", "GUINZAGLIO"), "dieta": ("🥦", "LA DIETA", "DIETA"),
-    "gatta": ("🐱", "LA GATTA DEL CANILE", "GATTA"), "foto": ("📸", "LA FOTO", "FOTO"), "denti": ("🪥", "LAVARE I DENTI", "DENTI"),
-    "cappottino": ("🧥", "IL CAPPOTTINO", "CAPPOTTINO"), "seduto": ("🎂", "IMPARARE «SEDUTO»", "SEDUTO"), "visita": ("🏡", "UNA FAMIGLIA IN VISITA", "FAMIGLIA"),
+    "bagno": ("🛁", "IL BAGNO", "BAGNO"), "veterinario": ("🩺", "IL VETERINARIO", "VETERINARIO"), "colloquio": ("📝", "IL COLLOQUIO", "COLLOQUIO"),
+    "tv": ("📺", "IN TV", "TV"), "concorso": ("🏆", "IL CONCORSO", "CONCORSO"), "fuga": ("🏃", "LA FUGA", "FUGA"),
+    "piazza": ("🎄", "LA FESTA IN PIAZZA", "PIAZZA"), "agility": ("🚧", "L'AGILITY", "AGILITY"), "micia": ("🐱", "MICIA", "MICIA"), "luna": ("💘", "LUNA AL PARCO", "LUNA"),
 }
+# 16/11, Alberto: «quello che mi hai detto di fare non mi piace… fai te la scelta». Puntate nuove con un cast fisso (come la nonna e i dentisti di Ugo):
+# Nonna Pina (volontaria anziana che lo vizia), il direttore Gino (sempre arrabbiato), Micia (la gatta che comanda il canile).
+# Ogni puntata: 3 foto diverse (posto, azione, sorpresa finale che cresce fino all'assurdo) + la foto della scelta.
 SERIE_PUNTATE = {  # titolo, sfondo, muso, sporco dopo, frasi (voce, testo grande, oggetti)
     "inizio": ("30 GIORNI PER TROVARE CASA", "canile", "triste", True, [
-        ("Questo è Paolino. Vive in un canile, ha le pulci e un alito terribile.", "PAOLINO, 4 ANNI, PULCI", [("🪳", 170, 980, 70), ("🦴", 820, 1060, 90)]),
-        ("Ha trenta giorni per trovare una famiglia prima di Natale. Oggi ha provato a farsi bello per la foto…", "LA FOTO PER L'ADOZIONE", [("📸", 780, 720, 120)]),
-        ("e ha mangiato la macchina fotografica.", "HA MANGIATO LA MACCHINA FOTOGRAFICA", [("📸", 470, 1040, 80), ("💥", 600, 900, 110)])]),
+        ("Questo è Paolino. Vive in un canile, ha le pulci e un alito terribile.", "PAOLINO, 4 ANNI, PULCI", []),
+        ("Ha trenta giorni per trovare una famiglia prima di Natale. Oggi ha provato a farsi bello per la foto…", "LA FOTO PER L'ADOZIONE", []),
+        ("e ha mangiato la macchina fotografica.", "HA MANGIATO LA MACCHINA FOTOGRAFICA", [])]),
     "bagno": ("IL BAGNO", "bagno", "lingua", False, [
-        ("Avete scelto il bagno. Paolino non fa il bagno da quattro anni.", "4 ANNI SENZA BAGNO", [("🛁", 760, 1040, 140), ("🧼", 200, 1080, 90)]),
-        ("Sono serviti tre volontari, due ombrelli e una scopa.", "TRE VOLONTARI FRADICI", [("☂️", 150, 760, 110), ("☂️", 820, 760, 110), ("🧹", 860, 1060, 100)]),
-        ("Adesso profuma di lavanda. E ha fatto il bagno anche al direttore.", "ANCHE IL DIRETTORE È BAGNATO", [("💧", 300, 700, 80), ("💧", 760, 680, 80), ("🌸", 520, 640, 90)])]),
+        ("Avete scelto il bagno. Paolino non fa il bagno da quattro anni. Nonna Pina ha preparato la vasca.", "4 ANNI SENZA BAGNO", []),
+        ("Appena ha sentito l'acqua è scappato. Tutto insaponato. Per tutto il paese.", "È SCAPPATO INSAPONATO", []),
+        ("Ha allagato il canile. Sono arrivati i pompieri.", "SONO ARRIVATI I POMPIERI", [])]),
     "veterinario": ("IL VETERINARIO", "veterinario", "triste", True, [
-        ("Avete scelto il veterinario. Paolino ha visto il camice bianco ed è scappato.", "È SCAPPATO DAL CAMICE", [("🩺", 780, 760, 120), ("🥼", 180, 980, 110)]),
-        ("L'hanno ritrovato dentro l'armadio delle garze.", "NELL'ARMADIO DELLE GARZE", [("🗄️", 820, 1000, 130)]),
-        ("Diagnosi: sta benissimo. Solo che ha fatto la pipì sulla bilancia.", "PIPÌ SULLA BILANCIA", [("⚖️", 780, 1050, 120), ("💦", 650, 1100, 70)])]),
-    "toelettatura": ("LA TOELETTATURA", "toelettatura", "occhiolino", False, [
-        ("Avete scelto la toelettatura. Il parrucchiere ha detto: ci penso io.", "«CI PENSO IO»", [("✂️", 780, 760, 120), ("💇", 170, 1000, 100)]),
-        ("Dopo tre ore di lavoro, Paolino sembra un'altra razza.", "SEMBRA UN BARBONCINO", [("🎀", 640, 640, 90), ("✨", 260, 720, 80)]),
-        ("Il parrucchiere invece si è licenziato.", "IL PARRUCCHIERE SI È LICENZIATO", [("📦", 800, 1060, 110)])]),
-    "zampa": ("DARE LA ZAMPA", "canile", "lingua", True, [
-        ("Avete scelto: imparare a dare la zampa. Il volontario dice: zampa!", "«ZAMPA!»", [("🍪", 800, 760, 110)]),
-        ("Paolino ha dato la zampa. Poi l'altra. Poi si è sdraiato sul volontario.", "SDRAIATO SUL VOLONTARIO", [("🧑", 760, 1060, 110)]),
-        ("E si è mangiato tutti i biscotti del premio. Anche quelli di domani.", "ANCHE I BISCOTTI DI DOMANI", [("🍪", 220, 1000, 90), ("🍪", 820, 1020, 90), ("🍪", 520, 1100, 90)])]),
-    "guinzaglio": ("IL GUINZAGLIO", "strada", "lingua", True, [
-        ("Avete scelto il guinzaglio. Prima passeggiata fuori dal canile.", "PRIMA PASSEGGIATA", [("🦮", 800, 760, 120)]),
-        ("Ha visto un piccione. Il volontario no.", "HA VISTO UN PICCIONE", [("🐦", 820, 640, 110), ("💨", 200, 1000, 110)]),
-        ("Hanno fatto due chilometri di corsa. Ha portato lui a spasso il volontario.", "HA PORTATO A SPASSO IL VOLONTARIO", [("🏃", 200, 980, 110)])]),
-    "dieta": ("LA DIETA", "canile", "triste", True, [
-        ("Avete scelto la dieta. Oggi a pranzo: carote.", "A PRANZO: CAROTE", [("🥕", 790, 760, 120), ("🥣", 220, 1060, 110)]),
-        ("Paolino le ha guardate. Ha guardato il volontario. Ha guardato le carote.", "LO SGUARDO", [("👀", 520, 640, 100)]),
-        ("Stasera nella sua cuccia hanno trovato diciassette carote nascoste.", "17 CAROTE NELLA CUCCIA", [("🥕", 200, 1020, 80), ("🥕", 300, 1080, 80), ("🥕", 820, 1040, 80)])]),
-    "gatta": ("LA GATTA DEL CANILE", "canile", "occhiolino", True, [
-        ("Avete scelto la gatta. Nel canile vive Micia, che comanda su tutti.", "MICIA COMANDA", [("🐈", 800, 1000, 140)]),
-        ("Paolino ha provato ad abbaiare. Micia l'ha guardato.", "L'HA GUARDATO", [("😾", 820, 720, 110)]),
-        ("Adesso Micia dorme sopra di lui, e lui non si muove da sei ore.", "NON SI MUOVE DA 6 ORE", [("🐈", 520, 600, 130), ("💤", 820, 700, 90)])]),
-    "foto": ("LA FOTO", "casa", "occhiolino", True, [
-        ("Avete scelto la foto per l'annuncio di adozione. Fotografo pronto.", "SERVIZIO FOTOGRAFICO", [("📸", 800, 760, 120), ("💡", 200, 760, 100)]),
-        ("Duecento scatti.", "200 SCATTI", [("📷", 820, 1040, 100)]),
-        ("In tutti e duecento ha gli occhi chiusi. Tranne uno: lì sta starnutendo.", "OCCHI CHIUSI IN TUTTE", [("🤧", 780, 700, 110)])]),
-    "denti": ("LAVARE I DENTI", "bagno", "lingua", True, [
-        ("Avete scelto i denti. L'alito di Paolino ha fatto svenire un postino.", "HA FATTO SVENIRE UN POSTINO", [("🪥", 800, 760, 120), ("📮", 200, 1040, 100)]),
-        ("Spazzolino pronto, dentifricio alla menta.", "DENTIFRICIO ALLA MENTA", [("🪥", 790, 760, 110)]),
-        ("Si è mangiato tutto il tubetto. Adesso fa le bolle.", "ADESSO FA LE BOLLE", [("🫧", 640, 700, 100), ("🫧", 300, 760, 80), ("🫧", 820, 900, 70)])]),
-    "cappottino": ("IL CAPPOTTINO", "notte", "triste", True, [
-        ("Avete scelto il cappottino di Natale. Fuori fa freddo.", "FUORI FA FREDDO", [("🧥", 800, 760, 120), ("❄️", 200, 700, 90)]),
-        ("Dopo quaranta minuti di lotta…", "40 MINUTI DI LOTTA", [("⏱️", 820, 1040, 100)]),
-        ("ha infilato tre zampe su quattro. La quarta ce l'ha in testa.", "TRE ZAMPE SU QUATTRO", [("🧥", 520, 600, 120), ("🎄", 820, 1040, 100)])]),
-    "seduto": ("IMPARARE «SEDUTO»", "casa", "occhiolino", True, [
-        ("Avete scelto: imparare seduto. Oggi è il compleanno del direttore del canile.", "COMPLEANNO DEL DIRETTORE", [("🎂", 800, 1000, 130), ("🎈", 200, 700, 100)]),
-        ("Il volontario dice: seduto!", "«SEDUTO!»", [("☝️", 800, 720, 100)]),
-        ("Paolino si è seduto. Sulla torta.", "SI È SEDUTO SULLA TORTA", [("🎂", 520, 1060, 130), ("💥", 760, 960, 100)])]),
-    "visita": ("UNA FAMIGLIA IN VISITA", "casa", "triste", True, [
-        ("Avete scelto la visita. Oggi una famiglia viene a conoscere Paolino.", "UNA FAMIGLIA PER PAOLINO?", [("👨‍👩‍👧", 800, 1000, 130)]),
-        ("Paolino li ha visti arrivare dal cancello…", "LI HA VISTI ARRIVARE", [("🚪", 820, 720, 110)]),
-        ("e si è nascosto sotto il furgone. Era timido. Torneranno, forse.", "NASCOSTO SOTTO IL FURGONE", [("🚐", 520, 1060, 140), ("❓", 820, 700, 90)])]),
+        ("Avete scelto il veterinario. Il direttore Gino l'ha portato in braccio. Quaranta chili.", "40 CHILI IN BRACCIO", []),
+        ("Il veterinario ha preso lo stetoscopio… e Paolino se l'è mangiato.", "SI È MANGIATO LO STETOSCOPIO", []),
+        ("Adesso il battito del cuore si sente… dalla pancia.", "IL CUORE SI SENTE DALLA PANCIA", [])]),
+    "colloquio": ("IL COLLOQUIO", "casa", "occhiolino", True, [
+        ("Avete scelto il colloquio. Una famiglia vuole conoscere Paolino. Alle dieci, in ufficio.", "COLLOQUIO ALLE 10:00", []),
+        ("La famiglia è entrata. Paolino si è seduto sulla loro sedia.", "SI È SEDUTO AL POSTO LORO", []),
+        ("Poi si è mangiato il modulo di adozione. Già firmato.", "SI È MANGIATO IL MODULO", [])]),
+    "tv": ("IN TV", "strada", "occhiolino", True, [
+        ("Avete scelto la TV. Il telegiornale fa un servizio sul canile, e Paolino è la star.", "PAOLINO IN TV", []),
+        ("In diretta, davanti a tutta la regione…", "IN DIRETTA", []),
+        ("ha rubato il microfono ed è scappato con la giornalista dietro.", "HA RUBATO IL MICROFONO", [])]),
+    "concorso": ("IL CONCORSO", "casa", "occhiolino", True, [
+        ("Avete scelto il concorso. Nonna Pina l'ha iscritto di nascosto al concorso di bellezza.", "ISCRITTO DI NASCOSTO", []),
+        ("Gli avversari: barboncini profumati e un levriero col fiocco.", "GLI AVVERSARI", []),
+        ("Ha vinto. Premio speciale: il più puzzolente.", "VINCE: IL PIÙ PUZZOLENTE", [])]),
+    "fuga": ("LA FUGA", "strada", "lingua", True, [
+        ("Avete scelto la fuga. Stamattina il box di Paolino era vuoto.", "IL BOX È VUOTO", []),
+        ("Il direttore Gino l'ha cercato in tutto il paese.", "CERCATO OVUNQUE", []),
+        ("L'hanno trovato al bar. Seduto al tavolino, con un cornetto.", "AL BAR CON UN CORNETTO", [])]),
+    "piazza": ("LA FESTA IN PIAZZA", "notte", "occhiolino", True, [
+        ("Avete scelto la piazza. Festa di Natale, e Paolino è l'ospite d'onore.", "OSPITE D'ONORE", []),
+        ("Il sindaco sta per accendere le luci dell'albero…", "IL SINDACO ACCENDE LE LUCI", []),
+        ("Paolino ha tirato una pallina. È caduto l'albero.", "È CADUTO L'ALBERO", [])]),
+    "agility": ("L'AGILITY", "parco", "lingua", True, [
+        ("Avete scelto l'agility. Ostacoli, slalom e tunnel.", "PERCORSO DI AGILITY", []),
+        ("Ostacolo: abbattuto. Slalom: saltato.", "OSTACOLI SUPERATI: 0", []),
+        ("Nel tunnel si è incastrato. Ci sono voluti tre volontari e il direttore Gino.", "INCASTRATO NEL TUNNEL", [])]),
+    "micia": ("MICIA", "canile", "triste", True, [
+        ("Avete scelto Micia. Micia comanda il canile, e oggi ha deciso: la cuccia di Paolino è sua.", "MICIA COMANDA", []),
+        ("Paolino ha provato ad abbaiare. Micia l'ha guardato.", "LO SGUARDO DI MICIA", []),
+        ("Paolino ha dormito fuori. Nonna Pina gli ha portato la coperta.", "HA DORMITO FUORI", [])]),
+    "luna": ("LUNA AL PARCO", "parco", "occhiolino", True, [
+        ("Avete scelto Luna. Al parco Paolino ha visto Luna, e si è innamorato.", "COLPO DI FULMINE", []),
+        ("Si è sistemato il collare, si è pettinato con la zampa…", "SI FA BELLO", []),
+        ("e le ha portato un regalo: un bastone. Gigante.", "UN BASTONE GIGANTE", [])]),
 }
 SERIE_INIZIO = date(2026, 11, 16)
 # 15/11, Alberto: «più grafiche, più scritte dentro il video, sembra troppo piatto». Ai lati di Paolino (mai sopra): etichette con la freccia
@@ -1750,16 +1744,37 @@ X = lambda t, lato="d", y=700, t0=0.4: {"t": t, "lato": lato, "y": y, "t0": t0}
 SERIE_GRAFICHE = {
     "inizio": [([E("PULCI: 37", "🪳", "s", 760), E("ALITO: 10/10", "☠️", "d", 1010)], None),
                ([E("FOTO PER L'ADOZIONE", "📸", "d", 760), E("POSA DA STAR", "⭐", "d", 1000)], None),
-               ([E("MACCHINA FOTOGRAFICA: 0", "📷", "s", 1080), E("PAOLINO: 1", "🐶", "d", 1180)], X("CRUNCH!", "d", 560, 0.2)),
-               ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
-    "bagno": [([E("ULTIMO BAGNO: MAI", "🛁", "s", 760), E("VOGLIA: 0%", "😾", "d", 1000)], None),
-              ([E("VOLONTARI BAGNATI: 3", "💦", "s", 800), E("OMBRELLI: 2", "☂️", "d", 1040)], X("SPLASH!", "d", 560)),
-              ([E("PROFUMO: LAVANDA", "🌸", "s", 800), E("GLOW-UP", "✨", "d", 1040)], None),
-              ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
-    "veterinario": [([E("CAMICE BIANCO", "🥼", "s", 760), E("PAURA: 100%", "😱", "d", 1000)], X("FUGA!", "d", 560)),
-                    ([E("NASCONDIGLIO: ARMADIO", "🗄️", "s", 820), E("TROVATO DOPO: 40 MIN", "⏱️", "d", 1060)], None),
-                    ([E("DIAGNOSI: SANO", "🩺", "s", 820), E("BILANCIA: BAGNATA", "💦", "d", 1060)], X("OPS!", "d", 560)),
-                    ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+               ([E("MACCHINA FOTOGRAFICA: 0", "📷", "s", 1080), E("PAOLINO: 1", "🐶", "d", 1180)], X("CRUNCH!", "d", 560, 0.2)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "bagno": [([E("ULTIMO BAGNO: MAI", "🛁", "s", 760), E("NONNA PINA: PRONTA", "👵", "d", 1000)], None),
+              ([E("SAPONE: TUTTO", "🫧", "s", 820), E("DIREZIONE: IL PAESE", "🏃", "d", 1060)], X("FUGA!", "d", 560)),
+              ([E("CANILE: ALLAGATO", "🌊", "s", 820), E("POMPIERI: 2", "🚒", "d", 1060)], X("SPLASH!", "d", 560)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "veterinario": [([E("PESO: 40 KG", "⚖️", "s", 820), E("DIRETTORE GINO: K.O.", "😤", "d", 1060)], None),
+                    ([E("STETOSCOPIO: 0", "🩺", "s", 820), E("PAOLINO: 1", "🐶", "d", 1060)], X("GULP!", "d", 560)),
+                    ([E("BATTITO: DALLA PANCIA", "💓", "s", 820), E("VETERINARIO: CONFUSO", "😵", "d", 1060)], None), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "colloquio": [([E("CRAVATTA: PRESA", "👔", "s", 820), E("NERVOSISMO: 100%", "😬", "d", 1060)], None),
+                  ([E("POSTO: SBAGLIATO", "🪑", "s", 820), E("FAMIGLIA: IN PIEDI", "🧍", "d", 1060)], X("OPS!", "d", 560)),
+                  ([E("MODULO: MANGIATO", "📝", "s", 820), E("FIRMA: DIGERITA", "✍️", "d", 1060)], X("GNAM!", "d", 560)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "tv": [([E("TELEGIORNALE", "📺", "s", 820), E("STAR: PAOLINO", "⭐", "d", 1060)], None),
+           ([E("IN DIRETTA", "🔴", "s", 820), E("SPETTATORI: TANTISSIMI", "👀", "d", 1060)], None),
+           ([E("MICROFONO: RUBATO", "🎤", "s", 820), E("GIORNALISTA: DI CORSA", "🏃‍♀️", "d", 1060)], X("FUGA!", "d", 560)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "concorso": [([E("ISCRITTO DA: NONNA PINA", "👵", "s", 820), E("PROFUMO: NESSUNO", "🙊", "d", 1060)], None),
+                 ([E("BARBONCINI: 6", "🐩", "s", 820), E("LEVRIERI COL FIOCCO: 1", "🎀", "d", 1060)], None),
+                 ([E("PREMIO: IL PIÙ PUZZOLENTE", "🏆", "s", 820), E("GIURIA: SENZA FIATO", "🤢", "d", 1060)], X("VITTORIA!", "d", 560)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "fuga": [([E("BOX: VUOTO", "🚪", "s", 820), E("CIOTOLA: ROVESCIATA", "🥣", "d", 1060)], X("DOV'È?!", "d", 560)),
+             ([E("CERCATO DA: GINO", "🔦", "s", 820), E("PAESE: TUTTO", "🏘️", "d", 1060)], None),
+             ([E("TROVATO: AL BAR", "☕", "s", 820), E("CORNETTO: ALLA CREMA", "🥐", "d", 1060)], X("TROVATO!", "d", 560)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "piazza": [([E("OSPITE D'ONORE", "🎄", "s", 820), E("CAPPELLINO: DI NATALE", "🎅", "d", 1060)], None),
+               ([E("SINDACO: PRONTO", "🎗️", "s", 820), E("PALLINE: TROPPO BELLE", "🔴", "d", 1060)], None),
+               ([E("ALBERO: GIÙ", "🎄", "s", 820), E("SINDACO: SENZA PAROLE", "😶", "d", 1060)], X("CRASH!", "d", 560)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "agility": [([E("OSTACOLI: 5", "🚧", "s", 820), E("ALLENAMENTO: MAI", "😅", "d", 1060)], None),
+                ([E("OSTACOLI SUPERATI: 0", "❌", "s", 820), E("SLALOM: SALTATO", "🙈", "d", 1060)], X("BOOM!", "d", 560)),
+                ([E("TUNNEL: TROPPO STRETTO", "🌀", "s", 820), E("VOLONTARI: 3 + GINO", "💪", "d", 1060)], X("TIRATE!", "d", 560)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "micia": [([E("CUCCIA: OCCUPATA", "🏠", "s", 820), E("PADRONA: MICIA", "🐱", "d", 1060)], None),
+              ([E("ABBAIO: 1", "🐶", "s", 820), E("SGUARDO DI MICIA: LETALE", "😾", "d", 1060)], X("MIAO.", "d", 560)),
+              ([E("NOTTE: FUORI", "🌙", "s", 820), E("COPERTA: DI NONNA PINA", "👵", "d", 1060)], None), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
+    "luna": [([E("AL PARCO", "🌳", "s", 820), E("CUORE: IMPAZZITO", "💘", "d", 1060)], None),
+             ([E("COLLARE: SISTEMATO", "✨", "s", 820), E("PETTINATURA: CON LA ZAMPA", "🐾", "d", 1060)], None),
+             ([E("REGALO: UN BASTONE", "🪵", "s", 820), E("MISURA: GIGANTE", "📏", "d", 1060)], X("PER TE!", "d", 560)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
 }
 SERIE_GRAFICHE_SOLITE = [([E("GIORNO DIFFICILE", "😅", "s", 820)], None), ([E("COLPO DI SCENA", "🎬", "d", 900)], None), ([], X("NOOO!", "d", 560)),
                          ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)]
@@ -1782,7 +1797,8 @@ def serie(D, rng, st):
         if ep in fatte: ep = next((k for k in SERIE_PUNTATE if k not in fatte and k != "inizio"), ep)
     restanti = [k for k in SERIE_PUNTATE if k not in fatte | {ep, "inizio"}]
     rng.shuffle(restanti)
-    opzioni = (["bagno", "veterinario"] if n == 1 else restanti[:2]) or ["visita", "foto"]
+    opzioni = ["bagno", "veterinario"] if n == 1 else restanti[:2]
+    if len(opzioni) < 2: raise Salta("finite le puntate scritte della serie: scriverne di nuove")
     tot = int(S.get("commenti", 0)); famiglia = min(99, round(tot / 20)); famiglia_ieri = storia[-1].get("famiglia", famiglia) if storia else famiglia
     if not all((ROOT / f"reel/assets/zampa/{ep}-{i}.png").exists() for i in range(4)):  # Paolino vero in ogni scena, o la puntata non esce
         raise Salta(f"mancano le foto di Paolino per la puntata «{ep}» (reel/assets/zampa/{ep}-0…3.png)")
@@ -1905,7 +1921,7 @@ def main():
     try:
         try: titolo, frasi, did = FORMATI[formato](D, rng, st)
         except Salta as e0:
-            if formato != "serie" or "foto" not in str(e0): raise
+            if formato != "serie": raise
             print(f"serie: {e0}; al suo posto il reel delle 21 a rotazione")
             formato = scelta_21(); titolo, frasi, did = FORMATI[formato](D, rng, st)
     except Salta as e:  # niente caso verificato: il reel non esce, e il motivo resta nel registro del test
