@@ -1,23 +1,5 @@
 [
  {
-  "id": "2026-11-08-2110-coppa_apertura",
-  "formato": "coppa_apertura",
-  "modalita": "operativa",
-  "inizio": "2026-11-08T20:10:23+00:00",
-  "stato": "senza direttore",
-  "fine": "2026-11-08T20:14:04+00:00",
-  "scambi": 126
- },
- {
-  "id": "2026-11-09-0012-campanile_rivale",
-  "formato": "campanile_rivale",
-  "modalita": "operativa",
-  "inizio": "2026-11-08T23:12:55+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-08T23:17:21+00:00",
-  "scambi": 130
- },
- {
   "id": "2026-11-09-0041-paese_al_buio",
   "formato": "paese_al_buio",
   "modalita": "operativa",
@@ -538,5 +520,23 @@
   "stato": "senza direttore",
   "fine": "2026-11-15T23:25:47+00:00",
   "scambi": 126
+ },
+ {
+  "id": "crescita-2026-11-16",
+  "formato": "crescita del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-16T10:20:59+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-16T10:21:14+00:00",
+  "scambi": 11
+ },
+ {
+  "id": "innovazione-2026-11-16",
+  "formato": "innovazione del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-16T10:21:14+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-16T10:21:34+00:00",
+  "scambi": 19
  }
 ]

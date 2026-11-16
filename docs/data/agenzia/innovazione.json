@@ -96,5 +96,15 @@
    "come_misurarla": "Dopo 7 giorni guardare i follower ogni 1.000 account raggiunti per i reel di questo formato, confrontandoli con il 13,9 di questa_luce (361 account) e il 2,6 di testa_a_testa. Contare anche quanti commenti nominano un comune diverso da quello del reel."
   },
   "perche": "Ho scelto il Reel del Campanile Vero perché è fattibile subito con video con SÌ esplicito, coordinate e mappa SVG già disponibili, senza dover creare disegni di campanili o audio nuovi come il Campanile Vivo, né dipendere dalla vista 3D presente solo per Livorno come il Campanile in Scena. Inoltre la domanda sul comune vicino dà un invito concreto a commentare e tornare."
+ },
+ {
+  "giorno": "2026-11-16",
+  "realismo": {
+   "idea": "Il Paese in Tasca in 3D a rilievo reale",
+   "come_funziona": "Dalla mappa con rilievo, toccando un comune si apre una vista 3D del suo centro abitato sul terreno vero, costruita con three.js sui dati di altitudine già in uso. Gli animali dei follower del comune compaiono come sagome SVG sul proprio punto di casa, orientati secondo la pendenza reale del terreno. Sotto la vista c'è il pulsante per passare al comune vicino, così il confronto tra paesi confinanti si fa nello spazio reale.",
+   "primo_passo": "In docs/index.html aggiungere un canvas three.js caricato al tocco di un comune. Leggere da motore/config.json le coordinate del comune e ritagliare dai dati di altitudine già usati dalla mappa una griglia attorno a quel punto. Con quella griglia costruire una PlaneGeometry con i vertici spostati in quota. Testare su UN solo comune (es. Mussolente), con un solo animale che ha consenso SÌ, posizionato come sprite SVG sul punto di casa. Solo dopo estendere agli altri comuni e aggiungere il pulsante verso il comune vicino.",
+   "come_misurarla": "Dopo 7 giorni: aperture della vista 3D sul totale dei tocchi sui comuni (obiettivo sopra il 20%), quota di utenti che dalla vista passano a un comune vicino, tempo medio di permanenza e follower ogni 1.000 account raggiunti dai reel che rimandano alla vista 3D, confrontati con il 21,3 del derby Mussolente-Vigodarzere e con la mediana di 8,0 dei reel di mappa."
+  },
+  "perche": "Delle dieci proposte, tutte sulla stessa idea, ho scelto la prima perché è quella che lega il 3D al confronto tra comuni vicini (il meccanismo che ha dato 21,3 follower ogni 1.000 account raggiunti) usando solo dati, three.js e SVG già disponibili. Le altre tracce, gioco e reel, hanno un cantiere aperto e restano fuori."
  }
 ]

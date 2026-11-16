@@ -1386,6 +1386,13 @@
 "comments": 6,
 "shares": 0,
 "follower_dopo": null
+},
+"g14": {
+"views": 749,
+"reach": 480,
+"comments": 6,
+"shares": 0,
+"follower_dopo": null
 }
 },
 "18120198653003536": {
@@ -1441,6 +1448,13 @@
 "g13": {
 "views": 937,
 "reach": 512,
+"comments": 57,
+"shares": 0,
+"follower_dopo": null
+},
+"g14": {
+"views": 951,
+"reach": 516,
 "comments": 57,
 "shares": 0,
 "follower_dopo": null
@@ -1502,6 +1516,13 @@
 "comments": 4,
 "shares": 0,
 "follower_dopo": null
+},
+"g14": {
+"views": 737,
+"reach": 520,
+"comments": 4,
+"shares": 0,
+"follower_dopo": null
 }
 },
 "18136743076730460": {
@@ -1557,6 +1578,13 @@
 "g13": {
 "views": 984,
 "reach": 544,
+"comments": 73,
+"shares": 1,
+"follower_dopo": null
+},
+"g14": {
+"views": 989,
+"reach": 551,
 "comments": 73,
 "shares": 1,
 "follower_dopo": null
@@ -1683,6 +1711,13 @@
 "comments": 61,
 "shares": 2,
 "follower_dopo": null
+},
+"g13": {
+"views": 908,
+"reach": 525,
+"comments": 61,
+"shares": 2,
+"follower_dopo": null
 }
 },
 "17956407522290090": {
@@ -1803,6 +1838,13 @@
 "g11": {
 "views": 488,
 "reach": 317,
+"comments": 20,
+"shares": 0,
+"follower_dopo": null
+},
+"g12": {
+"views": 495,
+"reach": 324,
 "comments": 20,
 "shares": 0,
 "follower_dopo": null
@@ -1929,6 +1971,13 @@
 "comments": 16,
 "shares": 5,
 "follower_dopo": null
+},
+"g11": {
+"views": 547,
+"reach": 397,
+"comments": 16,
+"shares": 5,
+"follower_dopo": null
 }
 },
 "17900534934609464": {
@@ -1987,6 +2036,13 @@
 "comments": 31,
 "shares": 1,
 "follower_dopo": null
+},
+"g11": {
+"views": 786,
+"reach": 456,
+"comments": 31,
+"shares": 1,
+"follower_dopo": null
 }
 },
 "18103807631381966": {
@@ -2042,6 +2098,13 @@
 "g10": {
 "views": 593,
 "reach": 363,
+"comments": 38,
+"shares": 0,
+"follower_dopo": null
+},
+"g11": {
+"views": 597,
+"reach": 365,
 "comments": 38,
 "shares": 0,
 "follower_dopo": null
@@ -2168,6 +2231,13 @@
 "comments": 14,
 "shares": 0,
 "follower_dopo": null
+},
+"g10": {
+"views": 472,
+"reach": 310,
+"comments": 14,
+"shares": 0,
+"follower_dopo": null
 }
 },
 "18113680013579871": {
@@ -2223,6 +2293,13 @@
 "g9": {
 "views": 824,
 "reach": 464,
+"comments": 27,
+"shares": 1,
+"follower_dopo": null
+},
+"g10": {
+"views": 837,
+"reach": 471,
 "comments": 27,
 "shares": 1,
 "follower_dopo": null
@@ -2349,6 +2426,13 @@
 "comments": 39,
 "shares": 4,
 "follower_dopo": null
+},
+"g9": {
+"views": 1038,
+"reach": 717,
+"comments": 39,
+"shares": 4,
+"follower_dopo": null
 }
 },
 "18132615418697172": {
@@ -2404,6 +2488,13 @@
 "g8": {
 "views": 740,
 "reach": 478,
+"comments": 23,
+"shares": 2,
+"follower_dopo": null
+},
+"g9": {
+"views": 749,
+"reach": 483,
 "comments": 23,
 "shares": 2,
 "follower_dopo": null
@@ -2530,6 +2621,13 @@
 "comments": 25,
 "shares": 6,
 "follower_dopo": 0
+},
+"g8": {
+"views": 524,
+"reach": 359,
+"comments": 25,
+"shares": 6,
+"follower_dopo": 0
 }
 },
 "18348954133285067": {
@@ -2585,6 +2683,13 @@
 "g7": {
 "views": 827,
 "reach": 438,
+"comments": 68,
+"shares": 2,
+"follower_dopo": 7
+},
+"g8": {
+"views": 842,
+"reach": 445,
 "comments": 68,
 "shares": 2,
 "follower_dopo": 7
@@ -2697,6 +2802,13 @@
 "comments": 14,
 "shares": 0,
 "follower_dopo": 2
+},
+"g7": {
+"views": 422,
+"reach": 312,
+"comments": 14,
+"shares": 0,
+"follower_dopo": 2
 }
 },
 "18109914779628458": {
@@ -2745,6 +2857,13 @@
 "g6": {
 "views": 1824,
 "reach": 1357,
+"comments": 33,
+"shares": 1,
+"follower_dopo": 6
+},
+"g7": {
+"views": 1834,
+"reach": 1364,
 "comments": 33,
 "shares": 1,
 "follower_dopo": 6
@@ -2843,6 +2962,13 @@
 "comments": 19,
 "shares": 0,
 "follower_dopo": 5
+},
+"g6": {
+"views": 518,
+"reach": 361,
+"comments": 19,
+"shares": 0,
+"follower_dopo": 5
 }
 },
 "18119085059589798": {
@@ -2884,6 +3010,13 @@
 "g5": {
 "views": 582,
 "reach": 373,
+"comments": 29,
+"shares": 3,
+"follower_dopo": 5
+},
+"g6": {
+"views": 587,
+"reach": 378,
 "comments": 29,
 "shares": 3,
 "follower_dopo": 5
@@ -2968,6 +3101,13 @@
 "comments": 13,
 "shares": 0,
 "follower_dopo": 4
+},
+"g5": {
+"views": 468,
+"reach": 343,
+"comments": 13,
+"shares": 0,
+"follower_dopo": 4
 }
 },
 "18110692523633004": {
@@ -3003,6 +3143,13 @@
 "views": 511,
 "reach": 342,
 "comments": 37,
+"shares": 1,
+"follower_dopo": 8
+},
+"g5": {
+"views": 527,
+"reach": 357,
+"comments": 39,
 "shares": 1,
 "follower_dopo": 8
 }
@@ -3072,6 +3219,13 @@
 "comments": 60,
 "shares": 5,
 "follower_dopo": 10
+},
+"g4": {
+"views": 962,
+"reach": 671,
+"comments": 60,
+"shares": 5,
+"follower_dopo": 10
 }
 },
 "18120730690964083": {
@@ -3125,6 +3279,13 @@
 "comments": 15,
 "shares": 0,
 "follower_dopo": 5
+},
+"g3": {
+"views": 561,
+"reach": 389,
+"comments": 15,
+"shares": 0,
+"follower_dopo": 5
 }
 },
 "18109156028217309": {
@@ -3145,6 +3306,13 @@
 "g2": {
 "views": 1305,
 "reach": 980,
+"comments": 27,
+"shares": 2,
+"follower_dopo": 1
+},
+"g3": {
+"views": 1345,
+"reach": 1006,
 "comments": 27,
 "shares": 2,
 "follower_dopo": 1
@@ -3187,6 +3355,13 @@
 "comments": 5,
 "shares": 5,
 "follower_dopo": 3
+},
+"g2": {
+"views": 1372,
+"reach": 1023,
+"comments": 5,
+"shares": 5,
+"follower_dopo": 3
 }
 },
 "18120821099069743": {
@@ -3202,6 +3377,13 @@
 "reach": 303,
 "comments": 12,
 "shares": 0,
+"follower_dopo": 2
+},
+"g2": {
+"views": 542,
+"reach": 349,
+"comments": 20,
+"shares": 1,
 "follower_dopo": 2
 }
 },
@@ -3228,6 +3410,24 @@
 "comments": 6,
 "shares": 0,
 "follower_dopo": null
+}
+},
+"18095890481194766": {
+"g0": {
+"views": 354,
+"reach": 242,
+"comments": 11,
+"shares": 0,
+"follower_dopo": 4
+}
+},
+"18158116726520656": {
+"g0": {
+"views": 291,
+"reach": 188,
+"comments": 22,
+"shares": 0,
+"follower_dopo": 0
 }
 }
 }

@@ -706,5 +706,47 @@
   "esito": "9 follower in totale, 29.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (2) hanno una mediana di 8.0.",
   "riprovare": "Riprovare: apertura «video vero», gancio «Verona contro Vicenza: 45 chilometri, e la sfida è aperta.», chiusura «Sei di Vicenza o di Verona? Commenta città e nome del tuo animale!» (formato testa_a_testa).",
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18113852452890527",
+  "file": "2026-11-08-1807-questa_luce",
+  "formato": "questa_luce",
+  "uscita": "2026-11-08T17:12:54+00:00",
+  "follower": 2,
+  "reach_7g": 312,
+  "follower_ogni_1000": 6.4,
+  "mediana_simili": 10.2,
+  "simili": 4,
+  "scelte": {
+   "formato": "questa_luce",
+   "apertura": "video vero",
+   "voce": true,
+   "gancio": "Questa luce è di Stella, labrador, a Carosino.",
+   "chiusura": "Le prossime luci domani alle 18. Seguici per vedere la tua!"
+  },
+  "esito": "2 follower in totale, 6.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (4) hanno una mediana di 10.2.",
+  "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18109914779628458",
+  "file": "2026-11-08-2110-coppa_apertura",
+  "formato": "coppa_apertura",
+  "uscita": "2026-11-08T20:15:40+00:00",
+  "follower": 6,
+  "reach_7g": 1364,
+  "follower_ogni_1000": 4.4,
+  "mediana_simili": 11.2,
+  "simili": 4,
+  "scelte": {
+   "formato": "coppa_apertura",
+   "apertura": "mappa",
+   "voce": true,
+   "gancio": "Parte la Coppa delle Zampe: 988 comuni d'Italia, sfida a due.",
+   "chiusura": "Domenica alle 21 il trofeo. Gioca per la tua città!"
+  },
+  "esito": "6 follower in totale, 4.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (4) hanno una mediana di 11.2.",
+  "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]

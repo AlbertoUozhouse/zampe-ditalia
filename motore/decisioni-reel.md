@@ -454,3 +454,9 @@ Piano nuovo (da oggi): 2 reel al giorno, ognuno una promessa. 13:00 testa a test
 
 - 2026-11-08-1306-testa_a_testa: 9 follower in totale, 29.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (2) hanno una mediana di 8.0. Riprovare: apertura «video vero», gancio «Verona contro Vicenza: 45 chilometri, e la sfida è aperta.», chiusura «Sei di Vicenza o di Verona? Commenta città e nome del tuo animale!» (formato testa_a_testa).
 - 15–16/11 «Paolino ha 30 giorni per trovare casa» (Alberto, dopo la pagina di Ugo: 3 puntate, 1,4 milioni di views, stessa conversione nostra 0,7%; la differenza sono le views). Una serie a puntate ogni sera alle 21 dal 16/11 al 15/12: Paolino, cane di canile (foto realistiche fatte da Alberto con ChatGPT, riferimento in reel/assets/zampa), deve trovare una famiglia prima di Natale. Contatori GIORNI e FAMIGLIA (sale coi commenti, 20 = 1%), etichette ai lati e scritte da fumetto, mai sopra il cane, a tutto schermo. Il pubblico sceglie nei commenti la puntata di domani tra due (BAGNO o VETERINARIO…): commenti.py conta i voti (uno a persona) e risponde col conteggio. Se mancano le foto della puntata votata esce il reel delle 21 a rotazione. Misura: views e commenti per puntata contro la mediana di 479; obiettivo la prima puntata sopra 2.000.
+
+
+## 2026-11-16 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-08-1807-questa_luce: 2 follower in totale, 6.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (4) hanno una mediana di 10.2. Non riprovare così com'è: è sotto la mediana dei reel simili.
+- 2026-11-08-2110-coppa_apertura: 6 follower in totale, 4.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (4) hanno una mediana di 11.2. Non riprovare così com'è: è sotto la mediana dei reel simili.

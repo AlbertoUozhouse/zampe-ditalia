@@ -41,6 +41,38 @@
      "docs/"
     ],
     "fatto_quando": "Aprendo docs/index.html il quiz mostra l'animale del giorno con 4 comuni, la stessa domanda compare a parità di data, una risposta giusta accende il comune nella tabella e la serie di giorni consecutivi si conserva ricaricando la pagina, senza errori in console."
+   },
+   {
+    "giorno": "2026-11-16",
+    "ruolo": "Giochi nuovi",
+    "passo": "Dal codice di 'Indovina la Zampa' in docs/index.html aggiungi la scelta giornaliera deterministica: prendi l'animale del giorno dalle foto in archivio con consenso esplicito (SÌ), con seed sulla data AAAA-MM-GG, e le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto, calcolati dalle coordinate in motore/config.json. Salva la serie di giorni consecutivi in localStorage. Se entro domani non è completo, esci con la versione ridotta: solo le 4 opzioni del giorno e il conteggio della serie, senza la storia sbloccabile.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Aprendo docs/index.html il quiz mostra l'animale del giorno con 4 comuni, la stessa domanda compare a parità di data, una risposta giusta accende il comune nella tabella e la serie di giorni consecutivi si conserva ricaricando la pagina, senza errori in console."
+   },
+   {
+    "giorno": "2026-11-16",
+    "ruolo": "Meccaniche di gioco",
+    "passo": "Dal codice di 'Indovina la Zampa' in docs/index.html, aggiungi la scelta giornaliera deterministica: prendi l'animale del giorno dalle foto in archivio con consenso esplicito (SÌ), con seed sulla data AAAA-MM-GG; le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto, calcolati dalle coordinate in motore/config.json. Salva la serie di giorni consecutivi in localStorage. Se entro domani non è completo, esci con la versione ridotta: solo le 4 opzioni del giorno e il conteggio della serie, senza la storia sbloccabile.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Aprendo docs/index.html il quiz mostra l'animale del giorno con 4 comuni, la stessa domanda compare a parità di data, una risposta giusta accende il comune nella tabella e la serie di giorni consecutivi si conserva ricaricando la pagina, senza errori in console."
+   },
+   {
+    "giorno": "2026-11-16",
+    "ruolo": "Fattibilità tecnica",
+    "passo": "Dal codice di 'Indovina la Zampa' in docs/index.html aggiungi la scelta giornaliera deterministica: l'animale del giorno si prende dalle foto in archivio con consenso esplicito (SÌ), con seed sulla data AAAA-MM-GG, e le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto, calcolati dalle coordinate in motore/config.json. Se entro domani il calcolo delle distanze non regge, esci con la versione ridotta: 3 comuni scelti a mano per regione e il conteggio della serie, senza la storia sbloccabile.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Aprendo docs/index.html compare l'animale del giorno con 4 opzioni di comune, la stessa domanda appare a parità di data, una risposta giusta accende il comune nella tabella per regione, la serie di giorni consecutivi resta salvata in localStorage dopo il ricaricamento e non ci sono errori in console."
    }
   ]
  },
@@ -53,149 +85,51 @@
   "aperto": "2026-11-15",
   "scadenza": "2026-11-17",
   "stato": "da costruire",
-  "passi_proposti": []
- },
- "realismo": {
-  "idea": "Ombra del Paese: la luce che proietta il vero profilo del comune",
-  "come_funziona": "Quando si accende la luce di un animale, nella vista 3D three.js del suo paese compare un'ombra proiettata dal rilievo reale del comune, orientata con l'ora locale della sera. Ogni comune mostra le proprie colline e coste vere, e l'animale appare come un punto luminoso che si posa sul paese illuminato dal tramonto. Chi cerca la propria città vede il suo paese con la sua ombra e può condividerlo.",
-  "primo_passo": "Nella vista 3D esistente in docs/ aggiungere una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo (che già usa i dati di altitudine). Calcolare l'angolo del sole con la data, l'ora locale e la latitudine/longitudine del comune (libreria SunCalc o formula semplice di azimut ed elevazione). Provare prima su un solo comune pilota, ad esempio Livorno, con shadowMap a 1024 per restare leggeri sul telefono.",
-  "come_misurarla": "Dopo 7 giorni confrontare i follower ogni 1.000 account raggiunti dei reel che rimandano alla vista 3D con la soglia di 13-18 del formato 'questa_luce'. Contare inoltre le visite alla pagina 3D rispetto alla media delle altre pagine del sito e quanti commenti riportano il nome di un comune.",
-  "traccia": "realismo",
-  "aperto": "2026-11-13",
-  "scadenza": "2026-11-15",
-  "stato": "online",
   "passi_proposti": [
    {
-    "giorno": "2026-11-15",
-    "ruolo": "Realismo degli animali",
-    "passo": "Aprire la vista 3D esistente in docs/index.html e aggiungere una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024; calcolare azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno da motore/config.json, e verificare l'ombra solo su questo comune pilota. Se entro domani l'ombra astronomica non regge, uscire con una luce fissa orientata a sera senza calcolo astronomico, così la scadenza del 15 novembre è rispettata.",
+    "giorno": "2026-11-16",
+    "ruolo": "Nuovi stili di reel",
+    "passo": "Scegli dall'archivio un video con consenso SÌ di un follower, leggi in motore/config.json le coordinate del suo comune e monta l'apertura nel formato questa_luce, collegandola alla discesa sulla mappa SVG già esistente. Se entro domani non regge, esci con una versione ridotta: solo il video di apertura e la mappa che si stringe sul comune, senza la domanda finale sul comune vicino.",
     "file": [
-     "docs/index.html",
-     "docs/3d/",
-     "motore/config.json"
+     "reel/",
+     "motore/config.json",
+     "docs/"
     ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
+    "fatto_quando": "Il reel di test è pubblicato entro il 17 novembre, si apre con il video reale del follower, la mappa si stringe sul suo comune e si accende la luce, con la domanda finale per il comune vicino (o senza, nella versione ridotta)."
    },
    {
-    "giorno": "2026-11-15",
-    "ruolo": "Realismo della mappa e del 3D",
-    "passo": "Aggiungi in docs/index.html, nella vista 3D esistente, una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcola azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno da motore/config.json, e verifica l'ombra solo su quel comune pilota; se entro domani non regge, esci con una luce fissa orientata a sera senza calcolo astronomico, così la scadenza del 15 novembre è rispettata.",
+    "giorno": "2026-11-16",
+    "ruolo": "Riprese e montaggio diversi",
+    "passo": "Scegli dall'archivio un video di un follower con consenso esplicito (SÌ), leggi in motore/config.json le coordinate del suo comune e monta il clip come apertura del formato questa_luce, collegandolo alla discesa finale sulla mappa SVG già esistente. Se entro domani il montaggio non regge, esci con una versione ridotta: solo il video del comune, la discesa sulla mappa e la domanda finale sul comune vicino, senza altri effetti.",
     "file": [
-     "docs/index.html",
-     "docs/3d/",
-     "motore/config.json"
+     "reel/",
+     "motore/config.json",
+     "docs/"
     ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
+    "fatto_quando": "Il reel di test è pubblicato entro il 17 novembre, il video del follower compare per primo, la mappa si stringe sul suo comune e si accende la luce, e la domanda finale nomina il comune vicino."
    },
    {
-    "giorno": "2026-11-15",
-    "ruolo": "Esperimenti misurabili",
-    "passo": "Aprire docs/index.html e cercare la vista 3D esistente del rilievo; aggiungere una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcolare azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno da motore/config.json, e verificare l'ombra solo su questo comune pilota. Se entro domani l'ombra astronomica non regge, uscire con una luce fissa orientata a sera senza calcolo astronomico, così la scadenza del 15 novembre è rispettata.",
+    "giorno": "2026-11-16",
+    "ruolo": "Suono e musica nuovi",
+    "passo": "Scegli dall'archivio un video di un follower con consenso SÌ esplicito, leggi in motore/config.json le coordinate del suo comune e monta l'apertura nel formato questa_luce, collegandola alla discesa finale sulla mappa SVG già esistente. Se entro domani il montaggio non è pulito, esci con la versione ridotta: solo video reale di apertura, discesa sulla mappa e domanda finale sul comune vicino, senza effetti extra.",
     "file": [
-     "docs/index.html",
-     "docs/3d/",
-     "motore/config.json"
+     "reel/",
+     "motore/config.json",
+     "docs/"
     ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
-   },
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "Animali in 3D",
-    "passo": "Aprire docs/index.html nella vista 3D e aggiungere una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcolare azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno da motore/config.json, e verificare l'ombra solo su questo comune pilota; se entro domani non regge, uscire con una luce fissa orientata a sera senza calcolo astronomico.",
-    "file": [
-     "docs/index.html",
-     "docs/3d/",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
-   },
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "Paesi e piazze in 3D",
-    "passo": "Aprire docs/index.html e, nella vista 3D esistente, aggiungere una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Calcolare azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno da motore/config.json, e verificare l'ombra solo su questo comune pilota. Se entro domani l'ombra astronomica non regge, uscire con una luce fissa orientata a sera senza calcolo astronomico, così la scadenza del 15 novembre è rispettata.",
-    "file": [
-     "docs/index.html",
-     "docs/3d/",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
-   },
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "Rilievo e terreno veri",
-    "passo": "Il cantiere è in ritardo: 15 passi proposti tutti uguali per lo stesso lavoro e nessun codice ancora scritto. Taglia il lavoro: in docs/index.html aggiungi una sola DirectionalLight three.js con castShadow attivo sulla mesh del rilievo già caricata, shadowMap a 1024, con una direzione fissa orientata a sera per Livorno (coordinate in motore/config.json), senza calcolo astronomico. Se domani resta tempo, sostituisci la direzione con SunCalc.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile, senza errori in console e con caricamento fluido su telefono; il commit è online entro il 15 novembre."
-   },
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "Luci della notte in 3D",
-    "passo": "Il cantiere è già in ritardo (il passo del 14/11 non risulta fatto e la scadenza è il 15). Taglia la versione di domani: in docs/index.html, nella vista 3D esistente, aggiungi una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024, e orientala con una direzione fissa verso sera (senza SunCalc). Usa le coordinate di Livorno da motore/config.json solo per verificare che il rilievo sia quello giusto, poi attiva l'ombra per il solo comune pilota.",
-    "file": [
-     "docs/index.html",
-     "docs/3d/",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser, il rilievo proietta un'ombra visibile orientata verso sera, senza errori in console e con caricamento fluido su telefono; la versione con calcolo astronomico dell'ora locale viene rimandata a un cantiere successivo."
-   },
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "Materiali e texture",
-    "passo": "Aprire la vista 3D esistente in docs/index.html e aggiungere una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024; calcolare azimut ed elevazione del sole con SunCalc (o formula semplice) usando data, ora locale e coordinate di Livorno da motore/config.json, e verificare l'ombra solo su questo comune pilota. Se entro domani l'ombra astronomica non regge, uscire con una luce fissa orientata a sera senza calcolo astronomico, così la scadenza del 15 novembre è rispettata.",
-    "file": [
-     "docs/index.html",
-     "docs/3d/",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
-   },
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "Camere e inquadrature 3D",
-    "passo": "Aprire docs/index.html, individuare la vista 3D esistente del rilievo e aggiungere una DirectionalLight di three.js con castShadow attivo sulla mesh del rilievo già caricata dai dati di altitudine, con shadowMap a 1024. Usare le coordinate di Livorno in motore/config.json per una prima prova; se l'ombra astronomica con SunCalc non regge entro domani, uscire con una luce fissa orientata a sera, così la scadenza del 15 novembre è rispettata.",
-    "file": [
-     "docs/index.html",
-     "docs/3d/",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile orientata con l'ora locale della sera, senza errori in console e con caricamento fluido su telefono."
-   },
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "Animazioni 3D",
-    "passo": "Il cantiere è già in ritardo: i passi proposti per il 14 novembre sono quasi tutti copie dello stesso lavoro e non ne esiste ancora uno sul codice. Taglia l'ambizione: nella vista 3D di docs/index.html aggiungi una sola DirectionalLight con castShadow attivo, shadowMap a 1024 e una direzione fissa orientata a sera sul rilievo di Livorno, senza calcolo astronomico né SunCalc. Se l'ombra non è pulita entro domani, esci con la luce fissa e rimanda il calcolo del sole.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile con direzione fissa a sera, senza errori in console e con caricamento fluido su un telefono."
-   },
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "Scene 3D per i reel",
-    "passo": "Il cantiere è in ritardo: 15 passi proposti tutti uguali per lo stesso lavoro e nessun codice ancora scritto. Taglia il lavoro: in docs/index.html aggiungi una sola DirectionalLight three.js con castShadow attivo sulla mesh del rilievo già caricata, shadowMap a 1024, con una direzione fissa orientata a sera per Livorno (coordinate in motore/config.json), senza calcolo astronomico. Se domani resta tempo, sostituisci la direzione con SunCalc.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile, senza errori in console e con caricamento fluido su telefono; il commit è online entro il 15 novembre."
-   },
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "3D leggero sul telefono",
-    "passo": "Il cantiere è in ritardo: 15 passi proposti tutti uguali e nessun codice scritto. Taglia il lavoro: in docs/index.html aggiungi una sola DirectionalLight three.js con castShadow attivo sulla mesh del rilievo già caricata, shadowMap a 1024, con una direzione fissa orientata a sera per Livorno (coordinate in motore/config.json), senza calcolo astronomico. Se domani resta tempo, sostituisci la direzione fissa con SunCalc.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Aprendo la vista 3D di Livorno nel browser il rilievo proietta un'ombra visibile, senza errori in console e con caricamento fluido su telefono; il commit è online entro il 15 novembre."
+    "fatto_quando": "Il reel di test è pubblicato entro il 17 novembre: si apre con il video reale del follower, la mappa scende sul comune con la luce che si accende e la chiusura chiede il comune vicino, senza errori di montaggio e con le coordinate corrette rispetto a motore/config.json."
    }
-  ],
-  "aggiornato": "2026-11-15",
-  "nota": "La sciarpa della squadra: sulla mappa (disegno), nel paese 3D (sciarpa a righe coi due colori al collo dei tifosi) e nella scheda («⚽ Tifa Juventus», «💛 Adottato»)",
-  "online_dal": "2026-11-15"
+  ]
+ },
+ "realismo": {
+  "idea": "Il Paese in Tasca in 3D a rilievo reale",
+  "come_funziona": "Dalla mappa con rilievo, toccando un comune si apre una vista 3D del suo centro abitato sul terreno vero, costruita con three.js sui dati di altitudine già in uso. Gli animali dei follower del comune compaiono come sagome SVG sul proprio punto di casa, orientati secondo la pendenza reale del terreno. Sotto la vista c'è il pulsante per passare al comune vicino, così il confronto tra paesi confinanti si fa nello spazio reale.",
+  "primo_passo": "In docs/index.html aggiungere un canvas three.js caricato al tocco di un comune. Leggere da motore/config.json le coordinate del comune e ritagliare dai dati di altitudine già usati dalla mappa una griglia attorno a quel punto. Con quella griglia costruire una PlaneGeometry con i vertici spostati in quota. Testare su UN solo comune (es. Mussolente), con un solo animale che ha consenso SÌ, posizionato come sprite SVG sul punto di casa. Solo dopo estendere agli altri comuni e aggiungere il pulsante verso il comune vicino.",
+  "come_misurarla": "Dopo 7 giorni: aperture della vista 3D sul totale dei tocchi sui comuni (obiettivo sopra il 20%), quota di utenti che dalla vista passano a un comune vicino, tempo medio di permanenza e follower ogni 1.000 account raggiunti dai reel che rimandano alla vista 3D, confrontati con il 21,3 del derby Mussolente-Vigodarzere e con la mediana di 8,0 dei reel di mappa.",
+  "traccia": "realismo",
+  "aperto": "2026-11-16",
+  "scadenza": "2026-11-18",
+  "stato": "da costruire",
+  "passi_proposti": []
  }
 }

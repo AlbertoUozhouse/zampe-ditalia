@@ -1,0 +1,143 @@
+{
+ "id": "crescita-2026-11-16",
+ "formato": "crescita del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-16T10:20:59+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-16T10:20:59+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Si parte dai numeri veri degli ultimi 12 reel organici e dai verbali dei 7 giorni."
+  },
+  {
+   "t": "2026-11-16T10:21:03+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa è quello più costante: nei reel del 15 novembre (Mussolente-Vigodarzere) ha raggiunto 544 views, 422 reach e 9 follower (21,3 ogni 1.000 account), mentre il 13 novembre (Barletta-Bisceglie) ha avuto 2.512 views e 2.014 reach ma solo 5 follower (2,5 ogni 1.000). Il formato questa_luce del 12 novembre ha dato 12,9 ogni 1.000 con 389 reach. Il reel 'fondatore' del 15 novembre",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa è quello più costante: nei reel del 15 novembre (Mussolente-Vigodarzere) ha raggiunto 544 views, 422 reach e 9 follower (21,3 ogni 1.000 account), mentre il 13 novembre (Barletta-Bisceglie) ha avuto 2.512 views e 2.014 reach ma solo 5 follower (2,5 ogni 1.000). Il formato questa_luce del 12 novembre ha dato 12,9 ogni 1.000 con 389 reach. Il reel 'fondatore' del 15 novembre (Napoli o Monza?) ha 0 follower su 188 reach, e il 14 novembre (Agliana) ne ha 0 su 361. Nei verbali, la mediana dei simili supera il risultato di tutti i reel con esito 'riprovare: no' (prima_luce 0 vs 16,0; questa_luce 6,4 vs 10,2; coppa_apertura 4,4 vs 11,2), mentre testa_a_testa dell'8 novembre (Verona-Vicenza) ha 29,0 contro una mediana di 8,0. Il dato più forte resta quindi il testa_a_testa con apertura video vero e voce. I follower sono bassi in assoluto (in genere da 0 a 10 per reel) e molti dati di follower dei verbali non sono disponibili, quindi le differenze vanno lette con cautela.",
+    "proposta": "Domani ripetere il formato testa_a_testa con la stessa struttura che ha funzionato l'8 novembre: apertura con video vero, coppia di comuni vicini con chilometri in gancio, chiusura che chiede città e nome dell'animale. Scegliere una coppia di comuni di dimensioni simili e di una regione diversa dalle ultime sfide, per verificare se l'effetto regge fuori dal Veneto/Puglia. Evitare il formato 'fondatore' e le chiusure che non chiedono un'azione concreta.",
+    "gancio": "Due comuni vicini, una sfida: quale vince? Sei di qui? Scrivi città e nome del tuo animale."
+   }
+  },
+  {
+   "t": "2026-11-16T10:21:03+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Sui 14 reel con dati, il formato testa_a_testa con apertura «video vero» è quello più ripetuto (5 volte) e con risultati misti: 5,7 follower ogni 1.000 account il 12/11, 2,5 il 13/11 (88 commenti, 16 condivisioni, il miglior engagement), 0,0 il 14/11, 21,3 il 15/11 e 29,0 ogni 1.000 nel verbale dell'8/11 (9 follower su reach 310 a 7 giorni). Il formato questa_luce ha dato 14,9 e 12,9 ogni 1.000 ne",
+   "dati": {
+    "osservazione": "Sui 14 reel con dati, il formato testa_a_testa con apertura «video vero» è quello più ripetuto (5 volte) e con risultati misti: 5,7 follower ogni 1.000 account il 12/11, 2,5 il 13/11 (88 commenti, 16 condivisioni, il miglior engagement), 0,0 il 14/11, 21,3 il 15/11 e 29,0 ogni 1.000 nel verbale dell'8/11 (9 follower su reach 310 a 7 giorni). Il formato questa_luce ha dato 14,9 e 12,9 ogni 1.000 nelle uscite serali del 11 e 12/11, ma nel verbale dell'8/11 solo 6,4 contro una mediana simile di 10,2. Il formato coppa_apertura del 8/11 è sotto la mediana simile (4,4 contro 11,2) pur avendo il reach più alto (1.364). Le uscite con più follower in assoluto sono i testa_a_testa del 15/11 (9) e dell'8/11 (9). Il dato dei follower è 'null' per quasi tutti i verbali di inizio settimana, quindi i confronti sono su campioni piccolissimi.",
+    "proposta": "Riprovare il testa_a_testa con «video vero» in apertura, mantenendo città reale, numero di chilometri e chiusura che chiede città e nome dell'animale, perché è il formato con più ripetizioni e con il segnale più alto tra i reel con dati completi. Pubblicare il pomeriggio/sera di domani in un orario diverso dalle 13, per verificare se le uscite serali (18-21) hanno un rendimento migliore. Evitare il formato fondatore e la variante 'Napoli o Monza?' del 15/11, con 0 follower e 22 commenti ma reach basso (188).",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-16T10:21:03+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nei 14 reel del periodo i follower per 1.000 account raggiunti variano molto: il picco è 21.3 per il testa_a_testa Mussolente-Vigodarzere (544 views, 422 reach, 9 follower dopo) e 16.5 per 'citta' (354 reach); la «questa_luce» dell'11 novembre ha fatto 14.9. I formati testa_a_testa e questa_luce hanno ottenuto i risultati più stabili, mentre 'fondatore' (0.0 su 188 reach) e 'gara_follower' (5.7) s",
+   "dati": {
+    "osservazione": "Nei 14 reel del periodo i follower per 1.000 account raggiunti variano molto: il picco è 21.3 per il testa_a_testa Mussolente-Vigodarzere (544 views, 422 reach, 9 follower dopo) e 16.5 per 'citta' (354 reach); la «questa_luce» dell'11 novembre ha fatto 14.9. I formati testa_a_testa e questa_luce hanno ottenuto i risultati più stabili, mentre 'fondatore' (0.0 su 188 reach) e 'gara_follower' (5.7) sono andati peggio. Nei verbali, testa_a_testa dell'8 novembre ha 29.0 ogni 1.000 contro una mediana di 8.0, ma 'prima_luce' (0.0 contro mediana 16.0) e 'coppa_apertura' (4.4 contro 11.2) sono sotto la mediana dei loro simili. I reel dei verbali di 5-6 novembre non hanno dato dati sui follower.",
+    "proposta": "Domani proporre un testa_a_testa tra due comuni di dimensioni simili e di distanza ravvicinata (come Mussolente-Vigodarzere), con apertura video vero, voce attiva e chiusura che chiede città e nome dell'animale. Evitare il formato 'fondatore' e le aperture senza gancio concreto, e tenere sotto controllo il dato follower dopo l'uscita per confermare il segnale.",
+    "gancio": "Mussolente contro Vigodarzere: 36 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-16T10:21:03+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Sui 14 reel con dato follower (2026-11-11/15), i follower dopo ogni reel variano da 0 a 10, e il valore per 1.000 account raggiunti va da 0.0 a 21.3 (Mussolente-Vigodarzere, 9 follower su 422 reach). Le sfide testa_a_testa hanno tassi molto diversi: 8.4 e 5.7 nei primi, 0.0 e 21.3 nei successivi. Nei verbali a 7 giorni, il formato testa_a_testa Verona-Vicenza ha 29.0 ogni 1.000 con 9 follower, con",
+   "dati": {
+    "osservazione": "Sui 14 reel con dato follower (2026-11-11/15), i follower dopo ogni reel variano da 0 a 10, e il valore per 1.000 account raggiunti va da 0.0 a 21.3 (Mussolente-Vigodarzere, 9 follower su 422 reach). Le sfide testa_a_testa hanno tassi molto diversi: 8.4 e 5.7 nei primi, 0.0 e 21.3 nei successivi. Nei verbali a 7 giorni, il formato testa_a_testa Verona-Vicenza ha 29.0 ogni 1.000 con 9 follower, contro una mediana di 8.0; il questa_luce di Carosino è sotto la mediana (6.4 contro 10.2), così come la prima_luce (0.0 contro 16.0) e la coppa_apertura (4.4 contro 11.2). Il reel più visto (2512 views, 2014 reach, 16 condivisioni, Barletta-Bisceglie) ha portato solo 5 follower, quindi la visibilità da sola non basta.",
+    "proposta": "Domani riprovare il testa_a_testa con coppia di città del Nord-Est o Veneto, perché è il formato che ha dato il tasso più alto nei verbali (Verona-Vicenza); mantenere la struttura video vero + sfida + chiusura che chiede di commentare città e nome dell'animale. Evitare il questa_luce così com'è, perché è sotto la mediana nei verbali.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-16T10:21:05+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Sui reel con follower_ogni_1000 disponibile, i valori vanno da 0.0 (testa_a_testa del 14/11 e fondatore del 15/11) a 21.3 (testa_a_testa del 15/11, 9 follower su reach 422). Il formato testa_a_testa è il più frequente e i suoi risultati oscillano molto: 8.4, 5.7, 2.5 e 0.0 nei reel del feed, mentre quello del 08/11 nei verbali segna 29.0 con mediana dei simili a 8.0. Il reel 'indovina' del 13/11 h",
+   "dati": {
+    "osservazione": "Sui reel con follower_ogni_1000 disponibile, i valori vanno da 0.0 (testa_a_testa del 14/11 e fondatore del 15/11) a 21.3 (testa_a_testa del 15/11, 9 follower su reach 422). Il formato testa_a_testa è il più frequente e i suoi risultati oscillano molto: 8.4, 5.7, 2.5 e 0.0 nei reel del feed, mentre quello del 08/11 nei verbali segna 29.0 con mediana dei simili a 8.0. Il reel 'indovina' del 13/11 ha 1.023 reach ma solo 5 commenti e 3 follower (2.9 ogni 1.000). Nei verbali, 'coppa_apertura' ha la reach più alta a 7 giorni (1.364) ma 4.4 ogni 1.000, sotto la mediana dei simili (11.2), e 'questa_luce' del 08/11 è a 6.4 contro una mediana di 10.2. Non ci sono dati di follower per 'ospiti_sera' del 05/11, 'incoronazione' e 'amici' (null).",
+    "proposta": "Provare domani un testa_a_testa con apertura 'video vero', lasciando invariato il gancio e la chiusura del 08/11 (verbale con 29.0 ogni 1.000 e 9 follower), perché è il formato con il rendimento più alto documentato e i dati dicono di riprovarlo così com'è. Evitare di riproporre 'indovina' e 'coppa_apertura' nella stessa forma, che hanno reach ma pochi follower.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-16T10:21:06+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Sui reel organici con dati completi, il formato testa_a_testa con apertura 'video vero' ha la mediana più alta di follower ogni 1.000 account tra quelli ripetuti: 8.4 (13/11 13:01), 5.7 (12/11 13:02), 2.5 (13/11 13:07, 2.512 views, 16 condivisioni, ma solo 5 follower), 0.0 (14/11, 537 views, 27 commenti, 0 follower), 21.3 (15/11, 544 views, 9 follower). Il picco assoluto è il 29.0 del reel del 08/",
+   "dati": {
+    "osservazione": "Sui reel organici con dati completi, il formato testa_a_testa con apertura 'video vero' ha la mediana più alta di follower ogni 1.000 account tra quelli ripetuti: 8.4 (13/11 13:01), 5.7 (12/11 13:02), 2.5 (13/11 13:07, 2.512 views, 16 condivisioni, ma solo 5 follower), 0.0 (14/11, 537 views, 27 commenti, 0 follower), 21.3 (15/11, 544 views, 9 follower). Il picco assoluto è il 29.0 del reel del 08/11 (9 follower su reach 310 a 7 giorni), ma è un campione piccolo. Il formato questa_luce ha dato 14.9 e 12.9 nei due reel del 11-12/11, poi 6.4 a 7 giorni. I reel con più commenti non portano necessariamente più follower: il 13/11 13:07 ha 88 commenti e 16 condivisioni ma solo 5 follower. Il reel 'coppa_sorpasso' (12/11) ha 1.345 views ma 1 solo follower (1.0 ogni 1.000). I formati 'fondatore' (0.0) e 'indovina' (2.9, con 5 commenti) sono stati deboli.",
+    "proposta": "Domani ripetere il formato testa_a_testa con apertura 'video vero' e chiusura che chiede città e nome dell'animale, perché è il formato con la mediana più alta e i commenti reggono; mantenere la chiusura che invita a seguire per la sfida successiva, senza invitare alla gara sui follower. Tenere d'occhio il rapporto tra commenti e follower: il formato genera conversazione ma non sempre conversione.",
+    "gancio": "Sei di Castrovillari o di Cavaion Veronese? Tocca alla tua città: sfida aperta, 40 chilometri, e la prima mossa è tua."
+   }
+  },
+  {
+   "t": "2026-11-16T10:21:06+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa con apertura «video vero» rende meglio di tutti gli altri: l'ultimo reel del 2026-11-13 ha raggiunto 2.014 account, 88 commenti e 16 condivisioni, con 5 follower (2,5 ogni 1.000 account). Il reel del 2026-11-15 ha 21,3 follower ogni 1.000 account, ma su soli 422 account raggiunti. Nei verbali a 7 giorni, il testa_a_testa del 2026-11-08 (Verona contro Vicenza) ha 29,0 follo",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa con apertura «video vero» rende meglio di tutti gli altri: l'ultimo reel del 2026-11-13 ha raggiunto 2.014 account, 88 commenti e 16 condivisioni, con 5 follower (2,5 ogni 1.000 account). Il reel del 2026-11-15 ha 21,3 follower ogni 1.000 account, ma su soli 422 account raggiunti. Nei verbali a 7 giorni, il testa_a_testa del 2026-11-08 (Verona contro Vicenza) ha 29,0 follower ogni 1.000 account contro una mediana di 8,0 dei simili. Al contrario, i reel questa_luce e coppa_apertura sono sotto la mediana dei simili (6,4 contro 10,2; 4,4 contro 11,2). Il reel coppa_sorpasso del 2026-11-12 ha raggiunto 1.006 account con 1 solo follower (1,0 ogni 1.000), quindi la portata da sola non porta nuovi follower. Non ci sono dati sui follower per diversi verbali (es. ospiti_sera del 2026-11-05, incoronazione, amici).",
+    "proposta": "Domani ripetere il testa_a_testa con apertura «video vero» e la struttura dei reel che hanno funzionato: due comuni vicini, distanza in chilometri e chiusura che chiede città e nome dell'animale. Confrontare i numeri a 7 giorni con quelli del reel del 2026-11-08 per capire se il risultato si ripete. Evitare di ripetere questa_luce e coppa_apertura così come sono, perché sono sotto la mediana.",
+    "gancio": "Barletta contro Molfetta: 30 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-16T10:21:06+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato più forte è il testa_a_testa Barletta-Bisceglie del 13/11: 2.512 views, 2.014 reach, 88 commenti e 16 condivisioni, ma solo 5 follower (2,5 ogni 1.000 reach): tanto coinvolgimento, poca conversione. Per i reel con dato disponibile, la conversione migliore è 29,0 ogni 1.000 account (testa_a_testa Verona-Vicenza, 8/11, mediana dei simili 8,0) e 21,3 (testa_a_testa Mussolente-Vigodarzere, 15/",
+   "dati": {
+    "osservazione": "Il dato più forte è il testa_a_testa Barletta-Bisceglie del 13/11: 2.512 views, 2.014 reach, 88 commenti e 16 condivisioni, ma solo 5 follower (2,5 ogni 1.000 reach): tanto coinvolgimento, poca conversione. Per i reel con dato disponibile, la conversione migliore è 29,0 ogni 1.000 account (testa_a_testa Verona-Vicenza, 8/11, mediana dei simili 8,0) e 21,3 (testa_a_testa Mussolente-Vigodarzere, 15/11). Le luci sono sotto la mediana dei simili (6,4 contro 10,2; 0,0 contro 16,0), mentre l'ospiti_sera del 7/11 ha 16,0 ogni 1.000. Su 6 reel dei 7 giorni il dato follower manca o è 0, quindi le conclusioni sono fragili.",
+    "proposta": "Domani riprova il testa_a_testa con la coppia di città più vicina e rivalità riconoscibile (es. Verona-Vicenza), con apertura video vero e chiusura che chiede città e nome dell'animale; evita le luci, che non convertono, e tieni le condivisioni come segnale da monitorare.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-16T10:21:09+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa con apertura «video vero» è quello che rende meglio sul dato disponibile: 21,3 follower ogni 1.000 account (15/11, 544 views, 422 reach, 9 follower) e 29,0 nel verbale dell'8/11 (310 reach, 9 follower), entrambi sopra le mediane dei simili (8,0 nel verbale). Il reel testa_a_testa del 12/11 ha il reach più alto tra quelli di questo formato (878) ma solo 5,7 ogni 1.000. I fo",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa con apertura «video vero» è quello che rende meglio sul dato disponibile: 21,3 follower ogni 1.000 account (15/11, 544 views, 422 reach, 9 follower) e 29,0 nel verbale dell'8/11 (310 reach, 9 follower), entrambi sopra le mediane dei simili (8,0 nel verbale). Il reel testa_a_testa del 12/11 ha il reach più alto tra quelli di questo formato (878) ma solo 5,7 ogni 1.000. I formati con più commenti (testa_a_testa 13/11: 88 commenti, 16 condivisioni, 2.014 reach) non hanno però convertito in follower proporzionalmente: 2,5 ogni 1.000. I reel di chiusura «fondatore» e «citta» restano bassi (0,0 e 16,5 su campioni piccoli). Il dato è rilevato solo sui reel con follower attribuiti; diversi verbali riportano follower non disponibili.",
+    "proposta": "Domani ripetere il formato testa_a_testa con apertura «video vero» e voce, scegliendo una coppia di comuni vicini (sotto i 40 km) e chiudendo con la domanda sulla città e il nome dell'animale. Confrontare i follower ogni 1.000 account con la mediana dei simili (8,0) a 7 giorni prima di decidere se continuare.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-16T10:21:14+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Per domani: gancio «Mussolente contro Vigodarzere: 36 chilometri, una sfida. Quale comune vince? Apertura con video vero e voce, chilometri subito nella prima frase.», chiusura «Sei di uno dei due comuni? Scrivi la tua città e il nome del tuo animale.». Dato: 21,3 follower ogni 1.000 account raggiunti (9 follower su 422 reach) per Mussolente-Vigodarzere del 15/11, insieme al 29,0 contro la mediana dei simili di 8,0 per Verona-Vicenza dell'8/11. Campioni piccoli (0-10 follower per reel) e il testa_a_testa oscilla da 0,0 a 21,3, quindi il segnale va verificato.",
+   "dati": {
+    "pubblico": "Chi vive in un comune medio-piccolo del Nord-Est o d'Italia e ha un animale: persone che non ci conoscono e si riconoscono nella rivalità tra due comuni vicini. Se possibile, una coppia di una regione diversa da Veneto e Puglia.",
+    "gancio": "Mussolente contro Vigodarzere: 36 chilometri, una sfida. Quale comune vince? Apertura con video vero e voce, chilometri subito nella prima frase.",
+    "motivo_per_seguire": "Ogni giorno una nuova sfida tra due comuni vicini, con gli animali veri della gente del posto: seguici per vedere se la tua città vince la prossima.",
+    "chiusura": "Sei di uno dei due comuni? Scrivi la tua città e il nome del tuo animale.",
+    "da_riprovare": "Il testa_a_testa con apertura video vero e voce, due comuni vicini di dimensioni simili (sotto i 40 km), chiusura che chiede città e nome dell'animale. Provarlo con una coppia fuori da Veneto e Puglia e in orario serale (18-21) invece che alle 13.",
+    "da_evitare": "Il formato fondatore (0 follower su 188 reach e 0 su 361), le luci (prima_luce, questa_luce, coppa_apertura) così come sono perché sotto la mediana dei simili, e le chiusure senza azione concreta. Non puntare solo sulla portata: coppa_sorpasso e Barletta-Bisceglie hanno molta reach ma pochi follower.",
+    "dato": "21,3 follower ogni 1.000 account raggiunti (9 follower su 422 reach) per Mussolente-Vigodarzere del 15/11, insieme al 29,0 contro la mediana dei simili di 8,0 per Verona-Vicenza dell'8/11. Campioni piccoli (0-10 follower per reel) e il testa_a_testa oscilla da 0,0 a 21,3, quindi il segnale va verificato."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 66379,
+ "fine": "2026-11-16T10:21:14+00:00"
+}

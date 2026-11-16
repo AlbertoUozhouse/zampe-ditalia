@@ -1996,6 +1996,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  },
+  {
+   "t": "2026-11-16T10:20:59+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 2 follower in totale, 6.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (4) hanno una mediana di 10.2. Non riprovare così com'è: è sotto la mediana dei reel simili.",
+   "dati": {
+    "id": "18113852452890527",
+    "file": "2026-11-08-1807-questa_luce",
+    "formato": "questa_luce",
+    "uscita": "2026-11-08T17:12:54+00:00",
+    "follower": 2,
+    "reach_7g": 312,
+    "follower_ogni_1000": 6.4,
+    "mediana_simili": 10.2,
+    "simili": 4,
+    "scelte": {
+     "formato": "questa_luce",
+     "apertura": "video vero",
+     "voce": true,
+     "gancio": "Questa luce è di Stella, labrador, a Carosino.",
+     "chiusura": "Le prossime luci domani alle 18. Seguici per vedere la tua!"
+    },
+    "esito": "2 follower in totale, 6.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (4) hanno una mediana di 10.2.",
+    "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [
