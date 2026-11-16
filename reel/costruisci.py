@@ -184,6 +184,7 @@ INDEX = """<!doctype html>
       /* Reel automatico di Zampe d'Italia: {nota} */
       @font-face {{ font-family: "Bricolage Grotesque"; font-weight: 800; src: url("assets/fonts/bric800.woff2") format("woff2"); }}
       @font-face {{ font-family: "Bricolage Grotesque"; font-weight: 700; src: url("assets/fonts/bric700.woff2") format("woff2"); }}
+      @font-face {{ font-family: "Anton"; font-weight: 400; src: url("assets/fonts/anton.woff2") format("woff2"); }}
       :root {{ --night: #060B1A; --night2: #0E1A3A; --gold: #FFC55C; --warm: #FFB347; --cream: #FFF4DE; --cat: #CFE36B;
         --font-display: "Bricolage Grotesque", "Nunito", sans-serif; --font-body: "Nunito", sans-serif; }}
       * {{ margin: 0; padding: 0; box-sizing: border-box; }}
@@ -317,6 +318,9 @@ def main():
             sc["centro"] = px(*sc["centro"]); sc["italia_c"] = px(12.6, 41.9)
             sc["punti"] = [{**q, **dict(zip(("x", "y"), px(q["lng"], q["lat"])))} for q in sc["punti"]]
             sc["intorno"] = [px(lng, lat) for lng, lat in sc.get("intorno", [])]
+        if tipo == "cartone":  # 16/11 sera: Paolino a cartone, disegnato da Alberto con ChatGPT (reel/assets/paolino)
+            (prog / "assets/img").mkdir(parents=True, exist_ok=True)
+            for a_ in sc.get("attori", []): shutil.copy(ROOT / "reel/assets/paolino" / f"{a_['img']}.png", prog / "assets/img" / f"paolino-{a_['img']}.png")
         if tipo == "zampa30" and sc.get("foto"):  # 15/11 sera: la foto IA di Zampa (reel/assets/zampa, motore/zampa.py)
             sc.pop("muso", None); (prog / "assets/img").mkdir(parents=True, exist_ok=True)
             shutil.copy(ROOT / "reel/assets/zampa" / sc["foto"], prog / "assets/img" / sc["foto"])
@@ -381,7 +385,8 @@ def main():
     inizio_parole = [sum(len(x.split()) for x in frasi[:k]) for k in range(len(frasi))]
     nascoste = ",".join(f"{inizio_parole[k]}-{inizio_parole[k] + len(frasi[k].split()) - 1}" for k, f in enumerate(copione["frasi"]) if f["scena"]["tipo"] in ("padroni", "tifosi", "svela", "tappa", "avvento", "zampa30"))
     subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *([f"--salta={len(frasi[0].split())}"] if copione["frasi"][0]["scena"]["tipo"] in ("gancio", "intruso") else []),
-                    *([f"--nascondi={nascoste}"] if nascoste else []), *gruppi_sottotitoli(frasi)], check=True)
+                    *([f"--nascondi={nascoste}"] if nascoste else []), *(["--cartone"] if copione.get("cartone") else []),
+                    *([f"--colori={','.join(f'{k}:{v}' for k, v in copione['parole_colore'].items())}"] if copione.get("parole_colore") else []), *gruppi_sottotitoli(frasi)], check=True)
     (out / "effetti.json").write_text(json.dumps(effetti))
     subprocess.run([sys.executable, str(ROOT / "reel/musica.py"), str(out / "effetti.json"), str(prog / "assets/audio/musica.wav")], check=True)
 

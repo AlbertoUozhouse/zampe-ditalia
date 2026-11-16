@@ -778,5 +778,169 @@ def zampa30(cid, dur, svg="", giorni=30, famiglia=0, testo="", banner="", sfondo
         if foto: js.append(f'    tl.to("#{cid}-bf", {{ width: "{max(2, famiglia)}%", duration: 0.6, ease: "power2.out" }}, {max(0.8, dur * 0.5):.2f});')
     return _pagina(cid, f"Zampa ha 30 giorni: {testo or banner}", css, corpo, "\n".join(js))
 
-TIPI = {"zampa30": zampa30, "avvento": avvento, "tappa": tappa, "tifosi": tifosi, "padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
+# ---------------------------------------------------------------- Paolino a cartone (16/11 sera)
+# Alberto, dopo il Giorno 1 con le foto: «è un flop, dovevamo farlo in grafica animata come gli altri», col video della puntata di Ugo:
+# cartone 2D piatto con contorni spessi, il numero gigante dei giorni, «AVETE SCELTO» col voto in percentuale, «PAROLE VOSTRE» (il commento
+# di un follower), il personaggio che si muove e sviene, le nuvolette, le etichette storte colorate. Paolino e il cast li ha disegnati Alberto
+# con ChatGPT (reel/assets/paolino, sfondo trasparente); gli sfondi sono disegnati qui, piatti, con lo stesso contorno scuro.
+LINEA = "#2A1A10"
+CARTONE_SFONDI = {
+    "canile": f"""<rect width="1080" height="1300" fill="#34436E"/>{''.join(f'<rect x="{x}" y="0" width="14" height="1300" fill="#2C3960"/>' for x in range(60, 1080, 120))}
+      <rect x="70" y="330" width="300" height="330" rx="10" fill="#1B2547" stroke="{LINEA}" stroke-width="10"/><circle cx="290" cy="420" r="44" fill="#FFE9A8"/><circle cx="312" cy="404" r="40" fill="#1B2547"/>
+      <g fill="#fff"><circle cx="130" cy="390" r="5"/><circle cx="200" cy="560" r="4"/><circle cx="320" cy="600" r="5"/></g>
+      {''.join(f'<rect x="{x}" y="330" width="16" height="330" fill="#6B7896" stroke="{LINEA}" stroke-width="5"/>' for x in (130, 205, 280))}
+      <rect x="760" y="560" width="230" height="120" rx="12" fill="#E2432F" stroke="{LINEA}" stroke-width="9" transform="rotate(4 875 620)"/>
+      <g fill="#fff" transform="rotate(4 875 620)"><ellipse cx="875" cy="640" rx="26" ry="20"/><circle cx="843" cy="610" r="11"/><circle cx="866" cy="596" r="11"/><circle cx="889" cy="596" r="11"/><circle cx="910" cy="610" r="11"/></g>
+      <rect x="0" y="1290" width="1080" height="630" fill="#5A4130"/><rect x="0" y="1285" width="1080" height="16" fill="{LINEA}"/>
+      {''.join(f'<rect x="{x}" y="{y}" width="16" height="10" fill="{c}" transform="rotate({r} {x} {y})"/>' for x, y, c, r in ((120, 1400, "#FFD23F", 20), (310, 1520, "#E2432F", -15), (880, 1450, "#6FE38F", 30), (980, 1700, "#FFD23F", 10), (60, 1760, "#E2432F", 40), (700, 1820, "#6FE38F", -20)))}
+      <ellipse cx="190" cy="1640" rx="120" ry="42" fill="#9AA6B8" stroke="{LINEA}" stroke-width="8"/><ellipse cx="190" cy="1628" rx="88" ry="22" fill="#6B7896"/>""",
+    "bagno": f"""<rect width="1080" height="1300" fill="#A9DDEA"/>{''.join(f'<rect x="{x}" y="0" width="6" height="1300" fill="#8CC6D6"/>' for x in range(0, 1080, 108))}{''.join(f'<rect x="0" y="{y}" width="1080" height="6" fill="#8CC6D6"/>' for y in range(0, 1300, 108))}
+      <rect x="60" y="520" width="240" height="14" rx="7" fill="#9AA6B8" stroke="{LINEA}" stroke-width="6"/><path d="M80 534 h200 v300 l-40 -30 l-40 30 l-40 -30 l-40 30 z" fill="#F28DB2" stroke="{LINEA}" stroke-width="8"/>
+      <rect x="0" y="1290" width="1080" height="630" fill="#EEF4F6"/>{''.join(f'<rect x="{x}" y="{y}" width="120" height="120" fill="#C9D6DD"/>' for y in range(1300, 1920, 240) for x in range(0, 1080, 240))}{''.join(f'<rect x="{x}" y="{y}" width="120" height="120" fill="#C9D6DD"/>' for y in range(1420, 1920, 240) for x in range(120, 1080, 240))}
+      <rect x="0" y="1285" width="1080" height="16" fill="{LINEA}"/>
+      <path d="M930 760 h70 v40 h-40 v60" fill="none" stroke="{LINEA}" stroke-width="30" stroke-linecap="round"/><path d="M930 760 h70 v40 h-40 v60" fill="none" stroke="#C7D0D9" stroke-width="16" stroke-linecap="round"/>
+      <rect x="500" y="1010" width="560" height="300" rx="70" fill="#FBFDFF" stroke="{LINEA}" stroke-width="10"/><rect x="480" y="990" width="600" height="48" rx="24" fill="#FBFDFF" stroke="{LINEA}" stroke-width="10"/>
+      <g fill="#FBFDFF" stroke="{LINEA}" stroke-width="8">{''.join(f'<circle cx="{x}" cy="{y}" r="{r}"/>' for x, y, r in ((560, 975, 48), (640, 950, 62), (740, 965, 54), (840, 945, 66), (950, 970, 52), (1030, 960, 40)))}</g>
+      <g fill="#D4A017" stroke="{LINEA}" stroke-width="7"><path d="M560 1300 l-20 60 h50 l10 -60z"/><path d="M1000 1300 l20 60 h-50 l-10 -60z"/></g>""",
+    "strada": f"""<rect width="1080" height="1300" fill="#8ED3F5"/><circle cx="930" cy="230" r="70" fill="#FFE27A" stroke="{LINEA}" stroke-width="8"/>
+      {''.join(f'<rect x="{x}" y="{y}" width="{w}" height="{1260 - y}" fill="{c}" stroke="{LINEA}" stroke-width="10"/><rect x="{x - 14}" y="{y - 40}" width="{w + 28}" height="44" fill="#7A3B22" stroke="{LINEA}" stroke-width="9"/>'
+               + ''.join(f'<rect x="{x + wx}" y="{y + wy}" width="80" height="110" fill="#2F4F7F" stroke="{LINEA}" stroke-width="7"/><rect x="{x + wx - 30}" y="{y + wy}" width="26" height="110" fill="#4C9A5B" stroke="{LINEA}" stroke-width="5"/><rect x="{x + wx + 84}" y="{y + wy}" width="26" height="110" fill="#4C9A5B" stroke="{LINEA}" stroke-width="5"/>'
+                         for wx in (60, w - 140) for wy in (90, 300))
+               for x, y, w, c in ((0, 420, 360, "#F2B84B"), (360, 360, 360, "#E07A4F"), (720, 460, 360, "#F2A7A0")))}
+      <path d="M380 940 h320 v70 h-320z" fill="#fff" stroke="{LINEA}" stroke-width="8"/>{''.join(f'<rect x="{380 + k * 64}" y="940" width="32" height="70" fill="#E2432F"/>' for k in range(5))}
+      <rect x="420" y="1010" width="240" height="250" fill="#3B2A20" stroke="{LINEA}" stroke-width="8"/><rect x="440" y="1030" width="90" height="120" fill="#8ED3F5" stroke="{LINEA}" stroke-width="5"/>
+      <rect x="0" y="1260" width="1080" height="120" fill="#D8C7A6" stroke="{LINEA}" stroke-width="10"/><rect x="0" y="1380" width="1080" height="540" fill="#585C6C"/>
+      {''.join(f'<rect x="{x}" y="1650" width="110" height="22" rx="8" fill="#F4F4F4"/>' for x in range(30, 1080, 220))}""",
+    "veterinario": f"""<rect width="1080" height="1300" fill="#CDEBDD"/><rect x="0" y="880" width="1080" height="46" fill="#9FD1B9"/>
+      <rect x="640" y="300" width="330" height="140" rx="14" fill="#2E9E6B" stroke="{LINEA}" stroke-width="9"/><path d="M805 330 v80 M765 370 h80" stroke="#fff" stroke-width="26" stroke-linecap="round"/>
+      <rect x="80" y="320" width="260" height="340" rx="10" fill="#FFFDF5" stroke="{LINEA}" stroke-width="9"/><path d="M210 400 v120 M150 460 h120" stroke="#E2432F" stroke-width="36" stroke-linecap="round"/>
+      <rect x="130" y="580" width="160" height="22" rx="11" fill="#9AA6B8"/>
+      <rect x="0" y="1290" width="1080" height="630" fill="#EEF3F4"/>{''.join(f'<rect x="0" y="{y}" width="1080" height="5" fill="#D2DCE0"/>' for y in range(1400, 1920, 110))}<rect x="0" y="1285" width="1080" height="16" fill="{LINEA}"/>
+      <rect x="560" y="1110" width="480" height="44" rx="10" fill="#C7D0D9" stroke="{LINEA}" stroke-width="9"/><rect x="600" y="1150" width="22" height="200" fill="#9AA6B8" stroke="{LINEA}" stroke-width="6"/><rect x="980" y="1150" width="22" height="200" fill="#9AA6B8" stroke="{LINEA}" stroke-width="6"/>""",
+}
+CARTONE_COLORI = {"rosso": ("#E2432F", "#FFFFFF"), "giallo": ("#FFD23F", "#1A1206"), "verde": ("#5BD07A", "#1A1206"), "rosa": ("#F0609E", "#FFFFFF"),
+                  "arancio": ("#F28C28", "#FFFFFF"), "blu": ("#3E8EF0", "#FFFFFF"), "bianco": ("#FFF8EA", "#1A1206")}
+
+
+def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=None, attori=(), etichette=(), nuvole=(), oggetti=(), sfx=None,
+            numero=None, voto=None, commento=None, scelta=None):
+    """Una scena di Paolino a cartone. attori: [{"img": "felice", "x": 540, "y": 1560, "h": 700, "flip": False, "anim": ["entra_sx", "respira"], "t0": 0}]
+    (x e y = centro dei piedi); etichette: [{"t": "PAOLINO", "c": "rosso", "x": 60, "y": 900, "r": -5, "z": 64, "t0": 0.3}];
+    nuvole: [{"t": "VIENI, TESORO!", "x": 80, "y": 640, "w": 440, "coda": "sx", "t0": 0.4}]; oggetti: emoji come attrezzi di scena
+    [{"e": "🧽", "x": 300, "y": 900, "z": 130, "t0": 1}]; numero: {"n": 29, "sotto": "PER TROVARE CASA"}; voto: {"parola": "IL BAGNO", "chiave": "BAGNO", "pc": 64};
+    commento: {"t": "testo del commento", "cuori": 12}; scelta: {"a": [emoji, nome, parola], "b": [...]}."""
+    fp = famiglia if famiglia_prima is None else famiglia_prima
+    css = f"""
+    #root .fondo {{ position: absolute; inset: 0; }}
+    #root .hud {{ position: absolute; left: 34px; top: 190px; display: flex; gap: 12px; z-index: 4; }}
+    #root .hud div {{ min-width: 150px; padding: 6px 16px 4px; border-radius: 12px; background: #15100C; border: 4px solid #F3E6C8; text-align: center; }}
+    #root .hud small {{ display: block; font: 900 20px/1.2 var(--font-body); color: #F3E6C8; letter-spacing: 1px; }}
+    #root .hud b {{ display: block; font: 400 56px/1.05 "Anton", sans-serif; color: #FFD23F; }}
+    #root .hud .f b {{ color: #6FE38F; }}
+    #root .att {{ position: absolute; width: 1000px; display: flex; justify-content: center; align-items: flex-end; }}
+    #root .att img {{ height: 100%; width: auto; filter: drop-shadow(0 14px 0 rgba(0,0,0,.18)); }}
+    #root .att.flip img {{ transform: scaleX(-1); }}
+    #root .om {{ position: absolute; height: 34px; border-radius: 50%; background: rgba(0,0,0,.22); }}
+    #root .et {{ position: absolute; white-space: nowrap; z-index: 3; }}
+    #root .et span {{ display: inline-block; font: 400 var(--z)/1.05 "Anton", sans-serif; letter-spacing: 1px; padding: 8px 22px 10px; border: 6px solid #1A1206; border-radius: 12px; box-shadow: 0 8px 0 rgba(0,0,0,.35); transform: rotate(var(--r)); }}
+    #root .nv {{ position: absolute; z-index: 3; }}
+    #root .nv div {{ position: relative; padding: 18px 26px; background: #FFFFFF; border: 7px solid #1A1206; border-radius: 44px; font: 400 60px/1.08 "Anton", sans-serif; color: #1A1206; text-align: center; box-shadow: 0 8px 0 rgba(0,0,0,.25); }}
+    #root .nv div::after {{ content: ""; position: absolute; bottom: -30px; width: 44px; height: 44px; background: #FFFFFF; border-right: 7px solid #1A1206; border-bottom: 7px solid #1A1206; transform: rotate(45deg) skew(12deg, 12deg); }}
+    #root .nv.sx div::after {{ left: 70px; }} #root .nv.dx div::after {{ right: 70px; }}
+    #root .og {{ position: absolute; line-height: 1; z-index: 2; filter: drop-shadow(0 8px 0 rgba(0,0,0,.25)); }}
+    #root .sfx {{ position: absolute; z-index: 4; }}
+    #root .sfx span {{ display: inline-block; transform: rotate(-8deg); font: 400 110px/1 "Anton", sans-serif; color: #FFD23F; -webkit-text-stroke: 8px #1A1206; paint-order: stroke fill; text-shadow: 0 10px 0 #1A1206; }}
+    #root .num {{ position: absolute; left: 0; right: 0; top: 290px; text-align: center; z-index: 3; }}
+    #root .num b {{ display: block; font: 400 330px/0.95 "Anton", sans-serif; color: #FFC93C; -webkit-text-stroke: 12px #1A1206; paint-order: stroke fill; text-shadow: 0 14px 0 #1A1206; }}
+    #root .num i {{ display: block; font: 400 120px/1 "Anton", sans-serif; font-style: normal; color: #FFFFFF; -webkit-text-stroke: 9px #1A1206; paint-order: stroke fill; text-shadow: 0 9px 0 #1A1206; }}
+    #root .num span {{ display: inline-block; margin-top: 26px; font: 400 64px/1.1 "Anton", sans-serif; color: #1A1206; background: #5BD07A; border: 6px solid #1A1206; border-radius: 12px; padding: 6px 24px 8px; transform: rotate(-3deg); box-shadow: 0 8px 0 rgba(0,0,0,.35); }}
+    #root .vt {{ position: absolute; left: 40px; right: 40px; top: 300px; text-align: center; z-index: 3; }}
+    #root .vt .h {{ font: 400 104px/1 "Anton", sans-serif; color: #FFFFFF; -webkit-text-stroke: 9px #1A1206; paint-order: stroke fill; text-shadow: 0 9px 0 #1A1206; }}
+    #root .vt .p {{ display: inline-block; margin-top: 26px; font: 400 150px/1.05 "Anton", sans-serif; color: #1A1206; background: #FFF1C9; border: 8px solid #1A1206; border-radius: 22px; padding: 6px 46px 14px; transform: rotate(-3deg); box-shadow: 0 12px 0 rgba(0,0,0,.35); }}
+    #root .vt .bar {{ position: relative; margin: 40px auto 0; width: 820px; height: 86px; border-radius: 43px; background: #2C2C38; border: 6px solid #1A1206; overflow: hidden; }}
+    #root .vt .bar i {{ position: absolute; left: 0; top: 0; bottom: 0; background: #5BD07A; }}
+    #root .vt .bar em {{ position: absolute; inset: 0; font: 400 54px/74px "Anton", sans-serif; font-style: normal; color: #FFFFFF; -webkit-text-stroke: 6px #1A1206; paint-order: stroke fill; }}
+    #root .cm {{ position: absolute; left: 50px; right: 50px; top: 760px; z-index: 3; }}
+    #root .cm .q {{ background: #FFFFFF; border: 7px solid #1A1206; border-radius: 26px; padding: 30px 34px 22px; box-shadow: 0 10px 0 rgba(0,0,0,.3); font: 800 50px/1.2 var(--font-body); color: #1A1206; }}
+    #root .cm .q small {{ display: block; margin-top: 10px; font: 900 40px/1 var(--font-body); color: #E2432F; }}
+    #root .cm .tg {{ position: absolute; right: 30px; top: -58px; }}
+    #root .cm .tg span {{ display: inline-block; font: 400 62px/1.05 "Anton", sans-serif; color: #1A1206; background: #FFD23F; border: 6px solid #1A1206; border-radius: 12px; padding: 6px 22px 8px; transform: rotate(4deg); box-shadow: 0 8px 0 rgba(0,0,0,.35); }}
+    #root .sc {{ position: absolute; left: 40px; right: 40px; top: 300px; z-index: 3; text-align: center; }}
+    #root .sc .h {{ font: 400 92px/1.02 "Anton", sans-serif; color: #FFFFFF; -webkit-text-stroke: 8px #1A1206; paint-order: stroke fill; text-shadow: 0 8px 0 #1A1206; }}
+    #root .sc .ops {{ position: relative; margin-top: 34px; height: 300px; }}
+    #root .sc .op {{ position: absolute; top: 0; width: 470px; height: 280px; border-radius: 28px; background: #FFF1C9; border: 8px solid #1A1206; box-shadow: 0 12px 0 rgba(0,0,0,.35); display: flex; flex-direction: column; align-items: center; justify-content: center; }}
+    #root .sc .opa {{ left: 0; }} #root .sc .opb {{ right: 0; }}
+    #root .sc .op .em {{ font-size: 100px; line-height: 1.1; }}
+    #root .sc .op b {{ font: 400 64px/1.05 "Anton", sans-serif; color: #1A1206; }}
+    #root .sc .o {{ position: absolute; left: 50%; top: 110px; width: 130px; margin-left: -65px; font: 400 36px/62px "Anton", sans-serif; color: #1A1206; background: #FFD23F; border: 5px solid #1A1206; border-radius: 31px; }}"""
+    corpo = [f'<svg class="fondo" viewBox="0 0 1080 1920">{CARTONE_SFONDI.get(sfondo, CARTONE_SFONDI["canile"])}</svg>']
+    js = []
+    for i, o in enumerate(oggetti):
+        corpo.append(f'<div class="og" id="{cid}-g{i}" style="left:{o["x"]}px;top:{o["y"]}px;font-size:{o.get("z", 120)}px">{ESC(o["e"])}</div>')
+        js.append(f'    tl.fromTo("#{cid}-g{i}", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.6)" }}, {o.get("t0", 0.3):.2f});')
+        if o.get("vola"): js.append(f'    tl.to("#{cid}-g{i}", {{ keyframes: [{{ y: -24, duration: 0.4 }}, {{ y: 0, duration: 0.4 }}], repeat: {max(1, int(dur / 0.8))} }}, {o.get("t0", 0.3) + 0.35:.2f});')
+    for i, a in enumerate(attori):
+        h = a.get("h", 700); x, y = a.get("x", 540), a.get("y", 1560)
+        corpo.append(f'<div class="om" style="left:{x - h * 0.32:.0f}px;top:{y - 20}px;width:{h * 0.64:.0f}px"></div>')
+        corpo.append(f'<div class="att{" flip" if a.get("flip") else ""}" id="{cid}-a{i}" style="left:{x - 500}px;top:{y - h}px;height:{h}px">'
+                     f'<img src="assets/img/paolino-{a["img"]}.png" alt=""></div>')
+        t0 = a.get("t0", 0.0); an = a.get("anim", ["pop"]); an = [an] if isinstance(an, str) else an; sel = f"#{cid}-a{i}"
+        rip = lambda per: max(1, int((dur - t0) / per))
+        for k in an:
+            if k == "pop": js.append(f'    tl.fromTo("{sel}", {{ scale: 0.6, opacity: 0, transformOrigin: "50% 100%" }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.2)" }}, {t0:.2f});')
+            elif k in ("entra_sx", "entra_dx"): js.append(f'    tl.fromTo("{sel}", {{ x: {-1000 if k == "entra_sx" else 1000} }}, {{ x: 0, duration: 0.5, ease: "back.out(1.3)" }}, {t0:.2f});')
+            elif k == "respira": js.append(f'    tl.to("{sel}", {{ keyframes: [{{ scaleY: 1.035, duration: 0.6 }}, {{ scaleY: 1, duration: 0.6 }}], transformOrigin: "50% 100%", repeat: {rip(1.2)} }}, {t0 + 0.4:.2f});')
+            elif k == "salta": js.append(f'    tl.to("{sel}", {{ keyframes: [{{ y: -70, duration: 0.22, ease: "power2.out" }}, {{ y: 0, duration: 0.22, ease: "power2.in" }}], repeat: {rip(0.6)}, repeatDelay: 0.16 }}, {t0 + 0.3:.2f});')
+            elif k == "trema": js.append(f'    tl.to("{sel}", {{ keyframes: [{{ x: -9, duration: 0.05 }}, {{ x: 9, duration: 0.05 }}, {{ x: -6, duration: 0.05 }}, {{ x: 0, duration: 0.05 }}], repeat: {rip(0.2)} }}, {t0 + 0.2:.2f});')
+            elif k == "scrolla": js.append(f'    tl.to("{sel}", {{ keyframes: [{{ rotation: -7, duration: 0.07 }}, {{ rotation: 7, duration: 0.07 }}, {{ rotation: 0, duration: 0.07 }}], transformOrigin: "50% 90%", repeat: {rip(0.21)} }}, {t0 + 0.2:.2f});')
+            elif k == "corre":  # attraversa la scena da a["da"] (x relativo) ad a["a"], saltellando
+                js.append(f'    tl.fromTo("{sel}", {{ x: {a.get("da", -1100)} }}, {{ x: {a.get("a", 1100)}, duration: {max(0.8, dur - t0):.2f}, ease: "none" }}, {t0:.2f});')
+                js.append(f'    tl.to("{sel}", {{ keyframes: [{{ y: -40, duration: 0.14 }}, {{ y: 0, duration: 0.14 }}], repeat: {rip(0.28)} }}, {t0:.2f});')
+            elif k == "cade":  # sviene: si gira di lato e cade (a["t1"] = quando)
+                t1 = a.get("t1", t0 + 1.0)
+                js.append(f'    tl.to("{sel}", {{ rotation: {a.get("verso", 88)}, y: 60, scale: {a.get("scala", 1)}, duration: 0.45, ease: "bounce.out", transformOrigin: "50% 100%" }}, {t1:.2f});')
+            elif k == "esci_dx": js.append(f'    tl.to("{sel}", {{ x: 1100, duration: 0.45, ease: "power2.in" }}, {a.get("t1", dur - 0.6):.2f});')
+    for i, e in enumerate(etichette):
+        bg, fg = CARTONE_COLORI.get(e.get("c", "giallo"), CARTONE_COLORI["giallo"])
+        corpo.append(f'<div class="et" id="{cid}-e{i}" style="left:{e.get("x", 60)}px;top:{e.get("y", 900)}px;--r:{e.get("r", -4)}deg;--z:{e.get("z", 64)}px">'
+                     f'<span style="background:{bg};color:{fg}">{ESC(e["t"])}</span></div>')
+        js.append(f'    tl.fromTo("#{cid}-e{i}", {{ scale: 0.2, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)" }}, {e.get("t0", 0.3 + i * 0.4):.2f});')
+    for i, n in enumerate(nuvole):
+        corpo.append(f'<div class="nv {n.get("coda", "sx")}" id="{cid}-n{i}" style="left:{n.get("x", 80)}px;top:{n.get("y", 600)}px;width:{n.get("w", 460)}px"><div>{ESC(n["t"])}</div></div>')
+        js.append(f'    tl.fromTo("#{cid}-n{i}", {{ scale: 0, opacity: 0, transformOrigin: "{"20%" if n.get("coda", "sx") == "sx" else "80%"} 100%" }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.4)" }}, {n.get("t0", 0.5):.2f});')
+    if sfx:
+        corpo.append(f'<div class="sfx" id="{cid}-x" style="left:{sfx.get("x", 600)}px;top:{sfx.get("y", 700)}px"><span>{ESC(sfx["t"])}</span></div>')
+        t0 = sfx.get("t0", 0.4)
+        js.append(f'    tl.fromTo("#{cid}-x", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.25, ease: "back.out(3)" }}, {t0:.2f});')
+        js.append(f'    tl.to("#{cid}-x", {{ keyframes: [{{ x: -10, duration: 0.05 }}, {{ x: 10, duration: 0.05 }}, {{ x: 0, duration: 0.05 }}], repeat: 4 }}, {t0 + 0.25:.2f});')
+    if numero:
+        corpo.append(f'<div class="num"><b id="{cid}-nb">{numero["n"]}</b><i id="{cid}-ni">GIORNI</i>' + (f'<span id="{cid}-ns">{ESC(numero["sotto"])}</span>' if numero.get("sotto") else "") + '</div>')
+        js.append(f'    tl.fromTo("#{cid}-nb", {{ scale: 2.4, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.05);')
+        js.append(f'    tl.fromTo("#{cid}-ni", {{ y: 60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0.3);')
+        if numero.get("sotto"): js.append(f'    tl.fromTo("#{cid}-ns", {{ scale: 0.2, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)" }}, 0.6);')
+    if voto:
+        pc = max(0, min(100, int(voto.get("pc", 0))))
+        corpo.append(f'<div class="vt"><div class="h" id="{cid}-vh">AVETE SCELTO</div><div class="p" id="{cid}-vp">{ESC(voto["parola"])}</div>'
+                     f'<div class="bar" id="{cid}-vb"><i id="{cid}-vi" style="width:{pc}%"></i><em>{ESC(voto["chiave"])} {pc}%</em></div></div>')
+        js.append(f'    tl.fromTo("#{cid}-vh", {{ y: -60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0.05);')
+        js.append(f'    tl.fromTo("#{cid}-vp", {{ scale: 0.2, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.4)" }}, 0.35);')
+        js.append(f'    tl.fromTo("#{cid}-vb", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.2 }}, 0.7); tl.fromTo("#{cid}-vi", {{ width: "0%" }}, {{ width: "{pc}%", duration: 0.8, ease: "power2.out" }}, 0.75);')
+    if commento:
+        corpo.append(f'<div class="cm" id="{cid}-c"><div class="q">«{ESC(commento["t"])}»' + (f'<small>♥ {commento["cuori"]}</small>' if commento.get("cuori") else "")
+                     + f'</div><div class="tg" id="{cid}-ct"><span>PAROLE VOSTRE</span></div></div>')
+        js.append(f'    tl.fromTo("#{cid}-c", {{ y: 80, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.8)" }}, {commento.get("t0", 0.4):.2f});')
+        js.append(f'    tl.fromTo("#{cid}-ct", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(3)" }}, {commento.get("t0", 0.4) + 0.4:.2f});')
+    if scelta:
+        ops = "".join(f'<div class="op op{k}" id="{cid}-op{k}"><span class="em">{ESC(v[0])}</span><b>{ESC(v[1])}</b></div>' for k, v in (("a", scelta["a"]), ("b", scelta["b"])))
+        corpo.append(f'<div class="sc"><div class="h" id="{cid}-sh">DOMANI COSA FA PAOLINO?</div><div class="ops">{ops}<div class="o">OPPURE</div></div></div>')
+        js.append(f'    tl.fromTo("#{cid}-sh", {{ y: -60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0.05);')
+        js.append(f'    tl.fromTo("#{cid}-opa", {{ x: -320, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.3);')
+        js.append(f'    tl.fromTo("#{cid}-opb", {{ x: 320, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.5);')
+        js.append(f'    tl.to(["#{cid}-opa", "#{cid}-opb"], {{ keyframes: [{{ scale: 1.05, duration: 0.3 }}, {{ scale: 1, duration: 0.3 }}], repeat: {max(1, int(dur / 1.2))}, stagger: 0.3 }}, 1.0);')
+    corpo.append(f'<div class="hud"><div><small>GIORNI</small><b>{giorni}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>')
+    if famiglia_prima is not None and famiglia_prima != famiglia:
+        js.append(f'    tl.set("#{cid}-f", {{ textContent: "{famiglia}%" }}, {max(0.8, dur * 0.5):.2f}); tl.to("#{cid}-f", {{ keyframes: [{{ scale: 1.4, duration: 0.15 }}, {{ scale: 1, duration: 0.2 }}] }}, {max(0.8, dur * 0.5):.2f});')
+    return _pagina(cid, "Paolino a cartone", css, "\n    ".join(corpo), "\n".join(js))
+
+TIPI = {"cartone": cartone, "zampa30": zampa30, "avvento": avvento, "tappa": tappa, "tifosi": tifosi, "padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
         "numero": numero, "classifica": classifica, "vetrina": vetrina, "chiusura": chiusura}

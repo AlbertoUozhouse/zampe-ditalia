@@ -10,14 +10,21 @@ from pathlib import Path
 ORO = {"cani", "cane", "fondatore", "spenta", "accende", "nome", "tifo", "città", "commenti", "vince", "luce", "notte"}
 VERDE = {"gatti", "gatto", "tetti"}
 
+CARTONE_CSS = """
+    #root .g { top: 1340px; font: 400 100px/1.04 "Anton", sans-serif; letter-spacing: 1px; color: #FFFFFF; -webkit-text-stroke: 10px #120C08; paint-order: stroke fill; text-shadow: 0 8px 0 #120C08; }
+    #root .or { color: #FFD23F; } #root .ro { color: #FF4B3E; } #root .bl { color: #4FC3F7; } #root .ve { color: #6FE38F; }"""
+
 def main():
     parole_json, progetto, durata, *frasi = sys.argv[1:]
     salta = 0  # «--salta=N»: le prime N parole non hanno sottotitoli (il gancio è già scritto grande nella prima scena)
+    cartone, colori = False, {}
     nascondi = []  # «--nascondi=12-20,31-36»: parole senza sottotitoli (15/11: la scena dei padroni ha i suoi biglietti proprio dove stanno i sottotitoli)
     while frasi and frasi[0].startswith("--"):
         x = frasi.pop(0)
         if x.startswith("--salta="): salta = int(x[8:])
         elif x.startswith("--nascondi="): nascondi += [tuple(map(int, r.split("-"))) for r in x[11:].split(",") if r]
+        elif x == "--cartone": cartone = True  # 16/11, Paolino a cartone: le scritte come nei cartoni (Anton, contorno nero), più in basso
+        elif x.startswith("--colori="): colori.update(dict(r.split(":", 1) for r in x[9:].split(",") if ":" in r))  # parola:colore (or, ve, ro, bl)
     P = json.loads(Path(parole_json).read_text())["parole"]
     durata = float(durata)
     gruppi, i = [], 0
@@ -39,7 +46,7 @@ def main():
         spans = []
         for wi, w in enumerate(ws):
             k = w["p"].lower().strip(".,:;!?…")
-            cls = " or" if k in ORO else " ve" if k in VERDE else ""
+            cls = f" {colori[k]}" if k in colori else "" if cartone else " or" if k in ORO else " ve" if k in VERDE else ""
             spans.append(f'<span class="w{cls}" id="st-{gi}-{wi}">{w["p"].upper()}</span>')
             js.append(f'tl.fromTo("#st-{gi}-{wi}", {{ scale: 0.6, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.14, ease: "back.out(3)" }}, {max(s, w["s"] - 0.04):.3f});')
         html.append(f'<div class="g" id="st-g{gi}">{" ".join(spans)}</div>')
@@ -57,7 +64,7 @@ def main():
       font: 800 92px/1.02 "Bricolage Grotesque", sans-serif; letter-spacing: -1px; color: #FFF4DE; overflow: visible;
       text-shadow: 0 6px 0 #060B1A, 0 0 30px rgba(6, 11, 26, .9), 0 0 6px #060B1A; }}
     #root .w {{ display: inline-block; }}
-    #root .or {{ color: #FFC55C; }} #root .ve {{ color: #CFE36B; }}
+    #root .or {{ color: #FFC55C; }} #root .ve {{ color: #CFE36B; }}{CARTONE_CSS if cartone else ""}
   </style>
   <div id="root" data-composition-id="sottotitoli" data-width="1080" data-height="1920">
     {righe_html}

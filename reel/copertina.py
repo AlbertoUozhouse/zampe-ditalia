@@ -50,6 +50,41 @@ PAGINA_LUCE = """<!doctype html><html lang="it"><head><meta charset="utf-8">
 .marca{{position:absolute;bottom:330px;left:0;right:0;text-align:center;font:800 44px 'Bricolage Grotesque';color:#FFC55C}}
 </style></head><body><div class="s"><div class="box"><div class="sopra">{sopra}</div><div class="grande">{grande}</div></div><div class="sotto">{sotto}</div><div class="marca">Zampe d'Italia</div></div></body></html>"""
 
+PAGINA_PAOLINO = """<!doctype html><html lang="it"><head><meta charset="utf-8"><style>
+@font-face{{font-family:Anton;src:url('{anton}') format('woff2')}}
+*{{box-sizing:border-box;margin:0}} html,body{{width:1080px;height:1920px;overflow:hidden;background:#34436E}}
+.s{{position:relative;width:1080px;height:1920px;overflow:hidden}} svg{{position:absolute;inset:0}}
+.g{{position:absolute;left:0;right:0;top:220px;text-align:center;font:400 340px/0.92 Anton;color:#FFC93C;-webkit-text-stroke:14px #1A1206;paint-order:stroke fill;text-shadow:0 16px 0 #1A1206}}
+.g i{{display:block;font-style:normal;font-size:96px;color:#fff;-webkit-text-stroke:9px #1A1206;text-shadow:0 9px 0 #1A1206;margin-top:6px}}
+.t{{position:absolute;left:0;right:0;top:720px;text-align:center}}
+.t span{{display:inline-block;font:400 120px/1.05 Anton;color:#1A1206;background:#FFF1C9;border:9px solid #1A1206;border-radius:24px;padding:4px 40px 12px;transform:rotate(-3deg);box-shadow:0 12px 0 rgba(0,0,0,.35)}}
+.n{{position:absolute;left:40px;top:1010px}} .n span{{display:inline-block;font:400 76px/1.05 Anton;color:#fff;background:#E2432F;border:7px solid #1A1206;border-radius:14px;padding:4px 24px 8px;transform:rotate(-6deg);box-shadow:0 9px 0 rgba(0,0,0,.35)}}
+.p{{position:absolute;left:0;right:0;top:940px;height:760px;display:flex;justify-content:center;align-items:flex-end}} .p img{{height:100%;filter:drop-shadow(0 16px 0 rgba(0,0,0,.2))}}
+.f{{position:absolute;right:30px;top:1230px}} .f span{{display:inline-block;font:400 60px/1.05 Anton;color:#1A1206;background:#5BD07A;border:7px solid #1A1206;border-radius:14px;padding:4px 20px 8px;transform:rotate(5deg);box-shadow:0 9px 0 rgba(0,0,0,.35)}}
+</style></head><body><div class="s"><svg viewBox="0 0 1080 1920">{sfondo}</svg>
+<div class="p"><img src="{posa}"></div><div class="g">{giorno}<i>GIORNO {giorno} DI 30</i></div><div class="t"><span>{titolo}</span></div>
+<div class="n"><span>PAOLINO</span></div><div class="f"><span>VOTA TU 👇</span></div></div></body></html>"""
+
+
+def copertina_paolino(p, uscita):
+    """16/11, Alberto: «dovevi fare la copertina di Paolino». Ogni puntata la sua: il numero del giorno gigante, il titolo, Paolino a cartone.
+    Sul profilo si vede il centro 3:4 (da 240 a 1680): numero, titolo e Paolino stanno lì dentro."""
+    tmp = Path(tempfile.mkdtemp())
+    (tmp / "c.html").write_text(html_paolino(p))
+    png = tmp / "c.png"
+    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=1", "--window-size=1080,1920", "--allow-file-access-from-files",
+                    "--virtual-time-budget=6000", f"--user-data-dir={tmp / '.chrome'}", f"--screenshot={png}", (tmp / "c.html").as_uri()], capture_output=True, timeout=120)
+    if not png.exists(): sys.exit("copertina non creata")
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(png), "-q:v", "3", str(uscita)], check=True)
+    print(f"copertina di Paolino: {uscita}")
+
+
+def html_paolino(p):
+    sys.path.insert(0, str(ROOT / "reel/modello")); import scene
+    return (PAGINA_PAOLINO.format(anton=(ROOT / "reel/lancio-hf/assets/fonts/anton.woff2").as_uri(), sfondo=scene.CARTONE_SFONDI["canile"],
+                                  posa=(ROOT / "reel/assets/paolino" / f"{p.get('posa', 'triste')}.png").as_uri(), giorno=int(p["giorno"]), titolo=html.escape(p["titolo"])))
+
+
 def fondo_luce(lng, lat, uscita):
     """L'immagine protagonista: la mappa vera dell'Italia di notte attorno al comune, con la sua luce accesa al centro."""
     import math
@@ -73,6 +108,7 @@ def fondo_luce(lng, lat, uscita):
 def main():
     cop = json.loads(Path(sys.argv[1]).read_text())
     c = cop.get("copertina") or {"sopra": cop.get("testata", {}).get("titolo", "ZAMPE D'ITALIA"), "grande": "Accendi<br>la tua luce", "sotto": "Scrivi città, nome e animale 👇", "tema": "voto"}
+    if c.get("paolino"): return copertina_paolino(c["paolino"], sys.argv[2])
     if c.get("luce"):  # la serie della mappa (7/11): un'immagine protagonista e poche parole, per esempio «La prima luce di Atri»
         tmp = Path(tempfile.mkdtemp()); fondo_luce(*c["luce"], tmp / "fondo.jpg")
         n = len(c["grande"]); fs = 150 if n <= 9 else 120 if n <= 13 else 96 if n <= 18 else 78
