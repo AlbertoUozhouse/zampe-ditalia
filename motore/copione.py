@@ -1685,7 +1685,7 @@ def avvento(D, rng, st):
 SERIE_OPZIONI = {  # chiave: (emoji, come si scrive sulla carta, parola da commentare)
     "bagno": ("🛁", "IL BAGNO", "BAGNO"), "veterinario": ("🩺", "IL VETERINARIO", "VETERINARIO"), "colloquio": ("📝", "IL COLLOQUIO", "COLLOQUIO"),
     "tv": ("📺", "IN TV", "TV"), "concorso": ("🏆", "IL CONCORSO", "CONCORSO"), "fuga": ("🏃", "LA FUGA", "FUGA"),
-    "piazza": ("🎄", "LA FESTA IN PIAZZA", "PIAZZA"), "agility": ("🚧", "L'AGILITY", "AGILITY"), "micia": ("🐱", "MICIA", "MICIA"), "luna": ("💘", "LUNA AL PARCO", "LUNA"),
+    "piazza": ("🎄", "LA FESTA IN PIAZZA", "PIAZZA"), "agility": ("🚧", "L'AGILITY", "AGILITY"), "micia": ("🐱", "MICIA", "MICIA"), "alexa": ("💘", "ALEXA AL PARCO", "ALEXA"),
 }
 # 16/11, Alberto: «quello che mi hai detto di fare non mi piace… fai te la scelta». Puntate nuove con un cast fisso (come la nonna e i dentisti di Ugo):
 # Nonna Pina (volontaria anziana che lo vizia), il direttore Gino (sempre arrabbiato), Micia (la gatta che comanda il canile).
@@ -1731,8 +1731,8 @@ SERIE_PUNTATE = {  # titolo, sfondo, muso, sporco dopo, frasi (voce, testo grand
         ("Avete scelto Micia. Micia comanda il canile, e oggi ha deciso: la cuccia di Paolino è sua.", "MICIA COMANDA", []),
         ("Paolino ha provato ad abbaiare. Micia l'ha guardato.", "LO SGUARDO DI MICIA", []),
         ("Paolino ha dormito fuori. Nonna Pina gli ha portato la coperta.", "HA DORMITO FUORI", [])]),
-    "luna": ("LUNA AL PARCO", "parco", "occhiolino", True, [
-        ("Avete scelto Luna. Al parco Paolino ha visto Luna, e si è innamorato.", "COLPO DI FULMINE", []),
+    "alexa": ("ALEXA AL PARCO", "parco", "occhiolino", True, [  # la fidanzata: il nome l'ha scelto Alberto (16/11)
+        ("Avete scelto Alexa. Al parco Paolino ha visto Alexa, e si è innamorato.", "COLPO DI FULMINE", []),
         ("Si è sistemato il collare, si è pettinato con la zampa…", "SI FA BELLO", []),
         ("e le ha portato un regalo: un bastone. Gigante.", "UN BASTONE GIGANTE", [])]),
 }
@@ -1772,7 +1772,7 @@ SERIE_GRAFICHE = {
     "micia": [([E("CUCCIA: OCCUPATA", "🏠", "s", 820), E("PADRONA: MICIA", "🐱", "d", 1060)], None),
               ([E("ABBAIO: 1", "🐶", "s", 820), E("SGUARDO DI MICIA: LETALE", "😾", "d", 1060)], X("MIAO.", "d", 560)),
               ([E("NOTTE: FUORI", "🌙", "s", 820), E("COPERTA: DI NONNA PINA", "👵", "d", 1060)], None), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
-    "luna": [([E("AL PARCO", "🌳", "s", 820), E("CUORE: IMPAZZITO", "💘", "d", 1060)], None),
+    "alexa": [([E("ALEXA AL PARCO", "🌳", "s", 820), E("CUORE: IMPAZZITO", "💘", "d", 1060)], None),
              ([E("COLLARE: SISTEMATO", "✨", "s", 820), E("PETTINATURA: CON LA ZAMPA", "🐾", "d", 1060)], None),
              ([E("REGALO: UN BASTONE", "🪵", "s", 820), E("MISURA: GIGANTE", "📏", "d", 1060)], X("PER TE!", "d", 560)), ([E("VOTA NEI COMMENTI", "👇", "s", 1080), E("+1 FAMIGLIA A COMMENTO", "🏠", "d", 1180)], None)],
 }
