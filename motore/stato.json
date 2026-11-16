@@ -4192,6 +4192,7 @@
 "18081188051426643",
 "18081204317389461",
 "18081244112384651",
+"18081261611741065",
 "18081264827397700",
 "18081274307743417",
 "18081288569402218",
@@ -6912,6 +6913,7 @@
 "18121012102760609",
 "18121013647946376",
 "18121017568910983",
+"18121029899052232",
 "18121031692955075",
 "18121034138001474",
 "18121034269961631",
@@ -10830,7 +10832,10 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794848745.6451983,
+1794848750.8957174
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-15",
@@ -13039,7 +13044,9 @@
 "robytommy84": "2026-11-16",
 "guenda_23": "2026-11-16",
 "abuonocore857": "2026-11-16",
-"domenici_11": "2026-11-16"
+"domenici_11": "2026-11-16",
+"_grez_z": "2026-11-16",
+"noemipollinii": "2026-11-16"
 },
 "media_letti": {},
 "pezzi": {
@@ -19673,10 +19680,13 @@
 "f658f1af95282303",
 "ff027ffb3a3a1c13",
 "6d6b72fffdd43384",
-"a3b75538dfbf48ad"
+"a3b75538dfbf48ad",
+"992ecd50945150bc",
+"9f7235844d2b3ae8"
 ],
 "privati_ora": [
-1794842345.675101
+1794848745.64525,
+1794848750.8957372
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -22658,13 +22668,14 @@
 "Agerola|NA"
 ]
 ],
-"attesa": null,
+"attesa": "Frabosa Soprana|CN",
 "punti": {
 "Brescia|BS": 1,
 "Napoli|NA": 1,
 "Siracusa|SR": 1,
 "Agerola|NA": 3,
-"Viareggio|LU": 1
+"Viareggio|LU": 1,
+"Siena|SI": 1
 },
 "giocatori": {},
 "squadra": {},
@@ -22710,6 +22721,15 @@
 "t": "2026-11-16T15:19+00:00",
 "sorpasso": "Viareggio|LU",
 "su": "Udine|UD",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-16T17:05+00:00",
+"sorpasso": "Siena|SI",
+"su": "Settimo Torinese|TO",
 "punti": [
 1,
 0
@@ -22784,6 +22804,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Siena|SI": {
+"u": [
+"noemipollinii"
+],
+"c": [
+"18081261611741065"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22791,7 +22821,8 @@
 "robytommy84|animale|fulmine",
 "guenda_23|animale|cuore",
 "abuonocore857|animale|fluffy",
-"domenici_11|animale|jambo"
+"domenici_11|animale|jambo",
+"noemipollinii|animale|mirtilla"
 ]
 },
 "gara_follower": [
