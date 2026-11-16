@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-09-0041-paese_al_buio",
-  "formato": "paese_al_buio",
-  "modalita": "operativa",
-  "inizio": "2026-11-08T23:41:26+00:00",
-  "stato": "senza direttore",
-  "fine": "2026-11-08T23:44:43+00:00",
-  "scambi": 128
- },
- {
   "id": "2026-11-09-0118-campanile_rivale",
   "formato": "campanile_rivale",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "fatto",
   "fine": "2026-11-16T10:21:34+00:00",
   "scambi": 19
+ },
+ {
+  "id": "2026-11-16-1307-coppa_verdetto",
+  "formato": "coppa_verdetto",
+  "modalita": "operativa",
+  "inizio": "2026-11-16T12:07:38+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-16T12:12:08+00:00",
+  "scambi": 128
  }
 ]
