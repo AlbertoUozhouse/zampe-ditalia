@@ -1789,6 +1789,29 @@ A = lambda img, x=540, y=1670, h=740, anim=("pop", "respira"), **k: {"img": img,
 ET = lambda t, c="giallo", x=60, y=420, r=-4, z=64, t0=0.3: {"t": t, "c": c, "x": x, "y": y, "r": r, "z": z, "t0": t0}
 NV = lambda t, x=80, y=600, w=460, coda="sx", t0=0.5: {"t": t, "x": x, "y": y, "w": w, "coda": coda, "t0": t0}
 SERIE_CARTONE = {
+    "inizio": [  # 16/11 sera, Alberto: «rifacciamo tutto da capo e domani usciamo di nuovo col cartone»
+        ("Questo è Paolino. Ha trenta giorni per trovare casa.",
+         {"sfondo": "canile", "numero": {"n": 30, "sotto": "PER TROVARE CASA"}, "attori": [A("triste", 540, 1680, 740, ("pop", "respira"), t0=0.2)],
+          "etichette": [ET("PAOLINO", "rosso", 40, 900, -6, 70, 0.7), ET("4 ANNI", "giallo", 800, 960, 6, 56, 1.0)]}),
+        ("Vive in un canile. Ha le pulci e un alito terribile.",
+         {"sfondo": "canile", "attori": [A("triste", 540, 1680, 780, ("pop", "respira"))],
+          "oggetti": [{"e": "🪰", "x": 300, "y": 840, "z": 90, "t0": 0.6, "vola": True}, {"e": "🪰", "x": 700, "y": 780, "z": 80, "t0": 0.9, "vola": True}],
+          "etichette": [ET("PULCI: 37", "verde", 60, 330, -5, 64, 0.4), ET("ALITO: 10/10", "rosso", 600, 560, 5, 64, 1.4)]}),
+        ("Oggi Nonna Pina gli fa la foto per l'adozione.",
+         {"sfondo": "canile", "attori": [A("nonna", 250, 1680, 940, ("entra_sx",)), A("felice", 790, 1670, 740, ("pop", "salta"), t0=0.4)],
+          "oggetti": [{"e": "📷", "x": 330, "y": 900, "z": 150, "t0": 0.5}], "nuvole": [NV("SORRIDI, TESORO!", 50, 520, 460, "sx", 0.8)],
+          "etichette": [ET("FOTO PER L'ADOZIONE", "giallo", 330, 330, -4, 58, 0.3)]}),
+        ("Paolino si mangia la macchina fotografica.",
+         {"sfondo": "canile", "attori": [A("nonna", 250, 1680, 940, ()), A("felice", 790, 1670, 740, ("pop", "salta"))],
+          "sfx": {"t": "CRUNCH!", "x": 560, "y": 520, "t0": 0.4}, "nuvole": [NV("LA MIA MACCHINA!", 50, 560, 460, "sx", 1.0)],
+          "etichette": [ET("MACCHINA FOTOGRAFICA: 0", "rosso", 60, 330, -4, 56, 0.8)]}),
+        ("Nonna Pina sviene. Paolino fa gli occhi dolci.",
+         {"sfondo": "canile", "attori": [A("nonna", 250, 1680, 940, ("cade",), t1=0.3, verso=84, scala=0.8), A("dolce", 790, 1670, 720, ("pop", "respira"), t0=0.9)],
+          "etichette": [ET("NONNA PINA: K.O.", "rosso", 60, 330, -4, 60, 0.5)], "sfx": {"t": "TONF!", "x": 560, "y": 560, "t0": 0.4}}),
+        ("Da domani la sua storia la decidete voi.",
+         {"sfondo": "canile", "attori": [A("dolce", 540, 1680, 760, ("pop", "respira"))],
+          "etichette": [ET("DECIDETE VOI", "giallo", 230, 520, -4, 110, 0.3), ET("OGNI COMMENTO = PIÙ FAMIGLIA", "verde", 110, 760, 3, 52, 1.0)]}),
+    ],
     "bagno": [
         ("Nonna Pina prepara la vasca. Paolino è felicissimo…",
          {"sfondo": "bagno", "attori": [A("nonna", 250, 1680, 940, ("entra_sx",)), A("felice", 800, 1670, 740, ("pop", "salta"), t0=0.4)],
@@ -1821,7 +1844,7 @@ SERIE_CARTONE = {
           "etichette": [ET("VETERINARIO: K.O.", "rosso", 60, 330, -4, 60, 0.6)], "sfx": {"t": "TONF!", "x": 520, "y": 560, "t0": 0.6}}),
     ],
 }
-SERIE_COLORI = {"bagno": "bl", "vasca": "bl", "spugna": "ro", "insaponato": "bl", "fradici": "bl", "scrolla": "bl", "paese": "or", "veterinario": "ro", "stetoscopio": "or",
+SERIE_COLORI = {"pulci": "ve", "alito": "ve", "canile": "or", "sviene": "ro", "decidete": "or", "macchina": "ro", "fotografica": "ro", "paolino": "or", "trenta": "or", "bagno": "bl", "vasca": "bl", "spugna": "ro", "insaponato": "bl", "fradici": "bl", "scrolla": "bl", "paese": "or", "veterinario": "ro", "stetoscopio": "or",
                 "sviene": "ro", "pancia": "or", "casa": "or", "giorni": "or", "famiglia": "ve", "commenti": "or", "scappa": "ro", "trema": "ro", "mangia": "ro",
                 "felicissimo": "ve", "scelto": "or", "chiuso": "ro", "vostre": "or", "cuore": "ro", "domani": "or"}
 NUMERI_IT = ["zero", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci", "undici", "dodici", "tredici", "quattordici", "quindici", "sedici",
@@ -1833,7 +1856,8 @@ def parole_vostre(vincitore):
     """«PAROLE VOSTRE» come nella puntata di Ugo: il commento più apprezzato sotto la puntata di ieri (con almeno 3 parole, senza nome
     né @, niente parolacce), letto dalla voce e mostrato in un biglietto. Senza token, senza commenti adatti: la scena non c'è."""
     tok = os.environ.get("IG_TOKEN")
-    P = [x for x in carica(ROOT / "motore/pubblicati.json", []) if x.get("tipo") == "REELS" and "-serie." in x.get("media", "")]
+    dal = carica(ROOT / "motore/config.json", {}).get("serie_dal", "")
+    P = [x for x in carica(ROOT / "motore/pubblicati.json", []) if x.get("tipo") == "REELS" and "-serie." in x.get("media", "") and x.get("ts", "")[:10] >= dal]
     if not tok or not P: return None
     try:
         sys.path.insert(0, str(ROOT / "motore")); from pubblica import chiama
@@ -1850,10 +1874,22 @@ def parole_vostre(vincitore):
     return {"t": t[0].upper() + t[1:], "cuori": cuori}
 
 
+def _serie_scelta(base, a, b):
+    return (f"Domani: {a[1].lower()} o {b[1].lower()}? Scrivi nei commenti: ogni commento lo avvicina a casa.",
+            {**base, "sfondo": "canile", "scelta": {"a": list(a), "b": list(b)}, "attori": [A("dolce", 540, 1680, 700, ("pop", "respira"), t0=0.3)],
+             "etichette": [ET(f"SCRIVI {a[2]} O {b[2]}", "giallo", 140, 790, -3, 60, 1.2)]})
+
+
 def serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti_ieri, st):
     """La puntata a cartone: apertura col numero, il voto di ieri, le parole vostre, la storia, la scelta per domani."""
     giorni = 31 - n; base = {"tipo": "cartone", "giorni": giorni, "famiglia": famiglia}
-    titolo = SERIE_PUNTATE[ep][0]; parola = SERIE_OPZIONI[ep][1]; chiave = SERIE_OPZIONI[ep][2]
+    titolo = SERIE_PUNTATE[ep][0]
+    a, b = (SERIE_OPZIONI[k] for k in opzioni)
+    st["cartone"] = True; st["parole_colore"] = SERIE_COLORI
+    if ep == "inizio":  # il Giorno 1: la storia ha già il numero gigante in apertura
+        st["copertina"] = {"paolino": {"giorno": n, "titolo": "LA FOTO PER L'ADOZIONE", "posa": "triste", "giorni": giorni}}
+        return [(voce, {**base, **sc}) for voce, sc in SERIE_CARTONE[ep]] + [_serie_scelta(base, a, b)]
+    parola = SERIE_OPZIONI[ep][1]; chiave = SERIE_OPZIONI[ep][2]
     frasi = [(f"{NUMERI_IT[giorni].capitalize()} giorni per trovare casa.",
               {**base, "sfondo": "canile", "numero": {"n": giorni, "sotto": "PER TROVARE CASA"}, "attori": [A("triste", 540, 1680, 740, ("pop", "respira"), t0=0.2)],
                "etichette": [ET("PAOLINO", "rosso", 40, 900, -6, 70, 0.7), ET("PULCI: 37", "verde", 790, 960, 6, 50, 1.0)],
@@ -1866,11 +1902,7 @@ def serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti_ieri, st):
         frasi.append((f"Parole vostre: {pv['t']}", {**base, "sfondo": "canile", "commento": {**pv, "t0": 0.2}, "attori": [A("dolce", 540, 1680, 640, ("pop", "respira"), t0=0.3)]}))
     for voce, sc in SERIE_CARTONE[ep]:
         frasi.append((voce, {**base, **sc}))
-    a, b = (SERIE_OPZIONI[k] for k in opzioni)
-    frasi.append((f"Domani: {a[1].lower()} o {b[1].lower()}? Scrivi nei commenti: ogni commento lo avvicina a casa.",
-                  {**base, "sfondo": "canile", "scelta": {"a": list(a), "b": list(b)}, "attori": [A("dolce", 540, 1680, 700, ("pop", "respira"), t0=0.3)],
-                   "etichette": [ET(f"SCRIVI {a[2]} O {b[2]}", "giallo", 140, 790, -3, 60, 1.2)]}))
-    st["cartone"] = True; st["parole_colore"] = SERIE_COLORI
+    frasi.append(_serie_scelta(base, a, b))
     st["copertina"] = {"paolino": {"giorno": n, "titolo": titolo, "posa": {"bagno": "sapone", "veterinario": "paura"}.get(ep, "triste"), "giorni": giorni}}
     return frasi
 
@@ -1884,7 +1916,7 @@ def foto_sito(ep):
             foto = ROOT / f"reel/assets/zampa/{ep}-3.png"
             if foto.exists() and ep not in SERIE_CARTONE: im = Image.open(foto).convert("RGB"); im.thumbnail((540, 810))
             else:  # 16/11: Paolino a cartone, sul muro blu del canile
-                posa = Image.open(ROOT / "reel/assets/paolino" / f"{ {'bagno': 'sapone', 'veterinario': 'paura'}.get(ep, 'dolce') }.png").convert("RGBA"); posa.thumbnail((440, 560))
+                posa = Image.open(ROOT / "reel/assets/paolino" / f"{ {'bagno': 'sapone', 'veterinario': 'paura', 'inizio': 'triste'}.get(ep, 'dolce') }.png").convert("RGBA"); posa.thumbnail((440, 560))
                 im = Image.new("RGB", (540, 810), "#34436E"); im.paste(Image.new("RGB", (540, 260), "#5A4130"), (0, 550))
                 im.paste(posa, ((540 - posa.width) // 2, 700 - posa.height), posa)
             out.parent.mkdir(parents=True, exist_ok=True); im.save(out, quality=80, optimize=True, progressive=True)
@@ -1895,31 +1927,31 @@ def foto_sito(ep):
 
 def serie(D, rng, st):
     """Una puntata al giorno. Quale puntata: il giorno 1 è l'inizio; poi vince l'opzione più votata sotto la puntata di ieri."""
-    P = carica(ROOT / "motore/pubblicati.json", [])
-    uscite = sum(1 for x in P if x.get("tipo") == "REELS" and "-serie." in x.get("media", ""))
+    dal = carica(ROOT / "motore/config.json", {}).get("serie_dal", "")  # 16/11: si riparte da capo col cartone (il Giorno 1 con le foto non conta)
+    PS = [x for x in carica(ROOT / "motore/pubblicati.json", []) if x.get("tipo") == "REELS" and "-serie." in x.get("media", "") and x.get("ts", "")[:10] >= dal]
+    uscite = len(PS)
     n = uscite + 1
     if n > 30: raise Salta("la serie è finita")
-    if not (ROOT / "reel/assets/zampa/riferimento.png").exists(): raise Salta("mancano le foto di Paolino (motore/zampa.py, serve la chiave OpenAI)")
     S = carica(ROOT / "motore/stato.json", {}).get("serie", {})
-    storia = st.get("serie_storia", [])[:uscite]  # solo le puntate uscite davvero
+    storia = [x for x in st.get("serie_storia", []) if x.get("data", "") >= dal][:uscite]  # solo le puntate uscite davvero
     fatte = {x["ep"] for x in storia}
+    voti = S.get("voti_p", {}).get(PS[-1]["id"], {}) if PS else {}  # i voti sotto la puntata di ieri (motore/commenti.py serie_commento)
     if n == 1: ep = "inizio"
     else:
         ieri = storia[-1] if storia else {"opzioni": ["bagno", "veterinario"]}
-        voti = S.get("voti", {}).get(str(n - 1), {})
         ep = max(ieri["opzioni"], key=lambda k: (voti.get(k, 0), -ieri["opzioni"].index(k)))
         if ep in fatte: ep = next((k for k in SERIE_PUNTATE if k not in fatte and k != "inizio"), ep)
     # 16/11: le scelte in un ordine fisso (chi perde torna in gara il giorno dopo), così Alberto sa sempre quali foto preparare
     restanti = [k for k in SERIE_ORDINE if k not in fatte | {ep, "inizio"}] + [k for k in SERIE_PUNTATE if k not in SERIE_ORDINE and k not in fatte | {ep, "inizio"}]
     opzioni = ["bagno", "veterinario"] if n == 1 else restanti[:2]
     if len(opzioni) < 2: raise Salta("finite le puntate scritte della serie: scriverne di nuove")
-    tot = int(S.get("commenti", 0)); famiglia = min(99, round(tot / 20)); famiglia_ieri = storia[-1].get("famiglia", famiglia) if storia else famiglia
+    tot = int(S.get("commenti_serie", 0)); famiglia = min(99, round(tot / 20)); famiglia_ieri = storia[-1].get("famiglia", famiglia) if storia else famiglia
     titolo, sfondo, muso, sporco, scene = SERIE_PUNTATE[ep]
     a, b = (SERIE_OPZIONI[k] for k in opzioni)
     if ep in SERIE_CARTONE and all((ROOT / "reel/assets/paolino" / f"{x['img']}.png").exists() for _, sc in SERIE_CARTONE[ep] for x in sc.get("attori", [])):
-        frasi = serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, S.get("voti", {}).get(str(n - 1), {}), st)
+        frasi = serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti, st)
         return _serie_fine(n, ep, opzioni, titolo, famiglia, a, b, frasi, storia, st)
-    if not all((ROOT / f"reel/assets/zampa/{ep}-{i}.png").exists() for i in range(4)):  # Paolino vero in ogni scena, o la puntata non esce
+    if not all((ROOT / f"reel/assets/zampa/{ep}-{i}.png").exists() for i in range(4)) or not (ROOT / "reel/assets/zampa/riferimento.png").exists():  # Paolino vero in ogni scena, o la puntata non esce
         raise Salta(f"mancano le foto di Paolino per la puntata «{ep}» (reel/assets/zampa/{ep}-0…3.png)")
     sporco_ora = sporco and not any(x["ep"] in ("bagno", "toelettatura") for x in storia)  # dopo il bagno niente più puzza
     giorni = 31 - n

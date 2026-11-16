@@ -1149,11 +1149,18 @@ def giro_voto(stato, u, L):
 # ---------- «Zampa ha 30 giorni per trovare casa» (15/11) ----------
 # Sotto l'ultima puntata: ogni commento fa salire la FAMIGLIA di Zampa (stato «serie».commenti, 20 commenti = 1%), e chi scrive
 # una delle due parole della scelta (BAGNO, VETERINARIO…) vota la puntata di domani (un voto a persona per puntata).
+def serie_puntate():
+    """Le puntate di Paolino uscite dalla ripartenza (config «serie_dal»: il 16/11 il Giorno 1 era con le foto, Alberto: «rifacciamo tutto da capo
+    col cartone»; quella puntata non conta più, né per i giorni né per i voti)."""
+    try: P = json.loads((ROOT / "motore/pubblicati.json").read_text())
+    except (FileNotFoundError, json.JSONDecodeError): return []
+    try: dal = json.loads((ROOT / "motore/config.json").read_text()).get("serie_dal", "")
+    except (FileNotFoundError, json.JSONDecodeError): dal = ""
+    return [x for x in P if x.get("tipo") == "REELS" and "-serie." in x.get("media", "") and x.get("ts", "")[:10] >= dal]
+
 def serie_ultima():
     """(id Instagram, giorno, parole della scelta) dell'ultima puntata pubblicata, oppure None."""
-    try: P = json.loads((ROOT / "motore/pubblicati.json").read_text())
-    except (FileNotFoundError, json.JSONDecodeError): return None
-    ult = [x for x in P if x.get("tipo") == "REELS" and "-serie." in x.get("media", "")]
+    ult = serie_puntate()
     if not ult: return None
     try: info = json.loads((ROOT / "docs" / ult[-1]["media"].replace("media/auto/", "contenuti/auto/").replace(".mp4", ".json")).read_text()).get("serie") or {}
     except (OSError, json.JSONDecodeError): info = {}
@@ -1162,32 +1169,30 @@ def serie_ultima():
 def serie_commento(stato, u, testi, ultima):
     """Conta il commento (famiglia) e il voto. Restituisce la riga per la risposta."""
     mid, g, parole = ultima
-    S = stato.setdefault("serie", {}); S["commenti"] = S.get("commenti", 0) + len(testi)
+    S = stato.setdefault("serie", {}); S["commenti_serie"] = S.get("commenti_serie", 0) + len(testi)  # 16/11: dalla ripartenza col cartone
     voto = None
     for t in testi:
         tt = norm(t)
         trovate = [k for k, w in parole.items() if norm(w) in tt.split() or norm(w) in tt]
         if len(trovate) == 1: voto = trovate[0]
-    gia = S.setdefault("votanti", {}).setdefault(str(g), [])
-    fam = min(99, round(S["commenti"] / 20))
+    gia = S.setdefault("votanti_p", {}).setdefault(mid, [])  # i voti per puntata (id del reel), dalla ripartenza del 16/11
+    fam = min(99, round(S["commenti_serie"] / 20))
     if voto and u.lower() not in gia:
-        gia.append(u.lower()); v = S.setdefault("voti", {}).setdefault(str(g), {}); v[voto] = v.get(voto, 0) + 1
+        gia.append(u.lower()); v = S.setdefault("voti_p", {}).setdefault(mid, {}); v[voto] = v.get(voto, 0) + 1
         a, b = list(parole) + [None] * (2 - len(parole))
         return f"🗳️ Voto per {parole[voto]} contato! Per ora {parole.get(a, '')} {v.get(a, 0)} – {v.get(b, 0)} {parole.get(b, '')}. Domani alle 21 Paolino fa quello che vince. 🏠 FAMIGLIA {fam}%: ogni commento lo avvicina a casa!"
     return f"🏠 Grazie! Ogni commento avvicina Paolino a casa: FAMIGLIA {fam}%. Domani cosa fa? Scrivi {' o '.join(parole.values())} 👇" if parole else None
 
 def paolino_sito(stato):
     """Per il riquadro «Paolino» del sito (docs/app.js): il giorno, la famiglia, il voto per domani e le puntate uscite."""
-    try: P = json.loads((ROOT / "motore/pubblicati.json").read_text())
-    except (FileNotFoundError, json.JSONDecodeError): P = []
-    ult = [x for x in P if x.get("tipo") == "REELS" and "-serie." in x.get("media", "")]
+    ult = serie_puntate()
     S = stato.get("serie", {})
-    out = {"giorno": 0, "famiglia": min(99, round(S.get("commenti", 0) / 20)), "foto": "media/paolino/inizio.jpg",
+    out = {"giorno": 0, "famiglia": min(99, round(S.get("commenti_serie", 0) / 20)), "foto": "media/paolino/inizio.jpg",
            "puntate": [{"g": i + 1, "link": x.get("permalink")} for i, x in enumerate(ult)]}
     if not ult: return out
     try: info = json.loads((ROOT / "docs" / ult[-1]["media"].replace("media/auto/", "contenuti/auto/").replace(".mp4", ".json")).read_text()).get("serie") or {}
     except (OSError, json.JSONDecodeError): info = {}
-    g = info.get("giorno", len(ult)); v = S.get("voti", {}).get(str(g), {}); voci = info.get("voci", {})
+    g = info.get("giorno", len(ult)); v = S.get("voti_p", {}).get(ult[-1]["id"], {}); voci = info.get("voci", {})
     out.update(giorno=g, link=ult[-1].get("permalink"), ts=ult[-1].get("ts"), foto=info.get("foto") or out["foto"],
                voti=[{"k": k, "w": w, "e": (voci.get(k) or ["", w])[0], "n": v.get(k, 0)} for k, w in (info.get("parole") or {}).items()])
     return out
