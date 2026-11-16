@@ -2070,6 +2070,7 @@
 "fc2bfe1bcf02045f",
 "fc719c080832dc63",
 "fc98ab4dcf0ab103",
+"fc9c3a24af8c5652",
 "fd1f8de44d776879",
 "fd30b9fa42a1245c",
 "fd35060e19ad7eb8",
@@ -2094,17 +2095,7 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [
-{
-"igsid": "2440163706792206",
-"url": [
-"https://zampeditalia.it/cartoline/3a3a95c31640eb48.png",
-"https://zampeditalia.it/cartoline/d91622d5a9a7e811.png",
-"https://zampeditalia.it/cartoline/f74b5c61a8c20ea0.png"
-],
-"t": 1794824576.3971295
-}
-],
+"in_attesa": [],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
