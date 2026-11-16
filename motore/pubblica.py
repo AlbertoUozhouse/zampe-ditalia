@@ -123,13 +123,23 @@ def main():
     print(f"contenitore pronto: {cont}")
 
     # i video vengono elaborati da Instagram: si aspetta che il contenitore sia pronto (massimo 10 minuti)
-    for _ in range(60):
-        stato = chiama("GET", cont, token, fields="status_code").get("status_code")
-        if stato in (None, "FINISHED"):
-            break
-        if stato in ("ERROR", "EXPIRED"):
-            sys.exit(f"Instagram non ha accettato il media: {stato}")
-        time.sleep(10)
+    # 16/11: il 15/11 alle 21 Instagram ha dato ERROR su un video sano (il tifo) ed è uscita la riserva. Ora si stampa il motivo
+    # e si riprova una volta, dopo un minuto, con un contenitore nuovo senza copertina, tag e collaboratori.
+    for tentativo in (1, 2):
+        stato = None
+        for _ in range(60):
+            stato = chiama("GET", cont, token, fields="status_code").get("status_code")
+            if stato in (None, "FINISHED", "ERROR", "EXPIRED"): break
+            time.sleep(10)
+        if stato in (None, "FINISHED"): break
+        try: motivo = chiama("GET", cont, token, fields="status").get("status")
+        except SystemExit: motivo = ""
+        print(f"Instagram non ha accettato il media ({stato}): {motivo}")
+        if tentativo == 2 or stato not in ("ERROR", "EXPIRED"):
+            sys.exit(f"Instagram non ha accettato il media: {stato} {motivo}")
+        time.sleep(60)
+        cont = chiama("POST", "me/media", token, **{k: v for k, v in params.items() if k != "cover_url"})["id"]
+        print(f"secondo tentativo, contenitore nuovo: {cont}")
     if o.prova:
         print("prova: non pubblico")
         return
