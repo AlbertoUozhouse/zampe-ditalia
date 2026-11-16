@@ -7027,6 +7027,7 @@
 "18122298571987301",
 "18122329298068636",
 "18122331877938460",
+"18122363050978875",
 "18122372833821668",
 "18122376823952898",
 "18122377210979636",
@@ -10803,7 +10804,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794817806.2736716
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-15",
@@ -13007,7 +13010,8 @@
 "danio_l13": "2026-11-15",
 "emmanuel.premto4": "2026-11-15",
 "alice.graziano7": "2026-11-15",
-"proiettile2.0": "2026-11-15"
+"proiettile2.0": "2026-11-15",
+"karol_belotti10": "2026-11-16"
 },
 "media_letti": {},
 "pezzi": {
@@ -19625,11 +19629,11 @@
 "e2ec45fc3faa650e",
 "ccf5fec000d8fd4d",
 "75ba2de02b300435",
-"0e48c46bec5ea01e"
+"0e48c46bec5ea01e",
+"2077caf380b07081"
 ],
 "privati_ora": [
-1794780104.5768466,
-1794780993.7986512
+1794817806.2736993
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -22564,11 +22568,23 @@
 ]
 ],
 "attesa": "Zocca|MO",
-"punti": {},
+"punti": {
+"Brescia|BS": 1
+},
 "giocatori": {},
 "squadra": {},
 "giorni": {},
-"storia": [],
+"storia": [
+{
+"t": "2026-11-16T08:30+00:00",
+"sorpasso": "Brescia|BS",
+"su": "Genova|GE",
+"punti": [
+1,
+0
+]
+}
+],
 "chiuso": false,
 "prima": [
 "matteo_bruscobike",
@@ -22577,8 +22593,21 @@
 "stella_zenna",
 "teslathequeenofbards"
 ],
-"quartiere": {},
-"luci": []
+"quartiere": {
+"Brescia|BS": {
+"u": [
+"karol_belotti10"
+],
+"c": [
+"18122363050978875"
+],
+"chiuse": 0,
+"log": []
+}
+},
+"luci": [
+"karol_belotti10|animale|frodo"
+]
 },
 "gara_follower": [
 {
