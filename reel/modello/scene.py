@@ -847,7 +847,7 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
     #root .nv div {{ position: relative; padding: 18px 26px; background: #FFFFFF; border: 7px solid #1A1206; border-radius: 44px; font: 400 60px/1.08 "Anton", sans-serif; color: #1A1206; text-align: center; box-shadow: 0 8px 0 rgba(0,0,0,.25); }}
     #root .nv div::after {{ content: ""; position: absolute; bottom: -30px; width: 44px; height: 44px; background: #FFFFFF; border-right: 7px solid #1A1206; border-bottom: 7px solid #1A1206; transform: rotate(45deg) skew(12deg, 12deg); }}
     #root .nv.sx div::after {{ left: 70px; }} #root .nv.dx div::after {{ right: 70px; }}
-    #root .og {{ position: absolute; line-height: 1; z-index: 2; filter: drop-shadow(0 8px 0 rgba(0,0,0,.25)); }}
+    #root .og {{ position: absolute; line-height: 1; z-index: 2; color: #1A1206; filter: drop-shadow(0 8px 0 rgba(0,0,0,.25)); }}
     #root .sfx {{ position: absolute; z-index: 4; }}
     #root .sfx span {{ display: inline-block; transform: rotate(-8deg); font: 400 110px/1 "Anton", sans-serif; color: #FFD23F; -webkit-text-stroke: 8px #1A1206; paint-order: stroke fill; text-shadow: 0 10px 0 #1A1206; }}
     #root .num {{ position: absolute; left: 0; right: 0; top: 290px; text-align: center; z-index: 3; }}
@@ -870,7 +870,7 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
     #root .sc .ops {{ position: relative; margin-top: 34px; height: 300px; }}
     #root .sc .op {{ position: absolute; top: 0; width: 470px; height: 280px; border-radius: 28px; background: #FFF1C9; border: 8px solid #1A1206; box-shadow: 0 12px 0 rgba(0,0,0,.35); display: flex; flex-direction: column; align-items: center; justify-content: center; }}
     #root .sc .opa {{ left: 0; }} #root .sc .opb {{ right: 0; }}
-    #root .sc .op .em {{ font-size: 100px; line-height: 1.1; }}
+    #root .sc .op .em {{ font-size: 100px; line-height: 1.1; color: #1A1206; }}
     #root .sc .op b {{ font: 400 64px/1.05 "Anton", sans-serif; color: #1A1206; }}
     #root .sc .o {{ position: absolute; left: 50%; top: 110px; width: 130px; margin-left: -65px; font: 400 36px/62px "Anton", sans-serif; color: #1A1206; background: #FFD23F; border: 5px solid #1A1206; border-radius: 31px; }}"""
     corpo = [f'<svg class="fondo" viewBox="0 0 1080 1920">{CARTONE_SFONDI.get(sfondo, CARTONE_SFONDI["canile"])}</svg>']
