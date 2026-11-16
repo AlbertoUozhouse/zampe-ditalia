@@ -1736,6 +1736,7 @@ SERIE_PUNTATE = {  # titolo, sfondo, muso, sporco dopo, frasi (voce, testo grand
         ("Si è sistemato il collare, si è pettinato con la zampa…", "SI FA BELLO", []),
         ("e le ha portato un regalo: un bastone. Gigante.", "UN BASTONE GIGANTE", [])]),
 }
+SERIE_ORDINE = ["colloquio", "fuga", "tv", "concorso", "alexa", "micia", "piazza", "agility", "bagno", "veterinario"]
 SERIE_INIZIO = date(2026, 11, 16)
 # 15/11, Alberto: «più grafiche, più scritte dentro il video, sembra troppo piatto». Ai lati di Paolino (mai sopra): etichette con la freccia
 # verso di lui, e la scritta da fumetto del momento comico. Per scena: (etichette, scritta da fumetto o None)
@@ -1795,8 +1796,8 @@ def serie(D, rng, st):
         voti = S.get("voti", {}).get(str(n - 1), {})
         ep = max(ieri["opzioni"], key=lambda k: (voti.get(k, 0), -ieri["opzioni"].index(k)))
         if ep in fatte: ep = next((k for k in SERIE_PUNTATE if k not in fatte and k != "inizio"), ep)
-    restanti = [k for k in SERIE_PUNTATE if k not in fatte | {ep, "inizio"}]
-    rng.shuffle(restanti)
+    # 16/11: le scelte in un ordine fisso (chi perde torna in gara il giorno dopo), così Alberto sa sempre quali foto preparare
+    restanti = [k for k in SERIE_ORDINE if k not in fatte | {ep, "inizio"}] + [k for k in SERIE_PUNTATE if k not in SERIE_ORDINE and k not in fatte | {ep, "inizio"}]
     opzioni = ["bagno", "veterinario"] if n == 1 else restanti[:2]
     if len(opzioni) < 2: raise Salta("finite le puntate scritte della serie: scriverne di nuove")
     tot = int(S.get("commenti", 0)); famiglia = min(99, round(tot / 20)); famiglia_ieri = storia[-1].get("famiglia", famiglia) if storia else famiglia
