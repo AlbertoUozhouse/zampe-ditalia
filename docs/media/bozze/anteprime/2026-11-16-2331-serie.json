@@ -1,0 +1,445 @@
+{
+ "voce": true,
+ "variante": "voce-fissa-92",
+ "tema": "notte",
+ "id": "2026-11-16-2331-serie",
+ "formato": "serie",
+ "testata": {
+  "titolo": "🐶 PAOLINO · GIORNO 1 DI 30"
+ },
+ "conteggio": {
+  "cani": 2023,
+  "gatti": 812
+ },
+ "frasi": [
+  {
+   "testo": "Questo è Paolino. Ha trenta giorni per trovare casa.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 30,
+    "famiglia": 0,
+    "sfondo": "canile",
+    "numero": {
+     "n": 30,
+     "sotto": "PER TROVARE CASA"
+    },
+    "attori": [
+     {
+      "img": "triste",
+      "x": 540,
+      "y": 1680,
+      "h": 740,
+      "anim": [
+       "pop",
+       "respira"
+      ],
+      "t0": 0.2
+     }
+    ],
+    "etichette": [
+     {
+      "t": "PAOLINO",
+      "c": "rosso",
+      "x": 40,
+      "y": 900,
+      "r": -6,
+      "z": 70,
+      "t0": 0.7
+     },
+     {
+      "t": "4 ANNI",
+      "c": "giallo",
+      "x": 800,
+      "y": 960,
+      "r": 6,
+      "z": 56,
+      "t0": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Vive in un canile. Ha le pulci e un alito terribile.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 30,
+    "famiglia": 0,
+    "sfondo": "canile",
+    "attori": [
+     {
+      "img": "triste",
+      "x": 540,
+      "y": 1680,
+      "h": 780,
+      "anim": [
+       "pop",
+       "respira"
+      ]
+     }
+    ],
+    "oggetti": [
+     {
+      "e": "🪰",
+      "x": 300,
+      "y": 840,
+      "z": 90,
+      "t0": 0.6,
+      "vola": true
+     },
+     {
+      "e": "🪰",
+      "x": 700,
+      "y": 780,
+      "z": 80,
+      "t0": 0.9,
+      "vola": true
+     }
+    ],
+    "etichette": [
+     {
+      "t": "PULCI: 37",
+      "c": "verde",
+      "x": 60,
+      "y": 330,
+      "r": -5,
+      "z": 64,
+      "t0": 0.4
+     },
+     {
+      "t": "ALITO: 10/10",
+      "c": "rosso",
+      "x": 600,
+      "y": 560,
+      "r": 5,
+      "z": 64,
+      "t0": 1.4
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Oggi Nonna Pina gli fa la foto per l'adozione.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 30,
+    "famiglia": 0,
+    "sfondo": "canile",
+    "attori": [
+     {
+      "img": "nonna",
+      "x": 250,
+      "y": 1680,
+      "h": 940,
+      "anim": [
+       "entra_sx"
+      ]
+     },
+     {
+      "img": "felice",
+      "x": 790,
+      "y": 1670,
+      "h": 740,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.4
+     }
+    ],
+    "oggetti": [
+     {
+      "e": "📷",
+      "x": 330,
+      "y": 900,
+      "z": 150,
+      "t0": 0.5
+     }
+    ],
+    "nuvole": [
+     {
+      "t": "SORRIDI, TESORO!",
+      "x": 50,
+      "y": 520,
+      "w": 460,
+      "coda": "sx",
+      "t0": 0.8
+     }
+    ],
+    "etichette": [
+     {
+      "t": "FOTO PER L'ADOZIONE",
+      "c": "giallo",
+      "x": 330,
+      "y": 330,
+      "r": -4,
+      "z": 58,
+      "t0": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Paolino si mangia la macchina fotografica.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 30,
+    "famiglia": 0,
+    "sfondo": "canile",
+    "attori": [
+     {
+      "img": "nonna",
+      "x": 250,
+      "y": 1680,
+      "h": 940,
+      "anim": []
+     },
+     {
+      "img": "felice",
+      "x": 790,
+      "y": 1670,
+      "h": 740,
+      "anim": [
+       "pop",
+       "salta"
+      ]
+     }
+    ],
+    "sfx": {
+     "t": "CRUNCH!",
+     "x": 560,
+     "y": 520,
+     "t0": 0.4
+    },
+    "nuvole": [
+     {
+      "t": "LA MIA MACCHINA!",
+      "x": 50,
+      "y": 560,
+      "w": 460,
+      "coda": "sx",
+      "t0": 1.0
+     }
+    ],
+    "etichette": [
+     {
+      "t": "MACCHINA FOTOGRAFICA: 0",
+      "c": "rosso",
+      "x": 60,
+      "y": 330,
+      "r": -4,
+      "z": 56,
+      "t0": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Nonna Pina sviene. Paolino fa gli occhi dolci.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 30,
+    "famiglia": 0,
+    "sfondo": "canile",
+    "attori": [
+     {
+      "img": "nonna",
+      "x": 250,
+      "y": 1680,
+      "h": 940,
+      "anim": [
+       "cade"
+      ],
+      "t1": 0.3,
+      "verso": 84,
+      "scala": 0.8
+     },
+     {
+      "img": "dolce",
+      "x": 790,
+      "y": 1670,
+      "h": 720,
+      "anim": [
+       "pop",
+       "respira"
+      ],
+      "t0": 0.9
+     }
+    ],
+    "etichette": [
+     {
+      "t": "NONNA PINA: K.O.",
+      "c": "rosso",
+      "x": 60,
+      "y": 330,
+      "r": -4,
+      "z": 60,
+      "t0": 0.5
+     }
+    ],
+    "sfx": {
+     "t": "TONF!",
+     "x": 560,
+     "y": 560,
+     "t0": 0.4
+    }
+   }
+  },
+  {
+   "testo": "Da domani la sua storia la decidete voi.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 30,
+    "famiglia": 0,
+    "sfondo": "canile",
+    "attori": [
+     {
+      "img": "dolce",
+      "x": 540,
+      "y": 1680,
+      "h": 760,
+      "anim": [
+       "pop",
+       "respira"
+      ]
+     }
+    ],
+    "etichette": [
+     {
+      "t": "DECIDETE VOI",
+      "c": "giallo",
+      "x": 230,
+      "y": 520,
+      "r": -4,
+      "z": 110,
+      "t0": 0.3
+     },
+     {
+      "t": "OGNI COMMENTO = PIÙ FAMIGLIA",
+      "c": "verde",
+      "x": 110,
+      "y": 760,
+      "r": 3,
+      "z": 52,
+      "t0": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Domani: il bagno o il veterinario? Scrivi nei commenti: ogni commento lo avvicina a casa.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 30,
+    "famiglia": 0,
+    "sfondo": "canile",
+    "scelta": {
+     "a": [
+      "🛁",
+      "IL BAGNO",
+      "BAGNO"
+     ],
+     "b": [
+      "🩺",
+      "IL VETERINARIO",
+      "VETERINARIO"
+     ]
+    },
+    "attori": [
+     {
+      "img": "dolce",
+      "x": 540,
+      "y": 1680,
+      "h": 700,
+      "anim": [
+       "pop",
+       "respira"
+      ],
+      "t0": 0.3
+     }
+    ],
+    "etichette": [
+     {
+      "t": "SCRIVI BAGNO O VETERINARIO",
+      "c": "giallo",
+      "x": 140,
+      "y": 790,
+      "r": -3,
+      "z": 60,
+      "t0": 1.2
+     }
+    ]
+   }
+  }
+ ],
+ "banner": "👇 Scrivi BAGNO o VETERINARIO",
+ "didascalia": "Giorno 1 di 30 🐶 Paolino vive in un canile, ha le pulci e un alito terribile. Ha 30 giorni per trovare una famiglia prima di Natale. Oggi la foto per l'adozione… è andata così.\n\n👇 Domani cosa fa Paolino? Scrivi BAGNO oppure VETERINARIO nei commenti: vince il più commentato.\n🏠 Ogni commento lo avvicina a casa: FAMIGLIA 0%.\n➕ Seguici per vedere se ce la fa entro Natale.\n👑 Gara degli amici: tagga chi ha un cane o un gatto. Chi porta più amici entro domenica alle 20 vince la Corona sulla mappa!\n\nVoce generata con IA.\n\n#cani #canile #adozione #adottanonComprare #natale #animalidomestici ",
+ "tag": [],
+ "collab": [],
+ "copertina": {
+  "paolino": {
+   "giorno": 1,
+   "titolo": "LA FOTO PER L'ADOZIONE",
+   "posa": "triste",
+   "giorni": 30
+  }
+ },
+ "serie": {
+  "giorno": 1,
+  "ep": "inizio",
+  "opzioni": [
+   "bagno",
+   "veterinario"
+  ],
+  "parole": {
+   "bagno": "BAGNO",
+   "veterinario": "VETERINARIO"
+  },
+  "voci": {
+   "bagno": [
+    "🛁",
+    "IL BAGNO"
+   ],
+   "veterinario": [
+    "🩺",
+    "IL VETERINARIO"
+   ]
+  },
+  "foto": "media/paolino/inizio.jpg"
+ },
+ "cartone": true,
+ "parole_colore": {
+  "pulci": "ve",
+  "alito": "ve",
+  "canile": "or",
+  "sviene": "ro",
+  "decidete": "or",
+  "macchina": "ro",
+  "fotografica": "ro",
+  "paolino": "or",
+  "trenta": "or",
+  "bagno": "bl",
+  "vasca": "bl",
+  "spugna": "ro",
+  "insaponato": "bl",
+  "fradici": "bl",
+  "scrolla": "bl",
+  "paese": "or",
+  "veterinario": "ro",
+  "stetoscopio": "or",
+  "pancia": "or",
+  "casa": "or",
+  "giorni": "or",
+  "famiglia": "ve",
+  "commenti": "or",
+  "scappa": "ro",
+  "trema": "ro",
+  "mangia": "ro",
+  "felicissimo": "ve",
+  "scelto": "or",
+  "chiuso": "ro",
+  "vostre": "or",
+  "cuore": "ro",
+  "domani": "or"
+ },
+ "schermo_pulito": true
+}
