@@ -18,7 +18,7 @@
   "traccia": "reel",
   "aperto": "2026-11-15",
   "scadenza": "2026-11-17",
-  "stato": "da costruire",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-16",
@@ -86,7 +86,10 @@
     ],
     "fatto_quando": "Il reel di test è pubblicato entro il 17 novembre: si apre con il video reale del follower, la mappa si stringe sul suo comune e la luce si accende; le coordinate corrispondono a quelle di motore/config.json e, se c'è, la domanda sul comune vicino è nei commenti o nella chiusura."
    }
-  ]
+  ],
+  "aggiornato": "2026-11-17",
+  "nota": "Paolino a cartone anche dopo il Giorno 2: puntate a cartone della FUGA (Nonna Pina lo cerca in tutto il paese, lo trova al bar dopo 12 cornetti) col bar del paese nuovo, del COLLOQUIO con la famiglia nell'ufficio del canile nuovo, e IN TV (la diretta, il microfono rubato). La fuga è pronta (pose che ci sono già); colloquio e TV partono appena ci sono i disegni della famiglia e della giornalista. Ordine delle scelte: FUGA o COLLOQUIO al Giorno 3.",
+  "online_dal": "2026-11-17"
  },
  "realismo": {
   "idea": "Il Paese in Tasca in 3D a rilievo reale",

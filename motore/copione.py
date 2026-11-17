@@ -1736,7 +1736,7 @@ SERIE_PUNTATE = {  # titolo, sfondo, muso, sporco dopo, frasi (voce, testo grand
         ("Si è sistemato il collare, si è pettinato con la zampa…", "SI FA BELLO", []),
         ("e le ha portato un regalo: un bastone. Gigante.", "UN BASTONE GIGANTE", [])]),
 }
-SERIE_ORDINE = ["colloquio", "fuga", "tv", "concorso", "alexa", "micia", "piazza", "agility", "bagno", "veterinario"]
+SERIE_ORDINE = ["fuga", "colloquio", "tv", "concorso", "alexa", "micia", "piazza", "agility", "bagno", "veterinario"]
 SERIE_INIZIO = date(2026, 11, 16)
 # 15/11, Alberto: «più grafiche, più scritte dentro il video, sembra troppo piatto». Ai lati di Paolino (mai sopra): etichette con la freccia
 # verso di lui, e la scritta da fumetto del momento comico. Per scena: (etichette, scritta da fumetto o None)
@@ -1828,6 +1828,49 @@ SERIE_CARTONE = {
          {"sfondo": "strada", "attori": [A("bagnato", 540, 1690, 820, ("pop", "scrolla"))],
           "etichette": [ET("CLIENTI DEL BAR: FRADICI", "blu", 60, 330, -4, 56, 0.6), ET("BAR: CHIUSO", "rosso", 640, 640, 5, 56, 1.6)], "sfx": {"t": "SPLASH!", "x": 80, "y": 560, "t0": 0.3}}),
     ],
+    "fuga": [  # 17/11 (Officina): con le pose che ci sono già (Paolino, Nonna Pina) e lo sfondo nuovo del bar
+        ("Stamattina il box di Paolino è vuoto.",
+         {"sfondo": "canile", "attori": [A("nonna", 540, 1680, 940, ("entra_sx", "trema"))], "oggetti": [{"e": "🥣", "x": 760, "y": 1460, "z": 130, "t0": 0.2}],
+          "nuvole": [NV("PAOLINO?!", 520, 560, 380, "sx", 0.6)], "etichette": [ET("BOX 7: VUOTO", "rosso", 60, 330, -4, 64, 0.3)], "sfx": {"t": "DOV'È?!", "x": 560, "y": 860, "t0": 1.0}}),
+        ("Nonna Pina lo cerca in tutto il paese.",
+         {"sfondo": "strada", "attori": [A("nonna", 540, 1690, 900, ("corre",), da=-1150, a=1150)],
+          "etichette": [ET("RICERCHE: 3 ORE", "giallo", 300, 330, -4, 62, 0.3), ET("PAESE: TUTTO", "verde", 640, 560, 5, 56, 1.2)]}),
+        ("Lo trova al bar. Seduto al tavolino, con un cornetto.",
+         {"sfondo": "bar", "attori": [A("nonna", 230, 1680, 920, ("entra_sx",)), A("felice", 780, 1670, 740, ("pop", "salta"), t0=0.3)],
+          "oggetti": [{"e": "🥐", "x": 470, "y": 1150, "z": 150, "t0": 0.6}, {"e": "☕", "x": 900, "y": 840, "z": 110, "t0": 0.9}],
+          "nuvole": [NV("PAOLINO!!", 40, 520, 380, "sx", 0.7)], "etichette": [ET("CORNETTO: ALLA CREMA", "giallo", 420, 330, -4, 56, 1.2)]}),
+        ("Il conto: dodici cornetti. Paolino sviene.",
+         {"sfondo": "bar", "attori": [A("nonna", 230, 1680, 920, ()), A("svenuto", 760, 1690, 700, ("pop",), t0=0.6)],
+          "etichette": [ET("CONTO: 12 CORNETTI", "rosso", 60, 330, -4, 62, 0.2), ET("PAGA: NONNA PINA", "rosa", 560, 560, 5, 54, 1.2)], "sfx": {"t": "TONF!", "x": 600, "y": 760, "t0": 0.7}}),
+    ],
+    "colloquio": [  # 17/11 (Officina): serve il disegno della famiglia (reel/assets/paolino/famiglia.png); finché non c'è, la puntata non è pronta
+        ("Una famiglia vuole conoscere Paolino. Colloquio alle dieci.",
+         {"sfondo": "ufficio", "attori": [A("famiglia", 780, 1690, 900, ("entra_dx",)), A("dolce", 280, 1680, 700, ("pop", "respira"), t0=0.4)],
+          "etichette": [ET("COLLOQUIO ORE 10:00", "giallo", 60, 330, -4, 62, 0.3)], "nuvole": [NV("CHE CARINO!", 520, 520, 420, "dx", 0.8)]}),
+        ("Paolino si siede sulla loro sedia.",
+         {"sfondo": "ufficio", "attori": [A("famiglia", 780, 1690, 900, ()), A("felice", 300, 1680, 740, ("pop", "salta"))],
+          "oggetti": [{"e": "🪑", "x": 160, "y": 1180, "z": 200, "t0": 0.1}], "etichette": [ET("POSTO: SBAGLIATO", "rosso", 60, 330, -4, 62, 0.4)], "sfx": {"t": "OPS!", "x": 480, "y": 600, "t0": 0.7}}),
+        ("Poi si mangia il modulo di adozione. Già firmato.",
+         {"sfondo": "ufficio", "attori": [A("famiglia", 780, 1690, 900, ("trema",)), A("felice", 300, 1680, 740, ("pop", "salta"))],
+          "oggetti": [{"e": "📝", "x": 420, "y": 820, "z": 140, "t0": 0.1}], "etichette": [ET("MODULO: MANGIATO", "rosso", 60, 330, -4, 62, 0.8)], "sfx": {"t": "GNAM!", "x": 80, "y": 600, "t0": 0.9}}),
+        ("La famiglia ride. Ci pensano.",
+         {"sfondo": "ufficio", "attori": [A("famiglia", 780, 1690, 900, ("respira",)), A("dolce", 300, 1680, 720, ("pop", "respira"))],
+          "nuvole": [NV("CI PENSIAMO…", 520, 520, 420, "dx", 0.4)], "etichette": [ET("FAMIGLIA: +5%", "verde", 60, 330, -4, 64, 0.9)]}),
+    ],
+    "tv": [  # 17/11 (Officina): serve il disegno della giornalista (reel/assets/paolino/giornalista.png)
+        ("Il telegiornale fa un servizio sul canile. Paolino è la star.",
+         {"sfondo": "canile", "attori": [A("giornalista", 790, 1690, 900, ("entra_dx",)), A("felice", 290, 1680, 740, ("pop", "salta"), t0=0.4)],
+          "oggetti": [{"e": "🎥", "x": 430, "y": 760, "z": 140, "t0": 0.6}], "etichette": [ET("TELEGIORNALE", "blu", 60, 330, -4, 62, 0.3)]}),
+        ("In diretta, davanti a tutta la regione…",
+         {"sfondo": "canile", "attori": [A("giornalista", 790, 1690, 900, ()), A("dolce", 290, 1680, 720, ("pop", "respira"))],
+          "nuvole": [NV("ECCO A VOI PAOLINO!", 420, 500, 520, "dx", 0.3)], "etichette": [ET("● IN DIRETTA", "rosso", 60, 330, -4, 62, 0.2), ET("SPETTATORI: 100.000", "giallo", 60, 840, 4, 52, 1.0)]}),
+        ("Paolino ruba il microfono e scappa.",
+         {"sfondo": "strada", "attori": [A("corre", 540, 1690, 640, ("corre",), da=-1150, a=1150)], "oggetti": [{"e": "🎤", "x": 470, "y": 880, "z": 130, "t0": 0.3, "vola": True}],
+          "etichette": [ET("MICROFONO: RUBATO", "rosso", 300, 330, -4, 60, 0.4)], "sfx": {"t": "FUGA!", "x": 600, "y": 540, "t0": 0.5}}),
+        ("La giornalista lo insegue in diretta. Record di ascolti.",
+         {"sfondo": "strada", "attori": [A("giornalista", 540, 1690, 900, ("corre",), da=-1150, a=1150)],
+          "etichette": [ET("ASCOLTI: RECORD", "verde", 300, 330, -4, 62, 0.6)], "nuvole": [NV("FERMATEVI!", 560, 540, 380, "sx", 0.8)]}),
+    ],
     "veterinario": [
         ("Il veterinario lo aspetta. Paolino trema come una foglia.",
          {"sfondo": "veterinario", "attori": [A("vet", 810, 1690, 1040, ("entra_dx",)), A("paura", 300, 1680, 680, ("pop", "trema"), t0=0.3)],
@@ -1844,7 +1887,7 @@ SERIE_CARTONE = {
           "etichette": [ET("VETERINARIO: K.O.", "rosso", 60, 330, -4, 60, 0.6)], "sfx": {"t": "TONF!", "x": 520, "y": 560, "t0": 0.6}}),
     ],
 }
-SERIE_COLORI = {"pulci": "ve", "alito": "ve", "canile": "or", "sviene": "ro", "decidete": "or", "macchina": "ro", "fotografica": "ro", "paolino": "or", "trenta": "or", "bagno": "bl", "vasca": "bl", "spugna": "ro", "insaponato": "bl", "fradici": "bl", "scrolla": "bl", "paese": "or", "veterinario": "ro", "stetoscopio": "or",
+SERIE_COLORI = {"diretta": "ro", "microfono": "ro", "star": "or", "telegiornale": "bl", "ascolti": "ve", "vuoto": "ro", "cornetto": "or", "cornetti": "or", "bar": "or", "colloquio": "or", "modulo": "ro", "sedia": "ro", "ride": "ve",  "pulci": "ve", "alito": "ve", "canile": "or", "sviene": "ro", "decidete": "or", "macchina": "ro", "fotografica": "ro", "paolino": "or", "trenta": "or", "bagno": "bl", "vasca": "bl", "spugna": "ro", "insaponato": "bl", "fradici": "bl", "scrolla": "bl", "paese": "or", "veterinario": "ro", "stetoscopio": "or",
                 "sviene": "ro", "pancia": "or", "casa": "or", "giorni": "or", "famiglia": "ve", "commenti": "or", "scappa": "ro", "trema": "ro", "mangia": "ro",
                 "felicissimo": "ve", "scelto": "or", "chiuso": "ro", "vostre": "or", "cuore": "ro", "domani": "or"}
 NUMERI_IT = ["zero", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci", "undici", "dodici", "tredici", "quattordici", "quindici", "sedici",
@@ -1903,7 +1946,7 @@ def serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti_ieri, st):
     for voce, sc in SERIE_CARTONE[ep]:
         frasi.append((voce, {**base, **sc}))
     frasi.append(_serie_scelta(base, a, b))
-    st["copertina"] = {"paolino": {"giorno": n, "titolo": titolo, "posa": {"bagno": "sapone", "veterinario": "paura"}.get(ep, "triste"), "giorni": giorni}}
+    st["copertina"] = {"paolino": {"giorno": n, "titolo": titolo, "posa": {"bagno": "sapone", "veterinario": "paura", "fuga": "corre", "colloquio": "dolce", "tv": "felice"}.get(ep, "triste"), "giorni": giorni}}
     return frasi
 
 
@@ -1916,7 +1959,7 @@ def foto_sito(ep):
             foto = ROOT / f"reel/assets/zampa/{ep}-3.png"
             if foto.exists() and ep not in SERIE_CARTONE: im = Image.open(foto).convert("RGB"); im.thumbnail((540, 810))
             else:  # 16/11: Paolino a cartone, sul muro blu del canile
-                posa = Image.open(ROOT / "reel/assets/paolino" / f"{ {'bagno': 'sapone', 'veterinario': 'paura', 'inizio': 'triste'}.get(ep, 'dolce') }.png").convert("RGBA"); posa.thumbnail((440, 560))
+                posa = Image.open(ROOT / "reel/assets/paolino" / f"{ {'bagno': 'sapone', 'veterinario': 'paura', 'inizio': 'triste', 'fuga': 'corre'}.get(ep, 'dolce') }.png").convert("RGBA"); posa.thumbnail((440, 560))
                 im = Image.new("RGB", (540, 810), "#34436E"); im.paste(Image.new("RGB", (540, 260), "#5A4130"), (0, 550))
                 im.paste(posa, ((540 - posa.width) // 2, 700 - posa.height), posa)
             out.parent.mkdir(parents=True, exist_ok=True); im.save(out, quality=80, optimize=True, progressive=True)
