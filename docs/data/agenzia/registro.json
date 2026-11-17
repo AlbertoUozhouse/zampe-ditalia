@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-09-2110-puntata",
-  "formato": "puntata",
-  "modalita": "operativa",
-  "inizio": "2026-11-09T20:10:58+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-09T20:15:40+00:00",
-  "scambi": 129
- },
- {
   "id": "crescita-2026-11-10",
   "formato": "crescita del giorno",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "fatto",
   "fine": "2026-11-17T10:17:15+00:00",
   "scambi": 19
+ },
+ {
+  "id": "2026-11-17-1300-tifo",
+  "formato": "tifo",
+  "modalita": "operativa",
+  "inizio": "2026-11-17T12:00:55+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-17T12:04:48+00:00",
+  "scambi": 128
  }
 ]
