@@ -1225,6 +1225,7 @@
 "94a6d306887a0e6f",
 "94aad15b7cde5af0",
 "94d3fe3e8df1641d",
+"94dd87044eae485f",
 "94e269e82e3cc133",
 "94ec9853df797b34",
 "94ec9ca0a209865a",
@@ -2129,6 +2130,13 @@
 "t": 1794751427.4586527,
 "igsid": "2069219100262584",
 "giudicata": false,
+"video": false
+},
+"8d4b5d9dc53ca373": {
+"url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=3348540955329077&signature=Ab3_LpMSYx3woN1dJCvdurT3ja7FMtuui84dsOzK0wtyP5sZcaNPZ9EAaUu1GJv4Phlslc38RFZ8aWiwBtwHk0dIlaiD5_48QSveTuf47XR5yAlnIAGk2aedEWHnAxo03yqWuX3Nj96OTMIa-gzuqQakz1d21U66PyUsfdH7P4K7NDJ_W7K8iVtV1hPep0DcUTt1PcVgUEIpu3J0vJQPvXC9pN5IZj8",
+"t": 1794934004.068741,
+"igsid": "1487220743318059",
+"giudicata": true,
 "video": false
 }
 }
