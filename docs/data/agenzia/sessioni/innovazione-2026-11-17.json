@@ -1,0 +1,306 @@
+{
+ "id": "innovazione-2026-11-17",
+ "formato": "innovazione del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-17T10:17:00+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-17T10:17:03+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Staffetta di quartiere: Dentro la Coppa delle Zampe, 'Pappa al volo' si gioca a turni tra follower dello stesso comune: ogni giocatore prende un turno di 30 secondi e il punteggio si somma per il paese. Quando il turno passa a un amico o a un comune vicino, il gioco mostra il nome del follower che ha lasciato il testimone.",
+   "dati": {
+    "traccia": "gioco",
+    "idea": "Staffetta di quartiere",
+    "come_funziona": "Dentro la Coppa delle Zampe, 'Pappa al volo' si gioca a turni tra follower dello stesso comune: ogni giocatore prende un turno di 30 secondi e il punteggio si somma per il paese. Quando il turno passa a un amico o a un comune vicino, il gioco mostra il nome del follower che ha lasciato il testimone.",
+    "perche_porta_follower": "La staffetta chiede a chi gioca di invitare un altro, perché il punteggio del comune dipende dai turni di più persone. Il gioco esiste già nel sito, quindi non serve partire da zero e ogni passaggio di turno è un motivo concreto per tornare e per portare un amico.",
+    "perche_e_bella": "Trasforma un minigioco solitario in una cosa di paese: il comune gioca insieme e il risultato si vede sulla mappa come una luce più forte. Il passaggio di testimone tra vicini rende il confronto tra campanili un gioco di squadra, non solo una classifica.",
+    "cosa_serve": "Il minigioco 'Pappa al volo' già presente nel sito, la Coppa delle Zampe con il calcolo dei punti per comune, i dati dei comuni in motore/config.json e il sistema di SÌ dei follower per mostrare solo nomi e animali autorizzati.",
+    "come_misurarla": "Dopo 7 giorni guardare quanti giocatori tornano per un secondo turno (obiettivo sopra il 25%), quanti turni vengono passati a un amico e quanti follower arrivano dalla pagina della Coppa rispetto alle 514 sfide attuali."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:03+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Staffetta di quartiere: Nella Coppa delle Zampe, ogni comune schiera a turno un animale nel minigioco «Pappa al volo», e il risultato passa di mano in mano tra comuni vicini, come una staffetta di quartiere. Ogni tappa dura 24 ore e la classifica si aggiorna a fine turno, così chi ha appena giocato torna per vedere se il suo comune è stato superato.",
+   "dati": {
+    "traccia": "gioco",
+    "idea": "Staffetta di quartiere",
+    "come_funziona": "Nella Coppa delle Zampe, ogni comune schiera a turno un animale nel minigioco «Pappa al volo», e il risultato passa di mano in mano tra comuni vicini, come una staffetta di quartiere. Ogni tappa dura 24 ore e la classifica si aggiorna a fine turno, così chi ha appena giocato torna per vedere se il suo comune è stato superato.",
+    "perche_porta_follower": "Il gioco costringe a coinvolgere chi vive nel comune vicino: per passare il testimone serve che qualcuno del paese successivo giochi, e quindi porta persone nuove sul sito e a seguire la pagina per sapere quando tocca a loro.",
+    "perche_e_bella": "Trasforma una sfida astratta in qualcosa che riguarda i vicini di casa: il comune non vince da solo ma in relazione a quello accanto, e ogni animale diventa parte di una catena che attraversa il territorio.",
+    "cosa_serve": "Il minigioco «Pappa al volo» già presente sul sito, la logica della Coppa in motore/config.json (campo staffette, attualmente a 0), la mappa SVG dei comuni per definire i vicini, e i dati di iscrizione dei follower con consenso SÌ per scegliere gli animali in gara.",
+    "come_misurarla": "Dopo 7 giorni, guardare il numero di staffette avviate sul totale delle sfide (oggi 0 su 514) e la quota di partite giocate da utenti che arrivano dal reel di sfida, confrontandola con i giochi attuali."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:03+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Testare su un solo comune (Mussolente) la vista three.js: in docs/index.html aggiungere un canvas che si apre al tocco del comune, ritagliare dalla griglia di altitudine usata dalla mappa l'area attorno alle coordinate di config.json e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG",
+   "dati": {
+    "passo": "Testare su un solo comune (Mussolente) la vista three.js: in docs/index.html aggiungere un canvas che si apre al tocco del comune, ritagliare dalla griglia di altitudine usata dalla mappa l'area attorno alle coordinate di config.json e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG sul punto di casa. Se entro domani non regge, esci con una versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale e un solo animale SÌ posizionato sul suo punto di casa (o, nella versione ridotta, solo il terreno 3D), e la vista si chiude tornando alla mappa senza errori in console."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:03+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Aggiungere in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG su",
+   "dati": {
+    "passo": "Aggiungere in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG sul suo punto di casa. Se entro domani non regge in 3D, esci con una versione più piccola: la sola vista del rilievo di Mussolente, senza animali e senza pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente nella mappa si apre la vista 3D del suo centro sul terreno reale, con un animale con consenso SÌ visibile sul proprio punto di casa, pubblicata entro il 18 novembre (o, nella versione ridotta, la sola vista del rilievo senza animali)."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:04+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Reel del Campanile Vero»: Dalla stessa mappa SVG che scende su un comune, costruire il reel di test: scegliere dall'archivio un video con consenso SÌ di un follower, leggere in motore/config.json le coordinate del suo comune e montare l'apertura nel formato questa_luce, collegandola alla discesa finale sulla mappa già esistente. Se entro domani il montaggio non regge, uscire con la ve",
+   "dati": {
+    "passo": "Dalla stessa mappa SVG che scende su un comune, costruire il reel di test: scegliere dall'archivio un video con consenso SÌ di un follower, leggere in motore/config.json le coordinate del suo comune e montare l'apertura nel formato questa_luce, collegandola alla discesa finale sulla mappa già esistente. Se entro domani il montaggio non regge, uscire con la versione ridotta: video reale di apertura e mappa che si stringe sul comune, senza la domanda finale sul comune vicino.",
+    "file": [
+     "reel/",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Il reel di test è pubblicato entro il 17 novembre: si apre con il video reale del follower, la mappa si stringe sul suo comune e si accende la luce, con coordinate corrispondenti a motore/config.json (nella versione completa anche la domanda sul comune vicino)."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:04+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Reel del Campanile Vero»: Scegliere dall'archivio un video con consenso SÌ esplicito di un follower, leggere in motore/config.json le coordinate del suo comune e montare l'apertura nel formato questa_luce, collegandola alla discesa sulla mappa SVG già esistente. Se entro domani il montaggio non regge, uscire con la versione ridotta: solo video reale di apertura e mappa che si stringe ",
+   "dati": {
+    "passo": "Scegliere dall'archivio un video con consenso SÌ esplicito di un follower, leggere in motore/config.json le coordinate del suo comune e montare l'apertura nel formato questa_luce, collegandola alla discesa sulla mappa SVG già esistente. Se entro domani il montaggio non regge, uscire con la versione ridotta: solo video reale di apertura e mappa che si stringe sul comune, senza la domanda finale sul comune vicino.",
+    "file": [
+     "reel/",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Il reel di test è pubblicato entro il 17 novembre: il video reale del follower compare per primo, la mappa si stringe sul suo comune con la luce che si accende, e (nella versione piena) la chiusura chiede il comune vicino, con coordinate corrette rispetto a motore/config.json."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:05+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Reel del Campanile Vero»: Scegli dall'archivio un video di un follower con consenso SÌ esplicito, leggi in motore/config.json le coordinate del suo comune e monta l'apertura nel formato questa_luce, collegandola alla discesa finale sulla mappa SVG già esistente. Se entro domani il montaggio non regge, esci con la versione ridotta: solo video reale di apertura e mappa che si stringe su",
+   "dati": {
+    "passo": "Scegli dall'archivio un video di un follower con consenso SÌ esplicito, leggi in motore/config.json le coordinate del suo comune e monta l'apertura nel formato questa_luce, collegandola alla discesa finale sulla mappa SVG già esistente. Se entro domani il montaggio non regge, esci con la versione ridotta: solo video reale di apertura e mappa che si stringe sul comune, senza la domanda finale sul comune vicino.",
+    "file": [
+     "reel/",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Il reel di test è pubblicato entro il 17 novembre: si apre con il video reale del follower, la mappa si stringe sul suo comune e la luce si accende; le coordinate corrispondono a quelle di motore/config.json e, se c'è, la domanda sul comune vicino è nei commenti o nella chiusura."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:08+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Staffetta di Campanile: Nella Coppa delle Zampe, ogni comune schiera un animale per turno: il giocatore porta il proprio animale dal comune di casa a un comune vicino, prendendo 'Pappa al volo' a turni con i follower di quel paese. Il punteggio della staffetta si somma a quello della sfida tra i due comuni, così la partita diventa un passaggio di testimone tra vicini e non un duello isolato.",
+   "dati": {
+    "traccia": "gioco",
+    "idea": "Staffetta di Campanile",
+    "come_funziona": "Nella Coppa delle Zampe, ogni comune schiera un animale per turno: il giocatore porta il proprio animale dal comune di casa a un comune vicino, prendendo 'Pappa al volo' a turni con i follower di quel paese. Il punteggio della staffetta si somma a quello della sfida tra i due comuni, così la partita diventa un passaggio di testimone tra vicini e non un duello isolato.",
+    "perche_porta_follower": "Il gioco chiede a chi ha un animale di invitare il vicino di casa o un amico del paese accanto per completare la staffetta, e il sito mostra il tabellone dei comuni coinvolti: più gente entra per un turno, più la sfida cresce. Il formato riprende la sfida di campanile che già funziona nei reel (testa_a_testa a 29 follower ogni 1.000 account) e la porta dentro il gioco, dove si torna a giocare per la propria squadra.",
+    "perche_e_bella": "Porta i paesi a passarsi il testimone come nei giochi di piazza, con i nomi dei comuni vicini che si intrecciano sulla mappa e ogni turno che racconta un pezzo di territorio.",
+    "cosa_serve": "docs/ per il minigioco 'Pappa al volo' già esistente e la Coppa delle Zampe nel sito; motore/config.json per i comuni vicini e le loro coordinate; i dati di sfida già in uso (514 sfide, staffette a 0) come base per il tabellone; nessun materiale nuovo da produrre.",
+    "come_misurarla": "Dopo 7 giorni: numero di staffette avviate sul totale delle sfide di Coppa (oggi 0 su 514), quota di partite con più di un giocatore per comune e follower ogni 1.000 account raggiunti dai reel che annunciano la staffetta."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:08+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Aggiungi in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggi le coordinate del comune da motore/config.json, ritaglia dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota, senza ancora animali né pulsanti. Se entro domani non regge",
+   "dati": {
+    "passo": "Aggiungi in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggi le coordinate del comune da motore/config.json, ritaglia dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota, senza ancora animali né pulsanti. Se entro domani non regge, esci con la versione ridotta: solo la superficie 3D del rilievo di Mussolente, con chiusura che riporta alla mappa.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la pubblicazione è avvenuta entro il 18 novembre."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:08+00:00",
+   "da": "grafica3d-2",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Testare su un solo comune (Mussolente) la vista three.js: in docs/index.html aggiungere un canvas che si apre al tocco del comune, ritagliare dalla griglia di altitudine usata dalla mappa l'area attorno alle coordinate di config.json e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG",
+   "dati": {
+    "passo": "Testare su un solo comune (Mussolente) la vista three.js: in docs/index.html aggiungere un canvas che si apre al tocco del comune, ritagliare dalla griglia di altitudine usata dalla mappa l'area attorno alle coordinate di config.json e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG sul punto di casa. Se entro domani non regge, esci con una versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale e un solo animale SÌ posizionato sul suo punto di casa (o, nella versione ridotta, solo il terreno 3D), e la vista si chiude tornando alla mappa senza errori in console."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:08+00:00",
+   "da": "grafica3d-3",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Su docs/index.html aggiungi un canvas three.js che si apre al tocco di Mussolente: leggi da motore/config.json le coordinate del comune, ritaglia dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota. Se entro domani il 3D non regge, esci con la versione ridot",
+   "dati": {
+    "passo": "Su docs/index.html aggiungi un canvas three.js che si apre al tocco di Mussolente: leggi da motore/config.json le coordinate del comune, ritaglia dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota. Se entro domani il 3D non regge, esci con la versione ridotta: solo la superficie in rilievo di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale (con un solo animale SÌ sul punto di casa, oppure, nella versione ridotta, solo il terreno 3D), la vista si chiude tornando alla mappa e in console non compaiono errori."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:08+00:00",
+   "da": "grafica3d-4",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Creare su Mussolente la prima versione della vista 3D: in docs/index.html aggiungere un canvas three.js che si apre al tocco del comune, leggere le coordinate da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Se entro doma",
+   "dati": {
+    "passo": "Creare su Mussolente la prima versione della vista 3D: in docs/index.html aggiungere un canvas three.js che si apre al tocco del comune, leggere le coordinate da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, esci con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale (con un solo animale SÌ sul punto di casa se riesce, altrimenti solo il terreno), la vista si chiude tornando alla mappa e non compaiono errori in console."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:08+00:00",
+   "da": "grafica3d-5",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Testare la vista three.js su un solo comune (Mussolente): in docs/index.html aggiungere un canvas che si apre al tocco del comune, ritagliare dalla griglia di altitudine già usata dalla mappa l'area attorno alle coordinate di motore/config.json e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come",
+   "dati": {
+    "passo": "Testare la vista three.js su un solo comune (Mussolente): in docs/index.html aggiungere un canvas che si apre al tocco del comune, ritagliare dalla griglia di altitudine già usata dalla mappa l'area attorno alle coordinate di motore/config.json e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG sul punto di casa. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale e un solo animale SÌ sul suo punto di casa (o, nella versione ridotta, solo il terreno 3D), e la vista si chiude tornando alla mappa senza errori in console, con il tutto pubblicato entro il 18 novembre."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:08+00:00",
+   "da": "grafica3d-6",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Su docs/index.html aggiungi un canvas three.js che si apre al tocco di Mussolente: leggi le coordinate del comune da motore/config.json, ritaglia dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, esci con la versione ridotta: so",
+   "dati": {
+    "passo": "Su docs/index.html aggiungi un canvas three.js che si apre al tocco di Mussolente: leggi le coordinate del comune da motore/config.json, ritaglia dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, esci con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale (con un animale SÌ sul punto di casa se ce la fai, altrimenti solo il terreno 3D), la vista si chiude tornando alla mappa e in console non ci sono errori."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:09+00:00",
+   "da": "grafica3d-7",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Dentro docs/index.html, aggiungi un canvas three.js che si apre al tocco di Mussolente: leggi le coordinate da motore/config.json, ritaglia dalla griglia di altitudine già usata dalla mappa l'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG sul punto di c",
+   "dati": {
+    "passo": "Dentro docs/index.html, aggiungi un canvas three.js che si apre al tocco di Mussolente: leggi le coordinate da motore/config.json, ritaglia dalla griglia di altitudine già usata dalla mappa l'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG sul punto di casa. Se entro domani non regge, esci con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale (con l'animale SÌ sul suo punto di casa, oppure, nella versione ridotta, solo il terreno 3D), la vista si chiude tornando alla mappa e in console non compaiono errori, entro il 18 novembre."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:09+00:00",
+   "da": "grafica3d-8",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Aprire docs/index.html e aggiungere un canvas three.js che si attiva al tocco di Mussolente: leggere le coordinate da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa l'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, esci con la versione ridotta: s",
+   "dati": {
+    "passo": "Aprire docs/index.html e aggiungere un canvas three.js che si attiva al tocco di Mussolente: leggere le coordinate da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa l'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, esci con la versione ridotta: solo il terreno 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale (con un animale SÌ sul punto di casa, oppure, nella versione ridotta, solo il terreno), la vista si chiude tornando alla mappa e la console non mostra errori; il tutto è pubblicato entro il 18 novembre."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:09+00:00",
+   "da": "grafica3d-9",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Aprire docs/index.html e aggiungere un canvas three.js che si attiva al tocco di Mussolente: leggere da motore/config.json le coordinate del comune, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Se entro domani il 3D non regge, uscire con la",
+   "dati": {
+    "passo": "Aprire docs/index.html e aggiungere un canvas three.js che si attiva al tocco di Mussolente: leggere da motore/config.json le coordinate del comune, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Se entro domani il 3D non regge, uscire con la versione ridotta: solo la superficie del rilievo di Mussolente, senza sprite animali e senza pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale, che si chiude tornando alla mappa senza errori in console (con l'animale SÌ sul punto di casa se la versione completa è pronta entro il 18 novembre, altrimenti solo il terreno)."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:10+00:00",
+   "da": "grafica3d-10",
+   "a": "innovazione-1",
+   "tipo": "proposta",
+   "testo": "Cantiere «Il Paese in Tasca in 3D a rilievo reale»: Aggiungere in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota, senza ancora animali né pulsanti. Se entro domani non ",
+   "dati": {
+    "passo": "Aggiungere in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota, senza ancora animali né pulsanti. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D del rilievo di Mussolente, con chiusura che riporta alla mappa.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione è pubblicata entro il 18 novembre."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:15+00:00",
+   "da": "innovazione-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "GIOCO: «Staffetta di quartiere» (primo passo: Nel codice del minigioco 'Pappa al volo' in docs/ aggiungere un turno a tempo di 30 secondi che salva punteggio e comune in un contatore condiviso. Collegare quel contatore al calcolo dei punti per comune della Coppa e attivare il campo staffette in motore/config.json, oggi a 0. Poi aggiungere un link di invito 'passa il testimone' che porta alla pagina della Coppa. Mostrare il nome di chi ha passato il turno solo se presente nell'elenco dei follower con SÌ.) · REEL: «» (primo passo: ) · REALISMO: «» (primo passo: )",
+   "dati": {
+    "gioco": {
+     "idea": "Staffetta di quartiere",
+     "come_funziona": "Dentro la Coppa delle Zampe, 'Pappa al volo' si gioca a turni di 30 secondi tra follower dello stesso comune e il punteggio si somma per il paese. Quando il testimone passa a un amico o a un comune vicino, il gioco mostra il nome del follower che l'ha lasciato (solo se ha dato il SÌ). Il risultato del comune si vede sulla mappa come una luce più forte e la classifica si aggiorna a fine turno.",
+     "primo_passo": "Nel codice del minigioco 'Pappa al volo' in docs/ aggiungere un turno a tempo di 30 secondi che salva punteggio e comune in un contatore condiviso. Collegare quel contatore al calcolo dei punti per comune della Coppa e attivare il campo staffette in motore/config.json, oggi a 0. Poi aggiungere un link di invito 'passa il testimone' che porta alla pagina della Coppa. Mostrare il nome di chi ha passato il turno solo se presente nell'elenco dei follower con SÌ.",
+     "come_misurarla": "Dopo 7 giorni: quota di giocatori che tornano per un secondo turno (obiettivo sopra il 25%), numero di testimoni passati a un amico o a un comune vicino, numero di staffette avviate (oggi 0 su 514 sfide) e follower arrivati dalla pagina della Coppa rispetto alle 514 sfide attuali."
+    },
+    "reel": null,
+    "realismo": null,
+    "perche": "La staffetta usa un gioco già presente nel sito e trasforma ogni turno in un motivo concreto per invitare un vicino, quindi porta nuovi follower senza produrre materiali nuovi."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 109590,
+ "fine": "2026-11-17T10:17:15+00:00"
+}

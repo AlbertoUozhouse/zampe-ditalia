@@ -1,0 +1,143 @@
+{
+ "id": "crescita-2026-11-17",
+ "formato": "crescita del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-17T10:16:45+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-17T10:16:45+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Si parte dai numeri veri degli ultimi 12 reel organici e dai verbali dei 7 giorni."
+  },
+  {
+   "t": "2026-11-17T10:16:48+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa è quello che rende di più in termini di reach e commenti: il reel del 13/11 ha raggiunto 2055 account e 88 commenti, il più alto del periodo. Ma sul fronte follower i numeri sono bassi: 2,4 ogni 1.000 account, contro i 19,7 del reel testa_a_testa del 15/11 (9 follower su 456 account). Il formato questa_luce del 09/11 e la serie di Paolino del 15/11 hanno tassi alti (rispet",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa è quello che rende di più in termini di reach e commenti: il reel del 13/11 ha raggiunto 2055 account e 88 commenti, il più alto del periodo. Ma sul fronte follower i numeri sono bassi: 2,4 ogni 1.000 account, contro i 19,7 del reel testa_a_testa del 15/11 (9 follower su 456 account). Il formato questa_luce del 09/11 e la serie di Paolino del 15/11 hanno tassi alti (rispettivamente 13,8 e 28,6 ogni 1.000) ma su reach piccoli (362 e 175). Il reel del 16/11 (coppa_verdetto) ha 1212 account raggiunti ma solo 1,7 follower ogni 1.000. Il reach non si traduce in follower, e il dato sulle aperture (video vero vs mappa) non emerge come differenza netta.",
+    "proposta": "Domani provare un testa_a_testa con apertura «video vero» e chiusura che chieda un'azione concreta (scrivere SEGUO con la propria città), mantenendo la sfida tra due comuni vicini. Il testa_a_testa ha già portato reach e commenti; il test è vedere se la chiusura con invito a seguire converte meglio dei precedenti.",
+    "gancio": "Due comuni vicini, una sfida aperta: quale vince? Vicino a te c'è qualcuno che ci segue già?"
+   }
+  },
+  {
+   "t": "2026-11-17T10:16:48+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa è quello che converte meglio nei verbali a 7 giorni: Verona-Vicenza ha 29.0 follower ogni 1.000 account raggiunti (9 follower su reach 310), contro una mediana di 8.0 dei reel simili; Mussolente-Vigodarzere ne ha 19.7 nei reel del 15/11. Ma non è un risultato stabile: Agliana-Castelfranco ha 0 follower su 395 di reach. Il reel più visto (Bisceglie-Barletta, 2550 views, 88 ",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa è quello che converte meglio nei verbali a 7 giorni: Verona-Vicenza ha 29.0 follower ogni 1.000 account raggiunti (9 follower su reach 310), contro una mediana di 8.0 dei reel simili; Mussolente-Vigodarzere ne ha 19.7 nei reel del 15/11. Ma non è un risultato stabile: Agliana-Castelfranco ha 0 follower su 395 di reach. Il reel più visto (Bisceglie-Barletta, 2550 views, 88 commenti, 16 condivisioni) ha portato 5 follower, cioè 2.4 ogni 1.000 account, quindi molta visibilità non si traduce in nuovi follower. Il formato serie (Paolino) dà 28.6 ogni 1.000 ma su solo 175 di reach, campione troppo piccolo. Per i verbali di incoronazione, amici e coppa_apertura il dato follower non è disponibile o è sotto la mediana.",
+    "proposta": "Domani riprovare il testa_a_testa con l'apertura video vero, scegliendo due comuni vicini e di dimensione simile (come Verona-Vicenza), e chiudendo con la domanda su città e animale. Tenere il formato serie con un secondo episodio per capire se il dato 28.6 regge su un reach più ampio. Evitare il formato fondatore, che con 0 follower e 251 di reach non ha dato nulla.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-17T10:16:49+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa è quello che ha generato più reach e commenti, ma la conversione in follower è bassa e molto variabile: il reel del 2026-11-13 (2550 views, 2055 reach, 88 commenti, 16 condivisioni) ha portato 5 follower, cioè 2.4 ogni 1.000 account; quello del 2026-11-15 (585 views, 456 reach) ne ha portati 9, cioè 19.7 ogni 1.000. Il formato serie (Paolino) ha il tasso più alto del repar",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa è quello che ha generato più reach e commenti, ma la conversione in follower è bassa e molto variabile: il reel del 2026-11-13 (2550 views, 2055 reach, 88 commenti, 16 condivisioni) ha portato 5 follower, cioè 2.4 ogni 1.000 account; quello del 2026-11-15 (585 views, 456 reach) ne ha portati 9, cioè 19.7 ogni 1.000. Il formato serie (Paolino) ha il tasso più alto del reparto, 28.6 ogni 1.000, ma su soli 175 account raggiunti. Anche i verbali confermano il pattern: il testa_a_testa del 2026-11-08 ha 29.0 ogni 1.000 a 7 giorni contro una mediana di 8.0 sui simili, mentre il questa_luce del 2026-11-08 è sotto la mediana (6.4 contro 10.2). Il reel coppa_verdetto del 2026-11-16 ha molta reach (1212) ma solo 1.7 follower ogni 1.000. In sintesi: la reach alta non basta, serve un gancio personale che porti a commentare e a seguire.",
+    "proposta": "Domani provare un testa_a_testa a coppia di comuni vicini, con apertura video vero e chiusura che chiede città e nome dell'animale, perché è il formato con il tasso più alto nei verbali a 7 giorni (29.0 contro mediana 8.0). Aggiungere un invito esplicito a seguire nel finale, come nel reel che ha convertito meglio. Evitare il questa_luce con la stessa formula: nei verbali è sotto la mediana. Per il serie, valutare un secondo episodio di Paolino, perché il tasso è alto ma il campione è piccolo.",
+    "gancio": "Verona contro Vicenza, 45 chilometri: quale città vince? Sei di qui? Scrivi città e nome del tuo animale."
+   }
+  },
+  {
+   "t": "2026-11-17T10:16:49+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa è il più efficace: il reel del 2026-11-13 (Barletta-Bisceglie) ha raggiunto 2055 account e 88 commenti, con 16 condivisioni, il miglior dato di engagement dell'elenco; ma ha portato solo 5 follower (2.4 ogni 1.000 account). Il reel del 2026-11-15 (Mussolente-Vigodarzere) ne ha portati 9 su 456 account raggiunti (19.7 ogni 1.000), il rapporto più alto tra i testa_a_testa re",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa è il più efficace: il reel del 2026-11-13 (Barletta-Bisceglie) ha raggiunto 2055 account e 88 commenti, con 16 condivisioni, il miglior dato di engagement dell'elenco; ma ha portato solo 5 follower (2.4 ogni 1.000 account). Il reel del 2026-11-15 (Mussolente-Vigodarzere) ne ha portati 9 su 456 account raggiunti (19.7 ogni 1.000), il rapporto più alto tra i testa_a_testa recenti. Il formato 'serie' (Paolino) ha 28.6 follower ogni 1.000 account, ma su soli 175 account raggiunti e 5 follower. Il reel 'fondatore' (Napoli o Monza?) e quello 'coppa_sorpasso' hanno avuto buona reach ma zero o un solo follower. I dati a 7 giorni dei verbali confermano che testa_a_testa con apertura 'video vero' è il formato più solido: 29.0 follower ogni 1.000 a 7 giorni il 2026-11-08, mentre 'prima_luce' del 2026-11-07 è sotto la mediana.",
+    "proposta": "Domani un testa_a_testa tra due comuni di dimensioni simili e vicini geograficamente, con apertura 'video vero', e chiusura che chiede città e nome dell'animale per generare commenti. Mantenere la struttura che ha funzionato (distanza in chilometri e 'la sfida è aperta'), e aggiungere una call to action esplicita a seguire per ricevere la sfida successiva.",
+    "gancio": "Due comuni, una distanza in chilometri e la sfida è aperta: chi vince il duello?"
+   }
+  },
+  {
+   "t": "2026-11-17T10:16:51+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa con apertura «video vero» è quello che porta più reach e commenti: il reel del 2026-11-13 13:07 ha raggiunto 2055 account con 88 commenti e 16 condivisioni, ma ha portato 5 follower (2.4 ogni 1.000), mentre il reel del 2026-11-15 13:05 ne ha portati 9 su 456 account raggiunti (19.7 ogni 1.000). Nei verbali, il testa_a_testa del 2026-11-08 ha ottenuto 29.0 follower ogni 1.0",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa con apertura «video vero» è quello che porta più reach e commenti: il reel del 2026-11-13 13:07 ha raggiunto 2055 account con 88 commenti e 16 condivisioni, ma ha portato 5 follower (2.4 ogni 1.000), mentre il reel del 2026-11-15 13:05 ne ha portati 9 su 456 account raggiunti (19.7 ogni 1.000). Nei verbali, il testa_a_testa del 2026-11-08 ha ottenuto 29.0 follower ogni 1.000 contro una mediana di 8.0 dei simili. Il formato questa_luce è sotto la mediana in entrambi i casi osservati (6.4 contro 10.2). Il formato serie del 2026-11-16 ha 28.6 ogni 1.000 su soli 175 account, dato piccolo e non affidabile. Diversi reel (coppa_verdetto, 2 follower su 1212 account; fondatore, 0 follower su 251) hanno molta reach senza convertire.",
+    "proposta": "Domani riproporre il testa_a_testa con apertura «video vero», perché è il formato con il miglior rapporto follower/reach nei verbali e nei reel recenti. Mantenere la chiusura che chiede a chi guarda di scrivere città e animale, che genera commenti. Evitare di ripetere questa_luce nella forma attuale. Non riprovare il formato fondatore.",
+    "gancio": "Barletta, la città della Disfida, contro Bisceglie: 21 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-17T10:16:53+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa è quello con il dato più forte nei verbali: 9 follower ogni 310 account raggiunti (29,0 ogni 1.000, contro una mediana di 8,0 sui reel simili), con apertura «video vero» e gancio «Verona contro Vicenza: 45 chilometri, e la sfida è aperta.». Anche la serie di Paolino (28,6 ogni 1.000 su soli 175 account) e il testa_a_testa del 15/11 (19,7 ogni 1.000, con 456 account) reggon",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa è quello con il dato più forte nei verbali: 9 follower ogni 310 account raggiunti (29,0 ogni 1.000, contro una mediana di 8,0 sui reel simili), con apertura «video vero» e gancio «Verona contro Vicenza: 45 chilometri, e la sfida è aperta.». Anche la serie di Paolino (28,6 ogni 1.000 su soli 175 account) e il testa_a_testa del 15/11 (19,7 ogni 1.000, con 456 account) reggono bene. Al contrario, il reel «fondatore» del 15/11 e il testa_a_testa del 14/11 hanno portato 0 follower. I numeri sui follower sono piccoli (spesso 0-9 per reel) e per molti reel del 13/11 e 16/11 il dato di follower per 1.000 account è basso, quindi conviene leggere le tendenze con cautela. Dai reel più grandi (il 13/11 con 2.055 account, il 16/11 con 1.212) i follower sono stati pochi: il volume di reach da solo non porta crescita. Il verbale del reel «prima_luce» del 9/11 (14,6 ogni 1.000) va nella stessa direzione: l'apertura «video vero» con gancio concreto e una chiusura che invita a seguire funziona meglio dei formati basati su domande generiche.",
+    "proposta": "Domani riprova il testa_a_testa con apertura «video vero» e una coppia di comuni vicini e ben riconoscibili, chiudendo con la domanda «Sei di X o di Y? Commenta città e nome del tuo animale!». Mantieni la distanza in chilometri nel gancio, perché è il dettaglio che attira. Evita di aprire con la mappa o con domande astratte sulle città (come «fondatore» o «citta»), che hanno prodotto poco o nulla. Se il formato lo consente, pubblica il testa_a_testa nella fascia 13:00 come nei giorni migliori.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-17T10:16:53+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nei 16 reel del periodo i follower per 1.000 account sono bassi e molto variabili: il testa_a_testa del 13/11 ha raggiunto 2.055 account e 88 commenti ma solo 2,4 follower ogni 1.000 (3 follower?) ; le uscite a 7 giorni più forti sono «testa_a_testa» dell'8/11 (29,0 ogni 1.000, 9 follower su 310 account, sopra la mediana simili di 8,0) e «prima_luce» del 9/11 (14,6, 9 follower su 615 account, medi",
+   "dati": {
+    "osservazione": "Nei 16 reel del periodo i follower per 1.000 account sono bassi e molto variabili: il testa_a_testa del 13/11 ha raggiunto 2.055 account e 88 commenti ma solo 2,4 follower ogni 1.000 (3 follower?) ; le uscite a 7 giorni più forti sono «testa_a_testa» dell'8/11 (29,0 ogni 1.000, 9 follower su 310 account, sopra la mediana simili di 8,0) e «prima_luce» del 9/11 (14,6, 9 follower su 615 account, mediana simili 0,0). Sotto la mediana restano «questa_luce» dell'8/11 (6,4 contro 10,2) e «coppa_apertura» (4,4 contro 11,2). Il formato testa_a_testa con apertura «video vero» e gancio su due città vicine e chiusura che chiede città e nome dell'animale è quello che ha risposto meglio nei verbali.",
+    "proposta": "Riprovare il testa_a_testa dell'8/11 con l'impostazione esatta: apertura video vero, voce attiva, gancio di confronto tra due comuni vicini con distanza in km, chiusura che chiede città e nome dell'animale. Abbinare un secondo post «prima_luce» con gancio sulla città appena accesa, perché il 9/11 ha portato 9 follower su 615 account. Evitare di ripetere «questa_luce» e «coppa_apertura» nella versione dell'8/11, che sono sotto mediana.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-17T10:16:53+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa è il più forte per portata: il reel del 2026-11-13 (Barletta-Bisceglie) ha 2.055 account raggiunti, 88 commenti e 16 condivisioni, ma ha portato solo 5 follower (2,4 ogni 1.000). Il dato più promettente per conversione è il reel 'serie' del 2026-11-16 (Paolino) con 28,6 follower ogni 1.000 account, ma su soli 175 account raggiunti. Nei verbali, 'testa_a_testa' del 2026-11-",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa è il più forte per portata: il reel del 2026-11-13 (Barletta-Bisceglie) ha 2.055 account raggiunti, 88 commenti e 16 condivisioni, ma ha portato solo 5 follower (2,4 ogni 1.000). Il dato più promettente per conversione è il reel 'serie' del 2026-11-16 (Paolino) con 28,6 follower ogni 1.000 account, ma su soli 175 account raggiunti. Nei verbali, 'testa_a_testa' del 2026-11-08 ha 29,0 ogni 1.000 con mediana dei simili a 8,0, mentre 'questa_luce' e 'coppa_apertura' sono sotto la mediana dei simili. Il formato 'fondatore' (Napoli o Monza?) non ha portato nessun follower su 251 account raggiunti.",
+    "proposta": "Riprovare il formato testa_a_testa con apertura su video vero e chiusura che chiede città e nome dell'animale, come nel verbale dell'8 novembre (29,0 ogni 1.000). Affiancare un reel di serie con un personaggio ricorrente (tipo Paolino) con chiusura che chiede un voto nei commenti, perché il dato di conversione è alto anche se la portata è bassa. Evitare il formato fondatore, con zero follower.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-17T10:16:55+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato testa_a_testa è quello che rende di più in termini di reach e commenti: il reel del 13/11 (2.055 reach, 88 commenti, 16 condivisioni) è il più forte del periodo, ma ha portato solo 5 follower (2,4 ogni 1.000). I follower più efficienti sono arrivati da serie (28,6 ogni 1.000, ma solo 175 reach) e dal testa_a_testa del 15/11 (19,7 ogni 1.000). Il formato verbali indica che «testa_a_testa",
+   "dati": {
+    "osservazione": "Il formato testa_a_testa è quello che rende di più in termini di reach e commenti: il reel del 13/11 (2.055 reach, 88 commenti, 16 condivisioni) è il più forte del periodo, ma ha portato solo 5 follower (2,4 ogni 1.000). I follower più efficienti sono arrivati da serie (28,6 ogni 1.000, ma solo 175 reach) e dal testa_a_testa del 15/11 (19,7 ogni 1.000). Il formato verbali indica che «testa_a_testa» con apertura «video vero» e chiusura che chiede città e nome dell'animale ha una mediana più alta dei simili (8,0 contro 29,0 ottenuti il 08/11). Il dato più debole è il formato «fondatore» e il reel del 14/11 con 0 follower su 395 reach.",
+    "proposta": "Domani ripetere la struttura testa_a_testa con apertura «video vero» e chiusura che chiede città e nome dell'animale, scegliendo una coppia di comuni vicini tra loro per alimentare il confronto. Evitare il formato «fondatore» e le aperture senza video reale. Tenere d'occhio il conteggio follower a 6 ore per distinguere il contributo del formato dal rumore.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-17T10:17:00+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Per domani: gancio «Verona contro Vicenza: 45 chilometri, e la sfida è aperta. Apertura con video vero, non con la mappa.», chiusura «Sei di Verona o di Vicenza? Scrivi città e nome del tuo animale, e seguici.». Dato: Testa_a_testa dell'8/11 (Verona-Vicenza): 9 follower su 310 account raggiunti, cioè 29,0 ogni 1.000 a 7 giorni, contro una mediana di 8,0 dei reel simili. Il campione è piccolo e il risultato non è stabile: Agliana-Castelfranco ha 0 follower su 395 account e Barletta-Bisceglie, con 2.055 account e 88 commenti, ha 2,4 follower ogni 1.000. Il test di domani serve a verificare se l'invito a seguire migliora la conversione.",
+   "dati": {
+    "pubblico": "Chi vive in una città o in un comune di provincia e ha un animale: persone che non ci seguono ancora e che si riconoscono in una sfida tra due comuni vicini e di dimensioni simili.",
+    "gancio": "Verona contro Vicenza: 45 chilometri, e la sfida è aperta. Apertura con video vero, non con la mappa.",
+    "motivo_per_seguire": "Seguici per vedere chi vince la sfida tra i comuni e per far entrare il tuo animale e la tua città nel prossimo confronto.",
+    "chiusura": "Sei di Verona o di Vicenza? Scrivi città e nome del tuo animale, e seguici.",
+    "da_riprovare": "Il testa_a_testa con apertura video vero e due comuni vicini e simili, nella fascia delle 13:00. Aggiungere l'invito esplicito a seguire. Un secondo episodio della serie di Paolino per verificare se il tasso alto regge su un reach più ampio.",
+    "da_evitare": "Il formato fondatore (0 follower su 251 account raggiunti) e la ripetizione di questa_luce e coppa_apertura nella forma attuale, entrambi sotto la mediana dei reel simili. Evitare anche di puntare solo sul reach: coppa_verdetto ha 1.212 account raggiunti ma solo 1,7 follower ogni 1.000.",
+    "dato": "Testa_a_testa dell'8/11 (Verona-Vicenza): 9 follower su 310 account raggiunti, cioè 29,0 ogni 1.000 a 7 giorni, contro una mediana di 8,0 dei reel simili. Il campione è piccolo e il risultato non è stabile: Agliana-Castelfranco ha 0 follower su 395 account e Barletta-Bisceglie, con 2.055 account e 88 commenti, ha 2,4 follower ogni 1.000. Il test di domani serve a verificare se l'invito a seguire migliora la conversione."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 70847,
+ "fine": "2026-11-17T10:17:00+00:00"
+}

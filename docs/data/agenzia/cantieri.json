@@ -1,83 +1,14 @@
 {
  "gioco": {
-  "idea": "Zampa Sveglia: il quiz del campanile",
-  "come_funziona": "Ogni sera il sito mostra la foto parzialmente nascosta di un animale reale di un follower e il giocatore indovina il suo comune tra 4 opzioni, scelte tra i comuni vicini sulla mappa reale. Ogni risposta giusta accende la luce del comune nella tabella per regione. Chi indovina 5 giorni di fila sblocca una storia dell'animale, pronta da condividere.",
-  "primo_passo": "Partire dal codice di 'Indovina la Zampa' e aggiungere una scelta giornaliera deterministica: l'animale del giorno si sceglie con un seed basato sulla data (AAAA-MM-GG) tra le foto in archivio dei follower con SÌ esplicito. Le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto, calcolati con le coordinate di motore/config.json. La serie di giorni consecutivi si salva in localStorage. Poi si inserisce la schermata in docs/index.html.",
-  "come_misurarla": "Dopo 7 giorni: ritorno a 24 ore (giocatori del giorno N che rigiocano il giorno N+1), numero di serie da 5 raggiunte e storie sbloccate condivise, e follower guadagnati ogni 1.000 account raggiunti dai reel che rimandano al quiz. Il tutto va confrontato con i giochi attuali del sito.",
+  "idea": "Staffetta di quartiere",
+  "come_funziona": "Dentro la Coppa delle Zampe, 'Pappa al volo' si gioca a turni di 30 secondi tra follower dello stesso comune e il punteggio si somma per il paese. Quando il testimone passa a un amico o a un comune vicino, il gioco mostra il nome del follower che l'ha lasciato (solo se ha dato il SÌ). Il risultato del comune si vede sulla mappa come una luce più forte e la classifica si aggiorna a fine turno.",
+  "primo_passo": "Nel codice del minigioco 'Pappa al volo' in docs/ aggiungere un turno a tempo di 30 secondi che salva punteggio e comune in un contatore condiviso. Collegare quel contatore al calcolo dei punti per comune della Coppa e attivare il campo staffette in motore/config.json, oggi a 0. Poi aggiungere un link di invito 'passa il testimone' che porta alla pagina della Coppa. Mostrare il nome di chi ha passato il turno solo se presente nell'elenco dei follower con SÌ.",
+  "come_misurarla": "Dopo 7 giorni: quota di giocatori che tornano per un secondo turno (obiettivo sopra il 25%), numero di testimoni passati a un amico o a un comune vicino, numero di staffette avviate (oggi 0 su 514 sfide) e follower arrivati dalla pagina della Coppa rispetto alle 514 sfide attuali.",
   "traccia": "gioco",
-  "aperto": "2026-11-14",
-  "scadenza": "2026-11-16",
-  "stato": "online",
-  "passi_proposti": [
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "Giochi nuovi",
-    "passo": "Dal codice di 'Indovina la Zampa' in docs/index.html, aggiungi la scelta giornaliera deterministica: l'animale del giorno si prende dalle foto con consenso esplicito (SÌ) in archivio, con seed sulla data AAAA-MM-GG; le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto, calcolati dalle coordinate in motore/config.json. Salva la serie di giorni consecutivi in localStorage e inserisci la schermata del quiz in docs/index.html. Se entro domani non è completo, esci con la versione ridotta: solo le 4 opzioni del giorno e il conteggio della serie, senza la storia sbloccabile.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json",
-     "docs/"
-    ],
-    "fatto_quando": "Aprendo docs/index.html il quiz mostra l'animale del giorno con 4 comuni, la stessa domanda compare a parità di data, una risposta giusta accende il comune nella tabella e la serie di giorni consecutivi si conserva ricaricando la pagina, senza errori in console."
-   },
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "Meccaniche di gioco",
-    "passo": "Partire dal codice di 'Indovina la Zampa' in docs/index.html e aggiungere la scelta giornaliera deterministica: l'animale del giorno si sceglie con un seed dalla data (AAAA-MM-GG) tra le foto dei follower con consenso SÌ, e le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto calcolati con le coordinate in motore/config.json. Se entro domani il calcolo delle distanze non regge, esci con 3 comuni scelti a mano per regione, così la scadenza del 16 novembre è rispettata.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json",
-     "docs/"
-    ],
-    "fatto_quando": "Aprendo il sito il 16 novembre compare la foto dell'animale del giorno con 4 opzioni di comune, una risposta corretta registra la luce nella tabella per regione e la serie di giorni consecutivi resta salvata in localStorage dopo un ricaricamento della pagina."
-   },
-   {
-    "giorno": "2026-11-15",
-    "ruolo": "Fattibilità tecnica",
-    "passo": "Dal codice di 'Indovina la Zampa' in docs/index.html aggiungi la scelta giornaliera deterministica: prendi l'animale del giorno dalle foto con consenso esplicito (SÌ) in archivio, con seed sulla data AAAA-MM-GG, e le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto, calcolati dalle coordinate in motore/config.json. Inserisci la schermata del quiz e salva la serie di giorni consecutivi in localStorage. Se entro domani non è completo, esci con la versione ridotta: solo le 4 opzioni del giorno e il conteggio della serie, senza la storia sbloccabile.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json",
-     "docs/"
-    ],
-    "fatto_quando": "Aprendo docs/index.html il quiz mostra l'animale del giorno con 4 comuni, la stessa domanda compare a parità di data, una risposta giusta accende il comune nella tabella e la serie di giorni consecutivi si conserva ricaricando la pagina, senza errori in console."
-   },
-   {
-    "giorno": "2026-11-16",
-    "ruolo": "Giochi nuovi",
-    "passo": "Dal codice di 'Indovina la Zampa' in docs/index.html aggiungi la scelta giornaliera deterministica: prendi l'animale del giorno dalle foto in archivio con consenso esplicito (SÌ), con seed sulla data AAAA-MM-GG, e le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto, calcolati dalle coordinate in motore/config.json. Salva la serie di giorni consecutivi in localStorage. Se entro domani non è completo, esci con la versione ridotta: solo le 4 opzioni del giorno e il conteggio della serie, senza la storia sbloccabile.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Aprendo docs/index.html il quiz mostra l'animale del giorno con 4 comuni, la stessa domanda compare a parità di data, una risposta giusta accende il comune nella tabella e la serie di giorni consecutivi si conserva ricaricando la pagina, senza errori in console."
-   },
-   {
-    "giorno": "2026-11-16",
-    "ruolo": "Meccaniche di gioco",
-    "passo": "Dal codice di 'Indovina la Zampa' in docs/index.html, aggiungi la scelta giornaliera deterministica: prendi l'animale del giorno dalle foto in archivio con consenso esplicito (SÌ), con seed sulla data AAAA-MM-GG; le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto, calcolati dalle coordinate in motore/config.json. Salva la serie di giorni consecutivi in localStorage. Se entro domani non è completo, esci con la versione ridotta: solo le 4 opzioni del giorno e il conteggio della serie, senza la storia sbloccabile.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json",
-     "docs/"
-    ],
-    "fatto_quando": "Aprendo docs/index.html il quiz mostra l'animale del giorno con 4 comuni, la stessa domanda compare a parità di data, una risposta giusta accende il comune nella tabella e la serie di giorni consecutivi si conserva ricaricando la pagina, senza errori in console."
-   },
-   {
-    "giorno": "2026-11-16",
-    "ruolo": "Fattibilità tecnica",
-    "passo": "Dal codice di 'Indovina la Zampa' in docs/index.html aggiungi la scelta giornaliera deterministica: l'animale del giorno si prende dalle foto in archivio con consenso esplicito (SÌ), con seed sulla data AAAA-MM-GG, e le 3 opzioni sbagliate sono i 3 comuni più vicini a quello giusto, calcolati dalle coordinate in motore/config.json. Se entro domani il calcolo delle distanze non regge, esci con la versione ridotta: 3 comuni scelti a mano per regione e il conteggio della serie, senza la storia sbloccabile.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json",
-     "docs/"
-    ],
-    "fatto_quando": "Aprendo docs/index.html compare l'animale del giorno con 4 opzioni di comune, la stessa domanda appare a parità di data, una risposta giusta accende il comune nella tabella per regione, la serie di giorni consecutivi resta salvata in localStorage dopo il ricaricamento e non ci sono errori in console."
-   }
-  ],
-  "aggiornato": "2026-11-16",
-  "nota": "Il voto di Paolino sul sito: nuova linguetta «🐶 Paolino» (pulsa) su zampeditalia.it e link zampeditalia.it/#paolino. Foto vera di Paolino col giorno della serie, il voto per la prossima puntata (BAGNO contro VETERINARIO) coi voti e le percentuali che salgono coi commenti, la barra FAMIGLIA, il bottone Vota su Instagram e l'elenco delle puntate. Solo numeri, nessun nome di chi vota.",
-  "online_dal": "2026-11-16"
+  "aperto": "2026-11-17",
+  "scadenza": "2026-11-19",
+  "stato": "da costruire",
+  "passi_proposti": []
  },
  "reel": {
   "idea": "Il Reel del Campanile Vero",
@@ -121,6 +52,39 @@
      "docs/"
     ],
     "fatto_quando": "Il reel di test è pubblicato entro il 17 novembre: si apre con il video reale del follower, la mappa scende sul comune con la luce che si accende e la chiusura chiede il comune vicino, senza errori di montaggio e con le coordinate corrette rispetto a motore/config.json."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Nuovi stili di reel",
+    "passo": "Dalla stessa mappa SVG che scende su un comune, costruire il reel di test: scegliere dall'archivio un video con consenso SÌ di un follower, leggere in motore/config.json le coordinate del suo comune e montare l'apertura nel formato questa_luce, collegandola alla discesa finale sulla mappa già esistente. Se entro domani il montaggio non regge, uscire con la versione ridotta: video reale di apertura e mappa che si stringe sul comune, senza la domanda finale sul comune vicino.",
+    "file": [
+     "reel/",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Il reel di test è pubblicato entro il 17 novembre: si apre con il video reale del follower, la mappa si stringe sul suo comune e si accende la luce, con coordinate corrispondenti a motore/config.json (nella versione completa anche la domanda sul comune vicino)."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Riprese e montaggio diversi",
+    "passo": "Scegliere dall'archivio un video con consenso SÌ esplicito di un follower, leggere in motore/config.json le coordinate del suo comune e montare l'apertura nel formato questa_luce, collegandola alla discesa sulla mappa SVG già esistente. Se entro domani il montaggio non regge, uscire con la versione ridotta: solo video reale di apertura e mappa che si stringe sul comune, senza la domanda finale sul comune vicino.",
+    "file": [
+     "reel/",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Il reel di test è pubblicato entro il 17 novembre: il video reale del follower compare per primo, la mappa si stringe sul suo comune con la luce che si accende, e (nella versione piena) la chiusura chiede il comune vicino, con coordinate corrette rispetto a motore/config.json."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Suono e musica nuovi",
+    "passo": "Scegli dall'archivio un video di un follower con consenso SÌ esplicito, leggi in motore/config.json le coordinate del suo comune e monta l'apertura nel formato questa_luce, collegandola alla discesa finale sulla mappa SVG già esistente. Se entro domani il montaggio non regge, esci con la versione ridotta: solo video reale di apertura e mappa che si stringe sul comune, senza la domanda finale sul comune vicino.",
+    "file": [
+     "reel/",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Il reel di test è pubblicato entro il 17 novembre: si apre con il video reale del follower, la mappa si stringe sul suo comune e la luce si accende; le coordinate corrispondono a quelle di motore/config.json e, se c'è, la domanda sul comune vicino è nei commenti o nella chiusura."
    }
   ]
  },
@@ -133,6 +97,127 @@
   "aperto": "2026-11-16",
   "scadenza": "2026-11-18",
   "stato": "da costruire",
-  "passi_proposti": []
+  "passi_proposti": [
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Realismo degli animali",
+    "passo": "Testare su un solo comune (Mussolente) la vista three.js: in docs/index.html aggiungere un canvas che si apre al tocco del comune, ritagliare dalla griglia di altitudine usata dalla mappa l'area attorno alle coordinate di config.json e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG sul punto di casa. Se entro domani non regge, esci con una versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale e un solo animale SÌ posizionato sul suo punto di casa (o, nella versione ridotta, solo il terreno 3D), e la vista si chiude tornando alla mappa senza errori in console."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Realismo della mappa e del 3D",
+    "passo": "Aggiungere in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG sul suo punto di casa. Se entro domani non regge in 3D, esci con una versione più piccola: la sola vista del rilievo di Mussolente, senza animali e senza pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente nella mappa si apre la vista 3D del suo centro sul terreno reale, con un animale con consenso SÌ visibile sul proprio punto di casa, pubblicata entro il 18 novembre (o, nella versione ridotta, la sola vista del rilievo senza animali)."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Esperimenti misurabili",
+    "passo": "Aggiungi in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggi le coordinate del comune da motore/config.json, ritaglia dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota, senza ancora animali né pulsanti. Se entro domani non regge, esci con la versione ridotta: solo la superficie 3D del rilievo di Mussolente, con chiusura che riporta alla mappa.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la pubblicazione è avvenuta entro il 18 novembre."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Animali in 3D",
+    "passo": "Testare su un solo comune (Mussolente) la vista three.js: in docs/index.html aggiungere un canvas che si apre al tocco del comune, ritagliare dalla griglia di altitudine usata dalla mappa l'area attorno alle coordinate di config.json e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG sul punto di casa. Se entro domani non regge, esci con una versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale e un solo animale SÌ posizionato sul suo punto di casa (o, nella versione ridotta, solo il terreno 3D), e la vista si chiude tornando alla mappa senza errori in console."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Paesi e piazze in 3D",
+    "passo": "Su docs/index.html aggiungi un canvas three.js che si apre al tocco di Mussolente: leggi da motore/config.json le coordinate del comune, ritaglia dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota. Se entro domani il 3D non regge, esci con la versione ridotta: solo la superficie in rilievo di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale (con un solo animale SÌ sul punto di casa, oppure, nella versione ridotta, solo il terreno 3D), la vista si chiude tornando alla mappa e in console non compaiono errori."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Rilievo e terreno veri",
+    "passo": "Creare su Mussolente la prima versione della vista 3D: in docs/index.html aggiungere un canvas three.js che si apre al tocco del comune, leggere le coordinate da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, esci con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale (con un solo animale SÌ sul punto di casa se riesce, altrimenti solo il terreno), la vista si chiude tornando alla mappa e non compaiono errori in console."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Luci della notte in 3D",
+    "passo": "Testare la vista three.js su un solo comune (Mussolente): in docs/index.html aggiungere un canvas che si apre al tocco del comune, ritagliare dalla griglia di altitudine già usata dalla mappa l'area attorno alle coordinate di motore/config.json e costruire una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG sul punto di casa. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale e un solo animale SÌ sul suo punto di casa (o, nella versione ridotta, solo il terreno 3D), e la vista si chiude tornando alla mappa senza errori in console, con il tutto pubblicato entro il 18 novembre."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Materiali e texture",
+    "passo": "Su docs/index.html aggiungi un canvas three.js che si apre al tocco di Mussolente: leggi le coordinate del comune da motore/config.json, ritaglia dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, esci con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale (con un animale SÌ sul punto di casa se ce la fai, altrimenti solo il terreno 3D), la vista si chiude tornando alla mappa e in console non ci sono errori."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Camere e inquadrature 3D",
+    "passo": "Dentro docs/index.html, aggiungi un canvas three.js che si apre al tocco di Mussolente: leggi le coordinate da motore/config.json, ritaglia dalla griglia di altitudine già usata dalla mappa l'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota, con un solo animale con consenso SÌ come sprite SVG sul punto di casa. Se entro domani non regge, esci con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale (con l'animale SÌ sul suo punto di casa, oppure, nella versione ridotta, solo il terreno 3D), la vista si chiude tornando alla mappa e in console non compaiono errori, entro il 18 novembre."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Animazioni 3D",
+    "passo": "Aprire docs/index.html e aggiungere un canvas three.js che si attiva al tocco di Mussolente: leggere le coordinate da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa l'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, esci con la versione ridotta: solo il terreno 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente si apre il canvas three.js con il terreno in rilievo reale (con un animale SÌ sul punto di casa, oppure, nella versione ridotta, solo il terreno), la vista si chiude tornando alla mappa e la console non mostra errori; il tutto è pubblicato entro il 18 novembre."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "Scene 3D per i reel",
+    "passo": "Aprire docs/index.html e aggiungere un canvas three.js che si attiva al tocco di Mussolente: leggere da motore/config.json le coordinate del comune, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Se entro domani il 3D non regge, uscire con la versione ridotta: solo la superficie del rilievo di Mussolente, senza sprite animali e senza pulsante verso il comune vicino.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale, che si chiude tornando alla mappa senza errori in console (con l'animale SÌ sul punto di casa se la versione completa è pronta entro il 18 novembre, altrimenti solo il terreno)."
+   },
+   {
+    "giorno": "2026-11-17",
+    "ruolo": "3D leggero sul telefono",
+    "passo": "Aggiungere in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota, senza ancora animali né pulsanti. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D del rilievo di Mussolente, con chiusura che riporta alla mappa.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione è pubblicata entro il 18 novembre."
+   }
+  ]
  }
 }

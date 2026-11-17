@@ -106,5 +106,17 @@
    "come_misurarla": "Dopo 7 giorni: aperture della vista 3D sul totale dei tocchi sui comuni (obiettivo sopra il 20%), quota di utenti che dalla vista passano a un comune vicino, tempo medio di permanenza e follower ogni 1.000 account raggiunti dai reel che rimandano alla vista 3D, confrontati con il 21,3 del derby Mussolente-Vigodarzere e con la mediana di 8,0 dei reel di mappa."
   },
   "perche": "Delle dieci proposte, tutte sulla stessa idea, ho scelto la prima perché è quella che lega il 3D al confronto tra comuni vicini (il meccanismo che ha dato 21,3 follower ogni 1.000 account raggiunti) usando solo dati, three.js e SVG già disponibili. Le altre tracce, gioco e reel, hanno un cantiere aperto e restano fuori."
+ },
+ {
+  "giorno": "2026-11-17",
+  "gioco": {
+   "idea": "Staffetta di quartiere",
+   "come_funziona": "Dentro la Coppa delle Zampe, 'Pappa al volo' si gioca a turni di 30 secondi tra follower dello stesso comune e il punteggio si somma per il paese. Quando il testimone passa a un amico o a un comune vicino, il gioco mostra il nome del follower che l'ha lasciato (solo se ha dato il SÌ). Il risultato del comune si vede sulla mappa come una luce più forte e la classifica si aggiorna a fine turno.",
+   "primo_passo": "Nel codice del minigioco 'Pappa al volo' in docs/ aggiungere un turno a tempo di 30 secondi che salva punteggio e comune in un contatore condiviso. Collegare quel contatore al calcolo dei punti per comune della Coppa e attivare il campo staffette in motore/config.json, oggi a 0. Poi aggiungere un link di invito 'passa il testimone' che porta alla pagina della Coppa. Mostrare il nome di chi ha passato il turno solo se presente nell'elenco dei follower con SÌ.",
+   "come_misurarla": "Dopo 7 giorni: quota di giocatori che tornano per un secondo turno (obiettivo sopra il 25%), numero di testimoni passati a un amico o a un comune vicino, numero di staffette avviate (oggi 0 su 514 sfide) e follower arrivati dalla pagina della Coppa rispetto alle 514 sfide attuali."
+  },
+  "reel": null,
+  "realismo": null,
+  "perche": "La staffetta usa un gioco già presente nel sito e trasforma ogni turno in un motivo concreto per invitare un vicino, quindi porta nuovi follower senza produrre materiali nuovi."
  }
 ]

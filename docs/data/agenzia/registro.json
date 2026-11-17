@@ -1,23 +1,5 @@
 [
  {
-  "id": "2026-11-09-1301-prima_luce",
-  "formato": "prima_luce",
-  "modalita": "operativa",
-  "inizio": "2026-11-09T12:02:01+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-09T12:07:00+00:00",
-  "scambi": 129
- },
- {
-  "id": "2026-11-09-1803-questa_luce",
-  "formato": "questa_luce",
-  "modalita": "operativa",
-  "inizio": "2026-11-09T17:04:03+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-09T17:08:47+00:00",
-  "scambi": 129
- },
- {
   "id": "2026-11-09-2110-puntata",
   "formato": "puntata",
   "modalita": "operativa",
@@ -538,5 +520,23 @@
   "stato": "senza direttore",
   "fine": "2026-11-16T22:35:27+00:00",
   "scambi": 126
+ },
+ {
+  "id": "crescita-2026-11-17",
+  "formato": "crescita del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-17T10:16:45+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-17T10:17:00+00:00",
+  "scambi": 11
+ },
+ {
+  "id": "innovazione-2026-11-17",
+  "formato": "innovazione del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-17T10:17:00+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-17T10:17:15+00:00",
+  "scambi": 19
  }
 ]
