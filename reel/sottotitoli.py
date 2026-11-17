@@ -17,12 +17,13 @@ CARTONE_CSS = """
 def main():
     parole_json, progetto, durata, *frasi = sys.argv[1:]
     salta = 0  # «--salta=N»: le prime N parole non hanno sottotitoli (il gancio è già scritto grande nella prima scena)
-    cartone, colori = False, {}
+    cartone, colori, top = False, {}, None
     nascondi = []  # «--nascondi=12-20,31-36»: parole senza sottotitoli (15/11: la scena dei padroni ha i suoi biglietti proprio dove stanno i sottotitoli)
     while frasi and frasi[0].startswith("--"):
         x = frasi.pop(0)
         if x.startswith("--salta="): salta = int(x[8:])
         elif x.startswith("--nascondi="): nascondi += [tuple(map(int, r.split("-"))) for r in x[11:].split(",") if r]
+        elif x.startswith("--top="): top = int(x[6:])  # 17/11: nel reel della partita i sottotitoli stanno sopra le teste dei cani in campo
         elif x == "--cartone": cartone = True  # 16/11, Paolino a cartone: le scritte come nei cartoni (Anton, contorno nero), più in basso
         elif x.startswith("--colori="): colori.update(dict(r.split(":", 1) for r in x[9:].split(",") if ":" in r))  # parola:colore (or, ve, ro, bl)
     P = json.loads(Path(parole_json).read_text())["parole"]
@@ -64,7 +65,7 @@ def main():
       font: 800 92px/1.02 "Bricolage Grotesque", sans-serif; letter-spacing: -1px; color: #FFF4DE; overflow: visible;
       text-shadow: 0 6px 0 #060B1A, 0 0 30px rgba(6, 11, 26, .9), 0 0 6px #060B1A; }}
     #root .w {{ display: inline-block; }}
-    #root .or {{ color: #FFC55C; }} #root .ve {{ color: #CFE36B; }}{CARTONE_CSS if cartone else ""}
+    #root .or {{ color: #FFC55C; }} #root .ve {{ color: #CFE36B; }}{CARTONE_CSS if cartone else ""}{f" #root .g {{ top: {top}px; }}" if top else ""}
   </style>
   <div id="root" data-composition-id="sottotitoli" data-width="1080" data-height="1920">
     {righe_html}

@@ -833,12 +833,28 @@ CARTONE_SFONDI = {
       <rect x="720" y="640" width="260" height="660" rx="8" fill="#9AA6B8" stroke="{LINEA}" stroke-width="9"/>{''.join(f'<rect x="745" y="{y}" width="210" height="190" rx="6" fill="#B8C2CC" stroke="{LINEA}" stroke-width="6"/><rect x="815" y="{y + 80}" width="70" height="18" rx="9" fill="#5A6472"/>' for y in (665, 875, 1085))}
       <rect x="0" y="1300" width="1080" height="620" fill="#B9875A"/>{''.join(f'<rect x="0" y="{y}" width="1080" height="6" fill="#9C6F45"/>' for y in range(1390, 1920, 100))}<rect x="0" y="1295" width="1080" height="14" fill="{LINEA}"/>""",
 }
+def sfondo_stadio(ca, cb):
+    """17/11, il Campionato delle Zampe: lo stadio di notte, metà curva coi colori della squadra di casa e metà con quelli degli ospiti."""
+    teste = "".join(f'<circle cx="{x}" cy="{y}" r="11" fill="{(ca if x < 540 else cb)[(x // 30 + y // 40) % 2]}" stroke="{LINEA}" stroke-width="3"/>'
+                    for y in range(500, 980, 40) for x in range(15 + (y // 40 % 2) * 15, 1080, 30) if y > 470 + abs(x - 540) * 0.12)
+    return f"""<rect width="1080" height="1920" fill="#16204A"/>
+      <path d="M150 140 L-60 1000 L360 1000Z" fill="#FFF3B0" opacity=".12"/><path d="M930 140 L720 1000 L1140 1000Z" fill="#FFF3B0" opacity=".12"/>
+      {''.join(f'<rect x="{x - 8}" y="150" width="16" height="380" fill="#5A6472" stroke="{LINEA}" stroke-width="5"/><rect x="{x - 70}" y="110" width="140" height="70" rx="8" fill="#FFF3B0" stroke="{LINEA}" stroke-width="7"/>' for x in (150, 930))}
+      <path d="M0 520 Q540 380 1080 520 V1050 H0Z" fill="#2C3960" stroke="{LINEA}" stroke-width="10"/>
+      <path d="M0 520 Q270 440 540 420 V1050 H0Z" fill="{ca[1]}" opacity=".35"/><path d="M540 420 Q810 440 1080 520 V1050 H540Z" fill="{cb[1]}" opacity=".35"/>
+      {teste}
+      <rect x="0" y="990" width="1080" height="70" fill="#E2432F" stroke="{LINEA}" stroke-width="8"/>{''.join(f'<rect x="{x}" y="1002" width="150" height="46" rx="6" fill="{c}"/>' for x, c in ((30, ca[0]), (230, "#FFD23F"), (430, "#FFFFFF"), (630, "#FFD23F"), (830, cb[0])))}
+      <rect x="0" y="1060" width="1080" height="860" fill="#3FA34D"/>{''.join(f'<rect x="0" y="{y}" width="1080" height="70" fill="#379645"/>' for y in range(1130, 1920, 140))}
+      <path d="M0 1100 H1080 M540 1100 V1920" stroke="#F4F4F4" stroke-width="10"/><ellipse cx="540" cy="1500" rx="250" ry="90" fill="none" stroke="#F4F4F4" stroke-width="10"/>
+      <rect x="0" y="1055" width="1080" height="12" fill="{LINEA}"/>"""
+
+
 CARTONE_COLORI = {"rosso": ("#E2432F", "#FFFFFF"), "giallo": ("#FFD23F", "#1A1206"), "verde": ("#5BD07A", "#1A1206"), "rosa": ("#F0609E", "#FFFFFF"),
                   "arancio": ("#F28C28", "#FFFFFF"), "blu": ("#3E8EF0", "#FFFFFF"), "bianco": ("#FFF8EA", "#1A1206")}
 
 
 def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=None, attori=(), etichette=(), nuvole=(), oggetti=(), sfx=None,
-            numero=None, voto=None, commento=None, scelta=None):
+            numero=None, voto=None, commento=None, scelta=None, hud=True, colori=None, tabellone=None, tabella=None):
     """Una scena di Paolino a cartone. attori: [{"img": "felice", "x": 540, "y": 1560, "h": 700, "flip": False, "anim": ["entra_sx", "respira"], "t0": 0}]
     (x e y = centro dei piedi); etichette: [{"t": "PAOLINO", "c": "rosso", "x": 60, "y": 900, "r": -5, "z": 64, "t0": 0.3}];
     nuvole: [{"t": "VIENI, TESORO!", "x": 80, "y": 640, "w": 440, "coda": "sx", "t0": 0.4}]; oggetti: emoji come attrezzi di scena
@@ -888,17 +904,43 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
     #root .sc .op .em {{ font-size: 100px; line-height: 1.1; color: #1A1206; }}
     #root .sc .op b {{ font: 400 64px/1.05 "Anton", sans-serif; color: #1A1206; }}
     #root .sc .o {{ position: absolute; left: 50%; top: 110px; width: 130px; margin-left: -65px; font: 400 36px/62px "Anton", sans-serif; color: #1A1206; background: #FFD23F; border: 5px solid #1A1206; border-radius: 31px; }}"""
-    corpo = [f'<svg class="fondo" viewBox="0 0 1080 1920">{CARTONE_SFONDI.get(sfondo, CARTONE_SFONDI["canile"])}</svg>']
     js = []
+    fondo_svg = sfondo_stadio(*(colori or [["#1B4FA0", "#111111"], ["#D2151C", "#111111"]])) if sfondo == "stadio" else CARTONE_SFONDI.get(sfondo, CARTONE_SFONDI["canile"])
+    corpo = [f'<svg class="fondo" viewBox="0 0 1080 1920">{fondo_svg}</svg>']
+    css += """
+    #root .tb { position: absolute; left: 40px; right: 40px; top: 250px; z-index: 3; text-align: center; }
+    #root .tb .s { display: inline-block; font: 400 46px/1.05 "Anton", sans-serif; color: #1A1206; background: #FFD23F; border: 6px solid #1A1206; border-radius: 12px; padding: 4px 22px 6px; transform: rotate(-2deg); box-shadow: 0 8px 0 rgba(0,0,0,.35); }
+    #root .tb .q { display: grid; grid-template-columns: 1fr 250px 1fr; align-items: stretch; margin-top: 22px; background: #15100C; border: 8px solid #F3E6C8; border-radius: 26px; overflow: hidden; box-shadow: 0 12px 0 rgba(0,0,0,.4); }
+    #root .tb .q b { font: 400 66px/1.05 "Anton", sans-serif; padding: 26px 10px; color: #FFFFFF; -webkit-text-stroke: 6px #15100C; paint-order: stroke fill; }
+    #root .tb .q em { font: 400 140px/1 "Anton", sans-serif; font-style: normal; color: #FFD23F; padding: 14px 0; }
+    #root .cl { position: absolute; left: 60px; right: 60px; top: 300px; z-index: 3; }
+    #root .cl h3 { margin: 0 0 18px; text-align: center; font: 400 80px/1 "Anton", sans-serif; color: #FFFFFF; -webkit-text-stroke: 8px #1A1206; paint-order: stroke fill; text-shadow: 0 8px 0 #1A1206; }
+    #root .cl .r { display: grid; grid-template-columns: 70px 1fr 160px; align-items: center; gap: 14px; margin-bottom: 14px; background: #FFF8EA; border: 6px solid #1A1206; border-radius: 18px; padding: 8px 18px; box-shadow: 0 7px 0 rgba(0,0,0,.3); }
+    #root .cl .r span { font: 400 54px/1 "Anton", sans-serif; color: #1A1206; }
+    #root .cl .r b { font: 400 56px/1.1 "Anton", sans-serif; color: #1A1206; text-align: left; }
+    #root .cl .r i { font: 400 56px/1 "Anton", sans-serif; font-style: normal; color: #1A1206; text-align: right; }
+    #root .cl .r.primo { background: #FFD23F; }"""
+    if tabellone:
+        T = tabellone; bg = lambda c: f"background:linear-gradient(90deg,{c[0]} 0 50%,{c[1]} 50% 100%)"
+        corpo.append(f'<div class="tb" id="{cid}-tb">' + (f'<div class="s">{ESC(T["sopra"])}</div>' if T.get("sopra") else "")
+                     + f'<div class="q"><b style="{bg(T["ca"])}">{ESC(T["a"])}</b><em id="{cid}-ts">{T.get("ga", 0)} – {T.get("gb", 0)}</em><b style="{bg(T["cb"])}">{ESC(T["b"])}</b></div></div>')
+        js.append(f'    tl.fromTo("#{cid}-tb", {{ y: -120, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.6)" }}, 0.05);')
+        js.append(f'    tl.fromTo("#{cid}-ts", {{ scale: 2.2 }}, {{ scale: 1, duration: 0.4, ease: "back.out(2)" }}, 0.35);')
+    if tabella:
+        righe = "".join(f'<div class="r{" primo" if i == 0 else ""}" id="{cid}-r{i}"><span>{i + 1}</span><b>{ESC(x["nome"])}</b><i>{x["pt"]} PT</i></div>' for i, x in enumerate(tabella[:5]))
+        corpo.append(f'<div class="cl"><h3 id="{cid}-ch">CLASSIFICA</h3>{righe}</div>')
+        js.append(f'    tl.fromTo("#{cid}-ch", {{ y: -60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0.05);')
+        for i in range(len(tabella[:5])):
+            js.append(f'    tl.fromTo("#{cid}-r{i}", {{ x: {-700 if i % 2 == 0 else 700}, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.35, ease: "back.out(1.6)" }}, {0.3 + i * 0.2:.2f});')
     for i, o in enumerate(oggetti):
-        corpo.append(f'<div class="og" id="{cid}-g{i}" style="left:{o["x"]}px;top:{o["y"]}px;font-size:{o.get("z", 120)}px">{ESC(o["e"])}</div>')
+        corpo.append(f'<div class="og" id="{cid}-g{i}" style="left:{o["x"]}px;top:{o["y"]}px;font-size:{o.get("z", 120)}px{";color:" + o["colore"] if o.get("colore") else ""}">{ESC(o["e"])}</div>')
         js.append(f'    tl.fromTo("#{cid}-g{i}", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.6)" }}, {o.get("t0", 0.3):.2f});')
         if o.get("vola"): js.append(f'    tl.to("#{cid}-g{i}", {{ keyframes: [{{ y: -24, duration: 0.4 }}, {{ y: 0, duration: 0.4 }}], repeat: {max(1, int(dur / 0.8))} }}, {o.get("t0", 0.3) + 0.35:.2f});')
     for i, a in enumerate(attori):
         h = a.get("h", 700); x, y = a.get("x", 540), a.get("y", 1560)
         corpo.append(f'<div class="om" style="left:{x - h * 0.32:.0f}px;top:{y - 20}px;width:{h * 0.64:.0f}px"></div>')
         corpo.append(f'<div class="att{" flip" if a.get("flip") else ""}" id="{cid}-a{i}" style="left:{x - 500}px;top:{y - h}px;height:{h}px">'
-                     f'<img src="assets/img/paolino-{a["img"]}.png" alt=""></div>')
+                     + (f'<img src="assets/svg/{a["svg"]}" alt=""></div>' if a.get("svg") else f'<img src="assets/img/paolino-{a["img"]}.png" alt=""></div>'))
         t0 = a.get("t0", 0.0); an = a.get("anim", ["pop"]); an = [an] if isinstance(an, str) else an; sel = f"#{cid}-a{i}"
         rip = lambda per: max(1, int((dur - t0) / per))
         for k in an:
@@ -952,8 +994,8 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
         js.append(f'    tl.fromTo("#{cid}-opa", {{ x: -320, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.3);')
         js.append(f'    tl.fromTo("#{cid}-opb", {{ x: 320, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.5);')
         js.append(f'    tl.to(["#{cid}-opa", "#{cid}-opb"], {{ keyframes: [{{ scale: 1.05, duration: 0.3 }}, {{ scale: 1, duration: 0.3 }}], repeat: {max(1, int(dur / 1.2))}, stagger: 0.3 }}, 1.0);')
-    corpo.append(f'<div class="hud"><div><small>GIORNI</small><b>{giorni}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>')
-    if famiglia_prima is not None and famiglia_prima != famiglia:
+    if hud: corpo.append(f'<div class="hud"><div><small>GIORNI</small><b>{giorni}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>')
+    if hud and famiglia_prima is not None and famiglia_prima != famiglia:
         js.append(f'    tl.set("#{cid}-f", {{ textContent: "{famiglia}%" }}, {max(0.8, dur * 0.5):.2f}); tl.to("#{cid}-f", {{ keyframes: [{{ scale: 1.4, duration: 0.15 }}, {{ scale: 1, duration: 0.2 }}] }}, {max(0.8, dur * 0.5):.2f});')
     return _pagina(cid, "Paolino a cartone", css, "\n    ".join(corpo), "\n".join(js))
 

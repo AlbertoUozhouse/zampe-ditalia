@@ -320,7 +320,11 @@ def main():
             sc["intorno"] = [px(lng, lat) for lng, lat in sc.get("intorno", [])]
         if tipo == "cartone":  # 16/11 sera: Paolino a cartone, disegnato da Alberto con ChatGPT (reel/assets/paolino)
             (prog / "assets/img").mkdir(parents=True, exist_ok=True)
-            for a_ in sc.get("attori", []): shutil.copy(ROOT / "reel/assets/paolino" / f"{a_['img']}.png", prog / "assets/img" / f"paolino-{a_['img']}.png")
+            for a_ in sc.get("attori", []):
+                if a_.get("cane"):  # 17/11, il Campionato delle Zampe: i cani veri dei tifosi, con la sciarpa della squadra
+                    c_ = a_.pop("cane"); serve.add((c_["t"], c_["razza"], c_["seme"], c_["sq"])); soli.append((c_["t"], c_["razza"], f"{c_['seme']}-{c_['sq']}", None))
+                    a_["svg"] = f"{c_['razza']}-{c_['seme']}-{c_['sq']}-solo.svg"
+                else: shutil.copy(ROOT / "reel/assets/paolino" / f"{a_['img']}.png", prog / "assets/img" / f"paolino-{a_['img']}.png")
         if tipo == "zampa30" and sc.get("foto"):  # 15/11 sera: la foto IA di Zampa (reel/assets/zampa, motore/zampa.py)
             sc.pop("muso", None); (prog / "assets/img").mkdir(parents=True, exist_ok=True)
             shutil.copy(ROOT / "reel/assets/zampa" / sc["foto"], prog / "assets/img" / sc["foto"])
@@ -385,7 +389,7 @@ def main():
     inizio_parole = [sum(len(x.split()) for x in frasi[:k]) for k in range(len(frasi))]
     nascoste = ",".join(f"{inizio_parole[k]}-{inizio_parole[k] + len(frasi[k].split()) - 1}" for k, f in enumerate(copione["frasi"]) if f["scena"]["tipo"] in ("padroni", "tifosi", "svela", "tappa", "avvento", "zampa30"))
     subprocess.run([sys.executable, str(ROOT / "reel/sottotitoli.py"), str(out / "parole.json"), str(prog), str(durata), *([f"--salta={len(frasi[0].split())}"] if copione["frasi"][0]["scena"]["tipo"] in ("gancio", "intruso") else []),
-                    *([f"--nascondi={nascoste}"] if nascoste else []), *(["--cartone"] if copione.get("cartone") else []),
+                    *([f"--nascondi={nascoste}"] if nascoste else []), *(["--cartone"] if copione.get("cartone") else []), *([f"--top={copione['sottotitoli_top']}"] if copione.get("sottotitoli_top") else []),
                     *([f"--colori={','.join(f'{k}:{v}' for k, v in copione['parole_colore'].items())}"] if copione.get("parole_colore") else []), *gruppi_sottotitoli(frasi)], check=True)
     (out / "effetti.json").write_text(json.dumps(effetti))
     subprocess.run([sys.executable, str(ROOT / "reel/musica.py"), str(out / "effetti.json"), str(prog / "assets/audio/musica.wav")], check=True)

@@ -1228,7 +1228,7 @@ def verifica(cop):
 
 
 # ================================================================ formati nuovi (12/11, Alberto: «voglio video nuovi, idee diverse, basta sempre ste cose»)
-FRASI_FISSE = {"serie": 92, "avvento": 45, "giro": 60, "rari": 45, "citta": 45, "tifo": 50, "indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
+FRASI_FISSE = {"partita": 80, "serie": 92, "avvento": 45, "giro": 60, "rari": 45, "citta": 45, "tifo": 50, "indovina": 45, "figurina": 45, "testa_a_testa": 45, "gara_follower": 60, "intruso": 45, "nomi_top": 58, "corsa": 55}  # testi scritti apposta (niente riscrittura dell'IA, che rovinerebbe il «tre, due, uno»)
 
 MANTELLI = {"europeo", "grigio", "nero", "rosso", "bianco", "bicolore", "bicolore_rosso", "calico", "tartarugato", "meticcio"}  # colori, non razze: fuori dal quiz
 
@@ -2029,6 +2029,80 @@ def _serie_fine(n, ep, opzioni, titolo, famiglia, a, b, frasi, storia, st):
     st["senza_bonus"] = True
     return f"🐶 PAOLINO · GIORNO {n} DI 30", frasi, did
 
+def partita(D, rng, st):
+    """17/11, il Campionato delle Zampe (motore/campionato.py), a cartone come Paolino: il risultato dell'ultima partita, la classifica,
+    la partita di oggi nello stadio della squadra di casa coi cani veri dei tifosi in campo (i padroni taggati), e «ogni commento è un gol»."""
+    sys.path.insert(0, str(ROOT / "motore")); import campionato, squadre
+    C = carica(ROOT / "motore/stato.json", {}).get("campionato") or {}
+    P = C.get("partita")
+    if not P: raise Salta("nessuna partita in corso nel Campionato delle Zampe")
+    G = (C.get("giocate") or [None])[-1]
+    G = G if G and G.get("fine", "") >= (ORA - timedelta(days=3)).isoformat() else None  # il risultato solo se è di questi giorni
+    nom, col = squadre.nome, (lambda k: squadre.colori(k)["c"])
+    num = lambda n: NUMERI_IT[n] if n < len(NUMERI_IT) else str(n)
+    base = {"tipo": "cartone", "sfondo": "stadio", "hud": False}
+    tag = []
+
+    def cani(k, n, xs, t0=0.3, anim=("pop", "salta"), h=None):
+        pp = padroni(D, st, [a for a in D["animali"] if a.get("sq") == k], n, riposo=2)
+        out = []
+        for x, p in zip(xs, pp):
+            if p["t"] != "cane": continue
+            tag.append(p["utente"])
+            out.append({"cane": {"t": "cane", "razza": p["razza"], "seme": p["seme"], "sq": k}, "x": x, "y": 1640, "h": h or 780, "anim": list(anim), "t0": t0, "_nome": p["nome"]})
+        return out
+
+    def nomi(att, c):  # il nome di ogni cane sul petto, come una maglia (sopra le teste ci sono i sottotitoli)
+        return [{"t": a.pop("_nome").upper(), "c": c, "x": min(860, max(20, a["x"] - 100)), "y": a["y"] - 250, "r": -3 if i % 2 else 3, "z": 46, "t0": a["t0"] + 0.3} for i, a in enumerate(att)]
+
+    frasi = []
+    A, B = nom(P["a"]), nom(P["b"])
+    if G:
+        GA, GB = nom(G["a"]), nom(G["b"]); ga, gb = G["ga"], G["gb"]
+        vince = G["a"] if ga > gb else G["b"] if gb > ga else None
+        att = cani(vince, 2, (300, 780), 0.6) if vince else cani(G["a"], 1, (300,), 0.6) + cani(G["b"], 1, (780,), 0.6)
+        frasi.append((f"Finale {campionato.allo(G['stadio'])}: {GA} {num(ga)}, {GB} {num(gb)}! " + (f"Tre punti {'all' if nom(vince)[:1] in 'AEIOU' else 'al'}{'’' if nom(vince)[:1] in 'AEIOU' else ' '}{nom(vince)}!".replace("’", "'") if vince else "Pareggio: un punto a testa."),
+                      {**base, "colori": [col(G["a"]), col(G["b"])], "tabellone": {"sopra": f"FINALE · {G['stadio']}", "a": GA.upper(), "b": GB.upper(), "ga": ga, "gb": gb, "ca": col(G["a"]), "cb": col(G["b"])},
+                       "attori": att, "etichette": [{"t": f"VINCE {nom(vince).upper()}!" if vince else "PAREGGIO", "c": "verde", "x": 250, "y": 640, "r": -4, "z": 84, "t0": 0.8}] + nomi(att, "giallo"),
+                       "sfx": {"t": "3 PUNTI!" if vince else "1 PUNTO", "x": 620, "y": 820, "t0": 1.0}}))
+        tab = [{"nome": nom(k).upper(), "pt": r["pt"]} for k, r in campionato.classifica({"campionato": C})][:5]
+        if len(tab) >= 2:
+            k1 = campionato.classifica({"campionato": C})[0][0]; k2 = campionato.classifica({"campionato": C})[1][0]
+            frasi.append((f"In testa al Campionato delle Zampe: {tab[0]['nome'].title()}, {num(tab[0]['pt'])} punti.",
+                          {**base, "colori": [col(k1), col(k2)], "tabella": tab}))
+    else:
+        n_t = sum(campionato.tifosi(D["animali"]).values())
+        frasi.append(("Nasce il Campionato delle Zampe! I cani tifano, e ogni commento è un gol.",
+                      {**base, "colori": [col(P["a"]), col(P["b"])], "attori": cani(P["a"], 1, (300,), 0.4) + cani(P["b"], 1, (780,), 0.6),
+                       "etichette": [{"t": "CAMPIONATO", "c": "giallo", "x": 170, "y": 330, "r": -4, "z": 120, "t0": 0.1}, {"t": "DELLE ZAMPE", "c": "rosso", "x": 230, "y": 520, "r": 3, "z": 100, "t0": 0.4},
+                                     {"t": f"{n_t} CANI TIFOSI", "c": "verde", "x": 300, "y": 720, "r": -3, "z": 60, "t0": 1.0}]}))
+    derby = frozenset((P["a"], P["b"])) in {frozenset(x) for x in campionato.DERBY[:4]}
+    att = cani(P["a"], 2, (170, 400), 0.5, h=780) + cani(P["b"], 2, (680, 910), 0.8, h=780)
+    frasi.append((f"Oggi {campionato.allo(P['stadio'])}: {A} contro {B}." + (" È il derby!" if derby else ""),
+                  {**base, "colori": [col(P["a"]), col(P["b"])], "tabellone": {"sopra": f"OGGI · {P['stadio']} · GIORNATA {P['giornata']}", "a": A.upper(), "b": B.upper(), "ga": 0, "gb": 0, "ca": col(P["a"]), "cb": col(P["b"])},
+                   "attori": [dict(a) for a in att], "etichette": nomi([dict(a) for a in att], "giallo") + ([{"t": "DERBY!", "c": "rosso", "x": 380, "y": 700, "r": -5, "z": 100, "t0": 1.2}] if derby else [])}))
+    fino = campionato.quando(P["fine"], ORA).replace("12:30", "dodici e trenta")
+    frasi.append((f"Ogni commento è un gol: scrivi forza {A} o forza {B}, con città e nome del tuo cane. Si gioca fino a {fino}.",
+                  {**base, "colori": [col(P["a"]), col(P["b"])], "attori": [{k: v for k, v in a.items() if k != "_nome"} for a in att],
+                   "oggetti": [{"e": "⚽", "x": 470, "y": 860, "z": 150, "t0": 0.3, "vola": True, "colore": "#FFFFFF"}],
+                   "etichette": [{"t": "OGNI COMMENTO", "c": "giallo", "x": 130, "y": 330, "r": -4, "z": 96, "t0": 0.1}, {"t": "È UN GOL!", "c": "rosso", "x": 300, "y": 500, "r": 3, "z": 110, "t0": 0.4},
+                                 {"t": f"FORZA {A.upper()} O FORZA {B.upper()}", "c": "bianco", "x": 60, "y": 720, "r": -2, "z": 54, "t0": 1.2}]}))
+    st["tag_extra"] = list(dict.fromkeys(st.get("tag_extra", []) + tag))
+    st["cartone"] = True; st["schermo_pulito"] = True; st["senza_bonus"] = True; st["sottotitoli_top"] = 1075  # sopra le teste dei cani in campo
+    st["parole_colore"] = {"gol": "or", "commento": "or", "derby": "ro", "punti": "ve", "pareggio": "or", "forza": "or", "campionato": "or", "zampe": "or",
+                           A.lower(): "bl", B.lower(): "ro"}
+    st["copertina"] = {"sopra": "⚽ CAMPIONATO DELLE ZAMPE", "grande": f"{A}<br><i>vs</i><br>{B}", "sotto": f"{P['stadio']} · GIORNATA {P['giornata']}", "domanda": "Ogni commento è un gol 👇", "tema": "duello"}
+    st["banner_reel"] = f"⚽ Scrivi FORZA {A.upper()} o FORZA {B.upper()}"
+    st["hashtag"] = f"#{re.sub('[^a-z]', '', A.lower())} #{re.sub('[^a-z]', '', B.lower())} #calcio #seriea #tifosi #derby #cani #animalidomestici "
+    fine_t = campionato.quando(P["fine"], ORA)
+    did = ("⚽ Campionato delle Zampe · Giornata " + str(P["giornata"]) + "\n"
+           + (f"Finale {campionato.allo(G['stadio'])}: {nom(G['a'])} {G['ga']} – {G['gb']} {nom(G['b'])}.\n" if G else "Nasce il campionato dei cani tifosi!\n")
+           + f"Oggi {campionato.allo(P['stadio'])}: {A} contro {B}{' — è il derby!' if derby else ''}\n\n"
+           f"👇 Ogni commento è un gol: scrivi FORZA {A.upper()} o FORZA {B.upper()}, con città e nome del tuo cane (sulla mappa mette la sciarpa). Un gol a persona: tagga gli amici tifosi!\n"
+           f"⏱️ Si gioca fino a {fine_t}. Vittoria 3 punti, pareggio 1.")
+    return f"⚽ {A.upper()} – {B.upper()}", frasi, did
+
+
 def scelta_21():
     """15/11, piano nuovo: alle 21 a rotazione i reel che promettono qualcosa a chi commenta (la squadra, il tempo dell'intruso, il nome, la città)."""
     return ["intruso", "citta", "tifo", "rari", "nomi_top", "corsa"][(ORA.date() - date(2026, 11, 17)).days % 6]
@@ -2041,7 +2115,7 @@ def sera_18(D, rng, st):
     return FORMATI[scelta_18()](D, rng, st)
 
 
-FORMATI = {"serie": serie, "avvento": avvento, "giro": giro, "rari": rari, "citta": citta_reel, "tifo": tifo, "corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "sera_21": lambda D, rng, st: FORMATI[scelta_21()](D, rng, st), "giorno_13": lambda D, rng, st: FORMATI[scelta_13()](D, rng, st), "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
+FORMATI = {"partita": partita, "serie": serie, "avvento": avvento, "giro": giro, "rari": rari, "citta": citta_reel, "tifo": tifo, "corsa": corsa, "intruso": intruso, "nomi_top": nomi_top, "gara_follower": gara_follower, "indovina": indovina, "figurina": figurina_reel, "sera_18": sera_18, "sera_21": lambda D, rng, st: FORMATI[scelta_21()](D, rng, st), "giorno_13": lambda D, rng, st: FORMATI[scelta_13()](D, rng, st), "paese_al_buio": paese_al_buio, "campanile_rivale": campanile_rivale, "aggiornamento": aggiornamento, "verdetto_sera": verdetto_sera, "coppa_apertura": coppa_apertura, "coppa_sorpasso": coppa_sorpasso, "coppa_verdetto": coppa_verdetto, "prima_luce": prima_luce, "testa_a_testa": testa_a_testa, "questa_luce": questa_luce, "amici": amici, "ospiti": ospiti, "ospiti_sera": ospiti_sera, "re": regno, "incoronazione": incoronazione, "fuochi": fuochi, "missione": missione, "star": star, "neopresidente": neopresidente, "nomi": nomi, "razze": razze, "sfida": sfida, "presidente": presidente, "negozio": negozio, "gara": gara, "derby": derby, "altri": altri, "buio": buio, "attivita": attivita, "benvenuti": benvenuti, "voto": voto, "duello": duello, "vetrina": vetrina, "fondatore": fondatore, "puntata": puntata}
 ORARI = [(9, "duello"), (11, "voto"), (13, "benvenuti"), (16, "voto"), (18, "fondatore"), (21, "puntata"), (22, "voto")]
 
 # ---------------------------------------------------------------- variazione con Claude, entro regole rigide
@@ -2117,9 +2191,9 @@ def main():
     try:
         try: titolo, frasi, did = FORMATI[formato](D, rng, st)
         except Salta as e0:
-            if formato != "serie": raise
-            print(f"serie: {e0}; al suo posto il reel delle 21 a rotazione")
-            formato = scelta_21(); titolo, frasi, did = FORMATI[formato](D, rng, st)
+            if formato not in ("serie", "partita"): raise
+            print(f"{formato}: {e0}; al suo posto il reel a rotazione")
+            formato = scelta_21() if formato == "serie" else scelta_13(); titolo, frasi, did = FORMATI[formato](D, rng, st)
     except Salta as e:  # niente caso verificato: il reel non esce, e il motivo resta nel registro del test
         st["test_saltati"] = (st.get("test_saltati", []) + [{"quando": ORA.strftime("%Y-%m-%d %H:%M"), "formato": formato, "motivo": str(e)}])[-100:]
         STORICO.write_text(json.dumps(st, ensure_ascii=False, indent=1))
@@ -2188,6 +2262,7 @@ def main():
     avvento_info = st.pop("avvento_info", None)
     serie_info = st.pop("serie_info", None)
     cartone = st.pop("cartone", False); parole_colore = st.pop("parole_colore", None)  # 16/11: Paolino a cartone, sottotitoli colorati
+    sott_top = st.pop("sottotitoli_top", None)
     # l'aspetto grafico a rotazione: mai uguale ai due reel prima (reel/modello/scene.py, TEMI)
     temi = ["notte", "tramonto", "aurora", "giorno", "neon"]  # colori resi abbastanza scuri da passare il controllo di contrasto (reel/modello/scene.py)
     gia = st.get("temi", [])[-2:]
@@ -2200,7 +2275,7 @@ def main():
                "banner": st.pop("banner_reel", "💬 Commenta città e nome del tuo animale 👇"), "didascalia": did,
                "tag": [u for u in mostrati if u.lower() not in ESCLUSI],
                # 15/11: fino a 3 padroni in vista che ci seguono già ricevono l'invito a collaborare: se accettano, il reel va anche sul loro profilo
-               "collab": [x["utente"] for _, sc in frasi if sc.get("tipo") == "padroni" for x in sc["persone"] if x["utente"].lower() in D["seguono"]][:3], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}), **({"giro": giro_info} if giro_info else {}), **({"avvento": avvento_info} if avvento_info else {}), **({"serie": serie_info} if serie_info else {}), **({"cartone": True} if cartone else {}), **({"parole_colore": parole_colore} if parole_colore else {}), **({"schermo_pulito": True} if schermo_pulito else {}),
+               "collab": [x["utente"] for _, sc in frasi if sc.get("tipo") == "padroni" for x in sc["persone"] if x["utente"].lower() in D["seguono"]][:3], "copertina": st.pop("copertina", None), **({"intro": intro} if intro else {}), **({"intro_3d": intro_3d} if intro_3d and not intro else {}), **({"giro": giro_info} if giro_info else {}), **({"avvento": avvento_info} if avvento_info else {}), **({"serie": serie_info} if serie_info else {}), **({"cartone": True} if cartone else {}), **({"parole_colore": parole_colore} if parole_colore else {}), **({"sottotitoli_top": sott_top} if sott_top else {}), **({"schermo_pulito": True} if schermo_pulito else {}),
                **({"test": {"nome": "crescita-1", "formato": formato, "variante": voce_v, "slot": ORA.strftime("%H:%M"), "caso": caso}} if test else {})}
     if test: copione.pop("intro", None); copione.pop("intro_3d", None)  # nel test il primo fotogramma è il gancio: niente video prima
     oggi = ORA.date()  # 15/11: chi è stato taggato e quando (motore/copione.py padroni: riposo di 3 giorni tra un tag e l'altro)

@@ -2,7 +2,7 @@
  "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana, almeno 90 minuti tra un reel e l'altro (orari.py salta un reel se ne è uscito uno da meno di 75 minuti). Niente «:prova» (i Trial Reel di ottobre: 235 views). Dal 31/10: 6 reel al giorno, voluti da Alberto, e il controllo delle 11:13 li cambia in base a follower e numeri (motore/decisioni-reel.md). «una_tantum» vale per un giorno solo e sostituisce l'orario uguale.",
  "reel_automatici": true,
  "orari": {
-  "13:00": "giorno_13",
+  "13:00": "partita",
   "21:00": "serie"
  },
  "negozio": {
@@ -43,7 +43,6 @@
   "2026-11-16 21:00": "serie",
   "2026-11-15 18:00": "citta",
   "2026-11-16 13:00": "serie",
-  "2026-11-22 13:00": "tifo",
   "2026-11-15 13:00": "testa_a_testa",
   "2026-11-15 21:00": "tifo",
   "2026-12-01 13:00": "avvento",
@@ -73,6 +72,7 @@
   "2026-11-17 13:00": "tifo"
  },
  "serie_dal": "2026-11-17",
+ "campionato": {"dal": "2026-11-18"},
  "voce_ia": false,
  "feste_reel": false,
  "sponsorizzati": [
