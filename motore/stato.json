@@ -1617,6 +1617,7 @@
 "17949506490069448",
 "17949523071346841",
 "17949580962353766",
+"17949595266347224",
 "17949805299355777",
 "17949867285347358",
 "17949891837322938",
@@ -10854,7 +10855,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794915791.6996946
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-15",
@@ -13067,7 +13070,8 @@
 "_grez_z": "2026-11-16",
 "noemipollinii": "2026-11-16",
 "rebecca_mia72": "2026-11-16",
-"lu_ca01022": "2026-11-17"
+"lu_ca01022": "2026-11-17",
+"massimilianoscarciglia": "2026-11-17"
 },
 "media_letti": {},
 "pezzi": {
@@ -19707,10 +19711,11 @@
 "992ecd50945150bc",
 "9f7235844d2b3ae8",
 "9c7a09c8700ee539",
-"46c2b12ba8fe6fc1"
+"46c2b12ba8fe6fc1",
+"f3d8a2b8fa136cbe"
 ],
 "privati_ora": [
-1794896690.7681258
+1794915791.6997204
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -22735,9 +22740,13 @@
 [
 "Zocca|MO",
 "Agerola|NA"
+],
+[
+"Frabosa Soprana|CN",
+"San Pancrazio Salentino|BR"
 ]
 ],
-"attesa": "Frabosa Soprana|CN",
+"attesa": null,
 "punti": {
 "Brescia|BS": 1,
 "Napoli|NA": 1,
@@ -22746,7 +22755,8 @@
 "Viareggio|LU": 1,
 "Siena|SI": 3,
 "Campobasso|CB": 1,
-"Bari|BA": 3
+"Bari|BA": 3,
+"San Pancrazio Salentino|BR": 1
 },
 "giocatori": {},
 "squadra": {},
@@ -22819,6 +22829,15 @@
 "t": "2026-11-17T06:24+00:00",
 "sorpasso": "Bari|BA",
 "su": "Bergamo|BG",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-17T11:43+00:00",
+"sorpasso": "San Pancrazio Salentino|BR",
+"su": "Frabosa Soprana|CN",
 "punti": [
 1,
 0
@@ -22923,6 +22942,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"San Pancrazio Salentino|BR": {
+"u": [
+"massimilianoscarciglia"
+],
+"c": [
+"17949595266347224"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22933,7 +22962,8 @@
 "domenici_11|animale|jambo",
 "noemipollinii|animale|mirtilla",
 "rebecca_mia72|animale|freya",
-"lu_ca01022|animale|luca"
+"lu_ca01022|animale|luca",
+"massimilianoscarciglia|animale|fulmine"
 ]
 },
 "gara_follower": [
