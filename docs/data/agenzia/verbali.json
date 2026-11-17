@@ -811,5 +811,26 @@
   "esito": "5 follower in totale, 13.1 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.",
   "riprovare": null,
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18115667321463171",
+  "file": "2026-11-10-1303-testa_a_testa",
+  "formato": "testa_a_testa",
+  "uscita": "2026-11-10T12:10:06+00:00",
+  "follower": 11,
+  "reach_7g": 281,
+  "follower_ogni_1000": 39.1,
+  "mediana_simili": 29.0,
+  "simili": 1,
+  "scelte": {
+   "formato": "testa_a_testa",
+   "apertura": "video vero",
+   "voce": true,
+   "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta.",
+   "chiusura": "Sei di Cecina o di Livorno? Commenta città e nome del tuo animale!"
+  },
+  "esito": "11 follower in totale, 39.1 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 29.0.",
+  "riprovare": "Riprovare: apertura «video vero», gancio «Livorno contro Cecina: 32 chilometri, e la sfida è aperta.», chiusura «Sei di Cecina o di Livorno? Commenta città e nome del tuo animale!» (formato testa_a_testa).",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]
