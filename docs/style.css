@@ -307,3 +307,11 @@ body:has(#sheet:not([hidden])) .gioca-citta,body:has(#gioco) .gioca-citta{displa
 .pao-foto::after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(6,11,26,.92))}
 .pao-foto h2{position:absolute;z-index:1;left:12px;right:12px;bottom:8px;margin:0;font:800 21px/1.1 var(--f-display);color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
 .sheet .pao-h{margin:0 0 2px;font-size:16px}
+
+/* Campionato delle Zampe (17/11) */
+.cz-tab{margin:8px 0 10px;text-align:center}
+.cz-tab small{display:inline-block;font:800 12px var(--f-body);letter-spacing:.06em;color:#1A1206;background:var(--gold);border-radius:8px;padding:3px 10px;margin-bottom:6px}
+.cz-q{display:grid;grid-template-columns:1fr 92px 1fr;align-items:stretch;background:#15100C;border:3px solid #F3E6C8;border-radius:14px;overflow:hidden}
+.cz-q b{font:800 17px/1.1 var(--f-display);color:#fff;padding:12px 6px;text-shadow:0 1px 0 #000,0 -1px 0 #000,1px 0 0 #000,-1px 0 0 #000}
+.cz-q em{font:800 30px/1 var(--f-display);font-style:normal;color:#FFD23F;align-self:center}
+.cz-sc{display:inline-block;width:18px;height:12px;border-radius:3px;margin-right:8px;vertical-align:middle;border:1px solid rgba(255,255,255,.4)}

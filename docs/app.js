@@ -76,6 +76,7 @@ let INVITI = null; // la Sfida degli inviti: chi porta più amici a commentare
 let DERBY = null; // il Derby della settimana: {ora: {a, b, na, nb, fine, partito}, albo: [...]} (motore/derby.py)
 const SEGNI = ["", "♑ Capricorno", "♒ Acquario", "♓ Pesci", "♈ Ariete", "♉ Toro", "♊ Gemelli", "♋ Cancro", "♌ Leone", "♍ Vergine", "♎ Bilancia", "♏ Scorpione", "♐ Sagittario"]; // dal mese di nascita (motore/commenti.py SEGNI)
 let GIRO = null; // il Giro d'Italia di Zampa (15/11): la tappa di oggi e la strada fatta (motore/copione.py giro)
+let CAMPIONATO = null; // il Campionato delle Zampe (17/11): la partita in corso nello stadio di casa, l'ultima giocata, la classifica (motore/campionato.py)
 let PAOLINO = null; // «Paolino ha 30 giorni per trovare casa» (16/11): il giorno, la famiglia e il voto di domani, contato dai commenti (motore/commenti.py)
 let AMICI = null; // la gara degli amici (15/11): chi porta più amici entro domenica vince un accessorio in regalo (motore/commenti.py)
 let SQUADRE = {}; // il tifo (15/11): i colori delle squadre dei tifosi a quattro zampe, da animali.json (motore/squadre.py)
@@ -84,7 +85,7 @@ let _x = 0; // i link di pagamento degli accessori (motore/config.json → anima
 let FOLLOW = null; // il traguardo di tutti: {n: follower veri, traguardo: il prossimo, fatti: [...]}; 1.000 = neve, 2.000 = fuochi d'artificio
 async function loadData() {
   if (ANTEPRIMA) return demo();
-  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; SQUADRE = j.squadre || {}; AMICI = j.gara_amici || null; PAOLINO = j.paolino || null; GIRO = j.giro || null; return j.animali || []; } } catch (e) {}
+  try { const r = await fetch("data/animali.json?t=" + Math.floor(Date.now() / 60000)); if (r.ok) { const j = await r.json(); INVITI = j.inviti || null; PRENOTATE = j.prenotate || {}; FOLLOW = j.follower || null; NEGOZIO = j.negozio || {}; SFILATA = j.sfilata || []; BELLO = j.piu_bello || null; BOOST = j.boost || null; DERBY = j.derby || null; SQUADRE = j.squadre || {}; AMICI = j.gara_amici || null; PAOLINO = j.paolino || null; CAMPIONATO = j.campionato || null; GIRO = j.giro || null; return j.animali || []; } } catch (e) {}
   return [];
 }
 
@@ -323,6 +324,20 @@ function paolinoHtml() {
   return foto + voto + link + famiglia + intro + puntate;
 }
 
+// ---------- il Campionato delle Zampe (17/11): ogni commento che nomina una delle due squadre in campo è un gol ----------
+const strisce = c => `background:linear-gradient(90deg,${c[0]} 0 50%,${c[1]} 50% 100%)`;
+function campionatoHtml() {
+  const C = CAMPIONATO; if (!C || (!C.partita && !(C.classifica || []).length)) return "";
+  const P = C.partita, U = C.ultima;
+  const fine = P ? new Date(P.fine).toLocaleString("it-IT", { weekday: "long", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Rome" }) : "";
+  const tab = (x, sopra) => `<div class="cz-tab"><small>${esc(sopra)}</small><div class="cz-q"><b style="${strisce(x.a.c)}">${esc(x.a.nome)}</b><em>${x.ga} – ${x.gb}</em><b style="${strisce(x.b.c)}">${esc(x.b.nome)}</b></div></div>`;
+  return `<div class="sfida-inviti cz"><h3>⚽ Campionato delle Zampe</h3>` +
+    (P ? tab(P, `GIORNATA ${P.giornata} · ${P.stadio} · IN CORSO`) + `<p class="sub">Ogni commento è un gol: scrivi <b>forza ${esc(P.a.nome)}</b> o <b>forza ${esc(P.b.nome)}</b> sotto un nostro post (un gol a persona). Si gioca fino a ${esc(fine)}.</p>` : "") +
+    (U ? tab(U, `ULTIMA · ${U.stadio} · FINALE`) : "") +
+    ((C.classifica || []).length ? `<ol class="list">` + C.classifica.slice(0, 10).map((x, i) => `<li class="row"><span class="pos">${i + 1}</span><span class="who"><i class="cz-sc" style="${strisce(x.c)}"></i>${esc(x.nome)}<small>${x.g} ${x.g === 1 ? "partita" : "partite"} · ${x.v} V ${x.n} N ${x.p} P · ${(C.tifosi || {})[x.k] || 0} tifosi</small></span><span class="pts">${x.pt}<small>pt</small></span></li>`).join("") + `</ol>`
+      : `<p class="sub">La classifica parte dopo la prima partita.</p>`) + `</div>`;
+}
+
 // ---------- pannelli ----------
 function show(v) {
   document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", t.dataset.v === v));
@@ -346,7 +361,7 @@ function show(v) {
     const amici = `<div class="sfida-inviti"><h3>👑 Gara degli amici</h3><p class="sub">Tagga chi ha un cane o un gatto: ogni amico che arriva e commenta vale <b>1 punto</b>, se poi ci segue e scrive SEGUO <b>3</b>. ${esc(fine)} alle 20: al primo la <b>Corona</b>, al secondo il <b>Collare d'oro</b>, al terzo il <b>Fiocco</b>, in regalo sul suo animale.</p>` +
       (sett.length ? `<ol class="list">` + sett.slice(0, 10).map((x, i) => `<li class="row"><span class="pos">${i < 3 ? PREMI[i].split(" ")[0] : i + 1}</span><span class="who">@${esc(x.u)}${i < 3 ? `<small>vince ${PREMI[i].split(" ").slice(1).join(" ")}</small>` : ""}</span><span class="pts">${x.p}<small>${x.p === 1 ? "punto" : "punti"}</small></span></li>`).join("") + `</ol>`
         : `<p class="empty">La gara è appena partita: il primo amico che porti ti mette in testa!</p>`) + `</div>`;
-    s.innerHTML = `<h2>Classifica</h2><p class="sub">Più punti fai, più la tua luce cresce: cuccia, lucine, giardino, villa, castello.</p>` + amici + sfida + (STATS.rank.length ? `<ol class="list">` +
+    s.innerHTML = `<h2>Classifica</h2><p class="sub">Più punti fai, più la tua luce cresce: cuccia, lucine, giardino, villa, castello.</p>` + campionatoHtml() + amici + sfida + (STATS.rank.length ? `<ol class="list">` +
       STATS.rank.slice(0, 50).map(d => `<li class="row" data-id="${esc(d.id)}"><span class="pos">${d.rank}</span><span class="who">${icona(d)} ${esc(d.n)} · @${esc(d.u)}<small>${esc(d.c)} · ${esc(d.r)}</small></span><span class="pts">${fmt(d.pt)}<small>pt</small></span></li>`).join("") + `</ol>` : empty);
     s.querySelectorAll(".row").forEach(r => r.onclick = () => { show("mappa"); focus(DATA.find(d => d.id === r.dataset.id)); });
   }
