@@ -2671,6 +2671,7 @@
 "17994290760028667",
 "17994352692105222",
 "17994366354026222",
+"17994439872072761",
 "17994513018058030",
 "17994671496109113",
 "17994737508064077",
@@ -10845,7 +10846,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794873597.285464
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-15",
@@ -13056,7 +13059,8 @@
 "abuonocore857": "2026-11-16",
 "domenici_11": "2026-11-16",
 "_grez_z": "2026-11-16",
-"noemipollinii": "2026-11-16"
+"noemipollinii": "2026-11-16",
+"rebecca_mia72": "2026-11-16"
 },
 "media_letti": {},
 "pezzi": {
@@ -15302,11 +15306,6 @@
 "noemipollinii": 20
 },
 "inviti_giorno": {
-"2026-11-09": {
-"cristinaek": 1,
-"fede_sporty_": 1,
-"tania_ghensi": 1
-},
 "2026-11-10": {
 "iamfrancescarusso": 1,
 "uli_alfa.fan": 1
@@ -19696,11 +19695,11 @@
 "6d6b72fffdd43384",
 "a3b75538dfbf48ad",
 "992ecd50945150bc",
-"9f7235844d2b3ae8"
+"9f7235844d2b3ae8",
+"9c7a09c8700ee539"
 ],
 "privati_ora": [
-1794848745.64525,
-1794848750.8957372
+1794873597.285494
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -19752,7 +19751,7 @@
 "2026-11-14": 1888,
 "2026-11-15": 1909,
 "2026-11-16": 1920,
-"2026-11-17": 1920
+"2026-11-17": 1921
 },
 "gioco_pappa": {
 "2026-W46": {
@@ -20631,6 +20630,10 @@
 [
 "2026-11-16T22:30+00:00",
 1920
+],
+[
+"2026-11-16T23:59+00:00",
+1921
 ]
 ],
 "coppa": {
@@ -22702,7 +22705,8 @@
 "Siracusa|SR": 1,
 "Agerola|NA": 3,
 "Viareggio|LU": 1,
-"Siena|SI": 3
+"Siena|SI": 3,
+"Campobasso|CB": 1
 },
 "giocatori": {},
 "squadra": {},
@@ -22757,6 +22761,15 @@
 "t": "2026-11-16T17:05+00:00",
 "sorpasso": "Siena|SI",
 "su": "Settimo Torinese|TO",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-16T23:59+00:00",
+"sorpasso": "Campobasso|CB",
+"su": "Calvi|BN",
 "punti": [
 1,
 0
@@ -22841,6 +22854,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Campobasso|CB": {
+"u": [
+"rebecca_mia72"
+],
+"c": [
+"17994439872072761"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -22849,7 +22872,8 @@
 "guenda_23|animale|cuore",
 "abuonocore857|animale|fluffy",
 "domenici_11|animale|jambo",
-"noemipollinii|animale|mirtilla"
+"noemipollinii|animale|mirtilla",
+"rebecca_mia72|animale|freya"
 ]
 },
 "gara_follower": [
