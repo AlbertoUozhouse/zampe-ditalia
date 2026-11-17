@@ -65,6 +65,23 @@ SQUADRE = {
     "bisceglie": ("Bisceglie", "#1B4FA0", "#111111", ["bisceglie"]),
 }
 
+# 17/11, Alberto: «a Roma lo stadio Olimpico, a Milano San Siro»: gli stadi del Campionato delle Zampe (la squadra di casa gioca nel suo).
+# Solo nomi di luoghi, mai quelli degli sponsor: dove lo stadio ha il nome di un'azienda si dice «lo stadio di <città>».
+STADI = {"inter": ("SAN SIRO", "Milano"), "milan": ("SAN SIRO", "Milano"), "roma": ("STADIO OLIMPICO", "Roma"), "lazio": ("STADIO OLIMPICO", "Roma"),
+         "napoli": ("STADIO MARADONA", "Napoli"), "juventus": ("STADIO DI TORINO", "Torino"), "torino": ("STADIO GRANDE TORINO", "Torino"),
+         "fiorentina": ("STADIO FRANCHI", "Firenze"), "bologna": ("STADIO DALL'ARA", "Bologna"), "genoa": ("MARASSI", "Genova"), "sampdoria": ("MARASSI", "Genova"),
+         "atalanta": ("STADIO DI BERGAMO", "Bergamo"), "verona": ("STADIO BENTEGODI", "Verona"), "udinese": ("STADIO FRIULI", "Udine"), "cagliari": ("STADIO DI CAGLIARI", "Cagliari"),
+         "lecce": ("STADIO VIA DEL MARE", "Lecce"), "bari": ("STADIO SAN NICOLA", "Bari"), "palermo": ("STADIO BARBERA", "Palermo"), "catania": ("STADIO MASSIMINO", "Catania"),
+         "parma": ("STADIO TARDINI", "Parma"), "avellino": ("STADIO PARTENIO", "Avellino"), "salernitana": ("STADIO ARECHI", "Salerno"), "como": ("STADIO SINIGAGLIA", "Como"),
+         "venezia": ("STADIO PENZO", "Venezia"), "pisa": ("ARENA GARIBALDI", "Pisa"), "cremonese": ("STADIO ZINI", "Cremona"), "sassuolo": ("STADIO DI REGGIO EMILIA", "Reggio Emilia")}
+
+
+def stadio(k):
+    """(nome dello stadio, città) della squadra; per le squadre senza stadio in elenco, «STADIO DI <CITTÀ>»."""
+    if k in STADI: return STADI[k]
+    n = nome(k); return (f"STADIO DI {n.upper()}", n)
+
+
 # parole che dicono che si parla di calcio: senza una di queste, «Napoli» o «Roma» sono la città, non la squadra
 TIFO = re.compile(r"(?i)\b(tif\w*|forza|squadra|ultr\w*|curva|stadio)\b|⚽")
 

@@ -510,6 +510,9 @@ class Gioco:
         lun = datetime.fromisoformat(_sett_amici() + "T00:00:00+01:00")
         self.dati["gara_amici"] = {"settimana": [{"u": u, "p": pt} for u, pt in gara_amici_classifica(self.stato)[:10]], "premi": PREMI_AMICI,
                                    "fine": (lun + timedelta(days=6, hours=20)).isoformat(), "albo": dict(sorted(self.stato.get("gara_amici_albo", {}).items())[-4:])}
+        try:  # 17/11: la partita in corso, l'ultima giocata e la classifica del Campionato delle Zampe, per il sito
+            import campionato; self.dati["campionato"] = campionato.sito(self.stato, self.animali)
+        except Exception as e: print(f"campionato: dati per il sito non fatti ({type(e).__name__})")
         self.dati["paolino"] = paolino_sito(self.stato)  # 16/11 (Officina): il voto di Paolino sul sito, solo numeri (nessun nome di chi vota)
         self.dati["negozio"] = negozio.leggi(self.stato, self.animali)  # gli accessori pagati e i link del negozio per il sito
         self.sfilata()
@@ -1295,6 +1298,10 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
         for u, v in list(gioco.stato.get("seguono", {}).items()):
             if v == "premiato": gioco.punti_extra(u, PUNTI["segue"] - 10)
         gioco.stato["boost_follow"] = True; gioco.cambiato = True
+    try:  # 17/11, il Campionato delle Zampe: chiude la partita finita e apre la nuova (motore/campionato.py)
+        import campionato
+        if campionato.aggiorna(gioco.stato, gioco.animali): gioco.cambiato = True
+    except Exception as e: print(f"campionato: non aggiornato ({type(e).__name__}: {e})")
     rifai = applica_correzioni(gioco)
     for r in gioco.stato.pop("risposte_da_fare", []):  # risposte decise a mano nella correzione
         try:
@@ -1420,6 +1427,10 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
             if esito_v:
                 gioco.cambiato = True; nv, pv = esito_v
                 extra.insert(0, f"🗺️ Voto per {L_v['c']} contato! {L_v['c']} ha {nv} {'voto' if nv == 1 else 'voti'} ed è {pv}ª per la tappa di domani di Zampa. Fai votare gli amici: tagga chi è di {L_v['c']} 👥")
+        if u.lower() not in ESCLUSI:  # 17/11, il Campionato delle Zampe: ogni commento che nomina una delle due squadre in campo è un gol
+            import campionato
+            r_c = campionato.gol(gioco.stato, u, [c.get("text", "") for c in nuovi_c])
+            if r_c: extra.insert(0, r_c); gioco.cambiato = True
         if gioco.tifo_nuovo:  # 15/11: la sciarpa della squadra, e chi tifa come lui
             import squadre
             n_t, sq_t = gioco.tifo_nuovo[-1]; gioco.tifo_nuovo.clear()
