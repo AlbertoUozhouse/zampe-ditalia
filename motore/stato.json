@@ -1582,6 +1582,7 @@
 "17946085476086634",
 "17946150372358392",
 "17946214437363704",
+"17946373821381837",
 "17946487614361055",
 "17946560265369821",
 "17946632241086378",
@@ -1881,6 +1882,7 @@
 "17958847698267181",
 "17959038732259420",
 "17959051011290549",
+"17959101606270201",
 "17959131531258558",
 "17959148208254984",
 "17959373028253891",
@@ -10859,7 +10861,9 @@
 ],
 "risposte": [
 1794915791.6996946,
-1794916596.283778
+1794916596.283778,
+1794918251.9473271,
+1794918258.0306065
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -10867,7 +10871,7 @@
 "fishing_fil": "2026-10-27",
 "alebomba08": "2026-10-28",
 "vincenzo_bascer": "2026-10-26",
-"andreabombardi08": "2026-10-31",
+"andreabombardi08": "2026-11-17",
 "nicolassctt": "2026-10-26",
 "gada_raffy": "2026-11-13",
 "sofiamastrochicco": "2026-10-28",
@@ -11246,7 +11250,7 @@
 "gc142026": "2026-10-27",
 "vero_mazzoleni": "2026-10-27",
 "lucasirreg": "2026-10-27",
-"surixeur": "2026-10-30",
+"surixeur": "2026-11-17",
 "diego_lorenz13": "2026-10-27",
 "snjw1105": "2026-10-27",
 "_karug_": "2026-10-27",
@@ -14450,7 +14454,7 @@
 "anna_tolotti": 30,
 "hilary.montanaro_o": 30,
 "ange.li_causi": 30,
-"surixeur": 40,
+"surixeur": 45,
 "chloe.viola__": 30,
 "teo17999": 30,
 "sam_lobue": 33,
@@ -14558,7 +14562,7 @@
 "g.ryan_ares": 35,
 "rosa_carafa_": 35,
 "mary_privv_28": 35,
-"andreabombardi08": 43,
+"andreabombardi08": 48,
 "lollo.orla": 30,
 "beatriceoliverii": 35,
 "pietrofersani": 30,
@@ -22760,11 +22764,22 @@
 "Siena|SI": 3,
 "Campobasso|CB": 1,
 "Bari|BA": 3,
-"San Pancrazio Salentino|BR": 1
+"San Pancrazio Salentino|BR": 1,
+"Genova|GE": 1
 },
-"giocatori": {},
-"squadra": {},
-"giorni": {},
+"giocatori": {
+"Genova|GE": [
+"andreabombardi08"
+]
+},
+"squadra": {
+"andreabombardi08": "Genova|GE"
+},
+"giorni": {
+"andreabombardi08": [
+"2026-11-17"
+]
+},
 "storia": [
 {
 "t": "2026-11-16T08:30+00:00",
