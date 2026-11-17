@@ -2171,6 +2171,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  },
+  {
+   "t": "2026-11-17T20:53:20+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 4 follower in totale, 11.1 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (2) hanno una mediana di 10.1. Riprovare: apertura «video vero», gancio «Questa luce è di Nina, a Luino.», chiusura «Le prossime luci domani alle 18. Seguici per vedere la tua!» (formato questa_luce).",
+   "dati": {
+    "id": "18182682418431660",
+    "file": "2026-11-10-1812-questa_luce",
+    "formato": "questa_luce",
+    "uscita": "2026-11-10T17:22:00+00:00",
+    "follower": 4,
+    "reach_7g": 360,
+    "follower_ogni_1000": 11.1,
+    "mediana_simili": 10.1,
+    "simili": 2,
+    "scelte": {
+     "formato": "questa_luce",
+     "apertura": "video vero",
+     "voce": true,
+     "gancio": "Questa luce è di Nina, a Luino.",
+     "chiusura": "Le prossime luci domani alle 18. Seguici per vedere la tua!"
+    },
+    "esito": "4 follower in totale, 11.1 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (2) hanno una mediana di 10.1.",
+    "riprovare": "Riprovare: apertura «video vero», gancio «Questa luce è di Nina, a Luino.», chiusura «Le prossime luci domani alle 18. Seguici per vedere la tua!» (formato questa_luce).",
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [

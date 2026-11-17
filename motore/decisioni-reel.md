@@ -484,3 +484,9 @@ Piano nuovo (da oggi): 2 reel al giorno, ognuno una promessa. 13:00 testa a test
 ## 2026-11-17 — verbale dei 7 giorni (automatico, motore/verbale.py)
 
 - 2026-11-10-1303-testa_a_testa: 11 follower in totale, 39.1 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 29.0. Riprovare: apertura «video vero», gancio «Livorno contro Cecina: 32 chilometri, e la sfida è aperta.», chiusura «Sei di Cecina o di Livorno? Commenta città e nome del tuo animale!» (formato testa_a_testa).
+
+
+## 2026-11-17 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-10-1812-questa_luce: 4 follower in totale, 11.1 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (2) hanno una mediana di 10.1. Riprovare: apertura «video vero», gancio «Questa luce è di Nina, a Luino.», chiusura «Le prossime luci domani alle 18. Seguici per vedere la tua!» (formato questa_luce).
+- 2026-11-10-2103-puntata: 8 follower in totale, 21.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 13.1. Riprovare: apertura «mappa», gancio «Il tuo animale è già su questa mappa? 2789 luci accese in Italia.», chiusura «Seguici e scrivi qui sotto: accendi la tua luce!» (formato puntata).
