@@ -100,6 +100,7 @@
 "17873403849641920",
 "17873449194648192",
 "17873635518642540",
+"17873654877663514",
 "17873656752642776",
 "17873681268644159",
 "17873777211642412",
@@ -11301,7 +11302,8 @@
 ],
 "risposte": [
 1794978456.9673765,
-1794979285.9552674
+1794979285.9552674,
+1794981701.6178648
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -13572,7 +13574,8 @@
 "rosarioemanueldi": "2026-11-17",
 "antodauu_": "2026-11-17",
 "gori.matteo12": "2026-11-17",
-"niccol0di_bartolomeo": "2026-11-18"
+"niccol0di_bartolomeo": "2026-11-18",
+"_rob_99_": "2026-11-18"
 },
 "media_letti": {},
 "pezzi": {
@@ -20401,10 +20404,12 @@
 "bdc710999dd871dd",
 "a525553b2f792862",
 "c4cac011709d462f",
-"d200012d765ea04f"
+"d200012d765ea04f",
+"3ba25b19df4ed2b7"
 ],
 "privati_ora": [
-1794978456.967406
+1794978456.967406,
+1794981701.6178906
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -23575,7 +23580,7 @@
 "attesa": null,
 "punti": {
 "Brescia|BS": 1,
-"Napoli|NA": 13,
+"Napoli|NA": 14,
 "Siracusa|SR": 1,
 "Agerola|NA": 3,
 "Viareggio|LU": 1,
@@ -24042,7 +24047,8 @@
 "caprio_171717",
 "fra10_11",
 "arnaldo_napoli_1926",
-"antodauu_"
+"antodauu_",
+"_rob_99_"
 ],
 "c": [
 "18233918857334834",
@@ -24054,7 +24060,8 @@
 "18135947807493178",
 "18030905249696302",
 "18121578287020547",
-"17934330426441753"
+"17934330426441753",
+"17873654877663514"
 ],
 "chiuse": 3,
 "log": [
@@ -24784,7 +24791,8 @@
 "rosarioemanueldi|animale|rey",
 "antodauu_|animale|billy",
 "gori.matteo12|animale|gilda",
-"niccol0di_bartolomeo|animale|bobo"
+"niccol0di_bartolomeo|animale|bobo",
+"_rob_99_|animale|duke"
 ]
 },
 "gara_follower": [
