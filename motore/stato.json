@@ -15880,10 +15880,6 @@
 "gaix2_354": 10
 },
 "inviti_giorno": {
-"2026-11-10": {
-"iamfrancescarusso": 1,
-"uli_alfa.fan": 1
-},
 "2026-11-11": {
 "andrea_piazza94": 2,
 "orientalangel": 2
@@ -20419,9 +20415,7 @@
 "fiocco"
 ]
 },
-"missioni_fatte": {
-"dino_gallo13": "2026-11-17"
-},
+"missioni_fatte": {},
 "boost": {},
 "negozio_fatti": [
 "cs_live_a1tc9ajjoYH7gnBXqLG5RaSVBc8wSUixXOP2wB0w7uOhHAXVt0P7ArRQtJ",
