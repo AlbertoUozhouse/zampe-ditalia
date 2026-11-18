@@ -35,6 +35,7 @@
 "02e0da6b5ffcada0",
 "02ed92b0c6fb23ac",
 "02f4ba3f2cb738dd",
+"030b73bf9d967ca2",
 "033008d79e570215",
 "037662f0d4c19780",
 "03a228e9d3c96598",
@@ -829,6 +830,7 @@
 "5ff3414ab6b762e3",
 "5ff39faae63fc38b",
 "5ff95f73ddf6b306",
+"5ffb1b8e6fa7bce7",
 "601d7885e550894c",
 "601ed71500ca1d5f",
 "6027eaa3a2ec6b7d",
@@ -1014,6 +1016,7 @@
 "76b13b2a90cf5a52",
 "76cc9fcf00aff562",
 "76e1f6c9d946f389",
+"770d02cee56fcb8d",
 "7711e48ba6408037",
 "776686b1117eca98",
 "77a357093fe67ada",
@@ -1393,6 +1396,7 @@
 "a34cc43b2b30049d",
 "a35fa22d47fe1c06",
 "a376b50d1db34bbe",
+"a37cd99973cf30b3",
 "a382a32c78af53ff",
 "a3c7348751a6dfbd",
 "a3db2d7b003051ef",
@@ -1443,6 +1447,7 @@
 "a95b9a63feb22cb6",
 "a962337133b11122",
 "a98fb41dff8b72ea",
+"a992035c9c0be803",
 "a9bde4c8b680e96e",
 "a9c3f90589842002",
 "a9f6fa8512f77620",
@@ -1496,6 +1501,7 @@
 "ae0f4923980d9be6",
 "ae15e410f6105980",
 "aec178da3b72a71d",
+"af2c6f081bd719ad",
 "af51c4493d04f256",
 "af908a2070fcf3c8",
 "b0266338a4c0c16a",
@@ -1708,6 +1714,7 @@
 "c99e4075f3ec6ca3",
 "c9a45052ec346e0d",
 "c9b91f846299f25c",
+"c9cb1763da949e3c",
 "c9d34e604d2527d4",
 "ca03927b053d07eb",
 "ca41e10523ecd201",
@@ -2198,7 +2205,15 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1154287930630192",
+"url": [
+"https://zampeditalia.it/cartoline/1c31ee500ece89a1.png"
+],
+"t": 1795034204.5063782
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
@@ -2210,6 +2225,13 @@
 "url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=1737852321016549&signature=Ab3Sx4gTHNW9G8r52w0QYzcx-EJ9J4kVMKsUBr7mZ9MZIbcvq4SCOeZAk8wUmk3ALd5QHPdezHtWrTkyAA_6zb8oORzpkG95BbT6btSRnCx0itazEqIuxXbTBzYCN0mugePmyIsc313wMaWWnlxk1ziVj5aRW5spwD95ZNQVK-FabD99tr2J6vmLGV6BX5yKB09Jvj9kgSwaLkENEmemuuvzRP3aipw",
 "t": 1794999392.4063287,
 "igsid": "4140491352922234",
+"giudicata": false,
+"video": false
+},
+"89eb84ee9ebb99cb": {
+"url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=1493045286341152&signature=Ab321vBJolRgKLRDYcNDESj4KPx301Rln839P4T1aUb_yO33XHPtNIppaN2z-bEN99a5N2nE5PoG-HfNEufCuMAND_kZsVc7x6Jl7c25X76-5wWxlg9QTVL_2vfNFEbRz3G73dM8WflB5ZeBfBz-XDBj0fJSrGh1RUGUkvKm4uHpEqVorshqjRkIikGG0djgL1_gz5ruGHijv8iqntzYby4HMS1zG58",
+"t": 1795034194.4970517,
+"igsid": "1154287930630192",
 "giudicata": false,
 "video": false
 }
