@@ -874,5 +874,26 @@
   "esito": "8 follower in totale, 21.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 13.1.",
   "riprovare": "Riprovare: apertura «mappa», gancio «Il tuo animale è già su questa mappa? 2789 luci accese in Italia.», chiusura «Seguici e scrivi qui sotto: accendi la tua luce!» (formato puntata).",
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18000542436033978",
+  "file": "2026-11-11-1301-testa_a_testa",
+  "formato": "testa_a_testa",
+  "uscita": "2026-11-11T12:12:06+00:00",
+  "follower": 3,
+  "reach_7g": 377,
+  "follower_ogni_1000": 8.0,
+  "mediana_simili": 34.0,
+  "simili": 2,
+  "scelte": {
+   "formato": "testa_a_testa",
+   "apertura": "video vero",
+   "voce": true,
+   "gancio": "Giugliano in Campania contro Castellammare di Stabia: 35 chilometri, e la sfida è aperta.",
+   "chiusura": "Sei di Castellammare di Stabia o di Giugliano in Campania? Commenta città e nome del tuo animale!"
+  },
+  "esito": "3 follower in totale, 8.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (2) hanno una mediana di 34.0.",
+  "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]
