@@ -1,0 +1,143 @@
+{
+ "id": "crescita-2026-11-18",
+ "formato": "crescita del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-18T10:17:09+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-18T10:17:09+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Si parte dai numeri veri degli ultimi 12 reel organici e dai verbali dei 7 giorni."
+  },
+  {
+   "t": "2026-11-18T10:17:12+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel «tifo» ha il reach più alto (3.018 account) e 443 commenti, ma solo 7,6 follower ogni 1.000 account; i formati «serie» (Paolino) con 28,6 e 18,7 ogni 1.000 sono i più efficaci per conversione, anche se con reach piccoli. I «testa_a_testa» a 7 giorni mostrano 29,0 e 39,1 follower ogni 1.000 (mediana simili 8,0 e 29,0), mentre «coppa_verdetto» con 1.335 account raggiunti ha solo 1,5. Il form",
+   "dati": {
+    "osservazione": "Il reel «tifo» ha il reach più alto (3.018 account) e 443 commenti, ma solo 7,6 follower ogni 1.000 account; i formati «serie» (Paolino) con 28,6 e 18,7 ogni 1.000 sono i più efficaci per conversione, anche se con reach piccoli. I «testa_a_testa» a 7 giorni mostrano 29,0 e 39,1 follower ogni 1.000 (mediana simili 8,0 e 29,0), mentre «coppa_verdetto» con 1.335 account raggiunti ha solo 1,5. Il formato «fondatore» e «coppa_sorpasso» con 0 e 1 follower indicano bassa conversione.",
+    "proposta": "Domani provare un «serie» di Paolino con chiusura che chiede una scelta nei commenti (il tipo di scelta ha funzionato: 5 e 12 follower), abbinato a un «testa_a_testa» tra due città con apertura «video vero» e gancio con chiara distanza in chilometri; evitare formati mappa-generici e aperture statiche come «fondatore».",
+    "gancio": "Paolino ha le pulci e un alito terribile: domani decidi tu, bagno o veterinario?"
+   }
+  },
+  {
+   "t": "2026-11-18T10:17:12+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel «tifo» ha il reach più alto (3.018 account, 443 commenti, 4 condivisioni) ma converte solo 7,6 follower ogni 1.000 account; i formati più efficaci per follower sono «testa_a_testa» (es. 39,1 ogni 1.000 il 10/11 e 29,0 l'8/11, sopra la mediana di 8,0 dei simili) e «serie» (28,6 e 18,7 ogni 1.000). Il formato «fondatore» e «coppa_verdetto» (1,5 ogni 1.000, 2 follower su 1.335 account) conver",
+   "dati": {
+    "osservazione": "Il reel «tifo» ha il reach più alto (3.018 account, 443 commenti, 4 condivisioni) ma converte solo 7,6 follower ogni 1.000 account; i formati più efficaci per follower sono «testa_a_testa» (es. 39,1 ogni 1.000 il 10/11 e 29,0 l'8/11, sopra la mediana di 8,0 dei simili) e «serie» (28,6 e 18,7 ogni 1.000). Il formato «fondatore» e «coppa_verdetto» (1,5 ogni 1.000, 2 follower su 1.335 account) convertono poco nonostante buona reach. Le sfide di città con apertura «video vero» e gancio con distanza in chilometri sono quelle che rendono meglio.",
+    "proposta": "Domani puntare su un testa_a_testa tra due comuni scelti per un dato sorprendente o un'adiacenza inattesa, con apertura «video vero» e chiusura che chiede città e nome dell'animale; in alternativa un episodio della serie di Paolino, perché i reel di serie hanno convertito bene. Evitare formati di sola mappa senza una domanda diretta al pubblico, come «fondatore», che non ha portato nessun follower.",
+    "gancio": "Due comuni, una distanza e una domanda: «Sei di Cecina o di Livorno? Commenta città e nome del tuo animale!»"
+   }
+  },
+  {
+   "t": "2026-11-18T10:17:12+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel «tifo» ha raggiunto 3.018 account con 443 commenti e 23 follower (7,6 ogni 1.000), il miglior risultato in valore assoluto degli ultimi giorni. I formati «testa_a_testa» sono i più efficaci per follower ogni 1.000 account: 39,1 su Livorno-Cecina (11 follower, reach 281), 29,0 su Verona-Vicenza (9 follower, reach 310), 18,4 su Mussolente-Vigodarzere (9 follower, reach 489). Il formato «seri",
+   "dati": {
+    "osservazione": "Il reel «tifo» ha raggiunto 3.018 account con 443 commenti e 23 follower (7,6 ogni 1.000), il miglior risultato in valore assoluto degli ultimi giorni. I formati «testa_a_testa» sono i più efficaci per follower ogni 1.000 account: 39,1 su Livorno-Cecina (11 follower, reach 281), 29,0 su Verona-Vicenza (9 follower, reach 310), 18,4 su Mussolente-Vigodarzere (9 follower, reach 489). Il formato «serie» di Paolino ha 28,6 e 18,7 ogni 1.000. Al contrario, «coppa_verdetto» (1.335 reach) ha solo 1,5 e «fondatore» 0,0, con reach fra 314 e 1.335. Le chiusure con «commenta città e nome del tuo animale» sono il filo comune dei reel che hanno convertito meglio.",
+    "proposta": "Riprendere il testa_a_testa tra due comuni vicini (Livorno-Cecina come riferimento: 39,1 ogni 1.000), con apertura su video vero e chiusura che chiede città e nome dell'animale. Evitare il formato fondatore, che non ha convertito, e ridurre i verdetti di coppa, che portano reach ma quasi nessun follower. Confrontare i risultati con la mediana dei reel simili prima di decidere se ripetere.",
+    "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-18T10:17:13+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel «tifo» (17/11, 13:00) è il più visto: 4.144 views, 3.018 reach e 443 commenti, ma porta 23 follower, cioè 7,6 ogni 1.000 account. Le serie «Paolino» (16/11 e 17/11) hanno il tasso più alto dopo quello dei testa_a_testa del 15/11: 28,6 e 18,7 ogni 1.000, con pochissimi commenti. Nel verbale, il testa_a_testa «Vigodarzere-Mussolente» (15/11) fa 18,4 ogni 1.000 (9 follower su 489 di reach), m",
+   "dati": {
+    "osservazione": "Il reel «tifo» (17/11, 13:00) è il più visto: 4.144 views, 3.018 reach e 443 commenti, ma porta 23 follower, cioè 7,6 ogni 1.000 account. Le serie «Paolino» (16/11 e 17/11) hanno il tasso più alto dopo quello dei testa_a_testa del 15/11: 28,6 e 18,7 ogni 1.000, con pochissimi commenti. Nel verbale, il testa_a_testa «Vigodarzere-Mussolente» (15/11) fa 18,4 ogni 1.000 (9 follower su 489 di reach), mentre il «fondatore» (15/11) e «Agliana» (14/11) portano zero follower. I testa_a_testa su «video vero» con voce hanno avuto mediane fino a 29,0 ogni 1.000 nei verbali (Verona-Vicenza, Livorno-Cecina). Il dato dice che il pubblico reagisce al gioco della sfida tra due città e a personaggi ricorrenti, mentre i formati di sola chiusura con «scrivi la tua città» generano commenti ma pochi follower.",
+    "proposta": "Domani: un testa_a_testa tra due comuni di piccola dimensione, con apertura «video vero» e voce, seguito da un episodio della serie di Paolino con la scelta tra due opzioni nei commenti. Mantenere la chiusura con invito a seguire e a scrivere la propria città, senza formule generiche. Evitare il formato «fondatore» e le aperture su sola mappa per i reel di confronto, che nei dati hanno reso meno.",
+    "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-18T10:17:14+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel «tifo» ha il reach più alto (3.018 account, 443 commenti) ma solo 7,6 follower ogni 1.000 account. I formati piccoli e personali rendono di più: «serie» (Paolino) arriva a 18,7 e 28,6 follower ogni 1.000, e «testa_a_testa» Verona-Vicenza a 29,0 (contro una mediana simile di 8,0). Il formato «fondatore» (0,0) e «coppa_verdetto» (1,5, reach 1.335) sono i più deboli nel conversare. I verbali ",
+   "dati": {
+    "osservazione": "Il reel «tifo» ha il reach più alto (3.018 account, 443 commenti) ma solo 7,6 follower ogni 1.000 account. I formati piccoli e personali rendono di più: «serie» (Paolino) arriva a 18,7 e 28,6 follower ogni 1.000, e «testa_a_testa» Verona-Vicenza a 29,0 (contro una mediana simile di 8,0). Il formato «fondatore» (0,0) e «coppa_verdetto» (1,5, reach 1.335) sono i più deboli nel conversare. I verbali a 7 giorni confermano che «coppa_apertura» (4,4) e «questa_luce» Stella (6,4) sono sotto la mediana dei simili, quindi non vanno riproposti così come sono.",
+    "proposta": "Domani puntare sul formato «serie» di Paolino, con una votazione breve nei commenti (bagno o veterinario), e sostenerla con un testa_a_testa tra due comuni piccoli, usando la stessa apertura video vera e la chiusura che chiede città e nome dell'animale. Evitare formati solo celebrativi come «fondatore» e la coppa senza una domanda diretta.",
+    "gancio": "Paolino ha le pulci e un alito terribile: bagno o veterinario? Decidi tu nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-18T10:17:15+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel «tifo» (13 nov... no, 17 nov 13:00) ha portato il reach più alto di tutta la serie: 3.018 account e 443 commenti, ma solo 23 follower, cioè 7,6 ogni 1.000 account. Il formato «testa_a_testa» è quello che converte meglio con i verbali: 29,0 e 39,1 ogni 1.000 a 7 giorni, sopra la mediana dei simili (8,0 e 29,0). Le serie «Paolino» hanno il tasso più alto dei reel recenti (28,6 e 18,7) ma rea",
+   "dati": {
+    "osservazione": "Il reel «tifo» (13 nov... no, 17 nov 13:00) ha portato il reach più alto di tutta la serie: 3.018 account e 443 commenti, ma solo 23 follower, cioè 7,6 ogni 1.000 account. Il formato «testa_a_testa» è quello che converte meglio con i verbali: 29,0 e 39,1 ogni 1.000 a 7 giorni, sopra la mediana dei simili (8,0 e 29,0). Le serie «Paolino» hanno il tasso più alto dei reel recenti (28,6 e 18,7) ma reach basso (175 e 642). Il reel «fondatore» (Napoli o Monza?) ha 0 follower su 314 account raggiunti. I verbali dicono di non riprovare «questa_luce» e «coppa_apertura», entrambi sotto la mediana dei simili (6,4 contro 10,2 e 4,4 contro 11,2).",
+    "proposta": "Domani provare un testa_a_testa con apertura «video vero», come i due che hanno superato la mediana, e chiusura che chiede la città e il nome dell'animale, come nei casi migliori. Tenere la serie Paolino con il suo meccanismo di voto nei commenti, che ha convertito bene. Evitare domande generiche come «Napoli o Monza?» che hanno raccolto commenti senza follower.",
+    "gancio": "Dueeee città, un solo verdetto: [città A] contro [città B], [X] chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-18T10:17:15+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel «tifo» (17/11 13:00) è il più visto: 4.144 views, 3.018 reach e 443 commenti, ma porta 23 follower, cioè 7,6 ogni 1.000 account, sotto la media dei formati a testo breve. I formati con più follower ogni 1.000 sono «serie» (18,7 e 28,6) e «testa_a_testa» (18,4 sul 15/11 e 29,0 sul 08/11 a 7 giorni), mentre «coppa_verdetto» (1,5) e «fondatore» (0,0) portano quasi nulla nonostante reach alti ",
+   "dati": {
+    "osservazione": "Il reel «tifo» (17/11 13:00) è il più visto: 4.144 views, 3.018 reach e 443 commenti, ma porta 23 follower, cioè 7,6 ogni 1.000 account, sotto la media dei formati a testo breve. I formati con più follower ogni 1.000 sono «serie» (18,7 e 28,6) e «testa_a_testa» (18,4 sul 15/11 e 29,0 sul 08/11 a 7 giorni), mentre «coppa_verdetto» (1,5) e «fondatore» (0,0) portano quasi nulla nonostante reach alti o medi. Nei verbali a 7 giorni il formato «testa_a_testa» con apertura «video vero» e gancio sulla distanza in chilometri è sopra mediana (29,0 contro 8,0 dei simili; 39,1 contro 29,0 l'8 e 10/11), mentre «questa_luce» e «coppa_apertura» sono sotto mediana.",
+    "proposta": "Domani replicare il meccanismo «testa_a_testa» con apertura «video vero», voce attiva e gancio che nomina due comuni e la distanza in chilometri, chiudendo con una domanda che chiede città e nome dell'animale. Tenere la serialità di «Paolino» con la scelta nei commenti, perché ha il miglior rapporto follower/reach. Evitare di ripetere «fondatore» e «coppa_verdetto» come formati di crescita.",
+    "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-18T10:17:16+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel «tifo» (17/11, 13:00) è il più visto: 4.144 views, 3.018 account raggiunti, 443 commenti, ma 7,6 follower ogni 1.000 account, sotto la media dei formati serie. Le serie «Paolino» hanno il rendimento più alto in rapporto alla portata (28,6 e 18,7 ogni 1.000 account), con 642 account raggiunti nel reel più recente. Il «testa_a_testa» Mussolente-Vigodarzere ha 18,4 ogni 1.000 account, mentre ",
+   "dati": {
+    "osservazione": "Il reel «tifo» (17/11, 13:00) è il più visto: 4.144 views, 3.018 account raggiunti, 443 commenti, ma 7,6 follower ogni 1.000 account, sotto la media dei formati serie. Le serie «Paolino» hanno il rendimento più alto in rapporto alla portata (28,6 e 18,7 ogni 1.000 account), con 642 account raggiunti nel reel più recente. Il «testa_a_testa» Mussolente-Vigodarzere ha 18,4 ogni 1.000 account, mentre il reel «fondatore» del 15/11 ha portato 0 follower su 314 account raggiunti. I commenti alti non si traducono in follower: il formato «testa_a_testa» di Bisceglie ha 88 commenti e 2,4 ogni 1.000 account. Il verbale mostra che «testa_a_testa» con apertura «video vero» ha la mediana più alta tra i formati con dati, con 29,0 e 39,1 ogni 1.000 account a 7 giorni (8/11 e 10/11).",
+    "proposta": "Domani provare una nuova puntata della serie Paolino con apertura «video vero» e chiusura che chieda una scelta semplice nei commenti, perché è il formato con il miglior rapporto follower/account raggiunti. Mantenere il formato «testa_a_testa» con apertura video vero e gancio su due comuni vicini, perché è il formato più costante. Evitare il formato «fondatore» con apertura su mappa e domanda astratta, che non ha portato follower. Per il tifo, tenere il tema ma con un invito a seguire esplicito nella chiusura, visto che genera molta portata senza conversione.",
+    "gancio": "Questo è Paolino. Ha trenta giorni per trovare casa."
+   }
+  },
+  {
+   "t": "2026-11-18T10:17:17+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel «tifo» (17/11, 13:00) è il più visto: 4.144 views, 3.018 account raggiunti, 443 commenti, ma solo 7,6 follower ogni 1.000 account. Le serie «Paolino» rendono di più per follower: 28,6 (16/11) e 18,7 (17/11) ogni 1.000 account, con 250 e 845 views. Nei verbali a 7 giorni, il testa_a_testa Cecina/Livorno ha 39,1 follower ogni 1.000 account (mediana dei simili 29,0), mentre il questa_luce di ",
+   "dati": {
+    "osservazione": "Il reel «tifo» (17/11, 13:00) è il più visto: 4.144 views, 3.018 account raggiunti, 443 commenti, ma solo 7,6 follower ogni 1.000 account. Le serie «Paolino» rendono di più per follower: 28,6 (16/11) e 18,7 (17/11) ogni 1.000 account, con 250 e 845 views. Nei verbali a 7 giorni, il testa_a_testa Cecina/Livorno ha 39,1 follower ogni 1.000 account (mediana dei simili 29,0), mentre il questa_luce di Zoe ha 13,8 contro una mediana di 6,4. Il formato «fondatore» (Napoli o Monza) non ha portato nessun follower (0,0 su 314 account). I dati sui follower sono pochi (un reel con 1 solo follower): meglio non trarre conclusioni forti da un singolo reel.",
+    "proposta": "Domani provare una puntata della serie Paolino con chiusura che chiede una scelta concreta nei commenti (come «Domani: il bagno o il veterinario?»), e un testa_a_testa tra due città vicine con la stessa apertura «video vero» che ha funzionato a Cecina/Livorno. Evitare il formato fondatore (0 follower su 314 account), e non riproporre il questa_luce con l'apertura mappa di Zoe, sotto la mediana.",
+    "gancio": "Questo è Paolino. Ha trenta giorni per trovare casa."
+   }
+  },
+  {
+   "t": "2026-11-18T10:17:22+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Per domani: gancio «Livorno contro Cecina: 32 chilometri, e la sfida è aperta. Con video vero in apertura e voce.», chiusura «Scrivi la tua città e il nome del tuo animale: domani decidi tu!». Dato: Testa_a_testa Livorno-Cecina: 39,1 follower ogni 1.000 account a 7 giorni (mediana dei simili 29,0), Verona-Vicenza 29,0 (mediana 8,0); serie Paolino 28,6 e 18,7. Il tifo, pur con 3.018 account raggiunti, rende solo 7,6. I numeri sono piccoli (9-11 follower per reel): conviene confermare con un secondo test.",
+   "dati": {
+    "pubblico": "Persone che non ci conoscono ancora, appassionate di animali e legate alla loro città, da raggiungere con un testa_a_testa tra due comuni vicini, affiancato da una puntata di Paolino.",
+    "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta. Con video vero in apertura e voce.",
+    "motivo_per_seguire": "Una sfida tra città che continua a ogni puntata, più Paolino come personaggio ricorrente. Chi segue domani decide la puntata dopo: il voto nei commenti cambia davvero la storia.",
+    "chiusura": "Scrivi la tua città e il nome del tuo animale: domani decidi tu!",
+    "da_riprovare": "Testa_a_testa tra due comuni vicini con apertura «video vero» e distanza in chilometri nel gancio; serie di Paolino con scelta semplice nei commenti (bagno o veterinario). Il tifo va ripreso solo con un invito esplicito a seguire.",
+    "da_evitare": "Formato «fondatore» (0 follower su 314 account), coppa_verdetto (1,5 ogni 1.000), coppa_apertura e questa_luce con apertura mappa, e domande generiche tipo «Napoli o Monza?» che portano commenti ma non follower.",
+    "dato": "Testa_a_testa Livorno-Cecina: 39,1 follower ogni 1.000 account a 7 giorni (mediana dei simili 29,0), Verona-Vicenza 29,0 (mediana 8,0); serie Paolino 28,6 e 18,7. Il tifo, pur con 3.018 account raggiunti, rende solo 7,6. I numeri sono piccoli (9-11 follower per reel): conviene confermare con un secondo test."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 73844,
+ "fine": "2026-11-18T10:17:22+00:00"
+}

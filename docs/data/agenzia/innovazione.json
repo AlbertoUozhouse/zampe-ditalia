@@ -118,5 +118,15 @@
   "reel": null,
   "realismo": null,
   "perche": "La staffetta usa un gioco già presente nel sito e trasforma ogni turno in un motivo concreto per invitare un vicino, quindi porta nuovi follower senza produrre materiali nuovi."
+ },
+ {
+  "giorno": "2026-11-18",
+  "reel": {
+   "idea": "Il Campanile Vivo: ripresa reale del paese, poi la luce",
+   "come_funziona": "Ogni reel parte da un video vero girato nel comune (campanile, piazza, strada) con la voce di un follower che dice la sua frase. Solo alla fine la mappa si apre sul punto del paese e si accende la luce dell'animale. Montaggio in tre tempi: vero, distanza in chilometri dal comune vicino, luce. La chiusura invita a scrivere la propria città nei commenti.",
+   "primo_passo": "Scegliere un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggere le sue coordinate in motore/config.json, e montare in un editor verticale un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km sul comune vicino, poi la mappa già presente in docs/ con la luce posizionata sulle coordinate. Musica libera da diritti. Pubblicarlo nel contenitore «amici» o «ospiti» già pronto.",
+   "come_misurarla": "Dopo 7 giorni: follower ogni 1.000 account raggiunti, confrontati con la mediana dei reel di mappa (8,0) e con il 39,1 del testa_a_testa Livorno-Cecina (mediana 29,0); quota di visualizzazioni che supera il 50% della durata, cioè arriva alla luce; numero di commenti con una città scritta dal pubblico."
+  },
+  "perche": "È l'idea più completa e subito realizzabile con ciò che abbiamo (mappa in docs/, coordinate in config.json, voce e video con consenso), con il video vero in apertura che ferma lo scroll, la distanza che dà il gancio e l'invito a scrivere la propria città che trasforma i commenti in follower."
  }
 ]
