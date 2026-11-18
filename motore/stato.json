@@ -9264,6 +9264,7 @@
 "18149112184561937",
 "18149137090547562",
 "18149176474567740",
+"18149192503605770",
 "18149205430605621",
 "18149207503566132",
 "18149292481561106",
@@ -11606,9 +11607,6 @@
 "18798213136033257"
 ],
 "risposte": [
-1795033167.3287864,
-1795033170.6256497,
-1795033174.2097468,
 1795033975.8560972,
 1795033981.3939848,
 1795033984.229,
@@ -11618,7 +11616,8 @@
 1795034925.002038,
 1795034930.8679261,
 1795035741.3289392,
-1795035742.387146
+1795035742.387146,
+1795037340.4767094
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -14981,9 +14980,6 @@
 "ilenia__caria": [
 "_sau_ed0ard0"
 ],
-"irenesaba560": [
-"_sau_ed0ard0"
-],
 "martina_longooo": [
 "mariacristinaa.aa"
 ],
@@ -15208,7 +15204,8 @@
 "irenesaba560>_sau_ed0ard0",
 "mariacristinaa.aa>il_.privatisssimodellamacici",
 "mariacristinaa.aa>il.privvdellamacicii",
-"mariacristinaa.aa>la_.mariiiii._"
+"mariacristinaa.aa>la_.mariiiii._",
+"_sau_ed0ard0>irenesaba560"
 ],
 "voti_oggi": {
 "claudio92890": "2026-10-27",
@@ -16306,7 +16303,7 @@
 "edo_vigna_": 15,
 "ilenia__caria": 10,
 "fabiolino290111": 15,
-"_sau_ed0ard0": 10,
+"_sau_ed0ard0": 23,
 "gae.privatess.11": 15,
 "marassi_17": 10,
 "mcdavid7794": 15,
@@ -16338,7 +16335,8 @@
 },
 "2026-11-18": {
 "irenesaba560": 2,
-"mariacristinaa.aa": 3
+"mariacristinaa.aa": 3,
+"_sau_ed0ard0": 1
 }
 },
 "seguono": {
@@ -20923,7 +20921,8 @@
 },
 "missioni_fatte": {
 "irenesaba560": "2026-11-18",
-"mariacristinaa.aa": "2026-11-18"
+"mariacristinaa.aa": "2026-11-18",
+"_sau_ed0ard0": "2026-11-18"
 },
 "boost": {},
 "negozio_fatti": [
@@ -20965,7 +20964,7 @@
 "2026-11-15": 1909,
 "2026-11-16": 1920,
 "2026-11-17": 1968,
-"2026-11-18": 2009
+"2026-11-18": 2010
 },
 "gioco_pappa": {
 "2026-W46": {
@@ -22104,6 +22103,10 @@
 [
 "2026-11-18T21:02+00:00",
 2009
+],
+[
+"2026-11-18T21:29+00:00",
+2010
 ]
 ],
 "coppa": {
@@ -26198,6 +26201,12 @@
 "amico": "la_.mariiiii._",
 "p": 1,
 "t": "2026-11-18T20:48+00:00"
+},
+{
+"chi": "_sau_ed0ard0",
+"amico": "irenesaba560",
+"p": 1,
+"t": "2026-11-18T21:28+00:00"
 }
 ],
 "gara_amici_albo": {},
@@ -26479,7 +26488,7 @@
 "veterinario": 2
 }
 },
-"commenti_serie": 19,
+"commenti_serie": 20,
 "votanti_p": {
 "18116669770852121": [
 "annaagriggio",
@@ -26497,7 +26506,8 @@
 "eli_beautifulgirl"
 ],
 "18321426745303996": [
-"andrea.espo74"
+"andrea.espo74",
+"irenesaba560"
 ]
 },
 "voti_p": {
@@ -26506,7 +26516,7 @@
 "bagno": 2
 },
 "18321426745303996": {
-"colloquio": 1
+"colloquio": 2
 }
 }
 },
