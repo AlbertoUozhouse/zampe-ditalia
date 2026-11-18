@@ -5652,6 +5652,7 @@
 "18105152615371182",
 "18105197090324740",
 "18105203045289165",
+"18105203267375345",
 "18105208334008539",
 "18105252449374008",
 "18105252563563009",
@@ -8565,6 +8566,7 @@
 "18134463571747224",
 "18134464681672138",
 "18134503522667272",
+"18134506246780682",
 "18134511133669089",
 "18134523502781948",
 "18134529928746632",
@@ -11611,7 +11613,9 @@
 ],
 "risposte": [
 1795037340.4767094,
-1795038905.132453
+1795038905.132453,
+1795040556.239031,
+1795040560.7462206
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -13911,7 +13915,8 @@
 "arturo576327": "2026-11-18",
 "ed042025": "2026-11-18",
 "diego._.piraz": "2026-11-18",
-"leonardofogar": "2026-11-18"
+"leonardofogar": "2026-11-18",
+"chrix_pelli_": "2026-11-18"
 },
 "media_letti": {},
 "pezzi": {
@@ -20895,10 +20900,11 @@
 "029d06b49fcb380e",
 "183adc5ca06001a9",
 "b41145cc1c110f88",
-"e9d17215abe01fc8"
+"e9d17215abe01fc8",
+"cdaa6a2004ec73df"
 ],
 "privati_ora": [
-1795034925.0020669
+1795040560.746253
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -24261,7 +24267,8 @@
 "Alghero|SS": 11,
 "Cefalù|PA": 1,
 "Pozzolo Formigaro|AL": 1,
-"Gorizia|GO": 1
+"Gorizia|GO": 1,
+"Reggio di Calabria|RC": 1
 },
 "giocatori": {
 "Genova|GE": [
@@ -24792,6 +24799,15 @@
 "t": "2026-11-18T20:48+00:00",
 "sorpasso": "Gorizia|GO",
 "su": "Gonnosfanadiga|SU",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-18T22:22+00:00",
+"sorpasso": "Reggio di Calabria|RC",
+"su": "Caserta|CE",
 "punti": [
 1,
 0
@@ -25759,6 +25775,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Reggio di Calabria|RC": {
+"u": [
+"chrix_pelli_"
+],
+"c": [
+"18105203267375345"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -25853,7 +25879,8 @@
 "arturo576327|animale|milan",
 "ed042025|animale|lenticchia",
 "diego._.piraz|animale|scooby",
-"leonardofogar|animale|tyson"
+"leonardofogar|animale|tyson",
+"chrix_pelli_|animale|nala"
 ]
 },
 "gara_follower": [
