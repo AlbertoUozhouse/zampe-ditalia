@@ -3571,6 +3571,7 @@
 "18028069340872709",
 "18028153892699792",
 "18028211294875530",
+"18028225601868636",
 "18028231073861648",
 "18028256426870936",
 "18028285031697178",
@@ -5489,6 +5490,7 @@
 "18102920822435519",
 "18102933965561092",
 "18102956738530904",
+"18102978737075277",
 "18103008650452867",
 "18103015697076206",
 "18103042238383870",
@@ -10824,6 +10826,7 @@
 "18417157900084756",
 "18417217300083796",
 "18417573631087861",
+"18417686965083106",
 "18417859072083598",
 "18417865429156379",
 "18417977221081845",
@@ -11549,9 +11552,10 @@
 "18798213136033257"
 ],
 "risposte": [
-1795029508.5415986,
-1795029509.6060317,
-1795031890.435925
+1795031890.435925,
+1795033167.3287864,
+1795033170.6256497,
+1795033174.2097468
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -14915,6 +14919,36 @@
 ],
 "irenesaba560": [
 "_sau_ed0ard0"
+],
+"martina_longooo": [
+"mariacristinaa.aa"
+],
+"maria_vittoria_mele": [
+"mariacristinaa.aa"
+],
+"mariadepa_7": [
+"mariacristinaa.aa"
+],
+"beatrice_cole_13": [
+"mariacristinaa.aa"
+],
+"noemiocchinerii": [
+"mariacristinaa.aa"
+],
+"_la.mariiii_": [
+"mariacristinaa.aa"
+],
+"mariagiulia_prato": [
+"mariacristinaa.aa"
+],
+"xxnicolexx17": [
+"mariacristinaa.aa"
+],
+"privv_dellamarineg": [
+"mariacristinaa.aa"
+],
+"solazzomariaceleste": [
+"mariacristinaa.aa"
 ]
 },
 "premiati": [
@@ -26352,7 +26386,7 @@
 "stadio": "SAN SIRO",
 "citta": "Milano",
 "gol": {
-"inter": 23,
+"inter": 24,
 "milan": 23
 },
 "marcatori": [
@@ -26401,7 +26435,8 @@
 "gae.privatess.11",
 "arturo576327",
 "alessandrogrippa9",
-"diego._.piraz"
+"diego._.piraz",
+"santi_milwill"
 ],
 "inizio": "2026-11-18T12:33+01:00",
 "fine": "2026-11-19T12:30+01:00"
