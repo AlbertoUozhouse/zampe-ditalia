@@ -8551,6 +8551,7 @@
 "18137459233657358",
 "18137475602310271",
 "18137493634780233",
+"18137529670752722",
 "18137544982647389",
 "18137546620709629",
 "18137546782637640",
@@ -11296,7 +11297,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1794978456.9673765
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-15",
@@ -13565,7 +13568,8 @@
 "veroneseenea": "2026-11-17",
 "rosarioemanueldi": "2026-11-17",
 "antodauu_": "2026-11-17",
-"gori.matteo12": "2026-11-17"
+"gori.matteo12": "2026-11-17",
+"niccol0di_bartolomeo": "2026-11-18"
 },
 "media_letti": {},
 "pezzi": {
@@ -20392,11 +20396,11 @@
 "7b769444d9d91c72",
 "bdc710999dd871dd",
 "a525553b2f792862",
-"c4cac011709d462f"
+"c4cac011709d462f",
+"d200012d765ea04f"
 ],
 "privati_ora": [
-1794949212.4934762,
-1794952582.2271793
+1794978456.967406
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -23604,7 +23608,8 @@
 "Mergozzo|VB": 1,
 "Sant'Elpidio a Mare|FM": 2,
 "Balvano|PZ": 1,
-"Prato|PO": 1
+"Prato|PO": 1,
+"Pescara|PE": 1
 },
 "giocatori": {
 "Genova|GE": [
@@ -23984,6 +23989,15 @@
 "t": "2026-11-17T21:56+00:00",
 "sorpasso": "Prato|PO",
 "su": "Rho|MI",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-18T05:07+00:00",
+"sorpasso": "Pescara|PE",
+"su": "Piacenza|PC",
 "punti": [
 1,
 0
@@ -24686,6 +24700,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Pescara|PE": {
+"u": [
+"niccol0di_bartolomeo"
+],
+"c": [
+"18137529670752722"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -24751,7 +24775,8 @@
 "veroneseenea|animale|ace",
 "rosarioemanueldi|animale|rey",
 "antodauu_|animale|billy",
-"gori.matteo12|animale|gilda"
+"gori.matteo12|animale|gilda",
+"niccol0di_bartolomeo|animale|bobo"
 ]
 },
 "gara_follower": [
