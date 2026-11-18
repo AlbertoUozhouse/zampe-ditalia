@@ -10870,6 +10870,7 @@
 "18473134270143143",
 "18473490829187912",
 "18474210688140168",
+"18474326272185337",
 "18474482836137338",
 "18474923869143286",
 "18474924802138326",
@@ -11323,7 +11324,7 @@
 "18798213136033257"
 ],
 "risposte": [
-1794986089.3685553
+1794989535.1808715
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -13596,7 +13597,8 @@
 "gori.matteo12": "2026-11-17",
 "niccol0di_bartolomeo": "2026-11-18",
 "_rob_99_": "2026-11-18",
-"gabriele23714": "2026-11-18"
+"gabriele23714": "2026-11-18",
+"cotognotiziana": "2026-11-18"
 },
 "media_letti": {},
 "pezzi": {
@@ -20432,11 +20434,11 @@
 "c4cac011709d462f",
 "d200012d765ea04f",
 "3ba25b19df4ed2b7",
-"595939c8d7566e06"
+"595939c8d7566e06",
+"379fdb702af3b992"
 ],
 "privati_ora": [
-1794981701.6178906,
-1794985155.9959815
+1794989535.1808975
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -23638,7 +23640,7 @@
 "Bitonto|BA": 1,
 "Casirate d'Adda|BG": 1,
 "Siziano|PV": 2,
-"Roma|RM": 18,
+"Roma|RM": 19,
 "Olgiate Molgora|LC": 2,
 "Taranto|TA": 1,
 "Trevi nel Lazio|FR": 3,
@@ -24413,7 +24415,8 @@
 "gioele_ardagna",
 "lollopetri013",
 "lollogatta",
-"gabriele23714"
+"gabriele23714",
+"cotognotiziana"
 ],
 "c": [
 "18103415693383265",
@@ -24425,7 +24428,8 @@
 "18029517596915398",
 "18112024676265157",
 "18109869686287454",
-"18080173772721877"
+"18080173772721877",
+"18474326272185337"
 ],
 "chiuse": 3,
 "log": [
@@ -24844,7 +24848,8 @@
 "gori.matteo12|animale|gilda",
 "niccol0di_bartolomeo|animale|bobo",
 "_rob_99_|animale|duke",
-"gabriele23714|animale|rocky"
+"gabriele23714|animale|rocky",
+"cotognotiziana|animale|jerry"
 ]
 },
 "gara_follower": [
