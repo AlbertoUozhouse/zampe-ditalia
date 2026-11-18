@@ -1,0 +1,404 @@
+{
+ "voce": true,
+ "variante": "voce-fissa-80",
+ "tema": "giorno",
+ "id": "2026-11-18-1316-partita",
+ "formato": "partita",
+ "testata": {
+  "titolo": "⚽ INTER – MILAN"
+ },
+ "conteggio": {
+  "cani": 2102,
+  "gatti": 811
+ },
+ "frasi": [
+  {
+   "testo": "Nasce il Campionato delle Zampe! I cani tifano, e ogni commento è un gol.",
+   "scena": {
+    "tipo": "cartone",
+    "sfondo": "stadio",
+    "hud": false,
+    "colori": [
+     [
+      "#1B4FA0",
+      "#111111"
+     ],
+     [
+      "#D2151C",
+      "#111111"
+     ]
+    ],
+    "attori": [
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 361,
+       "sq": "inter"
+      },
+      "x": 300,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.4,
+      "_nome": "Pepe"
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 95,
+       "sq": "milan"
+      },
+      "x": 780,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.6,
+      "_nome": "Luna"
+     }
+    ],
+    "etichette": [
+     {
+      "t": "CAMPIONATO",
+      "c": "giallo",
+      "x": 170,
+      "y": 330,
+      "r": -4,
+      "z": 120,
+      "t0": 0.1
+     },
+     {
+      "t": "DELLE ZAMPE",
+      "c": "rosso",
+      "x": 230,
+      "y": 520,
+      "r": 3,
+      "z": 100,
+      "t0": 0.4
+     },
+     {
+      "t": "74 CANI TIFOSI",
+      "c": "verde",
+      "x": 300,
+      "y": 720,
+      "r": -3,
+      "z": 60,
+      "t0": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Oggi a San Siro: Inter contro Milan. È il derby!",
+   "scena": {
+    "tipo": "cartone",
+    "sfondo": "stadio",
+    "hud": false,
+    "colori": [
+     [
+      "#1B4FA0",
+      "#111111"
+     ],
+     [
+      "#D2151C",
+      "#111111"
+     ]
+    ],
+    "tabellone": {
+     "sopra": "OGGI · SAN SIRO · GIORNATA 1",
+     "a": "INTER",
+     "b": "MILAN",
+     "ga": 0,
+     "gb": 0,
+     "ca": [
+      "#1B4FA0",
+      "#111111"
+     ],
+     "cb": [
+      "#D2151C",
+      "#111111"
+     ]
+    },
+    "attori": [
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 361,
+       "sq": "inter"
+      },
+      "x": 170,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.5,
+      "_nome": "Pepe"
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 244,
+       "sq": "inter"
+      },
+      "x": 400,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.5,
+      "_nome": "Balú"
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 95,
+       "sq": "milan"
+      },
+      "x": 680,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.8,
+      "_nome": "Luna"
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 804,
+       "sq": "milan"
+      },
+      "x": 910,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.8,
+      "_nome": "Tequila"
+     }
+    ],
+    "etichette": [
+     {
+      "t": "PEPE",
+      "c": "giallo",
+      "x": 70,
+      "y": 1390,
+      "r": 3,
+      "z": 46,
+      "t0": 0.8
+     },
+     {
+      "t": "BALÚ",
+      "c": "giallo",
+      "x": 300,
+      "y": 1390,
+      "r": -3,
+      "z": 46,
+      "t0": 0.8
+     },
+     {
+      "t": "LUNA",
+      "c": "giallo",
+      "x": 580,
+      "y": 1390,
+      "r": 3,
+      "z": 46,
+      "t0": 1.1
+     },
+     {
+      "t": "TEQUILA",
+      "c": "giallo",
+      "x": 810,
+      "y": 1390,
+      "r": -3,
+      "z": 46,
+      "t0": 1.1
+     },
+     {
+      "t": "DERBY!",
+      "c": "rosso",
+      "x": 380,
+      "y": 700,
+      "r": -5,
+      "z": 100,
+      "t0": 1.2
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Ogni commento è un gol: scrivi forza Inter o forza Milan, con città e nome del tuo cane. Si gioca fino a domani alle dodici e trenta.",
+   "scena": {
+    "tipo": "cartone",
+    "sfondo": "stadio",
+    "hud": false,
+    "colori": [
+     [
+      "#1B4FA0",
+      "#111111"
+     ],
+     [
+      "#D2151C",
+      "#111111"
+     ]
+    ],
+    "attori": [
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 361,
+       "sq": "inter"
+      },
+      "x": 170,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.5
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 244,
+       "sq": "inter"
+      },
+      "x": 400,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.5
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 95,
+       "sq": "milan"
+      },
+      "x": 680,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.8
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 804,
+       "sq": "milan"
+      },
+      "x": 910,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.8
+     }
+    ],
+    "oggetti": [
+     {
+      "e": "⚽",
+      "x": 470,
+      "y": 860,
+      "z": 150,
+      "t0": 0.3,
+      "vola": true,
+      "colore": "#FFFFFF"
+     }
+    ],
+    "etichette": [
+     {
+      "t": "OGNI COMMENTO",
+      "c": "giallo",
+      "x": 130,
+      "y": 330,
+      "r": -4,
+      "z": 96,
+      "t0": 0.1
+     },
+     {
+      "t": "È UN GOL!",
+      "c": "rosso",
+      "x": 300,
+      "y": 500,
+      "r": 3,
+      "z": 110,
+      "t0": 0.4
+     },
+     {
+      "t": "FORZA INTER O FORZA MILAN",
+      "c": "bianco",
+      "x": 60,
+      "y": 720,
+      "r": -2,
+      "z": 54,
+      "t0": 1.2
+     }
+    ]
+   }
+  }
+ ],
+ "banner": "⚽ Scrivi FORZA INTER o FORZA MILAN",
+ "didascalia": "⚽ Campionato delle Zampe · Giornata 1\nNasce il campionato dei cani tifosi!\nOggi a San Siro: Inter contro Milan — è il derby!\n\n👇 Ogni commento è un gol: scrivi FORZA INTER o FORZA MILAN, con città e nome del tuo cane (sulla mappa mette la sciarpa). Un gol a persona: tagga gli amici tifosi!\n⏱️ Si gioca fino a domani alle 12:30. Vittoria 3 punti, pareggio 1.\n👑 Gara degli amici: tagga chi ha un cane o un gatto. Chi porta più amici entro domenica alle 20 vince la Corona sulla mappa!\n\n🐾 In questo reel: @ale_ghezzii @basile_christian014 @cosimo.marangi__ @die.trommino\n\nVoce generata con IA.\n\n#inter #milan #calcio #seriea #tifosi #derby #cani #animalidomestici ",
+ "tag": [
+  "ale_ghezzii",
+  "basile_christian014",
+  "cosimo.marangi__",
+  "die.trommino"
+ ],
+ "collab": [],
+ "copertina": {
+  "sopra": "⚽ CAMPIONATO DELLE ZAMPE",
+  "grande": "Inter<br><i>vs</i><br>Milan",
+  "sotto": "SAN SIRO · GIORNATA 1",
+  "domanda": "Ogni commento è un gol 👇",
+  "tema": "duello"
+ },
+ "cartone": true,
+ "parole_colore": {
+  "gol": "or",
+  "commento": "or",
+  "derby": "ro",
+  "punti": "ve",
+  "pareggio": "or",
+  "forza": "or",
+  "campionato": "or",
+  "zampe": "or",
+  "inter": "bl",
+  "milan": "ro"
+ },
+ "sottotitoli_top": 1075,
+ "schermo_pulito": true
+}

@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-10-1708-questa_luce",
-  "formato": "questa_luce",
-  "modalita": "operativa",
-  "inizio": "2026-11-10T16:08:27+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-10T16:16:16+00:00",
-  "scambi": 128
- },
- {
   "id": "2026-11-10-1812-questa_luce",
   "formato": "questa_luce",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "fatto",
   "fine": "2026-11-18T10:17:37+00:00",
   "scambi": 19
+ },
+ {
+  "id": "2026-11-18-1316-partita",
+  "formato": "partita",
+  "modalita": "operativa",
+  "inizio": "2026-11-18T12:16:33+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-18T12:20:20+00:00",
+  "scambi": 126
  }
 ]
