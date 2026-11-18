@@ -315,3 +315,14 @@ body:has(#sheet:not([hidden])) .gioca-citta,body:has(#gioco) .gioca-citta{displa
 .cz-q b{font:800 17px/1.1 var(--f-display);color:#fff;padding:12px 6px;text-shadow:0 1px 0 #000,0 -1px 0 #000,1px 0 0 #000,-1px 0 0 #000}
 .cz-q em{font:800 30px/1 var(--f-display);font-style:normal;color:#FFD23F;align-self:center}
 .cz-sc{display:inline-block;width:18px;height:12px;border-radius:3px;margin-right:8px;vertical-align:middle;border:1px solid rgba(255,255,255,.4)}
+
+/* lo stadio della partita in corso sulla mappa (18/11) */
+.stadio-mk[hidden]{display:none}
+.stadio-mk{position:absolute;z-index:460;transform:translate(-50%,-70%);display:flex;flex-direction:column;align-items:center;pointer-events:auto;cursor:pointer;filter:drop-shadow(0 6px 10px rgba(0,0,0,.55))}
+.stadio-mk svg{animation:stadio-pulsa 1.6s ease-in-out infinite}
+.stadio-mk .sc{margin-top:-2px;display:flex;flex-direction:column;align-items:center;background:#15100C;border:2px solid #F3E6C8;border-radius:10px;padding:3px 9px 4px;white-space:nowrap}
+.stadio-mk .sc b{font:800 14px/1.1 var(--f-display);color:#FFD23F}
+.stadio-mk .sc small{font:900 10px/1.2 var(--f-body);color:#F3E6C8;letter-spacing:.04em}
+.pop-q{margin:6px 0 8px}
+@keyframes stadio-pulsa{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@media (prefers-reduced-motion:reduce){.stadio-mk svg{animation:none}}

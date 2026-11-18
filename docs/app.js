@@ -492,6 +492,7 @@ function refresh(list) {
   VISTI = new Set(DATA.map(d => d.id));
   if (!raf && pulsano(ora)) raf = requestAnimationFrame(loop); else redraw();
   if (!$("#sheet").hidden) show(document.querySelector('.tab[aria-selected="true"]').dataset.v);
+  try { disegnaStadio(); } catch (e) {}
 }
 map.on("move zoom resize", redraw);
 map.on("moveend zoomend", () => { syncPets(); syncCities(STATS.city || []); redraw(); });
@@ -508,6 +509,31 @@ function disegnaGiro() {
   L.marker([GIRO.lat, GIRO.lng], { zIndexOffset: 2000, icon: L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet zampa-giro">${svg}<span class="name">🗺️ Zampa · tappa ${GIRO.tappa}</span></div>` }) })
     .bindPopup(`<div class="pop"><h3>🗺️ Il Giro d'Italia di Zampa</h3><div class="k">Tappa ${GIRO.tappa}: ${esc(GIRO.c)}</div><div>Dove va domani? Scrivi la tua città sotto il reel della tappa su Instagram: vince la più commentata!</div></div>`).addTo(giroLayer);
 }
+// lo stadio della partita in corso del Campionato delle Zampe (18/11), nel posto vero (San Siro a Milano, l'Olimpico a Roma…), col punteggio dal vivo
+// sta sopra le luci (il canvas #glow copre i marker di Leaflet): un elemento suo nel contenitore della mappa, spostato a ogni movimento
+const stadioEl = document.createElement("div"); stadioEl.className = "stadio-mk"; stadioEl.hidden = true; stadioEl.setAttribute("role", "button"); stadioEl.tabIndex = 0;
+map.getContainer().appendChild(stadioEl);
+stadioEl.onclick = e => { e.stopPropagation(); show("classifica"); };
+stadioEl.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show("classifica"); } };
+["mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend", "dblclick", "wheel"].forEach(ev => stadioEl.addEventListener(ev, e => e.stopPropagation(), { passive: true }));
+let STADIO_LL = null;
+function posStadio() {
+  if (!STADIO_LL) return;
+  const q = map.latLngToContainerPoint(STADIO_LL); stadioEl.style.left = q.x + "px"; stadioEl.style.top = q.y + "px";
+}
+function disegnaStadio() {
+  const P = CAMPIONATO && CAMPIONATO.partita;
+  if (!P || P.lat == null) { stadioEl.hidden = true; STADIO_LL = null; return; }
+  const [a0, a1] = P.a.c, [b0, b1] = P.b.c;
+  stadioEl.innerHTML = `<svg viewBox="0 0 120 84" width="92" height="64" aria-hidden="true"><ellipse cx="60" cy="46" rx="56" ry="34" fill="#2C3960" stroke="#1A1206" stroke-width="4"/>
+    <path d="M60 12 A56 34 0 0 0 60 80 V68 A42 22 0 0 1 60 24 Z" fill="${a0}" stroke="${a1}" stroke-width="2"/><path d="M60 12 A56 34 0 0 1 60 80 V68 A42 22 0 0 0 60 24 Z" fill="${b0}" stroke="${b1}" stroke-width="2"/>
+    <ellipse cx="60" cy="46" rx="40" ry="21" fill="#3FA34D" stroke="#F4F4F4" stroke-width="2.5"/><path d="M60 25 V67" stroke="#F4F4F4" stroke-width="2.5"/><circle cx="60" cy="46" r="7" fill="none" stroke="#F4F4F4" stroke-width="2"/>
+    <path d="M14 18 v-12 M106 18 v-12" stroke="#1A1206" stroke-width="3"/><rect x="6" y="1" width="16" height="7" rx="2" fill="#FFF3B0" stroke="#1A1206" stroke-width="2"/><rect x="98" y="1" width="16" height="7" rx="2" fill="#FFF3B0" stroke="#1A1206" stroke-width="2"/></svg>
+    <span class="sc"><b>${esc(P.a.nome)} ${P.ga} – ${P.gb} ${esc(P.b.nome)}</b><small>⚽ ${esc(P.stadio)} · LIVE</small></span>`;
+  stadioEl.setAttribute("aria-label", `Campionato delle Zampe: ${P.a.nome} ${P.ga}, ${P.b.nome} ${P.gb}, a ${P.stadio}. Apri la classifica`);
+  STADIO_LL = L.latLng(P.lat, P.lng); stadioEl.hidden = false; posStadio();
+}
+map.on("move zoom resize zoomend moveend", posStadio);
 fetch("data/razze.json").then(r => r.json()).then(D.carica).catch(() => {}).finally(() => loadData().then(refresh).then(disegnaGiro).then(() => { if (location.hash === "#paolino") show("paolino"); }));
 // Il motore dei commenti aggiorna i dati ogni 10-15 minuti: la pagina li ricarica da sola.
 if (!ANTEPRIMA) setInterval(() => loadData().then(refresh), 5 * 60e3);

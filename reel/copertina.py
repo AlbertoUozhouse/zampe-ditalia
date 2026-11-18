@@ -66,6 +66,36 @@ PAGINA_PAOLINO = """<!doctype html><html lang="it"><head><meta charset="utf-8"><
 <div class="n"><span>PAOLINO</span></div><div class="f"><span>VOTA TU 👇</span></div></div></body></html>"""
 
 
+PAGINA_STADIO = """<!doctype html><html lang="it"><head><meta charset="utf-8"><style>
+@font-face{{font-family:Anton;src:url('{anton}') format('woff2')}}
+*{{box-sizing:border-box;margin:0}} html,body{{width:1080px;height:1920px;overflow:hidden;background:#16204A}}
+.s{{position:relative;width:1080px;height:1920px;overflow:hidden}} svg{{position:absolute;inset:0}}
+.k{{position:absolute;left:0;right:0;top:300px;text-align:center}} .k span{{display:inline-block;font:400 64px/1.05 Anton;color:#1A1206;background:#FFD23F;border:7px solid #1A1206;border-radius:14px;padding:6px 26px 10px;transform:rotate(-3deg);box-shadow:0 10px 0 rgba(0,0,0,.35)}}
+.t{{position:absolute;left:30px;right:30px;top:470px;text-align:center;font:400 {fs}px/0.98 Anton;color:#fff;-webkit-text-stroke:14px #1A1206;paint-order:stroke fill;text-shadow:0 14px 0 #1A1206}}
+.t i{{display:block;font-style:normal;font-size:110px;color:#FFD23F;margin:6px 0}}
+.st{{position:absolute;left:0;right:0;top:1270px;text-align:center}} .st span{{display:inline-block;font:400 70px/1.05 Anton;color:#fff;background:#E2432F;border:7px solid #1A1206;border-radius:14px;padding:6px 26px 10px;transform:rotate(2deg);box-shadow:0 10px 0 rgba(0,0,0,.35)}}
+.g{{position:absolute;left:0;right:0;top:1440px;text-align:center}} .g span{{display:inline-block;font:400 60px/1.05 Anton;color:#1A1206;background:#5BD07A;border:7px solid #1A1206;border-radius:14px;padding:6px 24px 10px;transform:rotate(-2deg);box-shadow:0 10px 0 rgba(0,0,0,.35)}}
+</style></head><body><div class="s"><svg viewBox="0 0 1080 1920">{sfondo}</svg>
+<div class="k"><span>⚽ CAMPIONATO DELLE ZAMPE</span></div><div class="t">{a}<i>VS</i>{b}</div><div class="st"><span>{stadio}</span></div><div class="g"><span>OGNI COMMENTO È UN GOL 👇</span></div></div></body></html>"""
+
+
+def html_stadio(p):
+    """18/11: la copertina della partita del Campionato, nello stadio coi colori delle due squadre."""
+    sys.path.insert(0, str(ROOT / "reel/modello")); import scene
+    n = max(len(p["a"]), len(p["b"])); fs = 230 if n <= 5 else 190 if n <= 7 else 150 if n <= 10 else 120
+    return PAGINA_STADIO.format(anton=(ROOT / "reel/lancio-hf/assets/fonts/anton.woff2").as_uri(), sfondo=scene.sfondo_stadio(p["ca"], p["cb"]), fs=fs,
+                                a=html.escape(p["a"]), b=html.escape(p["b"]), stadio=html.escape(p["stadio"]))
+
+
+def copertina_stadio(p, uscita):
+    tmp = Path(tempfile.mkdtemp()); (tmp / "c.html").write_text(html_stadio(p)); png = tmp / "c.png"
+    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=1", "--window-size=1080,1920", "--allow-file-access-from-files",
+                    "--virtual-time-budget=6000", f"--user-data-dir={tmp / '.chrome'}", f"--screenshot={png}", (tmp / "c.html").as_uri()], capture_output=True, timeout=120)
+    if not png.exists(): sys.exit("copertina non creata")
+    subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", str(png), "-q:v", "3", str(uscita)], check=True)
+    print(f"copertina dello stadio: {uscita}")
+
+
 def copertina_paolino(p, uscita):
     """16/11, Alberto: «dovevi fare la copertina di Paolino». Ogni puntata la sua: il numero del giorno gigante, il titolo, Paolino a cartone.
     Sul profilo si vede il centro 3:4 (da 240 a 1680): numero, titolo e Paolino stanno lì dentro."""
@@ -109,6 +139,7 @@ def main():
     cop = json.loads(Path(sys.argv[1]).read_text())
     c = cop.get("copertina") or {"sopra": cop.get("testata", {}).get("titolo", "ZAMPE D'ITALIA"), "grande": "Accendi<br>la tua luce", "sotto": "Scrivi città, nome e animale 👇", "tema": "voto"}
     if c.get("paolino"): return copertina_paolino(c["paolino"], sys.argv[2])
+    if c.get("stadio"): return copertina_stadio(c["stadio"], sys.argv[2])
     if c.get("luce"):  # la serie della mappa (7/11): un'immagine protagonista e poche parole, per esempio «La prima luce di Atri»
         tmp = Path(tempfile.mkdtemp()); fondo_luce(*c["luce"], tmp / "fondo.jpg")
         n = len(c["grande"]); fs = 150 if n <= 9 else 120 if n <= 13 else 96 if n <= 18 else 78

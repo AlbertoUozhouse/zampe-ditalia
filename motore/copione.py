@@ -2091,7 +2091,7 @@ def partita(D, rng, st):
     st["cartone"] = True; st["schermo_pulito"] = True; st["senza_bonus"] = True; st["sottotitoli_top"] = 1075  # sopra le teste dei cani in campo
     st["parole_colore"] = {"gol": "or", "commento": "or", "derby": "ro", "punti": "ve", "pareggio": "or", "forza": "or", "campionato": "or", "zampe": "or",
                            A.lower(): "bl", B.lower(): "ro"}
-    st["copertina"] = {"sopra": "⚽ CAMPIONATO DELLE ZAMPE", "grande": f"{A}<br><i>vs</i><br>{B}", "sotto": f"{P['stadio']} · GIORNATA {P['giornata']}", "domanda": "Ogni commento è un gol 👇", "tema": "duello"}
+    st["copertina"] = {"stadio": {"a": A.upper(), "b": B.upper(), "ca": col(P["a"]), "cb": col(P["b"]), "stadio": f"{P['stadio']} · GIORNATA {P['giornata']}"}}  # 18/11: nello stadio
     st["banner_reel"] = f"⚽ Scrivi FORZA {A.upper()} o FORZA {B.upper()}"
     st["hashtag"] = f"#{re.sub('[^a-z]', '', A.lower())} #{re.sub('[^a-z]', '', B.lower())} #calcio #seriea #tifosi #derby #cani #animalidomestici "
     fine_t = campionato.quando(P["fine"], ORA)

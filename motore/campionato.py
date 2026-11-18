@@ -146,8 +146,11 @@ def sito(stato, animali):
     C = stato.get("campionato") or {}; P = C.get("partita")
     pub = lambda k: {"k": k, "nome": squadre.nome(k), "c": squadre.colori(k)["c"]}
     out = {"tifosi": tifosi(animali), "classifica": [{**pub(k), **r} for k, r in classifica(stato)][:20]}
-    if P: out["partita"] = {"giornata": P["giornata"], "a": pub(P["a"]), "b": pub(P["b"]), "ga": P["gol"].get(P["a"], 0), "gb": P["gol"].get(P["b"], 0),
-                            "stadio": P["stadio"], "citta": P["citta"], "fine": P["fine"]}
+    if P:
+        out["partita"] = {"giornata": P["giornata"], "a": pub(P["a"]), "b": pub(P["b"]), "ga": P["gol"].get(P["a"], 0), "gb": P["gol"].get(P["b"], 0),
+                          "stadio": P["stadio"], "citta": P["citta"], "fine": P["fine"]}
+        ll = squadre.STADI_LL.get(P["stadio"])
+        if ll: out["partita"]["lat"], out["partita"]["lng"] = ll  # 18/11: lo stadio sulla mappa del sito, nel posto vero
     if C.get("giocate"):
         x = C["giocate"][-1]; out["ultima"] = {"a": pub(x["a"]), "b": pub(x["b"]), "ga": x["ga"], "gb": x["gb"], "stadio": x["stadio"]}
     return out

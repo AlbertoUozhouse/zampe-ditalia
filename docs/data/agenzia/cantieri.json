@@ -60,7 +60,7 @@
   "traccia": "realismo",
   "aperto": "2026-11-16",
   "scadenza": "2026-11-18",
-  "stato": "da costruire",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-18",
@@ -182,6 +182,9 @@
     ],
     "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione (anche ridotta) è pubblicata entro il 18 novembre."
    }
-  ]
+  ],
+  "aggiornato": "2026-11-18",
+  "nota": "Il Campionato delle Zampe sulla mappa: lo stadio della partita in corso disegnato nel posto vero (San Siro a Milano, l'Olimpico a Roma, il Maradona a Napoli…), con le curve nei colori delle due squadre, i fari, e il punteggio dal vivo «Inter 10 – 8 Milan · SAN SIRO · LIVE» che pulsa; toccandolo si apre la partita con la classifica. Sta sopra le luci della mappa. In più la copertina del reel delle 13 è nello stadio coi colori delle due squadre.",
+  "online_dal": "2026-11-18"
  }
 }

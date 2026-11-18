@@ -76,6 +76,15 @@ STADI = {"inter": ("SAN SIRO", "Milano"), "milan": ("SAN SIRO", "Milano"), "roma
          "venezia": ("STADIO PENZO", "Venezia"), "pisa": ("ARENA GARIBALDI", "Pisa"), "cremonese": ("STADIO ZINI", "Cremona"), "sassuolo": ("STADIO DI REGGIO EMILIA", "Reggio Emilia")}
 
 
+# dove sono davvero gli stadi (17/11, per la mappa del sito): lat, lng
+STADI_LL = {"SAN SIRO": (45.4781, 9.1240), "STADIO OLIMPICO": (41.9339, 12.4547), "STADIO MARADONA": (40.8280, 14.1930), "STADIO DI TORINO": (45.1096, 7.6413),
+            "STADIO GRANDE TORINO": (45.0418, 7.6500), "STADIO FRANCHI": (43.7808, 11.2823), "STADIO DALL'ARA": (44.4921, 11.3097), "MARASSI": (44.4165, 8.9525),
+            "STADIO DI BERGAMO": (45.7089, 9.6808), "STADIO BENTEGODI": (45.4353, 10.9686), "STADIO FRIULI": (46.0816, 13.2003), "STADIO DI CAGLIARI": (39.1999, 9.1376),
+            "STADIO VIA DEL MARE": (40.3654, 18.2090), "STADIO SAN NICOLA": (41.0847, 16.8400), "STADIO BARBERA": (38.1527, 13.3424), "STADIO MASSIMINO": (37.5157, 15.0715),
+            "STADIO TARDINI": (44.7949, 10.3383), "STADIO PARTENIO": (40.9327, 14.8044), "STADIO ARECHI": (40.6460, 14.8237), "STADIO SINIGAGLIA": (45.8139, 9.0722),
+            "STADIO PENZO": (45.4276, 12.3640), "ARENA GARIBALDI": (43.7194, 10.3990), "STADIO ZINI": (45.1418, 10.0331), "STADIO DI REGGIO EMILIA": (44.7146, 10.6494)}
+
+
 def stadio(k):
     """(nome dello stadio, città) della squadra; per le squadre senza stadio in elenco, «STADIO DI <CITTÀ>»."""
     if k in STADI: return STADI[k]
