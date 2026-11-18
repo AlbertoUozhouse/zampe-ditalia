@@ -657,6 +657,7 @@
 "17906780547598522",
 "17906805441657177",
 "17906891139656875",
+"17906948607671499",
 "17906948910605386",
 "17906983680656871",
 "17906990844656842",
@@ -7992,6 +7993,7 @@
 "18130955396494315",
 "18130959232876389",
 "18130992805831325",
+"18131015567310215",
 "18131025865685531",
 "18131028589887923",
 "18131035418307911",
@@ -8612,6 +8614,7 @@
 "18137694238649220",
 "18137705581642001",
 "18137706256633557",
+"18137710795745237",
 "18137759761636068",
 "18137761588711733",
 "18137773084632859",
@@ -11360,11 +11363,11 @@
 "18798213136033257"
 ],
 "risposte": [
-1795001621.3290598,
-1795001624.9159274,
 1795003953.405906,
 1795004781.820267,
-1795004786.5824902
+1795004786.5824902,
+1795005604.031595,
+1795005607.0663831
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -13644,7 +13647,8 @@
 "emanueleali__": "2026-11-18",
 "xoxo.amaa": "2026-11-18",
 "belfiore_lorenzo": "2026-11-18",
-"mariacristinaa.aa": "2026-11-18"
+"mariacristinaa.aa": "2026-11-18",
+"marassi_17": "2026-11-18"
 },
 "media_letti": {},
 "pezzi": {
@@ -18882,7 +18886,8 @@
 "cotognotiziana": "2026-11-18",
 "giada_palombo": "2026-11-18",
 "emanueleali__": "2026-11-18",
-"belfiore_lorenzo": "2026-11-18"
+"belfiore_lorenzo": "2026-11-18",
+"mariacristinaa.aa": "2026-11-18"
 },
 "boost_follow": true,
 "privati": [
@@ -20496,10 +20501,12 @@
 "9200a14f99369259",
 "304c4565817afa2a",
 "f4dae27e4b6d9c71",
-"14f68a7cb1c3dec9"
+"14f68a7cb1c3dec9",
+"036c309233e17798"
 ],
 "privati_ora": [
-1795004786.5825107
+1795004786.5825107,
+1795005604.0316217
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -23712,9 +23719,13 @@
 [
 "Cipressa|IM",
 "Balvano|PZ"
+],
+[
+"San Cesareo|RM",
+"Campomorone|GE"
 ]
 ],
-"attesa": "San Cesareo|RM",
+"attesa": null,
 "punti": {
 "Brescia|BS": 1,
 "Napoli|NA": 16,
@@ -23761,7 +23772,8 @@
 "Prato|PO": 1,
 "Pescara|PE": 1,
 "Anzio|RM": 1,
-"Novoli|LE": 1
+"Novoli|LE": 1,
+"Campomorone|GE": 1
 },
 "giocatori": {
 "Genova|GE": [
@@ -24168,6 +24180,15 @@
 "t": "2026-11-18T12:26+00:00",
 "sorpasso": "Novoli|LE",
 "su": "Novate Milanese|MI",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-18T12:40+00:00",
+"sorpasso": "Campomorone|GE",
+"su": "San Cesareo|RM",
 "punti": [
 1,
 0
@@ -24929,6 +24950,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Campomorone|GE": {
+"u": [
+"marassi_17"
+],
+"c": [
+"18137710795745237"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -25003,7 +25034,8 @@
 "emanueleali__|animale|sky",
 "xoxo.amaa|animale|mia",
 "belfiore_lorenzo|animale|kikko",
-"mariacristinaa.aa|animale|margo"
+"mariacristinaa.aa|animale|margo",
+"marassi_17|animale|siria"
 ]
 },
 "gara_follower": [
