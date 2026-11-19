@@ -102,6 +102,15 @@ def aggiorna(stato, animali, ora=None):
             elif gf == gs: r["n"] += 1; r["pt"] += 1
             else: r["p"] += 1
         C["partita"] = None; P = None; cambiato = True
+    if "bomber" not in C and (C.get("giocate") or P):  # 19/11: i gol fatti prima della classifica marcatori (giornata 1 da motore/campionato_g1.json)
+        B_ = C["bomber"] = {}
+        try: vecchi = json.loads((ROOT / "motore/campionato_g1.json").read_text())
+        except (FileNotFoundError, json.JSONDecodeError): vecchi = []
+        sq_di = {a.get("u", "").lower(): a.get("sq") for a in animali if a.get("sq")}
+        for u in vecchi + (P["marcatori"] if P else []):
+            b = B_.setdefault(u, {"g": 0}); b["g"] += 1
+            if sq_di.get(u): b["sq"] = sq_di[u]
+        cambiato = True
     if not P and ora >= datetime.combine(datetime.fromisoformat(dal).date(), CAMBIO, ROMA):
         coppia = scegli(C, tifosi(animali))
         if coppia:
@@ -131,9 +140,13 @@ def gol(stato, u, testi):
     k = next((x for x in (squadra_nel_testo(t, (P["a"], P["b"])) for t in testi) if x), None)
     if not k: return None
     P["gol"][k] = P["gol"].get(k, 0) + 1; P["marcatori"].append(u.lower())
+    # 19/11 (Officina): i capocannonieri del Campionato, partita dopo partita; il primo ha il Pallone d'Oro sul suo cane (solo gloria)
+    B_ = stato["campionato"].setdefault("bomber", {}); b = B_.setdefault(u.lower(), {"g": 0}); b["g"] += 1; b["sq"] = k
+    pos = 1 + sum(1 for x in B_.values() if x["g"] > b["g"]); pari = sum(1 for x in B_.values() if x["g"] == b["g"]) > 1
     A, B = squadre.nome(P["a"]), squadre.nome(P["b"])
     return (f"⚽ GOL per {squadre.nome(k)}! {(lambda x: x[0].upper() + x[1:])(allo(P['stadio']))}: {A} {P['gol'][P['a']]} – {P['gol'][P['b']]} {B}. "
-            f"Si gioca fino a {quando(P['fine'])}: fai segnare i tuoi amici tifosi, taggali 👥")
+            + (f"Sei a {b['g']} gol nel Campionato: {pos}° tra i marcatori{' a pari merito' if pari else ''}{' e hai il Pallone d’Oro 🏆' if pos == 1 and not pari else ''}! " if b["g"] >= 2 else "")
+            + f"Si gioca fino a {quando(P['fine'])}: fai segnare i tuoi amici tifosi, taggali 👥")
 
 
 def classifica(stato):
@@ -151,6 +164,8 @@ def sito(stato, animali):
                           "stadio": P["stadio"], "citta": P["citta"], "fine": P["fine"]}
         ll = squadre.STADI_LL.get(P["stadio"])
         if ll: out["partita"]["lat"], out["partita"]["lng"] = ll  # 18/11: lo stadio sulla mappa del sito, nel posto vero
+    bomber = sorted(C.get("bomber", {}).items(), key=lambda x: -x[1]["g"])[:10]
+    out["bomber"] = [{"u": u, "g": x["g"], **({"sq": pub(x["sq"])} if x.get("sq") in squadre.SQUADRE else {})} for u, x in bomber]
     if C.get("giocate"):
         x = C["giocate"][-1]; out["ultima"] = {"a": pub(x["a"]), "b": pub(x["b"]), "ga": x["ga"], "gb": x["gb"], "stadio": x["stadio"]}
     return out

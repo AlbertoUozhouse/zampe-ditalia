@@ -150,7 +150,7 @@ function petSvg(d) {
 }
 function petIcon(d) {
   const svg = petSvg(d), cls = d.k === "animale" ? d.t : d.k;
-  return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}${d.recent ? " nuovo" : ""}" data-id="${esc(d.id)}" style="--k:${(d.prof || 1).toFixed(3)};--r:${((d.seed % 90) / 10).toFixed(1)}s">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${d.k !== "stella" && livello(d.pt) ? livello(d.pt)[1] + " " : ""}${esc(d.n)}${d.ad ? " 💛" : ""}</span></div>` });
+  return L.divIcon({ className: "", iconSize: [0, 0], html: `<div class="pet ${cls}${d.recent ? " nuovo" : ""}" data-id="${esc(d.id)}" style="--k:${(d.prof || 1).toFixed(3)};--r:${((d.seed % 90) / 10).toFixed(1)}s">${svg}<span class="name">${d.k === "stella" ? "✦ " : ""}${d.k !== "stella" && livello(d.pt) ? livello(d.pt)[1] + " " : ""}${esc(d.n)}${d.ad ? " 💛" : ""}${d.u && d.u.toLowerCase() === pallone() ? " ⚽🏆" : ""}</span></div>` });
 }
 const EDIFICI = [[5, "Fontanella", "⛲"], [10, "Parco cani", "🌳"], [25, "Gattile", "🏠"], [50, "Clinica veterinaria", "🏥"], [100, "Piazza dei Fondatori", "🏛️"], [250, "Grande parco", "🎡"]]; // come in motore/commenti.py
 const LIVELLI = [[30, "🌸", "Giardino"], [50, "🏡", "Villa"], [70, "🏰", "Castello"]]; // come in motore/copione.py: più punti, più la cuccia cresce
@@ -202,7 +202,7 @@ function popup(d) {
   const ruolo = d.ruolo || (d.fondatore ? "Fondatore di " + d.c : "");
   const tipo = d.k === "stella" ? "Una stella nel cielo" : d.k === "sogno" ? "Il sogno di @" + esc(d.u) : d.t === "altro" ? esc((d.razza_testo || d.specie || "Amico speciale").replace(/^./, c => c.toUpperCase())) : d.t === "gatto" ? (D.GATTI[d.rk]?.n || "Gatto") : (d.rk === "meticcio" && d.razza_testo && !/meticc|incrocio|mix/i.test(d.razza_testo) ? esc(d.razza_testo.replace(/^./, c => c.toUpperCase())) : D.CANI[d.rk]?.n || "Cane");
   return `<div class="pop"><h3>${d.k === "stella" ? "✦" : icona(d)} ${esc(d.n)}</h3><div class="k">${tipo}</div>
-    <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>${d.sq && SQUADRE[d.sq] ? `<div class="k">⚽ Tifa ${esc(SQUADRE[d.sq].n)}</div>` : ""}${d.ad ? `<div class="k">💛 Adottato: un salvato</div>` : ""}${d.mese ? `<div class="k">${SEGNI[d.mese]}</div>` : ""}
+    <div>${esc(d.c)} (${esc(d.p)}) · ${esc(d.r)}</div>${d.sq && SQUADRE[d.sq] ? `<div class="k">⚽ Tifa ${esc(SQUADRE[d.sq].n)}</div>` : ""}${d.ad ? `<div class="k">💛 Adottato: un salvato</div>` : ""}${d.u && d.u.toLowerCase() === pallone() ? `<div class="k">⚽🏆 Pallone d'Oro delle Zampe: capocannoniere del Campionato</div>` : ""}${d.mese ? `<div class="k">${SEGNI[d.mese]}</div>` : ""}
     ${d.k === "stella" ? "" : `<div>${d.pt} ${d.pt === 1 ? "punto" : "punti"}${d.rank ? ` · ${d.rank}° in Italia` : ""}</div>${barra(d.pt)}`}
     ${d.pres ? `<span class="role">🇮🇹 ${esc(d.pres)}</span>` : ""}
     ${d.capo ? `<span class="role">🐺 ${esc(d.capo)}</span>` : d.testa ? `<span class="role">🐺 In testa a ${esc(d.c)}: domenica alle 21 il Capobranco</span>` : ""}
@@ -326,6 +326,8 @@ function paolinoHtml() {
 
 // ---------- il Campionato delle Zampe (17/11): ogni commento che nomina una delle due squadre in campo è un gol ----------
 const strisce = c => `background:linear-gradient(90deg,${c[0]} 0 50%,${c[1]} 50% 100%)`;
+// il Pallone d'Oro delle Zampe (19/11): il capocannoniere del Campionato, se è da solo in testa con almeno 2 gol
+const pallone = () => { const B = (CAMPIONATO && CAMPIONATO.bomber) || []; return B.length && B[0].g >= 2 && (!B[1] || B[1].g < B[0].g) ? B[0].u.toLowerCase() : null; };
 function campionatoHtml() {
   const C = CAMPIONATO; if (!C || (!C.partita && !(C.classifica || []).length)) return "";
   const P = C.partita, U = C.ultima;
@@ -334,7 +336,8 @@ function campionatoHtml() {
   return `<div class="sfida-inviti cz"><h3>⚽ Campionato delle Zampe</h3>` +
     (P ? tab(P, `GIORNATA ${P.giornata} · ${P.stadio} · IN CORSO`) + `<p class="sub">Ogni commento è un gol: scrivi <b>forza ${esc(P.a.nome)}</b> o <b>forza ${esc(P.b.nome)}</b> sotto un nostro post (un gol a persona). Si gioca fino a ${esc(fine)}.</p>` : "") +
     (U ? tab(U, `ULTIMA · ${U.stadio} · FINALE`) : "") +
-    ((C.classifica || []).length ? `<ol class="list">` + C.classifica.slice(0, 10).map((x, i) => `<li class="row"><span class="pos">${i + 1}</span><span class="who"><i class="cz-sc" style="${strisce(x.c)}"></i>${esc(x.nome)}<small>${x.g} ${x.g === 1 ? "partita" : "partite"} · ${x.v} V ${x.n} N ${x.p} P · ${(C.tifosi || {})[x.k] || 0} tifosi</small></span><span class="pts">${x.pt}<small>pt</small></span></li>`).join("") + `</ol>`
+    ((C.bomber || []).length && C.bomber[0].g >= 2 ? `<h3 class="cz-h">🏆 Capocannonieri</h3><ol class="list">` + C.bomber.slice(0, 5).map((x, i) => `<li class="row"><span class="pos">${i === 0 && pallone() ? "⚽" : i + 1}</span><span class="who">@${esc(x.u)}${x.sq ? `<small><i class="cz-sc" style="${strisce(x.sq.c)}"></i>${esc(x.sq.nome)}</small>` : ""}</span><span class="pts">${x.g}<small>${x.g === 1 ? "gol" : "gol"}</small></span></li>`).join("") + `</ol><p class="sub">Il primo ha il <b>Pallone d'Oro</b> ⚽ sul suo animale nella mappa.</p>` : "") +
+    ((C.classifica || []).length ? `<h3 class="cz-h">📊 Classifica squadre</h3><ol class="list">` + C.classifica.slice(0, 10).map((x, i) => `<li class="row"><span class="pos">${i + 1}</span><span class="who"><i class="cz-sc" style="${strisce(x.c)}"></i>${esc(x.nome)}<small>${x.g} ${x.g === 1 ? "partita" : "partite"} · ${x.v} V ${x.n} N ${x.p} P · ${(C.tifosi || {})[x.k] || 0} tifosi</small></span><span class="pts">${x.pt}<small>pt</small></span></li>`).join("") + `</ol>`
       : `<p class="sub">La classifica parte dopo la prima partita.</p>`) + `</div>`;
 }
 

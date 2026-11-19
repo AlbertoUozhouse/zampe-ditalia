@@ -7,7 +7,7 @@
   "traccia": "gioco",
   "aperto": "2026-11-17",
   "scadenza": "2026-11-19",
-  "stato": "da costruire",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-18",
@@ -69,7 +69,10 @@
     ],
     "fatto_quando": "Si gioca un turno completo di 30 secondi in 'Pappa al volo', il punteggio compare sommato al comune nella classifica della Coppa dopo il turno, nessun errore in console, e il campo staffette in config.json è ancora a 0 (o passa a 1 solo dopo la verifica)."
    }
-  ]
+  ],
+  "aggiornato": "2026-11-19",
+  "nota": "Capocannonieri del Campionato delle Zampe e Pallone d'Oro: ogni gol (commento «forza X») conta anche per chi lo segna, partita dopo partita; il bot risponde «Sei a 3 gol: 1° tra i marcatori e hai il Pallone d'Oro»; sul sito, scheda Classifica, la classifica dei capocannonieri; il primo (da solo, almeno 2 gol) ha ⚽🏆 accanto al nome del suo animale sulla mappa e nella scheda. Recuperati i 60 gol del derby Inter–Milan.",
+  "online_dal": "2026-11-19"
  },
  "reel": {
   "idea": "Il Campanile Vivo: ripresa reale del paese, poi la luce",
