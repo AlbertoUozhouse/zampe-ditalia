@@ -1910,7 +1910,10 @@ def parole_vostre(vincitore):
     buoni = []
     for c in dati:
         t = re.sub(r"[^\w\s,.!?'’àèéìòù-]", "", c.get("text") or "").strip()
-        if (c.get("username") or "").lower() in ESCLUSI | {"zampeditalia"} or BRUTTE.search(c.get("text") or "") or not 3 <= len(t.split()) <= 16 or len(t) > 90: continue
+        if (c.get("username") or "").lower() in ESCLUSI | {"zampeditalia"} or BRUTTE.search(c.get("text") or "") or not 4 <= len(t.split()) <= 16 or len(t) > 90: continue
+        # 19/11: «BASTONE 314 NB» era passato. Una frase vera: niente numeri, non tutta maiuscola, almeno 3 parole vere, e che parli di Paolino o della scelta
+        if re.search(r"\d", t) or t.upper() == t or len(re.findall(r"[a-zàèéìòù]{3,}", t.lower())) < 3: continue
+        if vincitore.lower() not in t.lower() and "paolino" not in t.lower(): continue
         buoni.append((c.get("like_count", 0), vincitore.lower() in t.lower(), len(t), t))
     if not buoni: return None
     cuori, _, _, t = max(buoni)
