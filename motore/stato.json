@@ -8639,6 +8639,7 @@
 "18135037573739732",
 "18135044239663327",
 "18135044623746749",
+"18135046741684239",
 "18135075296503257",
 "18135083890675595",
 "18135084959495143",
@@ -11642,9 +11643,8 @@
 "18798213136033257"
 ],
 "risposte": [
-1795072578.1983004,
-1795072579.4206433,
-1795073404.8017843
+1795073404.8017843,
+1795076240.5422196
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -13947,7 +13947,8 @@
 "leonardofogar": "2026-11-18",
 "chrix_pelli_": "2026-11-18",
 "curtez142": "2026-11-19",
-"carlo_pappy": "2026-11-19"
+"carlo_pappy": "2026-11-19",
+"_matteo2810": "2026-11-19"
 },
 "media_letti": {},
 "pezzi": {
@@ -20933,11 +20934,11 @@
 "e9d17215abe01fc8",
 "cdaa6a2004ec73df",
 "65c90ec8a60d44fe",
-"453ee2e19ba4c711"
+"453ee2e19ba4c711",
+"15e2e642f0d63de2"
 ],
 "privati_ora": [
-1795069186.7415907,
-1795071768.771078
+1795076240.542265
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -20994,7 +20995,7 @@
 "2026-11-16": 1920,
 "2026-11-17": 1968,
 "2026-11-18": 2010,
-"2026-11-19": 2011
+"2026-11-19": 2012
 },
 "gioco_pappa": {
 "2026-W46": {
@@ -22152,6 +22153,10 @@
 [
 "2026-11-19T06:48+00:00",
 2011
+],
+[
+"2026-11-19T08:17+00:00",
+2012
 ]
 ],
 "coppa": {
@@ -24314,7 +24319,8 @@
 "Pozzolo Formigaro|AL": 1,
 "Gorizia|GO": 1,
 "Reggio di Calabria|RC": 1,
-"Treviglio|BG": 1
+"Treviglio|BG": 1,
+"Treviso|TV": 1
 },
 "giocatori": {
 "Genova|GE": [
@@ -24854,6 +24860,15 @@
 "t": "2026-11-18T22:22+00:00",
 "sorpasso": "Reggio di Calabria|RC",
 "su": "Caserta|CE",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-19T08:17+00:00",
+"sorpasso": "Treviso|TV",
+"su": "Ancona|AN",
 "punti": [
 1,
 0
@@ -25843,6 +25858,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Treviso|TV": {
+"u": [
+"_matteo2810"
+],
+"c": [
+"18135046741684239"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -25940,7 +25965,8 @@
 "leonardofogar|animale|tyson",
 "chrix_pelli_|animale|nala",
 "curtez142|animale|loky",
-"carlo_pappy|animale|zeus"
+"carlo_pappy|animale|zeus",
+"_matteo2810|animale|spike"
 ]
 },
 "gara_follower": [
@@ -26611,7 +26637,7 @@
 "citta": "Milano",
 "gol": {
 "inter": 29,
-"milan": 27
+"milan": 28
 },
 "marcatori": [
 "mariacristinaa.aa",
@@ -26669,7 +26695,8 @@
 "mattia_17_ca",
 "carlo_pappy",
 "francesco29_2013",
-"desireevinciprova"
+"desireevinciprova",
+"_matteo2810"
 ],
 "inizio": "2026-11-18T12:33+01:00",
 "fine": "2026-11-19T12:30+01:00"
