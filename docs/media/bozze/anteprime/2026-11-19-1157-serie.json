@@ -1,0 +1,462 @@
+{
+ "voce": true,
+ "variante": "voce-fissa-92",
+ "tema": "notte",
+ "id": "2026-11-19-1157-serie",
+ "formato": "serie",
+ "testata": {
+  "titolo": "🐶 PAOLINO · GIORNO 3 DI 30"
+ },
+ "conteggio": {
+  "cani": 2134,
+  "gatti": 809
+ },
+ "frasi": [
+  {
+   "testo": "Ventotto giorni per trovare casa.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 28,
+    "famiglia": 1,
+    "sfondo": "canile",
+    "numero": {
+     "n": 28,
+     "sotto": "PER TROVARE CASA"
+    },
+    "attori": [
+     {
+      "img": "triste",
+      "x": 540,
+      "y": 1680,
+      "h": 740,
+      "anim": [
+       "pop",
+       "respira"
+      ],
+      "t0": 0.2
+     }
+    ],
+    "etichette": [
+     {
+      "t": "PAOLINO",
+      "c": "rosso",
+      "x": 40,
+      "y": 900,
+      "r": -6,
+      "z": 70,
+      "t0": 0.7
+     },
+     {
+      "t": "PULCI: 37",
+      "c": "verde",
+      "x": 790,
+      "y": 960,
+      "r": 6,
+      "z": 50,
+      "t0": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Ieri avete scelto: il colloquio!",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 28,
+    "famiglia": 1,
+    "sfondo": "canile",
+    "voto": {
+     "parola": "IL COLLOQUIO",
+     "chiave": "COLLOQUIO",
+     "pc": 100
+    },
+    "attori": [
+     {
+      "img": "felice",
+      "x": 540,
+      "y": 1680,
+      "h": 700,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Parole vostre: BASTONE 314 NB",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 28,
+    "famiglia": 1,
+    "sfondo": "canile",
+    "commento": {
+     "t": "BASTONE 314 NB",
+     "cuori": 0,
+     "t0": 0.2
+    },
+    "attori": [
+     {
+      "img": "dolce",
+      "x": 540,
+      "y": 1680,
+      "h": 640,
+      "anim": [
+       "pop",
+       "respira"
+      ],
+      "t0": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Una famiglia vuole conoscere Paolino. Colloquio alle dieci.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 28,
+    "famiglia": 1,
+    "sfondo": "ufficio",
+    "attori": [
+     {
+      "img": "famiglia",
+      "x": 800,
+      "y": 1690,
+      "h": 860,
+      "anim": [
+       "entra_dx"
+      ],
+      "flip": true
+     },
+     {
+      "img": "dolce",
+      "x": 280,
+      "y": 1680,
+      "h": 700,
+      "anim": [
+       "pop",
+       "respira"
+      ],
+      "t0": 0.4
+     }
+    ],
+    "etichette": [
+     {
+      "t": "COLLOQUIO ORE 10:00",
+      "c": "giallo",
+      "x": 60,
+      "y": 330,
+      "r": -4,
+      "z": 62,
+      "t0": 0.3
+     }
+    ],
+    "nuvole": [
+     {
+      "t": "CHE CARINO!",
+      "x": 520,
+      "y": 520,
+      "w": 420,
+      "coda": "dx",
+      "t0": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Paolino si siede sulla loro sedia.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 28,
+    "famiglia": 1,
+    "sfondo": "ufficio",
+    "attori": [
+     {
+      "img": "famiglia",
+      "x": 800,
+      "y": 1690,
+      "h": 860,
+      "anim": [],
+      "flip": true
+     },
+     {
+      "img": "felice",
+      "x": 300,
+      "y": 1680,
+      "h": 740,
+      "anim": [
+       "pop",
+       "salta"
+      ]
+     }
+    ],
+    "oggetti": [
+     {
+      "e": "🪑",
+      "x": 150,
+      "y": 960,
+      "z": 190,
+      "t0": 0.1
+     }
+    ],
+    "etichette": [
+     {
+      "t": "POSTO: SBAGLIATO",
+      "c": "rosso",
+      "x": 60,
+      "y": 330,
+      "r": -4,
+      "z": 62,
+      "t0": 0.4
+     }
+    ],
+    "sfx": {
+     "t": "OPS!",
+     "x": 480,
+     "y": 600,
+     "t0": 0.7
+    }
+   }
+  },
+  {
+   "testo": "Poi si mangia il modulo di adozione. Già firmato.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 28,
+    "famiglia": 1,
+    "sfondo": "ufficio",
+    "attori": [
+     {
+      "img": "famiglia",
+      "x": 800,
+      "y": 1690,
+      "h": 860,
+      "anim": [
+       "trema"
+      ],
+      "flip": true
+     },
+     {
+      "img": "felice",
+      "x": 300,
+      "y": 1680,
+      "h": 740,
+      "anim": [
+       "pop",
+       "salta"
+      ]
+     }
+    ],
+    "oggetti": [
+     {
+      "e": "📝",
+      "x": 420,
+      "y": 820,
+      "z": 140,
+      "t0": 0.1
+     }
+    ],
+    "etichette": [
+     {
+      "t": "MODULO: MANGIATO",
+      "c": "rosso",
+      "x": 60,
+      "y": 330,
+      "r": -4,
+      "z": 62,
+      "t0": 0.8
+     }
+    ],
+    "sfx": {
+     "t": "GNAM!",
+     "x": 80,
+     "y": 600,
+     "t0": 0.9
+    }
+   }
+  },
+  {
+   "testo": "La famiglia ride. Ci pensano.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 28,
+    "famiglia": 1,
+    "sfondo": "ufficio",
+    "attori": [
+     {
+      "img": "famiglia",
+      "x": 800,
+      "y": 1690,
+      "h": 860,
+      "anim": [
+       "respira"
+      ],
+      "flip": true
+     },
+     {
+      "img": "dolce",
+      "x": 300,
+      "y": 1680,
+      "h": 720,
+      "anim": [
+       "pop",
+       "respira"
+      ]
+     }
+    ],
+    "nuvole": [
+     {
+      "t": "CI PENSIAMO…",
+      "x": 520,
+      "y": 520,
+      "w": 420,
+      "coda": "dx",
+      "t0": 0.4
+     }
+    ],
+    "etichette": [
+     {
+      "t": "FAMIGLIA: +5%",
+      "c": "verde",
+      "x": 60,
+      "y": 330,
+      "r": -4,
+      "z": 64,
+      "t0": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Domani: la fuga o in tv? Scrivi nei commenti: ogni commento lo avvicina a casa.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 28,
+    "famiglia": 1,
+    "sfondo": "canile",
+    "scelta": {
+     "a": [
+      "🏃",
+      "LA FUGA",
+      "FUGA"
+     ],
+     "b": [
+      "📺",
+      "IN TV",
+      "TV"
+     ]
+    },
+    "attori": [
+     {
+      "img": "dolce",
+      "x": 540,
+      "y": 1680,
+      "h": 700,
+      "anim": [
+       "pop",
+       "respira"
+      ],
+      "t0": 0.3
+     }
+    ],
+    "etichette": [
+     {
+      "t": "SCRIVI FUGA O TV",
+      "c": "giallo",
+      "x": 140,
+      "y": 790,
+      "r": -3,
+      "z": 60,
+      "t0": 1.2
+     }
+    ]
+   }
+  }
+ ],
+ "banner": "👇 Scrivi FUGA o TV",
+ "didascalia": "Giorno 3 di 30 🐶 Avete scelto il colloquio. È andata così…\n\n👇 Domani cosa fa Paolino? Scrivi FUGA oppure TV nei commenti: vince il più commentato.\n🏠 Ogni commento lo avvicina a casa: FAMIGLIA 1%.\n➕ Seguici per vedere se ce la fa entro Natale.\n👑 Gara degli amici: tagga chi ha un cane o un gatto. Chi porta più amici entro domenica alle 20 vince la Corona sulla mappa!\n\nVoce generata con IA.\n\n#cani #canile #adozione #adottanonComprare #natale #animalidomestici ",
+ "tag": [],
+ "collab": [],
+ "copertina": {
+  "paolino": {
+   "giorno": 3,
+   "titolo": "IL COLLOQUIO",
+   "posa": "dolce",
+   "giorni": 28
+  }
+ },
+ "serie": {
+  "giorno": 3,
+  "ep": "colloquio",
+  "opzioni": [
+   "fuga",
+   "tv"
+  ],
+  "parole": {
+   "fuga": "FUGA",
+   "tv": "TV"
+  },
+  "voci": {
+   "fuga": [
+    "🏃",
+    "LA FUGA"
+   ],
+   "tv": [
+    "📺",
+    "IN TV"
+   ]
+  },
+  "foto": "media/paolino/colloquio.jpg"
+ },
+ "cartone": true,
+ "parole_colore": {
+  "diretta": "ro",
+  "microfono": "ro",
+  "star": "or",
+  "telegiornale": "bl",
+  "ascolti": "ve",
+  "vuoto": "ro",
+  "cornetto": "or",
+  "cornetti": "or",
+  "bar": "or",
+  "colloquio": "or",
+  "modulo": "ro",
+  "sedia": "ro",
+  "ride": "ve",
+  "pulci": "ve",
+  "alito": "ve",
+  "canile": "or",
+  "sviene": "ro",
+  "decidete": "or",
+  "macchina": "ro",
+  "fotografica": "ro",
+  "paolino": "or",
+  "trenta": "or",
+  "bagno": "bl",
+  "vasca": "bl",
+  "spugna": "ro",
+  "insaponato": "bl",
+  "fradici": "bl",
+  "scrolla": "bl",
+  "paese": "or",
+  "veterinario": "ro",
+  "stetoscopio": "or",
+  "pancia": "or",
+  "casa": "or",
+  "giorni": "or",
+  "famiglia": "ve",
+  "commenti": "or",
+  "scappa": "ro",
+  "trema": "ro",
+  "mangia": "ro",
+  "felicissimo": "ve",
+  "scelto": "or",
+  "chiuso": "ro",
+  "vostre": "or",
+  "cuore": "ro",
+  "domani": "or"
+ },
+ "schermo_pulito": true
+}
