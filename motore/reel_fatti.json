@@ -90,7 +90,6 @@
   "Napoli"
  ],
  "temi": [
-  "neon",
   "giorno",
   "tramonto",
   "neon",
@@ -99,9 +98,10 @@
   "notte",
   "neon",
   "giorno",
-  "tramonto"
+  "tramonto",
+  "aurora"
  ],
- "variante_n": 54,
+ "variante_n": 55,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -156,7 +156,8 @@
   "2026-11-17-1300-tifo": "voce-fissa-50",
   "2026-11-17-2107-serie": "voce-fissa-92",
   "2026-11-18-1316-partita": "voce-fissa-80",
-  "2026-11-18-2101-serie": "voce-fissa-92"
+  "2026-11-18-2101-serie": "voce-fissa-92",
+  "2026-11-19-1312-partita": "voce-fissa-80"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -995,7 +996,13 @@
   "ale_ghezzii": "2026-11-18",
   "basile_christian014": "2026-11-18",
   "cosimo.marangi__": "2026-11-18",
-  "die.trommino": "2026-11-18"
+  "die.trommino": "2026-11-18",
+  "azzuu_privato2": "2026-11-19",
+  "christian_marfella014": "2026-11-19",
+  "gioi_lazze": "2026-11-19",
+  "lollogatta": "2026-11-19",
+  "mariacristinaa.aa": "2026-11-19",
+  "violasophienobile_": "2026-11-19"
  },
  "serie_storia": [
   {

@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-11-1301-testa_a_testa",
-  "formato": "testa_a_testa",
-  "modalita": "operativa",
-  "inizio": "2026-11-11T12:01:54+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-11T12:09:47+00:00",
-  "scambi": 131
- },
- {
   "id": "2026-11-11-1448-testa_a_testa",
   "formato": "testa_a_testa",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "senza direttore",
   "fine": "2026-11-19T11:01:19+00:00",
   "scambi": 126
+ },
+ {
+  "id": "2026-11-19-1312-partita",
+  "formato": "partita",
+  "modalita": "operativa",
+  "inizio": "2026-11-19T12:12:26+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-19T12:16:53+00:00",
+  "scambi": 128
  }
 ]
