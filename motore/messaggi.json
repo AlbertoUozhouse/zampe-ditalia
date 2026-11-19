@@ -177,6 +177,7 @@
 "122da41ff527d111",
 "127d19a16cd64c45",
 "12860f9c816e3b2d",
+"128a2addf6aac124",
 "12a8f4624a48459f",
 "12eb32be7d5e7cdb",
 "12ff714b6be6ca32",
@@ -433,6 +434,7 @@
 "30f797d3c1f1b526",
 "3136a395b40b5d53",
 "31394ce16c0e57d3",
+"31456804deb49cd5",
 "3158d3c8911dd8b7",
 "316429f5370bae9a",
 "3168c73d42ad635c",
@@ -914,6 +916,7 @@
 "693ffadfb68602ac",
 "6950b7d4aaf797e7",
 "69974e1634184283",
+"6999e1ad85781e17",
 "699dc02ce1831a83",
 "69b6bc0c50da854f",
 "69c2527a284a6769",
@@ -2042,6 +2045,7 @@
 "e825b6301f105e1a",
 "e89f0661c07475f0",
 "e8c488d133c1f635",
+"e8c7cc9308c54e24",
 "e9134b30537f1522",
 "e91caad14df31598",
 "e9207e767b3ed433",
@@ -2231,7 +2235,16 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1840148740650093",
+"url": [
+"https://zampeditalia.it/cartoline/22bf5d11b160f14d.png",
+"https://zampeditalia.it/cartoline/abb3ca79defac6d8.png"
+],
+"t": 1795114902.5500712
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
@@ -2243,6 +2256,13 @@
 "url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=1737852321016549&signature=Ab3Sx4gTHNW9G8r52w0QYzcx-EJ9J4kVMKsUBr7mZ9MZIbcvq4SCOeZAk8wUmk3ALd5QHPdezHtWrTkyAA_6zb8oORzpkG95BbT6btSRnCx0itazEqIuxXbTBzYCN0mugePmyIsc313wMaWWnlxk1ziVj5aRW5spwD95ZNQVK-FabD99tr2J6vmLGV6BX5yKB09Jvj9kgSwaLkENEmemuuvzRP3aipw",
 "t": 1794999392.4063287,
 "igsid": "4140491352922234",
+"giudicata": false,
+"video": false
+},
+"5d46101d45e3dac0": {
+"url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=2671563853356573&signature=Ab0B00aehlbu7sQQxplOGtr5v2QnhB0CN7e0wKUvCsW_eXbC-f03wRCv8bCRvJBjvz3ES-WLFCQsiamYOyTLOJK4FYNZzbDW3zH07jwvBmp0i3EhBR-MQ7DvcyZ4AQpa0pZ70v1luw6-L3QBIzKhUp9uHHUYE0QSXQYj_Zhj2DpU_cGG87wkNMY5PIEWGW-zL8dAKTBVm8pT_FbR37AJj8nkYmFF998",
+"t": 1795114883.6210165,
+"igsid": "2192827038110238",
 "giudicata": false,
 "video": false
 }
