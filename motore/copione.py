@@ -1843,18 +1843,18 @@ SERIE_CARTONE = {
          {"sfondo": "bar", "attori": [A("nonna", 230, 1680, 920, ()), A("svenuto", 760, 1690, 700, ("pop",), t0=0.6)],
           "etichette": [ET("CONTO: 12 CORNETTI", "rosso", 60, 330, -4, 62, 0.2), ET("PAGA: NONNA PINA", "rosa", 560, 560, 5, 54, 1.2)], "sfx": {"t": "TONF!", "x": 600, "y": 760, "t0": 0.7}}),
     ],
-    "colloquio": [  # 17/11 (Officina): serve il disegno della famiglia (reel/assets/paolino/famiglia.png); finché non c'è, la puntata non è pronta
+    "colloquio": [  # 17/11 (Officina); la famiglia l'ha disegnata Alberto il 19/11 (reel/assets/paolino/famiglia.png, girata verso Paolino)
         ("Una famiglia vuole conoscere Paolino. Colloquio alle dieci.",
-         {"sfondo": "ufficio", "attori": [A("famiglia", 780, 1690, 900, ("entra_dx",)), A("dolce", 280, 1680, 700, ("pop", "respira"), t0=0.4)],
+         {"sfondo": "ufficio", "attori": [A("famiglia", 800, 1690, 860, ("entra_dx",), flip=True), A("dolce", 280, 1680, 700, ("pop", "respira"), t0=0.4)],
           "etichette": [ET("COLLOQUIO ORE 10:00", "giallo", 60, 330, -4, 62, 0.3)], "nuvole": [NV("CHE CARINO!", 520, 520, 420, "dx", 0.8)]}),
         ("Paolino si siede sulla loro sedia.",
-         {"sfondo": "ufficio", "attori": [A("famiglia", 780, 1690, 900, ()), A("felice", 300, 1680, 740, ("pop", "salta"))],
+         {"sfondo": "ufficio", "attori": [A("famiglia", 800, 1690, 860, (), flip=True), A("felice", 300, 1680, 740, ("pop", "salta"))],
           "oggetti": [{"e": "🪑", "x": 160, "y": 1180, "z": 200, "t0": 0.1}], "etichette": [ET("POSTO: SBAGLIATO", "rosso", 60, 330, -4, 62, 0.4)], "sfx": {"t": "OPS!", "x": 480, "y": 600, "t0": 0.7}}),
         ("Poi si mangia il modulo di adozione. Già firmato.",
-         {"sfondo": "ufficio", "attori": [A("famiglia", 780, 1690, 900, ("trema",)), A("felice", 300, 1680, 740, ("pop", "salta"))],
+         {"sfondo": "ufficio", "attori": [A("famiglia", 800, 1690, 860, ("trema",), flip=True), A("felice", 300, 1680, 740, ("pop", "salta"))],
           "oggetti": [{"e": "📝", "x": 420, "y": 820, "z": 140, "t0": 0.1}], "etichette": [ET("MODULO: MANGIATO", "rosso", 60, 330, -4, 62, 0.8)], "sfx": {"t": "GNAM!", "x": 80, "y": 600, "t0": 0.9}}),
         ("La famiglia ride. Ci pensano.",
-         {"sfondo": "ufficio", "attori": [A("famiglia", 780, 1690, 900, ("respira",)), A("dolce", 300, 1680, 720, ("pop", "respira"))],
+         {"sfondo": "ufficio", "attori": [A("famiglia", 800, 1690, 860, ("respira",), flip=True), A("dolce", 300, 1680, 720, ("pop", "respira"))],
           "nuvole": [NV("CI PENSIAMO…", 520, 520, 420, "dx", 0.4)], "etichette": [ET("FAMIGLIA: +5%", "verde", 60, 330, -4, 64, 0.9)]}),
     ],
     "tv": [  # 17/11 (Officina): serve il disegno della giornalista (reel/assets/paolino/giornalista.png)
