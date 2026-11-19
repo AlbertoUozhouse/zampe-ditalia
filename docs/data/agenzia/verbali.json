@@ -916,5 +916,26 @@
   "esito": "10 follower in totale, 14.3 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (3) hanno una mediana di 11.1.",
   "riprovare": "Riprovare: apertura «video vero», gancio «Sai di chi è questa luce a Massa? Di Damon!», chiusura «Nuove luci domani alle 18: seguici e scopri se tocca alla tua!» (formato questa_luce).",
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18120730690964083",
+  "file": "2026-11-12-1302-testa_a_testa",
+  "formato": "testa_a_testa",
+  "uscita": "2026-11-12T12:14:38+00:00",
+  "follower": 5,
+  "reach_7g": 925,
+  "follower_ogni_1000": 5.4,
+  "mediana_simili": 29.0,
+  "simili": 3,
+  "scelte": {
+   "formato": "testa_a_testa",
+   "apertura": "video vero",
+   "voce": true,
+   "gancio": "Barletta contro Molfetta: 30 chilometri, e la sfida è aperta.",
+   "chiusura": "Sei di Molfetta o di Barletta? Commenta città e nome del tuo animale!"
+  },
+  "esito": "5 follower in totale, 5.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (3) hanno una mediana di 29.0.",
+  "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]
