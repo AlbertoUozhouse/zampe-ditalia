@@ -1917,13 +1917,23 @@ def parole_vostre(vincitore):
     return {"t": t[0].upper() + t[1:], "cuori": cuori}
 
 
+def _disegnabile(ep):
+    """La puntata ha la sua versione a cartone e tutti i disegni (reel/assets/paolino)?"""
+    return ep in SERIE_CARTONE and all((ROOT / "reel/assets/paolino" / f"{x['img']}.png").exists() for _, sc in SERIE_CARTONE[ep] for x in sc.get("attori", []) if x.get("img"))
+
+# 19/11: quando la scelta vincente non è ancora disegnata, la storia la rimanda a domani
+SERIE_RINVII = {"colloquio": "la famiglia ha chiamato: il colloquio è rimandato a domani", "tv": "la troupe è rimasta bloccata nel traffico: la TV arriva domani",
+                "concorso": "il concorso è rimandato a domani per pioggia", "micia": "Micia oggi dorme: ci pensa domani", "alexa": "Alexa oggi non è al parco: domani ci riprova",
+                "piazza": "la festa in piazza è rimandata a domani", "agility": "il campo dell'agility è allagato: si fa domani"}
+
+
 def _serie_scelta(base, a, b):
     return (f"Domani: {a[1].lower()} o {b[1].lower()}? Scrivi nei commenti: ogni commento lo avvicina a casa.",
             {**base, "sfondo": "canile", "scelta": {"a": list(a), "b": list(b)}, "attori": [A("dolce", 540, 1680, 700, ("pop", "respira"), t0=0.3)],
              "etichette": [ET(f"SCRIVI {a[2]} O {b[2]}", "giallo", 140, 790, -3, 60, 1.2)]})
 
 
-def serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti_ieri, st):
+def serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti_ieri, st, rinvio=None):
     """La puntata a cartone: apertura col numero, il voto di ieri, le parole vostre, la storia, la scelta per domani."""
     giorni = 31 - n; base = {"tipo": "cartone", "giorni": giorni, "famiglia": famiglia}
     titolo = SERIE_PUNTATE[ep][0]
@@ -1937,10 +1947,13 @@ def serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti_ieri, st):
               {**base, "sfondo": "canile", "numero": {"n": giorni, "sotto": "PER TROVARE CASA"}, "attori": [A("triste", 540, 1680, 740, ("pop", "respira"), t0=0.2)],
                "etichette": [ET("PAOLINO", "rosso", 40, 900, -6, 70, 0.7), ET("PULCI: 37", "verde", 790, 960, 6, 50, 1.0)],
                **({"famiglia_prima": famiglia_ieri} if famiglia_ieri != famiglia else {})})]
-    tot = sum(voti_ieri.values()); pc = round(voti_ieri.get(ep, 0) / tot * 100) if tot else None
-    frasi.append((f"Ieri avete scelto: {parola.lower()}!", {**base, "sfondo": "canile", "voto": {"parola": parola, "chiave": chiave, **({"pc": pc} if pc is not None else {})},
-                                                           "attori": [A("felice", 540, 1680, 700, ("pop", "salta"), t0=0.5)]}))
-    pv = parole_vostre(chiave)
+    scelto = rinvio or ep; p_sc, k_sc = SERIE_OPZIONI[scelto][1], SERIE_OPZIONI[scelto][2]
+    tot = sum(voti_ieri.values()); pc = round(voti_ieri.get(scelto, 0) / tot * 100) if tot else None
+    frasi.append((f"Ieri avete scelto: {p_sc.lower()}!" + (f" Ma {SERIE_RINVII.get(rinvio, 'è rimandato a domani')}. Intanto…" if rinvio else ""),
+                  {**base, "sfondo": "canile", "voto": {"parola": p_sc, "chiave": k_sc, **({"pc": pc} if pc is not None else {})},
+                   "attori": [A("felice", 540, 1680, 700, ("pop", "salta"), t0=0.5)],
+                   **({"etichette": [ET("RIMANDATO A DOMANI!", "rosso", 120, 860, -4, 72, 1.6)]} if rinvio else {})}))
+    pv = parole_vostre(k_sc)
     if pv:
         frasi.append((f"Parole vostre: {pv['t']}", {**base, "sfondo": "canile", "commento": {**pv, "t0": 0.2}, "attori": [A("dolce", 540, 1680, 640, ("pop", "respira"), t0=0.3)]}))
     for voce, sc in SERIE_CARTONE[ep]:
@@ -1984,15 +1997,22 @@ def serie(D, rng, st):
         ieri = storia[-1] if storia else {"opzioni": ["bagno", "veterinario"]}
         ep = max(ieri["opzioni"], key=lambda k: (voti.get(k, 0), -ieri["opzioni"].index(k)))
         if ep in fatte: ep = next((k for k in SERIE_PUNTATE if k not in fatte and k != "inizio"), ep)
+    # 19/11: la puntata scelta non ha ancora i disegni (es. il colloquio senza la famiglia): si rimanda a domani e intanto va in onda
+    # un'altra puntata già disegnata. Il voto si rispetta: la scelta vincente torna domani come prima opzione.
+    rinvio = None
+    if n > 1 and not _disegnabile(ep) and not all((ROOT / f"reel/assets/zampa/{ep}-{i}.png").exists() for i in range(4)):
+        alt = next((k for k in ieri["opzioni"] if k != ep and k not in fatte and _disegnabile(k)), None) or next((k for k in SERIE_ORDINE if k not in fatte and k != ep and _disegnabile(k)), None)
+        if alt: print(f"serie: «{ep}» non è ancora disegnata, rimandata a domani; oggi «{alt}»"); rinvio, ep = ep, alt
     # 16/11: le scelte in un ordine fisso (chi perde torna in gara il giorno dopo), così Alberto sa sempre quali foto preparare
     restanti = [k for k in SERIE_ORDINE if k not in fatte | {ep, "inizio"}] + [k for k in SERIE_PUNTATE if k not in SERIE_ORDINE and k not in fatte | {ep, "inizio"}]
-    opzioni = ["bagno", "veterinario"] if n == 1 else restanti[:2]
+    opzioni = ["bagno", "veterinario"] if n == 1 else ([rinvio] + [k for k in restanti if k != rinvio])[:2] if rinvio else restanti[:2]
     if len(opzioni) < 2: raise Salta("finite le puntate scritte della serie: scriverne di nuove")
     tot = int(S.get("commenti_serie", 0)); famiglia = min(99, round(tot / 20)); famiglia_ieri = storia[-1].get("famiglia", famiglia) if storia else famiglia
     titolo, sfondo, muso, sporco, scene = SERIE_PUNTATE[ep]
     a, b = (SERIE_OPZIONI[k] for k in opzioni)
-    if ep in SERIE_CARTONE and all((ROOT / "reel/assets/paolino" / f"{x['img']}.png").exists() for _, sc in SERIE_CARTONE[ep] for x in sc.get("attori", [])):
-        frasi = serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti, st)
+    st["serie_rinvio"] = rinvio
+    if _disegnabile(ep):
+        frasi = serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti, st, rinvio)
         return _serie_fine(n, ep, opzioni, titolo, famiglia, a, b, frasi, storia, st)
     if not all((ROOT / f"reel/assets/zampa/{ep}-{i}.png").exists() for i in range(4)) or not (ROOT / "reel/assets/zampa/riferimento.png").exists():  # Paolino vero in ogni scena, o la puntata non esce
         raise Salta(f"mancano le foto di Paolino per la puntata «{ep}» (reel/assets/zampa/{ep}-0…3.png)")
@@ -2016,11 +2036,12 @@ def serie(D, rng, st):
     return _serie_fine(n, ep, opzioni, titolo, famiglia, a, b, frasi, storia, st)
 
 def _serie_fine(n, ep, opzioni, titolo, famiglia, a, b, frasi, storia, st):
+    rv = st.pop("serie_rinvio", None)  # 19/11: la scelta vincente rimandata a domani (non si salva nello storico)
     st["serie_storia"] = storia + [{"ep": ep, "giorno": n, "opzioni": opzioni, "famiglia": famiglia, "data": ORA.date().isoformat()}]
     st["serie_info"] = {"giorno": n, "ep": ep, "opzioni": opzioni, "parole": {k: SERIE_OPZIONI[k][2] for k in opzioni},
                         "voci": {k: list(SERIE_OPZIONI[k][:2]) for k in opzioni}, "foto": foto_sito(ep)}
     did = (f"Giorno {n} di 30 🐶 " + (f"Paolino vive in un canile, ha le pulci e un alito terribile. Ha 30 giorni per trovare una famiglia prima di Natale. Oggi la foto per l'adozione… è andata così." if n == 1 else
-           f"Avete scelto {titolo.lower()}. È andata così…") + "\n\n"
+           (f"Avete scelto {SERIE_OPZIONI[rv][1].lower()}, ma è rimandato a domani! Intanto… {titolo.lower()}." if rv else f"Avete scelto {titolo.lower()}. È andata così…")) + "\n\n"
            f"👇 Domani cosa fa Paolino? Scrivi {a[2]} oppure {b[2]} nei commenti: vince il più commentato.\n"
            f"🏠 Ogni commento lo avvicina a casa: FAMIGLIA {famiglia}%.\n➕ Seguici per vedere se ce la fa entro Natale.")
     st["banner_reel"] = f"👇 Scrivi {a[2]} o {b[2]}"
