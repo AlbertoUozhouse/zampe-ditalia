@@ -128,5 +128,15 @@
    "come_misurarla": "Dopo 7 giorni: follower ogni 1.000 account raggiunti, confrontati con la mediana dei reel di mappa (8,0) e con il 39,1 del testa_a_testa Livorno-Cecina (mediana 29,0); quota di visualizzazioni che supera il 50% della durata, cioè arriva alla luce; numero di commenti con una città scritta dal pubblico."
   },
   "perche": "È l'idea più completa e subito realizzabile con ciò che abbiamo (mappa in docs/, coordinate in config.json, voce e video con consenso), con il video vero in apertura che ferma lo scroll, la distanza che dà il gancio e l'invito a scrivere la propria città che trasforma i commenti in follower."
+ },
+ {
+  "giorno": "2026-11-19",
+  "realismo": {
+   "idea": "Il Paese dal Vero: rilievo e animale nello stesso comune",
+   "come_funziona": "Quando si apre un comune sul sito, si carica una scena three.js costruita sui dati di altitudine già usati dalla mappa con rilievo e coste vere. Il terreno è quello reale, e l'animale, disegnato in SVG per razza, si accende sul punto esatto del comune usando le coordinate in motore/config.json. Si inclina e si ruota con un gesto del dito, e la luce dell'animale resta fissa sul suo punto. Le foto e i video dei follower entrano nella scena solo per chi ha dato il SÌ. La scena è una sola, riutilizzata per tutti i comuni, così cresce da sola man mano che arrivano nuovi animali.",
+   "primo_passo": "In docs/ aggiungere un modulo three.js unico (paese3d.js) che legge le coordinate del comune da motore/config.json, ritaglia la griglia di altitudine attorno a quel punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e vi posiziona lo sprite SVG dell'animale sul punto esatto. Collegarlo al tocco sul comune nella mappa esistente e provarlo prima su 3 comuni di test (uno di costa, uno di collina, uno di pianura). Rimandare edifici e foto alla seconda versione, con l'unico vincolo del SÌ del follower.",
+   "come_misurarla": "Dopo 7 giorni: quota di visitatori della mappa che aprono la vista 3D (obiettivo sopra il 20-30%), quota di chi resta oltre 30 secondi o ruota la scena almeno una volta, numero di comuni diversi aperti per utente, e follower arrivati dalle pagine dei comuni rispetto alla mediana attuale dei reel di mappa (8,0 ogni 1.000 account raggiunti)."
+  },
+  "perche": "Il Paese dal Vero usa solo ciò che abbiamo già (altitudine, coordinate, SVG, three.js), si può fare subito e dà a ogni comune poco noto un motivo concreto per riconoscersi, condividere e seguire la pagina."
  }
 ]

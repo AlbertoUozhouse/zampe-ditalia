@@ -499,3 +499,8 @@ Piano nuovo (da oggi): 2 reel al giorno, ognuno una promessa. 13:00 testa a test
 ## 2026-11-18 — verbale dei 7 giorni (automatico, motore/verbale.py)
 
 - 2026-11-11-1301-testa_a_testa: 3 follower in totale, 8.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (2) hanno una mediana di 34.0. Non riprovare così com'è: è sotto la mediana dei reel simili.
+
+
+## 2026-11-19 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-11-1803-questa_luce: 10 follower in totale, 14.3 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (3) hanno una mediana di 11.1. Riprovare: apertura «video vero», gancio «Sai di chi è questa luce a Massa? Di Damon!», chiusura «Nuove luci domani alle 18: seguici e scopri se tocca alla tua!» (formato questa_luce).

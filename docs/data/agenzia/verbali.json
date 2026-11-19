@@ -895,5 +895,26 @@
   "esito": "3 follower in totale, 8.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (2) hanno una mediana di 34.0.",
   "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18110164211339805",
+  "file": "2026-11-11-1803-questa_luce",
+  "formato": "questa_luce",
+  "uscita": "2026-11-11T17:13:01+00:00",
+  "follower": 10,
+  "reach_7g": 700,
+  "follower_ogni_1000": 14.3,
+  "mediana_simili": 11.1,
+  "simili": 3,
+  "scelte": {
+   "formato": "questa_luce",
+   "apertura": "video vero",
+   "voce": true,
+   "gancio": "Sai di chi è questa luce a Massa? Di Damon!",
+   "chiusura": "Nuove luci domani alle 18: seguici e scopri se tocca alla tua!"
+  },
+  "esito": "10 follower in totale, 14.3 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (3) hanno una mediana di 11.1.",
+  "riprovare": "Riprovare: apertura «video vero», gancio «Sai di chi è questa luce a Massa? Di Damon!», chiusura «Nuove luci domani alle 18: seguici e scopri se tocca alla tua!» (formato questa_luce).",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]

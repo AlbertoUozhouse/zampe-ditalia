@@ -38,6 +38,36 @@
      "motore/config.json"
     ],
     "fatto_quando": "Giocando un turno da 30 secondi in 'Pappa al volo' il punteggio viene sommato al comune nella classifica della Coppa, mentre il campo staffette in config.json resta a 0 finché la prova non è confermata (nella versione ridotta basta il punteggio sommato al comune, senza invito né nome del testimone)."
+   },
+   {
+    "giorno": "2026-11-19",
+    "ruolo": "Giochi nuovi",
+    "passo": "Riduci il cantiere a una versione piccola da pubblicare domani: nel minigioco 'Pappa al volo' in docs/ aggiungi un solo turno a tempo di 30 secondi che somma il punteggio al comune in un contatore condiviso, collegato alla classifica della Coppa, lasciando il campo staffette in motore/config.json a 0. Niente link di invito né nome del testimone per questa uscita.",
+    "file": [
+     "docs/",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Giocando un turno da 30 secondi in 'Pappa al volo' il punteggio compare sommato al comune nella classifica della Coppa dopo il turno, senza errori in console, e il campo staffette in config.json resta a 0 finché la prova non è confermata."
+   },
+   {
+    "giorno": "2026-11-19",
+    "ruolo": "Meccaniche di gioco",
+    "passo": "Apri il cantiere gioco e taglialo per domani: nel file docs/index.html del minigioco 'Pappa al volo' aggiungi solo il turno a tempo di 30 secondi che, a fine turno, somma il punteggio al comune in un contatore locale, senza link di invito né nome del testimone. Lascia il campo staffette in motore/config.json a 0 finché il contatore non è verificato.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Si gioca un turno completo di 30 secondi in 'Pappa al volo', il punteggio compare sommato al comune nella classifica della Coppa dopo il turno, nessun errore in console, e il campo staffette in config.json resta a 0 (o passa a 1 solo dopo la verifica)."
+   },
+   {
+    "giorno": "2026-11-19",
+    "ruolo": "Fattibilità tecnica",
+    "passo": "Riduci il cantiere gioco a una versione piccola per domani: in docs/index.html, nel minigioco 'Pappa al volo', aggiungi solo il turno a tempo di 30 secondi che a fine turno somma il punteggio al comune in un contatore locale collegato alla classifica della Coppa. Il campo staffette in motore/config.json resta a 0 finché il contatore non è verificato; niente link di invito né nome del testimone per questa uscita.",
+    "file": [
+     "docs/index.html",
+     "motore/config.json"
+    ],
+    "fatto_quando": "Si gioca un turno completo di 30 secondi in 'Pappa al volo', il punteggio compare sommato al comune nella classifica della Coppa dopo il turno, nessun errore in console, e il campo staffette in config.json è ancora a 0 (o passa a 1 solo dopo la verifica)."
    }
   ]
  },
@@ -50,141 +80,51 @@
   "aperto": "2026-11-18",
   "scadenza": "2026-11-20",
   "stato": "da costruire",
-  "passi_proposti": []
- },
- "realismo": {
-  "idea": "Il Paese in Tasca in 3D a rilievo reale",
-  "come_funziona": "Dalla mappa con rilievo, toccando un comune si apre una vista 3D del suo centro abitato sul terreno vero, costruita con three.js sui dati di altitudine già in uso. Gli animali dei follower del comune compaiono come sagome SVG sul proprio punto di casa, orientati secondo la pendenza reale del terreno. Sotto la vista c'è il pulsante per passare al comune vicino, così il confronto tra paesi confinanti si fa nello spazio reale.",
-  "primo_passo": "In docs/index.html aggiungere un canvas three.js caricato al tocco di un comune. Leggere da motore/config.json le coordinate del comune e ritagliare dai dati di altitudine già usati dalla mappa una griglia attorno a quel punto. Con quella griglia costruire una PlaneGeometry con i vertici spostati in quota. Testare su UN solo comune (es. Mussolente), con un solo animale che ha consenso SÌ, posizionato come sprite SVG sul punto di casa. Solo dopo estendere agli altri comuni e aggiungere il pulsante verso il comune vicino.",
-  "come_misurarla": "Dopo 7 giorni: aperture della vista 3D sul totale dei tocchi sui comuni (obiettivo sopra il 20%), quota di utenti che dalla vista passano a un comune vicino, tempo medio di permanenza e follower ogni 1.000 account raggiunti dai reel che rimandano alla vista 3D, confrontati con il 21,3 del derby Mussolente-Vigodarzere e con la mediana di 8,0 dei reel di mappa.",
-  "traccia": "realismo",
-  "aperto": "2026-11-16",
-  "scadenza": "2026-11-18",
-  "stato": "online",
   "passi_proposti": [
    {
-    "giorno": "2026-11-18",
-    "ruolo": "Realismo degli animali",
-    "passo": "Creare in docs/index.html un canvas three.js che si apre al tocco di Mussolente, leggendo le coordinate da motore/config.json e ritagliando dalla griglia di altitudine già usata dalla mappa un'area attorno al centro del comune, da trasformare in una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite animali né pulsante verso il comune vicino.",
+    "giorno": "2026-11-19",
+    "ruolo": "Nuovi stili di reel",
+    "passo": "Scegliere un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggere le sue coordinate in motore/config.json e montare un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km dal comune vicino, poi la mappa in docs/ con la luce sulle coordinate, con musica libera da diritti. Pubblicarlo nel contenitore «amici» o «ospiti» già pronto; se entro domani non regge, esci con la versione ridotta: video vero di 5 secondi e mappa con la luce, senza il terzo tempo di distanza.",
     "file": [
-     "docs/index.html",
-     "motore/config.json"
+     "motore/config.json",
+     "docs/",
+     "reel/"
     ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro (con un animale SÌ sul punto di casa se la versione completa è pronta, altrimenti solo il terreno), la vista si chiude tornando alla mappa e in console non compaiono errori, pubblicato entro il 18 novembre."
+    "fatto_quando": "Il reel di prova è pubblicato entro il 20 novembre nel contenitore «amici» o «ospiti», con i tre tempi (o, nella versione ridotta, video vero e mappa con la luce) e le coordinate del comune prese da motore/config.json."
    },
    {
-    "giorno": "2026-11-18",
-    "ruolo": "Realismo della mappa e del 3D",
-    "passo": "Aggiungere in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Per uscire domani con una versione più piccola, fermarsi alla sola superficie 3D di Mussolente, senza sprite animali né pulsante verso il comune vicino.",
+    "giorno": "2026-11-19",
+    "ruolo": "Riprese e montaggio diversi",
+    "passo": "Scegli un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggi le sue coordinate in motore/config.json e monta in un editor verticale un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km dal comune vicino, poi la mappa in docs/ con la luce sulle coordinate, con musica libera da diritti. Se il montaggio completo non regge entro domani, esci con una versione ridotta: solo video vero con voce e luce finale sulla mappa, senza il passaggio dei chilometri.",
     "file": [
-     "docs/index.html",
-     "motore/config.json"
+     "motore/config.json",
+     "docs/",
+     "reel/"
     ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione ridotta è pubblicata entro il 18 novembre."
+    "fatto_quando": "Esiste un file video verticale in reel/ di circa 10-12 secondi con il video vero del comune e la voce del follower nei primi secondi, la mappa con la luce accesa sul punto del paese a fine clip, e il reel è pubblicato nel contenitore «amici» o «ospiti» (nella versione ridotta basta video vero, voce e luce finale)."
    },
    {
-    "giorno": "2026-11-18",
-    "ruolo": "Esperimenti misurabili",
-    "passo": "Su docs/index.html aggiungi un canvas three.js che si apre al tocco di Mussolente: leggi le coordinate del comune da motore/config.json, ritaglia dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruisci una PlaneGeometry con i vertici spostati in quota, senza ancora animali né pulsanti. Se entro domani il 3D non regge, esci con la versione ridotta: solo la superficie in rilievo di Mussolente, con chiusura che riporta alla mappa.",
+    "giorno": "2026-11-19",
+    "ruolo": "Suono e musica nuovi",
+    "passo": "Scegliere un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggere le sue coordinate in motore/config.json, e montare un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km dal comune vicino, poi la mappa in docs/ con la luce sulle coordinate. Se entro domani non regge, esci con una versione ridotta: solo video vero con voce e poi la luce sulla mappa, senza il conteggio dei chilometri.",
     "file": [
-     "docs/index.html",
-     "motore/config.json"
+     "motore/config.json",
+     "docs/",
+     "reel/"
     ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione è pubblicata entro il 18 novembre."
-   },
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "Animali in 3D",
-    "passo": "Creare in docs/index.html il canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno al centro e costruire una PlaneGeometry con i vertici spostati in quota. Per uscire domani con una versione più piccola, fermarsi alla sola superficie 3D di Mussolente, senza sprite animali né pulsante verso il comune vicino.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione ridotta è pubblicata entro il 18 novembre."
-   },
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "Paesi e piazze in 3D",
-    "passo": "Creare la vista three.js per il solo comune di Mussolente: in docs/index.html aggiungere un canvas che si apre al tocco del comune, leggere le coordinate da motore/config.json e costruire una PlaneGeometry con i vertici spostati in quota dai dati di altitudine già usati dalla mappa. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite né pulsante verso il comune vicino.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale (con un animale SÌ sul punto di casa se la versione completa è pronta, altrimenti solo il terreno 3D), la vista si chiude tornando alla mappa senza errori in console, e la versione è pubblicata entro il 18 novembre."
-   },
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "Rilievo e terreno veri",
-    "passo": "Aggiungere in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota, senza animali né pulsanti. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D di Mussolente con chiusura che riporta alla mappa.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione (anche ridotta) è pubblicata entro il 18 novembre."
-   },
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "Luci della notte in 3D",
-    "passo": "Aprire docs/index.html e aggiungere il canvas three.js che si attiva al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa l'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite animali né pulsante verso il comune vicino.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione (completa con un animale SÌ, o ridotta solo con il terreno) è pubblicata entro il 18 novembre."
-   },
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "Materiali e texture",
-    "passo": "Aprire docs/index.html e aggiungere un canvas three.js che si attiva al tocco di Mussolente, leggendo le coordinate del comune da motore/config.json e ritagliando dai dati di altitudine già usati dalla mappa una griglia attorno a quel punto, da trasformare in una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D di Mussolente, senza sprite animali né pulsante verso il comune vicino.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console e la versione (completa con un animale SÌ, o ridotta) è pubblicata entro il 18 novembre."
-   },
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "Camere e inquadrature 3D",
-    "passo": "Aprire docs/index.html e aggiungere il canvas three.js che si attiva al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno al centro e costruire una PlaneGeometry con i vertici spostati in quota. Per uscire domani con una versione più piccola, fermarsi alla sola superficie 3D di Mussolente, senza sprite animali né pulsante verso il comune vicino.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione ridotta è pubblicata entro il 18 novembre."
-   },
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "Animazioni 3D",
-    "passo": "Aggiungere in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D del rilievo di Mussolente, senza sprite animali né pulsante verso il comune vicino.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione (completa o ridotta) è pubblicata entro il 18 novembre."
-   },
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "Scene 3D per i reel",
-    "passo": "Aggiungere in docs/index.html un canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota, senza ancora animali né pulsanti. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D di Mussolente, con chiusura che riporta alla mappa.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione (anche ridotta) è pubblicata entro il 18 novembre."
-   },
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "3D leggero sul telefono",
-    "passo": "Su docs/index.html aggiungere un canvas three.js che si apre al tocco di Mussolente: leggere le coordinate del comune da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un'area attorno a quel punto e costruire una PlaneGeometry con i vertici spostati in quota, senza ancora animali né pulsanti. Se entro domani non regge, uscire con la versione ridotta: solo la superficie 3D di Mussolente con chiusura che riporta alla mappa.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Toccando Mussolente nella mappa si apre il canvas three.js con il terreno in rilievo reale del suo centro, la vista si chiude tornando alla mappa senza errori in console, e la versione (anche ridotta) è pubblicata entro il 18 novembre."
+    "fatto_quando": "Il reel di prova è pubblicato nel contenitore «amici» o «ospiti» con i tre tempi visibili in sequenza (vero, km, luce) e il follower ha dato il SÌ tracciato nella config; nella versione ridotta basta vero più luce, senza km."
    }
-  ],
-  "aggiornato": "2026-11-18",
-  "nota": "Il Campionato delle Zampe sulla mappa: lo stadio della partita in corso disegnato nel posto vero (San Siro a Milano, l'Olimpico a Roma, il Maradona a Napoli…), con le curve nei colori delle due squadre, i fari, e il punteggio dal vivo «Inter 10 – 8 Milan · SAN SIRO · LIVE» che pulsa; toccandolo si apre la partita con la classifica. Sta sopra le luci della mappa. In più la copertina del reel delle 13 è nello stadio coi colori delle due squadre.",
-  "online_dal": "2026-11-18"
+  ]
+ },
+ "realismo": {
+  "idea": "Il Paese dal Vero: rilievo e animale nello stesso comune",
+  "come_funziona": "Quando si apre un comune sul sito, si carica una scena three.js costruita sui dati di altitudine già usati dalla mappa con rilievo e coste vere. Il terreno è quello reale, e l'animale, disegnato in SVG per razza, si accende sul punto esatto del comune usando le coordinate in motore/config.json. Si inclina e si ruota con un gesto del dito, e la luce dell'animale resta fissa sul suo punto. Le foto e i video dei follower entrano nella scena solo per chi ha dato il SÌ. La scena è una sola, riutilizzata per tutti i comuni, così cresce da sola man mano che arrivano nuovi animali.",
+  "primo_passo": "In docs/ aggiungere un modulo three.js unico (paese3d.js) che legge le coordinate del comune da motore/config.json, ritaglia la griglia di altitudine attorno a quel punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e vi posiziona lo sprite SVG dell'animale sul punto esatto. Collegarlo al tocco sul comune nella mappa esistente e provarlo prima su 3 comuni di test (uno di costa, uno di collina, uno di pianura). Rimandare edifici e foto alla seconda versione, con l'unico vincolo del SÌ del follower.",
+  "come_misurarla": "Dopo 7 giorni: quota di visitatori della mappa che aprono la vista 3D (obiettivo sopra il 20-30%), quota di chi resta oltre 30 secondi o ruota la scena almeno una volta, numero di comuni diversi aperti per utente, e follower arrivati dalle pagine dei comuni rispetto alla mediana attuale dei reel di mappa (8,0 ogni 1.000 account raggiunti).",
+  "traccia": "realismo",
+  "aperto": "2026-11-19",
+  "scadenza": "2026-11-21",
+  "stato": "da costruire",
+  "passi_proposti": []
  }
 }

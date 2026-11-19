@@ -1,23 +1,5 @@
 [
  {
-  "id": "2026-11-10-2103-puntata",
-  "formato": "puntata",
-  "modalita": "operativa",
-  "inizio": "2026-11-10T20:03:16+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-10T20:07:55+00:00",
-  "scambi": 129
- },
- {
-  "id": "crescita-2026-11-11",
-  "formato": "crescita del giorno",
-  "modalita": "operativa",
-  "inizio": "2026-11-11T10:18:26+00:00",
-  "stato": "fatto",
-  "fine": "2026-11-11T10:18:43+00:00",
-  "scambi": 11
- },
- {
   "id": "innovazione-2026-11-11",
   "formato": "innovazione del giorno",
   "modalita": "operativa",
@@ -538,5 +520,23 @@
   "stato": "senza direttore",
   "fine": "2026-11-18T20:05:18+00:00",
   "scambi": 126
+ },
+ {
+  "id": "crescita-2026-11-19",
+  "formato": "crescita del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-19T10:16:48+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-19T10:17:04+00:00",
+  "scambi": 11
+ },
+ {
+  "id": "innovazione-2026-11-19",
+  "formato": "innovazione del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-19T10:17:04+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-19T10:17:25+00:00",
+  "scambi": 19
  }
 ]
