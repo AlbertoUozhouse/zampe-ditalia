@@ -910,9 +910,10 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
     css += """
     #root .tb { position: absolute; left: 40px; right: 40px; top: 250px; z-index: 3; text-align: center; }
     #root .tb .s { display: inline-block; font: 400 46px/1.05 "Anton", sans-serif; color: #1A1206; background: #FFD23F; border: 6px solid #1A1206; border-radius: 12px; padding: 4px 22px 6px; transform: rotate(-2deg); box-shadow: 0 8px 0 rgba(0,0,0,.35); }
-    #root .tb .q { display: grid; grid-template-columns: 1fr 250px 1fr; align-items: stretch; margin-top: 22px; background: #15100C; border: 8px solid #F3E6C8; border-radius: 26px; overflow: hidden; box-shadow: 0 12px 0 rgba(0,0,0,.4); }
+    #root .tb .q { display: grid; grid-template-columns: 1fr auto 1fr; align-items: stretch; margin-top: 22px; background: #15100C; border: 8px solid #F3E6C8; border-radius: 26px; overflow: hidden; box-shadow: 0 12px 0 rgba(0,0,0,.4); }
     #root .tb .q b { font: 400 66px/1.05 "Anton", sans-serif; padding: 26px 10px; color: #FFFFFF; -webkit-text-stroke: 6px #15100C; paint-order: stroke fill; }
-    #root .tb .q em { font: 400 140px/1 "Anton", sans-serif; font-style: normal; color: #FFD23F; padding: 14px 0; }
+    #root .tb .q em { font: 400 140px/1 "Anton", sans-serif; font-style: normal; color: #FFD23F; padding: 14px 18px; white-space: nowrap; }
+    #root .tb .q em.lungo { font-size: 104px; padding-top: 30px; }
     #root .cl { position: absolute; left: 60px; right: 60px; top: 300px; z-index: 3; }
     #root .cl h3 { margin: 0 0 18px; text-align: center; font: 400 80px/1 "Anton", sans-serif; color: #FFFFFF; -webkit-text-stroke: 8px #1A1206; paint-order: stroke fill; text-shadow: 0 8px 0 #1A1206; }
     #root .cl .r { display: grid; grid-template-columns: 70px 1fr 160px; align-items: center; gap: 14px; margin-bottom: 14px; background: #FFF8EA; border: 6px solid #1A1206; border-radius: 18px; padding: 8px 18px; box-shadow: 0 7px 0 rgba(0,0,0,.3); }
@@ -923,7 +924,7 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
     if tabellone:
         T = tabellone; bg = lambda c: f"background:linear-gradient(90deg,{c[0]} 0 50%,{c[1]} 50% 100%)"
         corpo.append(f'<div class="tb" id="{cid}-tb">' + (f'<div class="s">{ESC(T["sopra"])}</div>' if T.get("sopra") else "")
-                     + f'<div class="q"><b style="{bg(T["ca"])}">{ESC(T["a"])}</b><em id="{cid}-ts">{T.get("ga", 0)} – {T.get("gb", 0)}</em><b style="{bg(T["cb"])}">{ESC(T["b"])}</b></div></div>')
+                     + f'<div class="q"><b style="{bg(T["ca"])}">{ESC(T["a"])}</b><em id="{cid}-ts"{" class=\"lungo\"" if len(str(T.get("ga", 0)) + str(T.get("gb", 0))) > 2 else ""}>{T.get("ga", 0)} – {T.get("gb", 0)}</em><b style="{bg(T["cb"])}">{ESC(T["b"])}</b></div></div>')
         js.append(f'    tl.fromTo("#{cid}-tb", {{ y: -120, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.6)" }}, 0.05);')
         js.append(f'    tl.fromTo("#{cid}-ts", {{ scale: 2.2 }}, {{ scale: 1, duration: 0.4, ease: "back.out(2)" }}, 0.35);')
     if tabella:
