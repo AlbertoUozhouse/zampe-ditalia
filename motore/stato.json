@@ -1972,6 +1972,7 @@
 "17954309526314097",
 "17954332230297646",
 "17954372976276599",
+"17954377797053559",
 "17954393262259287",
 "17954399118290374",
 "17954458806322604",
@@ -10462,6 +10463,7 @@
 "18203121295377914",
 "18203143654376774",
 "18203178022347506",
+"18203376289390467",
 "18203437978327914",
 "18203510173389741",
 "18203632696386901",
@@ -10481,6 +10483,7 @@
 "18207768112333061",
 "18207789055375510",
 "18207932665373845",
+"18207984826373286",
 "18207992233372214",
 "18208606756374899",
 "18208918177373922",
@@ -12099,7 +12102,9 @@
 "18798213136033257"
 ],
 "risposte": [
-1795129549.6520026
+1795129549.6520026,
+1795131039.0246792,
+1795131043.9607353
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -14434,7 +14439,8 @@
 "davide__santangelo___12": "2026-11-19",
 "nik_chi10": "2026-11-19",
 "leo_chi10": "2026-11-19",
-"d_day_999": "2026-11-19"
+"d_day_999": "2026-11-19",
+"melissa_lodato_": "2026-11-19"
 },
 "media_letti": {},
 "pezzi": {
@@ -16874,7 +16880,8 @@
 "joeloliva014": 10,
 "loryto_2013": 10,
 "marinanespeca": 10,
-"angelotortorella16": 10
+"angelotortorella16": 10,
+"d_day_999": 10
 },
 "inviti_giorno": {
 "2026-11-12": {
@@ -17799,7 +17806,8 @@
 "loryto_2013": "premiato",
 "marinanespeca": "premiato",
 "angelotortorella16": "premiato",
-"mazzetti_fabio": "in_attesa"
+"mazzetti_fabio": "in_attesa",
+"d_day_999": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -21545,10 +21553,12 @@
 "27cb6b7017d61ea1",
 "61fe9dfef6e318d0",
 "33c7e9d65746be7b",
-"6c6531c4fef9d152"
+"6c6531c4fef9d152",
+"c2af9347e612926a"
 ],
 "privati_ora": [
-1795129549.6520274
+1795129549.6520274,
+1795131043.960762
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -24962,9 +24972,13 @@
 [
 "San Polo dei Cavalieri|RM",
 "Casatenovo|LC"
+],
+[
+"Pignataro Maggiore|CE",
+"Priverno|LT"
 ]
 ],
-"attesa": "Pignataro Maggiore|CE",
+"attesa": null,
 "punti": {
 "Brescia|BS": 5,
 "Napoli|NA": 18,
@@ -25039,7 +25053,8 @@
 "Cagliari|CA": 1,
 "Casatenovo|LC": 3,
 "Comacchio|FE": 1,
-"Ladispoli|RM": 1
+"Ladispoli|RM": 1,
+"Priverno|LT": 1
 },
 "giocatori": {
 "Genova|GE": [
@@ -25696,6 +25711,15 @@
 "t": "2026-11-19T21:51+00:00",
 "sorpasso": "Ladispoli|RM",
 "su": "Lamezia Terme|CZ",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-19T23:30+00:00",
+"sorpasso": "Priverno|LT",
+"su": "Pignataro Maggiore|CE",
 "punti": [
 1,
 0
@@ -26860,6 +26884,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Priverno|LT": {
+"u": [
+"melissa_lodato_"
+],
+"c": [
+"18207984826373286"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -26987,7 +27021,8 @@
 "asia_buzzi_06|animale|kiro",
 "davide__santangelo___12|animale|spritz",
 "nik_chi10|animale|hiro",
-"leo_chi10|animale|hiro"
+"leo_chi10|animale|hiro",
+"melissa_lodato_|animale|medusa"
 ]
 },
 "gara_follower": [
@@ -27198,6 +27233,10 @@
 {
 "k": "Salerno|SA",
 "t": "2026-11-19T19:13+00:00"
+},
+{
+"k": "Pignataro Maggiore|CE",
+"t": "2026-11-19T23:30+00:00"
 }
 ],
 "staffette_log": [
@@ -27695,7 +27734,7 @@
 "veterinario": 2
 }
 },
-"commenti_serie": 25,
+"commenti_serie": 27,
 "votanti_p": {
 "18116669770852121": [
 "annaagriggio",
@@ -27740,7 +27779,7 @@
 "citta": "Roma",
 "gol": {
 "roma": 81,
-"lazio": 34
+"lazio": 35
 },
 "marcatori": [
 "pat_nog.1",
@@ -27857,7 +27896,8 @@
 "gi.useppe156",
 "saraaa__.02",
 "leo_chi10",
-"__mattiaa_.__"
+"__mattiaa_.__",
+"melissa_lodato_"
 ],
 "inizio": "2026-11-19T12:35+01:00",
 "fine": "2026-11-20T12:30+01:00"
@@ -28545,6 +28585,10 @@
 "__mattiaa_.__": {
 "g": 1,
 "sq": "roma"
+},
+"melissa_lodato_": {
+"g": 1,
+"sq": "lazio"
 }
 }
 }
