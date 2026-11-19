@@ -8979,6 +8979,7 @@
 "18140759257545492",
 "18140773636716326",
 "18140819491714148",
+"18140827405642161",
 "18140921470540999",
 "18140928109711589",
 "18140936431727588",
@@ -11653,7 +11654,8 @@
 "18798213136033257"
 ],
 "risposte": [
-1795086322.444155
+1795086322.444155,
+1795089085.5207357
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -13957,7 +13959,8 @@
 "chrix_pelli_": "2026-11-18",
 "curtez142": "2026-11-19",
 "carlo_pappy": "2026-11-19",
-"_matteo2810": "2026-11-19"
+"_matteo2810": "2026-11-19",
+"giuly23c": "2026-11-19"
 },
 "media_letti": {},
 "pezzi": {
@@ -20945,10 +20948,11 @@
 "cdaa6a2004ec73df",
 "65c90ec8a60d44fe",
 "453ee2e19ba4c711",
-"15e2e642f0d63de2"
+"15e2e642f0d63de2",
+"5294490843359dbd"
 ],
 "privati_ora": [
-1795076240.542265
+1795089085.520764
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -24273,7 +24277,7 @@
 ],
 "attesa": null,
 "punti": {
-"Brescia|BS": 1,
+"Brescia|BS": 3,
 "Napoli|NA": 18,
 "Siracusa|SR": 1,
 "Agerola|NA": 3,
@@ -24901,14 +24905,21 @@
 "Brescia|BS": {
 "u": [
 "karol_belotti10",
-"giadaaadesiderati"
+"giadaaadesiderati",
+"giuly23c"
 ],
 "c": [
 "18122363050978875",
-"18115739606033042"
+"18115739606033042",
+"18140827405642161"
 ],
-"chiuse": 0,
-"log": []
+"chiuse": 1,
+"log": [
+{
+"t": "2026-11-19T11:51+00:00",
+"prova": 1
+}
+]
 },
 "Napoli|NA": {
 "u": [
@@ -25980,7 +25991,8 @@
 "chrix_pelli_|animale|nala",
 "curtez142|animale|loky",
 "carlo_pappy|animale|zeus",
-"_matteo2810|animale|spike"
+"_matteo2810|animale|spike",
+"giuly23c|animale|lola"
 ]
 },
 "gara_follower": [
@@ -26253,6 +26265,11 @@
 {
 "k": "Bari|BA",
 "t": "2026-11-18T19:58+00:00",
+"turno": 2
+},
+{
+"k": "Brescia|BS",
+"t": "2026-11-19T11:51+00:00",
 "turno": 2
 }
 ],
