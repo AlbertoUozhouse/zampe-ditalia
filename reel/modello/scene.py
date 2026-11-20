@@ -34,8 +34,10 @@ STELLE = "".join(f'<circle cx="{x}" cy="{y}" r="{r}"/>' for x, y, r in
 def _primo_fotogramma(js):
     """Prima scena del reel: niente ingressi da vuoto, il primo fotogramma è già pieno e luminoso.
     Gli ingressi fromTo diventano piccoli assestamenti (scala 1.04 → 1), così resta il movimento ma non il buio."""
-    return re.sub(r'tl\.fromTo\(("[^"]+"), \{[^}]*\}, \{[^}]*?duration: ([\d.]+)[^}]*\}, [\d.]+\);',
-                  r'tl.fromTo(\1, { scale: 1.04 }, { scale: 1, duration: \2, ease: "power2.out" }, 0);', js)
+    # 20/11: solo gli ingressi dei primi 0,6 secondi (quelli che lascerebbero buio il primo fotogramma); quelli dopo restano com'erano,
+    # così il tiro in porta e il «GOL!» del reel della partita arrivano al loro momento anche nella prima scena
+    return re.sub(r'tl\.fromTo\(("[^"]+"), \{[^}]*\}, \{[^}]*?duration: ([\d.]+)[^}]*\}, ([\d.]+)\);',
+                  lambda m: m.group(0) if float(m.group(3)) >= 0.6 else f'tl.fromTo({m.group(1)}, {{ scale: 1.04 }}, {{ scale: 1, duration: {m.group(2)}, ease: "power2.out" }}, 0);', js)
 
 def _pagina(cid, nota, css, corpo, js):
     return f"""<template>
