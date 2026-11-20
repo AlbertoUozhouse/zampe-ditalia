@@ -979,5 +979,26 @@
   "esito": "1 follower in totale, 0.9 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (15) hanno una mediana di 13.1.",
   "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18413937094088289",
+  "file": "2026-11-13-1307-testa_a_testa",
+  "formato": "testa_a_testa",
+  "uscita": "2026-11-13T12:19:36+00:00",
+  "follower": 5,
+  "reach_7g": 2119,
+  "follower_ogni_1000": 2.4,
+  "mediana_simili": 18.5,
+  "simili": 4,
+  "scelte": {
+   "formato": "testa_a_testa",
+   "apertura": "video vero",
+   "voce": true,
+   "gancio": "Barletta, la città della Disfida, contro Bisceglie, la città del mare Adriatico: 21 chilometri, e la sfida è aperta.",
+   "chiusura": "Sei di Bisceglie o di Barletta? Commenta città e nome del tuo animale!"
+  },
+  "esito": "5 follower in totale, 2.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (4) hanno una mediana di 18.5.",
+  "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]

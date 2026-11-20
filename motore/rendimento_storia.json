@@ -2606,6 +2606,13 @@
 "comments": 45,
 "shares": 0,
 "follower_dopo": null
+},
+"g14": {
+"views": 620,
+"reach": 406,
+"comments": 45,
+"shares": 0,
+"follower_dopo": null
 }
 },
 "18400635064202193": {
@@ -2785,6 +2792,13 @@
 "comments": 23,
 "shares": 2,
 "follower_dopo": null
+},
+"g13": {
+"views": 813,
+"reach": 515,
+"comments": 23,
+"shares": 2,
+"follower_dopo": null
 }
 },
 "18113754056580276": {
@@ -2875,6 +2889,13 @@
 "g12": {
 "views": 505,
 "reach": 375,
+"comments": 25,
+"shares": 0,
+"follower_dopo": null
+},
+"g13": {
+"views": 511,
+"reach": 380,
 "comments": 25,
 "shares": 0,
 "follower_dopo": null
@@ -3150,6 +3171,13 @@
 "comments": 17,
 "shares": 1,
 "follower_dopo": 9
+},
+"g12": {
+"views": 436,
+"reach": 336,
+"comments": 17,
+"shares": 1,
+"follower_dopo": 9
 }
 },
 "18113852452890527": {
@@ -3401,6 +3429,13 @@
 "comments": 41,
 "shares": 1,
 "follower_dopo": 9
+},
+"g11": {
+"views": 850,
+"reach": 636,
+"comments": 41,
+"shares": 1,
+"follower_dopo": 9
 }
 },
 "18117695918103770": {
@@ -3631,6 +3666,13 @@
 "comments": 12,
 "shares": 0,
 "follower_dopo": 11
+},
+"g10": {
+"views": 446,
+"reach": 299,
+"comments": 12,
+"shares": 0,
+"follower_dopo": 11
 }
 },
 "18182682418431660": {
@@ -3840,6 +3882,13 @@
 "comments": 18,
 "shares": 0,
 "follower_dopo": 3
+},
+"g9": {
+"views": 552,
+"reach": 387,
+"comments": 18,
+"shares": 0,
+"follower_dopo": 3
 }
 },
 "18110164211339805": {
@@ -3960,6 +4009,13 @@
 "g7": {
 "views": 1203,
 "reach": 925,
+"comments": 38,
+"shares": 2,
+"follower_dopo": 5
+},
+"g8": {
+"views": 1213,
+"reach": 928,
 "comments": 38,
 "shares": 2,
 "follower_dopo": 5
@@ -4130,6 +4186,13 @@
 "comments": 88,
 "shares": 16,
 "follower_dopo": 5
+},
+"g7": {
+"views": 2624,
+"reach": 2119,
+"comments": 88,
+"shares": 16,
+"follower_dopo": 5
 }
 },
 "18037769600664590": {
@@ -4276,6 +4339,13 @@
 "comments": 27,
 "shares": 1,
 "follower_dopo": 0
+},
+"g6": {
+"views": 656,
+"reach": 463,
+"comments": 27,
+"shares": 1,
+"follower_dopo": 0
 }
 },
 "18135845701682696": {
@@ -4310,6 +4380,13 @@
 "g4": {
 "views": 670,
 "reach": 526,
+"comments": 11,
+"shares": 0,
+"follower_dopo": 9
+},
+"g5": {
+"views": 691,
+"reach": 542,
 "comments": 11,
 "shares": 0,
 "follower_dopo": 9
@@ -4417,6 +4494,13 @@
 "comments": 59,
 "shares": 7,
 "follower_dopo": 2
+},
+"g4": {
+"views": 1803,
+"reach": 1446,
+"comments": 59,
+"shares": 7,
+"follower_dopo": 2
 }
 },
 "17918294121521036": {
@@ -4447,6 +4531,13 @@
 "views": 4625,
 "reach": 3294,
 "comments": 507,
+"shares": 5,
+"follower_dopo": 23
+},
+"g3": {
+"views": 4805,
+"reach": 3397,
+"comments": 539,
 "shares": 5,
 "follower_dopo": 23
 }
@@ -4488,6 +4579,13 @@
 "comments": 222,
 "shares": 1,
 "follower_dopo": 18
+},
+"g2": {
+"views": 2927,
+"reach": 1959,
+"comments": 237,
+"shares": 1,
+"follower_dopo": 18
 }
 },
 "18321426745303996": {
@@ -4513,6 +4611,13 @@
 "comments": 292,
 "shares": 1,
 "follower_dopo": null
+},
+"g1": {
+"views": 5949,
+"reach": 4105,
+"comments": 467,
+"shares": 8,
+"follower_dopo": 18
 }
 },
 "18205822753376841": {
@@ -4522,6 +4627,15 @@
 "comments": 9,
 "shares": 0,
 "follower_dopo": 5
+}
+},
+"18122637982954150": {
+"g0": {
+"views": 2407,
+"reach": 1792,
+"comments": 71,
+"shares": 9,
+"follower_dopo": null
 }
 }
 }
