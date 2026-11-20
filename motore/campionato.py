@@ -73,8 +73,8 @@ def scegli(C, conta):
     incontrate. In casa gioca la squadra con più tifosi."""
     giocate = {frozenset((x["a"], x["b"])) for x in C.get("giocate", [])}
     pronte = [k for k, n in sorted(conta.items(), key=lambda x: -x[1]) if n >= 1]
-    for a, b in DERBY:
-        if a in pronte and b in pronte and frozenset((a, b)) not in giocate:
+    for a, b in DERBY:  # 20/11: un derby solo se tutte e due hanno almeno 5 tifosi (Genoa–Samp con 4 e 2 tifosi lasciava fuori la Juve con 24)
+        if conta.get(a, 0) >= 5 and conta.get(b, 0) >= 5 and frozenset((a, b)) not in giocate:
             return (a, b) if conta[a] >= conta[b] else (b, a)
     coppie = [(a, b) for i, a in enumerate(pronte) for b in pronte[i + 1:] if frozenset((a, b)) not in giocate]
     if not coppie and len(pronte) >= 2: coppie = [(pronte[0], pronte[1])]  # tutte già giocate: si ricomincia dal girone di ritorno

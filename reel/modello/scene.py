@@ -854,7 +854,7 @@ CARTONE_COLORI = {"rosso": ("#E2432F", "#FFFFFF"), "giallo": ("#FFD23F", "#1A120
 
 
 def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=None, attori=(), etichette=(), nuvole=(), oggetti=(), sfx=None,
-            numero=None, voto=None, commento=None, scelta=None, hud=True, colori=None, tabellone=None, tabella=None):
+            numero=None, voto=None, commento=None, scelta=None, hud=True, colori=None, tabellone=None, tabella=None, tiro=None):
     """Una scena di Paolino a cartone. attori: [{"img": "felice", "x": 540, "y": 1560, "h": 700, "flip": False, "anim": ["entra_sx", "respira"], "t0": 0}]
     (x e y = centro dei piedi); etichette: [{"t": "PAOLINO", "c": "rosso", "x": 60, "y": 900, "r": -5, "z": 64, "t0": 0.3}];
     nuvole: [{"t": "VIENI, TESORO!", "x": 80, "y": 640, "w": 440, "coda": "sx", "t0": 0.4}]; oggetti: emoji come attrezzi di scena
@@ -924,9 +924,23 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
     if tabellone:
         T = tabellone; bg = lambda c: f"background:linear-gradient(90deg,{c[0]} 0 50%,{c[1]} 50% 100%)"
         corpo.append(f'<div class="tb" id="{cid}-tb">' + (f'<div class="s">{ESC(T["sopra"])}</div>' if T.get("sopra") else "")
-                     + f'<div class="q"><b style="{bg(T["ca"])}">{ESC(T["a"])}</b><em id="{cid}-ts"{" class=\"lungo\"" if len(str(T.get("ga", 0)) + str(T.get("gb", 0))) > 2 else ""}>{T.get("ga", 0)} – {T.get("gb", 0)}</em><b style="{bg(T["cb"])}">{ESC(T["b"])}</b></div></div>')
+                     + f'<div class="q"><b style="{bg(T["ca"])}">{ESC(T["a"])}</b><em id="{cid}-ts"{" class=\"lungo\"" if len(str(T.get("ga", 0)) + str(T.get("gb", 0))) > 2 else ""}><span id="{cid}-ga">{T.get("ga", 0)}</span> – <span id="{cid}-gb">{T.get("gb", 0)}</span></em><b style="{bg(T["cb"])}">{ESC(T["b"])}</b></div></div>')
         js.append(f'    tl.fromTo("#{cid}-tb", {{ y: -120, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.4, ease: "back.out(1.6)" }}, 0.05);')
         js.append(f'    tl.fromTo("#{cid}-ts", {{ scale: 2.2 }}, {{ scale: 1, duration: 0.4, ease: "back.out(2)" }}, 0.35);')
+        if T.get("conta"):  # 20/11 (Officina): il punteggio sale da 0 al risultato finale, gol dopo gol
+            js.append(f'    tl.fromTo("#{cid}-ga", {{ innerText: 0 }}, {{ innerText: {int(T.get("ga", 0))}, snap: {{ innerText: 1 }}, duration: 1.6, ease: "power1.in" }}, 0.4);')
+            js.append(f'    tl.fromTo("#{cid}-gb", {{ innerText: 0 }}, {{ innerText: {int(T.get("gb", 0))}, snap: {{ innerText: 1 }}, duration: 1.6, ease: "power1.in" }}, 0.4);')
+    if tiro is not None:  # 20/11 (Officina): la porta in mezzo al campo e il pallone che entra, poi «GOL!»
+        t0 = float(tiro)
+        corpo.append(f'''<svg class="porta" viewBox="0 0 420 220" style="position:absolute;left:330px;top:1085px;width:420px;height:220px;z-index:1">
+          <g stroke="#F4F4F4" stroke-width="3" opacity=".75">{''.join(f'<path d="M{x} 20 V215"/>' for x in range(30, 400, 30))}{''.join(f'<path d="M14 {y} H406"/>' for y in range(40, 215, 30))}</g>
+          <path d="M10 215 V12 H410 V215" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linejoin="round"/><path d="M10 215 V12 H410 V215" fill="none" stroke="#1A1206" stroke-width="5"/></svg>
+          <div class="og" id="{cid}-pl" style="left:80px;top:1560px;font-size:110px;color:#FFFFFF;z-index:3">⚽</div>
+          <div class="sfx" id="{cid}-gl" style="left:330px;top:900px"><span>GOL!</span></div>''')
+        js.append(f'    tl.fromTo("#{cid}-pl", {{ x: 0, y: 0, rotation: 0, scale: 1 }}, {{ x: 400, y: -400, rotation: 720, scale: 0.55, duration: 0.7, ease: "power2.out" }}, {t0:.2f});')
+        js.append(f'    tl.to("#{cid}-pl", {{ opacity: 0, duration: 0.1 }}, {t0 + 0.72:.2f});')  # il pallone sparisce nella rete (sotto ci passano i sottotitoli)
+        js.append(f'    tl.fromTo("#{cid}-gl", {{ scale: 0, opacity: 0 }}, {{ scale: 1.25, opacity: 1, duration: 0.3, ease: "back.out(3)" }}, {t0 + 0.7:.2f});')
+        js.append(f'    tl.to("#{cid}-gl", {{ keyframes: [{{ rotation: -6, duration: 0.08 }}, {{ rotation: 6, duration: 0.08 }}, {{ rotation: 0, duration: 0.08 }}], repeat: 3 }}, {t0 + 1.0:.2f});')
     if tabella:
         righe = "".join(f'<div class="r{" primo" if i == 0 else ""}" id="{cid}-r{i}"><span>{i + 1}</span><b>{ESC(x["nome"])}</b><i>{x["pt"]} PT</i></div>' for i, x in enumerate(tabella[:5]))
         corpo.append(f'<div class="cl"><h3 id="{cid}-ch">CLASSIFICA</h3>{righe}</div>')

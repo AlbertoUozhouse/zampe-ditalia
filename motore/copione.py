@@ -2085,10 +2085,16 @@ def partita(D, rng, st):
         GA, GB = nom(G["a"]), nom(G["b"]); ga, gb = G["ga"], G["gb"]
         vince = G["a"] if ga > gb else G["b"] if gb > ga else None
         att = cani(vince, 2, (300, 780), 0.6) if vince else cani(G["a"], 1, (300,), 0.6) + cani(G["b"], 1, (780,), 0.6)
+        # 20/11 (Officina): il tabellone conta i gol da 0 al risultato, il pallone entra in porta con «GOL!», e il capocannoniere (taggato)
+        bomber = sorted((C.get("bomber") or {}).items(), key=lambda x: -x[1]["g"])
+        cap = bomber[0] if bomber and bomber[0][1]["g"] >= 2 and (len(bomber) < 2 or bomber[1][1]["g"] < bomber[0][1]["g"]) else None
+        if cap: tag.append(cap[0])
         frasi.append((f"Finale {campionato.allo(G['stadio'])}: {GA} {num(ga)}, {GB} {num(gb)}! " + (f"Tre punti {'all' if nom(vince)[:1] in 'AEIOU' else 'al'}{'’' if nom(vince)[:1] in 'AEIOU' else ' '}{nom(vince)}!".replace("’", "'") if vince else "Pareggio: un punto a testa."),
-                      {**base, "colori": [col(G["a"]), col(G["b"])], "tabellone": {"sopra": f"FINALE · {G['stadio']}", "a": GA.upper(), "b": GB.upper(), "ga": ga, "gb": gb, "ca": col(G["a"]), "cb": col(G["b"])},
-                       "attori": att, "etichette": [{"t": f"VINCE {nom(vince).upper()}!" if vince else "PAREGGIO", "c": "verde", "x": 250, "y": 640, "r": -4, "z": 84, "t0": 0.8}] + nomi(att, "giallo"),
-                       "sfx": {"t": "3 PUNTI!" if vince else "1 PUNTO", "x": 620, "y": 820, "t0": 1.0}}))
+                      {**base, "colori": [col(G["a"]), col(G["b"])], "tabellone": {"sopra": f"FINALE · {G['stadio']}", "a": GA.upper(), "b": GB.upper(), "ga": ga, "gb": gb, "ca": col(G["a"]), "cb": col(G["b"]), "conta": True},
+                       "attori": att, "tiro": 2.1,
+                       "etichette": [{"t": f"VINCE {nom(vince).upper()}!" if vince else "PAREGGIO", "c": "verde", "x": 250, "y": 600, "r": -4, "z": 84, "t0": 2.2}] + nomi(att, "giallo")
+                                    + ([{"t": f"⚽ CAPOCANNONIERE: @{cap[0]} · {cap[1]['g']} GOL", "c": "bianco", "x": 40, "y": 780, "r": 2, "z": 42, "t0": 2.6}] if cap else []),
+                       "sfx": {"t": "3 PUNTI!" if vince else "1 PUNTO", "x": 640, "y": 900, "t0": 2.9}}))
         tab = [{"nome": nom(k).upper(), "pt": r["pt"]} for k, r in campionato.classifica({"campionato": C})][:5]
         if len(tab) >= 2:
             k1 = campionato.classifica({"campionato": C})[0][0]; k2 = campionato.classifica({"campionato": C})[1][0]
