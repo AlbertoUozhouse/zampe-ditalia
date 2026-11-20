@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-12-1448-questa_luce",
-  "formato": "questa_luce",
-  "modalita": "operativa",
-  "inizio": "2026-11-12T13:48:58+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-12T13:57:32+00:00",
-  "scambi": 130
- },
- {
   "id": "2026-11-12-1811-questa_luce",
   "formato": "questa_luce",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "senza direttore",
   "fine": "2026-11-20T14:09:45+00:00",
   "scambi": 126
+ },
+ {
+  "id": "2026-11-20-2103-serie",
+  "formato": "serie",
+  "modalita": "operativa",
+  "inizio": "2026-11-20T20:03:13+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-20T20:08:41+00:00",
+  "scambi": 128
  }
 ]
