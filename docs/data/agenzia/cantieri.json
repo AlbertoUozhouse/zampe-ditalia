@@ -18,7 +18,7 @@
   "traccia": "reel",
   "aperto": "2026-11-18",
   "scadenza": "2026-11-20",
-  "stato": "da costruire",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-19",
@@ -86,7 +86,10 @@
     ],
     "fatto_quando": "Il reel di prova è pubblicato entro il 20 novembre nel contenitore «amici» o «ospiti», con i tre tempi (o, nella versione ridotta, video vero e mappa con la luce) e le coordinate del comune prese da motore/config.json."
    }
-  ]
+  ],
+  "aggiornato": "2026-11-20",
+  "nota": "Il reel della partita più vivo: il tabellone conta i gol da 0 al risultato finale (0–0, 24–13… 94–53), il pallone parte dal campo e entra nella porta disegnata in mezzo, esplode «GOL!», poi «VINCE ROMA!», «3 PUNTI!» e l'etichetta del capocannoniere col suo @ (taggato nel reel). Anche nella prima scena gli effetti arrivano al loro momento (prima venivano appiattiti). Derby solo con almeno 5 tifosi per squadra.",
+  "online_dal": "2026-11-20"
  },
  "realismo": {
   "idea": "Il Paese dal Vero: rilievo e animale nello stesso comune",
