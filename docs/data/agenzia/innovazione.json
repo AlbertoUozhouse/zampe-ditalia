@@ -138,5 +138,17 @@
    "come_misurarla": "Dopo 7 giorni: quota di visitatori della mappa che aprono la vista 3D (obiettivo sopra il 20-30%), quota di chi resta oltre 30 secondi o ruota la scena almeno una volta, numero di comuni diversi aperti per utente, e follower arrivati dalle pagine dei comuni rispetto alla mediana attuale dei reel di mappa (8,0 ogni 1.000 account raggiunti)."
   },
   "perche": "Il Paese dal Vero usa solo ciò che abbiamo già (altitudine, coordinate, SVG, three.js), si può fare subito e dà a ogni comune poco noto un motivo concreto per riconoscersi, condividere e seguire la pagina."
+ },
+ {
+  "giorno": "2026-11-20",
+  "gioco": {
+   "idea": "Derby di Campanile a staffetta (Livorno-Cecina come primo derby)",
+   "come_funziona": "Due comuni vicini, scelti da coordinate e chilometri in motore/config.json (partenza: Livorno e Cecina, 32 km), si sfidano a turni dentro la Coppa delle Zampe. Ogni padrone di un comune gioca un turno di 'Pappa al volo' o 'Riporta il bastone' e passa il testimone al padrone del comune rivale. Il punteggio del derby si aggiorna sulla mappa con una linea che collega i due paesi. A fine giornata arriva il verdetto e il comune vincitore sorpassa l'altro in classifica.",
+   "primo_passo": "In motore/config.json aggiungere una coppia 'derby' (Livorno-Cecina) con id, coordinate e km. Poi, nel sito in docs/, creare una pagina o sezione derby che riusa i due minigiochi esistenti: ogni partita registra comune e punteggio, alterna i turni tra i due comuni e scrive il totale in un file JSON letto dalla mappa SVG, che disegna la linea tra i due punti e accende la luce del comune in testa.",
+   "come_misurarla": "Dopo 7 giorni: staffette di derby completate rispetto alle 10 staffette attuali della Coppa, quota di giocatori che tornano per un secondo derby, e follower ogni 1.000 account raggiunti dai reel di derby confrontati con la mediana di 29,0 (il testa a testa Livorno-Cecina con apertura 'video vero' è già a 39,1)."
+  },
+  "reel": null,
+  "realismo": null,
+  "perche": "Il derby Livorno-Cecina ha già dimostrato di portare follower (39,1 contro una mediana di 29,0) e si costruisce subito riusando config, minigiochi, Coppa e mappa che abbiamo, senza sviluppare un gioco da zero."
  }
 ]

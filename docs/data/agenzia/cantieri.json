@@ -1,78 +1,14 @@
 {
  "gioco": {
-  "idea": "Staffetta di quartiere",
-  "come_funziona": "Dentro la Coppa delle Zampe, 'Pappa al volo' si gioca a turni di 30 secondi tra follower dello stesso comune e il punteggio si somma per il paese. Quando il testimone passa a un amico o a un comune vicino, il gioco mostra il nome del follower che l'ha lasciato (solo se ha dato il SÌ). Il risultato del comune si vede sulla mappa come una luce più forte e la classifica si aggiorna a fine turno.",
-  "primo_passo": "Nel codice del minigioco 'Pappa al volo' in docs/ aggiungere un turno a tempo di 30 secondi che salva punteggio e comune in un contatore condiviso. Collegare quel contatore al calcolo dei punti per comune della Coppa e attivare il campo staffette in motore/config.json, oggi a 0. Poi aggiungere un link di invito 'passa il testimone' che porta alla pagina della Coppa. Mostrare il nome di chi ha passato il turno solo se presente nell'elenco dei follower con SÌ.",
-  "come_misurarla": "Dopo 7 giorni: quota di giocatori che tornano per un secondo turno (obiettivo sopra il 25%), numero di testimoni passati a un amico o a un comune vicino, numero di staffette avviate (oggi 0 su 514 sfide) e follower arrivati dalla pagina della Coppa rispetto alle 514 sfide attuali.",
+  "idea": "Derby di Campanile a staffetta (Livorno-Cecina come primo derby)",
+  "come_funziona": "Due comuni vicini, scelti da coordinate e chilometri in motore/config.json (partenza: Livorno e Cecina, 32 km), si sfidano a turni dentro la Coppa delle Zampe. Ogni padrone di un comune gioca un turno di 'Pappa al volo' o 'Riporta il bastone' e passa il testimone al padrone del comune rivale. Il punteggio del derby si aggiorna sulla mappa con una linea che collega i due paesi. A fine giornata arriva il verdetto e il comune vincitore sorpassa l'altro in classifica.",
+  "primo_passo": "In motore/config.json aggiungere una coppia 'derby' (Livorno-Cecina) con id, coordinate e km. Poi, nel sito in docs/, creare una pagina o sezione derby che riusa i due minigiochi esistenti: ogni partita registra comune e punteggio, alterna i turni tra i due comuni e scrive il totale in un file JSON letto dalla mappa SVG, che disegna la linea tra i due punti e accende la luce del comune in testa.",
+  "come_misurarla": "Dopo 7 giorni: staffette di derby completate rispetto alle 10 staffette attuali della Coppa, quota di giocatori che tornano per un secondo derby, e follower ogni 1.000 account raggiunti dai reel di derby confrontati con la mediana di 29,0 (il testa a testa Livorno-Cecina con apertura 'video vero' è già a 39,1).",
   "traccia": "gioco",
-  "aperto": "2026-11-17",
-  "scadenza": "2026-11-19",
-  "stato": "online",
-  "passi_proposti": [
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "Giochi nuovi",
-    "passo": "Nel minigioco 'Pappa al volo' in docs/ aggiungere il turno a tempo di 30 secondi che salva punteggio e comune in un contatore condiviso, poi collegarlo al calcolo dei punti per comune della Coppa e attivare il campo staffette in motore/config.json (oggi a 0). Se entro domani non regge, esci con una versione ridotta: solo il turno a 30 secondi con punteggio per comune, senza link di invito né nome del testimone.",
-    "file": [
-     "docs/",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Giocando un turno da 30 secondi in 'Pappa al volo' il punteggio viene sommato al comune nella classifica della Coppa e il campo staffette in config.json non è più a 0 (nella versione ridotta basta il punteggio sommato al comune, senza invito né nome del testimone)."
-   },
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "Meccaniche di gioco",
-    "passo": "Nel file docs/index.html del minigioco 'Pappa al volo' aggiungere un turno a tempo di 30 secondi che, a fine turno, salva punteggio e comune in un contatore condiviso; collegare quel contatore al calcolo dei punti per comune della Coppa e impostare in motore/config.json il campo staffette (oggi a 0) per registrare i turni passati. Poi aggiungere il link 'passa il testimone' verso la pagina della Coppa, mostrando il nome di chi ha passato il turno solo se nell'elenco dei follower ha dato il SÌ.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Si gioca un turno completo di 30 secondi, il punteggio compare sommato per il comune nella classifica della Coppa dopo il turno, il contatore staffette in motore/config.json passa da 0 a 1 e il link 'passa il testimone' apre la pagina della Coppa senza errori in console, con il tutto pubblicato entro il 19 novembre."
-   },
-   {
-    "giorno": "2026-11-18",
-    "ruolo": "Fattibilità tecnica",
-    "passo": "Nel minigioco 'Pappa al volo' in docs/ aggiungere un turno a tempo di 30 secondi che salva punteggio e comune in un contatore condiviso, poi collegarlo al calcolo dei punti per comune della Coppa, lasciando il campo staffette in motore/config.json a 0 finché il contatore non è verificato. Se entro domani non regge, esci con la versione ridotta: solo il turno a 30 secondi con punteggio sommato al comune, senza link di invito né nome del testimone.",
-    "file": [
-     "docs/",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Giocando un turno da 30 secondi in 'Pappa al volo' il punteggio viene sommato al comune nella classifica della Coppa, mentre il campo staffette in config.json resta a 0 finché la prova non è confermata (nella versione ridotta basta il punteggio sommato al comune, senza invito né nome del testimone)."
-   },
-   {
-    "giorno": "2026-11-19",
-    "ruolo": "Giochi nuovi",
-    "passo": "Riduci il cantiere a una versione piccola da pubblicare domani: nel minigioco 'Pappa al volo' in docs/ aggiungi un solo turno a tempo di 30 secondi che somma il punteggio al comune in un contatore condiviso, collegato alla classifica della Coppa, lasciando il campo staffette in motore/config.json a 0. Niente link di invito né nome del testimone per questa uscita.",
-    "file": [
-     "docs/",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Giocando un turno da 30 secondi in 'Pappa al volo' il punteggio compare sommato al comune nella classifica della Coppa dopo il turno, senza errori in console, e il campo staffette in config.json resta a 0 finché la prova non è confermata."
-   },
-   {
-    "giorno": "2026-11-19",
-    "ruolo": "Meccaniche di gioco",
-    "passo": "Apri il cantiere gioco e taglialo per domani: nel file docs/index.html del minigioco 'Pappa al volo' aggiungi solo il turno a tempo di 30 secondi che, a fine turno, somma il punteggio al comune in un contatore locale, senza link di invito né nome del testimone. Lascia il campo staffette in motore/config.json a 0 finché il contatore non è verificato.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Si gioca un turno completo di 30 secondi in 'Pappa al volo', il punteggio compare sommato al comune nella classifica della Coppa dopo il turno, nessun errore in console, e il campo staffette in config.json resta a 0 (o passa a 1 solo dopo la verifica)."
-   },
-   {
-    "giorno": "2026-11-19",
-    "ruolo": "Fattibilità tecnica",
-    "passo": "Riduci il cantiere gioco a una versione piccola per domani: in docs/index.html, nel minigioco 'Pappa al volo', aggiungi solo il turno a tempo di 30 secondi che a fine turno somma il punteggio al comune in un contatore locale collegato alla classifica della Coppa. Il campo staffette in motore/config.json resta a 0 finché il contatore non è verificato; niente link di invito né nome del testimone per questa uscita.",
-    "file": [
-     "docs/index.html",
-     "motore/config.json"
-    ],
-    "fatto_quando": "Si gioca un turno completo di 30 secondi in 'Pappa al volo', il punteggio compare sommato al comune nella classifica della Coppa dopo il turno, nessun errore in console, e il campo staffette in config.json è ancora a 0 (o passa a 1 solo dopo la verifica)."
-   }
-  ],
-  "aggiornato": "2026-11-19",
-  "nota": "Capocannonieri del Campionato delle Zampe e Pallone d'Oro: ogni gol (commento «forza X») conta anche per chi lo segna, partita dopo partita; il bot risponde «Sei a 3 gol: 1° tra i marcatori e hai il Pallone d'Oro»; sul sito, scheda Classifica, la classifica dei capocannonieri; il primo (da solo, almeno 2 gol) ha ⚽🏆 accanto al nome del suo animale sulla mappa e nella scheda. Recuperati i 60 gol del derby Inter–Milan.",
-  "online_dal": "2026-11-19"
+  "aperto": "2026-11-20",
+  "scadenza": "2026-11-22",
+  "stato": "da costruire",
+  "passi_proposti": []
  },
  "reel": {
   "idea": "Il Campanile Vivo: ripresa reale del paese, poi la luce",
@@ -116,6 +52,39 @@
      "reel/"
     ],
     "fatto_quando": "Il reel di prova è pubblicato nel contenitore «amici» o «ospiti» con i tre tempi visibili in sequenza (vero, km, luce) e il follower ha dato il SÌ tracciato nella config; nella versione ridotta basta vero più luce, senza km."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Nuovi stili di reel",
+    "passo": "Scegli il comune di test con un follower che ha già dato il SÌ per ripresa e voce, leggi le sue coordinate in motore/config.json e monta in un editor verticale il reel di prova in tre tempi (4-5 s di video vero con voce, 2 s di distanza in km dal comune vicino, poi la mappa in docs/ con la luce sulle coordinate, musica libera). Se entro domani non regge, esci con la versione ridotta: video vero con voce più la luce sulla mappa, senza il conteggio dei km.",
+    "file": [
+     "motore/config.json",
+     "docs/",
+     "reel/"
+    ],
+    "fatto_quando": "Un file verticale in reel/ di circa 10-12 secondi è pubblicato entro il 20 novembre nel contenitore «amici» o «ospiti», con il video vero e la voce nei primi secondi e la luce accesa sul punto del comune a fine clip (nella versione ridotta, senza il passaggio dei km), con le coordinate prese da motore/config.json."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Riprese e montaggio diversi",
+    "passo": "Scegli un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggi le sue coordinate in motore/config.json e monta in un editor verticale un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km dal comune vicino, poi la mappa in docs/ con la luce accesa sulle coordinate, con musica libera da diritti. Se entro domani il montaggio completo non regge, esci con la versione ridotta: video vero con voce e luce finale sulla mappa, senza il passaggio dei chilometri.",
+    "file": [
+     "motore/config.json",
+     "docs/",
+     "reel/"
+    ],
+    "fatto_quando": "In reel/ esiste un video verticale di circa 10-12 secondi con il video vero del comune e la voce del follower nei primi secondi, la mappa con la luce accesa sul punto del paese a fine clip, ed è pubblicato nel contenitore «amici» o «ospiti» entro il 20 novembre (nella versione ridotta basta video vero, voce e luce finale)."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Suono e musica nuovi",
+    "passo": "Scegliere un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggerne le coordinate in motore/config.json e montare in un editor verticale un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km dal comune vicino, poi la mappa in docs/ con la luce sulle coordinate, musica libera da diritti. Se entro domani non regge, esci con la versione ridotta: video vero di 5 secondi e mappa con la luce, senza il terzo tempo dei km.",
+    "file": [
+     "motore/config.json",
+     "docs/",
+     "reel/"
+    ],
+    "fatto_quando": "Il reel di prova è pubblicato entro il 20 novembre nel contenitore «amici» o «ospiti», con i tre tempi (o, nella versione ridotta, video vero e mappa con la luce) e le coordinate del comune prese da motore/config.json."
    }
   ]
  },
@@ -128,6 +97,139 @@
   "aperto": "2026-11-19",
   "scadenza": "2026-11-21",
   "stato": "da costruire",
-  "passi_proposti": []
+  "passi_proposti": [
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Realismo degli animali",
+    "passo": "Creare in docs/ il modulo paese3d.js: legge le coordinate del comune da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto. Collegarlo al tocco sul comune nella mappa esistente e provarlo su 3 comuni di test (costa, collina, pianura); per domani, versione ridotta: solo terreno 3D con animale fisso, senza rotazione e senza foto dei follower.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Aprendo un comune di test dalla mappa si vede il terreno in 3D con rilievo reale e lo sprite dell'animale sul suo punto esatto, funzionante su almeno 3 comuni (costa, collina, pianura) e pubblicato sul sito."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Realismo della mappa e del 3D",
+    "passo": "Creare docs/paese3d.js: un modulo three.js che legge le coordinate del comune di test da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto. Collegarlo al tocco sul comune nella mappa esistente e provarlo su un solo comune (Livorno) prima di estendere ai tre di test.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Toccando Livorno sulla mappa si apre la scena 3D con il terreno reale e l'animale acceso sul punto esatto del comune, ruotabile con un gesto del dito; se il tempo non basta entro il 21 novembre, si esce con la versione ridotta: solo Livorno, senza edifici né foto, con la sola rotazione."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Esperimenti misurabili",
+    "passo": "Creare in docs/ il modulo paese3d.js: legge le coordinate del comune da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e vi posiziona lo sprite SVG dell'animale sul punto esatto. Se entro domani non regge, esci con una versione ridotta: solo il terreno 3D su 1 comune di test (di pianura), senza sprite animale né rotazione col dito.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Aprendo il comune di test dalla mappa esistente compare una scena three.js con il rilievo reale e, nella versione completa, lo sprite dell'animale sul punto delle coordinate di motore/config.json; nella versione ridotta basta il terreno 3D caricato e ruotabile su un solo comune."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Animali in 3D",
+    "passo": "Creare in docs/ il modulo paese3d.js: legge da motore/config.json le coordinate di un comune di test, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e vi posiziona lo sprite SVG dell'animale sul punto esatto. Se entro domani la scena 3D non regge, esci con una versione ridotta: un solo comune di test, senza rotazione col dito, con il rilievo statico e l'animale sul punto.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Aprendo la pagina di un comune di test (costa, collina o pianura) compare la scena three.js con il rilievo reale del comune e lo sprite SVG dell'animale sul punto indicato in motore/config.json; nella versione ridotta basta un solo comune con rilievo statico e animale visibile."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Paesi e piazze in 3D",
+    "passo": "Creare in docs/ il modulo paese3d.js che legge le coordinate di Livorno da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto; collegarlo al tocco su Livorno nella mappa esistente. Per domani, versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione né foto dei follower.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Toccando Livorno sulla mappa del sito si apre la scena 3D con il terreno reale e l'animale acceso sul punto esatto del comune, la scena è pubblicata e raggiungibile online entro il 21 novembre."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Rilievo e terreno veri",
+    "passo": "Creare docs/paese3d.js e collegarlo al tocco sul comune nella mappa, provandolo solo su Livorno: ritagliare la griglia di altitudine attorno alle sue coordinate in motore/config.json (circa 10 km), trasformarla in PlaneGeometry con i vertici alzati e posizionare lo sprite SVG dell'animale sul punto esatto. Per domani, versione ridotta: solo terreno 3D con animale fisso su Livorno, senza rotazione, edifici e foto dei follower.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Toccando Livorno sulla mappa pubblicata si apre la scena 3D con il rilievo reale e l'animale acceso sul punto esatto del comune; se la rotazione non è pronta entro il 21 novembre, la versione ridotta è online così com'è."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Luci della notte in 3D",
+    "passo": "Creare in docs/ il modulo paese3d.js: legge le coordinate del comune di test (Livorno) da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto. Collegarlo al tocco sul comune nella mappa esistente; per domani, versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione, senza edifici né foto dei follower.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Toccando Livorno sulla mappa del sito si apre una vista 3D con il terreno a rilievo reale e lo sprite dell'animale acceso sul punto esatto del comune, pubblicata online entro il 21 novembre."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Materiali e texture",
+    "passo": "Creare in docs/ il modulo paese3d.js che legge le coordinate di Livorno da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto; collegarlo al tocco su Livorno nella mappa esistente. Per domani, versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione né foto dei follower.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Toccando Livorno sulla mappa si apre il terreno 3D con il rilievo reale e lo sprite dell'animale acceso sul punto esatto del comune, pubblicato sul sito entro il 21 novembre."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Camere e inquadrature 3D",
+    "passo": "Creare in docs/ il modulo paese3d.js che legge le coordinate di Livorno da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto; collegarlo al tocco su Livorno nella mappa esistente. Per uscire domani con una versione ridotta: solo terreno 3D e animale fisso su Livorno, senza rotazione, senza edifici e senza foto dei follower.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Toccando Livorno sulla mappa si apre la scena 3D con il terreno reale e lo sprite dell'animale acceso sul punto esatto del comune, la versione è pubblicata sul sito entro il 21 novembre e funziona su Livorno (poi estendibile a costa, collina e pianura)."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Animazioni 3D",
+    "passo": "Creare in docs/ il modulo paese3d.js: legge le coordinate di Livorno da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto, collegandolo al tocco su Livorno nella mappa esistente. Per uscire domani con una versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione né foto dei follower.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Toccando Livorno sulla mappa del sito si apre la scena 3D con il terreno reale e l'animale acceso sul punto esatto del comune, e la pagina è pubblicata e raggiungibile online entro il 21 novembre."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "Scene 3D per i reel",
+    "passo": "Creare in docs/ il modulo paese3d.js che legge da motore/config.json le coordinate di Livorno, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in PlaneGeometry con i vertici alzati e vi posiziona lo sprite SVG dell'animale; collegarlo al tocco su Livorno nella mappa esistente. Per domani, versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione né foto dei follower.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Toccando Livorno sulla mappa pubblicata si apre la scena 3D con il rilievo reale e l'animale acceso sul punto esatto del comune, la scena è online entro il 21 novembre; senza rotazione se il tempo non basta."
+   },
+   {
+    "giorno": "2026-11-20",
+    "ruolo": "3D leggero sul telefono",
+    "passo": "Creare in docs/ il modulo paese3d.js che legge le coordinate di Livorno da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto; collegarlo al tocco su Livorno nella mappa esistente. Per domani, versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione, edifici né foto dei follower.",
+    "file": [
+     "docs/paese3d.js",
+     "motore/config.json",
+     "docs/"
+    ],
+    "fatto_quando": "Toccando Livorno sulla mappa del sito si apre una vista 3D con il terreno a rilievo reale e lo sprite dell'animale acceso sul punto esatto del comune, pubblicata online entro il 21 novembre."
+   }
+  ]
  }
 }

@@ -512,3 +512,9 @@ Piano nuovo (da oggi): 2 reel al giorno, ognuno una promessa. 13:00 testa a test
 ## 2026-11-19 — verbale dei 7 giorni (automatico, motore/verbale.py)
 
 - 2026-11-12-1302-testa_a_testa: 5 follower in totale, 5.4 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (3) hanno una mediana di 29.0. Non riprovare così com'è: è sotto la mediana dei reel simili.
+
+
+## 2026-11-20 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-12-1811-questa_luce: 5 follower in totale, 11.7 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (4) hanno una mediana di 12.4. Non riprovare così com'è: è sotto la mediana dei reel simili.
+- 2026-11-12-2109-coppa_sorpasso: 1 follower in totale, 0.9 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (15) hanno una mediana di 13.1. Non riprovare così com'è: è sotto la mediana dei reel simili.

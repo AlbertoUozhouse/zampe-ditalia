@@ -1,0 +1,143 @@
+{
+ "id": "crescita-2026-11-20",
+ "formato": "crescita del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-20T10:17:07+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-20T10:17:07+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Si parte dai numeri veri degli ultimi 12 reel organici e dai verbali dei 7 giorni."
+  },
+  {
+   "t": "2026-11-20T10:17:10+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel «tifo» del 17/11 ha il massimo reach (3.370 account) e 535 commenti, ma solo 23 follower (6,8 ogni 1.000). Il «partita» del 19/11 ha 5.607 views e 3.840 reach ma 4,7 follower ogni 1.000: alto coinvolgimento, poca conversione. Nei verbali a 7 giorni il formato «testa_a_testa» con apertura «video vero» ha 39,1 follower ogni 1.000 (11 follower, mediana simili 29,0), mentre le versioni sotto m",
+   "dati": {
+    "osservazione": "Il reel «tifo» del 17/11 ha il massimo reach (3.370 account) e 535 commenti, ma solo 23 follower (6,8 ogni 1.000). Il «partita» del 19/11 ha 5.607 views e 3.840 reach ma 4,7 follower ogni 1.000: alto coinvolgimento, poca conversione. Nei verbali a 7 giorni il formato «testa_a_testa» con apertura «video vero» ha 39,1 follower ogni 1.000 (11 follower, mediana simili 29,0), mentre le versioni sotto mediana sono 8,0 e 5,4. «Questa_luce» ottiene 14,3 con apertura «video vero» e gancio sul nome del cane (Damon, Massa). Il reel «coppa_sorpasso» scende a 0,9 su 1.054 account raggiunti.",
+    "proposta": "Replicare il formato testa_a_testa con apertura «video vero» e gancio su due città vicine con chilometri e sfida aperta, chiudendo con la domanda sulla città e il nome del cane. Evitare le aperture a mappa su formati di gioco e le serie a lunga durata senza un cambio di ritmo, che hanno generato pochi follower nonostante il reach.",
+    "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-20T10:17:10+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato che porta più follower in proporzione è il testa_a_testa del 10/11 (11 follower, 39.1 ogni 1.000 reach a 7 giorni, mediana simili 29.0), con apertura «video vero» e gancio su due città vicine. Le serie «Paolino» portano follower ma in modo variabile (28.6 il 16/11, 8.7 il 17/11, 3.1 il 18/11). I reel «partita» e «tifo» hanno molte views (5607 e 4748) ma pochi follower ogni 1.000 (4.7 e ",
+   "dati": {
+    "osservazione": "Il formato che porta più follower in proporzione è il testa_a_testa del 10/11 (11 follower, 39.1 ogni 1.000 reach a 7 giorni, mediana simili 29.0), con apertura «video vero» e gancio su due città vicine. Le serie «Paolino» portano follower ma in modo variabile (28.6 il 16/11, 8.7 il 17/11, 3.1 il 18/11). I reel «partita» e «tifo» hanno molte views (5607 e 4748) ma pochi follower ogni 1.000 (4.7 e 6.8): l'attenzione c'è, la conversione no. Il formato «coppa_sorpasso» scende a 0.9 contro mediana 13.1, e il reel «Napoli o Monza» del 15/11 non ha portato follower (0 su 367 reach).",
+    "proposta": "Riprendere il testa_a_testa con apertura «video vero» e coppia di città a distanza ravvicinata (come Livorno-Cecina), con chiusura che chiede città e nome del cane. Evitare il formato coppa_sorpasso, che è sotto la mediana. Per le serie tipo Paolino, tenere il ritmo ma limitare le uscite a un'unica volta a settimana, visto il calo dal 16 al 18 novembre.",
+    "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-20T10:17:10+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato più forte per nuovi follower è il testa_a_testa del 10 novembre: 11 follower ogni 281 account raggiunti a 7 giorni, 39.1 ogni 1.000, contro una mediana dei simili di 29.0 (un solo confronto). Il partita del 19 novembre (5.607 views) ha portato 18 follower, ma solo 4.7 ogni 1.000 account: tanta visibilità, conversione bassa. Il formato questa_luce del 9 novembre ha 13.8 ogni 1.000, sopra",
+   "dati": {
+    "osservazione": "Il formato più forte per nuovi follower è il testa_a_testa del 10 novembre: 11 follower ogni 281 account raggiunti a 7 giorni, 39.1 ogni 1.000, contro una mediana dei simili di 29.0 (un solo confronto). Il partita del 19 novembre (5.607 views) ha portato 18 follower, ma solo 4.7 ogni 1.000 account: tanta visibilità, conversione bassa. Il formato questa_luce del 9 novembre ha 13.8 ogni 1.000, sopra la sua mediana di 6.4. I formati più deboli sono coppa_sorpasso (0.9 ogni 1.000 contro mediana 13.1) e il testa_a_testa del 11 e 12 novembre (8.0 e 5.4, sotto la mediana di 29.0 e 34.0). Le serie Paolino hanno conversione tra 3.1 e 8.7 ogni 1.000, sotto la mediana dei reel simili di questo progetto.",
+    "proposta": "Ripetere il testa_a_testa del 10 novembre (apertura video vero, gancio su una coppia di città vicine con chilometri e sfida, chiusura che chiede città e nome del cane) e alternarlo a un questa_luce con apertura video vero, che è il formato più solido per conversione. Evitare il coppa_sorpasso e le serie Paolino finché non cambia la conversione.",
+    "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-20T10:17:11+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reparto ha pubblicato 11 reel nell'ultimo periodo, e i follower arrivati sono in calo. Il formato tifo del 17/11 ha raggiunto 3.370 account e 535 commenti, ma ha portato solo 23 follower (6,8 ogni 1.000). Il Campionato delle Zampe (18-19/11) ha prodotto il maggior engagement (5.607 views, 454 commenti sul finale) con 18 follower per ciascuno dei due reel. Le serie Paolino hanno un rendimento ba",
+   "dati": {
+    "osservazione": "Il reparto ha pubblicato 11 reel nell'ultimo periodo, e i follower arrivati sono in calo. Il formato tifo del 17/11 ha raggiunto 3.370 account e 535 commenti, ma ha portato solo 23 follower (6,8 ogni 1.000). Il Campionato delle Zampe (18-19/11) ha prodotto il maggior engagement (5.607 views, 454 commenti sul finale) con 18 follower per ciascuno dei due reel. Le serie Paolino hanno un rendimento basso (3,1 e 6,3 ogni 1.000 account, con 5 follower per l'ultimo). Il dato più chiaro è nei verbali: i testa_a_testa con apertura video vero e chiusura che chiede città e nome (10/11: 39,1 ogni 1.000, contro una mediana di 29,0) e i questa_luce con apertura video vero (17/11 non incluso; 11/11: 14,3 contro mediana 11,1). I reel con apertura 'mappa' e gancio generico nei formati coppa_sorpasso (0,9 ogni 1.000, sotto la mediana di 13,1) e testa_a_testa del 11-12/11 (8,0 e 5,4, sotto mediana) hanno invece reso meno. Sul campione dei verbali restano pochi reel per formato, quindi le conclusioni sono indicative.",
+    "proposta": "Domani usare il formato testa_a_testa con apertura video vero (era il formato con il miglior rapporto follower/reach nei verbali), gancio con due città vicine e distanza precisa, e chiusura che chiede città e nome del cane, sul modello del reel del 10/11. Evitare aperture a mappa con gancio generico. Monitorare follower a 6 ore e a 7 giorni per confermare il dato su un campione più ampio.",
+    "gancio": "Pistoia contro Quarrata: 14 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-20T10:17:13+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato 'partita' ha la reach più alta del periodo (3.840 account e 454 commenti il 19/11), ma follower_ogni_1000 scende da 9.4 (18/11) a 4.7 (19/11): più pubblico raggiunto, meno nuovi follower per ogni 1.000 account. Il formato 'serie' con la chiusura 'Domani: il bagno o il veterinario?' è in calo (3.1 e 6.3) rispetto al 28.6 del reel su Paolino del 16/11, che però aveva solo 175 di reach. Ne",
+   "dati": {
+    "osservazione": "Il formato 'partita' ha la reach più alta del periodo (3.840 account e 454 commenti il 19/11), ma follower_ogni_1000 scende da 9.4 (18/11) a 4.7 (19/11): più pubblico raggiunto, meno nuovi follower per ogni 1.000 account. Il formato 'serie' con la chiusura 'Domani: il bagno o il veterinario?' è in calo (3.1 e 6.3) rispetto al 28.6 del reel su Paolino del 16/11, che però aveva solo 175 di reach. Nei verbali a 7 giorni, 'testa_a_testa' ha prodotto 39.1 follower ogni 1.000 (video vero, Livorno-Cecina) contro i 5.4 di Barletta-Molfetta (video vero, reach 925): stesso formato, apertura e voce, quindi la differenza sta soprattutto nell'argomento della sfida. 'questa_luce' con apertura 'video vero' oscilla tra 11.1 e 14.3, sopra la mediana, mentre 'coppa_sorpasso' si ferma a 0.9.",
+    "proposta": "Domani riprova il formato 'testa_a_testa' con apertura 'video vero' e una coppia di città vicine e di pari dimensione, come Livorno-Cecina che ha dato 39.1 follower ogni 1.000. Per il secondo reel, ripeti 'questa_luce' con apertura 'video vero' e voce, che tiene sopra la mediana. Evita di ripetere la chiusura 'Domani: il bagno o il veterinario?' finché il dato resta sotto 10.",
+    "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-20T10:17:13+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel più visto (Finale Inter-Milan, 5607 views, 3840 reach, 454 commenti) ha portato solo 18 follower, cioè 4,7 ogni 1.000 account raggiunti: alto engagement, conversione bassa. Le serie «Paolino» hanno conversioni variabili (28,6 il 16/11 su 175 reach, 3,1 il 18/11 su 966 reach). Il verdetto della Coppa (1440 reach) ha portato 2 follower (1,4 ogni 1.000). Nei verbali a 7 giorni, il testa_a_tes",
+   "dati": {
+    "osservazione": "Il reel più visto (Finale Inter-Milan, 5607 views, 3840 reach, 454 commenti) ha portato solo 18 follower, cioè 4,7 ogni 1.000 account raggiunti: alto engagement, conversione bassa. Le serie «Paolino» hanno conversioni variabili (28,6 il 16/11 su 175 reach, 3,1 il 18/11 su 966 reach). Il verdetto della Coppa (1440 reach) ha portato 2 follower (1,4 ogni 1.000). Nei verbali a 7 giorni, il testa_a_testa del 10/11 ha fatto 39,1 ogni 1.000 (mediana simili 29,0), mentre quello dell'11/11 e del 12/11 sono sotto la mediana. Il formato questa_luce del 11/11 (video vero, gancio con nome del cane) è sopra la mediana (14,3 vs 11,1).",
+    "proposta": "Riprovare un testa_a_testa con apertura «video vero», gancio con due città vicine e chiusura che chiede città e nome del cane, perché questa combinazione è quella che ha superato la mediana. Evitare di affidarsi solo ai picchi di commenti del formato tifo/partita: generano interazione ma pochi follower. Per la serie Paolino, legare la chiusura a un'azione concreta (decidere il prossimo passo) ha funzionato meglio del puro appello.",
+    "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-20T10:17:13+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il dato più forte è il reel «testa_a_testa» del 10 novembre (apertura «video vero», gancio sulla sfida Livorno-Cecina): 11 follower su 281 account raggiunti a 7 giorni, cioè 39.1 ogni 1.000, contro una mediana dei simili di 29.0. Al contrario, il «coppa_sorpasso» del 12 novembre ha portato 1 follower su 1.054 account (0.9 ogni 1.000, sotto la mediana di 13.1), e il «testa_a_testa» dell'11 novembre",
+   "dati": {
+    "osservazione": "Il dato più forte è il reel «testa_a_testa» del 10 novembre (apertura «video vero», gancio sulla sfida Livorno-Cecina): 11 follower su 281 account raggiunti a 7 giorni, cioè 39.1 ogni 1.000, contro una mediana dei simili di 29.0. Al contrario, il «coppa_sorpasso» del 12 novembre ha portato 1 follower su 1.054 account (0.9 ogni 1.000, sotto la mediana di 13.1), e il «testa_a_testa» dell'11 novembre ne ha portati 3 ogni 1.000 (8.0, mediana 34.0). Nei reel recenti del 17-19 novembre il tasso è sceso: il «tifo» del 17 ha 6.8 ogni 1.000 con 3.370 account raggiunti, il «partita» del 19 ha 4.7 ogni 1.000 con 3.840 account. Il dato più evidente è che i commenti crescono molto (535 nel tifo, 454 nella partita del 19) senza trasformarsi in follower proporzionalmente.",
+    "proposta": "Tornare al formato «testa_a_testa» con apertura «video vero» e una sfida tra due comuni vicini, chiusura che chiede città e nome del cane. Accompagnarlo con un gancio che incentivi a seguire la serie per un motivo concreto, ad esempio la prossima sfida. Evitare di ripetere «coppa_sorpasso» e le chiusure generiche sul campionato, che hanno dato poca crescita. Tenere sotto controllo i follower ogni 1.000 account nei primi 7 giorni prima di ampliare.",
+    "gancio": "Pisa contro Cascina: 24 chilometri, e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-20T10:17:14+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il reel più visto (Campionato delle Zampe 'partita' del 19/11, 5.607 views, 454 commenti) ha portato 18 follower nel periodo misurato, cioè 4,7 ogni 1.000 account raggiunti: il volume di commenti non si traduce in follower. Nei verbali a 7 giorni, il 'testa_a_testa' di Livorno-Cecina (10/11) ha avuto 39,1 follower ogni 1.000 raggiunti, sopra la mediana dei simili (29,0), mentre il 'testa_a_testa' ",
+   "dati": {
+    "osservazione": "Il reel più visto (Campionato delle Zampe 'partita' del 19/11, 5.607 views, 454 commenti) ha portato 18 follower nel periodo misurato, cioè 4,7 ogni 1.000 account raggiunti: il volume di commenti non si traduce in follower. Nei verbali a 7 giorni, il 'testa_a_testa' di Livorno-Cecina (10/11) ha avuto 39,1 follower ogni 1.000 raggiunti, sopra la mediana dei simili (29,0), mentre il 'testa_a_testa' di Giugliano-Castellammare (11/11) è a 8,0, sotto la mediana di 34,0. Il formato 'questa_luce' con gancio su un nome di animale e una voce narrante (Massa, Damon: 14,3, sopra la mediana 11,1) funziona meglio della media. I 'coppa_sorpasso' hanno solo 0,9 ogni 1.000 su 1.054 raggiunti, il dato più basso.",
+    "proposta": "Riprovare il formato 'questa_luce' con apertura 'video vero' e gancio su un singolo animale con nome e razza, chiusura che invita a seguire per la prossima luce. Evitare i 'coppa_sorpasso' e i confronti tra città senza un animale protagonista. Per i testa-a-testa, tenere il formato solo se il gancio è costruito su una città dove ci sono già animali registrati nel progetto.",
+    "gancio": "Questa luce è di Damon, a Massa: sai chi è?"
+   }
+  },
+  {
+   "t": "2026-11-20T10:17:17+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato «testa_a_testa» ha un rendimento molto variabile: il 2026-11-10 ha portato 11 follower ogni 1.000 account raggiunti (39.1, sopra la mediana di 29.0), mentre il 2026-11-12 ne ha portati solo 5 ogni 1.000 (5.4, sotto la mediana di 29.0) con un reach di 925. Il formato «questa_luce» oscilla tra 11.1 e 14.3 (con 11.7 il 2026-11-12, appena sotto la mediana 12.4). Il formato «coppa_sorpasso» ",
+   "dati": {
+    "osservazione": "Il formato «testa_a_testa» ha un rendimento molto variabile: il 2026-11-10 ha portato 11 follower ogni 1.000 account raggiunti (39.1, sopra la mediana di 29.0), mentre il 2026-11-12 ne ha portati solo 5 ogni 1.000 (5.4, sotto la mediana di 29.0) con un reach di 925. Il formato «questa_luce» oscilla tra 11.1 e 14.3 (con 11.7 il 2026-11-12, appena sotto la mediana 12.4). Il formato «coppa_sorpasso» è il più debole: 0.9 follower ogni 1.000 con reach 1054, contro una mediana di 13.1. Nei reel degli ultimi giorni, le serie «Paolino» scendono da 8.7 a 3.1 e 6.3 follower ogni 1.000, e i reel «partita» e «tifo» hanno reach alto ma pochi follower (4.7–9.4 ogni 1.000), con commenti molto numerosi.",
+    "proposta": "Tornare al «testa_a_testa» con apertura «video vero» e chiusura che chiede città e nome del cane, come nel reel che ha reso di più, ma con una coppia di comuni vicini e possibilmente di regione diversa dalle ultime, per evitare di ripetere lo stesso pubblico. Evitare il «coppa_sorpasso» finché non cambia impostazione. Per la «questa_luce», riprovare la combinazione di apertura «video vero» con gancio sul proprietario e cane specifici. Non aumentare la frequenza delle serie «Paolino» senza un gancio nuovo.",
+    "gancio": "Coppia di comuni vicini: uno contro l'altro, con i chilometri tra loro: e la sfida è aperta."
+   }
+  },
+  {
+   "t": "2026-11-20T10:17:21+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Per domani: gancio «Livorno contro Cecina: 32 chilometri, e la sfida è aperta.», chiusura «Di che città sei? Scrivi la città e il nome del tuo cane.». Dato: Il testa_a_testa del 10/11 (Livorno-Cecina, apertura «video vero») ha fatto 39,1 follower ogni 1.000 account raggiunti a 7 giorni, contro mediana dei simili 29,0. Attenzione: è un solo reel con 281 account raggiunti (11 follower), quindi il dato è indicativo. I testa_a_testa dell'11 e 12/11 sono scesi a 8,0 e 5,4, per cui il risultato va ritestato e confermato a 7 giorni.",
+   "dati": {
+    "pubblico": "Proprietari di cani e amanti degli animali di città vicine tra loro, da coinvolgere con la sfida di campanile e il nome del loro cane. Il target è chi non ci segue ancora, non chi commenta soltanto.",
+    "gancio": "Livorno contro Cecina: 32 chilometri, e la sfida è aperta.",
+    "motivo_per_seguire": "Ogni giorno una nuova sfida tra due città vicine, e il tuo cane può farla vincere: segui per sapere chi sorpassa chi.",
+    "chiusura": "Di che città sei? Scrivi la città e il nome del tuo cane.",
+    "da_riprovare": "Testa_a_testa con apertura «video vero» e coppia di città vicine con chilometri indicati e sfida aperta. In seconda battuta, questa_luce con apertura «video vero» e gancio sul nome del cane (Damon, Massa).",
+    "da_evitare": "Coppa_sorpasso (0,9 follower ogni 1.000 contro mediana 13,1), aperture a mappa con gancio generico e formati di tifo/partita puntati solo sui commenti. Serie Paolino senza un gancio nuovo.",
+    "dato": "Il testa_a_testa del 10/11 (Livorno-Cecina, apertura «video vero») ha fatto 39,1 follower ogni 1.000 account raggiunti a 7 giorni, contro mediana dei simili 29,0. Attenzione: è un solo reel con 281 account raggiunti (11 follower), quindi il dato è indicativo. I testa_a_testa dell'11 e 12/11 sono scesi a 8,0 e 5,4, per cui il risultato va ritestato e confermato a 7 giorni."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 74878,
+ "fine": "2026-11-20T10:17:21+00:00"
+}
