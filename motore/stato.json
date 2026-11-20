@@ -2866,6 +2866,7 @@
 "17989698879081004",
 "17989766991073093",
 "17989912482116996",
+"17989945545092273",
 "17990040135091980",
 "17990231676086107",
 "17990242164081296",
@@ -7874,6 +7875,7 @@
 "18122397730740127",
 "18122399176737937",
 "18122407018949033",
+"18122436916972392",
 "18122448206518283",
 "18122449741957266",
 "18122451380283065",
@@ -12112,7 +12114,9 @@
 ],
 "risposte": [
 1795152571.9867945,
-1795153453.2301576
+1795153453.2301576,
+1795155110.66913,
+1795155114.81537
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -13017,7 +13021,7 @@
 "thomas_dei_giudici": "2026-10-29",
 "ale.er.braziliano": "2026-10-29",
 "ale.sala_013": "2026-10-29",
-"nicolo.righettii": "2026-11-01",
+"nicolo.righettii": "2026-11-20",
 "giu.se100": "2026-11-15",
 "annisalessandro13": "2026-10-29",
 "ema.rotella": "2026-10-29",
@@ -16551,7 +16555,7 @@
 "nicolas.balzano": 20,
 "giorgia.patra": 30,
 "____.irinaaa___": 30,
-"nicolo.righettii": 30,
+"nicolo.righettii": 40,
 "benedetta.maitilasso": 40,
 "andre_love_12": 20,
 "gielia_12": 50,
@@ -27788,7 +27792,7 @@
 "citta": "Roma",
 "gol": {
 "roma": 83,
-"lazio": 36
+"lazio": 38
 },
 "marcatori": [
 "pat_nog.1",
@@ -27909,7 +27913,9 @@
 "melissa_lodato_",
 "__manuelpiredda__",
 "cariota_mattia",
-"landi_l0"
+"landi_l0",
+"ludwiglindback",
+"nicolo.righettii"
 ],
 "inizio": "2026-11-19T12:35+01:00",
 "fine": "2026-11-20T12:30+01:00"
@@ -28611,6 +28617,14 @@
 "sq": "roma"
 },
 "landi_l0": {
+"g": 1,
+"sq": "lazio"
+},
+"ludwiglindback": {
+"g": 1,
+"sq": "lazio"
+},
+"nicolo.righettii": {
 "g": 1,
 "sq": "lazio"
 }
