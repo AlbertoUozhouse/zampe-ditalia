@@ -3166,6 +3166,7 @@
 "17999225094104900",
 "17999246727046422",
 "17999256096045390",
+"17999277305868056",
 "17999292843060926",
 "17999305832830962",
 "17999409972062414",
@@ -12202,8 +12203,8 @@
 "18798213136033257"
 ],
 "risposte": [
-1795169999.9484918,
-1795170805.7690551
+1795170805.7690551,
+1795174001.7087545
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -14544,7 +14545,8 @@
 "roberto___dambrosio": "2026-11-20",
 "14.rritz___": "2026-11-20",
 "trevisvinotti777": "2026-11-20",
-"diegolagumdzija": "2026-11-20"
+"diegolagumdzija": "2026-11-20",
+"andreapedon": "2026-11-20"
 },
 "media_letti": {},
 "pezzi": {
@@ -21667,11 +21669,11 @@
 "601da245633712fe",
 "fd30711176d189a4",
 "f79c149d810af13c",
-"bdcd213255f07197"
+"bdcd213255f07197",
+"99b3bcc810a4df16"
 ],
 "privati_ora": [
-1795165111.2005508,
-1795165926.0181105
+1795174001.7087784
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -25155,7 +25157,7 @@
 "Lecce|LE": 8,
 "San Donaci|BR": 1,
 "Cremona|CR": 1,
-"Verona|VR": 2,
+"Verona|VR": 4,
 "Mergozzo|VB": 1,
 "Sant'Elpidio a Mare|FM": 2,
 "Balvano|PZ": 1,
@@ -26649,14 +26651,21 @@
 "Verona|VR": {
 "u": [
 "francesca.colognato",
-"ciaomondo6628"
+"ciaomondo6628",
+"andreapedon"
 ],
 "c": [
 "18107676938178980",
-"18116050417850104"
+"18116050417850104",
+"17999277305868056"
 ],
-"chiuse": 0,
-"log": []
+"chiuse": 1,
+"log": [
+{
+"t": "2026-11-20T11:26+00:00",
+"prova": 1
+}
+]
 },
 "Mergozzo|VB": {
 "u": [
@@ -27194,7 +27203,8 @@
 "14.rritz___|animale|luna",
 "trevisvinotti777|animale|rubble",
 "trevisvinotti777|animale|pallino",
-"diegolagumdzija|animale|amanda"
+"diegolagumdzija|animale|amanda",
+"andreapedon|animale|rex"
 ]
 },
 "gara_follower": [
@@ -27559,6 +27569,11 @@
 {
 "k": "Roma|RM",
 "t": "2026-11-20T06:52+00:00",
+"turno": 2
+},
+{
+"k": "Verona|VR",
+"t": "2026-11-20T11:26+00:00",
 "turno": 2
 }
 ],
@@ -27965,7 +27980,7 @@
 "citta": "Roma",
 "gol": {
 "roma": 94,
-"lazio": 52
+"lazio": 53
 },
 "marcatori": [
 "pat_nog.1",
@@ -28113,7 +28128,8 @@
 "_.17cicciioo17._",
 "sofia.sardella_8",
 "sbrennaandrea",
-"__arianna._17"
+"__arianna._17",
+"andreapedon"
 ],
 "inizio": "2026-11-19T12:35+01:00",
 "fine": "2026-11-20T12:30+01:00"
@@ -28923,6 +28939,10 @@
 "sq": "roma"
 },
 "__arianna._17": {
+"g": 1,
+"sq": "lazio"
+},
+"andreapedon": {
 "g": 1,
 "sq": "lazio"
 }
