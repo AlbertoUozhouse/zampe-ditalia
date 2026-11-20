@@ -1,14 +1,5 @@
 [
  {
-  "id": "crescita-2026-11-12",
-  "formato": "crescita del giorno",
-  "modalita": "operativa",
-  "inizio": "2026-11-12T10:17:32+00:00",
-  "stato": "fatto",
-  "fine": "2026-11-12T10:17:45+00:00",
-  "scambi": 11
- },
- {
   "id": "innovazione-2026-11-12",
   "formato": "innovazione del giorno",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "fatto",
   "fine": "2026-11-20T10:17:37+00:00",
   "scambi": 19
+ },
+ {
+  "id": "2026-11-20-1322-partita",
+  "formato": "partita",
+  "modalita": "operativa",
+  "inizio": "2026-11-20T12:22:37+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-20T12:27:34+00:00",
+  "scambi": 128
  }
 ]

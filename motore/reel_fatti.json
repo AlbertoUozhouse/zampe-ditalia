@@ -89,7 +89,6 @@
   "Napoli"
  ],
  "temi": [
-  "tramonto",
   "neon",
   "giorno",
   "tramonto",
@@ -98,9 +97,10 @@
   "giorno",
   "tramonto",
   "aurora",
-  "giorno"
+  "giorno",
+  "notte"
  ],
- "variante_n": 56,
+ "variante_n": 57,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -157,7 +157,8 @@
   "2026-11-18-1316-partita": "voce-fissa-80",
   "2026-11-18-2101-serie": "voce-fissa-92",
   "2026-11-19-1312-partita": "voce-fissa-80",
-  "2026-11-19-2103-serie": "voce-fissa-92"
+  "2026-11-19-2103-serie": "voce-fissa-92",
+  "2026-11-20-1322-partita": "voce-fissa-80"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -1002,7 +1003,13 @@
   "gioi_lazze": "2026-11-19",
   "lollogatta": "2026-11-19",
   "mariacristinaa.aa": "2026-11-19",
-  "violasophienobile_": "2026-11-19"
+  "violasophienobile_": "2026-11-19",
+  "edo_vigna_": "2026-11-20",
+  "emanueleali__": "2026-11-20",
+  "ercaccia_andrea_": "2026-11-20",
+  "joeloliva014": "2026-11-20",
+  "marassi_17": "2026-11-20",
+  "marinanespeca": "2026-11-20"
  },
  "serie_storia": [
   {
