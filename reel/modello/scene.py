@@ -993,12 +993,12 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
         js.append(f'    tl.fromTo("#{cid}-ni", {{ y: 60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0.3);')
         if numero.get("sotto"): js.append(f'    tl.fromTo("#{cid}-ns", {{ scale: 0.2, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)" }}, 0.6);')
     if voto:
-        pc = max(0, min(100, int(voto.get("pc", 0))))
+        pc = max(0, min(100, int(voto.get("pc", 0)))); con_pc = "pc" in voto and voto["pc"] is not None  # 21/11: senza voti niente barra (era «TV 0%»)
         corpo.append(f'<div class="vt"><div class="h" id="{cid}-vh">AVETE SCELTO</div><div class="p" id="{cid}-vp">{ESC(voto["parola"])}</div>'
-                     f'<div class="bar" id="{cid}-vb"><i id="{cid}-vi" style="width:{pc}%"></i><em>{ESC(voto["chiave"])} {pc}%</em></div></div>')
+                     + (f'<div class="bar" id="{cid}-vb"><i id="{cid}-vi" style="width:{pc}%"></i><em>{ESC(voto["chiave"])} {pc}%</em></div>' if con_pc else "") + '</div>')
         js.append(f'    tl.fromTo("#{cid}-vh", {{ y: -60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0.05);')
         js.append(f'    tl.fromTo("#{cid}-vp", {{ scale: 0.2, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.4)" }}, 0.35);')
-        js.append(f'    tl.fromTo("#{cid}-vb", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.2 }}, 0.7); tl.fromTo("#{cid}-vi", {{ width: "0%" }}, {{ width: "{pc}%", duration: 0.8, ease: "power2.out" }}, 0.75);')
+        if con_pc: js.append(f'    tl.fromTo("#{cid}-vb", {{ opacity: 0 }}, {{ opacity: 1, duration: 0.2 }}, 0.7); tl.fromTo("#{cid}-vi", {{ width: "0%" }}, {{ width: "{pc}%", duration: 0.8, ease: "power2.out" }}, 0.75);')
     if commento:
         corpo.append(f'<div class="cm" id="{cid}-c"><div class="q">«{ESC(commento["t"])}»' + (f'<small>♥ {commento["cuori"]}</small>' if commento.get("cuori") else "")
                      + f'</div><div class="tg" id="{cid}-ct"><span>PAROLE VOSTRE</span></div></div>')
