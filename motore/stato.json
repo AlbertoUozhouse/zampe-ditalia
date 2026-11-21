@@ -4377,6 +4377,7 @@
 "18060056681797940",
 "18060121586559908",
 "18060152609560090",
+"18060210545584914",
 "18060442463661701",
 "18060661580795866",
 "18060757247799143",
@@ -8233,6 +8234,7 @@
 "18123817979311710",
 "18123819013896180",
 "18123821224932021",
+"18123849988943905",
 "18123855812059357",
 "18123979441972069",
 "18123986842934305",
@@ -10974,6 +10976,7 @@
 "18222338626346703",
 "18222375271352300",
 "18222390772351319",
+"18222417952349746",
 "18222452740355316",
 "18222584023345880",
 "18222749263350139",
@@ -12533,7 +12536,9 @@
 "18798213136033257"
 ],
 "risposte": [
-1795260580.568285
+1795264468.4221766,
+1795264472.697393,
+1795264477.5282507
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -14863,7 +14868,7 @@
 "marinanespeca": "2026-11-19",
 "joeloliva014": "2026-11-19",
 "andrea_71609": "2026-11-20",
-"angelotortorella16": "2026-11-19",
+"angelotortorella16": "2026-11-21",
 "asia_buzzi_06": "2026-11-19",
 "davide__santangelo___12": "2026-11-19",
 "nik_chi10": "2026-11-19",
@@ -14896,7 +14901,8 @@
 "lorenza_polidori": "2026-11-21",
 "samuel1608r": "2026-11-21",
 "boeroedoardo": "2026-11-21",
-"viteelonora009": "2026-11-21"
+"viteelonora009": "2026-11-21",
+"vale_riovi": "2026-11-21"
 },
 "media_letti": {},
 "pezzi": {
@@ -17351,7 +17357,7 @@
 "joeloliva014": 10,
 "loryto_2013": 10,
 "marinanespeca": 10,
-"angelotortorella16": 10,
+"angelotortorella16": 15,
 "d_day_999": 10,
 "roberto___dambrosio": 10,
 "_matteo.mancini____": 10,
@@ -22082,14 +22088,11 @@
 "70abef2b86825184",
 "144fab053b88e317",
 "fafafcfbd984da9e",
-"c1b13e32fcaf3b07"
+"c1b13e32fcaf3b07",
+"d5a8517f32da274f"
 ],
 "privati_ora": [
-1795253943.5490615,
-1795255770.7982566,
-1795256676.59607,
-1795256682.1279457,
-1795256687.8046129
+1795264477.5282795
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -22148,7 +22151,7 @@
 "2026-11-18": 2010,
 "2026-11-19": 2041,
 "2026-11-20": 2062,
-"2026-11-21": 2071
+"2026-11-21": 2072
 },
 "gioco_pappa": {
 "2026-W46": {
@@ -23526,6 +23529,10 @@
 [
 "2026-11-21T12:20+00:00",
 2071
+],
+[
+"2026-11-21T12:34+00:00",
+2072
 ]
 ],
 "coppa": {
@@ -25730,7 +25737,8 @@
 "Reggio nell'Emilia|RE": 1,
 "Rovereto|TN": 2,
 "Teramo|TE": 1,
-"Rocca Canavese|TO": 1
+"Rocca Canavese|TO": 1,
+"Sassari|SS": 1
 },
 "giocatori": {
 "Genova|GE": [
@@ -26477,6 +26485,15 @@
 "t": "2026-11-21T10:24+00:00",
 "sorpasso": "Rocca Canavese|TO",
 "su": "Roccamorice|PE",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-21T12:34+00:00",
+"sorpasso": "Sassari|SS",
+"su": "San Vincenzo|LI",
 "punti": [
 1,
 0
@@ -27807,6 +27824,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Sassari|SS": {
+"u": [
+"vale_riovi"
+],
+"c": [
+"18060210545584914"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -27961,7 +27988,8 @@
 "lorenza_polidori|animale|tommy",
 "samuel1608r|animale|dark",
 "boeroedoardo|animale|ambra",
-"viteelonora009|animale|lilith"
+"viteelonora009|animale|lilith",
+"vale_riovi|animale|cooper"
 ]
 },
 "gara_follower": [
@@ -28779,10 +28807,13 @@
 "stadio": "STADIO OLIMPICO",
 "citta": "Roma",
 "gol": {
-"roma": 0,
-"napoli": 0
+"roma": 1,
+"napoli": 1
 },
-"marcatori": [],
+"marcatori": [
+"claudio_cola05",
+"angelotortorella16"
+],
 "inizio": "2026-11-21T12:44+01:00",
 "fine": "2026-11-22T12:30+01:00"
 },
@@ -29433,7 +29464,7 @@
 "sq": "roma"
 },
 "claudio_cola05": {
-"g": 1,
+"g": 2,
 "sq": "roma"
 },
 "__00samueleviola__": {
@@ -29975,6 +30006,10 @@
 "d4do_alle": {
 "g": 1,
 "sq": "genoa"
+},
+"angelotortorella16": {
+"g": 1,
+"sq": "napoli"
 }
 }
 }
