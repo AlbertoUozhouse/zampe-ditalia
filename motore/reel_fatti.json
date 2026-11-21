@@ -89,7 +89,6 @@
   "Napoli"
  ],
  "temi": [
-  "tramonto",
   "notte",
   "neon",
   "giorno",
@@ -98,9 +97,10 @@
   "giorno",
   "notte",
   "neon",
-  "tramonto"
+  "tramonto",
+  "aurora"
  ],
- "variante_n": 59,
+ "variante_n": 60,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -160,7 +160,8 @@
   "2026-11-19-2103-serie": "voce-fissa-92",
   "2026-11-20-1322-partita": "voce-fissa-80",
   "2026-11-20-2103-serie": "voce-fissa-92",
-  "2026-11-21-1305-partita": "voce-fissa-80"
+  "2026-11-21-1305-partita": "voce-fissa-80",
+  "2026-11-21-2104-serie": "voce-fissa-92"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -1059,6 +1060,17 @@
    ],
    "famiglia": 1,
    "data": "2026-11-20",
+   "rinvio": "tv"
+  },
+  {
+   "ep": "concorso",
+   "giorno": 5,
+   "opzioni": [
+    "tv",
+    "alexa"
+   ],
+   "famiglia": 2,
+   "data": "2026-11-21",
    "rinvio": "tv"
   }
  ]
