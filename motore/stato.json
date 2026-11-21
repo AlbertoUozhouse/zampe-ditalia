@@ -4178,6 +4178,7 @@
 "18039039659847540",
 "18039050021908629",
 "18039053006845534",
+"18039107939887297",
 "18039151070848993",
 "18039164942662944",
 "18039182582853290",
@@ -12673,12 +12674,11 @@
 "18798213136033257"
 ],
 "risposte": [
-1795278448.995106,
-1795279272.4056077,
 1795280071.6310594,
 1795280079.1801336,
 1795280971.8365014,
-1795280973.0330524
+1795280973.0330524,
+1795282665.157724
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -15047,7 +15047,8 @@
 "alessandro61934": "2026-11-21",
 "ds16_off": "2026-11-21",
 "stacado59": "2026-11-21",
-"amulvoni": "2026-11-21"
+"amulvoni": "2026-11-21",
+"forinogian": "2026-11-21"
 },
 "media_letti": {},
 "pezzi": {
@@ -17523,7 +17524,8 @@
 "antonio.fortugnoo": 5,
 "tanoilcupido24": 15,
 "riccardo9_._chiruu": 10,
-"stacado59": 10
+"stacado59": 10,
+"dave_brock_82": 20
 },
 "inviti_giorno": {
 "2026-11-14": {
@@ -18450,7 +18452,8 @@
 "vale_riovi": "premiato",
 "tanoilcupido24": "premiato",
 "riccardo9_._chiruu": "premiato",
-"stacado59": "premiato"
+"stacado59": "premiato",
+"dave_brock_82": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -18549,7 +18552,8 @@
 "3a0a7cf58450a4c0",
 "f0db08759196397e",
 "3a6d2049f2bbdf20",
-"2a85c8235c5ac660"
+"2a85c8235c5ac660",
+"840a076925ed11af"
 ],
 "solleciti": {
 "chri.marini": "2026-10-27",
@@ -22260,11 +22264,12 @@
 "e417fe791441706a",
 "2bffa7169e9d13d6",
 "431a9660ff625920",
-"1f03c625b15631a7"
+"1f03c625b15631a7",
+"0987bbf4f4ee2a7c"
 ],
 "privati_ora": [
-1795276771.1391969,
-1795280079.1801639
+1795280079.1801639,
+1795282665.1577537
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -22323,7 +22328,7 @@
 "2026-11-18": 2010,
 "2026-11-19": 2041,
 "2026-11-20": 2062,
-"2026-11-21": 2075
+"2026-11-21": 2076
 },
 "gioco_pappa": {
 "2026-W46": {
@@ -23745,6 +23750,10 @@
 [
 "2026-11-21T16:54+00:00",
 2075
+],
+[
+"2026-11-21T17:37+00:00",
+2076
 ]
 ],
 "coppa": {
@@ -25954,7 +25963,9 @@
 "Pistoia|PT": 4,
 "Firenze|FI": 4,
 "Lucera|FG": 1,
-"Olbia|SS": 1
+"Olbia|SS": 1,
+"San Valentino Torio|SA": 1,
+"Settala|MI": 2
 },
 "giocatori": {
 "Genova|GE": [
@@ -26756,6 +26767,24 @@
 "punti": [
 1,
 0
+]
+},
+{
+"t": "2026-11-21T17:37+00:00",
+"sorpasso": "San Valentino Torio|SA",
+"su": "San Severo|FG",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-21T17:41+00:00",
+"sorpasso": "Settala|MI",
+"su": "Fiano|TO",
+"punti": [
+2,
+1
 ]
 }
 ],
@@ -28137,6 +28166,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"San Valentino Torio|SA": {
+"u": [
+"forinogian"
+],
+"c": [
+"18039107939887297"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -28299,7 +28338,8 @@
 "riccardo9_._chiruu|animale|alaska",
 "stacado59|animale|zero",
 "mottagiammi1624|animale|giammy",
-"amulvoni|animale|zampa"
+"amulvoni|animale|zampa",
+"forinogian|animale|giancarlo"
 ]
 },
 "gara_follower": [
@@ -28550,6 +28590,10 @@
 {
 "k": "Firenze|FI",
 "t": "2026-11-21T16:41+00:00"
+},
+{
+"k": "Settala|MI",
+"t": "2026-11-21T17:41+00:00"
 }
 ],
 "staffette_log": [
@@ -29134,7 +29178,7 @@
 "citta": "Roma",
 "gol": {
 "roma": 19,
-"napoli": 18
+"napoli": 19
 },
 "marcatori": [
 "claudio_cola05",
@@ -29173,7 +29217,8 @@
 "luca.monaco7",
 "salvatore95880",
 "il.privv.de__mattee",
-"emmanuele_barrett"
+"emmanuele_barrett",
+"forinogian"
 ],
 "inizio": "2026-11-21T12:44+01:00",
 "fine": "2026-11-22T12:30+01:00"
@@ -30489,6 +30534,10 @@
 "sq": "roma"
 },
 "emmanuele_barrett": {
+"g": 1,
+"sq": "napoli"
+},
+"forinogian": {
 "g": 1,
 "sq": "napoli"
 }
