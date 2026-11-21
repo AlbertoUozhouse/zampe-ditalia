@@ -2489,6 +2489,7 @@
 "17967887925229447",
 "17967907884213245",
 "17968047231207505",
+"17968156368078884",
 "17968177125199753",
 "17968222404237064",
 "17968309785196193",
@@ -5110,6 +5111,7 @@
 "18084645023707284",
 "18084705947343049",
 "18084720605344417",
+"18084728162357151",
 "18084732914406135",
 "18084735473344306",
 "18084740156722337",
@@ -12727,9 +12729,9 @@
 "18798213136033257"
 ],
 "risposte": [
-1795293678.075407,
 1795295258.9780977,
-1795296804.3338494
+1795296804.3338494,
+1795297589.5929708
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -15101,7 +15103,8 @@
 "amulvoni": "2026-11-21",
 "forinogian": "2026-11-21",
 "sabrina__leo__": "2026-11-21",
-"juve_club_monteisi": "2026-11-21"
+"juve_club_monteisi": "2026-11-21",
+"contedelia51": "2026-11-21"
 },
 "media_letti": {},
 "pezzi": {
@@ -22342,11 +22345,11 @@
 "1f03c625b15631a7",
 "0987bbf4f4ee2a7c",
 "3f6da9daff2e3e37",
-"5d2843ad094ff386"
+"5d2843ad094ff386",
+"e2a0adcac9691715"
 ],
 "privati_ora": [
-1795288795.9673128,
-1795290492.238543
+1795297589.592997
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -26056,7 +26059,8 @@
 "San Valentino Torio|SA": 1,
 "Settala|MI": 2,
 "Monteiasi|TA": 1,
-"Besnate|VA": 3
+"Besnate|VA": 3,
+"Giffoni Valle Piana|SA": 1
 },
 "giocatori": {
 "Genova|GE": [
@@ -26901,6 +26905,15 @@
 "punti": [
 2,
 1
+]
+},
+{
+"t": "2026-11-21T21:46+00:00",
+"sorpasso": "Giffoni Valle Piana|SA",
+"su": "Ginosa|TA",
+"punti": [
+1,
+0
 ]
 }
 ],
@@ -28312,6 +28325,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Giffoni Valle Piana|SA": {
+"u": [
+"contedelia51"
+],
+"c": [
+"17968156368078884"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -28476,7 +28499,8 @@
 "mottagiammi1624|animale|giammy",
 "amulvoni|animale|zampa",
 "forinogian|animale|giancarlo",
-"juve_club_monteisi|animale|cuore"
+"juve_club_monteisi|animale|cuore",
+"contedelia51|animale|ottavio"
 ]
 },
 "gara_follower": [
