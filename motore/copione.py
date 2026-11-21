@@ -1871,6 +1871,21 @@ SERIE_CARTONE = {
          {"sfondo": "strada", "attori": [A("giornalista", 540, 1690, 900, ("corre",), da=-1150, a=1150)],
           "etichette": [ET("ASCOLTI: RECORD", "verde", 300, 330, -4, 62, 0.6)], "nuvole": [NV("FERMATEVI!", 560, 540, 380, "sx", 0.8)]}),
     ],
+    "concorso": [  # 21/11: gli avversari sono i cani disegnati del sito (barboncino e bassotto), Paolino e Nonna Pina sono i disegni di Alberto
+        ("Nonna Pina l'ha iscritto di nascosto al concorso di bellezza.",
+         {"sfondo": "strada", "attori": [A("nonna", 250, 1680, 940, ("entra_sx",)), A("felice", 790, 1670, 740, ("pop", "salta"), t0=0.4)],
+          "etichette": [ET("CONCORSO DI BELLEZZA", "giallo", 300, 330, -4, 60, 0.3)], "nuvole": [NV("SEI IL PIÙ BELLO!", 40, 520, 440, "sx", 0.8)]}),
+        ("Gli avversari: un barboncino profumato e un bassotto col fiocco.",
+         {"sfondo": "strada", "attori": [{"cane": {"t": "cane", "razza": "barboncino", "seme": 41}, "x": 280, "y": 1660, "h": 900, "anim": ["entra_sx", "respira"], "t0": 0.1},
+                                         {"cane": {"t": "cane", "razza": "bassotto", "seme": 17}, "x": 800, "y": 1660, "h": 900, "anim": ["entra_dx", "respira"], "t0": 0.5}],
+          "etichette": [ET("PROFUMO: 100%", "rosa", 60, 330, -4, 58, 0.4), ET("FIOCCO: ROSA", "rosa", 600, 560, 5, 54, 0.9)]}),
+        ("Paolino si rotola nel fango davanti alla giuria.",
+         {"sfondo": "strada", "attori": [A("svenuto", 540, 1690, 720, ("pop", "scrolla"))], "oggetti": [{"e": "🟤", "x": 180, "y": 1460, "z": 120, "t0": 0.4}, {"e": "🟤", "x": 800, "y": 1480, "z": 100, "t0": 0.6}],
+          "etichette": [ET("FANGO: DAPPERTUTTO", "rosso", 60, 330, -4, 60, 0.3), ET("GIURIA: SENZA PAROLE", "giallo", 520, 560, 5, 54, 1.0)], "sfx": {"t": "SPLASH!", "x": 560, "y": 760, "t0": 0.5}}),
+        ("Vince lo stesso: premio speciale, il più simpatico.",
+         {"sfondo": "strada", "attori": [A("nonna", 250, 1680, 940, ()), A("felice", 790, 1670, 740, ("pop", "salta"))], "oggetti": [{"e": "🏆", "x": 640, "y": 760, "z": 150, "t0": 0.4}],
+          "etichette": [ET("PREMIO SIMPATIA", "verde", 60, 330, -4, 64, 0.6)], "nuvole": [NV("TE L'AVEVO DETTO!", 40, 520, 460, "sx", 1.0)]}),
+    ],
     "veterinario": [
         ("Il veterinario lo aspetta. Paolino trema come una foglia.",
          {"sfondo": "veterinario", "attori": [A("vet", 810, 1690, 1040, ("entra_dx",)), A("paura", 300, 1680, 680, ("pop", "trema"), t0=0.3)],
@@ -1887,7 +1902,7 @@ SERIE_CARTONE = {
           "etichette": [ET("VETERINARIO: K.O.", "rosso", 60, 330, -4, 60, 0.6)], "sfx": {"t": "TONF!", "x": 520, "y": 560, "t0": 0.6}}),
     ],
 }
-SERIE_COLORI = {"diretta": "ro", "microfono": "ro", "star": "or", "telegiornale": "bl", "ascolti": "ve", "vuoto": "ro", "cornetto": "or", "cornetti": "or", "bar": "or", "colloquio": "or", "modulo": "ro", "sedia": "ro", "ride": "ve",  "pulci": "ve", "alito": "ve", "canile": "or", "sviene": "ro", "decidete": "or", "macchina": "ro", "fotografica": "ro", "paolino": "or", "trenta": "or", "bagno": "bl", "vasca": "bl", "spugna": "ro", "insaponato": "bl", "fradici": "bl", "scrolla": "bl", "paese": "or", "veterinario": "ro", "stetoscopio": "or",
+SERIE_COLORI = {"concorso": "or", "bellezza": "or", "fango": "ro", "simpatico": "ve", "barboncino": "bl", "bassotto": "bl", "diretta": "ro", "microfono": "ro", "star": "or", "telegiornale": "bl", "ascolti": "ve", "vuoto": "ro", "cornetto": "or", "cornetti": "or", "bar": "or", "colloquio": "or", "modulo": "ro", "sedia": "ro", "ride": "ve",  "pulci": "ve", "alito": "ve", "canile": "or", "sviene": "ro", "decidete": "or", "macchina": "ro", "fotografica": "ro", "paolino": "or", "trenta": "or", "bagno": "bl", "vasca": "bl", "spugna": "ro", "insaponato": "bl", "fradici": "bl", "scrolla": "bl", "paese": "or", "veterinario": "ro", "stetoscopio": "or",
                 "sviene": "ro", "pancia": "or", "casa": "or", "giorni": "or", "famiglia": "ve", "commenti": "or", "scappa": "ro", "trema": "ro", "mangia": "ro",
                 "felicissimo": "ve", "scelto": "or", "chiuso": "ro", "vostre": "or", "cuore": "ro", "domani": "or"}
 NUMERI_IT = ["zero", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci", "undici", "dodici", "tredici", "quattordici", "quindici", "sedici",
@@ -1925,6 +1940,7 @@ def _disegnabile(ep):
     return ep in SERIE_CARTONE and all((ROOT / "reel/assets/paolino" / f"{x['img']}.png").exists() for _, sc in SERIE_CARTONE[ep] for x in sc.get("attori", []) if x.get("img"))
 
 # 19/11: quando la scelta vincente non è ancora disegnata, la storia la rimanda a domani
+SERIE_RINVII_ANCORA = {"tv": "la troupe ha sbagliato canile, di nuovo: la TV arriva domani, promesso", "colloquio": "la famiglia ha la febbre: il colloquio slitta ancora a domani"}
 SERIE_RINVII = {"colloquio": "la famiglia ha chiamato: il colloquio è rimandato a domani", "tv": "la troupe è rimasta bloccata nel traffico: la TV arriva domani",
                 "concorso": "il concorso è rimandato a domani per pioggia", "micia": "Micia oggi dorme: ci pensa domani", "alexa": "Alexa oggi non è al parco: domani ci riprova",
                 "piazza": "la festa in piazza è rimandata a domani", "agility": "il campo dell'agility è allagato: si fa domani"}
@@ -1952,7 +1968,9 @@ def serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti_ieri, st, rinvio
                **({"famiglia_prima": famiglia_ieri} if famiglia_ieri != famiglia else {})})]
     scelto = rinvio or ep; p_sc, k_sc = SERIE_OPZIONI[scelto][1], SERIE_OPZIONI[scelto][2]
     tot = sum(voti_ieri.values()); pc = round(voti_ieri.get(scelto, 0) / tot * 100) if tot else None
-    frasi.append((f"Ieri avete scelto: {p_sc.lower()}!" + (f" Ma {SERIE_RINVII.get(rinvio, 'è rimandato a domani')}. Intanto…" if rinvio else ""),
+    gia_rinviata = rinvio and any(x.get("rinvio") == rinvio for x in st.get("serie_storia", []))  # 21/11: la seconda volta una scusa diversa
+    scusa = (SERIE_RINVII_ANCORA if gia_rinviata else SERIE_RINVII).get(rinvio, "è rimandato a domani") if rinvio else ""
+    frasi.append((f"Ieri avete scelto: {p_sc.lower()}!" + (f" Ma {scusa}. Intanto…" if rinvio else ""),
                   {**base, "sfondo": "canile", "voto": {"parola": p_sc, "chiave": k_sc, **({"pc": pc} if pc is not None else {})},
                    "attori": [A("felice", 540, 1680, 700, ("pop", "salta"), t0=0.5)],
                    **({"etichette": [ET("RIMANDATO A DOMANI!", "rosso", 120, 860, -4, 72, 1.6)]} if rinvio else {})}))
@@ -1962,7 +1980,7 @@ def serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti_ieri, st, rinvio
     for voce, sc in SERIE_CARTONE[ep]:
         frasi.append((voce, {**base, **sc}))
     frasi.append(_serie_scelta(base, a, b))
-    st["copertina"] = {"paolino": {"giorno": n, "titolo": titolo, "posa": {"bagno": "sapone", "veterinario": "paura", "fuga": "corre", "colloquio": "dolce", "tv": "felice"}.get(ep, "triste"), "giorni": giorni}}
+    st["copertina"] = {"paolino": {"giorno": n, "titolo": titolo, "posa": {"bagno": "sapone", "veterinario": "paura", "fuga": "corre", "colloquio": "dolce", "tv": "felice", "concorso": "felice"}.get(ep, "triste"), "giorni": giorni}}
     return frasi
 
 
@@ -1975,7 +1993,7 @@ def foto_sito(ep):
             foto = ROOT / f"reel/assets/zampa/{ep}-3.png"
             if foto.exists() and ep not in SERIE_CARTONE: im = Image.open(foto).convert("RGB"); im.thumbnail((540, 810))
             else:  # 16/11: Paolino a cartone, sul muro blu del canile
-                posa = Image.open(ROOT / "reel/assets/paolino" / f"{ {'bagno': 'sapone', 'veterinario': 'paura', 'inizio': 'triste', 'fuga': 'corre'}.get(ep, 'dolce') }.png").convert("RGBA"); posa.thumbnail((440, 560))
+                posa = Image.open(ROOT / "reel/assets/paolino" / f"{ {'bagno': 'sapone', 'veterinario': 'paura', 'inizio': 'triste', 'fuga': 'corre', 'concorso': 'felice'}.get(ep, 'dolce') }.png").convert("RGBA"); posa.thumbnail((440, 560))
                 im = Image.new("RGB", (540, 810), "#34436E"); im.paste(Image.new("RGB", (540, 260), "#5A4130"), (0, 550))
                 im.paste(posa, ((540 - posa.width) // 2, 700 - posa.height), posa)
             out.parent.mkdir(parents=True, exist_ok=True); im.save(out, quality=80, optimize=True, progressive=True)
@@ -2040,7 +2058,7 @@ def serie(D, rng, st):
 
 def _serie_fine(n, ep, opzioni, titolo, famiglia, a, b, frasi, storia, st):
     rv = st.pop("serie_rinvio", None)  # 19/11: la scelta vincente rimandata a domani (non si salva nello storico)
-    st["serie_storia"] = storia + [{"ep": ep, "giorno": n, "opzioni": opzioni, "famiglia": famiglia, "data": ORA.date().isoformat()}]
+    st["serie_storia"] = storia + [{"ep": ep, "giorno": n, "opzioni": opzioni, "famiglia": famiglia, "data": ORA.date().isoformat(), **({"rinvio": rv} if rv else {})}]
     st["serie_info"] = {"giorno": n, "ep": ep, "opzioni": opzioni, "parole": {k: SERIE_OPZIONI[k][2] for k in opzioni},
                         "voci": {k: list(SERIE_OPZIONI[k][:2]) for k in opzioni}, "foto": foto_sito(ep)}
     did = (f"Giorno {n} di 30 🐶 " + (f"Paolino vive in un canile, ha le pulci e un alito terribile. Ha 30 giorni per trovare una famiglia prima di Natale. Oggi la foto per l'adozione… è andata così." if n == 1 else

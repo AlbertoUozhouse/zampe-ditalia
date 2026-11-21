@@ -321,9 +321,12 @@ def main():
         if tipo == "cartone":  # 16/11 sera: Paolino a cartone, disegnato da Alberto con ChatGPT (reel/assets/paolino)
             (prog / "assets/img").mkdir(parents=True, exist_ok=True)
             for a_ in sc.get("attori", []):
-                if a_.get("cane"):  # 17/11, il Campionato delle Zampe: i cani veri dei tifosi, con la sciarpa della squadra
+                if a_.get("cane") and a_["cane"].get("sq"):  # 17/11, il Campionato delle Zampe: i cani veri dei tifosi, con la sciarpa della squadra
                     c_ = a_.pop("cane"); serve.add((c_["t"], c_["razza"], c_["seme"], c_["sq"])); soli.append((c_["t"], c_["razza"], f"{c_['seme']}-{c_['sq']}", None))
                     a_["svg"] = f"{c_['razza']}-{c_['seme']}-{c_['sq']}-solo.svg"
+                elif a_.get("cane"):  # 21/11: un cane disegnato senza sciarpa (gli avversari di Paolino al concorso)
+                    c_ = a_.pop("cane"); svg_di(c_["t"], c_["razza"], c_["seme"], serve); soli.append((c_["t"], c_["razza"], c_["seme"], None))
+                    a_["svg"] = f"{c_['razza']}-{c_['seme']}-solo.svg"
                 else: shutil.copy(ROOT / "reel/assets/paolino" / f"{a_['img']}.png", prog / "assets/img" / f"paolino-{a_['img']}.png")
         if tipo == "zampa30" and sc.get("foto"):  # 15/11 sera: la foto IA di Zampa (reel/assets/zampa, motore/zampa.py)
             sc.pop("muso", None); (prog / "assets/img").mkdir(parents=True, exist_ok=True)
