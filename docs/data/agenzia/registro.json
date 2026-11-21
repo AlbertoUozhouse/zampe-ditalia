@@ -1,5 +1,14 @@
 [
  {
+  "id": "2026-11-12-2109-coppa_sorpasso",
+  "formato": "coppa_sorpasso",
+  "modalita": "operativa",
+  "inizio": "2026-11-12T20:09:37+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-12T20:13:47+00:00",
+  "scambi": 129
+ },
+ {
   "id": "2026-11-12-2153-testa_a_testa",
   "formato": "testa_a_testa",
   "modalita": "operativa",
@@ -522,21 +531,12 @@
   "scambi": 128
  },
  {
-  "id": "crescita-2026-11-21",
-  "formato": "crescita del giorno",
+  "id": "2026-11-21-1117-serie",
+  "formato": "serie",
   "modalita": "operativa",
-  "inizio": "2026-11-21T10:16:46+00:00",
-  "stato": "fatto",
-  "fine": "2026-11-21T10:16:59+00:00",
-  "scambi": 11
- },
- {
-  "id": "innovazione-2026-11-21",
-  "formato": "innovazione del giorno",
-  "modalita": "operativa",
-  "inizio": "2026-11-21T10:17:00+00:00",
-  "stato": "fatto",
-  "fine": "2026-11-21T10:17:17+00:00",
-  "scambi": 19
+  "inizio": "2026-11-21T10:17:30+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-21T10:22:14+00:00",
+  "scambi": 128
  }
 ]
