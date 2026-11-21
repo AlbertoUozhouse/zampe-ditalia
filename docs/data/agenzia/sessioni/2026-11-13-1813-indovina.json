@@ -2213,6 +2213,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  },
+  {
+   "t": "2026-11-21T10:16:46+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 3 follower in totale, 2.7 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (18) hanno una mediana di 11.4. Non riprovare così com'è: è sotto la mediana dei reel simili.",
+   "dati": {
+    "id": "18037769600664590",
+    "file": "2026-11-13-1813-indovina",
+    "formato": "indovina",
+    "uscita": "2026-11-13T17:21:30+00:00",
+    "follower": 3,
+    "reach_7g": 1108,
+    "follower_ogni_1000": 2.7,
+    "mediana_simili": 11.4,
+    "simili": 18,
+    "scelte": {
+     "formato": "indovina",
+     "apertura": "mappa",
+     "voce": true,
+     "gancio": "Indovina la razza: tre, due, uno.",
+     "chiusura": "Quante ne hai indovinate? Rispondi con città e nome del tuo animale."
+    },
+    "esito": "3 follower in totale, 2.7 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (18) hanno una mediana di 11.4.",
+    "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [

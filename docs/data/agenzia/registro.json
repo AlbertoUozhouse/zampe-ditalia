@@ -1,23 +1,5 @@
 [
  {
-  "id": "2026-11-12-1811-questa_luce",
-  "formato": "questa_luce",
-  "modalita": "operativa",
-  "inizio": "2026-11-12T17:11:10+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-12T17:19:58+00:00",
-  "scambi": 131
- },
- {
-  "id": "2026-11-12-2109-coppa_sorpasso",
-  "formato": "coppa_sorpasso",
-  "modalita": "operativa",
-  "inizio": "2026-11-12T20:09:37+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-12T20:13:47+00:00",
-  "scambi": 129
- },
- {
   "id": "2026-11-12-2153-testa_a_testa",
   "formato": "testa_a_testa",
   "modalita": "operativa",
@@ -538,5 +520,23 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-20T20:08:41+00:00",
   "scambi": 128
+ },
+ {
+  "id": "crescita-2026-11-21",
+  "formato": "crescita del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-21T10:16:46+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-21T10:16:59+00:00",
+  "scambi": 11
+ },
+ {
+  "id": "innovazione-2026-11-21",
+  "formato": "innovazione del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-21T10:17:00+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-21T10:17:17+00:00",
+  "scambi": 19
  }
 ]

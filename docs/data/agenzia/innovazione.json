@@ -150,5 +150,15 @@
   "reel": null,
   "realismo": null,
   "perche": "Il derby Livorno-Cecina ha già dimostrato di portare follower (39,1 contro una mediana di 29,0) e si costruisce subito riusando config, minigiochi, Coppa e mappa che abbiamo, senza sviluppare un gioco da zero."
+ },
+ {
+  "giorno": "2026-11-21",
+  "reel": {
+   "idea": "Il Reel del Campanile Vero: il reel si apre con un video reale del comune, con voce che dice nome e città, e solo dopo si accende la luce sulla mappa",
+   "come_funziona": "Il reel parte da un video vero girato con il SÌ del follower (una piazza, il porto o la piazza del paese), con la voce sintetica già in uso che dice il nome dell'animale e la città. Dopo qualche secondo il video si stringe su un punto riconoscibile e sfuma sulla mappa SVG, dove la luce si accende sul comune giusto. La chiusura è «seguici e scopri se tocca al tuo animale». Il formato «questa_luce» con apertura «video vero» e voce, già sopra la mediana con Damon (14,3) e Nina (11,1), diventa il modello di tutti i reel.",
+   "primo_passo": "Partire dal caso già approvato, Damon a Massa. 1) In motore/config.json leggere le coordinate di Massa e agganciarle all'ID del video del follower. 2) Esportare dalla mappa SVG in docs/ un fotogramma finale con la luce su quelle coordinate. 3) Scrivere uno script (ffmpeg) che unisce il video vero con la voce sintetica sopra, una dissolvenza di circa 1 secondo e il fotogramma della mappa tenuto 6-8 secondi. 4) Ripetere lo stesso script con Nina a Luino per verificare che funzioni su un secondo comune prima di renderlo il modello standard.",
+   "come_misurarla": "Dopo 7 giorni: follower ogni 1.000 account raggiunti dei reel «questa_luce» con apertura «video vero», confrontati con la mediana attuale dei simili (11,1) e con la soglia di Damon (14,3). In più, la quota di reach che arriva da chi non ci segue ancora."
+  },
+  "perche": "È l'idea più completa e più facile da replicare: collega il video vero alla luce giusta tramite le coordinate in config.json e si misura anche sul pubblico nuovo, che è quello che porta follower."
  }
 ]

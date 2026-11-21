@@ -2111,6 +2111,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce con la revisione della sola squadra."
+  },
+  {
+   "t": "2026-11-21T10:16:46+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 2 follower in totale, 4.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (18) hanno una mediana di 11.4. Non riprovare così com'è: è sotto la mediana dei reel simili.",
+   "dati": {
+    "id": "18120821099069743",
+    "file": "2026-11-13-2101-gara_follower",
+    "formato": "gara_follower",
+    "uscita": "2026-11-13T20:07:15+00:00",
+    "follower": 2,
+    "reach_7g": 434,
+    "follower_ogni_1000": 4.6,
+    "mediana_simili": 11.4,
+    "simili": 18,
+    "scelte": {
+     "formato": "gara_follower",
+     "apertura": "mappa",
+     "voce": true,
+     "gancio": "Quale città ci segue di più?",
+     "chiusura": "Seguici e scrivi SEGUO con la tua città: due punti al tuo paese."
+    },
+    "esito": "2 follower in totale, 4.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (18) hanno una mediana di 11.4.",
+    "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [

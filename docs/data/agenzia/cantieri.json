@@ -8,88 +8,52 @@
   "aperto": "2026-11-20",
   "scadenza": "2026-11-22",
   "stato": "da costruire",
-  "passi_proposti": []
- },
- "reel": {
-  "idea": "Il Campanile Vivo: ripresa reale del paese, poi la luce",
-  "come_funziona": "Ogni reel parte da un video vero girato nel comune (campanile, piazza, strada) con la voce di un follower che dice la sua frase. Solo alla fine la mappa si apre sul punto del paese e si accende la luce dell'animale. Montaggio in tre tempi: vero, distanza in chilometri dal comune vicino, luce. La chiusura invita a scrivere la propria città nei commenti.",
-  "primo_passo": "Scegliere un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggere le sue coordinate in motore/config.json, e montare in un editor verticale un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km sul comune vicino, poi la mappa già presente in docs/ con la luce posizionata sulle coordinate. Musica libera da diritti. Pubblicarlo nel contenitore «amici» o «ospiti» già pronto.",
-  "come_misurarla": "Dopo 7 giorni: follower ogni 1.000 account raggiunti, confrontati con la mediana dei reel di mappa (8,0) e con il 39,1 del testa_a_testa Livorno-Cecina (mediana 29,0); quota di visualizzazioni che supera il 50% della durata, cioè arriva alla luce; numero di commenti con una città scritta dal pubblico.",
-  "traccia": "reel",
-  "aperto": "2026-11-18",
-  "scadenza": "2026-11-20",
-  "stato": "online",
   "passi_proposti": [
    {
-    "giorno": "2026-11-19",
-    "ruolo": "Nuovi stili di reel",
-    "passo": "Scegliere un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggere le sue coordinate in motore/config.json e montare un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km dal comune vicino, poi la mappa in docs/ con la luce sulle coordinate, con musica libera da diritti. Pubblicarlo nel contenitore «amici» o «ospiti» già pronto; se entro domani non regge, esci con la versione ridotta: video vero di 5 secondi e mappa con la luce, senza il terzo tempo di distanza.",
+    "giorno": "2026-11-21",
+    "ruolo": "Giochi nuovi",
+    "passo": "Aggiungere in motore/config.json la coppia derby Livorno-Cecina (id, coordinate, 32 km), poi in docs/ creare la sezione derby che riusa 'Pappa al volo' e 'Riporta il bastone': ogni partita registra comune e punteggio, alterna i turni tra i due comuni e scrive il totale in un JSON letto dalla mappa SVG, che disegna la linea tra i due punti e accende la luce del comune in testa. Per uscire domani, versione ridotta: solo il derby Livorno-Cecina con turni alternati e linea sulla mappa, senza verdetto automatico né sorpasso in classifica.",
     "file": [
      "motore/config.json",
-     "docs/",
-     "reel/"
+     "docs/"
     ],
-    "fatto_quando": "Il reel di prova è pubblicato entro il 20 novembre nel contenitore «amici» o «ospiti», con i tre tempi (o, nella versione ridotta, video vero e mappa con la luce) e le coordinate del comune prese da motore/config.json."
+    "fatto_quando": "Dalla Coppa delle Zampe si può giocare un derby Livorno-Cecina a turni alternati, il punteggio totale compare sulla mappa con la linea tra i due comuni e la luce del comune in testa si accende, tutto pubblicato sul sito entro il 22 novembre."
    },
    {
-    "giorno": "2026-11-19",
-    "ruolo": "Riprese e montaggio diversi",
-    "passo": "Scegli un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggi le sue coordinate in motore/config.json e monta in un editor verticale un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km dal comune vicino, poi la mappa in docs/ con la luce sulle coordinate, con musica libera da diritti. Se il montaggio completo non regge entro domani, esci con una versione ridotta: solo video vero con voce e luce finale sulla mappa, senza il passaggio dei chilometri.",
+    "giorno": "2026-11-21",
+    "ruolo": "Meccaniche di gioco",
+    "passo": "Aggiungi in motore/config.json la coppia 'derby' Livorno-Cecina con id, coordinate e km (32), poi in docs/ crea la sezione derby che riusa 'Pappa al volo' e 'Riporta il bastone': ogni partita registra comune e punteggio, i turni alternano i due comuni e il totale viene scritto in un file JSON letto dalla mappa SVG, che disegna la linea tra i due paesi e accende la luce del comune in testa. Per uscire entro il 22 novembre, taglia alla versione minima: solo staffetta a turni con un gioco (Pappa al volo) e linea sulla mappa, senza verdetto automatico né sorpasso in classifica.",
     "file": [
      "motore/config.json",
-     "docs/",
-     "reel/"
+     "docs/derby.html",
+     "docs/derby.js",
+     "docs/mappa.svg"
     ],
-    "fatto_quando": "Esiste un file video verticale in reel/ di circa 10-12 secondi con il video vero del comune e la voce del follower nei primi secondi, la mappa con la luce accesa sul punto del paese a fine clip, e il reel è pubblicato nel contenitore «amici» o «ospiti» (nella versione ridotta basta video vero, voce e luce finale)."
+    "fatto_quando": "Aprendo la sezione derby su Livorno-Cecina si vede la linea tra i due comuni, il punteggio di entrambi che si aggiorna dopo ogni turno a staffetta e la luce del comune in testa accesa sulla mappa, pubblicato sul sito entro il 22 novembre."
    },
    {
-    "giorno": "2026-11-19",
-    "ruolo": "Suono e musica nuovi",
-    "passo": "Scegliere un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggere le sue coordinate in motore/config.json, e montare un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km dal comune vicino, poi la mappa in docs/ con la luce sulle coordinate. Se entro domani non regge, esci con una versione ridotta: solo video vero con voce e poi la luce sulla mappa, senza il conteggio dei chilometri.",
+    "giorno": "2026-11-21",
+    "ruolo": "Fattibilità tecnica",
+    "passo": "Creare in docs/ il modulo paese3d.js che legge le coordinate di Livorno da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km) e la trasforma in PlaneGeometry con i vertici alzati; collegarlo al tocco su Livorno nella mappa esistente e pubblicare. Per uscire domani con una versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione né foto dei follower.",
     "file": [
+     "docs/paese3d.js",
      "motore/config.json",
-     "docs/",
-     "reel/"
+     "docs/"
     ],
-    "fatto_quando": "Il reel di prova è pubblicato nel contenitore «amici» o «ospiti» con i tre tempi visibili in sequenza (vero, km, luce) e il follower ha dato il SÌ tracciato nella config; nella versione ridotta basta vero più luce, senza km."
-   },
-   {
-    "giorno": "2026-11-20",
-    "ruolo": "Nuovi stili di reel",
-    "passo": "Scegli il comune di test con un follower che ha già dato il SÌ per ripresa e voce, leggi le sue coordinate in motore/config.json e monta in un editor verticale il reel di prova in tre tempi (4-5 s di video vero con voce, 2 s di distanza in km dal comune vicino, poi la mappa in docs/ con la luce sulle coordinate, musica libera). Se entro domani non regge, esci con la versione ridotta: video vero con voce più la luce sulla mappa, senza il conteggio dei km.",
-    "file": [
-     "motore/config.json",
-     "docs/",
-     "reel/"
-    ],
-    "fatto_quando": "Un file verticale in reel/ di circa 10-12 secondi è pubblicato entro il 20 novembre nel contenitore «amici» o «ospiti», con il video vero e la voce nei primi secondi e la luce accesa sul punto del comune a fine clip (nella versione ridotta, senza il passaggio dei km), con le coordinate prese da motore/config.json."
-   },
-   {
-    "giorno": "2026-11-20",
-    "ruolo": "Riprese e montaggio diversi",
-    "passo": "Scegli un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggi le sue coordinate in motore/config.json e monta in un editor verticale un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km dal comune vicino, poi la mappa in docs/ con la luce accesa sulle coordinate, con musica libera da diritti. Se entro domani il montaggio completo non regge, esci con la versione ridotta: video vero con voce e luce finale sulla mappa, senza il passaggio dei chilometri.",
-    "file": [
-     "motore/config.json",
-     "docs/",
-     "reel/"
-    ],
-    "fatto_quando": "In reel/ esiste un video verticale di circa 10-12 secondi con il video vero del comune e la voce del follower nei primi secondi, la mappa con la luce accesa sul punto del paese a fine clip, ed è pubblicato nel contenitore «amici» o «ospiti» entro il 20 novembre (nella versione ridotta basta video vero, voce e luce finale)."
-   },
-   {
-    "giorno": "2026-11-20",
-    "ruolo": "Suono e musica nuovi",
-    "passo": "Scegliere un solo comune con un follower che ha già dato il SÌ per ripresa e voce, leggerne le coordinate in motore/config.json e montare in un editor verticale un reel di prova in tre tempi: 4-5 secondi di video vero con la voce, 2 secondi di distanza in km dal comune vicino, poi la mappa in docs/ con la luce sulle coordinate, musica libera da diritti. Se entro domani non regge, esci con la versione ridotta: video vero di 5 secondi e mappa con la luce, senza il terzo tempo dei km.",
-    "file": [
-     "motore/config.json",
-     "docs/",
-     "reel/"
-    ],
-    "fatto_quando": "Il reel di prova è pubblicato entro il 20 novembre nel contenitore «amici» o «ospiti», con i tre tempi (o, nella versione ridotta, video vero e mappa con la luce) e le coordinate del comune prese da motore/config.json."
+    "fatto_quando": "Toccando Livorno sulla mappa pubblicata sul sito si apre la scena 3D con il rilievo reale e lo sprite dell'animale acceso sul punto esatto del comune, online entro il 21 novembre."
    }
-  ],
-  "aggiornato": "2026-11-20",
-  "nota": "Il reel della partita più vivo: il tabellone conta i gol da 0 al risultato finale (0–0, 24–13… 94–53), il pallone parte dal campo e entra nella porta disegnata in mezzo, esplode «GOL!», poi «VINCE ROMA!», «3 PUNTI!» e l'etichetta del capocannoniere col suo @ (taggato nel reel). Anche nella prima scena gli effetti arrivano al loro momento (prima venivano appiattiti). Derby solo con almeno 5 tifosi per squadra.",
-  "online_dal": "2026-11-20"
+  ]
+ },
+ "reel": {
+  "idea": "Il Reel del Campanile Vero: il reel si apre con un video reale del comune, con voce che dice nome e città, e solo dopo si accende la luce sulla mappa",
+  "come_funziona": "Il reel parte da un video vero girato con il SÌ del follower (una piazza, il porto o la piazza del paese), con la voce sintetica già in uso che dice il nome dell'animale e la città. Dopo qualche secondo il video si stringe su un punto riconoscibile e sfuma sulla mappa SVG, dove la luce si accende sul comune giusto. La chiusura è «seguici e scopri se tocca al tuo animale». Il formato «questa_luce» con apertura «video vero» e voce, già sopra la mediana con Damon (14,3) e Nina (11,1), diventa il modello di tutti i reel.",
+  "primo_passo": "Partire dal caso già approvato, Damon a Massa. 1) In motore/config.json leggere le coordinate di Massa e agganciarle all'ID del video del follower. 2) Esportare dalla mappa SVG in docs/ un fotogramma finale con la luce su quelle coordinate. 3) Scrivere uno script (ffmpeg) che unisce il video vero con la voce sintetica sopra, una dissolvenza di circa 1 secondo e il fotogramma della mappa tenuto 6-8 secondi. 4) Ripetere lo stesso script con Nina a Luino per verificare che funzioni su un secondo comune prima di renderlo il modello standard.",
+  "come_misurarla": "Dopo 7 giorni: follower ogni 1.000 account raggiunti dei reel «questa_luce» con apertura «video vero», confrontati con la mediana attuale dei simili (11,1) e con la soglia di Damon (14,3). In più, la quota di reach che arriva da chi non ci segue ancora.",
+  "traccia": "reel",
+  "aperto": "2026-11-21",
+  "scadenza": "2026-11-23",
+  "stato": "da costruire",
+  "passi_proposti": []
  },
  "realismo": {
   "idea": "Il Paese dal Vero: rilievo e animale nello stesso comune",
@@ -102,136 +66,136 @@
   "stato": "da costruire",
   "passi_proposti": [
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "Realismo degli animali",
-    "passo": "Creare in docs/ il modulo paese3d.js: legge le coordinate del comune da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto. Collegarlo al tocco sul comune nella mappa esistente e provarlo su 3 comuni di test (costa, collina, pianura); per domani, versione ridotta: solo terreno 3D con animale fisso, senza rotazione e senza foto dei follower.",
+    "passo": "Creare in docs/ il file paese3d.js con un solo comune di test (Livorno, coordinate da motore/config.json): ritagliare la griglia di altitudine attorno al punto (circa 10 km), trasformarla in PlaneGeometry con i vertici alzati e posizionare lo sprite SVG dell'animale sul punto esatto; poi collegarlo al tocco su Livorno nella mappa esistente. Versione di domani: solo terreno 3D con animale fisso, senza rotazione, edifici né foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Aprendo un comune di test dalla mappa si vede il terreno in 3D con rilievo reale e lo sprite dell'animale sul suo punto esatto, funzionante su almeno 3 comuni (costa, collina, pianura) e pubblicato sul sito."
+    "fatto_quando": "Toccando Livorno sulla mappa pubblicata si apre la scena 3D con il rilievo reale e l'animale acceso sul punto esatto del comune, raggiungibile online entro il 21 novembre; la rotazione e le altre città restano per la versione successiva."
    },
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "Realismo della mappa e del 3D",
-    "passo": "Creare docs/paese3d.js: un modulo three.js che legge le coordinate del comune di test da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto. Collegarlo al tocco sul comune nella mappa esistente e provarlo su un solo comune (Livorno) prima di estendere ai tre di test.",
+    "passo": "Creare in docs/ il file paese3d.js con un solo comune di test (Livorno): legge lat/lon da motore/config.json, ritaglia dalla griglia di altitudine esistente un quadrato di circa 10 km attorno al punto, lo trasforma in una PlaneGeometry con i vertici alzati e vi posiziona lo sprite SVG dell'animale sul punto esatto; agganciarlo al tocco su Livorno nella mappa. Versione ridotta per domani: solo terreno 3D statico con animale fisso, senza rotazione col dito, senza edifici e senza foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Toccando Livorno sulla mappa si apre la scena 3D con il terreno reale e l'animale acceso sul punto esatto del comune, ruotabile con un gesto del dito; se il tempo non basta entro il 21 novembre, si esce con la versione ridotta: solo Livorno, senza edifici né foto, con la sola rotazione."
+    "fatto_quando": "Toccando Livorno sulla mappa del sito pubblicato si apre la scena three.js con il rilievo reale del comune e lo sprite dell'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre."
    },
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "Esperimenti misurabili",
-    "passo": "Creare in docs/ il modulo paese3d.js: legge le coordinate del comune da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e vi posiziona lo sprite SVG dell'animale sul punto esatto. Se entro domani non regge, esci con una versione ridotta: solo il terreno 3D su 1 comune di test (di pianura), senza sprite animale né rotazione col dito.",
+    "passo": "Creare in docs/ il file paese3d.js con un solo comune di test (Livorno, coordinate da motore/config.json): ritagliare dalla griglia di altitudine già usata dalla mappa un'area di circa 10 km attorno al punto, trasformarla in PlaneGeometry con i vertici alzati e posizionare lo sprite SVG dell'animale sul punto esatto; poi agganciarlo al tocco su Livorno nella mappa esistente. Versione di domani: solo terreno 3D statico con animale fisso, senza rotazione, edifici né foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Aprendo il comune di test dalla mappa esistente compare una scena three.js con il rilievo reale e, nella versione completa, lo sprite dell'animale sul punto delle coordinate di motore/config.json; nella versione ridotta basta il terreno 3D caricato e ruotabile su un solo comune."
+    "fatto_quando": "Toccando Livorno sulla mappa del sito pubblicato si apre la scena three.js con il rilievo reale del comune e l'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre; rotazione e altri comuni restano per la versione successiva."
    },
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "Animali in 3D",
-    "passo": "Creare in docs/ il modulo paese3d.js: legge da motore/config.json le coordinate di un comune di test, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e vi posiziona lo sprite SVG dell'animale sul punto esatto. Se entro domani la scena 3D non regge, esci con una versione ridotta: un solo comune di test, senza rotazione col dito, con il rilievo statico e l'animale sul punto.",
+    "passo": "Creare in docs/ il file paese3d.js con un solo comune di test (Livorno): leggere lat/lon da motore/config.json, ritagliare dalla griglia di altitudine esistente un quadrato di circa 10 km attorno al punto, trasformarlo in una PlaneGeometry con i vertici alzati e posizionarvi lo sprite SVG dell'animale; poi agganciarlo al tocco su Livorno nella mappa. Versione di domani: solo terreno 3D statico con animale fisso, senza rotazione col dito, senza edifici e senza foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Aprendo la pagina di un comune di test (costa, collina o pianura) compare la scena three.js con il rilievo reale del comune e lo sprite SVG dell'animale sul punto indicato in motore/config.json; nella versione ridotta basta un solo comune con rilievo statico e animale visibile."
+    "fatto_quando": "Toccando Livorno sulla mappa del sito pubblicato si apre la scena three.js con il rilievo reale del comune e lo sprite dell'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre."
    },
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "Paesi e piazze in 3D",
-    "passo": "Creare in docs/ il modulo paese3d.js che legge le coordinate di Livorno da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto; collegarlo al tocco su Livorno nella mappa esistente. Per domani, versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione né foto dei follower.",
+    "passo": "Creare in docs/ il file paese3d.js con un solo comune di test (Livorno): leggere lat/lon da motore/config.json, ritagliare dalla griglia di altitudine esistente un quadrato di circa 10 km attorno al punto, trasformarlo in una PlaneGeometry con i vertici alzati e posizionare lo sprite SVG dell'animale sul punto esatto; collegarlo al tocco su Livorno nella mappa esistente. Per uscire domani, versione ridotta: solo terreno 3D statico con animale fisso, senza rotazione, edifici né foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Toccando Livorno sulla mappa del sito si apre la scena 3D con il terreno reale e l'animale acceso sul punto esatto del comune, la scena è pubblicata e raggiungibile online entro il 21 novembre."
+    "fatto_quando": "Toccando Livorno sulla mappa del sito pubblicato si apre la scena three.js con il rilievo reale del comune e l'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre; rotazione e altri comuni restano per la versione successiva."
    },
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "Rilievo e terreno veri",
-    "passo": "Creare docs/paese3d.js e collegarlo al tocco sul comune nella mappa, provandolo solo su Livorno: ritagliare la griglia di altitudine attorno alle sue coordinate in motore/config.json (circa 10 km), trasformarla in PlaneGeometry con i vertici alzati e posizionare lo sprite SVG dell'animale sul punto esatto. Per domani, versione ridotta: solo terreno 3D con animale fisso su Livorno, senza rotazione, edifici e foto dei follower.",
+    "passo": "Creare in docs/ il file paese3d.js con il solo comune di test Livorno: leggere lat/lon da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un quadrato di circa 10 km attorno al punto, trasformarlo in PlaneGeometry con i vertici alzati e posizionarvi lo sprite SVG dell'animale; poi agganciare il modulo al tocco su Livorno nella mappa. Versione per domani: terreno 3D statico con animale fisso, senza rotazione, edifici né foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Toccando Livorno sulla mappa pubblicata si apre la scena 3D con il rilievo reale e l'animale acceso sul punto esatto del comune; se la rotazione non è pronta entro il 21 novembre, la versione ridotta è online così com'è."
+    "fatto_quando": "Toccando Livorno sulla mappa pubblicata si apre la scena three.js con il rilievo reale del comune e lo sprite dell'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre; costa, collina e pianura e la rotazione restano per la versione successiva."
    },
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "Luci della notte in 3D",
-    "passo": "Creare in docs/ il modulo paese3d.js: legge le coordinate del comune di test (Livorno) da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto. Collegarlo al tocco sul comune nella mappa esistente; per domani, versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione, senza edifici né foto dei follower.",
+    "passo": "Creare in docs/ il file paese3d.js con un solo comune di test (Livorno): legge lat/lon da motore/config.json, ritaglia dalla griglia di altitudine esistente un quadrato di circa 10 km attorno al punto, lo trasforma in una PlaneGeometry con i vertici alzati e vi posiziona lo sprite SVG dell'animale sul punto esatto; poi agganciarlo al tocco su Livorno nella mappa esistente. Per uscire domani con una versione ridotta: solo terreno 3D statico con animale fisso, senza rotazione, senza edifici né foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Toccando Livorno sulla mappa del sito si apre una vista 3D con il terreno a rilievo reale e lo sprite dell'animale acceso sul punto esatto del comune, pubblicata online entro il 21 novembre."
+    "fatto_quando": "Toccando Livorno sulla mappa del sito pubblicato si apre la scena three.js con il rilievo reale del comune e lo sprite dell'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre; rotazione e altri comuni restano per la versione successiva."
    },
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "Materiali e texture",
-    "passo": "Creare in docs/ il modulo paese3d.js che legge le coordinate di Livorno da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto; collegarlo al tocco su Livorno nella mappa esistente. Per domani, versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione né foto dei follower.",
+    "passo": "Creare in docs/ il file paese3d.js con un solo comune di test (Livorno, coordinate da motore/config.json): ritagliare dalla griglia di altitudine già usata dalla mappa un'area di circa 10 km attorno al punto, trasformarla in PlaneGeometry con i vertici alzati e posizionare lo sprite SVG dell'animale sul punto esatto; poi agganciarlo al tocco su Livorno nella mappa esistente. Versione di domani: solo terreno 3D statico con animale fisso, senza rotazione, edifici né foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Toccando Livorno sulla mappa si apre il terreno 3D con il rilievo reale e lo sprite dell'animale acceso sul punto esatto del comune, pubblicato sul sito entro il 21 novembre."
+    "fatto_quando": "Toccando Livorno sulla mappa del sito pubblicato si apre la scena three.js con il rilievo reale del comune e l'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre; rotazione e altri comuni restano per la versione successiva."
    },
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "Camere e inquadrature 3D",
-    "passo": "Creare in docs/ il modulo paese3d.js che legge le coordinate di Livorno da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in una PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto; collegarlo al tocco su Livorno nella mappa esistente. Per uscire domani con una versione ridotta: solo terreno 3D e animale fisso su Livorno, senza rotazione, senza edifici e senza foto dei follower.",
+    "passo": "Creare in docs/ il file paese3d.js con un solo comune di test (Livorno, coordinate da motore/config.json): ritagliare dalla griglia di altitudine già usata dalla mappa un'area di circa 10 km attorno al punto, trasformarla in PlaneGeometry con i vertici alzati e posizionare lo sprite SVG dell'animale sul punto esatto; poi collegarlo al tocco su Livorno nella mappa esistente. Versione di domani: solo terreno 3D statico con animale fisso, senza rotazione, edifici né foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Toccando Livorno sulla mappa si apre la scena 3D con il terreno reale e lo sprite dell'animale acceso sul punto esatto del comune, la versione è pubblicata sul sito entro il 21 novembre e funziona su Livorno (poi estendibile a costa, collina e pianura)."
+    "fatto_quando": "Toccando Livorno sulla mappa del sito pubblicato si apre la scena three.js con il rilievo reale del comune e l'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre; rotazione e altri comuni restano per la versione successiva."
    },
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "Animazioni 3D",
-    "passo": "Creare in docs/ il modulo paese3d.js: legge le coordinate di Livorno da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto, collegandolo al tocco su Livorno nella mappa esistente. Per uscire domani con una versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione né foto dei follower.",
+    "passo": "Creare in docs/ il file paese3d.js con un solo comune di test (Livorno): leggere lat/lon da motore/config.json, ritagliare dalla griglia di altitudine esistente un'area di circa 10 km attorno al punto, trasformarla in PlaneGeometry con i vertici alzati e posizionare lo sprite SVG dell'animale sul punto esatto; poi agganciarlo al tocco su Livorno nella mappa. Versione di domani: solo terreno 3D statico con animale fisso, senza rotazione, edifici né foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Toccando Livorno sulla mappa del sito si apre la scena 3D con il terreno reale e l'animale acceso sul punto esatto del comune, e la pagina è pubblicata e raggiungibile online entro il 21 novembre."
+    "fatto_quando": "Toccando Livorno sulla mappa del sito pubblicato si apre la scena three.js con il rilievo reale del comune e lo sprite dell'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre."
    },
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "Scene 3D per i reel",
-    "passo": "Creare in docs/ il modulo paese3d.js che legge da motore/config.json le coordinate di Livorno, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in PlaneGeometry con i vertici alzati e vi posiziona lo sprite SVG dell'animale; collegarlo al tocco su Livorno nella mappa esistente. Per domani, versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione né foto dei follower.",
+    "passo": "Creare in docs/ il file paese3d.js con il solo comune di test Livorno: leggere lat/lon da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un quadrato di circa 10 km attorno al punto, trasformarlo in PlaneGeometry con i vertici alzati e posizionare lo sprite SVG dell'animale sul punto esatto; poi agganciarlo al tocco su Livorno nella mappa esistente. Versione per domani: terreno 3D statico con animale fisso, senza rotazione, edifici né foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Toccando Livorno sulla mappa pubblicata si apre la scena 3D con il rilievo reale e l'animale acceso sul punto esatto del comune, la scena è online entro il 21 novembre; senza rotazione se il tempo non basta."
+    "fatto_quando": "Toccando Livorno sulla mappa del sito pubblicato si vede la scena three.js con il rilievo reale del comune e l'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre; rotazione e altri comuni restano per la versione successiva."
    },
    {
-    "giorno": "2026-11-20",
+    "giorno": "2026-11-21",
     "ruolo": "3D leggero sul telefono",
-    "passo": "Creare in docs/ il modulo paese3d.js che legge le coordinate di Livorno da motore/config.json, ritaglia la griglia di altitudine attorno al punto (circa 10 km), la trasforma in PlaneGeometry con i vertici alzati e posiziona lo sprite SVG dell'animale sul punto esatto; collegarlo al tocco su Livorno nella mappa esistente. Per domani, versione ridotta: solo Livorno, terreno 3D con animale fisso, senza rotazione, edifici né foto dei follower.",
+    "passo": "Creare in docs/ il file paese3d.js con il solo comune di test Livorno: leggere lat/lon da motore/config.json, ritagliare dalla griglia di altitudine già usata dalla mappa un quadrato di circa 10 km attorno al punto, trasformarlo in PlaneGeometry con i vertici alzati e posizionarvi lo sprite SVG dell'animale; poi agganciare il modulo al tocco su Livorno nella mappa. Versione per domani: terreno 3D statico con animale fisso, senza rotazione, edifici né foto dei follower.",
     "file": [
      "docs/paese3d.js",
      "motore/config.json",
      "docs/"
     ],
-    "fatto_quando": "Toccando Livorno sulla mappa del sito si apre una vista 3D con il terreno a rilievo reale e lo sprite dell'animale acceso sul punto esatto del comune, pubblicata online entro il 21 novembre."
+    "fatto_quando": "Toccando Livorno sulla mappa del sito pubblicato si apre la scena three.js con il rilievo reale del comune e lo sprite dell'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre; costa, collina, pianura e la rotazione restano per la versione successiva."
    }
   ]
  }
