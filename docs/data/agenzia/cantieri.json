@@ -63,7 +63,7 @@
   "traccia": "realismo",
   "aperto": "2026-11-19",
   "scadenza": "2026-11-21",
-  "stato": "da costruire",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-21",
@@ -197,6 +197,9 @@
     ],
     "fatto_quando": "Toccando Livorno sulla mappa del sito pubblicato si apre la scena three.js con il rilievo reale del comune e lo sprite dell'animale acceso sul punto esatto indicato in motore/config.json, online entro il 21 novembre; costa, collina, pianura e la rotazione restano per la versione successiva."
    }
-  ]
+  ],
+  "aggiornato": "2026-11-21",
+  "nota": "Lo stadio del Campionato delle Zampe in 3D: toccando lo stadio sulla mappa (o «Entra nello stadio in 3D» nella scheda Classifica) si entra nello stadio della partita in corso: curve a gradoni nei colori delle due squadre, campo con le righe e le porte, quattro torri dei fari, il pallone che rimbalza, e in prima fila i cani e i gatti veri dei tifosi con la sciarpa che saltano; il tabellone col punteggio dal vivo; toccando un tifoso si vede il suo nome, la città e la squadra. Si gira col dito.",
+  "online_dal": "2026-11-21"
  }
 }

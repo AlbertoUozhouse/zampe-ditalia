@@ -334,7 +334,8 @@ function campionatoHtml() {
   const fine = P ? new Date(P.fine).toLocaleString("it-IT", { weekday: "long", hour: "2-digit", minute: "2-digit", timeZone: "Europe/Rome" }) : "";
   const tab = (x, sopra) => `<div class="cz-tab"><small>${esc(sopra)}</small><div class="cz-q"><b style="${strisce(x.a.c)}">${esc(x.a.nome)}</b><em>${x.ga} – ${x.gb}</em><b style="${strisce(x.b.c)}">${esc(x.b.nome)}</b></div></div>`;
   return `<div class="sfida-inviti cz"><h3>⚽ Campionato delle Zampe</h3>` +
-    (P ? tab(P, `GIORNATA ${P.giornata} · ${P.stadio} · IN CORSO`) + `<p class="sub">Ogni commento è un gol: scrivi <b>forza ${esc(P.a.nome)}</b> o <b>forza ${esc(P.b.nome)}</b> sotto un nostro post (un gol a persona). Si gioca fino a ${esc(fine)}.</p>` : "") +
+    (P ? tab(P, `GIORNATA ${P.giornata} · ${P.stadio} · IN CORSO`) + `<p class="sub">Ogni commento è un gol: scrivi <b>forza ${esc(P.a.nome)}</b> o <b>forza ${esc(P.b.nome)}</b> sotto un nostro post (un gol a persona). Si gioca fino a ${esc(fine)}.</p>`
+      + `<p><button type="button" class="btn" onclick="entraStadio()">🏟️ Entra nello stadio in 3D</button></p>` : "") +
     (U ? tab(U, `ULTIMA · ${U.stadio} · FINALE`) : "") +
     ((C.bomber || []).length && C.bomber[0].g >= 2 ? `<h3 class="cz-h">🏆 Capocannonieri</h3><ol class="list">` + C.bomber.slice(0, 5).map((x, i) => `<li class="row"><span class="pos">${i === 0 && pallone() ? "⚽" : i + 1}</span><span class="who">@${esc(x.u)}${x.sq ? `<small><i class="cz-sc" style="${strisce(x.sq.c)}"></i>${esc(x.sq.nome)}</small>` : ""}</span><span class="pts">${x.g}<small>${x.g === 1 ? "gol" : "gol"}</small></span></li>`).join("") + `</ol><p class="sub">Il primo ha il <b>Pallone d'Oro</b> ⚽ sul suo animale nella mappa.</p>` : "") +
     ((C.classifica || []).length ? `<h3 class="cz-h">📊 Classifica squadre</h3><ol class="list">` + C.classifica.slice(0, 10).map((x, i) => `<li class="row"><span class="pos">${i + 1}</span><span class="who"><i class="cz-sc" style="${strisce(x.c)}"></i>${esc(x.nome)}<small>${x.g} ${x.g === 1 ? "partita" : "partite"} · ${x.v} V ${x.n} N ${x.p} P · ${(C.tifosi || {})[x.k] || 0} tifosi</small></span><span class="pts">${x.pt}<small>pt</small></span></li>`).join("") + `</ol>`
@@ -516,8 +517,10 @@ function disegnaGiro() {
 // sta sopra le luci (il canvas #glow copre i marker di Leaflet): un elemento suo nel contenitore della mappa, spostato a ogni movimento
 const stadioEl = document.createElement("div"); stadioEl.className = "stadio-mk"; stadioEl.hidden = true; stadioEl.setAttribute("role", "button"); stadioEl.tabIndex = 0;
 map.getContainer().appendChild(stadioEl);
-stadioEl.onclick = e => { e.stopPropagation(); show("classifica"); };
-stadioEl.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show("classifica"); } };
+// 21/11 (Officina): toccando lo stadio si entra nello stadio in 3D coi tifosi veri sugli spalti (stadio3d.js); senza 3D, la classifica
+const entraStadio = () => { const P = CAMPIONATO && CAMPIONATO.partita; if (P && window.Stadio3D) { map.closePopup(); $("#sheet").hidden = true; window.Stadio3D.apri({ ...P, a: P.a, b: P.b }, DATA.filter(d => d.sq && (d.sq === P.a.k || d.sq === P.b.k))); } else show("classifica"); };
+stadioEl.onclick = e => { e.stopPropagation(); entraStadio(); };
+stadioEl.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); entraStadio(); } };
 ["mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend", "dblclick", "wheel"].forEach(ev => stadioEl.addEventListener(ev, e => e.stopPropagation(), { passive: true }));
 let STADIO_LL = null;
 function posStadio() {
