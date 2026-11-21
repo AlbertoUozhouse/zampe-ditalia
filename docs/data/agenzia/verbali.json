@@ -1042,5 +1042,26 @@
   "esito": "2 follower in totale, 4.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (18) hanno una mediana di 11.4.",
   "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "17911190835664898",
+  "file": "2026-11-14-1307-testa_a_testa",
+  "formato": "testa_a_testa",
+  "uscita": "2026-11-14T12:19:07+00:00",
+  "follower": 0,
+  "reach_7g": 468,
+  "follower_ogni_1000": 0.0,
+  "mediana_simili": 8.0,
+  "simili": 5,
+  "scelte": {
+   "formato": "testa_a_testa",
+   "apertura": "video vero",
+   "voce": true,
+   "gancio": "Agliana, la città della via Cassia, contro Castelfranco di Sotto, il borgo cinto di mura nel Valdarno di Sotto: 31 chilometri, e la sfida è aperta.",
+   "chiusura": "Sei di Castelfranco di Sotto o di Agliana? Commenta città e nome. Seguici: domani un'altra sfida."
+  },
+  "esito": "0 follower in totale, 0.0 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (5) hanno una mediana di 8.0.",
+  "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]
