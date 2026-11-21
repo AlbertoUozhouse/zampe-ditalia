@@ -417,6 +417,7 @@
 "2d68dd49469b5789",
 "2d76b8550c60b829",
 "2d7fa080793d4084",
+"2de2f9ffd4a44f50",
 "2e48800b64d10f34",
 "2e5ed4465cbec4f7",
 "2e6a95d6cc009e04",
@@ -1223,6 +1224,7 @@
 "895f4688c90fa541",
 "89737b671c3fc113",
 "8998dd9a9cade208",
+"89a11340285eb46b",
 "89d4ad191e9049f0",
 "89e4bae55e9ab590",
 "8a0fa81acaa72c4b",
@@ -1539,6 +1541,7 @@
 "ac129130ed3eca39",
 "ac434cb897872925",
 "ac8fc8eccb32b0d2",
+"ac941f903b8b0f5a",
 "acab6dfad4ceb3d1",
 "acada180609b0460",
 "acc46d21510dafa2",
@@ -1702,6 +1705,7 @@
 "be1e47de6b7d7a20",
 "be289d9b56f2e785",
 "be487707ee7439f6",
+"be59ef955005b827",
 "be6cb968f842416c",
 "be8c0109366e8194",
 "beab63e7c9f66da7",
@@ -2211,6 +2215,7 @@
 "f6a71dad2c049a1b",
 "f6aab13e800550cf",
 "f6d466e194272a7b",
+"f714355183b6fc8d",
 "f71cdd8f9ced4f8f",
 "f7256b601a0191ba",
 "f735f4b2e7c20437",
@@ -2301,7 +2306,15 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1008754755615620",
+"url": [
+"https://zampeditalia.it/cartoline/643413ec6aac4734.png"
+],
+"t": 1795303598.7001877
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
@@ -2320,6 +2333,13 @@
 "url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=984505877615295&signature=Ab20_DwPzvgTFxr9VSLVg-M_TDYlUgBBtm81a088xEhEMEF6xhr-5Vku08w_FWD-e3BN6coPDWUIoRSQMa7hWhkjr1YaebPEdsu1uGg6zPsArHD1-yVBIx9z_R5voRF6tlpkUZ-BoeGKDYbO7kVd0wFQxEE488wo3o9SIq5AZJJxJWrF_vcu_2gtiM1_ow71FeYMj7mnDDubIhyblZiknHP6_6D-eA",
 "t": 1795115789.5671265,
 "igsid": "1154287930630192",
+"giudicata": false,
+"video": false
+},
+"0722e71033fc4112": {
+"url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=2761618910919804&signature=Ab3P7v0YuC_XXBrYUZs0ro2ui2hgd3z5MyjpkdbPU25WExCuYDK4-KYk-ca3pF1epWXa3UKJd5EdZ3HhczRg3QUiO9JqvU_Bgb7wlCt_5THi6PI1Wv7Gf5H0nDgePLjN1QkaZ-FPc1tURWruieP8IEps-mio7eVaSo1IGf6kpH0QxJ9dlaZSP2qAj2OFPXQ-8umxeEXYr0yAwPwRcMxSljWfzlZ5_8g",
+"t": 1795303568.7772593,
+"igsid": "1147670137745298",
 "giudicata": false,
 "video": false
 }
