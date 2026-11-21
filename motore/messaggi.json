@@ -126,6 +126,7 @@
 "0c6cc97ae8d6632d",
 "0ca747c8ad471305",
 "0cbf51f2b994db4a",
+"0cd3c2c79a179f97",
 "0ce369c5655bd056",
 "0ceadcf444ebff11",
 "0d1173300bbfe1b9",
@@ -2260,7 +2261,15 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"igsid": "1769145967483730",
+"url": [
+"https://zampeditalia.it/cartoline/4c2d6ce8ea84042b.png"
+],
+"t": 1795250238.316545
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
@@ -2287,13 +2296,6 @@
 "t": 1795115789.5671265,
 "igsid": "1154287930630192",
 "giudicata": false,
-"video": false
-},
-"af98a2d58f4b23c1": {
-"url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=1158809049968352&signature=Ab0JY963YmqBKiQITOEuaYwKovR2eHI6l4o6h5ZEa5NaD-lM1Q-uDueYrcSVwjmw-jNaICHGH2QbXzgXOY_s74fRtOHmZdoumoRKdfxQZwFGC18ChDB6KWoB5KSg-IL39DuV38tPlXbQc8L63Ud5KT_0R7Uxoi2T37J7FyJJWJn6X0e0JrikSjm_TfQvmQEJKywuaRHZshYzGuIhumotdOQK4TP9T5k",
-"t": 1795207340.0486104,
-"igsid": "2231560224439043",
-"giudicata": true,
 "video": false
 }
 }
