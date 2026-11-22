@@ -10745,6 +10745,7 @@
 "18181562017448199",
 "18181600975445276",
 "18181618273433665",
+"18181644787453218",
 "18181714192434434",
 "18181714507388901",
 "18181777111438308",
@@ -11173,6 +11174,7 @@
 "18221598115355369",
 "18221629078346133",
 "18221817778352283",
+"18221877685358600",
 "18221890261354363",
 "18222039922353408",
 "18222051616344193",
@@ -12760,7 +12762,9 @@
 "18798213136033257"
 ],
 "risposte": [
-1795333199.2512195
+1795333199.2512195,
+1795334835.0441885,
+1795334840.8577845
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -15135,7 +15139,8 @@
 "juve_club_monteisi": "2026-11-21",
 "contedelia51": "2026-11-21",
 "ciao_1237808": "2026-11-21",
-"valeria_couldbe": "2026-11-21"
+"valeria_couldbe": "2026-11-21",
+"aurora_bracciali_": "2026-11-22"
 },
 "media_letti": {},
 "pezzi": {
@@ -22385,11 +22390,11 @@
 "5d2843ad094ff386",
 "e2a0adcac9691715",
 "e46cfac53612fc0e",
-"42df408963a4dba6"
+"42df408963a4dba6",
+"f9b523c2efcdb220"
 ],
 "privati_ora": [
-1795300025.5311847,
-1795302537.8978221
+1795334835.0442119
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -22449,7 +22454,7 @@
 "2026-11-19": 2041,
 "2026-11-20": 2062,
 "2026-11-21": 2076,
-"2026-11-22": 2079
+"2026-11-22": 2080
 },
 "gioco_pappa": {
 "2026-W46": {
@@ -23912,6 +23917,10 @@
 [
 "2026-11-21T23:38+00:00",
 2079
+],
+[
+"2026-11-22T08:07+00:00",
+2080
 ]
 ],
 "coppa": {
@@ -26132,7 +26141,8 @@
 "Besnate|VA": 3,
 "Giffoni Valle Piana|SA": 3,
 "Castellammare di Stabia|NA": 1,
-"Policoro|MT": 1
+"Policoro|MT": 1,
+"Crotone|KR": 1
 },
 "giocatori": {
 "Genova|GE": [
@@ -26990,6 +27000,15 @@
 "t": "2026-11-21T21:46+00:00",
 "sorpasso": "Giffoni Valle Piana|SA",
 "su": "Ginosa|TA",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-22T08:07+00:00",
+"sorpasso": "Crotone|KR",
+"su": "Piombino|LI",
 "punti": [
 1,
 0
@@ -28424,6 +28443,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Crotone|KR": {
+"u": [
+"aurora_bracciali_"
+],
+"c": [
+"18181644787453218"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -28590,7 +28619,8 @@
 "forinogian|animale|giancarlo",
 "juve_club_monteisi|animale|cuore",
 "contedelia51|animale|ottavio",
-"ciao_1237808|animale|lully"
+"ciao_1237808|animale|lully",
+"aurora_bracciali_|animale|splif"
 ]
 },
 "gara_follower": [
@@ -29455,7 +29485,7 @@
 "citta": "Roma",
 "gol": {
 "roma": 23,
-"napoli": 26
+"napoli": 27
 },
 "marcatori": [
 "claudio_cola05",
@@ -29506,7 +29536,8 @@
 "luca_nat1o",
 "ciao_1237808",
 "rmaltiro",
-"spataro.dani"
+"spataro.dani",
+"elbrandinopro.1"
 ],
 "inizio": "2026-11-21T12:44+01:00",
 "fine": "2026-11-22T12:30+01:00"
@@ -30870,6 +30901,10 @@
 "sq": "roma"
 },
 "spataro.dani": {
+"g": 1,
+"sq": "napoli"
+},
+"elbrandinopro.1": {
 "g": 1,
 "sq": "napoli"
 }
