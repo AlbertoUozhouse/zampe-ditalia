@@ -819,6 +819,15 @@ CARTONE_SFONDI = {
       <rect x="130" y="580" width="160" height="22" rx="11" fill="#9AA6B8"/>
       <rect x="0" y="1290" width="1080" height="630" fill="#EEF3F4"/>{''.join(f'<rect x="0" y="{y}" width="1080" height="5" fill="#D2DCE0"/>' for y in range(1400, 1920, 110))}<rect x="0" y="1285" width="1080" height="16" fill="{LINEA}"/>
       <rect x="560" y="1110" width="480" height="44" rx="10" fill="#C7D0D9" stroke="{LINEA}" stroke-width="9"/><rect x="600" y="1150" width="22" height="200" fill="#9AA6B8" stroke="{LINEA}" stroke-width="6"/><rect x="980" y="1150" width="22" height="200" fill="#9AA6B8" stroke="{LINEA}" stroke-width="6"/>""",
+    # 22/11: il parco (la puntata di Alexa)
+    "parco": f"""<rect width="1080" height="1300" fill="#8ED3F5"/><circle cx="880" cy="230" r="70" fill="#FFE27A" stroke="{LINEA}" stroke-width="8"/>
+      <path d="M0 980 Q270 900 540 960 T1080 940 V1300 H0Z" fill="#7CC36B" stroke="{LINEA}" stroke-width="8"/>
+      {''.join(f'<rect x="{x - 18}" y="{y}" width="36" height="{1180 - y}" fill="#7A4A2A" stroke="{LINEA}" stroke-width="7"/><circle cx="{x}" cy="{y}" r="{r}" fill="#3F9A4E" stroke="{LINEA}" stroke-width="8"/><circle cx="{x - r * 0.35}" cy="{y - r * 0.3}" r="{r * 0.45}" fill="#56B062"/>' for x, y, r in ((130, 720, 150), (480, 640, 130), (900, 700, 160)))}
+      <rect x="0" y="1180" width="1080" height="740" fill="#6DB85C"/><path d="M380 1920 Q520 1500 540 1300 Q560 1500 700 1920Z" fill="#E6C88F" stroke="{LINEA}" stroke-width="7"/>
+      <rect x="0" y="1175" width="1080" height="12" fill="{LINEA}"/>
+      <rect x="700" y="1080" width="300" height="26" rx="8" fill="#B5763F" stroke="{LINEA}" stroke-width="7"/><rect x="700" y="1030" width="300" height="22" rx="8" fill="#B5763F" stroke="{LINEA}" stroke-width="7"/>
+      <rect x="720" y="1104" width="18" height="70" fill="#5A6472"/><rect x="962" y="1104" width="18" height="70" fill="#5A6472"/>
+      {''.join(f'<circle cx="{x}" cy="{y}" r="9" fill="{c}" stroke="{LINEA}" stroke-width="3"/>' for x, y, c in ((90, 1400, "#F28DB2"), (260, 1700, "#FFD23F"), (850, 1450, "#F28DB2"), (960, 1760, "#FFFFFF"), (180, 1250, "#FFFFFF")))}""",
     # 17/11 (Officina): il bar del paese (la puntata della fuga) e l'ufficio del canile (il colloquio con la famiglia)
     "bar": f"""<rect width="1080" height="1300" fill="#E9B97A"/><rect x="0" y="880" width="1080" height="420" fill="#8A5A3B"/>{''.join(f'<rect x="{x}" y="880" width="10" height="420" fill="#74492E"/>' for x in range(90, 1080, 150))}
       {''.join(f'<rect x="70" y="{y}" width="540" height="18" fill="#6B4226" stroke="{LINEA}" stroke-width="6"/>' for y in (430, 610))}
