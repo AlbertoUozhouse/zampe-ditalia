@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-13-2026-intruso",
-  "formato": "intruso",
-  "modalita": "operativa",
-  "inizio": "2026-11-13T19:26:25+00:00",
-  "stato": "senza direttore",
-  "fine": "2026-11-13T19:30:22+00:00",
-  "scambi": 126
- },
- {
   "id": "2026-11-13-2034-intruso",
   "formato": "intruso",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "fatto",
   "fine": "2026-11-22T10:17:17+00:00",
   "scambi": 19
+ },
+ {
+  "id": "2026-11-22-1315-partita",
+  "formato": "partita",
+  "modalita": "operativa",
+  "inizio": "2026-11-22T12:15:47+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-22T12:19:44+00:00",
+  "scambi": 126
  }
 ]

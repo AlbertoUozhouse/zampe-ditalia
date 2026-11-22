@@ -1,0 +1,466 @@
+{
+ "voce": true,
+ "variante": "voce-fissa-80",
+ "tema": "giorno",
+ "id": "2026-11-22-1315-partita",
+ "formato": "partita",
+ "testata": {
+  "titolo": "⚽ INTER – JUVENTUS"
+ },
+ "conteggio": {
+  "cani": 2218,
+  "gatti": 815
+ },
+ "frasi": [
+  {
+   "testo": "Finale allo Stadio Olimpico: Roma ventisei, Napoli 34! Tre punti al Napoli!",
+   "scena": {
+    "tipo": "cartone",
+    "sfondo": "stadio",
+    "hud": false,
+    "colori": [
+     [
+      "#8E1F2F",
+      "#F0BC42"
+     ],
+     [
+      "#12A0D7",
+      "#F4F4F4"
+     ]
+    ],
+    "tabellone": {
+     "sopra": "FINALE · STADIO OLIMPICO",
+     "a": "ROMA",
+     "b": "NAPOLI",
+     "ga": 26,
+     "gb": 34,
+     "ca": [
+      "#8E1F2F",
+      "#F0BC42"
+     ],
+     "cb": [
+      "#12A0D7",
+      "#F4F4F4"
+     ],
+     "conta": true
+    },
+    "attori": [
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 176,
+       "sq": "napoli"
+      },
+      "x": 300,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.6
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 533,
+       "sq": "napoli"
+      },
+      "x": 780,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.6
+     }
+    ],
+    "tiro": 2.1,
+    "etichette": [
+     {
+      "t": "VINCE NAPOLI!",
+      "c": "verde",
+      "x": 250,
+      "y": 600,
+      "r": -4,
+      "z": 84,
+      "t0": 2.2
+     },
+     {
+      "t": "LULLY",
+      "c": "giallo",
+      "x": 200,
+      "y": 1390,
+      "r": 3,
+      "z": 46,
+      "t0": 0.8999999999999999
+     },
+     {
+      "t": "OTTAVIO",
+      "c": "giallo",
+      "x": 680,
+      "y": 1390,
+      "r": -3,
+      "z": 46,
+      "t0": 0.8999999999999999
+     }
+    ],
+    "sfx": {
+     "t": "3 PUNTI!",
+     "x": 640,
+     "y": 900,
+     "t0": 2.9
+    }
+   }
+  },
+  {
+   "testo": "In testa al Campionato delle Zampe: Roma, tre punti.",
+   "scena": {
+    "tipo": "cartone",
+    "sfondo": "stadio",
+    "hud": false,
+    "colori": [
+     [
+      "#8E1F2F",
+      "#F0BC42"
+     ],
+     [
+      "#12A0D7",
+      "#F4F4F4"
+     ]
+    ],
+    "tabella": [
+     {
+      "nome": "ROMA",
+      "pt": 3
+     },
+     {
+      "nome": "NAPOLI",
+      "pt": 3
+     },
+     {
+      "nome": "INTER",
+      "pt": 3
+     },
+     {
+      "nome": "GENOA",
+      "pt": 1
+     },
+     {
+      "nome": "SAMPDORIA",
+      "pt": 1
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Oggi a San Siro: Inter contro Juventus.",
+   "scena": {
+    "tipo": "cartone",
+    "sfondo": "stadio",
+    "hud": false,
+    "colori": [
+     [
+      "#1B4FA0",
+      "#111111"
+     ],
+     [
+      "#F4F4F4",
+      "#111111"
+     ]
+    ],
+    "tabellone": {
+     "sopra": "OGGI · SAN SIRO · GIORNATA 5",
+     "a": "INTER",
+     "b": "JUVENTUS",
+     "ga": 0,
+     "gb": 0,
+     "ca": [
+      "#1B4FA0",
+      "#111111"
+     ],
+     "cb": [
+      "#F4F4F4",
+      "#111111"
+     ]
+    },
+    "attori": [
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "jack_russell",
+       "seme": 562,
+       "sq": "inter"
+      },
+      "x": 170,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.5,
+      "_nome": "Lillo"
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 36,
+       "sq": "inter"
+      },
+      "x": 400,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.5,
+      "_nome": "Mia"
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "bassotto",
+       "seme": 506,
+       "sq": "juventus"
+      },
+      "x": 680,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.8,
+      "_nome": "Pepe"
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 964,
+       "sq": "juventus"
+      },
+      "x": 910,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.8,
+      "_nome": "Lola"
+     }
+    ],
+    "etichette": [
+     {
+      "t": "LILLO",
+      "c": "giallo",
+      "x": 70,
+      "y": 1390,
+      "r": 3,
+      "z": 46,
+      "t0": 0.8
+     },
+     {
+      "t": "MIA",
+      "c": "giallo",
+      "x": 300,
+      "y": 1390,
+      "r": -3,
+      "z": 46,
+      "t0": 0.8
+     },
+     {
+      "t": "PEPE",
+      "c": "giallo",
+      "x": 580,
+      "y": 1390,
+      "r": 3,
+      "z": 46,
+      "t0": 1.1
+     },
+     {
+      "t": "LOLA",
+      "c": "giallo",
+      "x": 810,
+      "y": 1390,
+      "r": -3,
+      "z": 46,
+      "t0": 1.1
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Ogni commento è un gol: scrivi forza Inter o forza Juventus, con città e nome del tuo cane. Si gioca fino a martedì alle dodici e trenta.",
+   "scena": {
+    "tipo": "cartone",
+    "sfondo": "stadio",
+    "hud": false,
+    "colori": [
+     [
+      "#1B4FA0",
+      "#111111"
+     ],
+     [
+      "#F4F4F4",
+      "#111111"
+     ]
+    ],
+    "attori": [
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "jack_russell",
+       "seme": 562,
+       "sq": "inter"
+      },
+      "x": 170,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.5
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 36,
+       "sq": "inter"
+      },
+      "x": 400,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.5
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "bassotto",
+       "seme": 506,
+       "sq": "juventus"
+      },
+      "x": 680,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.8
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "meticcio",
+       "seme": 964,
+       "sq": "juventus"
+      },
+      "x": 910,
+      "y": 1640,
+      "h": 780,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.8
+     }
+    ],
+    "oggetti": [
+     {
+      "e": "⚽",
+      "x": 470,
+      "y": 860,
+      "z": 150,
+      "t0": 0.3,
+      "vola": true,
+      "colore": "#FFFFFF"
+     }
+    ],
+    "etichette": [
+     {
+      "t": "OGNI COMMENTO",
+      "c": "giallo",
+      "x": 130,
+      "y": 330,
+      "r": -4,
+      "z": 96,
+      "t0": 0.1
+     },
+     {
+      "t": "È UN GOL!",
+      "c": "rosso",
+      "x": 300,
+      "y": 500,
+      "r": 3,
+      "z": 110,
+      "t0": 0.4
+     },
+     {
+      "t": "FORZA INTER O FORZA JUVENTUS",
+      "c": "bianco",
+      "x": 60,
+      "y": 720,
+      "r": -2,
+      "z": 54,
+      "t0": 1.2
+     }
+    ]
+   }
+  }
+ ],
+ "banner": "⚽ Scrivi FORZA INTER o FORZA JUVENTUS",
+ "didascalia": "⚽ Campionato delle Zampe · Giornata 5\nFinale allo Stadio Olimpico: Roma 26 – 34 Napoli.\nOggi a San Siro: Inter contro Juventus\n\n👇 Ogni commento è un gol: scrivi FORZA INTER o FORZA JUVENTUS, con città e nome del tuo cane (sulla mappa mette la sciarpa). Un gol a persona: tagga gli amici tifosi!\n⏱️ Si gioca fino a martedì alle 12:30. Vittoria 3 punti, pareggio 1.\n👑 Gara degli amici: tagga chi ha un cane o un gatto. Chi porta più amici entro domenica alle 20 vince la Corona sulla mappa!\n\n🐾 In questo reel: @ciao_1237808 @contedelia51 @giuly23c @giuseppe.borrelli.012 @loryto_2013 @roberto___dambrosio\n\nVoce generata con IA.\n\n#inter #juventus #calcio #seriea #tifosi #derby #cani #animalidomestici ",
+ "tag": [
+  "ciao_1237808",
+  "contedelia51",
+  "giuly23c",
+  "giuseppe.borrelli.012",
+  "loryto_2013",
+  "roberto___dambrosio"
+ ],
+ "collab": [],
+ "copertina": {
+  "stadio": {
+   "a": "INTER",
+   "b": "JUVENTUS",
+   "ca": [
+    "#1B4FA0",
+    "#111111"
+   ],
+   "cb": [
+    "#F4F4F4",
+    "#111111"
+   ],
+   "stadio": "SAN SIRO · GIORNATA 5"
+  }
+ },
+ "cartone": true,
+ "parole_colore": {
+  "gol": "or",
+  "commento": "or",
+  "derby": "ro",
+  "punti": "ve",
+  "pareggio": "or",
+  "forza": "or",
+  "campionato": "or",
+  "zampe": "or",
+  "inter": "bl",
+  "juventus": "ro"
+ },
+ "sottotitoli_top": 1075,
+ "schermo_pulito": true
+}

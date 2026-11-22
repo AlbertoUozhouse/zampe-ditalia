@@ -87,7 +87,6 @@
   "Napoli"
  ],
  "temi": [
-  "notte",
   "neon",
   "giorno",
   "tramonto",
@@ -96,9 +95,10 @@
   "notte",
   "neon",
   "tramonto",
-  "aurora"
+  "aurora",
+  "giorno"
  ],
- "variante_n": 60,
+ "variante_n": 61,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -159,7 +159,8 @@
   "2026-11-20-1322-partita": "voce-fissa-80",
   "2026-11-20-2103-serie": "voce-fissa-92",
   "2026-11-21-1305-partita": "voce-fissa-80",
-  "2026-11-21-2104-serie": "voce-fissa-92"
+  "2026-11-21-2104-serie": "voce-fissa-92",
+  "2026-11-22-1315-partita": "voce-fissa-80"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -1016,7 +1017,13 @@
   "boeroedoardo": "2026-11-21",
   "lucri_zena": "2026-11-21",
   "moivalerio": "2026-11-21",
-  "sofia.sardella_8": "2026-11-21"
+  "sofia.sardella_8": "2026-11-21",
+  "ciao_1237808": "2026-11-22",
+  "contedelia51": "2026-11-22",
+  "giuly23c": "2026-11-22",
+  "giuseppe.borrelli.012": "2026-11-22",
+  "loryto_2013": "2026-11-22",
+  "roberto___dambrosio": "2026-11-22"
  },
  "serie_storia": [
   {
