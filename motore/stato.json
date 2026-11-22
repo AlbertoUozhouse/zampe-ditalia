@@ -10297,6 +10297,7 @@
 "18148392112576798",
 "18148405894537353",
 "18148407841566891",
+"18148440802589653",
 "18148482367572437",
 "18148504591571640",
 "18148510993585205",
@@ -12951,8 +12952,8 @@
 "18798213136033257"
 ],
 "risposte": [
-1795374565.8888013,
-1795376442.512411
+1795376442.512411,
+1795378077.3725414
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -17812,7 +17813,7 @@
 "marassi_17": 10,
 "mcdavid7794": 15,
 "mariacristinaa.aa": 34,
-"giuly23c": 20,
+"giuly23c": 40,
 "pat_nog.1": 5,
 "giuseppe.borrelli.012": 10,
 "diego.fratarcangeli810": 10,
@@ -17850,10 +17851,13 @@
 "valeria_couldbe": 20,
 "alexnicolo": 10,
 "chribavazz": 10,
-"attilioziveri": 10,
+"attilioziveri": 30,
 "lomba_.__": 10,
 "leonardo_socco": 10,
-"gioxyy.dag": 10
+"gioxyy.dag": 10,
+"angelolaidelli": 20,
+"karol_belotti10": 20,
+"lore.cheru011": 20
 },
 "inviti_giorno": {
 "2026-11-15": {
@@ -22645,7 +22649,8 @@
 "derby_premiati": [
 "2026-10-28NARM",
 "2026-11-01MITO",
-"2026-11-08LIPI"
+"2026-11-08LIPI",
+"2026-11-15BGBS"
 ],
 "acquisti": {
 "nicolassctt|animale|artur": [
@@ -22734,10 +22739,10 @@
 }
 },
 "elezione": "2026-11-22",
-"bello_sett": "2026-46",
+"bello_sett": "2026-47",
 "piu_bello": {
-"id": "jacopo.cavadini|animale|yuki",
-"giorno": "2026-11-15"
+"id": "contedelia51|animale|ottavio",
+"giorno": "2026-11-22"
 },
 "follower_ore": [
 [
@@ -30557,7 +30562,7 @@
 "stadio": "SAN SIRO",
 "citta": "Milano",
 "gol": {
-"inter": 13,
+"inter": 14,
 "juventus": 11
 },
 "marcatori": [
@@ -30584,7 +30589,8 @@
 "folla_matteo_",
 "leonardo_socco",
 "si_mo_cap_",
-"campisi_serena"
+"campisi_serena",
+"spataro.dani"
 ],
 "inizio": "2026-11-22T12:34+01:00",
 "fine": "2026-11-24T12:30+01:00"
@@ -31966,8 +31972,8 @@
 "sq": "roma"
 },
 "spataro.dani": {
-"g": 1,
-"sq": "napoli"
+"g": 2,
+"sq": "inter"
 },
 "elbrandinopro.1": {
 "g": 1,
