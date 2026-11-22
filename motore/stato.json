@@ -5532,6 +5532,7 @@
 "18096240338660887",
 "18096340010691299",
 "18096341489446733",
+"18096353309682424",
 "18096399890145865",
 "18096413357147414",
 "18096421130671385",
@@ -12813,8 +12814,8 @@
 "18798213136033257"
 ],
 "risposte": [
-1795345650.1084044,
-1795346461.5206316
+1795346461.5206316,
+1795349427.696475
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -15191,7 +15192,8 @@
 "ciao_1237808": "2026-11-22",
 "valeria_couldbe": "2026-11-22",
 "aurora_bracciali_": "2026-11-22",
-"mattiagio3": "2026-11-22"
+"mattiagio3": "2026-11-22",
+"samuele98851": "2026-11-22"
 },
 "media_letti": {},
 "pezzi": {
@@ -22453,10 +22455,11 @@
 "e46cfac53612fc0e",
 "42df408963a4dba6",
 "f9b523c2efcdb220",
-"37a70766e6eccfa5"
+"37a70766e6eccfa5",
+"5fa6220ecd1db71e"
 ],
 "privati_ora": [
-1795343787.1570787
+1795349427.6964998
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -26184,7 +26187,7 @@
 "Bologna|BO": 2,
 "Bergamo|BG": 1,
 "Catania|CT": 2,
-"Lecce|LE": 8,
+"Lecce|LE": 9,
 "San Donaci|BR": 1,
 "Cremona|CR": 2,
 "Verona|VR": 4,
@@ -27876,12 +27879,14 @@
 "u": [
 "gius_estra",
 "davide_balda3",
-"xoxo.amaa"
+"xoxo.amaa",
+"samuele98851"
 ],
 "c": [
 "18126307585941783",
 "17961728343269565",
-"18183995815435505"
+"18183995815435505",
+"18096353309682424"
 ],
 "chiuse": 1,
 "log": [
@@ -28753,7 +28758,8 @@
 "ciao_1237808|animale|lully",
 "aurora_bracciali_|animale|splif",
 "mattiagio3|animale|artu",
-"mattiagio3|animale|stella"
+"mattiagio3|animale|stella",
+"samuele98851|animale|balu"
 ]
 },
 "gara_follower": [
@@ -29636,10 +29642,12 @@
 "stadio": "SAN SIRO",
 "citta": "Milano",
 "gol": {
-"inter": 0,
+"inter": 1,
 "juventus": 0
 },
-"marcatori": [],
+"marcatori": [
+"samuele98851"
+],
 "inizio": "2026-11-22T12:34+01:00",
 "fine": "2026-11-24T12:30+01:00"
 },
@@ -31066,6 +31074,10 @@
 "gennaro1223394747": {
 "g": 1,
 "sq": "napoli"
+},
+"samuele98851": {
+"g": 1,
+"sq": "inter"
 }
 }
 }
