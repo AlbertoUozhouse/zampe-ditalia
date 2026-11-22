@@ -2297,6 +2297,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  },
+  {
+   "t": "2026-11-22T15:41:51+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 9 follower in totale, 16.3 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (6) hanno una mediana di 6.7. Riprovare: apertura «video vero», gancio «Mussolente, il comune del sarcofago di Gaio Vettonio, contro Vigodarzere, il comune sul fiume Brenta: 36 chilometri, e la sfida è aperta.», chiusura «Sei di Vigodarzere o di Mussolente? Commenta città e nome. Seguici: domani un'altra sfida.» (formato testa_a_testa).",
+   "dati": {
+    "id": "18135845701682696",
+    "file": "2026-11-15-1305-testa_a_testa",
+    "formato": "testa_a_testa",
+    "uscita": "2026-11-15T12:20:01+00:00",
+    "follower": 9,
+    "reach_7g": 553,
+    "follower_ogni_1000": 16.3,
+    "mediana_simili": 6.7,
+    "simili": 6,
+    "scelte": {
+     "formato": "testa_a_testa",
+     "apertura": "video vero",
+     "voce": true,
+     "gancio": "Mussolente, il comune del sarcofago di Gaio Vettonio, contro Vigodarzere, il comune sul fiume Brenta: 36 chilometri, e la sfida è aperta.",
+     "chiusura": "Sei di Vigodarzere o di Mussolente? Commenta città e nome. Seguici: domani un'altra sfida."
+    },
+    "esito": "9 follower in totale, 16.3 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (6) hanno una mediana di 6.7.",
+    "riprovare": "Riprovare: apertura «video vero», gancio «Mussolente, il comune del sarcofago di Gaio Vettonio, contro Vigodarzere, il comune sul fiume Brenta: 36 chilometri, e la sfida è aperta.», chiusura «Sei di Vigodarzere o di Mussolente? Commenta città e nome. Seguici: domani un'altra sfida.» (formato testa_a_testa).",
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [
