@@ -4006,6 +4006,7 @@
 "18029711528940282",
 "18029724476877653",
 "18029729456920386",
+"18029758883927513",
 "18029790629704920",
 "18029964737913462",
 "18029998568918098",
@@ -8390,6 +8391,7 @@
 "18123083171054533",
 "18123087152076703",
 "18123104881947652",
+"18123113195061844",
 "18123122383730974",
 "18123127549932985",
 "18123146527947196",
@@ -11730,6 +11732,7 @@
 "18362862265217350",
 "18364040425247641",
 "18364454077301369",
+"18365082796247759",
 "18366627457219787",
 "18367382365300179",
 "18369053182247045",
@@ -12819,7 +12822,9 @@
 "risposte": [
 1795349427.696475,
 1795350310.9094326,
-1795351160.9962342
+1795351160.9962342,
+1795352006.8967266,
+1795352011.3595214
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -15070,7 +15075,7 @@
 "goose.2501174": "2026-11-17",
 "fc27seba": "2026-11-17",
 "callolinocallolino": "2026-11-17",
-"basile_christian014": "2026-11-18",
+"basile_christian014": "2026-11-22",
 "dino_gallo13": "2026-11-17",
 "lollo_turooo": "2026-11-17",
 "luca_il_turco": "2026-11-17",
@@ -15197,7 +15202,8 @@
 "valeria_couldbe": "2026-11-22",
 "aurora_bracciali_": "2026-11-22",
 "mattiagio3": "2026-11-22",
-"samuele98851": "2026-11-22"
+"samuele98851": "2026-11-22",
+"attilioziveri": "2026-11-22"
 },
 "media_letti": {},
 "pezzi": {
@@ -17630,7 +17636,7 @@
 "pamelainsalaco": 10,
 "rumenspammer": 5,
 "gianlu.colombarini_712": 5,
-"basile_christian014": 25,
+"basile_christian014": 35,
 "fc27seba": 10,
 "tom_cabas": 5,
 "dino_gallo13": 16,
@@ -22461,10 +22467,12 @@
 "42df408963a4dba6",
 "f9b523c2efcdb220",
 "37a70766e6eccfa5",
-"5fa6220ecd1db71e"
+"5fa6220ecd1db71e",
+"05d224e4ade07b6f"
 ],
 "privati_ora": [
-1795349427.6964998
+1795349427.6964998,
+1795352011.359549
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -26157,7 +26165,7 @@
 ],
 "attesa": null,
 "punti": {
-"Brescia|BS": 5,
+"Brescia|BS": 6,
 "Napoli|NA": 22,
 "Siracusa|SR": 1,
 "Agerola|NA": 3,
@@ -27157,12 +27165,14 @@
 "u": [
 "karol_belotti10",
 "giadaaadesiderati",
-"giuly23c"
+"giuly23c",
+"attilioziveri"
 ],
 "c": [
 "18122363050978875",
 "18115739606033042",
-"18140827405642161"
+"18140827405642161",
+"18123113195061844"
 ],
 "chiuse": 1,
 "log": [
@@ -28764,7 +28774,8 @@
 "aurora_bracciali_|animale|splif",
 "mattiagio3|animale|artu",
 "mattiagio3|animale|stella",
-"samuele98851|animale|balu"
+"samuele98851|animale|balu",
+"attilioziveri|animale|pablo"
 ]
 },
 "gara_follower": [
@@ -29647,12 +29658,14 @@
 "stadio": "SAN SIRO",
 "citta": "Milano",
 "gol": {
-"inter": 1,
+"inter": 3,
 "juventus": 1
 },
 "marcatori": [
 "samuele98851",
-"giuly23c"
+"giuly23c",
+"basile_christian014",
+"attilioziveri"
 ],
 "inizio": "2026-11-22T12:34+01:00",
 "fine": "2026-11-24T12:30+01:00"
@@ -29830,7 +29843,7 @@
 "sq": "inter"
 },
 "basile_christian014": {
-"g": 1,
+"g": 2,
 "sq": "inter"
 },
 "tommaso_ronchi13": {
@@ -31088,6 +31101,10 @@
 "giuly23c": {
 "g": 1,
 "sq": "juventus"
+},
+"attilioziveri": {
+"g": 1,
+"sq": "inter"
 }
 }
 }
