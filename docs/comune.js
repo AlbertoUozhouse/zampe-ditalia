@@ -202,6 +202,7 @@ Z.telaio = function (cfg) {
 
 // I giochi del gruppo, per la pagina giochi.html: il più nuovo in alto.
 Z.GIOCHI = [
+  { id: "rigori", nome: "I rigori delle Zampe", pagina: "rigori.html", uscito: "2026-11-22", testo: "Il gioco del Campionato: tira i rigori col tuo animale e la sciarpa della tua squadra. In porta c'è un gatto che si tuffa!" },
   { id: "bastone", nome: "Riporta il bastone", pagina: "bastone.html", uscito: "2026-10-31", testo: "Lancia il bastone a tempo: il tuo animale corre a prenderlo. Più lontano va, più punti!" },
   { id: "pappa", nome: "Pappa al volo", pagina: "pappa.html", uscito: "2026-10-31", testo: "Prendi crocchette e ossi al volo. Attento a cioccolato, uva e cipolla!" },
   { id: "corsa", nome: "Zampe di corsa", pagina: "gioco.html", uscito: "2026-10-30", testo: "Corri di notte per il paese, salta gli ostacoli, raccogli gli ossi." },

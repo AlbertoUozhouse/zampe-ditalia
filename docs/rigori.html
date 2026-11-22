@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>I rigori delle Zampe | Zampe d'Italia</title>
+<meta name="description" content="Il minigioco del Campionato delle Zampe: tira i rigori col tuo cane o gatto con la sciarpa della tua squadra. In porta c'è un gatto che si tuffa!">
+<meta name="theme-color" content="#060B1A">
+<meta property="og:title" content="I rigori delle Zampe: quanti ne segni?">
+<meta property="og:description" content="Tira i rigori col tuo animale e la sciarpa della tua squadra. Gratis, nel browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Nunito:wght@600;800;900&display=swap">
+<link rel="stylesheet" href="gioco.css">
+<style>.squadra{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:800}.squadra select{font:800 16px var(--f-body,inherit);padding:8px 12px;border-radius:12px;border:2px solid #FFC55C;background:#14244D;color:#FFF4DE}</style>
+<meta name="google-adsense-account" content="ca-pub-9487085633840449">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9487085633840449" crossorigin="anonymous"></script>
+</head>
+<body>
+<canvas id="scena" aria-label="I rigori delle Zampe: tocca a sinistra, al centro o a destra della porta per tirare"></canvas>
+
+<div class="hud" id="hud" hidden>
+  <div class="punti"><b id="punti">0</b><small>gol</small></div>
+  <div class="ossi"><b id="vite">❤️❤️❤️</b><span class="doppio" id="doppio" hidden>×2</span></div>
+  <div class="bersaglio" id="bersaglio" hidden></div>
+</div>
+
+<section class="schermo" id="inizio">
+  <a class="indietro" href="giochi.html">← Giochi</a>
+  <h1>I rigori delle Zampe</h1>
+  <p class="sotto">Il tuo animale tira i rigori con la sciarpa della tua squadra. In porta c'è un gatto: si tuffa, e più segni più diventa bravo!</p>
+  <div class="sfida-banner" id="sfidaBanner" hidden></div>
+  <div class="mio" id="mio"></div>
+  <form class="scegli" id="scegli" hidden>
+    <label for="nome">Nome</label><input id="nome" maxlength="20" autocomplete="off" placeholder="Luna">
+    <label for="tipo">Animale</label><select id="tipo"><option value="cane">Cane</option><option value="gatto">Gatto</option></select>
+    <label for="razza">Razza</label><input id="razza" maxlength="40" autocomplete="off" placeholder="golden, bassotto, gatto rosso…">
+    <button class="btn piccolo" type="submit">Fatto</button>
+  </form>
+  <label class="squadra" for="squadra">La tua squadra <select id="squadra"></select></label>
+  <button class="btn grande" id="gioca" type="button">Gioca</button>
+  <p class="come">Tocca a sinistra, al centro o a destra della porta (o usa le frecce) per tirare. Ogni gol è un punto; il gatto può parare 3 volte.</p>
+  <p class="record" id="recordInizio"></p>
+  <div class="podio" id="podio" hidden></div>
+</section>
+
+<section class="schermo" id="fine" hidden>
+  <h2 id="fineTitolo">Che partita!</h2>
+  <div class="risultato"><b id="finePunti">0</b><small>gol</small></div>
+  <p class="esito" id="esito"></p>
+  <button class="btn grande video" id="continua" type="button" hidden>🎬 Continua da qui<small>guarda un breve video</small></button>
+  <div class="riga">
+    <button class="btn" id="rigioca" type="button">Rigioca</button>
+    <button class="btn chiaro" id="sfida" type="button">⚔️ Sfida un amico</button>
+  </div>
+  <div class="registra" id="registra">
+    <b>🏆 Entra in classifica col tuo @</b>
+    <span>Commenta l'ultimo reel di @zampeditalia con:</span>
+    <button type="button" class="codice" id="codice" title="Copia"></button>
+    <a class="btn piccolo" id="vaiIg" href="https://www.instagram.com/zampeditalia/" target="_blank" rel="noopener">Copia e vai su Instagram</a>
+  </div>
+  <p class="copiato" id="copiato" role="status"></p>
+  <a class="link" href="giochi.html">Altri giochi</a>
+  <p class="piccolo">Il tuo animale non è ancora sulla mappa? Commenta un reel di <a href="https://www.instagram.com/zampeditalia/" target="_blank" rel="noopener">@zampeditalia</a> e accendi la sua luce.</p>
+</section>
+
+<div class="pubblicita" id="velo" hidden>Pubblicità in arrivo…</div>
+
+<script src="disegni.js"></script>
+<script src="comune.js"></script>
+<script src="rigori.js"></script>
+</body>
+</html>

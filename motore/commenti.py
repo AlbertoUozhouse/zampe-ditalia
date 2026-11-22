@@ -867,7 +867,7 @@ SPECIE_RE = r"furett|conigli|criceti|criceto|pappagall|uccell|cavall|tartarug|pe
 
 # ---------- Zampe di corsa: il record del minigioco arriva come commento «CORSA 1234 K7» ----------
 # I minigiochi (docs/giochi.html): parola del codice -> nome. Un gioco nuovo si aggiunge qui e in Zampe.GIOCHI (docs/comune.js).
-GIOCHI = {"corsa": "Zampe di corsa", "pappa": "Pappa al volo", "bastone": "Riporta il bastone"}
+GIOCHI = {"corsa": "Zampe di corsa", "pappa": "Pappa al volo", "bastone": "Riporta il bastone", "rigori": "I rigori delle Zampe"}
 RE_CORSA = re.compile(r"(?i)\b(" + "|".join(GIOCHI) + r")\s*:?\s*(\d{1,6})\s+([a-z0-9]{2})\b")
 RE_COPPA = re.compile(r"(?i)\bcoppa\s*:?\s*([a-z0-9]{2})\b")  # la prova del giorno della Coppa delle Zampe (motore/coppa.py)
 

@@ -7,7 +7,7 @@
   "traccia": "gioco",
   "aperto": "2026-11-20",
   "scadenza": "2026-11-22",
-  "stato": "da costruire",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-21",
@@ -78,7 +78,10 @@
     ],
     "fatto_quando": "Aprendo la sezione derby su Livorno-Cecina si vedono la linea tra i due comuni, il punteggio di entrambi che si aggiorna dopo ogni turno alternato e la luce del comune in testa accesa sulla mappa, il tutto pubblicato sul sito entro il 22 novembre."
    }
-  ]
+  ],
+  "aggiornato": "2026-11-22",
+  "nota": "I rigori delle Zampe, il gioco del Campionato (zampeditalia.it/rigori.html, primo nella pagina Giochi): scegli la squadra, il tuo animale tira i rigori nello stadio coi colori della tua squadra, in porta un gatto nero che si tuffa e diventa più bravo a ogni gol; 3 parate e finisce. Codice per la classifica dei giochi (RIGORI 12 XY), sfida agli amici, e a fine partita l'invito a segnare un gol vero nel Campionato: «scrivi forza <squadra> sotto il reel di oggi».",
+  "online_dal": "2026-11-22"
  },
  "reel": {
   "idea": "Il Reel del Campanile Vero: il reel si apre con un video reale del comune, con voce che dice nome e città, e solo dopo si accende la luce sulla mappa",
