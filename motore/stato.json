@@ -12633,6 +12633,7 @@
 "18605184811067978",
 "18605352535064627",
 "18606313510071995",
+"18606521668068091",
 "18607887778064061",
 "18608623510067434",
 "18609339343066543",
@@ -12946,7 +12947,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1795374565.8888013
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-18",
@@ -22646,6 +22649,15 @@
 ],
 "jacopo.cavadini|animale|yuki": [
 "fiocco"
+],
+"irenesaba560|animale|max": [
+"corona"
+],
+"contedelia51|animale|ottavio": [
+"collare"
+],
+"mariacristinaa.aa|animale|margo": [
+"fiocco"
 ]
 },
 "missioni_fatte": {},
@@ -22659,7 +22671,10 @@
 "negozio_storie": [],
 "presidenti": {
 "Veneto": "nicolassctt|animale|artur",
-"Lombardia": "jacopo.cavadini|animale|yuki"
+"Lombardia": "jacopo.cavadini|animale|yuki",
+"Puglia": "mariacristinaa.aa|animale|margo",
+"Sardegna": "irenesaba560|animale|max",
+"Campania": "contedelia51|animale|ottavio"
 },
 "corsa": {
 "2026-W45": {
@@ -27393,7 +27408,7 @@
 ]
 }
 ],
-"chiuso": false,
+"chiuso": true,
 "prima": [
 "matteo_bruscobike",
 "nicola.sportello",
@@ -29625,7 +29640,31 @@
 "t": "2026-11-22T08:34+00:00"
 }
 ],
-"gara_amici_albo": {},
+"gara_amici_albo": {
+"2026-11-16": [
+{
+"u": "irenesaba560",
+"p": 6,
+"premio": "corona",
+"n": "Max",
+"c": "Alghero"
+},
+{
+"u": "contedelia51",
+"p": 3,
+"premio": "collare",
+"n": "Ottavio",
+"c": "Giffoni Valle Piana"
+},
+{
+"u": "mariacristinaa.aa",
+"p": 3,
+"premio": "fiocco",
+"n": "Margò",
+"c": "Novoli"
+}
+]
+},
 "avvento_fatti": [],
 "coppa_albo": [
 {
@@ -29873,6 +29912,534 @@
 "pc": 0
 }
 ]
+},
+{
+"turno": 2,
+"fine": "2026-11-22",
+"vincitori": [
+{
+"c": "Roma|RM",
+"p": 59,
+"contro": "Torino|TO",
+"pc": 6
+},
+{
+"c": "Napoli|NA",
+"p": 22,
+"contro": "Cavaion Veronese|VR",
+"pc": 0
+},
+{
+"c": "Milano|MI",
+"p": 15,
+"contro": "Catania|CT",
+"pc": 2
+},
+{
+"c": "Genova|GE",
+"p": 14,
+"contro": "Brescia|BS",
+"pc": 8
+},
+{
+"c": "Alghero|SS",
+"p": 11,
+"contro": "Alcara li Fusi|ME",
+"pc": 0
+},
+{
+"c": "Lecce|LE",
+"p": 9,
+"contro": "Giugliano in Campania|NA",
+"pc": 0
+},
+{
+"c": "Cosenza|CS",
+"p": 6,
+"contro": "Padova|PD",
+"pc": 0
+},
+{
+"c": "Pomezia|RM",
+"p": 6,
+"contro": "Pojana Maggiore|VI",
+"pc": 0
+},
+{
+"c": "Bari|BA",
+"p": 5,
+"contro": "Bergamo|BG",
+"pc": 1
+},
+{
+"c": "Firenze|FI",
+"p": 4,
+"contro": "Cagliari|CA",
+"pc": 1
+},
+{
+"c": "Verona|VR",
+"p": 4,
+"contro": "Trieste|TS",
+"pc": 0
+},
+{
+"c": "Salerno|SA",
+"p": 4,
+"contro": "Brindisi|BR",
+"pc": 0
+},
+{
+"c": "Pistoia|PT",
+"p": 4,
+"contro": "Pisogne|BS",
+"pc": 0
+},
+{
+"c": "Campomorone|GE",
+"p": 4,
+"contro": "San Cesareo|RM",
+"pc": 0
+},
+{
+"c": "Palermo|PA",
+"p": 3,
+"contro": "Venezia|VE",
+"pc": 0
+},
+{
+"c": "Perugia|PG",
+"p": 3,
+"contro": "Rieti|RI",
+"pc": 0
+},
+{
+"c": "Ancona|AN",
+"p": 3,
+"contro": "Treviso|TV",
+"pc": 1
+},
+{
+"c": "Castellammare di Stabia|NA",
+"p": 3,
+"contro": "Taranto|TA",
+"pc": 1
+},
+{
+"c": "Sassari|SS",
+"p": 3,
+"contro": "San Vincenzo|LI",
+"pc": 0
+},
+{
+"c": "Eboli|SA",
+"p": 3,
+"contro": "Domodossola|VB",
+"pc": 0
+},
+{
+"c": "Benevento|BN",
+"p": 3,
+"contro": "Basiglio|MI",
+"pc": 0
+},
+{
+"c": "Rimini|RN",
+"p": 3,
+"contro": "Rivarolo Canavese|TO",
+"pc": 0
+},
+{
+"c": "Siena|SI",
+"p": 3,
+"contro": "Settimo Torinese|TO",
+"pc": 0
+},
+{
+"c": "Sciacca|AG",
+"p": 3,
+"contro": "Selargius|CA",
+"pc": 0
+},
+{
+"c": "Trevi nel Lazio|FR",
+"p": 3,
+"contro": "Treviglio|BG",
+"pc": 1
+},
+{
+"c": "Cuneo|CN",
+"p": 3,
+"contro": "Crispiano|TA",
+"pc": 0
+},
+{
+"c": "Giffoni Valle Piana|SA",
+"p": 3,
+"contro": "Ginosa|TA",
+"pc": 0
+},
+{
+"c": "Massafra|TA",
+"p": 3,
+"contro": "Mascali|CT",
+"pc": 0
+},
+{
+"c": "Novoli|LE",
+"p": 3,
+"contro": "Novate Milanese|MI",
+"pc": 0
+},
+{
+"c": "Agerola|NA",
+"p": 3,
+"contro": "Zocca|MO",
+"pc": 0
+},
+{
+"c": "Capaccio Paestum|SA",
+"p": 3,
+"contro": "Manerba del Garda|BS",
+"pc": 0
+},
+{
+"c": "Boville Ernica|FR",
+"p": 3,
+"contro": "Poggio Mirteto|RI",
+"pc": 0
+},
+{
+"c": "Casatenovo|LC",
+"p": 3,
+"contro": "San Polo dei Cavalieri|RM",
+"pc": 0
+},
+{
+"c": "Besnate|VA",
+"p": 3,
+"contro": "Monteiasi|TA",
+"pc": 1
+},
+{
+"c": "Bologna|BO",
+"p": 2,
+"contro": "Modena|MO",
+"pc": 0
+},
+{
+"c": "Barletta|BT",
+"p": 2,
+"contro": "Avellino|AV",
+"pc": 0
+},
+{
+"c": "Cremona|CR",
+"p": 2,
+"contro": "Colloredo di Monte Albano|UD",
+"pc": 0
+},
+{
+"c": "Olgiate Molgora|LC",
+"p": 2,
+"contro": "Oggiono|LC",
+"pc": 0
+},
+{
+"c": "Pavia|PV",
+"p": 2,
+"contro": "Peschici|FG",
+"pc": 0
+},
+{
+"c": "Siziano|PV",
+"p": 2,
+"contro": "Sora|FR",
+"pc": 0
+},
+{
+"c": "Rovereto|TN",
+"p": 2,
+"contro": "Rovato|BS",
+"pc": 0
+},
+{
+"c": "Sant'Elpidio a Mare|FM",
+"p": 2,
+"contro": "Rotondi|AV",
+"pc": 1
+},
+{
+"c": "Sondrio|SO",
+"p": 2,
+"contro": "Colico|LC",
+"pc": 1
+},
+{
+"c": "Settala|MI",
+"p": 2,
+"contro": "Fiano|TO",
+"pc": 1
+},
+{
+"c": "Montese|MO",
+"p": 2,
+"contro": "Policoro|MT",
+"pc": 1
+},
+{
+"c": "Predappio|FC",
+"p": 2,
+"contro": "Ronciglione|VT",
+"pc": 1
+},
+{
+"c": "Crotone|KR",
+"p": 1,
+"contro": "Piombino|LI",
+"pc": 0
+},
+{
+"c": "Messina|ME",
+"p": 1,
+"contro": "Bisceglie|BT",
+"pc": 0
+},
+{
+"c": "Reggio di Calabria|RC",
+"p": 1,
+"contro": "Caserta|CE",
+"pc": 0
+},
+{
+"c": "Latina|LT",
+"p": 1,
+"contro": "Cesena|FC",
+"pc": 0
+},
+{
+"c": "Como|CO",
+"p": 1,
+"contro": "Vicenza|VI",
+"pc": 0
+},
+{
+"c": "Trento|TN",
+"p": 1,
+"contro": "San Rufo|SA",
+"pc": 0
+},
+{
+"c": "Pescara|PE",
+"p": 1,
+"contro": "Piacenza|PC",
+"pc": 0
+},
+{
+"c": "Reggio nell'Emilia|RE",
+"p": 1,
+"contro": "Quartu Sant'Elena|CA",
+"pc": 0
+},
+{
+"c": "Siracusa|SR",
+"p": 1,
+"contro": "Tivoli|RM",
+"pc": 0
+},
+{
+"c": "Varese|VA",
+"p": 1,
+"contro": "Vercelli|VC",
+"pc": 0
+},
+{
+"c": "Formia|LT",
+"p": 1,
+"contro": "Ivrea|TO",
+"pc": 0
+},
+{
+"c": "Anzio|RM",
+"p": 1,
+"contro": "Anagni|FR",
+"pc": 0
+},
+{
+"c": "Campobasso|CB",
+"p": 1,
+"contro": "Calvi|BN",
+"pc": 0
+},
+{
+"c": "Prato|PO",
+"p": 1,
+"contro": "Rho|MI",
+"pc": 0
+},
+{
+"c": "Velletri|RM",
+"p": 1,
+"contro": "Vasto|CH",
+"pc": 0
+},
+{
+"c": "Aprilia|LT",
+"p": 1,
+"contro": "Arese|MI",
+"pc": 0
+},
+{
+"c": "Darfo Boario Terme|BS",
+"p": 1,
+"contro": "Codevigo|PD",
+"pc": 0
+},
+{
+"c": "Udine|UD",
+"p": 1,
+"contro": "Viareggio|LU",
+"pc": 1
+},
+{
+"c": "Viareggio|LU",
+"p": 1,
+"contro": "Udine|UD",
+"pc": 1
+},
+{
+"c": "Ladispoli|RM",
+"p": 1,
+"contro": "Lamezia Terme|CZ",
+"pc": 0
+},
+{
+"c": "San Valentino Torio|SA",
+"p": 1,
+"contro": "San Severo|FG",
+"pc": 0
+},
+{
+"c": "Cefalù|PA",
+"p": 1,
+"contro": "Cerchio|AQ",
+"pc": 0
+},
+{
+"c": "Lecco|LC",
+"p": 1,
+"contro": "Lequile|LE",
+"pc": 0
+},
+{
+"c": "Olbia|SS",
+"p": 1,
+"contro": "Oderzo|TV",
+"pc": 0
+},
+{
+"c": "Sorrento|NA",
+"p": 1,
+"contro": "Spadola|VV",
+"pc": 0
+},
+{
+"c": "Bitonto|BA",
+"p": 1,
+"contro": "Bisignano|CS",
+"pc": 0
+},
+{
+"c": "Casirate d'Adda|BG",
+"p": 1,
+"contro": "Cassina de' Pecchi|MI",
+"pc": 0
+},
+{
+"c": "Comacchio|FE",
+"p": 1,
+"contro": "Colosimi|CS",
+"pc": 0
+},
+{
+"c": "Gorizia|GO",
+"p": 1,
+"contro": "Gonnosfanadiga|SU",
+"pc": 0
+},
+{
+"c": "Lucera|FG",
+"p": 1,
+"contro": "Luco dei Marsi|AQ",
+"pc": 0
+},
+{
+"c": "Mergozzo|VB",
+"p": 1,
+"contro": "Mercogliano|AV",
+"pc": 0
+},
+{
+"c": "Rocca Canavese|TO",
+"p": 1,
+"contro": "Roccamorice|PE",
+"pc": 0
+},
+{
+"c": "Teramo|TE",
+"p": 1,
+"contro": "Tempio Pausania|SS",
+"pc": 0
+},
+{
+"c": "Terracina|LT",
+"p": 1,
+"contro": "Termoli|CB",
+"pc": 0
+},
+{
+"c": "San Pancrazio Salentino|BR",
+"p": 1,
+"contro": "Frabosa Soprana|CN",
+"pc": 0
+},
+{
+"c": "Castellammare del Golfo|TP",
+"p": 1,
+"contro": "Rovito|CS",
+"pc": 0
+},
+{
+"c": "San Donaci|BR",
+"p": 1,
+"contro": "Angri|SA",
+"pc": 0
+},
+{
+"c": "Balvano|PZ",
+"p": 1,
+"contro": "Cipressa|IM",
+"pc": 0
+},
+{
+"c": "Pozzolo Formigaro|AL",
+"p": 1,
+"contro": "Palazzo San Gervasio|PZ",
+"pc": 0
+},
+{
+"c": "Priverno|LT",
+"p": 1,
+"contro": "Pignataro Maggiore|CE",
+"pc": 0
+},
+{
+"c": "Latronico|PZ",
+"p": 1,
+"contro": "Venafro|IS",
+"pc": 0
+}
+]
 }
 ],
 "coppa_misure": [
@@ -29889,6 +30456,20 @@
 "staffette": 3,
 "staffette_quartiere": 7,
 "partecipanti_quartiere": 63
+},
+{
+"turno": 2,
+"inizio": "2026-11-16",
+"fine": "2026-11-22",
+"giocatori": 5,
+"tornano": 0,
+"piu_giorni": 0,
+"nuovi_da_instagram": 4,
+"punti": 319,
+"comuni": 101,
+"staffette": 12,
+"staffette_quartiere": 28,
+"partecipanti_quartiere": 211
 }
 ],
 "serie": {
@@ -29964,7 +30545,7 @@
 "stadio": "SAN SIRO",
 "citta": "Milano",
 "gol": {
-"inter": 11,
+"inter": 12,
 "juventus": 11
 },
 "marcatori": [
@@ -29989,7 +30570,8 @@
 "gioxyy.dag",
 "leo_batta7",
 "folla_matteo_",
-"leonardo_socco"
+"leonardo_socco",
+"si_mo_cap_"
 ],
 "inizio": "2026-11-22T12:34+01:00",
 "fine": "2026-11-24T12:30+01:00"
@@ -31497,7 +32079,16 @@
 "leonardo_socco": {
 "g": 1,
 "sq": "inter"
+},
+"si_mo_cap_": {
+"g": 1,
+"sq": "inter"
 }
 }
-}
+},
+"feste_presidente": [
+"Puglia|b9adcfe6",
+"Sardegna|b2450d8b",
+"Campania|618285fe"
+]
 }
