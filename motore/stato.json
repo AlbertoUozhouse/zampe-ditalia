@@ -8371,6 +8371,7 @@
 "18122842381938829",
 "18122846179994672",
 "18122863460293359",
+"18122868422058706",
 "18122872531931303",
 "18122872799282736",
 "18122890678936095",
@@ -11557,6 +11558,7 @@
 "18345234232282021",
 "18345236173259850",
 "18345422857249113",
+"18345430939274195",
 "18345462781283368",
 "18345511495280138",
 "18345578203249539",
@@ -12811,8 +12813,6 @@
 "18798213136033257"
 ],
 "risposte": [
-1795343787.157051,
-1795343795.6990714,
 1795344712.8811462,
 1795344717.1485424,
 1795344720.3282292,
@@ -22522,7 +22522,7 @@
 "2026-11-19": 2041,
 "2026-11-20": 2062,
 "2026-11-21": 2076,
-"2026-11-22": 2094
+"2026-11-22": 2095
 },
 "gioco_pappa": {
 "2026-W46": {
@@ -24017,6 +24017,10 @@
 [
 "2026-11-22T11:21+00:00",
 2094
+],
+[
+"2026-11-22T11:34+00:00",
+2095
 ]
 ],
 "coppa": {
@@ -29628,79 +29632,18 @@
 },
 "campionato": {
 "partita": {
-"giornata": 4,
-"a": "roma",
-"b": "napoli",
-"stadio": "STADIO OLIMPICO",
-"citta": "Roma",
+"giornata": 5,
+"a": "inter",
+"b": "juventus",
+"stadio": "SAN SIRO",
+"citta": "Milano",
 "gol": {
-"roma": 26,
-"napoli": 34
+"inter": 0,
+"juventus": 0
 },
-"marcatori": [
-"claudio_cola05",
-"angelotortorella16",
-"riccardo9_._chiruu",
-"mattiagiancotta_",
-"federico92929",
-"mario_amelio_14",
-"zerto_012_",
-"ambro.170",
-"chri__priv27",
-"robby29953",
-"le_le4428_11",
-"sicuro_non_leonardo",
-"matteo_orru09",
-"__edoardogiaccio__",
-"cristian_faddi",
-"gipo_balasco_",
-"habibiyalla77",
-"euplio_dimasi",
-"vincenzo.fontana13",
-"amostef17_",
-"samu.26010",
-"napoleon_bonap4rt3",
-"niccoo_liberi",
-"rossella.dagostino.104",
-"andre_bartalesi",
-"matteobitelli",
-"antonio.fortugnoo",
-"peppe_bond15",
-"baby_samuuuuu17",
-"cri_sibo",
-"matteo__zn",
-"_kavin_russo_14",
-"marinanespeca",
-"luca.monaco7",
-"salvatore95880",
-"il.privv.de__mattee",
-"emmanuele_barrett",
-"forinogian",
-"domenicogiordano777",
-"mattiapro29",
-"__paolodemarino__",
-"armadillo.357849",
-"gabbogol86",
-"utentebrasiliano2016",
-"contedelia51",
-"luca_nat1o",
-"ciao_1237808",
-"rmaltiro",
-"spataro.dani",
-"elbrandinopro.1",
-"deer.8222210",
-"sharon_bianchi123",
-"cozzolino.gabriele",
-"giuseppe_marra_014",
-"antonio_jr581",
-"_salvatore_scanu22",
-"federica_esposito1232",
-"federica222221",
-"albi22101318",
-"gennaro1223394747"
-],
-"inizio": "2026-11-21T12:44+01:00",
-"fine": "2026-11-22T12:30+01:00"
+"marcatori": [],
+"inizio": "2026-11-22T12:34+01:00",
+"fine": "2026-11-24T12:30+01:00"
 },
 "giocate": [
 {
@@ -29729,6 +29672,15 @@
 "gb": 41,
 "stadio": "MARASSI",
 "fine": "2026-11-21T12:30+01:00"
+},
+{
+"giornata": 4,
+"a": "roma",
+"b": "napoli",
+"ga": 26,
+"gb": 34,
+"stadio": "STADIO OLIMPICO",
+"fine": "2026-11-22T12:30+01:00"
 }
 ],
 "classifica": {
@@ -29752,12 +29704,12 @@
 },
 "roma": {
 "pt": 3,
-"g": 1,
+"g": 2,
 "v": 1,
 "n": 0,
-"p": 0,
-"gf": 94,
-"gs": 53
+"p": 1,
+"gf": 120,
+"gs": 87
 },
 "lazio": {
 "pt": 0,
@@ -29785,6 +29737,15 @@
 "p": 0,
 "gf": 41,
 "gs": 41
+},
+"napoli": {
+"pt": 3,
+"g": 1,
+"v": 1,
+"n": 0,
+"p": 0,
+"gf": 34,
+"gs": 26
 }
 },
 "bomber": {
