@@ -1,0 +1,143 @@
+{
+ "id": "crescita-2026-11-22",
+ "formato": "crescita del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-22T10:16:41+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-22T10:16:41+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Si parte dai numeri veri degli ultimi 12 reel organici e dai verbali dei 7 giorni."
+  },
+  {
+   "t": "2026-11-22T10:16:44+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato 'tifo' del 17/11 alle 13:00 ha il reach più alto della serie (3.555 account) e 583 commenti, ma solo 23 follower, cioè 6,5 ogni 1.000. Le 'partita' (4,3, 2,4, 2,2 ogni 1.000) convertono meglio dei reel 'coppa' o 'testa a testa' non in linea con il reach. Il verbale migliore dei 7 giorni è 'puntata' con 21,4 ogni 1.000 (8 follower), ma su un solo reel simile. Nei reel recenti il follower",
+   "dati": {
+    "osservazione": "Il formato 'tifo' del 17/11 alle 13:00 ha il reach più alto della serie (3.555 account) e 583 commenti, ma solo 23 follower, cioè 6,5 ogni 1.000. Le 'partita' (4,3, 2,4, 2,2 ogni 1.000) convertono meglio dei reel 'coppa' o 'testa a testa' non in linea con il reach. Il verbale migliore dei 7 giorni è 'puntata' con 21,4 ogni 1.000 (8 follower), ma su un solo reel simile. Nei reel recenti il follower/1.000 cala costantemente, da 4,3 a 2,2 sulle partite; le serie 'Paolino' con apertura su mappa e chiusura a scelta nei commenti stanno a 2,3-4,1 ogni 1.000 con reach fra 1.000 e 1.300.",
+    "proposta": "Riprendere il formato 'puntata' (apertura mappa, voce, gancio sulla luce accesa e chiusura che chiede di accendere la propria luce), che ha il miglior rapporto follower/1.000 dei verbali. Mantenere un unico invito a seguire per reel, evitando la chiusura ripetuta con 'Domani: ...' su più giorni, e tenere il formato 'tifo' con chiusura a domanda aperta, ricordando che genera commenti ma poca conversione.",
+    "gancio": "Il tuo animale è già su questa mappa? 2789 luci accese in Italia."
+   }
+  },
+  {
+   "t": "2026-11-22T10:16:44+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato «tifo» (2026-11-17 13:00) ha portato 5.102 views e 583 commenti, il picco di coinvolgimento, ma solo 23 follower (6.5 ogni 1.000 reach). Le «partita» con il gancio di campionato hanno reach alti (4.211 e 4.163) ma follower_ogni_1000 scesi da 8.5 a 2.2. Nei verbali, i reel «testa_a_testa» sono sotto la mediana (es. 5.4 contro 29.0; 2.4 contro 18.5), mentre «questa_luce» con video vero ha",
+   "dati": {
+    "osservazione": "Il formato «tifo» (2026-11-17 13:00) ha portato 5.102 views e 583 commenti, il picco di coinvolgimento, ma solo 23 follower (6.5 ogni 1.000 reach). Le «partita» con il gancio di campionato hanno reach alti (4.211 e 4.163) ma follower_ogni_1000 scesi da 8.5 a 2.2. Nei verbali, i reel «testa_a_testa» sono sotto la mediana (es. 5.4 contro 29.0; 2.4 contro 18.5), mentre «questa_luce» con video vero ha fatto 14.3 contro una mediana di 11.1. Le «serie» con Paolino tengono 2.3-4.1 follower ogni 1.000 con reach intorno a 1.000-1.300, senza dati sulla mediana. Il calo dei follower a parità di reach suggerisce che il pubblico da campionato guarda e commenta, ma non segue.",
+    "proposta": "Domani ripetere il ritmo di «questa_luce» con video vero e voce, che nei verbali ha reso sopra la mediana, e collegarlo al campionato con un gancio che porti a seguire l'account per scoprire la propria luce, non solo a commentare il risultato. Evitare il formato testa_a_testa, sotto mediana in tutti e tre i casi. Tenere la chiusura «seguici» anche sulle partite.",
+    "gancio": "Questa luce è di Kira, labrador, a Vallo della Lucania: di chi è la prossima?"
+   }
+  },
+  {
+   "t": "2026-11-22T10:16:44+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato «tifo» del 17/11 ha portato 23 follower su 3.555 account raggiunti (6,5 ogni 1.000) e 583 commenti, il picco di coinvolgimento; la «partita» del 19/11 ne ha portati 18 su 4.211 (4,3 ogni 1.000) con 486 commenti. Il «coppa_verdetto» del 16/11 ha raggiunto 1.464 account con 71 commenti ma solo 2 follower (1,4 ogni 1.000). Le «serie» con Paolino ottengono 2,3-4,1 follower ogni 1.000 con re",
+   "dati": {
+    "osservazione": "Il formato «tifo» del 17/11 ha portato 23 follower su 3.555 account raggiunti (6,5 ogni 1.000) e 583 commenti, il picco di coinvolgimento; la «partita» del 19/11 ne ha portati 18 su 4.211 (4,3 ogni 1.000) con 486 commenti. Il «coppa_verdetto» del 16/11 ha raggiunto 1.464 account con 71 commenti ma solo 2 follower (1,4 ogni 1.000). Le «serie» con Paolino ottengono 2,3-4,1 follower ogni 1.000 con reach di circa 1.000-1.300, ma i commenti restano bassi (8-24). I verbali confermano il calo: «coppa_sorpasso» 0,9 ogni 1.000 e «testa_a_testa» del 14/11 zero follower, entrambi sotto la mediana dei simili. Il tratto comune dei reel che convertono è la domanda diretta al pubblico su animali e città.",
+    "proposta": "Riproporre il formato «tifo» con apertura su mappa e domanda sul proprio cane per tifoseria, chiudendo con un confronto tra tifoserie che invita a commentare città e nome; evitare il ripetersi del testa_a_testa e della coppa, che non convertono.",
+    "gancio": "Il tuo cane per chi tifa?"
+   }
+  },
+  {
+   "t": "2026-11-22T10:16:44+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato «tifo» del 17/11 ha portato 5.102 views e 583 commenti (il massimo di commenti della serie) ma solo 23 follower, cioè 6.5 ogni 1.000 account raggiunti. Il «verdetto» della Coppa del 16/11 (1.849 views) ha dato 1.4 follower ogni 1.000. Le serie di Paolino hanno un rapporto migliore: 28.6 follower ogni 1.000 il 16/11 (250 views, 5 follower) e 8.4 il 17/11. Le partite del 19 e 20/11 hanno ",
+   "dati": {
+    "osservazione": "Il formato «tifo» del 17/11 ha portato 5.102 views e 583 commenti (il massimo di commenti della serie) ma solo 23 follower, cioè 6.5 ogni 1.000 account raggiunti. Il «verdetto» della Coppa del 16/11 (1.849 views) ha dato 1.4 follower ogni 1.000. Le serie di Paolino hanno un rapporto migliore: 28.6 follower ogni 1.000 il 16/11 (250 views, 5 follower) e 8.4 il 17/11. Le partite del 19 e 20/11 hanno molta reach (4.211 e 4.163) ma solo 2.4-4.3 follower ogni 1.000. Nei verbali, il formato «puntata» (21.4 ogni 1.000 a 7 giorni, mediana simili 13.1) è l'unico sopra la mediana dei simili; «questa_luce» del 11/11 è sopra la sua mediana (14.3 contro 11.1), mentre i «testa_a_testa» sono sotto la mediana in tutti e tre i casi (es. 8.0 contro 34.0).",
+    "proposta": "Domani provare un formato «serie» di Paolino con gancio in cui il pubblico decide il prossimo passo (come quello del 16/11, che ha dato il rapporto migliore), chiudendo con una scelta binaria nei commenti e con l'appuntamento al giorno dopo. Tenere le partite solo per il tifo organizzato, evitare di ripetere i «testa_a_testa» così come sono, e riprovare il formato «puntata» con apertura mappa. Restano da verificare i dati a 7 giorni dei reel di oggi, perché le ultime uscite hanno solo il dato di follower dopo il reel.",
+    "gancio": "Questo è Paolino. Domani decidi tu cosa gli succede: scrivi nei commenti."
+   }
+  },
+  {
+   "t": "2026-11-22T10:16:47+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato «tifo» del 17/11 alle 13:00 ha il reach più alto della serie (3.555 account) e 583 commenti, ma solo 23 follower, cioè 6,5 ogni 1.000 account: i commenti non si traducono in follower. Il «partita» del 19/11 (4.211 reach, 486 commenti) porta 18 follower (4,3 ogni 1.000). Nei reel «serie» la conversione è più alta sul pubblico piccolo: il 21/11 ha 4,0 ogni 1.000 con 24 commenti, mentre le",
+   "dati": {
+    "osservazione": "Il formato «tifo» del 17/11 alle 13:00 ha il reach più alto della serie (3.555 account) e 583 commenti, ma solo 23 follower, cioè 6,5 ogni 1.000 account: i commenti non si traducono in follower. Il «partita» del 19/11 (4.211 reach, 486 commenti) porta 18 follower (4,3 ogni 1.000). Nei reel «serie» la conversione è più alta sul pubblico piccolo: il 21/11 ha 4,0 ogni 1.000 con 24 commenti, mentre le serie successive scendono sotto 2,5 e il formato «testa_a_testa» nei verbali (2,4 e 0,0 ogni 1.000) è sotto la mediana dei simili, come «questa_luce» (11,7 contro 12,4) e «coppa_sorpasso» (0,9 contro 13,1). Il dato più forte è la serie del 10/11 (puntata, 21,4 ogni 1.000 con apertura mappa), ma ha un solo simile di confronto.",
+    "proposta": "Domani provare un formato «serie» con apertura «mappa», perché è il formato che nei verbali e nei reel recenti converte meglio sul reach piccolo, mantenendo un gancio personale su un singolo animale e una chiusura che chiede un voto nei commenti. Evitare il «testa_a_testa» con apertura «video vero» finché non risale sopra la mediana dei simili. Misurare follower ogni 1.000 account, non i commenti.",
+    "gancio": "Questo è Paolino. Ha trenta giorni per trovare casa."
+   }
+  },
+  {
+   "t": "2026-11-22T10:16:47+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato partita/tifo genera reach e commenti alti (6.211 account e 486 commenti per la finale Inter-Milan del 19/11) ma il tasso di follower resta basso: 4,3 ogni 1.000 account raggiunti, e 2,2–2,4 nelle partite successive. Le serie di Paolino hanno reach più piccola ma follower per 1.000 account simili o più alti in certi casi (28,6 il 16/11, 8,4 il 17/11), mentre il 20–21/11 scendono a 2,3 e ",
+   "dati": {
+    "osservazione": "Il formato partita/tifo genera reach e commenti alti (6.211 account e 486 commenti per la finale Inter-Milan del 19/11) ma il tasso di follower resta basso: 4,3 ogni 1.000 account raggiunti, e 2,2–2,4 nelle partite successive. Le serie di Paolino hanno reach più piccola ma follower per 1.000 account simili o più alti in certi casi (28,6 il 16/11, 8,4 il 17/11), mentre il 20–21/11 scendono a 2,3 e 4,0. Il verbale del 12/11 mostra che il testa_a_testa è sotto la mediana dei simili (5,4 contro 29,0) e che coppa_sorpasso ha 0,9 follower ogni 1.000 account contro una mediana di 13,1. Il formato questa_luce del 11/11 è sopra la mediana (14,3 contro 11,1). Non ci sono dati sul tempo medio di permanenza dei nuovi follower.",
+    "proposta": "Riprendere il formato questa_luce con apertura video vero e voce, che nel verbale è stato sopra la mediana, e alternarlo a un reel di Paolino con gancio sulla scelta bagno/veterinario, che ha già mostrato un buon rapporto follower/reach. Evitare il testa_a_testa e il coppa_sorpasso così come sono. Per le partite, tenere la chiusura con il gioco ma misurare se il tasso di follower migliora rispetto a 2,2–2,4.",
+    "gancio": "Sai di chi è questa luce? Scorri e scoprilo."
+   }
+  },
+  {
+   "t": "2026-11-22T10:16:47+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Nelle ultime 9 uscite il rendimento in follower è basso: il reel 'tifo' del 17/11 ha 5.102 views e 583 commenti ma solo 23 follower (6,5 ogni 1.000 account raggiunti), mentre la 'partita' del 19/11 ne ha 6.211 views e 18 follower (4,3 ogni 1.000). I commenti alti non si traducono in follower. Nei verbali a 7 giorni i formati 'testa_a_testa' (mediana simili 18,5 e 29,0 contro 8,0 e 2,4 ottenuti) e ",
+   "dati": {
+    "osservazione": "Nelle ultime 9 uscite il rendimento in follower è basso: il reel 'tifo' del 17/11 ha 5.102 views e 583 commenti ma solo 23 follower (6,5 ogni 1.000 account raggiunti), mentre la 'partita' del 19/11 ne ha 6.211 views e 18 follower (4,3 ogni 1.000). I commenti alti non si traducono in follower. Nei verbali a 7 giorni i formati 'testa_a_testa' (mediana simili 18,5 e 29,0 contro 8,0 e 2,4 ottenuti) e 'coppa_sorpasso' (0,9 contro mediana 13,1) sono sotto la mediana. Il formato 'questa_luce' con apertura 'video vero' ha ottenuto 14,3 contro una mediana di 11,1, quindi è l'unico sopra la mediana.",
+    "proposta": "Domani riprovare il formato 'questa_luce' con apertura 'video vero' e voce, legando la storia a un animale specifico e alla sua luce, senza chiedere commenti generici. Evitare i 'testa_a_testa' e le sfide di città, che nei verbali non portano follower. Nel reel 'serie' di Paolino conviene sostituire la domanda di scelta nei commenti con un invito a seguire per vedere l'esito.",
+    "gancio": "Questa luce è di Kira, labrador: ha trovato casa a Vallo della Lucania. Vuoi vedere la sua?"
+   }
+  },
+  {
+   "t": "2026-11-22T10:16:47+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato 'tifo' del 17/11 alle 13:00 ha il reach più alto della serie (3.555 account) e 583 commenti, ma porta solo 23 follower (6,5 ogni 1.000). Il formato 'partita' del 19/11 ha 4.211 reach e 486 commenti, con 18 follower (4,3 ogni 1.000). Il 'testa_a_testa' è il formato più debole: nei verbali a 7 giorni sta sotto la mediana dei simili in tre casi su tre (5,4 contro 29,0; 2,4 contro 18,5; 0,0",
+   "dati": {
+    "osservazione": "Il formato 'tifo' del 17/11 alle 13:00 ha il reach più alto della serie (3.555 account) e 583 commenti, ma porta solo 23 follower (6,5 ogni 1.000). Il formato 'partita' del 19/11 ha 4.211 reach e 486 commenti, con 18 follower (4,3 ogni 1.000). Il 'testa_a_testa' è il formato più debole: nei verbali a 7 giorni sta sotto la mediana dei simili in tre casi su tre (5,4 contro 29,0; 2,4 contro 18,5; 0,0 contro 8,0). Le serie 'Paolino' con gancio 'Questo è Paolino' hanno i tassi più alti recenti (28,6 il 16/11 con soli 175 reach, 8,4 il 17/11), ma con pochi account raggiunti; i commenti crollano nei giorni successivi (da 31 a 8-24). I dati dei verbali a 7 giorni e quelli dei reel grezzi vanno letti separatamente.",
+    "proposta": "Riprendere il formato 'tifo' (domanda diretta sul proprio cane, con call to action a commentare), evitando il 'testa_a_testa', che nei verbali ha sempre sotto-performato. Alternare una serie 'Paolino' con gancio personale e un 'tifo' o 'partita' per la portata, e testare nei commenti una call to action che chieda la razza o la città, mantenendo il 'seguici' in chiusura.",
+    "gancio": "Il tuo cane per chi tifa?"
+   }
+  },
+  {
+   "t": "2026-11-22T10:16:50+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Il formato «partita» tiene meglio sulla crescita: 4,3 follower ogni 1.000 account raggiunti (19 novembre, 6.211 views, 4.211 reach, 18 follower) e 2,4 e 2,2 sugli altri due. Il formato «serie» con il gancio sui giorni per trovare casa oscilla tra 2,3 e 4,1, con reach più bassi e pochi commenti (8-24). Il reel «tifo» del 17 novembre ha generato il maggior numero di commenti (583) ma solo 6,5 follow",
+   "dati": {
+    "osservazione": "Il formato «partita» tiene meglio sulla crescita: 4,3 follower ogni 1.000 account raggiunti (19 novembre, 6.211 views, 4.211 reach, 18 follower) e 2,4 e 2,2 sugli altri due. Il formato «serie» con il gancio sui giorni per trovare casa oscilla tra 2,3 e 4,1, con reach più bassi e pochi commenti (8-24). Il reel «tifo» del 17 novembre ha generato il maggior numero di commenti (583) ma solo 6,5 follower ogni 1.000 con 23 follower totali. Nei verbali, il «testa_a_testa» con apertura «video vero» è sotto la mediana dei simili in tutte e tre le uscite (es. 2,4 contro 18,5 a Barletta-Bisceglie); «questa_luce» è sopra la mediana (14,3 contro 11,1) e «puntata» a 21,4 contro 13,1 è il dato più forte. I numeri della Coppa e del campionato portano commenti ma convertono poco in follower.",
+    "proposta": "Domani riprovare un reel in formato «questa_luce» con apertura «video vero», perché è l'unico formato che nei verbali supera la mediana dei simili; in parallelo ripetere la struttura che ha funzionato di più, cioè apertura su mappa e chiusura che chiede un commento con città e nome, e spostare il gancio verso un'identità chiara del cane (la luce di un animale specifico) invece dei conteggi generici. Evitare il testa_a_testa con apertura video vero finché non si cambia impostazione.",
+    "gancio": "Questa luce è di chi? Ti dico città e nome del cane che la accende."
+   }
+  },
+  {
+   "t": "2026-11-22T10:16:55+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Per domani: gancio «Questa luce è di Kira, labrador, a Vallo della Lucania: di chi sarà la prossima?», chiusura «Segui Zampe d'Italia e domani scopri la prossima luce: accendi anche la tua.». Dato: Il reel «tifo» del 17/11 ha avuto 583 commenti ma solo 23 follower (6,5 ogni 1.000 raggiunti). Le partite scendono da 4,3 a 2,2 ogni 1.000. Nei verbali a 7 giorni «questa_luce» fa 14,3 contro una mediana di 11,1, mentre il «testa_a_testa» sta sotto la mediana in 3 casi su 3.",
+   "dati": {
+    "pubblico": "Persone che amano cani e gatti e non conoscono ancora Zampe d'Italia: curiosi arrivati dal tifo e dalle partite che commentano ma non seguono, a cui va dato un motivo concreto per seguire.",
+    "gancio": "Questa luce è di Kira, labrador, a Vallo della Lucania: di chi sarà la prossima?",
+    "motivo_per_seguire": "Ogni animale ha una luce sulla mappa d'Italia. Seguendo l'account scopri la luce di un animale vero ogni giorno e puoi accendere la tua.",
+    "chiusura": "Segui Zampe d'Italia e domani scopri la prossima luce: accendi anche la tua.",
+    "da_riprovare": "Formato «questa_luce» con video vero e voce, che ha superato la mediana dei simili (14,3 contro 11,1). In alternativa la «puntata» con apertura su mappa, il dato più alto (21,4 ogni 1.000), ma su un solo reel. Un solo invito a seguire per reel. Le serie di Paolino possono restare come secondo formato.",
+    "da_evitare": "Il «testa_a_testa» (sotto la mediana in tutti e tre i casi) e il «coppa_sorpasso». Evitare anche domande generiche che portano solo commenti, e la chiusura «Domani: ...» ripetuta ogni giorno.",
+    "dato": "Il reel «tifo» del 17/11 ha avuto 583 commenti ma solo 23 follower (6,5 ogni 1.000 raggiunti). Le partite scendono da 4,3 a 2,2 ogni 1.000. Nei verbali a 7 giorni «questa_luce» fa 14,3 contro una mediana di 11,1, mentre il «testa_a_testa» sta sotto la mediana in 3 casi su 3."
+   }
+  }
+ ],
+ "versioni": [],
+ "token_persone": 74116,
+ "fine": "2026-11-22T10:16:55+00:00"
+}

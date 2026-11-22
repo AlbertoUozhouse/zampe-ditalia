@@ -1,23 +1,5 @@
 [
  {
-  "id": "2026-11-13-1307-testa_a_testa",
-  "formato": "testa_a_testa",
-  "modalita": "operativa",
-  "inizio": "2026-11-13T12:07:49+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-13T12:16:52+00:00",
-  "scambi": 131
- },
- {
-  "id": "2026-11-13-1813-indovina",
-  "formato": "indovina",
-  "modalita": "operativa",
-  "inizio": "2026-11-13T17:13:19+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-13T17:18:30+00:00",
-  "scambi": 129
- },
- {
   "id": "2026-11-13-2019-intruso",
   "formato": "intruso",
   "modalita": "operativa",
@@ -538,5 +520,23 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-21T20:09:30+00:00",
   "scambi": 128
+ },
+ {
+  "id": "crescita-2026-11-22",
+  "formato": "crescita del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-22T10:16:41+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-22T10:16:55+00:00",
+  "scambi": 11
+ },
+ {
+  "id": "innovazione-2026-11-22",
+  "formato": "innovazione del giorno",
+  "modalita": "operativa",
+  "inizio": "2026-11-22T10:16:56+00:00",
+  "stato": "fatto",
+  "fine": "2026-11-22T10:17:17+00:00",
+  "scambi": 19
  }
 ]

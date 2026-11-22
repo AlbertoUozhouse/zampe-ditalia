@@ -160,5 +160,17 @@
    "come_misurarla": "Dopo 7 giorni: follower ogni 1.000 account raggiunti dei reel «questa_luce» con apertura «video vero», confrontati con la mediana attuale dei simili (11,1) e con la soglia di Damon (14,3). In più, la quota di reach che arriva da chi non ci segue ancora."
   },
   "perche": "È l'idea più completa e più facile da replicare: collega il video vero alla luce giusta tramite le coordinate in config.json e si misura anche sul pubblico nuovo, che è quello che porta follower."
+ },
+ {
+  "giorno": "2026-11-22",
+  "gioco": null,
+  "reel": null,
+  "realismo": {
+   "idea": "Il Paese in Tasca 3D: Livorno in rilievo reale",
+   "come_funziona": "Toccando un comune sulla mappa del sito si apre una piccola scena three.js con il rilievo reale di circa 10 km attorno al paese, costruito dai dati di altitudine già usati per la mappa. Sul punto esatto del comune si accende lo sprite SVG dell'animale con la sua luce, e la scena si può ruotare col dito. Si parte da Livorno come prova, poi si estende agli altri comuni che hanno già la luce. Nei reel la stessa scena può diventare una ripresa breve di 4-6 secondi che ruota lenta prima della luce sulla mappa.",
+   "primo_passo": "Creare il modulo docs/paese3d.js: leggere da motore/config.json le coordinate di Livorno, ritagliare dalla griglia di altitudine esistente un quadrato di circa 10 km attorno al punto, trasformarlo in una PlaneGeometry di three.js con i vertici alzati secondo l'altitudine, e posizionare sul punto del comune lo sprite SVG dell'animale (come Sprite con texture). Poi collegare il modulo al tocco sul comune della mappa esistente in docs/ (mappa.svg) e verificare che si apra e giri bene su telefono.",
+   "come_misurarla": "Dopo 7 giorni: quota di visitatori della mappa che toccano un comune e aprono la scena 3D (aperture / visite alla mappa), tempo medio passato sulla scena, quota di utenti che aprono più di un comune e quota di ritorni il giorno dopo. Per l'eventuale ripresa nei reel: follower ogni 1.000 account raggiunti, confrontati con la mediana attuale dei simili (11,1)."
+  },
+  "perche": "Tutte le proposte convergono sulla stessa idea, che usa solo ciò che abbiamo già (config.json, dati di altitudine, three.js, sprite SVG), parte da Livorno con un solo modulo e offre un motivo concreto per toccare, condividere e tornare, quindi seguire."
  }
 ]
