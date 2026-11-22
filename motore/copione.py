@@ -1871,6 +1871,35 @@ SERIE_CARTONE = {
          {"sfondo": "strada", "attori": [A("nonna", 540, 1690, 900, ("corre",), da=-1150, a=1150)],
           "etichette": [ET("ASCOLTI: RECORD", "verde", 300, 330, -4, 62, 0.6)], "nuvole": [NV("FERMATI, TESORO!", 560, 540, 440, "sx", 0.8)]}),
     ],
+    "concorso": [  # 21/11: gli avversari sono i cani disegnati del sito (barboncino e bassotto), Paolino e Nonna Pina sono i disegni di Alberto
+        ("Nonna Pina l'ha iscritto di nascosto al concorso di bellezza.",
+         {"sfondo": "strada", "attori": [A("nonna", 250, 1680, 940, ("entra_sx",)), A("felice", 790, 1670, 740, ("pop", "salta"), t0=0.4)],
+          "etichette": [ET("CONCORSO DI BELLEZZA", "giallo", 300, 330, -4, 60, 0.3)], "nuvole": [NV("SEI IL PIÙ BELLO!", 40, 520, 440, "sx", 0.8)]}),
+        ("Gli avversari: un barboncino profumato e un bassotto col fiocco.",
+         {"sfondo": "strada", "attori": [{"cane": {"t": "cane", "razza": "barboncino", "seme": 41}, "x": 290, "y": 1600, "h": 760, "anim": ["entra_sx", "respira"], "t0": 0.1},
+                                         {"cane": {"t": "cane", "razza": "bassotto", "seme": 17}, "x": 790, "y": 1600, "h": 760, "anim": ["entra_dx", "respira"], "t0": 0.5}],
+          "etichette": [ET("PROFUMO: 100%", "rosa", 60, 330, -4, 58, 0.4), ET("FIOCCO: ROSA", "rosa", 600, 560, 5, 54, 0.9)]}),
+        ("Paolino si rotola nel fango davanti alla giuria.",
+         {"sfondo": "strada", "attori": [A("svenuto", 540, 1690, 720, ("pop", "scrolla"))], "oggetti": [{"e": "🟤", "x": 180, "y": 1460, "z": 120, "t0": 0.4}, {"e": "🟤", "x": 800, "y": 1480, "z": 100, "t0": 0.6}],
+          "etichette": [ET("FANGO: DAPPERTUTTO", "rosso", 60, 330, -4, 60, 0.3), ET("GIURIA: SENZA PAROLE", "giallo", 520, 560, 5, 54, 1.0)], "sfx": {"t": "SPLASH!", "x": 560, "y": 760, "t0": 0.5}}),
+        ("Vince lo stesso: premio speciale, il più simpatico.",
+         {"sfondo": "strada", "attori": [A("nonna", 250, 1680, 940, ()), A("felice", 790, 1670, 740, ("pop", "salta"))], "oggetti": [{"e": "🏆", "x": 640, "y": 760, "z": 150, "t0": 0.4}],
+          "etichette": [ET("PREMIO SIMPATIA", "verde", 60, 330, -4, 64, 0.6)], "nuvole": [NV("TE L'AVEVO DETTO!", 40, 520, 460, "sx", 1.0)]}),
+    ],
+    "micia": [  # 22/11: Micia è una gatta europea disegnata come i gatti del sito
+        ("Micia comanda il canile. Oggi ha deciso: la cuccia di Paolino è sua.",
+         {"sfondo": "canile", "attori": [A("triste", 290, 1680, 720, ("pop", "respira")), {"cane": {"t": "gatto", "razza": "europeo", "seme": 33}, "x": 790, "y": 1600, "h": 760, "anim": ["entra_dx", "respira"], "t0": 0.4}],
+          "etichette": [ET("CUCCIA: OCCUPATA", "rosso", 60, 330, -4, 62, 0.3), ET("PADRONA: MICIA", "giallo", 600, 600, 5, 56, 1.0)]}),
+        ("Paolino prova ad abbaiare. Micia lo guarda.",
+         {"sfondo": "canile", "attori": [A("paura", 290, 1680, 700, ("pop", "trema")), {"cane": {"t": "gatto", "razza": "europeo", "seme": 33}, "x": 790, "y": 1600, "h": 760, "anim": ["pop"], "t0": 0.1}],
+          "etichette": [ET("SGUARDO DI MICIA: LETALE", "rosso", 60, 330, -4, 56, 0.8)], "sfx": {"t": "BAU?", "x": 120, "y": 600, "t0": 0.3}}),
+        ("Paolino dorme fuori. Nonna Pina gli porta la coperta.",
+         {"sfondo": "canile", "attori": [A("nonna", 250, 1680, 940, ("entra_sx",)), A("triste", 790, 1670, 700, ("pop", "respira"), t0=0.3)],
+          "oggetti": [{"e": "🧣", "x": 640, "y": 900, "z": 140, "t0": 0.9}], "etichette": [ET("NOTTE: FUORI", "blu", 300, 330, -4, 62, 0.3)], "nuvole": [NV("POVERO TESORO!", 40, 520, 440, "sx", 0.7)]}),
+        ("Ma all'alba Micia dorme abbracciata a lui.",
+         {"sfondo": "canile", "attori": [A("dolce", 380, 1680, 720, ("pop", "respira")), {"cane": {"t": "gatto", "razza": "europeo", "seme": 33}, "x": 760, "y": 1620, "h": 640, "anim": ["pop", "respira"], "t0": 0.3}],
+          "oggetti": [{"e": "💤", "x": 560, "y": 820, "z": 130, "t0": 0.6, "vola": True}], "etichette": [ET("AMICI? FORSE", "verde", 60, 330, -4, 64, 0.8)]}),
+    ],
     "alexa": [  # 22/11: Alexa è un volpino disegnato come i cani del sito (Alberto: «la fidanzata Alexa»)
         ("Al parco Paolino vede Alexa. Colpo di fulmine.",
          {"sfondo": "parco", "attori": [A("dolce", 300, 1680, 720, ("pop", "respira")), {"cane": {"t": "cane", "razza": "volpino", "seme": 88}, "x": 790, "y": 1620, "h": 760, "anim": ["entra_dx", "respira"], "t0": 0.4}],
@@ -1901,7 +1930,7 @@ SERIE_CARTONE = {
           "etichette": [ET("VETERINARIO: K.O.", "rosso", 60, 330, -4, 60, 0.6)], "sfx": {"t": "TONF!", "x": 520, "y": 560, "t0": 0.6}}),
     ],
 }
-SERIE_COLORI = {"alexa": "ro", "fulmine": "ro", "bastone": "or", "regalo": "or", "concorso": "or", "bellezza": "or", "fango": "ro", "simpatico": "ve", "barboncino": "bl", "bassotto": "bl", "diretta": "ro", "microfono": "ro", "star": "or", "telegiornale": "bl", "ascolti": "ve", "vuoto": "ro", "cornetto": "or", "cornetti": "or", "bar": "or", "colloquio": "or", "modulo": "ro", "sedia": "ro", "ride": "ve",  "pulci": "ve", "alito": "ve", "canile": "or", "sviene": "ro", "decidete": "or", "macchina": "ro", "fotografica": "ro", "paolino": "or", "trenta": "or", "bagno": "bl", "vasca": "bl", "spugna": "ro", "insaponato": "bl", "fradici": "bl", "scrolla": "bl", "paese": "or", "veterinario": "ro", "stetoscopio": "or",
+SERIE_COLORI = {"micia": "ro", "cuccia": "or", "coperta": "bl", "alba": "or", "alexa": "ro", "fulmine": "ro", "bastone": "or", "regalo": "or", "concorso": "or", "bellezza": "or", "fango": "ro", "simpatico": "ve", "barboncino": "bl", "bassotto": "bl", "diretta": "ro", "microfono": "ro", "star": "or", "telegiornale": "bl", "ascolti": "ve", "vuoto": "ro", "cornetto": "or", "cornetti": "or", "bar": "or", "colloquio": "or", "modulo": "ro", "sedia": "ro", "ride": "ve",  "pulci": "ve", "alito": "ve", "canile": "or", "sviene": "ro", "decidete": "or", "macchina": "ro", "fotografica": "ro", "paolino": "or", "trenta": "or", "bagno": "bl", "vasca": "bl", "spugna": "ro", "insaponato": "bl", "fradici": "bl", "scrolla": "bl", "paese": "or", "veterinario": "ro", "stetoscopio": "or",
                 "sviene": "ro", "pancia": "or", "casa": "or", "giorni": "or", "famiglia": "ve", "commenti": "or", "scappa": "ro", "trema": "ro", "mangia": "ro",
                 "felicissimo": "ve", "scelto": "or", "chiuso": "ro", "vostre": "or", "cuore": "ro", "domani": "or"}
 NUMERI_IT = ["zero", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove", "dieci", "undici", "dodici", "tredici", "quattordici", "quindici", "sedici",
@@ -1979,7 +2008,7 @@ def serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti_ieri, st, rinvio
     for voce, sc in SERIE_CARTONE[ep]:
         frasi.append((voce, {**base, **sc}))
     frasi.append(_serie_scelta(base, a, b))
-    st["copertina"] = {"paolino": {"giorno": n, "titolo": titolo, "posa": {"bagno": "sapone", "veterinario": "paura", "fuga": "corre", "colloquio": "dolce", "tv": "felice", "concorso": "felice", "alexa": "dolce"}.get(ep, "triste"), "giorni": giorni}}
+    st["copertina"] = {"paolino": {"giorno": n, "titolo": titolo, "posa": {"bagno": "sapone", "veterinario": "paura", "fuga": "corre", "colloquio": "dolce", "tv": "felice", "concorso": "felice", "alexa": "dolce", "micia": "triste"}.get(ep, "triste"), "giorni": giorni}}
     return frasi
 
 
