@@ -91,7 +91,7 @@
   "traccia": "reel",
   "aperto": "2026-11-21",
   "scadenza": "2026-11-23",
-  "stato": "da costruire",
+  "stato": "online",
   "passi_proposti": [
    {
     "giorno": "2026-11-22",
@@ -126,7 +126,10 @@
     ],
     "fatto_quando": "Il file del reel di Damon a Massa esiste in reel/, si apre con il video vero e la voce sintetica, sfuma sulla mappa con la luce accesa su Massa e la chiusura «seguici e scopri se tocca al tuo animale», pubblicato entro il 23 novembre."
    }
-  ]
+  ],
+  "aggiornato": "2026-11-23",
+  "nota": "La regia del cartone (23/11): nei reel di Paolino il calendario a strappo (il foglio di ieri si gira e vola via, sotto il numero di oggi, anche il contatore in alto cambia) e in tutte le scene a cartone (Paolino e Campionato) una telecamera che si muove (avvicinamento, carrellate, allontanamento) e fa un colpo di zoom su BAU!, GOL!, svenimenti. Si vede stasera alle 21 e domani alle 13.",
+  "online_dal": "2026-11-23"
  },
  "realismo": {
   "idea": "Il Paese in Tasca 3D: Livorno in rilievo reale",
