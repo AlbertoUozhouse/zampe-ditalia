@@ -1,0 +1,979 @@
+{
+ "id": "2026-11-23-1454-partita",
+ "formato": "partita",
+ "modalita": "operativa",
+ "inizio": "2026-11-23T13:54:27+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-23T13:54:27+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "partita",
+     "id": "2026-11-23-1454-partita",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Finale allo Stadio Olimpico: Roma ventisei, Napoli 34! Tre punti al Napoli!",
+       "scena": "cartone"
+      },
+      {
+       "i": 1,
+       "testo": "In testa al Campionato delle Zampe: Roma, tre punti.",
+       "scena": "cartone"
+      },
+      {
+       "i": 2,
+       "testo": "Oggi a San Siro: Inter contro Juventus.",
+       "scena": "cartone"
+      },
+      {
+       "i": 3,
+       "testo": "Ogni commento è un gol: scrivi forza Inter o forza Juventus, con città e nome del tuo cane. Si gioca fino a domani alle dodici e trenta.",
+       "scena": "cartone"
+      }
+     ],
+     "apertura": null,
+     "fascia": "⚽ Scrivi FORZA INTER o FORZA JUVENTUS",
+     "didascalia": "⚽ Campionato delle Zampe · Giornata 5\nFinale allo Stadio Olimpico: Roma 26 – 34 Napoli.\nOggi a San Siro: Inter contro Juventus\n\n👇 Ogni commento è un gol: scrivi FORZA INTER o FORZA JUVENTUS, con città e nome del tuo cane (sulla mappa mette la sciarpa). Un gol a persona: tagga gli amici tifosi!\n⏱️ Si gioca fino a domani alle 12:30. Vittoria 3 punti, pareggio 1.\n👑 Gara degli amici: tagga chi ha un cane o un gatto. Chi porta più amici entro domenica alle 20 vince la Corona sulla mappa!\n\n🐾 In questo reel: @attilioziveri @irenesaba560 @leonardo_socco @lomba_.__ @riccardo9_._chiruu @tanoilcupido24\n\n",
+     "voce": true,
+     "copertina": {
+      "stadio": {
+       "a": "INTER",
+       "b": "JUVENTUS",
+       "ca": [
+        "#1B4FA0",
+        "#111111"
+       ],
+       "cb": [
+        "#F4F4F4",
+        "#111111"
+       ],
+       "stadio": "SAN SIRO · GIORNATA 5"
+      }
+     }
+    }
+   }
+  },
+  {
+   "t": "2026-11-23T13:54:27+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "partita",
+     "id": "2026-11-23-1454-partita",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Finale allo Stadio Olimpico: Roma ventisei, Napoli 34! Tre punti al Napoli!",
+       "scena": "cartone"
+      },
+      {
+       "i": 1,
+       "testo": "In testa al Campionato delle Zampe: Roma, tre punti.",
+       "scena": "cartone"
+      },
+      {
+       "i": 2,
+       "testo": "Oggi a San Siro: Inter contro Juventus.",
+       "scena": "cartone"
+      },
+      {
+       "i": 3,
+       "testo": "Ogni commento è un gol: scrivi forza Inter o forza Juventus, con città e nome del tuo cane. Si gioca fino a domani alle dodici e trenta.",
+       "scena": "cartone"
+      }
+     ],
+     "apertura": null,
+     "fascia": "⚽ Scrivi FORZA INTER o FORZA JUVENTUS",
+     "didascalia": "⚽ Campionato delle Zampe · Giornata 5\nFinale allo Stadio Olimpico: Roma 26 – 34 Napoli.\nOggi a San Siro: Inter contro Juventus\n\n👇 Ogni commento è un gol: scrivi FORZA INTER o FORZA JUVENTUS, con città e nome del tuo cane (sulla mappa mette la sciarpa). Un gol a persona: tagga gli amici tifosi!\n⏱️ Si gioca fino a domani alle 12:30. Vittoria 3 punti, pareggio 1.\n👑 Gara degli amici: tagga chi ha un cane o un gatto. Chi porta più amici entro domenica alle 20 vince la Corona sulla mappa!\n\n🐾 In questo reel: @attilioziveri @irenesaba560 @leonardo_socco @lomba_.__ @riccardo9_._chiruu @tanoilcupido24\n\n",
+     "voce": true,
+     "copertina": {
+      "stadio": {
+       "a": "INTER",
+       "b": "JUVENTUS",
+       "ca": [
+        "#1B4FA0",
+        "#111111"
+       ],
+       "cb": [
+        "#F4F4F4",
+        "#111111"
+       ],
+       "stadio": "SAN SIRO · GIORNATA 5"
+      }
+     }
+    },
+    "mappa": []
+   }
+  },
+  {
+   "t": "2026-11-23T13:54:29+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-23T13:56:43+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.5 LUFS, picco -1.0 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.5,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.9,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-23T13:56:43+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (21.3 s): ti mando 22 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 21.3,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21
+    ]
+   }
+  },
+  {
+   "t": "2026-11-23T13:56:43+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:43+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:43+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:43+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:44+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:44+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:44+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:44+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:44+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:44+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:44+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:44+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:44+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:44+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:44+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:45+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:45+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:45+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:45+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:45+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:45+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:45+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:45+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:46+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:46+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:46+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:46+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:46+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:46+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:46+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:46+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:46+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:46+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:47+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:47+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:47+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:47+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:47+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:47+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:47+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:47+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:47+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:47+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:47+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:48+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:48+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:48+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:48+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:48+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:48+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:48+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:48+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:48+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:48+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:49+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:49+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:49+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:49+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:49+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:49+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:49+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:49+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:49+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:49+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:50+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:51+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:51+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:51+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:51+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:51+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:52+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:53+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:53+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:53+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:53+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:53+00:00",
+   "da": "grafica3d-2",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:53+00:00",
+   "da": "grafica3d-3",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:53+00:00",
+   "da": "grafica3d-4",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:53+00:00",
+   "da": "grafica3d-5",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:53+00:00",
+   "da": "grafica3d-6",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:53+00:00",
+   "da": "grafica3d-7",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:54+00:00",
+   "da": "grafica3d-8",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:54+00:00",
+   "da": "grafica3d-9",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:54+00:00",
+   "da": "grafica3d-10",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T13:56:55+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce con la revisione della sola squadra."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 21.3,
+   "fotogrammi": [
+    "fotogrammi/2026-11-23-1454-partita/v1/s000.5.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s001.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s002.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s003.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s004.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s005.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s006.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s007.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s008.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s009.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s010.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s011.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s012.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s013.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s014.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s015.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s016.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s017.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s018.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s019.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s020.0.jpg",
+    "fotogrammi/2026-11-23-1454-partita/v1/s021.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.5,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.9,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "token_persone": 0,
+ "errori_persone": {
+  "claude-haiku-5-5: 400": 108,
+  "claude-sonnet-5-5: 400": 118
+ },
+ "fine": "2026-11-23T13:56:55+00:00"
+}
