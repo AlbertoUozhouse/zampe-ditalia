@@ -2151,6 +2151,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce con la revisione della sola squadra."
+  },
+  {
+   "t": "2026-11-23T19:32:09+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 0 follower in totale, 0.0 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.",
+   "dati": {
+    "id": "18158116726520656",
+    "file": "2026-11-15-2112-fondatore",
+    "formato": "fondatore",
+    "uscita": "2026-11-15T20:19:14+00:00",
+    "follower": 0,
+    "reach_7g": 414,
+    "follower_ogni_1000": 0.0,
+    "mediana_simili": null,
+    "simili": 0,
+    "scelte": {
+     "formato": "fondatore",
+     "apertura": "mappa",
+     "voce": true,
+     "gancio": "Napoli o Monza?",
+     "chiusura": "Allora: Napoli o Monza? Scrivi la tua città!"
+    },
+    "esito": "0 follower in totale, 0.0 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.",
+    "riprovare": null,
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [

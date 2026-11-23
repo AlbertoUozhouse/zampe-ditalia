@@ -2266,6 +2266,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  },
+  {
+   "t": "2026-11-23T19:32:09+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 2 follower in totale, 1.3 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (23) hanno una mediana di 8.0. Non riprovare così com'è: è sotto la mediana dei reel simili.",
+   "dati": {
+    "id": "18139301194640894",
+    "file": "2026-11-16-1307-coppa_verdetto",
+    "formato": "coppa_verdetto",
+    "uscita": "2026-11-16T12:15:03+00:00",
+    "follower": 2,
+    "reach_7g": 1495,
+    "follower_ogni_1000": 1.3,
+    "mediana_simili": 8.0,
+    "simili": 23,
+    "scelte": {
+     "formato": "coppa_verdetto",
+     "apertura": "mappa",
+     "voce": true,
+     "gancio": "Verdetto della Coppa delle Zampe: vince Bisceglie, 21 a 0 contro Bomarzo!",
+     "chiusura": "Da oggi si riparte. La tua città vuole la Coppa? Scrivi città e nome!"
+    },
+    "esito": "2 follower in totale, 1.3 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (23) hanno una mediana di 8.0.",
+    "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [

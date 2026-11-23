@@ -1,0 +1,19 @@
+{
+ "id": "crescita-2026-11-23",
+ "formato": "crescita del giorno",
+ "modalita": "operativa",
+ "inizio": "2026-11-23T19:32:09+00:00",
+ "stato": "fatto",
+ "scambi": [
+  {
+   "t": "2026-11-23T19:32:09+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Si parte dai numeri veri degli ultimi 12 reel organici e dai verbali dei 7 giorni."
+  }
+ ],
+ "versioni": [],
+ "token_persone": 0,
+ "fine": "2026-11-23T19:32:10+00:00"
+}

@@ -554,3 +554,10 @@ Piano nuovo (da oggi): 2 reel al giorno, ognuno una promessa. 13:00 testa a test
 
 Dove andavano i soldi: le sessioni lunghe di Claude Code (Officina ogni giorno + controllo quotidiano in una chat enorme: ogni messaggio rilegge tutto) e la lettura dei commenti con Sonnet 5.5 (circa 290 commenti al giorno, una chiamata per persona a ogni giro di 10 minuti). Decisioni: un reel al giorno a giorni alterni; commenti e messaggi ogni 2 ore e mezza; i «forza Inter» senza Claude; il lettore dei commenti e dei DM e i capi dell'agenzia con Haiku 5.5 (20 volte meno di Sonnet; si torna indietro con config «lettore_modello» e «agenzia_modello_capi»); crescita e innovazione dell'agenzia solo il lunedì; Officina ferma. Stima al mese: API Claude 5–8 € (commenti ~3, agenzia ~2, il resto DM e foto), Claude Code (le sessioni di lavoro con Alberto) il resto, fino a 40 €; ElevenLabs a parte, ~15 reel × 600 caratteri. Tetto vero: limite di spesa mensile da mettere da Alberto nella Console di Anthropic (chiave API) e nell'uso extra di Claude.
 - 23/11 sera (Alberto: «risparmia il più possibile, anche 40 €»): fermato anche il controllo quotidiano delle 11:13 (oltre all'Officina). Claude Code lavora solo quando Alberto scrive, in chat nuove e corte. Nessuna lettura extra dei commenti dopo i reel (proposta scartata per il budget). Se un reel fallisce, GitHub manda la mail di errore ad Alberto.
+
+
+## 2026-11-23 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-15-1809-citta: 4 follower in totale, 7.8 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (23) hanno una mediana di 8.0. Non riprovare così com'è: è sotto la mediana dei reel simili.
+- 2026-11-15-2112-fondatore: 0 follower in totale, 0.0 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.
+- 2026-11-16-1307-coppa_verdetto: 2 follower in totale, 1.3 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (23) hanno una mediana di 8.0. Non riprovare così com'è: è sotto la mediana dei reel simili.
