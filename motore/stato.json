@@ -2222,6 +2222,7 @@
 "17957531061337164",
 "17957630577293144",
 "17957643669276364",
+"17957674068344024",
 "17957724561296805",
 "17957742303267300",
 "17957814114036355",
@@ -12968,7 +12969,8 @@
 ],
 "risposte": [
 1795415030.2322679,
-1795415895.7289312
+1795415895.7289312,
+1795417641.1560068
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -27903,7 +27905,7 @@
 "citta": "Milano",
 "gol": {
 "inter": 15,
-"juventus": 13
+"juventus": 14
 },
 "marcatori": [
 "samuele98851",
@@ -27933,7 +27935,8 @@
 "spataro.dani",
 "_trauma_06",
 "nicolospitaleri",
-"paol_oguglielmi"
+"paol_oguglielmi",
+"pokemon_go_leone"
 ],
 "inizio": "2026-11-22T12:34+01:00",
 "fine": "2026-11-24T12:30+01:00"
@@ -29459,6 +29462,10 @@
 "sq": "juventus"
 },
 "paol_oguglielmi": {
+"g": 1,
+"sq": "juventus"
+},
+"pokemon_go_leone": {
 "g": 1,
 "sq": "juventus"
 }
