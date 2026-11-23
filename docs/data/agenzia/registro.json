@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-13-2101-gara_follower",
-  "formato": "gara_follower",
-  "modalita": "operativa",
-  "inizio": "2026-11-13T20:01:11+00:00",
-  "stato": "senza direttore",
-  "fine": "2026-11-13T20:04:45+00:00",
-  "scambi": 127
- },
- {
   "id": "crescita-2026-11-14",
   "formato": "crescita del giorno",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "senza direttore",
   "fine": "2026-11-23T12:18:01+00:00",
   "scambi": 116
+ },
+ {
+  "id": "2026-11-23-1450-serie",
+  "formato": "serie",
+  "modalita": "operativa",
+  "inizio": "2026-11-23T13:50:45+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-23T13:52:38+00:00",
+  "scambi": 114
  }
 ]

@@ -1,0 +1,475 @@
+{
+ "voce": true,
+ "variante": "voce-fissa-92",
+ "tema": "giorno",
+ "id": "2026-11-23-1450-serie",
+ "formato": "serie",
+ "testata": {
+  "titolo": "🐶 PAOLINO · GIORNO 7 DI 30"
+ },
+ "conteggio": {
+  "cani": 2231,
+  "gatti": 815
+ },
+ "frasi": [
+  {
+   "testo": "Ventiquattro giorni per trovare casa.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 24,
+    "famiglia": 2,
+    "sfondo": "canile",
+    "numero": {
+     "n": 24,
+     "sotto": "PER TROVARE CASA",
+     "prima": 25
+    },
+    "attori": [
+     {
+      "img": "triste",
+      "x": 540,
+      "y": 1680,
+      "h": 740,
+      "anim": [
+       "pop",
+       "respira"
+      ],
+      "t0": 0.2
+     }
+    ],
+    "etichette": [
+     {
+      "t": "PAOLINO",
+      "c": "rosso",
+      "x": 40,
+      "y": 900,
+      "r": -6,
+      "z": 70,
+      "t0": 0.7
+     },
+     {
+      "t": "PULCI: 37",
+      "c": "verde",
+      "x": 790,
+      "y": 960,
+      "r": 6,
+      "z": 50,
+      "t0": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Ieri avete scelto: alexa al parco!",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 24,
+    "famiglia": 2,
+    "sfondo": "canile",
+    "voto": {
+     "parola": "ALEXA AL PARCO",
+     "chiave": "ALEXA"
+    },
+    "attori": [
+     {
+      "img": "felice",
+      "x": 540,
+      "y": 1680,
+      "h": 700,
+      "anim": [
+       "pop",
+       "salta"
+      ],
+      "t0": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Al parco Paolino vede Alexa. Colpo di fulmine.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 24,
+    "famiglia": 2,
+    "sfondo": "parco",
+    "attori": [
+     {
+      "img": "dolce",
+      "x": 300,
+      "y": 1680,
+      "h": 720,
+      "anim": [
+       "pop",
+       "respira"
+      ]
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "volpino",
+       "seme": 88
+      },
+      "x": 790,
+      "y": 1620,
+      "h": 760,
+      "anim": [
+       "entra_dx",
+       "respira"
+      ],
+      "t0": 0.4
+     }
+    ],
+    "oggetti": [
+     {
+      "e": "💘",
+      "x": 470,
+      "y": 820,
+      "z": 150,
+      "t0": 1.0,
+      "vola": true
+     }
+    ],
+    "etichette": [
+     {
+      "t": "COLPO DI FULMINE",
+      "c": "rosa",
+      "x": 60,
+      "y": 330,
+      "r": -4,
+      "z": 64,
+      "t0": 0.3
+     },
+     {
+      "t": "ALEXA",
+      "c": "rosa",
+      "x": 720,
+      "y": 840,
+      "r": 5,
+      "z": 56,
+      "t0": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "testo": "Si sistema il collare, si pettina con la zampa…",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 24,
+    "famiglia": 2,
+    "sfondo": "parco",
+    "attori": [
+     {
+      "img": "felice",
+      "x": 540,
+      "y": 1680,
+      "h": 760,
+      "anim": [
+       "pop",
+       "salta"
+      ]
+     }
+    ],
+    "oggetti": [
+     {
+      "e": "✨",
+      "x": 200,
+      "y": 860,
+      "z": 120,
+      "t0": 0.4
+     },
+     {
+      "e": "✨",
+      "x": 780,
+      "y": 900,
+      "z": 100,
+      "t0": 0.8
+     }
+    ],
+    "etichette": [
+     {
+      "t": "SI FA BELLO",
+      "c": "giallo",
+      "x": 60,
+      "y": 330,
+      "r": -4,
+      "z": 64,
+      "t0": 0.3
+     },
+     {
+      "t": "PETTINE: LA ZAMPA",
+      "c": "verde",
+      "x": 560,
+      "y": 560,
+      "r": 5,
+      "z": 54,
+      "t0": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "testo": "e le porta un regalo: un bastone. Gigante.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 24,
+    "famiglia": 2,
+    "sfondo": "parco",
+    "attori": [
+     {
+      "img": "corre",
+      "x": 540,
+      "y": 1690,
+      "h": 640,
+      "anim": [
+       "corre"
+      ],
+      "da": -1150,
+      "a": 300
+     }
+    ],
+    "oggetti": [
+     {
+      "e": "🪵",
+      "x": 300,
+      "y": 900,
+      "z": 260,
+      "t0": 0.6
+     }
+    ],
+    "etichette": [
+     {
+      "t": "REGALO: UN BASTONE",
+      "c": "giallo",
+      "x": 60,
+      "y": 330,
+      "r": -4,
+      "z": 60,
+      "t0": 0.3
+     },
+     {
+      "t": "MISURA: GIGANTE",
+      "c": "rosso",
+      "x": 600,
+      "y": 600,
+      "r": 5,
+      "z": 56,
+      "t0": 1.0
+     }
+    ],
+    "sfx": {
+     "t": "PER TE!",
+     "x": 620,
+     "y": 760,
+     "t0": 1.2
+    }
+   }
+  },
+  {
+   "testo": "Alexa ci pensa… e prende il bastone.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 24,
+    "famiglia": 2,
+    "sfondo": "parco",
+    "attori": [
+     {
+      "img": "felice",
+      "x": 300,
+      "y": 1680,
+      "h": 720,
+      "anim": [
+       "pop",
+       "salta"
+      ]
+     },
+     {
+      "cane": {
+       "t": "cane",
+       "razza": "volpino",
+       "seme": 88
+      },
+      "x": 790,
+      "y": 1620,
+      "h": 760,
+      "anim": [
+       "pop",
+       "respira"
+      ],
+      "t0": 0.2
+     }
+    ],
+    "oggetti": [
+     {
+      "e": "💘",
+      "x": 470,
+      "y": 780,
+      "z": 150,
+      "t0": 0.8,
+      "vola": true
+     }
+    ],
+    "etichette": [
+     {
+      "t": "ALEXA: FORSE SÌ",
+      "c": "rosa",
+      "x": 60,
+      "y": 330,
+      "r": -4,
+      "z": 64,
+      "t0": 0.6
+     }
+    ],
+    "sfx": {
+     "t": "EVVIVA!",
+     "x": 520,
+     "y": 560,
+     "t0": 1.2
+    }
+   }
+  },
+  {
+   "testo": "Domani: micia o la festa in piazza? Scrivi nei commenti: ogni commento lo avvicina a casa.",
+   "scena": {
+    "tipo": "cartone",
+    "giorni": 24,
+    "famiglia": 2,
+    "sfondo": "canile",
+    "scelta": {
+     "a": [
+      "🐱",
+      "MICIA",
+      "MICIA"
+     ],
+     "b": [
+      "🎄",
+      "LA FESTA IN PIAZZA",
+      "PIAZZA"
+     ]
+    },
+    "attori": [
+     {
+      "img": "dolce",
+      "x": 540,
+      "y": 1680,
+      "h": 700,
+      "anim": [
+       "pop",
+       "respira"
+      ],
+      "t0": 0.3
+     }
+    ],
+    "etichette": [
+     {
+      "t": "SCRIVI MICIA O PIAZZA",
+      "c": "giallo",
+      "x": 140,
+      "y": 790,
+      "r": -3,
+      "z": 60,
+      "t0": 1.2
+     }
+    ]
+   }
+  }
+ ],
+ "banner": "👇 Scrivi MICIA o PIAZZA",
+ "didascalia": "Giorno 7 di 30 🐶 Avete scelto alexa al parco. È andata così…\n\n👇 Domani cosa fa Paolino? Scrivi MICIA oppure PIAZZA nei commenti: vince il più commentato.\n🏠 Ogni commento lo avvicina a casa: FAMIGLIA 2%.\n➕ Seguici per vedere se ce la fa entro Natale.\n👑 Gara degli amici: tagga chi ha un cane o un gatto. Chi porta più amici entro domenica alle 20 vince la Corona sulla mappa!\n\nVoce generata con IA.\n\n#cani #canile #adozione #adottanonComprare #natale #animalidomestici ",
+ "tag": [],
+ "collab": [],
+ "copertina": {
+  "paolino": {
+   "giorno": 7,
+   "titolo": "ALEXA AL PARCO",
+   "posa": "dolce",
+   "giorni": 24
+  }
+ },
+ "serie": {
+  "giorno": 7,
+  "ep": "alexa",
+  "opzioni": [
+   "micia",
+   "piazza"
+  ],
+  "parole": {
+   "micia": "MICIA",
+   "piazza": "PIAZZA"
+  },
+  "voci": {
+   "micia": [
+    "🐱",
+    "MICIA"
+   ],
+   "piazza": [
+    "🎄",
+    "LA FESTA IN PIAZZA"
+   ]
+  },
+  "foto": "media/paolino/alexa.jpg"
+ },
+ "cartone": true,
+ "parole_colore": {
+  "micia": "ro",
+  "cuccia": "or",
+  "coperta": "bl",
+  "alba": "or",
+  "alexa": "ro",
+  "fulmine": "ro",
+  "bastone": "or",
+  "regalo": "or",
+  "concorso": "or",
+  "bellezza": "or",
+  "fango": "ro",
+  "simpatico": "ve",
+  "barboncino": "bl",
+  "bassotto": "bl",
+  "diretta": "ro",
+  "microfono": "ro",
+  "star": "or",
+  "telegiornale": "bl",
+  "ascolti": "ve",
+  "vuoto": "ro",
+  "cornetto": "or",
+  "cornetti": "or",
+  "bar": "or",
+  "colloquio": "or",
+  "modulo": "ro",
+  "sedia": "ro",
+  "ride": "ve",
+  "pulci": "ve",
+  "alito": "ve",
+  "canile": "or",
+  "sviene": "ro",
+  "decidete": "or",
+  "macchina": "ro",
+  "fotografica": "ro",
+  "paolino": "or",
+  "trenta": "or",
+  "bagno": "bl",
+  "vasca": "bl",
+  "spugna": "ro",
+  "insaponato": "bl",
+  "fradici": "bl",
+  "scrolla": "bl",
+  "paese": "or",
+  "veterinario": "ro",
+  "stetoscopio": "or",
+  "pancia": "or",
+  "casa": "or",
+  "giorni": "or",
+  "famiglia": "ve",
+  "commenti": "or",
+  "scappa": "ro",
+  "trema": "ro",
+  "mangia": "ro",
+  "felicissimo": "ve",
+  "scelto": "or",
+  "chiuso": "ro",
+  "vostre": "or",
+  "cuore": "ro",
+  "domani": "or"
+ },
+ "schermo_pulito": true
+}
