@@ -1,5 +1,5 @@
 # Guardia dei commenti: il cron di GitHub qui non parte in modo affidabile, quindi questo workflow
-# fa girare il motore ogni 10 minuti per circa 5 ore e 20 minuti (sotto il limite di 350 minuti), poi si riavvia da solo.
+# guarda l'orario dei reel ogni 10 minuti (commenti e messaggi ogni 2 ore e mezza) per circa 5 ore e 20 minuti (sotto il limite di 350 minuti), poi si riavvia da solo.
 # commenti.yml resta come riserva e per i giri a mano.
 name: veglia
 
@@ -31,16 +31,20 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           for giro in $(seq 1 32); do
             git pull -q --rebase -X theirs || { git rebase --abort 2>/dev/null; git reset -q --hard origin/main; }
-            python3 -I motore/commenti.py || echo "giro $giro: errore del motore, riprovo al prossimo"
-            python3 -I motore/messaggi.py || echo "giro $giro: errore nei messaggi, riprovo al prossimo"
+            # 23/11 (Alberto: «troppi token, aggiornamento e commenti ogni 2-3 ore»): commenti e messaggi (li legge Claude) ogni 15 giri = 2 ore e mezza;
+            # l'orario dei reel (niente Claude) si guarda ogni 10 minuti, e all'ora del reel si leggono prima i commenti (la partita chiude e il reel è aggiornato)
             formato=$(python3 -I motore/orari.py || true)
-            if [ -n "$formato" ]; then echo "giro $giro: è l'ora del reel $formato"; prova=false; [ "${formato#*:}" = prova ] && prova=true; formato=${formato%%:*}
-              for t in 1 2 3; do gh workflow run reel.yml -f formato="$formato" -f prova=$prova && break; sleep 20; [ $t = 3 ] && { echo "reel non avviato, riprovo al prossimo giro"; python3 -I motore/orari.py --annulla; }; done; fi
+            if [ $(( (giro - 1) % 15 )) -eq 0 ] || [ -n "$formato" ]; then
+              python3 -I motore/commenti.py || echo "giro $giro: errore del motore, riprovo al prossimo"
+              python3 -I motore/messaggi.py || echo "giro $giro: errore nei messaggi, riprovo al prossimo"
+            fi
             git add docs/data/animali.json motore/stato.json motore/reel_fatti.json motore/messaggi.json motore/pubblicati.json docs/cartoline docs/data/coppa.json
             if ! git diff --cached --quiet; then
               git commit -q -m "Mappa aggiornata dai commenti"
               git pull -q --rebase -X theirs && git push -q || { git rebase --abort 2>/dev/null; echo "giro $giro: push non riuscito, riprovo al prossimo"; }
             fi
+            if [ -n "$formato" ]; then echo "giro $giro: è l'ora del reel $formato"; prova=false; [ "${formato#*:}" = prova ] && prova=true; formato=${formato%%:*}
+              for t in 1 2 3; do gh workflow run reel.yml -f formato="$formato" -f prova=$prova && break; sleep 20; [ $t = 3 ] && { echo "reel non avviato, riprovo al prossimo giro"; python3 -I motore/orari.py --annulla; }; done; fi
             if [ "$giro" -lt 32 ]; then sleep 600; fi
           done
       - name: Riparti

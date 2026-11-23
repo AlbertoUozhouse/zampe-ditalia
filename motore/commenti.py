@@ -19,6 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lettore
+import squadre
 import coppa  # la Coppa delle Zampe (campionato settimanale tra comuni)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -895,6 +896,24 @@ def settimana(ts=None):
 def solo_tag(testo):
     return bool(re.fullmatch(r"\s*(@[\w.]+[\s,]*)+", testo or ""))
 
+# 23/11 (Alberto: «stai consumando troppi token»): «forza Inter ⚽⚽» non ha né nome né città, non serve Claude per leggerlo.
+# Il gol del Campionato lo conta il codice (campionato.gol); Claude serve solo se c'è altro da capire o una sciarpa nuova da dare.
+_CORI = {"forza", "dai", "vai", "ale", "ole", "sempre", "tifo", "tifiamo", "tifoso", "tifosa", "tifosi", "grande", "grandi", "w", "viva", "evviva",
+         "gol", "goal", "noi", "siamo", "campioni", "per", "la", "il", "e", "che", "ci", "credo", "amala", "daje", "vamos", "curva", "sud", "nord",
+         "squadra", "mia", "nostra", "cuore", "sei", "tutta", "solo", "only", "the", "best", "unica", "si", "vinci", "vincere", "vinciamo", "stadio"}
+def squadre_cori(testo):
+    """Le squadre nominate in un commento fatto SOLO di tifo (None se c'è altro: un nome, una città, una frase)."""
+    p = squadre._norm(re.sub(r"@[\w.]+", " ", testo or "")).split()
+    if not p: return None
+    trovate, resto, coro = set(), [], "⚽" in (testo or "")
+    for w in p:
+        k = next((k for k, v in squadre.SQUADRE.items() if w in {x for a in [v[0], *v[3]] for x in squadre._norm(a).split()}), None)
+        if k: trovate.add(k)
+        elif w in _CORI or re.fullmatch(r"(f+o+r+z+a+|g+o+a*l+|a+l+e+|d+a+i+|v+a+i+)\w*", w): coro = True
+        else: resto.append(w)
+    if any(squadre._citta(k) for k in trovate) and not coro: return None  # «Roma» da solo può essere la città: lo legge Claude
+    return trovate if trovate and not resto else None
+
 def rivale(gioco, a):
     """Il comune acceso più vicino (entro ~60 km): la sfida col paese accanto fa taggare gli amici della propria città."""
     conta = {}
@@ -1319,8 +1338,10 @@ def gira(commenti, rispondi, mio_username=None, cancella=None, leggi_fn=None, pr
         if not nuovi_c:
             continue
         senza_codici = lambda t: RE_COPPA.sub("", RE_CORSA.sub("", t or "")).strip()
-        letto = vuoto() if all(solo_tag(c.get("text", "")) or not senza_codici(c.get("text", "")) for c in nuovi_c) \
-            else leggi_fn(u, [{**c, "text": senza_codici(c.get("text", ""))} for c in suoi])
+        cori = [squadre_cori(senza_codici(c.get("text", ""))) for c in nuovi_c if not solo_tag(c.get("text", "")) and senza_codici(c.get("text", ""))]
+        suoi_a = [a for a in gioco.animali if a.get("u", "").lower() == u.lower() and a.get("k") != "tifo"]
+        solo_cori = all(cori) and all(a.get("sq") in set().union(*cori) for a in suoi_a)  # niente da capire e la sciarpa è già quella
+        letto = vuoto() if solo_cori else leggi_fn(u, [{**c, "text": senza_codici(c.get("text", ""))} for c in suoi])
         if letto is None:
             print(f"@{u}: il lettore non ha risposto, riprovo al prossimo giro", file=sys.stderr)
             continue
