@@ -268,6 +268,7 @@
 "17883755745628875",
 "17883801579534890",
 "17883803874534540",
+"17883808668546991",
 "17883927822628963",
 "17884003521535435",
 "17884230615652151",
@@ -17868,11 +17869,6 @@
 "lore.cheru011": 20
 },
 "inviti_giorno": {
-"2026-11-15": {
-"_.enzo.privv": 1,
-"thor_golden_life": 1,
-"albertomarchesin": 1
-},
 "2026-11-17": {
 "dino_gallo13": 1
 },
@@ -22694,9 +22690,6 @@
 "Campania": "contedelia51|animale|ottavio"
 },
 "corsa": {
-"2026-W45": {
-"friz_tommy": 391
-},
 "2026-W47": {
 "giada_palombo": 294
 }
@@ -22734,14 +22727,6 @@
 }
 },
 "gioco_bastone": {
-"2026-W45": {
-"_la.nnoeee__": 454,
-"il_priv_del_suv": 492,
-"ste_mora_": 361,
-"angel_mussolino": 603,
-"friz_tommy": 553,
-"maryg78a": 406
-},
 "2026-W47": {
 "mariacristinaa.aa": 314,
 "stacado59": 532
