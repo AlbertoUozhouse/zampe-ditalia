@@ -1,0 +1,1670 @@
+{
+ "id": "2026-11-23-1314-coppa_verdetto",
+ "formato": "coppa_verdetto",
+ "modalita": "operativa",
+ "inizio": "2026-11-23T12:15:04+00:00",
+ "stato": "senza direttore",
+ "scambi": [
+  {
+   "t": "2026-11-23T12:15:04+00:00",
+   "da": "montaggio-1",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: chi vogliamo far diventare follower, con quale gancio e perché?",
+   "dati": {
+    "brief": {
+     "formato": "coppa_verdetto",
+     "id": "2026-11-23-1314-coppa_verdetto",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Verdetto della Coppa delle Zampe: vince Roma, 59 a 6 contro Torino!",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Trofeo anche per altre 86 città, come Latronico.",
+       "scena": "classifica"
+      },
+      {
+       "i": 2,
+       "testo": "Grazie a loro, e a tutti quelli di Roma!",
+       "scena": "padroni"
+      },
+      {
+       "i": 3,
+       "testo": "Da oggi si riparte. La tua città vuole la Coppa? Scrivi città e nome!",
+       "scena": "commento"
+      }
+     ],
+     "apertura": null,
+     "fascia": "🏆 La tua città vuole la Coppa? Scrivi città e nome 👇",
+     "didascalia": "🏆 Il verdetto della Coppa delle Zampe, turno 2!\n\n🏆 Roma 59–6 Torino\n🏆 Napoli 22–0 Cavaion Veronese\n🏆 Milano 15–2 Catania\n🏆 Genova 14–8 Brescia\n🏆 Alghero 11–0 Alcara li Fusi\n🏆 Lecce 9–0 Giugliano in Campania\n🏆 Cosenza 6–0 Padova\n🏆 Pomezia 6–0 Pojana Maggiore\n🏆 Bari 5–1 Bergamo\n🏆 Firenze 4–1 Cagliari\n🏆 Verona 4–0 Trieste\n🏆 Salerno 4–0 Brindisi\n🏆 Pistoia 4–0 Pisogne\n🏆 Campomorone 4–0 San Cesareo\n🏆 Palermo 3–0 Venezia\n\nI trofei sono sulla mappa di zampeditalia.it. Il turno nuovo è già partito: ogni animale nuovo è un punto per la sua città.\n\n🏆 Ogni animale nuovo è un punto per la sua città: commen",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       12.4837,
+       41.8928
+      ],
+      "sopra": "HA VINTO",
+      "grande": "Roma",
+      "sotto": "Coppa delle Zampe 🏆"
+     }
+    }
+   }
+  },
+  {
+   "t": "2026-11-23T12:15:08+00:00",
+   "da": "crescita-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Pubblico: Tifosi di città italiane che amano cani e gatti: chi commenta le sfide tra città (romani, torinesi, napoletani, genovesi) ma non segue ancora la pagina, e chi vive in una città o in un paese piccolo e vorrebbe vederlo sulla mappa. · Gancio: Roma ha battuto Torino 59 a 6: e la tua città dov'è finita? · Primo fotogramma: Mappa d'Italia di notte con una luce accesa su Roma. In grande la scritta «HA VINTO Roma 🏆», sotto «59 a 6 contro Torino». Si capisce anche senza audio che è una sfida tra città decisa da luci di animali. · Motivo per seguire: Su Zampe d'Italia ogni animale accende una luce nella sua città sulla mappa d'Italia di notte, e seguendo la pagina vedi ogni turno della Coppa delle Zampe e se la tua città vince. · Chiusura: Roma ha vinto. Segui Zampe d'Italia per vedere chi vince il prossimo turno.",
+   "dati": {
+    "pubblico": "Tifosi di città italiane che amano cani e gatti: chi commenta le sfide tra città (romani, torinesi, napoletani, genovesi) ma non segue ancora la pagina, e chi vive in una città o in un paese piccolo e vorrebbe vederlo sulla mappa.",
+    "gancio": "Roma ha battuto Torino 59 a 6: e la tua città dov'è finita?",
+    "primo_fotogramma": "Mappa d'Italia di notte con una luce accesa su Roma. In grande la scritta «HA VINTO Roma 🏆», sotto «59 a 6 contro Torino». Si capisce anche senza audio che è una sfida tra città decisa da luci di animali.",
+    "motivo_per_seguire": "Su Zampe d'Italia ogni animale accende una luce nella sua città sulla mappa d'Italia di notte, e seguendo la pagina vedi ogni turno della Coppa delle Zampe e se la tua città vince.",
+    "chiusura": "Roma ha vinto. Segui Zampe d'Italia per vedere chi vince il prossimo turno.",
+    "perche": "Chi commenta le sfide tra città ha già un motivo di tifo: il reel gli dice in un'immagine cos'è la pagina e gli dà una ragione per seguirla, con un solo invito a seguire."
+   }
+  },
+  {
+   "t": "2026-11-23T12:15:08+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Brief del reel prima del montaggio: scegli apertura, inquadratura e momento della luce, e verifica il motivo per seguire.",
+   "dati": {
+    "brief": {
+     "formato": "coppa_verdetto",
+     "id": "2026-11-23-1314-coppa_verdetto",
+     "frasi": [
+      {
+       "i": 0,
+       "testo": "Verdetto della Coppa delle Zampe: vince Roma, 59 a 6 contro Torino!",
+       "scena": "luce"
+      },
+      {
+       "i": 1,
+       "testo": "Trofeo anche per altre 86 città, come Latronico.",
+       "scena": "classifica"
+      },
+      {
+       "i": 2,
+       "testo": "Grazie a loro, e a tutti quelli di Roma!",
+       "scena": "padroni"
+      },
+      {
+       "i": 3,
+       "testo": "Da oggi si riparte. La tua città vuole la Coppa? Scrivi città e nome!",
+       "scena": "commento"
+      }
+     ],
+     "apertura": null,
+     "fascia": "🏆 La tua città vuole la Coppa? Scrivi città e nome 👇",
+     "didascalia": "🏆 Il verdetto della Coppa delle Zampe, turno 2!\n\n🏆 Roma 59–6 Torino\n🏆 Napoli 22–0 Cavaion Veronese\n🏆 Milano 15–2 Catania\n🏆 Genova 14–8 Brescia\n🏆 Alghero 11–0 Alcara li Fusi\n🏆 Lecce 9–0 Giugliano in Campania\n🏆 Cosenza 6–0 Padova\n🏆 Pomezia 6–0 Pojana Maggiore\n🏆 Bari 5–1 Bergamo\n🏆 Firenze 4–1 Cagliari\n🏆 Verona 4–0 Trieste\n🏆 Salerno 4–0 Brindisi\n🏆 Pistoia 4–0 Pisogne\n🏆 Campomorone 4–0 San Cesareo\n🏆 Palermo 3–0 Venezia\n\nI trofei sono sulla mappa di zampeditalia.it. Il turno nuovo è già partito: ogni animale nuovo è un punto per la sua città.\n\n🏆 Ogni animale nuovo è un punto per la sua città: commen",
+     "voce": true,
+     "copertina": {
+      "luce": [
+       12.4837,
+       41.8928
+      ],
+      "sopra": "HA VINTO",
+      "grande": "Roma",
+      "sotto": "Coppa delle Zampe 🏆"
+     }
+    },
+    "mappa": [
+     {
+      "scena": 0,
+      "etichetta": "🏆 Roma",
+      "lat": 41.8928,
+      "lng": 12.4837,
+      "luce": "spenta all'inizio della scena, si accende",
+      "scena_dal_secondo": null,
+      "scena_al_secondo": null,
+      "comune_sulla_mappa": "Roma",
+      "animali_li_in_ordine_di_arrivo": [
+       "Alice (@alessandrogiojelli, 2026-10-26)",
+       "Leo (@l0laaaa.____, 2026-10-27)",
+       "Hera (@simone_bianchini13, 2026-10-27)",
+       "Athena (@simone_bianchini13, 2026-10-27)",
+       "Franz (@sabrisorre30, 2026-10-27)"
+      ],
+      "luci_li_oggi": 126,
+      "luci_del_comune_dell_etichetta": 0
+     }
+    ]
+   }
+  },
+  {
+   "t": "2026-11-23T12:15:09+00:00",
+   "da": "direzione-1",
+   "a": "montaggio-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il montaggio parte con le scelte del copione."
+  },
+  {
+   "t": "2026-11-23T12:16:42+00:00",
+   "da": "audio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Controllo audio della versione 1: -14.5 LUFS, picco -1.0 dBFS, silenzi nessuno.",
+   "dati": {
+    "lufs": -14.5,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.7,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:42+00:00",
+   "da": "montaggio-1",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Versione 1 esportata (18.3 s): ti mando 19 fotogrammi coi secondi, trascrizione, dati della mappa e audio.",
+   "dati": {
+    "durata_s": 18.3,
+    "fotogrammi_secondi": [
+     0.5,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ]
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:47+00:00",
+   "da": "direzione-2",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il verdetto dice «vince Roma, 59 a 6 contro Torino!» mentre il copione dice «contro Torino» con la stessa frase, ma la scena 'CONTRO' compare già a ~1.9s e la luce su Roma si accende solo al secondo 1.66 con etichetta 'Roma' che compare dopo; inoltre nei primi 5 secondi non c'è alcun elemento visivo",
+   "dati": {
+    "controllato": "Apertura (0–5s): frasi, scena della luce su Roma e ritmo dei primi 5 secondi, confrontati con trascrizione, copione e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il verdetto dice «vince Roma, 59 a 6 contro Torino!» mentre il copione dice «contro Torino» con la stessa frase, ma la scena 'CONTRO' compare già a ~1.9s e la luce su Roma si accende solo al secondo 1.66 con etichetta 'Roma' che compare dopo; inoltre nei primi 5 secondi non c'è alcun elemento visivo chiaro del 'vince Roma' prima dello stacco su 'CONTRO', e il volume medio dei primi 5s (-16.7 dB) è sotto l'obiettivo di -14 LUFS, quindi l'apertura è più debole dell'audio complessivo.",
+    "correzione": "Mostrare 'ROMA HA VINTO' con la luce già accesa nel primo secondo (il fotogramma a 0.5s mostra la mappa ancora senza il punto acceso), e alzare il volume della voce nei primi 5 secondi di circa 2–3 dB per portarlo verso -14 LUFS.",
+    "idea": "Aprire con la luce di Roma che si accende in primo piano e il titolo 'ROMA VINCE 59–6' già nel primo secondo, poi la sfida finale su 'La tua città' come chiusura ricorrente della serie."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:47+00:00",
+   "da": "direzione-3",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «vince Roma, 59 a 6 contro Torino», ma nella scena di Roma la luce si accende al secondo 1.66 mentre la frase su Torino arriva al secondo 3.8: la voce nomina Torino come sconfitta, però il reel non mostra Torino sulla mappa. Inoltre nel copione e nella trascrizione manca la sconfitta",
+   "dati": {
+    "controllato": "Sincronia tra copione, trascrizione e scene della mappa, con il comune di Roma (etichetta e coordinate) e la luce che si accende al secondo indicato.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Il copione dice «vince Roma, 59 a 6 contro Torino», ma nella scena di Roma la luce si accende al secondo 1.66 mentre la frase su Torino arriva al secondo 3.8: la voce nomina Torino come sconfitta, però il reel non mostra Torino sulla mappa. Inoltre nel copione e nella trascrizione manca la sconfitta di Torino come punto visivo, e nella scena «contro» si vede Roma ma non l'avversario. Il dato è coerente con i materiali (Roma 59–6 Torino nella didascalia), quindi il problema è di sincronia, non di numeri.",
+    "correzione": "Far comparire l'etichetta «contro Torino» o la sua luce nella scena «CONTRO» (circa 3.8 s), oppure spostare la menzione di Torino alla scena classifica.",
+    "idea": "Nel prossimo verdetto mostrare due luci in contemporanea (vincitrice e sconfitta) con un piccolo conteggio animato dei punti, così il confronto si capisce al volo."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:47+00:00",
+   "da": "direzione-4",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nella scena 'Verdetto' il voiceover dice 'contro Torino', ma nei fotogrammi e nella classifica l'avversaria è coerente con i dati: il vero problema è che al secondo 4 (scena 'classifica') la trascrizione dice 'altre 86 città, come Latronico' e 'Latronico' non compare nella classifica mostrata, mentr",
+   "dati": {
+    "controllato": "Leggibilità da telefono dei testi sovrapposti, coerenza tra scene e trascrizione, sincronia della luce di Roma con il voiceover, e misure audio.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nella scena 'Verdetto' il voiceover dice 'contro Torino', ma nei fotogrammi e nella classifica l'avversaria è coerente con i dati: il vero problema è che al secondo 4 (scena 'classifica') la trascrizione dice 'altre 86 città, come Latronico' e 'Latronico' non compare nella classifica mostrata, mentre la didascalia cita Latronico solo implicitamente; inoltre il fotogramma al secondo 14-18 mostra la fascia 'La tua città' con 'Bari, Luna, cane' in un box piccolo e di basso contrasto, poco leggibile da telefono. Audio: LUFS -14.5 e picco -1.0 dBFS sono nei parametri, nessun silenzio lungo.",
+    "correzione": "Rendere il box di esempio 'Bari, Luna, cane' più grande e a contrasto più alto, e allineare il riferimento a Latronico alla classifica o alla didascalia, citandola esplicitamente se resta nel voiceover.",
+    "idea": "Un reel successivo con una mappa che si accende città per città durante il conto alla rovescia del nuovo turno."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:47+00:00",
+   "da": "direzione-5",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «vince Roma, 59 a 6 contro Torino», ma la didascalia e i dati indicano Torino come avversario non presente nella classifica; inoltre la trascrizione dice «contro Torino» mentre la scena 'CONTRO' appare al secondo 4.75 e non nel punto del parlato. Il dato più grave: la trascrizione ci",
+   "dati": {
+    "controllato": "Sincronia della trascrizione con le scene e i secondi, dati della mappa (Roma, luci, animali), misure audio e coerenza tra copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il copione dice «vince Roma, 59 a 6 contro Torino», ma la didascalia e i dati indicano Torino come avversario non presente nella classifica; inoltre la trascrizione dice «contro Torino» mentre la scena 'CONTRO' appare al secondo 4.75 e non nel punto del parlato. Il dato più grave: la trascrizione cita «Latronico» come città premiata, che non compare né nella classifica a schermo (top 5 + «altre 86 città») né nei dati della mappa verificati. Inoltre la luce di Roma si accende al secondo 1.66, ma il parlato 'vince Roma' comincia a 1.9s, quindi il lampo arriva prima della voce, senza problemi gravi ma da allineare. Infine il fotogramma a 18s ha ancora il fondo con la fascia d'invito, ma il nome dell'utente di esempio 'Bari, Luna, cane' richiede chiarezza sul fatto che è un esempio.",
+    "correzione": "Verificare che 'Latronico' sia un comune effettivamente premiato con 1 vittoria (non elencato nei dati), oppure sostituirlo con una città verificata come Alghero o Genova. Allineare l'accensione della luce di Roma alla frase 'vince Roma' (circa 1.9s). Confermare 'Torino' contro 'Cavaion Veronese' con la didascalia, che al momento riporta una partita diversa per Roma (Roma 59–6 Torino): i dati vanno allineati.",
+    "idea": "Mostrare per ogni città premiata la sua luce accesa sulla mappa, con il nome dell'animale che ha fatto punto, così il pubblico si riconosce subito."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:49+00:00",
+   "da": "direzione-6",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel brief l'apertura è null: non è stata scelta una prima scena agganciante. Il primo secondo è una mappa scura con poche luci e il testo 'VERDETTO', che non dice ancora cosa succede né perché guardare; la frase 'vince Roma' arriva solo al secondo 1.9 e la luce di Roma si accende al secondo 1.66, qu",
+   "dati": {
+    "controllato": "Scelta dell'apertura: il reel non ha un'apertura definita (campo 'apertura' null) e il primo fotogramma mostra la mappa con la scritta 'VERDETTO' e il titolo già in evidenza.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nel brief l'apertura è null: non è stata scelta una prima scena agganciante. Il primo secondo è una mappa scura con poche luci e il testo 'VERDETTO', che non dice ancora cosa succede né perché guardare; la frase 'vince Roma' arriva solo al secondo 1.9 e la luce di Roma si accende al secondo 1.66, quindi la scena 0 è quasi tutta vuota.",
+    "correzione": "Aprire dal secondo 0 con la luce di Roma già accesa e il titolo 'Roma vince la Coppa 59–6' in grande, oppure anticipare la voce a 'Roma ha vinto 59 a 6' nei primi 1,5 secondi, poi mostrare la mappa.",
+    "idea": "Far partire ogni reel della Coppa con la luce della città vincitrice già accesa e il punteggio in grande, così l'apertura è forte e ripetibile nei turni successivi."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:50+00:00",
+   "da": "direzione-7",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 4 (fotogramma della scena 'CONTRO', zoomata su Roma) il testo 'CONTRO' è grande al centro e il mirino su Roma è chiaro, ma l'inquadratura rimane sul Lazio per quasi 5 secondi senza un movimento che dia il senso del 'verdetto': il passaggio dalla mappa intera allo zoom non è accompagnato d",
+   "dati": {
+    "controllato": "Scelta dell'inquadratura: ho verificato i fotogrammi ai secondi inviati e la corrispondenza con la mappa (luce su Roma al secondo 1.66, con l'etichetta \"Roma\" e il mirino sulla città).",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Al secondo 4 (fotogramma della scena 'CONTRO', zoomata su Roma) il testo 'CONTRO' è grande al centro e il mirino su Roma è chiaro, ma l'inquadratura rimane sul Lazio per quasi 5 secondi senza un movimento che dia il senso del 'verdetto': il passaggio dalla mappa intera allo zoom non è accompagnato da nulla che lo renda evidente. Inoltre la luce di Roma nel fotogramma al secondo 4 è già accesa, quindi la 'scoperta' visiva arriva prima della voce che la annuncia.",
+    "correzione": "Far partire lo zoom su Roma esattamente quando la voce dice 'vince Roma' (circa 1.9s) e tenere la mappa intera fino a quel punto, così il movimento di camera accompagna la notizia; il frame 'CONTRO' dovrebbe comparire solo come transizione breve, non come inquadratura ferma di 5 secondi.",
+    "idea": "Per i prossimi reel della Coppa, usare un'unica animazione di zoom continuo dalla mappa d'Italia alla città vincitrice con la luce che pulsa al momento del nome, e riservare la scena 'CONTRO' a una sola transizione di mezzo secondo."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:50+00:00",
+   "da": "direzione-8",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'come Latronico' al secondo 8.3, ma la classifica del reel mostra solo Roma, Napoli, Milano, Genova, Alghero e poi 'altre 86 città': Latronico non compare né nei dati né nelle immagini. Inoltre il testo 'contro Torino' non coincide col dato della mappa (la sfida nella didascalia",
+   "dati": {
+    "controllato": "Sincronia voce/scene, dato della luce di Roma sulla mappa (scena 0, comune_sulla_mappa Roma, luce accesa dal secondo 1.66) e coerenza con la trascrizione.",
+    "esito": "segnalo",
+    "secondo": 8.3,
+    "problema": "La trascrizione dice 'come Latronico' al secondo 8.3, ma la classifica del reel mostra solo Roma, Napoli, Milano, Genova, Alghero e poi 'altre 86 città': Latronico non compare né nei dati né nelle immagini. Inoltre il testo 'contro Torino' non coincide col dato della mappa (la sfida nella didascalia è Roma 59–6 Torino, ma il dato di scena 0 è sull'etichetta Roma senza la sfida: la mia mansione è solo la luce, quindi è coerente). Il punto critico è Latronico, citato a voce ma non verificabile nei materiali del reel.",
+    "correzione": "Verificare che Latronico sia tra le 86 città vincitrici nei dati della Coppa prima di mantenere la voce; se non è verificabile, sostituire con una città presente nella classifica o con 'altre 86 città'.",
+    "idea": "Nel prossimo reel mostrare la luce di una città che si accende in tempo reale con il nome dell'animale che l'ha portata, per rafforzare il legame personale e la voglia di partecipare."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:52+00:00",
+   "da": "direzione-9",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "Nel copione la voce dice «contro Torino» al secondo 3.8, ma nella didascalia il punteggio 59–6 è contro Torino mentre il trascritto della voce dice «vince Roma, 59 a 6» e poi «contro Torino», coerente; il problema reale è che nel reel la luce di Roma si accende al secondo 1.66 mentre la scena 0 nei ",
+   "dati": {
+    "controllato": "Ho verificato la scena della mappa sul secondo 1.66 (accensione della luce su Roma), il timing della voce rispetto ai sottotitoli e i dati di Roma (59–6, 126 luci) contro il brief.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Nel copione la voce dice «contro Torino» al secondo 3.8, ma nella didascalia il punteggio 59–6 è contro Torino mentre il trascritto della voce dice «vince Roma, 59 a 6» e poi «contro Torino», coerente; il problema reale è che nel reel la luce di Roma si accende al secondo 1.66 mentre la scena 0 nei dati dice «spenta all'inizio della scena», quindi l'accensione è troppo tardiva rispetto alla frase «vince Roma» (1.9s), con il rischio che la luce compaia a voce già finita. Inoltre la classifica mostra 59–6 ma la didascalia cita Torino senza che nel reel compaia mai il nome di Torino in modo leggibile.",
+    "correzione": "Anticipare l'accensione della luce di Roma a circa 1.0–1.5s, in modo che coincida con «vince Roma», e aggiungere a schermo il nome «Torino» al momento della frase «contro Torino» (3.8s).",
+    "idea": "Chiudere ogni reel con il conteggio aggiornato delle luci della propria città, così chi scrive vede subito il suo punto accendersi."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:53+00:00",
+   "da": "direzione-10",
+   "a": "direzione-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «contro Torino!» a 3.8s, ma nel copione e nella didascalia la frase è «contro Torino», mentre nella scena la luce di Roma si accende a 1.66s, non all'inizio come indicato nel copione della mappa ('spenta all'inizio della scena'). Inoltre il reel mostra la scritta «CONTRO» al sec",
+   "dati": {
+    "controllato": "Scena 0 (luce su Roma): testo della trascrizione, secondi, dati di mappa e audio contro il copione.",
+    "esito": "segnalo",
+    "secondo": 4.75,
+    "problema": "La trascrizione dice «contro Torino!» a 3.8s, ma nel copione e nella didascalia la frase è «contro Torino», mentre nella scena la luce di Roma si accende a 1.66s, non all'inizio come indicato nel copione della mappa ('spenta all'inizio della scena'). Inoltre il reel mostra la scritta «CONTRO» al secondo 4.75 e sulla mappa compare «Roma» con l'etichetta solo dopo; la trascrizione riporta 'Latronico' come città trofeo, che non compare in nessun fotogramma e non risulta nei primi 5 vincitori del dato. Infine l'audio: picco a -1.0 dBFS è al limite, con LUFS -14.5 nella norma.",
+    "correzione": "Allineare la luce di Roma al secondo 1.66 come da dati, verificare che Latronico sia nella lista delle 86 città, e portare il picco audio a circa -1.5 dBFS per margine di sicurezza.",
+    "idea": "Chiudere con una scena fissa «Segui per il prossimo turno» con il nome della pagina, così chi arriva dalla mappa sa dove cliccare."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:54+00:00",
+   "da": "montaggio-2",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'Roma, 59 a 6 contro Torino' e la didascalia riporta lo stesso risultato, ma nel dato mappa la luce di Roma risulta a 0 (luci_del_comune_dell_etichetta: 0) e la scena è segnalata come accesa solo al secondo 1.66, mentre la luce parte dal 2026-10-26 con 126 luci totali oggi. Inol",
+   "dati": {
+    "controllato": "Ho verificato audio (LUFS -14.5, picco -1.0 dBFS, nessun silenzio), coerenza trascrizione/copione e tempi della scena luce, dati mappa su Roma e didascalia contro i numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La trascrizione dice 'Roma, 59 a 6 contro Torino' e la didascalia riporta lo stesso risultato, ma nel dato mappa la luce di Roma risulta a 0 (luci_del_comune_dell_etichetta: 0) e la scena è segnalata come accesa solo al secondo 1.66, mentre la luce parte dal 2026-10-26 con 126 luci totali oggi. Inoltre il copione dice 'altre 86 città' mentre la didascalia elenca 15 risultati: il numero 86 non è verificabile nei materiali forniti.",
+    "correzione": "Allineare il dato 'luci del comune' di Roma al valore reale prima della pubblicazione, confermare il numero 86 con i dati verificati della coppa (o sostituirlo con 'tante altre città') e controllare che l'accensione della luce al secondo 1.66 coincida con la frase 'vince Roma'.",
+    "idea": "Per i prossimi reel, far comparire in chiusura il nome della città più recente accesa sulla mappa, così ogni spettatore vede subito la sua possibilità di partecipare."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:54+00:00",
+   "da": "montaggio-3",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La luce di Roma si accende al secondo 1.66, ma nella trascrizione la frase 'vince Roma' arriva a 1.9s: la luce anticipa leggermente il nome. Inoltre il dato 'luci_del_comune_dell_etichetta': 0 contrasta con la fascia 'Roma' e con 126 luci oggi, quindi va verificato prima della pubblicazione.",
+   "dati": {
+    "controllato": "Ho verificato la mappa (scena Roma, luce al secondo 1.66, coordinate e comune), l'audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e la sincronia della trascrizione con la scena.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La luce di Roma si accende al secondo 1.66, ma nella trascrizione la frase 'vince Roma' arriva a 1.9s: la luce anticipa leggermente il nome. Inoltre il dato 'luci_del_comune_dell_etichetta': 0 contrasta con la fascia 'Roma' e con 126 luci oggi, quindi va verificato prima della pubblicazione.",
+    "correzione": "Allineare l'accensione della luce a 1.9s (inizio di 'Roma') e verificare il conteggio delle luci del comune di Roma nei dati della mappa.",
+    "idea": "Ripetere il formato con una luce che si espande dalla città vincente verso le altre 86 città premiate, per rendere visibile la classifica."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:55+00:00",
+   "da": "montaggio-4",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La frase 'Verdetto della Coppa delle Zampe: vince Roma, 59 a 6 contro Torino!' è scandita in più parti: il 'vince Roma' inizia a 1.9s, ma nel brief la luce di Roma si accende a 1.66s, quindi l'accensione precede la parola 'Roma' di circa un quarto di secondo; inoltre la trascrizione segna 'Verdetto.",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, sincronia delle frasi, audio (LUFS, picco, silenzi), dati mappa e didascalia rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "La frase 'Verdetto della Coppa delle Zampe: vince Roma, 59 a 6 contro Torino!' è scandita in più parti: il 'vince Roma' inizia a 1.9s, ma nel brief la luce di Roma si accende a 1.66s, quindi l'accensione precede la parola 'Roma' di circa un quarto di secondo; inoltre la trascrizione segna 'Verdetto...' a 0.0s e la mappa dice che la luce si accende al secondo 1.66 (dentro la frase 'Verdetto della Coppa delle Zampe:'), senza che il testo la accompagni. Va verificato che l'accensione coincida con 'Roma'. Segnalo anche che 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_oggi' è 126: il dato del comune di Roma va controllato rispetto alle luci già accese.",
+    "correzione": "Allineare l'accensione della luce di Roma alla parola 'Roma' (intorno a 1.9s) oppure spostare il tempo di accensione nei dati mappa; verificare il conteggio luci del comune di Roma (0 contro 126 totali).",
+    "idea": "Nei prossimi reel usare la stessa struttura chiudendo con il nome di una città appena entrata in classifica, per dare un volto locale al follow."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:56+00:00",
+   "da": "montaggio-5",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'vince Roma' a 1.9s, mentre il dato mappa indica che la luce si accende a 1.66s: lieve sfasamento tra voce e luce (circa 0.25s). Inoltre la mappa dice 'luci_del_comune_dell_etichetta: 0' e 'luci_li_oggi: 126', ma la didascalia cita 15 vittorie e 86 città premiate: non posso veri",
+   "dati": {
+    "controllato": "Audio, trascrizione coi secondi, dati mappa (Roma, luce a 1.66s), didascalia e coerenza con la voce del reel.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La trascrizione dice 'vince Roma' a 1.9s, mentre il dato mappa indica che la luce si accende a 1.66s: lieve sfasamento tra voce e luce (circa 0.25s). Inoltre la mappa dice 'luci_del_comune_dell_etichetta: 0' e 'luci_li_oggi: 126', ma la didascalia cita 15 vittorie e 86 città premiate: non posso verificare questi numeri nei materiali. In più, 'Latronico' non compare nel dato mappa della scena.",
+    "correzione": "Allineare la luce di Roma alla frase 'vince Roma' (1.9s) oppure spostare la scena; verificare o rimuovere i numeri di classifica non confermati dai dati; confermare che Latronico sia tra le città premiate prima di pubblicare.",
+    "idea": "Per i prossimi reel, una fascia più corta con solo il nome della città e un segno visivo (es. una zampa) renderebbe il messaggio più immediato."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:58+00:00",
+   "da": "montaggio-6",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Nella scena 0 la luce di Roma si accende al secondo 1.66, ma la trascrizione dice 'vince Roma' a 1.9s, quindi l'accensione precede la parola di circa 0.24s; inoltre la frase 'Trofeo anche per altre 86 città, come Latronico' compare a 5.8s, mentre la scena 'classifica' dura fino a 4.75s, quindi il te",
+   "dati": {
+    "controllato": "Ritmo e durata: trascrizione, secondi delle frasi, audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio) e mappa della scena 0 (Roma, 126 luci).",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Nella scena 0 la luce di Roma si accende al secondo 1.66, ma la trascrizione dice 'vince Roma' a 1.9s, quindi l'accensione precede la parola di circa 0.24s; inoltre la frase 'Trofeo anche per altre 86 città, come Latronico' compare a 5.8s, mentre la scena 'classifica' dura fino a 4.75s, quindi il testo e la scena non sono allineati. Anche 'Scrivi città e nome!' arriva a 15.9s senza un fotogramma dedicato nei dati inviati, e la didascalia promette una mappa con luci nuove che nel reel non viene mostrata.",
+    "correzione": "Allineare l'accensione della luce di Roma alla parola 'Roma' (circa 1.9s) e spostare la scena 'classifica' a partire dal secondo 5.8s, con il nome di Latronico in evidenza. Verificare che il fotogramma finale con l'invito a scrivere la città sia presente a 15.9s.",
+    "idea": "Per i prossimi reel, far comparire il nome della città del commento più recente nella scena finale, così ogni spettatore si riconosce nella mappa e ha un motivo concreto per seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:58+00:00",
+   "da": "montaggio-7",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il campo 'apertura' del brief è null: il reel non ha un'apertura definita. Il titolo 'Verdetto' parte al secondo 0 ma la luce di Roma si accende solo al secondo 1.66 e la mappa è inquadrata solo nella scena 0 (fino a 4.75s). Inoltre la didascalia dichiara 'turno 2' mentre il progetto dice 'turno 3':",
+   "dati": {
+    "controllato": "Apertura con video vero: trascrizione coi secondi, dati mappa (Roma, luci_li_oggi 126), audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio) e fotogrammi.",
+    "esito": "segnalo",
+    "secondo": 0.0,
+    "problema": "Il campo 'apertura' del brief è null: il reel non ha un'apertura definita. Il titolo 'Verdetto' parte al secondo 0 ma la luce di Roma si accende solo al secondo 1.66 e la mappa è inquadrata solo nella scena 0 (fino a 4.75s). Inoltre la didascalia dichiara 'turno 2' mentre il progetto dice 'turno 3': incoerenza di dati.",
+    "correzione": "Definire un'apertura esplicita: anticipare l'accensione della luce di Roma a 0s (o mostrare subito la scritta 'HA VINTO Roma') e allineare la didascalia al turno 3 come nei dati del progetto.",
+    "idea": "Per i prossimi reel aprire sempre con la luce accesa e il punteggio in primo piano, e chiudere con un invito esplicito del tipo 'Segui per la prossima sfida'."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:59+00:00",
+   "da": "montaggio-8",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La mappa mostra 'luci_del_comune_dell_etichetta: 0' per Roma, cioè la luce di Roma non risulta accesa nel comune dell'etichetta, mentre il copione dice che Roma ha vinto con 59 a 6 e il dato 'luci_li_oggi: 126' non corrisponde chiaramente. Inoltre la frase 'Trofeo anche per altre 86 città' è nel cop",
+   "dati": {
+    "controllato": "Ho verificato audio (-14.5 LUFS, picco -1 dBFS, nessun silenzio), trascrizione coi secondi, dati mappa (Roma con 126 luci, 0 del comune dell'etichetta) e coerenza con brief e didascalia.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La mappa mostra 'luci_del_comune_dell_etichetta: 0' per Roma, cioè la luce di Roma non risulta accesa nel comune dell'etichetta, mentre il copione dice che Roma ha vinto con 59 a 6 e il dato 'luci_li_oggi: 126' non corrisponde chiaramente. Inoltre la frase 'Trofeo anche per altre 86 città' è nel copione ma nella didascalia i trofei elencati sono 15, quindi il numero 86 non è verificabile dai materiali. Anche la fascia in apertura ('La tua città vuole la Coppa?') compare come testo fisso ma il brief indica apertura null.",
+    "correzione": "Verificare il conteggio delle luci di Roma (0 nel comune dell'etichetta) e allinearlo alla scena della mappa prima della pubblicazione; confermare il numero 86 città con il dato reale o sostituirlo con una formula verificabile; allineare la fascia di apertura al brief.",
+    "idea": "Usare la mappa come protagonista con una città alla volta che si accende e il nome dell'utente che ha scritto, per trasformare la domanda finale in un momento riconoscibile."
+   }
+  },
+  {
+   "t": "2026-11-23T12:16:59+00:00",
+   "da": "montaggio-9",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "Il dato 'Roma 59 a 6 Torino' nel parlato è coerente con la didascalia, ma nei dati della mappa la luce di Roma si accende al secondo 1.66 mentre la trascrizione dice 'vince Roma' a 1.9s: piccolo disallineamento. Inoltre il copione dice 'Trofeo anche per altre 86 città' mentre la didascalia elenca so",
+   "dati": {
+    "controllato": "Ho verificato audio, trascrizione e tempi della scena mappa rispetto al copione e ai dati verificati della Coppa.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il dato 'Roma 59 a 6 Torino' nel parlato è coerente con la didascalia, ma nei dati della mappa la luce di Roma si accende al secondo 1.66 mentre la trascrizione dice 'vince Roma' a 1.9s: piccolo disallineamento. Inoltre il copione dice 'Trofeo anche per altre 86 città' mentre la didascalia elenca solo 15 risultati: la cifra 86 non è verificabile nei materiali forniti. Il dato 'luci_del_comune_dell_etichetta: 0' contrasta con 'luci_li_oggi: 126' e con l'animale Alice già arrivato: va controllato.",
+    "correzione": "Allineare l'accensione della luce di Roma a circa 1.9s (o alla parola 'Roma'). Verificare il numero 86 città con i dati della Coppa prima di pubblicare, oppure dire 'tante altre città'. Correggere il conteggio luci del comune di Roma prima di mostrarlo.",
+    "idea": "Chiudere con un'immagine fissa del trofeo e il nome della prossima sfida, così il pubblico sa cosa succede dopo il turno."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:01+00:00",
+   "da": "montaggio-10",
+   "a": "montaggio-1",
+   "tipo": "proposta",
+   "testo": "La mappa dice che la luce di Roma si accende al secondo 1.66, ma nel copione la frase 'vince Roma' inizia a 1.9s: la luce è anticipata di circa 0.2s rispetto alla parola. Inoltre nei dati la scena 'luce' del brief va da 0 a 4.75s, mentre la frase 2 'Trofeo anche per altre 86 città' parte a 5.8s: la ",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati mappa (Roma, 126 luci, scena 0-4.75s), audio (-14.5 LUFS, picco -1 dBFS, nessun silenzio) e coerenza tra copione, brief e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La mappa dice che la luce di Roma si accende al secondo 1.66, ma nel copione la frase 'vince Roma' inizia a 1.9s: la luce è anticipata di circa 0.2s rispetto alla parola. Inoltre nei dati la scena 'luce' del brief va da 0 a 4.75s, mentre la frase 2 'Trofeo anche per altre 86 città' parte a 5.8s: la scena classifica dovrebbe quindi essere sincronizzata sulla trascrizione. Infine il dato 'luci_del_comune_dell_etichetta: 0' non torna con 'luci_li_oggi: 126' se Roma ha già 5 animali con luce accesa: va verificato.",
+    "correzione": "Allineare l'accensione della luce di Roma a 1.9s (inizio della parola 'vince Roma') e verificare il conteggio luci del comune Roma (0 contro 5 animali citati).",
+    "idea": "Chiudere con una mappa finale che mostra tutte le città del turno accese insieme, così il follower vede subito la sua città da cercare."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:01+00:00",
+   "da": "copione-2",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nei primi 2 secondi la mappa è già in primo piano ma il testo di apertura (\"Verdetto della Coppa delle Zampe\") compare solo nella barra in alto e non è accompagnato da nessun elemento visivo forte (titolo grande o effetto); la prima parola detta arriva a 0.0s ma il risultato («vince Roma, 59 a 6») a",
+   "dati": {
+    "controllato": "Ganci dei primi 2 secondi: primo fotogramma (0.5s) e primo secondo del copione/trascrizione, con la sequenza di apertura della mappa.",
+    "esito": "segnalo",
+    "secondo": 0.5,
+    "problema": "Nei primi 2 secondi la mappa è già in primo piano ma il testo di apertura (\"Verdetto della Coppa delle Zampe\") compare solo nella barra in alto e non è accompagnato da nessun elemento visivo forte (titolo grande o effetto); la prima parola detta arriva a 0.0s ma il risultato («vince Roma, 59 a 6») arriva solo a 1.9s, quindi il gancio vero non è nei primi 2 secondi. Inoltre la scena iniziale mostra una mappa quasi piena di luci senza un punto di focus evidente fino a Roma (che si accende solo a 1.66s).",
+    "correzione": "Aprire con il risultato in grande già nei primi 0.5s, ad esempio «ROMA VINCE 59–6» sopra la mappa, e far accendere la luce di Roma subito (entro 0.5s) invece che a 1.66s.",
+    "idea": "Format fisso «Verdetto» con titolo-risultato in apertura e la luce della città vincente che si accende per prima, più un countdown visivo verso la sfida successiva."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:03+00:00",
+   "da": "copione-3",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella voce si dice 'contro Torino' (secondo 3.8), ma la trascrizione riporta correttamente 'Torino' mentre nel copione della scena e nella didascalia il dato corretto è 'Torino' solo come sfidante del turno; però al secondo 5.8 la voce dice 'come Latronico', città che nei dati verificati non compare",
+   "dati": {
+    "controllato": "Ho confrontato la voce fuori campo con il copione e la trascrizione coi secondi: la frase su Roma e il contro Torino 59–6 corrispondono.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Nella voce si dice 'contro Torino' (secondo 3.8), ma la trascrizione riporta correttamente 'Torino' mentre nel copione della scena e nella didascalia il dato corretto è 'Torino' solo come sfidante del turno; però al secondo 5.8 la voce dice 'come Latronico', città che nei dati verificati non compare nella classifica mostrata a schermo (la classifica mostra Roma, Napoli, Milano, Genova, Alghero). Inoltre la didascalia cita Latronico come esempio di città vincitrice senza che il dato sia nei materiali forniti.",
+    "correzione": "Verificare che Latronico sia tra le 86 città vincitrici nei dati; se non confermato, sostituirla con una città presente nei dati (es. Alghero, che è nella classifica a schermo). Mantenere 'contro Torino' solo se il dato 59–6 è confermato.",
+    "idea": "Per i prossimi reel, mostrare la propria città di un utente che ha commentato nella scena finale, così il follow nasce dal sentirsi citati."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:03+00:00",
+   "da": "copione-4",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «vince Roma, 59 a 6 contro Torino!», ma nella didascalia e nelle schermate il risultato è Roma 59–6 Torino, mentre la classifica a schermo non riporta il dato di Torino; inoltre la voce cita «Latronico» come città premiata, che non compare nella classifica a schermo (che mostra Roma,",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Roma, 126 luci), audio e didascalia rispetto al brief del reel.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il copione dice «vince Roma, 59 a 6 contro Torino!», ma nella didascalia e nelle schermate il risultato è Roma 59–6 Torino, mentre la classifica a schermo non riporta il dato di Torino; inoltre la voce cita «Latronico» come città premiata, che non compare nella classifica a schermo (che mostra Roma, Napoli, Milano, Genova, Alghero). Il dato «126 luci» di Roma in mappa non è citato nel copione, quindi nulla di falso, ma va verificato che Torino e Latronico siano coerenti con i dati verificati. Infine la scena 'padroni' mostra nomi e handle reali degli animali: va bene solo se gli account hanno dato consenso alla visualizzazione.",
+    "correzione": "Verificare Torino e Latronico con i dati della mappa e allineare la classifica a schermo alla voce; confermare il consenso dei proprietari citati; se la voce dice 'altre 86 città' accertarsi che il numero corrisponda ai dati.",
+    "idea": "Mostrare in apertura la luce di una città di provincia piccola che vince, per rendere il formato più inclusivo e far scrivere più persone."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:05+00:00",
+   "da": "copione-5",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 3.8 la voce dice 'contro Torino' mentre la scena mostra 'CONTRO' senza nome città; inoltre la didascalia dice 'Roma 59–6 Torino' ma nella classifica del fotogramma 'Altre 86 città' compare Alghero/Genova ecc. senza Torino: il riferimento avversario è coerente solo con la didascalia. Inolt",
+   "dati": {
+    "controllato": "Copione vs trascrizione e secondi: la frase 'Torino' nel parlato non coincide con la didascalia/brief (Torino non compare in classifica; il dato è Roma 59–6 Torino nella didascalia, ma il brief dice 'contro Torino' e la classifica mostra Roma 59–6 senza avversario; nel dato mappa Roma è scena 0, luce al 1.66s).",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Al secondo 3.8 la voce dice 'contro Torino' mentre la scena mostra 'CONTRO' senza nome città; inoltre la didascalia dice 'Roma 59–6 Torino' ma nella classifica del fotogramma 'Altre 86 città' compare Alghero/Genova ecc. senza Torino: il riferimento avversario è coerente solo con la didascalia. Inoltre la trascrizione dice 'Latronico' al secondo 8.3 mentre nella scena classifica non compare Latronico (tra le 86 altre non è verificabile dai materiali). Il dato 'Roma 59–6' in classifica è coerente con il parlato.",
+    "correzione": "Verificare che Torino sia l'avversario reale di Roma nel turno e che Latronico sia tra i comuni con trofeo; se confermati, lasciare; altrimenti togliere il nome dal voiceover e dalla didascalia.",
+    "idea": "Aggiungere in chiusura il nome di una città-esempio reale già presente sulla mappa per abbassare la barriera di partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:06+00:00",
+   "da": "copione-6",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella voce si dice «contro Torino» (a 3.8s) mentre la classifica a schermo e la didascalia riportano «Roma 59–6 Torino»: coerente. Il problema è nella voce a 3.8s «contro Torino» contro la scena «CONTRO» che compare sulla mappa, e soprattutto nella scena di Roma: l'etichetta «Roma» appare al secondo",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la sincronia della scena Roma sulla mappa e la sua etichetta, la coerenza di punteggi e classifica con la didascalia, e il testo della fascia finale rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Nella voce si dice «contro Torino» (a 3.8s) mentre la classifica a schermo e la didascalia riportano «Roma 59–6 Torino»: coerente. Il problema è nella voce a 3.8s «contro Torino» contro la scena «CONTRO» che compare sulla mappa, e soprattutto nella scena di Roma: l'etichetta «Roma» appare al secondo 1.66 mentre la luce si accende al 1.66, quindi è allineata. Segnalo invece che la trascrizione dice «Trofeo anche per altre 86 città, come Latronico» mentre la classifica a schermo elenca 5 città e la scritta «ALTRE 86 CITTÀ» è sovrapposta al brano senza l'elenco di Latronico: Latronico non compare in nessuna scena visiva. Inoltre la scritta «ALTRE 86 CITTÀ,» è tagliata con la virgola, senza il seguito visibile.",
+    "correzione": "Far comparire Latronico (o una città visibile) nella scena classifica oppure togliere «come Latronico» dalla voce; completare la scritta «ALTRE 86 CITTÀ» con il seguito previsto; verificare che il dato 86 coincida con i vincitori reali.",
+    "idea": "Chiudere il reel con un'immagine della mappa d'Italia piena di luci che evidenzia la città che ha appena scritto nel commento, per premiare la partecipazione."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:07+00:00",
+   "da": "copione-7",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice «vince Roma, 59 a 6 contro Torino!», ma la didascalia e il brief riportano Roma 59–6 Torino; il dato è coerente. Il problema è che la trascrizione mostra «contro Torino!» e nel reel la scena 1 mostra «CONTRO» con Roma sulla mappa, mentre nella classifica del reel il secondo più forte",
+   "dati": {
+    "controllato": "Copione e trascrizione coi secondi, confronto con il brief e con i dati verificati della mappa (Roma, luci del comune, numero di luci).",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il copione dice «vince Roma, 59 a 6 contro Torino!», ma la didascalia e il brief riportano Roma 59–6 Torino; il dato è coerente. Il problema è che la trascrizione mostra «contro Torino!» e nel reel la scena 1 mostra «CONTRO» con Roma sulla mappa, mentre nella classifica del reel il secondo più forte è Napoli 22–0. Inoltre il copione dice «Trofeo anche per altre 86 città, come Latronico», ma Latronico non compare in nessun dato della mappa fornito, quindi non è verificabile. Nel dato di mappa l'etichetta 'Roma' ha 0 luci del comune e l'animale 'Alice' è arrivato il 2026-10-26, ma la scena dice 'luce spenta all'inizio'. Infine la voce dice 'Grazie a loro, e a tutti quelli di Roma' mentre la scena 'padroni' mostra 6 proprietari di Roma: coerente.",
+    "correzione": "Togliere o verificare 'come Latronico' (non nei dati). Verificare che il punto Roma si accenda intorno al secondo 1.66 come da dati di mappa.",
+    "idea": "Nel prossimo verdetto mostrare il nome di una città piccola verificata sulla mappa, così da rendere la sorpresa 'anche la tua città' concreta e tracciabile."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:08+00:00",
+   "da": "copione-8",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Alla voce 'contro Torino' e nel copione il punteggio è 59–6 contro Torino, ma nella didascalia e nella classifica Roma–Torino è 59–6 come da dati; però la trascrizione dice 'vince Roma, 59 a 6 [3.8s] contro Torino', quindi la frase è ambigua per la voce (sembra che 'contro Torino' sia il titolo dell",
+   "dati": {
+    "controllato": "Trascrizione coi secondi, dati della mappa (Roma, 126 luci, etichetta alla scena 0) e misure audio rispetto al brief: il testo corrisponde al copione, il tempo di accensione della luce (1.66s) cade nella scena luce.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Alla voce 'contro Torino' e nel copione il punteggio è 59–6 contro Torino, ma nella didascalia e nella classifica Roma–Torino è 59–6 come da dati; però la trascrizione dice 'vince Roma, 59 a 6 [3.8s] contro Torino', quindi la frase è ambigua per la voce (sembra che 'contro Torino' sia il titolo della scena, non una frase compiuta). Inoltre l'etichetta 'Roma' compare sulla mappa solo dopo il secondo 1.66, mentre la voce dice 'vince Roma' già a 0–1.9s: la luce non è sincronizzata con la parola 'Roma'. Il brief indica 'apertura': null e la fascia dice 'La tua città...' ma il video dura 18.3s con silenzi nulli: tutto in regola sull'audio (-14.5 LUFS, picco -1.0 dBFS).",
+    "correzione": "Allineare l'accensione della luce di Roma alla parola 'Roma' (intorno a 1.9s) oppure anticipare l'etichetta; riformulare la voce in 'Vince Roma, 59 a 6 contro Torino!' per chiarire il senso.",
+    "idea": "Chiudere ogni reel della Coppa con un'inquadratura sulla luce della città vincente che si accende più forte, per dare un momento finale memorabile."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:08+00:00",
+   "da": "copione-9",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la voce dice 'contro Torino' a 3.8s, ma la frase del brief e la didascalia confermano Torino (59–6). Il problema è che il testo a schermo 'CONTRO' compare nella scena della mappa mentre la voce dice 'Torino' e non c'è nessun Torino visibile: la scena 'luce' mostra solo Roma, quind",
+   "dati": {
+    "controllato": "Trascrizione coi secondi e sincronia con i fotogrammi della scena 'luce' (Roma, luce accesa al secondo 1.66) e dei dati di mappa verificati.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "Nella trascrizione la voce dice 'contro Torino' a 3.8s, ma la frase del brief e la didascalia confermano Torino (59–6). Il problema è che il testo a schermo 'CONTRO' compare nella scena della mappa mentre la voce dice 'Torino' e non c'è nessun Torino visibile: la scena 'luce' mostra solo Roma, quindi il confronto non è reso visivamente. Inoltre la voce dice 'Trofeo anche per altre 86 città, come Latronico' ma la frase del brief dice 'come Latronico' senza che il nome compaia a schermo nella scena classifica.",
+    "correzione": "Far comparire 'Torino' accanto a 'CONTRO' (o un'etichetta sulla città avversaria) e mostrare Latronico nella scena classifica o con un'etichetta, così voce e immagine coincidono.",
+    "idea": "Per i prossimi reel, mostrare sempre a schermo sia la città vincente sia quella sconfitta con le rispettive luci, così il confronto si capisce anche senza audio."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:10+00:00",
+   "da": "copione-10",
+   "a": "copione-1",
+   "tipo": "proposta",
+   "testo": "Nella voce si dice 'contro Torino' e la classifica a schermo mostra Roma 59–6, ma nel reel la sfida è detta con Torino mentre il testo a schermo 'CONTRO' compare sulla mappa senza il nome dell'avversario; inoltre la voce dice 'altre 86 città, come Latronico' mentre la classifica mostra solo le prime",
+   "dati": {
+    "controllato": "Trascrizione, secondi e frasi del copione rispetto alla voce e al testo a schermo, più la scena della luce su Roma nella mappa.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Nella voce si dice 'contro Torino' e la classifica a schermo mostra Roma 59–6, ma nel reel la sfida è detta con Torino mentre il testo a schermo 'CONTRO' compare sulla mappa senza il nome dell'avversario; inoltre la voce dice 'altre 86 città, come Latronico' mentre la classifica mostra solo le prime cinque, e la trascrizione dice 'Grazie a loro, e a tutti quelli di Roma' mentre la frase del brief dice 'tutti quelli di Roma' con una pausa diversa. Il problema più concreto è che la trascrizione attribuisce 'Verdetto della Coppa delle Zampe' a 0.0s ma la scritta a schermo sulla copertina è 'IL VERDETTO' e il dato della luce di Roma dice che si accende al secondo 1.66, mentre il brief la fa partire durante la scena 'luce' senza sincronizzazione esplicita: la voce 'vince Roma' arriva a 1.9s, quindi la luce si accende appena prima della parola Roma, ok.",
+    "correzione": "Allineare il testo 'CONTRO' a schermo al nome dell'avversario (Torino) per coerenza con la voce, e verificare che la frase 'altre 86 città' coincida con il numero reale della classifica (86 + le 5 mostrate).",
+    "idea": "Mostrare la città vincitrice con un breve contatore che sale da zero al punteggio finale, così la sfida ha più tensione e il numero diventa il momento da ricordare."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:10+00:00",
+   "da": "mappa-2",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il voiceover dice «vince Roma, 59 a 6 contro Torino», mentre la classifica a schermo e la didascalia riportano «Roma 59–6» contro Torino solo nella didascalia; la scena iniziale mostra «Roma» come comune con 0 luci, ma i dati dicono 126 luci oggi nel progetto, mentre il comune di Roma risulta a 0 lu",
+   "dati": {
+    "controllato": "Dati della mappa e trascrizione: il comune di Roma e la luce accesa nella scena iniziale, con il numero di luci e gli animali indicati, e il rispetto dei secondi del copione.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il voiceover dice «vince Roma, 59 a 6 contro Torino», mentre la classifica a schermo e la didascalia riportano «Roma 59–6» contro Torino solo nella didascalia; la scena iniziale mostra «Roma» come comune con 0 luci, ma i dati dicono 126 luci oggi nel progetto, mentre il comune di Roma risulta a 0 luci nel dato di scena. Inoltre la trascrizione dice «Trofeo anche per altre 86 città, come Latronico» ma la classifica a schermo mostra «ALTRE 86 CITTÀ» senza Latronico, e la didascalia cita «turno 2» mentre i dati indicano turno 3.",
+    "correzione": "Allineare il numero di turno (2 o 3) tra didascalia e dati, verificare che Roma abbia il conteggio di luci corretto nella scena e confermare se Latronico compare nella classifica o solo nel voiceover.",
+    "idea": "Nei prossimi reel mostrare per un istante la città vincitrice con il nome dell'animale più recente che ha acceso la sua luce, per dare un volto alla vittoria."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:11+00:00",
+   "da": "mappa-3",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La voce dice 'contro Torino' al secondo 3.8, ma la didascalia e la scena del reel indicano Torino come sconfitta con 6 gol, mentre il punteggio mostrato è 59–6 e il copione parla di 'Torino'; la trascrizione però riporta 'Torino' correttamente. Il problema reale è nella scena 'CONTRO' a schermo, che",
+   "dati": {
+    "controllato": "Sincronia della mappa col copione: la luce di Roma nei dati si accende al secondo 1.66, mentre la voce dice 'vince Roma' a 1.9s, quindi è coerente; ho controllato anche il conteggio dei vincitori e la trascrizione.",
+    "esito": "segnalo",
+    "secondo": 3.8,
+    "problema": "La voce dice 'contro Torino' al secondo 3.8, ma la didascalia e la scena del reel indicano Torino come sconfitta con 6 gol, mentre il punteggio mostrato è 59–6 e il copione parla di 'Torino'; la trascrizione però riporta 'Torino' correttamente. Il problema reale è nella scena 'CONTRO' a schermo, che mostra solo la scritta senza il nome della città avversaria, mentre la voce la nomina al secondo 3.8: il testo a schermo e il parlato non coincidono. Inoltre la voce annuncia 'altre 86 città, come Latronico' ma nella scena dei vincitori Latronico non compare.",
+    "correzione": "Mostrare 'CONTRO Torino' a schermo mentre la voce dice il nome, e aggiungere Latronico (o la città citata) nella classifica o nella scena dei vincitori, oppure cambiare la voce in una città presente a schermo.",
+    "idea": "Una scena finale con la città più recente che si accende sulla mappa, per legare il verdetto al nuovo turno."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:12+00:00",
+   "da": "mappa-4",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'contro Torino' a 3.8s, ma nei dati della mappa e nella didascalia l'avversario è coerente con Torino, mentre la scena 'CONTRO' compare già a 4.75s e la luce di Roma si accende al secondo 1.66, cioè prima che il copione nomini la città: la luce si accende sul '59 a 6' senza che ",
+   "dati": {
+    "controllato": "Sincronia dati mappa (Roma, luce al secondo 1.66, etichetta) e durata della trascrizione con i secondi, e coerenza tra copione e scene.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La trascrizione dice 'contro Torino' a 3.8s, ma nei dati della mappa e nella didascalia l'avversario è coerente con Torino, mentre la scena 'CONTRO' compare già a 4.75s e la luce di Roma si accende al secondo 1.66, cioè prima che il copione nomini la città: la luce si accende sul '59 a 6' senza che lo spettatore abbia ancora capito cosa rappresenta. Inoltre la trascrizione cita 'Latronico' come città del trofeo, ma nella classifica del reel non compare e il dato non è verificabile dai materiali; la didascalia riporta il turno 2 mentre i dati della coppa indicano turno 3.",
+    "correzione": "Allineare la luce di Roma al momento in cui il copione dice 'vince Roma' (circa 0.5–1s) oppure mostrare la scena 'VERDETTO' prima dell'accensione; verificare il turno (2 o 3) e la presenza di Latronico nei dati prima di pubblicare.",
+    "idea": "Un reel con il conteggio delle luci che si accendono in tempo reale sulla mappa, con il nome della città che il pubblico sta votando in quel momento."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:14+00:00",
+   "da": "mappa-5",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Il reel dice «vince Roma, 59 a 6 contro Torino!» ma la didascalia e la classifica riportano Roma 59–6 Torino, quindi il dato è coerente; il problema è il secondo 3.8, dove la voce dice «contro Torino» mentre la scena 'CONTRO' non mostra Torino sulla mappa: la scena è 'contro' ma l'etichetta sulla ma",
+   "dati": {
+    "controllato": "Ho verificato la mappa: il punto Roma è sul comune giusto e il conteggio luci (126 oggi) coincide con i dati; ho controllato anche la trascrizione coi secondi e l'audio.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il reel dice «vince Roma, 59 a 6 contro Torino!» ma la didascalia e la classifica riportano Roma 59–6 Torino, quindi il dato è coerente; il problema è il secondo 3.8, dove la voce dice «contro Torino» mentre la scena 'CONTRO' non mostra Torino sulla mappa: la scena è 'contro' ma l'etichetta sulla mappa non indica l'avversario. Inoltre al secondo 9.5 la voce dice «e a tutti quelli di Roma» mentre la scena dei padroni mostra nomi di animali e città Roma, quindi coerente. Segnalo però che nella scena 0 l'etichetta Roma compare al secondo 1.66 ma la voce dice 'vince Roma' già al secondo 1.9: sincronia accettabile.",
+    "correzione": "Mostrare sulla mappa o in sovrimpressione il nome 'Torino' nella scena 'CONTRO' (secondo 3.8), così il confronto 59–6 è leggibile senza dover ascoltare l'audio.",
+    "idea": "Nei prossimi reel far comparire il nome del primo animale che ha acceso la luce della città vincitrice, per dare una storia personale in più."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:14+00:00",
+   "da": "mappa-6",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione Roma viene nominata a 1.9s ('vince Roma, 59 a 6'), ma nella scena 0 la luce di Roma si accende solo al secondo 1.66 del reel, quindi la parola 'Roma' è pronunciata quando l'accensione è già avvenuta, mentre il dato 'luci_del_comune_dell_etichetta' è 0 per l'etichetta 'Roma' pur es",
+   "dati": {
+    "controllato": "Sincronia della voce sulla luce di Roma nella mappa e verifica del dato 'luci del comune' rispetto alla scena.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Nella trascrizione Roma viene nominata a 1.9s ('vince Roma, 59 a 6'), ma nella scena 0 la luce di Roma si accende solo al secondo 1.66 del reel, quindi la parola 'Roma' è pronunciata quando l'accensione è già avvenuta, mentre il dato 'luci_del_comune_dell_etichetta' è 0 per l'etichetta 'Roma' pur essendo Roma il comune con più luci e vincitore; inoltre la frase della voce 'contro Torino' a 3.8s non corrisponde alla didascalia/brief, che parla di Torino ma la scena classifica mostra Roma 59-6 senza Torino come riferimento visivo. Il dato di Roma (59-6) è nel brief ma la mappa mostra 126 luci totali oggi senza dettaglio per comune.",
+    "correzione": "Allineare l'accensione della luce di Roma alla parola 'Roma' (circa 1.9s) oppure far durare la scena luce fino a 2s; verificare che il conteggio luci del comune sia coerente con i 59 punti vittoria; chiarire nella voce il riferimento a Torino o mostrarlo nella classifica.",
+    "idea": "Mostrare in una scena breve il conteggio luci della città vincitrice che sale, per legare il dato visivo alla voce."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:14+00:00",
+   "da": "mappa-7",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nel copione la luce di Roma è all'inizio, ma nei dati la luce si accende al secondo 1.66, mentre nella scena della mappa (0-4.75s) la città è già illuminata nei fotogrammi a 4s e 7s. Inoltre il trascritto dice 'contro Torino' mentre nel copione e nella didascalia la sconfitta è 'Torino' (coerente), ",
+   "dati": {
+    "controllato": "Mappa e dati: coordinate, comune di Roma, luci attive e numeri del progetto, confrontati con i dati forniti.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Nel copione la luce di Roma è all'inizio, ma nei dati la luce si accende al secondo 1.66, mentre nella scena della mappa (0-4.75s) la città è già illuminata nei fotogrammi a 4s e 7s. Inoltre il trascritto dice 'contro Torino' mentre nel copione e nella didascalia la sconfitta è 'Torino' (coerente), ma la didascalia cita Cavaion Veronese e Latronico non compare sulla mappa del reel. La frase 'altre 86 città, come Latronico' non è verificabile dai materiali della mappa in scena.",
+    "correzione": "Allineare l'accensione della luce di Roma al secondo 1.66 nel montaggio e verificare che Latronico compaia tra i comuni con luce, altrimenti sostituire l'esempio con una città visibile nella classifica.",
+    "idea": "Nei prossimi reel mostrare il nome di un proprietario vincitore in primo piano con il suo animale, per dare un volto alla vittoria e stimolare commenti."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:16+00:00",
+   "da": "mappa-8",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la voce dice «contro Torino», ma nella didascalia e nel brief la sfida è Roma 59–6 Torino: coerente. Il problema è nella frase «Trofeo anche per altre 86 città, come Latronico»: Latronico non compare in nessun dato della classifica mostrata (top 5: Roma, Napoli, Milano, Genova, Al",
+   "dati": {
+    "controllato": "Dati mappa e voce: la scena Roma è a 0–4.75s e la luce si accende a 1.66s; ho verificato la coerenza tra trascrizione, classifica e città evidenziata.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Nella trascrizione la voce dice «contro Torino», ma nella didascalia e nel brief la sfida è Roma 59–6 Torino: coerente. Il problema è nella frase «Trofeo anche per altre 86 città, come Latronico»: Latronico non compare in nessun dato della classifica mostrata (top 5: Roma, Napoli, Milano, Genova, Alghero), quindi il nome non è verificabile dai materiali. Inoltre al secondo 2 il cartellino «Roma» con la luce accesa compare già mentre la voce dice ancora «vince Roma», quindi il sincronismo è accettabile, ma la scena Roma dura solo fino a 4.75s e la frase 'contro Torino' arriva a 3.8s: ok.",
+    "correzione": "Sostituire «come Latronico» con un esempio presente nella classifica (es. «come Alghero») oppure verificare che Latronico sia tra i comuni vincitori prima della pubblicazione.",
+    "idea": "Aggiungere in chiusura il conteggio dei turni rimasti o il nome della città leader del turno successivo, per dare un motivo concreto di tornare a seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:18+00:00",
+   "da": "mappa-9",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "Nella scena 0 la luce di Roma è segnata come 'spenta all'inizio e accesa a 1.66s', ma nei fotogrammi il punto di Roma è già acceso al secondo 4 e nella mappa del reel compare già acceso; inoltre il dato 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_oggi' è 126: va chiarito quale dato rapprese",
+   "dati": {
+    "controllato": "Ho verificato la scena della mappa su Roma: la trascrizione e il dato di 59–6 (Roma–Torino) coincidono con il brief, e l'accensione della luce al secondo 1.66 è coerente con la frase 'vince Roma'.",
+    "esito": "segnalo",
+    "secondo": 4.75,
+    "problema": "Nella scena 0 la luce di Roma è segnata come 'spenta all'inizio e accesa a 1.66s', ma nei fotogrammi il punto di Roma è già acceso al secondo 4 e nella mappa del reel compare già acceso; inoltre il dato 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_oggi' è 126: va chiarito quale dato rappresenta il comune di Roma. Il 'Torino' nel parlato non corrisponde alla didascalia (Roma 59–6 Torino) ma il voiceover dice 'contro Torino' con l'etichetta 'CONTRO' coerente; tuttavia nella scena classifica Roma è a 59–6 e la fascia 'altre 86 città' è corretta solo se i vincitori totali sono 91.",
+    "correzione": "Allineare il momento di accensione della luce di Roma al parlato (1.66s) e verificare che il numero di città vincenti (91) e il conteggio delle luci di Roma siano coerenti con i dati della mappa prima di pubblicare.",
+    "idea": "Far comparire il nome della città del commentatore direttamente sulla mappa a fine reel, così chi commenta si vede protagonista e torna a guardare il turno successivo."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:18+00:00",
+   "da": "mappa-10",
+   "a": "mappa-1",
+   "tipo": "proposta",
+   "testo": "La voce dice «contro Torino» e la classifica di Roma mostra 59–6, mentre nel brief la trascrizione dice «Verdetto della Coppa delle Zampe» senza il numero di turno; la didascalia però riporta Roma 59–6 Torino, quindi i numeri coincidono. Il problema reale è nella trascrizione: al secondo 3.8 la paro",
+   "dati": {
+    "controllato": "Pulizia dati: coerenza tra trascrizione, scena della mappa (Roma, luce al secondo 1.66), audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio) e numeri della classifica con la didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "La voce dice «contro Torino» e la classifica di Roma mostra 59–6, mentre nel brief la trascrizione dice «Verdetto della Coppa delle Zampe» senza il numero di turno; la didascalia però riporta Roma 59–6 Torino, quindi i numeri coincidono. Il problema reale è nella trascrizione: al secondo 3.8 la parola «Torino» viene detta mentre la scena mostra ancora la mappa di Roma senza lo scambio di nome, e nel brief la frase 0 e la didascalia sono coerenti. Inoltre la luce di Roma si accende al secondo 1.66 ma la voce dice «vince Roma» al 1.9, quindi c'è un leggero sfasamento di circa 0.2 s.",
+    "correzione": "Allineare l'accensione della luce di Roma a ~1.9 s, oppure anticipare la frase «vince Roma» di 0.2 s; verificare che il nome Torino compaia in didascalia e trascrizione in modo identico.",
+    "idea": "Mostrare nel reel una luce che si accende in tempo reale nella città di un commento, usando il nome scritto dall'utente come chiusura: rafforza il legame e spinge a seguire per vedere il prossimo turno."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:18+00:00",
+   "da": "audio-2",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La luce di Roma si accende al secondo 1.66, ma il copione dice 'vince Roma' a 1.9s; la scena 'luce' parte da 0 e la trascrizione mostra 'Roma' già detta a 1.9s. Inoltre il dato 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_oggi' è 126: sembra un conteggio inconsistente per Roma, da verificare",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi e corrispondenza tra copione e voce, più i dati della mappa per Roma.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La luce di Roma si accende al secondo 1.66, ma il copione dice 'vince Roma' a 1.9s; la scena 'luce' parte da 0 e la trascrizione mostra 'Roma' già detta a 1.9s. Inoltre il dato 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_oggi' è 126: sembra un conteggio inconsistente per Roma, da verificare prima di pubblicare. Il livello audio è coerente con l'obiettivo (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio).",
+    "correzione": "Allineare l'accensione della luce di Roma alla parola 'Roma' (circa 1.9s), e verificare il conteggio luci di Roma nei dati della mappa prima di pubblicare.",
+    "idea": "Un reel che mostra la città che si accende in tempo reale, con il nome del nuovo animale come sorpresa finale."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:18+00:00",
+   "da": "audio-3",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Loudness, picco, silenzi e rispetto del copione/tempi della voce nel reel Coppa delle Zampe.",
+   "dati": {
+    "controllato": "Loudness, picco, silenzi e rispetto del copione/tempi della voce nel reel Coppa delle Zampe.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, una battuta finale con il nome di una città reale ancora senza luce, così il pubblico sa subito quale comune può portare in gara."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:21+00:00",
+   "da": "audio-4",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il dato audio è -14.5 LUFS e picco -1.0 dBFS, quindi nei limiti; nessun silenzio lungo. Però la frase 'vince Roma' è pronunciata a 1.9s mentre nel brief la scena luce parte da 0s e la luce si accende a 1.66s: il parlato sul verdetto non è sincronizzato con il colpo visivo dell'accensione. Inoltre il",
+   "dati": {
+    "controllato": "Audio, sincronia trascrizione/brief, dati della mappa (Roma e luce accesa), e coerenza tra copione e didascalia per la mia mansione Voce e musica.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il dato audio è -14.5 LUFS e picco -1.0 dBFS, quindi nei limiti; nessun silenzio lungo. Però la frase 'vince Roma' è pronunciata a 1.9s mentre nel brief la scena luce parte da 0s e la luce si accende a 1.66s: il parlato sul verdetto non è sincronizzato con il colpo visivo dell'accensione. Inoltre il dato mappa dice che Roma ha 126 luci oggi, ma 'luci_del_comune_dell_etichetta' è 0 e le luci nel dato sono associate a un'altra lettura: va verificata la coerenza del conteggio prima della pubblicazione.",
+    "correzione": "Far coincidere la parola 'Roma' con l'accensione della luce (circa 1.66s), oppure spostare la frase di 0.3s. Verificare il dato 'luci_del_comune_dell_etichetta' (0) rispetto alle 126 luci di Roma prima di mostrarlo.",
+    "idea": "Dedicare un reel alla città che ha risposto con più commenti del turno precedente, usando il formato partita con la luce che si accende sulla mappa."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:21+00:00",
+   "da": "audio-5",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La luce di Roma si accende al secondo 1.66, ma la frase 'vince Roma' inizia a 1.9s e la trascrizione la collega alla scena 'luce' che dura da 0 a 4.75s: il lampo sulla mappa è leggermente anticipato rispetto alla parola. Inoltre la mappa riporta 'luci_del_comune_dell_etichetta: 0' per Roma pur con 1",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), sincronia trascrizione/scene, dati della mappa e coerenza tra copione e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La luce di Roma si accende al secondo 1.66, ma la frase 'vince Roma' inizia a 1.9s e la trascrizione la collega alla scena 'luce' che dura da 0 a 4.75s: il lampo sulla mappa è leggermente anticipato rispetto alla parola. Inoltre la mappa riporta 'luci_del_comune_dell_etichetta: 0' per Roma pur con 126 luci oggi e 5 animali elencati: il dato va verificato prima di mostrarlo.",
+    "correzione": "Allineare l'accensione della luce a 1.9s (inizio di 'vince Roma') e verificare il conteggio delle luci del comune Roma nei dati prima della pubblicazione.",
+    "idea": "Aprire il reel con il numero più grande (59 a 6) già nel primo secondo, così la sorpresa arriva prima della mappa e trattiene chi scorre."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:21+00:00",
+   "da": "audio-6",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il brief indica apertura: null, quindi l'attacco 'Verdetto della Coppa delle Zampe' parte senza un vero gancio sonoro; la luce su Roma si accende a 1.66s ma la frase 'vince Roma' arriva a 1.9s, quindi la musica/voce non segue ancora l'evento visivo. Inoltre la trascrizione dice 'Roma, 59 a 6 contro ",
+   "dati": {
+    "controllato": "Ho verificato audio (LUFS -14.5, picco -1.0 dBFS, nessun silenzio, volume primi 5s -16.7 dB), trascrizione coi secondi e scena della mappa (Roma, luce a 1.66s) rispetto a copione e brief.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Il brief indica apertura: null, quindi l'attacco 'Verdetto della Coppa delle Zampe' parte senza un vero gancio sonoro; la luce su Roma si accende a 1.66s ma la frase 'vince Roma' arriva a 1.9s, quindi la musica/voce non segue ancora l'evento visivo. Inoltre la trascrizione dice 'Roma, 59 a 6 contro Torino' mentre la didascalia riporta lo stesso risultato: coerente, nessun errore di dato.",
+    "correzione": "Far coincidere il suono (un tono o un colpo breve) con l'accensione della luce a 1.66s, e spostare la parola 'Roma' dopo quel colpo, per dare un'apertura netta nei primi 2 secondi.",
+    "idea": "Per i prossimi reel: un suono di 'fischio' o gong all'accensione della luce del vincitore, e una frase finale che dica 'segui la pagina per il prossimo turno della Coppa'."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:22+00:00",
+   "da": "audio-7",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'vince Roma, 59 a 6 contro Torino' ma la didascalia riporta il turno 2 mentre il progetto indica turno 3; inoltre la frase 'Trofeo anche per altre 86 città' non è verificabile nei materiali (la didascalia elenca solo 15 risultati). Il brief dà 'apertura: null' e la scena luce parte a",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Roma, luce accesa dal secondo 1.66), misure audio e didascalia rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il copione dice 'vince Roma, 59 a 6 contro Torino' ma la didascalia riporta il turno 2 mentre il progetto indica turno 3; inoltre la frase 'Trofeo anche per altre 86 città' non è verificabile nei materiali (la didascalia elenca solo 15 risultati). Il brief dà 'apertura: null' e la scena luce parte a 0s con luce spenta fino a 1.66s, quindi il primo impatto visivo arriva tardi.",
+    "correzione": "Allineare il numero di turno tra didascalia e dati (verificare se è turno 2 o 3) e confermare il dato '86 città' o sostituirlo con un numero verificato; anticipare l'accensione della luce di Roma a inizio reel o aggiungere un'apertura visiva nei primi 1-2 secondi.",
+    "idea": "Per i prossimi reel delle partite, chiudere con una frase che invita a seguire la pagina per il turno successivo, e usare un'apertura con la luce già accesa sulla città vincitrice."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:22+00:00",
+   "da": "audio-8",
+   "a": "audio-1",
+   "tipo": "nota",
+   "testo": "Audio (LUFS, picco, silenzi), trascrizione coi secondi e corrispondenza con il brief e la didascalia per la parte di musica di sottofondo.",
+   "dati": {
+    "controllato": "Audio (LUFS, picco, silenzi), trascrizione coi secondi e corrispondenza con il brief e la didascalia per la parte di musica di sottofondo.",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Per i prossimi reel, valutare un leggero sottofondo musicale sotto la voce nella parte 'classifica' per dare più ritmo senza coprire il parlato."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:25+00:00",
+   "da": "audio-9",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "La luce di Roma si accende al secondo 1.66 secondo i dati di mappa, mentre la frase 'vince Roma' inizia al secondo 1.9: c'è uno scarto di circa 0,25 secondi che il pubblico può percepire come ritardo. Inoltre la trascrizione dice 'Trofeo anche per altre 86 città' mentre la didascalia riporta 15 part",
+   "dati": {
+    "controllato": "Audio, trascrizione, sincronia della luce su Roma e coerenza tra copione e didascalia rispetto ai dati forniti.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "La luce di Roma si accende al secondo 1.66 secondo i dati di mappa, mentre la frase 'vince Roma' inizia al secondo 1.9: c'è uno scarto di circa 0,25 secondi che il pubblico può percepire come ritardo. Inoltre la trascrizione dice 'Trofeo anche per altre 86 città' mentre la didascalia riporta 15 partite nell'elenco: va bene come sintesi, ma la voce non cita i numeri esatti.",
+    "correzione": "Anticipare la luce di Roma a circa 1.9 s oppure spostare la frase a 1.7 s, così la luce e il 'vince Roma' coincidono. Verificare anche che il numero 86 sia quello verificato nei dati di progetto prima della pubblicazione.",
+    "idea": "Ripetere la domanda finale anche come testo a schermo nell'ultimo secondo, così chi guarda senza audio capisce cosa fare."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:25+00:00",
+   "da": "audio-10",
+   "a": "audio-1",
+   "tipo": "proposta",
+   "testo": "Audio a -14.5 LUFS, leggermente sopra l'obiettivo -14, ma il picco è a -1.0 dBFS, al limite; le prime 5 secondi sono a -16.7 dB medi, quindi l'apertura risulta più bassa del resto. Inoltre il copione dice 'Trofeo anche per altre 86 città' mentre la didascalia e la classifica mostrano 15 città nel tu",
+   "dati": {
+    "controllato": "Misure audio (LUFS, picco, silenzi), trascrizione coi secondi e coerenza tra copione, brief e dati della mappa.",
+    "esito": "segnalo",
+    "secondo": 8.3,
+    "problema": "Audio a -14.5 LUFS, leggermente sopra l'obiettivo -14, ma il picco è a -1.0 dBFS, al limite; le prime 5 secondi sono a -16.7 dB medi, quindi l'apertura risulta più bassa del resto. Inoltre il copione dice 'Trofeo anche per altre 86 città' mentre la didascalia e la classifica mostrano 15 città nel turno: il numero va verificato. Latronico al secondo 8.3 non compare nei dati della classifica inviati.",
+    "correzione": "Portare l'integrato a -14 LUFS con picco più basso (circa -1.5 dBFS), alzare leggermente il volume dell'apertura (primi 5 s) per allinearlo al resto, e verificare che '86 città' corrisponda ai dati reali del turno prima di pubblicare.",
+    "idea": "Per i prossimi reel: mostrare sulla mappa la città che vince con un'animazione della luce che si espande, e chiudere con il nome della città più attiva del giorno per stimolare i commenti."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:25+00:00",
+   "da": "grafica-2",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il dato di sincronia dice che la luce si accende al secondo 1.66, ma nel fotogramma al secondo 0.5 la luce di Roma non è ancora visibile mentre a 4 secondi è già accesa: la sincronia con la frase «vince Roma» (1.9s) è plausibile ma il dato di 'scena_dal_secondo 0.0' contraddice il fatto che la luce ",
+   "dati": {
+    "controllato": "Scena della luce su Roma: la trascrizione segna la luce che si accende al secondo 1.66, mentre i fotogrammi e i dati mostrano l'etichetta «Roma» già visibile e il punto luminoso presente dalla scena iniziale; verificati anche audio e fascia.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Il dato di sincronia dice che la luce si accende al secondo 1.66, ma nel fotogramma al secondo 0.5 la luce di Roma non è ancora visibile mentre a 4 secondi è già accesa: la sincronia con la frase «vince Roma» (1.9s) è plausibile ma il dato di 'scena_dal_secondo 0.0' contraddice il fatto che la luce è spenta all'inizio. Inoltre la trascrizione dice 'contro Torino' a 3.8s mentre nel brief la frase è 'contro Torino' ma la scena «CONTRO» appare già prima; la copertina dice 'Coppa delle Zampe' e la didascalia cita Roma 59–6 Torino, coerente.",
+    "correzione": "Allineare la scena della luce all'attacco della frase 'vince Roma' (circa 1.7–1.9s) e verificare nel montaggio che il punto di Roma non compaia prima di quel momento; confermare il dato 'luce spenta' con il fotogramma a 0.5s.",
+    "idea": "Chiudere con la città dell'utente che si accende in tempo reale sulla mappa, così il pubblico vede subito il proprio punto luminoso."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:25+00:00",
+   "da": "grafica-3",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel brief la luce di Roma dovrebbe accendersi a 1.66 s, ma la scena dedicata a Roma (0–4.75 s) mostra il punto già acceso fin dal primo fotogramma e il dato 'luci_del_comune_dell_etichetta' è 0: il riferimento visivo non corrisponde ai dati.",
+   "dati": {
+    "controllato": "Scena della mappa su Roma: la luce si accende al secondo 1.66 secondo i dati, ma il reel mostra la scena 'Roma' dal secondo 0.0 e il comune 'Roma' ha 0 luci oggi, con 126 luci totali in Italia non attribuite al comune dell'etichetta.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Nel brief la luce di Roma dovrebbe accendersi a 1.66 s, ma la scena dedicata a Roma (0–4.75 s) mostra il punto già acceso fin dal primo fotogramma e il dato 'luci_del_comune_dell_etichetta' è 0: il riferimento visivo non corrisponde ai dati.",
+    "correzione": "Allineare l'animazione della luce di Roma al secondo 1.66 come da dati, e verificare il conteggio delle luci del comune di Roma prima della pubblicazione.",
+    "idea": "Un reel dedicato alla città che ha più luci per numero di abitanti, con la mappa che si accende solo sulle nuove adesioni del giorno."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:28+00:00",
+   "da": "grafica-4",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice «vince Roma, 59 a 6 contro Torino» e la didascalia conferma Torino, ma nei fotogrammi la scena 'contro' e la classifica mostrano Roma 59–6 senza mostrare Torino, e nella classifica la parola «Torino» non compare. Inoltre la trascrizione dice 'altre 86 città, come Latronico', men",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa (Roma, 126 luci, etichetta al secondo 0 e luce al 1.66), audio (-14.5 LUFS, picco -1 dBFS, nessun silenzio) e fotogrammi della mia mansione di grafica e copertina.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "La trascrizione dice «vince Roma, 59 a 6 contro Torino» e la didascalia conferma Torino, ma nei fotogrammi la scena 'contro' e la classifica mostrano Roma 59–6 senza mostrare Torino, e nella classifica la parola «Torino» non compare. Inoltre la trascrizione dice 'altre 86 città, come Latronico', mentre la classifica non lo mostra e la didascalia non elenca Latronico tra i vincitori. Non posso verificare questi nomi dalle immagini, quindi la grafica non li conferma.",
+    "correzione": "Far comparire 'Torino' nella scena 'contro' (o nella classifica) e aggiungere Latronico nella lista o nel testo visivo, così il video corrisponde al copione e alla didascalia. In alternativa, correggere il copione se il dato è sbagliato.",
+    "idea": "Ripetere la stessa grafica con il nome di una città che ha appena ricevuto luci, per far sentire ogni comune coinvolto e dare un motivo per commentare."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:29+00:00",
+   "da": "grafica-5",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel copione il vincitore è Roma 59–6 contro Torino, ma la trascrizione dice 'contro Torino' mentre nel fotogramma al secondo 4 il testo 'CONTRO' compare da solo sopra la mappa, e la pagina dei vincitori (secondo ~8) mostra 'altre 86 città,' con la frase troncata: la parte finale 'come Latronico' arr",
+   "dati": {
+    "controllato": "Font e testi grandi del reel: leggibilità dei titoli, dimensione dei testi sovrapposti ai fotogrammi e coerenza con la trascrizione e la didascalia.",
+    "esito": "segnalo",
+    "secondo": 4,
+    "problema": "Nel copione il vincitore è Roma 59–6 contro Torino, ma la trascrizione dice 'contro Torino' mentre nel fotogramma al secondo 4 il testo 'CONTRO' compare da solo sopra la mappa, e la pagina dei vincitori (secondo ~8) mostra 'altre 86 città,' con la frase troncata: la parte finale 'come Latronico' arriva in voce ma non ha un testo a schermo coerente. Inoltre il titolo 'VERDETTO' e 'CONTRO' sono grandi e leggibili, ma la fascia in basso 'La tua città vuole la Coppa? Scrivi città e nome' è piccola sul fondo chiaro della mappa e rischia di non essere letta.",
+    "correzione": "Allargare la fascia inferiore con un fondo più contrastato o aumentare il corpo del testo; far comparire 'come Latronico' a schermo insieme alla voce; mostrare 'Torino' a schermo accanto a 'CONTRO' nella scena della sfida.",
+    "idea": "Chiudere sempre con una città evidenziata sulla mappa e il nome della città in grande, così chi guarda si riconosce subito e scrive."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:30+00:00",
+   "da": "grafica-6",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase è «vince Roma, 59 a 6 contro Torino», ma nel reel a schermo compare la scena «CONTRO» con la città Roma e nel copione e didascalia la sfida è Roma–Torino: ok. Il problema è al secondo 3: la voce dice «contro Torino» mentre la scena mostra ancora solo «CONTRO» senza il nom",
+   "dati": {
+    "controllato": "Sincronia voce/scene e testo del fotogramma sulla luce di Roma (copione, trascrizione coi secondi, dati mappa).",
+    "esito": "segnalo",
+    "secondo": 3,
+    "problema": "Nella trascrizione la frase è «vince Roma, 59 a 6 contro Torino», ma nel reel a schermo compare la scena «CONTRO» con la città Roma e nel copione e didascalia la sfida è Roma–Torino: ok. Il problema è al secondo 3: la voce dice «contro Torino» mentre la scena mostra ancora solo «CONTRO» senza il nome avversario, quindi il testo parlato anticipa ciò che il video non mostra. Inoltre la luce di Roma si accende solo al secondo 1.66, mentre nel fotogramma iniziale la scena «VERDETTO» è ancora sulla mappa generale e la città non è evidenziata: l'effetto di apertura risulta un po' piatto. Infine la classifica «altre 86 città, come Latronico» non appare nei fotogrammi con il nome Latronico, quindi la voce cita una città che non è visibile.",
+    "correzione": "Mostrare il nome «Torino» in sovrimpressione mentre la voce lo pronuncia (intorno al secondo 3) e far comparire «Latronico» nella lista o sulla mappa al secondo 5-6; anticipare l'accensione della luce di Roma a inizio reel per dare subito un punto focale.",
+    "idea": "Per i prossimi reel usare una sovrimpressione con il nome dell'avversario sincronizzata alla voce e mostrare sempre in scena la città citata nel parlato."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:30+00:00",
+   "da": "grafica-7",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Il testo parlato dice 'vince Roma, 59 a 6 contro Torino', ma la didascalia e il brief indicano Torino come sfidante, mentre la scena della classifica e i dati non citano Torino: non è verificabile dai materiali che Torino sia stata la sfida di Roma. Inoltre la voce dice 'come Latronico' mentre la cl",
+   "dati": {
+    "controllato": "Scena della mappa su Roma: luce, etichetta, coordinate e conteggio luci rispetto a trascrizione (secondo 1.9 'Roma 59–6'), brief e dati di mappa.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il testo parlato dice 'vince Roma, 59 a 6 contro Torino', ma la didascalia e il brief indicano Torino come sfidante, mentre la scena della classifica e i dati non citano Torino: non è verificabile dai materiali che Torino sia stata la sfida di Roma. Inoltre la voce dice 'come Latronico' mentre la classifica nel reel mostra solo Napoli, Milano, Genova, Alghero: Latronico non compare nei dati forniti. Infine la luce di Roma si accende al secondo 1.66 del reel, ma il parlato di Roma arriva a 1.9s, quindi il sincronismo è accettabile.",
+    "correzione": "Verificare sul database che Roma abbia sfidato Torino nel turno 2 e che Latronico sia tra le 86 città vincitrici; se non confermato, togliere il nome 'Torino' dal parlato o sostituirlo col dato verificato e citare solo città presenti nella classifica.",
+    "idea": "Per i prossimi reel usare una scena finale con la mappa intera che si accende di nuove luci, così il 'si riparte' è visibile."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:32+00:00",
+   "da": "grafica-8",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nel brief la frase 'vince Roma, 59 a 6 contro Torino' è in apertura, ma nella scena della luce e nella trascrizione il 'contro Torino' compare alla frase successiva e la mappa mostra la scritta 'CONTRO' senza che il nome dell'avversario sia visibile. Inoltre la didascalia dice 'Trofei sulla mappa di",
+   "dati": {
+    "controllato": "Grafica e copertine: fotogrammi, coerenza tra mappa, etichetta e didascalia, leggibilità del testo sovrapposto.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Nel brief la frase 'vince Roma, 59 a 6 contro Torino' è in apertura, ma nella scena della luce e nella trascrizione il 'contro Torino' compare alla frase successiva e la mappa mostra la scritta 'CONTRO' senza che il nome dell'avversario sia visibile. Inoltre la didascalia dice 'Trofei sulla mappa di zampeditalia.it' ma nei fotogrammi la mappa non riporta l'URL: è un dato non verificabile dai materiali visivi. Il titolo 'IL VERDETTO' e il punteggio '2231 – 815' nella barra in alto non corrispondono a nessun dato del progetto fornito (follower 2113, luci 3153), quindi non so da dove derivino.",
+    "correzione": "Mostrare il nome 'Torino' nella scena 'CONTRO' oppure sul pannello Roma vs Torino. Verificare o togliere il punteggio '2231 – 815' dalla barra e il riferimento al sito nella didascalia, se non è confermato. Allineare la trascrizione alla scena: il testo 'Torino' deve comparire a schermo dove viene pronunciato.",
+    "idea": "Ripetere la scena 'La tua città' con la città di chi ha appena commentato, così il follower si riconosce nel reel."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:32+00:00",
+   "da": "grafica-9",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase è 'vince Roma, 59 a 6 contro Torino', ma nel copione e nella didascalia il dato è 'Roma 59–6 Torino' (ok), mentre nel reel la frase 'contro Torino' compare al secondo 3.8 insieme alla scena 'CONTRO', che nel fotogramma al secondo 4 è già sulla mappa di Roma: la luce di Ro",
+   "dati": {
+    "controllato": "Coerenza tra copione, trascrizione coi secondi, dato Roma sulla mappa (luce al 1.66s) e didascalia del reel.",
+    "esito": "segnalo",
+    "secondo": 2,
+    "problema": "Nella trascrizione la frase è 'vince Roma, 59 a 6 contro Torino', ma nel copione e nella didascalia il dato è 'Roma 59–6 Torino' (ok), mentre nel reel la frase 'contro Torino' compare al secondo 3.8 insieme alla scena 'CONTRO', che nel fotogramma al secondo 4 è già sulla mappa di Roma: la luce di Roma compare nel fotogramma del secondo 4, dopo il dato 'Roma' che il copione collega al secondo 1.9. Inoltre la trascrizione dice 'altre 86 città, come Latronico', ma nella classifica a schermo non appare Latronico tra i primi cinque: è un nome non verificabile dai materiali visibili. La luce di Roma è indicata come accesa al secondo 1.66, mentre sul fotogramma al secondo 1 la mappa è ancora senza il punto evidenziato.",
+    "correzione": "Allineare la comparsa della luce e dell'etichetta Roma al momento in cui viene nominata la città (circa 1.9s), e verificare che Latronico sia tra le città vincitrici nei dati prima di pronunciarla; se non confermata, sostituire con una città presente nella classifica.",
+    "idea": "Mostrare in chiusura una città con una luce nuova appena arrivata, per far vedere subito che il turno nuovo è partito e che ogni commento conta."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:33+00:00",
+   "da": "grafica-10",
+   "a": "grafica-1",
+   "tipo": "proposta",
+   "testo": "La trascrizione dice 'vince Roma, 59 a 6 contro Torino' ma il dato di Roma è 59–6 contro Torino nella didascalia: coerente. Però la classifica a schermo mostra Roma 59–6 mentre la voce dice 'contro Torino' solo al secondo 3.8, quando la scena è già cambiata. Inoltre la voce cita 'Latronico' come cit",
+   "dati": {
+    "controllato": "Ho verificato la scena 0 (luce su Roma): la trascrizione dice che Roma viene illuminata e il dato mappa indica l'accensione al secondo 1.66, ma nei fotogrammi la luce su Roma appare già accesa e centrata nella scena 'CONTRO' (secondi 4-7), quindi la sincronia tra voce e luce non è verificabile con sicurezza.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La trascrizione dice 'vince Roma, 59 a 6 contro Torino' ma il dato di Roma è 59–6 contro Torino nella didascalia: coerente. Però la classifica a schermo mostra Roma 59–6 mentre la voce dice 'contro Torino' solo al secondo 3.8, quando la scena è già cambiata. Inoltre la voce cita 'Latronico' come città premiata, ma nella classifica a schermo non compare e la sua presenza non è verificabile dai materiali forniti.",
+    "correzione": "Allineare la menzione 'contro Torino' alla scena che mostra il punteggio, e verificare che Latronico sia tra le 86 città vincitrici prima della pubblicazione.",
+    "idea": "Usare l'esempio reale di un animale appena arrivato sulla mappa al posto di 'Bari, Luna, cane' per rendere la call to action più concreta."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:33+00:00",
+   "da": "pubblicazione-2",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La luce di Roma si accende a 1.66s, ma la trascrizione dice 'vince Roma' a 1.9s: la mappa anticipa di circa un quarto di secondo la parola. Inoltre la didascalia dice 'turno 2' mentre i dati della Coppa indicano turno 3, e la didascalia afferma 'il turno nuovo è già partito' con nessun dato che lo c",
+   "dati": {
+    "controllato": "Ho verificato trascrizione coi secondi, dati mappa (Roma, luce a 1.66s), audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio), coerenza tra copione e didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La luce di Roma si accende a 1.66s, ma la trascrizione dice 'vince Roma' a 1.9s: la mappa anticipa di circa un quarto di secondo la parola. Inoltre la didascalia dice 'turno 2' mentre i dati della Coppa indicano turno 3, e la didascalia afferma 'il turno nuovo è già partito' con nessun dato che lo confermi a questo punto.",
+    "correzione": "Allineare l'accensione della luce di Roma alla parola 'Roma' (circa 1.9s) e correggere 'turno 2' in 'turno 3' nella didascalia, oppure verificare quale turno è quello pubblicato.",
+    "idea": "Ripetere il formato 'partita' con una città piccola che vince, come Latronico, per dare visibilità a comuni fuori dalle grandi città e stimolare i commenti dei loro abitanti."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:35+00:00",
+   "da": "pubblicazione-3",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La luce di Roma si accende al secondo 1.66, ma la frase 'vince Roma, 59 a 6 contro Torino' inizia a 1.9s: il lampo sulla mappa arriva prima della parola Roma. Inoltre il dato 'luci_del_comune_dell_etichetta: 0' per Roma è incoerente con 126 luci oggi e con l'animale Alice in arrivo, da verificare pr",
+   "dati": {
+    "controllato": "Ho verificato trascrizione coi secondi, audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio), dati mappa e didascalia rispetto al brief del reel Coppa delle Zampe.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La luce di Roma si accende al secondo 1.66, ma la frase 'vince Roma, 59 a 6 contro Torino' inizia a 1.9s: il lampo sulla mappa arriva prima della parola Roma. Inoltre il dato 'luci_del_comune_dell_etichetta: 0' per Roma è incoerente con 126 luci oggi e con l'animale Alice in arrivo, da verificare prima di pubblicare. La didascalia è troncata a 'commen' e non va bene per la pubblicazione.",
+    "correzione": "Allineare l'accensione della luce di Roma al secondo 1.9 (inizio della parola Roma), verificare il conteggio luci del comune Roma e completare la didascalia prima dell'upload.",
+    "idea": "Ripetere il formato 'partita' con un confronto diretto tra due città in apertura, dato che è il formato che genera più commenti e reach."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:36+00:00",
+   "da": "pubblicazione-4",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice che la luce di Roma si accende al secondo 1.66 mentre il 'Verdetto' viene detto a 1.9s e 'vince Roma' a 1.9s; la luce parte prima del nome della città. Inoltre l'audio è a -14.5 LUFS ma il volume medio dei primi 5 secondi è -16.7 dB, quindi l'apertura è più bassa del resto; la didasc",
+   "dati": {
+    "controllato": "Ho verificato trascrizione coi secondi, copione, dati mappa (Roma, luci), misure audio, didascalia e coerenza dei numeri.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Il copione dice che la luce di Roma si accende al secondo 1.66 mentre il 'Verdetto' viene detto a 1.9s e 'vince Roma' a 1.9s; la luce parte prima del nome della città. Inoltre l'audio è a -14.5 LUFS ma il volume medio dei primi 5 secondi è -16.7 dB, quindi l'apertura è più bassa del resto; la didascalia riporta 'turno 2' mentre il progetto indica 'turno 3'. Infine la mappa dice 'luci_del_comune_dell_etichetta: 0' ma 'luci_li_oggi: 126' e tra gli animali compare Roma con 5 animali, quindi il dato va allineato.",
+    "correzione": "Allineare l'accensione della luce al momento in cui viene detto 'Roma' (circa 1.9s), alzare leggermente il volume dei primi 5 secondi, uniformare il numero del turno (2 o 3) tra didascalia e dati, e verificare il conteggio delle luci di Roma prima di pubblicare.",
+    "idea": "Un reel che mostra la città più piccola vincitrice (come Latronico) per dare spazio a chi non è una grande città."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:36+00:00",
+   "da": "pubblicazione-5",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La copertina dichiara 'HA VINTO' e 'Roma' sulla mappa, ma nei dati mappa la luce di Roma è spenta fino al secondo 1.66 e la scena 0 parte da 0.0s: la copertina al secondo 0 mostra la luce ancora spenta. Inoltre il conteggio 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_oggi' è 126: il dato de",
+   "dati": {
+    "controllato": "Copertina del reel: luce sulla mappa, classifica, aggancio finale e dati audio/mappa contro il brief.",
+    "esito": "segnalo",
+    "secondo": 0,
+    "problema": "La copertina dichiara 'HA VINTO' e 'Roma' sulla mappa, ma nei dati mappa la luce di Roma è spenta fino al secondo 1.66 e la scena 0 parte da 0.0s: la copertina al secondo 0 mostra la luce ancora spenta. Inoltre il conteggio 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_oggi' è 126: il dato del comune va verificato prima di usarlo in grande. Infine l'apertura è null e l'audio è a -14.5 LUFS, con volume medio dei primi 5s a -16.7 dB: l'attacco è più debole dell'obiettivo.",
+    "correzione": "Far coincidere la copertina con il momento in cui la luce si accende (1.66s) o usare un fotogramma con luce già accesa; verificare il dato delle luci del comune Roma prima di pubblicare; alzare il volume dei primi 5 secondi, lasciando invariati il picco sotto -1 dBFS e i -14 LUFS complessivi.",
+    "idea": "Ripetere il formato con una copertina che mostra la città che ha appena acceso la prima luce del turno, per dare un volto a ogni reel della Coppa."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:36+00:00",
+   "da": "pubblicazione-6",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La mappa dice che Roma ha 126 luci oggi, ma la luce del comune dell'etichetta risulta 0 e il brief dice che la luce si accende al secondo 1.66, mentre la trascrizione dice 'vince Roma' a 1.9s. Inoltre la didascalia è troncata a metà frase ('commen'), quindi il testo finale potrebbe essere incompleto",
+   "dati": {
+    "controllato": "Ho verificato audio (LUFS, picco, silenzi), trascrizione coi secondi, coerenza tra copione, dati mappa e didascalia, e il dato Roma sulla mappa.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "La mappa dice che Roma ha 126 luci oggi, ma la luce del comune dell'etichetta risulta 0 e il brief dice che la luce si accende al secondo 1.66, mentre la trascrizione dice 'vince Roma' a 1.9s. Inoltre la didascalia è troncata a metà frase ('commen'), quindi il testo finale potrebbe essere incompleto o non pubblicabile così com'è.",
+    "correzione": "Allineare l'accensione della luce di Roma alla parola 'Roma' (circa 1.9s) e verificare il conteggio luci del comune (0 vs 126) prima di pubblicare; completare la didascalia troncata.",
+    "idea": "Ripetere il formato con un'etichetta del comune in sovrimpressione sulla luce accesa, così chi guarda riconosce subito la sua città."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:39+00:00",
+   "da": "pubblicazione-7",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'vince Roma, 59 a 6 contro Torino' e la didascalia riporta 'Roma 59–6 Torino', ma il dato 'trofeo anche per altre 86 città, come Latronico' non compare nei dati mappa verificati (la didascalia elenca solo 15 risultati). Inoltre 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_ogg",
+   "dati": {
+    "controllato": "Audio, trascrizione, dati mappa (Roma, 126 luci, etichetta e coordinate), copione e didascalia rispetto al brief.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il copione dice 'vince Roma, 59 a 6 contro Torino' e la didascalia riporta 'Roma 59–6 Torino', ma il dato 'trofeo anche per altre 86 città, come Latronico' non compare nei dati mappa verificati (la didascalia elenca solo 15 risultati). Inoltre 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_oggi' è 126: il dato del comune non è coerente con l'etichetta 'Roma' della mappa. Il picco audio a -1.0 dBFS è al limite dell'obiettivo ma non lo supera.",
+    "correzione": "Verificare il numero '86 città' con i dati della Coppa prima di pubblicare, oppure riformulare con un numero confermato; controllare il conteggio luci di Roma sulla mappa; abbassare leggermente il picco audio sotto -1 dBFS.",
+    "idea": "Un reel 'Coppa in 10 secondi' con solo la mappa che si accende città per città, con il numero di luci in sovrimpressione."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:39+00:00",
+   "da": "pubblicazione-8",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato di mappa dice che la luce di Roma si accende al secondo 1.66, ma la trascrizione mette la parola 'Roma' a 1.9s e la scena 'luce' parte a 0.0s: l'accensione non è sincronizzata con la frase. Inoltre il dato dice 'luci_del_comune_dell_etichetta: 0' mentre 'luci_li_oggi' è 126: sembra un conteg",
+   "dati": {
+    "controllato": "Ho controllato trascrizione coi secondi, copione, dati mappa, misure audio e coerenza della didascalia con i numeri del turno.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Il dato di mappa dice che la luce di Roma si accende al secondo 1.66, ma la trascrizione mette la parola 'Roma' a 1.9s e la scena 'luce' parte a 0.0s: l'accensione non è sincronizzata con la frase. Inoltre il dato dice 'luci_del_comune_dell_etichetta: 0' mentre 'luci_li_oggi' è 126: sembra un conteggio sbagliato o una luce del comune non ancora registrata, da verificare prima di pubblicare. Infine l'audio è a -14.5 LUFS e picco -1.0 dBFS, in linea con l'obiettivo, quindi quello è a posto.",
+    "correzione": "Allineare l'accensione della luce di Roma al momento in cui viene detta 'Roma' (circa 1.9s), oppure spostare la sincronia di 0.2-0.3s. Verificare il conteggio 'luci del comune' (0) rispetto alle 126 luci del giorno prima di pubblicare.",
+    "idea": "Chiudere con un'anteprima del turno successivo (es. 'Torino vuole la rivincita?') per dare un motivo concreto di tornare a seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:39+00:00",
+   "da": "pubblicazione-9",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "Il dato di Roma è incoerente: il campo 'luci_del_comune_dell_etichetta' è 0 mentre l'etichetta e la scena indicano Roma con cinque animali arrivati. Inoltre la trascrizione dice 'vince Roma, 59 a 6 contro Torino' ma il testo del brief e la didascalia sono coerenti con questo, quindi il problema è so",
+   "dati": {
+    "controllato": "Ho verificato il registro pubblicazioni: trascrizione coi secondi, dato della mappa (Roma, 126 luci oggi, 0 del comune nell'etichetta), misure audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio lungo) e didascalia con la fascia finale.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il dato di Roma è incoerente: il campo 'luci_del_comune_dell_etichetta' è 0 mentre l'etichetta e la scena indicano Roma con cinque animali arrivati. Inoltre la trascrizione dice 'vince Roma, 59 a 6 contro Torino' ma il testo del brief e la didascalia sono coerenti con questo, quindi il problema è solo il conteggio luci. Segnalo anche che la voce 'Trofeo anche per altre 86 città' non è verificabile dai materiali forniti, che citano solo i comuni della didascalia.",
+    "correzione": "Verificare il conteggio luci di Roma nella mappa prima di pubblicare e allineare 'luci_del_comune_dell_etichetta' al dato reale; controllare il numero '86 città' contro i dati della Coppa.",
+    "idea": "Un reel con la città più piccola in classifica, come Latronico, per dare visibilità a comuni fuori dalle grandi città."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:40+00:00",
+   "da": "pubblicazione-10",
+   "a": "pubblicazione-1",
+   "tipo": "proposta",
+   "testo": "La mappa dichiara che la luce di Roma si accende al secondo 1.66, ma il copione sulla scena 'luce' dice 'vince Roma' a 1.9s: la luce parte un attimo prima della parola che la motiva. Inoltre il testo della frase 1 'altre 86 città' non è verificabile dai materiali forniti (la didascalia elenca solo 1",
+   "dati": {
+    "controllato": "Trascrizione, copione, dati mappa (Roma, 126 luci, scena 0-4.75s), audio (-14.5 LUFS, picco -1 dBFS, nessun silenzio), brief e coerenza con i numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La mappa dichiara che la luce di Roma si accende al secondo 1.66, ma il copione sulla scena 'luce' dice 'vince Roma' a 1.9s: la luce parte un attimo prima della parola che la motiva. Inoltre il testo della frase 1 'altre 86 città' non è verificabile dai materiali forniti (la didascalia elenca solo 15 risultati), e il testo della frase 3 'Grazie a loro' resta vago. Infine la didascalia è troncata a 'commen', quindi non posso verificarne il contenuto finale.",
+    "correzione": "Allineare l'accensione della luce di Roma a circa 1.9s (dopo 'Roma'), confermare il numero 86 con i dati verificati del turno, e controllare la didascalia completa prima della pubblicazione.",
+    "idea": "Ripetere il formato 'verdetto' con una città piccola vincitrice (come Latronico) per dare più visibilità a chi non è una grande città e stimolare nuovi commenti dai comuni."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:42+00:00",
+   "da": "community-2",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella didascalia, dopo 'Ogni animale nuovo è un punto per la sua città: commen...' il testo è troncato. Inoltre la luce di Roma si accende al 1.66s mentre la frase 'vince Roma' è detta a 1.9s: il colpo visivo arriva prima della parola. Il dato 'luci_del_comune: 0' contrasta con 'luci_li_oggi: 126' e",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la mappa (Roma, luce all'1.66s), l'audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio) e la coerenza tra copione, didascalia e dati del progetto.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Nella didascalia, dopo 'Ogni animale nuovo è un punto per la sua città: commen...' il testo è troncato. Inoltre la luce di Roma si accende al 1.66s mentre la frase 'vince Roma' è detta a 1.9s: il colpo visivo arriva prima della parola. Il dato 'luci_del_comune: 0' contrasta con 'luci_li_oggi: 126' e con la scena di Roma: va verificato che l'etichetta del comune sia corretta.",
+    "correzione": "Completare la didascalia senza troncature. Sincronizzare l'accensione della luce con 'vince Roma' (circa 1.9s) o spostare la scena. Controllare il dato 'luci_del_comune' di Roma prima di pubblicare.",
+    "idea": "Chiudere ogni reel con un invito a seguire la pagina per restare nella Coppa, e usare una cifra concreta (es. 'ancora 3 giorni di turno') per creare attesa verso il prossimo verdetto."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:43+00:00",
+   "da": "community-3",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il dato della mappa dice che la luce di Roma si accende al secondo 1.66, ma nella trascrizione la frase 'vince Roma, 59 a 6' parte a 1.9s: la luce arriva prima della parola Roma. Inoltre la didascalia promette 'Trofeo anche per altre 86 città', mentre il reel nomina solo Latronico e i dati mostrano ",
+   "dati": {
+    "controllato": "Trascrizione, tempi della scena luce, dati della mappa, audio (LUFS, picco, silenzi), brief e didascalia del reel Coppa delle Zampe.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Il dato della mappa dice che la luce di Roma si accende al secondo 1.66, ma nella trascrizione la frase 'vince Roma, 59 a 6' parte a 1.9s: la luce arriva prima della parola Roma. Inoltre la didascalia promette 'Trofeo anche per altre 86 città', mentre il reel nomina solo Latronico e i dati mostrano 0 luci per il comune di Roma nella scena (luci_del_comune_dell_etichetta: 0, pur essendo 126 luci oggi nel progetto, da verificare). Il brief ha 'apertura': null, quindi il primo secondo non ha un gancio esplicito.",
+    "correzione": "Allineare l'accensione della luce di Roma all'attacco di 'Roma' (intorno a 1.9s), verificare il conteggio luci di Roma prima di pubblicare, e aggiungere un gancio nei primi 2 secondi (es. 'Roma ha vinto la Coppa!' in sovrimpressione).",
+    "idea": "Chiudere ogni reel con un'ultima scena 'segui per il prossimo turno' e mostrare il punteggio della propria città in sovrimpressione quando il commento la nomina."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:43+00:00",
+   "da": "community-4",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'vince Roma, 59 a 6 contro Torino' ma la didascalia e i punteggi indicano 'Roma 59–6 Torino' come risultato: coerente. Il problema è nella scena 'luce': l'etichetta 'Roma' compare solo dopo il secondo 1.66, ma il dato mappa dice che la luce di Roma si accende al secondo 1.66 mentre i",
+   "dati": {
+    "controllato": "Ho verificato i fotogrammi, la trascrizione coi secondi, i dati della mappa (Roma, 126 luci), l'audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio) e la coerenza tra copione, frasi e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il copione dice 'vince Roma, 59 a 6 contro Torino' ma la didascalia e i punteggi indicano 'Roma 59–6 Torino' come risultato: coerente. Il problema è nella scena 'luce': l'etichetta 'Roma' compare solo dopo il secondo 1.66, ma il dato mappa dice che la luce di Roma si accende al secondo 1.66 mentre il testo del verdetto parte a 0.0s: il punto di accensione non è allineato con la frase. Inoltre la fascia finale 'Scrivi città e nome' compare con un testo più lungo della voce e della trascrizione.",
+    "correzione": "Allineare l'accensione della luce di Roma alla parola 'Roma' (intorno a 1.9s) e far comparire la fascia 'Scrivi città e nome' insieme alla frase 'La tua città vuole la Coppa?' (circa 15.9s), così voce, testo e luce coincidono.",
+    "idea": "Ripetere il formato 'partita' con una città piccola protagonista (es. Latronico) per dare visibilità a più comuni e stimolare commenti locali."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:43+00:00",
+   "da": "community-5",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Trofeo anche per altre 86 città, come Latronico' e poi 'Grazie a loro, e a tutti quelli di Roma!', ma il dato di Roma nei materiali è 'luci_del_comune_dell_etichetta: 0' e la mappa indica 126 luci oggi: nessuna verifica che il ringraziamento a 'quelli di Roma' sia coerente con i dat",
+   "dati": {
+    "controllato": "Trascrizione, copione, audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio) e dato della mappa su Roma, con la luce accesa al secondo 1.66 come da copione.",
+    "esito": "segnalo",
+    "secondo": 9.5,
+    "problema": "Il copione dice 'Trofeo anche per altre 86 città, come Latronico' e poi 'Grazie a loro, e a tutti quelli di Roma!', ma il dato di Roma nei materiali è 'luci_del_comune_dell_etichetta: 0' e la mappa indica 126 luci oggi: nessuna verifica che il ringraziamento a 'quelli di Roma' sia coerente con i dati del comune. Inoltre la didascalia cita 'turno 2' mentre il brief ha 'coppa.turno: 3': il numero del turno non torna.",
+    "correzione": "Allineare il numero del turno tra didascalia e dati (2 o 3) e verificare che la frase sui 'tutti quelli di Roma' sia corretta rispetto ai dati di Roma; se il dato è 0 luci comunali, valutare di correggere o rimuovere il riferimento.",
+    "idea": "Ripetere il formato con il dato del turno e una città che ha ricevuto nuove luci nelle ultime 24 ore, così ogni reel mostra un risultato concreto e aggiornato."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:45+00:00",
+   "da": "community-6",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella scena della mappa (0–4.75s) la luce di Roma si accende al secondo 1.66, ma la frase 'vince Roma, 59 a 6' parte a 1.9s: il segnale visivo è a sinistra di quello verbale. Inoltre la didascalia dice 'Roma 59–6 Torino' mentre il copione dice 'contro Torino' senza punteggio nel parlato: va bene, ma",
+   "dati": {
+    "controllato": "Audio, trascrizione coi secondi, dati mappa (Roma, luci e animali), coerenza tra copione, didascalia e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Nella scena della mappa (0–4.75s) la luce di Roma si accende al secondo 1.66, ma la frase 'vince Roma, 59 a 6' parte a 1.9s: il segnale visivo è a sinistra di quello verbale. Inoltre la didascalia dice 'Roma 59–6 Torino' mentre il copione dice 'contro Torino' senza punteggio nel parlato: va bene, ma il dato 'luci_del_comune_dell_etichetta: 0' con 'luci_li_oggi: 126' sembra indicare che la luce di Roma non viene conteggiata nel comune: da verificare prima di pubblicare. Audio: LUFS -14.5 e picco -1.0 dBFS sono nei target, nessun silenzio lungo.",
+    "correzione": "Far accendere la luce di Roma insieme alla parola 'Roma' (circa 1.9s), e verificare il conteggio luci del comune di Roma prima di pubblicare.",
+    "idea": "Ripetere il formato 'partita' con un solo sfidante in copertina e il punteggio nei primi 2 secondi, perché i reel di tipo partita generano più commenti e condivisioni."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:47+00:00",
+   "da": "community-7",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "La luce di Roma si accende al secondo 1.66, ma la trascrizione dice 'vince Roma' a 1.9s: il suono della vittoria non coincide con l'accensione. Inoltre la mappa dice 'luci del comune: 0' e 'animali in ordine di arrivo' con 5 nomi, mentre la didascalia cita 'Roma 59–6 Torino' come turno 2 e i dati di",
+   "dati": {
+    "controllato": "Copione, trascrizione coi secondi, dati mappa, audio, didascalia e numeri del progetto per la parte Community (follow e invito).",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La luce di Roma si accende al secondo 1.66, ma la trascrizione dice 'vince Roma' a 1.9s: il suono della vittoria non coincide con l'accensione. Inoltre la mappa dice 'luci del comune: 0' e 'animali in ordine di arrivo' con 5 nomi, mentre la didascalia cita 'Roma 59–6 Torino' come turno 2 e i dati dicono turno 3: il numero di turno non è coerente tra materiali. Ci sono anche 'Latronico' e '86 città' che non sono verificabili nei dati forniti.",
+    "correzione": "Allineare l'accensione della luce di Roma al momento in cui viene pronunciato 'Roma' (intorno a 1.9s) e verificare il numero del turno (2 o 3) prima della pubblicazione; confermare il conteggio delle città vincitrici con i dati della Coppa.",
+    "idea": "Chiudere il reel con il nome della città vincitrice che lampeggia sulla mappa e un invito fisso 'segui per il prossimo turno', così ogni verdetto porta nuovi follower."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:47+00:00",
+   "da": "community-8",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Il copione dice 'Roma, 59 a 6 contro Torino' ma la didascalia riporta correttamente 'Roma 59–6 Torino' con il comune corretto; il dato di Roma sulla mappa è però 'luci_del_comune_dell_etichetta: 0' mentre 'luci_li_oggi' è 126 e gli animali elencati sono 5: il conteggio della luce di Roma non torna c",
+   "dati": {
+    "controllato": "Trascrizione, tempi della mappa, audio (LUFS, picco, silenzi), coerenza tra copione, brief e didascalia, e numeri del progetto.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il copione dice 'Roma, 59 a 6 contro Torino' ma la didascalia riporta correttamente 'Roma 59–6 Torino' con il comune corretto; il dato di Roma sulla mappa è però 'luci_del_comune_dell_etichetta: 0' mentre 'luci_li_oggi' è 126 e gli animali elencati sono 5: il conteggio della luce di Roma non torna con i dati. Inoltre la voce dice 'Trofeo anche per altre 86 città' mentre la didascalia elenca 15 risultati, senza verifica che il numero 86 sia coerente con i dati forniti. Infine il brief ha 'apertura: null' e 'voce: true' senza testo di apertura, e la luce di Roma si accende al secondo 1.66 mentre la trascrizione dice 'vince Roma' a 1.9s: piccola discordanza di sincronia.",
+    "correzione": "Verificare il conteggio luci di Roma (0 nel comune dell'etichetta vs 5 animali elencati) e il numero 86 città prima della pubblicazione; allineare l'accensione della luce al parlato (1.66s vs 1.9s); definire l'apertura o confermare che la prima frase la sostituisce.",
+    "idea": "Per i prossimi reel della Coppa, mostrare alla fine il nome del comune appena acceso con il numero di animali, così la domanda 'scrivi città e nome' ha un esempio concreto da imitare."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:47+00:00",
+   "da": "community-9",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Grazie a loro, e a tutti quelli di Roma!' cade a 8.3s-12.4s, ma nel brief la scena 'padroni' è la frase i=2; il dato 'luci_del_comune_dell_etichetta: 0' per Roma è incoerente con 126 luci oggi e con la luce di Roma accesa nel reel. Inoltre la fascia 'Scrivi città e nome'",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, mappa (Roma, luce accesa a 1.66s), audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio) e didascalia rispetto ai dati di progetto.",
+    "esito": "segnalo",
+    "secondo": 12.4,
+    "problema": "Nella trascrizione la frase 'Grazie a loro, e a tutti quelli di Roma!' cade a 8.3s-12.4s, ma nel brief la scena 'padroni' è la frase i=2; il dato 'luci_del_comune_dell_etichetta: 0' per Roma è incoerente con 126 luci oggi e con la luce di Roma accesa nel reel. Inoltre la fascia 'Scrivi città e nome' compare in apertura senza un'apertura definita (campo apertura: null), e la copertina dice 'HA VINTO' pur con 'Roma' come unico nome grande.",
+    "correzione": "Verificare il conteggio luci del comune Roma (deve essere coerente con le luci accese mostrate) e allineare i secondi della frase 'padroni' alla scena dichiarata; definire un'apertura esplicita nei primi 2-3 secondi.",
+    "idea": "Per i prossimi reel della Coppa, mostrare nei primi 2 secondi il nome della città e il punteggio insieme alla luce accesa, così chi arriva dal feed capisce subito cosa sta guardando."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:49+00:00",
+   "da": "community-10",
+   "a": "community-1",
+   "tipo": "proposta",
+   "testo": "Nella trascrizione la frase 'Verdetto della Coppa delle Zampe' cade a 0.0s, ma la luce di Roma si accende a 1.66s, quindi la scena 'luce' non è sincronizzata con il testo che la introduce. Inoltre la scena 'luce' dura solo fino a 4.75s mentre la frase 'vince Roma, 59 a 6' finisce a 3.8s: ok. Il prob",
+   "dati": {
+    "controllato": "Ho verificato il copione, la trascrizione coi secondi, la mappa (Roma, luce a 1.66s), le misure audio e la didascalia contro i dati di progetto.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Nella trascrizione la frase 'Verdetto della Coppa delle Zampe' cade a 0.0s, ma la luce di Roma si accende a 1.66s, quindi la scena 'luce' non è sincronizzata con il testo che la introduce. Inoltre la scena 'luce' dura solo fino a 4.75s mentre la frase 'vince Roma, 59 a 6' finisce a 3.8s: ok. Il problema principale: la voce dice 'Trofeo anche per altre 86 città' ma nella didascalia i trofei sono solo 15 elencati, va bene perché è un elenco parziale, però il numero 86 non è verificabile dai materiali forniti come dato di mappa. Il conteggio 'luci_del_comune_dell_etichetta': 0 per Roma è incoerente con 'luci_li_oggi': 126 e con cinque animali elencati per Roma, da verificare.",
+    "correzione": "Allineare l'accensione della luce di Roma alla frase 'vince Roma' (circa 1.9s) oppure spostare l'accensione a 1.66s con il testo; verificare il numero 86 città e il conteggio luci di Roma prima di pubblicare.",
+    "idea": "Mostrare un contatore che sale in tempo reale (luci di oggi) a fine reel, così chi guarda vede il progetto crescere e ha un motivo concreto per seguire la pagina."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:50+00:00",
+   "da": "coppa-2",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La luce di Roma si accende a 1.66s, ma la frase 'vince Roma, 59 a 6' parte a 1.9s, quindi l'accensione precede il verdetto di circa un quarto di secondo. Inoltre il brief dichiara apertura null e la trascrizione segna 'Trofeo anche per altre 86 città' come un'unica frase che non coincide con la scen",
+   "dati": {
+    "controllato": "Ho controllato la trascrizione coi secondi, il brief e la mappa (Roma, luce a 1.66s), l'audio e la coerenza tra didascalia e dati del turno.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La luce di Roma si accende a 1.66s, ma la frase 'vince Roma, 59 a 6' parte a 1.9s, quindi l'accensione precede il verdetto di circa un quarto di secondo. Inoltre il brief dichiara apertura null e la trascrizione segna 'Trofeo anche per altre 86 città' come un'unica frase che non coincide con la scena 'classifica' indicata. Nella mappa risulta 'luci_del_comune_dell_etichetta: 0' mentre 'luci_li_oggi: 126': il dato del comune di Roma va verificato prima di pubblicare.",
+    "correzione": "Allineare l'accensione della luce a 1.9s, verificare il conteggio delle luci di Roma e confermare che la scena 'classifica' mostri davvero le 86 città citate.",
+    "idea": "Per i prossimi reel, mostrare la città che entra in classifica con una luce in più e il suo nome in grande, così ogni comunità si riconosce e condivide."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:50+00:00",
+   "da": "coppa-3",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La luce di Roma si accende al secondo 1.66 ma nei dati la scena 'luce' parte da 0.0 e dura fino a 4.75; la frase 'Verdetto... vince Roma' esce a 1.9s, quindi la luce è quasi in linea. Il problema vero è la mappa: 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_oggi' è 126 e la mappa conta 5 ani",
+   "dati": {
+    "controllato": "Ho verificato audio (LUFS, picco, silenzi), trascrizione coi secondi, coerenza tra copione, brief e dati della mappa, e il dato Roma sulla mappa.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La luce di Roma si accende al secondo 1.66 ma nei dati la scena 'luce' parte da 0.0 e dura fino a 4.75; la frase 'Verdetto... vince Roma' esce a 1.9s, quindi la luce è quasi in linea. Il problema vero è la mappa: 'luci_del_comune_dell_etichetta' è 0 mentre 'luci_li_oggi' è 126 e la mappa conta 5 animali di Roma, quindi il dato del comune non torna con quello che il reel mostra. Inoltre il titolo 'vince Roma, 59 a 6' non è verificabile nei materiali (il conteggio punti non è nei dati).",
+    "correzione": "Allineare il conteggio luci del comune di Roma con i dati reali prima di pubblicare, e controllare che la luce si accenda vicino alla frase 'vince Roma' (circa 1.9s).",
+    "idea": "Per i prossimi reel della Coppa, usare una scena finale con la città del commentatore più recente per far sentire l'utente parte della mappa."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:51+00:00",
+   "da": "coppa-4",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Nella scena della mappa la luce di Roma si accende al secondo 1.66 secondo i dati, ma il copione sul voiceover 'vince Roma' cade a 1.9s: lo stacco visivo e la voce sono sfalsati di circa un quarto di secondo. Inoltre il dato 'luci_del_comune_dell_etichetta' per Roma è 0 mentre la mappa ne conta 126 ",
+   "dati": {
+    "controllato": "Ho verificato la mia mansione sul reel: trascrizione coi secondi, copione e frasi, dati della mappa per Roma, misure audio e coerenza di didascalia e numeri.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Nella scena della mappa la luce di Roma si accende al secondo 1.66 secondo i dati, ma il copione sul voiceover 'vince Roma' cade a 1.9s: lo stacco visivo e la voce sono sfalsati di circa un quarto di secondo. Inoltre il dato 'luci_del_comune_dell_etichetta' per Roma è 0 mentre la mappa ne conta 126 oggi e ci sono cinque animali elencati per Roma: il conteggio del comune non torna con l'elenco. Infine l'audio è a -14.5 LUFS con picco -1.0 dBFS e rispetta l'obiettivo, quindi quel punto è a posto.",
+    "correzione": "Allineare l'accensione della luce di Roma al momento della parola 'Roma' (intorno a 1.9s), oppure spostare la luce a 1.66s e anticipare la voce. Verificare il campo luci del comune di Roma prima di pubblicare, perché 0 contraddice i 5 animali elencati.",
+    "idea": "Per i prossimi reel della Coppa, mostrare la città del commento più recente nel finale, così il invito a scrivere diventa personale e si ripete il formato che ha dato più commenti."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:53+00:00",
+   "da": "coppa-5",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il brief dice 'vince Roma, 59 a 6 contro Torino' ma nella didascalia Roma–Torino compare come 59–6 e nel copione il punteggio è detto senza distinguere le squadre; inoltre la scena 'luce' dice che la luce si accende a 1.66s mentre la frase su Roma arriva a 1.9s, quindi c'è un leggero disallineamento",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, mappa (Roma, luce a 1.66s), audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio), e coerenza tra trascrizione, brief e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il brief dice 'vince Roma, 59 a 6 contro Torino' ma nella didascalia Roma–Torino compare come 59–6 e nel copione il punteggio è detto senza distinguere le squadre; inoltre la scena 'luce' dice che la luce si accende a 1.66s mentre la frase su Roma arriva a 1.9s, quindi c'è un leggero disallineamento tra voce e luce. Infine la didascalia è troncata ('commen') e il testo dei dati mappa dice 'luci_del_comune_dell_etichetta: 0' con la luce di Roma che però risulta accesa a 126 luci oggi: il dato va chiarito.",
+    "correzione": "Allineare l'accensione della luce di Roma al momento in cui viene detto 'Roma' (circa 1.9s) e verificare che la didascalia sia completa; controllare il conteggio luci di Roma nei dati prima della pubblicazione.",
+    "idea": "Chiudere ogni reel con un'anteprima del turno successivo ('Domani: Napoli contro Milano') per dare un motivo concreto di tornare e seguire."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:54+00:00",
+   "da": "coppa-6",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La luce di Roma si accende a 1.66s, ma la frase 'vince Roma, 59 a 6' parte a 1.9s: il lampo è un attimo prima del verdetto e il dato 'luci_del_comune_dell_etichetta: 0' non torna con una luce che si accende nella scena. Inoltre le fasce dati mostrano 126 luci 'li oggi' senza spiegazione nel copione.",
+   "dati": {
+    "controllato": "Ho verificato la trascrizione coi secondi, la luce di Roma nella mappa (scena 0, accensione a 1.66s), i dati audio e la coerenza tra copione, frasi e punteggi della didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La luce di Roma si accende a 1.66s, ma la frase 'vince Roma, 59 a 6' parte a 1.9s: il lampo è un attimo prima del verdetto e il dato 'luci_del_comune_dell_etichetta: 0' non torna con una luce che si accende nella scena. Inoltre le fasce dati mostrano 126 luci 'li oggi' senza spiegazione nel copione. Audio: -14.5 LUFS e picco -1.0 dBFS sono nei target, nessun silenzio lungo, quindi l'audio è a posto.",
+    "correzione": "Allineare l'accensione della luce di Roma alla parola 'Roma' (intorno a 1.9s) e verificare che il conteggio luci del comune nei dati mappa sia coerente con l'animazione prima di pubblicare.",
+    "idea": "Chiudere ogni reel con un invito esplicito a seguire la pagina per il turno successivo e mostrare in un frame il nome della città più vicina alla fine del turno, per dare una ragione di follow oltre al commento."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:54+00:00",
+   "da": "coppa-7",
+   "a": "coppa-1",
+   "tipo": "nota",
+   "testo": "Mansione Punti e codici: ho verificato i dati della mappa (Roma, coordinate, luce a 1.66s, conteggio luci del comune), la trascrizione con i secondi e l'audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio).",
+   "dati": {
+    "controllato": "Mansione Punti e codici: ho verificato i dati della mappa (Roma, coordinate, luce a 1.66s, conteggio luci del comune), la trascrizione con i secondi e l'audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio).",
+    "esito": "ok",
+    "secondo": null,
+    "problema": "",
+    "correzione": "",
+    "idea": "Ripetere il formato con una città piccola in evidenza (come Latronico) per dare voce anche ai comuni fuori dalle grandi città, con il nome della città e il conteggio dei trofei nella copertina."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:55+00:00",
+   "da": "coppa-8",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "La voce dice 'vince Roma, 59 a 6 contro Torino' e la luce su Roma dovrebbe accendersi al verdetto, ma nei dati la luce si accende a 1.66s mentre la voce pronuncia 'Roma' a 1.9s: va bene, però la frase 'Trofeo anche per altre 86 città, come Latronico' compare nel brief mentre nella didascalia i trofe",
+   "dati": {
+    "controllato": "Ho verificato trascrizione coi secondi, dati mappa (Roma, luce al 1.66s), audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio), coerenza tra voce, brief e didascalia.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "La voce dice 'vince Roma, 59 a 6 contro Torino' e la luce su Roma dovrebbe accendersi al verdetto, ma nei dati la luce si accende a 1.66s mentre la voce pronuncia 'Roma' a 1.9s: va bene, però la frase 'Trofeo anche per altre 86 città, come Latronico' compare nel brief mentre nella didascalia i trofei sono 15 elencati, quindi il numero 86 non è verificabile dai materiali mostrati. Inoltre la fascia finale 'Scrivi città e nome' non ha un punto di chiusura chiaro nella trascrizione (manca la parola 'commenta').",
+    "correzione": "Verificare il numero 86 città con i dati della mappa prima di pubblicare; allineare la call to action tra voce, fascia e didascalia usando la stessa parola (es. 'commenta con città e nome').",
+    "idea": "Un reel con la città più lontana che ha vinto un trofeo, per far sentire ogni città coinvolta e spingere a condividere con amici di quella zona."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:56+00:00",
+   "da": "coppa-9",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il verdetto 'vince Roma, 59 a 6 contro Torino' nel voiceover compare prima che la luce si accenda (secondo 1.66 secondo i dati mappa, ma la frase 'vince Roma' inizia a 1.9s); inoltre il brief dice 'Trofeo anche per altre 86 città', mentre la didascalia elenca solo 15 risultati: il numero 86 non è ve",
+   "dati": {
+    "controllato": "Ho verificato copione, trascrizione coi secondi, dati mappa (Roma, 126 luci oggi), audio (-14.5 LUFS, picco -1.0 dBFS, nessun silenzio) e coerenza tra didascalia e risultati del turno 2.",
+    "esito": "segnalo",
+    "secondo": 1.9,
+    "problema": "Il verdetto 'vince Roma, 59 a 6 contro Torino' nel voiceover compare prima che la luce si accenda (secondo 1.66 secondo i dati mappa, ma la frase 'vince Roma' inizia a 1.9s); inoltre il brief dice 'Trofeo anche per altre 86 città', mentre la didascalia elenca solo 15 risultati: il numero 86 non è verificabile dai materiali forniti come dato del turno. Il campo 'apertura' del brief è null, quindi l'apertura va costruita sull'immagine della luce di Roma.",
+    "correzione": "Allineare l'accensione della luce di Roma al 'vince Roma' (circa 1.9s) e, se il dato 86 città non è confermato, sostituirlo con una formula verificabile tipo 'trofeo anche per le altre città del turno' o indicare la fonte del numero.",
+    "idea": "Per i prossimi verdetti, mostrare nei primi secondi la mappa con la luce della città vincente già accesa e una frase di sfida tipo 'Chi la prende al turno 3?' per spingere commenti e follow."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:56+00:00",
+   "da": "coppa-10",
+   "a": "coppa-1",
+   "tipo": "proposta",
+   "testo": "Il volume medio dei primi 5 secondi è -16.7 dB, sotto il target di -14 LUFS e più basso del resto del reel: l'apertura risulta più debole. Inoltre la trascrizione dice 'vince Roma' al secondo 1.9, mentre la luce di Roma si accende al 1.66: la voce non è ancora partita quando il punto si accende, il ",
+   "dati": {
+    "controllato": "Misure audio e sincronia della mappa: il secondo di accensione della luce di Roma (1.66s) e i dati di volume rispetto al target.",
+    "esito": "segnalo",
+    "secondo": 1.66,
+    "problema": "Il volume medio dei primi 5 secondi è -16.7 dB, sotto il target di -14 LUFS e più basso del resto del reel: l'apertura risulta più debole. Inoltre la trascrizione dice 'vince Roma' al secondo 1.9, mentre la luce di Roma si accende al 1.66: la voce non è ancora partita quando il punto si accende, il che va bene, ma va verificato che il ritmo visivo regga.",
+    "correzione": "Alzare il volume dell'apertura di circa 2-3 dB per portarlo vicino a -14 LUFS, mantenendo il picco sotto -1 dBFS; verificare che l'accensione della luce coincida con la parola 'Roma' della voce.",
+    "idea": "Per i prossimi reel, aprire con un'immagine o un suono più pieno nei primi secondi e mostrare il nome della città vincitrice in grande già dalla prima scena."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "crescita-2",
+   "a": "crescita-1",
+   "tipo": "proposta",
+   "testo": "Al secondo 9.5 la voce dice 'Grazie a loro, e a tutti quelli di Roma!', ma nel fotogramma di 11 s la scena mostra ancora la classifica o la sezione 'Hanno vinto: Roma' non è sincronizzata; inoltre la trascrizione dice 'Torino' mentre la didascalia riporta 'Roma 59–6 Torino' e la frase 'Trofeo anche ",
+   "dati": {
+    "controllato": "Il secondo di sincronizzazione tra voce e scena: la frase 'Roma 59 a 6' cade al secondo 1.9, mentre la luce di Roma si accende nel dato a 1.66 s, quindi la scena 'luce' è coerente con l'audio.",
+    "esito": "segnalo",
+    "secondo": 9.5,
+    "problema": "Al secondo 9.5 la voce dice 'Grazie a loro, e a tutti quelli di Roma!', ma nel fotogramma di 11 s la scena mostra ancora la classifica o la sezione 'Hanno vinto: Roma' non è sincronizzata; inoltre la trascrizione dice 'Torino' mentre la didascalia riporta 'Roma 59–6 Torino' e la frase 'Trofeo anche per altre 86 città, come Latronico' è detta sopra la classifica che mostra Alghero come quinta città, senza Latronico. Il dato 'Roma 59 a 6 contro Torino' non compare a schermo: la scena 'contro' mostra solo la mappa.",
+    "correzione": "Allineare la scena 'padroni' (elenco dei nomi di Roma) alla frase 'e a tutti quelli di Roma' intorno al secondo 9.5-12, e mostrare il punteggio 59–6 contro Torino a schermo quando viene pronunciato.",
+    "idea": "Chiudere il reel con un invito esplicito a seguire la pagina per ricevere il turno successivo della Coppa, oltre al commento con città e nome."
+   }
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "crescita-3",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "crescita-4",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "crescita-5",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "crescita-6",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "crescita-7",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "crescita-8",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "crescita-9",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "crescita-10",
+   "a": "crescita-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "innovazione-2",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "innovazione-3",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "innovazione-4",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "innovazione-5",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "innovazione-6",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "innovazione-7",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "innovazione-8",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "innovazione-9",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "innovazione-10",
+   "a": "innovazione-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "grafica3d-2",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "grafica3d-3",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "grafica3d-4",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "grafica3d-5",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:58+00:00",
+   "da": "grafica3d-6",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:59+00:00",
+   "da": "grafica3d-7",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:59+00:00",
+   "da": "grafica3d-8",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:59+00:00",
+   "da": "grafica3d-9",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:17:59+00:00",
+   "da": "grafica3d-10",
+   "a": "grafica3d-1",
+   "tipo": "nota",
+   "testo": "Non ha risposto in tempo."
+  },
+  {
+   "t": "2026-11-23T12:18:01+00:00",
+   "da": "montaggio-1",
+   "a": "pubblicazione-1",
+   "tipo": "decisione",
+   "testo": "La squadra non ha trovato difetti segnalati da almeno 3 reparti: nessuna correzione.",
+   "dati": {
+    "perche": []
+   }
+  },
+  {
+   "t": "2026-11-23T12:18:01+00:00",
+   "da": "direzione-1",
+   "a": "pubblicazione-1",
+   "tipo": "nota",
+   "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce con la revisione della sola squadra."
+  }
+ ],
+ "versioni": [
+  {
+   "v": 1,
+   "durata": 18.3,
+   "fotogrammi": [
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s000.5.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s001.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s002.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s003.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s004.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s005.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s006.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s007.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s008.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s009.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s010.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s011.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s012.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s013.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s014.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s015.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s016.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s017.0.jpg",
+    "fotogrammi/2026-11-23-1314-coppa_verdetto/v1/s018.0.jpg"
+   ],
+   "audio": {
+    "lufs": -14.5,
+    "picco_dbfs": -1.0,
+    "silenzi_s": [],
+    "volume_medio_primi_5s_db": -16.7,
+    "obiettivo": "-14 LUFS, picco sotto -1 dBFS, niente silenzi lunghi dopo l'apertura"
+   }
+  }
+ ],
+ "crescita": {
+  "pubblico": "Tifosi di città italiane che amano cani e gatti: chi commenta le sfide tra città (romani, torinesi, napoletani, genovesi) ma non segue ancora la pagina, e chi vive in una città o in un paese piccolo e vorrebbe vederlo sulla mappa.",
+  "gancio": "Roma ha battuto Torino 59 a 6: e la tua città dov'è finita?",
+  "primo_fotogramma": "Mappa d'Italia di notte con una luce accesa su Roma. In grande la scritta «HA VINTO Roma 🏆», sotto «59 a 6 contro Torino». Si capisce anche senza audio che è una sfida tra città decisa da luci di animali.",
+  "motivo_per_seguire": "Su Zampe d'Italia ogni animale accende una luce nella sua città sulla mappa d'Italia di notte, e seguendo la pagina vedi ogni turno della Coppa delle Zampe e se la tua città vince.",
+  "chiusura": "Roma ha vinto. Segui Zampe d'Italia per vedere chi vince il prossimo turno.",
+  "perche": "Chi commenta le sfide tra città ha già un motivo di tifo: il reel gli dice in un'immagine cos'è la pagina e gli dà una ragione per seguirla, con un solo invito a seguire."
+ },
+ "token_persone": 321088,
+ "errori_persone": {
+  "claude-haiku-5-5: 400": 26,
+  "claude-sonnet-5-5: 400": 36
+ },
+ "fine": "2026-11-23T12:18:01+00:00"
+}

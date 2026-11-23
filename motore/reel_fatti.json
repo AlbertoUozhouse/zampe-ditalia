@@ -86,7 +86,6 @@
   "Napoli"
  ],
  "temi": [
-  "giorno",
   "tramonto",
   "aurora",
   "giorno",
@@ -95,9 +94,10 @@
   "tramonto",
   "aurora",
   "giorno",
-  "tramonto"
+  "tramonto",
+  "notte"
  ],
- "variante_n": 62,
+ "variante_n": 63,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -160,7 +160,8 @@
   "2026-11-21-1305-partita": "voce-fissa-80",
   "2026-11-21-2104-serie": "voce-fissa-92",
   "2026-11-22-1315-partita": "voce-fissa-80",
-  "2026-11-22-2111-serie": "voce-fissa-92"
+  "2026-11-22-2111-serie": "voce-fissa-92",
+  "2026-11-23-1314-coppa_verdetto": "voce-solita-32"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -1003,15 +1004,15 @@
   "azzuu_privato2": "2026-11-19",
   "christian_marfella014": "2026-11-19",
   "gioi_lazze": "2026-11-19",
-  "lollogatta": "2026-11-19",
+  "lollogatta": "2026-11-23",
   "mariacristinaa.aa": "2026-11-19",
   "violasophienobile_": "2026-11-19",
   "edo_vigna_": "2026-11-20",
   "emanueleali__": "2026-11-20",
   "ercaccia_andrea_": "2026-11-20",
-  "joeloliva014": "2026-11-20",
+  "joeloliva014": "2026-11-23",
   "marassi_17": "2026-11-20",
-  "marinanespeca": "2026-11-20",
+  "marinanespeca": "2026-11-23",
   "_rob_99_": "2026-11-21",
   "angelotortorella16": "2026-11-21",
   "boeroedoardo": "2026-11-21",
@@ -1023,7 +1024,14 @@
   "giuly23c": "2026-11-22",
   "giuseppe.borrelli.012": "2026-11-22",
   "loryto_2013": "2026-11-22",
-  "roberto___dambrosio": "2026-11-22"
+  "roberto___dambrosio": "2026-11-22",
+  "_g4e_13": "2026-11-23",
+  "alan407103": "2026-11-23",
+  "andrea_71609": "2026-11-23",
+  "cri1_927": "2026-11-23",
+  "livio_federici_13": "2026-11-23",
+  "lory05.08": "2026-11-23",
+  "pamelainsalaco": "2026-11-23"
  },
  "serie_storia": [
   {

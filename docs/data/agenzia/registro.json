@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-13-2055-intruso",
-  "formato": "intruso",
-  "modalita": "operativa",
-  "inizio": "2026-11-13T19:55:38+00:00",
-  "stato": "senza direttore",
-  "fine": "2026-11-13T19:59:36+00:00",
-  "scambi": 126
- },
- {
   "id": "2026-11-13-2101-gara_follower",
   "formato": "gara_follower",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-22T20:16:12+00:00",
   "scambi": 128
+ },
+ {
+  "id": "2026-11-23-1314-coppa_verdetto",
+  "formato": "coppa_verdetto",
+  "modalita": "operativa",
+  "inizio": "2026-11-23T12:15:04+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-23T12:18:01+00:00",
+  "scambi": 116
  }
 ]
