@@ -1991,7 +1991,8 @@ def serie_cartone(n, ep, opzioni, famiglia, famiglia_ieri, voti_ieri, st, rinvio
         return [(voce, {**base, **sc}) for voce, sc in SERIE_CARTONE[ep]] + [_serie_scelta(base, a, b)]
     parola = SERIE_OPZIONI[ep][1]; chiave = SERIE_OPZIONI[ep][2]
     frasi = [(f"{NUMERI_IT[giorni].capitalize()} giorni per trovare casa.",
-              {**base, "sfondo": "canile", "numero": {"n": giorni, "sotto": "PER TROVARE CASA"}, "attori": [A("triste", 540, 1680, 740, ("pop", "respira"), t0=0.2)],
+              {**base, "sfondo": "canile", "numero": {"n": giorni, "sotto": "PER TROVARE CASA", **({"prima": giorni + 1} if giorni < 30 else {})},  # 23/11: il foglio di ieri si strappa
+               "attori": [A("triste", 540, 1680, 740, ("pop", "respira"), t0=0.2)],
                "etichette": [ET("PAOLINO", "rosso", 40, 900, -6, 70, 0.7), ET("PULCI: 37", "verde", 790, 960, 6, 50, 1.0)],
                **({"famiglia_prima": famiglia_ieri} if famiglia_ieri != famiglia else {})})]
     scelto = rinvio or ep; p_sc, k_sc = SERIE_OPZIONI[scelto][1], SERIE_OPZIONI[scelto][2]

@@ -865,12 +865,16 @@ CARTONE_COLORI = {"rosso": ("#E2432F", "#FFFFFF"), "giallo": ("#FFD23F", "#1A120
 
 
 def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=None, attori=(), etichette=(), nuvole=(), oggetti=(), sfx=None,
-            numero=None, voto=None, commento=None, scelta=None, hud=True, colori=None, tabellone=None, tabella=None, tiro=None):
+            numero=None, voto=None, commento=None, scelta=None, hud=True, colori=None, tabellone=None, tabella=None, tiro=None, regia=True):
     """Una scena di Paolino a cartone. attori: [{"img": "felice", "x": 540, "y": 1560, "h": 700, "flip": False, "anim": ["entra_sx", "respira"], "t0": 0}]
     (x e y = centro dei piedi); etichette: [{"t": "PAOLINO", "c": "rosso", "x": 60, "y": 900, "r": -5, "z": 64, "t0": 0.3}];
     nuvole: [{"t": "VIENI, TESORO!", "x": 80, "y": 640, "w": 440, "coda": "sx", "t0": 0.4}]; oggetti: emoji come attrezzi di scena
     [{"e": "🧽", "x": 300, "y": 900, "z": 130, "t0": 1}]; numero: {"n": 29, "sotto": "PER TROVARE CASA"}; voto: {"parola": "IL BAGNO", "chiave": "BAGNO", "pc": 64};
-    commento: {"t": "testo del commento", "cuori": 12}; scelta: {"a": [emoji, nome, parola], "b": [...]}."""
+    commento: {"t": "testo del commento", "cuori": 12}; scelta: {"a": [emoji, nome, parola], "b": [...]}.
+    23/11 (Officina, «la regia»): lo sfondo, i personaggi e gli oggetti stanno dentro una telecamera che si muove piano in ogni scena
+    (avvicinamento, carrellata a sinistra, allontanamento, carrellata a destra, a turno) e fa un colpo di zoom sui momenti forti
+    (BAU!, GOL!, lo svenimento); le scritte restano ferme. Il numero dei giorni è un calendario a strappo: con numero["prima"]
+    si vede il numero di ieri e il foglio si gira e vola via."""
     fp = famiglia if famiglia_prima is None else famiglia_prima
     css = f"""
     #root .fondo {{ position: absolute; inset: 0; }}
@@ -892,6 +896,15 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
     #root .og {{ position: absolute; line-height: 1; z-index: 2; color: #1A1206; filter: drop-shadow(0 8px 0 rgba(0,0,0,.25)); }}
     #root .sfx {{ position: absolute; z-index: 4; }}
     #root .sfx span {{ display: inline-block; transform: rotate(-8deg); font: 400 110px/1 "Anton", sans-serif; color: #FFD23F; -webkit-text-stroke: 8px #1A1206; paint-order: stroke fill; text-shadow: 0 10px 0 #1A1206; }}
+    #root .cam, #root .mondo {{ position: absolute; inset: 0; }}
+    #root .cal {{ position: absolute; left: 280px; width: 520px; top: 300px; z-index: 3; perspective: 1400px; }}
+    #root .cal .tt {{ position: relative; height: 96px; background: #E2432F; border: 8px solid #1A1206; border-radius: 24px 24px 0 0; text-align: center; font: 400 64px/80px "Anton", sans-serif; letter-spacing: 4px; color: #FFFFFF; }}
+    #root .cal .an {{ position: absolute; top: -26px; width: 26px; height: 54px; border-radius: 13px; background: #6B7896; border: 6px solid #1A1206; }}
+    #root .cal .pg {{ position: relative; height: 350px; margin-top: -8px; background: #FFF8EA; border: 8px solid #1A1206; border-radius: 0 0 24px 24px; text-align: center; box-shadow: 0 10px 0 #D9CBB0, 0 18px 0 #1A1206; }}
+    #root .cal .pg b {{ display: block; font: 400 290px/340px "Anton", sans-serif; color: #1A1206; }}
+    #root .cal .fg {{ position: absolute; left: 0; right: 0; top: 96px; margin-top: -8px; box-shadow: none; transform-origin: 50% 0%; backface-visibility: visible; }}
+    #root .cal-s {{ position: absolute; left: 0; right: 0; top: 780px; text-align: center; z-index: 3; }}
+    #root .cal-s span {{ display: inline-block; font: 400 58px/1.1 "Anton", sans-serif; color: #1A1206; background: #5BD07A; border: 6px solid #1A1206; border-radius: 12px; padding: 6px 24px 8px; transform: rotate(-3deg); box-shadow: 0 8px 0 rgba(0,0,0,.35); }}
     #root .num {{ position: absolute; left: 0; right: 0; top: 290px; text-align: center; z-index: 3; }}
     #root .num b {{ display: block; font: 400 330px/0.95 "Anton", sans-serif; color: #FFC93C; -webkit-text-stroke: 12px #1A1206; paint-order: stroke fill; text-shadow: 0 14px 0 #1A1206; }}
     #root .num i {{ display: block; font: 400 120px/1 "Anton", sans-serif; font-style: normal; color: #FFFFFF; -webkit-text-stroke: 9px #1A1206; paint-order: stroke fill; text-shadow: 0 9px 0 #1A1206; }}
@@ -917,7 +930,7 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
     #root .sc .o {{ position: absolute; left: 50%; top: 110px; width: 130px; margin-left: -65px; font: 400 36px/62px "Anton", sans-serif; color: #1A1206; background: #FFD23F; border: 5px solid #1A1206; border-radius: 31px; }}"""
     js = []
     fondo_svg = sfondo_stadio(*(colori or [["#1B4FA0", "#111111"], ["#D2151C", "#111111"]])) if sfondo == "stadio" else CARTONE_SFONDI.get(sfondo, CARTONE_SFONDI["canile"])
-    corpo = [f'<svg class="fondo" viewBox="0 0 1080 1920">{fondo_svg}</svg>']
+    mondo = [f'<svg class="fondo" viewBox="0 0 1080 1920">{fondo_svg}</svg>']; corpo = []; colpi = []  # mondo: dentro la telecamera; corpo: le scritte ferme
     css += """
     #root .tb { position: absolute; left: 40px; right: 40px; top: 250px; z-index: 3; text-align: center; }
     #root .tb .s { display: inline-block; font: 400 46px/1.05 "Anton", sans-serif; color: #1A1206; background: #FFD23F; border: 6px solid #1A1206; border-radius: 12px; padding: 4px 22px 6px; transform: rotate(-2deg); box-shadow: 0 8px 0 rgba(0,0,0,.35); }
@@ -943,11 +956,11 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
             js.append(f'    tl.fromTo("#{cid}-gb", {{ innerText: 0 }}, {{ innerText: {int(T.get("gb", 0))}, snap: {{ innerText: 1 }}, duration: 1.6, ease: "power1.in" }}, 0.4);')
     if tiro is not None:  # 20/11 (Officina): la porta in mezzo al campo e il pallone che entra, poi «GOL!»
         t0 = float(tiro)
-        corpo.append(f'''<svg class="porta" viewBox="0 0 420 220" style="position:absolute;left:330px;top:1085px;width:420px;height:220px;z-index:1">
+        mondo.append(f'''<svg class="porta" viewBox="0 0 420 220" style="position:absolute;left:330px;top:1085px;width:420px;height:220px;z-index:1">
           <g stroke="#F4F4F4" stroke-width="3" opacity=".75">{''.join(f'<path d="M{x} 20 V215"/>' for x in range(30, 400, 30))}{''.join(f'<path d="M14 {y} H406"/>' for y in range(40, 215, 30))}</g>
           <path d="M10 215 V12 H410 V215" fill="none" stroke="#FFFFFF" stroke-width="16" stroke-linejoin="round"/><path d="M10 215 V12 H410 V215" fill="none" stroke="#1A1206" stroke-width="5"/></svg>
-          <div class="og" id="{cid}-pl" style="left:80px;top:1560px;font-size:110px;color:#FFFFFF;z-index:3">⚽</div>
-          <div class="sfx" id="{cid}-gl" style="left:330px;top:900px"><span>GOL!</span></div>''')
+          <div class="og" id="{cid}-pl" style="left:80px;top:1560px;font-size:110px;color:#FFFFFF;z-index:3">⚽</div>''')
+        corpo.append(f'<div class="sfx" id="{cid}-gl" style="left:330px;top:900px"><span>GOL!</span></div>'); colpi.append(t0 + 0.7)
         js.append(f'    tl.fromTo("#{cid}-pl", {{ x: 0, y: 0, rotation: 0, scale: 1 }}, {{ x: 400, y: -400, rotation: 720, scale: 0.55, duration: 0.7, ease: "power2.out" }}, {t0:.2f});')
         js.append(f'    tl.to("#{cid}-pl", {{ opacity: 0, duration: 0.1 }}, {t0 + 0.72:.2f});')  # il pallone sparisce nella rete (sotto ci passano i sottotitoli)
         js.append(f'    tl.fromTo("#{cid}-gl", {{ scale: 0, opacity: 0 }}, {{ scale: 1.25, opacity: 1, duration: 0.3, ease: "back.out(3)" }}, {t0 + 0.7:.2f});')
@@ -959,13 +972,13 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
         for i in range(len(tabella[:5])):
             js.append(f'    tl.fromTo("#{cid}-r{i}", {{ x: {-700 if i % 2 == 0 else 700}, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.35, ease: "back.out(1.6)" }}, {0.3 + i * 0.2:.2f});')
     for i, o in enumerate(oggetti):
-        corpo.append(f'<div class="og" id="{cid}-g{i}" style="left:{o["x"]}px;top:{o["y"]}px;font-size:{o.get("z", 120)}px{";color:" + o["colore"] if o.get("colore") else ""}">{ESC(o["e"])}</div>')
+        mondo.append(f'<div class="og" id="{cid}-g{i}" style="left:{o["x"]}px;top:{o["y"]}px;font-size:{o.get("z", 120)}px{";color:" + o["colore"] if o.get("colore") else ""}">{ESC(o["e"])}</div>')
         js.append(f'    tl.fromTo("#{cid}-g{i}", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2.6)" }}, {o.get("t0", 0.3):.2f});')
         if o.get("vola"): js.append(f'    tl.to("#{cid}-g{i}", {{ keyframes: [{{ y: -24, duration: 0.4 }}, {{ y: 0, duration: 0.4 }}], repeat: {max(1, int(dur / 0.8))} }}, {o.get("t0", 0.3) + 0.35:.2f});')
     for i, a in enumerate(attori):
         h = a.get("h", 700); x, y = a.get("x", 540), a.get("y", 1560)
-        corpo.append(f'<div class="om" style="left:{x - h * 0.32:.0f}px;top:{y - 20}px;width:{h * 0.64:.0f}px"></div>')
-        corpo.append(f'<div class="att{" flip" if a.get("flip") else ""}" id="{cid}-a{i}" style="left:{x - 500}px;top:{y - h}px;height:{h}px">'
+        mondo.append(f'<div class="om" style="left:{x - h * 0.32:.0f}px;top:{y - 20}px;width:{h * 0.64:.0f}px"></div>')
+        mondo.append(f'<div class="att{" flip" if a.get("flip") else ""}" id="{cid}-a{i}" style="left:{x - 500}px;top:{y - h}px;height:{h}px">'
                      + (f'<img src="assets/svg/{a["svg"]}" alt=""></div>' if a.get("svg") else f'<img src="assets/img/paolino-{a["img"]}.png" alt=""></div>'))
         t0 = a.get("t0", 0.0); an = a.get("anim", ["pop"]); an = [an] if isinstance(an, str) else an; sel = f"#{cid}-a{i}"
         rip = lambda per: max(1, int((dur - t0) / per))
@@ -980,7 +993,7 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
                 js.append(f'    tl.fromTo("{sel}", {{ x: {a.get("da", -1100)} }}, {{ x: {a.get("a", 1100)}, duration: {max(0.8, dur - t0):.2f}, ease: "none" }}, {t0:.2f});')
                 js.append(f'    tl.to("{sel}", {{ keyframes: [{{ y: -40, duration: 0.14 }}, {{ y: 0, duration: 0.14 }}], repeat: {rip(0.28)} }}, {t0:.2f});')
             elif k == "cade":  # sviene: si gira di lato e cade (a["t1"] = quando)
-                t1 = a.get("t1", t0 + 1.0)
+                t1 = a.get("t1", t0 + 1.0); colpi.append(t1 + 0.3)
                 js.append(f'    tl.to("{sel}", {{ rotation: {a.get("verso", 88)}, y: 60, scale: {a.get("scala", 1)}, duration: 0.45, ease: "bounce.out", transformOrigin: "50% 100%" }}, {t1:.2f});')
             elif k == "esci_dx": js.append(f'    tl.to("{sel}", {{ x: 1100, duration: 0.45, ease: "power2.in" }}, {a.get("t1", dur - 0.6):.2f});')
     for i, e in enumerate(etichette):
@@ -993,10 +1006,27 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
         js.append(f'    tl.fromTo("#{cid}-n{i}", {{ scale: 0, opacity: 0, transformOrigin: "{"20%" if n.get("coda", "sx") == "sx" else "80%"} 100%" }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.4)" }}, {n.get("t0", 0.5):.2f});')
     if sfx:
         corpo.append(f'<div class="sfx" id="{cid}-x" style="left:{sfx.get("x", 600)}px;top:{sfx.get("y", 700)}px"><span>{ESC(sfx["t"])}</span></div>')
-        t0 = sfx.get("t0", 0.4)
+        t0 = sfx.get("t0", 0.4); colpi.append(t0)
         js.append(f'    tl.fromTo("#{cid}-x", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.25, ease: "back.out(3)" }}, {t0:.2f});')
         js.append(f'    tl.to("#{cid}-x", {{ keyframes: [{{ x: -10, duration: 0.05 }}, {{ x: 10, duration: 0.05 }}, {{ x: 0, duration: 0.05 }}], repeat: 4 }}, {t0 + 0.25:.2f});')
-    if numero:
+    hud_g = giorni
+    if numero and regia:  # 23/11: il calendario a strappo (il numero di ieri si gira e vola via, sotto c'è quello di oggi)
+        prima = numero.get("prima"); T = 0.55
+        corpo.append(f'<div class="cal" id="{cid}-cal"><div class="tt">MANCANO<i class="an" style="left:90px"></i><i class="an" style="right:90px"></i></div>'
+                     f'<div class="pg"><b id="{cid}-nb"{" style=\"opacity:0\"" if prima else ""}>{numero["n"]}</b></div>'
+                     + (f'<div class="pg fg" id="{cid}-fg"><b id="{cid}-fb">{prima}</b></div>' if prima else "") + '</div>'
+                     + (f'<div class="cal-s"><span id="{cid}-ns">GIORNI {ESC(numero["sotto"])}</span></div>' if numero.get("sotto") else ""))
+        js.append(f'    tl.fromTo("#{cid}-cal", {{ y: -500, rotation: -6 }}, {{ y: 0, rotation: 0, duration: 0.45, ease: "back.out(1.4)" }}, 0.05);')
+        if numero.get("sotto"): js.append(f'    tl.fromTo("#{cid}-ns", {{ scale: 0.2, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2.6)" }}, 0.6);')
+        if prima:  # il foglio si alza sugli anelli (si vede il davanti), di taglio cambia il numero, poi si vede il retro bianco e vola via
+            hud_g = prima
+            js.append(f'    tl.to("#{cid}-fg", {{ rotationX: -88, duration: 0.16, ease: "power2.in" }}, {T:.2f});')
+            js.append(f'    tl.set("#{cid}-fb", {{ opacity: 0 }}, {T + 0.16:.2f}); tl.set("#{cid}-nb", {{ opacity: 1 }}, {T + 0.16:.2f}); tl.set("#{cid}-hg", {{ textContent: "{numero["n"]}" }}, {T + 0.16:.2f});')
+            js.append(f'    tl.to("#{cid}-fg", {{ rotationX: -175, y: -380, x: 160, rotation: 14, opacity: 0, duration: 0.45, ease: "power1.out" }}, {T + 0.16:.2f});')
+            js.append(f'    tl.fromTo("#{cid}-nb", {{ scale: 1.3 }}, {{ scale: 1, duration: 0.35, ease: "back.out(3)" }}, {T + 0.16:.2f});')
+            js.append(f'    tl.to("#{cid}-hg", {{ keyframes: [{{ scale: 1.4, duration: 0.15 }}, {{ scale: 1, duration: 0.2 }}] }}, {T + 0.16:.2f});')
+            colpi.append(T + 0.16)
+    elif numero:
         corpo.append(f'<div class="num"><b id="{cid}-nb">{numero["n"]}</b><i id="{cid}-ni">GIORNI</i>' + (f'<span id="{cid}-ns">{ESC(numero["sotto"])}</span>' if numero.get("sotto") else "") + '</div>')
         js.append(f'    tl.fromTo("#{cid}-nb", {{ scale: 2.4, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.05);')
         js.append(f'    tl.fromTo("#{cid}-ni", {{ y: 60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0.3);')
@@ -1020,9 +1050,21 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
         js.append(f'    tl.fromTo("#{cid}-opa", {{ x: -320, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.3);')
         js.append(f'    tl.fromTo("#{cid}-opb", {{ x: 320, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.5);')
         js.append(f'    tl.to(["#{cid}-opa", "#{cid}-opb"], {{ keyframes: [{{ scale: 1.05, duration: 0.3 }}, {{ scale: 1, duration: 0.3 }}], repeat: {max(1, int(dur / 1.2))}, stagger: 0.3 }}, 1.0);')
-    if hud: corpo.append(f'<div class="hud"><div><small>GIORNI</small><b>{giorni}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>')
+    if hud: corpo.append(f'<div class="hud"><div><small>GIORNI</small><b id="{cid}-hg">{hud_g}</b></div><div class="f"><small>FAMIGLIA</small><b id="{cid}-f">{fp}%</b></div></div>')
     if hud and famiglia_prima is not None and famiglia_prima != famiglia:
         js.append(f'    tl.set("#{cid}-f", {{ textContent: "{famiglia}%" }}, {max(0.8, dur * 0.5):.2f}); tl.to("#{cid}-f", {{ keyframes: [{{ scale: 1.4, duration: 0.15 }}, {{ scale: 1, duration: 0.2 }}] }}, {max(0.8, dur * 0.5):.2f});')
+    if regia:
+        k = int(re.sub(r"\D", "", cid) or 0)
+        s0, x0, s1, x1 = [(1.0, 0, 1.07, 0), (1.07, 28, 1.07, -28), (1.08, 0, 1.0, 0), (1.07, -28, 1.07, 28)][k % 4]
+        js.insert(0, f'    tl.set("#{cid}-cam", {{ scale: {s0}, x: {x0}, transformOrigin: "50% 60%" }}, 0); tl.to("#{cid}-cam", {{ scale: {s1}, x: {x1}, duration: {dur:.2f}, ease: "sine.inOut" }}, 0);')
+        fatti = []
+        for t in sorted(colpi):
+            if t > dur - 0.5 or any(abs(t - f) < 0.7 for f in fatti): continue
+            fatti.append(t)
+            js.append(f'    tl.to("#{cid}-m", {{ keyframes: [{{ scale: 1.09, duration: 0.12, ease: "power2.out" }}, {{ scale: 1, duration: 0.5, ease: "power2.inOut" }}], transformOrigin: "50% 55%" }}, {t:.2f});')
+        corpo.insert(0, f'<div class="cam" id="{cid}-cam"><div class="mondo" id="{cid}-m">' + "".join(mondo) + '</div></div>')
+    else:
+        corpo = mondo + corpo
     return _pagina(cid, "Paolino a cartone", css, "\n    ".join(corpo), "\n".join(js))
 
 TIPI = {"cartone": cartone, "zampa30": zampa30, "avvento": avvento, "tappa": tappa, "tifosi": tifosi, "padroni": padroni, "corsa": corsa, "intruso": intruso, "intruso_svela": intruso_svela, "barre": barre, "sagoma": sagoma, "svela": svela, "figurina": figurina, "gancio": gancio, "luce": luce, "foto": foto, "cuccia": cuccia, "gatto": gatto, "duello": duello, "mappa": mappa, "commento": commento,
