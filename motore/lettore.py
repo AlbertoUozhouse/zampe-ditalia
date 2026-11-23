@@ -3,7 +3,13 @@ le storie divise in più commenti e le correzioni ("no, era il contrario"). Ogni
 il nome deve comparire nei commenti e il comune deve esistere davvero. Se Claude non risponde, non si inventa niente."""
 import json, os, re, sys, urllib.request
 
-MODELLO = "claude-sonnet-5-5"
+# 23/11 (Alberto: «50 euro al mese, non un euro in più»): Haiku 5.5 costa 20 volte meno di Sonnet 5.5 ($0,10/$0,50 contro $2/$10 per milione di token);
+# leggere nome, città e razza da un commento è un lavoro semplice e il codice controlla comunque ogni dato. Per tornare a Sonnet: config «lettore_modello».
+try:
+    import json as _j, pathlib as _p
+    MODELLO = _j.loads((_p.Path(__file__).resolve().parent / "config.json").read_text()).get("lettore_modello", "claude-haiku-5-5")
+except Exception:
+    MODELLO = "claude-haiku-5-5"
 
 ISTRUZIONI = """Sei il lettore dei commenti di "Zampe d'Italia", un gioco su Instagram: chi commenta accende la luce del proprio animale su una mappa dell'Italia.
 Il formato chiesto è «città, nome, razza», ma la gente scrive come vuole: in ordine sparso, con la regione, la provincia, emoji, frasi libere, più animali insieme, o a pezzi in più commenti. Si accettano TUTTI gli animali domestici: cani, gatti, conigli, furetti, gechi, tartarughe, criceti, pappagalli, cavalli, ecc.
@@ -201,7 +207,7 @@ def giudica_foto(dati_jpg):
             "per un reel «La star di oggi». Serve: un animale domestico ben visibile e al centro, a fuoco, con buona luce, inquadratura gradevole. "
             "Scarta se: sfocata, buia, animale piccolo o tagliato, persone (soprattutto bambini) in primo piano, screenshot, scritte o meme, "
             "contenuti violenti o non adatti. Rispondi solo con JSON: {\"ok\": true/false, \"motivo\": \"in 3-6 parole italiane, per esempio 'un po\' sfocata'\"}")
-    body = {"model": MODELLO, "max_tokens": 200, "messages": [{"role": "user", "content": [
+    body = {"model": MODELLO, "max_tokens": 1500, "output_config": {"effort": "low"}, "messages": [{"role": "user", "content": [  # 23/11: Haiku 5.5 pensa prima di rispondere: 200 token non bastavano
         {"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": base64.b64encode(dati_jpg).decode()}},
         {"type": "text", "text": istr}]}]}
     try:

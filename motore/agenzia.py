@@ -19,7 +19,7 @@ DATI = ROOT / "docs/data/agenzia"
 FOTO = ROOT / "docs/agenzia/fotogrammi"
 CONFIG = json.loads((ROOT / "motore/config.json").read_text())
 MODELLI_OPENAI = CONFIG.get("openai_modelli", ["gpt-5", "gpt-4.1", "gpt-4o"])  # il primo che risponde
-CLAUDE = "claude-sonnet-5-5"
+CLAUDE = CONFIG.get("agenzia_modello_capi", "claude-haiku-5-5")  # 23/11: budget di 50 €/mese, anche i capi reparto con Haiku 5.5 (prima Sonnet 5.5)
 PERSONE = CONFIG.get("agenzia_modello_persone", "claude-haiku-5-5")  # le 100 persone dell'ufficio: un modello veloce ed economico
 MAX_REVISIONI = 2
 
