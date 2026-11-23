@@ -10078,6 +10078,7 @@
 "18142952578715780",
 "18143039896617020",
 "18143098402716647",
+"18143106406654376",
 "18143126654506126",
 "18143143600615125",
 "18143160658608483",
@@ -12970,7 +12971,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1795425989.2888665
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-18",
@@ -27908,7 +27911,7 @@
 "citta": "Milano",
 "gol": {
 "inter": 15,
-"juventus": 15
+"juventus": 16
 },
 "marcatori": [
 "samuele98851",
@@ -27940,7 +27943,8 @@
 "nicolospitaleri",
 "paol_oguglielmi",
 "pokemon_go_leone",
-"giosuepio_socciarello"
+"giosuepio_socciarello",
+"ladogana_domenico"
 ],
 "inizio": "2026-11-22T12:34+01:00",
 "fine": "2026-11-24T12:30+01:00"
@@ -29474,6 +29478,10 @@
 "sq": "juventus"
 },
 "giosuepio_socciarello": {
+"g": 1,
+"sq": "juventus"
+},
+"ladogana_domenico": {
 "g": 1,
 "sq": "juventus"
 }
