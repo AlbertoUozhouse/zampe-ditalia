@@ -87,7 +87,6 @@
   "Napoli"
  ],
  "temi": [
-  "tramonto",
   "aurora",
   "giorno",
   "notte",
@@ -96,9 +95,10 @@
   "aurora",
   "giorno",
   "tramonto",
-  "notte"
+  "notte",
+  "giorno"
  ],
- "variante_n": 63,
+ "variante_n": 64,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -162,7 +162,8 @@
   "2026-11-21-2104-serie": "voce-fissa-92",
   "2026-11-22-1315-partita": "voce-fissa-80",
   "2026-11-22-2111-serie": "voce-fissa-92",
-  "2026-11-23-1314-coppa_verdetto": "voce-solita-32"
+  "2026-11-23-1314-coppa_verdetto": "voce-solita-32",
+  "2026-11-23-2108-serie": "voce-fissa-92"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -1096,6 +1097,16 @@
    ],
    "famiglia": 2,
    "data": "2026-11-22"
+  },
+  {
+   "ep": "alexa",
+   "giorno": 7,
+   "opzioni": [
+    "micia",
+    "piazza"
+   ],
+   "famiglia": 2,
+   "data": "2026-11-23"
   }
  ]
 }

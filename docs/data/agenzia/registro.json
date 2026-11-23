@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-14-1450-corsa",
-  "formato": "corsa",
-  "modalita": "operativa",
-  "inizio": "2026-11-14T13:50:46+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-14T13:55:07+00:00",
-  "scambi": 128
- },
- {
   "id": "2026-11-14-1809-intruso",
   "formato": "intruso",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "fatto",
   "fine": "2026-11-23T19:32:11+00:00",
   "scambi": 0
+ },
+ {
+  "id": "2026-11-23-2108-serie",
+  "formato": "serie",
+  "modalita": "operativa",
+  "inizio": "2026-11-23T20:08:45+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-23T20:14:25+00:00",
+  "scambi": 128
  }
 ]
