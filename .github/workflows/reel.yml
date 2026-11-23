@@ -140,7 +140,8 @@ jobs:
           git config user.name "zampe-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           LIMITE2=$(date -u -d '14 days ago' +%Y-%m-%d)  # fotogrammi della stanza e bozze: due settimane
-          for f in docs/agenzia/fotogrammi/* docs/media/bozze/*; do [ -e "$f" ] || continue; n=$(basename "$f"); if [ "${n:0:10}" \< "$LIMITE2" ]; then rm -rf "$f"; fi; done
+          for f in docs/agenzia/fotogrammi/* docs/media/bozze/* docs/media/bozze/anteprime/*; do [ -e "$f" ] || continue; n=$(basename "$f"); if [ "${n:0:10}" \< "$LIMITE2" ]; then rm -rf "$f"; fi; done
+          git add -A docs/media/bozze 2>/dev/null || true  # 23/11: senza questo le bozze cancellate tornavano a ogni giro (67 MB sul sito)
           cp /tmp/copione.json "docs/contenuti/auto/$ID.json"  # il copione resta: serve per rivedere e rimontare un reel già uscito
           git add docs/media/auto docs/contenuti/auto motore/reel_fatti.json; [ -d docs/media/paolino ] && git add docs/media/paolino; [ -f motore/citta.json ] && git add motore/citta.json
           for d in docs/data/agenzia docs/agenzia; do [ -e "$d" ] && git add "$d"; done
