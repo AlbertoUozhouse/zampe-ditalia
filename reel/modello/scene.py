@@ -1045,7 +1045,7 @@ def cartone(cid, dur, sfondo="canile", giorni=30, famiglia=0, famiglia_prima=Non
         js.append(f'    tl.fromTo("#{cid}-ct", {{ scale: 0, opacity: 0 }}, {{ scale: 1, opacity: 1, duration: 0.3, ease: "back.out(3)" }}, {commento.get("t0", 0.4) + 0.4:.2f});')
     if scelta:
         ops = "".join(f'<div class="op op{k}" id="{cid}-op{k}"><span class="em">{ESC(v[0])}</span><b>{ESC(v[1])}</b></div>' for k, v in (("a", scelta["a"]), ("b", scelta["b"])))
-        corpo.append(f'<div class="sc"><div class="h" id="{cid}-sh">DOMANI COSA FA PAOLINO?</div><div class="ops">{ops}<div class="o">OPPURE</div></div></div>')
+        corpo.append(f'<div class="sc"><div class="h" id="{cid}-sh">E ORA COSA FA PAOLINO?</div><div class="ops">{ops}<div class="o">OPPURE</div></div></div>')
         js.append(f'    tl.fromTo("#{cid}-sh", {{ y: -60, opacity: 0 }}, {{ y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }}, 0.05);')
         js.append(f'    tl.fromTo("#{cid}-opa", {{ x: -320, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.3);')
         js.append(f'    tl.fromTo("#{cid}-opb", {{ x: 320, opacity: 0 }}, {{ x: 0, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }}, 0.5);')

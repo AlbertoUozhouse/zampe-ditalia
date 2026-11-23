@@ -1975,7 +1975,7 @@ SERIE_RINVII = {"colloquio": "la famiglia ha chiamato: il colloquio è rimandato
 
 
 def _serie_scelta(base, a, b):
-    return (f"Domani: {a[1].lower()} o {b[1].lower()}? Scrivi nei commenti: ogni commento lo avvicina a casa.",
+    return (f"Nella prossima puntata: {a[1].lower()} o {b[1].lower()}? Scrivi nei commenti: ogni commento lo avvicina a casa.",
             {**base, "sfondo": "canile", "scelta": {"a": list(a), "b": list(b)}, "attori": [A("dolce", 540, 1680, 700, ("pop", "respira"), t0=0.3)],
              "etichette": [ET(f"SCRIVI {a[2]} O {b[2]}", "giallo", 140, 790, -3, 60, 1.2)]})
 

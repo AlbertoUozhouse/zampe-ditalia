@@ -1,10 +1,7 @@
 {
  "nota": "Interruttore dei reel automatici. Per fermarli tutti: reel_automatici false. Orari in ora italiana, almeno 90 minuti tra un reel e l'altro (orari.py salta un reel se ne è uscito uno da meno di 75 minuti). Niente «:prova» (i Trial Reel di ottobre: 235 views). Dal 31/10: 6 reel al giorno, voluti da Alberto, e il controllo delle 11:13 li cambia in base a follower e numeri (motore/decisioni-reel.md). «una_tantum» vale per un giorno solo e sostituisce l'orario uguale.",
  "reel_automatici": true,
- "orari": {
-  "13:00": "partita",
-  "21:00": "serie"
- },
+ "orari": {},
  "negozio": {
   "osso": "https://buy.stripe.com/6oU14n8GY9giaNM1tpenS03",
   "fiocco": "https://buy.stripe.com/9B628rcXedwy2hgc83enS04",
@@ -15,36 +12,38 @@
  },
  "una_tantum": {
   "2026-10-30 22:30": "pronto-corsa_luna",
-  "2026-10-31 21:00": "sfida",
-  "2026-10-31 13:30": "nomi",
-  "2026-11-01 13:30": "razze",
   "2026-10-31 11:15": "neopresidente",
+  "2026-10-31 13:30": "nomi",
+  "2026-10-31 21:00": "sfida",
+  "2026-11-01 13:30": "razze",
   "2026-11-01 19:30": "pronto-gioco_bastone",
   "2026-11-01 21:00": "missione",
   "2026-11-02 21:00": "sfida",
-  "2026-11-04 21:00": "ospiti_sera",
-  "2026-11-06 21:00": "incoronazione",
-  "2026-11-08 21:00": "coppa_apertura",
   "2026-11-04 13:00": "fuochi",
+  "2026-11-04 19:30": "ospiti",
+  "2026-11-04 21:00": "ospiti_sera",
   "2026-11-05 13:00": "re",
   "2026-11-05 21:00": "ospiti_sera",
   "2026-11-06 13:00": "re",
-  "2026-11-07 21:00": "ospiti_sera",
-  "2026-11-04 19:30": "ospiti",
   "2026-11-06 18:00": "amici",
+  "2026-11-06 21:00": "incoronazione",
   "2026-11-07 13:00": "amici",
   "2026-11-07 18:00": "prima_luce",
+  "2026-11-07 21:00": "ospiti_sera",
   "2026-11-08 13:00": "testa_a_testa",
+  "2026-11-08 21:00": "coppa_apertura",
+  "2026-11-09 13:00": "prima_luce",
   "2026-11-10 13:00": "testa_a_testa",
   "2026-11-12 13:00": "testa_a_testa",
-  "2026-11-14 13:00": "testa_a_testa",
-  "2026-11-09 13:00": "prima_luce",
   "2026-11-13 21:00": "gara_follower",
-  "2026-11-16 21:00": "serie",
-  "2026-11-15 18:00": "citta",
-  "2026-11-16 13:00": "serie",
+  "2026-11-14 13:00": "testa_a_testa",
   "2026-11-15 13:00": "testa_a_testa",
+  "2026-11-15 18:00": "citta",
   "2026-11-15 21:00": "tifo",
+  "2026-11-16 13:00": "serie",
+  "2026-11-16 21:00": "serie",
+  "2026-11-17 13:00": "tifo",
+  "2026-11-23 21:00": "serie",
   "2026-12-01 13:00": "avvento",
   "2026-12-02 13:00": "avvento",
   "2026-12-03 13:00": "avvento",
@@ -68,18 +67,25 @@
   "2026-12-21 13:00": "avvento",
   "2026-12-22 13:00": "avvento",
   "2026-12-23 13:00": "avvento",
-  "2026-12-24 13:00": "avvento",
-  "2026-11-17 13:00": "tifo"
+  "2026-12-24 13:00": "avvento"
  },
  "serie_dal": "2026-11-17",
- "campionato": {"dal": "2026-11-18"},
+ "campionato": {
+  "dal": "2026-11-18"
+ },
  "voce_ia": false,
  "feste_reel": false,
  "sponsorizzati": [
   "18121405274055603"
  ],
  "settimanali": {
-  "lun 13:00": "coppa_verdetto"
+  "lun 13:00": "coppa_verdetto",
+  "mar 21:00": "serie",
+  "mer 13:00": "partita",
+  "gio 21:00": "serie",
+  "ven 13:00": "partita",
+  "sab 21:00": "serie",
+  "dom 13:00": "partita"
  },
  "test_crescita": {
   "nota": "Test di crescita (Alberto, 8/11): quali reel portano più follower. stato: «anteprima» = nessuna uscita, solo anteprime; «attivo» = dal giorno «dal» il piano sostituisce gli orari delle 13, 18 e 21 per 7 giorni; «spento» = tutto come prima. Per tornare indietro basta «spento».",
