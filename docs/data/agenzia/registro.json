@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-14-1809-intruso",
-  "formato": "intruso",
-  "modalita": "operativa",
-  "inizio": "2026-11-14T17:09:50+00:00",
-  "stato": "corretto dalla squadra",
-  "fine": "2026-11-14T17:14:14+00:00",
-  "scambi": 128
- },
- {
   "id": "2026-11-14-2101-gara_follower",
   "formato": "gara_follower",
   "modalita": "operativa",
@@ -537,6 +528,15 @@
   "inizio": "2026-11-23T20:08:45+00:00",
   "stato": "corretto dalla squadra",
   "fine": "2026-11-23T20:14:25+00:00",
+  "scambi": 128
+ },
+ {
+  "id": "2026-11-24-2116-serie",
+  "formato": "serie",
+  "modalita": "operativa",
+  "inizio": "2026-11-24T20:16:55+00:00",
+  "stato": "corretto dalla squadra",
+  "fine": "2026-11-24T20:22:15+00:00",
   "scambi": 128
  }
 ]
