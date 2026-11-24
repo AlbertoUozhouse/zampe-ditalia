@@ -1137,6 +1137,7 @@
 "7d9d0a23d6c755d9",
 "7da1fbe89d65503a",
 "7db3e59bbb899c9c",
+"7e0c1436351a1da1",
 "7e1f7efc16b52d2b",
 "7e2667cdf31502dc",
 "7e4982d3e8010e0c",
@@ -1269,6 +1270,7 @@
 "8b4280304412de95",
 "8b47c125eec10b2e",
 "8b92f5ed03f45e04",
+"8b97a4a4ab665a06",
 "8b97f369dc82ee91",
 "8ba547121e5fa167",
 "8ba794451ad39b1a",
@@ -2348,11 +2350,19 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"storia": "cartoline/5dc32be4312696ad.png",
+"url": [
+"https://zampeditalia.it/cartoline/5dc32be4312696ad.png"
+],
+"t": 1795480678.9149787
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
-"2026-11-22": 3
+"2026-11-24": 1
 },
 "prenota_attesa": {},
 "foto_attesa": {}
