@@ -2179,6 +2179,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): esce la versione corretta dalla squadra."
+  },
+  {
+   "t": "2026-11-24T19:07:55+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 23 follower in totale, 6.2 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (24) hanno una mediana di 7.9. Non riprovare così com'è: è sotto la mediana dei reel simili.",
+   "dati": {
+    "id": "18121739915045564",
+    "file": "2026-11-17-1300-tifo",
+    "formato": "tifo",
+    "uscita": "2026-11-17T12:07:46+00:00",
+    "follower": 23,
+    "reach_7g": 3690,
+    "follower_ogni_1000": 6.2,
+    "mediana_simili": 7.9,
+    "simili": 24,
+    "scelte": {
+     "formato": "tifo",
+     "apertura": "mappa",
+     "voce": true,
+     "gancio": "Il tuo cane per chi tifa?",
+     "chiusura": "E domenica il campionato: quale tifoseria ha più cani?"
+    },
+    "esito": "23 follower in totale, 6.2 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (24) hanno una mediana di 7.9.",
+    "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [

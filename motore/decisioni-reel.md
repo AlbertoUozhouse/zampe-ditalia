@@ -561,3 +561,8 @@ Dove andavano i soldi: le sessioni lunghe di Claude Code (Officina ogni giorno +
 - 2026-11-15-1809-citta: 4 follower in totale, 7.8 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (23) hanno una mediana di 8.0. Non riprovare così com'è: è sotto la mediana dei reel simili.
 - 2026-11-15-2112-fondatore: 0 follower in totale, 0.0 ogni 1.000 account raggiunti a 7 giorni. Nessun reel organico simile con dati sui follower da confrontare.
 - 2026-11-16-1307-coppa_verdetto: 2 follower in totale, 1.3 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (23) hanno una mediana di 8.0. Non riprovare così com'è: è sotto la mediana dei reel simili.
+
+
+## 2026-11-24 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-17-1300-tifo: 23 follower in totale, 6.2 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (24) hanno una mediana di 7.9. Non riprovare così com'è: è sotto la mediana dei reel simili.
