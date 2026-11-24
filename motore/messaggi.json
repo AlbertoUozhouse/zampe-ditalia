@@ -246,8 +246,10 @@
 "183272267037992f",
 "184d0886e6ced8be",
 "184d3d47bcec33d1",
+"1853f2e51b50af59",
 "18554dadecfad3c7",
 "186063416dd66dd9",
+"18992d28d0c71608",
 "189a1c8573b115fa",
 "18ad6a56241d907d",
 "18e1be454d634764",
@@ -434,6 +436,7 @@
 "2e6a95d6cc009e04",
 "2e89baeef254c43e",
 "2eca2cb55bddcf57",
+"2ed230c70a992d89",
 "2f1026871237a95c",
 "2f1035377f9b6df3",
 "2f302619095e98f1",
@@ -2350,12 +2353,28 @@
 "ffd691c69733657e",
 "ffda5e1b67b21e46"
 ],
-"in_attesa": [],
+"in_attesa": [
+{
+"storia": "cartoline/e82c9c5a3d7ecf2c.png",
+"url": [
+"https://zampeditalia.it/cartoline/e82c9c5a3d7ecf2c.png"
+],
+"t": 1795510618.01799
+}
+],
 "storie_v1": true,
 "grazie_v1": true,
 "storie_nostre": {
-"2026-11-24": 1
+"2026-11-24": 2
 },
 "prenota_attesa": {},
-"foto_attesa": {}
+"foto_attesa": {
+"a1351b55118796a2": {
+"url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=1158287213401851&signature=Ab197D4m7q2wVb76EQU76lK39eyO8FBAiT7IYEIh--T5wi775zBgwI_1imt_TxnNUUSNv4z6dOFBWy23ZPgSVaZLSc9GBPQQFWZHMS-EbFWs84f-FGyU5rn0F_2e7drvDzedx6SE7-WJ2ZEgXoQsGuJ0nVzJOYVOWYRbB0o-EVC9Vgz0Kdewwo0jvmI7tk-xkxZbG2QaH43CbfkhgNf4BzL407C4_m0",
+"t": 1795510618.9290817,
+"igsid": "1870223614212431",
+"giudicata": true,
+"video": false
+}
+}
 }
