@@ -434,6 +434,7 @@
 "17892083337457957",
 "17892123057683672",
 "17892168669620884",
+"17892182979688679",
 "17892198132686849",
 "17892220620617555",
 "17892232506454906",
@@ -8595,6 +8596,7 @@
 "18123659557958283",
 "18123711326319298",
 "18123722324070118",
+"18123742241052294",
 "18123753382984214",
 "18123755515994153",
 "18123770189055040",
@@ -9360,6 +9362,7 @@
 "18132238102771265",
 "18132255913770441",
 "18132266806684497",
+"18132276307915395",
 "18132278272700832",
 "18132278674684943",
 "18132288721882279",
@@ -13089,9 +13092,7 @@
 "18798213136033257"
 ],
 "risposte": [
-1795598516.5566642,
-1795598523.021434,
-1795599524.8370736
+1795608156.183488
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -13208,7 +13209,7 @@
 "sabrisorre30": "2026-10-27",
 "tommymx_213": "2026-10-27",
 "bordignonalexa": "2026-11-19",
-"ema_gira09": "2026-11-23",
+"ema_gira09": "2026-11-25",
 "vittoria_perelli": "2026-10-27",
 "fattaemanuele": "2026-10-27",
 "mondapaolo00": "2026-10-27",
@@ -15488,7 +15489,7 @@
 "bobbyrobiii": "2026-11-24",
 "lucia._cariola9": "2026-11-24",
 "thoamasvetrano_": "2026-11-24",
-"_francescopalattella": "2026-11-24",
+"_francescopalattella": "2026-11-25",
 "chiara.franchinaa": "2026-11-24",
 "martinadeiddaa": "2026-11-25",
 "biondina_spammm_": "2026-11-25",
@@ -17192,7 +17193,7 @@
 "onlysisso": 30,
 "francesco_giardini_": 50,
 "_urbanmarko_": 30,
-"ema_gira09": 65,
+"ema_gira09": 80,
 "celine._card": 50,
 "_steva_03": 35,
 "matteo_papa010": 50,
@@ -18013,7 +18014,8 @@
 "lore.cheru011": 20,
 "clemma98": 10,
 "memesgsuergiu": 25,
-"bobbyrobiii": 10
+"bobbyrobiii": 10,
+"_francescopalattella": 25
 },
 "inviti_giorno": {
 "2026-11-18": {
@@ -18944,7 +18946,8 @@
 "lomba_.__": "premiato",
 "leonardo_socco": "premiato",
 "memesgsuergiu": "premiato",
-"bobbyrobiii": "premiato"
+"bobbyrobiii": "premiato",
+"_francescopalattella": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -26692,7 +26695,8 @@
 "Catania|CT": 1,
 "Napoli|NA": 1,
 "Clusone|BG": 1,
-"Palagiano|TA": 1
+"Palagiano|TA": 1,
+"Triggiano|BA": 2
 },
 "giocatori": {},
 "squadra": {},
@@ -26777,6 +26781,15 @@
 "punti": [
 1,
 0
+]
+},
+{
+"t": "2026-11-25T12:02+00:00",
+"sorpasso": "Triggiano|BA",
+"su": "Clusone|BG",
+"punti": [
+2,
+1
 ]
 }
 ],
@@ -27224,6 +27237,10 @@
 {
 "k": "Cagliari|CA",
 "t": "2026-11-24T16:55+00:00"
+},
+{
+"k": "Triggiano|BA",
+"t": "2026-11-25T12:02+00:00"
 }
 ],
 "staffette_log": [
@@ -28394,56 +28411,18 @@
 },
 "campionato": {
 "partita": {
-"giornata": 5,
-"a": "inter",
-"b": "juventus",
-"stadio": "SAN SIRO",
-"citta": "Milano",
+"giornata": 6,
+"a": "juventus",
+"b": "milan",
+"stadio": "STADIO DI TORINO",
+"citta": "Torino",
 "gol": {
-"inter": 21,
-"juventus": 16
+"juventus": 0,
+"milan": 0
 },
-"marcatori": [
-"samuele98851",
-"giuly23c",
-"basile_christian014",
-"attilioziveri",
-"_luciano_02013",
-"lory_08.012",
-"kekkoo_sciglioo",
-"edo_porcelli",
-"hector_t012",
-"alusoskiazis",
-"patty.cappiello",
-"lomba_.__",
-"angix511",
-"leo_mang14",
-"polaretto16",
-"marcobillia011",
-"roanbodlli",
-"yassin_football017",
-"gioxyy.dag",
-"leo_batta7",
-"folla_matteo_",
-"leonardo_socco",
-"si_mo_cap_",
-"campisi_serena",
-"spataro.dani",
-"_trauma_06",
-"nicolospitaleri",
-"paol_oguglielmi",
-"pokemon_go_leone",
-"giosuepio_socciarello",
-"ladogana_domenico",
-"joele_bresciani",
-"benedettawins",
-"caro600008",
-"ema_gira09",
-"memesgsuergiu",
-"fra.poli12"
-],
-"inizio": "2026-11-22T12:34+01:00",
-"fine": "2026-11-25T12:30+01:00"
+"marcatori": [],
+"inizio": "2026-11-25T13:02+01:00",
+"fine": "2026-11-27T12:30+01:00"
 },
 "giocate": [
 {
@@ -28481,17 +28460,26 @@
 "gb": 34,
 "stadio": "STADIO OLIMPICO",
 "fine": "2026-11-22T12:30+01:00"
+},
+{
+"giornata": 5,
+"a": "inter",
+"b": "juventus",
+"ga": 21,
+"gb": 16,
+"stadio": "SAN SIRO",
+"fine": "2026-11-25T12:30+01:00"
 }
 ],
 "classifica": {
 "inter": {
-"pt": 3,
-"g": 1,
-"v": 1,
+"pt": 6,
+"g": 2,
+"v": 2,
 "n": 0,
 "p": 0,
-"gf": 31,
-"gs": 29
+"gf": 52,
+"gs": 45
 },
 "milan": {
 "pt": 0,
@@ -28546,6 +28534,15 @@
 "p": 0,
 "gf": 34,
 "gs": 26
+},
+"juventus": {
+"pt": 0,
+"g": 1,
+"v": 0,
+"n": 0,
+"p": 1,
+"gf": 16,
+"gs": 21
 }
 },
 "bomber": {
