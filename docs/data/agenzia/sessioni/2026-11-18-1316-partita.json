@@ -2190,6 +2190,34 @@
    "a": "pubblicazione-1",
    "tipo": "nota",
    "testo": "Direttore video non collegato (gpt-5: errore 401): il reel esce con la revisione della sola squadra."
+  },
+  {
+   "t": "2026-11-25T18:12:45+00:00",
+   "da": "crescita-10",
+   "a": "direzione-1",
+   "tipo": "decisione",
+   "testo": "Verbale dei 7 giorni: 18 follower in totale, 7.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (26) hanno una mediana di 7.9. Non riprovare così com'è: è sotto la mediana dei reel simili.",
+   "dati": {
+    "id": "17946029835094955",
+    "file": "2026-11-18-1316-partita",
+    "formato": "partita",
+    "uscita": "2026-11-18T12:23:59+00:00",
+    "follower": 18,
+    "reach_7g": 2382,
+    "follower_ogni_1000": 7.6,
+    "mediana_simili": 7.9,
+    "simili": 26,
+    "scelte": {
+     "formato": "partita",
+     "apertura": "mappa",
+     "voce": true,
+     "gancio": "Nasce il Campionato delle Zampe! I cani tifano, e ogni commento è un gol.",
+     "chiusura": "Ogni commento è un gol: scrivi forza Inter o forza Milan, con città e nome del tuo cane. Si gioca fino a domani alle dodici e trenta."
+    },
+    "esito": "18 follower in totale, 7.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (26) hanno una mediana di 7.9.",
+    "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+    "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+   }
   }
  ],
  "versioni": [

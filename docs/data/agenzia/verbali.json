@@ -1168,5 +1168,47 @@
   "esito": "23 follower in totale, 6.2 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (24) hanno una mediana di 7.9.",
   "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18116669770852121",
+  "file": "2026-11-17-2107-serie",
+  "formato": "serie",
+  "uscita": "2026-11-17T20:16:11+00:00",
+  "follower": 12,
+  "reach_7g": 1487,
+  "follower_ogni_1000": 8.1,
+  "mediana_simili": 7.7,
+  "simili": 26,
+  "scelte": {
+   "formato": "serie",
+   "apertura": "mappa",
+   "voce": true,
+   "gancio": "Questo è Paolino. Ha trenta giorni per trovare casa.",
+   "chiusura": "Domani: il bagno o il veterinario? Scrivi nei commenti: ogni commento lo avvicina a casa."
+  },
+  "esito": "12 follower in totale, 8.1 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (26) hanno una mediana di 7.7.",
+  "riprovare": "Riprovare: apertura «mappa», gancio «Questo è Paolino. Ha trenta giorni per trovare casa.», chiusura «Domani: il bagno o il veterinario? Scrivi nei commenti: ogni commento lo avvicina a casa.» (formato serie).",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "17946029835094955",
+  "file": "2026-11-18-1316-partita",
+  "formato": "partita",
+  "uscita": "2026-11-18T12:23:59+00:00",
+  "follower": 18,
+  "reach_7g": 2382,
+  "follower_ogni_1000": 7.6,
+  "mediana_simili": 7.9,
+  "simili": 26,
+  "scelte": {
+   "formato": "partita",
+   "apertura": "mappa",
+   "voce": true,
+   "gancio": "Nasce il Campionato delle Zampe! I cani tifano, e ogni commento è un gol.",
+   "chiusura": "Ogni commento è un gol: scrivi forza Inter o forza Milan, con città e nome del tuo cane. Si gioca fino a domani alle dodici e trenta."
+  },
+  "esito": "18 follower in totale, 7.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (26) hanno una mediana di 7.9.",
+  "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]

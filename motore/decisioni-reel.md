@@ -566,3 +566,9 @@ Dove andavano i soldi: le sessioni lunghe di Claude Code (Officina ogni giorno +
 ## 2026-11-24 — verbale dei 7 giorni (automatico, motore/verbale.py)
 
 - 2026-11-17-1300-tifo: 23 follower in totale, 6.2 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (24) hanno una mediana di 7.9. Non riprovare così com'è: è sotto la mediana dei reel simili.
+
+
+## 2026-11-25 — verbale dei 7 giorni (automatico, motore/verbale.py)
+
+- 2026-11-17-2107-serie: 12 follower in totale, 8.1 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (26) hanno una mediana di 7.7. Riprovare: apertura «mappa», gancio «Questo è Paolino. Ha trenta giorni per trovare casa.», chiusura «Domani: il bagno o il veterinario? Scrivi nei commenti: ogni commento lo avvicina a casa.» (formato serie).
+- 2026-11-18-1316-partita: 18 follower in totale, 7.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (26) hanno una mediana di 7.9. Non riprovare così com'è: è sotto la mediana dei reel simili.
