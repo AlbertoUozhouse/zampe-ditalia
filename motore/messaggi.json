@@ -141,6 +141,7 @@
 "0df70b7bb64a2449",
 "0e7cedd09fe17acd",
 "0e99ff44793e5d74",
+"0e9fd8d8873367cf",
 "0ea5bc0cbc0fb258",
 "0ec5620209cdabf3",
 "0ee301fbac1a2b60",
@@ -724,6 +725,7 @@
 "4bcc4353b4efd238",
 "4bcd360bc9dfb476",
 "4bfef9fa532ff420",
+"4c81fbb42ff3459b",
 "4cac21ea09360fed",
 "4cae99eca02e1128",
 "4ccc2968c29c90d6",
@@ -2369,5 +2371,13 @@
 "2026-11-24": 2
 },
 "prenota_attesa": {},
-"foto_attesa": {}
+"foto_attesa": {
+"bdb50c723cc5679b": {
+"url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=1152597877288713&signature=Ab1NDBlscNNbZilIBs5oRjg4-TM_vEikPV4guAsfT-WMPuqbCUNtkZyQG3rNh1jXhCe2N4X5U_s80SpJaeVuLRst36b3IbxUh9hmNc4s2fPwQNSOXBtA69DIR44CMgQh4iUt7TaNNiT5zfp9ea5KDSkF5NV5BOpgShqQPb4FVHNvkb5PPg6M48d8fp97B_T5rJcatkkG71d8xVnc1tLUy7vgcwAdn8Y",
+"t": 1795628684.3924203,
+"igsid": "1786095019134933",
+"giudicata": true,
+"video": false
+}
+}
 }
