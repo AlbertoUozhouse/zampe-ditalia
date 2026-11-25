@@ -426,6 +426,7 @@
 "17891473524685461",
 "17891713143618340",
 "17891808849619202",
+"17891812038623472",
 "17891879466616538",
 "17891926455458786",
 "17892027216684016",
@@ -8728,6 +8729,7 @@
 "18126083378315702",
 "18126085411884082",
 "18126087323476776",
+"18126135238897593",
 "18126144097924125",
 "18126151225694743",
 "18126153422318047",
@@ -9573,6 +9575,7 @@
 "18133995145739447",
 "18134013487692493",
 "18134044013500866",
+"18134044450843493",
 "18134067661696557",
 "18134085736741084",
 "18134090407738680",
@@ -13083,7 +13086,10 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1795598516.5566642,
+1795598523.021434
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-18",
@@ -15482,7 +15488,8 @@
 "_francescopalattella": "2026-11-24",
 "chiara.franchinaa": "2026-11-24",
 "martinadeiddaa": "2026-11-25",
-"biondina_spammm_": "2026-11-25"
+"biondina_spammm_": "2026-11-25",
+"gianvy007": "2026-11-25"
 },
 "media_letti": {},
 "pezzi": {
@@ -22809,10 +22816,11 @@
 "f9c582f90e457326",
 "c0fe2ce44351e1da",
 "f9db5fa2f6ae3c25",
-"e1a5cccf0a0801fa"
+"e1a5cccf0a0801fa",
+"c3daf17b76067c9a"
 ],
 "privati_ora": [
-1795578688.0646992
+1795598516.556691
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -22885,7 +22893,7 @@
 "2026-11-22": 2113,
 "2026-11-23": 2119,
 "2026-11-24": 2125,
-"2026-11-25": 2130
+"2026-11-25": 2131
 },
 "gioco_pappa": {
 "2026-W46": {
@@ -24512,6 +24520,10 @@
 [
 "2026-11-25T06:46+00:00",
 2130
+],
+[
+"2026-11-25T09:22+00:00",
+2131
 ]
 ],
 "coppa": {
@@ -26658,9 +26670,13 @@
 [
 "Triggiano|BA",
 "Clusone|BG"
+],
+[
+"Guspini|SU",
+"Palagiano|TA"
 ]
 ],
-"attesa": "Guspini|SU",
+"attesa": null,
 "punti": {
 "Firenze|FI": 1,
 "Sulmona|AQ": 2,
@@ -26671,7 +26687,8 @@
 "Cagliari|CA": 3,
 "Catania|CT": 1,
 "Napoli|NA": 1,
-"Clusone|BG": 1
+"Clusone|BG": 1,
+"Palagiano|TA": 1
 },
 "giocatori": {},
 "squadra": {},
@@ -26744,6 +26761,15 @@
 "t": "2026-11-24T22:26+00:00",
 "sorpasso": "Clusone|BG",
 "su": "Triggiano|BA",
+"punti": [
+1,
+0
+]
+},
+{
+"t": "2026-11-25T09:21+00:00",
+"sorpasso": "Palagiano|TA",
+"su": "Guspini|SU",
 "punti": [
 1,
 0
@@ -26872,6 +26898,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Palagiano|TA": {
+"u": [
+"gianvy007"
+],
+"c": [
+"18126135238897593"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -26884,7 +26920,8 @@
 "bobbyrobiii|animale|maui",
 "lucia._cariola9|animale|romeo",
 "thoamasvetrano_|animale|ciro",
-"chiara.franchinaa|animale|luce"
+"chiara.franchinaa|animale|luce",
+"gianvy007|animale|shira"
 ]
 },
 "gara_follower": [
@@ -28293,7 +28330,7 @@
 "veterinario": 2
 }
 },
-"commenti_serie": 47,
+"commenti_serie": 48,
 "votanti_p": {
 "18116669770852121": [
 "annaagriggio",
