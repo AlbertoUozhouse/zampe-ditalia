@@ -1,14 +1,5 @@
 [
  {
-  "id": "2026-11-14-2101-gara_follower",
-  "formato": "gara_follower",
-  "modalita": "operativa",
-  "inizio": "2026-11-14T20:01:20+00:00",
-  "stato": "senza direttore",
-  "fine": "2026-11-14T20:04:59+00:00",
-  "scambi": 126
- },
- {
   "id": "crescita-2026-11-15",
   "formato": "crescita del giorno",
   "modalita": "operativa",
@@ -538,5 +529,14 @@
   "stato": "corretto dalla squadra",
   "fine": "2026-11-24T20:22:15+00:00",
   "scambi": 128
+ },
+ {
+  "id": "2026-11-25-1307-partita",
+  "formato": "partita",
+  "modalita": "operativa",
+  "inizio": "2026-11-25T12:07:10+00:00",
+  "stato": "senza direttore",
+  "fine": "2026-11-25T12:11:56+00:00",
+  "scambi": 126
  }
 ]

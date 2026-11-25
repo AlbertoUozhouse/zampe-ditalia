@@ -85,7 +85,6 @@
   "Napoli"
  ],
  "temi": [
-  "giorno",
   "notte",
   "neon",
   "tramonto",
@@ -94,9 +93,10 @@
   "tramonto",
   "notte",
   "giorno",
-  "aurora"
+  "aurora",
+  "notte"
  ],
- "variante_n": 65,
+ "variante_n": 66,
  "varianti": {
   "2026-11-01-1509-presidente": "voce-solita-48",
   "2026-11-01-1637-derby": "muto-solita-48",
@@ -162,7 +162,8 @@
   "2026-11-22-2111-serie": "voce-fissa-92",
   "2026-11-23-1314-coppa_verdetto": "voce-solita-32",
   "2026-11-23-2108-serie": "voce-fissa-92",
-  "2026-11-24-2116-serie": "voce-fissa-92"
+  "2026-11-24-2116-serie": "voce-fissa-92",
+  "2026-11-25-1307-partita": "voce-fissa-80"
  },
  "seguono_prima": [
   "13_prvt._",
@@ -1023,7 +1024,7 @@
   "ciao_1237808": "2026-11-22",
   "contedelia51": "2026-11-22",
   "giuly23c": "2026-11-22",
-  "giuseppe.borrelli.012": "2026-11-22",
+  "giuseppe.borrelli.012": "2026-11-25",
   "loryto_2013": "2026-11-22",
   "roberto___dambrosio": "2026-11-22",
   "_g4e_13": "2026-11-23",
@@ -1032,7 +1033,12 @@
   "cri1_927": "2026-11-23",
   "livio_federici_13": "2026-11-23",
   "lory05.08": "2026-11-23",
-  "pamelainsalaco": "2026-11-23"
+  "pamelainsalaco": "2026-11-23",
+  "blasker5523": "2026-11-25",
+  "leonardo_socco": "2026-11-25",
+  "lomba_.__": "2026-11-25",
+  "memesgsuergiu": "2026-11-25",
+  "stephy.013": "2026-11-25"
  },
  "serie_storia": [
   {
