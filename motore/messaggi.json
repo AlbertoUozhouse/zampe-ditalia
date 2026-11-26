@@ -2374,13 +2374,5 @@
 "2026-11-24": 2
 },
 "prenota_attesa": {},
-"foto_attesa": {
-"2e9aa6839dcd3d25": {
-"url": "https://lookaside.fbsbx.com/ig_messaging_cdn/?asset_id=1661195095445700&signature=Ab1MPaBy9YxrjAbuJ2oKxRhVVNA6eTA4xoIMBzlzB2auxWyKWPhFEUfxZNGXKlLFQgjV-eFYUtuGUkppKDjlPUr9ukX0vUbNK2jakE6qZCQK1Obol8LQrpmOV_o3YgNcdSsOUXFoIhZuFKBzLXM_Fg9CAwpImBGCiWlOepr7MVTNyi4y-HS7j_VFE89Vjk35gR_am4zMVC1lK74Pi1BPqFnokHO96KU",
-"t": 1795657533.9845314,
-"igsid": "2521225598369835",
-"giudicata": true,
-"video": false
-}
-}
+"foto_attesa": {}
 }
