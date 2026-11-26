@@ -1210,5 +1210,47 @@
   "esito": "18 follower in totale, 7.6 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (26) hanno una mediana di 7.9.",
   "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
   "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18321426745303996",
+  "file": "2026-11-18-2101-serie",
+  "formato": "serie",
+  "uscita": "2026-11-18T20:08:13+00:00",
+  "follower": 3,
+  "reach_7g": 1098,
+  "follower_ogni_1000": 2.7,
+  "mediana_simili": 8.1,
+  "simili": 1,
+  "scelte": {
+   "formato": "serie",
+   "apertura": "mappa",
+   "voce": true,
+   "gancio": "Ventinove giorni per trovare casa.",
+   "chiusura": "Domani: la fuga o il colloquio? Scrivi nei commenti: ogni commento lo avvicina a casa."
+  },
+  "esito": "3 follower in totale, 2.7 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 8.1.",
+  "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
+ },
+ {
+  "id": "18470063767185649",
+  "file": "2026-11-19-1312-partita",
+  "formato": "partita",
+  "uscita": "2026-11-19T12:20:00+00:00",
+  "follower": 18,
+  "reach_7g": 4391,
+  "follower_ogni_1000": 4.1,
+  "mediana_simili": 7.6,
+  "simili": 1,
+  "scelte": {
+   "formato": "partita",
+   "apertura": "mappa",
+   "voce": true,
+   "gancio": "Finale a San Siro: Inter 31, Milan ventinove! Tre punti all'Inter!",
+   "chiusura": "Ogni commento è un gol: scrivi forza Roma o forza Lazio, con città e nome del tuo cane. Si gioca fino a domani alle dodici e trenta."
+  },
+  "esito": "18 follower in totale, 4.1 ogni 1.000 account raggiunti a 7 giorni; i reel organici simili (1) hanno una mediana di 7.6.",
+  "riprovare": "Non riprovare così com'è: è sotto la mediana dei reel simili.",
+  "dato": "follower arrivati dopo l'uscita fino al reel successivo (max 6 ore), su reach a 7 giorni; mediana dei reel organici dello stesso formato a 7 giorni"
  }
 ]
