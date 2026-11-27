@@ -12325,6 +12325,7 @@
 "18390897349226328",
 "18391285660231647",
 "18391443805161829",
+"18391634761228433",
 "18392145448300229",
 "18392845444235433",
 "18393304927231743",
@@ -13307,7 +13308,9 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1795745761.833772
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-18",
@@ -15715,7 +15718,8 @@
 "giada.desogus": "2026-11-26",
 "martymen91": "2026-11-26",
 "junema._": "2026-11-25",
-"its_francescaa._": "2026-11-26"
+"its_francescaa._": "2026-11-26",
+"justcallme_diste": "2026-11-27"
 },
 "media_letti": {},
 "pezzi": {
@@ -23085,11 +23089,11 @@
 "acee84cf5dedba98",
 "4889233119839342",
 "364c25ae8e82de49",
-"0ed9b9c3bc1cc9f3"
+"0ed9b9c3bc1cc9f3",
+"ffa741b6290cd591"
 ],
 "privati_ora": [
-1795637717.159775,
-1795637725.8604302
+1795745761.8337972
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -27016,7 +27020,8 @@
 "Milano|MI": 3,
 "Atessa|CH": 3,
 "Pescara|PE": 1,
-"Vigevano|PV": 3
+"Vigevano|PV": 3,
+"Vittorio Veneto|TV": 1
 },
 "giocatori": {},
 "squadra": {},
@@ -27173,6 +27178,15 @@
 "punti": [
 3,
 1
+]
+},
+{
+"t": "2026-11-27T02:16+00:00",
+"sorpasso": "Vittorio Veneto|TV",
+"su": "Acireale|CT",
+"punti": [
+1,
+0
 ]
 }
 ],
@@ -27440,6 +27454,16 @@
 ],
 "chiuse": 0,
 "log": []
+},
+"Vittorio Veneto|TV": {
+"u": [
+"justcallme_diste"
+],
+"c": [
+"18391634761228433"
+],
+"chiuse": 0,
+"log": []
 }
 },
 "luci": [
@@ -27461,7 +27485,8 @@
 "giada.desogus|animale|biba",
 "martymen91|animale|kiro",
 "junema._|animale|kirin",
-"its_francescaa._|animale|kira"
+"its_francescaa._|animale|kira",
+"justcallme_diste|animale|kicco"
 ]
 },
 "gara_follower": [
