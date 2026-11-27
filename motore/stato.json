@@ -1430,6 +1430,7 @@
 "17919566340521037",
 "17919630696497567",
 "17919649290494631",
+"17919660864490875",
 "17919696492496675",
 "17919709245497107",
 "17919777597263611",
@@ -6305,6 +6306,7 @@
 "18102611546163097",
 "18102614171531465",
 "18102617186171947",
+"18102625244423549",
 "18102640754322399",
 "18102641804558421",
 "18102642974639077",
@@ -9065,6 +9067,7 @@
 "18127964168487775",
 "18127983647478892",
 "18127992251512992",
+"18127993108920655",
 "18128017084883125",
 "18128023330920922",
 "18128027440929396",
@@ -12349,6 +12352,7 @@
 "18388068475236870",
 "18388077388229356",
 "18388081189238788",
+"18388326028232767",
 "18388378294226367",
 "18388508032229538",
 "18388626034225664",
@@ -13353,12 +13357,7 @@
 "18798213136033257"
 ],
 "risposte": [
-1795774419.332083,
-1795774427.180081,
-1795774432.936977,
-1795775276.0277584,
-1795775277.2534556,
-1795775278.451727
+1795781027.2526104
 ],
 "bonus": {
 "thor_golden_life": "2026-10-26",
@@ -18327,7 +18326,8 @@
 "its_francescaa._": 15,
 "martymen91": 15,
 "ed042025": 5,
-"_benedettacataldo_": 10
+"_benedettacataldo_": 20,
+"my_name_is_giuseppegld": 10
 },
 "inviti_giorno": {
 "2026-11-21": {
@@ -19260,7 +19260,8 @@
 "giada.desogus": "premiato",
 "its_francescaa._": "premiato",
 "martymen91": "premiato",
-"_benedettacataldo_": "premiato"
+"_benedettacataldo_": "premiato",
+"my_name_is_giuseppegld": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -19365,7 +19366,8 @@
 "3ac2ec401a1673ce",
 "fbd00a787041a39e",
 "9f00ab063b9387b9",
-"57fe593307c92fe2"
+"57fe593307c92fe2",
+"4a54c33cbc1fecc5"
 ],
 "solleciti": {
 "chri.marini": "2026-10-27",
@@ -27100,7 +27102,7 @@
 "Pescara|PE": 1,
 "Vigevano|PV": 3,
 "Vittorio Veneto|TV": 1,
-"Visciano|NA": 1
+"Visciano|NA": 3
 },
 "giocatori": {},
 "squadra": {},
@@ -27920,6 +27922,10 @@
 {
 "k": "Parabita|LE",
 "t": "2026-11-27T10:27+00:00"
+},
+{
+"k": "Visciano|NA",
+"t": "2026-11-27T12:03+00:00"
 }
 ],
 "staffette_log": [
@@ -29095,61 +29101,18 @@
 },
 "campionato": {
 "partita": {
-"giornata": 6,
-"a": "juventus",
-"b": "milan",
-"stadio": "STADIO DI TORINO",
-"citta": "Torino",
+"giornata": 7,
+"a": "roma",
+"b": "inter",
+"stadio": "STADIO OLIMPICO",
+"citta": "Roma",
 "gol": {
-"juventus": 29,
-"milan": 13
+"roma": 0,
+"inter": 0
 },
-"marcatori": [
-"ambro.170",
-"lomba_.__",
-"giuseppe.borrelli.012",
-"ettore.brugnaro",
-"luciano488244",
-"mattia___campoo",
-"matte_dellaa",
-"antua_gambino",
-"francesco_santoni15",
-"stefanomagrelli",
-"daniele__rota__",
-"tommaso.pepi_",
-"ap130904",
-"blasker5523",
-"u_brazilianu_17",
-"lorenzo92514",
-"alligator.520041",
-"lelelip3",
-"federicomorsillo",
-"a.ariel._.moraa",
-"francesco45344",
-"ale_scordo",
-"mariosipala10",
-"gangemi_alessandro",
-"vale68971",
-"stefano339892",
-"elisabettalodato",
-"its_francescaa._",
-"asia.cav",
-"stella_francesco_macelleria",
-"biramdiarra_9",
-"fabio.ita03",
-"giosuepio_socciarello",
-"claudio23716",
-"ema.rotella",
-"angelica643349",
-"hurmuzoana",
-"ed042025",
-"francesco_chirico2018",
-"tapha.gueye.7965",
-"filippo56875",
-"matteo79823"
-],
-"inizio": "2026-11-25T13:02+01:00",
-"fine": "2026-11-27T12:30+01:00"
+"marcatori": [],
+"inizio": "2026-11-27T13:03+01:00",
+"fine": "2026-11-29T12:30+01:00"
 },
 "giocate": [
 {
@@ -29196,6 +29159,15 @@
 "gb": 16,
 "stadio": "SAN SIRO",
 "fine": "2026-11-25T12:30+01:00"
+},
+{
+"giornata": 6,
+"a": "juventus",
+"b": "milan",
+"ga": 29,
+"gb": 13,
+"stadio": "STADIO DI TORINO",
+"fine": "2026-11-27T12:30+01:00"
 }
 ],
 "classifica": {
@@ -29210,12 +29182,12 @@
 },
 "milan": {
 "pt": 0,
-"g": 1,
+"g": 2,
 "v": 0,
 "n": 0,
-"p": 1,
-"gf": 29,
-"gs": 31
+"p": 2,
+"gf": 42,
+"gs": 60
 },
 "roma": {
 "pt": 3,
@@ -29263,13 +29235,13 @@
 "gs": 26
 },
 "juventus": {
-"pt": 0,
-"g": 1,
-"v": 0,
+"pt": 3,
+"g": 2,
+"v": 1,
 "n": 0,
 "p": 1,
-"gf": 16,
-"gs": 21
+"gf": 45,
+"gs": 34
 }
 },
 "bomber": {
