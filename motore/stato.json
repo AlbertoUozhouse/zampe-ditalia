@@ -5410,6 +5410,7 @@
 "18085538120359677",
 "18085538207334461",
 "18085541306716201",
+"18085580300401619",
 "18085704671708151",
 "18085762013333868",
 "18085762238328111",
@@ -9689,6 +9690,7 @@
 "18133022395696299",
 "18133029010805685",
 "18133042132761489",
+"18133078634316004",
 "18133079344746781",
 "18133081207805703",
 "18133085440811152",
@@ -13396,7 +13398,10 @@
 "18668921470032586",
 "18798213136033257"
 ],
-"risposte": [],
+"risposte": [
+1795863000.657168,
+1795863003.88205
+],
 "bonus": {
 "thor_golden_life": "2026-10-26",
 "albertomarchesin": "2026-11-18",
@@ -15811,8 +15816,9 @@
 "_benedettacataldo_": "2026-11-27",
 "iosono_anonimo": "2026-11-27",
 "d.a.v.i.d.e011": "2026-11-27",
-"abhayvibex2": "2026-11-27",
-"fra.poli12": "2026-11-27"
+"abhayvibex2": "2026-11-28",
+"fra.poli12": "2026-11-27",
+"giosuegucci9": "2026-11-28"
 },
 "media_letti": {},
 "pezzi": {
@@ -18371,7 +18377,8 @@
 "ed042025": 5,
 "_benedettacataldo_": 20,
 "my_name_is_giuseppegld": 10,
-"ludovico.15": 10
+"ludovico.15": 10,
+"abhayvibex2": 15
 },
 "inviti_giorno": {
 "2026-11-21": {
@@ -19306,7 +19313,8 @@
 "martymen91": "premiato",
 "_benedettacataldo_": "premiato",
 "my_name_is_giuseppegld": "premiato",
-"ludovico.15": "premiato"
+"ludovico.15": "premiato",
+"abhayvibex2": "premiato"
 },
 "storie": [
 "9f34f4677f3c7e64",
@@ -23214,10 +23222,11 @@
 "37070400f73958e6",
 "539919c716599937",
 "84330855069fc609",
-"97a73152cc0a6d8b"
+"97a73152cc0a6d8b",
+"5e63342be0c3bbda"
 ],
 "privati_ora": [
-1795804356.2201471
+1795863003.8820763
 ],
 "derby_premiati": [
 "2026-10-28NARM",
@@ -23293,7 +23302,7 @@
 "2026-11-25": 2140,
 "2026-11-26": 2152,
 "2026-11-27": 2152,
-"2026-11-28": 2156
+"2026-11-28": 2158
 },
 "gioco_pappa": {
 "2026-W46": {
@@ -24992,6 +25001,10 @@
 [
 "2026-11-28T08:00+00:00",
 2156
+],
+[
+"2026-11-28T10:50+00:00",
+2158
 ]
 ],
 "coppa": {
@@ -27154,7 +27167,7 @@
 "Castel Madama|RM": 1,
 "Cagliari|CA": 3,
 "Catania|CT": 1,
-"Napoli|NA": 1,
+"Napoli|NA": 2,
 "Clusone|BG": 1,
 "Palagiano|TA": 1,
 "Triggiano|BA": 2,
@@ -27170,7 +27183,7 @@
 "Visciano|NA": 3,
 "Seriate|BG": 1,
 "L'Aquila|AQ": 1,
-"San Pancrazio Salentino|BR": 1,
+"San Pancrazio Salentino|BR": 3,
 "Carrara|MS": 1
 },
 "giocatori": {},
@@ -27499,10 +27512,12 @@
 },
 "Napoli|NA": {
 "u": [
-"thoamasvetrano_"
+"thoamasvetrano_",
+"giosuegucci9"
 ],
 "c": [
-"17974673127197568"
+"17974673127197568",
+"18085580300401619"
 ],
 "chiuse": 0,
 "log": []
@@ -27766,7 +27781,8 @@
 "iosono_anonimo|animale|atena",
 "d.a.v.i.d.e011|animale|pongo",
 "abhayvibex2|animale|kira",
-"fra.poli12|animale|lucky"
+"fra.poli12|animale|lucky",
+"giosuegucci9|animale|milka"
 ]
 },
 "gara_follower": [
@@ -28101,6 +28117,10 @@
 {
 "k": "Roma|RM",
 "t": "2026-11-27T15:58+00:00"
+},
+{
+"k": "San Pancrazio Salentino|BR",
+"t": "2026-11-28T10:49+00:00"
 }
 ],
 "staffette_log": [
@@ -29216,7 +29236,7 @@
 "veterinario": 2
 }
 },
-"commenti_serie": 52,
+"commenti_serie": 53,
 "votanti_p": {
 "18116669770852121": [
 "annaagriggio",
